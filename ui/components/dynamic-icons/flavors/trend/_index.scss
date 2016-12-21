@@ -1,0 +1,88 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Circle's cirumference
+$_icon-trend-circumference: 46.3385px; // r=7.375 * pi * 2
+
+// Arrow path length
+$_icon-trend-arrow-length: 20.15px;
+
+// HACK: Trick minifiers so they don't minify 0px to 0,
+// which breaks the animation in Edge
+$_icon-trend-zero: 0.1px;
+
+// HACK: a 1px stroke sitting on a pixel grid line (here: the arrow)
+// doesn't get aliased well on non-retina displays,
+// so we bump up the stroke-width to force a better anti-aliasing
+// which improves rendering at small size
+$_icon-trend-one: 1.125px;
+
+.slds-icon-trend {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+
+  &.slds-is-animated {
+    .slds-icon-trend__arrow {
+      animation: slds-icon-trend-arrow ($duration-slowly * 2) ($duration-slowly) ease-in-out both;
+    }
+    .slds-icon-trend__circle {
+      animation: slds-icon-trend-circle ($duration-slowly * 2) ease-in-out both;
+    }
+  }
+
+  &.slds-is-paused {
+    .slds-icon-trend__arrow,
+    .slds-icon-trend__circle {
+      animation-play-state: paused;
+    }
+  }
+}
+
+.slds-icon-trend[data-slds-trend="down"] {
+  color: #c23934;
+  transform: rotate(45deg);
+}
+.slds-icon-trend[data-slds-trend="neutral"] {
+  color: #979797;
+}
+.slds-icon-trend[data-slds-trend="up"] {
+  color: #028048;
+  transform: rotate(-45deg);
+}
+
+.slds-icon-trend__arrow,
+.slds-icon-trend__circle {
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: $_icon-trend-one;
+}
+
+.slds-icon-trend__arrow {
+  stroke-dashoffset: $_icon-trend-zero;
+  stroke-dasharray: $_icon-trend-arrow-length * 2 - $_icon-trend-one;
+}
+
+.slds-icon-trend__circle {
+  stroke-dasharray: ($_icon-trend-circumference - 4px), $_icon-trend-circumference;
+}
+
+@keyframes slds-icon-trend-arrow {
+  from {
+    stroke-dashoffset: $_icon-trend-arrow-length * 2;
+  }
+}
+
+@keyframes slds-icon-trend-circle {
+  from {
+    stroke-dasharray: $_icon-trend-zero, $_icon-trend-circumference;
+  }
+}

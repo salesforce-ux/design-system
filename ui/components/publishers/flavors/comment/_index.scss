@@ -18,7 +18,7 @@
     max-height: $size-small;
 
     .slds-publisher__actions {
-      opacity: 1;
+      display: flex;
     }
   }
 
@@ -27,7 +27,7 @@
   }
 
   .slds-publisher__actions {
-    opacity: 0;
+    display: none;
     padding: 0 $spacing-small $spacing-small;
   }
 

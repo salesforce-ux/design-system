@@ -25,6 +25,11 @@ The following changes have been made in this release:
 
 The following issues have now been resolved:
 
+- Remove `aria-haspopup="true"` from `slds-context-bar__icon-action`'s button 
+  global nav tab bar.
+- Change assistive text on above mentioned button to `New Tab`.
+- Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
+
 **DEPRECATED**
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
@@ -32,6 +37,8 @@ The following features are being marked as deprecated in this release and will b
 **REMOVED**
 
 The following features are being removed in this release:
+
+Removed the like count in the bottom right of the Feed card.
 
 **TOKENS**
 

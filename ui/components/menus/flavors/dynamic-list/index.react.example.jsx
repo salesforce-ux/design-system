@@ -70,10 +70,10 @@ export let states = [
             <ListboxItem role="presentation" headerText="My Favorites" />
             <ListboxItem tabIndex="0">
               <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-              <div className="slds-media__body">
-                <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
+              <span className="slds-media__body">
+                <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
                 <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-              </div>
+              </span>
             </ListboxItem>
           </ListboxList>
         </Listbox>
@@ -95,10 +95,10 @@ export let states = [
             { _.times(7, i =>
               <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
                 <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-                <div className="slds-media__body">
-                  <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
+                <span className="slds-media__body">
+                  <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
                   <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-                </div>
+                </span>
               </ListboxItem>
             )}
           </ListboxList>
@@ -137,10 +137,10 @@ export let states = [
             { _.times(11, i =>
               <ListboxItem key={`listbox-${i}`}>
                 <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-                <div className="slds-media__body">
-                  <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
+                <span className="slds-media__body">
+                  <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
                   <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-                </div>
+                </span>
               </ListboxItem>
             )}
           </ListboxList>

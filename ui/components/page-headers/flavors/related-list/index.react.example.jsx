@@ -18,7 +18,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 export default (
-  <div className="slds-page-header">
+  <header className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <BreadCrumbs className="slds-m-bottom--xx-small">
@@ -33,7 +33,7 @@ export default (
           <button className="slds-button slds-button--neutral">
             Add Contact
           </button>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon
               className="slds-button--icon-border-filled"
               symbol="down"
@@ -49,7 +49,7 @@ export default (
         <p className="slds-text-body--small">10 items &bull; sorted by name</p>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
-        <div className="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="false">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger--click">
           <ButtonIcon
             className="slds-button--icon-more"
             symbol="table"
@@ -67,7 +67,7 @@ export default (
             className="slds-button--icon-border"
             symbol="filterList"
             assistiveText="Filter List" />
-          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon
               className="slds-button--icon-more"
               symbol="sort"
@@ -78,5 +78,5 @@ export default (
         </div>
       </div>
     </div>
-  </div>
+  </header>
 );

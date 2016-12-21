@@ -1,0 +1,8 @@
+status: 'prototype'
+flavors:
+  - ellie
+  - eq
+  - score
+  - strength
+  - trend
+  - waffle

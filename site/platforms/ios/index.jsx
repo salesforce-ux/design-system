@@ -17,161 +17,162 @@ import CodeBlock from 'app_modules/ui/code-block';
 import g from 'app_modules/global';
 
 export default (
-  <PageBody anchorTitle="iOS" contentClassName="site slds-grid slds-wrap">
-    <StickyNav>
-      <div className="site-menu--jump-links">
-        <ul className="slds-list--vertical slds-has-block-links">
-          <li><a href="#setup">Setup</a></li>
-          <li>
-            <a href="#usage">Usage</a>
-            <ul>
-              <li><a href="#colors">Colors</a></li>
-              <li><a href="#fonts">Fonts and Text Sizes</a></li>
-              <li><a href="#icons">Icons</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </StickyNav>
+  <PageBody anchorTitle="iOS">
+    <div className="slds-grid slds-wrap">
+      <StickyNav>
+        <div className="site-menu--jump-links">
+          <ul className="slds-list--vertical slds-has-block-links">
+            <li><a href="#setup">Setup</a></li>
+            <li>
+              <a href="#usage">Usage</a>
+              <ul>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#fonts">Fonts and Text Sizes</a></li>
+                <li><a href="#icons">Icons</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </StickyNav>
 
-    <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
-      <div className="slds-container--large">
+      <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--5-of-6 slds-large-order--1">
+        <div className="slds-container--large">
 
-        <p className="site-text-introduction">
-          Use our iOS integration to style your native iOS applications
-          to be consistent with the <span className="site-nowrap">{g.displayName}</span>.
-        </p>
+          <p className="site-text-introduction">
+            Use our iOS integration to style your native iOS applications
+            to be consistent with the <span className="site-nowrap">{g.displayName}</span>.
+          </p>
 
-        <p>The <a href="https://github.com/salesforce-ux/design-system-ios">{g.displayName} iOS Static Library</a> includes:</p>
+          <p>The <a href="https://github.com/salesforce-ux/design-system-ios">{g.displayName} iOS Static Library</a> includes:</p>
 
-        <ul>
-          <li>Compiled Design Tokens</li>
-          <li>The Salesforce Sans Font</li>
-          <li>The {g.displayName} Icons</li>
-          <li>Helper Classes</li>
-        </ul>
+          <ul>
+            <li>Compiled Design Tokens</li>
+            <li>The Salesforce Sans Font</li>
+            <li>The {g.displayName} Icons</li>
+            <li>Helper Classes</li>
+          </ul>
 
-        <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
-          Setup
-        </Heading>
+          <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
+            Setup
+          </Heading>
 
-        <p>Add this to your Podfile:</p>
-      </div>
+          <p>Add this to your Podfile:</p>
+        </div>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 
 pod 'DesignSystem'
 
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <div className="slds-container--large">
-        <p>Then run:</p>
-      </div>
+        <div className="slds-container--large">
+          <p>Then run:</p>
+        </div>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 
 pod install
 
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <div className="slds-container--large">
-        <Heading textLabel="Usage" type="h2" id="usage" className="site-text-heading--large">
-          Usage
+        <div className="slds-container--large">
+          <Heading textLabel="Usage" type="h2" id="usage" className="site-text-heading--large">
+            Usage
+          </Heading>
+
+          <p>While we encourage a holistic integration of the entire design system,
+          you are free to include as many or as few of the following modules
+          as you need in your app. Each module will import a small subset
+          of design tokens or icons.</p>
+        </div>
+
+        <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
+          Colors
         </Heading>
 
-        <p>While we encourage a holistic integration of the entire design system,
-        you are free to include as many or as few of the following modules
-        as you need in your app. Each module will import a small subset
-        of design tokens or icons.</p>
-      </div>
+        <h4 className="site-text-heading--label">Text Colors</h4>
 
-      <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
-        Colors
-      </Heading>
-
-      <h4 className="site-text-heading--label">Text Colors</h4>
-
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsColorText:SLDSColorTextInverse];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Background Colors</h4>
+        <h4 className="site-text-heading--label">Background Colors</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Border Colors</h4>
+        <h4 className="site-text-heading--label">Border Colors</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Button Colors</h4>
+        <h4 className="site-text-heading--label">Button Colors</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsButtonColor:SLDSColorBtnBackgroundButtonBrand];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Input Colors</h4>
+        <h4 className="site-text-heading--label">Input Colors</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
 
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Messaging Colors</h4>
+        <h4 className="site-text-heading--label">Messaging Colors</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-        Fonts and Text Sizes
-      </Heading>
+        <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
+          Fonts and Text Sizes
+        </Heading>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
@@ -181,59 +182,60 @@ UIFont* lightFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
 UIFont* regularFont = [UIFont sldsFontRegularWithSize:SLDSFontSizeXLarge];
 
 UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
-        Icons
-      </Heading>
+        <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
+          Icons
+        </Heading>
 
-      <h4 className="site-text-heading--label">Action Icons</h4>
+        <h4 className="site-text-heading--label">Action Icons</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIImage* actionIcon = [UIImage sldsIconAction:SLDSIconActionApproval withSize:SLDSSquareIconSmall];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Custom Icons</h4>
+        <h4 className="site-text-heading--label">Custom Icons</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIImage* customIcon = [UIImage sldsIconCustom:SLDSIconCustom1 withSize:SLDSSquareIconSmall];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Standard Icons</h4>
+        <h4 className="site-text-heading--label">Standard Icons</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSize:SLDSSquareIconSmall];
-        `}</CodeBlock>
-      </div>
+          `}</CodeBlock>
+        </div>
 
-      <h4 className="site-text-heading--label">Utility Icons</h4>
+        <h4 className="site-text-heading--label">Utility Icons</h4>
 
-      <div className="site-code--content slds-scrollable--x">
-        <CodeBlock language="bash">{`
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
 #import <DesignSystem/DesignSystem.h>
 
 ...
 
 UIImage* utilityIcon = [UIImage sldsIconUtility:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
-        `}</CodeBlock>
+          `}</CodeBlock>
+        </div>
       </div>
     </div>
   </PageBody>

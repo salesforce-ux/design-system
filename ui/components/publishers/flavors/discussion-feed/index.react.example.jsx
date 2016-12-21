@@ -29,11 +29,7 @@ const image = (
 
 let Publisher = props =>
   <div className={classNames('slds-publisher slds-publisher--discussion', props.className)}>
-    <dl className="slds-dl--inline slds-m-bottom--small slds-publisher__toggle-visibility">
-      <dt className="slds-dl--inline__label slds-text-body--small">To: </dt>
-      <dd className="slds-dl--inline__detail">My Followers</dd>
-    </dl>
-    <label htmlFor="comment-text-input2" className="slds-assistive-text">Write a comment</label>
+    <label htmlFor="comment-text-input2" className="slds-publisher__toggle-visibility slds-m-bottom--small"><span className="slds-assistive-text">Write a comment</span>To: My followers</label>
     <textarea id="comment-text-input2" className="slds-publisher__input slds-textarea slds-text-longform" placeholder="Write a comment&hellip;" />
     {props.children}
   </div>;

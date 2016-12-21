@@ -22,7 +22,17 @@ mkdirp(__PATHS__.logs);
 
 let logs = '';
 let run = (script, done) => {
-  let command = spawn('npm',  ['run', script, '--', '--color'], {
+  let callback = standardNodeCallbackError => {
+    if (standardNodeCallbackError) {
+      script.warning
+      ? done(null, script.warning)
+      : done(standardNodeCallbackError);
+    } else {
+      done();
+    }
+  };
+
+  let command = spawn('npm',  ['run', script.test, '--', '--color'], {
     cwd: __PATHS__.root,
     stdio: ['inherit', 'pipe', 'inherit']
   });
@@ -31,13 +41,21 @@ let run = (script, done) => {
     logs += stripAnsi(str);
     console.log(str);
   });
-  command.on('close', done);
-  command.on('error', done);
+  command.on('close', callback);
+  command.on('error', callback);
 };
+
+const tests = [
+  {test: 'test-unit'},
+  {test: 'test-integration'},
+  {test: 'test-browser'},
+  {test: 'test-snapshot',  warning: '*WARNING* Snapshot changes occured. Inspect and run `npm run test-snapshot -- -u` to approve.'}
+];
 
 // HACK: The order of these tests is directly related
 // to "formatTestOut" in scripts/helpers/publish.js
-async.eachSeries(['test-unit', 'test-integration', 'test-browser'], run, (err) => {
+async.mapSeries(tests, run, (standardNodeCallbackError, warnings) => {
   fs.writeFileSync(`${__PATHS__.logs}/test.txt`, logs);
-  if (err) throw new Error('Tests Failed (see output above)');
+  if (standardNodeCallbackError) throw new Error('Tests Failed (see output above)');
+  if (warnings.length) console.log(warnings.join('\n'));
 });

@@ -4,4 +4,3 @@ flavors:
   - alert
   - toast
   - prompt
-  - modal-toast

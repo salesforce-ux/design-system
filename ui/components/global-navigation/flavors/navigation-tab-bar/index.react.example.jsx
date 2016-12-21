@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -67,7 +67,7 @@ export let ContextTabBar = props =>
     <div className="slds-context-bar__primary">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
         <div className="slds-context-bar__icon-action">
-          { <WaffleIcon /> }
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
           <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.appName || 'App Name' }</span>
@@ -75,7 +75,7 @@ export let ContextTabBar = props =>
       </div>
 
       <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
-        <a href="javascript:void(0);" title="Context" className="slds-context-bar__label-action">
+        <a href="javascript:void(0);" title="Object" className="slds-context-bar__label-action">
           <span className="slds-truncate">Object</span>
         </a>
         <div className="slds-context-bar__icon-action">
@@ -117,8 +117,7 @@ export let ContextTabBar = props =>
           <ButtonIcon
             className="slds-button--icon-container slds-button--icon-small"
             symbol="add"
-            aria-haspopup="true"
-            assistiveText="Open object switcher menu" />
+            assistiveText="New Tab" />
         </div>
         { props.addTabActive ?
           <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>

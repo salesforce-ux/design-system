@@ -14,7 +14,9 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 
 const icon = (
-  <SvgIcon className="slds-icon" sprite="doctype" symbol="zip" />
+  <span className="slds-icon_container" title="description of icon when needed">
+    <SvgIcon className="slds-icon" sprite="doctype" symbol="zip" />
+  </span>
 );
 
 export default (

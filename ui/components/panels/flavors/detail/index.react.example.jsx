@@ -11,7 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { Pill } from 'ui/components/pills/flavors/base/index.react.example';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
+import { Select } from 'ui/components/forms/flavors/select/index.react.example';
+import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
@@ -20,16 +22,9 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 let Demo = props =>
-  <div className="demo-only slds-grid" {...props} style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
+  <div className="demo-only slds-grid" style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
     {props.children}
   </div>;
-
-let Checkbox = props =>
-  <label className={classNames('slds-checkbox', props.className)} htmlFor={props.id}>
-    <input name="checkbox" type="checkbox" id={props.id} disabled={props.disabled} />
-    <span className="slds-checkbox--faux"></span>
-    <span className="slds-assistive-text">{props.label}</span>
-  </label>;
 
 export let Panel = props =>
   <div className={classNames('slds-panel slds-grid slds-grid--vertical slds-nowrap', props.className)}>
@@ -46,15 +41,18 @@ export let PanelSection = props =>
     {props.children}
   </div>;
 
-let Tile = props =>
+let PanelHeader = props =>
   <div className="slds-media">
     <div className="slds-media__figure">
-      <Checkbox id="completed" label="Complete Task" />
+      <Checkbox
+        label="Complete Task"
+        hideLabel
+      />
     </div>
     <div className="slds-media__body">
-      <p className="slds-truncate slds-text-heading--small" title="Follow up on '15 contact">
+      <h2 className="slds-truncate slds-text-heading--small" title="Follow up on '15 contact">
         <a href="javascript:void(0);">Follow up on '15 contact</a>
-      </p>
+      </h2>
       <p className="slds-truncate slds-text-body--small" title="Jun 18">Jun 18</p>
       <div className="slds-button-group slds-m-top--small" role="group">
         <button className="slds-button slds-button--neutral slds-grow">Edit</button>
@@ -63,55 +61,30 @@ let Tile = props =>
         <ButtonIcon
           className="slds-button--icon-border-filled"
           symbol="down"
+          aria-haspopup="true"
           assistiveText="More Actions"
-          title="More Actions"/>
+          title="More Actions"
+        />
       </div>
     </div>
   </div>;
 
 let FormElementStatic = props =>
-  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
+  <li className={ classNames('slds-form-element slds-hint-parent slds-has-divider--bottom', props.inlineEdit ? 'slds-form-element--edit' : null) }>
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
-      <span className="slds-form-element__static">{props.text}</span>
+      <span className={ classNames('slds-form-element__static', props.longform ? 'slds-text-longform' : null)}>{props.text}</span>
+      { props.inlineEdit ?
+        <ButtonIcon
+          className="slds-float--right slds-button--icon slds-button--icon-small"
+          iconClassName="slds-button__icon--hint"
+          symbol="edit"
+          assistiveText="Edit this Field"
+          title="Edit this Field"
+        />
+      : null }
     </div>
-  </div>;
-
-let FormElementStaticInline = props =>
-  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
-    <ButtonIcon
-      className="slds-float--right slds-button--icon slds-button--icon-small"
-      iconClassName="slds-button__icon--hint"
-      symbol="edit"
-      assistiveText="Edit this Field"
-      title="Edit this Field" />
-    <span className="slds-form-element__label">{props.label}</span>
-    <div className="slds-form-element__control">
-      <span className="slds-form-element__static">{props.text}</span>
-    </div>
-  </div>;
-
-let FormElementStaticLonform = props =>
-  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
-    <span className="slds-form-element__label">{props.label}</span>
-    <div className="slds-form-element__control">
-      <span className="slds-form-element__static slds-text-longform">{props.text}</span>
-    </div>
-  </div>;
-
-let FormElementStaticLonformInline = props =>
-  <div className="slds-form-element slds-hint-parent slds-has-divider--bottom">
-    <ButtonIcon
-      className="slds-float--right slds-button--icon slds-button--icon-small"
-      iconClassName="slds-button__icon--hint"
-      symbol="edit"
-      assistiveText="Edit this Field"
-      title="Edit this Field" />
-    <span className="slds-form-element__label">{props.label}</span>
-    <div className="slds-form-element__control">
-      <span className="slds-form-element__static slds-text-longform">{props.text}</span>
-    </div>
-  </div>;
+  </li>;
 
 let FormElement = props =>
   <div className="slds-form-element">
@@ -122,8 +95,8 @@ let FormElement = props =>
   </div>;
 
 let Lookup = props =>
-  <div className="slds-form-element slds-lookup slds-has-selection" data-select="single" data-scope="single" data-typeahead="false">
-    <label className="slds-form-element__label" htmlFor={props.id}>{props.label}</label>
+  <div className="slds-form-element slds-lookup" data-select="single">
+    <span className="slds-form-element__label" htmlFor={props.id}>{props.label}</span>
     <div className="slds-form-element__control">
       {props.children}
     </div>
@@ -138,21 +111,25 @@ let Default = props =>
     <Panel containerClassName="panel_container--space">
       <PanelBody>
         <PanelSection className="slds-has-divider--bottom">
-          <Tile />
+          <PanelHeader />
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
-          <FormElementStatic label="Subject" text="Follow up on '15 Contract" />
-          <FormElementStatic label="Due Date" text="6/18/16" />
-          <FormElementStatic label="Assigned TO" text="Jason Dewar" />
-          <FormElementStatic label="Name" text="Adam Choi" />
-          <FormElementStatic label="Related To" text="Tesla Cloudhub + Anypoint Connectors" />
-          <FormElementStaticLonform label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+          <ul>
+            <FormElementStatic label="Subject" text="Follow up on '15 Contract" />
+            <FormElementStatic label="Due Date" text="6/18/16" />
+            <FormElementStatic label="Assigned TO" text="Jason Dewar" />
+            <FormElementStatic label="Name" text="Adam Choi" />
+            <FormElementStatic label="Related To" text="Tesla Cloudhub + Anypoint Connectors" />
+            <FormElementStatic longform label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+          </ul>
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
-          <FormElementStatic label="Status" text="Not Started" />
-          <FormElementStatic label="Priority" text="Normal" />
+          <ul>
+            <FormElementStatic label="Status" text="Not Started" />
+            <FormElementStatic label="Priority" text="Normal" />
+          </ul>
         </PanelSection>
       </PanelBody>
     </Panel>
@@ -163,21 +140,25 @@ let HasEditing = props =>
     <Panel containerClassName="panel_container--space">
       <PanelBody>
         <PanelSection className="slds-has-divider--bottom">
-          <Tile />
+          <PanelHeader />
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
-          <FormElementStaticInline label="Subject" text="Follow up on '15 Contract" />
-          <FormElementStaticInline label="Due Date" text="6/18/16" />
-          <FormElementStaticInline label="Assigned TO" text="Jason Dewar" />
-          <FormElementStaticInline label="Name" text="Adam Choi" />
-          <FormElementStaticInline label="Related To" text="Tesla Cloudhub + Anypoint Connectors" />
-          <FormElementStaticLonformInline label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+          <ul>
+            <FormElementStatic inlineEdit label="Subject" text="Follow up on '15 Contract" />
+            <FormElementStatic inlineEdit label="Due Date" text="6/18/16" />
+            <FormElementStatic inlineEdit label="Assigned TO" text="Jason Dewar" />
+            <FormElementStatic inlineEdit label="Name" text="Adam Choi" />
+            <FormElementStatic inlineEdit label="Related To" text="Tesla Cloudhub + Anypoint Connectors" />
+            <FormElementStatic inlineEdit longform label="Comments" text="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+          </ul>
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
-          <FormElementStaticInline label="Status" text="Not Started" />
-          <FormElementStaticInline label="Priority" text="Normal" />
+          <ul>
+            <FormElementStatic inlineEdit label="Status" text="Not Started" />
+            <FormElementStatic inlineEdit label="Priority" text="Normal" />
+          </ul>
         </PanelSection>
       </PanelBody>
     </Panel>
@@ -188,66 +169,70 @@ let IsEditing = props =>
     <Panel containerClassName="panel_container--space" className="slds-is-editing">
       <PanelBody>
         <PanelSection className="slds-has-divider--bottom">
-          <Tile />
+          <PanelHeader />
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
-          <FormElement label="Subject" id="text-input-01">
-            <input className="slds-input" id="text-input-01" defaultValue="Follow up on '15 Contract" />
-          </FormElement>
-          <FormElement label="Due Date" id="date-input-01">
-            <input className="slds-input" id="date-input-01" defaultValue="6/18/16" />
-          </FormElement>
-          <Lookup label="Assigned To" id="text-input-02">
-            <div className="slds-pill_container slds-show">
-              <Pill label="Jason Dewar">
-                <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
-                  <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
-                  <span className="slds-assistive-text">Person</span>
-                </span>
-              </Pill>
-            </div>
-          </Lookup>
-          <Lookup label="Name" id="text-input-03">
-            <div className="slds-pill_container slds-show">
-              <Pill label="Adam Choi">
-                <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
-                  <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
-                  <span className="slds-assistive-text">Person</span>
-                </span>
-              </Pill>
-            </div>
-          </Lookup>
-          <Lookup label="Related To" id="text-input-04">
-            <div className="slds-pill_container slds-show">
-              <Pill label="Tesla Cloudhub + Anypoint Connectors">
-                <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
-                  <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
-                  <span className="slds-assistive-text">Account</span>
-                </span>
-              </Pill>
-            </div>
-          </Lookup>
-          <FormElement label="Comments" id="text-input-05">
-            <textarea className="slds-textarea" id="text-input-05" defaultValue="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
-          </FormElement>
+          <ul>
+            <FormElement label="Subject" id="text-input-01">
+              <input className="slds-input" id="text-input-01" defaultValue="Follow up on '15 Contract" />
+            </FormElement>
+            <FormElement label="Due Date" id="date-input-01">
+              <input className="slds-input" id="date-input-01" defaultValue="6/18/16" />
+            </FormElement>
+            <Lookup label="Assigned To" id="text-input-02">
+              <PillContainer>
+                <Pill label="Jason Dewar">
+                  <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                    <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
+                    <span className="slds-assistive-text">Person</span>
+                  </span>
+                </Pill>
+              </PillContainer>
+            </Lookup>
+            <Lookup label="Name" id="text-input-03">
+              <PillContainer>
+                <Pill label="Adam Choi">
+                  <span className="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                    <SvgIcon className="slds-icon" sprite="standard" symbol="avatar" />
+                    <span className="slds-assistive-text">Person</span>
+                  </span>
+                </Pill>
+              </PillContainer>
+            </Lookup>
+            <Lookup label="Related To" id="text-input-04">
+              <PillContainer>
+                <Pill label="Tesla Cloudhub + Anypoint Connectors">
+                  <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+                    <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+                    <span className="slds-assistive-text">Account</span>
+                  </span>
+                </Pill>
+              </PillContainer>
+            </Lookup>
+            <FormElement label="Comments" id="text-input-05">
+              <textarea className="slds-textarea" id="text-input-05" defaultValue="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates." />
+            </FormElement>
+          </ul>
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading--small slds-m-bottom--medium">Additional Information</h3>
-          <FormElement label="Status" id="non-text-input-01">
-            <div className="slds-select_container">
-              <select className="slds-select" id="non-text-input-01">
+          <ul>
+            <FormElement label="Status" id="non-text-input-01">
+              <Select id="non-text-input-01">
                 <option>Not Started</option>
-              </select>
-            </div>
-          </FormElement>
-          <FormElement label="Priority" id="non-text-input-02">
-            <div className="slds-select_container">
-              <select className="slds-select" id="non-text-input-02">
+                <option>Prospecting</option>
+              </Select>
+            </FormElement>
+            <FormElement label="Priority" id="non-text-input-02">
+              <Select id="non-text-input-02">
                 <option>Normal</option>
-              </select>
-            </div>
-          </FormElement>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </Select>
+            </FormElement>
+          </ul>
         </PanelSection>
       </PanelBody>
       <div className="slds-panel__actions slds-has-divider--top">

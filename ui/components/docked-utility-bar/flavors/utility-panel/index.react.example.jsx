@@ -74,7 +74,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '540px' }}>
         <UtilityBar panel={PanelOpen}>
-          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>
@@ -85,7 +85,7 @@ export let states = [
     label: 'Closed',
     element:
       <div className="demo-only" style={{ height: '540px' }}>
-        <UtilityBar panel={PanelClosed}>
+        <UtilityBar>
           <UtilityBarItem symbol="call">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>

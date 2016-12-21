@@ -25,7 +25,10 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> }>
+        <TileMedia
+          title="Contact Trammel Crow Company"
+          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+        >
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>
@@ -35,7 +38,11 @@ export let states = [
     label: 'With actions',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> } actions>
+        <TileMedia
+          title="Contact Trammel Crow Company"
+          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+          actions
+        >
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>

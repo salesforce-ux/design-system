@@ -79,7 +79,7 @@ export default React.createClass({
       contentClassName = '';
     } else {
       contentClassName = classNames(
-        'site-content slds-p-around--xx-large',
+        'site-content site slds',
         contentClassName
       );
     }
@@ -109,8 +109,10 @@ export default React.createClass({
       return <option value={status}>Component Status: {label}</option>;
     });
     return (
-      <div className="site-banner-badge slds-grid">
-        <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
+      <div className="site">
+        <div className="site-banner-badge slds-grid">
+          <span>Internal Only ({process.env.INTERNAL_RELEASE_NAME})</span>
+        </div>
       </div>
     );
   },
@@ -118,10 +120,10 @@ export default React.createClass({
   renderSearch() {
     if (!globals.displaySearch) return;
     return (
-      <form id="search" noValidate="novalidate" className="searchbox">
-        <div role="search" className="searchbox__wrapper">
+      <form id="search" noValidate="novalidate" className="site-searchbox">
+        <div role="search" className="site-searchbox__wrapper">
           <label htmlFor="docsearch" className="slds-assistive-text">Unfortunately, the 3rd party software we rely on for search is not accessible at the moment.</label>
-          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="searchbox__input slds-input" />
+          <input id="docsearch" type="search" name="search" placeholder="Search" autoComplete="off" required="required" className="site-searchbox__input slds-input" />
           <button type="submit" className="slds-assistive-text" tabIndex="-1">
             Submit your search query
           </button>
@@ -172,7 +174,7 @@ export default React.createClass({
         'slds-is-open': item.isOpen,
         'slds-is-selected': item.isSelected,
         'slds-is-active': item.isActive,
-        'is-closed': !item.isOpen && item.hasChildren
+        'site-is-closed': !item.isOpen && item.hasChildren
       });
       const dataProps = {};
       if (item.hasChildren) {
@@ -241,20 +243,22 @@ export default React.createClass({
     const updated = moment().format('MMMM Do YYYY, h:mm a');
     const versionDateBuildString = `Version ${process.env.SLDS_VERSION}. Last Updated on ${updated}.`;
     return (
-      <footer className="site site-contentinfo slds-grid slds-wrap site-text-longform slds-text-body--small" role="contentinfo">
-        <p className="slds-p-horizontal--x-large slds-size--1-of-1 slds-shrink-none slds-large-size--2-of-3">
-          Copyright &copy; 2015-2016 <span className="site-name">Sales<i>f</i>orce. </span>
-          <CTALink
-            href="http://salesforce.com/company/legal/intellectual.jsp"
-            eventType="copyright">
-            All rights reserved
-          </CTALink>. {versionDateBuildString}
-        </p>
-        <p className="slds-p-horizontal--x-large slds-text-align--right slds-size--1-of-1 slds-shrink-none slds-large-size--1-of-3">
-          <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
-          <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
-          <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>
-        </p>
+      <footer className="site site-contentinfo">
+        <div className="slds-grid slds-wrap slds-text-body--small" role="contentinfo">
+          <p className="slds-p-horizontal--x-large slds-size--1-of-1 slds-shrink-none slds-large-size--2-of-3">
+            Copyright &copy; 2015-2016 <span className="site-name">Sales<i>f</i>orce. </span>
+            <CTALink
+              href="http://salesforce.com/company/legal/intellectual.jsp"
+              eventType="copyright">
+              All rights reserved
+            </CTALink>. {versionDateBuildString}
+          </p>
+          <p className="slds-p-horizontal--x-large slds-text-align--right slds-size--1-of-1 slds-shrink-none slds-large-size--1-of-3">
+            <a className="site-social-twitter" href="http://twitter.com/salesforceux" title="Follow @salesforceux on Twitter">Twitter</a>
+            <a className="site-social-dribbble" href="http://dribbble.com/salesforce" title="Find us on Dribbble">Dribbble</a>
+            <a className="site-social-github" href="https://github.com/salesforce-ux/design-system" title="Get the code on GitHub">GitHub Repository</a>
+          </p>
+        </div>
       </footer>
     );
   }

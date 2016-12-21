@@ -14,16 +14,16 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import _ from 'lodash';
 
 let NavigationBar = props =>
-<div className="docs-example slds-m-bottom--xx-large">
+<div className="site-docs-example slds-m-bottom--xx-large">
   <div className="slds-context-bar site-stencil__color-dark">
     <div className="slds-context-bar__primary slds-context-bar__item--divider-right slds-is-relative">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
         <div className="slds-context-bar__icon-action">
-          <WaffleIcon />
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
           <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -82,7 +82,7 @@ export default (
 
     <h2 className="site-text-heading--label">1.2. Building the Navigation Bar Item</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -91,7 +91,7 @@ export default (
       </div>
     </div>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -117,7 +117,7 @@ export default (
 
     <h2 className="site-text-heading--label">1.3. Building the Icons in the Navigation Bar</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -140,7 +140,7 @@ export default (
 
     <h2 className="site-text-heading--label">1.4. Menu trigger area on Navigation Bar Items</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -165,11 +165,11 @@ export default (
 
     <h2 className="site-text-heading--label">1.5. Specifics of the Navigation Bar - App Launcher</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
             <div className="site-dimension site-dimension--absolute"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
@@ -183,11 +183,11 @@ export default (
 
     <h2 className="site-text-heading--label">1.6. Specifics of the Navigation Bar - App Name</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -201,11 +201,11 @@ export default (
 
     <h2 className="site-text-heading--label">1.7. Specifics of the Navigation Bar - Divider</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>

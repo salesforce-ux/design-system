@@ -9,49 +9,39 @@
 
 .site {
 
-  &-example-color-text {
+  .site-example-color-text {
     padding: $spacing-xx-small;
     font-size: $font-size-x-large;
     line-height: $line-height-reset;
-
-    figure {
-      position: relative;
-      cursor: help;
-
-      + figure {
-        font-size: $font-size-medium;
-        line-height: $line-height-text;
-      }
-    }
 
     td {
       padding: $spacing-x-small $spacing-medium;
     }
   }
 
-  &-example-color-background {
+  .site-example-color-background {
     background-color: $color-background;
   }
 
-  &-example-color-background-alt {
+  .site-example-color-background-alt {
     background-color: $color-background-alt;
   }
 
-  &-example-color-background-inverse {
+  .site-example-color-background-inverse {
     background-color: $color-background-inverse;
   }
 
-  &-example-color-text-inverse {
+  .site-example-color-text-inverse {
     background-color: $color-background-inverse;
   }
 
-  &-example-opacity {
+  .site-example-opacity {
     display: inline-block;
     background-color: $color-brand-darker;
     padding: $spacing-x-small;
   }
 
-  &-indicator {
+  .site-indicator {
 
     &-pass,
     &-fail {
@@ -82,7 +72,7 @@
     }
   }
 
-  &-box {
+  .site-box {
 
     &-color-border,
     &-spacing,
@@ -116,7 +106,7 @@
     }
   }
 
-  &-atmosphere {
+  .site-atmosphere {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -124,7 +114,7 @@
     background-color: #fff;
   }
 
-  &-token {
+  .site-token {
 
     &__generic-size {
       position: relative;
@@ -166,7 +156,8 @@
     }
   }
 
-  &-spec-legend {
+  .site-spec-legend {
+
     dt {
       width: $spacing-medium;
       text-align: center;
@@ -187,34 +178,17 @@
 
 @include mq-medium-min {
 
-  .site {
+  .site-example {
 
-    &-example {
-
-      &-atmosphere,
-      &-color-text,
-      &-color-border,
-      &-font-size,
-      &-spacing,
-      &-radius,
-      &-shadow {
-        vertical-align: middle;
-      }
+    &-atmosphere,
+    &-color-text,
+    &-color-border,
+    &-font-size,
+    &-spacing,
+    &-radius,
+    &-shadow {
+      vertical-align: middle;
     }
-  }
-}
-
-.ruled .site-example-spec-container.slds-cell:first-child {
-  position: relative;
-  margin-right: $spacing-medium * 2;
-
-  &:after {
-    position: absolute;
-    top: 0;
-    right: -$spacing-medium;
-    bottom: 0;
-    border-right: 1px solid #ff0;
-    content: ' ';
   }
 }
 
@@ -242,26 +216,11 @@
     @include mq-medium-min {
       width: 20%;
     }
-
-    &.token--empty {
-      // scss-lint:disable NestingDepth
-
-      > div:before {
-        margin: $spacing-xx-small 0;
-        display: block;
-        padding: $spacing-x-small $spacing-small;
-        width: 100%;
-        font-style: italic;
-        background: $color-background;
-        color: $color-text-weak;
-        content: 'Same as Previous Form Factor';
-      }
-    }
   }
 
-  &.background-color {
+  &.site-background-color {
 
-    td.token > div {
+    td.site-token > div {
       height: 2rem;
       box-shadow: $color-background-alt 0 1px 0 inset,
                   $color-background-alt 0 -1px 0 inset;
@@ -274,7 +233,7 @@
 
     @include mq-small-max {
 
-      td.token {
+      td.site-token {
         // scss-lint:disable NestingDepth
 
         > div {
@@ -295,7 +254,7 @@
 
     @include mq-medium-min {
       // scss-lint:disable NestingDepth SelectorDepth
-      td.token {
+      td.site-token {
         vertical-align: top;
         padding: {
           top: $spacing-small;

@@ -18,7 +18,7 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 export let Tile = props =>
-  <div className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <article className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions ?
       <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
         <h3 className="slds-truncate" title={ props.title || 'Title' }>
@@ -36,10 +36,10 @@ export let Tile = props =>
     <div className="slds-tile__detail slds-text-body--small">
       { props.children ? props.children : <Detail /> }
     </div>
-  </div>;
+  </article>;
 
 export let TileMedia = props =>
-  <div className={classNames('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
+  <article className={classNames('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.media ?
       <div className="slds-media__figure">
         { props.media }
@@ -64,7 +64,7 @@ export let TileMedia = props =>
         { props.children ? props.children : <Detail /> }
       </div>
     </div>
-  </div>;
+  </article>;
 
 let Detail = props =>
   <dl className="slds-list--horizontal slds-wrap">

@@ -24,7 +24,13 @@ let Demo = props =>
   </div>;
 
 export let Modal = props =>
-  <section role="dialog" tabIndex="-1" {...props} className={classNames('slds-modal slds-fade-in-open', props.className)}>
+  <section
+    role="dialog"
+    tabIndex="-1"
+    {...props}
+    aria-describedby="modal-content-01"
+    className={classNames('slds-modal slds-fade-in-open', props.className)}
+  >
     <div className="slds-modal__container">
       {props.children}
     </div>
@@ -43,7 +49,7 @@ export let ModalHeader = props =>
   </header>;
 
 export let ModalContent = props =>
-  <div className={classNames('slds-modal__content', props.className)}>
+  <div className={classNames('slds-modal__content', props.className)} id="modal-content-01">
     {props.children}
   </div>;
 
@@ -58,9 +64,9 @@ export let ModalFooter = props =>
 
 let Default = props =>
   <Demo style={{height: '640px'}}>
-    <Modal aria-labelledby="header43">
+    <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -77,9 +83,9 @@ let Default = props =>
 
 let Taglines = props =>
   <Demo style={{height: '640px'}}>
-    <Modal aria-labelledby="header43">
+    <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
         <p className="slds-m-top--x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
@@ -101,9 +107,9 @@ let Taglines = props =>
 
 let Large = props =>
   <Demo style={{height: '640px'}}>
-    <Modal className="slds-modal--large" aria-labelledby="header43">
+    <Modal className="slds-modal--large" aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -120,9 +126,9 @@ let Large = props =>
 
 let Directional = props =>
   <Demo style={{height: '640px'}}>
-    <Modal aria-labelledby="header43">
+    <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -139,9 +145,8 @@ let Directional = props =>
 
 let Headless = props =>
   <Demo style={{height: '640px'}}>
-    <Modal>
-      <ModalHeader className="slds-modal__header slds-modal__header--empty">
-      </ModalHeader>
+    <Modal aria-label="Meaningful description of the modal content">
+      <ModalHeader className="slds-modal__header slds-modal__header--empty" />
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
           quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
@@ -157,9 +162,9 @@ let Headless = props =>
 
 let Footless = props =>
   <Demo style={{height: '640px'}}>
-    <Modal aria-labelledby="header43">
+    <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore

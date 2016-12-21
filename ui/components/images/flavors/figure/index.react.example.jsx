@@ -33,15 +33,31 @@ export let Image = props =>
     </a>
     { props.actions ?
       <ButtonGroup className="slds-image__actions">
-        <ButtonIcon className="slds-button--icon-border-filled" symbol="download" assistiveText="Download" title="Download" />
-        <ButtonIcon className="slds-button--icon-border-filled" symbol="down" assitiveText="More Actions" title="More Actions" />
+        <ButtonIcon
+          className="slds-button--icon-border-filled"
+          symbol="download"
+          assistiveText="Download"
+          title="Download"
+        />
+        <ButtonIcon
+          className="slds-button--icon-border-filled"
+          symbol="down"
+          aria-haspopup="true"
+          assistiveText="More Actions"
+          title="More Actions"
+        />
       </ButtonGroup> : null }
     <figcaption className={classNames('slds-image__title', props.titleClass)}>
       { props.symbol ?
-      <span className="slds-icon_container slds-m-right--x-small" title={ props.symbol || 'unknown file type' }>
-        <SvgIcon className="slds-icon slds-icon--x-small" sprite="doctype" symbol={ props.symbol || 'unknown' } />
-        <span className="slds-assistive-text">{ props.symbol || 'unknown file type' }</span>
-      </span>: null }
+        <span className="slds-icon_container slds-m-right--x-small" title={ props.symbol || 'unknown file type' }>
+          <SvgIcon
+            className="slds-icon slds-icon--x-small"
+            sprite="doctype"
+            symbol={ props.symbol || 'unknown' }
+          />
+          <span className="slds-assistive-text">{ props.symbol || 'unknown file type' }</span>
+        </span>
+      : null }
       <span className="slds-image__text slds-truncate" title={ props.title || 'Image Title' }>
         { props.title || 'Image Title' }
         { props.overlay ? <span className="slds-assistive-text">more files</span> : null }

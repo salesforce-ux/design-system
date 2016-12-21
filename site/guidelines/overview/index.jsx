@@ -14,55 +14,55 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 
 export default (
-  <PageBody anchorTitle="Guidelines" contentClassName="site site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Guidelines" contentClassName="site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">The Lightning Design System reflects the patterns and components that underpin the Salesforce product. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the Salesforce ecosystem.</p>
       <h2 className="site-text-heading--large">Design Principles</h2>
       <p><strong>We constantly keep these core principles in mind when making design decisions at Salesforce, and we encourage you to adopt them as well.</strong></p>
       <ul className="slds-grid slds-wrap slds-grid--pull-padded-large slds-text-align--center slds-p-vertical--x-large">
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="grid-card">
+          <div className="site-grid-card">
             <img src="/assets/images/guidelines/img-clarity.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Clarity</dt>
               <dd>
-                <hr className="hr hr--blue" />
+                <hr className="site-hr site-hr--blue" />
                 Eliminate ambiguity. Enable people to see, understand, and act with confidence.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="grid-card">
+          <div className="site-grid-card">
             <img src="/assets/images/guidelines/img-efficiency.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Efficiency</dt>
               <dd>
-                <hr className="hr hr--blue"/>
+                <hr className="site-hr site-hr--blue"/>
                 Streamline and optimize workflows. Intelligently anticipate needs to help people work better, smarter, and faster.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="grid-card">
+          <div className="site-grid-card">
             <img src="/assets/images/guidelines/img-consistency.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Consistency</dt>
               <dd>
-                <hr className="hr hr--blue"/>
+                <hr className="site-hr site-hr--blue"/>
                 Create familiarity and strengthen intuition by applying the same solution to the same problem.
               </dd>
             </dl>
           </div>
         </li>
         <li className="slds-col--padded-large slds-size--1-of-1 slds-small-size--1-of-2">
-          <div className="grid-card">
+          <div className="site-grid-card">
             <img src="/assets/images/guidelines/img-beauty.svg" alt="" />
             <dl>
               <dt className="site-text-heading--label-weak-large">Beauty</dt>
               <dd>
-                <hr className="hr hr--blue"/>
+                <hr className="site-hr site-hr--blue"/>
                 Demonstrate respect for people’s time and attention through thoughtful and elegant craftsmanship.
               </dd>
             </dl>

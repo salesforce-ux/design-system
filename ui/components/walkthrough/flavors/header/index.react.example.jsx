@@ -58,7 +58,7 @@ let Header = props =>
     <div className="slds-grid slds-grid--vertical-align-center slds-col--bump-left">
       <span className="slds-box slds-box--xx-small slds-theme--default">30</span>
       <span className="slds-m-horizontal--x-small">Days left in trial</span>
-      <a href="#" className="slds-button slds-button--success">Subscribe Now</a>
+      <a href="javascript:void(0);" className="slds-button slds-button--success">Subscribe Now</a>
     </div>
   </div>;
 

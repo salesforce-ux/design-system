@@ -4,6 +4,9 @@ updatedependencies:
 	npm cache clear
 	rm -f npm-shrinkwrap.json
 	rm -Rf node_modules
+	# Remove this next line when this issue is fixed:
+	# https://github.com/dequelabs/axe-webdriverjs/issues/17
+	npm install axe-core@~2.0.5
 	npm install
 	npm shrinkwrap
 	clingwrap npmbegone

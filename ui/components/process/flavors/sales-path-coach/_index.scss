@@ -240,9 +240,14 @@
 // New in 1.0
 
 .slds-path-coach {
-  border: $color-border $border-width-thin solid;
+  border: $color-border 0 solid;
   border-top: 0;
-  padding-bottom: $spacing-medium;
+
+  &.slds-is-expanded {
+    border-width: $border-width-thin;
+    padding-bottom: $spacing-medium;
+  }
+
 }
 
 .slds-path__trigger {

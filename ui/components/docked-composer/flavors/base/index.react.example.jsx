@@ -12,9 +12,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { Modal, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
+
+const dialogHeadingId = 'dialog-heading-id-1';
+const dialogBodyId = 'dialog-body-id-1';
 
 const composers = [{
   'entity': 'email',
@@ -41,63 +45,54 @@ const Footer = props =>
     <button className="slds-button slds-button--brand">Action</button>
   </div>;
 
-export let DockedComposerPanel = props => {
-  let headingUniqueId;
-  let bodyUniqueId;
-  if (!props.nestedDialog) {
-    headingUniqueId = _.uniqueId('dialog-heading-id-');
-    bodyUniqueId = _.uniqueId('dialog-body-id-');
-  }
-  return (
-    <section
-      className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)}
-      role={ !props.nestedDialog ? 'dialog' : null}
-      aria-labelledby={ headingUniqueId }
-      aria-describedby={ bodyUniqueId }
-    >
-      <header className="slds-docked-composer__header slds-grid slds-shrink-none">
-        <div className="slds-media slds-media--center">
-          <div className="slds-media__figure slds-m-right--x-small">
-            <span className="slds-icon_container">
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
-            </span>
-          </div>
-          <div className="slds-media__body">
-            <h2 id={ headingUniqueId }>{ props.header || 'Header' }</h2>
-          </div>
+export let DockedComposerPanel = props =>
+  <section
+    className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)}
+    role={ !props.nestedDialog ? 'dialog' : null}
+    aria-labelledby={ !props.nestedDialog ? dialogHeadingId : null }
+    aria-describedby={ !props.nestedDialog ? dialogBodyId : null }
+  >
+    <header className="slds-docked-composer__header slds-grid slds-shrink-none">
+      <div className="slds-media slds-media--center">
+        <div className="slds-media__figure slds-m-right--x-small">
+          <span className="slds-icon_container">
+            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
+          </span>
         </div>
-        <div className="slds-col--bump-left">
-          <ButtonIcon
-            className="slds-button--icon"
-            symbol="minimize_window"
-            assistiveText="Minimize Composer Panel"
-            title="Minimize window"
-          />
-          <ButtonIcon
-            className="slds-button--icon"
-            symbol="expand_alt"
-            assistiveText="Expand Composer Panel"
-            title="Expand Composer"
-          />
-          <ButtonIcon
-            className="slds-button--icon"
-            symbol="close"
-            assistiveText="Close Composer Panel"
-            title="Close"
-          />
+        <div className="slds-media__body">
+          <h2 id={ dialogHeadingId }>{ props.header || 'Header' }</h2>
         </div>
-      </header>
-      <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={ bodyUniqueId }>
-        { props.children }
       </div>
-      { props.footer ?
-        <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
-          { props.footer }
-        </footer>
-      : null }
-    </section>
-  );
-};
+      <div className="slds-col--bump-left">
+        <ButtonIcon
+          className="slds-button--icon"
+          symbol="minimize_window"
+          assistiveText="Minimize Composer Panel"
+          title="Minimize window"
+        />
+        <ButtonIcon
+          className="slds-button--icon"
+          symbol="expand_alt"
+          assistiveText="Expand Composer Panel"
+          title="Expand Composer"
+        />
+        <ButtonIcon
+          className="slds-button--icon"
+          symbol="close"
+          assistiveText="Close Composer Panel"
+          title="Close"
+        />
+      </div>
+    </header>
+    <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={ dialogBodyId }>
+      { props.children }
+    </div>
+    { props.footer ?
+      <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
+        { props.footer }
+      </footer>
+    : null }
+  </section>;
 
 let ComposerOverflowMenu = props =>
   <div className="slds-docked-composer slds-docked-composer--overflow">
@@ -119,15 +114,6 @@ let ComposerOverflowMenu = props =>
         )}
       </MenuList>
     </Menu>
-  </div>;
-
-let Modal = props =>
-  <div aria-hidden="false" role="dialog" className="slds-modal slds-fade-in-open slds-docked-composer-modal">
-    <div className="slds-modal__container">
-      <div className="slds-modal__content">
-        {props.children}
-      </div>
-    </div>
   </div>;
 
 ///////////////////////////////////////////
@@ -167,10 +153,12 @@ export let states = [
     label: 'Popout',
     element:
     <Demo>
-      <Modal>
-        <DockedComposerPanel footer={ <Footer /> } nestedDialog>
-          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
-        </DockedComposerPanel>
+      <Modal className="slds-docked-composer-modal" aria-labelledby={dialogHeadingId} aria-describedby={dialogBodyId}>
+        <ModalContent>
+          <DockedComposerPanel footer={ <Footer /> } nestedDialog>
+            <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
+          </DockedComposerPanel>
+        </ModalContent>
       </Modal>
       <div className="slds-backdrop slds-backdrop--open"></div>
     </Demo>

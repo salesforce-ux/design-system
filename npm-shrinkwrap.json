@@ -3555,7 +3555,7 @@
       "dev": true
     },
     "jsonpointer": {
-      "version": "4.0.0",
+      "version": "4.0.1",
       "dev": true
     },
     "jsprim": {
@@ -4288,7 +4288,7 @@
       "dev": true
     },
     "nan": {
-      "version": "2.4.0"
+      "version": "2.5.0"
     },
     "nanoseconds": {
       "version": "0.1.0",
@@ -5704,7 +5704,7 @@
       }
     },
     "theo": {
-      "version": "5.0.0-rc.4",
+      "version": "5.0.0-rc.5",
       "dev": true,
       "dependencies": {
         "tinycolor2": {
@@ -5935,7 +5935,7 @@
       "dev": true
     },
     "useragent": {
-      "version": "2.1.9",
+      "version": "2.1.10",
       "dev": true,
       "dependencies": {
         "lru-cache": {

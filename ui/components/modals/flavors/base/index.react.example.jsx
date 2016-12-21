@@ -28,7 +28,7 @@ export let Modal = props =>
     role="dialog"
     tabIndex="-1"
     {...props}
-    aria-describedby="modal-content-01"
+    aria-describedby={ props['aria-describedby'] || 'modal-content-id-1' }
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">
@@ -49,7 +49,7 @@ export let ModalHeader = props =>
   </header>;
 
 export let ModalContent = props =>
-  <div className={classNames('slds-modal__content', props.className)} id="modal-content-01">
+  <div className={classNames('slds-modal__content', props.className)} id={ props['aria-describedby'] || 'modal-content-id-1' }>
     {props.children}
   </div>;
 

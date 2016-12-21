@@ -17,8 +17,8 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-const dialogHeadingId = 'dialog-heading-id-1';
-const dialogBodyId = 'dialog-body-id-1';
+const dialogHeadingId = 'modal-heading-id-1';
+const dialogBodyId = 'modal-content-id-1';
 
 const composers = [{
   'entity': 'email',

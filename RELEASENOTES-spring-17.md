@@ -17,7 +17,7 @@ The following components are now available:
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
 - Added Button Group List - [Button Group List](compoments/button-groups/#flavor-list) - the new recommended way to mark up button groups.
 - Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
-- Added Global Header Notifications - [Global Header Notifications](/components/global/#flavor-notifications)
+- Added Global Header Notifications - [Global Header Notifications](/components/global-header#flavor-notifications)
 - Added Popover Header - [Popover Header](/components/popovers/#flavor-base-popover-header)
 - Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
 - Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)

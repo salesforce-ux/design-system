@@ -15,6 +15,7 @@ import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example
 import { DockedComposerPanel } from 'ui/components/docked-composer/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Export
@@ -162,8 +163,8 @@ export let states = [
         bodyClassName="slds-align--absolute-center"
         header="Lei Chan - Busy"
         footer={[
-          <button className="slds-button slds-button--neutral slds-size--1-of-2">Follow-Up Later</button>,
-          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2" key={_.uniqueId('follow-up-')}>Follow-Up Later</button>,
+          <button className="slds-button slds-button--brand slds-size--1-of-2" key={_.uniqueId('call-again-')}>Call Again</button>
         ]}
       >
         <div className="slds-text-align--center slds-align-middle">
@@ -196,8 +197,8 @@ export let states = [
         bodyClassName="slds-align--absolute-center"
         header="Lei Chan - Call Failed"
         footer={[
-          <button className="slds-button slds-button--neutral slds-size--1-of-2">Edit Phone Number</button>,
-          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2" key={_.uniqueId('follow-up-')}>Edit Phone Number</button>,
+          <button className="slds-button slds-button--brand slds-size--1-of-2" key={_.uniqueId('call-again-')}>Call Again</button>
         ]}
       >
         <div className="slds-text-align--center slds-align-middle">
@@ -230,8 +231,8 @@ export let states = [
         bodyClassName="slds-align--absolute-center"
         header="Lei Chan - No Answer"
         footer={[
-          <button className="slds-button slds-button--neutral slds-size--1-of-2">Follow-Up Later</button>,
-          <button className="slds-button slds-button--brand slds-size--1-of-2">Call Again</button>
+          <button className="slds-button slds-button--neutral slds-size--1-of-2" key={_.uniqueId('follow-up-')}>Follow-Up Later</button>,
+          <button className="slds-button slds-button--brand slds-size--1-of-2" key={_.uniqueId('call-again-')}>Call Again</button>
         ]}
       >
         <div className="slds-text-align--center slds-align-middle">

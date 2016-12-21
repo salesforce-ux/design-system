@@ -67,12 +67,19 @@ let Action = props =>
     {props.children}
   </button>;
 
-let ListMain = props =>
-  <div className="slds-tabs--path" role="application">
-    <ul className="slds-tabs--path__nav" role={props.listRole}>
-      {props.children}
-    </ul>
-  </div>;
+let ListMain = props => {
+  let ariaOrientation;
+  if(props.listRole === 'listbox') {
+    ariaOrientation = 'horizontal';
+  }
+  return(
+    <div className="slds-tabs--path" role="application">
+      <ul className="slds-tabs--path__nav" role={props.listRole} aria-orientation={ ariaOrientation }>
+        {props.children}
+      </ul>
+    </div>
+  );
+};
 
 let ListItem = props => {
   let ariaExpanded;

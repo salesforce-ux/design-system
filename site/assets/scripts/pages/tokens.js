@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import fastdom from 'fastdom';
 
 import camelCase from 'lodash/camelCase';
-import kebabCase from 'lodash/kebabCase';
+import kebabCase from 'theo/lib/props/util/kebabCase';
 
 import emitter from '../framework/events';
 import { $, setClassName, hide } from '../framework/dom';

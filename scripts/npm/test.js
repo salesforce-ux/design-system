@@ -48,8 +48,7 @@ let run = (script, done) => {
 const tests = [
   {test: 'test-unit'},
   {test: 'test-integration'},
-  {test: 'test-browser'},
-  {test: 'test-snapshot',  warning: '*WARNING* Snapshot changes occured. Inspect and run `npm run test-snapshot -- -u` to approve.'}
+  {test: 'test-browser'}
 ];
 
 // HACK: The order of these tests is directly related

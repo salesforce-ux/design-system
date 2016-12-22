@@ -142,7 +142,10 @@ export let states = [
     element:
     <Demo>
       <div className="slds-docked_container">
-        <DockedComposerPanel footer={ <Footer /> }>
+        <DockedComposerPanel
+          className="slds-is-closed"
+          footer={ <Footer /> }
+        >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>

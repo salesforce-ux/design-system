@@ -9,9 +9,9 @@ components:
   - cards
   - data-tables
   - datepickers
-  - dynamic-icons
   - docked-composer
   - docked-utility-bar
+  - dynamic-icons
   - feeds
   - files
   - file-selector

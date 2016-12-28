@@ -116,7 +116,12 @@ export let states = [
           <p className="slds-col--bump-left slds-text-heading--large">5:37</p>
         </div>
         <div className="slds-docked-composer__toolbar">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" />
+          <ButtonIcon
+            className="slds-button--icon-border-filled slds-button--icon-small"
+            symbol="unmuted"
+            assistiveText="Mute Yourself"
+            title="Mute Yourself"
+          />
         </div>
         <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
         <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />

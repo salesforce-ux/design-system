@@ -21,7 +21,7 @@ import classNames from 'classnames';
 /////////////////////////////////////////////
 
 const MoreIcon = (
-  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" />
+  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" />
 );
 
 

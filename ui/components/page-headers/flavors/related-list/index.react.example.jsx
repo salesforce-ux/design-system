@@ -66,7 +66,9 @@ export default (
           <ButtonIcon
             className="slds-button--icon-border"
             symbol="filterList"
-            assistiveText="Filter List" />
+            assistiveText="Filter List"
+            title="Filter List"
+          />
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
             <ButtonIcon
               className="slds-button--icon-more"

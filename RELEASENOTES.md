@@ -91,6 +91,10 @@ The following features are being removed in this release:
 
 **TOKENS**
 
+Tokens are now part of the Lightning Design System.
+
+Token files previously available from the `@salesforce-ux/design-tokens` npm package are now available in `design-tokens/dist` in the `@salesforce-ux/design-system` package (the same applies for the zip download).
+
 The following tokens have been add/removed/deprecated in this release:
 
 - Added `force-base/fill.json`

@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "2.2.0-dev",
+  "version": "2.2.0",
   "dependencies": {
     "@salesforce-ux/build-server-api": {
       "version": "1.4.0",

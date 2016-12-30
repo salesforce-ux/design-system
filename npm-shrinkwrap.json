@@ -68,11 +68,11 @@
       "dev": true
     },
     "ajv": {
-      "version": "4.10.0",
+      "version": "4.10.3",
       "dev": true
     },
     "ajv-keywords": {
-      "version": "1.2.0",
+      "version": "1.5.0",
       "dev": true
     },
     "align-text": {
@@ -238,7 +238,7 @@
       "dev": true
     },
     "autoprefixer": {
-      "version": "6.5.3",
+      "version": "6.6.0",
       "dev": true
     },
     "aws-sign2": {
@@ -250,11 +250,11 @@
       "dev": true
     },
     "axe-core": {
-      "version": "2.0.7",
+      "version": "2.1.7",
       "dev": true
     },
     "axe-webdriverjs": {
-      "version": "0.4.0",
+      "version": "0.5.0",
       "dev": true
     },
     "babel-cli": {
@@ -272,7 +272,7 @@
       "dev": true
     },
     "babel-core": {
-      "version": "6.20.0",
+      "version": "6.21.0",
       "dev": true
     },
     "babel-generator": {
@@ -320,11 +320,11 @@
       "dev": true
     },
     "babel-jest": {
-      "version": "17.0.2",
+      "version": "18.0.0",
       "dev": true
     },
     "babel-loader": {
-      "version": "6.2.9",
+      "version": "6.2.10",
       "dev": true
     },
     "babel-messages": {
@@ -336,11 +336,11 @@
       "dev": true
     },
     "babel-plugin-istanbul": {
-      "version": "2.0.3",
+      "version": "3.0.0",
       "dev": true
     },
     "babel-plugin-jest-hoist": {
-      "version": "17.0.2",
+      "version": "18.0.0",
       "dev": true
     },
     "babel-plugin-syntax-flow": {
@@ -488,7 +488,7 @@
       "dev": true
     },
     "babel-preset-jest": {
-      "version": "17.0.2",
+      "version": "18.0.0",
       "dev": true
     },
     "babel-preset-react": {
@@ -585,7 +585,7 @@
       "dev": true
     },
     "bluebird": {
-      "version": "3.4.6",
+      "version": "3.4.7",
       "dev": true
     },
     "body-parser": {
@@ -667,7 +667,7 @@
       "dev": true
     },
     "browserslist": {
-      "version": "1.4.0",
+      "version": "1.5.1",
       "dev": true
     },
     "bs-recipes": {
@@ -817,7 +817,7 @@
       "dev": true
     },
     "chromedriver": {
-      "version": "2.26.1",
+      "version": "2.25.1",
       "dev": true
     },
     "ci-info": {
@@ -1151,11 +1151,11 @@
       "dev": true
     },
     "dateformat": {
-      "version": "1.0.12",
+      "version": "2.0.0",
       "dev": true
     },
     "debug": {
-      "version": "2.5.1",
+      "version": "2.6.0",
       "dev": true
     },
     "debug-fabulous": {
@@ -1233,7 +1233,7 @@
       "dev": true
     },
     "diff": {
-      "version": "3.1.0",
+      "version": "3.2.0",
       "dev": true
     },
     "doctrine": {
@@ -1487,7 +1487,7 @@
       "dev": true
     },
     "eslint": {
-      "version": "3.12.0",
+      "version": "3.12.2",
       "dev": true,
       "dependencies": {
         "strip-bom": {
@@ -1669,11 +1669,11 @@
       "dev": true
     },
     "fancy-log": {
-      "version": "1.2.0",
+      "version": "1.3.0",
       "dev": true
     },
     "fast-levenshtein": {
-      "version": "2.0.5",
+      "version": "2.0.6",
       "dev": true
     },
     "fastdom": {
@@ -1719,18 +1719,8 @@
       "dev": true
     },
     "fileset": {
-      "version": "0.2.1",
-      "dev": true,
-      "dependencies": {
-        "glob": {
-          "version": "5.0.15",
-          "dev": true
-        },
-        "minimatch": {
-          "version": "2.0.10",
-          "dev": true
-        }
-      }
+      "version": "2.0.3",
+      "dev": true
     },
     "fill-range": {
       "version": "2.2.3",
@@ -2488,7 +2478,7 @@
       "dev": true
     },
     "gulp-axe-webdriver": {
-      "version": "1.3.1",
+      "version": "1.4.0",
       "dev": true,
       "dependencies": {
         "fs-extra": {
@@ -2577,6 +2567,10 @@
         },
         "chalk": {
           "version": "0.5.1",
+          "dev": true
+        },
+        "dateformat": {
+          "version": "1.0.12",
           "dev": true
         },
         "gulp-util": {
@@ -2762,14 +2756,6 @@
         "vinyl-fs": {
           "version": "2.4.4",
           "dev": true
-        },
-        "xml2js": {
-          "version": "0.4.17",
-          "dev": true
-        },
-        "xmlbuilder": {
-          "version": "4.2.1",
-          "dev": true
         }
       }
     },
@@ -2796,7 +2782,7 @@
       }
     },
     "gulp-util": {
-      "version": "3.0.7",
+      "version": "3.0.8",
       "dev": true,
       "dependencies": {
         "object-assign": {
@@ -3259,33 +3245,9 @@
       "version": "0.1.2",
       "dev": true
     },
-    "istanbul": {
-      "version": "0.4.5",
-      "dev": true,
-      "dependencies": {
-        "async": {
-          "version": "1.5.2",
-          "dev": true
-        },
-        "glob": {
-          "version": "5.0.15",
-          "dev": true
-        },
-        "resolve": {
-          "version": "1.1.7",
-          "dev": true
-        }
-      }
-    },
     "istanbul-api": {
-      "version": "1.0.0-aplha.10",
-      "dev": true,
-      "dependencies": {
-        "async": {
-          "version": "1.5.2",
-          "dev": true
-        }
-      }
+      "version": "1.1.0",
+      "dev": true
     },
     "istanbul-lib-coverage": {
       "version": "1.0.0",
@@ -3336,7 +3298,7 @@
       }
     },
     "jest": {
-      "version": "17.0.0",
+      "version": "18.1.0",
       "dev": true,
       "dependencies": {
         "callsites": {
@@ -3348,7 +3310,7 @@
           "dev": true
         },
         "jest-cli": {
-          "version": "17.0.3",
+          "version": "18.1.0",
           "dev": true
         }
       }
@@ -3358,19 +3320,19 @@
       "dev": true
     },
     "jest-config": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-diff": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-environment-jsdom": {
-      "version": "17.0.2",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-environment-node": {
-      "version": "17.0.2",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-file-exists": {
@@ -3378,7 +3340,7 @@
       "dev": true
     },
     "jest-haste-map": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true,
       "dependencies": {
         "graceful-fs": {
@@ -3388,7 +3350,7 @@
       }
     },
     "jest-jasmine2": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true,
       "dependencies": {
         "graceful-fs": {
@@ -3398,27 +3360,27 @@
       }
     },
     "jest-matcher-utils": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-matchers": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-mock": {
-      "version": "17.0.2",
+      "version": "18.0.0",
       "dev": true
     },
     "jest-resolve": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-resolve-dependencies": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-runtime": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true,
       "dependencies": {
         "graceful-fs": {
@@ -3428,11 +3390,11 @@
       }
     },
     "jest-snapshot": {
-      "version": "17.0.3",
+      "version": "18.1.0",
       "dev": true
     },
     "jest-util": {
-      "version": "17.0.2",
+      "version": "18.1.0",
       "dev": true,
       "dependencies": {
         "graceful-fs": {
@@ -3451,7 +3413,7 @@
       "dev": true
     },
     "js-beautify": {
-      "version": "1.6.4",
+      "version": "1.6.7",
       "dev": true
     },
     "js-tokens": {
@@ -3473,10 +3435,6 @@
       "dependencies": {
         "acorn": {
           "version": "2.7.0",
-          "dev": true
-        },
-        "sax": {
-          "version": "1.2.1",
           "dev": true
         }
       }
@@ -3555,7 +3513,7 @@
       "dev": true
     },
     "jsonpointer": {
-      "version": "4.0.0",
+      "version": "4.0.1",
       "dev": true
     },
     "jsprim": {
@@ -3713,7 +3671,7 @@
       }
     },
     "karma-webpack": {
-      "version": "1.8.0",
+      "version": "1.8.1",
       "dev": true,
       "dependencies": {
         "async": {
@@ -3828,7 +3786,7 @@
       }
     },
     "lodash": {
-      "version": "4.17.2",
+      "version": "4.17.3",
       "dev": true
     },
     "lodash._arraycopy": {
@@ -4134,7 +4092,7 @@
       "dev": true
     },
     "markdown-it": {
-      "version": "8.2.1",
+      "version": "8.2.2",
       "dev": true
     },
     "marked": {
@@ -4164,7 +4122,7 @@
       "dev": true
     },
     "memory-fs": {
-      "version": "0.3.0",
+      "version": "0.4.1",
       "dev": true,
       "dependencies": {
         "isarray": {
@@ -4284,7 +4242,7 @@
       "dev": true
     },
     "nan": {
-      "version": "2.4.0"
+      "version": "2.5.0"
     },
     "nanoseconds": {
       "version": "0.1.0",
@@ -4383,7 +4341,7 @@
       "dev": true
     },
     "node-sass": {
-      "version": "4.0.0",
+      "version": "4.1.1",
       "dev": true,
       "dependencies": {
         "gaze": {
@@ -4396,10 +4354,6 @@
         },
         "lodash": {
           "version": "4.16.6",
-          "dev": true
-        },
-        "lodash.isarray": {
-          "version": "4.0.0",
           "dev": true
         }
       }
@@ -4743,7 +4697,7 @@
       }
     },
     "postcss": {
-      "version": "5.2.6",
+      "version": "5.2.8",
       "dev": true
     },
     "postcss-safe-parser": {
@@ -4767,7 +4721,7 @@
       "dev": true
     },
     "pretty-format": {
-      "version": "4.2.3",
+      "version": "18.1.0",
       "dev": true
     },
     "pretty-hrtime": {
@@ -5164,7 +5118,7 @@
       }
     },
     "sax": {
-      "version": "0.6.1",
+      "version": "1.2.1",
       "dev": true
     },
     "secure-keys": {
@@ -5172,15 +5126,11 @@
       "dev": true
     },
     "selenium-webdriver": {
-      "version": "2.53.3",
+      "version": "3.0.1",
       "dev": true,
       "dependencies": {
-        "adm-zip": {
-          "version": "0.4.4",
-          "dev": true
-        },
         "tmp": {
-          "version": "0.0.24",
+          "version": "0.0.30",
           "dev": true
         }
       }
@@ -5356,7 +5306,7 @@
       "dev": true
     },
     "source-map-support": {
-      "version": "0.4.6",
+      "version": "0.4.8",
       "dev": true
     },
     "source-map-url": {
@@ -5404,6 +5354,20 @@
     "statuses": {
       "version": "1.3.1",
       "dev": true
+    },
+    "stdout-stream": {
+      "version": "1.4.0",
+      "dev": true,
+      "dependencies": {
+        "isarray": {
+          "version": "1.0.0",
+          "dev": true
+        },
+        "readable-stream": {
+          "version": "2.2.2",
+          "dev": true
+        }
+      }
     },
     "stream-browserify": {
       "version": "2.0.1",
@@ -5587,11 +5551,6 @@
           "version": "1.1.14",
           "dev": true
         },
-        "sax": {
-          "version": "1.2.1",
-          "dev": true,
-          "optional": true
-        },
         "supports-color": {
           "version": "1.2.0",
           "dev": true
@@ -5670,7 +5629,7 @@
       "dev": true
     },
     "test-exclude": {
-      "version": "2.1.3",
+      "version": "3.3.0",
       "dev": true
     },
     "text-table": {
@@ -5682,7 +5641,7 @@
       "dev": true
     },
     "tfunk": {
-      "version": "3.0.2",
+      "version": "3.1.0",
       "dev": true
     },
     "then-request": {
@@ -5701,14 +5660,6 @@
       "dependencies": {
         "tinycolor2": {
           "version": "1.1.2",
-          "dev": true
-        },
-        "xml2js": {
-          "version": "0.4.17",
-          "dev": true
-        },
-        "xmlbuilder": {
-          "version": "4.2.1",
           "dev": true
         }
       }
@@ -5927,7 +5878,7 @@
       "dev": true
     },
     "useragent": {
-      "version": "2.1.9",
+      "version": "2.1.10",
       "dev": true,
       "dependencies": {
         "lru-cache": {
@@ -6091,6 +6042,18 @@
         "interpret": {
           "version": "0.6.6",
           "dev": true
+        },
+        "isarray": {
+          "version": "1.0.0",
+          "dev": true
+        },
+        "memory-fs": {
+          "version": "0.3.0",
+          "dev": true
+        },
+        "readable-stream": {
+          "version": "2.2.2",
+          "dev": true
         }
       }
     },
@@ -6105,7 +6068,7 @@
       }
     },
     "webpack-dev-middleware": {
-      "version": "1.8.4",
+      "version": "1.9.0",
       "dev": true
     },
     "weinre": {
@@ -6210,11 +6173,11 @@
       "dev": true
     },
     "xml2js": {
-      "version": "0.4.4",
+      "version": "0.4.17",
       "dev": true
     },
     "xmlbuilder": {
-      "version": "8.2.2",
+      "version": "4.2.1",
       "dev": true
     },
     "xmlhttprequest-ssl": {

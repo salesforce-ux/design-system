@@ -23,8 +23,17 @@
 
 .slds-icon {
   @include square($square-icon-medium-boundary);
-  border-radius: $border-radius-medium;
   fill: $color-text-icon-inverse;
+}
+
+[class*='slds-icon-standard-'],
+[class*='slds-icon-action-'],
+[class*='slds-icon-custom-'] {
+
+  .slds-icon,
+  &.slds-icon {
+    border-radius: $border-radius-medium;
+  }
 }
 
 @each $name, $color in $bg-actions-map {

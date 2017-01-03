@@ -21,6 +21,9 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
+- Rounded corners have been removed from utility icons so that they no longer 
+  clip incorrectly.
+
 **FIXED**
 
 The following issues have now been resolved:

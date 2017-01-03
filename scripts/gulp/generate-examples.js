@@ -75,7 +75,7 @@ export const toHtml = (el) =>
 gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
     .src(`${__PATHS__.generated}/examples/*.html`)
-    .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><title>Example</title>', '</html>'))
+    .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../.www/assets/styles/slds.css" /></head><body>', '</body></html>'))
     .pipe(gulp.dest(__PATHS__.html)));
 
 gulp.task('generate:examples', () => {

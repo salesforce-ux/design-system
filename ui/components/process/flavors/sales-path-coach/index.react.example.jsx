@@ -178,14 +178,6 @@ let CoachExample2 = props =>
     </div>
   </div>;
 
-let Tooltip = props =>
-  <div
-    className="slds-popover slds-popover--tooltip slds-nubbin--top"
-    role="tooltip"
-  >
-    <div className="slds-popover__body">10 days in Needs Analysis</div>
-  </div>
-;
 
 ///////////////////////////////////////////////
 // State Constructor(s)

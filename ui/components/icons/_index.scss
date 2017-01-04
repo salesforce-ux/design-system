@@ -60,6 +60,16 @@
   }
 }
 
+@include deprecate('3.0.0', 'This should be fixed at Theo’s level');
+$task2-monkey-patch: (
+  // The icon name is task2 but we had it as task-2
+  // (with an extra hyphen) so we're monkey patching the CSS to include the
+  // legacy token name in the CSS
+  'task-2': map-get($bg-standard-map, 'task2')
+);
+
+$bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
+
 @each $name, $color in $bg-standard-map {
   .slds-icon-standard-#{$name} {
     background-color: $color;

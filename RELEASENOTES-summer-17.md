@@ -32,6 +32,7 @@ The following issues have now been resolved:
   global nav tab bar.
 - Change assistive text on above mentioned button to `New Tab`.
 - Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
+- Fixed a bug where the task2 icon corresponding class name was incorrectly named "task-2"
 
 **DEPRECATED**
 
@@ -46,3 +47,5 @@ The following features are being removed in this release:
 **TOKENS**
 
 The following tokens have been add/removed/deprecated in this release:
+
+- `TASK_2` was renamed into `TASK2`

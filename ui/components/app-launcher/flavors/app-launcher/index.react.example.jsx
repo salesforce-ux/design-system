@@ -51,7 +51,7 @@ let AppLauncherModal = props =>
           </div>
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-27" objectInitials="SC" referenceId={props.dragDropId}>
+              <AppLauncherTile draggable figureClass="slds-icon-custom-27" grabbed={props.grabbed} objectInitials="SC" referenceId={props.dragDropId}>
                 <span className="slds-text-link">Sales Cloud</span>
                 <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
               </AppLauncherTile>
@@ -147,7 +147,7 @@ let AppLauncherModal = props =>
 const dragDropId = 'dragDropInstructions';
 export let states = [
   {
-    id: 'app-launcher',
+    id: 'default',
     label: 'Default',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
@@ -160,7 +160,7 @@ export let states = [
     </div>
   },
   {
-    id: 'app-launcher-grabbed',
+    id: 'grabbed',
     label: 'Grabbed',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
@@ -168,12 +168,13 @@ export let states = [
         dragDropId={dragDropId}
         dragDropInstructions=""
         dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
+        grabbed
       />
       <div className="slds-backdrop slds-backdrop--open" />
     </div>
   },
   {
-    id: 'app-launcher-moved',
+    id: 'moved',
     label: 'Moved in list',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
@@ -186,7 +187,7 @@ export let states = [
     </div>
   },
   {
-    id: 'app-launcher-dropped',
+    id: 'dropped',
     label: 'Dropped',
     element:
     <div className="demo-only" style={{ height: '800px' }}>

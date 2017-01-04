@@ -12,7 +12,7 @@ props:
     value: '{!EMERALD}'
     comment: The background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_COMPLETE_HOVER:
-    value: '{!SALEM_TRANSPARENT_95}'
+    value: '{!SALEM}'
     comment: The hover background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_CURRENT:
     value: '{!SCIENCE_BLUE}'

@@ -17,7 +17,7 @@ import globals from 'app_modules/global';
 import packageJSON from '../package.json';
 
 let hero = (
-  <header className="site site-masthead--landing slds-p-around--xx-large container--buffer">
+  <header className="site site-masthead--landing slds-p-around--xx-large site-container--buffer">
     <div className="slds-grid slds-grid--vertical-align-start slds-wrap slds-medium-nowrap">
       <img
         className="site-masthead--landing-logo"
@@ -45,15 +45,15 @@ let hero = (
 
 export default (
   <PageBody anchor={hero} contentClassName="site-landing-page">
-    <div className="site container--buffer slds-container--x-large">
+    <div className="site-container--buffer slds-container--x-large">
       {/* Grid */}
-      <section className="site-grid--landing slds-p-vertical--xx-large site-text-longform">
+      <section className="site-grid--landing slds-p-vertical--xx-large">
         <ul className="slds-grid slds-wrap slds-grid--pull-padded-large site-grid--landing-primary">
           <li className="slds-col--padded-large slds-p-vertical--xx-large slds-clearfix">
             <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">
               <img className="image" src="/assets/images/landing/img-icon-group.svg" alt="" />
             </p>
-            <dl className="slds-medium-size--1-of-2">
+            <dl className="slds-medium-size--1-of-2 slds-p-vertical--x-large">
               <dt className="site-text-heading--large">Style with Ease</dt>
               <dd>With the {globals.displayName} you can build custom applications with a look and feel that is consistent with Salesforce core features &mdash; without reverse engineering our styles! Simply download our platform-agnostic CSS framework and get started today.</dd>
             </dl>
@@ -63,7 +63,7 @@ export default (
               <img className="image" src="/assets/images/landing/img-expertise.svg" alt="" />
             </p>
             <dl className="slds-medium-size--1-of-2 slds-float--right">
-              <dt className="site-text-heading--large">Design with Expertise</dt>
+              <dt className="site-text-heading--large slds-p-vertical--xx-large">Design with Expertise</dt>
               <dd>Utilize our detailed guidelines to confidently design excellent apps that fit right into the Salesforce ecosystem. With the Design System, you get access to all of the Salesforce core visual and interaction design patterns so that you can follow established best practices and build apps that have a consistent look and feel with the Salesforce user experience.</dd>
             </dl>
           </li>
@@ -82,29 +82,29 @@ export default (
         </div>
         <ul className="slds-grid slds-wrap slds-grid--align-spread slds-grid--pull-padded-large">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/landing/icon-trust.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Trustworthy</dt>
-                <dd><hr className="hr hr--orange" />We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports.</dd>
+                <dd><hr className="site-hr site-hr--orange" />We’ve put the design system through its paces. We’ve engaged in thousands of hours of user research, and tested the system in all of the same browsers that the Lightning Experience supports.</dd>
               </dl>
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/landing/icon-platform.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Platform-Agnostic</dt>
-                <dd><hr className="hr hr--purple" />You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku.</dd>
+                <dd><hr className="site-hr site-hr--purple" />You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku.</dd>
               </dl>
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-3">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <img src="/assets/images/landing/icon-living.svg" alt="" />
               <dl>
                 <dt className="site-text-heading--label-weak-large">Living</dt>
-                <dd><hr className="hr hr--pink" />The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</dd>
+                <dd><hr className="site-hr site-hr--pink" />The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</dd>
               </dl>
             </div>
           </li>
@@ -114,23 +114,23 @@ export default (
       <footer className="site-resources--landing slds-p-vertical--xx-large">
         <ul className="slds-grid slds-wrap slds-grid--align-spread slds-grid--pull-padded-large">
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <div className="slds-grid slds-grid--align-spread">
                 <h3 className="site-text-heading--label-weak-large slds-align-middle" id="downloads-header">Downloads</h3>
                 <img src="/assets/images/landing/icon-download.svg" alt="" />
               </div>
-              <hr className="hr hr--pink" />
+              <hr className="site-hr site-hr--pink" />
               <p>Get all of the pieces of the {globals.displayName}, including our icons, fonts, and CSS&nbsp;framework.</p>
               <CTALink aria-describedby="downloads-header" className="slds-button slds-button--neutral slds-m-top--large" href="/downloads" eventType="downloads-bottom">Learn More</CTALink>
             </div>
           </li>
           <li className="slds-col--padded-large slds-size--1-of-1 slds-large-size--1-of-2">
-            <div className="grid-card">
+            <div className="site-grid-card">
               <div className="slds-grid slds-grid--align-spread">
                 <h3 className="site-text-heading--label-weak-large slds-align-middle" id="getting-started-header">Getting started</h3>
                 <img src="/assets/images/landing/icon-getting-started.svg" alt="" />
               </div>
-              <hr className="hr hr--orange" />
+              <hr className="site-hr site-hr--orange" />
               <p>Learn best practices, tips and tricks on how to use, customize, and implement the {globals.displayName}.</p>
               <CTALink aria-describedby="getting-started-header" className="slds-button slds-button--neutral slds-m-top--large" href="/getting-started" eventType="getting-started-bottom">Learn More</CTALink>
             </div>

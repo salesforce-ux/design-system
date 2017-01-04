@@ -1,0 +1,89 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Base icon size and appearance
+//
+// 1. Each dot is an SVG <circle> element
+// 2. Adds transitions when the strength changes.
+//    Modifying the data-slds-strength attribute in JavaScript should
+//    animate the dots nicely.
+// 3. Let the browser know which properties are going to change,
+//    enabling it to optimize rendering speed as best it can
+.slds-icon-strength {
+  width: 1rem;
+  display: inline-block;
+
+  circle { // 1
+    stroke-width: 1.125;
+    fill: transparent;
+    stroke: #ccc;
+    transition: all 0.4s ease-in-out; // 2
+    will-change: fill, stroke; // 3
+  }
+
+  // Strength States
+  //
+  // The strength is controlled via the data-slds-strength attribute.
+  //
+  // These styles adapt the stroke and fill depending on the strength level.
+  //
+  // <svg data-slds-strength="[Number]">
+  // 0. no active dots
+  // 1. one active dot
+  // 2. two active dots
+  // 3. all dots active
+  &[data-slds-strength="1"] circle:nth-child(1),
+  &[data-slds-strength="2"] circle:nth-child(1),
+  &[data-slds-strength="2"] circle:nth-child(2),
+  &[data-slds-strength="3"] circle:nth-child(1),
+  &[data-slds-strength="3"] circle:nth-child(2),
+  &[data-slds-strength="3"] circle:nth-child(3) {
+    fill: #22b0e6;
+    stroke: #22b0e6;
+  }
+
+  // Animated state
+  //
+  // Add .slds-is-animated to the SVG to enhance the icon with an animation.
+  &.slds-is-animated {
+    circle {
+      // Adjust this value to add a delay to the whole animation
+      $_strength-offset-delay: 1s;
+
+      animation: slds-icon-strength-load 0.4s $_strength-offset-delay ease-in-out alternate both paused;
+
+      &:nth-child(2) {
+        animation-delay: ($_strength-offset-delay + 0.4s);
+      }
+      &:nth-child(3) {
+        animation-delay: ($_strength-offset-delay + 0.8s);
+      }
+    }
+
+    &[data-slds-strength="1"] circle:nth-child(1),
+    &[data-slds-strength="2"] circle:nth-child(1),
+    &[data-slds-strength="2"] circle:nth-child(2),
+    &[data-slds-strength="3"] circle:nth-child(1),
+    &[data-slds-strength="3"] circle:nth-child(2),
+    &[data-slds-strength="3"] circle:nth-child(3) {
+      animation-play-state: running;
+    }
+  }
+
+  &.slds-is-paused circle {
+    // scss-lint:disable ImportantRule
+    animation-play-state: paused !important;
+  }
+}
+
+// scss-lint:disable SingleLinePerProperty
+@keyframes slds-icon-strength-load {
+  from { fill: transparent; stroke: #ccc;    }
+  to   { fill: #22b0e6;   stroke: #22b0e6; }
+}

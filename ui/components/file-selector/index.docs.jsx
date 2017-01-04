@@ -16,7 +16,7 @@ import CodeBlock from 'app_modules/ui/code-block';
 
 export const intro = (
   <p className="site-text-introduction">
-    The File selector component allows the user to select files(s) from a users file system. Either natively using an file input or drag and drop.
+    The File selector component allows the user to select files(s) from a user’s file system. Either natively using an file input or drag and drop.
   </p>
 );
 

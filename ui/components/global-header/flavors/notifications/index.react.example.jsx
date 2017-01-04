@@ -63,8 +63,8 @@ let NotificationItem = props =>
   </li>;
 
 let PopoverMenu = props =>
-  <section className="slds-popover slds-popover--large slds-nubbin--top-right" role="dialog" style={{ position: 'absolute', right: '3.125rem' }}>
-    <div className="slds-popover__body slds-p-around--none">
+  <section className="slds-popover slds-popover--large slds-nubbin--top-right" role="dialog" aria-label="Notifications" aria-describedby="notifications-container" style={{ position: 'absolute', right: '3.125rem' }}>
+    <div id="notifications-container" className="slds-popover__body slds-p-around--none">
       <ul>
         {props.children}
       </ul>

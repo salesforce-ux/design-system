@@ -19,14 +19,17 @@ import classNames from 'classnames';
 
 export let UtilityBarItem = props =>
   <li className="slds-utility-bar__item">
-    <button className={classNames('slds-button slds-utility-bar__action', props.className)}>
+    <button
+      className={classNames('slds-button slds-utility-bar__action', props.active ? 'slds-is-active' : null)}
+      aria-pressed={ props.active ? true : false }
+    >
       <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol={ props.symbol } />
       { props.children }
     </button>
   </li>;
 
 export let UtilityBar = props =>
-  <footer className="slds-utility-bar_container" role="footer" aria-label="Utility Bar">
+  <footer className="slds-utility-bar_container" aria-label="Utility Bar">
     <h2 className="slds-assistive-text">Utility Bar</h2>
     <ul className="slds-utility-bar">
       { props.children }
@@ -58,7 +61,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '40px' }}>
         <UtilityBar>
-          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>

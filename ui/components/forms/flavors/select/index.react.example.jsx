@@ -40,7 +40,7 @@ export let Select = props =>
       aria-describedby={ props['aria-describedby'] }
       className={classNames('slds-select', props.className)}
       disabled={props.disabled}
-      id="select-01"
+      id={ props.id || 'select-01'}
       required={props.required}
       multiple={props.multiple}
     >

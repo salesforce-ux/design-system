@@ -226,7 +226,7 @@ class FAQ extends React.Component {
   render () {
     return (
       <PageBody {...this.props} anchorTitle="Frequently Asked Questions">
-        <div className="site site-main-content">
+        <div className="slds-container--large">
           {this.content}
         </div>
       </PageBody>

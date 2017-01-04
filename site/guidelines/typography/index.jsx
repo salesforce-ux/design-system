@@ -14,7 +14,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import PageBody from 'app_modules/site/components/page/body';
 
 export default (
-  <PageBody anchorTitle="Typography" contentClassName="site site-guidelines site-guidelines-layout">
+  <PageBody anchorTitle="Typography" contentClassName="site-guidelines site-guidelines-layout">
     <div className="slds-container--large">
       <p className="site-text-introduction">Text is the primary way that users digest content and accomplish work, so it’s important to use good typographic principles to establish a clear visual hierarchy and to maximize legibility.</p>
       <h2 className="site-text-heading--large">Salesforce Sans</h2>
@@ -31,17 +31,17 @@ export default (
       <p>We use different type sizes and weights to convey a visual</p>
       <div className="slds-p-vertical--x-large slds-m-bottom--medium">
           <h3 className="slds-text-heading--large slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Large</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Large</p>
           <h3 className="slds-text-heading--medium slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Medium</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Medium</p>
           <h3 className="slds-text-heading--small slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Small</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Small</p>
           <h3 className="slds-text-heading--label slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Heading Label</p>
+          <p className="site-text-heading--label slds-m-top--none">Heading Label</p>
           <h3 className="text-body--default slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Body Default</p>
+          <p className="site-text-heading--label slds-m-top--none">Body Default</p>
           <h3 className="slds-text-body--small slds-m-bottom--x-small">The quick brown fox jumps over the lazy dog.</h3>
-          <p className="site-text-heading--label m-top--reset">Body Small</p>
+          <p className="site-text-heading--label slds-m-top--none">Body Small</p>
       </div>
       <p>For more information about these styles, check out our <a href="/components/utilities/text/">CSS Text Utilities.</a></p>
 

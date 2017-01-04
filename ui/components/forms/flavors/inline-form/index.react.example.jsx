@@ -15,12 +15,12 @@ import Input from 'ui/components/forms/flavors/input/index.react';
 
 export default (
 <div className="demo-only">
-  <form className="slds-form--inline">
+  <div className="slds-form--inline">
     <Input label="Name" assistiveText="name" />
     <Input label="Email" assistiveText="email" />
     <div className="slds-form-element">
       <button type="button" className="slds-button slds-button--brand">Send</button>
     </div>
-  </form>
+  </div>
 </div>
 );

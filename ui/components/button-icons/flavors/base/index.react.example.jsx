@@ -35,13 +35,13 @@ export let ButtonIcon = props =>
     aria-pressed={ props['aria-pressed'] }
     aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
     tabIndex={ props.tabIndex }
-    title={ props.title || 'settings' } >
+    title={ props.title || 'Provide description of action' } >
     <SvgIcon
       className={classNames('slds-button__icon', props.iconClassName)}
       sprite="utility"
       symbol={ props.symbol || 'settings' } />
     { props.hasDropdown ? <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" /> : null }
-    <span className="slds-assistive-text">{ props.assistiveText || 'Settings' }</span>
+    <span className="slds-assistive-text">{ props.assistiveText || 'Provide description of action' }</span>
   </button>;
 
 ///////////////////////////////////////////

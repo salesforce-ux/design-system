@@ -7,7 +7,7 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.site-masthead {
+.site.site-masthead {
   padding: $spacing-medium $spacing-x-large;
   background-color: $color-background-alt-inverse;
   color: $color-text-inverse;
@@ -19,12 +19,8 @@
     }
     line-height: $line-height-heading;
   }
-}
 
-
-
-@include mq-medium-max {
-  .site-masthead {
+  @include mq-medium-max {
     display: block;
 
     .slds-media__figure {
@@ -39,12 +35,8 @@
       padding-top: $spacing-medium;
     }
   }
-}
 
-
-
-@include mq-medium-min {
-  .site-masthead {
+  @include mq-medium-min {
 
     .slds-media__figure {
       @include square($site-square-masthead-image);
@@ -56,12 +48,8 @@
       padding-left: $spacing-x-large;
     }
   }
-}
 
-
-
-@include mq-large-min {
-  .site-masthead {
+  @include mq-large-min {
     height: $site-height-masthead-header;
 
     h1 {

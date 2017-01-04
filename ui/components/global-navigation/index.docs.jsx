@@ -14,16 +14,16 @@ import ComponentDocs from 'app_modules/site/components/page/component/docs';
 import CodeClass from 'app_modules/site/components/code-class';
 import CodeBlock from 'app_modules/ui/code-block';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import _ from 'lodash';
 
 let NavigationBar = props =>
-<div className="docs-example slds-m-bottom--xx-large">
+<div className="site-docs-example slds-m-bottom--xx-large">
   <div className="slds-context-bar site-stencil__color-dark">
     <div className="slds-context-bar__primary slds-context-bar__item--divider-right slds-is-relative">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
         <div className="slds-context-bar__icon-action">
-          <WaffleIcon />
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
           <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -72,17 +72,17 @@ export default (
       <li><strong>Primary,</strong> which contains the App Launcher and App Name</li>
       <li><strong>Secondary,</strong> which contains the App Items, for navigating within the current app</li>
     </ul>
-    <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="slds-slds-context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="slds-context-bar__primary" />.</p>
+    <p>The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of <CodeClass className="context-bar" /> needs the appropriate ordering class name, e.g. <CodeClass className="context-bar__primary" />.</p>
 
     <h2 className="site-text-heading--label">1.1. Items on the Navigation Bar</h2>
     <NavigationBar showItems />
-    <p>Every item that sits on the horizontal axis of the navigation bar should receive the class <CodeClass className="slds-context-bar__item" />.</p>
-    <p>This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items <CodeClass className="slds-context-bar__label-action" /> and <CodeClass className="slds-context-bar__icon-action" /> to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.</p>
+    <p>Every item that sits on the horizontal axis of the navigation bar should receive the class <CodeClass className="context-bar__item" />.</p>
+    <p>This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" /> to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.</p>
     <p>Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as <code>.slds-order--[#]</code>.</p>
 
     <h2 className="site-text-heading--label">1.2. Building the Navigation Bar Item</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -91,7 +91,7 @@ export default (
       </div>
     </div>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -111,13 +111,13 @@ export default (
       <li>Individual text hyperlink to invokes link destination</li>
       <li>Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available</li>
     </ol>
-    <p>These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class <CodeClass className="slds-context-bar__label-action" /> and the icon based action area would get the class <CodeClass className="slds-context-bar__icon-action" />.</p>
-    <p>The <CodeClass className="slds-context-bar__icon-action" /> class handles the alignment and coloring of the icons based on interactions such as <code>:hover</code>, <code>:focus</code> and <code>:active</code>. This is a required if you have an actionable icon area adjacent to an actionable text area.</p>
+    <p>These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class <CodeClass className="context-bar__label-action" /> and the icon based action area would get the class <CodeClass className="context-bar__icon-action" />.</p>
+    <p>The <CodeClass className="context-bar__icon-action" /> class handles the alignment and coloring of the icons based on interactions such as <code>:hover</code>, <code>:focus</code> and <code>:active</code>. This is a required if you have an actionable icon area adjacent to an actionable text area.</p>
     <p>The markup structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as <code>.slds-order--[#]</code>.</p>
 
     <h2 className="site-text-heading--label">1.3. Building the Icons in the Navigation Bar</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -133,14 +133,14 @@ export default (
     </div>
 
     <p>The icons in the navigation bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.</p>
-    <p>The class used to indicate a button icon will sit adjacent to another actionable item is <CodeClass className="slds-context-bar__icon-action" />.  If you two icons in an item, each icon should be contained in it&rsquo;s own <CodeClass className="slds-context-bar__icon-action" /> element.</p>
+    <p>The class used to indicate a button icon will sit adjacent to another actionable item is <CodeClass className="context-bar__icon-action" />.  If you two icons in an item, each icon should be contained in it&rsquo;s own <CodeClass className="context-bar__icon-action" /> element.</p>
     <p>The look and feel of the button icon is dependant on the modifiers used from <a href="/components/buttons/#icon">Button Icon Variant Component</a> page.</p>
-    <p>The <CodeClass className="slds-context-bar__icon-action" /> styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class <CodeClass className="slds-p-left--none" />.</p>
-    <p>If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class <CodeClass className="slds-hint-parent" /> to the hover region, most cases would be <CodeClass className="slds-context-bar__icon-action" /> element.</p>
+    <p>The <CodeClass className="context-bar__icon-action" /> styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class <CodeClass className="p-left--none" />.</p>
+    <p>If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class <CodeClass className="hint-parent" /> to the hover region, most cases would be <CodeClass className="context-bar__icon-action" /> element.</p>
 
     <h2 className="site-text-heading--label">1.4. Menu trigger area on Navigation Bar Items</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large slds-m-left--large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-is-relative">
           <a className="slds-context-bar__label-action site-stencil__squeeze" href="javascript:void(0);">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</a>
@@ -157,19 +157,19 @@ export default (
 
     <p>When a navigation bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:</p>
     <ol>
-      <li><CodeClass className="slds-context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn&rsquo;t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar</li>
-      <li><CodeClass className="slds-dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
+      <li><CodeClass className="context-bar__dropdown-trigger" /> — Add a hoverable zone below the action so that the dropdown doesn&rsquo;t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar</li>
+      <li><CodeClass className="dropdown-trigger" /> — Globally used utility that notifies the element there is a dropdown menu </li>
       <li><code>.slds-dropdown-trigger--[interaction]</code> — Specify which type of interaction the menu should appear with &ldquo;hover&rdquo; or &ldquo;click&rdquo;. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.</li>
     </ol>
-    <p>If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the <CodeClass className="slds-context-bar__label-action" /> and <CodeClass className="slds-context-bar__icon-action" />. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the <CodeClass className="slds-context-bar__icon-action" />.</p>
+    <p>If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the <CodeClass className="context-bar__label-action" /> and <CodeClass className="context-bar__icon-action" />. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the <CodeClass className="context-bar__icon-action" />.</p>
 
     <h2 className="site-text-heading--label">1.5. Specifics of the Navigation Bar - App Launcher</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
             <div className="site-dimension site-dimension--absolute"><div className="site-dimension__line site-dimension__line--red"></div></div>
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
@@ -183,11 +183,11 @@ export default (
 
     <h2 className="site-text-heading--label">1.6. Specifics of the Navigation Bar - App Name</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -197,15 +197,15 @@ export default (
       </div>
     </div>
 
-    <p>The application name needs to receive the <CodeClass className="slds-context-bar__app-name" /> class. This class will handle such things as its unique font sizing and truncation widths.</p>
+    <p>The application name needs to receive the <CodeClass className="context-bar__app-name" /> class. This class will handle such things as its unique font sizing and truncation widths.</p>
 
     <h2 className="site-text-heading--label">1.7. Specifics of the Navigation Bar - Divider</h2>
 
-    <div className="docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
+    <div className="site-docs-example slds-m-bottom--xx-large" style={{ display: 'inline-flex' }}>
       <div className="slds-context-bar site-stencil__color-dark">
         <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover slds-is-relative">
           <div className="slds-context-bar__icon-action slds-is-relative">
-            <WaffleIcon />
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
           <span className="slds-context-bar__label-action slds-context-bar__app-name site-stencil__squeeze slds-is-relative">
             <span className="slds-truncate">🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢</span>
@@ -217,8 +217,8 @@ export default (
       </div>
     </div>
 
-    <p>Due to the platform-esc nature of the navigation bar, there is an available element utility to apply a divider between sections where needed. The <CodeClass className="slds-context-bar__vertical-divider" /> class should be applied to an empty <code>&lt;div&gt;</code> and placed within the markup of your navigation bar for a visual divider.</p>
-    <p>Alternatively, two classes are available to add border using css. Adding the class <CodeClass className="slds-context-bar__item--divider-left" /> will add a left border to a navigation bar item while <CodeClass className="slds-context-bar__item--divider-right" /> will add a right border.</p>
+    <p>Due to the platform-esc nature of the navigation bar, there is an available element utility to apply a divider between sections where needed. The <CodeClass className="context-bar__vertical-divider" /> class should be applied to an empty <code>&lt;div&gt;</code> and placed within the markup of your navigation bar for a visual divider.</p>
+    <p>Alternatively, two classes are available to add border using css. Adding the class <CodeClass className="context-bar__item--divider-left" /> will add a left border to a navigation bar item while <CodeClass className="context-bar__item--divider-right" /> will add a right border.</p>
 
   </ComponentDocs>
 );

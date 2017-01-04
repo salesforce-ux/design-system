@@ -16,6 +16,7 @@
     padding: $spacing-large $spacing-large $spacing-small;
     border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
     border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
+    border-bottom: 0;
   }
 
   .slds-popover__body {

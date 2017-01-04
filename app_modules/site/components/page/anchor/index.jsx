@@ -25,17 +25,15 @@ export default React.createClass({
 
   render() {
     return (
-      <header className="site-masthead slds-grid slds-wrap">
+      <header className="site site-masthead slds-grid slds-wrap">
         <div className="site-masthead-title slds-col slds-has-flexi-truncate slds-align-middle">
           <div className="slds-media slds-media--center slds-media--responsive">
             <span className="slds-media__figure">
               <img src={`/assets/images/header-${rootNavId(this.props.path)}.svg`} alt="" />
             </span>
             <div className="slds-media__body">
-              <div className="slds-grid">
-                <span className="slds-hide docsearch-category">{rootNavLabel(this.props.path)}</span>
-                <h1 title={this.props.title}>{this.props.title}</h1>
-              </div>
+              <span className="slds-hide docsearch-category">{rootNavLabel(this.props.path)}</span>
+              <h1 title={this.props.title}>{this.props.title}</h1>
             </div>
           </div>
         </div>

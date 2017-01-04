@@ -27,12 +27,11 @@ export let AppLauncherTile = props =>
   >
     <div className={classNames('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
       { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
-        <span className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</span>
+        <abbr className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</abbr>
       }
       { props.draggable ?
         <span className="slds-icon_container" title="Drag item to a new location">
           <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="rows" />
-          <span className="slds-assistive-text">Drag item to a new location</span>
         </span> : null}
     </div>
     <div className={classNames('slds-app-launcher__tile-body', props.flavor == 'small' ? 'slds-app-launcher__tile-body--small' : null)}>
@@ -51,7 +50,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27">
-          <span className="slds-text-link">Sales Cloud</span>
+          <h2 className="slds-text-link">Sales Cloud</h2>
           <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
         </AppLauncherTile>
       </div>
@@ -62,7 +61,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
-          <span className="slds-text-link">Sales Cloud</span>
+          <h2 className="slds-text-link">Sales Cloud</h2>
           <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
         </AppLauncherTile>
       </div>

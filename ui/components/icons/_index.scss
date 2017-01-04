@@ -23,8 +23,17 @@
 
 .slds-icon {
   @include square($square-icon-medium-boundary);
-  border-radius: $border-radius-medium;
   fill: $color-text-icon-inverse;
+}
+
+[class*='slds-icon-standard-'],
+[class*='slds-icon-action-'],
+[class*='slds-icon-custom-'] {
+
+  .slds-icon,
+  &.slds-icon {
+    border-radius: $border-radius-medium;
+  }
 }
 
 @each $name, $color in $bg-actions-map {
@@ -50,6 +59,16 @@
     color: $color-text-inverse; // This is for text based icon created with just the first letters of the words
   }
 }
+
+@include deprecate('3.0.0', 'This should be fixed at Theo’s level');
+$task2-monkey-patch: (
+  // The icon name is task2 but we had it as task-2
+  // (with an extra hyphen) so we're monkey patching the CSS to include the
+  // legacy token name in the CSS
+  'task-2': map-get($bg-standard-map, 'task2')
+);
+
+$bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 @each $name, $color in $bg-standard-map {
   .slds-icon-standard-#{$name} {

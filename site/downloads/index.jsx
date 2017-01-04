@@ -76,6 +76,7 @@ bower install salesforce-lightning-design-system --save
 
     <h3 className="site-text-heading--large" id="archives">Archives</h3>
     <ul className="slds-list--dotted">
+      <li><CTALink href="https://archive-2_1_4.lightningdesignsystem.com" eventType="SLDS-Archives">Version 2.1.4</CTALink></li>
       <li><CTALink href="https://archive-2_0_3.lightningdesignsystem.com" eventType="SLDS-Archives">Version 2.0.3</CTALink></li>
       <li><CTALink href="https://archive-1_0_5.lightningdesignsystem.com" eventType="SLDS-Archives">Version 1.0.5</CTALink></li>
       <li><CTALink href="http://design-system-v-0-12-2.herokuapp.com/" eventType="SLDS-Archives">Version 0.12.2</CTALink></li>

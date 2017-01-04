@@ -46,7 +46,7 @@ export let states = [
     label: 'With icon',
     element:
       <Pill>
-        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container" title="Account">
           <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
           <span className="slds-assistive-text">Account</span>
         </span>
@@ -57,7 +57,7 @@ export let states = [
     label: 'With portrait',
     element:
       <Pill>
-        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-m-right--xx-small">
+        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-m-right--xx-small" title="User avatar">
           <img
             alt="Person name"
             src="/assets/images/avatar2.jpg"
@@ -96,7 +96,7 @@ export let states = [
     label: 'Error',
     element:
       <Pill className="slds-has-error">
-        <span className="slds-icon_container slds-pill__icon_container slds-m-left--xx-small">
+        <span className="slds-icon_container slds-pill__icon_container slds-m-left--xx-small" title="Error">
           <SvgIcon className="icon-error slds-icon--x-small slds-icon-text-error" sprite="utility" symbol="warning" />
           <span className="slds-assistive-text">Warning</span>
         </span>

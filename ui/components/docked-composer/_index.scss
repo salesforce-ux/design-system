@@ -32,6 +32,14 @@
     height: 480px;
   }
 
+  &.slds-is-closed {
+
+    .slds-docked-composer__body,
+    .slds-docked-composer__footer {
+      display: none;
+    }
+  }
+
   + .slds-docked-composer {
     margin-left: $spacing-large;
   }

@@ -125,6 +125,7 @@ let SplitView = props =>
                 hasDropdown
                 className="slds-button--icon-inverse slds-button--icon-container-more"
                 symbol="side_list"
+                title="Change View"
                 assistiveText="Change View"
               />
             </div>
@@ -132,6 +133,7 @@ let SplitView = props =>
               <ButtonIcon
                 className="slds-button--icon-inverse slds-button--icon-container"
                 symbol="refresh"
+                title="Refresh Results"
                 assistiveText="Refresh Results"
               />
             </div>
@@ -160,7 +162,7 @@ let Row = props =>
         </abbr>
       : null }
       <div className="slds-grid slds-wrap">
-        <span role="rowheader" className="slds-truncate slds-text-body--regular slds-text-color--inverse" title={ props.name || 'Object Name' }>
+        <span className="slds-truncate slds-text-body--regular slds-text-color--inverse" title={ props.name || 'Object Name' }>
           { props.colOne || 'Column 1' }
         </span>
         <span className="slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>

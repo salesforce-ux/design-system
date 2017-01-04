@@ -47,7 +47,7 @@ const Footer = props =>
 
 export let DockedComposerPanel = props =>
   <section
-    className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className)}
+    className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className, props.dialogClosed ? 'slds-is-closed' : null)}
     role={ !props.nestedDialog ? 'dialog' : null}
     aria-labelledby={ !props.nestedDialog ? dialogHeadingId : null }
     aria-describedby={ !props.nestedDialog ? dialogBodyId : null }
@@ -60,6 +60,9 @@ export let DockedComposerPanel = props =>
           </span>
         </div>
         <div className="slds-media__body">
+          { props.dialogClosed ?
+            <span className="slds-assistive-text">Minimized</span>
+          : null }
           <h2 id={ dialogHeadingId }>{ props.header || 'Header' }</h2>
         </div>
       </div>
@@ -142,7 +145,10 @@ export let states = [
     element:
     <Demo>
       <div className="slds-docked_container">
-        <DockedComposerPanel footer={ <Footer /> }>
+        <DockedComposerPanel
+          dialogClosed
+          footer={ <Footer /> }
+        >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
       </div>

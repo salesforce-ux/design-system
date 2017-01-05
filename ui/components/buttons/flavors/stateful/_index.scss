@@ -9,6 +9,7 @@
 
 
 
+.slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
   border-color: transparent;
   background-color: transparent;
@@ -25,12 +26,14 @@
 }
 
 // Icon modifier for stateful buttons
+.slds-button__icon_stateful,
 .slds-button__icon--stateful {
   @include square($square-icon-small-content);
   fill: currentColor;
 }
 
 // Inverse Button
+.slds-button_inverse.slds-is-selected,
 .slds-button--inverse.slds-is-selected {
   border-color: transparent;
 }

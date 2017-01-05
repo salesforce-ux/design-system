@@ -9,6 +9,7 @@
 
 
 
+.slds-tabs_default,
 .slds-tabs--default {
   @include tabs;
 
@@ -62,11 +63,13 @@
     }
   }
 
+  .slds-tabs__item_overflow,
   .slds-tabs__item--overflow {
     overflow: visible;
   }
 }
 
+.slds-tabs_default__item,
 .slds-tabs--default__item {
   color: $color-text-action-label;
   position: relative;
@@ -90,6 +93,7 @@
       background-color: $color-brand-dark;
     }
 
+    .slds-tabs_default__link,
     .slds-tabs--default__link {
 
       &:hover {
@@ -118,10 +122,12 @@
   }
 }
 
+.slds-tabs_default__content,
 .slds-tabs--default__content {
   @include tabs-content;
 }
 
+.slds-tabs_default__link,
 .slds-tabs--default__link {
   @include tabs-link;
   height: $line-height-tab;

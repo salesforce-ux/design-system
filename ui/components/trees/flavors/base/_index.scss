@@ -14,6 +14,7 @@
   min-width: rem(120px);
   max-width: rem(400px);
 
+  > .slds-text-heading_label,
   > .slds-text-heading--label {
     margin-bottom: $spacing-x-small;
   }

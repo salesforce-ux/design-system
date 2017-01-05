@@ -21,6 +21,7 @@
 
   &__header,
   &__footer,
+  &__body_inner,
   &__body--inner {
     padding-left: $spacing-small;
     padding-right: $spacing-small;
@@ -55,6 +56,7 @@
     text-align: right;
   }
 
+  &_narrow,
   &--narrow {
 
     .slds-card__header {
@@ -77,6 +79,7 @@
   }
 
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
+    .slds-card_empty .slds-card__body,
     .slds-card--empty .slds-card__body {
       text-align: center;
     }

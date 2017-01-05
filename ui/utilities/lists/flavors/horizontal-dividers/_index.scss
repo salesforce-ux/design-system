@@ -9,19 +9,24 @@
 
 
 // Left horizontal dot separator
+.slds-has-dividers_left > .slds-list__item,
 .slds-has-dividers--left > .slds-list__item,
+.slds-has-dividers_left > .slds-item,
 .slds-has-dividers--left > .slds-item {
   @include dot-separator(left);
 }
 
 // Right horizontal dot separator
+.slds-has-dividers_right > .slds-list__item,
 .slds-has-dividers--right > .slds-list__item,
+.slds-has-dividers_right > .slds-item,
 .slds-has-dividers--right > .slds-item {
   @include dot-separator(right);
 }
 
 // Deprecate in 0.15.0
 @include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+  .slds-list_horizontal.slds-has-dividers > .slds-list__item,
   .slds-list--horizontal.slds-has-dividers > .slds-list__item {
     @include dot-separator;
   }

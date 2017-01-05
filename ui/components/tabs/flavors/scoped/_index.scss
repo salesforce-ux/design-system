@@ -9,6 +9,7 @@
 
 
 
+.slds-tabs_scoped,
 .slds-tabs--scoped {
   @include tabs;
 
@@ -75,20 +76,24 @@
   }
 }
 
+.slds-tabs_scoped__item,
 .slds-tabs--scoped__item {
   position: relative;
   margin-bottom: ($border-width-thin * -1);
 
+  + .slds-tabs_scoped__item,
   + .slds-tabs--scoped__item {
     margin-left: ($border-width-thin * -1);
   }
 
+  &:first-child .slds-tabs_scoped__link,
   &:first-child .slds-tabs--scoped__link {
     border-left: 0;
     border-radius: $border-radius-medium 0 0 0;
   }
 }
 
+.slds-tabs_scoped__content,
 .slds-tabs--scoped__content {
   background-color: $color-background-alt;
   border: $border-width-thin solid $color-border-button-default;
@@ -97,6 +102,7 @@
   padding: $spacing-medium;
 }
 
+.slds-tabs_scoped__link,
 .slds-tabs--scoped__link {
   @include tabs-link;
   height: $line-height-tab;
@@ -117,6 +123,7 @@
   }
 }
 
+.slds-active .slds-tabs_scoped__link,
 .slds-active .slds-tabs--scoped__link {
   background-color: $color-background-alt;
   color: $color-text-link;

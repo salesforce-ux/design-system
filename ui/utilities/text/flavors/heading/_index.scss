@@ -9,18 +9,21 @@
 
 
 
+.slds-text-heading_large,
 .slds-text-heading--large {
   font-weight: $font-weight-light;
   font-size: $font-size-xx-large;
   line-height: $line-height-heading;
 }
 
+.slds-text-heading_medium,
 .slds-text-heading--medium {
   font-weight: $font-weight-light;
   font-size: $font-size-x-large;
   line-height: $line-height-heading;
 }
 
+.slds-text-heading_small,
 .slds-text-heading--small {
   font-size: $font-size-large;
   line-height: $line-height-heading;
@@ -28,10 +31,12 @@
 
 @include  deprecate('4.0.0', 'Use slds text-title instead') {
 
+  .slds-text-heading_label,
   .slds-text-heading--label {
     @include text-heading--label;
   }
 
+  .slds-text-heading_label-normal,
   .slds-text-heading--label-normal {
     @include text-heading--label-normal;
   }

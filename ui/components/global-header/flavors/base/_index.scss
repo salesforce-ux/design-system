@@ -15,6 +15,7 @@
   z-index: $z-index-sticky;
 
   // Position for when assistive text becomes into focus
+  .slds-assistive-text_focus,
   .slds-assistive-text--focus {
     background: $color-background-alt;
     top: 0;
@@ -32,6 +33,7 @@
     padding: 0 $spacing-medium;
   }
 
+  &__item_search,
   &__item--search {
     flex: 0 1 rem(440px);
     padding: 0;
@@ -42,6 +44,7 @@
     width: rem(45px);
   }
 
+  &__button_icon,
   &__button--icon {
     margin: 0 $spacing-xx-small;
     color: $fill-header-button;
@@ -61,6 +64,7 @@
     }
   }
 
+  &__button_icon-actions,
   &__button--icon-actions {
     background: $fill-header-button;
     border-radius: $border-radius-medium;
@@ -73,6 +77,7 @@
     }
   }
 
+  &__button_icon-favorites,
   &__button--icon-favorites {
     color: $color-text-icon-inverse;
 

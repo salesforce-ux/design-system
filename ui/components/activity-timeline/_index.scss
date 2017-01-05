@@ -9,6 +9,7 @@
 
 
 
+.slds-media_timeline,
 .slds-media--timeline {
   padding-bottom: $spacing-large;
   @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
@@ -64,18 +65,22 @@
     color: $color-text-weak;
   }
 
+  &__media_call:before,
   &__media--call:before {
     background: $log-a-call;
   }
 
+  &__media_email:before,
   &__media--email:before {
     background: $email;
   }
 
+  &__media_event:before,
   &__media--event:before {
     background: $event;
   }
 
+  &__media_task:before,
   &__media--task:before {
     background: $task;
   }

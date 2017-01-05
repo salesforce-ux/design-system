@@ -63,6 +63,7 @@
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
+  &__tile_small,
   &__tile--small {
     flex-direction: column;
     border: 0;
@@ -73,17 +74,20 @@
     &:hover,
     &:focus {
 
+      .slds-app-launcher__tile-figure_small,
       .slds-app-launcher__tile-figure--small {
         border-color: $color-border-selection-hover;
       }
     }
   }
 
+  &__tile-figure_small,
   &__tile-figure--small {
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
   }
 
+  &__tile-body_small,
   &__tile-body--small {
     background: transparent;
     padding: $spacing-x-small 0;

@@ -14,6 +14,7 @@
   margin: auto;
 
   // When on a shaded background such as the modal footer
+  &_shade,
   &--shade {
 
     .slds-progress__item {
@@ -24,6 +25,7 @@
         background: $progress-color-background-shade;
       }
 
+      &.slds-is-completed .slds-progress__marker_icon,
       &.slds-is-completed .slds-progress__marker--icon {
         border-color: $progress-color-background-shade;
       }
@@ -78,6 +80,7 @@
     border-color: $progress-color-border-active;
   }
 
+  &.slds-is-completed .slds-progress__marker_icon,
   &.slds-is-completed .slds-progress__marker--icon {
     border-color: $progress-color-background;
     color: $progress-bar-color-background-fill;
@@ -121,6 +124,7 @@
   border: 4px solid $progress-color-border;
   vertical-align: middle;
 
+  &_icon,
   &--icon {
     @include square(auto);
   }
@@ -142,22 +146,27 @@
     height: 100%;
   }
 
+  &_x-small,
   &--x-small {
     height: $progress-bar-height;
   }
 
+  &_small,
   &--small {
     height: ($progress-bar-height * 2);
   }
 
+  &_medium,
   &--medium {
     height: ($progress-bar-height * 4);
   }
 
+  &_large,
   &--large {
     height: ($progress-bar-height * 6);
   }
 
+  &_circular,
   &--circular {
     border-radius: $border-radius-large;
 

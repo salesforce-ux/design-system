@@ -22,21 +22,25 @@
     color: currentColor;
   }
 
+  &_x-small,
   &--x-small {
     @include square($square-icon-x-small-boundary);
     font-size: $font-size-heading-xx-small;
   }
 
+  &_small,
   &--small {
     @include square($square-icon-small-boundary);
     font-size: $font-size-heading-xx-small;
   }
 
+  &_medium,
   &--medium {
     @include square($square-icon-medium-boundary);
     font-size: $font-size-heading-small;
   }
 
+  &_large,
   &--large {
     @include square($square-icon-large-boundary);
     font-size: $font-size-heading-medium;
@@ -44,11 +48,13 @@
     line-height: $line-height-heading;
   }
 
+  &_circle,
   &--circle {
     border-radius: $border-radius-circle;
   }
 
   // New in 2.0.0
+  &_empty,
   &--empty {
     border: $border-width-thin dashed $color-border;
   }

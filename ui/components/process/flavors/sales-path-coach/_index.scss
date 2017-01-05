@@ -9,6 +9,7 @@
 
 // New in 0.12.0
 
+.slds-tabs_path,
 .slds-tabs--path {
   @include tabs;
 
@@ -19,10 +20,12 @@
   .slds-is-complete {
     background-color: $color-background-path-complete;
 
+    .slds-tabs_path__stage,
     .slds-tabs--path__stage {
       transform: rotateX(0deg);
     }
 
+    .slds-tabs_path__title,
     .slds-tabs--path__title {
       transform: rotateX(180deg);
     }
@@ -30,10 +33,12 @@
     &:hover {
       background-color: $color-background-path-complete-hover;
 
+      .slds-tabs_path__stage,
       .slds-tabs--path__stage {
         transform: rotateX(-180deg);
       }
 
+      .slds-tabs_path__title,
       .slds-tabs--path__title {
         transform: rotateX(0deg);
       }
@@ -63,6 +68,7 @@
       background-color: $color-background-path-incomplete-hover;
     }
 
+    .slds-tabs_path__link,
     .slds-tabs--path__link {
       color: $color-text-default;
     }
@@ -77,6 +83,7 @@
   .slds-is-complete,
   .slds-is-lost {
 
+    .slds-tabs_path__link,
     .slds-tabs--path__link {
       color: $color-text-inverse;
     }
@@ -85,6 +92,7 @@
   .slds-is-active { // This class must be added with JS when a section of the sales path is clicked on to see the coaching information
     background-color: $color-background-inverse;
 
+    .slds-tabs_path__link,
     .slds-tabs--path__link {
       color: $color-text-inverse;
     }
@@ -92,11 +100,13 @@
     &:hover {
       background-color: $color-background-alt-inverse;
 
+      + .slds-tabs_path__item:before,
       + .slds-tabs--path__item:before {
         background-color: $color-background-alt-inverse;
       }
     }
 
+    + .slds-tabs_path__item:before,
     + .slds-tabs--path__item:before {
       background-color: $color-background-inverse;
     }
@@ -105,16 +115,19 @@
   .slds-is-active,
   .slds-is-won {
 
+    .slds-tabs_path__title,
     .slds-tabs--path__title {
       transform: rotateX(0deg);
     }
 
+    .slds-tabs_path__stage,
     .slds-tabs--path__stage {
       transform: rotateX(-180deg);
     }
   }
 }
 
+.slds-tabs_path__item,
 .slds-tabs--path__item {
   overflow: hidden;
   position: relative;
@@ -177,7 +190,9 @@
   }
 }
 
+.slds-tabs_path__title,
 .slds-tabs--path__title,
+.slds-tabs_path__stage,
 .slds-tabs--path__stage {
   display: block;
   transition: transform 0.2s linear;
@@ -188,10 +203,12 @@
   backface-visibility: hidden;
 }
 
+.slds-tabs_path__title,
 .slds-tabs--path__title {
   @include truncate;
 }
 
+.slds-tabs_path__stage,
 .slds-tabs--path__stage {
   position: absolute;
   top: 50%;
@@ -201,6 +218,7 @@
   transform: rotateX(-180deg);
 }
 
+.slds-tabs_path__link,
 .slds-tabs--path__link {
   display: flex;
   justify-content: center;
@@ -234,10 +252,12 @@
 }
 
 // @TODO: Move to global utility?
+.slds-flip_vertical,
 .slds-flip--vertical {
   transform: rotateX(180deg);
 }
 
+.slds-flip_horizontal,
 .slds-flip--horizontal {
   transform: rotateY(180deg);
 }
@@ -256,6 +276,7 @@
   }
 }
 
+.slds-tabs_path__content,
 .slds-tabs--path__content {
   position: relative;
   padding-left: $spacing-large;

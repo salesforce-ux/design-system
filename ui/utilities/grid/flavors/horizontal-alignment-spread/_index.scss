@@ -9,10 +9,12 @@
 
 
 
+.slds-grid_align-spread,
 .slds-grid--align-spread {
   justify-content: space-between;
 
   .slds-col,
+  [class*="slds-col_padded"],
   [class*="slds-col--padded"] {
     flex-grow: 0;
   }

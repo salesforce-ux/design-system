@@ -79,7 +79,7 @@ export default (
             <h2 className="site-text-heading--medium slds-p-top--x-large">Table Layouts</h2>
             <p>Use a table layout for flexibly viewing and managing large sets of data. The layout uses 100% of the viewport. Items are displayed as rows with their fields organized in columns.</p>
             <p>The columns are fixed width and use as much horizontal space as necessary. Columns do not resize when the window changes width. Users can choose which columns to show and how wide each column is. If the grid is wider than the viewport, users horizontally scroll to see more data.</p>
-            <p>The table can be of infinite length. Data is loaded as the user scrolls.</p>
+            <p>The table can be of infinite length. Data is loaded as the user scrolls. This lets your users access their data most efficiently. Avoid using manual pagination controls, which reduce efficiency.</p>
           </div>
           <figure className="slds-size--1-of-1 slds-medium-size--1-of-3 slds-shrink-none">
             <img className="slds-image" src="/assets/images/layout/img-table-layout.svg" alt="Wireframe image of table layout design" />

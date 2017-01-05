@@ -1,0 +1,32 @@
+description: This table gives you a quick overview of the {{abbreviatedName}} CSS classes that can be applied to this component.
+classes:
+  -
+    class: slds-progress-bar
+    description: Initializes progress bar
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress-bar--x-small
+    description: Creates a progress bar height at the smaller .125rem (2px) size
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress-bar--small
+    description: Creates a progress bar height at the smaller .25rem (4px) size
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress-bar--medium
+    description: Creates a progress bar height at the smaller .5rem (8px) size
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress-bar--large
+    description: Creates a progress bar height at the smaller .75rem (12px) size
+    required: true
+    applied: <code>&lt;div&gt;</code>
+  -
+    class: slds-progress-bar--circular
+    description: Adds a border radius to the progress bar to give it a circular look
+    required: true
+    applied: <code>&lt;div&gt;</code>

@@ -134,12 +134,36 @@
   background: $progress-bar-color-background;
   border: 0;
   appearance: none;
-  height: $progress-bar-height;
   position: relative;
 
   .slds-progress-bar__value {
     display: block;
     background: $progress-bar-color-background-fill;
+    height: 100%;
+  }
+
+  &--x-small {
     height: $progress-bar-height;
   }
+
+  &--small {
+    height: ($progress-bar-height * 2);
+  }
+
+  &--medium {
+    height: ($progress-bar-height * 4);
+  }
+
+  &--large {
+    height: ($progress-bar-height * 6);
+  }
+
+  &--circular {
+    border-radius: $border-radius-large;
+
+    .slds-progress-bar__value {
+      border-radius: $border-radius-large;
+    }
+  }
+
 }

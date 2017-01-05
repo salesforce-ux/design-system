@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
+import { ProgressBar } from 'ui/components/progress-bar/flavors/base/index.react.example';
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -24,11 +25,7 @@ export let Progress = props =>
     <ol className="slds-progress__list">
       { props.children }
     </ol>
-    <div className="slds-progress-bar">
-      <span className="slds-progress-bar__value" style={{ width: props.value + '%' }}>
-        <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
-      </span>
-    </div>
+    <ProgressBar className="slds-progress-bar--x-small" value={props.value} />
   </div>;
 
 export let Step = props =>

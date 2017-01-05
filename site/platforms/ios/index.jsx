@@ -25,8 +25,8 @@ export default (
         <div className="site-menu--jump-links">
           <ul className="slds-list--vertical slds-has-block-links">
             <li><a href="#setup">Setup</a></li>
-            <li><a href="#obj-c-usage">Obj-C Usage</a></li>
             <li><a href="#swift-usage">Swift Usage</a></li>
+            <li><a href="#obj-c-usage">Obj-C Usage</a></li>
           </ul>
         </div>
       </StickyNav>
@@ -77,6 +77,105 @@ pod 'DesignSystem'
 
 pod install
 
+          `}</CodeBlock>
+        </div>
+
+              <div className="slds-container--large">
+          <Heading textLabel="Swift Usage" type="h2" id="swift-usage" className="site-text-heading--large">
+            Swift Usage
+          </Heading>
+        </div>
+
+        <Heading textLabel="Swift Integration" type="h3" id="swift-integration" className="site-text-heading--medium">
+          Swift Integration
+        </Heading>
+
+        <p className="slds-m-top--small">To use the SLDS library in Swift, create a bridging header:</p>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+#ifndef slds_bridging_header_h
+#define slds_bridging_header_h
+
+#import <SalesforceDesignSystem/SalesforceDesignSystemExtended.h>
+
+#endif
+          `}</CodeBlock>
+        </div>
+
+        <ol>
+          <li>Create slds-bridging-header.h.</li>
+          <li>In build settings, locate the “Swift Compiler – Code Generation” section.</li>
+          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. slds-bridging-header.h).</li>
+        </ol>
+
+        <p>SLDS extensions and constants are now accessible to all files in your project/workspace. There is no need to import the Design system to each file.</p>
+
+        <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
+          Colors
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let textColor = UIColor.sldsColorText(.default)
+
+let borderColor = UIColor.sldsColorBorder(.brand)
+
+let backgroundColor = UIColor.sldsColorBackground(.brand)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
+          Fonts and Text Sizes
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+label.font = UIFont.sldsFont(.bold, with: .medium)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
+          Icons
+        </Heading>
+
+        <h4 className="site-text-heading--label">Action Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Custom Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.custom1, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Standard Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.account, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Utility Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
           `}</CodeBlock>
         </div>
 
@@ -195,106 +294,6 @@ UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSi
 UIImage* utilityIcon = [UIImage sldsIconUtility:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
-
-      <div className="slds-container--large">
-          <Heading textLabel="Swift Usage" type="h2" id="swift-usage" className="site-text-heading--large">
-            Swift Usage
-          </Heading>
-        </div>
-
-        <Heading textLabel="Swift Integration" type="h3" id="swift-integration" className="site-text-heading--medium">
-          Swift Integration
-        </Heading>
-
-        <p className="slds-m-top--small">To use the SLDS library in Swift, create a bridging header:</p>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#ifndef slds_bridging_header_h
-#define slds_bridging_header_h
-
-#import <SalesforceDesignSystem/SalesforceDesignSystemExtended.h>
-
-#endif
-          `}</CodeBlock>
-        </div>
-
-        <ol>
-          <li>Create slds-bridging-header.h.</li>
-          <li>In build settings, locate the “Swift Compiler – Code Generation” section.</li>
-          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. slds-bridging-header.h).</li>
-        </ol>
-
-        <p>SLDS extensions and constants are now accessible to all files in your project/workspace. There is no need to import the Design system to each file.</p>
-
-        <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
-          Colors
-        </Heading>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-let textColor = UIColor.sldsColorText(.default)
-
-let borderColor = UIColor.sldsColorBorder(.brand)
-
-let backgroundColor = UIColor.sldsColorBackground(.brand)
-          `}</CodeBlock>
-        </div>
-
-        <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-          Fonts and Text Sizes
-        </Heading>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-label.font = UIFont.sldsFont(.bold, with: .medium)
-          `}</CodeBlock>
-        </div>
-
-        <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
-          Icons
-        </Heading>
-
-        <h4 className="site-text-heading--label">Action Icons</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
-
-let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Custom Icons</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-let icon = UIImage.sldsIconAction(.custom1, withSize: SLDSSquareIconLarge)
-
-let iconWithColor = UIImage.sldsIconAction(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Standard Icons</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-let icon = UIImage.sldsIconAction(.account, withSize: SLDSSquareIconLarge)
-
-let iconWithColor = UIImage.sldsIconAction(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Utility Icons</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
-
-let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
-          `}</CodeBlock>
-        </div>
-
       </div>
 
     </div>

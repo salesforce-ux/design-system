@@ -16,6 +16,8 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
 import g from 'app_modules/global';
 
+
+
 export default (
   <PageBody anchorTitle="iOS">
     <div className="slds-grid slds-wrap">
@@ -23,14 +25,8 @@ export default (
         <div className="site-menu--jump-links">
           <ul className="slds-list--vertical slds-has-block-links">
             <li><a href="#setup">Setup</a></li>
-            <li>
-              <a href="#usage">Usage</a>
-              <ul>
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#fonts">Fonts and Text Sizes</a></li>
-                <li><a href="#icons">Icons</a></li>
-              </ul>
-            </li>
+            <li><a href="#obj-c-usage">Obj-C Usage</a></li>
+            <li><a href="#swift-usage">Swift Usage</a></li>
           </ul>
         </div>
       </StickyNav>
@@ -51,6 +47,11 @@ export default (
             <li>The {g.displayName} Icons</li>
             <li>Helper Classes</li>
           </ul>
+
+          <p>While we encourage a holistic integration of the entire design system,
+          you are free to include as many or as few of the following modules
+          as you need in your app. Each module will import a small subset
+          of design tokens or icons.</p>
 
           <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
             Setup
@@ -80,14 +81,9 @@ pod install
         </div>
 
         <div className="slds-container--large">
-          <Heading textLabel="Usage" type="h2" id="usage" className="site-text-heading--large">
-            Usage
+          <Heading textLabel="Obj-C Usage" type="h2" id="obj-c-usage" className="site-text-heading--large">
+            Obj-C Usage
           </Heading>
-
-          <p>While we encourage a holistic integration of the entire design system,
-          you are free to include as many or as few of the following modules
-          as you need in your app. Each module will import a small subset
-          of design tokens or icons.</p>
         </div>
 
         <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
@@ -114,7 +110,7 @@ UIColor* c = [UIColor sldsColorText:SLDSColorTextInverse];
 
 ...
 
-UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
+UIColor* c = [UIColor sldsColorBackground:SLDSColorBackgroundAltInverse];
           `}</CodeBlock>
         </div>
 
@@ -126,44 +122,7 @@ UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
 
 ...
 
-UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Button Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsButtonColor:SLDSColorBtnBackgroundButtonBrand];
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Input Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
-
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Messaging Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
+UIColor* c = [UIColor sldsColorBorder:SLDSColorBorderBrand];
           `}</CodeBlock>
         </div>
 
@@ -236,7 +195,108 @@ UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSi
 UIImage* utilityIcon = [UIImage sldsIconUtility:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
+
+      <div className="slds-container--large">
+          <Heading textLabel="Swift Usage" type="h2" id="swift-usage" className="site-text-heading--large">
+            Swift Usage
+          </Heading>
+        </div>
+
+        <Heading textLabel="Swift Integration" type="h3" id="swift-integration" className="site-text-heading--medium">
+          Swift Integration
+        </Heading>
+
+        <p className="slds-m-top--small">To use the SLDS library in Swift, create a bridging header:</p>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+#ifndef slds_bridging_header_h
+#define slds_bridging_header_h
+
+#import <SalesforceDesignSystem/SalesforceDesignSystemExtended.h>
+
+#endif
+          `}</CodeBlock>
+        </div>
+
+        <ol>
+          <li>Create slds-bridging-header.h.</li>
+          <li>In build settings, locate the “Swift Compiler – Code Generation” section.</li>
+          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. slds-bridging-header.h).</li>
+        </ol>
+
+        <p>SLDS extensions and constants are now accessible to all files in your project/workspace. There is no need to import the Design system to each file.</p>
+
+        <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
+          Colors
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let textColor = UIColor.sldsColorText(.default)
+
+let borderColor = UIColor.sldsColorBorder(.brand)
+
+let backgroundColor = UIColor.sldsColorBackground(.brand)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
+          Fonts and Text Sizes
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+label.font = UIFont.sldsFont(.bold, with: .medium)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
+          Icons
+        </Heading>
+
+        <h4 className="site-text-heading--label">Action Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Custom Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.custom1, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Standard Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.account, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Utility Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
       </div>
+
     </div>
   </PageBody>
 );

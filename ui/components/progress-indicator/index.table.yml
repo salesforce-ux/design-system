@@ -36,10 +36,10 @@ classes:
     description: Stateful class for the active step
     required: true
     applied: <code>slds-progress__item</code>
-    notes: Class should be applied thought JavaScript
+    notes: Class should be applied through JavaScript
   -
     class: slds-is-completed
     description: Stateful class for a completed step, <code>.slds-progress__item</code> should receive a success icon at this point
     required: true
     applied: <code>slds-progress__item</code>
-    notes: Class should be applied thought JavaScript
+    notes: Class should be applied through JavaScript

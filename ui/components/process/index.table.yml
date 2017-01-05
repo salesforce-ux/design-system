@@ -101,4 +101,4 @@ classes:
     description: Stateful class that turns dot indicator and progress bar blue
     required: true
     applied: <code>slds-wizard__item</code>
-    notes: Class should be applied thought JavaScript
+    notes: Class should be applied through JavaScript

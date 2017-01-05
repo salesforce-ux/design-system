@@ -46,6 +46,8 @@
   // Modifying .slds-notify when inside a region with the
   // class .slds-region--narrow
   .slds-notify {
-    min-width: 22.5rem;
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
   }
 }

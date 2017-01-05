@@ -120,9 +120,9 @@ let ErrorWithDetails = props =>
 </div>;
 
 let Small = props =>
-<div className="demo-only" style={{height: demoHeight}}>
-  <div className="slds-region_narrow">
-    <div className="slds-notify_container">
+<div className="demo-only" style={{height: 4 + 'rem', width: 25 + 'rem'}}>
+  <div className="slds-region_narrow slds-is-relative">
+    <div className="slds-notify_container slds-is-absolute">
       <div className="slds-notify slds-notify--toast" role="alert">
         <span className="slds-assistive-text">Small width</span>
         <ButtonIcon

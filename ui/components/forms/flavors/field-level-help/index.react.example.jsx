@@ -19,16 +19,30 @@ export default (
         <label className="slds-align-middle" htmlFor="form-help">Text Label</label>
       </div>
       <div className="slds-form-element__icon">
-        <a href="javascript:void(0);">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="info" />
+        <button aria-describedby="help" className="slds-button slds-button--icon">
+          <SvgIcon
+            className="slds-icon slds-icon--x-small slds-icon-text-default"
+            sprite="utility"
+            symbol="info"
+          />
           <span className="slds-assistive-text">Help</span>
-        </a>
+        </button>
       </div>
       <div className="slds-form-element__control">
-        <input id="form-help" className="slds-input" type="text" placeholder="Field Level Help" aria-describedby="help" />
+        <input
+          className="slds-input"
+          id="form-help"
+          placeholder="Field Level Help"
+          type="text"
+        />
       </div>
     </div>
-    <div id="help" className="slds-popover slds-popover--tooltip slds-nubbin--bottom-left" role="tooltip" aria-live="polite" style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}>
+    <div
+      className="slds-popover slds-popover--tooltip slds-nubbin--bottom-left"
+      id="help"
+      role="tooltip"
+      style={{position: 'absolute', top: '15px', left: '103px', marginLeft: '-1rem', width: '20rem'}}
+    >
       <div className="slds-popover__body slds-text-longform">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
       </div>

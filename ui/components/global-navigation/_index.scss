@@ -204,12 +204,6 @@
   // Button inside of actionable container
   .slds-context-bar__button {
     color: inherit;
-
-    // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
-    // Setting custom focus thats specific to context bar
-    &:focus {
-      box-shadow: none;
-    }
   }
 
   // Workspace tabs

@@ -21,14 +21,22 @@ The following classes are now available:
 
 The following changes have been made in this release:
 
-- Rounded corners have been removed from utility icons so that they no longer 
+- Global Navigation Accessibility Fixes:
+  - The app switcher (`slds-icon-waffle_container`) uses a button instead of
+    an anchor element.
+  - Removed `aria-haspopup=true` from dropdown `li`.
+  - Removed `tabindex="0"` from `slds-context-bar__icon-action`.
+  - Removed `tabindex="-1"` from `slds-context-bar__icon-action`'s button.
+  - Add `aria-haspopup="true"` to `slds-context-bar__icon-action`'s button.
+  - Add assistive text to active item for Current page.
+- Rounded corners have been removed from utility icons so that they no longer
   clip incorrectly.
 
 **FIXED**
 
 The following issues have now been resolved:
 
-- Remove `aria-haspopup="true"` from `slds-context-bar__icon-action`'s button 
+- Remove `aria-haspopup="true"` from `slds-context-bar__icon-action`'s button
   global nav tab bar.
 - Change assistive text on above mentioned button to `New Tab`.
 - Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)

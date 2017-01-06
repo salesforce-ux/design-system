@@ -13,10 +13,9 @@ import React from 'react';
 import classNames from 'classnames';
 
 export let WaffleIcon = props =>
-  <a
+  <button
     {...props}
-    href="javascript:void(0);"
-    className={classNames('slds-icon-waffle_container', props.className)}
+    className={classNames('slds-button slds-icon-waffle_container', props.className)}
     title="Description of the icon when needed">
     <div className="slds-icon-waffle">
       <div className="slds-r1"></div>
@@ -30,7 +29,7 @@ export let WaffleIcon = props =>
       <div className="slds-r9"></div>
     </div>
     <span className="slds-assistive-text">Open App Launcher</span>
-  </a>;
+  </button>;
 
 export default (
   <div className="demo-only" style={{ height: '2rem' }}>

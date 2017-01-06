@@ -133,7 +133,14 @@ export let states = [
 
         <li>
           <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-            <ButtonIcon className="slds-button--icon-border" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
+            <ButtonIcon
+              className="slds-button--icon-border"
+              assistiveText="More Actions"
+              disabled
+              aria-haspopup="true"
+              symbol="down"
+              title="More Actions"
+            />
           </div>
         </li>
       </ButtonGroupList>
@@ -158,7 +165,13 @@ export let states = [
 
           <li>
             <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-              <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+              <ButtonIcon
+                className="slds-button--icon-border-inverse"
+                assistiveText="More Actions"
+                aria-haspopup="true"
+                symbol="down"
+                title="More Actions"
+              />
             </div>
           </li>
         </ButtonGroupList>
@@ -184,7 +197,13 @@ export let states = [
 
           <li>
             <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-              <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" aria-haspopup="true" symbol="down" />
+              <ButtonIcon
+                className="slds-button--icon-border-inverse"
+                assistiveText="More Actions"
+                aria-haspopup="true"
+                symbol="down"
+                title="More Actions"
+              />
             </div>
           </li>
         </ButtonGroupList>
@@ -210,7 +229,14 @@ export let states = [
 
           <li>
             <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
-              <ButtonIcon className="slds-button--icon-border-inverse" assistiveText="More Actions" disabled aria-haspopup="true" symbol="down" />
+              <ButtonIcon
+                className="slds-button--icon-border-inverse"
+                assistiveText="More Actions"
+                disabled
+                aria-haspopup="true"
+                symbol="down"
+                title="More Actions"
+              />
             </div>
           </li>
         </ButtonGroupList>

@@ -43,7 +43,9 @@ export let UtilityPanel = props =>
         <ButtonIcon
           className="slds-button--icon"
           symbol="minimize_window"
-          assistiveText="Minimize Panel" />
+          assistiveText="Close Panel"
+          title="Close Panel"
+        />
       </div>
     </header>
     <div className="slds-utility-panel__body">

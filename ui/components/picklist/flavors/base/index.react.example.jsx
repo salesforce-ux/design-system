@@ -84,6 +84,7 @@ let ComboboxSearchInput = props =>
           className="slds-input__icon slds-text-color--default"
           symbol="down"
           assistiveText="Expand category options"
+          title="Expand category options"
           aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
           iconClassName="slds-button__icon"
           tabIndex="-1"

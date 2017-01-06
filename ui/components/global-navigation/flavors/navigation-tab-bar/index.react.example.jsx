@@ -38,7 +38,9 @@ let ContextTab = props =>
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="chevrondown"
         aria-haspopup="true"
-        assistiveText={ 'Actions for ' + props.title } />
+        assistiveText={ 'Actions for ' + props.title }
+        title={ 'Actions for ' + props.title }
+      />
       <Menu className="slds-dropdown--right">
         <MenuList>
           <MenuItem>Refresh Tab</MenuItem>
@@ -52,7 +54,9 @@ let ContextTab = props =>
         className="slds-button--icon-container slds-button--icon-x-small"
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="close"
-        assistiveText={ 'Close ' + props.title } />
+        assistiveText={ 'Close ' + props.title }
+        title={ 'Close ' + props.title }
+      />
     </div>
   </li>;
 
@@ -83,7 +87,9 @@ export let ContextTabBar = props =>
             className="slds-button--icon-container slds-button--icon-x-small"
             symbol="chevrondown"
             aria-haspopup="true"
-            assistiveText="Open object switcher menu" />
+            assistiveText="Open object switcher menu"
+            title="Open object switcher menu"
+          />
         </div>
         <Menu className="slds-dropdown--right">
           <MenuList>
@@ -108,7 +114,9 @@ export let ContextTabBar = props =>
             className={ classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
             aria-haspopup="true"
-            assistiveText="Toggle split view" />
+            assistiveText="Toggle split view"
+            title="Toggle split view"
+          />
         </div>
       </div>
       <div className="slds-context-bar__vertical-divider"></div>
@@ -117,7 +125,9 @@ export let ContextTabBar = props =>
           <ButtonIcon
             className="slds-button--icon-container slds-button--icon-small"
             symbol="add"
-            assistiveText="New Tab" />
+            assistiveText="Open a New Tab"
+            title="Open a New Tab"
+          />
         </div>
         { props.addTabActive ?
           <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>

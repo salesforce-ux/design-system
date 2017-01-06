@@ -80,6 +80,7 @@ let SplitView = props =>
       iconClassName="slds-button__icon--x-small"
       symbol="left"
       assistiveText={ props.hidden ? 'Open Split View' : 'Close Split View' }
+      title={ props.hidden ? 'Open Split View' : 'Close Split View' }
     />
     <article
       aria-hidden={ props.hidden ? 'true' : 'false' }

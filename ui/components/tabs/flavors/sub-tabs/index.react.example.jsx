@@ -45,6 +45,7 @@ let Subtab = props =>
           symbol="chevrondown"
           aria-haspopup="true"
           assistiveText={ 'Actions for ' + props.title }
+          title={ 'Actions for ' + props.title }
         />
       </div>
     : null }
@@ -54,6 +55,7 @@ let Subtab = props =>
         tabIndex={ props.active ? '0' : '-1' }
         symbol="close"
         assistiveText={ 'Close ' + props.title }
+        title={ 'Close ' + props.title }
       />
     </div>
   </li>;

@@ -17,7 +17,7 @@ import classNames from 'classnames';
 //////////////////////////////////////////////
 
 export let ProgressBar = props =>
-  <div className={classNames('slds-progress-bar', props.className)}>
+  <div className={classNames('slds-progress-bar', props.className)} aria-valuemin="0" aria-valuemax="100" aria-valuenow={props.value} role="progressbar">
     <span className="slds-progress-bar__value" style={{ width: props.value + '%' }}>
       <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
     </span>

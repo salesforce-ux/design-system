@@ -12,6 +12,7 @@ The following site enhancements are now available:
 **NEW COMPONENTS AND VARIANTS**
 
 The following components are now available:
+- Added Progress Bar - [Progress Bar](/components/progress-bar)
 
 **ADDED**
 

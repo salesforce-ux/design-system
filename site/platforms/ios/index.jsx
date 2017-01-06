@@ -25,7 +25,7 @@ export default (
             <li><a href="#setup">Setup</a></li>
             <li>
               <a href="#usage">Usage</a>
-              <ul>
+              <ul className="slds-list--vertical slds-has-block-links slds-is-nested">
                 <li><a href="#colors">Colors</a></li>
                 <li><a href="#fonts">Fonts and Text Sizes</a></li>
                 <li><a href="#icons">Icons</a></li>

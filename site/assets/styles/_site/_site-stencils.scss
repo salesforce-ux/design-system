@@ -113,6 +113,11 @@ $stencil-dark:  #a8b8d0 !default;
     &__squeeze {
       letter-spacing: -2px;
     }
+
+    // scss-lint:disable SelectorDepth
+    .slds-picklist .slds-button {
+      display: block;
+    }
   }
 
   .site-list--reset {

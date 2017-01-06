@@ -28,7 +28,7 @@ export let Toast = props => {
   } = props;
 
   return (
-    <div className={ classNames('slds-notify_container slds-is-relative', containerClassName) }>
+    <div className={ classNames('slds-notify_container', containerClassName) }>
       <div className={ classNames('slds-notify slds-notify--toast', className, type ? 'slds-theme--' + type : null) } role="alert">
         <span className="slds-assistive-text">{ type || 'info' }</span>
         { children }
@@ -54,7 +54,7 @@ export let states = [
     label: 'Informational',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="info">
+        <Toast type="info" containerClassName="slds-is-relative">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
@@ -71,7 +71,7 @@ export let states = [
     label: 'Success',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="success">
+        <Toast type="success" containerClassName="slds-is-relative">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
@@ -88,7 +88,7 @@ export let states = [
     label: 'Warning',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="warning">
+        <Toast type="warning" containerClassName="slds-is-relative">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
@@ -105,7 +105,7 @@ export let states = [
     label: 'Error',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="error">
+        <Toast type="error" containerClassName="slds-is-relative">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
@@ -122,7 +122,7 @@ export let states = [
     label: 'Error With Details',
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="error">
+        <Toast type="error" containerClassName="slds-is-relative">
           <SvgIcon
             className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
             sprite="utility"
@@ -133,6 +133,20 @@ export let states = [
             <p>Here's some detail of what happened, being very descriptive and transparent.</p>
           </div>
         </Toast>
+      </div>
+  },
+  {
+    id: 'small',
+    label: 'Small Column',
+    element:
+      <div className="demo-only" style={{ height: '4rem', width: '25rem' }}>
+        <div className="slds-region_narrow slds-is-relative">
+          <Toast type="info" containerClassName="slds-is-absolute">
+            <div className="slds-notify__content">
+              <h2 className="slds-text-heading--small">26 potential duplicate leads were found.</h2>
+            </div>
+          </Toast>
+        </div>
       </div>
   }
 ];

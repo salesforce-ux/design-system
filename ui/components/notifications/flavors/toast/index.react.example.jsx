@@ -119,6 +119,26 @@ let ErrorWithDetails = props =>
   </div>
 </div>;
 
+let Small = props =>
+<div className="demo-only" style={{height: 4 + 'rem', width: 25 + 'rem'}}>
+  <div className="slds-region_narrow slds-is-relative">
+    <div className="slds-notify_container slds-is-absolute">
+      <div className="slds-notify slds-notify--toast" role="alert">
+        <span className="slds-assistive-text">Small width</span>
+        <ButtonIcon
+          className="slds-notify__close slds-button--icon-inverse"
+          iconClassName="slds-button__icon--large"
+          symbol="close"
+          assistiveText="Close"
+          title="Close" />
+        <div className="slds-notify__content">
+          <h2 className="slds-text-heading--small">Base Toast</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>;
+
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
@@ -148,5 +168,10 @@ export let states = [
     id: 'error-with-details',
     label: 'Error With Details',
     element: <ErrorWithDetails />
+  },
+  {
+    id: 'small',
+    label: 'Small Column',
+    element: <Small />
   }
 ];

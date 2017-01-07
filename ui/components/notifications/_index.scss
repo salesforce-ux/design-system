@@ -36,3 +36,14 @@
     margin-left: $spacing-xx-small;
   }
 }
+
+.slds-region_narrow {
+
+  // Modifying .slds-notify when inside a region with the
+  // class .slds-region--narrow
+  .slds-notify {
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+}

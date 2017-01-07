@@ -18,6 +18,9 @@
     display: flex;
     align-items: center;
     font-size: $font-size-large;
+    line-height: $line-height-button; // Same height as title-action
+    border: $border-width-thin solid transparent;
+    border-radius: $border-radius-medium;
   }
 
   &__title-action {

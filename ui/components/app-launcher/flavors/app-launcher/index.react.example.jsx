@@ -50,48 +50,20 @@ let AppLauncherModal = props =>
             {props.dragDropInstructions}
           </div>
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-27" grabbed={props.grabbed} objectInitials="SC" referenceId={props.dragDropId}>
-                <span className="slds-text-link">Sales Cloud</span>
-                <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-59" objectInitials="MC" referenceId={props.dragDropId}>
-                <span className="slds-text-link">Marketing Cloud</span>
-                <p>Salesforce Marketing Cloud lets businesses of any size...<span className="slds-text-link">More</span></p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-10" objectInitials="HR" referenceId={props.dragDropId}>
-                <span className="slds-text-link">HR Concierge</span>
-                <p>Community for managing employee benefits and time off.</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-6" objectInitials="MM" referenceId={props.dragDropId}>
-                <span className="slds-text-link">My Money</span>
-                <p>Manage your finances across multiple financial platforms...<span className="slds-text-link">More</span></p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-91" objectInitials="CC" referenceId={props.dragDropId}>
-                <span className="slds-text-link">Call Center</span>
-                <p>The key to call center and contact center management is more...<span className="slds-text-link">More</span></p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-              <AppLauncherTile draggable figureClass="slds-icon-custom-50" objectInitials="CS" referenceId={props.dragDropId}>
-                <span className="slds-text-link">Customer Support Communitiy</span>
-                <p>Areas of Focus are used to track customer support for your...<span className="slds-text-link">More</span></p>
-              </AppLauncherTile>
-            </li>
+            {props.appTiles.map(tile => {
+              return (
+                <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+                  <AppLauncherTile draggable figureClass={tile.figureClass} grabbed={tile.grabbed} objectInitials={tile.initials} referenceId={tile.dragDropId}>
+                    <span className="slds-text-link">{tile.label}</span>
+                    <p>{tile.description}<span className="slds-text-link">More</span></p>
+                  </AppLauncherTile>
+                </li>
+              );
+            })}
           </ul>
         </SectionContent>
       </Section>
-
       <hr />
-
       <Section className="slds-is-open">
         <SectionTitle>
           <SectionTitleAction isOpen={true} referenceId="itemsContent">
@@ -100,41 +72,15 @@ let AppLauncherModal = props =>
         </SectionTitle>
         <SectionContent isOpen={true} referenceId="itemsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="account">
-                <p className="slds-truncate slds-text-link" title="Accounts">Accounts</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="announcement">
-                <p className="slds-truncate slds-text-link" title="Announcements">Announcements</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="approval">
-                <p className="slds-truncate slds-text-link" title="Approvals">Approvals</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="campaign">
-                <p className="slds-truncate slds-text-link" title="Campaigns">Campaigns</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="case">
-                <p className="slds-truncate slds-text-link" title="Cases">Cases</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="coaching">
-                <p className="slds-truncate slds-text-link" title="Coaching">Coaching</p>
-              </AppLauncherTile>
-            </li>
-            <li className="slds-p-horizontal--small slds-size--xx-small">
-              <AppLauncherTile flavor="small" symbol="contact">
-                <p className="slds-truncate slds-text-link" title="Contacts">Contacts</p>
-              </AppLauncherTile>
-            </li>
+            {props.itemTiles.map(tile => {
+              return (
+                <li className="slds-p-horizontal--small slds-size--xx-small">
+                  <AppLauncherTile flavor="small" symbol={tile.symbol}>
+                    <p className="slds-truncate slds-text-link" title={tile.label}>{tile.label}</p>
+                  </AppLauncherTile>
+                </li>
+                );
+            })}
           </ul>
         </SectionContent>
       </Section>
@@ -144,7 +90,89 @@ let AppLauncherModal = props =>
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
-const dragDropId = 'dragDropInstructions';
+
+/*
+ * DragDropId relates app launcher tile anchor aria-describedby to the div that holds the instructions for drag & drop
+ */
+const dragDropId = 'drag-instructions';
+
+const itemTiles = [
+  { label: 'Accounts', symbol: 'account' },
+  { label: 'Announcements', symbol: 'announcement' },
+  { label: 'Approvals', symbol: 'approval' },
+  { label: 'Campaigns', symbol: 'campaign' },
+  { label: 'Cases', symbol: 'case' },
+  { label: 'Coaching', symbol: 'coaching' },
+  { label: 'Contacts', symbol: 'contact' },
+];
+
+/*
+ * Tile data for All Apps section inside example.
+ * Using data instead of hard-coding becase we want to move the position of one App Tile based on state (ie. moved, dropped).
+ */
+const appTiles = [
+  {
+    description: 'The primary internal Salesforce org. Used to run our...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-27',
+    grabbed: false,
+    initials: 'SC',
+    label: 'Sales Cloud'
+  },
+  {
+    description: 'Salesforce Marketing Cloud lets businesses of any size...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-59',
+    grabbed: false,
+    initials: 'MC',
+    label: 'Marketing Cloud'
+  },
+  {
+    description: 'Community for managing employee benefits and time off.',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-10',
+    grabbed: false,
+    initials: 'HR',
+    label: 'HR Concierge'
+  },
+  {
+    description: 'Manage your finances across multiple financial platforms...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-6',
+    grabbed: false,
+    initials: 'MM',
+    label: 'My Money'
+  },
+  {
+    description: 'The key to call center and contact center management is more...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-91',
+    grabbed: false,
+    initials: 'CC',
+    label: 'Call Center'
+  },
+  {
+    description: 'Areas of Focus are used to track customer support for your...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-50',
+    grabbed: false,
+    initials: 'CS',
+    label: 'Customer Support Communitiy'
+  }
+];
+
+/*
+ * Helpers to position the App Tile for each state (ie. moved, dropped, etc.)
+ */
+const moveItemPosition = function(arr, from, to) {
+  let copyArr = arr.slice(0);
+  copyArr.splice(to, 0, copyArr.splice(from, 1)[0]);
+  return copyArr;
+};
+
+const appTilesMoved = moveItemPosition(appTiles, 0, 2);
+const appTilesDropped = moveItemPosition(appTiles, 0, 3);
+
 export let states = [
   {
     id: 'default',
@@ -152,9 +180,11 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
+        appTiles={appTiles}
         dragDropId={dragDropId}
         dragDropInstructions="Press space bar to move this app within the list."
         dragDropLiveRegion=""
+        itemTiles={itemTiles}
       />
       <div className="slds-backdrop slds-backdrop--open" />
     </div>
@@ -165,10 +195,12 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
+        appTiles={appTiles}
         dragDropId={dragDropId}
         dragDropInstructions=""
         dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
         grabbed
+        itemTiles={itemTiles}
       />
       <div className="slds-backdrop slds-backdrop--open" />
     </div>
@@ -179,9 +211,11 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
+        appTiles={appTilesMoved}
         dragDropId={dragDropId}
         dragDropInstructions=""
         dragDropLiveRegion="Sales Cloud: new position 3 of 6."
+        itemTiles={itemTiles}
       />
       <div className="slds-backdrop slds-backdrop--open" />
     </div>
@@ -192,9 +226,11 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
+        appTiles={appTilesDropped}
         dragDropId={dragDropId}
         dragDropInstructions="Press space bar to move this app within the list."
         dragDropLiveRegion="Sales Cloud: final position 4 of 6."
+        itemTiles={itemTiles}
       />
       <div className="slds-backdrop slds-backdrop--open" />
     </div>

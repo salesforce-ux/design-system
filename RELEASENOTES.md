@@ -940,7 +940,7 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.1...winter-17
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.1...spring-17
 [2.2.1]: https://github.com/salesforce-ux/design-system/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/salesforce-ux/design-system/compare/v2.1.4...v2.2.0
 [2.1.4]: https://github.com/salesforce-ux/design-system/compare/v2.1.3...v2.1.4

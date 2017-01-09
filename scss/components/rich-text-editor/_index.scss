@@ -1,0 +1,98 @@
+// Lightning Design System 2.2.1
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.slds-rich-text-editor {
+  border: $border-width-thin solid $color-border {
+    radius: $border-radius-medium;
+  };
+  min: {
+    width: $size-medium;
+    height: $size-xx-small;
+  }
+
+  &__toolbar {
+    border: {
+      top: {
+        left-radius: $border-radius-medium;
+        right-radius: $border-radius-medium;
+      }
+      bottom: $border-width-thin solid $color-border;
+    }
+    white-space: nowrap;
+  }
+
+  .slds-textarea {
+    border-bottom: {
+      left-radius: $border-radius-medium;
+      right-radius: $border-radius-medium;
+    }
+  }
+
+  &__table {
+    list-style: none;
+    margin: 0 {
+      right: ($spacing-xxx-small * -1);
+      left: ($spacing-xxx-small * -1);
+    }
+    padding: 0;
+    width: 8.25rem;
+
+    .slds-box {
+      border-radius: $border-radius-small;
+    }
+
+    .slds-is-active {
+      background-color: $color-background-selection;
+    }
+  }
+
+  .slds-textarea {
+    border: 0 {
+      top: {
+        left-radius: 0;
+        right-radius: 0;
+      }
+    };
+    min-height: $size-xx-small;
+    vertical-align: middle;
+    resize: none;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  textarea[disabled] ~ .slds-textarea {
+    cursor: not-allowed;
+    user-select: none;
+  }
+
+  &.slds-has-focus {
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
+
+  &.slds-has-error {
+    border: $border-width-thick solid $color-border-error;
+
+    .slds-textarea {
+      box-shadow: none;
+    }
+  }
+
+  .slds-picklist__label[disabled] .slds-icon {
+    fill: $color-text-button-default-disabled;
+  }
+
+  [contenteditable]:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,106 @@
+// Lightning Design System 2.2.1
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Wrapper of split view
+//
+// Contains the split view list and the view toggle button
+.slds-split-view_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  &.slds-is-open {
+    flex: 1 1 auto;
+  }
+}
+
+.slds-split-view {
+  @include inverse-text($support: ('text-utilities'));
+  background: $split-view-color-background;
+}
+
+// Header of split view
+//
+// Contains elements such as the list filter, view switcher and refresh button
+.slds-split-view__header {
+  padding: $spacing-medium $spacing-medium $spacing-x-small $spacing-large;
+}
+
+// Column headers
+.slds-split-view__list-header {
+  border: {
+    top: $border-width-thin solid $split-view-color-border;
+    bottom: $border-width-thin solid $split-view-color-border;
+  }
+  padding: $spacing-x-small $spacing-medium $spacing-x-small $spacing-large;
+}
+
+// List Item
+//
+// Each row of the list
+.slds-split-view__list-item {
+  display: flex;
+  position: relative;
+  color: $color-text-inverse-weak;
+  border-bottom: $border-width-thin solid $split-view-color-border;
+  font-size: $font-size-text-x-small;
+
+  &:hover,
+  &:focus {
+    background: $split-view-color-background-row-hover;
+  }
+
+  // Unread states
+  //
+  // position dot indicator to the left of the content
+  .slds-indicator--unread {
+    @include square(8px);
+    position: absolute;
+    top: $spacing-medium;
+    left: $spacing-x-small;
+    border-radius: $border-radius-circle;
+    display: block;
+    background: $color-background-alt;
+  }
+}
+
+// The whole row is clickable
+.slds-split-view__list-item-action {
+  padding: $spacing-small $spacing-medium $spacing-small $spacing-large;
+
+  &:hover,
+  &:focus {
+    background: $split-view-color-background-row-hover;
+  }
+}
+
+// Expand/Collapse button
+.slds-split-view__toggle-button {
+  position: absolute;
+  right: (0.75rem * -1);
+  top: 50%;
+  margin-top: (($size-xx-small / 2) * -1);
+  height: $size-xx-small;
+  width: 0.75rem;
+  background: $split-view-color-background;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:hover,
+  &:focus {
+    background: $split-view-color-background-row-hover;
+  }
+
+  // We just rotate the left arrow icon on close
+  &.slds-is-closed .slds-button__icon {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,1014 @@
+{
+  "properties": [
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Brandable primary button",
+      "name": "colorBackgroundButtonBrand"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Brandable primary button - active state",
+      "name": "colorBackgroundButtonBrandActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Brandable primary button - hover state",
+      "name": "colorBackgroundButtonBrandHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "Brandable primary button - disabled state",
+      "name": "colorBackgroundButtonBrandDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default secondary button",
+      "name": "colorBackgroundButtonDefault"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default secondary button - hover state",
+      "name": "colorBackgroundButtonDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default secondary button - focus state",
+      "name": "colorBackgroundButtonDefaultFocus"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Default secondary button - active state",
+      "name": "colorBackgroundButtonDefaultActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default secondary button - disabled state",
+      "name": "colorBackgroundButtonDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Background color for icon-only button",
+      "name": "colorBackgroundButtonIcon"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Background color for icon-only button - hover state",
+      "name": "colorBackgroundButtonIconHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Background color for icon-only button - focus state",
+      "name": "colorBackgroundButtonIconFocus"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(238, 241, 246)",
+      "comment": "Background color for icon-only button - active state",
+      "name": "colorBackgroundButtonIconActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Background color for icon-only button - disabled state",
+      "name": "colorBackgroundButtonIconDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Button backgrounds on inverse/dark backgrounds",
+      "name": "colorBackgroundButtonInverse"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.24)",
+      "comment": "Active button backgrounds on inverse backgrounds on mobile",
+      "name": "colorBackgroundButtonInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "comment": "Disabled button backgrounds on inverse/dark backgrounds",
+      "name": "colorBackgroundButtonInverseDisabled"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height",
+        "bottom"
+      ],
+      "value": "30",
+      "comment": "Line heights for regular buttons",
+      "name": "lineHeightButton"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "28",
+      "comment": "Line heights for small buttons",
+      "name": "lineHeightButtonSmall"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default Card component background color.",
+      "name": "cardColorBackground"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "12",
+      "name": "cardSpacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "16",
+      "name": "cardSpacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "24",
+      "name": "cardSpacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "8",
+      "name": "tableSpacingXSmall"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Docked panel header’s background color.",
+      "name": "colorBackgroundDockedPanelHeader"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Height of the docked bar.",
+      "name": "heightDockedBar"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "20.8",
+      "comment": "Line heights for toggle buttons",
+      "name": "lineHeightToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Slider size for toggle.",
+      "name": "squareToggleSlider"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "48",
+      "comment": "Slider width.",
+      "name": "widthToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "24",
+      "comment": "Slider height.",
+      "name": "heightToggle"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Global identity icon size.",
+      "name": "squareIconGlobalIdentityIcon"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default context bar background color.",
+      "name": "colorBackgroundContextBar"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Brand color in context bar for default theme",
+      "name": "colorBackgroundContextBarBrandAccent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Hovered context bar item background color.",
+      "name": "colorBackgroundContextBarItemHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Active context bar item background color.",
+      "name": "colorBackgroundContextBarItemActive"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Context TAB bar item background color.",
+      "name": "colorBackgroundContextTabBarItem"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Hovered context bar item background color.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarInverseItemHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.4)",
+      "comment": "Active context bar item background color.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarInverseItemActive"
+    },
+    {
+      "type": "gradient",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 1)",
+      "comment": "A Gradient used for putting shadows on the bottom when box-shadow is not possible.",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarShadow"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Highlight for context bar action (hover and focus states).",
+      "deprecated": true,
+      "name": "colorBackgroundContextBarActionHighlight"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Default color for animated icon waffle for app switcher.",
+      "name": "colorBackgroundIconWaffle"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Divider in context bar",
+      "deprecated": true,
+      "name": "colorBorderContextBarDivider"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.2)",
+      "comment": "Border color in context bar",
+      "name": "colorBorderContextBarItem"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.2)",
+      "comment": "Border color in context bar on dark background",
+      "deprecated": true,
+      "name": "colorBorderContextBarInverseItem"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefault"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(223, 228, 238)",
+      "comment": "Alternate border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultAlt"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(11, 35, 153)",
+      "comment": "Hovered border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(223, 228, 238)",
+      "comment": "Active border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultActive"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Context bar height.",
+      "name": "heightContextBar"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "comment": "Context bar text color",
+      "name": "colorTextContextBar"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Context bar text color on a dark background",
+      "deprecated": true,
+      "name": "colorTextContextBarInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgba(255, 255, 255, 0.4)",
+      "comment": "Context bar action trigger text color",
+      "deprecated": true,
+      "name": "colorTextContextBarActionTrigger"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "deprecated": true,
+      "comment": "Use COLOR_BACKGROUND_PAGE_HEADER instead.",
+      "name": "colorBackgroundAnchor"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(247, 249, 251)",
+      "comment": "Page Header background color",
+      "name": "colorBackgroundPageHeader"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "The background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathComplete"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(4, 132, 75, 0.95)",
+      "comment": "The hover background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathCompleteHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "The background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "The hover background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrentHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(224, 229, 238)",
+      "comment": "The background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncomplete"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "The hover background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncompleteHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "The background color for the final stage of a Salespath when it has been lost.",
+      "name": "colorBackgroundPathLost"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 251)",
+      "comment": "The background color for Salespath guidance coaching section.",
+      "name": "colorBackgroundGuidance"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Used as a separator between dark colors like the stages of salespath.",
+      "name": "colorBorderPathDivider"
+    },
+    {
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "24",
+      "comment": "Line heights for salespath",
+      "name": "lineHeightSalespath"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32",
+      "comment": "Height of Salespath",
+      "name": "heightSalesPath"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The default background color for Progress Indicator",
+      "name": "progressColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "The shaded background color for Progress Indicator",
+      "name": "progressColorBackgroundShade"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "comment": "The background color for the Progress Bar",
+      "name": "progressBarColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(94, 180, 255)",
+      "comment": "The background color of the fill for the Progess Bar",
+      "name": "progressBarColorBackgroundFill"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Shaded borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderShade"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Hovered border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Active border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderActive"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "2",
+      "comment": "Height of the Progress Bar",
+      "name": "progressBarHeight"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(51, 62, 79)",
+      "comment": "Split View background color.",
+      "name": "splitViewColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(65, 76, 94)",
+      "comment": "Split View background color on row hover.",
+      "name": "splitViewColorBackgroundRowHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(44, 54, 70)",
+      "comment": "Row dividers in Split View list",
+      "name": "splitViewColorBorder"
+    }
+  ]
+}

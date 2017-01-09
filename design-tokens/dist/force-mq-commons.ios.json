@@ -1,0 +1,48 @@
+{
+  "properties": [
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "only screen and (max-width: 47.9375em)",
+      "comment": "Small form factor: devices smaller than tablet",
+      "name": "mqSmall"
+    },
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "only screen and (min-width: 48em)",
+      "comment": "Medium form factor:  devices larger than phone",
+      "name": "mqMedium"
+    },
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)",
+      "comment": "Medium form factor, landscape:  devices larger than phone, in landscape orientation",
+      "name": "mqMediumLandscape"
+    },
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "only screen and (min-width: 64.0625em)",
+      "comment": "Large form factor:  devices larger than tablet",
+      "name": "mqLarge"
+    },
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)",
+      "deprecated": true,
+      "comment": "Retina displays",
+      "name": "mqHighRes"
+    },
+    {
+      "category": "media-query",
+      "type": "media-query",
+      "value": "(max-width: 599px)",
+      "deprecated": true,
+      "comment": "Make record layout 1 col when its view port is < 600px",
+      "name": "mqSingleColumnRecordLayout"
+    }
+  ]
+}

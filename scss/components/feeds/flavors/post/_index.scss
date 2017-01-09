@@ -1,0 +1,152 @@
+// Lightning Design System 2.2.1
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// Container for feed item comments
+.slds-feed__item-comments {
+  background: $color-background-post;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid $color-border;
+
+  .slds-comment {
+    padding: $spacing-x-small $spacing-medium;
+  }
+}
+
+.slds-post {
+  background: $color-background-alt;
+  padding: $spacing-small $spacing-medium;
+
+  @include mq-medium-max {
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  @include mq-large-min {
+    padding: 0 $spacing-medium $spacing-x-small;
+  }
+
+  &__header {
+    margin-bottom: $spacing-small;
+  }
+
+  &__content {
+    margin-bottom: $spacing-small;
+
+    @include mq-medium-min {
+      margin-bottom: $spacing-large;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    font-size: $font-size-small;
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
+  }
+}
+
+// Post Footer Actions
+.slds-post__footer-actions-list {
+  justify-content: space-between;
+  text-align: center;
+  order: 1;
+
+  @include mq-medium-min {
+    order: 0;
+  }
+}
+
+// Action Items
+.slds-post__footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-default;
+  padding: $spacing-small 0;
+
+  @include mq-medium-min {
+    margin-right: $spacing-medium;
+    padding: 0;
+  }
+
+  .slds-icon {
+    margin-right: $spacing-xx-small;
+  }
+
+  &:hover,
+  &:focus,
+  &.slds-is-active {
+    color: $color-text-link-hover;
+    text-decoration: none;
+
+    .slds-icon {
+      fill: currentColor;
+    }
+  }
+}
+
+// Meta list
+.slds-post__footer-meta-list {
+  margin-bottom: $spacing-medium;
+
+  @include mq-medium-min {
+    margin: {
+      left: auto;
+      bottom: 0;
+    }
+  }
+}
+
+// A feed post is altered when inside a narrow region of the application
+// We take the existing media-queries properties that are being used on
+// slds-post and applying them to slds-post when it finds a parent class
+// named .slds-region--narrow.
+//
+// If styles are being updated via media-queries, please make sure you update
+// the .slds-region--narrow references as the goal is for slds-post to
+// inherit the styles from mobile.
+.slds-region--narrow {
+
+  // Modifying .slds-post when inside a region with the
+  // class .slds-region--narrow
+  .slds-post {
+    border: 0;
+    padding: $spacing-small $spacing-medium;
+  }
+
+  // Modifying .slds-post__content when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__content {
+    margin-bottom: $spacing-small;
+  }
+
+  // Modifying .slds-post__footer when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__footer {
+    flex-direction: column;
+  }
+
+  // Modifying .slds-post__footer-actions-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-actions-list {
+    order: 1;
+  }
+
+  // Modifying .slds-post__footer-meta-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-meta-list {
+    margin: {
+      left: 0;
+      bottom: $spacing-medium;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<aura:tokens>
+  <aura:token name="borderWidthThin" value="1px" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="borderWidthThick" value="2px" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="borderStrokeWidthThin" value="1px" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="borderStrokeWidthThick" value="2px" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingNone" value="0" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingXxxSmall" value="0.125rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingXxSmall" value="0.25rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingXSmall" value="0.5rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingSmall" value="0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingMedium" value="1rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow,stroke,stroke-width" />
+  <aura:token name="spacingLarge" value="2rem" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,stroke,stroke-width" />
+  <aura:token name="spacingXLarge" value="4rem" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,stroke,stroke-width" />
+  <aura:token name="spacingXxLarge" value="8rem" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,stroke,stroke-width" />
+  <aura:token name="fontFamilyBody" value="'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif" property="font,font-family" />
+  <aura:token name="fontWeightLight" value="300" property="font,font-weight" />
+  <aura:token name="fontWeightRegular" value="400" property="font,font-weight" />
+  <aura:token name="fontWeightBold" value="700" property="font,font-weight" />
+  <aura:token name="fontSizeXSmall" value="0.625rem" property="font,font-size" />
+  <aura:token name="fontSizeSmall" value="0.75rem" property="font,font-size" />
+  <aura:token name="fontSizeXMedium" value="0.875rem" property="font,font-size" />
+  <aura:token name="fontSizeMedium" value="1rem" property="font,font-size" />
+  <aura:token name="fontSizeLarge" value="1.125rem" property="font,font-size" />
+  <aura:token name="fontSizeXLarge" value="1.25rem" property="font,font-size" />
+  <aura:token name="fontSizeXxLarge" value="1.5rem" property="font,font-size" />
+  <aura:token name="borderRadiusSmall" value=".125rem" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" />
+  <aura:token name="borderRadiusMedium" value=".25rem" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" />
+  <aura:token name="borderRadiusLarge" value=".5rem" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" />
+  <aura:token name="borderRadiusPill" value="5rem" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" />
+  <aura:token name="borderRadiusCircle" value="50%" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" />
+  <aura:token name="lineHeightReset" value="1" property="font,line-height" />
+  <aura:token name="lineHeightHeading" value="1.25" property="font,line-height" />
+  <aura:token name="lineHeightText" value="1.5" property="font,line-height" />
+  <aura:token name="mqSmall" value="only screen and (min-width: 28em)"  />
+  <aura:token name="mqMedium" value="only screen and (min-width: 48em)"  />
+  <aura:token name="mqLarge" value="only screen and (min-width: 64em)"  />
+  <aura:token name="mqXLarge" value="only screen and (min-width: 80em)"  />
+  <aura:token name="timing1" value=".1s" property="animation,animation-duration" />
+  <aura:token name="timing2" value=".2s" property="animation,animation-duration" />
+  <aura:token name="timing3" value=".4s" property="animation,animation-duration" />
+  <aura:token name="timing4" value=".6s" property="animation,animation-duration" />
+  <aura:token name="timing5" value=".8s" property="animation,animation-duration" />
+  <aura:token name="timingTest" value="5s" property="animation,animation-duration" />
+  <aura:token name="colorWhite" value="rgb(255, 255, 255)" property="background,background-color" />
+  <aura:token name="colorGreenSea100" value="rgb(53, 212, 204)" property="background,background-color" />
+  <aura:token name="colorGreenSea300" value="rgb(46, 194, 186)" property="background,background-color" />
+  <aura:token name="colorGreenSea500" value="rgb(39, 171, 164)" property="background,background-color" />
+  <aura:token name="colorGreenSea700" value="rgb(32, 150, 145)" property="background,background-color" />
+  <aura:token name="colorGreenSea900" value="rgb(27, 130, 125)" property="background,background-color" />
+  <aura:token name="colorBlueSky100" value="rgb(108, 183, 250)" property="background,background-color" />
+  <aura:token name="colorBlueSky300" value="rgb(68, 162, 245)" property="background,background-color" />
+  <aura:token name="colorBlueSky500" value="rgb(45, 147, 237)" property="background,background-color" />
+  <aura:token name="colorBlueSky700" value="rgb(32, 129, 214)" property="background,background-color" />
+  <aura:token name="colorBlueSky900" value="rgb(25, 112, 189)" property="background,background-color" />
+  <aura:token name="colorPurpleRain100" value="rgb(173, 144, 245)" property="background,background-color" />
+  <aura:token name="colorPurpleRain300" value="rgb(146, 113, 232)" property="background,background-color" />
+  <aura:token name="colorPurpleRain500" value="rgb(122, 86, 214)" property="background,background-color" />
+  <aura:token name="colorPurpleRain700" value="rgb(100, 63, 192)" property="background,background-color" />
+  <aura:token name="colorPurpleRain900" value="rgb(89, 65, 149)" property="background,background-color" />
+  <aura:token name="colorBlueAthens" value="rgb(242, 246, 250)" property="background,background-color" />
+  <aura:token name="colorBlueSparta" value="rgb(230, 236, 242)" property="background,background-color" />
+  <aura:token name="colorBlueRome" value="rgb(197, 211, 224)" property="background,background-color" />
+  <aura:token name="colorBlueSpider" value="rgb(163, 184, 204)" property="background,background-color" />
+  <aura:token name="colorBlueGhost" value="rgb(125, 152, 179)" property="background,background-color" />
+  <aura:token name="colorBlueAluminium" value="rgb(92, 122, 153)" property="background,background-color" />
+  <aura:token name="colorBlueRollingstone" value="rgb(64, 96, 127)" property="background,background-color" />
+  <aura:token name="colorBlueRhino" value="rgb(41, 71, 102)" property="background,background-color" />
+  <aura:token name="colorBlueZodiac" value="rgb(23, 50, 77)" property="background,background-color" />
+  <aura:token name="colorBlueBigstoneBlue" value="rgb(10, 31, 51)" property="background,background-color" />
+  <aura:token name="colorOrangeAlert" value="rgb(255, 183, 93)" property="background,background-color" />
+  <aura:token name="colorRedError" value="rgb(212, 80, 76)" property="background,background-color" />
+  <aura:token name="colorGreenSuccess" value="rgb(75, 202, 129)" property="background,background-color" />
+  <aura:token name="colorBlueScience" value="rgb(0, 112, 210)" property="background,background-color" />
+  <aura:token name="colorBlueEndeavour" value="rgb(0, 95, 178)" property="background,background-color" />
+  <aura:token name="colorBlueMidnightBlue" value="rgb(0, 57, 107)" property="background,background-color" />
+  <aura:token name="colorBlueBiscay" value="rgb(22, 50, 92)" property="background,background-color" />
+</aura:tokens>

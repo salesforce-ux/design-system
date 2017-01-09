@@ -1,0 +1,497 @@
+// Lightning Design System 2.2.1
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.slds-context-bar {
+  display: flex;
+  height: $height-context-bar;
+  background-color: $color-background-context-bar;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: 3px solid $color-background-context-bar-brand-accent;
+  color: $color-text-default;
+  position: relative;
+  padding: 0 0 0 $spacing-medium;
+
+  &__primary,
+  &__secondary,
+  &__tertiary {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  // Context nav items go in the secondary region
+  // and secondary region needs to respect the width
+  // of the context bar parent for JavaScript to work
+  // This is how to do that in CSS
+  &__secondary {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  // Manually add a divider between items
+  &__vertical-divider {
+    width: 0;
+    overflow: hidden;
+    border-left: $border-width-thin solid $color-border;
+  }
+
+  // Any item on the horizontal axis of the context nav bar
+  //
+  // Interactions such as hovers + active are defaults, bottom of the
+  // file deals with light / dark theme thresholds
+  &__item {
+    display: flex;
+    align-content: center;
+    align-items: stretch;
+    white-space: nowrap;
+    position: relative;
+    max-width: $size-small;
+
+    &:not(.slds-no-hover):hover,
+    &.slds-is-active {
+      outline: 0;
+      border-radius: 0;
+      background-color: $color-background-context-bar-item-hover;
+      border-bottom: 3px solid $color-background-context-bar-brand-accent;
+      margin-bottom: (3px * -1);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:not(.slds-no-hover):hover:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      display: block;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+
+      @supports (mix-blend-mode: soft-light) {
+        background: rgba(0, 0, 0, 0.75);
+        mix-blend-mode: soft-light;
+      }
+    }
+
+    &.slds-is-active {
+      border-left: $border-width-thin solid $color-border;
+      border-right: $border-width-thin solid $color-border;
+      border-bottom-color: $color-background-context-bar-item-hover;
+
+      &:before,
+      &:after {
+        content: '';
+        height: 3px;
+        display: block;
+        background: $color-background-context-bar-brand-accent;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        right: -1px;
+      }
+
+      &:after {
+        background: rgba(0, 0, 0, 0.25);
+
+        @supports (mix-blend-mode: soft-light) {
+          background: rgba(0, 0, 0, 0.75);
+          mix-blend-mode: soft-light;
+        }
+      }
+
+      &:hover {
+        border-bottom-color: $color-background-context-bar-item-hover;
+      }
+    }
+
+    // Remove border on active due to primary section always having a right border
+    &:first-child.slds-is-active {
+      border-left: 0;
+    }
+
+    // Toggled focused class applied via JavaScript
+    &.slds-has-focus,
+    &.slds-has-focus:hover {
+
+      &:before,
+      &:after {
+        height: 4px;
+      }
+    }
+
+    &--divider-left {
+      border-left: $border-width-thin solid $color-border;
+    }
+
+    &--divider-right {
+      border-right: $border-width-thin solid $color-border;
+    }
+  }
+
+  // Actionable Text Links
+  &__label-action {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 $spacing-small;
+    border-radius: 0;
+    min-width: 0%;
+    color: inherit;
+    font-size: $font-size-medium;
+
+    &:focus,
+    &:focus:hover {
+      outline: 0;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+
+    &:active {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  // Actionable Icons
+  &__icon-action {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: $color-text-context-bar;
+    margin-left: ($spacing-xx-small * -1);
+    padding: 0 $spacing-x-small;
+    border-radius: 0;
+
+    &:focus {
+      outline: 0;
+
+      .slds-context-bar__button {
+        @include focus-button;
+      }
+
+      ~ .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-context-bar;
+    }
+
+    &:active {
+      color: $color-text-context-bar;
+    }
+  }
+
+  // Button inside of actionable container
+  .slds-context-bar__button {
+    color: inherit;
+
+    // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
+    // Setting custom focus thats specific to context bar
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // Workspace tabs
+  //
+  // Consumes tab structure but looks like gnav
+  // ------------
+  &--tabs {
+
+    // Need to reset styles from default
+    .slds-context-bar__icon-action {
+      margin-left: auto;
+    }
+  }
+
+  // Tab context bar items
+  &__item--tab {
+    width: $size-x-small;
+    border-right: $border-width-thin solid $color-border;
+
+    .slds-context-bar__label-action {
+      padding: 0 $spacing-x-small;
+    }
+
+    // Handle active states
+    &.slds-is-active,
+    &:nth-child(n).slds-is-active {
+      border-left: 0;
+      border-bottom-color: $color-background-context-tab-bar-item;
+      background-color: $color-background-context-tab-bar-item;
+
+      &:hover {
+        background-color: $color-background-context-tab-bar-item;
+        border-bottom-color: transparent;
+      }
+    }
+
+    // Pinned state
+    // Toggles visibility of elements inside of tab
+    &.slds-is-pinned {
+      width: auto;
+      padding-right: $spacing-x-small;
+
+      .slds-context-bar__label-action {
+        padding: 0 $spacing-x-small;
+      }
+    }
+  }
+
+  // Dirty state of tabs
+  .slds-is-unsaved {
+
+    .slds-context-bar__label-action {
+      position: relative;
+      padding-left: $spacing-x-small;
+      font-style: italic;
+    }
+  }
+}
+
+// Unsaved indicator - This can probably be used in other locations as well
+.slds-indicator--unsaved {
+  color: $color-text-brand;
+  align-self: center;
+  font-size: $font-size-medium-a;
+}
+
+// Context Bar dropdown trigger specifics
+.slds-context-bar__dropdown-trigger {
+
+  .slds-dropdown {
+    margin-top: 3px;
+
+    // Add a hoverable zone below the action so that the dropdown doesn't
+    // disappear when the mouse is between the action and the dropdown
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+
+// app-name
+.slds-context-bar__app-name {
+  padding: 0 $spacing-large 0 0;
+  font-size: rem(18px); // @todo tokenize
+  font-weight: $font-weight-light;
+  line-height: $line-height-heading;
+}
+
+// object-switcher
+.slds-context-bar__object-switcher {
+  min-width: rem(144px); // @todo tokenize
+  max-width: $size-x-small;
+  border-left: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid $color-border;
+}
+
+
+// Themes - Pre-defined themes
+// Using mixin to determine text color and interactive states
+//
+// Marketing - temp
+.slds-context-bar--theme-marketing {
+  border-bottom-color: #f59331;
+
+  .slds-context-bar__item:not(.slds-no-hover):hover {
+    border-bottom-color: #f59331;
+  }
+
+  .slds-context-bar__item.slds-is-active {
+
+    &:before {
+      background: #f59331;
+    }
+
+    &:hover {
+      border-bottom-color: $color-background-context-bar-item-hover;
+    }
+  }
+}
+
+// Waffle Icon + animation
+.slds-icon-waffle_container {
+  outline: 0;
+}
+
+.slds-icon-waffle {
+  @include square(rem(21px));
+  position: relative;
+}
+
+// scss-lint:disable MergeableSelector
+.slds-icon-waffle div {
+  @include square(rem(5px));
+  background: $color-background-icon-waffle;
+  display: inline-block;
+  position: absolute;
+  border-radius: $border-radius-circle;
+  transition: background 100ms;
+  transform-origin: 50% 50%;
+}
+
+.slds-icon-waffle .slds-r1 {
+  top: 0;
+  left: 0;
+}
+
+.slds-icon-waffle .slds-r2 {
+  top: 0;
+  left: rem(8px);
+}
+
+.slds-icon-waffle .slds-r3 {
+  top: 0;
+  right: 0;
+}
+
+.slds-icon-waffle .slds-r4 {
+  top: rem(8px);
+  left: 0;
+}
+
+.slds-icon-waffle .slds-r5 {
+  top: rem(8px);
+  left: rem(8px);
+}
+
+.slds-icon-waffle .slds-r6 {
+  top: rem(8px);
+  right: 0;
+}
+
+.slds-icon-waffle .slds-r7 {
+  bottom: 0;
+  left: 0;
+}
+
+.slds-icon-waffle .slds-r8 {
+  bottom: 0;
+  left: rem(8px);
+}
+
+.slds-icon-waffle .slds-r9 {
+  bottom: 0;
+  right: 0;
+}
+
+.slds-icon-waffle_container:hover .slds-icon-waffle,
+.slds-icon-waffle_container:focus .slds-icon-waffle {
+  cursor: pointer;
+}
+
+.slds-icon-waffle_container:hover .slds-r1,
+.slds-icon-waffle_container:hover .slds-r2,
+.slds-icon-waffle_container:hover .slds-r3,
+.slds-icon-waffle_container:focus .slds-r1,
+.slds-icon-waffle_container:focus .slds-r2,
+.slds-icon-waffle_container:focus .slds-r3 {
+  background: #418fde;
+}
+
+.slds-icon-waffle_container:hover .slds-r4,
+.slds-icon-waffle_container:hover .slds-r5,
+.slds-icon-waffle_container:hover .slds-r7,
+.slds-icon-waffle_container:focus .slds-r4,
+.slds-icon-waffle_container:focus .slds-r5,
+.slds-icon-waffle_container:focus .slds-r7 {
+  background: #ed8b00;
+}
+
+.slds-icon-waffle_container:hover .slds-r6,
+.slds-icon-waffle_container:hover .slds-r8,
+.slds-icon-waffle_container:hover .slds-r9,
+.slds-icon-waffle_container:focus .slds-r6,
+.slds-icon-waffle_container:focus .slds-r8,
+.slds-icon-waffle_container:focus .slds-r9 {
+  background: #ffb60f;
+}
+
+.slds-icon-waffle_container:hover .slds-r2,
+.slds-icon-waffle_container:hover .slds-r4,
+.slds-icon-waffle_container:focus .slds-r2,
+.slds-icon-waffle_container:focus .slds-r4 {
+  transition-delay: 50ms;
+  animation-delay: 50ms;
+}
+
+.slds-icon-waffle_container:hover .slds-icon-waffle div,
+.slds-icon-waffle_container:focus .slds-icon-waffle div {
+  animation: throb 2 200ms alternate;
+}
+
+.slds-icon-waffle_container:hover .slds-r3,
+.slds-icon-waffle_container:hover .slds-r5,
+.slds-icon-waffle_container:hover .slds-r7,
+.slds-icon-waffle_container:focus .slds-r3,
+.slds-icon-waffle_container:focus .slds-r5,
+.slds-icon-waffle_container:focus .slds-r7 {
+  transition-delay: 100ms;
+  animation-delay: 100ms;
+}
+
+.slds-icon-waffle_container:hover .slds-r6,
+.slds-icon-waffle_container:hover .slds-r8,
+.slds-icon-waffle_container:focus .slds-r6,
+.slds-icon-waffle_container:focus .slds-r8 {
+  transition-delay: 150ms;
+  animation-delay: 150ms;
+}
+
+.slds-icon-waffle_container:hover .slds-r9,
+.slds-icon-waffle_container:focus .slds-r9 {
+  transition-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+.slds-icon-waffle_container .slds-r1 {
+  transition-delay: 200ms;
+}
+
+.slds-icon-waffle_container .slds-r2,
+.slds-icon-waffle_container .slds-r4 {
+  transition-delay: 150ms;
+}
+
+.slds-icon-waffle_container .slds-r3,
+.slds-icon-waffle_container .slds-r5,
+.slds-icon-waffle_container .slds-r7 {
+  transition-delay: 100ms;
+}
+
+.slds-icon-waffle_container .slds-r6,
+.slds-icon-waffle_container .slds-r8 {
+  transition-delay: 50ms;
+}
+
+@keyframes throb {
+  100% {
+    transform: scale(1.5);
+  }
+}

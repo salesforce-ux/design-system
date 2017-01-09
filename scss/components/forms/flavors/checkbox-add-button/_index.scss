@@ -1,0 +1,105 @@
+// Lightning Design System 2.2.1
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.slds-checkbox--add-button {
+
+  .slds-checkbox--faux {
+    @include square($square-icon-medium-boundary);
+    position: relative;
+    display: inline-block;
+    border: $border-width-thin solid $color-border-button-default;
+    border-radius: $border-radius-medium;
+    background-color: $color-background-input;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: rem(14px);
+      width: rem(2px);
+      margin: auto;
+      background: $color-brand-dark;
+    }
+
+    &:after {
+      width: rem(14px);
+      height: rem(2px);
+    }
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]) {
+      border: $border-width-thin solid $color-border-button-default;
+      background-color: $color-background-button-default-hover;
+    }
+
+    &:active {
+      background-color: $color-background-button-default-active;
+    }
+  }
+
+  input[type=checkbox]:checked {
+
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
+      border-color: transparent;
+      background: $color-background-success;
+
+      &:before,
+      &:after {
+        background: $color-background-alt;
+      }
+
+      &:before {
+        top: rem(-2px);
+        left: rem(7px);
+        width: rem(3px);
+        height: rem(17px);
+        transform: rotate(40deg);
+      }
+
+      &:after {
+        top: rem(5px);
+        left: rem(-10px);
+        width: rem(10px);
+        height: rem(3px);
+        transform: rotate(36deg);
+      }
+    }
+  }
+
+  input[type=checkbox]:focus {
+
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
+      @include focus-button;
+      border-color: $color-border-input-active;
+    }
+  }
+
+  input[type=checkbox][disabled] {
+
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox--faux {
+      background-color: $color-background-button-brand-disabled;
+      border-color: $color-border-button-brand-disabled;
+      color: $color-text-button-brand-disabled;
+
+      &:before,
+      &:after {
+        background: $color-background-alt;
+      }
+    }
+  }
+}

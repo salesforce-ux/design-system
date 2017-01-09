@@ -29,7 +29,7 @@ const dialingIcon = (
 export let UtilityPanel = props =>
   <section className={classNames('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <header className="slds-utility-panel__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media--center">
+      <div className="slds-media slds-media--center slds-size--1-of-1">
         <div className="slds-media__figure slds-m-right--x-small">
           <span className="slds-icon_container">
             <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="call" />
@@ -39,7 +39,7 @@ export let UtilityPanel = props =>
           <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className="slds-col--bump-left">
+      <div className="slds-col--bump-left slds-shrink-none">
         <ButtonIcon
           className="slds-button--icon"
           symbol="minimize_window"

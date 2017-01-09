@@ -50,9 +50,9 @@ let AppLauncherModal = props =>
             {props.dragDropInstructions}
           </div>
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
-            {props.appTiles.map(tile => {
+            {props.appTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+                <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3" key={i}>
                   <AppLauncherTile draggable figureClass={tile.figureClass} grabbed={tile.grabbed} objectInitials={tile.initials} referenceId={tile.dragDropId}>
                     <span className="slds-text-link">{tile.label}</span>
                     <p>{tile.description}<span className="slds-text-link">More</span></p>
@@ -72,9 +72,9 @@ let AppLauncherModal = props =>
         </SectionTitle>
         <SectionContent isOpen={true} referenceId="itemsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
-            {props.itemTiles.map(tile => {
+            {props.itemTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal--small slds-size--xx-small">
+                <li className="slds-p-horizontal--small slds-size--xx-small" key={i}>
                   <AppLauncherTile flavor="small" symbol={tile.symbol}>
                     <p className="slds-truncate slds-text-link" title={tile.label}>{tile.label}</p>
                   </AppLauncherTile>

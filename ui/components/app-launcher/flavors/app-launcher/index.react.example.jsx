@@ -79,7 +79,7 @@ let AppLauncherModal = props =>
                     <p className="slds-truncate slds-text-link" title={tile.label}>{tile.label}</p>
                   </AppLauncherTile>
                 </li>
-                );
+              );
             })}
           </ul>
         </SectionContent>

@@ -5,6 +5,14 @@
 
 <!-- ## [Unreleased] -->
 
+## Release [2.2.1] - January 9, 2017
+
+**NEW COMPONENTS AND VARIANTS**
+
+The following components are now available:
+
+- Added a toast for small columns - [Small Column Toast](/components/notifications#flavor-toast-small)
+
 ## Release [2.2.0] - January 6, 2017
 
 **SITE IA/ENHANCEMENTS**
@@ -98,7 +106,7 @@ Token files previously available from the `@salesforce-ux/design-tokens` npm pac
 The following tokens have been add/removed/deprecated in this release:
 
 - Added `force-base/fill.json`
-  - Added token: `FILL_HEADER_BUTTON`    
+  - Added token: `FILL_HEADER_BUTTON`
   - Added token: `FILL_HEADER_BUTTON_HOVER`
 - Added `force-base/text-transform.json`
   - Added token: `TEXT_TRANSFORM`
@@ -932,7 +940,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.0...winter-17
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.1...spring-17
+[2.2.1]: https://github.com/salesforce-ux/design-system/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/salesforce-ux/design-system/compare/v2.1.4...v2.2.0
 [2.1.4]: https://github.com/salesforce-ux/design-system/compare/v2.1.3...v2.1.4
 [2.1.3]: https://github.com/salesforce-ux/design-system/compare/v2.1.2...v2.1.3

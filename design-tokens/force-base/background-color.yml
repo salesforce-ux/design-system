@@ -236,7 +236,7 @@ props:
     value: '{!KASHMIR_BLUE_TRANSPARENT_95}'
     comment: Background color for toast messaging.
   COLOR_BACKGROUND_TOAST_SUCCESS:
-    value: '{!SALEM_TRANSPARENT_95}'
+    value: '{!SALEM}'
     comment: Background color for success toast messaging.
   COLOR_BACKGROUND_TOAST_ERROR:
     value: '{!FLUSH_MAHOGANY_TRANSPARENT_95}'

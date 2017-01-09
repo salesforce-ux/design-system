@@ -72,20 +72,4 @@
   &--inverse-text {
     @include inverse-links;
   }
-
-  &--default,
-  &--shade,
-  &--inverse,
-  &--alt-inverse,
-  &--success,
-  &--info,
-  &--warning,
-  &--error,
-  &--offline,
-  &--alert-texture,
-  &--inverse-text {
-    .slds-text-body--small {
-      color: inherit;
-    }
-  }
 }

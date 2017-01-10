@@ -78,6 +78,7 @@
   @for $i from 1 through length($support) {
     @if nth($support, $i) == 'text-utilities' {
       .slds-text-title,
+      .slds-text-title_caps,
       .slds-text-title--caps {
         color: $color-text-inverse-weak;
       }

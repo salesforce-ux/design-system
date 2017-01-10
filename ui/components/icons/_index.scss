@@ -15,6 +15,7 @@
   display: inline-block;
   border-radius: $border-radius-medium;
 
+  &_circle,
   &--circle {
     padding: $spacing-x-small;
     border-radius: $border-radius-circle;

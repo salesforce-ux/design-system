@@ -53,10 +53,12 @@
     display: block;
     max-width: 100%;
 
+    &.slds-video_center,
     &.slds-video--center {
       margin: 0 auto;
     }
 
+    &.slds-video_right,
     &.slds-video--right {
       margin: 0 0 0 auto;
     }

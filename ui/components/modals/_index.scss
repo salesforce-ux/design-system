@@ -72,11 +72,13 @@
     }
   }
 
+  &__header_empty,
   &__header--empty {
     padding: 0;
     border-bottom: 0;
   }
 
+  &__header_empty + .slds-modal__content,
   &__header--empty + .slds-modal__content {
       border: {
       top: {
@@ -129,6 +131,7 @@
     text-align: right;
     box-shadow: $shadow-drop-down;
 
+    &_directional .slds-button:first-child,
     &--directional .slds-button:first-child {
       float: left;
     }
@@ -160,6 +163,7 @@
   background: $color-background-temp-modal-tint;
   z-index: $z-index-modal;
 
+  &_open,
   &--open {
     visibility: visible;
     opacity: 1;
@@ -167,6 +171,7 @@
   }
 }
 
+.slds-modal_large .slds-modal__container,
 .slds-modal--large .slds-modal__container {
 
   // TODO: We'll want to readdress this to do the .99 thing

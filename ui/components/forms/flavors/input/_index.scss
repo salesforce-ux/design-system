@@ -21,6 +21,7 @@
   // Input bare
   //
   // Removes aesthetic nature from an input
+  &_bare,
   &--bare {
     background-color: transparent;
     border: 0;
@@ -42,6 +43,7 @@
   //
   // Used to apply an <input> size to another element thats a non <input>
   // Because sometimes I need elements the same height as inputs
+  &_height,
   &--height {
     min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   }
@@ -62,39 +64,47 @@
     }
   }
 
+  &_left,
   &--left {
     .slds-input__icon {
       left: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
+    .slds-input_bare,
     .slds-input--bare {
       padding-left: $spacing-xx-large;
     }
   }
 
+  &_right,
   &--right {
     .slds-input__icon {
       right: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
+    .slds-input_bare,
     .slds-input--bare {
       padding-right: $spacing-xx-large;
     }
   }
 
+  &_left-right,
   &--left-right {
 
+    .slds-input__icon_left,
     .slds-input__icon--left {
       left: ($spacing-medium + $spacing-xx-small);
     }
 
+    .slds-input__icon_right,
     .slds-input__icon--right {
       right: ($spacing-medium + $spacing-xx-small);
     }
 
     .slds-input,
+    .slds-input_bare,
     .slds-input--bare {
       padding: 0 $spacing-xx-large;
     }

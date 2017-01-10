@@ -60,6 +60,7 @@
   // Unread states
   //
   // position dot indicator to the left of the content
+  .slds-indicator_unread,
   .slds-indicator--unread {
     @include square(8px);
     position: absolute;

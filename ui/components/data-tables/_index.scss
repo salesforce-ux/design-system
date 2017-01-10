@@ -59,10 +59,12 @@
   }
 
   // Use to add a left padding buffer to cells, @todo will need to reset for responsive
+  .slds-cell-buffer_left,
   .slds-cell-buffer--left {
     padding-left: $spacing-large;
   }
 
+  .slds-cell-buffer_right,
   .slds-cell-buffer--right {
     padding-right: $spacing-large;
   }
@@ -83,6 +85,7 @@
 }
 
 // Add left and right padding to the first and last cells of a table
+.slds-table_cell-buffer,
 .slds-table--cell-buffer {
 
   tr > th:first-child,
@@ -97,6 +100,7 @@
 }
 
 // Add vertical borders to a table
+.slds-table_bordered,
 .slds-table--bordered {
   border-collapse: separate;
   // scss-lint:disable SelectorDepth
@@ -132,6 +136,7 @@
 }
 
 // Add column borders
+.slds-table_col-bordered,
 .slds-table--col-bordered {
 
   td + td,
@@ -143,6 +148,7 @@
 }
 
 // Add alternating strips to rows
+.slds-table_striped,
 .slds-table--striped {
   // scss-lint:disable SelectorDepth
   tbody tr:nth-of-type(even) > td,
@@ -181,6 +187,7 @@
     background-color: $color-background-row-hover;
   }
 
+  &_form,
   &--form {
     display: inline-flex; // Allows for alignment of form element, such as a checkbox
   }
@@ -201,6 +208,7 @@
   }
 
   // Change direction of arrow
+  &_asc .slds-is-sortable__icon,
   &--asc .slds-is-sortable__icon {
     transform: rotate(180deg);
   }
@@ -268,6 +276,7 @@
 // Resizable data table columns
 //
 // Set table to use fixed layout for width and truncation purposes
+.slds-table_fixed-layout,
 .slds-table--fixed-layout {
   table-layout: fixed;
   width: 100%;
@@ -307,6 +316,7 @@
   }
 }
 
+.slds-table_compact,
 .slds-table--compact {
 
   th,

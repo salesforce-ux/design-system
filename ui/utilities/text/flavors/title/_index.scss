@@ -12,6 +12,7 @@
   @include text-heading--label-normal;
 }
 
+.slds-text-title_caps,
 .slds-text-title--caps {
   @include text-heading--label-normal;
   text-transform: uppercase;

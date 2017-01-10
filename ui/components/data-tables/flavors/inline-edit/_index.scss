@@ -9,6 +9,7 @@
 
 // We are not going to expose inline edit until Spring-17 but the CSS needs to be included.
 
+.slds-table_edit_container,
 .slds-table--edit_container {
 
   &:focus {
@@ -26,6 +27,7 @@
       box-shadow: 0 0 0 4px $color-border-brand inset;
     }
 
+    .slds-table_edit_container-message,
     .slds-table--edit_container-message {
       display: block;
       position: absolute;
@@ -41,6 +43,7 @@
   }
 }
 
+.slds-table_edit_container-message,
 .slds-table--edit_container-message {
   display: none;
 }
@@ -48,6 +51,7 @@
 // Inline Edit Table
 //
 // This class goes on the table and deals with some items inside
+.slds-table_edit,
 .slds-table--edit {
 
   .slds-cell-error {
@@ -82,6 +86,7 @@
     }
   }
 
+  .slds-button__icon_edit:focus,
   .slds-button__icon--edit:focus {
     fill: $color-text-brand;
   }
@@ -157,7 +162,9 @@
 
 .slds-hint-parent .slds-cell-edit {
 
+  .slds-button__icon_edit,
   .slds-button__icon--edit,
+  .slds-button__icon_lock,
   .slds-button__icon--lock {
     opacity: 0;
   }
@@ -165,6 +172,7 @@
   &:hover,
   &:focus {
 
+    .slds-button__icon_edit,
     .slds-button__icon--edit {
       opacity: 0.5;
 
@@ -175,11 +183,13 @@
       }
     }
 
+    .slds-button__icon_lock,
     .slds-button__icon--lock {
       opacity: 0.5;
     }
   }
 
+  &.slds-has-focus .slds-button__icon_edit,
   &.slds-has-focus .slds-button__icon--edit {
     fill: $color-text-icon-default;
     opacity: 1;
@@ -198,7 +208,9 @@
     background-color: $color-background-alt;
     box-shadow: $color-border-selection 0 0 0 1px inset;
 
+    .slds-button__icon_edit,
     .slds-button__icon--edit,
+    .slds-button__icon_lock,
     .slds-button__icon--lock {
       opacity: 1;
     }
@@ -237,6 +249,7 @@
     background: $color-background-row-hover;
     box-shadow: none;
 
+    .slds-button__icon_edit,
     .slds-button__icon--edit {
       opacity: 1;
     }
@@ -260,14 +273,17 @@
   }
 }
 
+.slds-cell-edit__button:focus .slds-button__icon_edit,
 .slds-cell-edit__button:focus .slds-button__icon--edit {
     opacity: 1;
 }
 
+.slds-form-element__label_edit,
 .slds-form-element__label--edit {
   margin: 0 $spacing-xxx-small 0;
 }
 
+.slds-popover_edit,
 .slds-popover--edit {
   border-top: 0;
   border-top-left-radius: 0;

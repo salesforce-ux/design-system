@@ -31,14 +31,17 @@
       display: block;
     }
 
+    &_1-by-1,
     &--1-by-1 {
       padding-top: 100%;
     }
 
+    &_16-by-9,
     &--16-by-9 {
       padding-top: 56.25%;
     }
 
+    &_4-by-3,
     &--4-by-3 {
       padding-top: 75%;
     }
@@ -49,6 +52,7 @@
     align-items: center;
     padding: $spacing-x-small;
 
+    &_overlay,
     &--overlay {
       color: $color-text-inverse;
       position: absolute;
@@ -62,6 +66,7 @@
       }
     }
 
+    &_card,
     &--card {
       background: $color-background;
       position: absolute;
@@ -71,6 +76,7 @@
     }
   }
 
+  &_overlay,
   &--overlay {
     content: '';
     background: $color-background-image-overlay;
@@ -83,6 +89,7 @@
     z-index: 1;
   }
 
+  &_card,
   &--card {
     background: $color-background-alt;
     border-top: $border-width-thin solid $color-border-separator;

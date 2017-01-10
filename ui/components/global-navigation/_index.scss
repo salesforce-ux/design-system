@@ -126,10 +126,12 @@
       }
     }
 
+    &_divider-left,
     &--divider-left {
       border-left: $border-width-thin solid $color-border;
     }
 
+    &_divider-right,
     &--divider-right {
       border-right: $border-width-thin solid $color-border;
     }
@@ -210,6 +212,7 @@
   //
   // Consumes tab structure but looks like gnav
   // ------------
+  &_tabs,
   &--tabs {
 
     // Need to reset styles from default
@@ -219,6 +222,7 @@
   }
 
   // Tab context bar items
+  &__item_tab,
   &__item--tab {
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border;
@@ -264,6 +268,7 @@
 }
 
 // Unsaved indicator - This can probably be used in other locations as well
+.slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
   align-self: center;
@@ -309,6 +314,7 @@
 // Using mixin to determine text color and interactive states
 //
 // Marketing - temp
+.slds-context-bar_theme-marketing,
 .slds-context-bar--theme-marketing {
   border-bottom-color: #f59331;
 

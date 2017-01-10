@@ -35,19 +35,23 @@
     z-index: ($z-index-dialog + 1);
   }
 
+  &_small,
   &--small {
     min-width: $size-small;
   }
 
+  &_medium,
   &--medium {
     min-width: $size-medium;
   }
 
+  &_large,
   &--large {
     min-width: $size-large;
     max-width: $max-width-action-overflow-menu;
   }
 
+  &[class*="theme_"],
   &[class*="theme--"] {
     border: 0;
   }

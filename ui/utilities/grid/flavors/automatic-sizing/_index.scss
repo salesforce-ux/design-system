@@ -12,22 +12,26 @@
 .slds-grid {
   display: flex;
 
+  &_frame,
   &--frame {
     min-width: 100vw;
     min-height: 100vh;
     overflow: hidden;
   }
 
+  &_vertical,
   &--vertical {
     flex-direction: column;
   }
 
   // New in 1.0.0
+  &_vertical-reverse,
   &--vertical-reverse {
     flex-direction: column-reverse;
   }
 
   // New in 1.0.0
+  &_reverse,
   &--reverse {
     flex-direction: row-reverse;
   }
@@ -36,10 +40,12 @@
 @include deprecate('4.0.0', 'Use spacing utilities instead') {
   .slds-col,
   // Catch all for col--padded variants
+  [class*="slds-col_padded"],
   [class*="slds-col--padded"] {
     @include flex-item(expand);
   }
 
+  .slds-col_padded,
   .slds-col--padded {
     padding: {
       right: $spacing-small;
@@ -74,6 +80,7 @@
   }
 }
 
+.slds-grid_pull-padded,
 .slds-grid--pull-padded {
   margin: {
     right: ($spacing-small * -1);
@@ -123,18 +130,22 @@
 
     @include mq-large-min {
 
+      &_top,
       &--top {
         border-top: 1px solid $color-border-separator;
       }
 
+      &_right,
       &--right {
         border-right: 1px solid $color-border-separator;
       }
 
+      &_bottom,
       &--bottom {
         border-bottom: 1px solid $color-border-separator;
       }
 
+      &_left,
       &--left {
         border-left: 1px solid $color-border-separator;
       }
@@ -143,6 +154,7 @@
 }
 
 // New in 1.0.0
+.slds-col_rule,
 .slds-col--rule {
 
   @include mq-large-min {
@@ -175,6 +187,7 @@
   @include flex-wrap(false);
 
   @include deprecate('4.0.0') {
+    &_small,
     &--small {
       @include mq-small-min {
         @include flex-item(expand);
@@ -182,6 +195,7 @@
       }
     }
 
+    &_medium,
     &--medium {
       @include mq-medium-min {
         @include flex-item(expand);
@@ -189,6 +203,7 @@
       }
     }
 
+    &_large,
     &--large {
       @include mq-large-min {
         @include flex-item(expand);

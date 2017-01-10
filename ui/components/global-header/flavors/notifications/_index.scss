@@ -10,6 +10,7 @@
 .slds-global-header__notification {
   border-bottom: 1px solid $color-border;
 
+  &_unread,
   &--unread {
     background-color: $color-background-row-selected;
   }

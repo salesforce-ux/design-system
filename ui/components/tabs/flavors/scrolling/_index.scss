@@ -19,11 +19,14 @@
 
 .slds-has-overflow {
 
+  .slds-tabs__nav-scroller_inner,
   .slds-tabs__nav-scroller--inner {
     overflow: hidden;
   }
 
+  .slds-tabs_scoped__nav,
   .slds-tabs--scoped__nav,
+  .slds-tabs_default__nav,
   .slds-tabs--default__nav {
     border: 0;
   }
@@ -38,8 +41,10 @@
   }
 }
 
+.slds-tabs_default,
 .slds-tabs--default {
 
+  .slds-has-overflow .slds-tabs__nav-scroller_inner,
   .slds-has-overflow .slds-tabs__nav-scroller--inner {
     border-bottom: $border-width-thin solid $color-border;
   }
@@ -50,10 +55,12 @@
   }
 }
 
+.slds-tabs_scoped,
 .slds-tabs--scoped {
 
   .slds-has-overflow {
 
+    .slds-tabs__nav-scroller_inner,
     .slds-tabs__nav-scroller--inner {
       border: $border-width-thin solid $color-border;
       border-bottom: 0;
@@ -61,6 +68,7 @@
       background-color: $color-background;
     }
 
+    .slds-tabs_scoped__item,
     .slds-tabs--scoped__item {
       margin-bottom: 0;
       border-bottom: $border-width-thin solid $color-border;

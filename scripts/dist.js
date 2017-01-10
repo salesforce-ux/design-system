@@ -279,7 +279,8 @@ async.series([
       .pipe(gulp.dest(distPath()))
       .on('error', done)
       .pipe(minifycss({
-        advanced: false
+        advanced: false,
+        roundingPrecision: '-1'
       }))
       .pipe(gulprename(function(path) {
         path.basename += '.min';

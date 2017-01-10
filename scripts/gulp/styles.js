@@ -77,7 +77,7 @@ gulp.task('styles:site', ['generate:tokens:sass'], () =>
       ]
     }).on('error', sass.logError))
     .pipe(autoprefixer({ remove: false }))
-    .pipe(minifycss({ advanced: false }))
+    .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.www/assets/styles'))
     .pipe(browserSync.stream({ match: '**/*.css' }))

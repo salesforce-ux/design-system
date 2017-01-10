@@ -16,11 +16,12 @@
 // 3. Let the browser know which properties are going to change,
 //    enabling it to optimize rendering speed as best it can
 .slds-icon-strength {
-  width: 1rem;
+  width: 1.6875rem;
+  height: 0.4375rem;
   display: inline-block;
 
   circle { // 1
-    stroke-width: 1.125;
+    stroke-width: 0.765px;
     fill: transparent;
     stroke: #ccc;
     transition: all 0.4s ease-in-out; // 2

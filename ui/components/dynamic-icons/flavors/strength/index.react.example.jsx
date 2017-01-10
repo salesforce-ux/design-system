@@ -17,10 +17,10 @@ let Strength = props =>
     {...props}
     title="Description of the icon when needed"
     className={classNames('slds-icon-strength', props.className)}>
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-      <circle r="1.825" cx="2.3875" cy="50%" />
-      <circle r="1.825" cx="50%" cy="50%" />
-      <circle r="1.825" cx="13.6125" cy="50%" />
+    <svg viewBox="0 0 27 7" aria-hidden="true">
+      <circle r="3.1175" cx="3.5" cy="3.5" />
+      <circle r="3.1175" cx="13.5" cy="3.5" />
+      <circle r="3.1175" cx="23.5" cy="3.5" />
     </svg>
     <span className="slds-assistive-text">Text alternative when needed</span>
   </span>;

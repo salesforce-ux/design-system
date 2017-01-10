@@ -1,0 +1,12 @@
+<aura:tokens>
+  <aura:token name="salesforceSansRegularWoff2" value="/slds/fonts/v2.3.0/SalesforceSans-Regular.woff2" property="src" />
+  <aura:token name="salesforceSansRegularWoff" value="/slds/fonts/v2.3.0/SalesforceSans-Regular.woff" property="src" />
+  <aura:token name="salesforceSansLightWoff2" value="/slds/fonts/v2.3.0/SalesforceSans-Light.woff2" property="src" />
+  <aura:token name="salesforceSansLightWoff" value="/slds/fonts/v2.3.0/SalesforceSans-Light.woff" property="src" />
+  <aura:token name="salesforceSansBoldWoff2" value="/slds/fonts/v2.3.0/SalesforceSans-Bold.woff2" property="src" />
+  <aura:token name="salesforceSansBoldWoff" value="/slds/fonts/v2.3.0/SalesforceSans-Bold.woff" property="src" />
+  <aura:token name="salesforceSansLightItalicWoff2" value="/slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff2" property="src" />
+  <aura:token name="salesforceSansLightItalicWoff" value="/slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff" property="src" />
+  <aura:token name="salesforceSansItalicWoff2" value="/slds/fonts/v2.3.0/SalesforceSans-Italic.woff2" property="src" />
+  <aura:token name="salesforceSansItalicWoff" value="/slds/fonts/v2.3.0/SalesforceSans-Italic.woff" property="src" />
+</aura:tokens>

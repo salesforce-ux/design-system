@@ -6,4 +6,7 @@ Stateful icons can be toggled on and off and retain their state. JavaScript is u
 
 <h4 class="site-text-heading--label">Accessibility</h4>
 
-For accessibility, include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+For accessibility, implement the [ARIA Toggle Button](http://w3c.github.io/aria-practices/#button) concept.
+- Similar to a mute button, the button represents a pressed or unpressed state.
+- Button text doesn't change per state
+- `aria-pressed` is set to `true` or `false`, depending its state

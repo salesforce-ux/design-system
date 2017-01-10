@@ -170,7 +170,10 @@ const moveItemPosition = function(arr, from, to) {
   return copyArr;
 };
 
+const appTilesGrabbed = appTiles.slice(0);
+appTilesGrabbed[0] = Object.assign({}, appTilesGrabbed[0], {grabbed: true});
 const appTilesMoved = moveItemPosition(appTiles, 0, 2);
+appTilesMoved[2] = Object.assign({}, appTilesMoved[2], {grabbed: true});
 const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
 export let states = [
@@ -195,7 +198,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
-        appTiles={appTiles}
+        appTiles={appTilesGrabbed}
         dragDropId={dragDropId}
         dragDropInstructions=""
         dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"

@@ -12,12 +12,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import fastdom from 'fastdom';
 
 import camelCase from 'lodash/camelCase';
-import kebabCase from 'theo/lib/props/util/kebabCase';
+import noCase from 'no-case';
 
 import emitter from '../framework/events';
 import { $, setClassName, hide } from '../framework/dom';
 import { search } from '../framework/helpers';
 import { set as setPreference, get as getPreference } from '../shared/preferences';
+
+// Should be exactly the same as Theo's kebabCase function
+const kebabCase = (string) => noCase(string, null, '-');
 
 const nameFormats = [
   {

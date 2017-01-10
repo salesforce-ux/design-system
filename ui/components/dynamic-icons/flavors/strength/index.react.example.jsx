@@ -51,9 +51,29 @@ export let states = [
     element: <Strength data-slds-strength="3" />
   },
   {
+    id: 'strength-negative-1',
+    label: 'Strength: -1',
+    element: <Strength data-slds-strength="-1" />
+  },
+  {
+    id: 'strength-negative-2',
+    label: 'Strength: -2',
+    element: <Strength data-slds-strength="-2" />
+  },
+  {
+    id: 'strength-negative-3',
+    label: 'Strength: -3',
+    element: <Strength data-slds-strength="-3" />
+  },
+  {
     id: 'animated',
     label: 'Animated on load',
     element: <Strength className="slds-is-animated" data-slds-strength="3" />
+  },
+  {
+    id: 'animated-negative',
+    label: 'Animated on load (negative)',
+    element: <Strength className="slds-is-animated" data-slds-strength="-3" />
   },
   {
     id: 'paused',

@@ -36,17 +36,27 @@
   //
   // <svg data-slds-strength="[Number]">
   // 0. no active dots
-  // 1. one active dot
-  // 2. two active dots
-  // 3. all dots active
+  // (-)1. one active dot
+  // (-)2. two active dots
+  // (-)3. all dots active
   &[data-slds-strength="1"] circle:nth-child(1),
   &[data-slds-strength="2"] circle:nth-child(1),
   &[data-slds-strength="2"] circle:nth-child(2),
   &[data-slds-strength="3"] circle:nth-child(1),
   &[data-slds-strength="3"] circle:nth-child(2),
   &[data-slds-strength="3"] circle:nth-child(3) {
-    fill: #22b0e6;
-    stroke: #22b0e6;
+    fill: #04844b;
+    stroke: #04844b;
+  }
+
+  &[data-slds-strength="-1"] circle:nth-child(1),
+  &[data-slds-strength="-2"] circle:nth-child(1),
+  &[data-slds-strength="-2"] circle:nth-child(2),
+  &[data-slds-strength="-3"] circle:nth-child(1),
+  &[data-slds-strength="-3"] circle:nth-child(2),
+  &[data-slds-strength="-3"] circle:nth-child(3) {
+    fill: #ffdde1;
+    stroke: #c23934;
   }
 
   // Animated state
@@ -57,7 +67,7 @@
       // Adjust this value to add a delay to the whole animation
       $_strength-offset-delay: 1s;
 
-      animation: slds-icon-strength-load 0.4s $_strength-offset-delay ease-in-out alternate both paused;
+      animation: slds-icon-strength-positive-load 0.4s $_strength-offset-delay ease-in-out alternate both paused;
 
       &:nth-child(2) {
         animation-delay: ($_strength-offset-delay + 0.4s);
@@ -67,6 +77,16 @@
       }
     }
 
+    &[data-slds-strength^="-"] circle {
+      animation-name: slds-icon-strength-negative-load;
+    }
+
+    &[data-slds-strength="-1"] circle:nth-child(1),
+    &[data-slds-strength="-2"] circle:nth-child(1),
+    &[data-slds-strength="-2"] circle:nth-child(2),
+    &[data-slds-strength="-3"] circle:nth-child(1),
+    &[data-slds-strength="-3"] circle:nth-child(2),
+    &[data-slds-strength="-3"] circle:nth-child(3),
     &[data-slds-strength="1"] circle:nth-child(1),
     &[data-slds-strength="2"] circle:nth-child(1),
     &[data-slds-strength="2"] circle:nth-child(2),
@@ -84,7 +104,12 @@
 }
 
 // scss-lint:disable SingleLinePerProperty
-@keyframes slds-icon-strength-load {
-  from { fill: transparent; stroke: #ccc;    }
-  to   { fill: #22b0e6;   stroke: #22b0e6; }
+@keyframes slds-icon-strength-positive-load {
+  0%   { fill: transparent; stroke: #ccc; }
+  100% { fill: #04844b; stroke: #04844b; }
+}
+
+@keyframes slds-icon-strength-negative-load {
+  0%   { fill: transparent; stroke: #ccc; }
+  100% { fill: #ffdde1; stroke: #c23934; }
 }

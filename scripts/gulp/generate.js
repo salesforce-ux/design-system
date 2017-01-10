@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
+import '../../app_modules/util/lodash_id_overwrite';
 
 import './generate-icons';
 import './generate-release-notes';

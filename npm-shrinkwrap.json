@@ -761,7 +761,7 @@
       }
     },
     "caniuse-db": {
-      "version": "1.0.30000604",
+      "version": "1.0.30000605",
       "dev": true
     },
     "cardinal": {
@@ -2763,7 +2763,7 @@
       }
     },
     "gulp-sourcemaps": {
-      "version": "2.3.0",
+      "version": "2.3.1",
       "dev": true,
       "dependencies": {
         "acorn": {
@@ -5283,7 +5283,7 @@
       }
     },
     "source-list-map": {
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dev": true
     },
     "source-map": {
@@ -5567,14 +5567,8 @@
       }
     },
     "theo": {
-      "version": "5.0.0-rc.5",
-      "dev": true,
-      "dependencies": {
-        "tinycolor2": {
-          "version": "1.1.2",
-          "dev": true
-        }
-      }
+      "version": "5.0.0-rc.6",
+      "dev": true
     },
     "throat": {
       "version": "3.0.0",

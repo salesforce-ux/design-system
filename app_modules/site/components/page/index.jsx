@@ -87,7 +87,7 @@ export default React.createClass({
         <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         {this.renderAnalytics()}
-        <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js" />
+        <script src="https://cdn.ravenjs.com/3.9.1/raven.min.js" />
         <script dangerouslySetInnerHTML={{__html: sentryScript}} />
       </head>
     );

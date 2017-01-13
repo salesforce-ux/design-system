@@ -15,12 +15,13 @@ if (globals.displaySearch) {
   const o = d.createElement(t);
   const s = d.getElementsByTagName(t)[0];
   o.src = 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js';
+  const publicDocSearchApiKey = 'a5ad71e92251e2eaad9e20a9befd004b';
+  const publicDocSearchIndexName = 'lightningdesignsystem';
 
   o.addEventListener('load', function (e) {
-    search = docsearch({
-      appId: process.env.SEARCH_APP_ID,
-      apiKey: process.env.SEARCH_API_KEY,
-      indexName: 'spring-17',
+    let docSearchConfig = {
+      apiKey: process.env.SEARCH_API_KEY === 'Use public DocSearch' ? publicDocSearchApiKey : process.env.SEARCH_API_KEY,
+      indexName: process.env.SEARCH_INDEX_NAME === 'Use public DocSearch' ? publicDocSearchIndexName : process.env.SEARCH_INDEX_NAME,
       inputSelector: '#docsearch',
       autocompleteOptions,
       transformData: (hits) => {
@@ -31,7 +32,15 @@ if (globals.displaySearch) {
           return hit;
         });
       }
-    });
+    };
+
+    // Only specify an appId when using a private DocSearch instance
+    // The public version of DocSearch figures out the appId for us
+    if (process.env.SEARCH_APP_ID !== 'Use public DocSearch') {
+      docSearchConfig.appId = process.env.SEARCH_APP_ID;
+    }
+
+    search = docsearch(docSearchConfig);
   });
   s.parentNode.insertBefore(o, s);
 }

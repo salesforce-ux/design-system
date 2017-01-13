@@ -17,8 +17,9 @@
       "internal": true
     },
     "search": {
-      "appId": "B2KKG101RI",
-      "apiKey": "f289c1dd954797a3e57158c04a897d46"
+      "appId": "Use public DocSearch",
+      "apiKey": "Use public DocSearch",
+      "indexName": "Use public DocSearch"
     }
   },
   "devDependencies": {

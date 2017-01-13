@@ -5,4 +5,4 @@ flavors:
   - stateful
 lightning:
   namespace: lightning:button
-  url: https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm
+  url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_button.htm

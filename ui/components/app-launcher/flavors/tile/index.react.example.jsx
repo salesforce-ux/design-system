@@ -20,17 +20,32 @@ import classNames from 'classnames';
 //////////////////////////////////////////////
 
 export let AppLauncherTile = props =>
-  <a href="javascript:void(0);" className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, props.flavor == 'small' ? 'slds-app-launcher__tile--small' : null, props.draggable ? 'slds-is-draggable' : null)}>
-    <div className={classNames('slds-app-launcher__tile-figure', props.flavor == 'small' ? 'slds-app-launcher__tile-figure--small' : null)}>
-      { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
-        <abbr className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</abbr>
+  <a
+    aria-describedby={ props.draggable ? props.referenceId : null }
+    draggable={props.draggable}
+    href="javascript:void(0);"
+    className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, {
+      'slds-is-draggable': props.draggable,
+      'slds-app-launcher__tile--small': props.flavor === 'small',
+      'slds-is-grabbed': props.grabbed
+    })}
+  >
+    <div className={classNames('slds-app-launcher__tile-figure', {
+      'slds-app-launcher__tile-figure--small': props.flavor === 'small'
+    })}
+  >
+    { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
+      <abbr className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</abbr>
       }
       { props.draggable ?
         <span className="slds-icon_container" title="Drag item to a new location">
           <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="rows" />
         </span> : null}
-    </div>
-    <div className={classNames('slds-app-launcher__tile-body', props.flavor == 'small' ? 'slds-app-launcher__tile-body--small' : null)}>
+      </div>
+      <div className={classNames('slds-app-launcher__tile-body', {
+        'slds-app-launcher__tile-body--small': props.flavor === 'small'
+      })}
+    >
       {props.children}
     </div>
   </a>;
@@ -41,7 +56,7 @@ export let AppLauncherTile = props =>
 
 export let states = [
   {
-    id: 'app-launcher-tile',
+    id: 'default',
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
@@ -52,11 +67,22 @@ export let states = [
       </div>
   },
   {
-    id: 'app-launcher-tile-draggable',
+    id: 'draggable',
     label: 'Draggable',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
+          <h2 className="slds-text-link">Sales Cloud</h2>
+          <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
+        </AppLauncherTile>
+      </div>
+  },
+  {
+    id: 'grabbed',
+    label: 'Grabbed',
+    element:
+      <div className="demo-only" style={{ width: '20rem' }}>
+        <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable grabbed>
           <h2 className="slds-text-link">Sales Cloud</h2>
           <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
         </AppLauncherTile>

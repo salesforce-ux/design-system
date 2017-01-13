@@ -113,6 +113,7 @@
 // If styles are being updated via media-queries, please make sure you update
 // the .slds-region--narrow references as the goal is for slds-post to
 // inherit the styles from mobile.
+.slds-region_narrow,
 .slds-region--narrow {
 
   // Modifying .slds-post when inside a region with the

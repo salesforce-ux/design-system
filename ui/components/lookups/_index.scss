@@ -59,6 +59,7 @@
     }
   }
 
+  &__item_label,
   &__item--label {
     display: flex;
     align-items: center;
@@ -93,6 +94,7 @@
     }
   }
 
+  &__item-action_label,
   &__item-action--label {
     padding: $spacing-x-small $spacing-medium;
 

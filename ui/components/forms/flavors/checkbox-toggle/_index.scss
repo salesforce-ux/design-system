@@ -7,9 +7,11 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+.slds-checkbox_toggle,
 .slds-checkbox--toggle {
   width: 100%;
 
+  .slds-checkbox_faux,
   .slds-checkbox--faux {
     display: block;
     position: relative;
@@ -50,14 +52,17 @@
     position: absolute;
 
     // scss-lint:disable NestingDepth SelectorDepth
+    + .slds-checkbox_faux_container,
     + .slds-checkbox--faux_container {
       font-size: $font-size-x-small;
       color: $color-text-label;
 
+      .slds-checkbox_off,
       .slds-checkbox--off {
         display: block;
       }
 
+      .slds-checkbox_on,
       .slds-checkbox--on {
         display: none;
       }
@@ -65,8 +70,11 @@
 
     &:focus {
 
+      & + .slds-checkbox_faux,
       & + .slds-checkbox--faux,
+      & ~ .slds-checkbox_faux,
       & ~ .slds-checkbox--faux,
+      & + .slds-checkbox_faux_container .slds-checkbox_faux,
       & + .slds-checkbox--faux_container .slds-checkbox--faux {
         background-color: $color-background-toggle-hover;
         border-color: $color-border-input-active;
@@ -78,17 +86,22 @@
     &:checked {
 
       // scss-lint:disable NestingDepth SelectorDepth
+      + .slds-checkbox_faux_container .slds-checkbox_off,
       + .slds-checkbox--faux_container .slds-checkbox--off {
           display: none;
         }
 
       // scss-lint:disable NestingDepth SelectorDepth
+      + .slds-checkbox_faux_container .slds-checkbox_on,
       + .slds-checkbox--faux_container .slds-checkbox--on {
         display: block;
       }
 
+      & + .slds-checkbox_faux,
       & + .slds-checkbox--faux,
+      & ~ .slds-checkbox_faux,
       & ~ .slds-checkbox--faux,
+      & + .slds-checkbox_faux_container .slds-checkbox_faux,
       & + .slds-checkbox--faux_container .slds-checkbox--faux {
         border-color: $color-background-toggle-active;
         background-color: $color-background-toggle-active;
@@ -127,8 +140,11 @@
 
       &:focus {
 
+        & + .slds-checkbox_faux,
         & + .slds-checkbox--faux,
+        & ~ .slds-checkbox_faux,
         & ~ .slds-checkbox--faux,
+        & + .slds-checkbox_faux_container .slds-checkbox_faux,
         & + .slds-checkbox--faux_container .slds-checkbox--faux {
           background-color: $color-background-toggle-active-hover;
         }
@@ -139,8 +155,11 @@
     &[disabled] {
     // scss-lint:disable NestingDepth
 
+      & + .slds-checkbox_faux,
       & + .slds-checkbox--faux,
+      & ~ .slds-checkbox_faux,
       & ~ .slds-checkbox--faux,
+      & + .slds-checkbox_faux_container .slds-checkbox_faux,
       & + .slds-checkbox--faux_container .slds-checkbox--faux {
         // scss-lint:disable NestingDepth
         background-color: $color-background-toggle-disabled;
@@ -159,6 +178,7 @@
 
       &:checked {
 
+        & + .slds-checkbox_faux_container .slds-checkbox_faux,
         & + .slds-checkbox--faux_container .slds-checkbox--faux {
 
           &:before {

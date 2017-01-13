@@ -17,6 +17,7 @@
     border-top: $border-width-thin solid $color-border;
   }
 
+  &_top,
   &--top {
     @include border(top);
 
@@ -27,10 +28,12 @@
     }
   }
 
+  &_right,
   &--right {
     @include dot-separator(right);
   }
 
+  &_bottom,
   &--bottom {
     @include border(bottom);
 
@@ -41,6 +44,7 @@
     }
   }
 
+  &_left,
   &--left {
     @include dot-separator(left);
   }

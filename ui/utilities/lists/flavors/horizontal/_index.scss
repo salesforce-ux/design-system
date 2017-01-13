@@ -9,10 +9,12 @@
 
 
 
+.slds-list_horizontal,
 .slds-list--horizontal {
   @include align-horizontal('.slds-list__item', true);
 }
 
+.slds-list_horizontal-large,
 .slds-list--horizontal-large {
 
   > .slds-list__item > a {

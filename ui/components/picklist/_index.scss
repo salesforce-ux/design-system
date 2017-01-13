@@ -18,17 +18,20 @@
 
   li {
 
+    .slds-icon_selected,
     .slds-icon--selected {
       opacity: 0;
       transition: opacity $duration-immediately ease;
     }
 
+    &.slds-is-selected .slds-icon_selected,
     &.slds-is-selected .slds-icon--selected {
       fill: $color-text-icon-default-hover;
       opacity: 1;
     }
   }
 
+  &_fluid,
   &--fluid {
     .slds-picklist__input,
     .slds-picklist__label,

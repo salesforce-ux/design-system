@@ -11,26 +11,32 @@
 
 .slds-container {
 
+  &_small,
   &--small {
     max-width: rem($mq-small);
   }
 
+  &_medium,
   &--medium {
     max-width: rem($mq-medium);
   }
 
+  &_large,
   &--large {
     max-width: rem($mq-large);
   }
 
+  &_x-large,
   &--x-large {
     max-width: rem($mq-x-large);
   }
 
+  &_fluid,
   &--fluid {
     width: 100%;
   }
 
+  &_center,
   &--center {
     margin: {
       left: auto;
@@ -38,10 +44,12 @@
     }
   }
 
+  &_left,
   &--left {
     margin-right: auto;
   }
 
+  &_right,
   &--right {
     margin-left: auto;
   }

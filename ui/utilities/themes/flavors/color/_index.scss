@@ -11,34 +11,41 @@
 
 .slds-theme {
 
+  &_default,
   &--default {
     @include theme(default);
   }
 
+  &_shade,
   &--shade {
     @include theme(shade);
   }
 
+  &_inverse,
   &--inverse {
     @include theme(inverse);
     border-color: $color-background-inverse;
   }
 
+  &_alt-inverse,
   &--alt-inverse {
     @include theme(alt-inverse);
     border-color: $color-background-alt-inverse;
   }
 
+  &_success,
   &--success {
     @include inverse-links;
     background-color: $color-background-toast-success;
   }
 
+  &_info,
   &--info {
     @include inverse-links;
     background-color: $color-background-toast;
   }
 
+  &_warning,
   &--warning {
     background-color: $color-background-warning;
     color: $color-text-default;
@@ -55,20 +62,24 @@
     }
   }
 
+  &_error,
   &--error {
     @include inverse-links;
     background-color: $color-background-toast-error;
   }
 
+  &_offline,
   &--offline {
     @include inverse-links;
     background-color: #444;
   }
 
+  &_alert-texture,
   &--alert-texture {
     @include gradient-striped;
   }
 
+  &_inverse-text,
   &--inverse-text {
     @include inverse-links;
   }

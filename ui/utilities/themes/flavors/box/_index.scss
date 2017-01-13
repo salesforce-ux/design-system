@@ -12,18 +12,22 @@
 .slds-box {
   @include box($borders: around);
 
+  &_xx-small,
   &--xx-small {
     padding: $spacing-xx-small;
   }
 
+  &_x-small,
   &--x-small {
     padding: $spacing-x-small;
   }
 
+  &_small,
   &--small {
     padding: $spacing-small;
   }
 
+  &_border,
   &--border {
     @include box($padding: 0, $borders: around);
   }

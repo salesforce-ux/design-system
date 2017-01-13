@@ -9,6 +9,7 @@
 
 
 
+.slds-popover_panel,
 .slds-popover--panel {
 
   .slds-popover__header {
@@ -29,9 +30,13 @@
   }
 
   // Deal with Nubbin Color
+  &.slds-nubbin_left-top,
   &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
   &.slds-nubbin--right-top,
+  &.slds-nubbin_top-left,
   &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
   &.slds-nubbin--top-right {
 
     &:before,
@@ -41,7 +46,9 @@
   }
 
   // Align nubbin to the icon
+  &.slds-nubbin_left-top,
   &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
   &.slds-nubbin--right-top {
 
     &:before,

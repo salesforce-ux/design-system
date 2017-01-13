@@ -11,14 +11,17 @@
 
 .slds-text-align {
 
+  &_left,
   &--left {
     text-align: left;
   }
 
+  &_center,
   &--center {
     text-align: center;
   }
 
+  &_right,
   &--right {
     text-align: right;
   }

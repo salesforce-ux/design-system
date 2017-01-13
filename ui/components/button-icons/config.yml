@@ -11,4 +11,4 @@ flavors:
   - icon-with-dropdown
 lightning:
   namespace: lightning:buttonIcon
-  url: https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm
+  url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm

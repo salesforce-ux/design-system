@@ -55,6 +55,7 @@
 // Single Line
 // Dedicated dropzone when there are multiple dropzones in the form or when
 // the input is positioned among other form inputs.
+.slds-file-selector_files,
 .slds-file-selector--files {
 
   .slds-file-selector__body {
@@ -76,6 +77,7 @@
 // Multi Line / Image
 // Use as a dedicated dropzone for image files only. May require a
 // cropping control.
+.slds-file-selector_images,
 .slds-file-selector--images {
   display: block;
 
@@ -102,12 +104,14 @@
 // Invisible Dropzone (Container)
 // Use when an entire container should be droppable.
 // The container should have a visible boundary, like a modal, composer, or page.
+.slds-file-selector_integrated,
 .slds-file-selector--integrated {
   @include square(100%);
   position: relative;
   display: block;
 }
 
+.slds-file-selector__dropzone_integrated,
 .slds-file-selector__dropzone--integrated {
   @include absolute-center;
   position: absolute;
@@ -131,6 +135,7 @@
   }
 }
 
+.slds-file-selector__body_integrated,
 .slds-file-selector__body--integrated {
   @include square($size-x-small);
   @include absolute-center;
@@ -141,6 +146,7 @@
   flex-direction: column;
 }
 
+.slds-file-selector__text_integrated,
 .slds-file-selector__text--integrated {
   margin-top: $spacing-small;
 }

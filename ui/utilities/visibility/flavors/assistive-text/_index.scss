@@ -21,6 +21,7 @@
   clip: rect(0 0 0 0) !important;
 }
 
+.slds-assistive-text_focus,
 .slds-assistive-text--focus {
   // scss-lint:disable ImportantRule
   &:focus {

@@ -30,46 +30,46 @@ export default (
 
           <ul className="slds-list--vertical slds-has-block-links">
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm">Icon</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_icon.htm">Icon</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_badge.htm">Badge</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_badge.htm">Badge</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_button.htm">Button</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_button.htm">Button</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm">ButtonGroup</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm">ButtonGroup</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm">ButtonIcon</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_buttonIcon.htm">ButtonIcon</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm">ButtonMenu</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_buttonMenu.htm">ButtonMenu</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_input.htm">Input</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_input.htm">Input</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm">Text Area</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_textarea.htm">Text Area</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_select.htm">inputSelect</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_select.htm">inputSelect</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm">Tabs</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_tabset.htm">Tabs</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_card.htm">Card</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_card.htm">Card</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layout.htm">Layout</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_layout.htm">Layout</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_layoutItem.htm">LayoutItem</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_layoutItem.htm">LayoutItem</a>
             </li>
             <li>
-              <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm">Spinner</a>
+              <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm">Spinner</a>
             </li>
           </ul>
         </div>
@@ -85,7 +85,7 @@ export default (
           </p>
 
           <p>
-            Your <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/lightning_out_dependencies.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">Lightning Components for Visualforce (LC4VF)</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/apps_slds.htm">Lightning Application</a> automatically get the Lightning Design System
+            Your <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/lightning_out_dependencies.htm">Lightning Out</a>, <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/components_visualforce.htm?search_text=lc4vf">Lightning Components for Visualforce (LC4VF)</a>, and <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/apps_slds.htm">Lightning Application</a> automatically get the Lightning Design System
             stylesheets and design tokens by using the linked instructions to each.
             This is the easiest way to stay up-to-date and consistent with SLDS
             enhancements.
@@ -100,7 +100,7 @@ export default (
 
           <ul className="slds-list--dotted">
             <li>
-              The Design System uses SVG icons. You can use them in your Lightning components by using one of the new Base Lightning Components called <a href="https://developer.salesforce.com/docs/atlas.en-us.204.0.lightning.meta/lightning/aura_compref_lightning_icon.htm?search_text=lightning:">lightning:icon</a>. You can explore the other Base Components in the Reference section of the Developer Guide.
+              The Design System uses SVG icons. You can use them in your Lightning components by using one of the new Base Lightning Components called <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_icon.htm?search_text=lightning:">lightning:icon</a>. You can explore the other Base Components in the Reference section of the Developer Guide.
             </li>
 
             <li>

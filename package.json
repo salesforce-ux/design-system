@@ -18,7 +18,8 @@
     },
     "search": {
       "appId": "B2KKG101RI",
-      "apiKey": "f289c1dd954797a3e57158c04a897d46"
+      "apiKey": "f289c1dd954797a3e57158c04a897d46",
+      "indexName": "summer-17"
     }
   },
   "devDependencies": {

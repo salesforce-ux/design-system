@@ -25,7 +25,7 @@
   ol,
   dl,
   table {
-    margin-bottom: $spacing-medium;
+    margin-bottom: $spacing-large;
 
     &:last-child {
       margin-bottom: 0;
@@ -129,9 +129,9 @@
   }
 
   ul.slds-list--vertical {
-     margin-left: 0;
-     list-style: none;
-   }
+    margin-left: 0;
+    list-style: none;
+  }
 
   .site-menu--jump-links .slds-is-nested {
     margin-left: $spacing-medium;
@@ -187,5 +187,12 @@
 
   .site-nowrap {
     white-space: nowrap;
+  }
+
+  .site-list--reset {
+    // scss-lint:disable ImportantRule
+    // Should this be a utility?
+    margin-left: 0 !important;
+    list-style: none !important;
   }
 }

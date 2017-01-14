@@ -77,6 +77,11 @@
     .slds-is-nested a {
       padding-left: $spacing-x-large + ($spacing-large * 2);
     }
+
+    // scss-lint:disable SelectorDepth
+    .slds-is-nested .slds-is-nested a {
+      padding-left: $spacing-x-large + ($spacing-large * 3);
+    }
   }
 
   @include mq-medium-min {

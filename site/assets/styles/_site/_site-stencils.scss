@@ -120,11 +120,6 @@ $stencil-dark:  #a8b8d0 !default;
     }
   }
 
-  .site-list--reset {
-    // Should this be a utility?
-    list-style: none !important;
-  }
-
   .site-dimension {
     margin-top: $spacing-large;
     font-size: $font-size-small;

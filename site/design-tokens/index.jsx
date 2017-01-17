@@ -84,9 +84,8 @@ const Tokens = React.createClass({
     const options = release.groups.map(group => {
       return <option key={group.name} value={group.name}>{group.label}</option>;
     });
-    const formatSelect = !process.env.INTERNAL
-      ? null
-      : <div className="slds-form-element slds-p-horizontal--medium">
+    const formatSelect =
+      <div className="slds-form-element slds-p-horizontal--medium">
           <label htmlFor="slds-tokens-name-format" className="slds-form-element__label" >Format:</label>
           <div className="slds-form-element__control">
             <select className="slds-select slds-no-flex" id="slds-tokens-name-format" />

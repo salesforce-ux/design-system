@@ -15,7 +15,7 @@
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
-  padding: 0 0 0 $spacing-medium;
+  padding: 0 0 0 $spacing-large;
 
   &__primary,
   &__secondary,
@@ -175,9 +175,9 @@
     display: flex;
     align-items: center;
     align-content: center;
-    color: $color-text-context-bar;
     margin-left: ($spacing-xx-small * -1);
     padding: 0 $spacing-x-small;
+    color: $color-text-context-bar;
     border-radius: 0;
 
     &:focus {
@@ -201,6 +201,21 @@
     &:active {
       color: $color-text-context-bar;
     }
+
+    .slds-icon-waffle_container {
+      @include square($square-icon-large-content);
+      margin: {
+        right: $spacing-xx-small;
+        left: -$spacing-x-small;
+      }
+    }
+
+    .slds-icon-waffle {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
   }
 
   // Button inside of actionable container
@@ -208,17 +223,11 @@
     color: inherit;
   }
 
-  // Workspace tabs
-  //
-  // Consumes tab structure but looks like gnav
-  // ------------
-  &_tabs,
-  &--tabs {
 
-    // Need to reset styles from default
-    .slds-context-bar__icon-action {
-      margin-left: auto;
-    }
+
+  // Need to reset styles from default
+  .slds-context-bar__icon-action {
+    margin-left: auto;
   }
 
   // Tab context bar items

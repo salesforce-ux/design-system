@@ -12557,89 +12557,89 @@ exports[`test feeds_comment_comment-liked.html 1`] = `
 `;
 
 exports[`test feeds_feed-list_default.html 1`] = `
-"<div class=\"slds-feed\">
-  <ul class=\"slds-feed__list\">
-    <li class=\"slds-feed__item\">
-      <article class=\"slds-post\">
-        <header class=\"slds-post__header slds-media\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-              <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<div class="slds-feed">
+  <ul class="slds-feed__list">
+    <li class="slds-feed__item">
+      <article class="slds-post">
+        <header class="slds-post__header slds-media">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+              <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-              <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-              <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-                title=\"More Options\">
-                <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+              <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+              <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+                title="More Options">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                 </svg>
-                <span class=\"slds-assistive-text\">More Options</span>
+                <span class="slds-assistive-text">More Options</span>
               </button>
             </div>
-            <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+            <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
           </div>
         </header>
-        <div class=\"slds-post__content slds-text-longform\">
-          <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        <div class="slds-post__content slds-text-longform">
+          <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
         </div>
-        <footer class=\"slds-post__footer\">
-          <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+        <footer class="slds-post__footer">
+          <ul class="slds-post__footer-actions-list slds-list--horizontal">
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
                 </svg>Like</a>
             </li>
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
                 </svg> Comment</a>
             </li>
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
                 </svg> Share</a>
             </li>
           </ul>
-          <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-            <li class=\"slds-item\">20 shares</li>
-            <li class=\"slds-item\">259 views</li>
+          <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+            <li class="slds-item">20 shares</li>
+            <li class="slds-item">259 views</li>
           </ul>
         </footer>
       </article>
-      <div class=\"slds-feed__item-comments\">
-        <div class=\"slds-p-horizontal--medium slds-p-vertical--x-small slds-grid\"><a href=\"javascript:void(0);\">More comments</a>
-          <span class=\"slds-text-body--small slds-col--bump-left\">1 of 8</span>
+      <div class="slds-feed__item-comments">
+        <div class="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid"><a href="javascript:void(0);">More comments</a>
+          <span class="slds-text-body--small slds-col--bump-left">1 of 8</span>
         </div>
         <ul>
           <li>
-            <article class=\"slds-comment slds-media slds-hint-parent\">
-              <div class=\"slds-media__figure\">
-                <a href=\"javascript:void(0);\" title=\"Jenna Davis\" class=\"slds-avatar slds-avatar--circle slds-avatar--medium\">
-                  <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+            <article class="slds-comment slds-media slds-hint-parent">
+              <div class="slds-media__figure">
+                <a href="javascript:void(0);" title="Jenna Davis" class="slds-avatar slds-avatar--circle slds-avatar--medium">
+                  <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
                 </a>
               </div>
-              <div class=\"slds-media__body\">
-                <header class=\"slds-media slds-media--center\">
-                  <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-                    <p class=\"slds-truncate\"><a href=\"javascript:void(0);\" title=\"Jenna Davis\">Jenna Davis</a></p>
-                    <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\" title=\"More Options\">
-                      <svg class=\"slds-button__icon slds-button__icon--hint\" aria-hidden=\"true\">
-                        <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+              <div class="slds-media__body">
+                <header class="slds-media slds-media--center">
+                  <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                    <p class="slds-truncate"><a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a></p>
+                    <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true" title="More Options">
+                      <svg class="slds-button__icon slds-button__icon--hint" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                       </svg>
-                      <span class=\"slds-assistive-text\">More Options</span>
+                      <span class="slds-assistive-text">More Options</span>
                     </button>
                   </div>
                 </header>
-                <div class=\"slds-comment__content slds-text-longform\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="slds-comment__content slds-text-longform">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 <footer>
-                  <ul class=\"slds-list--horizontal slds-has-dividers--right slds-text-body--small\">
-                    <li class=\"slds-item\"><a class=\"slds-text-color--weak\" href=\"javascript:void(0);\" title=\"Like this item\">Like</a></li>
-                    <li class=\"slds-item\">16hr Ago</li>
+                  <ul class="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+                    <li class="slds-item"><a class="slds-text-color--weak" href="javascript:void(0);" title="Like this item">Like</a></li>
+                    <li class="slds-item">16hr Ago</li>
                   </ul>
                 </footer>
               </div>
@@ -12648,55 +12648,55 @@ exports[`test feeds_feed-list_default.html 1`] = `
         </ul>
       </div>
     </li>
-    <li class=\"slds-feed__item\">
-      <article class=\"slds-post\">
-        <header class=\"slds-post__header slds-media\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-              <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+    <li class="slds-feed__item">
+      <article class="slds-post">
+        <header class="slds-post__header slds-media">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+              <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-              <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-              <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-                title=\"More Options\">
-                <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+              <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+              <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+                title="More Options">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                 </svg>
-                <span class=\"slds-assistive-text\">More Options</span>
+                <span class="slds-assistive-text">More Options</span>
               </button>
             </div>
-            <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+            <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
           </div>
         </header>
-        <div class=\"slds-post__content slds-text-longform\">
-          <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+        <div class="slds-post__content slds-text-longform">
+          <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
         </div>
-        <footer class=\"slds-post__footer\">
-          <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+        <footer class="slds-post__footer">
+          <ul class="slds-post__footer-actions-list slds-list--horizontal">
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
                 </svg>Like</a>
             </li>
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
                 </svg> Comment</a>
             </li>
-            <li class=\"slds-col slds-item slds-m-right--medium\">
-              <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-                <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-                  <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+            <li class="slds-col slds-item slds-m-right--medium">
+              <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+                <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
                 </svg> Share</a>
             </li>
           </ul>
-          <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-            <li class=\"slds-item\">20 shares</li>
-            <li class=\"slds-item\">259 views</li>
+          <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+            <li class="slds-item">20 shares</li>
+            <li class="slds-item">259 views</li>
           </ul>
         </footer>
       </article>
@@ -12706,442 +12706,442 @@ exports[`test feeds_feed-list_default.html 1`] = `
 `;
 
 exports[`test feeds_post_post.html 1`] = `
-"<article class=\"slds-post\">
-  <header class=\"slds-post__header slds-media\">
-    <div class=\"slds-media__figure\">
-      <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-        <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<article class="slds-post">
+  <header class="slds-post__header slds-media">
+    <div class="slds-media__figure">
+      <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+        <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
       </a>
     </div>
-    <div class=\"slds-media__body\">
-      <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-        <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-        <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-          title=\"More Options\">
-          <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+    <div class="slds-media__body">
+      <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+        <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+          title="More Options">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
           </svg>
-          <span class=\"slds-assistive-text\">More Options</span>
+          <span class="slds-assistive-text">More Options</span>
         </button>
       </div>
-      <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+      <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
     </div>
   </header>
-  <div class=\"slds-post__content slds-text-longform\">
-    <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+  <div class="slds-post__content slds-text-longform">
+    <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
   </div>
-  <footer class=\"slds-post__footer\">
-    <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+  <footer class="slds-post__footer">
+    <ul class="slds-post__footer-actions-list slds-list--horizontal">
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
           </svg>Like</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
           </svg> Comment</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
           </svg> Share</a>
       </li>
     </ul>
-    <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-      <li class=\"slds-item\">20 shares</li>
-      <li class=\"slds-item\">259 views</li>
+    <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+      <li class="slds-item">20 shares</li>
+      <li class="slds-item">259 views</li>
     </ul>
   </footer>
 </article>"
 `;
 
 exports[`test feeds_post_post-with-liker-bar.html 1`] = `
-"<div class=\"demo-only\">
-  <article class=\"slds-post\">
-    <header class=\"slds-post__header slds-media\">
-      <div class=\"slds-media__figure\">
-        <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-          <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<div class="demo-only">
+  <article class="slds-post">
+    <header class="slds-post__header slds-media">
+      <div class="slds-media__figure">
+        <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-          <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-          <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-            title=\"More Options\">
-            <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+      <div class="slds-media__body">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+          <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+            title="More Options">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
             </svg>
-            <span class=\"slds-assistive-text\">More Options</span>
+            <span class="slds-assistive-text">More Options</span>
           </button>
         </div>
-        <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+        <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
       </div>
     </header>
-    <div class=\"slds-post__content slds-text-longform\">
-      <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+    <div class="slds-post__content slds-text-longform">
+      <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <footer class=\"slds-post__footer\">
-      <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action slds-is-active\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+    <footer class="slds-post__footer">
+      <ul class="slds-post__footer-actions-list slds-list--horizontal">
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action slds-is-active">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
             </svg>Liked</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
             </svg> Comment</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
             </svg> Share</a>
         </li>
       </ul>
-      <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-        <li class=\"slds-item\">1 likes</li>
-        <li class=\"slds-item\">20 shares</li>
-        <li class=\"slds-item\">259 views</li>
+      <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+        <li class="slds-item">1 likes</li>
+        <li class="slds-item">20 shares</li>
+        <li class="slds-item">259 views</li>
       </ul>
     </footer>
   </article>
-  <div class=\"slds-feed__item-comments\">
-    <div class=\"slds-p-horizontal--medium slds-p-vertical--x-small\"><a href=\"javascript:void(0);\">You</a> liked this post</div>
+  <div class="slds-feed__item-comments">
+    <div class="slds-p-horizontal--medium slds-p-vertical--x-small"><a href="javascript:void(0);">You</a> liked this post</div>
   </div>
 </div>"
 `;
 
 exports[`test feeds_post-with-attachments_post-attachment-files.html 1`] = `
-"<article class=\"slds-post\">
-  <header class=\"slds-post__header slds-media\">
-    <div class=\"slds-media__figure\">
-      <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-        <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<article class="slds-post">
+  <header class="slds-post__header slds-media">
+    <div class="slds-media__figure">
+      <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+        <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
       </a>
     </div>
-    <div class=\"slds-media__body\">
-      <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-        <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-        <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-          title=\"More Options\">
-          <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+    <div class="slds-media__body">
+      <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+        <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+          title="More Options">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
           </svg>
-          <span class=\"slds-assistive-text\">More Options</span>
+          <span class="slds-assistive-text">More Options</span>
         </button>
       </div>
-      <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+      <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
     </div>
   </header>
-  <div class=\"slds-post__content slds-text-longform\">
-    <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+  <div class="slds-post__content slds-text-longform">
+    <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
   </div>
-  <div class=\"slds-post__payload\">
-    <ul class=\"slds-grid slds-grid--pull-padded\">
-      <li class=\"slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3\">
-        <figure class=\"slds-image slds-image--card\">
-          <a href=\"javascript:void(0);\" class=\"slds-image__crop slds-image__crop--16-by-9\">
-            <img src=\"/assets/images/placeholder-img@16x9.jpg\" alt=\"Description of the image\" />
+  <div class="slds-post__payload">
+    <ul class="slds-grid slds-grid--pull-padded">
+      <li class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
+        <figure class="slds-image slds-image--card">
+          <a href="javascript:void(0);" class="slds-image__crop slds-image__crop--16-by-9">
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" />
           </a>
-          <figcaption class=\"slds-image__title slds-image__title--card\">
-            <span class=\"slds-icon_container slds-m-right--x-small\" title=\"image\">
-              <svg class=\"slds-icon slds-icon--x-small\" aria-hidden=\"true\">
-                <use xlink:href=\"/assets/icons/doctype-sprite/svg/symbols.svg#image\"></use>
+          <figcaption class="slds-image__title slds-image__title--card">
+            <span class="slds-icon_container slds-m-right--x-small" title="image">
+              <svg class="slds-icon slds-icon--x-small" aria-hidden="true">
+                <use xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
               </svg>
-              <span class=\"slds-assistive-text\">image</span>
+              <span class="slds-assistive-text">image</span>
             </span>
-            <span class=\"slds-image__text slds-truncate\" title=\"Image Title\">Image Title</span>
+            <span class="slds-image__text slds-truncate" title="Image Title">Image Title</span>
           </figcaption>
         </figure>
       </li>
-      <li class=\"slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show\">
-        <figure class=\"slds-image slds-image--card\">
-          <a href=\"javascript:void(0);\" class=\"slds-image__crop slds-image__crop--16-by-9\">
-            <span class=\"slds-image__icon slds-icon_container\" title=\"pdf\">
-              <svg class=\"slds-icon\" aria-hidden=\"true\">
-                <use xlink:href=\"/assets/icons/doctype-sprite/svg/symbols.svg#pdf\"></use>
+      <li class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show">
+        <figure class="slds-image slds-image--card">
+          <a href="javascript:void(0);" class="slds-image__crop slds-image__crop--16-by-9">
+            <span class="slds-image__icon slds-icon_container" title="pdf">
+              <svg class="slds-icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"></use>
               </svg>
-              <span class=\"slds-assistive-text\">Image Title</span>
+              <span class="slds-assistive-text">Image Title</span>
             </span>
           </a>
-          <figcaption class=\"slds-image__title slds-image__title--card\">
-            <span class=\"slds-icon_container slds-m-right--x-small\" title=\"pdf\">
-              <svg class=\"slds-icon slds-icon--x-small\" aria-hidden=\"true\">
-                <use xlink:href=\"/assets/icons/doctype-sprite/svg/symbols.svg#pdf\"></use>
+          <figcaption class="slds-image__title slds-image__title--card">
+            <span class="slds-icon_container slds-m-right--x-small" title="pdf">
+              <svg class="slds-icon slds-icon--x-small" aria-hidden="true">
+                <use xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"></use>
               </svg>
-              <span class=\"slds-assistive-text\">pdf</span>
+              <span class="slds-assistive-text">pdf</span>
             </span>
-            <span class=\"slds-image__text slds-truncate\" title=\"Image Title\">Image Title</span>
+            <span class="slds-image__text slds-truncate" title="Image Title">Image Title</span>
           </figcaption>
         </figure>
       </li>
-      <li class=\"slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3\">
-        <figure class=\"slds-image slds-image--card\">
-          <a href=\"javascript:void(0);\" class=\"slds-image__crop slds-image__crop--16-by-9\">
-            <div class=\"slds-image--overlay\"></div>
-            <img src=\"/assets/images/placeholder-img@16x9.jpg\" alt=\"Description of the image\" />
+      <li class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
+        <figure class="slds-image slds-image--card">
+          <a href="javascript:void(0);" class="slds-image__crop slds-image__crop--16-by-9">
+            <div class="slds-image--overlay"></div>
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" />
           </a>
-          <figcaption class=\"slds-image__title slds-image__title--overlay slds-align--absolute-center slds-text-heading--large\">
-            <span class=\"slds-image__text slds-truncate\" title=\"22+\">22+
-              <span class=\"slds-assistive-text\">more files</span>
+          <figcaption class="slds-image__title slds-image__title--overlay slds-align--absolute-center slds-text-heading--large">
+            <span class="slds-image__text slds-truncate" title="22+">22+
+              <span class="slds-assistive-text">more files</span>
             </span>
           </figcaption>
         </figure>
       </li>
     </ul>
   </div>
-  <footer class=\"slds-post__footer\">
-    <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+  <footer class="slds-post__footer">
+    <ul class="slds-post__footer-actions-list slds-list--horizontal">
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
           </svg>Like</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
           </svg> Comment</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
           </svg> Share</a>
       </li>
     </ul>
-    <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-      <li class=\"slds-item\">20 shares</li>
-      <li class=\"slds-item\">259 views</li>
+    <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+      <li class="slds-item">20 shares</li>
+      <li class="slds-item">259 views</li>
     </ul>
   </footer>
 </article>"
 `;
 
 exports[`test feeds_post-with-attachments_post-attachment-link.html 1`] = `
-"<article class=\"slds-post\">
-  <header class=\"slds-post__header slds-media\">
-    <div class=\"slds-media__figure\">
-      <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-        <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<article class="slds-post">
+  <header class="slds-post__header slds-media">
+    <div class="slds-media__figure">
+      <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+        <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
       </a>
     </div>
-    <div class=\"slds-media__body\">
-      <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-        <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-        <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-          title=\"More Options\">
-          <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+    <div class="slds-media__body">
+      <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+        <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+          title="More Options">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
           </svg>
-          <span class=\"slds-assistive-text\">More Options</span>
+          <span class="slds-assistive-text">More Options</span>
         </button>
       </div>
-      <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+      <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
     </div>
   </header>
-  <div class=\"slds-post__content slds-text-longform\">
-    <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+  <div class="slds-post__content slds-text-longform">
+    <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
   </div>
-  <div class=\"slds-post__payload\">
-    <a href=\"javascript:void(0);\" class=\"slds-media slds-box slds-grow slds-text-link--reset\">
-      <div class=\"slds-media__figure slds-medium-show\">
-        <div class=\"slds-image slds-size--small\">
-          <div class=\"slds-image__crop slds-image__crop--16-by-9\">
-            <img src=\"/assets/images/placeholder-img@16x9.jpg\" alt=\"Image Title\" />
+  <div class="slds-post__payload">
+    <a href="javascript:void(0);" class="slds-media slds-box slds-grow slds-text-link--reset">
+      <div class="slds-media__figure slds-medium-show">
+        <div class="slds-image slds-size--small">
+          <div class="slds-image__crop slds-image__crop--16-by-9">
+            <img src="/assets/images/placeholder-img@16x9.jpg" alt="Image Title" />
           </div>
         </div>
       </div>
-      <div class=\"slds-media__body\">
-        <h3 class=\"slds-text-heading--small\">Maui By Air The Best Way Around The Island</h3>
+      <div class="slds-media__body">
+        <h3 class="slds-text-heading--small">Maui By Air The Best Way Around The Island</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-        <span class=\"slds-text-body--small\">Maui By Air The Best Way Around The Island</span>
+        <span class="slds-text-body--small">Maui By Air The Best Way Around The Island</span>
       </div>
     </a>
   </div>
-  <footer class=\"slds-post__footer\">
-    <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+  <footer class="slds-post__footer">
+    <ul class="slds-post__footer-actions-list slds-list--horizontal">
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
           </svg>Like</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
           </svg> Comment</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
           </svg> Share</a>
       </li>
     </ul>
-    <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-      <li class=\"slds-item\">20 shares</li>
-      <li class=\"slds-item\">259 views</li>
+    <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+      <li class="slds-item">20 shares</li>
+      <li class="slds-item">259 views</li>
     </ul>
   </footer>
 </article>"
 `;
 
 exports[`test feeds_post-with-comments_post-with-comments.html 1`] = `
-"<div class=\"demo-only\">
-  <article class=\"slds-post\">
-    <header class=\"slds-post__header slds-media\">
-      <div class=\"slds-media__figure\">
-        <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-          <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<div class="demo-only">
+  <article class="slds-post">
+    <header class="slds-post__header slds-media">
+      <div class="slds-media__figure">
+        <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-          <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-          <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-            title=\"More Options\">
-            <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+      <div class="slds-media__body">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+          <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+            title="More Options">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
             </svg>
-            <span class=\"slds-assistive-text\">More Options</span>
+            <span class="slds-assistive-text">More Options</span>
           </button>
         </div>
-        <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+        <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
       </div>
     </header>
-    <div class=\"slds-post__content slds-text-longform\">
-      <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+    <div class="slds-post__content slds-text-longform">
+      <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <footer class=\"slds-post__footer\">
-      <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+    <footer class="slds-post__footer">
+      <ul class="slds-post__footer-actions-list slds-list--horizontal">
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
             </svg>Like</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
             </svg> Comment</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
             </svg> Share</a>
         </li>
       </ul>
-      <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-        <li class=\"slds-item\">2 comments</li>
-        <li class=\"slds-item\">20 shares</li>
-        <li class=\"slds-item\">259 views</li>
+      <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+        <li class="slds-item">2 comments</li>
+        <li class="slds-item">20 shares</li>
+        <li class="slds-item">259 views</li>
       </ul>
     </footer>
   </article>
-  <div class=\"slds-feed__item-comments\">
+  <div class="slds-feed__item-comments">
     <ul>
       <li>
-        <article class=\"slds-comment slds-media slds-hint-parent\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jenna Davis\" class=\"slds-avatar slds-avatar--circle slds-avatar--medium\">
-              <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+        <article class="slds-comment slds-media slds-hint-parent">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jenna Davis" class="slds-avatar slds-avatar--circle slds-avatar--medium">
+              <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <header class=\"slds-media slds-media--center\">
-              <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-                <p class=\"slds-truncate\"><a href=\"javascript:void(0);\" title=\"Jenna Davis\">Jenna Davis</a></p>
-                <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\" title=\"More Options\">
-                  <svg class=\"slds-button__icon slds-button__icon--hint\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <header class="slds-media slds-media--center">
+              <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                <p class="slds-truncate"><a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a></p>
+                <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true" title="More Options">
+                  <svg class="slds-button__icon slds-button__icon--hint" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">More Options</span>
+                  <span class="slds-assistive-text">More Options</span>
                 </button>
               </div>
             </header>
-            <div class=\"slds-comment__content slds-text-longform\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="slds-comment__content slds-text-longform">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             <footer>
-              <ul class=\"slds-list--horizontal slds-has-dividers--right slds-text-body--small\">
-                <li class=\"slds-item\"><a class=\"slds-text-color--weak\" href=\"javascript:void(0);\" title=\"Like this item\">Like</a></li>
-                <li class=\"slds-item\">16hr Ago</li>
+              <ul class="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+                <li class="slds-item"><a class="slds-text-color--weak" href="javascript:void(0);" title="Like this item">Like</a></li>
+                <li class="slds-item">16hr Ago</li>
               </ul>
             </footer>
           </div>
         </article>
       </li>
       <li>
-        <article class=\"slds-comment slds-media slds-hint-parent\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jenna Davis\" class=\"slds-avatar slds-avatar--circle slds-avatar--medium\">
-              <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+        <article class="slds-comment slds-media slds-hint-parent">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jenna Davis" class="slds-avatar slds-avatar--circle slds-avatar--medium">
+              <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <header class=\"slds-media slds-media--center\">
-              <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-                <p class=\"slds-truncate\"><a href=\"javascript:void(0);\" title=\"Jenna Davis\">Jenna Davis</a></p>
-                <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\" title=\"More Options\">
-                  <svg class=\"slds-button__icon slds-button__icon--hint\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <header class="slds-media slds-media--center">
+              <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                <p class="slds-truncate"><a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a></p>
+                <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true" title="More Options">
+                  <svg class="slds-button__icon slds-button__icon--hint" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">More Options</span>
+                  <span class="slds-assistive-text">More Options</span>
                 </button>
               </div>
             </header>
-            <div class=\"slds-comment__content slds-text-longform\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="slds-comment__content slds-text-longform">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             <footer>
-              <ul class=\"slds-list--horizontal slds-has-dividers--right slds-text-body--small\">
-                <li class=\"slds-item\"><a class=\"slds-text-color--weak\" href=\"javascript:void(0);\" title=\"Like this item\">Like</a></li>
-                <li class=\"slds-item\">16hr Ago</li>
+              <ul class="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+                <li class="slds-item"><a class="slds-text-color--weak" href="javascript:void(0);" title="Like this item">Like</a></li>
+                <li class="slds-item">16hr Ago</li>
               </ul>
             </footer>
           </div>
         </article>
       </li>
     </ul>
-    <div class=\"slds-media slds-comment slds-hint-parent\">
-      <div class=\"slds-media__figure\">
-        <a class=\"slds-avatar slds-avatar--circle slds-avatar--medium\" href=\"javascript:void(0);\" title=\"Jenna Davis\">
-          <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+    <div class="slds-media slds-comment slds-hint-parent">
+      <div class="slds-media__figure">
+        <a class="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);" title="Jenna Davis">
+          <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-publisher slds-publisher--comment\">
-          <label for=\"comment-text-input-01\" class=\"slds-assistive-text\">Write a comment</label>
-          <textarea id=\"comment-text-input-01\" class=\"slds-publisher__input slds-input--bare slds-text-longform\" placeholder=\"Write a comment…\"></textarea>
-          <div class=\"slds-publisher__actions slds-grid slds-grid--align-spread\">
-            <ul class=\"slds-grid\">
+      <div class="slds-media__body">
+        <div class="slds-publisher slds-publisher--comment">
+          <label for="comment-text-input-01" class="slds-assistive-text">Write a comment</label>
+          <textarea id="comment-text-input-01" class="slds-publisher__input slds-input--bare slds-text-longform" placeholder="Write a comment…"></textarea>
+          <div class="slds-publisher__actions slds-grid slds-grid--align-spread">
+            <ul class="slds-grid">
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Add User\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#adduser\"></use>
+                <button class="slds-button slds-button--icon-container" title="Add User">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#adduser"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Add User</span>
+                  <span class="slds-assistive-text">Add User</span>
                 </button>
               </li>
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Attach a file\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#attach\"></use>
+                <button class="slds-button slds-button--icon-container" title="Attach a file">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#attach"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Attach a file</span>
+                  <span class="slds-assistive-text">Attach a file</span>
                 </button>
               </li>
             </ul>
-            <button class=\"slds-button slds-button--brand\">Comment</button>
+            <button class="slds-button slds-button--brand">Comment</button>
           </div>
         </div>
       </div>
@@ -13151,124 +13151,124 @@ exports[`test feeds_post-with-comments_post-with-comments.html 1`] = `
 `;
 
 exports[`test feeds_post-with-comments_post-with-overflow.html 1`] = `
-"<div class=\"demo-only\">
-  <article class=\"slds-post\">
-    <header class=\"slds-post__header slds-media\">
-      <div class=\"slds-media__figure\">
-        <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-          <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<div class="demo-only">
+  <article class="slds-post">
+    <header class="slds-post__header slds-media">
+      <div class="slds-media__figure">
+        <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-          <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-          <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-            title=\"More Options\">
-            <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+      <div class="slds-media__body">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+          <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+            title="More Options">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
             </svg>
-            <span class=\"slds-assistive-text\">More Options</span>
+            <span class="slds-assistive-text">More Options</span>
           </button>
         </div>
-        <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+        <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
       </div>
     </header>
-    <div class=\"slds-post__content slds-text-longform\">
-      <p>Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+    <div class="slds-post__content slds-text-longform">
+      <p>Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <footer class=\"slds-post__footer\">
-      <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+    <footer class="slds-post__footer">
+      <ul class="slds-post__footer-actions-list slds-list--horizontal">
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
             </svg>Like</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
             </svg> Comment</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
             </svg> Share</a>
         </li>
       </ul>
-      <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-        <li class=\"slds-item\">8 comments</li>
-        <li class=\"slds-item\">20 shares</li>
-        <li class=\"slds-item\">259 views</li>
+      <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+        <li class="slds-item">8 comments</li>
+        <li class="slds-item">20 shares</li>
+        <li class="slds-item">259 views</li>
       </ul>
     </footer>
   </article>
-  <div class=\"slds-feed__item-comments\">
-    <div class=\"slds-p-horizontal--medium slds-p-vertical--x-small slds-grid\"><a href=\"javascript:void(0);\">More comments</a>
-      <span class=\"slds-text-body--small slds-col--bump-left\">1 of 8</span>
+  <div class="slds-feed__item-comments">
+    <div class="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid"><a href="javascript:void(0);">More comments</a>
+      <span class="slds-text-body--small slds-col--bump-left">1 of 8</span>
     </div>
     <ul>
       <li>
-        <article class=\"slds-comment slds-media slds-hint-parent\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jenna Davis\" class=\"slds-avatar slds-avatar--circle slds-avatar--medium\">
-              <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+        <article class="slds-comment slds-media slds-hint-parent">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jenna Davis" class="slds-avatar slds-avatar--circle slds-avatar--medium">
+              <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <header class=\"slds-media slds-media--center\">
-              <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-                <p class=\"slds-truncate\"><a href=\"javascript:void(0);\" title=\"Jenna Davis\">Jenna Davis</a></p>
-                <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\" title=\"More Options\">
-                  <svg class=\"slds-button__icon slds-button__icon--hint\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <header class="slds-media slds-media--center">
+              <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                <p class="slds-truncate"><a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a></p>
+                <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true" title="More Options">
+                  <svg class="slds-button__icon slds-button__icon--hint" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">More Options</span>
+                  <span class="slds-assistive-text">More Options</span>
                 </button>
               </div>
             </header>
-            <div class=\"slds-comment__content slds-text-longform\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="slds-comment__content slds-text-longform">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             <footer>
-              <ul class=\"slds-list--horizontal slds-has-dividers--right slds-text-body--small\">
-                <li class=\"slds-item\"><a class=\"slds-text-color--weak\" href=\"javascript:void(0);\" title=\"Like this item\">Like</a></li>
-                <li class=\"slds-item\">16hr Ago</li>
+              <ul class="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+                <li class="slds-item"><a class="slds-text-color--weak" href="javascript:void(0);" title="Like this item">Like</a></li>
+                <li class="slds-item">16hr Ago</li>
               </ul>
             </footer>
           </div>
         </article>
       </li>
     </ul>
-    <div class=\"slds-media slds-comment slds-hint-parent\">
-      <div class=\"slds-media__figure\">
-        <a class=\"slds-avatar slds-avatar--circle slds-avatar--medium\" href=\"javascript:void(0);\" title=\"Jenna Davis\">
-          <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+    <div class="slds-media slds-comment slds-hint-parent">
+      <div class="slds-media__figure">
+        <a class="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);" title="Jenna Davis">
+          <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-publisher slds-publisher--comment\">
-          <label for=\"comment-text-input-01\" class=\"slds-assistive-text\">Write a comment</label>
-          <textarea id=\"comment-text-input-01\" class=\"slds-publisher__input slds-input--bare slds-text-longform\" placeholder=\"Write a comment…\"></textarea>
-          <div class=\"slds-publisher__actions slds-grid slds-grid--align-spread\">
-            <ul class=\"slds-grid\">
+      <div class="slds-media__body">
+        <div class="slds-publisher slds-publisher--comment">
+          <label for="comment-text-input-01" class="slds-assistive-text">Write a comment</label>
+          <textarea id="comment-text-input-01" class="slds-publisher__input slds-input--bare slds-text-longform" placeholder="Write a comment…"></textarea>
+          <div class="slds-publisher__actions slds-grid slds-grid--align-spread">
+            <ul class="slds-grid">
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Add User\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#adduser\"></use>
+                <button class="slds-button slds-button--icon-container" title="Add User">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#adduser"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Add User</span>
+                  <span class="slds-assistive-text">Add User</span>
                 </button>
               </li>
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Attach a file\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#attach\"></use>
+                <button class="slds-button slds-button--icon-container" title="Attach a file">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#attach"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Attach a file</span>
+                  <span class="slds-assistive-text">Attach a file</span>
                 </button>
               </li>
             </ul>
-            <button class=\"slds-button slds-button--brand\">Comment</button>
+            <button class="slds-button slds-button--brand">Comment</button>
           </div>
         </div>
       </div>
@@ -13278,124 +13278,124 @@ exports[`test feeds_post-with-comments_post-with-overflow.html 1`] = `
 `;
 
 exports[`test feeds_post-with-comments_post-with-publisher-active.html 1`] = `
-"<div class=\"demo-only\">
-  <article class=\"slds-post\">
-    <header class=\"slds-post__header slds-media\">
-      <div class=\"slds-media__figure\">
-        <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-          <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<div class="demo-only">
+  <article class="slds-post">
+    <header class="slds-post__header slds-media">
+      <div class="slds-media__figure">
+        <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+          <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-          <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-          <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-            title=\"More Options\">
-            <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+      <div class="slds-media__body">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+          <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+            title="More Options">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
             </svg>
-            <span class=\"slds-assistive-text\">More Options</span>
+            <span class="slds-assistive-text">More Options</span>
           </button>
         </div>
-        <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+        <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
       </div>
     </header>
-    <div class=\"slds-post__content slds-text-longform\">
-      <p>Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+    <div class="slds-post__content slds-text-longform">
+      <p>Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
     </div>
-    <footer class=\"slds-post__footer\">
-      <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+    <footer class="slds-post__footer">
+      <ul class="slds-post__footer-actions-list slds-list--horizontal">
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
             </svg>Like</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
             </svg> Comment</a>
         </li>
-        <li class=\"slds-col slds-item slds-m-right--medium\">
-          <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-            <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-              <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+        <li class="slds-col slds-item slds-m-right--medium">
+          <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+            <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
             </svg> Share</a>
         </li>
       </ul>
-      <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-        <li class=\"slds-item\">8 comments</li>
-        <li class=\"slds-item\">20 shares</li>
-        <li class=\"slds-item\">259 views</li>
+      <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+        <li class="slds-item">8 comments</li>
+        <li class="slds-item">20 shares</li>
+        <li class="slds-item">259 views</li>
       </ul>
     </footer>
   </article>
-  <div class=\"slds-feed__item-comments\">
-    <div class=\"slds-p-horizontal--medium slds-p-vertical--x-small slds-grid\"><a href=\"javascript:void(0);\">More comments</a>
-      <span class=\"slds-text-body--small slds-col--bump-left\">1 of 8</span>
+  <div class="slds-feed__item-comments">
+    <div class="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid"><a href="javascript:void(0);">More comments</a>
+      <span class="slds-text-body--small slds-col--bump-left">1 of 8</span>
     </div>
     <ul>
       <li>
-        <article class=\"slds-comment slds-media slds-hint-parent\">
-          <div class=\"slds-media__figure\">
-            <a href=\"javascript:void(0);\" title=\"Jenna Davis\" class=\"slds-avatar slds-avatar--circle slds-avatar--medium\">
-              <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+        <article class="slds-comment slds-media slds-hint-parent">
+          <div class="slds-media__figure">
+            <a href="javascript:void(0);" title="Jenna Davis" class="slds-avatar slds-avatar--circle slds-avatar--medium">
+              <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
             </a>
           </div>
-          <div class=\"slds-media__body\">
-            <header class=\"slds-media slds-media--center\">
-              <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-                <p class=\"slds-truncate\"><a href=\"javascript:void(0);\" title=\"Jenna Davis\">Jenna Davis</a></p>
-                <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\" title=\"More Options\">
-                  <svg class=\"slds-button__icon slds-button__icon--hint\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <div class="slds-media__body">
+            <header class="slds-media slds-media--center">
+              <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                <p class="slds-truncate"><a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a></p>
+                <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true" title="More Options">
+                  <svg class="slds-button__icon slds-button__icon--hint" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">More Options</span>
+                  <span class="slds-assistive-text">More Options</span>
                 </button>
               </div>
             </header>
-            <div class=\"slds-comment__content slds-text-longform\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="slds-comment__content slds-text-longform">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             <footer>
-              <ul class=\"slds-list--horizontal slds-has-dividers--right slds-text-body--small\">
-                <li class=\"slds-item\"><a class=\"slds-text-color--weak\" href=\"javascript:void(0);\" title=\"Like this item\">Like</a></li>
-                <li class=\"slds-item\">16hr Ago</li>
+              <ul class="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+                <li class="slds-item"><a class="slds-text-color--weak" href="javascript:void(0);" title="Like this item">Like</a></li>
+                <li class="slds-item">16hr Ago</li>
               </ul>
             </footer>
           </div>
         </article>
       </li>
     </ul>
-    <div class=\"slds-media slds-comment slds-hint-parent\">
-      <div class=\"slds-media__figure\">
-        <a class=\"slds-avatar slds-avatar--circle slds-avatar--medium\" href=\"javascript:void(0);\" title=\"Jenna Davis\">
-          <img src=\"/assets/images/avatar2.jpg\" alt=\"Jenna Davis\" />
+    <div class="slds-media slds-comment slds-hint-parent">
+      <div class="slds-media__figure">
+        <a class="slds-avatar slds-avatar--circle slds-avatar--medium" href="javascript:void(0);" title="Jenna Davis">
+          <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
         </a>
       </div>
-      <div class=\"slds-media__body\">
-        <div class=\"slds-publisher slds-publisher--comment slds-is-active slds-has-focus\">
-          <label for=\"comment-text-input-01\" class=\"slds-assistive-text\">Write a comment</label>
-          <textarea id=\"comment-text-input-01\" class=\"slds-publisher__input slds-input--bare slds-text-longform\" placeholder=\"Write a comment…\"></textarea>
-          <div class=\"slds-publisher__actions slds-grid slds-grid--align-spread\">
-            <ul class=\"slds-grid\">
+      <div class="slds-media__body">
+        <div class="slds-publisher slds-publisher--comment slds-is-active slds-has-focus">
+          <label for="comment-text-input-01" class="slds-assistive-text">Write a comment</label>
+          <textarea id="comment-text-input-01" class="slds-publisher__input slds-input--bare slds-text-longform" placeholder="Write a comment…"></textarea>
+          <div class="slds-publisher__actions slds-grid slds-grid--align-spread">
+            <ul class="slds-grid">
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Add User\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#adduser\"></use>
+                <button class="slds-button slds-button--icon-container" title="Add User">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#adduser"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Add User</span>
+                  <span class="slds-assistive-text">Add User</span>
                 </button>
               </li>
               <li>
-                <button class=\"slds-button slds-button--icon-container\" title=\"Attach a file\">
-                  <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#attach\"></use>
+                <button class="slds-button slds-button--icon-container" title="Attach a file">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#attach"></use>
                   </svg>
-                  <span class=\"slds-assistive-text\">Attach a file</span>
+                  <span class="slds-assistive-text">Attach a file</span>
                 </button>
               </li>
             </ul>
-            <button class=\"slds-button slds-button--brand\">Comment</button>
+            <button class="slds-button slds-button--brand">Comment</button>
           </div>
         </div>
       </div>
@@ -13405,55 +13405,55 @@ exports[`test feeds_post-with-comments_post-with-publisher-active.html 1`] = `
 `;
 
 exports[`test feeds_post-with-question_default.html 1`] = `
-"<article class=\"slds-post\">
-  <header class=\"slds-post__header slds-media\">
-    <div class=\"slds-media__figure\">
-      <a href=\"javascript:void(0);\" title=\"Jason Rodgers\" class=\"slds-avatar slds-avatar--circle slds-avatar--large\">
-        <img src=\"/assets/images/avatar1.jpg\" alt=\"Jason Rodgers\" />
+"<article class="slds-post">
+  <header class="slds-post__header slds-media">
+    <div class="slds-media__figure">
+      <a href="javascript:void(0);" title="Jason Rodgers" class="slds-avatar slds-avatar--circle slds-avatar--large">
+        <img src="/assets/images/avatar1.jpg" alt="Jason Rodgers" />
       </a>
     </div>
-    <div class=\"slds-media__body\">
-      <div class=\"slds-grid slds-grid--align-spread slds-has-flexi-truncate\">
-        <p><a href=\"javascript:void(0);\" title=\"Jason Rodgers\">Jason Rogers</a> — <a href=\"javascript:void(0);\" title=\"Design Systems\">Design Systems</a></p>
-        <button class=\"slds-button slds-button--icon-border slds-button--icon-x-small\" aria-haspopup=\"true\"
-          title=\"More Options\">
-          <svg class=\"slds-button__icon\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+    <div class="slds-media__body">
+      <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <p><a href="javascript:void(0);" title="Jason Rodgers">Jason Rogers</a> — <a href="javascript:void(0);" title="Design Systems">Design Systems</a></p>
+        <button class="slds-button slds-button--icon-border slds-button--icon-x-small" aria-haspopup="true"
+          title="More Options">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
           </svg>
-          <span class=\"slds-assistive-text\">More Options</span>
+          <span class="slds-assistive-text">More Options</span>
         </button>
       </div>
-      <p class=\"slds-text-body--small\"><a href=\"javascript:void(0);\" title=\"Click for single-item view of this post\" class=\"slds-text-link--reset\">5 days Ago</a></p>
+      <p class="slds-text-body--small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link--reset">5 days Ago</a></p>
     </div>
   </header>
-  <div class=\"slds-post__content slds-text-longform\">
-    <h3 class=\"slds-text-heading--small\">Barbecue Party Tips For A Truly Amazing Event?</h3>
-    <p>Hey there! Here&#x27;s the latest demo presentation <a href=\"javascript:void(0);\" title=\"Jenna Davis\">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+  <div class="slds-post__content slds-text-longform">
+    <h3 class="slds-text-heading--small">Barbecue Party Tips For A Truly Amazing Event?</h3>
+    <p>Hey there! Here&#x27;s the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I&#x27;ve updated slides 3-8 and slides 16-18 slides with new product shots.</p>
   </div>
-  <footer class=\"slds-post__footer\">
-    <ul class=\"slds-post__footer-actions-list slds-list--horizontal\">
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Like this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#like\"></use>
+  <footer class="slds-post__footer">
+    <ul class="slds-post__footer-actions-list slds-list--horizontal">
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Like this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"></use>
           </svg>Like</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Comment on this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share_post\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Comment on this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share_post"></use>
           </svg> Comment</a>
       </li>
-      <li class=\"slds-col slds-item slds-m-right--medium\">
-        <a href=\"javascript:void(0);\" title=\"Share this item\" class=\"slds-post__footer-action\">
-          <svg class=\"slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#share\"></use>
+      <li class="slds-col slds-item slds-m-right--medium">
+        <a href="javascript:void(0);" title="Share this item" class="slds-post__footer-action">
+          <svg class="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#share"></use>
           </svg> Share</a>
       </li>
     </ul>
-    <ul class=\"slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title\">
-      <li class=\"slds-item\">20 shares</li>
-      <li class=\"slds-item\">259 views</li>
+    <ul class="slds-post__footer-meta-list slds-list--horizontal slds-has-dividers--right slds-text-title">
+      <li class="slds-item">20 shares</li>
+      <li class="slds-item">259 views</li>
     </ul>
   </footer>
 </article>"
@@ -26274,6 +26274,27 @@ exports[`test notifications_toast_error-with-details.html 1`] = `
 </div>"
 `;
 
+exports[`test notifications_toast_small.html 1`] = `
+"<div class=\"demo-only\" style=\"height:4rem;width:25rem;\">
+  <div class=\"slds-region_narrow slds-is-relative\">
+    <div class=\"slds-notify_container slds-is-absolute\">
+      <div class=\"slds-notify slds-notify--toast\" role=\"alert\">
+        <span class=\"slds-assistive-text\">Small width</span>
+        <button class=\"slds-button slds-notify__close slds-button--icon-inverse\" title=\"Close\">
+          <svg class=\"slds-button__icon slds-button__icon--large\" aria-hidden=\"true\">
+            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#close\"></use>
+          </svg>
+          <span class=\"slds-assistive-text\">Close</span>
+        </button>
+        <div class=\"slds-notify__content\">
+          <h2 class=\"slds-text-heading--small\">Base Toast</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`test notifications_toast_success.html 1`] = `
 "<div class=\"demo-only\" style=\"height:4rem;\">
   <div class=\"slds-notify_container\">
@@ -34146,49 +34167,49 @@ exports[`test tabs_default_nested.html 1`] = `
 `;
 
 exports[`test tabs_default_overflow.html 1`] = `
-"<div class=\"demo-only\" style=\"height:10rem;\">
-  <div class=\"slds-tabs--default\">
-    <ul class=\"slds-tabs--default__nav\" role=\"tablist\">
-      <li class=\"slds-tabs--default__item slds-active\" title=\"Item One\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"0\" aria-selected=\"true\" aria-controls=\"tab-default-1\" id=\"tab-default-1__item\">Item One</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Two\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-2\" id=\"tab-default-2__item\">Item Two</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Three\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-3\" id=\"tab-default-3__item\">Item Three</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Four\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-4\" id=\"tab-default-4__item\">Item Four</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Five\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-5\" id=\"tab-default-5__item\">Item Five</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Six\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-6\" id=\"tab-default-6__item\">Item Six</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Seven\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-7\" id=\"tab-default-7__item\">Item Seven</a></li>
-      <li class=\"slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-tabs--default__item slds-tabs__item--overflow\"
-        title=\"More tabs\" role=\"presentation\">
-        <a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" aria-haspopup=\"true\">
-          <span class=\"slds-truncate\" title=\"More tabs\">More
-            <span class=\"slds-assistive-text\">tabs</span>
+"<div class="demo-only" style="height:10rem;">
+  <div class="slds-tabs--default">
+    <ul class="slds-tabs--default__nav" role="tablist">
+      <li class="slds-tabs--default__item slds-active" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a></li>
+      <li class="slds-tabs--default__item" title="Item Two" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a></li>
+      <li class="slds-tabs--default__item" title="Item Three" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a></li>
+      <li class="slds-tabs--default__item" title="Item Four" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">Item Four</a></li>
+      <li class="slds-tabs--default__item" title="Item Five" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">Item Five</a></li>
+      <li class="slds-tabs--default__item" title="Item Six" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-6" id="tab-default-6__item">Item Six</a></li>
+      <li class="slds-tabs--default__item" title="Item Seven" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-7" id="tab-default-7__item">Item Seven</a></li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-tabs--default__item slds-tabs__item--overflow"
+        title="More tabs" role="presentation">
+        <a class="slds-tabs--default__link" href="javascript:void(0);" aria-haspopup="true">
+          <span class="slds-truncate" title="More tabs">More
+            <span class="slds-assistive-text">tabs</span>
           </span>
-          <svg class=\"slds-button__icon slds-button__icon--x-small\" aria-hidden=\"true\">
-            <use xlink:href=\"/assets/icons/utility-sprite/svg/symbols.svg#down\"></use>
+          <svg class="slds-button__icon slds-button__icon--x-small" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
           </svg>
         </a>
-        <div class=\"slds-dropdown slds-dropdown--right\">
-          <ul class=\"slds-dropdown__list slds-dropdown--length-with-icon-10\" role=\"menu\">
-            <li class=\"slds-dropdown__item\" role=\"presentation\">
-              <a href=\"javascript:void(0);\" role=\"menuitem\" tabindex=\"-1\">
-                <span class=\"slds-truncate\">
-                  <svg class=\"slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/standard-sprite/svg/symbols.svg#account\"></use>
+        <div class="slds-dropdown slds-dropdown--right">
+          <ul class="slds-dropdown__list slds-dropdown--length-with-icon-10" role="menu">
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate">
+                  <svg class="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
                   </svg>Accounts</span>
               </a>
             </li>
-            <li class=\"slds-dropdown__item\" role=\"presentation\">
-              <a href=\"javascript:void(0);\" role=\"menuitem\" tabindex=\"-1\">
-                <span class=\"slds-truncate\">
-                  <svg class=\"slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/standard-sprite/svg/symbols.svg#approval\"></use>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate">
+                  <svg class="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#approval"></use>
                   </svg>Approvals</span>
               </a>
             </li>
-            <li class=\"slds-dropdown__item\" role=\"presentation\">
-              <a href=\"javascript:void(0);\" role=\"menuitem\" tabindex=\"-1\">
-                <span class=\"slds-truncate\">
-                  <svg class=\"slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small\" aria-hidden=\"true\">
-                    <use xlink:href=\"/assets/icons/standard-sprite/svg/symbols.svg#lead\"></use>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate">
+                  <svg class="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
                   </svg>Lead</span>
               </a>
             </li>
@@ -34196,19 +34217,19 @@ exports[`test tabs_default_overflow.html 1`] = `
         </div>
       </li>
     </ul>
-    <div id=\"tab-default-1\" class=\"slds-tabs--default__content slds-show\" role=\"tabpanel\" aria-labelledby=\"tab-default-1__item\">Item One Content</div>
-    <div id=\"tab-default-2\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-2__item\">Item Two Content</div>
-    <div id=\"tab-default-3\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-3__item\">Item Three Content</div>
-    <div id=\"tab-default-4\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-4__item\">
+    <div id="tab-default-1" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
+    <div id="tab-default-2" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+    <div id="tab-default-3" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+    <div id="tab-default-4" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-4__item">
       <h2>Item Four Content</h2>
     </div>
-    <div id=\"tab-default-5\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-5__item\">
+    <div id="tab-default-5" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-5__item">
       <h2>Item Five Content</h2>
     </div>
-    <div id=\"tab-default-6\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-6__item\">
+    <div id="tab-default-6" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-6__item">
       <h2>Item Six Content</h2>
     </div>
-    <div id=\"tab-default-7\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-7__item\">
+    <div id="tab-default-7" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-7__item">
       <h2>Item Seven Content</h2>
     </div>
   </div>
@@ -34216,17 +34237,17 @@ exports[`test tabs_default_overflow.html 1`] = `
 `;
 
 exports[`test tabs_default_selected.html 1`] = `
-"<div class=\"demo-only\">
-  <div class=\"slds-tabs--default\">
-    <ul class=\"slds-tabs--default__nav\" role=\"tablist\">
-      <li class=\"slds-tabs--default__item\" title=\"Item One\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-1\" id=\"tab-default-1__item\">Item One</a></li>
-      <li class=\"slds-tabs--default__item slds-active\" title=\"Item Two\"
-        role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"0\" aria-selected=\"true\" aria-controls=\"tab-default-2\" id=\"tab-default-2__item\">Item Two</a></li>
-      <li class=\"slds-tabs--default__item\" title=\"Item Three\" role=\"presentation\"><a class=\"slds-tabs--default__link\" href=\"javascript:void(0);\" role=\"tab\" tabindex=\"-1\" aria-selected=\"false\" aria-controls=\"tab-default-3\" id=\"tab-default-3__item\">Item Three</a></li>
+"<div class="demo-only">
+  <div class="slds-tabs--default">
+    <ul class="slds-tabs--default__nav" role="tablist">
+      <li class="slds-tabs--default__item" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a></li>
+      <li class="slds-tabs--default__item slds-active" title="Item Two"
+        role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a></li>
+      <li class="slds-tabs--default__item" title="Item Three" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a></li>
     </ul>
-    <div id=\"tab-default-1\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-1__item\">Item One Content</div>
-    <div id=\"tab-default-2\" class=\"slds-tabs--default__content slds-show\" role=\"tabpanel\" aria-labelledby=\"tab-default-2__item\">Item Two Content</div>
-    <div id=\"tab-default-3\" class=\"slds-tabs--default__content slds-hide\" role=\"tabpanel\" aria-labelledby=\"tab-default-3__item\">Item Three Content</div>
+    <div id="tab-default-1" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
+    <div id="tab-default-2" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+    <div id="tab-default-3" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
   </div>
 </div>"
 `;

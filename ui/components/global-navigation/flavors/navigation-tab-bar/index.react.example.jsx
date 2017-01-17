@@ -74,7 +74,7 @@ export let ContextTabBar = props =>
           <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title={ props.appName || 'App Name' }>{ props.appName || 'App Name' }</span>
         </span>
       </div>
 

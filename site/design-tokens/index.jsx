@@ -86,11 +86,11 @@ const Tokens = React.createClass({
     });
     const formatSelect =
       <div className="slds-form-element slds-p-horizontal--medium">
-          <label htmlFor="slds-tokens-name-format" className="slds-form-element__label" >Format:</label>
-          <div className="slds-form-element__control">
-            <select className="slds-select slds-no-flex" id="slds-tokens-name-format" />
-          </div>
-        </div>;
+        <label htmlFor="slds-tokens-name-format" className="slds-form-element__label">Format:</label>
+        <div className="slds-form-element__control">
+          <select className="slds-select slds-no-flex" id="slds-tokens-name-format" />
+        </div>
+      </div>;
     return (
       <Sticky>
         <div className="site-tools slds-form--inline">

@@ -57,7 +57,7 @@ export default (
             Setup
           </Heading>
 
-          <p>Add this to your Podfile:</p>
+            <p>The iOS Design Tokesn use <a href="https://cocoapods.org/">Cocoapods</a> to integrate with your project. If you are already set up with pods add the line below to your Podfile. Otherwise go to <a href="https://cocoapods.org/">cocoapods.org</a> to get set up.</p>
         </div>
 
         <div className="site-code--content slds-scrollable--x">
@@ -126,12 +126,20 @@ let backgroundColor = UIColor.sldsBackgroundColor(.colorBackgroundBrand)
         </div>
 
         <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-          Fonts and Text Sizes
+            <p>Fonts and Text Sizes</p>
+            <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
         </Heading>
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
 label.font = UIFont.sldsFont(.bold, with: .medium)
+
+// Setup and use a custom font
+UIFont.sldsUse("customFontName", fromBundle: "CustomFontBundleName", for: .light)
+label.font = UIFont.sldsFont(.bold, with: .light)
+
+// Undo a custom font override
+UIFont.sldsUseDefaultFont(for: .light)
           `}</CodeBlock>
         </div>
 
@@ -226,7 +234,8 @@ UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
         </div>
 
         <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-          Fonts and Text Sizes
+          <p>Fonts and Text Sizes</p>
+          <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
         </Heading>
 
         <div className="site-code--content slds-scrollable--x">
@@ -240,6 +249,13 @@ UIFont* lightFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
 UIFont* regularFont = [UIFont sldsFontRegularWithSize:SLDSFontSizeXLarge];
 
 UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
+
+// Override with a custom font
+[UIFont sldsUse:"customFontName", fromBundle: "CustomFontBundleName", for: SLDSFontTypeLight];
+UIFont* customFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
+
+// Undo a font override
+[UIFont sldsUseDefaultFontFor: SLDSFontTypeLight];
           `}</CodeBlock>
         </div>
 

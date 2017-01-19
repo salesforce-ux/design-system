@@ -83,32 +83,4 @@
   &--inverse-text {
     @include inverse-links;
   }
-
-  &_default,
-  &--default,
-  &_shade,
-  &--shade,
-  &_inverse,
-  &--inverse,
-  &_alt-inverse,
-  &--alt-inverse,
-  &_success,
-  &--success,
-  &_info,
-  &--info,
-  &_warning,
-  &--warning,
-  &_error,
-  &--error,
-  &_offline,
-  &--offline,
-  &_alert-texture,
-  &--alert-texture,
-  &_inverse-text,
-  &--inverse-text {
-    .slds-text-body_small,
-    .slds-text-body--small {
-      color: inherit;
-    }
-  }
 }

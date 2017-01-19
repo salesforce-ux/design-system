@@ -121,7 +121,7 @@ export const wrapExample = (flavor, html, script = '', descriptionMarkup = '') =
   <link type="text/css" rel="stylesheet" href="/assets/styles/slds.css" />
   <link type="text/css" rel="stylesheet" href="/assets/styles/demo.css" />
   <meta name="robots" content="noindex" />
-  <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js"></script>
+  <script src="https://cdn.ravenjs.com/3.9.1/raven.min.js"></script>
   <script>${sentryScript}</script>
 </head>
 <body>

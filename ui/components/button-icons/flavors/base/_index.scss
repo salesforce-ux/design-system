@@ -8,13 +8,21 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+.slds-button_icon,
 .slds-button--icon,
+.slds-button_icon-inverse,
 .slds-button--icon-inverse,
+.slds-button_icon-container,
 .slds-button--icon-container,
+.slds-button_icon-border,
 .slds-button--icon-border,
+.slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse,
+.slds-button_icon-more,
 .slds-button--icon-more,
+.slds-button_icon-error,
 .slds-button--icon-error {
   line-height: $line-height-reset;
   vertical-align: middle;
@@ -22,6 +30,7 @@
 }
 
 @include deprecate('4.0.0', 'Use .slds-button--icon instead') {
+  .slds-button_icon-bare,
   .slds-button--icon-bare {
     line-height: $line-height-reset;
     vertical-align: middle;
@@ -29,6 +38,7 @@
   }
 }
 
+.slds-button_icon-border[disabled],
 .slds-button--icon-border[disabled] {
 
   &:hover,
@@ -37,11 +47,14 @@
   }
 }
 
+.slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
+.slds-button_icon-border,
 .slds-button--icon-border {
   @include button-base;
 }
 
+.slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
   @include button-base;
   background-color: $color-background-button-inverse;
@@ -53,14 +66,19 @@
   }
 }
 
+.slds-button_icon-container,
 .slds-button--icon-container,
+.slds-button_icon-border,
 .slds-button--icon-border,
+.slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse { // @TODO- if border-radius is placed on the icon/svg, the button element causes corner clipping problems that background-clip isn't solving
   @include square($square-icon-medium-boundary);
 }
 
 // Button icon with background
+.slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
   background-color: $color-background-button-default;
 
@@ -71,6 +89,7 @@
 }
 
 // Button icon with dropdown
+.slds-button_icon-more,
 .slds-button--icon-more {
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
@@ -103,6 +122,7 @@
   }
 }
 
+.slds-button_icon-container-more,
 .slds-button--icon-container-more {
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
@@ -110,6 +130,7 @@
 }
 
 // Button icon on inversed background
+.slds-button_icon-inverse,
 .slds-button--icon-inverse {
   color: $color-text-link-inverse;
 
@@ -132,6 +153,7 @@
 }
 
 // Button icon for errors
+.slds-button_icon-error,
 .slds-button--icon-error {
 
   &,
@@ -142,12 +164,15 @@
   }
 }
 
+.slds-button_icon-border-inverse[disabled],
 .slds-button--icon-border-inverse[disabled] {
   border-color: $color-border-button-inverse-disabled;
 }
 
 // Stateful Button Icon
+.slds-button_icon-container.slds-is-selected,
 .slds-button--icon-container.slds-is-selected,
+.slds-button_icon-border.slds-is-selected,
 .slds-button--icon-border.slds-is-selected {
   @include button-brand;
 
@@ -165,11 +190,13 @@
 }
 
 // Button icon container sizing
+.slds-button_icon-small,
 .slds-button--icon-small {
   @include square($square-icon-small-boundary);
   border-radius: $border-radius-small;
 }
 
+.slds-button_icon-x-small,
 .slds-button--icon-x-small {
   @include square($square-icon-x-small-boundary);
   border-radius: $border-radius-small;
@@ -180,6 +207,7 @@
   }
 }
 
+.slds-button_icon-xx-small,
 .slds-button--icon-xx-small {
   @include square($square-icon-xx-small-boundary);
   border-radius: $border-radius-small;
@@ -195,24 +223,29 @@
   @include square($square-icon-medium-content-alt);
   fill: currentColor;
 
+  &_large,
   &--large { // Usually used for the large close button
     @include square($square-icon-utility-large);
   }
 
+  &_small,
   &--small { // This creates the small down icon
     @include square($square-icon-small-content);
   }
 
+  &_x-small,
   &--x-small { // This creates the x-small down icon that sits next to another icon
     @include square($square-icon-x-small-content);
   }
 }
 
 // Button Icon Hint
+.slds-button__icon_hint,
 .slds-button__icon--hint {
   fill: $color-text-icon-default-hint;
 }
 
+.slds-button__icon_inverse-hint,
 .slds-button__icon--inverse-hint {
   fill: $color-text-icon-inverse-hint;
 }
@@ -220,6 +253,7 @@
 // Hint parent should be applied to the parent of the button
 .slds-hint-parent {
 
+  .slds-button_icon-border-inverse,
   .slds-button--icon-border-inverse {
     border-color: $color-border-icon-inverse-hint;
 
@@ -231,14 +265,17 @@
   &:hover,
   &:focus {
 
+    .slds-button_icon-border-inverse,
     .slds-button--icon-border-inverse {
       border-color: $color-border-icon-inverse-hint-hover;
     }
 
+    .slds-button__icon_hint,
     .slds-button__icon--hint {
       fill: $color-text-icon-default;
     }
 
+    .slds-button__icon_inverse-hint,
     .slds-button__icon--inverse-hint {
       fill: $color-text-icon-inverse-hint-hover;
     }

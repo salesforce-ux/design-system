@@ -52,11 +52,6 @@ export let SectionTitleAction = props =>
 
 export let states = [
   {
-    id: 'section-title',
-    label: 'Default',
-    element: <SectionTitle>Section Title</SectionTitle>
-  },
-  {
     id: 'section-title-closed',
     label: 'Closed',
     element:
@@ -81,7 +76,19 @@ export let states = [
         </SectionTitle>
         <SectionContent isOpen={true} referenceId="contentOpen">
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</p>
+        </SectionContent>
+      </Section>
+  },
+  {
+    id: 'shade',
+    label: 'Non-collapsable',
+    element:
+      <Section className="slds-is-open">
+        <SectionTitle className="slds-theme--shade">
+          <span className="slds-truncate slds-p-horizontal--small">Section Title</span>
+        </SectionTitle>
+        <SectionContent isOpen={true}>
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
         </SectionContent>
       </Section>
   }

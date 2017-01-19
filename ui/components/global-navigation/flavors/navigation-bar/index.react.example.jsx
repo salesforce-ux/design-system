@@ -57,7 +57,7 @@ export let ContextBar = props =>
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title={ props.appName || 'App Name' }>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -73,15 +73,15 @@ export let ContextBar = props =>
             <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover" aria-haspopup="true">
+        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover">
           <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Menu Item">
             <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
-          <div className="slds-context-bar__icon-action slds-p-left--none" tabIndex="0">
+          <div className="slds-context-bar__icon-action slds-p-left--none">
             <ButtonIcon
               className="slds-button--icon slds-context-bar__button"
               symbol="chevrondown"
-              tabIndex="-1"
+              aria-haspopup="true"
               assistiveText="Open menu item submenu"
               title="Open menu item submenu" />
           </div>
@@ -91,7 +91,7 @@ export let ContextBar = props =>
           _.times(3, i =>
             <li className="slds-context-bar__item" key={ i }>
               <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
-                <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+                <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item ' + i }</span>
               </a>
             </li>
           ) : props.children }
@@ -129,6 +129,7 @@ export let states = [
         <ContextBar>
           <li className="slds-context-bar__item slds-is-active">
             <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
+              <span className="slds-assistive-text">Current Page:</span>
               <span className="slds-truncate">Menu Item</span>
             </a>
           </li>

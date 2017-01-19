@@ -62,6 +62,7 @@
     overflow: auto;
   }
 
+  &__body_form,
   &__body--form {
     justify-content: flex-start;
     padding: $spacing-medium;
@@ -103,10 +104,12 @@
   }
 
   // Overflow Pills
+  &_overflow,
   &--overflow {
     width: auto;
   }
 
+  &_overflow__button,
   &--overflow__button {
     display: flex;
     background: $color-background-docked-panel-header;
@@ -122,6 +125,7 @@
   }
 
   @include deprecate('4.0.0', 'Use docked-composer--overflow__button instead') {
+    &_overflow__pill,
     &--overflow__pill {
       display: flex;
       padding: 0 $spacing-small;
@@ -140,6 +144,7 @@
         text-decoration: none;
       }
 
+      .slds-text-body_small,
       .slds-text-body--small {
         color: $color-text-inverse;
         margin-left: $spacing-x-small;

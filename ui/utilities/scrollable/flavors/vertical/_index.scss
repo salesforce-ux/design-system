@@ -9,6 +9,7 @@
 
 
 
+.slds-scrollable_y,
 .slds-scrollable--y {
   @include enable-ios-momentum-scrolling;
   max-height: 100%;

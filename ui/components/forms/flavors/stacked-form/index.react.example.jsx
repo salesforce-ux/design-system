@@ -12,8 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import Input from 'ui/components/forms/flavors/input/index.react';
 import Textarea from 'ui/components/forms/flavors/textarea/index.react';
-import Radio from 'ui/components/forms/flavors/radio/index.react';
-import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
+import { Radio } from 'ui/components/forms/flavors/radio/index.react.example';
+import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
 
 
 export default (
@@ -24,20 +24,35 @@ export default (
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
       <div className="slds-form-element__control">
-        <Checkbox name="default" label="All opportunities owned by you" assistiveText="opportunities ownership" />
-        <Checkbox name="default" label="All contacts in the account owned by you" assistiveText="contact ownership" />
+        <Checkbox
+          label="All opportunities owned by you"
+          name="default"
+        />
+        <Checkbox
+          label="All contacts in the account owned by you"
+          name="default"
+        />
       </div>
     </fieldset>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
       <div className="slds-form-element__control">
-        <Radio name="options" label="Lead Generation" assistiveText="lead" />
-        <Radio name="options" label="Education Leads" assistiveText="education" />
+        <Radio
+          label="Lead Generation"
+          name="options"
+        />
+        <Radio
+          label="Education Leads"
+          name="options"
+        />
       </div>
     </fieldset>
     <div className="slds-form-element">
       <div className="slds-form-element__control">
-        <Checkbox name="default" label="I agree to the Terms & Service" assistiveText="agree" />
+        <Checkbox
+          label="I agree to the Terms & Service"
+          name="agree"
+        />
       </div>
     </div>
   </div>

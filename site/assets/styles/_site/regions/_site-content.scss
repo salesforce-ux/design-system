@@ -39,11 +39,11 @@
 
   @include mq-large-max {
 
-    .sticky--fixed {
+    .site-sticky--fixed {
       position: static;
     }
 
-    .sticky__placeholder--on {
+    .site-sticky__placeholder--on {
       display: none;
     }
   }

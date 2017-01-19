@@ -17,6 +17,7 @@ export const WebpackDefineKeys = [
   'SLDS_VERSION',
   'SEARCH_APP_ID',
   'SEARCH_API_KEY',
+  'SEARCH_INDEX_NAME',
   'NODE_ENV'
 ];
 
@@ -24,5 +25,6 @@ export const WebpackDefineKeys = [
 process.env = Object.assign({
   SLDS_VERSION: packageJSON.version,
   SEARCH_APP_ID: packageJSON.config.search.appId,
-  SEARCH_API_KEY: packageJSON.config.search.apiKey
+  SEARCH_API_KEY: packageJSON.config.search.apiKey,
+  SEARCH_INDEX_NAME: packageJSON.config.search.indexName
 }, process.env);

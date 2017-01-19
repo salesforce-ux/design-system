@@ -9,10 +9,12 @@
 
 
 
+.slds-grid_align-center,
 .slds-grid--align-center {
   justify-content: center;
 
   .slds-col,
+  [class*="slds-col_padded"],
   [class*="slds-col--padded"] {
     flex-grow: 0;
   }

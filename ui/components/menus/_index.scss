@@ -25,29 +25,35 @@
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
 
+  &_left,
   &--left {
     left: 0;
     transform: translateX(0);
   }
 
+  &_right,
   &--right {
     left: auto;
     right: 0;
     transform: translateX(0);
   }
 
+  &_bottom,
   &--bottom {
     bottom: 100%;
   }
 
+  &_small,
   &--small {
     min-width: $size-small;
   }
 
+  &_medium,
   &--medium {
     min-width: $size-medium;
   }
 
+  &_large,
   &--large {
     min-width: $size-large;
     max-width: $max-width-action-overflow-menu;
@@ -56,31 +62,38 @@
   // New in 1.00
   //
   // Apply to Dropdown UL
+  &_length-5,
   &--length-5 {
     @include dropdown-overflow-length(5);
   }
 
+  &_length-7,
   &--length-7 {
     @include dropdown-overflow-length(7);
   }
 
+  &_length-10,
   &--length-10 {
     @include dropdown-overflow-length(10);
   }
 
+  &_length-with-icon-5,
   &--length-with-icon-5 {
     @include dropdown-overflow-length(5, $icon-size: $square-icon-small-boundary);
   }
 
+  &_length-with-icon-7,
   &--length-with-icon-7 {
     @include dropdown-overflow-length(7, $icon-size: $square-icon-small-boundary);
   }
 
+  &_length-with-icon-10,
   &--length-with-icon-10 {
     @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
   }
 
   // Theme
+  &_inverse,
   &--inverse {
     background: $color-background-inverse;
     border-color: $color-border-inverse;
@@ -115,16 +128,19 @@
     background-color: transparent;
   }
 
+  &[class*="slds-nubbin_top"],
   &[class*="slds-nubbin--top"] {
     margin-top: ($square-tooltip-nubbin / 2);
   }
 
+  &[class*="slds-nubbin_bottom"],
   &[class*="slds-nubbin--bottom"] {
     margin-bottom: ($square-tooltip-nubbin / 2);
   }
 
   @include deprecate('4.0.0') {
 
+    &_nubbin-top,
     &--nubbin-top {
       @include nubbin(top, 'before');
       @include nubbin(top);
@@ -140,6 +156,7 @@
         z-index: -1;
       }
 
+      &.slds-dropdown_left,
       &.slds-dropdown--left {
         left: ($spacing-medium * -1);
 
@@ -150,6 +167,7 @@
         }
       }
 
+      &.slds-dropdown_right,
       &.slds-dropdown--right {
         right: ($spacing-medium * -1);
 
@@ -201,11 +219,13 @@
       }
     }
 
+    .slds-icon_selected,
     .slds-icon--selected {
       opacity: 0;
       transition: opacity $duration-immediately ease;
     }
 
+    &.slds-is-selected .slds-icon_selected,
     &.slds-is-selected .slds-icon--selected {
       opacity: 1;
     }
@@ -216,17 +236,23 @@
     .slds-has-icon {
       position: relative;
 
+      &_left > a,
       &--left > a,
+      &_left > span,
       &--left > span {
         padding-left: $spacing-x-large;
       }
 
+      &_right > a,
       &--right > a,
+      &_right > span,
       &--right > span {
         padding-right: $spacing-x-large;
       }
 
+      &_left-right > a,
       &--left-right > a,
+      &_left-right > span,
       &--left-right > span {
         padding: {
           left: $spacing-x-large;
@@ -241,10 +267,12 @@
         margin-top: (($square-icon-medium-content / 2) * -1);
         fill: $color-text-icon-default;
 
+        &_left,
         &--left {
           left: $spacing-small;
         }
 
+        &_right,
         &--right {
           right: $spacing-small;
         }
@@ -261,6 +289,7 @@
     top: 100%;
   }
 
+  .slds-dropdown_bottom,
   .slds-dropdown--bottom {
     top: auto;
   }
@@ -285,6 +314,7 @@
     }
   }
 
+  &_hover,
   &--hover {
 
     .slds-dropdown {
@@ -306,6 +336,7 @@
   }
 
   // If someone is using javascript for click to toggle - this modifier will help
+  &_click,
   &--click {
 
     .slds-dropdown {
@@ -320,12 +351,15 @@
   }
 
   // Deal with positioning when target is just an icon
+  > [class*="slds-button_icon"],
   > [class*="slds-button--icon"] {
 
+    ~ .slds-dropdown_left[class*="slds-nubbin"],
     ~ .slds-dropdown--left[class*="slds-nubbin"] {
       left: ($spacing-x-small * -1);
     }
 
+    ~ .slds-dropdown_right[class*="slds-nubbin"],
     ~ .slds-dropdown--right[class*="slds-nubbin"] {
       right: ($spacing-x-small * -1);
     }

@@ -53,7 +53,7 @@ export let DockedComposerPanel = props =>
     aria-describedby={ !props.nestedDialog ? dialogBodyId : null }
   >
     <header className="slds-docked-composer__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media--center">
+      <div className="slds-media slds-media--center slds-size--1-of-1">
         <div className="slds-media__figure slds-m-right--x-small">
           <span className="slds-icon_container">
             <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.headerSymbol || 'call' } />
@@ -66,7 +66,7 @@ export let DockedComposerPanel = props =>
           <h2 id={ dialogHeadingId }>{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className="slds-col--bump-left">
+      <div className="slds-col--bump-left slds-shrink-none">
         <ButtonIcon
           className="slds-button--icon"
           symbol="minimize_window"

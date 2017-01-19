@@ -154,6 +154,7 @@
     }
 
     @for $i from 1 through $denominator {
+      .slds-#{$breakpoint-string}size_#{$i}-of-#{$denominator},
       .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
         width: ($i / $denominator) * 100%;
       }
@@ -169,6 +170,7 @@
     @for $numerator from 1 to $denominator {
 
       // Build a class in the format `.slds-order--1`.
+      .slds-#{$breakpoint}order_#{$numerator},
       .slds-#{$breakpoint}order--#{$numerator} {
         order: $numerator;
       }
@@ -288,28 +290,33 @@
       @each $position in $positions {
         // Only apply !important to spacing--none utilities
         @if $size == 0 {
+          .slds-#{$prop-prefix}-#{$position}_#{$spacing},
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
             #{$property}-#{$position}: 0 !important;
           }
         }
         // Generate directional spacing utilities
         @else {
+          .slds-#{$prop-prefix}-#{$position}_#{$spacing},
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
             #{$property}-#{$position}: $size;
           }
         }
       }
       // Generate vertical spacing utilities
+      .slds-#{$prop-prefix}-vertical_#{$spacing},
       .slds-#{$prop-prefix}-vertical--#{$spacing} {
         #{$property}-top: $size;
         #{$property}-bottom: $size;
       }
       // Generate horizontal spacing utilities
+      .slds-#{$prop-prefix}-horizontal_#{$spacing},
       .slds-#{$prop-prefix}-horizontal--#{$spacing} {
         #{$property}-right: $size;
         #{$property}-left: $size;
       }
       // Generate vertical + horizontal spacing utilities
+      .slds-#{$prop-prefix}-around_#{$spacing},
       .slds-#{$prop-prefix}-around--#{$spacing} {
         #{$property}: $size;
       }
@@ -334,9 +341,11 @@
         @media (min-width: $min) {
           display: block;
 
+          &_inline-block,
           &--inline-block {
             display: inline-block;
           }
+          &_inline,
           &--inline {
             display: inline;
           }
@@ -352,9 +361,11 @@
         @media (min-width: $min) and (max-width: $max - 1) {
           display: block;
 
+          &_inline-block,
           &--inline-block {
             display: inline-block;
           }
+          &_inline,
           &--inline {
             display: inline;
           }

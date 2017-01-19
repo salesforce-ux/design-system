@@ -54,7 +54,7 @@ export let states = [
     label: 'Inverse - Container Only',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-container-more" assistiveText="More options" />
+        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-container-more" assistiveText="More options" title="More Options" />
       </div>
   }
 ];

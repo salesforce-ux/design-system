@@ -8,12 +8,12 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 $_eq-bar-height-min: 3px;
-$_eq-bar-height-max: 20px;
+$_eq-bar-height-max: 14px;
 
 .slds-icon-eq {
   position: relative;
-  width: fix-ie-rounding(17);
-  height: fix-ie-rounding($_eq-bar-height-max / 1rem);
+  width: fix-ie-rounding(14);
+  height: fix-ie-rounding($_eq-bar-height-max / 1px);
 
   &.slds-is-animated {
     .slds-icon-eq__bar {
@@ -36,18 +36,18 @@ $_eq-bar-height-max: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: fix-ie-rounding(5);
+  width: fix-ie-rounding(4);
   height: rem($_eq-bar-height-min) * 3;
   background: #0070d2;
   transform: scaleY(1);
   transform-origin: bottom;
 
   &:nth-of-type(2) {
-    left: fix-ie-rounding(6);
+    left: fix-ie-rounding(5);
     height: rem($_eq-bar-height-max);
   }
   &:nth-of-type(3) {
-    left: fix-ie-rounding(12);
+    left: fix-ie-rounding(10);
     height: rem($_eq-bar-height-min) * 4;
   }
 }

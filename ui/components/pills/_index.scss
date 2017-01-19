@@ -37,6 +37,7 @@
     text-decoration: none;
   }
 
+  &_bare,
   &--bare {
     background-color: transparent;
     border: 0;
@@ -57,7 +58,9 @@
     min-height: calc(#{$height-input} + 2px);
   }
 
+  &__container_bare,
   &__container--bare,
+  &_container_bare,
   &_container--bare {
 
     @include deprecate('4.0.0');

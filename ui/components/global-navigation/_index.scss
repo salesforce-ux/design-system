@@ -15,7 +15,7 @@
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
-  padding: 0 0 0 $spacing-medium;
+  padding: 0 0 0 $spacing-large;
 
   &__primary,
   &__secondary,
@@ -126,10 +126,12 @@
       }
     }
 
+    &_divider-left,
     &--divider-left {
       border-left: $border-width-thin solid $color-border;
     }
 
+    &_divider-right,
     &--divider-right {
       border-right: $border-width-thin solid $color-border;
     }
@@ -173,9 +175,9 @@
     display: flex;
     align-items: center;
     align-content: center;
-    color: $color-text-context-bar;
     margin-left: ($spacing-xx-small * -1);
     padding: 0 $spacing-x-small;
+    color: $color-text-context-bar;
     border-radius: 0;
 
     &:focus {
@@ -199,32 +201,37 @@
     &:active {
       color: $color-text-context-bar;
     }
+
+    .slds-icon-waffle_container {
+      @include square($square-icon-large-content);
+      margin: {
+        right: $spacing-xx-small;
+        left: -$spacing-x-small;
+      }
+    }
+
+    .slds-icon-waffle {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
   }
 
   // Button inside of actionable container
   .slds-context-bar__button {
     color: inherit;
-
-    // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
-    // Setting custom focus thats specific to context bar
-    &:focus {
-      box-shadow: none;
-    }
   }
 
-  // Workspace tabs
-  //
-  // Consumes tab structure but looks like gnav
-  // ------------
-  &--tabs {
 
-    // Need to reset styles from default
-    .slds-context-bar__icon-action {
-      margin-left: auto;
-    }
+
+  // Need to reset styles from default
+  .slds-context-bar__icon-action {
+    margin-left: auto;
   }
 
   // Tab context bar items
+  &__item_tab,
   &__item--tab {
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border;
@@ -270,6 +277,7 @@
 }
 
 // Unsaved indicator - This can probably be used in other locations as well
+.slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
   align-self: center;
@@ -315,6 +323,7 @@
 // Using mixin to determine text color and interactive states
 //
 // Marketing - temp
+.slds-context-bar_theme-marketing,
 .slds-context-bar--theme-marketing {
   border-bottom-color: #f59331;
 

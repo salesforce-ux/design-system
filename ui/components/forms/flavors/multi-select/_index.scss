@@ -9,6 +9,7 @@
 
 
 
+.slds-picklist_draggable,
 .slds-picklist--draggable {
 
   .slds-button {
@@ -29,6 +30,7 @@
   height: $size-small;
   background-color: $color-background-input-active;
 
+  &_multi,
   &--multi {
     overflow: auto;
   }

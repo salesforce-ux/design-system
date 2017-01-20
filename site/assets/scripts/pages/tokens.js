@@ -29,7 +29,7 @@ const nameFormats = [
     formatter: token => `$${kebabCase(token.name)}`
   },
   {
-    label: 'Aura',
+    label: 'Lightning',
     value: 'aura',
     formatter: token => `t(${camelCase(token.name)})`
   }

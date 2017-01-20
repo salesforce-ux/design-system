@@ -122,7 +122,7 @@
     "fsevents": "*"
   },
   "engines": {
-    "node": ">=6.5.0",
+    "node": ">=6.5.0 <7.0.0",
     "npm": ">=3.10.6"
   },
   "license": "SEE LICENSE IN README.md",

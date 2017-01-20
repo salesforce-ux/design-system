@@ -1,0 +1,408 @@
+/*
+Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+.lmf {
+  .slds-table td,
+  .slds-table th {
+    white-space: normal;
+    vertical-align: baseline;
+  }
+
+  .slds-notify_container--inline {
+    margin-bottom: $spacing-large;
+    position: relative;
+    width: auto;
+    z-index: 0;
+
+    // scss-lint:disable SelectorDepth
+    .slds-notify__content h2.slds-text-heading--small {
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .slds-theme--warning {
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      h2.slds-text-heading--small,
+      a:not(.slds-button--neutral) {
+        color: $color-text-default;
+      }
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      .slds-icon {
+        fill: $color-text-default;
+      }
+    }
+
+    .slds-modal {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: static;
+    }
+
+    .slds-modal__container {
+      z-index: 1;
+    }
+
+    .slds-backdrop {
+      display: block;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      visibility: visible;
+      z-index: 0;
+    }
+
+    .slds-modal--prompt {
+      text-align: left;
+    }
+
+  }
+
+  .slds-popover_container {
+    align-items: center;
+    color: $color-text-default;
+    display: flex;
+    line-height: $line-height-text;
+    margin-bottom: $spacing-x-large;
+    margin-top: $spacing-small;
+    position: relative;
+
+    .slds-button {
+      margin-left: $spacing-x-small;
+    }
+
+    .slds-nubbin--left {
+      margin-left: $spacing-small;
+    }
+
+    .slds-notify__close {
+      position: absolute;
+      right: $spacing-x-small;
+      top: $spacing-x-small;
+    }
+
+    .slds-text-heading--small {
+      color: $color-text-default;
+      font-size: $font-size-medium;
+      font-weight: 700;
+      margin-bottom: $spacing-x-small;
+    }
+
+    .slds-theme--error {
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      .slds-text-heading--small {
+        color: $color-text-inverse;
+      }
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      ul {
+        margin-bottom: $spacing-xx-small;
+        margin-left: $spacing-medium;
+      }
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      .slds-notify__close {
+        color: $color-text-icon-inverse;
+      }
+    }
+  }
+
+  .slds-global-header__notification {
+    font-size: $font-size-medium;
+    list-style-type: none;
+    margin: 0;
+
+    &.slds-popover_container:hover {
+      background: $color-background-alt;
+    }
+
+    // scss-lint:disable SelectorDepth
+    h3 strong {
+      color: $color-text-default;
+      text-transform: none;
+    }
+
+    // scss-lint:disable SelectorDepth
+    .slds-popover .slds-dropdown-trigger button {
+      margin: 0;
+    }
+
+    // scss-lint:disable SelectorDepth
+    .slds-popover__body ul {
+      margin: 0;
+    }
+
+    h4 {
+      font-size: $font-size-x-large;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  .slds-illustration_container {
+    border: 1px solid $color-border;
+    margin: $spacing-medium 0 $spacing-large 0;
+    padding: $spacing-large;
+
+    figure {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      width: 600px;
+      height: 360px;
+
+      // scss-lint:disable SelectorDepth NestingDepth
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    // scss-lint:disable NestingDepth
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .slds-notify_container--mobile {
+    max-width: 375px;
+
+    // scss-lint:disable SelectorDepth
+    .notify__content svg,
+    h2 svg {
+      display: none;
+    }
+
+    &.slds-illustration_container {
+
+      // scss-lint:disable NestingDepth
+      figure {
+        width: 300px;
+        height: 180px;
+
+        // scss-lint:disable SelectorDepth
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      // scss-lint:disable NestingDepth
+      h4 {
+        font-size: $font-size-large;
+        font-weight: normal;
+        text-transform: none;
+      }
+
+      // scss-lint:disable NestingDepth
+      p {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+
+  .slds-notify--mobile {
+    min-width: 0;
+    padding: $spacing-x-small $spacing-medium $spacing-small $spacing-medium;
+    width: 100%;
+
+    &.slds-notify--toast {
+      width: 90%;
+
+      // scss-lint:disable NestingDepth
+      h2 {
+        font-size: $font-size-medium;
+        font-weight: 300;
+        text-align: left;
+
+        // scss-lint:disable SelectorDepth
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    &.slds-notify--modal {
+      background: rgba(126, 140, 153, 0.8);
+      padding-top: $spacing-xx-large;
+
+      // scss-lint:disable NestingDepth
+      h2 {
+        font-size: $font-size-large;
+      }
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      svg {
+        display: block;
+      }
+
+      // scss-lint:disable NestingDepth
+      .slds-modal__header {
+        padding-bottom: $spacing-medium;
+        padding-top: $spacing-medium;
+      }
+
+      // scss-lint:disable SelectorDepth
+      .slds-modal__footer button {
+        margin: 0 0 $spacing-small 0;
+        width: 100%;
+
+        // scss-lint:disable SelectorDepth
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .slds-card_container {
+    width: $size-medium;
+  }
+
+  .slds-section-activity-feed {
+
+    .slds-section__title-action {
+      background: $color-background-alt;
+      padding: 0 0.5rem 0 0;
+      z-index: 1;
+    }
+
+    .slds-section__title {
+      position: relative;
+    }
+
+    .slds-section__title:before {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      border-bottom: 1px dashed $color-border;
+      content: ' ';
+    }
+  }
+
+  .slds-card--alt {
+    background: $color-background-alt;
+  }
+
+  .slds-banner {
+
+    .slds-notify__close {
+      margin-top: $spacing-xx-small;
+    }
+
+    .slds-icon {
+      margin-top: -4px;
+    }
+  }
+
+  .slds-has-error {
+
+    .slds-content-message {
+      color: $color-text-error;
+    }
+  }
+
+  .slds-inline_icon_text {
+    background-color: #f4f6f9;
+    color: $color-text-weak;
+    padding: $spacing-small $spacing-medium;
+
+    .slds-icon {
+      fill: $color-text-icon-default;
+    }
+  }
+
+  .slds-inline_icon_text--error {
+    background: $color-background-alt;
+    color: $color-text-error;
+
+    .slds-icon {
+      fill: $color-text-error;
+    }
+  }
+
+  .slds-inline_icon_text--warning {
+    background: $color-background-alt;
+
+    .slds-icon {
+      fill: $color-text-warning;
+    }
+  }
+
+  .screenshot {
+    border: 1px solid $color-border-separator-alt;
+    box-shadow: 0 0 4px 4px #fafafa;
+    margin-bottom: $spacing-medium;
+    margin-right: $spacing-medium;
+    vertical-align: top;
+  }
+
+  .demo-component {
+    display: none;
+
+    &.slds-popover {
+      left: $spacing-medium;
+      top: -16px;
+      position: absolute;
+    }
+
+    .slds-modal {
+      transform: scale(0.9);
+    }
+
+    .slds-grow-open {
+      transform: scale(1);
+      transition: 0.2s transform ease-in-out;
+    }
+
+    .slds-shrink-close {
+      transform: scale(0.9);
+      transition: 0.2s transform ease-in-out;
+    }
+
+    .slds-fade-out-close {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.1s linear;
+    }
+  }
+
+  .site-menu--jump-links {
+
+    &.site-menu--jump-links-fixed {
+      position: fixed;
+      top: 48px;
+    }
+
+    // scss-lint:disable SelectorDepth
+    ul.slds-list--vertical {
+      margin-left: 0;
+
+      // scss-lint:disable NestingDepth
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

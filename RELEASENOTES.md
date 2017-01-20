@@ -5,6 +5,12 @@
 
 <!-- ## [Unreleased] -->
 
++## [Unreleased]
+
+**SITE IA/ENHANCEMENTS**
+
+- New and improved [Messaging Guidelines](/guidelines/messaging-overview)
+
 ## Release [2.2.1] - January 9, 2017
 
 **NEW COMPONENTS AND VARIANTS**

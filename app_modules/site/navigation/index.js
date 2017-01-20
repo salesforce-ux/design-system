@@ -175,7 +175,62 @@ const nav = formatNavItem({
           label: 'Markup and Style'
         },
         {
-          label: 'Messaging'
+          label: 'Messaging',
+          children: [
+            {
+              path: '/guidelines/messaging-overview',
+              label: 'Overview'
+            },
+            {
+              path: '/guidelines/messaging-types',
+              label: 'Types'
+            },
+            {
+              label: 'Components',
+              children: [
+                {
+                  path: '/guidelines/messaging-components-overview',
+                  label: 'Overview'
+                },
+                {
+                  path: '/guidelines/messaging-components-inline-text',
+                  label: 'Inline Text'
+                },
+                {
+                  path: '/guidelines/messaging-components-popovers',
+                  label: 'Popovers'
+                },
+                {
+                  path: '/guidelines/messaging-components-notifications',
+                  label: 'Notifications'
+                },
+                {
+                  path: '/guidelines/messaging-components-toasts',
+                  label: 'Toasts'
+                },
+                {
+                  path: '/guidelines/messaging-components-banners',
+                  label: 'Banners'
+                },
+                {
+                  path: '/guidelines/messaging-components-illustration-and-text',
+                  label: 'Illustration & Text'
+                },
+                {
+                  path: '/guidelines/messaging-components-modals',
+                  label: 'Modals'
+                },
+                {
+                  path: '/guidelines/messaging-components-notices',
+                  label: 'Notices'
+                }
+              ]
+            },
+            {
+              label: 'States',
+              path: '/guidelines/messaging-states'
+            }
+          ]
         },
         {
           label: 'Motion'

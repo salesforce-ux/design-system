@@ -33,7 +33,12 @@ module.exports = {
     },
     {
       source: '/design/messaging',
-      destination: '/guidelines/messaging',
+      destination: '/guidelines/messaging-overview',
+      status: 301
+    },
+    {
+      source: '/guidelines/messaging',
+      destination: '/guidelines/messaging-overview',
       status: 301
     },
     {

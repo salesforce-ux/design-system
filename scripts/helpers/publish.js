@@ -88,6 +88,8 @@ const prepare = (done) => {
     ], done),
     // examples
     async.apply(execute, `cp -a ${__PATHS__.generated}/examples/. ${__PATHS__.build}/examples`),
+    // snaps
+    async.apply(execute, 'npm run snaps'),
     // website
     async.apply(execute, `cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`),
     // git info

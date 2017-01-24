@@ -17,10 +17,10 @@ let Strength = props =>
     {...props}
     title="Description of the icon when needed"
     className={classNames('slds-icon-strength', props.className)}>
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-      <circle r="1.825" cx="2.3875" cy="50%" />
-      <circle r="1.825" cx="50%" cy="50%" />
-      <circle r="1.825" cx="13.6125" cy="50%" />
+    <svg viewBox="0 0 27 7" aria-hidden="true">
+      <circle r="3.025" cx="3.5" cy="3.5" />
+      <circle r="3.025" cx="13.5" cy="3.5" />
+      <circle r="3.025" cx="23.5" cy="3.5" />
     </svg>
     <span className="slds-assistive-text">Text alternative when needed</span>
   </span>;
@@ -51,9 +51,29 @@ export let states = [
     element: <Strength data-slds-strength="3" />
   },
   {
+    id: 'strength-negative-1',
+    label: 'Strength: -1',
+    element: <Strength data-slds-strength="-1" />
+  },
+  {
+    id: 'strength-negative-2',
+    label: 'Strength: -2',
+    element: <Strength data-slds-strength="-2" />
+  },
+  {
+    id: 'strength-negative-3',
+    label: 'Strength: -3',
+    element: <Strength data-slds-strength="-3" />
+  },
+  {
     id: 'animated',
     label: 'Animated on load',
     element: <Strength className="slds-is-animated" data-slds-strength="3" />
+  },
+  {
+    id: 'animated-negative',
+    label: 'Animated on load (negative)',
+    element: <Strength className="slds-is-animated" data-slds-strength="-3" />
   },
   {
     id: 'paused',

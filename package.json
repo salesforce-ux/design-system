@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^1.4.0",
-    "@salesforce-ux/create-snap": "0.0.1",
+    "@salesforce-ux/create-snap": "0.0.5",
     "@salesforce-ux/design-system-ui-kit": "github:salesforce-ux/design-system-ui-kit#v1.0.1",
     "@salesforce-ux/design-tokens": "3.8.0",
     "@salesforce-ux/icons": "5.2.1",
@@ -134,7 +134,6 @@
     "install-ruby-dependencies": "babel-node scripts/install-ruby-dependencies.js",
     "lint": "gulp lint",
     "postinstall": "babel-node scripts/npm/postinstall.js",
-    "snaps": "node node_modules/@salesforce-ux/create-snap/index.js .generated/examples/ .dist/ .dist/assets/styles/salesforce-lightning-design-system.css",
     "start": "gulp",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",

@@ -88,6 +88,8 @@ const prepare = (done) => {
     ], done),
     // examples
     async.apply(execute, `cp -a ${__PATHS__.generated}/examples/. ${__PATHS__.build}/examples`),
+    // snaps
+    async.apply(execute, `create-snap ${__PATHS__.generated}/examples/ ${__PATHS__.build} ${__PATHS__.build}/dist/assets/styles/salesforce-lightning-design-system.css`),
     // website
     async.apply(execute, `cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`),
     // tokens
@@ -118,7 +120,7 @@ const prepare = (done) => {
     async.apply(zip, 'examples'),
     async.apply(zip, 'www'),
     async.apply(zip, 'design-tokens')
-  ], (err, [_prepare, _dist, _examples, _website, _tokens, info, stats, sha, dependencies, _zip]) => {
+  ], (err, [_prepare, _dist, _examples, _snaps, _website, _tokens, info, stats, sha, dependencies, _zip]) => {
     if (err) return done(err);
     let result = _.assign({}, { sha, info, stats, dependencies }, {
       tag: process.env.TRAVIS_TAG || '',
@@ -137,7 +139,7 @@ module.exports = (done) => prepare((err, result) => {
   if (err) return done(err);
   publish({
     result,
-    zips: ['dist.zip', 'examples.zip', 'www.zip', 'design-tokens.zip']
+    zips: ['dist.zip', 'examples.zip', 'www.zip', 'snapshot.json', 'design-tokens.zip']
       .map((p) => paths.build(p)),
     project: 'design-system'
   }, done);

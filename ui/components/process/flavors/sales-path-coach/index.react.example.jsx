@@ -133,13 +133,13 @@ let CoachExample1 = props =>
         <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
         <span className="slds-text-body--small"><button className="slds-button">Edit</button></span>
       </div>
-      <dl className="slds-dl--horizontal">
-        <dt className="slds-coach__item slds-dl--horizontal__label">Expected Budget</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail">$10,000</dd>
-        <dt className="slds-coach__item slds-dl--horizontal__label">Lead Source</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail">Marketing and Web Referral</dd>
-        <dt className="slds-coach__item slds-dl--horizontal__label">Support Engineer</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail"><a href="javascript:void(0);">Jack Arthur</a></dd>
+      <dl className="slds-list--horizontal slds-wrap">
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Expected Budget</dt>
+        <dd className="slds-coach__value slds-item--detail">$10,000</dd>
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Lead Source</dt>
+        <dd className="slds-coach__value slds-item--detail">Marketing and Web Referral</dd>
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Support Engineer</dt>
+        <dd className="slds-coach__value slds-item--detail"><a href="javascript:void(0);">Jack Arthur</a></dd>
       </dl>
     </div>
     <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">
@@ -159,13 +159,13 @@ let CoachExample2 = props =>
         <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
         <span className="slds-text-body--small"><button className="slds-button">Edit</button></span>
       </div>
-      <dl className="slds-dl--horizontal">
-        <dt className="slds-coach__item slds-dl--horizontal__label">Build State</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail">In Motion</dd>
-        <dt className="slds-coach__item slds-dl--horizontal__label">Expected Sign Date</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail">-</dd>
-        <dt className="slds-coach__item slds-dl--horizontal__label">Key Buyer</dt>
-        <dd className="slds-coach__value slds-dl--horizontal__detail"><a href="javascript:void(0);">-</a></dd>
+      <dl className="slds-list--horizontal slds-wrap">
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Build State</dt>
+        <dd className="slds-coach__value slds-item--detail">In Motion</dd>
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Expected Sign Date</dt>
+        <dd className="slds-coach__value slds-item--detail">-</dd>
+        <dt className="slds-coach__item slds-item--label slds-text-color--weak">Key Buyer</dt>
+        <dd className="slds-coach__value slds-item--detail"><a href="javascript:void(0);">-</a></dd>
       </dl>
     </div>
     <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">

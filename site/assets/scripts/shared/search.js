@@ -8,14 +8,14 @@ if (globals.displaySearch) {
   // for full list of options.
   const autocompleteOptions = {
     hint: false
-    // debug: true
+    // , debug: true
   };
 
   const d = document;
   const t = 'script';
   const o = d.createElement(t);
   const s = d.getElementsByTagName(t)[0];
-  o.src = '/assets/scripts/docsearch.min.js';
+  o.src = 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js';
   const publicDocSearchApiKey = 'a5ad71e92251e2eaad9e20a9befd004b';
   const publicDocSearchIndexName = 'lightningdesignsystem';
 

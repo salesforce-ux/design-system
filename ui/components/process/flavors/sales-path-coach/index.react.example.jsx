@@ -131,7 +131,7 @@ let CoachExample1 = props =>
     <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
       <div className="slds-grid slds-grid--align-spread">
         <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
-        <span className="slds-text-body--small"><button className="slds-button">Edit</button></span>
+        <span className="slds-text-body--small"><button className="slds-button slds-button--reset">Edit</button></span>
       </div>
       <dl className="slds-list--horizontal slds-wrap">
         <dt className="slds-coach__item slds-item--label slds-text-color--weak">Expected Budget</dt>
@@ -157,7 +157,7 @@ let CoachExample2 = props =>
     <div className="slds-coach__keys slds-size--1-of-2 slds-m-left--x-large">
       <div className="slds-grid slds-grid--align-spread">
         <h2 className="slds-text-title--caps slds-p-bottom--small">Key Fields This Stage</h2>
-        <span className="slds-text-body--small"><button className="slds-button">Edit</button></span>
+        <span className="slds-text-body--small"><button className="slds-button slds-button--reset">Edit</button></span>
       </div>
       <dl className="slds-list--horizontal slds-wrap">
         <dt className="slds-coach__item slds-item--label slds-text-color--weak">Build State</dt>

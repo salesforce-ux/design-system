@@ -22,7 +22,7 @@ linters:
   ColorVariable:
     enabled: false
   Comment:
-    enabled: true
+    enabled: false
     allowed: 'Copyright'
   DeclarationOrder:
     enabled: false
@@ -63,7 +63,7 @@ linters:
     enabled: true
     style: include_zero
   MergeableSelector:
-    enabled: true
+    enabled: false
     force_nesting: true
   NameFormat:
     enabled: true

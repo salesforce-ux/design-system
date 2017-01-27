@@ -92,7 +92,15 @@
   }
 
   &__remove {
+    @include square ($square-icon-xx-small-boundary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: $spacing-xx-small;
+
+    svg {
+      @include square($square-icon-xx-small-content);
+    }
   }
 }
 

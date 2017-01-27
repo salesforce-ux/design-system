@@ -43,7 +43,7 @@ export let SectionTitleAction = props =>
     className="slds-button slds-section__title-action"
   >
     <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
-    {props.children}
+    <span className="slds-truncate">{props.children}</span>
   </button>;
 
 ///////////////////////////////////////////

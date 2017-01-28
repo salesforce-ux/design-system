@@ -13,6 +13,7 @@ The following site enhancements are now available:
 
 The following components are now available:
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
+- Add Split View List - [Split view](/components/split-view)
 
 **ADDED**
 

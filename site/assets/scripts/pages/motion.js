@@ -42,7 +42,7 @@ const handleToggleExampleClick = (event, node) => {
     state = Object.assign({}, state, nextState);
     fastdom.mutate(() => {
       setClassName(target, {
-        [`${state.which}-example--on`]: state.isOn === true
+        [`site-${state.which}-example--on`]: state.isOn === true
       });
       node.setAttribute(ATTRIBUTE, JSON.stringify(state));
     });

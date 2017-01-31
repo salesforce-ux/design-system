@@ -16,10 +16,10 @@ props:
      value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff2
   SALESFORCE_SANS_BOLD_WOFF:
      value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff
-  SALESFORCE_SANS_LIGHT_ITALIC_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff2
-  SALESFORCE_SANS_LIGHT_ITALIC_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-LightItalic.woff
+  SALESFORCE_SANS_BOLD_ITALIC_WOFF2:
+     value: /slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2
+  SALESFORCE_SANS_BOLD_ITALIC_WOFF:
+     value: /slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff
   SALESFORCE_SANS_ITALIC_WOFF2:
      value: /slds/fonts/v2.3.0/SalesforceSans-Italic.woff2
   SALESFORCE_SANS_ITALIC_WOFF:

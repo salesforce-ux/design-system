@@ -1,46 +1,58 @@
 components:
   - accordion
   - activity-timeline
+  - alert
   - app-launcher
+  - avatar
   - badges
   - breadcrumbs
   - buttons
   - button-icons
   - button-groups
   - cards
+  - checkbox
   - data-tables
   - datepickers
   - docked-composer
+  - docked-form-footer
   - docked-utility-bar
   - dynamic-icons
   - feeds
   - files
   - file-selector
-  - forms
+  - form-layout
   - global-header
   - global-navigation
   - icons
+  - input
   - images
   - list-builder
   - lookups
   - menus
   - modals
+  - multi-select
   - navigation
-  - notifications
   - page-headers
   - panels
+  - path
   - picklist
   - pills
-  - process
   - progress-bar
   - progress-indicator
+  - prompt
   - popovers
   - publishers
+  - radio-group
+  - radio-button-group
   - rich-text-editor
+  - select
   - spinners
   - split-view
+  - scoped-tabs
   - tabs
+  - textarea
   - tiles
+  - toast
   - tooltips
   - trees
   - walkthrough

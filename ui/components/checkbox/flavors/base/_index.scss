@@ -1,0 +1,235 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * The ability to style checkboxes with CSS varies across browsers.
+ * To ensure that checkboxes look the same everywhere, we use a custom DOM.
+ * Pay close attention to the markup, because all elements must exist for the
+ * styles to work.
+ *
+ * #### Accessibility
+ *
+ * Groups of checkboxes should be marked up using the fieldset and legend
+ * element. This helps someone using assistive technology to understand the
+ * question they're answering with the group of checkboxes. The fieldset is
+ * placed around the whole group and the legend contains the question.
+ *
+ * Custom checkboxes are created by applying the `.slds-checkbox` class to
+ * a `<label>` element. To remain accessible to all user agents, place
+ * `<input>` with `type="checkbox"` inside the `<label>` element.  The `<input>`
+ * is then visually hidden, and the styling is placed on a span with
+ * the `.slds-checkbox--faux` class. The styling of the span changes based
+ * on whether the checkbox is selected or focused by using a pseudo-element.
+ * A second span with `.slds-form-element__label` contains the label text.
+ *
+ * When a single checkbox is required, `<div class="slds-checkbox">` should
+ * get `<abbr class="required" title="required">*</abbr>` added to the DOM,
+ * directly before the `<input type="checkbox" />` for visual indication
+ * that the checkbox is required.
+ *
+ * When a checkbox group is required, the `<fieldset>` should receive the
+ * class `.slds-is-required`. The `<legend>` should then get
+ * `<abbr class="required" title="required">*</abbr>` added to the DOM for
+ * visual indication that the checkbox group is required.
+ *
+ * As SLDS checkboxes rely on the :checked psuedo selector, and the
+ * indeterminate state is only accessible via JavaScript, the use of a
+ * CSS class on the input will be necessary to implement this in SLDS.
+ * Use JavaScript to add the class when the indeterminate property is set to
+ * true on the input.
+ *
+ * The following JavaScript demonstrates how to set a checkbox to be indeterminate:
+ * ```js
+ * var checkbox = document.getElementById('checkbox-indeterminate-01');
+ * checkbox.indeterminate = true;
+ * ```
+ *
+ * @summary A checkable input that communicates if an option is true, false or indeterminate
+ *
+ * @base
+ * @name checkbox
+ * @selector .slds-checkbox
+ * @support dev-ready
+ * @category simple
+ * @type data-entry
+ * @role checkbox
+ */
+
+/**
+ * @summary Initializes checkbox
+ *
+ * @name base
+ * @selector .slds-checkbox
+ * @restrict span
+ * @required
+ * @variant
+ */
+.slds-checkbox {
+  display: inline-block;
+
+  /**
+   * Creates a custom styled checkbox
+   *
+   * @selector .slds-checkbox--faux
+   * @restrict .slds-checkbox span
+   * @required
+   */
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    @include square($square-icon-medium-content);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border: $border-width-thin solid $color-border-input;
+    border-radius: $border-radius-small;
+    background: $color-background-input;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+  }
+
+  .slds-form-element__label {
+    display: inline;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+  }
+
+  [type="checkbox"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:checked + .slds-checkbox_faux,
+    &:checked + .slds-checkbox--faux,
+    &:checked ~ .slds-checkbox_faux,
+    &:checked ~ .slds-checkbox--faux,
+    &:checked + .slds-checkbox__label .slds-checkbox_faux,
+    &:checked + .slds-checkbox__label .slds-checkbox--faux {
+
+      &:after {
+        display: block;
+        content: '';
+        height: ($square-icon-x-small-content / 2);
+        width: $square-icon-x-small-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+        border-bottom: $border-width-thick solid $color-brand;
+        border-left: $border-width-thick solid $color-brand;
+      }
+    }
+
+    &:focus {
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox__label .slds-checkbox_faux,
+      + .slds-checkbox__label .slds-checkbox--faux {
+        content: '';
+        border-color: $color-border-input-active;
+        box-shadow: $shadow-button-focus;
+      }
+
+      &:checked > .slds-checkbox_faux,
+      &:checked > .slds-checkbox--faux,
+      &:checked ~ .slds-checkbox_faux,
+      &:checked ~ .slds-checkbox--faux,
+      &:checked + .slds-checkbox__label .slds-checkbox_faux,
+      &:checked + .slds-checkbox__label .slds-checkbox--faux {
+        border-color: $color-border-input-active;
+        background-color: $color-background-input;
+      }
+    }
+
+    &:indeterminate + .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox--faux:after,
+    &:indeterminate ~ .slds-checkbox_faux:after,
+    &:indeterminate ~ .slds-checkbox--faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox--faux:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $square-icon-x-small-content;
+      height: 2px;
+      background: $color-brand;
+      border: 0;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    &[disabled] {
+      // scss-lint:disable NestingDepth
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox__label .slds-checkbox_faux,
+      + .slds-checkbox__label .slds-checkbox--faux {
+        background-color: $color-background-input-disabled;
+        border-color: $color-border-input-disabled;
+
+
+        &:after {
+          border-color: $color-background-input;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Error styles for checkbox or checkbox group
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error .slds-checkbox [type="checkbox"] {
+
+  + .slds-checkbox_faux,
+  + .slds-checkbox--faux,
+  ~ .slds-checkbox_faux,
+  ~ .slds-checkbox--faux,
+  + .slds-checkbox__label .slds-checkbox_faux,
+  + .slds-checkbox__label .slds-checkbox--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+
+  &:checked + .slds-checkbox_faux,
+  &:checked + .slds-checkbox--faux,
+  &:checked ~ .slds-checkbox_faux,
+  &:checked ~ .slds-checkbox--faux,
+  &:checked + .slds-checkbox__label .slds-checkbox_faux,
+  &:checked + .slds-checkbox__label .slds-checkbox--faux {
+    border-color: $color-border-error;
+    background-color: $color-background-input;
+
+    &:after {
+      border-color: $color-background-error;
+    }
+  }
+}
+
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox--faux,
+.slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox--faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
+  margin-right: $spacing-x-small;
+}

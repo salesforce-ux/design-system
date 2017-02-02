@@ -1,17 +1,5 @@
 flavors:
-  - input
-  - textarea
-  - radio
-  - radio-group-alternate
-  - checkbox
-  - checkbox-toggle
-  - checkbox-alternate
-  - checkbox-add-button
-  - select
-  - multi-select
   - horizontal-form
   - stacked-form
   - inline-form
   - compound-form
-  - field-level-help
-  - docked-form-footer

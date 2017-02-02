@@ -179,7 +179,7 @@ export let Lookup = props => {
   const uniqueListId = _.uniqueId('lookup-listbox-');
 
   return (
-    <div className={classNames('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null)} data-select="single">
+    <div className={classNames('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null, props.selection ? 'slds-has-selection' : null)}>
       { !props.selection ?
       <label className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueInputId }>{ props.label || 'Account Name' }</label> :
       <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
@@ -203,6 +203,10 @@ export let Lookup = props => {
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
+
+export default (
+  <Lookup />
+);
 
 export let states = [
   {

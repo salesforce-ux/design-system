@@ -7,10 +7,36 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * @summary Docked utility bar is a persistent bar that allows a user to continually use the app to complete tasks while expanding/collapsing utility panels.
+ *
+ * @base
+ * @name docked-utility-bar
+ * @selector .slds-utility-bar_container
+ * @support dev-ready
+ */
+
+/**
+ * Fixed bar at the bottom of viewport, contains items
+ *
+ * @name base
+ * @selector .slds-utility-bar_container
+ * @restrict footer
+ * @support dev-ready
+ * @required
+ * @variant
+ */
 .slds-utility-bar_container {
   position: relative;
 }
 
+/**
+ * Fixed bar at the bottom of viewport, contains items
+ *
+ * @selector .slds-utility-bar
+ * @restrict .slds-utility-bar_container ul
+ * @required
+ */
 .slds-utility-bar {
   display: flex;
   position: fixed;
@@ -22,12 +48,24 @@
   box-shadow: $shadow-docked;
   z-index: $z-index-overlay; // Better token - more specific to docked stuff
 
+  /**
+   * Items that invoke specific utility bar panel
+   *
+   * @selector .slds-utility-bar__item
+   * @restrict .slds-utility-bar li
+   * @required
+   */
   &__item {
     display: flex;
     margin-right: $border-width-thin;
   }
 
-  // Button that invokes utility panel
+  /**
+   * Button that invokes utility panel
+   *
+   * @selector .slds-utility-bar__action
+   * @restrict .slds-utility-bar button
+   */
   &__action {
     position: relative;
     padding: 0 $spacing-small;
@@ -61,6 +99,11 @@
       background: $color-background-utility-bar-hover;
     }
 
+    /**
+     * @selector .slds-is-active
+     * @restrict .slds-utility-bar__action
+     * @modifier
+     */
     &.slds-is-active {
       background: $color-background-utility-bar-hover;
       color: inherit;

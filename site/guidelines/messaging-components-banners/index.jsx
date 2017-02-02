@@ -478,7 +478,7 @@ export default (
         </h2>
 
         <p>
-          <a href="/components/notifications/#flavor-alert">Refer to this code
+          <a href="/components/alert">Refer to this code
           sample</a> for the banner markup.
         </p>
 

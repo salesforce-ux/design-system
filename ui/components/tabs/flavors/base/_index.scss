@@ -1,0 +1,255 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * Because tab sets can be nested, pay close attention to the markup. They are
+ * constructed to prevent styles from leaking from parent tab sets into child tab sets.
+ *
+ * <h4 class="site-text-heading--label">JavaScript Needs</h4>
+ *
+ * The active tab has two markup requirements:
+ *
+ * - The `.slds-active` class should be placed on the `li` with `.slds-tabs--{variant}__item`.
+ * - The corresponding `.slds-tabs--{variant}__content` container receives `.slds-show`.
+ *
+ * Inactive `.slds-tabs--{variant}__content` containers receive `.slds-hide`.
+ * When the user clicks a different tab, move the `.slds-active` class and
+ * toggle the `.slds-hide`/`.slds-show` classes.
+ *
+ * #### Accessibility
+ *
+ * Tabbed UIs have three parts with specific **ARIA** role requirements:
+ *
+ * - The tab list, which should have `role="tablist"`
+ * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+ * - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+ *
+ * **Expected markup:**
+ *
+ * - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+ * - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+ * - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+ * - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+ * - Tab key, when focus is before the tab list, moves focus to the selected tab
+ * - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
+ * - Shift+Tab keys, when focus is on first element in a tab panel, move focus to the selected tab
+ *
+ * @summary A tab keeps related content in a single container that is shown and hidden through navigation.
+ *
+ * @base
+ * @name tabs
+ * @selector .slds-tabs--default
+ * @support dev-ready
+ * @category simple
+ * @type navigation
+ * @role tablist
+ */
+
+/**
+ * The default tab set style encapsulates everything that is underneath it
+ * without enclosing it visually. Initialize a default tab set by applying the
+ * `.slds-tab--default` class to the containing `<div>` around the tab list and
+ * tab panels. The `<ul>` element also requires the class `.slds-tab--default__nav`
+ * to prevent styles from bleeding into nested tabs.
+ *
+ * The overflow tab style is provided as a tab item type that acts as a menu
+ * component and appears as a tab item. It could contain those tab items that
+ * don't all fit in a horizontal orientation. Initialize a default tab set and
+ * in the last tab item of the set, apply the additional classes `slds-dropdown-trigger`
+ * and `.slds-tabs__item--overflow`. Include an `<a>` element to contain the
+ * tab item label like the other tab items. After the `<a>` element, the
+ * `.slds-dropdown` segment of a search overflow menu component is used. The
+ * `slds-dropdown__list` element also then requires a `slds-dropdown--length-X`
+ * class, where X is the number of items to show in it.
+ *
+ * @summary Initializes a default tablist
+ *
+ * @name base
+ * @selector .slds-tabs--default
+ * @restrict div
+ * @required
+ * @variant
+ */
+.slds-tabs_default,
+.slds-tabs--default {
+  @include tabs;
+
+  /**
+   * Creates the container for the default tabs
+   *
+   * @selector .slds-tabs--default__nav
+   * @restrict .slds-tabs--default ul
+   * @required
+   */
+  &__nav {
+    @include tabs-nav;
+    border-bottom: $border-width-thin solid $color-border;
+  }
+
+  @include deprecate('4.0.0') {
+
+    .slds-tabs__item {
+
+      + .slds-tabs__item {
+        @include mq-medium-min {
+          margin-left: $spacing-large;
+        }
+      }
+
+      > a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        border-bottom: $border-width-thick solid transparent;
+        padding: 0 $spacing-x-small;
+        color: $color-text-action-label;
+
+        @include mq-medium-min {
+          padding: 0 $spacing-medium;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-color: $color-border-tab-selected;
+          color: $color-text-action-label-active;
+        }
+      }
+
+      &.slds-active a {
+        border-color: $color-border-tab-selected;
+        color: $color-text-action-label-active;
+
+        &:focus {
+          color: $color-text-tab-label-selected;
+        }
+      }
+    }
+
+    > .slds-tabs__content {
+      @include tabs-content;
+    }
+  }
+
+  .slds-tabs__item_overflow,
+  .slds-tabs__item--overflow {
+    overflow: visible;
+  }
+}
+
+/**
+ * Styles each list item as a single tab
+ *
+ * @selector .slds-tabs--default__item
+ * @restrict .slds-tabs--default ul li
+ * @required
+ */
+.slds-tabs_default__item,
+.slds-tabs--default__item {
+  color: $color-text-action-label;
+  position: relative;
+  padding: 0 $spacing-small;
+
+  &:after {
+    display: block;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: $border-width-thick;
+  }
+
+  /**
+   * Active state for a tab item
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-tabs--default__item
+   * @notes Required on the `<li>` element that is associated with the active tab panel
+   * @modifier
+   */
+  &.slds-active,
+  &.slds-is-active {
+    color: $color-text-action-label-active;
+
+    &:after {
+      background-color: $color-brand-dark;
+    }
+
+    .slds-tabs_default__link,
+    .slds-tabs--default__link {
+
+      &:hover {
+        color: $color-text-action-label-active;
+      }
+
+    }
+  }
+
+  &:hover {
+
+    &:after {
+      background-color: $color-brand-dark;
+    }
+  }
+
+  /**
+   * Focus state for a tab item
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-tabs--default__item
+   * @modifier
+   */
+  &:focus,
+  &.slds-has-focus {
+    outline: 0;
+    color: $color-text-tab-label-selected;
+
+    &:after {
+      height: ($border-width-thick + 1);
+      background-color: $color-brand-dark;
+    }
+  }
+}
+
+/**
+ * Styles each actionable element inside each tab item
+ *
+ * @selector .slds-tabs--default__link
+ * @restrict .slds-tabs--default__item a
+ * @required
+ */
+.slds-tabs_default__link,
+.slds-tabs--default__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  color: currentColor;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Styles each tab content wrapper
+ *
+ * @selector .slds-tabs--default__content
+ * @restrict .slds-tabs--default div
+ * @required
+ */
+.slds-tabs_default__content,
+.slds-tabs--default__content {
+  @include tabs-content;
+}

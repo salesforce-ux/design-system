@@ -95,7 +95,7 @@ let FormElement = props =>
   </div>;
 
 let Lookup = props =>
-  <div className="slds-form-element slds-lookup" data-select="single">
+  <div className="slds-form-element slds-lookup slds-has-selection">
     <span className="slds-form-element__label" htmlFor={props.id}>{props.label}</span>
     <div className="slds-form-element__control">
       {props.children}

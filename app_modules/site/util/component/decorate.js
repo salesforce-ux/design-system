@@ -15,6 +15,7 @@ import _ from 'lodash';
 import yaml from 'js-yaml';
 import markdown from 'markdown-it';
 import { renderMarkdownAndReplaceGlobals, replaceGlobals } from 'app_modules/site/util/component/render-markdown';
+import ReactDOM from 'react-dom/server';
 
 import globals from 'app_modules/global';
 
@@ -53,24 +54,49 @@ const getIndex = (dir, ext, success, error) =>
  *
  * @param {object} component
  */
-const addInfo = component => {
-  component.info = {};
-
+const addInfo = (component, type) => {
   const getMarkdown = indexPath =>
     renderMarkdownAndReplaceGlobals(fs.readFileSync(indexPath).toString());
-
   const getYaml = indexPath =>
     yaml.safeLoad(replaceGlobals(fs.readFileSync(indexPath).toString()));
 
-  getIndex(component.path, 'markup.md', indexPath => {
-    component.info.markup = {
-      __html: getMarkdown(indexPath)
-    };
-  });
+  // HACK: BACKPORT (component)
+  // TODO: Remove this later
+  if (type === 'component') {
+    if (!component.description) {
+      getFile(component.path, 'index.docs.jsx', indexPath => {
+        delete require.cache[indexPath];
+        const m = require(indexPath);
+        if (m.default) {
+          component.description = ReactDOM.renderToStaticMarkup(m.default);
+        }
+      });
+    }
+    if (!component.summary) {
+      getFile(component.path, 'index.docs.jsx', indexPath => {
+        delete require.cache[indexPath];
+        const m = require(indexPath);
+        if (m.intro) {
+          component.summary = ReactDOM.renderToStaticMarkup(m.intro);
+        }
+      });
+    }
+    if (!component.table) {
+      getIndex(component.path, 'table.yml', indexPath => {
+        component.table = getYaml(indexPath);
+      });
+    }
+  }
 
-  getIndex(component.path, 'table.yml', indexPath => {
-    component.info.tableYaml = getYaml(indexPath);
-  });
+  // HACK: BACKPORT (variant)
+  // TODO: Remove this later
+  if (type === 'variant') {
+    if (!component.description) {
+      getIndex(component.path, 'markup.md', indexPath => {
+        component.description = getMarkdown(indexPath);
+      });
+    }
+  }
 };
 
 /**
@@ -80,13 +106,13 @@ const addInfo = component => {
  * @returns {object}
  */
 export default component => {
-  addInfo(component);
+  addInfo(component, 'component');
   component.flavors.forEach(flavor => {
     _.defaults(flavor, {
       showFormFactors: [],
       dependencies: []
     });
-    addInfo(flavor);
+    addInfo(flavor, 'variant');
   });
   return component;
 };

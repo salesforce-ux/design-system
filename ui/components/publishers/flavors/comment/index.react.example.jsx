@@ -56,16 +56,13 @@ export let Publisher = props =>
 export let Default = props =>
   <Publisher />;
 
-let Active = props =>
-  <Publisher className="slds-is-active" />;
-
-let ActiveFocus = props =>
-  <Publisher className="slds-is-active slds-has-focus" />;
-
-
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
+
+export default (
+  <Publisher />
+);
 
 export let states = [
   {

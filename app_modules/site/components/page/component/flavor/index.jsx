@@ -181,11 +181,10 @@ class ComponentFlavor extends React.Component {
 
   renderInfo() {
     const { flavor } = this.props;
-
-    return flavor.info.markup ? (
+    return flavor.description ? (
       <div
         className="slds-text-longform"
-        dangerouslySetInnerHTML={flavor.info.markup} />
+        dangerouslySetInnerHTML={{ __html: flavor.description }} />
     ) : null;
   }
 

@@ -1,0 +1,71 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * A prompt uses the base modal component and then adds the class `.slds-modal--prompt` to the overall `.slds-modal`. The utilities > themes > colors class is placed on the `.slds-modal__head` to create the color of the header. In the example, we illustrate using `.slds-theme--error`. The class `.slds-theme--alert-texture` should be applied to create the striped gradient. The `.slds-modal__footer` receives the class `.slds-theme--default`.
+ *
+ * #### Accessibility
+ *
+ * Prompt notifications are similar to modals, in that they are a focus trap, but they should take a slightly different `role` of `alertdialog` to indicate their severity. Like modals they should be labelled by their headings, but additonally they should be desscribed by the message details of the prompt.
+ *
+ * The element containing the prompt message should be the target focus of the browser when it is displayed, which is why we add `tab-index="0"` to `slds-modal__container`.
+ *
+ * There is no requirement for a close button, as the confirmation button should be used to dismiss the prompt, along with the usual Esc key dismissal.
+ *
+ * **Expected markup (same as Modals, but with the following differences):**
+ * - Modal has `role="alertdialog"`
+ * - Modal has an `aria-describedby` attribute that matches the id of the modal message container.
+ * - Modal message container container should have `tab-index="0"`
+ *
+ * **Expected keyboard interaction (sme as Modal, with the addition of):**
+ * - Modal message container should take initial focus
+ *
+ * @summary Prompt notice grabs the user’s attention & alert them of system-related issues/updates.
+ *
+ * @base
+ * @name prompt
+ * @selector .slds-modal--prompt
+ * @support dev-ready
+ * @category complex
+ * @type messaging
+ * @role alert
+ */
+
+/**
+ * @summary Initializes Prompt style notification
+ *
+ * @name base
+ * @selector .slds-modal--prompt
+ * @restrict .slds-modal
+ * @required
+ * @variant
+ */
+.slds-modal_prompt,
+.slds-modal--prompt {
+
+  .slds-modal__header {
+    border-bottom: 0;
+  }
+
+  .slds-modal__content {
+    padding-left: $spacing-x-large;
+    padding-right: $spacing-x-large;
+  }
+
+  .slds-modal__footer {
+    border-top: 0;
+    text-align: center;
+  }
+
+  @include deprecate('4.0.0', 'Close button should be removed from the markup') {
+    slds-modal__close {
+      display: none; // @TODO - Amy, can you make this optional?
+    }
+  }
+}

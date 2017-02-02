@@ -1,0 +1,141 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * An avatar can be circular or a rounded rectangle, depending on usage. The
+ * default is a rounded rectangle and requires `.slds-avatar` as the base class.
+ * Use a circle for all people-oriented objects that could potentially render
+ * as avatars. For a fully round avatar, add the `.slds-avatar--circle` class.
+ * Four additional classes are available for sizing.
+
+ * If an image is unavailable, up to two letters can be used instead. If the
+ * record name contains two words, like first and last name, use the first
+ * capitalized letter of each. For records that only have a single word name,
+ * use the first two letters of that word using one capital and one lower case
+ * letter. If initials are not available, use the object icon as a fallback.
+ *
+ * @summary A avatar component is an image that represents a person
+ *
+ * @base
+ * @name avatar
+ * @selector .slds-avatar
+ * @support dev-ready
+ * @category simple
+ * @type data-display
+ */
+
+/**
+ * @summary Creates an avatar component
+ *
+ * @name base
+ * @selector .slds-avatar
+ * @restrict span
+ * @variant
+ */
+.slds-avatar {
+  @include square($square-icon-medium-boundary);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius-medium;
+  line-height: $line-height-reset;
+  color: $color-text-inverse;
+
+  &:hover,
+  &:focus:hover {
+    color: currentColor;
+  }
+
+  /**
+   * Size modifier for avatars - x-small
+   *
+   * @selector .slds-avatar--x-small
+   * @restrict .slds-avatar
+   * @modifier
+   * @group size
+   */
+  &_x-small,
+  &--x-small {
+    @include square($square-icon-x-small-boundary);
+    font-size: $font-size-heading-xx-small;
+  }
+
+  /**
+   * Size modifier for avatars - small
+   *
+   * @selector .slds-avatar--small
+   * @restrict .slds-avatar
+   * @modifier
+   * @group size
+   */
+  &_small,
+  &--small {
+    @include square($square-icon-small-boundary);
+    font-size: $font-size-heading-xx-small;
+  }
+
+  /**
+   * Size modifier for avatars - medium
+   *
+   * @selector .slds-avatar--medium
+   * @restrict .slds-avatar
+   * @modifier
+   * @group size
+   */
+  &_medium,
+  &--medium {
+    @include square($square-icon-medium-boundary);
+    font-size: $font-size-heading-small;
+  }
+
+  /**
+   * Size modifier for avatars - large
+   *
+   * @selector .slds-avatar--large
+   * @restrict .slds-avatar
+   * @modifier
+   * @group size
+   */
+  &_large,
+  &--large {
+    @include square($square-icon-large-boundary);
+    font-size: $font-size-heading-medium;
+    font-weight: $font-weight-light;
+    line-height: $line-height-heading;
+  }
+
+  /**
+   * Make avatar a circle
+   *
+   * @selector .slds-avatar--circle
+   * @restrict .slds-avatar
+   * @modifier
+   */
+  &_circle,
+  &--circle {
+    border-radius: $border-radius-circle;
+  }
+
+  // This isn't a thing so lets not document it
+  &_empty,
+  &--empty {
+    border: $border-width-thin dashed $color-border;
+  }
+
+  /**
+   * Element for initials inside an avatar
+   *
+   * @selector .slds-avatar__initials
+   * @restrict .slds-avatar abbr
+   */
+  &__initials {
+    @include absolute-center;
+    height: 100%;
+  }
+}

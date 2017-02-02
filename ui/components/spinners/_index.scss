@@ -7,6 +7,32 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * To use the spinner in a component, the parent of the spinner should be set to `position:relative`. You can use the utility class `.slds-is-relative` or add the declaration to your custom component CSS. If you are using the spinner in an `iframe` and dynamically loading DOM nodes after the page has loaded, it is recommended that you set the `.slds-spinner_container` to `position:fixed` so that it remains centered in the viewport.
+ *
+ * The background overlay for the spinner is an optional element.
+ *
+ * #### Accessibility
+ *
+ * A spinner should have the Aria `role="status"` and contain assistive text that explains what is currently happening.
+ *
+ * @summary Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations. In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.
+ *
+ * @base
+ * @name spinners
+ * @selector .slds-spinner_container
+ * @support dev-ready
+ * @category feature
+ * @type loading
+ * @role alert
+ */
+
+/**
+ * @name base
+ * @selector .slds-spinner_container
+ * @restrict div
+ * @variant
+ */
 
 .slds-spinner_container {
   position: absolute;
@@ -33,6 +59,14 @@
   display: none;
 }
 
+/**
+ * This is the gray base class for spinner
+ *
+ * @selector .slds-spinner
+ * @restrict .slds-spinner_container div
+ * @required
+ */
+
 .slds-spinner {
   position: absolute;
   top: 50%;
@@ -45,6 +79,22 @@
 .slds-spinner__dot-b {
   transform-origin: 50% 50%;
 }
+
+/**
+ * This creates two of the circles
+ *
+ * @selector .slds-spinner__dot-a
+ * @restrict .slds-spinner div
+ * @required
+ */
+
+/**
+ * This creates two of the circles
+ *
+ * @selector .slds-spinner__dot-b
+ * @restrict .slds-spinner div
+ * @required
+ */
 
 .slds-spinner__dot-a,
 .slds-spinner__dot-b {

@@ -8,6 +8,40 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+/**
+ * To initialize a card, apply the `.slds-card` class to a containing `<article>`.
+ * A card is made up of three sections, a header, a body, and a footer.
+ * The card header will get the `.slds-card__header` class.
+ * The card body will get the `.slds-card__body` class. The card footer will
+ * get the `.slds-card__footer` class.
+ *
+ * @summary Cards are used to apply a container around a related grouping of information.
+ *
+ * @base
+ * @name cards
+ * @selector .slds-card
+ * @category structure
+ * @type data-display, layout
+ * @role presentation
+ * @support dev-ready
+ * @layout responsive
+ */
+
+
+/**
+* The base card is used primarily on desktop within a &ldquo;wide&rdquo; column
+* or &ldquo;main content area&rdquo;, which uses two-thirds of the viewport.
+* In addition, the `.slds-card` class is used for layout purposes
+* when a card has an adjacent card, those proceeding the initial will provide margin
+* to give the cards spacing between each other.
+*
+* @summary Initializes card
+*
+* @name base
+* @selector .slds-card
+* @restrict article
+* @variant
+*/
 .slds-card {
   padding: 0;
   background: $card-color-background;
@@ -15,6 +49,7 @@
   border-radius: $border-radius-medium;
   background-clip: padding-box;
 
+  // Adds spacing between cards
   + .slds-card {
     margin-top: $spacing-medium;
   }
@@ -32,6 +67,12 @@
     }
   }
 
+  /**
+   * Initializes card header
+   *
+   * @selector .slds-card__header
+   * @restrict .slds-card div
+   */
   &__header {
     padding-top: $spacing-small;
     margin-bottom: $spacing-small;
@@ -41,6 +82,12 @@
     color: inherit;
   }
 
+  /**
+   * Initializes card body
+   *
+   * @selector .slds-card__body
+   * @restrict .slds-card div
+   */
   &__body {
     margin-bottom: $spacing-small;
   }
@@ -50,12 +97,26 @@
     display: none;
   }
 
+  /**
+   * Initializes card footer
+   *
+   * @selector .slds-card__footer
+   * @restrict .slds-card footer
+   */
   &__footer {
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;
     text-align: right;
   }
 
+  /**
+   * @summary Modifies styles for card in a narrow column
+   *
+   * @name card-narrow
+   * @selector .slds-card--narrow
+   * @restrict .slds-card
+   * @modifier
+   */
   &_narrow,
   &--narrow {
 
@@ -78,6 +139,12 @@
     }
   }
 
+  /**
+   * @selector .slds-card--empty
+   * @restrict .slds-card
+   * @modifier
+   * @deprecated
+   */
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
     .slds-card_empty .slds-card__body,
     .slds-card--empty .slds-card__body {
@@ -86,6 +153,12 @@
   }
 }
 
+/**
+ * Use class if card consumes any form of a tile
+ *
+ * @selector .slds-card__tile
+ * @restrict .slds-tile
+ */
 .slds-card__tile {
   margin-top: $spacing-x-small;
 }

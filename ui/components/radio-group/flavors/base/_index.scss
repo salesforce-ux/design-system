@@ -1,0 +1,186 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * Radio buttons are shown in a group of two or more. The user can only select
+ * one radio button at a time. You should use the same `name` attribute on all
+ * radio buttons in the group. This ensures that if there is more than one
+ * group in the form, each one stays associated with its own group.
+ *
+ * The ability to style radio buttons with CSS varies across browsers. To
+ * ensure that radio buttons look the same everywhere, we use a custom DOM.
+ * Pay close attention to the markup, because all elements must exist for the
+ * styles to work.
+ *
+ * #### Accessibility
+ *
+ * Groups of radio buttons should be marked up using the fieldset and legend
+ * element. This helps someone using assistive technology to understand
+ * the question they're answering with the group of radio buttons. The fieldset
+ * is placed around the whole group and the legend contains the question.
+ *
+ * Custom radio buttons are created by applying the `.slds-radio` class to a
+ * `<label>` element. To remain accessible to all user agents, place an
+ * `<input>` with `type="radio"` inside the `<label>` element. The `<input>`
+ * is then visually hidden, and the styling is placed on a span with the
+ * `.slds-radio--faux` class. The styling of the span changes based on whether
+ * the radio button is selected or focused by using a pseudo-element. A second
+ * span with `.slds-form-element__label` contains the label text.
+ *
+ * When a radio group is required, the `<fieldset>` should receive the class
+ * `.slds-is-required`. The `<legend>` should then get
+ * `<abbr class="required" title="required">*</abbr>` added to the DOM for
+ * visual indication that the radio group is required.
+ *
+ * @summary A select list that can have a single entry checked at any one time.
+ *
+ * @base
+ * @name radio-group
+ * @selector .slds-radio
+ * @support dev-ready
+ * @category simple
+ * @type data-entry
+ * @role radiogroup
+ */
+
+/**
+ * @summary Initializes radio button
+ *
+ * @name base
+ * @selector .slds-radio
+ * @restrict span
+ * @variant
+ */
+.slds-radio {
+  display: inline-block;
+
+  /**
+   * Creates a custom styled radio button
+   *
+   * @selector .slds-radio--faux
+   * @restrict .slds-radio span
+   */
+  .slds-radio_faux,
+  .slds-radio--faux {
+    @include square($square-icon-medium-content);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border: $border-width-thin solid $color-border-input;
+    border-radius: $border-radius-circle;
+    background: $color-background-input;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+  }
+
+  .slds-form-element__label {
+    display: inline;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+  }
+
+  /**
+   * @selector [type="radio"]
+   * @restrict .slds-radio input
+   */
+  [type="radio"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:checked + .slds-radio_faux,
+    &:checked + .slds-radio--faux,
+    &:checked ~ .slds-radio_faux,
+    &:checked ~ .slds-radio--faux,
+    &:checked + .slds-radio__label .slds-radio_faux,
+    &:checked + .slds-radio__label .slds-radio--faux {
+      background: $color-background-input;
+
+      &:after {
+        @include square(0.5rem);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: $border-radius-circle;
+        background: $color-brand;
+      }
+    }
+
+    &:focus + .slds-radio_faux,
+    &:focus + .slds-radio--faux,
+    &:focus ~ .slds-radio_faux,
+    &:focus ~ .slds-radio--faux,
+    &:focus + .slds-radio__label .slds-radio_faux,
+    &:focus + .slds-radio__label .slds-radio--faux {
+      border-color: $color-border-input-active;
+      box-shadow: $shadow-button-focus;
+    }
+
+    &[disabled] {
+      // scss-lint:disable NestingDepth
+      cursor: not-allowed;
+      user-select: none;
+
+      ~ .slds-radio_faux,
+      ~ .slds-radio--faux,
+      + .slds-radio__label .slds-radio_faux,
+      + .slds-radio__label .slds-radio--faux {
+        background-color: $color-background-input-disabled;
+        border-color: $color-border-input-disabled;
+      }
+    }
+  }
+}
+
+/**
+ * Error state for radio group
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error .slds-radio [type="radio"] {
+
+  + .slds-radio_faux,
+  + .slds-radio--faux,
+  ~ .slds-radio_faux,
+  ~ .slds-radio--faux,
+  + .slds-radio__label .slds-radio_faux,
+  + .slds-radio__label .slds-radio--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+
+  &:checked + .slds-radio_faux,
+  &:checked + .slds-radio--faux,
+  &:checked ~ .slds-radio_faux,
+  &:checked ~ .slds-radio--faux,
+  &:checked + .slds-radio__label .slds-radio_faux,
+  &:checked + .slds-radio__label .slds-radio--faux {
+    background: $color-background-input;
+
+    &:after {
+      background: $color-background-error;
+    }
+  }
+}
+
+.slds-form-element .slds-radio [type="radio"] + .slds-radio_faux,
+.slds-form-element .slds-radio [type="radio"] + .slds-radio--faux,
+.slds-form-element .slds-radio [type="radio"] ~ .slds-radio_faux,
+.slds-form-element .slds-radio [type="radio"] ~ .slds-radio--faux,
+.slds-radio [type=radio] + .slds-radio__label .slds-radio_faux,
+.slds-radio [type=radio] + .slds-radio__label .slds-radio--faux {
+  margin-right: $spacing-x-small;
+}

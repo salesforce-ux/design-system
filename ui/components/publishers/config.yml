@@ -1,5 +1,5 @@
 classBase: 'publisher'
 status: 'dev-ready'
 flavors:
-  - discussion-feed
+  - base
   - comment

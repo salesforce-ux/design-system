@@ -38,6 +38,12 @@ export let Spinner = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Demo>
+    <Spinner />
+  </Demo>
+  );
+
 export let states = [
   {
     id: 'without-container',

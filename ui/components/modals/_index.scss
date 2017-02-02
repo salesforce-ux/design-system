@@ -7,8 +7,79 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * Default modals are used in the vast majority of cases. They are as wide as
+ * 50% of the viewport, but include a minimum and maximum width to avoid going
+ * too narrow or too wide.
+ *
+ * Modals always have an equal amount of space at the top and bottom to account
+ * for the height of the close button.
+ *
+ * Modals grow according to how much content is within, but once the modal
+ * reaches full height (including the previously mentioned space on top and
+ * bottom), the content area will begin to scroll. (This scrolling is currently
+ * not available in Salesforce1 Mobile.)
+ *
+ * Modals can have a tagline in the header, simply by adding a paragraph after
+ * the heading.
+ *
+ * By default, the content area of the modal does not have spacing. This allows
+ * for content such as Tables to be full-width to the modal. To get spacing
+ * when you need it, apply a padding utility (`.slds-p-around--medium`).
+ *
+ * Modal headers can also have taglines, if you need to provide additional
+ * context. This tagline can also contain links, or the whole thing could be a
+ * link in and of itself.
+ *
+ * Large modals call for large amounts of content. The height follows the same
+ * behavior and styles of other modals. The width changes to 90% of the viewport,
+ * and uses a wider minimum width and no maximum width.
+ *
+ * These are modals that require a linearly directional paradigm of navigation
+ * (“Next” and “Back”, etc.) — the actionable buttons in the modal footer live
+ * on the left and right, rather than all on the right. These can either be
+ * within a large or default modal, depending on the use case.
+ *
+ * #### Accessibility
+ *
+ * Modals, by definition, trap focus. This means that if a user presses Tab or
+ * Shift+Tab while their keyboard focus is in the modal, their focus should
+ * stay in and cycle through the modal’s content. Focus shouldn’t return to
+ * the underlying page until the user presses the Esc key, presses an explicit
+ * “Cancel” or “Close” button in the modal, or performs another action that
+ * closes the modal.
+ *
+ * **Expected markup:**
+ *
+ * - Modal has `role="dialog"`
+ * - When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
+ * - Modal contains an HTML heading
+ * - Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Esc key closes the modal and moves focus to whatever triggered the modal to open
+ * - Tab key at bottom of modal cycles focus back to first focusable element at top of modal
+ * - Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
+ * - Enter key submits modal’s form data, if applicable
+ *
+ * @summary Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+ *
+ * @base
+ * @name modals
+ * @selector .slds-modal
+ * @support dev-ready
+ * @category structure
+ * @type layout
+ * @role modal-dialog
+ */
 
-
+/**
+ * @name base
+ * @selector .slds-modal
+ * @restrict section
+ * @variant
+ */
 .slds-modal {
   opacity: 0;
   visibility: hidden;
@@ -21,6 +92,14 @@
   left: 0;
   z-index: ($z-index-modal + 1);
 
+  /**
+   * Centers and sizes the modal horizontally and confines modal within viewport height
+   *
+   * @selector .slds-modal__container
+   * @restrict .slds-modal div
+   * @notes This should be nested immediately inside `.slds-modal` with nothing else nested on the same level.
+   * @required
+   */
   &__container {
     position: relative;
     transform: translate(0, 0);
@@ -52,6 +131,14 @@
     flex-shrink: 0;
   }
 
+  /**
+   * Creates the Modal Header container.
+   *
+   * @selector .slds-modal__header
+   * @restrict .slds-modal header
+   * @notes This should be nested immediately inside `.slds-modal__container` as the first element.
+   * @required
+   */
   &__header {
     position: relative;
     border: {
@@ -72,6 +159,13 @@
     }
   }
 
+  /**
+   *
+   *
+   * @selector .slds-modal__header--empty
+   * @restrict .slds-modal__header
+   * @modifier
+   */
   &__header_empty,
   &__header--empty {
     padding: 0;
@@ -88,6 +182,13 @@
     }
   }
 
+  /**
+   * Creates the scrollable content area for the modal.
+   *
+   * @selector .slds-modal__content
+   * @restrict .slds-modal div
+   * @required
+   */
   &__content {
     @include hyphenate;
     overflow: hidden {
@@ -103,6 +204,14 @@
     }
   }
 
+  /**
+   * Creates the shaded menu area for the modal.
+   *
+   * @selector .slds-modal__menu
+   * @restrict .slds-modal div
+   * @notes Either `.slds-modal__menu` or `.slds-modal__content` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
+   * @required
+   */
   &__menu {
     position: relative;
     border-radius: $border-radius-medium;
@@ -118,6 +227,14 @@
     }
   }
 
+  /**
+   * Creates the Modal Footer container.
+   *
+   * @selector .slds-modal__footer
+   * @restrict .slds-modal footer
+   * @notes This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__container`. Nothing should follow it. Note that by default, elements will be aligned to the right.
+   * @required
+   */
   &__footer {
     border: {
       top: $border-width-thick solid $color-border;
@@ -131,6 +248,14 @@
     text-align: right;
     box-shadow: $shadow-drop-down;
 
+    /**
+     * Makes buttons inside the footer spread to both left and right.
+     *
+     * @selector .slds-modal__footer--directional
+     * @restrict .slds-modal__footer
+     * @notes This is only needed when you have two buttons that indicate a back and forward navigation.
+     * @modifier
+     */
     &_directional .slds-button:first-child,
     &--directional .slds-button:first-child {
       float: left;
@@ -141,6 +266,14 @@
     }
   }
 
+  /**
+   * Positions the close button to the top right outside of the modal.
+   *
+   * @selector .slds-modal__close
+   * @restrict .slds-modal button
+   * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
+   * @required
+   */
   &__close {
     @include square($square-icon-medium-boundary);
     position: absolute;
@@ -163,6 +296,15 @@
   background: $color-background-temp-modal-tint;
   z-index: $z-index-modal;
 
+  /**
+   * Allows the backdrop to be visible.
+   *
+   * @selector .slds-backdrop--open
+   * @restrict .slds-backdrop
+   * @notes Apply this class to a modal backdrop with JavaScript to make it visible.
+   * @modifier
+   * @required
+   */
   &_open,
   &--open {
     visibility: visible;
@@ -171,6 +313,14 @@
   }
 }
 
+/**
+ * Widens the modal to take more horizontal space
+ *
+ * @selector .slds-modal--large
+ * @restrict .slds-modal
+ * @modifier
+ * @group width
+ */
 .slds-modal_large .slds-modal__container,
 .slds-modal--large .slds-modal__container {
 
@@ -190,13 +340,28 @@
   }
 }
 
+/**
+ * Creates the shaded backdrop used behind the modal.
+ *
+ * @selector .slds-backdrop
+ * @restrict .slds-modal div
+ * @notes This should follow after the `.slds-modal` as an empty element.
+ * @required
+ */
 .slds-backdrop {
   // new class
   @include backdrop;
 }
 
-
-
+/**
+ * Allows the modal to be visible.
+ *
+ * @selector .slds-fade-in-open
+ * @restrict .slds-modal
+ * @notes Apply this class to a modal with JavaScript to make it visible.
+ * @modifier
+ * @group animation
+ */
 .slds-fade-in-open {
   opacity: 1;
   visibility: visible;
@@ -209,6 +374,14 @@
   }
 }
 
+/**
+ *
+ *
+ * @selector .slds-slide-up-open
+ * @restrict .slds-modal
+ * @modifier
+ * @group animation
+ */
 .slds-slide-up-open {
   opacity: 1;
   visibility: visible;
@@ -225,13 +398,28 @@
   }
 }
 
+/**
+ *
+ *
+ * @selector .slds-slide-up-saving
+ * @restrict .slds-modal
+ * @modifier
+ * @group animation
+ */
 .slds-slide-up-saving {
   opacity: 1;
   visibility: visible;
   transform: translate(0, -$spacing-medium);
 }
 
-
+/**
+ *
+ *
+ * @selector .slds-slide-down-cancel
+ * @restrict .slds-modal
+ * @modifier
+ * @group animation
+ */
 .slds-slide-down-cancel {
   opacity: 1;
   visibility: visible;

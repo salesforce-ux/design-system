@@ -1,5 +1,0 @@
-status: 'dev-ready'
-className: 'select'
-lightning:
-  namespace: lightning:select
-  url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_select.htm

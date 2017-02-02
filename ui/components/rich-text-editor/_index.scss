@@ -7,6 +7,37 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * At a high-level, the buttons in RTE are organized into four groupings:
+ * “format text”, “format body”, “insert content”, and “clear formatting”.
+ *
+ * The “clear formatting” button always stays at the end of the buttons set,
+ * regardless of which rich text editor variant is used. It should always stand by itself.
+ *
+ * #### Accessibility
+ *
+ * Ensure that there is a single tab key stop for the button groups in the
+ * toolbar, and that left and right arrows are used to navigate through each button.
+ *
+ * @summary The Rich Text Editor is a textarea with added capabilities for use in various publishers.
+ *
+ * @base
+ * @name rich-text-editor
+ * @selector .slds-rich-text-editor
+ * @support dev-ready
+ * @category feature
+ * @type data-entry
+ * @role textbox,toolbar
+ */
+
+/**
+ * The default rich text editor contains a minimal amount of text formatting capabilities.
+ *
+ * @name base
+ * @selector .slds-rich-text-editor
+ * @restrict div
+ * @variant
+ */
 .slds-rich-text-editor {
   border: $border-width-thin solid $color-border {
     radius: $border-radius-medium;
@@ -16,6 +47,13 @@
     height: $size-xx-small;
   }
 
+  /**
+   * Container for Rich Text Editor Toolbar
+   *
+   * @selector .slds-rich-text-editor__toolbar
+   * @restrict .slds-rich-text-editor div
+   * @required
+   */
   &__toolbar {
     border: {
       top: {
@@ -34,6 +72,7 @@
     }
   }
 
+  // Doesn't look like this is being used anywhere
   &__table {
     list-style: none;
     margin: 0 {
@@ -74,11 +113,25 @@
     user-select: none;
   }
 
+  /**
+   * Focus state for rich text editor
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-rich-text-editor
+   * @modifier
+   */
   &.slds-has-focus {
     border-color: $color-border-input-active;
     box-shadow: $shadow-button-focus;
   }
 
+  /**
+   * Error state for rich text editor
+   *
+   * @selector .slds-has-error
+   * @restrict .slds-rich-text-editor
+   * @modifier
+   */
   &.slds-has-error {
     border: $border-width-thick solid $color-border-error;
 

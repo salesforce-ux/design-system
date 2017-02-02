@@ -7,18 +7,77 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * The lookup can parse through single or multi scoped datasets. The parsed
+ * dataset can be filtered by single or multi option selects.
+ *
+ * You can find the lookup component throughout most data fields that allow
+ * inline inputs. Most commonly used on **record home** and **object home**.
+ *
+ * #### Accessibility
+ *
+ * Lookups allow the user to have dual keyboard focus: while focus in the input
+ * search field, the user can type text into the field and simultaneously use
+ * arrow keys to navigate up and down the results list. Use the appropriate **ARIA**
+ * attributes in your markup in order to effectively communicate the relationship
+ * between the input field and the results list to users of assistive technology.
+ *
+ * **Expected markup:**
+ *
+ * - Input field has attributes `role="combobox"`, `aria-autocomplete="list"`
+ * - Input field has an `aria-expanded` attribute whose value is `false` when the results list is hidden, `true` when the results list is visible
+ * - Input field has an `aria-activedescendant` attribute whose value is the id of the highlighted results list option, no value if nothing’s highlighted in the list
+ * - Results list is an `<ul role="presentation">`, where each item is containing an `<a href="javascript:void(0);" role="option">`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Character keys filter the list
+ * - Up and down arrow keys cycle through the available options in the list and
+ * update the input field’s `aria-activedescendant` value
+ * - Enter key selects highlighted option and collapses the results list
+ * - Escape key collapses the results list
+ *
+ * @summary Lookup is an advanced inline search form.
+ *
+ * @base
+ * @name lookups
+ * @selector .slds-lookup
+ * @support dev-ready
+ * @category complex
+ * @type user-input
+ * @role combobox, listbox
+ */
 
-
+/**
+ * @name single
+ * @selector .slds-lookup
+ * @restrict div
+ * @variant
+ */
 .slds-lookup {
   position: relative;
   width: 100%; // Fill up parent container
 
+  /**
+   * Initializes lookup results list
+   *
+   * @selector .slds-lookup__list
+   * @restrict .slds-lookup ul
+   */
   &__list {
     // crazy calc - line height of primary text + line height of meta text - the offset to bring the meta up a bit + the top/bottom padding multipied by how many items I want to show
     max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 8);
     overflow-y: auto;
   }
 
+  /**
+   * Initializes lookup results list container
+   *
+   * @selector .slds-lookup__menu
+   * @restrict .slds-lookup div
+   * @notes Applies positioning and container styles
+   * @required
+   */
   &__menu {
     background: $color-background-alt;
     border: $border-width-thin solid $color-border;
@@ -59,6 +118,12 @@
     }
   }
 
+  /**
+   * Non-actionable label inside of a lookup item
+   *
+   * @selector .slds-lookup__item--label
+   * @restrict .slds-lookup h3
+   */
   &__item_label,
   &__item--label {
     display: flex;
@@ -66,6 +131,12 @@
     padding: $spacing-x-small $spacing-medium;
   }
 
+  /**
+   * Actionable element inside of a lookup item
+   *
+   * @selector .slds-lookup__item-action
+   * @restrict .slds-lookup a, .slds-lookup span
+   */
   &__item-action {
     font-size: $font-size-medium;
     display: flex;
@@ -77,6 +148,13 @@
     line-height: $line-height-text;
     border-radius: 0;
 
+    /**
+     * Hover/focus state for actionable lookup item
+     *
+     * @selector .slds-has-focus
+     * @restrict .slds-lookup__item-action
+     * @modifier
+     */
     &:hover,
     &:focus,
     &.slds-has-focus {
@@ -94,6 +172,12 @@
     }
   }
 
+  /**
+   * Actionable element inside of a lookup item that's output is single line text
+   *
+   * @selector .slds-lookup__item-action--label
+   * @restrict .slds-lookup__item-action
+   */
   &__item-action_label,
   &__item-action--label {
     padding: $spacing-x-small $spacing-medium;
@@ -104,26 +188,45 @@
     }
   }
 
+  /**
+   * Search input inside of lookup
+   *
+   * @selector .slds-lookup__search-input
+   * @restrict .slds-lookup input
+   */
   &__search-input {
     width: 100%;
   }
 
-  // Primary Text in results, truncate mixin used so class wouldn't need to be repeated in DOM
+  /**
+   * Primary entity name within lookup item
+   *
+   * @selector .slds-lookup__result-text
+   * @restrict .slds-lookup__item-action span
+   */
   &__result-text {
-    @include truncate;
+    @include truncate; // truncate mixin used so class wouldn't need to be repeated in DOM
     display: block;
     margin-bottom: $spacing-xxx-small;
   }
 
-  // Meta data in results
+  /**
+   * Secondary info of primary entity name within lookup item
+   *
+   * @selector .slds-lookup__result-meta
+   * @restrict .slds-lookup__item-action span
+   */
   &__result-meta {
     display: block;
     margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
     color: $color-text-label;
   }
 
-  &__pill-container {
-    padding: 0 $spacing-x-small $spacing-xx-small; // center aligns pills within selection area due to top padding on menu
+  @include deprecate('4.0.0', 'slds-lookup__pill-container not needed anymore, use slds-pill_container instead') {
+
+    &__pill-container {
+      padding: 0 $spacing-x-small $spacing-xx-small; // center aligns pills within selection area due to top padding on menu
+    }
   }
 
   // Typeahead bizness
@@ -132,7 +235,13 @@
     background-color: transparent;
   }
 
-  // Deal with Lookup when user activates the lookup
+  /**
+   * Deal with Lookup when user activates the lookup
+   *
+   * @selector .slds-is-open
+   * @restrict .slds-lookup
+   * @modifier
+   */
   &.slds-is-open {
 
     // Show and remove border and border radius
@@ -141,18 +250,21 @@
     }
   }
 
-  // Deal with lookup if selection has been made
+  /**
+   * Deal with lookup if selection has been made
+   *
+   * @selector .slds-has-selection
+   * @restrict .slds-lookup
+   * @modifier
+   */
   &.slds-has-selection {
 
     // If developer needs to keep the input in the DOM and not able to remove it
+    .slds-input,
+    .slds-input__icon,
     .slds-lookup__search-input {
       display: none;
     }
-  }
-
-  // Single selection specific
-  &[data-select="single"],
-  &[data-select="multi"] {
 
     // Stretch pill 100% of container
     .slds-pill {
@@ -162,16 +274,6 @@
     // Send close button to the end of the pill
     .slds-pill__remove {
       margin-left: auto;
-    }
-  }
-
-  @include deprecate('4.0.0', '.slds-has-selection now removes the selector .slds-lookup__search-input instead of .slds-input') {
-    &.slds-has-selection {
-
-      .slds-input,
-      .slds-input__icon {
-        display: none;
-      }
     }
   }
 }

@@ -215,6 +215,22 @@ let IconRight = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Demo style={{height: '220px'}}>
+    <Trigger>
+      <Menu className="slds-dropdown--left">
+        <MenuList>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+          <li className="slds-has-divider--top-space" role="separator"></li>
+          <MenuItem>Menu Item Four</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  </Demo>
+);
+
 export let states = [
   {
     id: 'dropdown-menu',

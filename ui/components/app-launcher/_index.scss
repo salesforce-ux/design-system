@@ -7,23 +7,93 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * #### Accessibility
+ *
+ * Each App Launcher section uses the [Section Title](/components/utilities/text/#flavor-section-title-section-title-open) component. It contains a button heading that opens and closes the content below it. The button heading needs to be associated with the content so that assistive technology knows what the button opens and closes. The button and section also need aria attributes to indicate the open and closed state of the section.
+ *
+ * **Notable attributes**
+ *
+ * Button:
+ * - `aria-controls` is used to create an association between the button and the section. If the section has an `id="content"`, then the button should have `aria-controls="content"`.
+ * - `aria-expanded` indicates if the section is open or closed and is read aloud by assitive technology when the button is focused.
+ *
+ * Section:
+ * - `aria-hidden` indicates if the section is open or closed, and if set to `true`, assistive technology hides the section.
+ *
+ * **Keyboard navigation**
+ *
+ * - The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+ *
+ * **Updating Operation and State**
+ *
+ * - When the user interacts with the button to open the section, `aria-expanded` on the button should be `true` and `aria-hidden` on the section should be `false`.
+ * - When the user interacts with the button to close the section, `aria-expanded` on the button should be `false` and `aria-hidden` on the section should be `true`.
+ *
+ * @summary The App Launcher allows the user to quickly access all the apps and functionality with their organization.
+ *
+ * @base
+ * @name app-launcher
+ * @selector .slds-app-launcher
+ * @support prototype
+ * @category feature
+ * @type navigation
+ * @role modal-dialog
+ */
+
+/**
+ * @summary Creates styles for app-launcher
+ *
+ * @name base
+ * @selector .slds-app-launcher
+ * @restrict section
+ * @support prototype
+ * @variant
+ */
 .slds-app-launcher {
 
+  /**
+   * Defines the header region of the app launcher modal
+   *
+   * @selector .slds-app-launcher__header
+   * @restrict .slds-app-launcher header
+   * @required
+   */
   &__header,
   &__content {
     background: $color-background;
   }
 
+  /**
+   * Sets styles to search box, things like width and such
+   *
+   * @selector .slds-app-launcher__header-search
+   * @restrict .slds-app-launcher__header div
+   * @required
+   */
   &__header-search {
     flex: 0 1 $size-large;
     padding: 0 $spacing-medium;
   }
 
+  /**
+   * Defines the body region of the app launcher modal
+   *
+   * @selector .slds-app-launcher__content
+   * @restrict .slds-app-launcher div
+   * @required
+   */
   &__content {
     flex: 1 1 auto;
   }
 
-  // App Launcher Tile Items
+  /**
+   * Tile cards that contains the app information, the icon and description
+   *
+   * @selector .slds-app-launcher__tile
+   * @restrict .slds-app-launcher a
+   * @required
+   */
   &__tile {
     display: flex;
     align-items: stretch;
@@ -38,6 +108,13 @@
       border-color: $color-border-selection-hover;
     }
 
+    /**
+     * Add styles associated with drag and drop of a tile
+     *
+     * @selector .slds-is-draggable
+     * @restrict .slds-app-launcher__tile
+     * @modifier
+     */
     &.slds-is-draggable {
 
       // Remove bottom padding because the draggable icon is there
@@ -47,6 +124,14 @@
     }
   }
 
+
+  /**
+   * App image or icon
+   *
+   * @selector .slds-app-launcher__tile-figure
+   * @restrict .slds-app-launcher__tile div
+   * @required
+   */
   &__tile-figure {
     flex-shrink: 0;
     padding: $spacing-small;
@@ -56,6 +141,14 @@
     text-align: center;
   }
 
+
+  /**
+   * App title and description
+   *
+   * @selector .slds-app-launcher__tile-body
+   * @restrict .slds-app-launcher__tile div
+   * @required
+   */
   &__tile-body {
     flex: 1 1 auto;
     background: $color-background-alt-2;
@@ -63,6 +156,14 @@
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
+  /**
+   * Tile card that containes the just app icon and title
+   *
+   * @selector .slds-app-launcher__tile--small
+   * @restrict .slds-app-launcher__tile
+   * @required
+   * @modifier
+   */
   &__tile_small,
   &__tile--small {
     flex-direction: column;
@@ -81,12 +182,29 @@
     }
   }
 
+
+  /**
+   * App image or icon of a small tile
+   *
+   * @selector .slds-app-launcher__tile-figure--small
+   * @restrict .slds-app-launcher__tile-figure
+   * @required
+   * @modifier
+   */
   &__tile-figure_small,
   &__tile-figure--small {
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
   }
 
+  /**
+   * App title, no description
+   *
+   * @selector .slds-app-launcher__tile-body--small
+   * @restrict .slds-app-launcher__tile-body
+   * @required
+   * @modifier
+   */
   &__tile-body_small,
   &__tile-body--small {
     background: transparent;

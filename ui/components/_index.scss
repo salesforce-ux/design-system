@@ -15,10 +15,10 @@
   'activity-timeline/index',
 
   // Badges
-  'badges/index',
+  'badges/flavors/base/index',
 
   // Breadcrumbs
-  'breadcrumbs/index',
+  'breadcrumbs/flavors/base/index',
 
   // Button Groups
   'button-groups/index',
@@ -32,8 +32,6 @@
 
   // Icons
   'icons/index',
-  'icons/flavors/icon-colors/index',
-  'icons/flavors/sizes/index',
 
   // Accordion
   'accordion/flavors/base/index',
@@ -51,21 +49,20 @@
 
   // Forms
   'forms/index',
-  'forms/flavors/input/index',
-  'forms/flavors/textarea/index',
-  'forms/flavors/radio/index',
-  'forms/flavors/radio-group-alternate/index',
-  'forms/flavors/checkbox/index',
-  'forms/flavors/checkbox-toggle/index',
-  'forms/flavors/select/index',
-  'forms/flavors/checkbox-alternate/index',
-  'forms/flavors/checkbox-add-button/index',
-  'forms/flavors/multi-select/index',
-  'forms/flavors/horizontal-form/index',
-  'forms/flavors/stacked-form/index',
-  'forms/flavors/inline-form/index',
-  'forms/flavors/compound-form/index',
-  'forms/flavors/docked-form-footer/index',
+  'input/flavors/base/index',
+  'input/flavors/read-only/index',
+  'textarea/flavors/base/index',
+  'radio-group/flavors/base/index',
+  'radio-button-group/flavors/base/index',
+  'checkbox/flavors/base/index',
+  'checkbox/flavors/toggle/index',
+  'checkbox/flavors/button/index',
+  'checkbox-button-group/flavors/base/index',
+  'select/flavors/base/index',
+  'multi-select/flavors/base/index',
+  'form-layout/flavors/base/index',
+  'form-layout/flavors/compound/index',
+  'docked-form-footer/flavors/base/index',
 
   // File selector
   'file-selector/index',
@@ -118,8 +115,7 @@
   'global-navigation/index',
 
   // Publishers
-  'publishers/index',
-  'publishers/flavors/discussion-feed/index',
+  'publishers/flavors/base/index',
   'publishers/flavors/comment/index',
 
   // Discussion Feed
@@ -140,9 +136,10 @@
 
   // Process
   'process/flavors/wizard/index',
-  'process/flavors/sales-path-coach/index',
+  'path/flavors/base/index',
 
   // Progress Indicator
+  'progress-bar/flavors/base/index',
   'progress-indicator/index',
 
   // Rich Text Editor
@@ -161,18 +158,17 @@
   'tiles/flavors/board/index',
 
   // Tabs
-  'tabs/flavors/default/index',
-  'tabs/flavors/scoped/index',
+  'tabs/flavors/base/index',
+  'scoped-tabs/flavors/base/index',
   'tabs/flavors/scrolling/index',
 
   // Navigation
   'navigation/flavors/vertical/index',
 
   // Notifications -- Toasts & Alerts
-  'notifications/index',
-  'notifications/flavors/alert/index',
-  'notifications/flavors/prompt/index',
-  'notifications/flavors/toast/index',
+  'alert/flavors/base/index',
+  'prompt/flavors/base/index',
+  'toast/flavors/base/index',
   'notifications/flavors/modal-toast/index',
   'walkthrough/flavors/header/index',
 
@@ -180,7 +176,7 @@
   'lookups/index',
 
   // Images
-  'images/flavors/avatar/index',
+  'avatar/flavors/base/index',
   'images/flavors/figure/index',
 
   // Tables

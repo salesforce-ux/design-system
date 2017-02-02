@@ -7,7 +7,14 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
+/**
+ * This is the extra small spinner
+ *
+ * @selector .slds-spinner--x-small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
 
 .slds-spinner_x-small,
 .slds-spinner--x-small {
@@ -68,6 +75,15 @@
   }
 }
 
+/**
+ * This is the small spinner
+ *
+ * @selector .slds-spinner--small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
 .slds-spinner_small,
 .slds-spinner--small {
   width: 1.25rem;
@@ -127,6 +143,15 @@
   }
 }
 
+/**
+ * This is the medium spinner
+ *
+ * @selector .slds-spinner--medium
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
 .slds-spinner_medium,
 .slds-spinner--medium {
   width: 2rem;
@@ -185,6 +210,15 @@
     transform: translateX(0);
   }
 }
+
+/**
+ * This is the large spinner
+ *
+ * @selector .slds-spinner--large
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
 
 .slds-spinner_large,
 .slds-spinner--large {

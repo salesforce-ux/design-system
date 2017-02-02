@@ -7,7 +7,14 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// Container for feed item comments
+/**
+ * Container for feed item comments
+ *
+ * @selector .slds-feed__item-comments
+ * @restrict .slds-feed__item div
+ * @notes Contains comment replies and publisher
+ * @required
+ */
 .slds-feed__item-comments {
   background: $color-background-post;
   border-top: $border-width-thin solid $color-border;
@@ -18,6 +25,12 @@
   }
 }
 
+/**
+ * @name post
+ * @selector .slds-post
+ * @restrict .slds-feed article
+ * @variant
+ */
 .slds-post {
   background: $color-background-alt;
   padding: $spacing-small $spacing-medium;
@@ -30,10 +43,22 @@
     padding: 0 $spacing-medium $spacing-x-small;
   }
 
+  /**
+   * Header region of a feed post
+   *
+   * @selector .slds-post__header
+   * @restrict .slds-post header
+   */
   &__header {
     margin-bottom: $spacing-small;
   }
 
+  /**
+   * Content region of a feed post
+   *
+   * @selector .slds-post__content
+   * @restrict .slds-post div
+   */
   &__content {
     margin-bottom: $spacing-small;
 
@@ -42,6 +67,12 @@
     }
   }
 
+  /**
+   * Footer region of a feed post
+   *
+   * @selector .slds-post__footer
+   * @restrict .slds-post footer
+   */
   &__footer {
     display: flex;
     font-size: $font-size-small;
@@ -53,7 +84,12 @@
   }
 }
 
-// Post Footer Actions
+/**
+ * Footer region that contains quick action items for post
+ *
+ * @selector .slds-post__footer-actions-list
+ * @restrict .slds-post__footer ul
+ */
 .slds-post__footer-actions-list {
   justify-content: space-between;
   text-align: center;
@@ -64,7 +100,12 @@
   }
 }
 
-// Action Items
+/**
+ * Action items within the feed post footer
+ *
+ * @selector .slds-post__footer-action
+ * @restrict .slds-post__footer-actions button
+ */
 .slds-post__footer-action {
   display: flex;
   align-items: center;
@@ -93,7 +134,12 @@
   }
 }
 
-// Meta list
+/**
+ * Footer region that contains read only items for post
+ *
+ * @selector .slds-post__footer-meta-list
+ * @restrict div
+ */
 .slds-post__footer-meta-list {
   margin-bottom: $spacing-medium;
 

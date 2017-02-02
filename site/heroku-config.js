@@ -77,8 +77,13 @@ module.exports = {
       status: 301
     },
     {
-      source: '/components/menus#flavor-picklist',
-      destination: '/components/picklist',
+      source: '/components/forms',
+      destination: '/components/form-layout',
+      status: 301
+    },
+    {
+      source: '/components/process',
+      destination: '/components/path',
       status: 301
     },
     {

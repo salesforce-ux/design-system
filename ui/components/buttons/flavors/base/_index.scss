@@ -8,6 +8,58 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+/**
+ * Create a button with a `button` or `a` element to retain the
+ * native click function.
+ * Use a disabled attribute when a button can’t be clicked.
+ *
+ * @summary Buttons are used to invoke an event
+ *
+ * @name buttons
+ * @base
+ * @selector .slds-button
+ * @category simple
+ * @type action
+ * @role button
+ * @support dev-ready
+ * @layout responsive
+ *
+ */
+
+/**
+ * The base `.slds-button` looks like a plain text link. It removes all the
+ * styling of the native button. It’s typically used to trigger a modal or
+ * display a “like” link. All button variations are built by adding another
+ * class to `.slds-button`.
+ *
+ * Add the `.slds-button--neutral` class to create a neutral button, which
+ * has a white background and gray border.
+ *
+ * Use a neutral icon button is for buttons with an icon on the left or
+ * right (not for stateful buttons). Add the `.slds-button--neutral` class
+ * to `.slds-button`.
+ *
+ * The SVG inside receives the `.slds-button__icon` class. You can position
+ * the icon on the right or the left using `.slds-button__icon--right` or
+ * `.slds-button__icon--left` , which apply the correct amount of space
+ * between the icon and the text.
+ *
+ * To create the brand button, add the `.slds-button--brand` class to
+ * the `.slds-button` class.
+ *
+ * To create the destructive button, add the `.slds-button--destructive`
+ * class to the `.slds-button` class.
+ *
+ * Use the inverse button on dark backgrounds. Add the `.slds-button--inverse`
+ * class to the `.slds-button` class.
+ *
+ * @summary This neutralizes all the base styles making it look like a text link
+ *
+ * @name base
+ * @selector .slds-button
+ * @restrict button, a
+ * @variant
+ */
 
 .slds-button {
   position: relative;
@@ -63,12 +115,12 @@
       fill: currentColor;
     }
   }
-
+  // Add spacing when button-group is adjacent to a button
   + .slds-button-group,
   + .slds-button-group-list {
     margin-left: $spacing-xx-small;
   }
-
+  // Add spacing when another button is adjacent to it
   + .slds-button {
 
     @include deprecate('4.0.0') {
@@ -77,13 +129,7 @@
   }
 }
 
-.slds-button-space-left {
-
-  @include deprecate('4.0.0', 'Use spacing utilities instead') {
-    margin-left: $spacing-xx-small;
-  }
-}
-
+// Polyfill for slds-button on links
 a.slds-button {
   text-align: center;
 
@@ -92,17 +138,17 @@ a.slds-button {
   }
 }
 
-// Deal with button spacing
-.slds-button__icon_left,
-.slds-button__icon--left {
-  margin-right: $spacing-x-small;
+a.slds-button--inverse:focus {
+  @include focus-inverse;
 }
 
-.slds-button__icon_right,
-.slds-button__icon--right {
-  margin-left: $spacing-x-small;
-}
-
+/**
+ * Resets attributes of .slds-button back to the browser default
+ *
+ * @selector .slds-button--reset
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_reset,
 .slds-button--reset {
   font-size: inherit;
@@ -114,16 +160,15 @@ a.slds-button {
   text-align: inherit;
 }
 
-.slds-button_small,
-.slds-button--small {
-  line-height: $line-height-button-small;
-  // Force icon-only buttons to be the same
-  // height as small buttons since they're SVG
-  // and line-height has no effect on them
-  min-height: $square-icon-medium-boundary;
-}
 
-// Neutral Button
+/**
+ * Creates the gray border with white background default style
+ *
+ * @name button-neutral
+ * @selector .slds-button--neutral
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_neutral,
 .slds-button--neutral {
   @include button;
@@ -136,33 +181,14 @@ a.slds-button {
   }
 }
 
-.slds-button_hint,
-.slds-button--hint {
-  color: $color-text-button-default-hint;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-text-button-default;
-  }
-}
-
-// A parent class must be put on anything that contains
-// a .slds-button--hint so that the child reacts
-// when the parent is hovered.
-.slds-hint-parent {
-
-  &:hover,
-  &:focus {
-
-    .slds-button_hint,
-    .slds-button--hint {
-      color: $color-text-button-default;
-    }
-  }
-}
-
-// Brand Buttons
+/**
+ * Creates the brand blue Salesforce style
+ *
+ * @name button-brand
+ * @selector .slds-button--brand
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_brand,
 .slds-button--brand {
   @include button;
@@ -175,7 +201,14 @@ a.slds-button {
   }
 }
 
-// Inverse Buttons
+/**
+ * Creates the inverse style for dark backgrounds
+ *
+ * @name button-inverse
+ * @selector .slds-button--inverse
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_inverse,
 .slds-button--inverse {
   @include button;
@@ -215,11 +248,14 @@ a.slds-button {
   }
 }
 
-a.slds-button--inverse:focus {
-  @include focus-inverse;
-}
-
-// Destructive Button
+/**
+ * Creates a red button style
+ *
+ * @name button-destructive
+ * @selector .slds-button--destructive
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_destructive,
 .slds-button--destructive {
   @include button;
@@ -232,9 +268,91 @@ a.slds-button--inverse:focus {
   }
 }
 
-// Success Button
+/**
+ * Creates a green button style
+ *
+ * @name button-success
+ * @selector .slds-button--success
+ * @restrict .slds-button
+ * @modifier
+ */
 .slds-button_success,
 .slds-button--success {
   @include button;
   @include button-success;
+}
+
+/**
+ * Creates a smaller button style
+ *
+ * @name button-small
+ * @selector .slds-button--small
+ * @restrict .slds-button
+ * @modifier
+ */
+.slds-button_small,
+.slds-button--small {
+  line-height: $line-height-button-small;
+  // Force icon-only buttons to be the same
+  // height as small buttons since they're SVG
+  // and line-height has no effect on them
+  min-height: $square-icon-medium-boundary;
+}
+
+/**
+ * @selector .slds-button-space-left
+ * @deprecated
+ */
+.slds-button-space-left {
+
+  @include deprecate('4.0.0', 'Use spacing utilities instead') {
+    margin-left: $spacing-xx-small;
+  }
+}
+
+/**
+* @selector .slds-button--hint
+* @restrict .slds-button
+* @modifier
+*/
+.slds-button_hint,
+.slds-button--hint {
+  color: $color-text-button-default-hint;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+}
+
+/**
+ * A parent class must be put on anything that contains
+ * a .slds-button--hint so that the child reacts
+ * when the parent is hovered.
+ *
+ * @name hint-hover
+ * @selector .slds-button--hint
+ * @restrict .slds-button
+ * @variant
+ */
+.slds-hint-parent {
+
+  &:hover,
+  &:focus {
+
+    .slds-button--hint {
+      color: $color-text-button-default;
+    }
+  }
+}
+
+.slds-button__icon_left,
+.slds-button__icon--left {
+  margin-right: $spacing-x-small;
+}
+
+.slds-button__icon_right,
+.slds-button__icon--right {
+  margin-left: $spacing-x-small;
 }

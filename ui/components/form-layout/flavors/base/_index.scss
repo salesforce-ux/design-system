@@ -1,0 +1,159 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * To vertically stack `<label>` and `<input>` pairs, place `.slds-form--stacked` on the wrapper of the form for optimal spacing.
+ *
+ * To horizontally align a `<label>` and `<input>`, use the `.slds-form--horizontal` class on the wrapper around the form. A `.slds-form-element__label` takes up 33% of the width, and the `.slds-form-element__control` uses the remaining 66%.
+ *
+ * * For optimum spacing and layout, wrap each element in `.slds-form-element`. Layout helper classes are available through the following class names, `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`.
+ *
+ * The read-only state is for form elements that can’t be modified. It is used for small, non-editable form fields that sit next to inputs and allows the size and height to align. It is not meant for large paragraphs of text.
+ *
+ * Because the read-only field state has no `<input>`, don’t use a `<label>` to provide better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
+ *
+ * Error states alert the user when content in the form is invalid. The `.slds-has-error` class is placed on the `<div class=".slds-form-element">`. Place the error message for the user in a `<span>` with the `.slds-form-element__help` class.
+ *
+ * The native form elements, `<input>`, `<textarea>`, `<select>`, `<input type='checkbox'>`, and `<input type='radio'>`, receive validation styling for `disabled`, `checked`, and `checked disabled`, if applicable.
+ *
+ * #### Accessibility
+ *
+ * Every field requires an associated, non-empty `<label>` element. The label should have a `for` attribute that references the `id` of the field. For example, `<label for="emailAddress">Enter email address:</label>` and `<input id="emailAddress">`. This association ensures that assistive technology informs users what information to enter where.
+ *
+ * If the field is required, the `<input>` element should have the HTML attribute `required` or `required=""`. Similarily, if it is disabled, it should have the `disabled` or `disabled=""` attribute. Do not use true/false values inside the `required` or `disabled` because the mere presence of these attributes signifies the field is required or disabled.
+ *
+ * If the field is invalid and displays an error message, the `<input>` element should have an `aria-describedby` attribute that references the `id` of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
+ *
+ * @summary An HTML form contains interactive controls to submit information to a web server.
+ *
+ * @base
+ * @name form-layout
+ * @selector .slds-form
+ * @support dev-ready
+ * @category structure
+ * @type layout
+ */
+
+/**
+ * @name base
+ * @selector .slds-form
+ * @restrict form, div, fieldset
+ * @variant
+ */
+
+/**
+ * Vertically aligns form label and control, provides spacing between form elements
+ *
+ * @selector .slds-form--stacked
+ * @restrict .slds-form
+ * @modifier
+ */
+.slds-form_stacked .slds-form-element,
+.slds-form--stacked .slds-form-element {
+  display: block;
+
+  + .slds-form-element {
+    @include form-element-vertical-spacing;
+  }
+
+  .slds-checkbox,
+  .slds-radio {
+    display: block;
+  }
+}
+
+/**
+ * Horizontally aligns a single form label and control on the same line
+ *
+ * @selector .slds-form--horizontal
+ * @restrict .slds-form
+ * @modifier
+ */
+.slds-form_horizontal,
+.slds-form--horizontal {
+
+  @include mq-medium-min {
+    text-align: right;
+  }
+
+  .slds-form-element {
+
+    > .slds-form-element__legend,
+    > .slds-form-element__label {
+
+      @include mq-medium-min {
+        float: left;
+        text-align: right;
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        position: relative;
+        top: (($line-height-button / 2) - ($line-height-text / 2));
+        margin: {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    + .slds-form-element {
+      @include form-element-vertical-spacing;
+    }
+  }
+
+  .slds-form-element__control {
+    width: 100%;
+
+    @include mq-medium-min {
+      width: 66%;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
+
+/**
+ * Horizontally align multiple form elements on the same axis
+ *
+ * @selector .slds-form--inline
+ * @restrict .slds-form
+ * @modifier
+ */
+.slds-form_inline,
+.slds-form--inline {
+
+  .slds-form-element,
+  .slds-form-element__label,
+  .slds-form-element__control {
+    display: block;
+  }
+
+  .slds-form-element + .slds-form-element {
+    margin-top: $spacing-small;
+  }
+
+  @include mq-small-min {
+
+    .slds-form-element {
+      margin-right: $spacing-x-small;
+
+      + .slds-form-element {
+        margin-top: 0;
+      }
+    }
+
+    .slds-form-element,
+    .slds-form-element__label,
+    .slds-form-element__control {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -7,6 +7,26 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * @summary The global header is the anchor for the Salesforce platform and spans all other parts of the UI. The functionality in the header is applicable across all contexts in the Salesforce ecosystem (internal or 3rd party).
+ *
+ * @base
+ * @name global-header
+ * @selector .slds-global-header_container
+ * @category feature
+ * @type layout
+ * @support dev-ready
+ */
+
+/**
+ * Container that fixes the global header to the top of the viewport,
+ * contains global header element
+ *
+ * @name base
+ * @selector .slds-global-header_container
+ * @restrict header
+ * @variant
+ */
 .slds-global-header_container {
   position: fixed;
   width: 100%;
@@ -22,6 +42,10 @@
   }
 }
 
+/**
+ * @selector .slds-global-header
+ * @restrict .slds-global-header_container div
+ */
 .slds-global-header {
   background: $color-background-alt;
   box-shadow: $shadow-header;
@@ -29,21 +53,49 @@
   height: $height-header;
   align-items: center;
 
+  /**
+   * A region within the global header
+   *
+   * @selector .slds-global-header__item
+   * @restrict .slds-global-header div, .slds-global-header ul
+   */
   &__item {
     padding: 0 $spacing-medium;
   }
 
+  /**
+   * Region that contains the search input, handles sizing
+   *
+   * @selector .slds-global-header__item--search
+   * @restrict .slds-global-header__item:nth-child(2)
+   * @modifier
+   * @required
+   */
   &__item_search,
   &__item--search {
     flex: 0 1 rem(440px);
     padding: 0;
   }
 
+  /**
+   * Container of the global header logo
+   *
+   * @selector .slds-global-header__logo
+   * @restrict .slds-global-header__item div
+   * @required
+   */
   &__logo {
     flex-shrink: 0;
     width: rem(45px);
   }
 
+  /**
+   * Button icons on the global header
+   *
+   * @selector .slds-global-header__button--icon
+   * @restrict .slds-global-header__item button
+   * @required
+   */
   &__button_icon,
   &__button--icon {
     margin: 0 $spacing-xx-small;
@@ -64,6 +116,13 @@
     }
   }
 
+  /**
+   * Button icon specifically for global actions
+   *
+   * @selector .slds-global-header__button--icon-actions
+   * @restrict .slds-global-header__item button
+   * @required
+   */
   &__button_icon-actions,
   &__button--icon-actions {
     background: $fill-header-button;
@@ -77,6 +136,13 @@
     }
   }
 
+  /**
+   * Button icon specifically for global actions
+   *
+   * @selector .slds-global-header__button--icon-favorites
+   * @restrict .slds-global-header__item button
+   * @required
+   */
   &__button_icon-favorites,
   &__button--icon-favorites {
     color: $color-text-icon-inverse;
@@ -103,6 +169,14 @@
       stroke: $color-stroke-brand-active;
     }
 
+    /**
+     * Selected state for favorites button
+     *
+     * @selector .slds-is-selected
+     * @restrict .slds-global-header__button--icon-favorites
+     * @modifier
+     * @group stateful
+     */
     &.slds-is-selected {
 
       .slds-icon,
@@ -135,6 +209,13 @@
     }
   }
 
+  /**
+   * Deal with sizing for global header icons
+   *
+   * @selector .global-header__icon
+   * @restrict .slds-global-header__item svg
+   * @required
+   */
   &__icon,
   &__icon .slds-icon,
   &__icon .slds-button__icon {

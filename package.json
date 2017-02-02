@@ -25,6 +25,7 @@
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^1.4.0",
     "@salesforce-ux/create-snap": "0.0.5",
+    "@salesforce-ux/design-system-parser": "0.0.2",
     "@salesforce-ux/design-system-ui-kit": "github:salesforce-ux/design-system-ui-kit#v1.0.1",
     "@salesforce-ux/icons": "7.6.0",
     "app-module-path": "2.2.0",
@@ -46,6 +47,7 @@
     "classnames": "2.2.5",
     "colors": "1.1.2",
     "cssstats": "3.0.0",
+    "data.either": "1.4.0",
     "del": "2.2.2",
     "eslint": "3.13.1",
     "express": "4.14.0",

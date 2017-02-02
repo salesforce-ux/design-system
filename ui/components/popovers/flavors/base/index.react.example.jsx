@@ -73,6 +73,13 @@ let Header = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Popover
+    closeButton={ true }>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </Popover>
+);
+
 export let states = [
   {
     id: 'default',

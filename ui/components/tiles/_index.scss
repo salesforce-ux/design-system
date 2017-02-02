@@ -7,18 +7,52 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * Tiles are setup to be displayed with or without an image/icon. The default
+ * pattern for tiles has an image/icon, a detail body which contains a list of
+ * information and action overflow menu dropdown. The detail body list, by
+ * default, comes as a name/value pairing but can be swapped out with a string
+ * of text or an inline horizontal list.
+ *
+ * Tiles can have different groupings of information based on its context.
+ * Pay close attention to the markup, as each tile layout is constructed differently.
+ *
+ * @summary A tile is a grouping of related information associated with a record.
+ *
+ * @base
+ * @name tiles
+ * @selector .slds-tile
+ * @support dev-ready
+ * @category structure
+ * @type data-display
+ */
 
-
+/**
+ * @summary Initializes tile
+ *
+ * @name base
+ * @selector .slds-tile
+ * @restrict article
+ * @variant
+ */
 .slds-tile {
 
   + .slds-tile {
     margin-top: $spacing-x-small;
   }
 
+  /**
+   * @selector .slds-tile__detail
+   * @restrict .slds-tile div
+   */
   &__detail {
     position: relative;
   }
 
+  /**
+   * @selector .slds-tile__meta
+   * @restrict .slds-tile div
+   */
   &__meta {
     color: $color-text-default;
   }

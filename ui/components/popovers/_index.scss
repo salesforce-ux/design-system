@@ -7,12 +7,49 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * A popover is used to display contextual information to the user. It can be a
+ * simple tooltip or used for more complex components, such as a preview panel.
+ *
+ * A popover can accept the following nubbin position classes, `.slds-nubbin--left`, `.slds-nubbin--left-top`, `.slds-nubbin--left-bottom`, `.slds-nubbin--top-left`, `.slds-nubbin--top-right`, `.slds-nubbin--right-top`, `.slds-nubbin--right-bottom`, `.slds-nubbin--bottom-left`, `.slds-nubbin--bottom-right`.
+ *
+ * #### Accessibility
+ *
+ * Showing the popover on hover or on keyboard focus ensures that all users
+ * can access it, even if they aren’t using a mouse.
+ *
+ * Give the popover an ID and use that as the value of the `aria-describedby`
+ * attribute of the DOM element it describes. This helps users of assistive
+ * technology read the tooltip content.
+ *
+ * @summary A popover is a non-modal dialog.
+ *
+ * @base
+ * @name popovers
+ * @selector .slds-popover
+ * @support dev-ready
+ * @category structure
+ * @type messaging
+ * @role non-modal-dialog
+ */
 
-
+/**
+ * @name base
+ * @selector .slds-popover
+ * @restrict section
+ * @variant
+ */
 .slds-popover {
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
 
+  /**
+   * Applies syles for primary content area of popover
+   *
+   * @selector .slds-popover__body
+   * @restrict .slds-popover div
+   * @required
+   */
   &__body,
   &__header,
   &__footer {
@@ -21,36 +58,82 @@
     padding: $spacing-x-small $spacing-small;
   }
 
+  /**
+   * Applies styles for top area of popover
+   *
+   * @selector .slds-popover__header
+   * @restrict .slds-popover header
+   * @required
+   */
   &__header {
     border-bottom: $border-width-thin solid $color-border;
   }
 
+  /**
+   * Applies styles for footer area of popover
+   *
+   * @selector .slds-popover__footer
+   * @restrict .slds-popover footer
+   * @required
+   */
   &__footer {
     border-top: $border-width-thin solid $color-border;
   }
 
+  /**
+   * Close button within a popover
+   *
+   * @selector .slds-popover__close
+   * @restrict .slds-popover button
+   * @required
+   */
   &__close {
     position: relative;
     margin: $spacing-xx-small;
     z-index: ($z-index-dialog + 1);
   }
 
+  /**
+   * Width modifier for popover - small
+   *
+   * @selector .slds-popover--small
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
   &_small,
   &--small {
     min-width: $size-small;
   }
 
+  /**
+   * Width modifier for popover - medium
+   *
+   * @selector .slds-popover--medium
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
   &_medium,
   &--medium {
     min-width: $size-medium;
   }
 
+  /**
+   * Width modifier for popover - large
+   *
+   * @selector .slds-popover--large
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
   &_large,
   &--large {
     min-width: $size-large;
     max-width: $max-width-action-overflow-menu;
   }
 
+  // Remove border if theme modifier is applied
   &[class*="theme_"],
   &[class*="theme--"] {
     border: 0;

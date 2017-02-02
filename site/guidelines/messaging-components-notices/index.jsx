@@ -540,7 +540,7 @@ export default (
         </h2>
 
         <p>
-          <a href="/components/notifications/#flavor-prompt">Refer to this
+          <a href="/components/prompt">Refer to this
           code sample</a> for the notice markup.
         </p>
 

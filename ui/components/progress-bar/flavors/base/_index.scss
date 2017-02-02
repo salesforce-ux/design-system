@@ -1,0 +1,116 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * @summary A progress bar component communicates to the user the progress of a particular process.
+ *
+ * @base
+ * @name progress-bar
+ * @selector .slds-progress-bar
+ * @support dev-ready
+ * @category simple
+ * @type process
+ * @role progressbar
+ */
+
+/**
+ * @name base
+ * @selector .slds-progress-bar
+ * @restrict div
+ * @variant
+ */
+.slds-progress-bar {
+  display: block;
+  width: 100%;
+  background: $progress-bar-color-background;
+  border: 0;
+  appearance: none;
+  position: relative;
+
+  /**
+   * Creates a progress bar height at the smaller .125rem (2px) size
+   *
+   * @selector .slds-progress-bar--x-small
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_x-small,
+  &--x-small {
+    height: $progress-bar-height;
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .25rem (4px) size
+   *
+   * @selector .slds-progress-bar--small
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_small,
+  &--small {
+    height: ($progress-bar-height * 2);
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .5rem (8px) size
+   *
+   * @selector .slds-progress-bar--medium
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_medium,
+  &--medium {
+    height: ($progress-bar-height * 4);
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .75rem (12px) size
+   *
+   * @selector .slds-progress-bar--large
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_large,
+  &--large {
+    height: ($progress-bar-height * 6);
+  }
+
+  /**
+   * Adds a border radius to the progress bar to give it a circular look
+   *
+   * @selector .slds-progress-bar--circular
+   * @restrict .slds-progress-bar
+   * @modifier
+   */
+  &_circular,
+  &--circular {
+    border-radius: $border-radius-large;
+
+    .slds-progress-bar__value {
+      border-radius: $border-radius-large;
+    }
+  }
+}
+
+/**
+ * Fill up bar inside of the progress bar
+ *
+ * @selector .slds-progress-bar__value
+ * @restrict .slds-progress-bar span
+ * @required
+ */
+.slds-progress-bar__value {
+  display: block;
+  background: $progress-bar-color-background-fill;
+  height: 100%;
+}

@@ -1,0 +1,232 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * Because tab sets can be nested, pay close attention to the markup. They are
+ * constructed to prevent styles from leaking from parent tab sets into child tab sets.
+ *
+ * # JavaScript Needs
+ *
+ * The active tab has two markup requirements:
+ *
+ * - The `.slds-active` class should be placed on the `li` with `.slds-tabs--{variant}__item`.
+ * - The corresponding `.slds-tabs--{variant}__content` container receives `.slds-show`.
+ *
+ * Inactive `.slds-tabs--{variant}__content` containers receive `.slds-hide`.
+ * When the user clicks a different tab, move the `.slds-active` class and
+ * toggle the `.slds-hide`/`.slds-show` classes.
+ *
+ * #### Accessibility
+ *
+ * Tabbed UIs have three parts with specific **ARIA** role requirements:
+ *
+ * - The tab list, which should have `role="tablist"`
+ * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+ * - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+ *
+ * **Expected markup:**
+ *
+ * - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+ * - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+ * - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+ * - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+ * - Tab key, when focus is before the tab list, moves focus to the selected tab
+ * - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
+ * - Shift+Tab keys, when focus is on first element in a tab panel, move focus to the selected tab
+ *
+ * @summary A tab keeps related content in a single container that is shown and hidden through navigation.
+ *
+ * @base
+ * @name scoped-tabs
+ * @selector .slds-tabs--scoped
+ * @support dev-ready
+ * @category simple
+ * @type navigation
+ * @role tablist
+ */
+
+/**
+ * A scoped tabset style has a closed container with a defined border. Initialize
+ * a scoped tab set by applying the `.slds-tab--scoped` class to the containing
+ * `<div>` around the tab list and tab panels. The `<ul>` element also requires
+ * the class `.slds-tab--scoped__nav` to prevent styles from bleeding into nested tabs.
+ *
+ * @summary Initializes scoped tabs
+ *
+ * @name base
+ * @selector .slds-tabs--scoped
+ * @restrict div
+ * @required
+ * @variant
+ */
+.slds-tabs_scoped,
+.slds-tabs--scoped {
+  @include tabs;
+
+  /**
+   * Creates the container for the default tabs
+   *
+   * @selector .slds-tabs--scoped__nav
+   * @restrict .slds-tabs--scoped ul
+   * @required
+   */
+  &__nav {
+    @include tabs-nav;
+    background-color: $color-background;
+    border: $border-width-thin solid $color-border-button-default;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+
+  @include deprecate('4.0.0') {
+
+    .slds-tabs__item {
+      position: relative;
+      margin-bottom: ($border-width-thin * -1);
+
+      + .slds-tabs__item {
+        margin-left: ($border-width-thin * -1);
+      }
+
+      &:first-child > a {
+        border-left: 0;
+        border-radius: $border-radius-medium 0 0 0;
+      }
+
+      > a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        padding: 0 $spacing-large;
+        color: $color-text-weak;
+        background-clip: padding-box;
+        border: {
+          left: $border-width-thin solid transparent;
+          right: $border-width-thin solid transparent;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $color-text-link-hover;
+          border-color: $color-border;
+        }
+      }
+      // scss-lint:disable SelectorDepth
+      .slds-active > a {
+        background-color: $color-background-alt;
+        color: $color-text-link;
+        border-color: $color-border;
+
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    > .slds-tabs__content {
+      background-color: $color-background-alt;
+      border: $border-width-thin solid $color-border-button-default;
+      border-top: 0;
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+      padding: $spacing-medium;
+    }
+  }
+}
+/**
+ * Styles each list item as a single tab
+ *
+ * @selector .slds-tabs--scoped__item
+ * @restrict .slds-tabs--scoped ul li
+ * @required
+ */
+.slds-tabs_scoped__item,
+.slds-tabs--scoped__item {
+  position: relative;
+  margin-bottom: ($border-width-thin * -1);
+
+  + .slds-tabs_scoped__item,
+  + .slds-tabs--scoped__item {
+    margin-left: ($border-width-thin * -1);
+  }
+
+  &:first-child .slds-tabs_scoped__link,
+  &:first-child .slds-tabs--scoped__link {
+    border-left: 0;
+    border-radius: $border-radius-medium 0 0 0;
+  }
+}
+
+/**
+ * Styles each tab content wrapper
+ *
+ * @selector .slds-tabs--scoped__content
+ * @restrict .slds-tabs--scoped div
+ * @required
+ */
+.slds-tabs_scoped__content,
+.slds-tabs--scoped__content {
+  background-color: $color-background-alt;
+  border: $border-width-thin solid $color-border-button-default;
+  border-top: 0;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  padding: $spacing-medium;
+}
+
+/**
+ * Styles each actionable element inside each tab item
+ *
+ * @selector .slds-tabs--scoped__link
+ * @restrict .slds-tabs--scoped__item a
+ * @required
+ */
+.slds-tabs_scoped__link,
+.slds-tabs--scoped__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  padding: 0 $spacing-medium;
+  color: $color-text-weak;
+  background-clip: padding-box;
+  border: {
+    left: $border-width-thin solid transparent;
+    right: $border-width-thin solid transparent;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-text-link-hover;
+    border-color: $color-border;
+  }
+}
+
+/**
+ * Active state for a tab item
+ *
+ * @selector .slds-is-active
+ * @restrict .slds-tabs--scoped__item
+ * @notes Required on the `<li>` element that is associated with the active tab panel
+ * @modifier
+ */
+.slds-active .slds-tabs_scoped__link,
+.slds-active .slds-tabs--scoped__link,
+.slds-is-active .slds-tabs_scoped__link,
+.slds-is-active .slds-tabs--scoped__link {
+  background-color: $color-background-alt;
+  color: $color-text-link;
+  border-color: $color-border;
+
+  &:focus {
+    text-decoration: underline;
+  }
+}

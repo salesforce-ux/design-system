@@ -7,8 +7,170 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * The unordered menu list with `[role="menu"]` should be contained in a `<div>`
+ * with the class `.slds-dropdown`. The exception to this is the **Action
+ * Overflow for Touch**, which not a dropdown menu.
+ *
+ * The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger--click`.
+ *
+ * By default, dropdown menus do not display a nubbin (the little cute triangle
+ * pointing at your target). If you want to apply one, you can add the class
+ * that defines the nubbin position and `.slds-nubbin--top` to the `.slds-dropdown`
+ * HTML element.
+ *
+ * <div class="site-text-heading--label">Accessibility</div>
+ *
+ * The main thing that distinguishes menus from other popover blocks is keyboard
+ * navigation: elsewhere, users press the Tab key to navigate through actionable
+ * items, but in a menu, users press the arrow keys to navigate.
+ *
+ * **Expected markup:**
+ *
+ * - Menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
+ * - Menu has `role="menu"` and an `aria-labelledby` attribute whose value is the id of the menu trigger
+ * - Menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)
+ * - Tab key closes menu and moves focus to the next focusable element on the page
+ * - Esc key closes menu and moves focus back to the menu trigger
+ * - Any character key moves focus to the next menu item that starts with that character, if applicable
+ *
+ * @summary A Menu offers a list of actions or functions that a user can access.
+ *
+ * @base
+ * @name menus
+ * @selector .slds-dropdown-trigger
+ * @support dev-ready
+ * @category complex
+ * @type navigation
+ * @role menu
+ */
 
+/**
+ * Initializes a trigger element around the dropdown
+ *
+ * @name dropdown
+ * @selector .slds-dropdown-trigger
+ * @restrict div
+ * @variant
+ */
+.slds-dropdown-trigger {
+  position: relative;
+  display: inline-block;
 
+  .slds-dropdown {
+    top: 100%;
+  }
+
+  .slds-dropdown_bottom,
+  .slds-dropdown--bottom {
+    top: auto;
+  }
+
+  @include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
+
+    .slds-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  /**
+   * If someone is using javascript for click to toggle - this modifier will help
+   *
+   * @selector .slds-dropdown-trigger--hover
+   * @restrict .slds-dropdown-trigger
+   * @modifier
+   * @group trigger
+   */
+  &_hover,
+  &--hover {
+
+    .slds-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  /**
+   * If someone is using javascript for click to toggle - this modifier will help
+   *
+   * @selector .slds-dropdown-trigger--click
+   * @restrict .slds-dropdown-trigger
+   * @modifier
+   * @group trigger
+   */
+  &_click,
+  &--click {
+
+    .slds-dropdown {
+      display: none;
+    }
+
+    /**
+     * Opens dropdown menu when invoked on click
+     *
+     * @selector .slds-is-open
+     * @restrict .slds-dropdown-trigger--click
+     * @modifier
+     */
+    &.slds-is-open .slds-dropdown {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // Deal with positioning when target is just an icon
+  > [class*="slds-button_icon"],
+  > [class*="slds-button--icon"] {
+
+    ~ .slds-dropdown_left[class*="slds-nubbin"],
+    ~ .slds-dropdown--left[class*="slds-nubbin"] {
+      left: ($spacing-x-small * -1);
+    }
+
+    ~ .slds-dropdown_right[class*="slds-nubbin"],
+    ~ .slds-dropdown--right[class*="slds-nubbin"] {
+      right: ($spacing-x-small * -1);
+    }
+  }
+}
+
+/**
+ * Initializes dropdown
+ *
+ * @selector .slds-dropdown
+ * @restrict .slds-dropdown-trigger div
+ * @notes Applies positioning and container styles, by default, dropdown appears below and center of target
+ */
 .slds-dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
@@ -25,12 +187,28 @@
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
 
+  /**
+   * Positions dropdown to left side of target
+   *
+   * @selector .slds-dropdown--left
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group position
+   */
   &_left,
   &--left {
     left: 0;
     transform: translateX(0);
   }
 
+  /**
+   * Positions dropdown to right side of target
+   *
+   * @selector .slds-dropdown--right
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group position
+   */
   &_right,
   &--right {
     left: auto;
@@ -38,61 +216,145 @@
     transform: translateX(0);
   }
 
+  /**
+   * Positions dropdown to above target
+   *
+   * @selector .slds-dropdown--bottom
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group position
+   */
   &_bottom,
   &--bottom {
     bottom: 100%;
   }
 
+  /**
+   * Sets min-width of 15rem/240px
+   *
+   * @selector .slds-dropdown--small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
   &_small,
   &--small {
     min-width: $size-small;
   }
 
+  /**
+   * Sets min-width of 20rem/320px
+   *
+   * @selector .slds-dropdown--medium
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
   &_medium,
   &--medium {
     min-width: $size-medium;
   }
 
+  /**
+   * Sets min-width of 25rem/400px
+   *
+   * @selector .slds-dropdown--large
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
   &_large,
   &--large {
     min-width: $size-large;
     max-width: $max-width-action-overflow-menu;
   }
 
-  // New in 1.00
-  //
-  // Apply to Dropdown UL
+  /**
+   * Forces overflow scrolling after 5 list items
+   *
+   * @selector .slds-dropdown--length-5
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-5,
   &--length-5 {
     @include dropdown-overflow-length(5);
   }
 
+  /**
+   * Forces overflow scrolling after 7 list items
+   *
+   * @selector .slds-dropdown--length-7
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-7,
   &--length-7 {
     @include dropdown-overflow-length(7);
   }
 
+  /**
+   * Forces overflow scrolling after 10 list items
+   *
+   * @selector .slds-dropdown--length-10
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-10,
   &--length-10 {
     @include dropdown-overflow-length(10);
   }
 
+  /**
+   * Forces overflow scrolling after 5 list items with an icon
+   *
+   * @selector .slds-dropdown--length-with-icon-5
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-with-icon-5,
   &--length-with-icon-5 {
     @include dropdown-overflow-length(5, $icon-size: $square-icon-small-boundary);
   }
 
+  /**
+   * Forces overflow scrolling after 7 list items with an icon
+   *
+   * @selector .slds-dropdown--length-with-icon-7
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-with-icon-7,
   &--length-with-icon-7 {
     @include dropdown-overflow-length(7, $icon-size: $square-icon-small-boundary);
   }
 
+  /**
+   * Forces overflow scrolling after 10 list items with an icon
+   *
+   * @selector .slds-dropdown--length-with-icon-10
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group height
+   */
   &_length-with-icon-10,
   &--length-with-icon-10 {
     @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
   }
 
-  // Theme
+  /**
+   * Theme
+   *
+   * @selector .slds-dropdown--inverse
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group theme
+   */
   &_inverse,
   &--inverse {
     background: $color-background-inverse;
@@ -123,16 +385,19 @@
     }
   }
 
+  // Typeahead stuff
   mark {
     font-weight: $font-weight-bold;
     background-color: transparent;
   }
 
+  // Adjust position of dropdown with top nubbin
   &[class*="slds-nubbin_top"],
   &[class*="slds-nubbin--top"] {
     margin-top: ($square-tooltip-nubbin / 2);
   }
 
+  // Adjust position of dropdown with bottom nubbin
   &[class*="slds-nubbin_bottom"],
   &[class*="slds-nubbin--bottom"] {
     margin-bottom: ($square-tooltip-nubbin / 2);
@@ -181,10 +446,23 @@
     }
   }
 
+  /**
+   * Adds padding to area above dropdown menu list
+   *
+   * @selector .slds-dropdown__header
+   * @restrict .slds-dropdown li
+   */
   &__header {
     padding: $spacing-x-small $spacing-small;
   }
 
+  /**
+   * Initializes dropdown item
+   *
+   * @selector .slds-dropdown__item
+   * @restrict .slds-dropdown li
+   * @required
+   */
   &__item {
     line-height: $line-height-text;
 
@@ -219,12 +497,25 @@
       }
     }
 
+    /**
+     * If menu contains menuitemcheckbox then this toggles the selected icon when it is selected
+     *
+     * @selector .slds-icon--selected
+     * @restrict .slds-dropdown__item svg
+     */
     .slds-icon_selected,
     .slds-icon--selected {
       opacity: 0;
       transition: opacity $duration-immediately ease;
     }
 
+    /**
+     * If menu contains menuitemcheckbox then this handles the selected states
+     *
+     * @selector .slds-is-selected
+     * @restrict .slds-dropdown__item
+     * @modifier
+     */
     &.slds-is-selected .slds-icon_selected,
     &.slds-is-selected .slds-icon--selected {
       opacity: 1;
@@ -279,89 +570,4 @@
       }
     }
   } // Deprecate has-icon
-}
-
-.slds-dropdown-trigger {
-  position: relative;
-  display: inline-block;
-
-  .slds-dropdown {
-    top: 100%;
-  }
-
-  .slds-dropdown_bottom,
-  .slds-dropdown--bottom {
-    top: auto;
-  }
-
-  @include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
-
-    .slds-dropdown {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
-    }
-
-    &:hover,
-    &:focus {
-      outline: 0;
-
-      .slds-dropdown {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
-      }
-    }
-  }
-
-  &_hover,
-  &--hover {
-
-    .slds-dropdown {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
-    }
-
-    &:hover,
-    &:focus {
-      outline: 0;
-
-      .slds-dropdown {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
-      }
-    }
-  }
-
-  // If someone is using javascript for click to toggle - this modifier will help
-  &_click,
-  &--click {
-
-    .slds-dropdown {
-      display: none;
-    }
-
-    &.slds-is-open .slds-dropdown {
-      display: block;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-
-  // Deal with positioning when target is just an icon
-  > [class*="slds-button_icon"],
-  > [class*="slds-button--icon"] {
-
-    ~ .slds-dropdown_left[class*="slds-nubbin"],
-    ~ .slds-dropdown--left[class*="slds-nubbin"] {
-      left: ($spacing-x-small * -1);
-    }
-
-    ~ .slds-dropdown_right[class*="slds-nubbin"],
-    ~ .slds-dropdown--right[class*="slds-nubbin"] {
-      right: ($spacing-x-small * -1);
-    }
-  }
 }

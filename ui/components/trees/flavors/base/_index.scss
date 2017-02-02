@@ -7,6 +7,32 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
+ *
+ * A tree will need helper classes added and removed to help structure the layout. Each child node list needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.
+ *
+ * Whenever the tree has a nested group, the `li` element should receive the ARIA role `group`. This will add appropiate styling to decendent `.slds-tree__item` elements. A helper class of `.slds-is-expanded` and `.slds-is-collapsed` will need to be toggled on the appropriate child of list item node if the decendent groups are visible or not visible.
+ *
+ * A `.slds-tree__item` is any element of the tree that is a single node within a node with an ARIA attribute of `role="group"`. To achieve interactions demostrated in the demo, some helper classes are being added and removed based on actions to the list item node. To achieve the desired hover and focus states, applying the `.slds-is-hovered` and `.slds-is-focused` class helpers to the `li` on its respective interactions. If an item is selected and want to demostrate that state, applying the `.slds-is-selected` helper class will give you this outcome.
+ *
+ * In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-controls` to the button the icon is contained within. The value of the `aria-controls` attribute should be the ID of the group that clicking the button will affect.
+ *
+ * @summary A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
+ *
+ * @base
+ * @name trees
+ * @selector .slds-tree_container
+ * @support dev-ready
+ */
+
+/**
+ * @name base
+ * @selector .slds-tree_container
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
 .slds-tree-container,
 .slds-tree_container {
 
@@ -20,39 +46,88 @@
   }
 }
 
+/**
+ * @selector .slds-tree
+ * @restrict .slds-tree_container div
+ * @required
+ */
 .slds-tree {
 
+  /**
+   * @selector .slds-tree__item
+   * @restrict .slds-tree div
+   * @required
+   */
   &__item {
     display: flex;
     line-height: $line-height-button;
     padding-left: $spacing-medium;
 
+    /**
+     * When a branch doesn't have children, apply slds-is-disabled to the button icon
+     *
+     * @selector .slds-is-disabled
+     * @restrict .slds-tree__item button
+     * @required
+     * @modifier
+     */
     .slds-is-disabled {
       visibility: hidden;
     }
 
     a {
       color: $color-text-default;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: 0;
+        text-decoration: underline;
+      }
     }
 
-    a:hover,
-    a:focus {
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus {
-      @include tree-item-hover;
+    /**
+     * Hover state for a tree item
+     *
+     * @selector .slds-is-hovered
+     * @restrict .slds-tree__item
+     * @notes Class should be applied via Javascript
+     * @required
+     * @modifier
+     */
+    &.slds-is-hovered,
+    &:hover {
+      background: $color-background-row-hover;
+      cursor: pointer;
     }
   }
 
+  /**
+   * Selected state for a tree item
+   *
+   * @selector .slds-is-selected
+   * @restrict .slds-tree__item
+   * @notes Class should be applied via Javascript
+   * @required
+   * @modifier
+   */
   .slds-is-selected {
-    @include tree-item-selected;
+    background: $color-background-row-selected;
+    box-shadow: $color-background-button-brand 4px 0 0 inset;
   }
 
-  .slds-is-hovered,
+  /**
+   * Focus state for a tree item
+   *
+   * @selector .slds-is-focused
+   * @restrict .slds-tree__item
+   * @required
+   * @modifier
+   */
   .slds-is-focused {
-    @include tree-item-hover;
+    text-decoration: underline;
   }
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
@@ -62,7 +137,7 @@
       padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
-
+  // scss-lint:disable SelectorDepth
   [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
   [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
     transition: $duration-promptly transform ease-in-out;

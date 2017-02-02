@@ -19,8 +19,6 @@ install:
   - npm install
 script:
   - npm run build-travis
-after_success:
-  - npm run test-snapshot
 cache:
   directories:
     - node_modules

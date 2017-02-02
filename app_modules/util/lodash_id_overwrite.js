@@ -10,11 +10,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 let idCounter = 0;
 
+const PREFIXES = {};
+
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing
 import _ from 'lodash';
 
-function uniqueId(prefix) {
-  var id = ++idCounter;
-  return prefix ? prefix + id : id;
-}
+const newCounter = prefix =>
+  PREFIXES[prefix] = 0;
+
+const incCounter = prefix =>
+  PREFIXES[prefix] = PREFIXES[prefix] + 1;
+
+const initCounterForPrefix = prefix =>
+  PREFIXES[prefix] != null
+  ? PREFIXES[prefix]
+  : newCounter(prefix);
+
+const addToPrefix = prefix => {
+  initCounterForPrefix(prefix);
+  return prefix + incCounter(prefix);
+};
+
+const uniqueId = prefix =>
+  prefix ? addToPrefix(prefix) : idCounter++;
+
 _.uniqueId = uniqueId;

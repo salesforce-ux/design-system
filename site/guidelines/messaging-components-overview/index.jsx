@@ -16,7 +16,10 @@ export default (
   <PageBody anchorTitle="Messaging Components" contentClassName="site-guidelines">
     <div className="slds-container--large lmf">
       <p className="site-text-introduction">
-        There are a number of messaging components available for use.
+        There are a number of messaging components available for use. To
+        choose a messaging element, you can refer to either Components
+        or <a href="/guidelines/messaging-states">States</a> as a starting
+        point.
       </p>
 
       <figure>
@@ -25,7 +28,7 @@ export default (
 
       <p>
         Each component has <strong>properties</strong> that determine
-        their prominence.
+        their prominence. For example:
       </p>
 
       <div className="slds-scrollable--x slds-m-vertical--x-large">
@@ -195,7 +198,7 @@ export default (
           </li>
 
           <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-8 slds-text-align--center">
-            <a href="/guidelines/messaging-components-illustration-and-text">
+            <a href="/guidelines/messaging-components-illustration-and-inline-text">
               <img src="/assets/images/messaging/chart-illustration-text.png" alt="" width="120" height="120" />
               <br />
               Illustration &#38;&nbsp;Text
@@ -233,7 +236,7 @@ export default (
 
                 <li className="slds-m-bottom--small">
                   occupies a smaller section of the page, either as a component,
-                  alongside another component, or in a &ldquo;card&rdquo;
+                  alongside another component, or in a&nbsp;&ldquo;card&rdquo;
                 </li>
 
                 <li className="slds-m-bottom--small">

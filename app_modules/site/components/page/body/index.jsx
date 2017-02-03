@@ -246,7 +246,7 @@ export default React.createClass({
       <footer className="site site-contentinfo">
         <div className="slds-grid slds-wrap slds-text-body--small" role="contentinfo">
           <p className="slds-p-horizontal--x-large slds-size--1-of-1 slds-shrink-none slds-large-size--2-of-3">
-            Copyright &copy; 2015-2016 <span className="site-name">Sales<i>f</i>orce. </span>
+            Copyright &copy; 2015-present <span className="site-name">Sales<i>f</i>orce. </span>
             <CTALink
               href="http://salesforce.com/company/legal/intellectual.jsp"
               eventType="copyright">

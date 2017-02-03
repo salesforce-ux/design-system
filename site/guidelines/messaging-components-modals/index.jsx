@@ -46,10 +46,6 @@ export default (
           </li>
 
           <li className="slds-list__name site-states-parent">
-            <a href="#flavor-ui-text">UI Text</a>
-          </li>
-
-          <li className="slds-list__name site-states-parent">
             <a href="#flavor-specs">Recommended Specs</a>
           </li>
         </ul>
@@ -59,8 +55,8 @@ export default (
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
       <div className="slds-container--large lmf">
         <p className="site-text-introduction">
-          <strong>Modal</strong> acts as a warning mechanism to ensure the
-          user action is intentional and not accidental.
+          <strong>Modal</strong> can show an action in progress, confirm a
+          user action, or communicate about an error.
         </p>
 
         <figure>
@@ -90,20 +86,20 @@ export default (
         </div>
 
         <p>
-          In the context of messaging, modals only exist in one
-          state: <strong>warning</strong>. It appears when a user tries to
-          commit one of these things:
+          In the context of messaging, a modal can show one of the following
+          states:
         </p>
 
         <ul>
-          <li>A destructive action, e.g. deleting a record.</li>
+          <li><strong>Transient:</strong> when a user is uploading files.</li>
 
           <li>
-            An action that has major impacts, e.g. sending an email to all
-            100,000 subscribers.
+            <strong>Warning:</strong> when a user tries to commit a
+            destructive action (e.g. deleting a record), complete an action
+            that has major impacts (e.g. sending an email to all 100,000
+            subscribers), or abandon an incomplete action (e.g. leaving an
+            unsaved form).
           </li>
-
-          <li>Abandons incomplete action, e.g. leaving an unsaved form.</li>
         </ul>
 
         <p>
@@ -135,8 +131,20 @@ export default (
 
         <ul>
           <li>
-            <strong>Do</strong> use modals sparingly. A user shouldn&rsquo;t
-            see multiple warning modals in one flow.
+            <strong>Do</strong> use modals only when needed to convey
+            progress, confirmation, or an error. A user shouldn’t see
+            multiple warning modals in one flow.
+          </li>
+
+          <li>
+            <strong>Do</strong> place the action buttons on the bottom right,
+            consistent with the overall modal pattern.
+          </li>
+
+          <li>
+            <strong>Do</strong> match the title and action button label. For
+            instance, if the modal title is “Delete contact?” the action
+            button should say “Delete.”
           </li>
         </ul>
 
@@ -144,21 +152,17 @@ export default (
 
         <ul>
           <li>
-            <strong>Do not</strong> call a modal for an affirmative action
-            that has relatively minor impact. E.g. adding a related contact to
-            an opportunity.
+            <strong>Do not</strong> use a modal to notify the user of a
+            successful action, such as “Contact was added to the opportunity.”
+            Use
+            a <a href="/guidelines/messaging-components-toasts/">toast</a> for
+            that instead.
           </li>
 
           <li>
             <strong>Do not</strong> focus the cursor on the action button. A
             user that relies on keyboard a lot may accidentally confirms the
             action.
-          </li>
-
-          <li>
-            <strong>Do not</strong> present the user with more than a binary
-            set of actions. In this context, the modal confirms user intent,
-            so anything more than yes/no is redundant.
           </li>
         </ul>
 
@@ -175,7 +179,88 @@ export default (
           Variants - State
         </h2>
 
-        <p>N/A (In this context, modals only exist in one state: warning)</p>
+        <figure className="slds-m-vertical--xx-large">
+          <figcaption className="site-text-heading--label">
+            Transient
+          </figcaption>
+
+          <div className="slds-notify_container slds-notify_container--inline">
+            <div className="slds-modal__container">
+              <div className="slds-modal__header">
+                <button className="slds-button slds-button--icon-inverse slds-modal__close" tabIndex="-1">
+                  <SvgIcon aria-hidden="true" className="slds-button__icon slds-button__icon--large" sprite="action" symbol="close" />
+
+                  <span className="slds-assistive-text">Close</span>
+                </button>
+
+                <h2 className="slds-text-heading--medium">
+                  Uploading&hellip;
+                </h2>
+              </div>
+
+              <div className="slds-modal__footer" style={{borderRadius: 0, borderTop: 0, textAlign: 'left'}}>
+                <div>
+                  <span className="slds-icon_container">
+                    <SvgIcon className="slds-icon slds-icon--medium" style={{marginRight: 8 + 'px'}} aria-hidden="true" sprite="doctype" symbol="pdf" />
+
+                    Q3 2017 presentation.pdf
+                  </span>
+                </div>
+              </div>
+
+              <div className="slds-progress-bar slds-progress-bar--large slds-progress-bar--circular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+                <span className="slds-progress-bar__value" style={{width: 25 + '%'}}>
+                  <span className="slds-assistive-text">Progress: 25%</span>
+                </span>
+              </div>
+            </div>
+
+            <div className="slds-backdrop"></div>
+          </div>
+        </figure>
+
+        <figure className="slds-m-vertical--x-large">
+          <figcaption className="site-text-heading--label">Warning</figcaption>
+
+          <div className="slds-notify_container slds-notify_container--inline">
+            <div className="slds-modal" aria-hidden="false" role="dialog">
+              <div className="slds-modal__container">
+                <div className="slds-modal__header">
+                  <button className="slds-button slds-button--icon-inverse slds-modal__close" tabIndex="-1">
+                    <SvgIcon aria-hidden="true" className="slds-button__icon slds-button__icon--large" sprite="action" symbol="close" />
+
+                    <span className="slds-assistive-text">Close</span>
+                  </button>
+
+                  <h2 className="slds-text-heading--medium">
+                    Delete opportunity?
+                  </h2>
+                </div>
+
+                <div className="slds-modal__content slds-p-around--large">
+                  <div>
+                    <p>
+                      Are you sure you want to delete opportunity “Tesla
+                      CloudHub + Anypoint Connectors”?
+                    </p>
+                  </div>
+                </div>
+
+                <div className="slds-modal__footer">
+                  <button className="slds-button slds-button--neutral">
+                    Cancel
+                  </button>
+
+                  <button className="slds-button slds-button--neutral slds-button--brand">
+                    Delete
+                  </button>
+                </div>
+              </div>
+
+              <div className="slds-backdrop"></div>
+            </div>
+          </div>
+        </figure>
 
         <h2 className="site-text-heading--large" id="flavor-variants-screen">
           Variants - Screen Size
@@ -183,7 +268,7 @@ export default (
 
 
         <figure className="slds-m-vertical--x-large">
-          <figcaption className="site-text-heading--label">MOBILE</figcaption>
+          <figcaption className="site-text-heading--label">Mobile</figcaption>
 
           <div className="slds-notify_container slds-notify_container--inline slds-notify_container--mobile">
             <div className="slds-modal__container slds-notify--mobile slds-notify--modal">
@@ -197,12 +282,6 @@ export default (
                 <h2 className="slds-text-heading--medium">
                   Delete Opportunity
                 </h2>
-              </div>
-
-              <div className="slds-modal__content slds-p-around--large">
-                <div>
-                  <p>Are you sure?</p>
-                </div>
               </div>
 
               <div className="slds-modal__footer">
@@ -224,77 +303,12 @@ export default (
           <li>Smaller title</li>
 
           <li>Full-width buttons</li>
-        </ul>
-
-        <h2 className="site-text-heading--large" id="flavor-ui-text">
-          UI Text
-        </h2>
-
-        <p>Basic rules around UI text in modal:</p>
-
-        <ul>
-          <li>
-            The title syntax is as
-            follows: <code>&laquo;verb&raquo;&nbsp;&nbsp;&nbsp;&laquo;record
-            name&raquo;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-          </li>
-
-          <li>Frame the body text as a question.</li>
 
           <li>
-            If the action is related to one record, mention the record name in
-            the body text. Otherwise, provide a count of the records affected.
+            Don’t include body text unless it adds crucial information about
+            the result of the action
           </li>
         </ul>
-
-        <div className="slds-scrollable--x">
-          <table className="slds-table slds-table--bordered slds-table--col-bordered slds-no-row-hover">
-            <thead className="slds-theme--shade">
-              <tr className="site-text-heading--label">
-                <th scope="col">State</th>
-
-                <th scope="col">Intent</th>
-
-                <th scope="col">Example Title</th>
-
-                <th scope="col">Example Body</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <th scope="row" className="slds-text-heading--label">
-                  Warning
-                </th>
-
-                <td>Action on one record</td>
-
-                <td>Delete Opportunity</td>
-
-                <td>
-                  <figure>
-                    Are you sure you want to delete opportunity &ldquo;ACME -
-                    100 widgets&rdquo;?
-                  </figure>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row" className="slds-text-heading--label">
-                  Warning
-                </th>
-
-                <td>Action on multiple records</td>
-
-                <td>Delete Leads</td>
-
-                <td>
-                  <figure>Are you sure you want to delete 10 leads?</figure>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
         <h2 className="site-text-heading--large" id="flavor-specs">
           Recommended Specs

@@ -55,8 +55,8 @@ export default (
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
       <div className="slds-container--large lmf">
         <p className="site-text-introduction">
-          <strong>Popovers</strong> call attention to a record without being
-          obtrusive.
+          <strong>Popovers</strong> calls attention to a problem or a
+          potential problem with a field or record.
         </p>
 
         <img src="/assets/images/messaging/diagram-popover.png" alt="" width="248" height="92" />
@@ -73,8 +73,7 @@ export default (
               <li><strong>Visual:</strong> Visible</li>
 
               <li>
-                <strong>Voice &amp; Tone:</strong>
-                Conversational&mdash;Informational
+                <strong>Voice &amp; Tone:</strong> Conversational&mdash;Informational
               </li>
 
               <li><strong>Motion:</strong> Static&mdash;Delicate</li>
@@ -150,8 +149,9 @@ export default (
           <li><strong>Do</strong> use animation to show/hide the popover.</li>
 
           <li>
-            <strong>Do</strong> make sure that links and close button inside
-            the popover are accessible via keyboard.
+            <strong>Do</strong> make sure that links and the close button
+            inside the popover are accessible via keyboard.
+
           </li>
         </ul>
 

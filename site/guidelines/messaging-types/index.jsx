@@ -36,25 +36,26 @@ export default (
           update data in the system. It can be initiated by either the system
           or another user.
           <br/>
-          e.g. Opportunity X hasn&rsquo;t had any activities in 30 days.
+          e.g. No activity on Opportunity <var>x</var> in the past 30 days.
           Create a task or schedule an event.
         </li>
 
         <li className="slds-m-bottom--x-large">
           <strong>Access messaging</strong> appears when the user tries to
           access an item that&rsquo;s not available to them. It may be because
-          the record has been deleted, the user has insufficient privilege,
+          the record has been deleted, the user doesn’t have access, etc.
           etc.
           <br/>
-          e.g. Lead X cannot be found.
+          e.g. Lead <var>x</var> isn’t available.
         </li>
 
         <li>
           <strong>Feedback messaging</strong> is the application&rsquo;s
-          response when the user is interacting with it. The majority of CRUD
-          actions will result in feedback messaging.
+          response when the user is interacting with it. The majority of
+          create, read, update, delete (CRUD) actions will result in feedback
+          messaging.
           <br/>
-          e.g. Account X was created.
+          e.g. Account <var>x</var> was created.
         </li>
       </ul>
     </div>

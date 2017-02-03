@@ -128,7 +128,6 @@ export let states = [
               <span className="slds-lookup__item-action slds-lookup__item-action--label slds-text-body--small slds-has-focus" id="option-00" role="option">
                 <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="search" />
                 <span className="slds-truncate">"ibm" in Salesforce</span>
-                <span className="slds-col--bump-left slds-shrink-none">Click "enter" to search</span>
               </span>
             </li>
             <li role="presentation">
@@ -174,12 +173,6 @@ export let states = [
                   <span className="slds-lookup__result-text">Art Vandelay (<mark>IBM</mark>)</span>
                   <span className="slds-lookup__result-meta slds-text-body--small">User &bull; Latex Salesman</span>
                 </span>
-              </span>
-            </li>
-            <li role="presentation">
-              <span className="slds-lookup__item-action slds-lookup__item-action--label" id="option-06" role="option">
-                <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="forward" />
-                <span className="slds-truncate" title="Go to Groups home">Go to <mark>Groups</mark> home</span>
               </span>
             </li>
           </ul>

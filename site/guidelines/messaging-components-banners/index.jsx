@@ -106,23 +106,23 @@ export default (
 
         <ul>
           <li>
-            <strong>Informational:</strong> to show admin-related status (e.g.
-            logged in as a user), system maintenance, etc.
-          </li>
-
-          <li>
-            <strong>Warning:</strong> to warn the user of potential issues
-            with their Salesforce experience, e.g. due to an outdated browser.
-          </li>
-
-          <li>
             <strong>Error:</strong> to tell the user that they cannot proceed
             with their Salesforce experience, e.g. due to an outdated browser.
           </li>
 
           <li>
+            <strong>Informational:</strong> to show admin-related status (e.g.
+            logged in as a user), system maintenance, etc.
+          </li>
+
+          <li>
             <strong>Offline:</strong> to inform the user that they are in
             offline mode.
+          </li>
+
+          <li>
+            <strong>Warning:</strong> to warn the user of potential issues
+            with their Salesforce experience, e.g. due to an outdated browser.
           </li>
         </ul>
 
@@ -168,7 +168,7 @@ export default (
 
         <ul>
           <li>
-            <strong>Do not</strong> use notifications as a feedback
+            <strong>Do not</strong> use banners as a feedback
             mechanism. Look
             into <a href="/guidelines/messaging-components-inline-text">inline
             text</a>, <a href="/guidelines/messaging-components-popovers">popover</a>, <a href="/guidelines/messaging-components-toasts">toast</a>,
@@ -205,10 +205,7 @@ export default (
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" sprite="custom" symbol="custom19" />
 
                   Scheduled Maintenance Notification: Sunday March 15, 8:00
-                  AM–10:00 PST.
-                  <a href="javascript:void(0);" tabIndex="-1">
-                    More information
-                  </a>
+                  AM–10:00 PST. <a href="javascript:void(0);" tabIndex="-1">More information</a>
                 </h2>
               </div>
             </div>
@@ -228,8 +225,7 @@ export default (
                 <h2>
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="user" />
 
-                  Logged in as John Smith (johnsmith@acme.com).
-                  <a href="#" tabIndex="-1">Log out</a>
+                  Logged in as John Smith (johnsmith@acme.com). <a href="#" tabIndex="-1">Log out</a>
                 </h2>
               </div>
             </div>
@@ -252,6 +248,7 @@ export default (
 
                 <h2>
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="warning" />
+                  Your browser is not supported. Your app will not run. <a href="#" tabIndex="-1">More Information</a>
                 </h2>
               </div>
             </div>
@@ -271,8 +268,7 @@ export default (
                 <h2>
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="user" />
 
-                  Logged in as John Smith (johnsmith@acme.com).
-                  <a href="#" tabIndex="-1">Log out</a>
+                  Logged in as John Smith (johnsmith@acme.com). <a href="#" tabIndex="-1">Log out</a>
                 </h2>
               </div>
             </div>
@@ -292,10 +288,7 @@ export default (
                 <h2>
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="offline" />
 
-                  You are in offline mode.
-                  <a href="javascript:void(0);" tabIndex="-1">
-                    More information
-                  </a>
+                  You are in offline mode. <a href="javascript:void(0);" tabIndex="-1">More information</a>
                 </h2>
               </div>
             </div>
@@ -340,10 +333,7 @@ export default (
                   <SvgIcon aria-hidden="true" className="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" sprite="custom" symbol="custom19" />
 
                   Scheduled Maintenance Notification: Sunday March 15, 8:00
-                  AM–10:00 PST.
-                  <a href="javascript:void(0);" tabIndex="-1">
-                    More information
-                  </a>
+                  AM–10:00 PST. <a href="javascript:void(0);" tabIndex="-1">More information</a>
                 </h2>
               </div>
             </div>
@@ -388,8 +378,7 @@ export default (
 
                 <td>
                   <figure>
-                    Logged in as John Smith (johnsmith@acme.com).
-                    <a href="#" tabIndex="-1">Log out</a>
+                    Logged in as John Smith (johnsmith@acme.com). <a href="#" tabIndex="-1">Log out</a>
                   </figure>
                 </td>
               </tr>
@@ -419,8 +408,7 @@ export default (
 
                 <td>
                   <figure>
-                    Your browser is not supported. Your app will not run.
-                    <a href="#" tabIndex="-1">More information</a>
+                    Your browser is not supported. Your app will not run. <a href="#" tabIndex="-1">More information</a>
                   </figure>
                 </td>
               </tr>

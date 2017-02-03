@@ -60,8 +60,8 @@ export default (
       <div className="slds-container--large lmf">
         <p className="site-text-introduction">
           <strong>Inline text</strong> communicates messages in an
-          unobtrusive way. It&rsquo;s displayed inline and doesn&rsquo;t block
-          any other part of the interface.
+          non-blocking way. It&rsquo;s displayed inline and doesn&rsquo;t
+          block any other part of the interface.
         </p>
 
         <img src="/assets/images/messaging/diagram-text.png" alt="" width="300" height="58" />
@@ -79,7 +79,7 @@ export default (
 
               <li>
                 <strong>Voice &amp;
-                Tone:</strong> Conversational&ndash;Informational
+                Tone:</strong> (Varies per circumstance)
               </li>
 
               <li><strong>Motion:</strong> Static</li>
@@ -120,10 +120,8 @@ export default (
         </ul>
 
         <p>
-          For an empty state that affects the whole page,
-          consider <a href="/guidelines/messaging-components-illustration-and-text">pairing
-          up text with illustrations</a> (which includes an image, a title,
-          and body text of 1–2 sentences with an inline link).
+          For an empty state that affects the whole page, consider
+          using <a href="/guidelines/messaging-components-illustration-and-inline-text">Inline Text + Illustration</a>.
         </p>
 
         <p>
@@ -270,8 +268,7 @@ export default (
                   <div className="slds-card__body--inner">
                     <div className="slds-tile slds-has-error">
                       <p>
-                        <span className="slds-content-message">The system
-                        failed to load.</span> <a href="#" tabIndex="-1">Try
+                        <span className="slds-content-message">Can’t load contact.</span> <a href="#" tabIndex="-1">Try
                         again?</a>
                       </p>
                     </div>
@@ -284,8 +281,7 @@ export default (
           <figure className="slds-box">
             <div className="slds-form-element is-required slds-has-error slds-card_container">
               <label className="slds-form-element__label" htmlFor="text-input-01">
-                <abbr className="slds-required" title="required">*</abbr> Input
-                Label
+                <abbr className="slds-required" title="required">*</abbr> Name
               </label>
 
               <div className="slds-form-element__control">
@@ -293,7 +289,7 @@ export default (
               </div>
 
               <div id="error-message" className="slds-form-element__help">
-                This field is required
+                Enter a name
               </div>
             </div>
           </figure>
@@ -303,7 +299,7 @@ export default (
               <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="warning" />
 
               <div className="slds-col slds-align-middle">
-                <p>Error loading default fields.</p>
+                <p>Review the following errors.</p>
               </div>
             </div>
           </figure>
@@ -315,17 +311,17 @@ export default (
           </figcaption>
 
           <div className="slds-box">
-            <div className="slds-inline_icon_text slds-grid">
+            <div className="slds-inline_icon_text slds-grid slds-m-bottom--large">
               <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="info" />
 
               <div className="slds-col slds-align-middle">
                 <p>
-                  This idea has been merged into another idea. To comment or
-                  vote on this idea, please
-                  visit <a href="#" tabIndex="-1">Open links in Console</a>.
+                  It looks as if duplicates exist for this lead. <a href="#" tabIndex="-1">View Duplicates</a>.
                 </p>
               </div>
             </div>
+
+            <p>3 of 10 files selected</p>
           </div>
         </figure>
 
@@ -511,7 +507,7 @@ export default (
 
                 <td><code>$color-text-error</code></td>
 
-                <td><code>#c23934</code></td>
+                <td>#c23934</td>
               </tr>
             </tbody>
           </table>

@@ -104,8 +104,8 @@ export default (
           </li>
 
           <li>
-            <strong>Success:</strong> when a user completes an action, and it
-            is successfully executed.
+            <strong>Success:</strong> when a user completes/executes an
+            action.
           </li>
 
           <li>
@@ -429,8 +429,6 @@ export default (
                 </button>
 
                 <div className="slds-notify__content slds-grid">
-                  <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex" sprite="utility" symbol="error" />
-
                   <div className="slds-col slds-align-left">
                     <h2>
                       Opportunity &ldquo;Tesla CloudHub + Anypoint Connectors
@@ -642,7 +640,7 @@ export default (
         <p>
           The &ldquo;dismissible&rdquo; toast is preferred and should work for
           most cases. &ldquo;Dismissible&rdquo; means that the toast remains
-          visible until the user dismisses it with the “X” or duration has
+          visible until the user dismisses it with the “&times;” or duration has
           elapsed, whichever comes first.
         </p>
 

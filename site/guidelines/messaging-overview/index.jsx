@@ -30,7 +30,8 @@ export default (
 
       <p>
         <strong>
-          How do I determine the appropriate messaging for X when Y happens?
+          How do I determine the appropriate messaging
+          for <var>x</var> when <var>y</var> happens?
         </strong>
       </p>
 
@@ -92,8 +93,8 @@ export default (
               </th>
 
               <th scope="col">
-                <a href="/guidelines/messaging-components-illustration-and-text">
-                  Illustration &amp; Text
+                <a href="/guidelines/messaging-components-illustration-and-inline-text">
+                  Illustration &amp; Inline Text
                 </a>
               </th>
 
@@ -415,6 +416,52 @@ export default (
               <th scope="row">
                 <div className="slds-media">
                   <div className="slds-media__figure">
+                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="error" aria-hidden="true" />
+                  </div>
+
+                  <div className="slds-media__body">Error</div>
+                </div>
+              </th>
+
+              <td data-label="When to Use">
+                Something is erroneous.
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                <div className="slds-media">
+                  <div className="slds-media__figure">
+                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="info" aria-hidden="true" />
+                  </div>
+
+                  <div className="slds-media__body">Info</div>
+                </div>
+              </th>
+
+              <td data-label="When to Use">
+                Additional information is available.
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                <div className="slds-media">
+                  <div className="slds-media__figure">
+                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="offline" aria-hidden="true" />
+                  </div>
+
+                  <div className="slds-media__body">Offline</div>
+                </div>
+              </th>
+
+              <td data-label="When to Use">User is in offline mode.</td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                <div className="slds-media">
+                  <div className="slds-media__figure">
                     <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="success" aria-hidden="true" />
                   </div>
 
@@ -423,7 +470,7 @@ export default (
               </th>
 
               <td data-label="When to Use">
-                An action was completed successfully.
+                An action was completed.
               </td>
             </tr>
 
@@ -439,23 +486,7 @@ export default (
               </th>
 
               <td data-label="When to Use">
-                Something is either erroneous or is potentially problematic.
-              </td>
-            </tr>
-
-            <tr>
-              <th scope="row">
-                <div className="slds-media">
-                  <div className="slds-media__figure">
-                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="custom_apps" aria-hidden="true" />
-                  </div>
-
-                  <div className="slds-media__body">Wrench</div>
-                </div>
-              </th>
-
-              <td data-label="When to Use">
-                Maintenance-related message is shown.
+                Something is potentially problematic.
               </td>
             </tr>
 
@@ -479,29 +510,15 @@ export default (
               <th scope="row">
                 <div className="slds-media">
                   <div className="slds-media__figure">
-                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="offline" aria-hidden="true" />
+                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="custom_apps" aria-hidden="true" />
                   </div>
 
-                  <div className="slds-media__body">Offline</div>
-                </div>
-              </th>
-
-              <td data-label="When to Use">User is in offline mode.</td>
-            </tr>
-
-            <tr>
-              <th scope="row">
-                <div className="slds-media">
-                  <div className="slds-media__figure">
-                    <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="info" aria-hidden="true" />
-                  </div>
-
-                  <div className="slds-media__body">Info</div>
+                  <div className="slds-media__body">Wrench</div>
                 </div>
               </th>
 
               <td data-label="When to Use">
-                Additional information is available.
+                Maintenance-related message is shown.
               </td>
             </tr>
           </tbody>
@@ -516,7 +533,7 @@ export default (
         sale finally went through, but some of the numbers also changed. She
         goes into the application and updates this record so the data is
         properly tracked. <strong>What should be the application&rsquo;s
-        response to show that the record is saved successfully?</strong>
+        response to show that the record is saved?</strong>
       </p>
 
       <p>

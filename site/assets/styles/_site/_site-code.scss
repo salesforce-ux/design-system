@@ -9,8 +9,10 @@
 
 .site {
   code,
-  kbd {
+  kbd,
+  var {
     font: {
+      style: normal;
       weight: $font-weight-regular;
       family: Consolas, Monaco, 'Andale Mono', monospace, monospace;
     }

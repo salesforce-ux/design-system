@@ -63,14 +63,13 @@ export default (
         </figure>
 
         <p className="site-text-introduction">
-          <strong>Notice</strong> grabs the user&rsquo;s attention &amp; alert
-          them of system-related issues/updates.
+          <strong>Notice</strong> alerts users to system-related issues and
+          updates.
         </p>
 
         <p>
-          <strong>Note:</strong> Notices are part of system messaging and are
-          handled internally by Salesforce. Partners building apps that appear
-          within Salesforce shouldn&rsquo;t use prompts.
+          <strong>Note:</strong> If you’re a partner building an app that
+          appears within Salesforce, don’t use this component.
         </p>
 
         <h2 className="site-text-heading--large" id="flavor-usage">Usage</h2>
@@ -84,7 +83,7 @@ export default (
             <ul>
               <li><strong>Visual:</strong> Pronounced</li>
 
-              <li><strong>Voice &amp; Tone:</strong> Imperative</li>
+              <li><strong>Voice &amp; Tone:</strong> (Varies per circumstance)</li>
 
               <li><strong>Motion:</strong> Dramatic</li>
 
@@ -103,8 +102,8 @@ export default (
         </p>
 
         <p>
-          Notices do not have a close (x) button. To dismiss a notice, the
-          user needs to hit the action button inside of the notice.
+          Notices do not have a close (&times;) button. To dismiss a notice,
+          the user needs to hit the action button inside of the notice.
         </p>
 
         <p>A notice can show one of the following states:</p>
@@ -144,7 +143,8 @@ export default (
         <ul>
           <li>
             <strong>Do</strong> use notices sparingly. They should not be your
-            first choice to display system messaging.
+            first choice to display system messaging because they interrupt
+            the user and block everything else on the page.
           </li>
 
           <li>
@@ -160,7 +160,7 @@ export default (
           <li>
             <strong>Do not</strong> use notices as a confirmation for user
             action, e.g. warning before user deletes an item. Use
-            a <a href="/guidelines/messaging-components-modals">modal</a> instead
+            a <a href="/guidelines/messaging-components-modals">standard modal</a> instead
             for this.
           </li>
 

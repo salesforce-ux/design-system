@@ -15,7 +15,7 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import SvgIcon from 'app_modules/ui/svg-icon';
 
 export default (
-  <PageBody anchorTitle="Illustration & Text" contentClassName="site-guidelines slds-grid slds-wrap">
+  <PageBody anchorTitle="Illustration & Inline Text" contentClassName="site-guidelines slds-grid slds-wrap">
     <StickyNav>
       <div className="site-menu--jump-links">
         <h3 className="site-text-heading--label">Guidelines</h3>
@@ -63,7 +63,7 @@ export default (
         </figure>
 
         <p className="site-text-introduction">
-          <strong>Illustration &amp; Text</strong> work in tandem to
+          <strong>Illustration &amp; Inline Text</strong> work in tandem to
           communicate a state in a more friendly way.
         </p>
 
@@ -89,7 +89,7 @@ export default (
           </div>
         </div>
 
-        <p>Illustration &#38; text is used to show one of these states:</p>
+        <p>Illustration &#38; inline text is used to show one of these states:</p>
 
         <ul>
           <li>
@@ -109,7 +109,7 @@ export default (
         </ul>
 
         <h2 className="site-text-heading--large" id="flavor-in-context">
-          Illustration &amp; Text in Context
+          Illustration &amp; Inline Text in Context
         </h2>
 
         <figure className="slds-grid slds-wrap slds-grid--pull-padded">
@@ -332,7 +332,7 @@ export default (
                 The data you’re trying to access isn’t available. It might be
                 due to another user deleting it or a system error. If you know
                 the data isn’t deleted and you can’t get to it, please visit
-                our <a href="#" tabIndex="-1">support page</a>.
+                our <a href="#" tabIndex="-1">support&nbsp;page</a>.
               </p>
             </div>
           </figure>
@@ -359,9 +359,9 @@ export default (
                 <img src="/assets/images/messaging/illustration-system-failure.png" alt="" width="180" height="323" />
               </figure>
 
-              <h4>Oops!</h4>
+              <h4>Can’t connect!</h4>
 
-              <p>Salesforce failed to load. Please try again later.</p>
+              <p>The page didn’t load. Please try again later.</p>
             </div>
           </figure>
         </figure>

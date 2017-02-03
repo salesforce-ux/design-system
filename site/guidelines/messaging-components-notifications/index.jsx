@@ -46,10 +46,6 @@ export default (
           </li>
 
           <li className="slds-list__name site-states-parent">
-            <a href="#flavor-ui-text">UI Text</a>
-          </li>
-
-          <li className="slds-list__name site-states-parent">
             <a href="#flavor-specs">Recommended Specs</a>
           </li>
         </ul>
@@ -550,12 +546,6 @@ export default (
           may receive OS-level notification on their phone when they are not
           in the application.
         </p>
-
-        <h2 className="site-text-heading--large" id="flavor-ui-text">
-          UI Text
-        </h2>
-
-        <p>TBD</p>
 
         <h2 className="site-text-heading--large" id="flavor-specs">
           Recommended Specs

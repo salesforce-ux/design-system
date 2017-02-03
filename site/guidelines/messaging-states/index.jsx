@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
+import Heading from 'app_modules/site/components/page/heading';
 
 export default (
   <PageBody anchorTitle="Messaging States" contentClassName="site-guidelines slds-grid slds-wrap">
@@ -61,7 +62,7 @@ export default (
         </p>
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="empty">Empty</h2>
+          <Heading type="h2" id="empty" className="site-text-heading--large">Empty</Heading>
 
           <p>Empty state can appear in these scenarios:</p>
 
@@ -97,8 +98,8 @@ export default (
             If&hellip; a page has no item to show,
             <br/>
             Then&hellip; load the page
-            with <a href="/guidelines/messaging-components-illustration-and-text">illustration
-            &amp; text</a>.
+            with <a href="/guidelines/messaging-components-illustration-and-inline-text">illustration
+            &amp; inline text</a>.
           </p>
 
           <figure className="slds-m-vertical--xx-large">
@@ -109,7 +110,7 @@ export default (
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="error">Error</h2>
+          <Heading type="h2" id="error" className="site-text-heading--large">Error</Heading>
 
           <p>Error state can appear in these scenarios:</p>
 
@@ -266,8 +267,8 @@ export default (
             tries to open it,
             <br/>
             Then&hellip; load the page
-            with <a href="/guidelines/messaging-components-illustration-and-text">illustration
-            &amp; text</a>.
+            with <a href="/guidelines/messaging-components-illustration-and-inline-text">illustration
+            &amp; inline text</a>.
           </p>
 
           <figure className="slds-m-vertical--xx-large">
@@ -292,9 +293,7 @@ export default (
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="informational">
-            Informational
-          </h2>
+          <Heading type="h2" id="informational" className="site-text-heading--large">Informational</Heading>
 
           <p>Informational state can appear in these scenarios:</p>
 
@@ -394,8 +393,8 @@ export default (
             If&hellip; the system is unavailable,
             <br/>
             Then&hellip; load the page
-            with <a href="/guidelines/messaging-components-illustration-and-text">illustration
-            &amp; text</a>.
+            with <a href="/guidelines/messaging-components-illustration-and-inline-text">illustration
+            &amp; inline text</a>.
           </p>
 
           <figure className="slds-m-vertical--xx-large">
@@ -435,7 +434,7 @@ export default (
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="offline">Offline</h2>
+          <Heading type="h2" id="offline" className="site-text-heading--large">Offline</Heading>
 
           <p>
             Offline state appears when the system detects that the user
@@ -458,7 +457,7 @@ export default (
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="success">Success</h2>
+          <Heading type="h2" id="success" className="site-text-heading--large">Success</Heading>
 
           <p>Success state can appear in these scenarios:</p>
 
@@ -536,9 +535,7 @@ export default (
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="transient">
-            Transient
-          </h2>
+          <Heading type="h2" id="transient" className="site-text-heading--large">Transient</Heading>
 
           <p>
             Transient state appears when the system is processing an action,
@@ -556,12 +553,23 @@ export default (
           <figure className="slds-m-vertical--xx-large">
             <img src="/assets/images/messaging/state-success-automatic.png" alt="" width="138" height="6" />
           </figure>
+
+          <p>
+            If… the system is processing file upload(s),
+            <br />
+            Then… show a modal with progress bar and remove it when the system
+            is done processing.
+          </p>
+
+          <figure className="slds-m-vertical--xx-large">
+            <img src="/assets/images/messaging/state-transient-progress.png" alt="" width="656" height="129" />
+          </figure>
         </section>
 
         <hr className="slds-m-vertical--xx-large" />
 
         <section className="slds-p-vertical--x-large">
-          <h2 className="site-text-heading--large" id="warning">Warning</h2>
+          <Heading type="h2" id="warning" className="site-text-heading--large">Warning</Heading>
 
           <p>Warning state can appear in these scenarios:</p>
 
@@ -666,7 +674,8 @@ export default (
 
           <p>
             If&hellip; a user is about to commit an action that is
-            destructive, has major impacts, or abandons incomplete action,
+            destructive, completes an action that has major impacts, or
+            abandons incomplete action,
             <br/>
             Then&hellip; call
             a <a href="/guidelines/messaging-components-modals">modal</a> to

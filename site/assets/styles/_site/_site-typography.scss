@@ -191,8 +191,10 @@
 
   .site-list--reset {
     // scss-lint:disable ImportantRule
+    /* stylelint-disable declaration-no-important */
     // Should this be a utility?
     margin-left: 0 !important;
     list-style: none !important;
+    /* stylelint-enable declaration-no-important */
   }
 }

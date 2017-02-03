@@ -150,7 +150,7 @@
  * @restrict .slds-form-element
  * @modifier
  */
-.slds-has-error .slds-radio [type="radio"] {
+.slds-has-error .slds-radio [type='radio'] {
 
   + .slds-radio_faux,
   + .slds-radio--faux,
@@ -176,11 +176,11 @@
   }
 }
 
-.slds-form-element .slds-radio [type="radio"] + .slds-radio_faux,
-.slds-form-element .slds-radio [type="radio"] + .slds-radio--faux,
-.slds-form-element .slds-radio [type="radio"] ~ .slds-radio_faux,
-.slds-form-element .slds-radio [type="radio"] ~ .slds-radio--faux,
-.slds-radio [type=radio] + .slds-radio__label .slds-radio_faux,
-.slds-radio [type=radio] + .slds-radio__label .slds-radio--faux {
+.slds-form-element .slds-radio [type='radio'] + .slds-radio_faux,
+.slds-form-element .slds-radio [type='radio'] + .slds-radio--faux,
+.slds-form-element .slds-radio [type='radio'] ~ .slds-radio_faux,
+.slds-form-element .slds-radio [type='radio'] ~ .slds-radio--faux,
+.slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux,
+.slds-radio [type='radio'] + .slds-radio__label .slds-radio--faux {
   margin-right: $spacing-x-small;
 }

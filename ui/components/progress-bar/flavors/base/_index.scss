@@ -103,7 +103,7 @@
 }
 
 /**
- * Fill up bar inside of the progress bar
+ * Fill up blue bar inside of the progress bar
  *
  * @selector .slds-progress-bar__value
  * @restrict .slds-progress-bar span
@@ -114,3 +114,4 @@
   background: $progress-bar-color-background-fill;
   height: 100%;
 }
+

@@ -33,5 +33,23 @@ export let states = [
     label: 'Default',
     element:
       <ProgressBar className="slds-progress-bar--large slds-progress-bar--circular" value="25" />
-  }
+  },
+  {
+    id: 'x-small',
+    label: 'X-small',
+    element:
+      <ProgressBar className="slds-progress-bar--x-small slds-progress-bar--circular" value="25" />
+  },
+  {
+    id: 'small',
+    label: 'Small',
+    element:
+      <ProgressBar className="slds-progress-bar--small slds-progress-bar--circular" value="25" />
+  },
+  {
+    id: 'medium',
+    label: 'Medium',
+    element:
+      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="25" />
+  },
 ];

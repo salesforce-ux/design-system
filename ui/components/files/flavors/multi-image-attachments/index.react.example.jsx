@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import { Image } from 'ui/components/images/flavors/figure/index.react.example';
+import { Image } from 'ui/components/files/flavors/image-attachment/index.react.example';
 
 //////////////////////////////////////////////
 // Export

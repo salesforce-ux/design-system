@@ -71,29 +71,43 @@ export let Image = props =>
 
 export let states = [
   {
-    id: 'figure-card',
-    label: 'Card',
+    id: 'attachment-file-with-image',
+    label: 'File with image',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className="slds-image--card"
           cropClass="slds-image__crop--16-by-9"
           titleClass="slds-image__title--card"
+          symbol="image"
           image />
       </div>
   },
   {
-    id: 'figure-overlay',
-    label: 'Overlay',
+    id: 'attachment-file-no-image',
+    label: 'File with no image',
     element:
       <div className="demo-only" style={{ width: '20rem' }}>
         <Image
           className="slds-image--card"
           cropClass="slds-image__crop--16-by-9"
-          titleClass="slds-image__title--overlay slds-align--absolute-center slds-text-heading--large"
-          title="22+"
-          image
-          overlay />
+          titleClass="slds-image__title--card"
+          symbol="pdf"
+          title="Proposal.pdf" />
+      </div>
+  },
+  {
+    id: 'attachment-file-with-actions',
+    label: 'File with actions',
+    element:
+      <div className="demo-only" style={{ width: '20rem' }}>
+        <Image
+          className="slds-image--card"
+          cropClass="slds-image__crop--16-by-9"
+          titleClass="slds-image__title--card"
+          symbol="image"
+          actions
+          image />
       </div>
   }
 ];

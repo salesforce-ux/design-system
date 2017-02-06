@@ -140,7 +140,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+        <Modal className="slds-modal--large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
             <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>

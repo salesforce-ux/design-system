@@ -10,16 +10,35 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
+import classNames from 'classnames';
 
-export const intro = (
-  <p className="site-text-introduction">
-    A panel provides contextual and detailed information based on an click or hover interaction of data by a user.
-  </p>
-);
+///////////////////////////////////////////
+// Partial(s)
+///////////////////////////////////////////
+
+export let AttachmentLink = props =>
+  <a href="javascript:void(0);" className="slds-media slds-box slds-grow slds-text-link--reset">
+    <div className="slds-media__figure slds-medium-show">
+      <div className="slds-image slds-size--small">
+        <div className="slds-image__crop slds-image__crop--16-by-9">
+          <img src="/assets/images/placeholder-img@16x9.jpg" alt={ props.title || 'Image Title' } />
+        </div>
+      </div>
+    </div>
+    <div className="slds-media__body">
+      <h3 className="slds-text-heading--small">{ props.articleTitle || 'Article Title' }</h3>
+      <p>{ props.articleDescription || 'Article Description' }</p>
+      <span className="slds-text-body--small">{ props.articleTitle || 'http://www.linkurl.com' }</span>
+    </div>
+  </a>;
+
+//////////////////////////////////////////////
+// Export
+//////////////////////////////////////////////
 
 export default (
-  <ComponentDocs>
-  </ComponentDocs>
+  <AttachmentLink
+    articleTitle="Maui By Air The Best Way Around The Island"
+    articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  />
 );

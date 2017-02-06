@@ -7,60 +7,13 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-
-.slds-avatar {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: $border-radius-medium;
-  line-height: $line-height-reset;
-  color: $color-text-inverse;
-
-  &:hover,
-  &:focus:hover {
-    color: currentColor;
-  }
-
-  &_x-small,
-  &--x-small {
-    @include square($square-icon-x-small-boundary);
-    font-size: $font-size-heading-xx-small;
-  }
-
-  &_small,
-  &--small {
-    @include square($square-icon-small-boundary);
-    font-size: $font-size-heading-xx-small;
-  }
-
-  &_medium,
-  &--medium {
-    @include square($square-icon-medium-boundary);
-    font-size: $font-size-heading-small;
-  }
-
-  &_large,
-  &--large {
-    @include square($square-icon-large-boundary);
-    font-size: $font-size-heading-medium;
-    font-weight: $font-weight-light;
-    line-height: $line-height-heading;
-  }
-
-  &_circle,
-  &--circle {
-    border-radius: $border-radius-circle;
-  }
-
-  // New in 2.0.0
-  &_empty,
-  &--empty {
-    border: $border-width-thin dashed $color-border;
-  }
-
-  &__initials {
-    @include absolute-center;
-    height: 100%;
-  }
-}
+/**
+ * The List builder relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.
+ *
+ * @summary The List builder is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.
+ *
+ * @base
+ * @name list-builder
+ * @selector .slds-list-builder
+ * @support dev-ready
+ */

@@ -9,6 +9,14 @@
 
 
 /**
+ * Buttons in a group are surrounded by a parent with the `.slds-button-group` class, unless they are in a list (in which case they use `.slds-button-group-list`. If the last button is an icon, like the down triangle, use the `.slds-button--icon-border-filled` class when accompanying a `.slds-button--neutral` group.
+ *
+ * If the last button in a group needs to be wrapped in another element (for example, a drop-down trigger), add the `.slds-button--last` class to the wrapper element to create proper spacing and borders.
+ *
+ * #### Accessibility
+ *
+ * Unless you are using the list version, include the Aria role `role="group"` so that assistive technologies are alerted to the grouping.
+ *
  * @summary Button groups are used to bunch together buttons with similar actions
  *
  * @name button-groups
@@ -19,7 +27,6 @@
  * @role button
  * @support dev-ready
  * @layout responsive
- *
  */
 
 /**
@@ -37,8 +44,8 @@
   .slds-button {
     border-radius: 0;
 
-    &:focus { // @TODO: not sure this is doing anything anymore?
-      z-index: $z-index-default;
+    &:focus {
+      z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons
     }
   }
 }
@@ -56,7 +63,13 @@
   border-radius: $border-radius-medium 0 0 $border-radius-medium;
 }
 
-// These selectors must remain in long hand in order to zero out borders that we don't want on last-child or :only-child wrapped buttons
+/**
+ * These selectors must remain in long hand in order to zero out borders that
+ * we don't want on last-child or :only-child wrapped buttons
+ *
+ * @selector .slds-button--last
+ * @restrict .slds-button-group button
+ */
 .slds-button-group .slds-button:last-child,
 .slds-button-group-list li:last-child .slds-button,
 .slds-button-group .slds-button_last .slds-button,

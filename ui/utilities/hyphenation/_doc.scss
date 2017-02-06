@@ -9,27 +9,12 @@
 
 
 /**
- * @summary Makes links and buttons appear as regular text
+ * This will allow the text to break, or hyphenate, depending on the browser's capabilities. Chrome currently doesn't show the hyphenation, but the bug is currently marked fixed, so it should soon.
  *
- * @name text-link-reset
- * @selector .slds-text-link--reset
- * @variant
+ * @summary The hyphenation class should be placed on text that might be served in narrow width containers and is not truncated.
+ *
+ * @utility
+ * @name hyphenation
+ * @selector .slds-hyphenate
+ * @support dev-ready
  */
-.slds-text-link_reset,
-.slds-text-link--reset {
-  cursor: pointer;
-  line-height: inherit;
-  font-size: inherit;
-
-  &:active {
-    outline: none;
-  }
-
-  &,
-  &:active,
-  &:focus,
-  &:hover {
-    color: inherit;
-    text-decoration: inherit;
-  }
-}

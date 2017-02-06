@@ -10,11 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
 
 export default (
-<ComponentDocs>
-  <p className="site-text-introduction">Use border utility classes to add borders to elements.</p>
-</ComponentDocs>
+  <span className="slds-text-link--faux">Span with faux link interactions</span>
 );

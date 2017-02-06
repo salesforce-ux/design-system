@@ -36,6 +36,8 @@ body {
   text-align: center;
 }
 
+.demo-only--height
+
 .demo-only--top {
   padding-top: 9rem;
 }
@@ -110,6 +112,9 @@ body {
     margin-bottom: 25px;
   }
 }
+
+// Alignment Utility
+.demo-only--alignment > div { height: 9.375rem; }
 
 // For spacing demo
 .demo-only--spacing {

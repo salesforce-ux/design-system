@@ -7,29 +7,26 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 /**
- * @summary Makes links and buttons appear as regular text
+ * Faux links are used on areas that can't be wrapped in an `a` element, but need to appear to be a link with an underline on hover. An example is in the page header for Object home. The `H1` and `button` that sit next to each other have the `.slds-text-link--faux` class on their parent element.
  *
- * @name text-link-reset
- * @selector .slds-text-link--reset
+ * @summary Creates a faux link with hover interactions
+ *
+ * @name faux-link
+ * @selector .slds-text-link--faux
+ * @notes This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
  * @variant
  */
-.slds-text-link_reset,
-.slds-text-link--reset {
+.slds-text-link--faux,
+.slds-type-focus {
+  border-bottom: $border-width-thin solid transparent;
+  border-radius: 0;
+  color: currentColor;
   cursor: pointer;
-  line-height: inherit;
-  font-size: inherit;
 
-  &:active {
-    outline: none;
-  }
-
-  &,
-  &:active,
-  &:focus,
-  &:hover {
-    color: inherit;
-    text-decoration: inherit;
+  &:hover,
+  &:focus {
+    color: currentColor;
+    border-bottom: $border-width-thin solid currentColor;
   }
 }

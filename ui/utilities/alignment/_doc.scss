@@ -9,27 +9,10 @@
 
 
 /**
- * @summary Makes links and buttons appear as regular text
+ * @summary Alignment utilities will assist with general alignment problems
  *
- * @name text-link-reset
- * @selector .slds-text-link--reset
- * @variant
+ * @utility
+ * @name alignment
+ * @selector [class*='.slds-align--']
+ * @support dev-ready
  */
-.slds-text-link_reset,
-.slds-text-link--reset {
-  cursor: pointer;
-  line-height: inherit;
-  font-size: inherit;
-
-  &:active {
-    outline: none;
-  }
-
-  &,
-  &:active,
-  &:focus,
-  &:hover {
-    color: inherit;
-    text-decoration: inherit;
-  }
-}

@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "2.3.0-dev",
+  "version": "2.3.0-alpha.5",
   "dependencies": {
     "fsevents": {
       "version": "1.0.17",

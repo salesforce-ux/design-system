@@ -55,7 +55,8 @@ let Table = props =>
 
 export let Th = props => {
 
-  const { columnName, ...rest } = props;
+  const { columnName, focusable, ...rest } = props;
+  const tabIndex = focusable ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
   let sortDirection;
   if (props['aria-sort']) {
@@ -64,7 +65,7 @@ export let Th = props => {
 
   return (
     <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ tabIndex }>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
         <div className="slds-icon_container">
@@ -74,7 +75,7 @@ export let Th = props => {
       </a>
       <div className="slds-resizable">
         <label htmlFor={uniqueId} className="slds-assistive-text">{ columnName || 'Column Name' } column width</label>
-        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ !props.focusable ? '-1' : '0' } />
+        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ tabIndex } />
         <span className="slds-resizable__handle">
           <span className="slds-resizable__divider"></span>
         </span>

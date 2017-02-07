@@ -35,14 +35,17 @@
   'alignment/flavors/absolute-center/index',
 
   // Objects
+  'media-objects/doc',
   'media-objects/flavors/base/index',
   'media-objects/flavors/responsive/index',
 
   // Spacing
+  'spacing/doc',
   'spacing/flavors/margin/index',
   'spacing/flavors/padding/index',
 
   // Floats
+  'floats/doc',
   'floats/flavors/float-left/index',
   'floats/flavors/float-right/index',
   'floats/flavors/float-none/index',
@@ -53,7 +56,7 @@
   'interactions/flavors/text-link-reset/index',
   'interactions/flavors/text-link/index',
   'interactions/flavors/blur-focus/index',
-  'interactions/flavors/faux-links/index',
+  'interactions/flavors/faux-link/index',
 
   // Lists
   'lists/index',
@@ -73,18 +76,21 @@
   'borders/flavors/border-top/index',
 
   // Truncation
+  'truncation/doc',
   'truncation/flavors/single-line/index',
   'truncation/flavors/max-width/index',
 
   // Hyphenation
-  'hyphenation/doc'
+  'hyphenation/doc',
   'hyphenation/flavors/base/index',
 
   // Theme
+  'themes/doc',
   'themes/flavors/box/index',
   'themes/flavors/color/index',
 
   // Text
+  'text/doc',
   'text/flavors/body/index',
   'text/flavors/heading/index',
   'text/flavors/title/index',
@@ -96,17 +102,24 @@
   'text/flavors/section-title-dividers/index',
 
   // Interactions
+  'scrollable/doc',
   'scrollable/flavors/base/index',
   'scrollable/flavors/vertical/index',
   'scrollable/flavors/horizontal/index',
 
   // Sizing
+  'sizing/doc',
   'sizing/flavors/widths/index',
 
   // Position
-  'position/index',
+  'position/doc',
+  'position/flavors/absolute/index',
+  'position/flavors/fixed/index',
+  'position/flavors/relative/index',
+  'position/flavors/static/index',
 
   // Visibility
+  'visibility/doc',
   'visibility/flavors/hide-show/index',
   'visibility/flavors/hidden-visible/index',
   'visibility/flavors/transition-hide-show/index',

@@ -8,22 +8,17 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
-@include mq-medium-max {
-
-  /**
-   * @summary .slds-media__figure and .slds-media__body stack on smaller screens
-   *
-   * @selector .slds-media--responsive
-   * @restrict .slds-media
-   * @modifer
-   */
-  .slds-media_responsive,
-  .slds-media--responsive {
-    display: block;
-
-    .slds-media__figure {
-      margin: 0 0 $spacing-small;
-    }
-  }
-}
+/**
+ * To float an element on the left, add the `.slds-float--left` class to the element. To float it on the right, add the `.slds-float--right` class.
+ *
+ * Note: The floated element must be first in the document flow, even if it renders on the right.
+ *
+ * If you want the parent of the floated element to contain the floats, add the `.slds-clearfix` class to the parent.
+ *
+ * @summary Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.
+ *
+ * @utility
+ * @name floats
+ * @selector [class*='slds-float--']
+ * @support dev-ready
+ */

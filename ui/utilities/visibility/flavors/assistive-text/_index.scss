@@ -8,7 +8,13 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+/**
+ * @summary Hides an element yet enables a screen reader to read the element that is hidden
+ *
+ * @selector .slds-assistive-text
+ * @notes This should be used over other methods when you don't want to hide from screenreaders
+ * @modifier
+ */
 .slds-assistive-text {
   // scss-lint:disable ImportantRule
   position: absolute !important;
@@ -21,6 +27,13 @@
   clip: rect(0 0 0 0) !important;
 }
 
+/**
+ * @summary Enables `.slds-assistive-text` to become visible on focus
+ *
+ * @selector .slds-assistive-text--focus
+ * @restrict .slds-assistive-text
+ * @modifier
+ */
 .slds-assistive-text_focus,
 .slds-assistive-text--focus {
   // scss-lint:disable ImportantRule

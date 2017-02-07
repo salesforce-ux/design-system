@@ -17,6 +17,13 @@
     border-top: $border-width-thin solid $color-border;
   }
 
+  /**
+   * @summary Adds 1px border divider above an HTML element
+   *
+   * @selector .slds-has-divider--top
+   * @restrict li
+   * @modifier
+   */
   &_top,
   &--top {
     @include border(top);
@@ -28,11 +35,25 @@
     }
   }
 
+  /**
+   * @summary Adds dot separator to the right of an HTML element
+   *
+   * @selector .slds-has-divider--right
+   * @restrict li
+   * @modifier
+   */
   &_right,
   &--right {
     @include dot-separator(right);
   }
 
+  /**
+   * @summary Adds 1px border divider below an HTML element
+   *
+   * @selector .slds-has-divider--bottom
+   * @restrict li
+   * @modifier
+   */
   &_bottom,
   &--bottom {
     @include border(bottom);
@@ -44,6 +65,13 @@
     }
   }
 
+  /**
+   * @summary Adds dot separator to the left of an HTML element
+   *
+   * @selector .slds-has-divider--left
+   * @restrict li
+   * @modifier
+   */
   &_left,
   &--left {
     @include dot-separator(left);

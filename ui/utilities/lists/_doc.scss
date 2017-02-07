@@ -9,37 +9,16 @@
 
 
 /**
- * @summary Adds dot separators to the left of horizontal list items
+ * This CSS framework is built to create enterprise applications, so lists rarely need their default styling. All lists start by having their defaults reset to `margin: 0` and `padding: 0` with no list markers. When using a screen reader, a list is announced along with the number of items it contains.
  *
- * @selector .slds-has-dividers--left
- * @restrict ul, ol
- * @modifier
- */
-.slds-has-dividers_left > .slds-list__item,
-.slds-has-dividers--left > .slds-list__item,
-.slds-has-dividers_left > .slds-item,
-.slds-has-dividers--left > .slds-item {
-  @include dot-separator(left);
-}
-
-/**
- * @summary Adds dot separators to the right of horizontal list items
+ * When creating a basic page rather than application style, surround the group of headings, paragraphs, and lists with the `.slds-text-longform` class to retain their default spacing.
  *
- * @selector .slds-has-dividers--right
- * @restrict ul, ol
- * @modifier
+ * By default, a list is vertical, but you can change it to horizontal using these utility classes.
+ *
+ * @summary A list groups related content together.
+ *
+ * @utility
+ * @name lists
+ * @selector [class*='slds-list']
+ * @support dev-ready
  */
-.slds-has-dividers_right > .slds-list__item,
-.slds-has-dividers--right > .slds-list__item,
-.slds-has-dividers_right > .slds-item,
-.slds-has-dividers--right > .slds-item {
-  @include dot-separator(right);
-}
-
-// Deprecate in 0.15.0
-@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
-  .slds-list_horizontal.slds-has-dividers > .slds-list__item,
-  .slds-list--horizontal.slds-has-dividers > .slds-list__item {
-    @include dot-separator;
-  }
-}

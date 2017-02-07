@@ -7,6 +7,14 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+/**
+ * @summary Marks a vertical list with .5rem spacing around
+ *
+ * @selector .slds-list--vertical-space
+ * @restrict ul
+ * @modifier
+ */
 .slds-list_vertical-space,
 .slds-list--vertical-space {
 
@@ -16,6 +24,13 @@
   }
 }
 
+/**
+ * @summary Marks a vertical list with 1rem spacing around
+ *
+ * @selector .slds-list--vertical-space-medium
+ * @restrict ul
+ * @modifier
+ */
 .slds-list_vertical-space-medium,
 .slds-list--vertical-space-medium {
 
@@ -25,14 +40,36 @@
   }
 }
 
+/**
+ * @summary Provides styles for a nested lists
+ *
+ * @selector .slds-is-nested
+ * @restrict ul
+ * @modifier
+ */
 .slds-is-nested {
   margin-left: $spacing-medium;
 }
 
+/**
+ * @summary Creates an unordered list with markers
+ *
+ * @selector .slds-list--dotted
+ * @restrict ul
+ * @modifier
+ */
 .slds-list_dotted,
 .slds-list--dotted {
   @include list-has-bullets;
 }
+
+/**
+ * @summary Creates an ordered list with decimals
+ *
+ * @selector .slds-list--ordered
+ * @restrict ul
+ * @modifier
+ */
 .slds-list_ordered,
 .slds-list--ordered {
   @include list-has-numbers;

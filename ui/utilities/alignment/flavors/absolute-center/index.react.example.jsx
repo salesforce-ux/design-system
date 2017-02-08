@@ -18,4 +18,4 @@ export default (
       This content will be positioned in the absolute center of its container
     </div>
   </div>
-)
+);

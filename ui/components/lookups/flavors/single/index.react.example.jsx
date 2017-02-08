@@ -57,16 +57,17 @@ let LookupSearchInput = props =>
     <div className={classNames('slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grow' : null)}>
       <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
       <input
-        id={ props.id }
-        className={classNames('slds-lookup__search-input', props.polymorphic ? 'slds-input--bare' : 'slds-input')}
-        type="search"
-        placeholder={ props.placeholder || 'Search Accounts' }
-        defaultValue={ props.typeahead ? 'salesforce' : null }
-        aria-owns={ props.listId }
-        role="combobox"
         aria-activedescendant=""
-        aria-expanded={ props.showLookupDropdown ? 'true' : 'false' }
-        aria-autocomplete="list" />
+        aria-autocomplete="list"
+        aria-controls={ props.listId }
+        autoComplete="off"
+        className={classNames('slds-lookup__search-input', props.polymorphic ? 'slds-input--bare' : 'slds-input')}
+        defaultValue={ props.typeahead ? 'salesforce' : null }
+        id={ props.id }
+        placeholder={ props.placeholder || 'Search Accounts' }
+        role="textbox"
+        type="search"
+      />
     </div>
   </div>;
 
@@ -177,12 +178,18 @@ export let Lookup = props => {
   const uniqueId = _.uniqueId('lookup-');
   const uniqueInputId = _.uniqueId('lookup-input-');
   const uniqueListId = _.uniqueId('lookup-listbox-');
+  const ariaExpanded = props.showLookupDropdown ? 'true' : 'false';
 
   return (
-    <div className={classNames('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null, props.selection ? 'slds-has-selection' : null)}>
+    <div
+      aria-expanded={ props.selection ? null : ariaExpanded }
+      aria-haspopup={ props.selection ? null : 'listbox' }
+      className={classNames('slds-form-element slds-lookup', props.className, props.showLookupDropdown ? 'slds-is-open' : null, props.selection ? 'slds-has-selection' : null)}
+      role={ props.selection ? null : 'combobox' }
+    >
       { !props.selection ?
-      <label className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueInputId }>{ props.label || 'Account Name' }</label> :
-      <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
+        <label className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)} htmlFor={ uniqueInputId }>{ props.label || 'Account Name' }</label> :
+        <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{ props.label || 'Account Name' }</span>
       }
       { !props.selection ?
         <LookupSearchInput
@@ -191,7 +198,6 @@ export let Lookup = props => {
           placeholder={ props.placeholder }
           typeahead={ props.typeahead }
           polymorphic={ props.polymorphic }
-          showLookupDropdown={ props.showLookupDropdown }
           showEntityDropdown={ props.showEntityDropdown } /> :
         <LookupSelection />
       }

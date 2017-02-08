@@ -24,7 +24,7 @@
  *
  * @name base
  * @selector .slds-radio--button-group
- * @restrict span
+ * @restrict .slds-form-element div
  * @required
  * @variant
  */
@@ -37,7 +37,7 @@
 
 /**
  * @selector .slds-radio--button
- * @restrict .slds-form-element span
+ * @restrict .slds-radio--button-group span
  */
 .slds-radio_button,
 .slds-radio--button {
@@ -46,32 +46,21 @@
   border-radius: 0;
   background-clip: padding-box;
 
+  /**
+   * Create styled button when adjacent to the input[radio] element
+   *
+   * @selector .slds-radio--faux
+   * @restrict .slds-radio--button span
+   */
   .slds-radio_faux,
   .slds-radio--faux {
     @include button;
-    position: relative;
-    background-color: $color-background-button-default;
-    transition: border $duration-quickly linear, background-color $duration-quickly linear;
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background-color: $color-background-button-default-hover;
-    }
   }
 
-  .slds-radio_button__label .slds-radio_faux,
-  .slds-radio--button__label .slds-radio--faux,
-  [type="radio"]:checked + .slds-radio--button__label .slds-radio--faux {
-    background-color: transparent;
-  }
-
-  // Apply left borders to anything radio button
-  // after the first button
+  // Apply left borders to anything radio button after the first button
   + .slds-radio_button,
   + .slds-radio--button {
     border-left: $border-width-thin solid $color-border;
-    border-radius: 0;
     margin: 0;
   }
 
@@ -105,6 +94,7 @@
     position: absolute;
 
     // Checked State with Interactions
+    // +/~ slds-radio--faux selector are for legacy support
     &:checked + .slds-radio_faux,
     &:checked + .slds-radio--faux,
     &:checked ~ .slds-radio_faux,
@@ -122,6 +112,7 @@
     }
 
     // Focus State
+    // +/~ slds-radio--faux selector are for legacy support
     &:focus + .slds-radio_faux,
     &:focus + .slds-radio--faux,
     &:focus ~ .slds-radio_faux,
@@ -133,6 +124,7 @@
     }
 
     // Disabled State
+    // +/~ slds-radio--faux selector are for legacy support
     &[disabled] + .slds-radio_faux,
     &[disabled] + .slds-radio--faux,
     &[disabled] ~ .slds-radio_faux,
@@ -141,7 +133,26 @@
     &[disabled] + .slds-radio--button__label {
       background-color: $color-background-button-default-disabled;
       color: $color-text-button-default-disabled;
-      cursor: default;
+
+      &:hover,
+      &:focus {
+        cursor: default;
+      }
     }
+  }
+}
+
+/**
+ * Label element inside of a radio button
+ *
+ * @selector .slds-radio--button__label
+ * @restrict .slds-radio--button label
+ */
+.slds-radio--button__label {
+  background-color: $color-background-button-default;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 }

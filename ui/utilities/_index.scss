@@ -15,6 +15,8 @@
 
 @import
   // Grid
+  'grid/doc',
+  'grid/flavors/wrapper/index',
   'grid/flavors/automatic-sizing/index',
   'grid/flavors/horizontal-alignment-center/index',
   'grid/flavors/horizontal-alignment-space/index',
@@ -26,7 +28,6 @@
   'grid/flavors/vertical-alignment-item/index',
   'grid/flavors/vertical-stretch/index',
   'grid/flavors/alignment-item-bump/index',
-  'grid/flavors/container-frame/index',
   'grid/flavors/containers/index',
   'grid/flavors/overflow/index',
 

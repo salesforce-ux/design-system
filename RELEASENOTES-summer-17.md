@@ -59,3 +59,5 @@ The following features are being removed in this release:
 The following tokens have been add/removed/deprecated in this release:
 
 - `TASK_2` was renamed into `TASK2`
+- Standard icon set: Added `ENTITLEMENT`
+- Standard icon set: Added `LIVE_CHAT`

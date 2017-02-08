@@ -7,7 +7,8 @@ if (globals.displaySearch) {
   // See https://github.com/algolia/autocomplete.js#options
   // for full list of options.
   const autocompleteOptions = {
-    // debug: true
+    hint: false
+    // , debug: true
   };
 
   const d = document;

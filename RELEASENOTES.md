@@ -31,7 +31,7 @@ The following components are now available:
 
 - Added Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
 - Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
-- Added Button Group List - [Button Group List](components/button-groups/#flavor-list) - the new recommended way to mark up button groups.
+- Added Button Group List - [Button Group List](/components/button-groups/#flavor-list) - the new recommended way to mark up button groups.
 - Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
 - Added Global Header Notifications - [Global Header Notifications](/components/global-header#flavor-notifications)
 - Added Popover Header - [Popover Header](/components/popovers/#flavor-base-popover-header)

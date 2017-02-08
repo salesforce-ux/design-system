@@ -270,3 +270,7 @@ props:
     value: '#FAB24C'
   WORK_TYPE:
     value: '#54698D'
+  ENTITLEMENT:
+    value: '#7E8BE4'
+  LIVE_CHAT:
+    value: '#F88960'

@@ -108,6 +108,13 @@
       }
     }
   }
+
+  .slds-modal__header,
+  .slds-notify--toast {
+    h2 {
+      margin-top: $spacing-none;
+    }
+  }
 }
 
 

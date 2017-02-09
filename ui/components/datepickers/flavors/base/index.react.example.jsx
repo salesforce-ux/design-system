@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import classNames from 'classnames';
-import { Select as Select } from 'ui/components/forms/flavors/select/index.react.example';
+import { Select } from 'ui/components/select/flavors/base/index.react.example';
 
 ///////////////////////////////////////////
 // Partial(s)

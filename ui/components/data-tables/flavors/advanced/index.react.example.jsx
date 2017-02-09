@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';

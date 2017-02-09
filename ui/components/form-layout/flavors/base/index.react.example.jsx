@@ -11,15 +11,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import classNames from 'classnames';
-import Input from 'ui/components/forms/flavors/input/index.react';
-import Textarea from 'ui/components/forms/flavors/textarea/index.react';
-import { Radio } from 'ui/components/forms/flavors/radio/index.react.example';
-import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
+import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
+import { Input } from 'ui/components/input/flavors/base/index.react.example';
+import { Textarea } from 'ui/components/textarea/flavors/base/index.react.example';
+import { Radio } from 'ui/components/radio-group/flavors/base/index.react.example';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
+
+const inputId01 = 'input-id-01';
+const inputId02 = 'input-id-02';
+const inputId03 = 'input-id-03';
 
 let Form = props =>
   <div className={ classNames('slds-form', props.className) }>
-    <Input label="Text Input" placeholder="Placeholder Text" assistiveText="inputSample2" />
-    <Textarea label="Textarea Label" assistiveText="textareaSample2"></Textarea>
+    <FormElement label="Text Input" inputId={ inputId01 }>
+      <Input id={ inputId01 } />
+    </FormElement>
+    <FormElement label="Textarea Label" inputId={ inputId02 }>
+      <Textarea id={ inputId02 } />
+    </FormElement>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
       <div className="slds-form-element__control">

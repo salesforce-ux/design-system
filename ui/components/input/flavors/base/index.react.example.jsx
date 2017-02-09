@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
-const inputId = 'text-input-id-1';
+let inputId = 'text-input-id-1';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -43,13 +43,14 @@ export let Input = props => {
   return (
     <input
       {...props}
-      id={ inputId }
+      id={ props.id || inputId }
       className={classNames('slds-input', props.className)}
       type={ props.type || 'text'}
       placeholder={ props.placeholder || 'Placeholder Text' }
     />
   );
 };
+
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////

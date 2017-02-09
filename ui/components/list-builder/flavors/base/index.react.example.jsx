@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
-import { CheckboxAddButton } from 'ui/components/forms/flavors/checkbox-add-button/index.react.example';
+import { CheckboxAddButton } from 'ui/components/checkbox/flavors/button/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';

@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import classNames from 'classnames';
 

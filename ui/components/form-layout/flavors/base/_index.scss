@@ -18,7 +18,7 @@
  *
  * Because the read-only field state has no `<input>`, don’t use a `<label>` to provide better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
  *
- * Error states alert the user when content in the form is invalid. The `.slds-has-error` class is placed on the `<div class=".slds-form-element">`. Place the error message for the user in a `<span>` with the `.slds-form-element__help` class.
+ * Error states alert the user when content in the form is invalid. The `.slds-has-error` class is placed on the `<div class="slds-form-element">`. Place the error message for the user in a `<span>` with the `.slds-form-element__help` class.
  *
  * The native form elements, `<input>`, `<textarea>`, `<select>`, `<input type='checkbox'>`, and `<input type='radio'>`, receive validation styling for `disabled`, `checked`, and `checked disabled`, if applicable.
  *

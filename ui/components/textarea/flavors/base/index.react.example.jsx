@@ -39,7 +39,7 @@ export let FormElementControl = props =>
 export let Textarea = props =>
   <textarea
     {...props}
-    id={ textareaId }
+    id={ props.id || textareaId }
     className={classNames('slds-textarea', props.className)}
     placeholder={ props.placeholder || 'Placeholder Text' }
   />;

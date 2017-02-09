@@ -10,10 +10,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import Input from 'ui/components/forms/flavors/input/index.react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Select } from 'ui/components/forms/flavors/select/index.react.example';
+import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
+import { Input } from 'ui/components/input/flavors/base/index.react.example';
+import { Select } from 'ui/components/select/flavors/base/index.react.example';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
+
+const inputId01 = 'input-id-01';
+const inputId02 = 'input-id-02';
+const inputId03 = 'input-id-03';
+const inputId04 = 'input-id-04';
+const inputId05 = 'input-id-05';
+const inputId06 = 'input-id-06';
+const inputId07 = 'input-id-07';
+const inputId08 = 'input-id-08';
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
@@ -26,10 +36,15 @@ export default (
       <ModalContent>
         <h3 className="slds-section-title--divider">Section Information</h3>
         <div className="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
-          <Input label="Name Suffix" placeholder="Ms." assistiveText="inputNameSample1" />
-          <Input label="First Name" placeholder="Esther" assistiveText="inputNameSample2" />
-          <Input label="Last Name" placeholder="Lewis" assistiveText="inputNameSample3" />
-
+          <FormElement label="Name Suffix" inputId={ inputId01 }>
+            <Input id={ inputId01 } placeholder="Ms." />
+          </FormElement>
+          <FormElement label="First Name" inputId={ inputId02 }>
+            <Input id={ inputId02 } placeholder="Esther" />
+          </FormElement>
+          <FormElement label="Last Name" inputId={ inputId03 }>
+            <Input id={ inputId03 } placeholder="Lewis" />
+          </FormElement>
           <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
             <div className="slds-form-element">
               <label className="slds-form-element__label" htmlFor="lookup">Lookup</label>
@@ -47,14 +62,24 @@ export default (
             </Select>
           </div>
 
-          <Input label="Text Input" assistiveText="inputSample2" />
+          <FormElement label="Text Input" inputId={ inputId04 }>
+            <Input id={ inputId04 } placeholder="" />
+          </FormElement>
         </div>
         <h3 className="slds-section-title--divider">Section Information</h3>
         <div className="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
-          <Input label="Text Input" assistiveText="inputSample3" />
-          <Input label="Text Input" assistiveText="inputSample4" />
-          <Input label="Text Input" assistiveText="inputSample5" />
-          <Input label="Text Input" assistiveText="inputSample6" />
+          <FormElement label="Text Input" inputId={ inputId05 }>
+            <Input id={ inputId05 } placeholder="" />
+          </FormElement>
+          <FormElement label="Text Input" inputId={ inputId06 }>
+            <Input id={ inputId06 } placeholder="" />
+          </FormElement>
+          <FormElement label="Text Input" inputId={ inputId07 }>
+            <Input id={ inputId07 } placeholder="" />
+          </FormElement>
+          <FormElement label="Text Input" inputId={ inputId08 }>
+            <Input id={ inputId08 } />
+          </FormElement>
         </div>
       </ModalContent>
     </Modal>

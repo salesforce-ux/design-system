@@ -16,7 +16,8 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { ListboxPill, ListboxHoriz, ListItemHoriz } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
-import { FormElement, FormElementLabel, FormElementControl, Input } from 'ui/components/forms/flavors/input/index.react.example';
+import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
+import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -63,9 +64,12 @@ export let ListboxItem = props => {
 };
 
 let ComboboxSearchInput = props =>
-  <FormElement>
-    <FormElementLabel>Categories</FormElementLabel>
-    <FormElementControl className="slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+  <FormElement
+    label="Categories"
+    inputId="text-input-01"
+    inputIcon="right"
+    formControlClassName="slds-picklist__input"
+  >
       <input
         id="text-input-01"
         className="slds-lookup__search-input slds-input"
@@ -92,7 +96,6 @@ let ComboboxSearchInput = props =>
           />
         : null
       }
-    </FormElementControl>
   </FormElement>;
 
 ///////////////////////////////////////////

@@ -15,6 +15,7 @@ import { FormElement } from 'ui/components/form-layout/flavors/element/index.rea
 import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import { Select } from 'ui/components/select/flavors/base/index.react.example';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';
@@ -46,13 +47,7 @@ export default (
             <Input id={ inputId03 } placeholder="Lewis" />
           </FormElement>
           <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
-            <div className="slds-form-element">
-              <label className="slds-form-element__label" htmlFor="lookup">Lookup</label>
-              <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
-                <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
-                <input id="lookup" className="slds-input" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" />
-              </div>
-            </div>
+            <Lookup label="Lookup" placeholder=" " />
           </div>
 
           <div className="slds-form-element slds-m-top--medium">

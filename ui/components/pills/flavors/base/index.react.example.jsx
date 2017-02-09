@@ -19,11 +19,19 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 export let Pill = props =>
-  <span className={classNames('slds-pill', props.className)}>
-    {props.children}
-    {props.unlinked ? <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</span>
-    : <a href="javascript:void(0);" className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</a>}
-    <ButtonIcon className="slds-button--icon slds-pill__remove" symbol="close" assistiveText="Remove" title="Remove" />
+  <span className={ classNames('slds-pill slds-pill--link', props.className) }>
+    { props.children }
+    <a href="javascript:void(0);" className="slds-pill__action" title={ props.label || 'Full pill label verbiage mirrored here' }>
+      <span className="slds-pill__label">
+        { props.label || 'Pill Label' }
+      </span>
+    </a>
+    <ButtonIcon
+      className="slds-button--icon slds-pill__remove"
+      symbol="close"
+      assistiveText="Remove"
+      title="Remove"
+    />
   </span>;
 
 export let PillContainer = props =>
@@ -37,12 +45,12 @@ export let PillContainer = props =>
 
 export let states = [
   {
-    id: 'pill',
+    id: 'default',
     label: 'Default',
     element: <Pill />
   },
   {
-    id: 'pill-with-icon',
+    id: 'icon',
     label: 'With icon',
     element:
       <Pill>
@@ -53,11 +61,11 @@ export let states = [
       </Pill>
   },
   {
-    id: 'pill-with-portrait',
-    label: 'With portrait',
+    id: 'avatar',
+    label: 'With avatar',
     element:
       <Pill>
-        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-m-right--xx-small" title="User avatar">
+        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-pill__icon_container" title="User avatar">
           <img
             alt="Person name"
             src="/assets/images/avatar2.jpg"
@@ -67,12 +75,7 @@ export let states = [
       </Pill>
   },
   {
-    id: 'pill-unlinked',
-    label: 'Unlinked',
-    element: <Pill unlinked />
-  },
-  {
-    id: 'pill-truncated',
+    id: 'truncated',
     label: 'Truncated',
     element:
       <div className="demo-only" style={{ width: '220px' }}>
@@ -82,7 +85,7 @@ export let states = [
       </div>
   },
   {
-    id: 'pill-container',
+    id: 'container',
     label: 'Pill with Container',
     element:
       <PillContainer>
@@ -92,7 +95,7 @@ export let states = [
       </PillContainer>
   },
   {
-    id: 'pill-error',
+    id: 'error',
     label: 'Error',
     element:
       <Pill className="slds-has-error">

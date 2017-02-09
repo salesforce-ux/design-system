@@ -7,10 +7,20 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+
 /**
- * To create a pill, apply the `.slds-pill` class on a `span`. Inside, place either a `span` or an `a` with the `.slds-pill__label` class around the text.
+ * To create a pill, apply the `.slds-pill` class on a `<span>`.
  *
- * Additionally, a pill can have an icon or image that sits to the left-hand side of the `.slds-pill__label`. That icon or image should receive the class `.slds-pill__icon`.
+ * Depending on your context, you will either need a linked pill or a pill option inside of a listbox.
+ *
+ * For linked pills, a modifier class of `slds-pill--link` needs to be added to the existing `<span>` with the classname of `slds-pill`. You need an `<a>` inside of the span with the `slds-pill--link` class. The `<a>` will get the classname of `slds-pill__action`. This will treat the interactions differently from an unlinked pill option inside of a listbox.
+ *
+ * For both linked pills and unlinked pill options, a `<span>` with the classname of `slds-pill__label` should contain the string of text describing the pill object.
+ *
+ * Note, that a linked pill should not be used as a pill option inside of a listbox.
+ *
+ * Additionally, a pill can have an icon or image that sits to the left-hand side of the `.slds-pill__label`. That icon or image should receive the class `.slds-pill__icon_container`.
  *
  * You may also want the functionality to remove the pill as a selection. An "X" icon is normally used and will sit to the right-hand side of the `.slds-pill__label`. That icon should receive the class `.slds-pill__remove`.
  *
@@ -56,6 +66,7 @@
   &:focus {
     outline: 0;
     border-radius: $border-radius-medium;
+    border-color: $color-border-input-active;
     box-shadow: $shadow-button-focus;
   }
 
@@ -137,7 +148,7 @@
   /**
    * Initializes pill icon or avatar that sits to the left of the label
    *
-   * @selector .slds-pill__icon
+   * @selector .slds-pill__icon_container
    * @restrict .slds-pill span
    */
   &__icon,
@@ -147,6 +158,10 @@
 
     .slds-icon {
       @include square($square-icon-x-small-boundary);
+    }
+
+    ~ .slds-pill__action {
+      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
     }
   }
 
@@ -162,10 +177,55 @@
     align-items: center;
     justify-content: center;
     margin-left: $spacing-xx-small;
+    border-radius: $border-radius-small;
 
     svg {
       @include square($square-icon-xx-small-content);
     }
+  }
+}
+
+/**
+ * Creates a pill with a hyperlink
+ *
+ * @selector .slds-pill--link
+ * @restrict .slds-pill
+ */
+.slds-pill--link {
+  border: 0;
+  padding: 0;
+
+  .slds-pill__icon_container {
+    position: absolute;
+    left: $spacing-xxx-small;
+  }
+
+  .slds-pill__remove {
+    position: absolute;
+    right: $spacing-xxx-small;
+  }
+}
+
+/**
+ * Actionable element inside of pill with hyperlink
+ *
+ * @selector .slds-pill__action
+ * @restrict .slds-pill--link
+ */
+.slds-pill__action {
+  padding: $spacing-xxx-small;
+  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-xx-small} + 2px);
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+
+  &:focus {
+    outline: 0;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
   }
 }
 
@@ -182,5 +242,9 @@
   .slds-pill__label {
     font-weight: $font-weight-bold;
     color: $color-text-error;
+  }
+
+  .slds-pill__action {
+    border-color: $color-border-error;
   }
 }

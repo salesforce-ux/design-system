@@ -13,7 +13,7 @@ The following site enhancements are now available:
 
 The following components are now available:
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
-- Add Split View List - [Split view](/components/split-view)
+- Added Split View List - [Split view](/components/split-view)
 
 **ADDED**
 
@@ -33,6 +33,9 @@ The following changes have been made in this release:
   - Add assistive text to active item for Current page.
 - Rounded corners have been removed from utility icons so that they no longer
   clip incorrectly.
+- Update focus state for pills
+  - Added `slds-pill--link` to modify pill for when we want the hyperlink to take up 100% of the available pill
+  - Added `slds-pill__action` to the actionable link element inside of `slds-pill--link`
 
 **FIXED**
 

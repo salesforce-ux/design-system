@@ -21,6 +21,12 @@ import _ from 'lodash';
 // Partial(s)
 //////////////////////////////////////////////
 
+let ShortCutKey = props =>
+  <span className="slds-text-body--small slds-text-color--weak slds-p-left--large">
+    <span className="slds-assistive-text">:</span>
+    { props.children }
+  </span>;
+
 // Context Tab
 let ContextTab = props =>
   <li className={classNames('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
@@ -43,9 +49,10 @@ let ContextTab = props =>
       />
       <Menu className="slds-dropdown--right">
         <MenuList>
-          <MenuItem>Refresh Tab</MenuItem>
-          <MenuItem>Pin Tab</MenuItem>
-          <MenuItem>Close Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>r</ShortCutKey>}>Refresh Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>⇧ + n</ShortCutKey>}>Open in a new window</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>p</ShortCutKey>}>Pin Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>w</ShortCutKey>}>Close Tab</MenuItem>
         </MenuList>
       </Menu>
     </div>
@@ -202,7 +209,7 @@ export let states = [
     id: 'tab-item-action-menu-open',
     label: 'Tab - Action Overflow',
     element:
-      <div className="demo-only" style={{height: '10rem'}}>
+      <div className="demo-only" style={{height: '12rem'}}>
         <ContextTabBar>
           <ContextTab title="Home" symbol="home" />
           <ContextTab title="Tab Item 1" itemActive actionOverflow="true" />

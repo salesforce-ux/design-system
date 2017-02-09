@@ -15,7 +15,6 @@ import gulpif from 'gulp-if';
 import runSequence from 'run-sequence';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
-import scsslint from 'gulp-scss-lint';
 import browserSync from 'browser-sync';
 import htmlhint from 'gulp-htmlhint';
 import tokenlint from './plugins/lint-tokens';
@@ -29,9 +28,10 @@ gulp.task('lint:sass', () =>
     'ui/**/*.scss'
   ])
   .pipe(cache('lintsass'))
-  .pipe(scsslint({
-    bundleExec: true
-  }))
+  // FIXME: replace with stylelint
+  // .pipe(scsslint({
+  //   bundleExec: true
+  // }))
 );
 
 gulp.task('lint:spaces', () =>

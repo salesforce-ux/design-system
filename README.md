@@ -76,12 +76,6 @@ The Salesforce Lightning Design System uses `npm` to manage dependencies. Please
 
 If Node.js is already installed, make sure you’re running v6 or up.
 
-### Ruby dependencies
-
-Ruby comes pre-installed on macOS. For other systems, check <https://www.ruby-lang.org>.
-
-If `gem install bundler` fails, run `sudo gem install bundler` and try running `npm install` again.
-
 ### JavaScript and compilation issues
 
 JavaScript dependencies sometimes get out of sync and inexplicable bugs start to happen. Follow these steps to give a fresh start to your development environment:

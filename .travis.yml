@@ -7,19 +7,9 @@ env:
     - DISPLAY=:99.0
 before_install:
   - sh -e /etc/init.d/xvfb start
-  # Rename the node-which binary to prevent getting the error "RVM requires 'curl'. Install 'curl' first and try again"
-  # See issue https://github.com/travis-ci/travis-ci/issues/5092
-  - if [ -f node_modules/.bin/which ]; then mv node_modules/.bin/which node_modules/.bin/which.backup; fi
-  - rvm install 2.3.1
-  # Rename node-which back to its original name
-  - if [ -f node_modules/.bin/which.backup ]; then mv node_modules/.bin/which.backup node_modules/.bin/which; fi
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-install:
-  - bundle install --path vendor/bundle
-  - npm install
 script:
   - npm run build-travis
 cache:
   directories:
     - node_modules
-    - vendor/bundle

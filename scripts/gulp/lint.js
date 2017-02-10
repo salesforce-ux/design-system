@@ -28,7 +28,7 @@ gulp.task('lint:sass', () =>
     'site/assets/styles/**/*.scss',
     'ui/**/*.scss'
   ])
-  // .pipe(cache('lintsass'))
+  .pipe(cache('stylelint'))
   .pipe(stylelint({
     reporters: [
       {

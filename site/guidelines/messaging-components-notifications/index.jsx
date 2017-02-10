@@ -53,7 +53,7 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
-      <div className="slds-container--large lmf">
+      <div className="slds-container--large site-lmf">
         <p className="site-text-introduction">
           <strong>Notification</strong> informs users of relevant activities
           across the board by surfacing actionable information &amp;
@@ -184,11 +184,11 @@ export default (
 
         <div className="slds-grid slds-wrap slds-grid--pull-padded">
           <figure className="slds-m-vertical--x-large slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img src="/assets/images/messaging/screenshot-notification-mobile.png" alt="Notification in Context (Mobile)" className="screenshot" width="187" height="334" />
+            <img src="/assets/images/messaging/screenshot-notification-mobile.png" alt="Notification in Context (Mobile)" className="site-screenshot" width="187" height="334" />
           </figure>
 
           <figure className="slds-m-vertical--x-large slds-p-horizontal--small slds-size--1-of-1- slds-medium-size--2-of-3">
-            <img src="/assets/images/messaging/screenshot-notification-desktop.png" alt="Notification in Context (Desktop)" className="screenshot" width="640" height="512" />
+            <img src="/assets/images/messaging/screenshot-notification-desktop.png" alt="Notification in Context (Desktop)" className="site-screenshot" width="640" height="512" />
           </figure>
         </div>
 
@@ -531,7 +531,7 @@ export default (
         <figure className="slds-m-vertical--x-large">
           <figcaption className="site-text-heading--label">Mobile</figcaption>
 
-          <img src="/assets/images/messaging/screenshot-notification-mobile.png" alt="Notification in Context (Mobile)" className="screenshot" width="187" height="334" />
+          <img src="/assets/images/messaging/screenshot-notification-mobile.png" alt="Notification in Context (Mobile)" className="site-screenshot" width="187" height="334" />
         </figure>
 
         <p>

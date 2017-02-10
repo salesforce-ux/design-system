@@ -57,7 +57,7 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
-      <div className="slds-container--large lmf">
+      <div className="slds-container--large site-lmf">
         <figure className="slds-p-bottom--large">
           <img src="/assets/images/messaging/diagram-illustration-text.png" alt="" width="250" height="183" />
         </figure>
@@ -114,11 +114,11 @@ export default (
 
         <figure className="slds-grid slds-wrap slds-grid--pull-padded">
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img src="/assets/images/messaging/screenshot-illustration-text-mobile.png" alt="Illustration & Text in Context (Mobile)" className="screenshot" width="187" height="334" />
+            <img src="/assets/images/messaging/screenshot-illustration-text-mobile.png" alt="Illustration & Text in Context (Mobile)" className="site-screenshot" width="187" height="334" />
           </div>
 
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--2-of-3">
-            <img src="/assets/images/messaging/screenshot-illustration-text-desktop.png" alt="Illustration & Text in Context (Desktop)" className="screenshot" width="640" height="512" />
+            <img src="/assets/images/messaging/screenshot-illustration-text-desktop.png" alt="Illustration & Text in Context (Desktop)" className="site-screenshot" width="640" height="512" />
           </div>
         </figure>
 
@@ -177,15 +177,15 @@ export default (
 
         <div className="slds-grid slds-wrap slds-grid--pull-padded">
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img className="screenshot" src="/assets/images/messaging/illustration-layout-01.png" alt="illustration as full page" width="160" height="128" />
+            <img className="site-screenshot" src="/assets/images/messaging/illustration-layout-01.png" alt="illustration as full page" width="160" height="128" />
           </div>
 
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img className="screenshot" src="/assets/images/messaging/illustration-layout-02.png" alt="illustration in main body" width="160" height="128" />
+            <img className="site-screenshot" src="/assets/images/messaging/illustration-layout-02.png" alt="illustration in main body" width="160" height="128" />
           </div>
 
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img className="screenshot" src="/assets/images/messaging/illustration-layout-03.png" alt="illustration in sidebar" width="160" height="128" />
+            <img className="site-screenshot" src="/assets/images/messaging/illustration-layout-03.png" alt="illustration in sidebar" width="160" height="128" />
           </div>
         </div>
 

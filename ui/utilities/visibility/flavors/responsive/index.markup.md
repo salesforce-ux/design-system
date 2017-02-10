@@ -14,93 +14,93 @@
       </tr>
       <tr>
         <th><code>.slds-x-small-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
       </tr>
       <tr>
         <th><code>.slds-small-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
       </tr>
       <tr>
         <th><code>.slds-medium-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
       </tr>
       <tr>
         <th><code>.slds-large-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__visible">Show</td>
       </tr>
       <tr>
         <th><code>.slds-x-small-show-only</code></th>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
       </tr>
       <tr>
         <th><code>.slds-small-show-only</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
       </tr>
       <tr>
         <th><code>.slds-medium-show-only</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Show</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
       </tr>
       <tr>
         <th><code>.slds-max-x-small-hide</code></th>
-        <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
       </tr>
       <tr>
         <th><code>.slds-max-small-hide</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
       </tr>
       <tr>
         <th><code>.slds-max-medium-hide</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__hidden">Hide</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
+        <td class="demo-visibility-chart__visible">Initial</td>
       </tr>
     </table>
   </div>

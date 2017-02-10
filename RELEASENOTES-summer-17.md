@@ -14,6 +14,7 @@ The following site enhancements are now available:
 The following components are now available:
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
 - Added Split View List - [Split view](/components/split-view)
+- Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
 
 **ADDED**
 

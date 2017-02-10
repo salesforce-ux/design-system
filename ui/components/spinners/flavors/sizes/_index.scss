@@ -8,6 +8,74 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
+ * This is the extra extra small spinner
+ *
+ * @selector .slds-spinner--xx-small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_xx-small,
+.slds-spinner--xx-small {
+  width: 0.5rem;
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.125rem;
+    height: 0.125rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    top: -0.0625rem;
+    left: -0.0625rem;
+    animation-name: dotsBounceBefore-extraExtraSmall;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    top: -0.0625rem;
+    right: -0.0625rem;
+    animation-name: dotsBounceAfter-extraExtraSmall;
+  }
+}
+
+@keyframes dotsBounceBefore-extraExtraSmall {
+  60% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.275, 0.0425, 0.34, 0.265);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0.555, 0.35, 0.715);
+    transform: translateX(-0.125rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotsBounceAfter-extraExtraSmall {
+  60% {
+    animation-timing-function: cubic-bezier(0.275, 0.0425, 0.34, 0.265);
+    transform: translateX(0);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0.555, 0.35, 0.715);
+    transform: translateX(0.125rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**
  * This is the extra small spinner
  *
  * @selector .slds-spinner--x-small

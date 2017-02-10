@@ -64,6 +64,10 @@
   &--x-small {
     @include square($square-icon-x-small-boundary);
     font-size: $font-size-heading-xx-small;
+
+    .slds-icon {
+      @include square($square-icon-x-small-boundary);
+    }
   }
 
   /**
@@ -78,6 +82,10 @@
   &--small {
     @include square($square-icon-small-boundary);
     font-size: $font-size-heading-xx-small;
+
+    .slds-icon {
+      @include square($square-icon-small-boundary);
+    }
   }
 
   /**
@@ -92,6 +100,10 @@
   &--medium {
     @include square($square-icon-medium-boundary);
     font-size: $font-size-heading-small;
+
+    .slds-icon {
+      @include square($square-icon-medium-boundary);
+    }
   }
 
   /**
@@ -108,6 +120,10 @@
     font-size: $font-size-heading-medium;
     font-weight: $font-weight-light;
     line-height: $line-height-heading;
+
+    .slds-icon {
+      @include square($square-icon-large-boundary);
+    }
   }
 
   /**

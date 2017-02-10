@@ -108,6 +108,13 @@
       }
     }
   }
+
+  .#{$css-prefix}modal__header,
+  .#{$css-prefix}notify--toast {
+    h2 {
+      margin-top: $spacing-none;
+    }
+  }
 }
 
 

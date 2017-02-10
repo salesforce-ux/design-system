@@ -141,6 +141,7 @@
     "gulp": "gulp",
     "lint": "gulp lint",
     "start": "gulp",
+    "previewer": "babel-node scripts/previewer",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
     "test-browser": "karma start",

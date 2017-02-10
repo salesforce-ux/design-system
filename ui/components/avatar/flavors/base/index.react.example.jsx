@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
+import { StandardIcon } from 'ui/components/icons/flavors/standard/index.react.example';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////
@@ -75,6 +76,22 @@ export let states = [
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
         <abbr className="slds-avatar__initials slds-icon-standard-contact" title="person name">AB</abbr>
+      </Avatar>
+  },
+  {
+    id: 'avatar-square-icon',
+    label: 'Square Icon Fallback',
+    element:
+      <Avatar className="slds-avatar--medium">
+        <StandardIcon />
+      </Avatar>
+  },
+  {
+    id: 'avatar-circle-icon',
+    label: 'Circle Icon Fallback',
+    element:
+      <Avatar className="slds-avatar--circle slds-avatar--medium">
+        <StandardIcon />
       </Avatar>
   },
   {

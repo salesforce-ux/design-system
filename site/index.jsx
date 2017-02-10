@@ -25,14 +25,14 @@ let hero = (
         alt="" />
       <div>
         <h1 className="site-text-heading--large">
-          Lightning <span className="text-no-wrap">Design System</span>
+          Lightning <span className="site-text-no-wrap">Design System</span>
         </h1>
         <h2 className="site-masthead--landing-tagline slds-m-bottom--xx-large">
           Create the world’s best enterprise app experiences.
         </h2>
         <div className="slds-grid slds-grid--vertical-align-center slds-wrap slds-small-nowrap site-masthead--landing-cta">
           <div className="site-cta-buttons">
-            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small text-no-wrap" eventType="downloads-top">Get Started</CTALink>
+            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small site-text-no-wrap" eventType="downloads-top">Get Started</CTALink>
           </div>
           <div className="site-releasenumber">
             Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>

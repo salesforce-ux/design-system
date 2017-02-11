@@ -67,6 +67,11 @@ module.exports = {
       status: 301
     },
     {
+      source: '/components',
+      destination: '/components-overview',
+      status: 301
+    },
+    {
       source: '/components/grid-system',
       destination: '/components/utilities/grid',
       status: 301

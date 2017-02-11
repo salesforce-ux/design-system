@@ -30,6 +30,17 @@ let Demo = props =>
 
 export let states = [
   {
+    id: 'xx-small',
+    label: 'Xx-small',
+    description: 'The extra extra small spinner can be applied to tabs in global navigation to indicate loading.',
+    element:
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner--xx-small" />
+        </SpinnerContainer>
+      </Demo>
+  },
+  {
     id: 'x-small',
     label: 'X-small',
     description: 'The extra small spinner can be positioned over the end of an input to indicate loading.',

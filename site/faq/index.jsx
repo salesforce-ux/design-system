@@ -144,31 +144,20 @@ class FAQ extends React.Component {
         </p>
       </div>
     );
-
     let compactVersion = `${g.abbreviatedName}${process.env.SLDS_VERSION.replace(/\D/g, '')}`;
     this.addContentItem(
-      'How do I link to Visualforce static resources like stylesheets and icons?',
+      'How do I link to icons in Visualforce?',
       <div>
         <p className="slds-container--large">
-          Visualforce uses a special syntax to reference your static resources, and
-          you need to edit the code you cut and paste from the {g.displayName}.
-          If you want to load the master stylesheet and you uploaded the {g.displayName} as
-          a static resource named <code>{compactVersion}</code> then you should
-          change the <code>{'<apex:stylesheet />'}</code> value to:
+          Use the <code>&lt;apex:slds /></code> element to incorporate the Lightning Design System in your Visualforce pages and align them with the styling of Lightning Experience. This component is a streamlined alternative to uploading the Lightning Design System as a static resource and using it in your Visualforce pages.
         </p>
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="javascript">
-          {`
-<apex:stylesheet value="{!URLFOR($Resource.${compactVersion}, 'assets/styles/${g.moduleName}-vf.min.css')}" />
-          `}</CodeBlock>
-        </div>
         <p className="slds-container--large">
-          This is similar for icons, for example this User one from the Standard Icons sprite:
+          To reference assets in the Lightning Design System, such as SVG icons and images, use the <code>URLFOR()</code> formula function and the <code>$Asset</code> global variable. Use the following markup, for example, to reference the SVG user icon.
         </p>
         <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="javascript">{`
-<svg aria-hidden="true" class="$"slds-icon slds-icon--large slds-icon-standard-user"">
-  <use xlink:href="{!URLFOR($Resource.${compactVersion}, 'assets/icons/standard-sprite/svg/symbols.svg#user')}" />
+          <CodeBlock language="xml">{`
+<svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+  <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#user')}"></use>
 </svg>
           `}</CodeBlock>
         </div>
@@ -176,18 +165,17 @@ class FAQ extends React.Component {
           <em>Note: XML namespaces are required to be added to the <code>html</code> element:</em>
         </p>
         <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="javascript">{`
+          <CodeBlock language="xml">{`
 <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           `}</CodeBlock>
         </div>
-        <p>Using a custom CSS scope class is now required for building with Visualforce and {g.displayName}. The scoped file is no longer included in the download files, but can instead be created <a href="https://tools.lightningdesignsystem.com/css-customizer">using this tool to create your custom CSS.</a>
-        </p>
         <p>
-          Please refer to our <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead Module</a> for more detailed instructions and examples.
+          Please refer to our <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead Module</a> and the documentation page <a href="https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_styling_slds.htm">"Using the Lightning Design System"</a> in our Visualforce Developer Guide for more detailed instructions and examples.
         </p>
 
       </div>
     );
+
     this.addContentItem(
       'How do I link to Lightning static resources like stylesheets and icons?',
       <div>
@@ -199,7 +187,7 @@ class FAQ extends React.Component {
         </p>
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="javascript">{`
-<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.min.css"/>
+<ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.min.css" />
           `}</CodeBlock>
         </div>
         <p><a href="https://tools.lightningdesignsystem.com/css-customizer">The tool to create your custom CSS is available here.</a></p>

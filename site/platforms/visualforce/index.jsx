@@ -28,8 +28,8 @@ export default (
       <p>To use the Design System in Visualforce you have two options:</p>
 
       <ol>
-        <li>Add <code>&lt;apex:slds /&gt;</code> to your page and wrap your code in a container <code>&lt;div class="slds-scope"&gt; ... &lt;/div&gt;</code>. <a href="https://trailhead.salesforce.com/modules/lightning_design_system/units/lightning-design-system2">See this code in context on Trailhead</a> and learn more in our <a href="https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_styling_slds.htm">Visualforce Developer Guide</a>.</li>
-        <li>create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here</a>.</li>
+        <li>Add <code>&lt;apex:slds /&gt;</code> to your page and wrap your code in a container <code>&lt;div class="slds-scope"&gt; ... &lt;/div&gt;</code>. <a href="https://trailhead.salesforce.com/modules/lightning_design_system/units/lightning-design-system2"><em>See this code in context on Trailhead</em></a> and learn more in our <a href="https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_styling_slds.htm"><em>Visualforce Developer Guide</em></a>.</li>
+        <li>Or (not recommended…): create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here</a>.</li>
       </ol>
       <p>
         If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:

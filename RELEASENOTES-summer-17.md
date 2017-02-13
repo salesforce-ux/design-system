@@ -67,3 +67,7 @@ The following tokens have been add/removed/deprecated in this release:
 - `TASK_2` was renamed into `TASK2`
 - Standard icon set: Added `ENTITLEMENT`
 - Standard icon set: Added `LIVE_CHAT`
+- s1-base/sizing
+  - Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
+  - Removed `MAX_WIDTH_ACTION_BAR`
+  - Removed `MAX_WIDTH_ACTION_BAR_ITEM`

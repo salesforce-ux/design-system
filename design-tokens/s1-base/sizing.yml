@@ -34,6 +34,7 @@ props:
   MAX_HEIGHT_HEADER_BRAND:
     value: 32px
     comment: Maximum height for brand logos in header.
+    deprecated: true
   MAX_WIDTH_ACTION_BAR_WITH_LABELS:
     value: 320px
     comment: Maximum width for action icons in action bar when there are only 2 items with labels.

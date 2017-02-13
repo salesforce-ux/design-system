@@ -9,6 +9,8 @@
 
 The following site enhancements are now available:
 
+- Added additional Popover accessibility/interaction guidelines - [Popover](/components/popovers/#overview)
+
 **NEW COMPONENTS AND VARIANTS**
 
 The following components are now available:

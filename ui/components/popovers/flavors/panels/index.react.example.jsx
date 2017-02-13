@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import MediaObject from 'ui/utilities/media-objects/index.react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
 
 const iconHeader = (
@@ -37,17 +38,24 @@ const ViewAll = () =>
   <dd className="slds-m-top--x-small slds-text-align--right"><a href="javascript:void(0);" title="View all Opportunities">View All</a></dd>;
 
 export default (
-  <section className="slds-popover slds-popover--panel slds-nubbin--left-top" role="dialog">
-
+  <section
+    aria-labelledby="panel-heading-id"
+    className="slds-popover slds-popover--panel slds-nubbin--left-top"
+    role="dialog">
+    <ButtonIcon
+      className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close"
+      symbol="close"
+      assistiveText="Close dialog"
+      title="Close dialog"
+    />
     <div className="slds-popover__header">
 
       <header className="slds-media slds-media--center slds-m-bottom--small">
         <span className="slds-icon_container slds-icon-standard-account slds-media__figure">
           <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
-          <span className="slds-assistive-text">Tesla Motors</span>
         </span>
         <div className="slds-media__body">
-          <p className="slds-text-heading--medium slds-hyphenate"><a href="javascript:void(0);">Tesla Motors</a></p>
+          <h2 className="slds-text-heading--medium slds-hyphenate" id="panel-heading-id"><a href="javascript:void(0);">Tesla Motors</a></h2>
         </div>
       </header>
 

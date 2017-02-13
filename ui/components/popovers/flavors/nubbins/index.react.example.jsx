@@ -10,14 +10,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Popover = props =>
-<section className={`slds-popover slds-nubbin--${props.nubbinPosition}`} role="dialog">
-  <div className="slds-popover__body">
+<section
+  aria-label="Dialog title"
+  aria-describedby="popover-body-id"
+  className={`slds-popover slds-nubbin--${props.nubbinPosition}`}
+  role="dialog">
+  <ButtonIcon
+    className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close"
+    symbol="close"
+    assistiveText="Close dialog"
+    title="Close dialog"
+  />
+  <div id="popover-body-id" className="slds-popover__body">
     <code>
       slds-popover
       <br />

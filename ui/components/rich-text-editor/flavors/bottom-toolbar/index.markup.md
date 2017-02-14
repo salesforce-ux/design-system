@@ -1,1 +1,1 @@
-The reversed rich text editor renders the toolbar on the bottom.
+This rich text editor renders the toolbar on the bottom.

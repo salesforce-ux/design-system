@@ -49,8 +49,13 @@
     a:hover,
     a:link,
     a:visited {
-    text-decoration: none;
-      color: $color-text-default;
+      text-decoration: none;
+      color: $color-text-link;
+      text-transform: uppercase;
+    }
+
+    .context {
+      color: $color-text-default !important;
     }
 
     .circle {
@@ -58,7 +63,9 @@
         left: $spacing-none;
       }
       border-radius: $border-radius-medium;
-      padding: ($square-icon-utility-large - $font-size-medium) / 2;
+      padding: ($square-icon-utility-large - $font-size-medium) / 2 {
+        left: (($square-icon-utility-large - $font-size-medium) / 2) + 0.25;
+      }
       height: $square-icon-utility-large;
       width: $square-icon-utility-large;
       font-size: $font-size-medium;

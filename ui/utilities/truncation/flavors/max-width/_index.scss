@@ -7,30 +7,58 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+// The truncation width class can be used on the container of a truncated element (or group containing a truncated element)
 
-
-// The truncation width class can be used on the container of a
-// truncated element (or group containing a truncated element)
+/**
+ * @summary Truncates text at 25% of its parent container
+ *
+ * @selector .slds-truncate_container--25
+ * @modifier
+ */
 .slds-truncate_container_25,
 .slds-truncate_container--25 {
   max-width: 25%;
 }
 
+/**
+ * @summary Truncates text at 50% of its parent container
+ *
+ * @selector .slds-truncate_container--50
+ * @modifier
+ */
 .slds-truncate_container_50,
 .slds-truncate_container--50 {
   max-width: 50%;
 }
 
+/**
+ * @summary Truncates text at 75% of its parent container
+ *
+ * @selector .slds-truncate_container--75
+ * @modifier
+ */
 .slds-truncate_container_75,
 .slds-truncate_container--75 {
   max-width: 75%;
 }
 
+/**
+ * @summary Truncates text at 33% of its parent container
+ *
+ * @selector .slds-truncate_container--33
+ * @modifier
+ */
 .slds-truncate_container_33,
 .slds-truncate_container--33 {
   max-width: 33%;
 }
 
+/**
+ * @summary Truncates text at 66% of its parent container
+ *
+ * @selector .slds-truncate_container--66
+ * @modifier
+ */
 .slds-truncate_container_66,
 .slds-truncate_container--66 {
   max-width: 66%;

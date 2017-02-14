@@ -10,16 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
-
-export const intro = (
-  <p className="site-text-introduction">
-    You can specify how to show and hide elements.
-  </p>
-);
 
 export default (
-<ComponentDocs>
-</ComponentDocs>
+  <div>test</div>
 );

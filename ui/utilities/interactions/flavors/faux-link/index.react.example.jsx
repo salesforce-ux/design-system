@@ -10,17 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import ComponentDocs from 'app_modules/site/components/page/component/docs';
-import CodeClass from 'app_modules/site/components/code-class';
-
-export const intro = (
-  <p className="site-text-introduction">
-    Make a containing box scrollable when scrolling is available.
-  </p>
-);
 
 export default (
-<ComponentDocs>
-  <p>Use the scrollable utility when you need to provide scrolling within a section of a page. For example, when the content within an element exceeds either the width or height of the element, applying <CodeClass className="scrollable--y" /> provides a vertical scrollbar, while <CodeClass className="scrollable--x" /> adds a horizontal scrollbar.</p>
-</ComponentDocs>
+  <span className="slds-text-link--faux">Span with faux link interactions</span>
 );

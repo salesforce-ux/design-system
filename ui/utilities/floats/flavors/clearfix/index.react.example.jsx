@@ -11,9 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 
-
 export default (
-<div className="demo-only">
   <section className="slds-clearfix">
     <div className="slds-float--left">
       <p>I’m floooaaaating</p>
@@ -22,5 +20,4 @@ export default (
       <p>I’m floooaaaating</p>
     </div>
   </section>
-</div>
 );

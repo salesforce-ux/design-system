@@ -12,19 +12,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 
-
-export const preview = (
-<div className="demo-only">
-  <div className="slds-align--absolute-center" style={{height: '150px'}}>
-    This content will be positioned in the absolute center of its container
+export default (
+  <div className="demo-only demo-only--alignment">
+    <div className="slds-align--absolute-center">
+      This content will be positioned in the absolute center of its container
+    </div>
   </div>
-</div>
-);
-
-export const code = (
-<div className="demo-only">
-  <div className="slds-align--absolute-center">
-    This content will be positioned in the absolute center of its container
-  </div>
-</div>
 );

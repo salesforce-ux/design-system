@@ -11,6 +11,13 @@
 
 @include mq-medium-max {
 
+  /**
+   * @summary .slds-media__figure and .slds-media__body stack on smaller screens
+   *
+   * @selector .slds-media--responsive
+   * @restrict .slds-media
+   * @modifer
+   */
   .slds-media_responsive,
   .slds-media--responsive {
     display: block;

@@ -11,40 +11,82 @@
 
 .slds-theme {
 
+  /**
+   * @summary Sets the background color to white
+   *
+   * @selector .slds-theme--default
+   * @modifier
+   */
   &_default,
   &--default {
     @include theme(default);
   }
 
+  /**
+   * @summary Sets the background color to gray
+   *
+   * @selector .slds-theme--shade
+   * @modifier
+   */
   &_shade,
   &--shade {
     @include theme(shade);
   }
 
+  /**
+   * @summary Sets the background color to dark blue
+   *
+   * @selector .slds-theme--inverse
+   * @modifier
+   */
   &_inverse,
   &--inverse {
     @include theme(inverse);
     border-color: $color-background-inverse;
   }
 
+  /**
+   * @summary Sets the background color to darker blue
+   *
+   * @selector .slds-theme--alt-inverse
+   * @modifier
+   */
   &_alt-inverse,
   &--alt-inverse {
     @include theme(alt-inverse);
     border-color: $color-background-alt-inverse;
   }
 
+  /**
+   * @summary Sets the background color to green
+   *
+   * @selector .slds-theme--success
+   * @modifier
+   */
   &_success,
   &--success {
     @include inverse-links;
     background-color: $color-background-toast-success;
   }
 
+  /**
+   * @summary Sets the background color to gray-ish blue
+   *
+   * @selector .slds-theme--info
+   * @modifier
+   */
   &_info,
   &--info {
     @include inverse-links;
     background-color: $color-background-toast;
   }
 
+  /**
+   * @summary Sets the background color to yellow
+   *
+   * @selector .slds-theme--warning
+   * @modifier
+   */
   &_warning,
   &--warning {
     background-color: $color-background-warning;
@@ -62,23 +104,42 @@
     }
   }
 
+  /**
+   * @summary Sets the background color to red
+   *
+   * @selector .slds-theme--error
+   * @modifier
+   */
   &_error,
   &--error {
     @include inverse-links;
     background-color: $color-background-toast-error;
   }
 
+  /**
+   * @summary Sets the background color to black
+   *
+   * @selector .slds-theme--offline
+   * @modifier
+   */
   &_offline,
   &--offline {
     @include inverse-links;
     background-color: #444;
   }
 
+  /**
+   * @summary Adds striped background
+   *
+   * @selector .slds-theme--alert-texture
+   * @modifier
+   */
   &_alert-texture,
   &--alert-texture {
     @include gradient-striped;
   }
 
+  // Is this being used?
   &_inverse-text,
   &--inverse-text {
     @include inverse-links;

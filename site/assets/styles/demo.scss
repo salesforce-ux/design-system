@@ -104,6 +104,9 @@ body {
   }
 }
 
+// Alignment Utility
+.demo-only--alignment > div { height: 9.375rem; }
+
 // For spacing demo
 .demo-only--spacing {
   overflow: hidden;

@@ -72,6 +72,32 @@
     }
   }
 
+  /**
+   * Container for Rich Text Editor Bottom Toolbar
+   *
+   * @name bottom-toolbar
+   * @selector .slds-rich-text-editor__toolbar-bottom
+   * @restrict .slds-rich-text-editor div
+   * @variant
+   */
+  &__toolbar-bottom {
+    border: {
+      bottom: {
+        left-radius: $border-radius-medium;
+        right-radius: $border-radius-medium;
+      }
+      top: $border-width-thin solid $color-border;
+    }
+    white-space: nowrap;
+  }
+
+  .slds-textarea {
+    border-top: {
+      left-radius: $border-radius-medium;
+      right-radius: $border-radius-medium;
+    }
+  }
+
   // Doesn't look like this is being used anywhere
   &__table {
     list-style: none;

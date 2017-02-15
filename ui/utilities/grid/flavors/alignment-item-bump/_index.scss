@@ -7,23 +7,51 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// New in 1.0.0
-.slds-col_bump,
-.slds-col--bump {
 
-  &-top {
-    margin-top: auto;
-  }
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit at the top, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col--bump-top
+ * @restrict .slds-grid > *
+ * @modifier
+ */
+.slds-col_bump-top,
+.slds-col--bump-top {
+  margin-top: auto;
+}
 
-  &-right {
-    margin-right: auto;
-  }
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit to the right, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col--bump-right
+ * @restrict .slds-grid > *
+ * @modifier
+ */
+.slds-col_bump-right,
+.slds-col--bump-right {
+  margin-right: auto;
+}
 
-  &-bottom {
-    margin-right: auto;
-  }
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit at the bottom, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col--bump-bottom
+ * @restrict .slds-grid > *
+ * @modifier
+ */
+.slds-col_bump-bottom,
+.slds-col--bump-bottom {
+  margin-right: auto;
+}
 
-  &-left {
-    margin-left: auto;
-  }
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col--bump-left
+ * @restrict .slds-grid > *
+ * @modifier
+ */
+.slds-col_bump-left,
+.slds-col--bump-left {
+  margin-left: auto;
 }

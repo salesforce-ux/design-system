@@ -48,6 +48,153 @@ let ButtonIcon = props =>
     <span className="slds-assistive-text">{ props.assistiveText }</span>
   </button>;
 
+let GlobalSearch = props =>
+  <div
+    aria-expanded={ props.expanded ? 'true' : 'false' }
+    aria-haspopup="listbox"
+    className={classNames('slds-form-element slds-lookup', props.expanded ? 'slds-is-open': null)}
+    role="combobox"
+  >
+    <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
+
+    <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left-right">
+      <SvgIcon className="slds-input__icon slds-input__icon--left" sprite="utility" symbol="search" />
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="list"
+        aria-controls="global-search-list-01"
+        autoComplete="off"
+        className="slds-input slds-lookup__search-input"
+        id="global-search-01"
+        placeholder="Search Salesforce"
+        role="textbox"
+        type="search"
+        defaultValue={ props.value }
+      />
+      {
+        props.value ?
+          <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+            <SvgIcon className="slds-button__icon" sprite="utility" symbol="clear" />
+            <span className="slds-assistive-text">Clear the current search term</span>
+          </button>
+        : null
+      }
+    </div>
+
+    <div className="slds-lookup__menu" role="listbox" id="global-search-list-01">
+      { props.value ?
+      <GlobalSearchSearchOptions /> :
+      <GlobalSearchMRUs /> }
+    </div>
+  </div>;
+
+let GlobalSearchMRUs = props =>
+  <ul className="slds-lookup__list" role="group" aria-label="Recent Items">
+    <li role="presentation">
+      <h3 role="presentation" className="slds-lookup__item--label slds-text-body--small">Recent Items</h3>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">Salesforce - 1,000 Licenses</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Prospecting</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">Art Vandelay</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Contact &bull; avandelay@vandelay.com</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">Vandelary Industries</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
+        <SvgIcon className="slds-icon slds-icon-custom-8 slds-icon--small slds-media__figure" sprite="custom" symbol="custom8" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">Salesforce UK 2016 Events</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">General Ledger &bull; $20,000</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-lead slds-icon--small slds-media__figure" sprite="standard" symbol="lead" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">H.E. Pennypacker</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Lead &bull; Nursing</span>
+        </span>
+      </span>
+    </li>
+  </ul>;
+
+let GlobalSearchSearchOptions = props =>
+  <ul className="slds-lookup__list" role="presentation">
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-lookup__item-action--label slds-text-body--small slds-has-focus" id="option-00" role="option">
+        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="search" />
+        <span className="slds-truncate">"ibm" in Salesforce</span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text"><mark>IBM</mark> - 1yr/100k</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Proposal/Quote</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text"><mark>IBM</mark></span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text"><mark>IBM</mark> Watson</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">200 Service Licenses - <mark>IBM</mark></span>
+          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity  &bull; Close-Won</span>
+        </span>
+      </span>
+    </li>
+    <li role="presentation">
+      <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
+        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+        <span className="slds-media__body">
+          <span className="slds-lookup__result-text">Art Vandelay (<mark>IBM</mark>)</span>
+          <span className="slds-lookup__result-meta slds-text-body--small">User &bull; Latex Salesman</span>
+        </span>
+      </span>
+    </li>
+  </ul>;
+
 export let GlobalHeader = props =>
   <header className={classNames('slds-global-header_container', props.className)}>
     <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
@@ -59,15 +206,10 @@ export let GlobalHeader = props =>
         </div>
       </div>
       <div className="slds-global-header__item slds-global-header__item--search">
-        <div className={classNames('slds-form-element slds-lookup', props.autocomplete ? 'slds-is-open': null)}>
-          <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
-          { props.autocomplete ?
-            props.children
-            : <div className="slds-form-element__control lookup__search-control slds-input-has-icon slds-input-has-icon--left">
-                <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
-                <input id="global-search-01" className="slds-input slds-lookup__search-input" type="search" placeholder="Search Salesforce" />
-              </div> }
-        </div>
+        <GlobalSearch
+          expanded={ props.expanded }
+          value={ props.searchingFor }
+        />
       </div>
       <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
         <li className={ classNames('slds-grid') }>

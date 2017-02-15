@@ -63,6 +63,16 @@ export let ListboxItem = props => {
   );
 };
 
+export const PickList = props =>
+  <div
+    aria-expanded={ props.isOpen ? 'true' : 'false' }
+    aria-haspopup="listbox"
+    className={ classNames('slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click', { 'slds-is-open': props.isOpen, 'slds-picklist--fluid': props.isFluid }, props.classNames) }
+    role="combobox"
+  >
+    { props.children }
+  </div>;
+
 let ComboboxSearchInput = props =>
   <FormElement
     label="Categories"
@@ -71,16 +81,16 @@ let ComboboxSearchInput = props =>
     formControlClassName="slds-picklist__input"
   >
       <input
-        id="text-input-01"
-        className="slds-lookup__search-input slds-input"
-        type="search"
-        placeholder={ props.placeholder || 'Select an Option' }
-        aria-owns="option-list-01"
-        role="combobox"
         aria-activedescendant=""
-        aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
+        aria-autocomplete={ props.autocomplete ? 'list' : null }
+        aria-controls="option-list-01"
+        autoComplete="off"
+        className="slds-lookup__search-input slds-input"
+        id="text-input-01"
+        placeholder={ props.placeholder || 'Select an Option' }
         readOnly={ !props.autocomplete }
-        aria-autocomplete={ props.autocomplete }
+        role="textbox"
+        type="search"
         value={ props.value }
       />
       {
@@ -107,7 +117,7 @@ export let states = [
     id: 'picklist-closed',
     label: 'Closed',
     element:
-      <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
+      <PickList>
         <ComboboxSearchInput />
         <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
           <ListboxList>
@@ -119,14 +129,14 @@ export let states = [
             <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
           </ListboxList>
         </Listbox>
-      </div>
+      </PickList>
   },
   {
     id: 'picklist-open',
     label: 'Open',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput dropdown="open" />
           <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
@@ -138,7 +148,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -146,7 +156,7 @@ export let states = [
     label: 'Item selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput value="Option A" dropdown="open" />
           <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
@@ -160,7 +170,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -168,7 +178,7 @@ export let states = [
     label: 'Multiple items selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput value="2 Options selected" dropdown="open" />
           <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
@@ -184,7 +194,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -192,7 +202,7 @@ export let states = [
     label: 'Closed - Multiple items selected',
     element:
       <div className="demo-only">
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
+        <PickList>
           <ComboboxSearchInput value="2 Options selected" dropdown="open" />
           <Listbox className="slds-dropdown slds-dropdown--left">
             <ListboxList>
@@ -208,7 +218,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
         <PillContainer className="slds-pill_container--bare">
           <ListboxHoriz>
             <ListItemHoriz>
@@ -226,7 +236,7 @@ export let states = [
     label: 'With Header',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput value="2 Options selected" dropdown="open" />
           <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList role="group" aria-label="Recently Viewed">
@@ -243,7 +253,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -251,7 +261,7 @@ export let states = [
     label: 'Autocomplete',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput placeholder="Find Option" dropdown="open" autocomplete />
           <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList role="group" aria-label="Recently Viewed">
@@ -277,7 +287,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   }
 ];

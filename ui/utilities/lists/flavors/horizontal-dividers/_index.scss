@@ -8,7 +8,13 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-// Left horizontal dot separator
+/**
+ * @summary Adds dot separators to the left of horizontal list items
+ *
+ * @selector .slds-has-dividers--left
+ * @restrict ul, ol
+ * @modifier
+ */
 .slds-has-dividers_left > .slds-list__item,
 .slds-has-dividers--left > .slds-list__item,
 .slds-has-dividers_left > .slds-item,
@@ -16,7 +22,13 @@
   @include dot-separator(left);
 }
 
-// Right horizontal dot separator
+/**
+ * @summary Adds dot separators to the right of horizontal list items
+ *
+ * @selector .slds-has-dividers--right
+ * @restrict ul, ol
+ * @modifier
+ */
 .slds-has-dividers_right > .slds-list__item,
 .slds-has-dividers--right > .slds-list__item,
 .slds-has-dividers_right > .slds-item,

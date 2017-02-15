@@ -10,14 +10,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 
 //////////////////////////////////////////////
 // State Constructor(s)
 //////////////////////////////////////////////
 
 let Popover = props =>
-<div className={`slds-popover slds-nubbin--left slds-theme--${props.theme}`} role="dialog">
-  <div className="slds-popover__body">
+<div
+  aria-label="Dialog title"
+  aria-describedby="popover-body-id"
+  className={`slds-popover slds-nubbin--left slds-theme--${props.theme}`}
+  role="dialog">
+  <ButtonIcon
+    className="slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close"
+    symbol="close"
+    assistiveText="Close dialog"
+    title="Close dialog"
+  />
+  <div id="popover-body-id" className="slds-popover__body">
     Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
   </div>
 </div>;

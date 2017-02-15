@@ -8,25 +8,52 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+/**
+ * @summary Provides 1rem base padding and borders
+ *
+ * @selector .slds-box
+ * @modifier
+ */
 .slds-box {
   @include box($borders: around);
 
+  /**
+   * @summary Changes padding to .25rem
+   *
+   * @selector .slds-box--xx-small
+   * @restrict .slds-box
+   * @modifier
+   */
   &_xx-small,
   &--xx-small {
     padding: $spacing-xx-small;
   }
 
+  /**
+   * @summary Changes padding to .5rem
+   *
+   * @selector .slds-box--x-small
+   * @restrict .slds-box
+   * @modifier
+   */
   &_x-small,
   &--x-small {
     padding: $spacing-x-small;
   }
 
+  /**
+   * @summary Changes padding to .75rem
+   *
+   * @selector .slds-box--small
+   * @restrict .slds-box
+   * @modifier
+   */
   &_small,
   &--small {
     padding: $spacing-small;
   }
 
+  // Deprecate for slds-border--around
   &_border,
   &--border {
     @include box($padding: 0, $borders: around);

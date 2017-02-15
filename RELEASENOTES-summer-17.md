@@ -9,11 +9,14 @@
 
 The following site enhancements are now available:
 
+- Added additional Popover accessibility/interaction guidelines - [Popover](/components/popovers/#overview)
+
 **NEW COMPONENTS AND VARIANTS**
 
 The following components are now available:
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
 - Added Split View List - [Split view](/components/split-view)
+- Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
 
 **ADDED**
 
@@ -64,3 +67,7 @@ The following tokens have been add/removed/deprecated in this release:
 - `TASK_2` was renamed into `TASK2`
 - Standard icon set: Added `ENTITLEMENT`
 - Standard icon set: Added `LIVE_CHAT`
+- s1-base/sizing
+  - Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
+  - Removed `MAX_WIDTH_ACTION_BAR`
+  - Removed `MAX_WIDTH_ACTION_BAR_ITEM`

@@ -25,13 +25,23 @@ export default (
       <p className="site-text-introduction">
         Create a custom CSS file to use the {g.displayName} in Visualforce.
       </p>
-      <p>To use the Design System in Visualforce you need to create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here</a>.</p>
+      <p>To use the Design System in Visualforce you have two options:</p>
+
+      <ol>
+        <li>
+          Add <code>&lt;apex:slds /&gt;</code> to your page and wrap your code in a container <code>&lt;div class="slds-scope"&gt; ... &lt;/div&gt;</code>.<br />
+          <a href="https://trailhead.salesforce.com/modules/lightning_design_system/units/lightning-design-system2"><em>See this code in context on Trailhead</em></a> and learn more in our <a href="https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_styling_slds.htm"><em>Visualforce Developer Guide</em></a>.
+        </li>
+        <li>
+          Or (not recommended…): create a CSS file with a custom scoped outer wrapper. <a href="https://tools.lightningdesignsystem.com/css-customizer">A tool to create your custom CSS is available here</a>.
+        </li>
+      </ol>
       <p>
         If you want to dive straight in, here are a few things to note when working with the {g.displayName} in Visualforce:
       </p>
       <ul className="slds-list--dotted">
-        <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-visualforce-static-resources-like-stylesheets-and-icons">FAQ</a>.</li>
-        <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the component examples, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
+        <li>When using the component sample code from this site, be sure to replace all static resource paths with the Visualforce URLFOR syntax, as summarized in the <a href="/faq#how-do-i-link-to-icons-in-visualforce">FAQ</a>.</li>
+        <li>Apex tags such as <code>&lt;apex:pageblock&gt;</code> and <code>&lt;apex:inputField&gt;</code> are not yet supported for use with the {g.displayName}. The Trailhead unit on <a href="https://developer.salesforce.com/trailhead/lex_dev_visualforce/lex_dev_visualforce_design">Visualforce development within Lightning</a> explains options for styling legacy code to look like the new Lightning UI. For best results with the {g.displayName}, use the markup style as outlined in the component examples, and use JavaScript Remoting, Remote Objects or a similar API for data access.</li>
         <li>To use the SVG spritemap icons, add the attributes <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> to the <code>&lt;html&gt;</code> element as documented in the <a href="https://developer.salesforce.com/trailhead/module/lightning_design_system">Trailhead module</a>. Do not add the attributes to individual <code>&lt;svg&gt;</code> elements as can cause a page rendering bug.</li>
         <li>To use SVG spritemap image icons with Internet Explorer, use the <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a> script.</li>
         <li>Currently, if you need to use the Salesforce header or sidebar, you can not specify the <code>xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</code> on the <code>&lt;html&gt;</code> element. In this case, the SVG icons are not supported.</li>

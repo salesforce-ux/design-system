@@ -20,32 +20,6 @@
 }
 
 
-
-@mixin placeholder($color: $color-text-placeholder, $weight: $font-weight-regular, $size: $font-size-medium) {
-  @include deprecate('4.0.0', 'Use ::placeholder instead, and prefix the output using autoprefixer') {
-    // scss-lint:disable VendorPrefix
-
-    &::-webkit-input-placeholder {
-      color: $color;
-      font-weight: $weight;
-      font-size: $size;
-    }
-
-    &::-moz-placeholder {
-      color: $color;
-      font-weight: $weight;
-      font-size: $size;
-    }
-
-    &:-ms-input-placeholder {
-      color: $color;
-      font-weight: $weight;
-      font-size: $size;
-    }
-  }
-}
-
-
 @mixin calendar-selection-fill {
   content: '';
   position: absolute;

@@ -7,15 +7,28 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
 .slds-list_horizontal,
 .slds-list--horizontal {
 
+  /**
+   * @summary Label of the name-value pair variant. Layout is modified by its parent class.
+   *
+   * @selector .slds-item--label
+   * @restrict li
+   */
   .slds-item_label,
   .slds-item--label {
     width: 30%;
     padding-right: $spacing-small;
   }
 
+  /**
+   * @summary Label of the name-value pair variant. Layout is modified by its parent class.
+   *
+   * @selector .slds-item--detail
+   * @restrict li
+   */
   .slds-item_detail,
   .slds-item--detail {
     width: 70%;

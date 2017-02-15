@@ -8,16 +8,34 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+/**
+ * @summary Creates media object
+ *
+ * @name base
+ * @selector .slds-media
+ * @variant
+ */
 .slds-media {
   display: flex;
   align-items: flex-start;
 
+  /**
+   * Defines the figure area
+   *
+   * @selector .slds-media__figure
+   * @restrict .slds-media div
+   */
   &__figure {
     flex-shrink: 0;
     margin-right: $spacing-small;
   }
 
+  /**
+   * Defines the body area
+   *
+   * @selector .slds-media__body
+   * @restrict .slds-media div
+   */
   &__body {
     flex: 1;
     min-width: 0; // This fixes an issue with truncation inside flexbox due to the changes in flex basis (already in FFOX, coming to Chrome)
@@ -29,14 +47,16 @@
   }
 }
 
+/**
+ * Adjusts whitespace on smaller media objects
+ *
+ * @selector .slds-media--small
+ * @restrict .slds-media
+ * @modifier
+ */
 .slds-media_small .slds-media__figure,
 .slds-media--small .slds-media__figure {
   margin-right: $spacing-xx-small;
-}
-
-.slds-media_large .slds-media__figure,
-.slds-media--large .slds-media__figure {
-  margin-right: $spacing-large;
 }
 
 .slds-media_small .slds-media__figure_reverse,
@@ -44,16 +64,42 @@
   margin-left: $spacing-xx-small;
 }
 
+/**
+ * Adjusts whitespace on larger media objects
+ *
+ * @selector .slds-media--large
+ * @restrict .slds-media
+ * @modifier
+ */
+.slds-media_large .slds-media__figure,
+.slds-media--large .slds-media__figure {
+  margin-right: $spacing-large;
+}
+
 .slds-media_large .slds-media__figure_reverse,
 .slds-media--large .slds-media__figure--reverse {
   margin-left: $spacing-large;
 }
 
+/**
+ * Aligns the content in the .slds-media__body to the middle of the .slds-media__figure
+ *
+ * @selector .slds-media--center
+ * @restrict .slds-media
+ * @modifier
+ */
 .slds-media_center,
 .slds-media--center {
   align-items: center;
 }
 
+/**
+ * Defines the figure area on the other side
+ *
+ * @selector .slds-media__figure--reverse
+ * @restrict .slds-media__figure
+ * @modifier
+ */
 .slds-media__figure_reverse,
 .slds-media__figure--reverse {
   margin: 0 0 0 $spacing-small;

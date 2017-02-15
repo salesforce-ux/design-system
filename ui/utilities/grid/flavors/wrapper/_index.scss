@@ -1,0 +1,244 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid
+ * @restrict *
+ * @modifier
+ */
+.slds-grid {
+  display: flex;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid--frame
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_frame,
+.slds-grid--frame {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid--vertical
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_vertical,
+.slds-grid--vertical {
+  flex-direction: column;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid--vertical-reverse
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_vertical-reverse,
+.slds-grid--vertical-reverse {
+  flex-direction: column-reverse;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid--reverse
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_reverse,
+.slds-grid--reverse {
+  flex-direction: row-reverse;
+}
+
+/**
+ * @summary Allows columns to wrap when they exceed 100% of their parent’s width
+ *
+ * @selector .slds-wrap
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-wrap {
+  @include flex-wrap(true);
+}
+
+/**
+ * @summary Keeps columns on one line. Allows columns to stretch and fill 100% of the parent&rsquo;s width and height.
+ *
+ * @selector .slds-nowrap
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-nowrap {
+  @include flex-item(expand);
+  @include flex-wrap(false);
+}
+
+@include deprecate('4.0.0', 'Use .slds-{size}-nowrap instead') {
+  .slds-nowrap_small,
+  .slds-nowrap--small {
+    @include mq-small-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_medium,
+  .slds-nowrap--medium {
+    @include mq-medium-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_large,
+  .slds-nowrap--large {
+    @include mq-large-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+}
+
+/**
+ * @summary .slds-{size}-nowrap used for responsive design
+ *
+ * @selector [class*='-nowrap']
+ * @restrict .slds-grid
+ * @modifier
+ */
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
+  @each $key in $size {
+    @media (min-width: #{pem($breakpoint)}) {
+      .slds-#{$size}-nowrap {
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+/**
+ * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
+ *
+ * @selector .slds-grid--pull-padded
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded,
+.slds-grid--pull-padded {
+  margin: {
+    right: ($spacing-small * -1);
+    left: ($spacing-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.125rem of padding when nesting a grid in a region with `.slds-p-horizontal--xxx-small`
+ *
+ * @selector .slds-grid--pull-padded-xxx-small
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-xxx-small,
+.slds-grid--pull-padded-xxx-small {
+  margin: {
+    right: ($spacing-xxx-small * -1);
+    left: ($spacing-xxx-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.25rem of padding when nesting a grid in a region with `.slds-p-horizontal--xx-small`
+ *
+ * @selector .slds-grid--pull-padded-xx-small
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-xx-small,
+.slds-grid--pull-padded-xx-small {
+  margin: {
+    right: ($spacing-xx-small * -1);
+    left: ($spacing-xx-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--x-small`
+ *
+ * @selector .slds-grid--pull-padded-x-small
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-x-small,
+.slds-grid--pull-padded-x-small {
+  margin: {
+    right: ($spacing-x-small * -1);
+    left: ($spacing-x-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
+ *
+ * @selector .slds-grid--pull-padded-small
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-small,
+.slds-grid--pull-padded-small {
+  margin: {
+    right: ($spacing-small * -1);
+    left: ($spacing-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 1rem of padding when nesting a grid in a region with `.slds-p-horizontal--medium`
+ *
+ * @selector .slds-grid--pull-padded-medium
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-medium,
+.slds-grid--pull-padded-medium {
+  margin: {
+    right: ($spacing-medium * -1);
+    left: ($spacing-medium * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--large`
+ *
+ * @selector .slds-grid--pull-padded-large
+ * @restrict .slds-grid
+ * @modifier
+ */
+.slds-grid_pull-padded-large,
+.slds-grid--pull-padded-large {
+  margin: {
+    right: ($spacing-large * -1);
+    left: ($spacing-large * -1);
+  }
+}

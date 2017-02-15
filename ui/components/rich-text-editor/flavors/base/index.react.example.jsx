@@ -36,6 +36,11 @@ export let RteToolbar = props =>
     {props.children}
   </div>;
 
+export let RteToolbarBottom = props =>
+  <div role="toolbar" aria-label={props.disabledLabel} className="slds-rich-text-editor__toolbar-bottom slds-is-relative slds-shrink-none slds-p-around--x-small slds-grid slds-theme--shade">
+    {props.children}
+  </div>;
+
 export let RteFormatFont = props =>
   <div className="slds-button-group" role="group" aria-label="Format font family & size">
     <div className="slds-button-group">
@@ -255,16 +260,24 @@ export let RteOverflow = props =>
           assistiveText="More Actions" />
       </li>
     </ButtonGroupList>
+    {props.children}
+  </div>;
 
-    <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36px', right: '0'}}>
-      <RteInsertContent overflow />
-      <RteClearFormatting overflow />
-    </div>
+export let RteOverflowDown = props =>
+  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36px', right: '0'}}>
+    <RteInsertContent overflow />
+    <RteClearFormatting overflow />
+  </div>;
+
+export let RteOverflowUp = props =>
+  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', bottom: '36px', right: '0'}}>
+    <RteInsertContent overflow />
+    <RteClearFormatting overflow />
   </div>;
 
 export let RteTextarea = props =>
   <div className="slds-rich-text-editor__textarea">
-    <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid slds-grow">
+    <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid">
       { props.text ?
         <div aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
         <div aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
@@ -382,7 +395,9 @@ export let states = [
         <RteToolbar>
           <RteFormatText tabIndexSetting="0" />
           <RteFormatBody />
-          <RteOverflow />
+          <RteOverflow>
+            <RteOverflowDown />
+          </RteOverflow>
         </RteToolbar>
         <RteTextarea placeholder="Compose text..." />
       </RichTextEditor>

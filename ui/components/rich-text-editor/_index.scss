@@ -39,112 +39,90 @@
  * @variant
  */
 .slds-rich-text-editor {
-  border: $border-width-thin solid $color-border {
-    radius: $border-radius-medium;
-  };
-  min: {
-    width: $size-medium;
-    height: $size-xx-small;
-  }
+  min-width: $size-medium;
+  min-height: $size-xx-small;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
 
-  /**
-   * Container for Rich Text Editor Toolbar
-   *
-   * @selector .slds-rich-text-editor__toolbar
-   * @restrict .slds-rich-text-editor div
-   * @required
-   */
-  &__toolbar {
-    border: {
-      top: {
-        left-radius: $border-radius-medium;
-        right-radius: $border-radius-medium;
-      }
-      bottom: $border-width-thin solid $color-border;
-    }
-    white-space: nowrap;
+/**
+ * Container for Rich Text Editor Toolbar
+ *
+ * @selector .slds-rich-text-editor__toolbar
+ * @restrict .slds-rich-text-editor div
+ * @required
+ */
+.slds-rich-text-editor__toolbar {
+  white-space: nowrap;
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * Container for Rich Text Editor Bottom Toolbar
+ *
+ * @name bottom-toolbar
+ * @selector .slds-rich-text-editor__toolbar-bottom
+ * @restrict .slds-rich-text-editor div
+ * @variant
+ */
+.slds-rich-text-editor__toolbar-bottom {
+  white-space: nowrap;
+  border-bottom-left-radius: $border-radius-medium;
+  border-bottom-right-radius: $border-radius-medium;
+  border-top: $border-width-thin solid $color-border;
+}
+
+/**
+ * Textarea for Rich Text Editor containing editable div
+ *
+ * @selector .slds-textarea
+ * @restrict .slds-rich-text-editor__textarea div
+ * @required
+ */
+.slds-rich-text-editor__textarea .slds-textarea {
+  min-height: $size-xx-small;
+  vertical-align: middle;
+  border: 0;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
   }
+}
+
+/**
+ * Focus state for rich text editor
+ *
+ * @selector .slds-has-focus
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-focus {
+  border-color: $color-border-input-active;
+  box-shadow: $shadow-button-focus;
+}
+
+/**
+ * Error state for rich text editor
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-error {
+  border: $border-width-thick solid $color-border-error;
 
   .slds-textarea {
-    border-bottom: {
-      left-radius: $border-radius-medium;
-      right-radius: $border-radius-medium;
-    }
+    box-shadow: none;
   }
+}
 
-  // Doesn't look like this is being used anywhere
-  &__table {
-    list-style: none;
-    margin: 0 {
-      right: ($spacing-xxx-small * -1);
-      left: ($spacing-xxx-small * -1);
-    }
-    padding: 0;
-    width: 8.25rem;
+.slds-picklist__label[disabled] .slds-icon {
+  fill: $color-text-button-default-disabled;
+}
 
-    .slds-box {
-      border-radius: $border-radius-small;
-    }
-
-    .slds-is-active {
-      background-color: $color-background-selection;
-    }
-  }
-
-  .slds-textarea {
-    border: 0 {
-      top: {
-        left-radius: 0;
-        right-radius: 0;
-      }
-    };
-    min-height: $size-xx-small;
-    vertical-align: middle;
-    resize: none;
-
-    &:focus,
-    &:active {
-      box-shadow: none;
-    }
-  }
-
-  textarea[disabled] ~ .slds-textarea {
-    cursor: not-allowed;
-    user-select: none;
-  }
-
-  /**
-   * Focus state for rich text editor
-   *
-   * @selector .slds-has-focus
-   * @restrict .slds-rich-text-editor
-   * @modifier
-   */
-  &.slds-has-focus {
-    border-color: $color-border-input-active;
-    box-shadow: $shadow-button-focus;
-  }
-
-  /**
-   * Error state for rich text editor
-   *
-   * @selector .slds-has-error
-   * @restrict .slds-rich-text-editor
-   * @modifier
-   */
-  &.slds-has-error {
-    border: $border-width-thick solid $color-border-error;
-
-    .slds-textarea {
-      box-shadow: none;
-    }
-  }
-
-  .slds-picklist__label[disabled] .slds-icon {
-    fill: $color-text-button-default-disabled;
-  }
-
-  [contenteditable]:focus {
-    outline: none;
-  }
+[contenteditable]:focus {
+  outline: none;
 }

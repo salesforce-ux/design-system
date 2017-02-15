@@ -10,9 +10,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Demo, RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting, RteOverflow, RteOverflowDown } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
+import { Demo, RichTextEditor, RteToolbar, RteToolbarBottom, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting, RteOverflow, RteOverflowDown, RteOverflowUp } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 ///////////////////////////////////////////
 // Export
@@ -25,17 +26,12 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor>
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
-            <RteFormatColor />
+          <RteTextarea placeholder="Compose text..." />
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" />
             <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
             <RteClearFormatting />
-          </RteToolbar>
-
-          <RteTextarea placeholder="Compose Email..." />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   },
@@ -45,17 +41,12 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor className="slds-has-focus">
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
-            <RteFormatColor />
+          <RteTextarea placeholder="Compose text..." />
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" />
             <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
             <RteClearFormatting />
-          </RteToolbar>
-
-          <RteTextarea placeholder="Compose Email..." />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   },
@@ -65,17 +56,12 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor>
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
-            <RteFormatColor />
-            <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
-            <RteClearFormatting />
-          </RteToolbar>
-
           <RteTextarea text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do iusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   },
@@ -85,18 +71,13 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor className="slds-has-error">
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
-            <RteFormatColor />
-            <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
-            <RteClearFormatting />
-          </RteToolbar>
-
-          <RteTextarea placeholder="Compose Email..." aria-describedby="rte-error-01" />
+          <RteTextarea placeholder="Compose text..." aria-describedby="rte-error-01" />
           <div id="rte-error-01" className="slds-form-element__help slds-p-around--small">This field is required</div>
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   },
@@ -106,17 +87,12 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor>
-          <RteToolbar disabledButtons disabledLabel="disabled">
-            <RteFormatFont disabledButtons />
-            <RteFormatText tabIndexSetting="-1" disabledButtons />
-            <RteFormatColor disabledButtons />
+          <RteTextarea placeholder="Compose text..." disabled />
+          <RteToolbarBottom disabledButtons disabledLabel="disabled">
+            <RteFormatText tabIndexSetting="0" disabledButtons />
             <RteFormatBody disabledButtons />
-            <RteAlignText disabledButtons />
-            <RteInsertContent disabledButtons />
             <RteClearFormatting disabledButtons />
-          </RteToolbar>
-
-          <RteTextarea placeholder="Compose Email..." disabled />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   },
@@ -126,19 +102,13 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor>
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" hasTooltip />
-            <RteFormatColor />
+          <RteTextarea placeholder="Compose text..." />
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" hasTooltip />
             <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
             <RteClearFormatting />
-          </RteToolbar>
-
-          <RteTextarea />
-
-          <Tooltip className="slds-nubbin--top-left" id="bold" style={{position: 'absolute', top: '48px', left: '149px'}}>
+          </RteToolbarBottom>
+          <Tooltip className="slds-nubbin--bottom-left" id="bold" style={{position: 'absolute', top: '60px', left: '2px'}}>
             Bold <kbd>cmd+b</kbd>
           </Tooltip>
         </RichTextEditor>
@@ -150,19 +120,14 @@ export let states = [
     element:
       <Demo>
         <RichTextEditor>
-          <RteToolbar>
-            <RteFormatFont />
-            <RteFormatText tabIndexSetting="-1" />
-            <RteFormatColor />
+          <RteTextarea placeholder="Compose text..." />
+          <RteToolbarBottom>
+            <RteFormatText tabIndexSetting="0" />
             <RteFormatBody />
-            <RteAlignText />
-            <RteInsertContent />
             <RteOverflow>
-              <RteOverflowDown />
+              <RteOverflowUp />
             </RteOverflow>
-          </RteToolbar>
-
-          <RteTextarea />
+          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   }

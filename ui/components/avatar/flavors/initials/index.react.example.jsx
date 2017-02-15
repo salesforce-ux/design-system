@@ -38,7 +38,7 @@ export let states = [
     label: 'Circle Initials',
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-contact" title="person name">AB</abbr>
+        <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
       </Avatar>
   },
   {

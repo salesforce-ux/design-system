@@ -11,17 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { StandardIcon } from 'ui/components/icons/flavors/standard/index.react.example';
+import { Avatar } from 'ui/components/avatar/flavors/base/index.react.example';
 import classNames from 'classnames';
-
-///////////////////////////////////////////
-// Partial(s)
-///////////////////////////////////////////
-
-export let Avatar = props =>
-  <span className={classNames('slds-avatar', props.className)}>
-    { props.children }
-  </span>;
 
 //////////////////////////////////////////////
 // Export
@@ -29,37 +20,25 @@ export let Avatar = props =>
 
 export default (
   <Avatar>
-    <img
-      alt="Person name"
-      src="/assets/images/avatar2.jpg"
-      title="User avatar"
-    />
+    <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
   </Avatar>
 );
 
 export let states = [
   {
-    id: 'avatar-square',
-    label: 'Square',
+    id: 'avatar-square-initials',
+    label: 'Square Initials',
     element:
       <Avatar className="slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
   {
-    id: 'avatar-circle',
-    label: 'Circle',
+    id: 'avatar-circle-initials',
+    label: 'Circle Initials',
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
       </Avatar>
   },
   {
@@ -67,11 +46,7 @@ export let states = [
     label: 'Size - X Small',
     element:
       <Avatar className="slds-avatar--x-small">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
   {
@@ -79,11 +54,7 @@ export let states = [
     label: 'Size - Small',
     element:
       <Avatar className="slds-avatar--small">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
   {
@@ -91,11 +62,7 @@ export let states = [
     label: 'Size - Medium',
     element:
       <Avatar className="slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
   {
@@ -103,11 +70,7 @@ export let states = [
     label: 'Size - Large',
     element:
       <Avatar className="slds-avatar--large">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   }
 ];

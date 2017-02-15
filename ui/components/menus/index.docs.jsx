@@ -22,9 +22,9 @@ export const intro = (
 
 export default (
   <ComponentDocs>
-    <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>. The exception to this is the <strong>Action Overflow for Touch</strong>, which not a dropdown menu.</p>
+    <p>The unordered menu list with <code>[role="menu"]</code> should be contained in a <code>&lt;div&gt;</code> with the class <CodeClass className="dropdown"/>.</p>
 
-    <p>The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger dropdown-trigger--click"/>.</p>
+    <p>The target HTML element and dropdown need to be wrapped in the class <CodeClass className="dropdown-trigger dropdown-trigger--click"/>. When the button is clicked, use JS to add the class <CodeClass className="is-open"/> to the wrapper. This is what causes the menu to appear. When the user makes a selection, remove the <CodeClass className="is-open"/> class to close the menu.</p>
 
     <p>By default, dropdown menus do not display a nubbin (the little cute triangle pointing at your target). If you want to apply one, you can add the class that defines the nubbin position and <CodeClass className="nubbin--top"/> to the <CodeClass className="dropdown"/> HTML element.</p>
     <p>See the <a href="#overview">Component Overview</a> table for further nubbin support.</p>
@@ -34,7 +34,7 @@ export default (
 
     <p>Expected markup:</p>
     <ul>
-      <li>Menu trigger is a focusable element (<code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>) with <code>aria-haspopup="true"</code></li>
+      <li>Menu trigger is a <code>&lt;button&gt;</code> with <code>aria-haspopup="true"</code></li>
       <li>Menu has <code>role="menu"</code> and an <code>aria-labelledby</code> attribute whose value is the id of the menu trigger</li>
       <li>Menu items have <code>role="menuitem"</code>, <code>role="menuitemcheckbox"</code>, or <code>role="menuitemradio"</code></li>
     </ul>

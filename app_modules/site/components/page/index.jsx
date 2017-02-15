@@ -14,6 +14,10 @@ import globals from 'app_modules/global';
 
 const LOCALYTICS_ID = '2a6dc90c85e5991e50f752a-f8539a44-1e85-11e5-44ef-006918dcf667';
 const GOOGLE_ANALYTICS_ID = 'UA-45076517-7';
+const GOOGLE_ANALYTICS_DIMENSIONS = {
+  SLDS_VERSION: 'dimension1',
+  USERTYPE: 'dimension2'
+};
 
 export const sentryScript = `
   Raven.config(
@@ -110,6 +114,8 @@ export default React.createClass({
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', '${GOOGLE_ANALYTICS_ID}', 'auto');
       ga('require', 'linkid');
+      ga('set', '${GOOGLE_ANALYTICS_DIMENSIONS.SLDS_VERSION}', '${process.env.SLDS_VERSION}');
+      ga('set', '${GOOGLE_ANALYTICS_DIMENSIONS.USERTYPE}', '${process.env.INTERNAL ? 'internal' : 'external'}');
       ga('send', 'pageview');
     `}} />;
   },

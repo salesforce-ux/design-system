@@ -63,38 +63,6 @@ export let states = [
       </Avatar>
   },
   {
-    id: 'avatar-square-initials',
-    label: 'Square Initials',
-    element:
-      <Avatar className="slds-avatar--medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
-      </Avatar>
-  },
-  {
-    id: 'avatar-circle-initials',
-    label: 'Circle Initials',
-    element:
-      <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-contact" title="person name">AB</abbr>
-      </Avatar>
-  },
-  {
-    id: 'avatar-square-icon',
-    label: 'Square Icon Fallback',
-    element:
-      <Avatar className="slds-avatar--medium">
-        <StandardIcon />
-      </Avatar>
-  },
-  {
-    id: 'avatar-circle-icon',
-    label: 'Circle Icon Fallback',
-    element:
-      <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <StandardIcon />
-      </Avatar>
-  },
-  {
     id: 'size-x-small',
     label: 'Size - X Small',
     element:

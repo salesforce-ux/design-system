@@ -20,7 +20,7 @@
  * use the first two letters of that word using one capital and one lower case
  * letter. If either an image or initials are unavailable, use the object icon as a fallback.
  *
- * @summary A avatar component is an image that represents a person
+ * @summary An avatar component represents an object or entity
  *
  * @base
  * @name avatar
@@ -31,8 +31,9 @@
  */
 
 /**
- * @summary Creates an avatar component
+ * An image is the preferred format for an avatar
  *
+ * @summary Creates an avatar component
  * @name base
  * @selector .slds-avatar
  * @restrict span
@@ -151,7 +152,8 @@
  * the first capitalized letter of each. For records that only have a
  * single word name, use the first two letters of that word using one
  * capital and one lower case letter. The background color should match
- * the entity icon.
+ * the entity or object icon. If no image or initials are available,
+ * the fallback should be the icon for the entity or object.
  *
  * @summary Used for initials inside an avatar
  * @name initials
@@ -162,4 +164,13 @@
 .slds-avatar__initials {
   @include absolute-center;
   height: 100%;
+
+  &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .slds-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
+    cursor: default;
+  }
+
+  &:hover {
+    color: $color-text-inverse;
+    cursor: default;
+  }
 }

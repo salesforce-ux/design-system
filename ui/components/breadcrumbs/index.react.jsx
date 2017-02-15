@@ -20,7 +20,7 @@ Crumb.propTypes = { href: React.PropTypes.string };
 
 const BreadCrumbs = props =>
   <nav {...props} role="navigation" aria-label="Breadcrumbs">
-    <ol className="slds-breadcrumb slds-list--horizontal">
+    <ol className="slds-breadcrumb slds-list--horizontal slds-wrap">
       {props.children}
     </ol>
   </nav>;

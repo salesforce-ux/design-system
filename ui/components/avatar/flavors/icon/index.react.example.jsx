@@ -40,7 +40,7 @@ export let states = [
     label: 'Circle Icon Fallback',
     element:
       <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <StandardIcon />
+        <StandardIcon symbol="user" />
       </Avatar>
   },
   {

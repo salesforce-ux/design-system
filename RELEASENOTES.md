@@ -3,8 +3,7 @@
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
-<!-- ## [Unreleased] -->
-## February 16, 2017
+## [Unreleased]
 
 **ADDED**
 

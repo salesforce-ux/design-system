@@ -1,0 +1,16 @@
+global:
+  category: font
+  type: font-weight
+  cssProperties:
+  - font
+  - font-weight
+props:
+  FONT_WEIGHT_LIGHT:
+    value: '300'
+    comment: Use for large headings only.
+  FONT_WEIGHT_REGULAR:
+    value: '400'
+    comment: Most all body copy.
+  FONT_WEIGHT_BOLD:
+    value: '700'
+    comment: Used sparingly for emphasized text within regular body copy.

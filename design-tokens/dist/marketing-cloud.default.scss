@@ -1,0 +1,50 @@
+// Use for large headings only.
+$font-weight-light: 300 !default;
+// Most all body copy.
+$font-weight-regular: 400 !default;
+// Used sparingly for emphasized text within regular body copy.
+$font-weight-bold: 700 !default;
+$font-size-x-small: 0.625rem !default;
+$font-size-small: 0.875rem !default;
+$font-size-medium: 1rem !default;
+$font-size-medium-a: 1.125rem !default;
+$font-size-large: 1.25rem !default;
+$font-size-x-large: 1.5rem !default;
+$font-size-x-large-a: 1.57rem !default;
+$font-size-xx-large: 2rem !default;
+// Extra extra small text.
+$font-size-text-xx-small: .625rem !default;
+// Extra small body text.
+$font-size-text-x-small: .75rem !default;
+// Small body text.
+$font-size-text-small: .8125rem !default;
+// Medium body text.
+$font-size-text-medium: 1rem !default;
+// Large body text.
+$font-size-text-large: 1.125rem !default;
+// Extra large body text.
+$font-size-text-x-large: 1.25rem !default;
+// Extra Extra small headings.
+$font-size-heading-xx-small: .625rem !default;
+// Extra small headings.
+$font-size-heading-x-small: .75rem !default;
+// Small headings.
+$font-size-heading-small: .875rem !default;
+// Medium headings.
+$font-size-heading-medium: 1.125rem !default;
+// Large headings.
+$font-size-heading-large: 1.5rem !default;
+// Extra large headings.
+$font-size-heading-x-large: 2rem !default;
+// Unitless line-heights for reusability
+$line-height-heading: 1.25 !default;
+// Unitless line-heights for reusability
+$line-height-text: 1.375 !default;
+// Remove extra leading. Unitless line-heights for reusability
+$line-height-reset: 1 !default;
+// Line heights for tabs
+$line-height-tab: 2.5rem !default;
+// Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.
+$font-family: 'Salesforce Sans', Arial, sans-serif !default;
+$font-family-text: 'Salesforce Sans', Arial, sans-serif !default;
+$font-family-heading: 'Salesforce Sans', Arial, sans-serif !default;

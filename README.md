@@ -1,4 +1,4 @@
-# Salesforce Lightning Design System [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
+# Salesforce Lightning Design System [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system) [![Greenkeeper badge](https://badges.greenkeeper.io/salesforce-ux/design-system-internal.svg?token=daad1067bbfc5d75c4fb2372360b4b0869bed68d4dc370f6b618b1db22b8f052)](https://greenkeeper.io/)
 
 Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 

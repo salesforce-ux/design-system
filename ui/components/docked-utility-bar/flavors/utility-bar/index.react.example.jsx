@@ -18,13 +18,31 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 export let UtilityBarItem = props =>
-  <li className="slds-utility-bar__item">
+  <li className={ classNames(
+    'slds-utility-bar__item',
+    { 'slds-has-notification': props.notification },
+    props.className
+  )}>
     <button
-      className={classNames('slds-button slds-utility-bar__action', props.active ? 'slds-is-active' : null)}
+      className={classNames(
+        'slds-button slds-utility-bar__action',
+        { 'slds-is-active': props.active }
+      )}
       aria-pressed={ props.active ? true : false }
     >
-      <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol={ props.symbol } />
-      { props.children }
+      { props.notification ?
+        <abbr className="slds-indicator--unread" title="Unread Item" aria-label="Unread Item">
+          <span className="slds-assistive-text">●</span>
+        </abbr>
+      : null }
+      <SvgIcon
+        className="slds-button__icon slds-button__icon--left"
+        sprite="utility"
+        symbol={ props.symbol }
+      />
+      <span className="slds-utility-bar__text">
+        { props.children }
+      </span>
     </button>
   </li>;
 
@@ -52,6 +70,10 @@ export let states = [
           <UtilityBarItem symbol="call">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+          <UtilityBarItem symbol="omni_channel">
+            <span className="slds-m-bottom--xxx-small">Online</span>
+            <span>Omni-Channel</span>
+          </UtilityBarItem>
         </UtilityBar>
       </div>
   },
@@ -64,6 +86,10 @@ export let states = [
           <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+          <UtilityBarItem symbol="omni_channel">
+            <span className="slds-m-bottom--xxx-small">Online</span>
+            <span>Omni-Channel</span>
+          </UtilityBarItem>
         </UtilityBar>
       </div>
   }

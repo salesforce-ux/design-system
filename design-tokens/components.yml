@@ -9,6 +9,7 @@ imports:
 - ../ui/components/data-tables/tokens/spacing.yml
 - ../ui/components/docked-composer/tokens/color.yml
 - ../ui/components/docked-composer/tokens/sizing.yml
+- ../ui/components/docked-utility-bar/tokens/background-color.yml
 - ../ui/components/dynamic-icons/tokens/background-color.yml
 - ../ui/components/global-header/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/background-color.yml

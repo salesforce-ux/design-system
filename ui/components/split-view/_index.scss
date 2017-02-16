@@ -151,14 +151,28 @@
    */
   .slds-indicator_unread,
   .slds-indicator--unread {
-    @include square(8px);
-    position: absolute;
-    top: $spacing-medium;
-    left: $spacing-x-small;
-    border-radius: $border-radius-circle;
-    display: block;
     background: $color-brand;
   }
+}
+
+/**
+ * Unread states
+ *
+ * Positions the dot indicator to the left of the content
+ *
+ * @selector .slds-indicator--unread
+ * @restrict .slds-split-view__list-item abbr
+ * @required
+ */
+.slds-indicator_unread,
+.slds-indicator--unread {
+  @include square(8px);
+  position: absolute;
+  top: $spacing-medium;
+  left: $spacing-x-small;
+  display: block;
+  border-radius: $border-radius-circle;
+  background: $color-background-notification-badge;
 }
 
 /**

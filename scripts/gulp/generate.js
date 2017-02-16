@@ -19,7 +19,6 @@ import './generate-tokens-zip';
 import './generate-cmps';
 import './generate-tokens-components';
 import './generate-tokens-ui';
-import './generate-ui-kit-zip';
 import './generate-ui';
 import './generate-examples';
 
@@ -32,7 +31,6 @@ gulp.task('generate', callback =>
       'generate:icons',
       'generate:tokens:zip',
       'generate:tokens:ui',
-      'generate:ui-kit:zip',
       'generate:ui'
     ],
     'generate:examples',

@@ -57,7 +57,7 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
-      <div className="slds-container--large lmf">
+      <div className="slds-container--large site-lmf">
         <p className="site-text-introduction">
           <strong>Toast</strong> serves as a feedback &amp; confirmation
           mechanism after the user takes an action.
@@ -152,11 +152,11 @@ export default (
 
         <figure className="slds-grid slds-wrap slds-grid--push-padded">
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
-            <img src="/assets/images/messaging/screenshot-toast-mobile.png" alt="Toast in Context (Mobile)" className="screenshot" width="187" height="334" />
+            <img src="/assets/images/messaging/screenshot-toast-mobile.png" alt="Toast in Context (Mobile)" className="site-screenshot" width="187" height="334" />
           </div>
 
           <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--2-of-3">
-            <img src="/assets/images/messaging/screenshot-toast-desktop.png" alt="Toast in Context (Desktop)" className="screenshot" width="640" height="512" />
+            <img src="/assets/images/messaging/screenshot-toast-desktop.png" alt="Toast in Context (Desktop)" className="site-screenshot" width="640" height="512" />
           </div>
         </figure>
 

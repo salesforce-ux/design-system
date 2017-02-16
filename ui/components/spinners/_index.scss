@@ -48,6 +48,8 @@
   transition-delay: 0s, 0.3s;
 }
 
+/* Follow production class names (not starting with slds-) */
+/* stylelint-disable selector-class-pattern */
 .slds-spinner_container.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -58,6 +60,7 @@
 .slds-spinner_container.hide {
   display: none;
 }
+/* stylelint-enable selector-class-pattern */
 
 /**
  * This is the gray base class for spinner

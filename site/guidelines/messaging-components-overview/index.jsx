@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 
 export default (
   <PageBody anchorTitle="Messaging Components" contentClassName="site-guidelines">
-    <div className="slds-container--large lmf">
+    <div className="slds-container--large site-lmf">
       <p className="site-text-introduction">
         There are a number of messaging components available for use. To
         choose a messaging element, you can refer to either Components

@@ -14,7 +14,7 @@ import PageBody from 'app_modules/site/components/page/body';
 
 export default (
   <PageBody anchorTitle="Messaging Types" contentClassName="site-guidelines">
-    <div className="slds-container--large lmf">
+    <div className="slds-container--large site-lmf">
       <img className="image" src="/assets/images/messaging/img-messaging-types.png" alt="At a high-level, we categorize messaging types by the nature of user interaction: system, engagement, access, and feedback." width="2000" height="620" />
 
       <p>

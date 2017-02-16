@@ -9,7 +9,8 @@ Neither the name of salesforce.com, inc. nor the names of its contributors may b
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-.lmf {
+.site-lmf {
+
   .slds-table td,
   .slds-table th {
     white-space: normal;
@@ -66,7 +67,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     .slds-modal--prompt {
       text-align: left;
     }
-
   }
 
   .slds-popover_container {
@@ -184,7 +184,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     max-width: 375px;
 
     // scss-lint:disable SelectorDepth
-    .notify__content svg,
+    .slds-notify__content svg,
     h2 svg {
       display: none;
     }
@@ -197,7 +197,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         height: 180px;
 
         // scss-lint:disable SelectorDepth
-        img {
+        img { /* stylelint-disable-line max-nesting-depth */
           margin: 0 auto;
         }
       }
@@ -231,7 +231,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         text-align: left;
 
         // scss-lint:disable SelectorDepth
-        svg {
+        svg { /* stylelint-disable-line max-nesting-depth */
           display: none;
         }
       }
@@ -263,7 +263,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         width: 100%;
 
         // scss-lint:disable SelectorDepth
-        &:last-child {
+        &:last-child { /* stylelint-disable-line max-nesting-depth */
           margin-bottom: 0;
         }
       }
@@ -346,7 +346,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     }
   }
 
-  .screenshot {
+  .site-screenshot {
     border: 1px solid $color-border-separator-alt;
     box-shadow: 0 0 4px 4px #fafafa;
     margin-bottom: $spacing-medium;
@@ -400,9 +400,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         list-style-type: none;
       }
     }
-  }
-
-  .clear {
-    clear: both;
   }
 }

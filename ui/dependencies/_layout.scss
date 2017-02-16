@@ -285,7 +285,8 @@
 @mixin visibility($class-name, $min: null, $max: null) {
 
   .slds-#{$class-name} {
-
+    /* Allow class interpolation with parent selector for easier utility class generation */
+    /* stylelint-disable selector-class-pattern */
     &-show {
       display: none;
 
@@ -324,6 +325,7 @@
         }
       }
     }
+    /* stylelint-enable selector-class-pattern */
   }
   @if $max {
 

@@ -161,19 +161,19 @@ body {
 }
 
 // Responsive Visibility Table
-.demo-visibility-chart {
-  .visible,
-  .hidden {
-    text-align: center;
-  }
-  .visible {
-    background: $color-background-success;
-    color: $color-text-inverse;
-  }
-  .hidden {
-    color: $color-text-weak;
-    opacity: 0.5;
-  }
+.demo-visibility-chart__visible,
+.demo-visibility-chart__hidden {
+  text-align: center;
+}
+
+.demo-visibility-chart__visible {
+  background: $color-background-success;
+  color: $color-text-inverse;
+}
+
+.demo-visibility-chart__hidden {
+  color: $color-text-weak;
+  opacity: 0.5;
 }
 
 .demo-visibility [class*="-hide"] {

@@ -53,7 +53,7 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
-      <div className="slds-container--large lmf">
+      <div className="slds-container--large site-lmf">
         <p className="site-text-introduction">
           Messaging state informs the UI text&rsquo;s voice &amp; tone. In
           keeping with messaging principles, the UI text should

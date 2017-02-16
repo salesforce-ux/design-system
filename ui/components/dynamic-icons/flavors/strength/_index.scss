@@ -99,7 +99,9 @@
 
   &.slds-is-paused circle {
     // scss-lint:disable ImportantRule
+    /* stylelint-disable declaration-no-important */
     animation-play-state: paused !important;
+    /* stylelint-enable declaration-no-important */
   }
 }
 

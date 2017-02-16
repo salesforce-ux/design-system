@@ -53,7 +53,7 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
-      <div className="slds-container--large lmf">
+      <div className="slds-container--large site-lmf">
         <p className="site-text-introduction">
           <strong>Popovers</strong> calls attention to a problem or a
           potential problem with a field or record.
@@ -132,11 +132,11 @@ export default (
         </h2>
 
         <figure className="slds-m-vertical--x-large">
-          <img src="/assets/images/messaging/screenshot-popover-warning-desktop.png" alt="Engagement Popover in Context (Desktop)" className="screenshot" width="640" height="512" />
+          <img src="/assets/images/messaging/screenshot-popover-warning-desktop.png" alt="Engagement Popover in Context (Desktop)" className="site-screenshot" width="640" height="512" />
         </figure>
 
         <figure className="slds-m-vertical--x-large">
-          <img src="/assets/images/messaging/screenshot-popover-error-desktop.png" alt="Error Popover in Context (Desktop)" className="screenshot" width="640" height="512" />
+          <img src="/assets/images/messaging/screenshot-popover-error-desktop.png" alt="Error Popover in Context (Desktop)" className="site-screenshot" width="640" height="512" />
         </figure>
 
         <h2 className="site-text-heading--large" id="flavor-dos-donts">

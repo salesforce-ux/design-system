@@ -15,7 +15,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 
 export default (
   <PageBody anchorTitle="Messaging Overview" contentClassName="site slds-container--large">
-    <div className="slds-container--large lmf">
+    <div className="slds-container--large site-lmf">
       <p className="site-text-introduction">
         The Lightning Messaging Framework is a design guideline for
         messaging patterns in the Salesforce ecosystem.

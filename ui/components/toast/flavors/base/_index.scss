@@ -1,0 +1,95 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * #### Accessibility
+ *
+ * Notifications should contain `role="alert"` on the container to signal to
+ * assistive technology that they require the user’s immediate attention. Use a
+ * span with `.slds-assistive-text` to let the user know what type of notification it is.
+ *
+ * @summary Toast serves as a feedback & confirmation mechanism after the user takes an action.
+ *
+ * @base
+ * @name toast
+ * @selector .slds-notify_container
+ * @support dev-ready
+ * @category complex
+ * @type messaging
+ * @role alert
+ */
+
+/**
+ * @name base
+ * @selector .slds-notify_container
+ * @restrict div
+ * @variant
+ */
+.slds-notify-container,
+.slds-notify_container {
+
+  @include deprecate('4.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: $z-index-toast;
+  text-align: center;
+}
+
+/**
+ * Initializes toast notification
+ *
+ * @selector .slds-notify--toast
+ * @restrict .slds-notify_container div
+ * @required
+ */
+.slds-notify_toast,
+.slds-notify--toast {
+  @include inverse-text;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  background: $color-background-toast;
+  font-weight: $font-weight-light;
+  border-radius: $border-radius-medium;
+  margin: $spacing-x-small;
+  padding: $spacing-small $spacing-xx-large $spacing-small $spacing-large;
+  min-width: rem(480px);
+  text-align: left;
+  justify-content: flex-start;
+
+  /**
+   * Alert close button
+   *
+   * @selector .slds-notify__close
+   * @restrict .slds-notify--toast button
+   * @required
+   */
+  .slds-notify__close {
+    float: right;
+    position: absolute;
+    top: $spacing-small;
+    right: $spacing-small;
+    margin-left: $spacing-xx-small;
+    transform: translateY($spacing-xxx-small * -1);
+  }
+}
+
+// Modify toasts when in a narrow column
+.slds-region_narrow {
+
+  // Modifying .slds-notify--toast when inside a region with the
+  // class .slds-region--narrow
+  .slds-notify--toast {
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+}

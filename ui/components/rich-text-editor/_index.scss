@@ -7,91 +7,122 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * At a high-level, the buttons in RTE are organized into four groupings:
+ * “format text”, “format body”, “insert content”, and “clear formatting”.
+ *
+ * The “clear formatting” button always stays at the end of the buttons set,
+ * regardless of which rich text editor variant is used. It should always stand by itself.
+ *
+ * #### Accessibility
+ *
+ * Ensure that there is a single tab key stop for the button groups in the
+ * toolbar, and that left and right arrows are used to navigate through each button.
+ *
+ * @summary The Rich Text Editor is a textarea with added capabilities for use in various publishers.
+ *
+ * @base
+ * @name rich-text-editor
+ * @selector .slds-rich-text-editor
+ * @support dev-ready
+ * @category feature
+ * @type data-entry
+ * @role textbox,toolbar
+ */
+
+/**
+ * The default rich text editor contains a minimal amount of text formatting capabilities.
+ *
+ * @name base
+ * @selector .slds-rich-text-editor
+ * @restrict div
+ * @variant
+ */
 .slds-rich-text-editor {
-  border: $border-width-thin solid $color-border {
-    radius: $border-radius-medium;
-  };
-  min: {
-    width: $size-medium;
-    height: $size-xx-small;
-  }
+  min-width: $size-medium;
+  min-height: $size-xx-small;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
 
-  &__toolbar {
-    border: {
-      top: {
-        left-radius: $border-radius-medium;
-        right-radius: $border-radius-medium;
-      }
-      bottom: $border-width-thin solid $color-border;
-    }
-    white-space: nowrap;
+/**
+ * Container for Rich Text Editor Toolbar
+ *
+ * @selector .slds-rich-text-editor__toolbar
+ * @restrict .slds-rich-text-editor div
+ * @required
+ */
+.slds-rich-text-editor__toolbar {
+  white-space: nowrap;
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * Container for Rich Text Editor Bottom Toolbar
+ *
+ * @name bottom-toolbar
+ * @selector .slds-rich-text-editor__toolbar-bottom
+ * @restrict .slds-rich-text-editor div
+ * @variant
+ */
+.slds-rich-text-editor__toolbar-bottom {
+  white-space: nowrap;
+  border-bottom-left-radius: $border-radius-medium;
+  border-bottom-right-radius: $border-radius-medium;
+  border-top: $border-width-thin solid $color-border;
+}
+
+/**
+ * Textarea for Rich Text Editor containing editable div
+ *
+ * @selector .slds-textarea
+ * @restrict .slds-rich-text-editor__textarea div
+ * @required
+ */
+.slds-rich-text-editor__textarea .slds-textarea {
+  min-height: $size-xx-small;
+  vertical-align: middle;
+  border: 0;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
   }
+}
+
+/**
+ * Focus state for rich text editor
+ *
+ * @selector .slds-has-focus
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-focus {
+  border-color: $color-border-input-active;
+  box-shadow: $shadow-button-focus;
+}
+
+/**
+ * Error state for rich text editor
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-error {
+  border: $border-width-thick solid $color-border-error;
 
   .slds-textarea {
-    border-bottom: {
-      left-radius: $border-radius-medium;
-      right-radius: $border-radius-medium;
-    }
+    box-shadow: none;
   }
+}
 
-  &__table {
-    list-style: none;
-    margin: 0 {
-      right: ($spacing-xxx-small * -1);
-      left: ($spacing-xxx-small * -1);
-    }
-    padding: 0;
-    width: 8.25rem;
+.slds-picklist__label[disabled] .slds-icon {
+  fill: $color-text-button-default-disabled;
+}
 
-    .slds-box {
-      border-radius: $border-radius-small;
-    }
-
-    .slds-is-active {
-      background-color: $color-background-selection;
-    }
-  }
-
-  .slds-textarea {
-    border: 0 {
-      top: {
-        left-radius: 0;
-        right-radius: 0;
-      }
-    };
-    min-height: $size-xx-small;
-    vertical-align: middle;
-    resize: none;
-
-    &:focus,
-    &:active {
-      box-shadow: none;
-    }
-  }
-
-  textarea[disabled] ~ .slds-textarea {
-    cursor: not-allowed;
-    user-select: none;
-  }
-
-  &.slds-has-focus {
-    border-color: $color-border-input-active;
-    box-shadow: $shadow-button-focus;
-  }
-
-  &.slds-has-error {
-    border: $border-width-thick solid $color-border-error;
-
-    .slds-textarea {
-      box-shadow: none;
-    }
-  }
-
-  .slds-picklist__label[disabled] .slds-icon {
-    fill: $color-text-button-default-disabled;
-  }
-
-  [contenteditable]:focus {
-    outline: none;
-  }
+[contenteditable]:focus {
+  outline: none;
 }

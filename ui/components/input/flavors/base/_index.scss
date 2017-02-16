@@ -1,0 +1,252 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/**
+ * You can style the HTML `<input>` element to align with the Salesforce brand
+ * by using the `.slds-input` class on the `<input>` element.
+ *
+ * The `<input>` element includes support for all HTML5 types: `text`,
+ * `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`,
+ * `number`, `email`, `url`, `search`, `tel`, and `color`.
+ *
+ * #### Accessibility
+ *
+ * Inputs with errors should have `aria-describedby` to insure that the
+ * associated field level error message is read by assistive technology.
+ * If the error message has an `id="my-error-message"`, then the input should
+ * have `aria-describedby="my-error-message"`.
+ *
+ * If you're needing some type of field level help and if your tooltips are
+ * available on hover, make sure they’re also available on keyboard focus. The
+ * help icon needs to be associated to the tooltip so that when the user focuses
+ * on the icon, assistive technology reads out the content of the tooltip. If
+ * the tooltip has an `id="help"`, then the `<button>` containing the icon should
+ * have `aria-describedby="help"`.
+ *
+ * @summary Text inputs are used for freeform data entry
+ *
+ * @base
+ * @name input
+ * @selector .slds-input
+ * @support dev-ready
+ * @category simple
+ * @type data-entry
+ * @layout responsive
+ */
+
+/**
+ * @summary Initializes text input
+ *
+ * @name base
+ * @selector .slds-input
+ * @restrict input
+ * @required
+ * @variant
+ */
+.slds-input {
+  @include form-states;
+  display: inline-block;
+  padding: 0 $spacing-medium 0 $spacing-small;
+  line-height: $height-input;
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+
+  &:read-only {
+    @include button-interactions;
+  }
+
+  /**
+   * Removes aesthetic nature from an input
+   *
+   * @selector .slds-input--bare
+   * @restrict .slds-input
+   * @modifier
+   */
+  &_bare,
+  &--bare {
+    background-color: transparent;
+    border: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+      left: $spacing-small;
+    }
+    color: $color-text-default;
+    line-height: $height-input;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
+  /**
+   * Used to apply an input size to another element thats a non input
+   * Because sometimes I need elements the same height as inputs
+   *
+   * @selector .slds-input--height
+   * @restrict .slds-input
+   * @modifier
+   */
+  &_height,
+  &--height {
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+  }
+}
+
+/**
+ * @summary Modifier if text input has svg icon adjacent to input
+ *
+ * @name with-icon
+ * @selector .slds-input-has-icon
+ * @restrict .slds-form-element .slds-form-element__control
+ * @variant
+ */
+.slds-input-has-icon {
+  position: relative;
+
+  /**
+   * Hook for .slds-input-has-icon
+   *
+   * @selector .slds-input__icon
+   * @restrict .slds-input-has-icon svg
+   */
+  .slds-input__icon {
+    @include square($square-icon-medium-content);
+    position: absolute;
+    top: 50%;
+    margin-top: (($square-icon-medium-content / 2) * -1);
+
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+      fill: $color-text-input-icon;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon to the left of the text input
+   *
+   * @selector .slds-input-has-icon--left
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_left,
+  &--left {
+
+    .slds-input__icon {
+      left: ($spacing-medium + $spacing-xx-small);
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-left: $spacing-xx-large;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon to the right of the text input
+   *
+   * @selector .slds-input-has-icon--right
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_right,
+  &--right {
+
+    .slds-input__icon {
+      right: ($spacing-medium + $spacing-xx-small);
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-right: $spacing-xx-large;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon--left to the left of the text input and .slds-input__icon--right to the right of the text input
+   *
+   * @selector .slds-input-has-icon--left-right
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_left-right,
+  &--left-right {
+
+    /**
+     * Hook for .slds-input-has-icon--left-right
+     *
+     * @selector .slds-input__icon--left
+     * @restrict .slds-input__icon
+     */
+    .slds-input__icon_left,
+    .slds-input__icon--left {
+      left: ($spacing-medium + $spacing-xx-small);
+    }
+
+    /**
+     * Hook for .slds-input-has-icon--left-right
+     *
+     * @selector .slds-input__icon--right
+     * @restrict .slds-input__icon
+     */
+    .slds-input__icon_right,
+    .slds-input__icon--right {
+      right: ($spacing-medium + $spacing-xx-small);
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding: 0 $spacing-xx-large;
+    }
+  }
+}
+
+/**
+ * @summary Use on input container to let it know there is fixed text to the left or right of the input
+ *
+ * @name fixed-text
+ * @selector .slds-input-has-fixed-addon
+ * @restrict .slds-form-element .slds-form-element__control
+ * @variant
+ */
+.slds-input-has-fixed-addon {
+  display: flex;
+}
+
+/**
+ * Fixed text that sits to the left or right of an input
+ *
+ * @selector .slds-form-element__addon
+ * @restrict .slds-input-has-fixed-addon span
+ */
+.slds-form-element__addon {
+  display: inline-block;
+  margin: 0 $spacing-x-small;
+  align-self: center;
+}
+
+/**
+ *  Error Styles for input field
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error {
+  @include form-input-error('.slds-input');
+
+  .slds-input__icon {
+    fill: $color-text-error;
+  }
+}

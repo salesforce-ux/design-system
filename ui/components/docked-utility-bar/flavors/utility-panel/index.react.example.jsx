@@ -27,9 +27,9 @@ const dialingIcon = (
 );
 
 export let UtilityPanel = props =>
-  <div className={classNames('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
-    <div className="slds-utility-panel__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media--center">
+  <section className={classNames('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+    <header className="slds-utility-panel__header slds-grid slds-shrink-none">
+      <div className="slds-media slds-media--center slds-size--1-of-1">
         <div className="slds-media__figure slds-m-right--x-small">
           <span className="slds-icon_container">
             <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="call" />
@@ -39,17 +39,19 @@ export let UtilityPanel = props =>
           <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className="slds-col--bump-left">
+      <div className="slds-col--bump-left slds-shrink-none">
         <ButtonIcon
           className="slds-button--icon"
           symbol="minimize_window"
-          assistiveText="Minimize Panel" />
+          assistiveText="Close Panel"
+          title="Close Panel"
+        />
       </div>
-    </div>
+    </header>
     <div className="slds-utility-panel__body">
       { props.children }
     </div>
-  </div>;
+  </section>;
 
 const PanelOpen = (
   <UtilityPanel className="slds-is-open" header="Call">
@@ -74,7 +76,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '540px' }}>
         <UtilityBar panel={PanelOpen}>
-          <UtilityBarItem symbol="call" className="slds-is-active">Call</UtilityBarItem>
+          <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         </UtilityBar>
@@ -85,7 +87,7 @@ export let states = [
     label: 'Closed',
     element:
       <div className="demo-only" style={{ height: '540px' }}>
-        <UtilityBar panel={PanelClosed}>
+        <UtilityBar>
           <UtilityBarItem symbol="call">Call</UtilityBarItem>
           <UtilityBarItem symbol="clock">History</UtilityBarItem>
           <UtilityBarItem symbol="note">Notes</UtilityBarItem>

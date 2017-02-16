@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
@@ -20,8 +21,12 @@ import classNames from 'classnames';
 export let Comment = props =>
   <article className={classNames('slds-comment slds-media slds-hint-parent', props.className)}>
     <div className="slds-media__figure">
-      <a href="javascript:void(0);" title="Jenna Davis" className="slds-avatar slds-avatar--circle slds-avatar--medium">
-        <img src="/assets/images/avatar2.jpg" alt="Jenna Davis" />
+      <a href="javascript:void(0);" className="slds-avatar slds-avatar--circle slds-avatar--medium">
+        <img
+          alt="Jenna Davis"
+          src="/assets/images/avatar2.jpg"
+          title="Jenna Davis avatar"
+        />
       </a>
     </div>
     <div className="slds-media__body">
@@ -35,7 +40,13 @@ export let CommentHeader = props =>
       <p className="slds-truncate">
         <a href="javascript:void(0);" title="Jenna Davis">Jenna Davis</a>
       </p>
-      <ButtonIcon className="slds-button--icon-border slds-button--icon-x-small" hasPopup="true" symbol="down" assistiveText="More Options" />
+      <ButtonIcon
+        className="slds-button--icon-border slds-button--icon-x-small"
+        aria-haspopup="true"
+        symbol="down"
+        assistiveText="More Options"
+        title="More Options"
+      />
     </div>
   </header>;
 
@@ -48,18 +59,18 @@ export let CommentFooter = props =>
   <footer>
     <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
       <li className="slds-item">
-        <a className="slds-text-color--weak" href="javascript:void(0);" title="Like this item">{ props.liked ? 'Liked' : 'Like' }</a>
+        <button
+          className="slds-button--reset slds-text-color--weak"
+          title="Like this item"
+          aria-pressed={ props.liked ? true : false }
+        >
+          { props.liked ? 'Liked' : 'Like' }
+        </button>
       </li>
       { props.liked ? <li className="slds-item">1 Like</li> : null }
       <li className="slds-item">16hr Ago</li>
     </ul>
   </footer>;
-
-let ButtonIcon = props =>
-  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-haspopup={props.hasPopup} title={ props.title || 'More Options' }>
-    <SvgIcon className="slds-button__icon slds-button__icon--hint" sprite="utility" symbol={props.symbol} />
-    <span className="slds-assistive-text">{props.assistiveText}</span>
-  </button>;
 
 ///////////////////////////////////////////
 // Export

@@ -78,8 +78,8 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <span className="slds-icon_container slds-p-around--x-small slds-icon-action-share-thanks slds-m-bottom--x-small">
-              <SvgIcon className="slds-icon slds-icon-action-share-thanks slds-icon--medium" sprite="action" symbol="share_thanks" />
+            <span className="slds-icon_container slds-icon-action-share-thanks slds-m-bottom--x-small">
+              <SvgIcon className="slds-icon slds-icon--medium" sprite="action" symbol="share_thanks" />
               <span className="slds-assistive-text">Share Thanks</span>
             </span>
             <h2 className="slds-text-heading--medium">Your Feedback is Valuable</h2>

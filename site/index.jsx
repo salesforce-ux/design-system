@@ -25,14 +25,14 @@ let hero = (
         alt="" />
       <div>
         <h1 className="site-text-heading--large">
-          Lightning <span className="text-no-wrap">Design System</span>
+          Lightning <span className="site-text-no-wrap">Design System</span>
         </h1>
         <h2 className="site-masthead--landing-tagline slds-m-bottom--xx-large">
           Create the world’s best enterprise app experiences.
         </h2>
         <div className="slds-grid slds-grid--vertical-align-center slds-wrap slds-small-nowrap site-masthead--landing-cta">
           <div className="site-cta-buttons">
-            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small text-no-wrap" eventType="downloads-top">Get Started</CTALink>
+            <CTALink href="/getting-started" className="slds-button slds-button--neutral site-cta-download slds-p-horizontal--xx-large slds-p-vertical--xx-small site-text-no-wrap" eventType="downloads-top">Get Started</CTALink>
           </div>
           <div className="site-releasenumber">
             Current release: <CTALink href="/release-notes" eventType="release-notes-top">{packageJSON.slds.name} (SLDS {process.env.SLDS_VERSION})</CTALink> | <a href="/downloads#archives">Archives</a>
@@ -53,7 +53,7 @@ export default (
             <p className="slds-size--1-of-1 slds-medium-size--1-of-2 slds-float--right">
               <img className="image" src="/assets/images/landing/img-icon-group.svg" alt="" />
             </p>
-            <dl className="slds-medium-size--1-of-2">
+            <dl className="slds-medium-size--1-of-2 slds-p-vertical--x-large">
               <dt className="site-text-heading--large">Style with Ease</dt>
               <dd>With the {globals.displayName} you can build custom applications with a look and feel that is consistent with Salesforce core features &mdash; without reverse engineering our styles! Simply download our platform-agnostic CSS framework and get started today.</dd>
             </dl>
@@ -63,7 +63,7 @@ export default (
               <img className="image" src="/assets/images/landing/img-expertise.svg" alt="" />
             </p>
             <dl className="slds-medium-size--1-of-2 slds-float--right">
-              <dt className="site-text-heading--large">Design with Expertise</dt>
+              <dt className="site-text-heading--large slds-p-vertical--xx-large">Design with Expertise</dt>
               <dd>Utilize our detailed guidelines to confidently design excellent apps that fit right into the Salesforce ecosystem. With the Design System, you get access to all of the Salesforce core visual and interaction design patterns so that you can follow established best practices and build apps that have a consistent look and feel with the Salesforce user experience.</dd>
             </dl>
           </li>

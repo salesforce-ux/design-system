@@ -11,10 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
-import { CheckboxAddButton } from 'ui/components/forms/flavors/checkbox-add-button/index.react.example';
+import { CheckboxAddButton } from 'ui/components/checkbox/flavors/button/index.react.example';
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
-import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+import { ListboxPill, ListboxHoriz, ListItemHoriz } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -119,8 +120,14 @@ let RowData = props => {
 
 let FilteredItems = props =>
   <PillContainer className="slds-pill_container--bare">
-    <Pill label="Option A" unlinked />
-    <Pill label="Option B" unlinked />
+    <ListboxHoriz>
+      <ListItemHoriz>
+        <ListboxPill label="Option A" tabIndex="0" />
+      </ListItemHoriz>
+      <ListItemHoriz>
+        <ListboxPill label="Option B" />
+      </ListItemHoriz>
+    </ListboxHoriz>
   </PillContainer>;
 
 ///////////////////////////////////////////
@@ -133,7 +140,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+        <Modal className="slds-modal--large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
             <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>

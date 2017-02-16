@@ -10,9 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Listbox, ListboxList, ListboxItem } from 'ui/components/picklist/flavors/base/index.react.example';
+import { Listbox, ListboxList, ListboxItem, PickList } from 'ui/components/picklist/flavors/base/index.react.example';
 import { Popover } from 'ui/components/popovers/flavors/base/index.react.example';
-import { FormElement, FormElementLabel, FormElementControl } from 'ui/components/forms/flavors/input/index.react.example';
+import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import _ from 'lodash';
 
@@ -63,19 +63,20 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        bodyRole="listbox"
         footer={ <Footer /> }
       >
-        <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
-          <ListboxItem role="presentation" headerText="My Favorites" />
-          <ListboxItem tabIndex="0">
-            <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-            <div className="slds-media__body">
-              <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
-              <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-            </div>
-          </ListboxItem>
-        </ListboxList>
+        <Listbox className="slds-dropdown--length-10">
+          <ListboxList role="group" aria-label="My Favorites">
+            <ListboxItem role="presentation" headerText="My Favorites" />
+            <ListboxItem tabIndex="0">
+              <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+              <span className="slds-media__body">
+                <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
+                <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+              </span>
+            </ListboxItem>
+          </ListboxList>
+        </Listbox>
       </Popover>
   },
   {
@@ -86,21 +87,22 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        bodyRole="listbox"
         footer={ <Footer /> }
       >
-        <ListboxList className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
-          <ListboxItem role="presentation" headerText="My Favorites" />
-          { _.times(7, i =>
-            <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
-              <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-              <div className="slds-media__body">
-                <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
-                <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-              </div>
-            </ListboxItem>
-          )}
-        </ListboxList>
+        <Listbox className="slds-dropdown--length-10">
+          <ListboxList role="group" aria-label="My Favorites">
+            <ListboxItem role="presentation" headerText="My Favorites" />
+            { _.times(7, i =>
+              <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
+                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+                <span className="slds-media__body">
+                  <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
+                  <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+                </span>
+              </ListboxItem>
+            )}
+          </ListboxList>
+        </Listbox>
       </Popover>
   },
   {
@@ -111,37 +113,44 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        bodyRole="listbox"
         footer={ <Footer /> }
       >
-        <FormElement className="slds-p-around--small">
-          <FormElementLabel className="slds-assistive-text">Categories</FormElementLabel>
-          <FormElementControl className="slds-input-has-icon slds-input-has-icon--right">
+        <PickList classNames="slds-size--1-of-1" isOpen>
+          <FormElement
+            className="slds-p-around--small"
+            label="Categories"
+            hideLabel={ true }
+            inputId="text-input-01"
+            inputIcon="right"
+          >
             <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
             <input
-              id="text-input-01"
-              className="slds-input slds-lookup__search-input"
-              type="search"
-              placeholder="Search Accounts"
-              aria-owns="option-list-01"
-              role="combobox"
               aria-activedescendant=""
-              aria-expanded="true"
-              aria-autocomplete="list" />
-          </FormElementControl>
-        </FormElement>
-        <ListboxList id="option-list-01" className="slds-dropdown--length-10" role="group" aria-label="My Favorites">
-          <ListboxItem role="presentation" headerText="My Favorites" />
-          { _.times(11, i =>
-            <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
-              <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
-              <div className="slds-media__body">
-                <div className="slds-lookup__result-text">Salesforce.com, Inc.</div>
-                <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
-              </div>
-            </ListboxItem>
-          )}
-        </ListboxList>
+              aria-autocomplete="list"
+              aria-controls="option-list-01"
+              autoComplete="off"
+              className="slds-input slds-lookup__search-input"
+              id="text-input-01"
+              placeholder="Search Accounts"
+              role="textbox"
+              type="search"
+            />
+          </FormElement>
+          <Listbox className="slds-dropdown--length-10" id="option-list-01">
+            <ListboxList role="group" aria-label="My Favorites">
+              <ListboxItem role="presentation" headerText="My Favorites" />
+              { _.times(11, i =>
+                <ListboxItem key={`listbox-${i}`}>
+                  <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+                  <span className="slds-media__body">
+                    <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
+                    <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+                  </span>
+                </ListboxItem>
+              )}
+            </ListboxList>
+          </Listbox>
+        </PickList>
       </Popover>
   }
 ];

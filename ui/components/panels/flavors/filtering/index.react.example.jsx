@@ -43,30 +43,47 @@ export let FiltersBody = props =>
 
 export let FiltersFooter = props =>
   <div className="slds-filters__footer slds-grid slds-shrink-none">
-    <a href="javascript:void(0);">Add Filter</a>
-    <a href="javascript:void(0);" className="slds-col--bump-left">Remove All</a>
+    <button className="slds-button--reset slds-text-link" href="javascript:void(0);">Add Filter</button>
+    <button className="slds-button--reset slds-text-link slds-col--bump-left" href="javascript:void(0);">Remove All</button>
   </div>;
 
-export let FilterObject = props =>
-  <li className="slds-item slds-hint-parent">
-    <div className={classNames('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
-      <a href="javascript:void(0);" className="slds-grow slds-has-blur-focus">
-        {props.type ? (<p className="slds-text-body--small">{props.type}</p>) : null }
-        <p>{props.children}</p>
-      </a>
-      { props.removable ? removeButton : null }
-    </div>
-    { props.errorMessage ? (<p className="slds-text-color--error slds-m-top--xx-small">{props.errorMessage}</p>) : null }
-  </li>;
+export let FilterObject = props => {
+  let ariaDesribedBy;
+  if (props.errorMessage) {
+    ariaDesribedBy = 'error-filter-01';
+  }
 
-const removeButton = (
-  <ButtonIcon
-    className="slds-button--icon slds-button--icon-small"
-    iconClassName="slds-button__icon--hint"
-    symbol="close"
-    assistiveText="Remove"
-    title="Remove" />
-);
+  return (
+    <li className="slds-item slds-hint-parent">
+      <div className={classNames('slds-filters__item slds-grid slds-grid--vertical-align-center', props.className)}>
+        <button
+          href="javascript:void(0);"
+          className="slds-button--reset slds-grow slds-has-blur-focus"
+          aria-describedby={ ariaDesribedBy }
+          disabled={ props.disabled }
+        >
+          <span className="slds-assistive-text">Edit filter:</span>
+          {props.type ?
+            <p className="slds-text-body--small">{props.type}</p>
+          : null }
+          <p>{props.children}</p>
+        </button>
+        { props.removable ?
+          <ButtonIcon
+            className="slds-button--icon slds-button--icon-small"
+            iconClassName="slds-button__icon--hint"
+            symbol="close"
+            assistiveText={ props.type ? 'Remove filter: ' + props.type + ' ' + props.children : 'Remove filter: ' + props.children }
+            title={'Remove ' + props.children}
+          />
+        : null }
+      </div>
+      { props.errorMessage ?
+        <p id={ ariaDesribedBy } className="slds-text-color--error slds-m-top--xx-small">{props.errorMessage}</p>
+      : null }
+    </li>
+  );
+};
 
 ///////////////////////////////////////////
 // State Constructor(s)
@@ -78,7 +95,7 @@ let Default = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader>
-            <h4 className="slds-align-middle slds-text-heading--small">Filter</h4>
+            <h2 className="slds-align-middle slds-text-heading--small">Filter</h2>
             <ButtonIcon
               className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
@@ -89,7 +106,7 @@ let Default = props =>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <h3 className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</h3>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
@@ -114,7 +131,7 @@ let NewFilter = props =>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <h3 className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</h3>
             <ul className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
@@ -137,11 +154,11 @@ let ErrorPanel = props =>
             <button className="slds-button slds-button--brand">Save</button>
           </FiltersHeader>
           <FiltersBody>
-            <div className="slds-text-color--error slds-m-bottom--x-small" aria-live="assertive">Filters could not be applied. Please fix the validation errors below.</div>
+            <div className="slds-text-color--error slds-m-bottom--x-small" role="alert">Filters could not be applied. Please fix the validation errors below.</div>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <h3 className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</h3>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
@@ -160,7 +177,7 @@ let Locked = props =>
       <PanelBody className="slds-grid slds-grid--vertical">
         <Filters>
           <FiltersHeader>
-            <h4 className="slds-align-middle slds-text-heading--small">Filter</h4>
+            <h2 className="slds-align-middle slds-text-heading--small">Filter</h2>
             <ButtonIcon
               className="slds-col--bump-left slds-button--icon slds-button--icon-small"
               symbol="forward"
@@ -171,17 +188,17 @@ let Locked = props =>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Show Me">All Products</FilterObject>
             </ol>
-            <p className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</p>
+            <h3 className="slds-text-body--small slds-m-vertical--x-small">Matching all these filters</h3>
             <ol className="slds-list--vertical slds-list--vertical-space">
               <FilterObject type="Created Date" removable>equals THIS WEEK</FilterObject>
               <FilterObject type="List Price" removable>greater than "500"</FilterObject>
             </ol>
-            <p className="slds-text-body--small slds-m-vertical--x-small slds-grid">
+            <h3 className="slds-text-body--small slds-m-vertical--x-small slds-grid">
               Locked Filters
               <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-m-left--x-small" sprite="utility" symbol="lock" />
-            </p>
+            </h3>
             <ol className="slds-list--vertical slds-list--vertical-space">
-              <FilterObject className="slds-is-locked" type="Name">equals "ACME"</FilterObject>
+              <FilterObject className="slds-is-locked" type="Name" disabled>equals "ACME"</FilterObject>
             </ol>
           </FiltersBody>
           <FiltersFooter />

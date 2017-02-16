@@ -7,6 +7,93 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * #### 1.0\. Building the Navigation Bar
+ *
+ * The navigation bar is composed of a wrapper and 2 required regions:
+ *
+ * - **Primary,** which contains the App Launcher and App Name
+ * - **Secondary,** which contains the App Items, for navigating within the current app
+ *
+ * The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
+ *
+ * #### 1.1\. Items on the Navigation Bar
+ *
+ * Every item that sits on the horizontal axis of the navigation bar should receive the class `.slds-context-bar__item`.
+ *
+ * This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items `.slds-context-bar__label-action` and `.slds-context-bar__icon-action` to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.
+ *
+ * Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as `.slds-order--[#]`.
+ *
+ * #### 1.2\. Building the Navigation Bar Item
+ *
+ * The navigation bar item is built to accommodate 2 specific layout needs.
+ *
+ * 1.  Individual text hyperlink to invokes link destination
+ * 2.  Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available
+ *
+ * These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class `.slds-context-bar__label-action` and the icon based action area would get the class `.slds-context-bar__icon-action`.
+ *
+ * The `.slds-context-bar__icon-action` class handles the alignment and coloring of the icons based on interactions such as `:hover`, `:focus` and `:active`. This is a required if you have an actionable icon area adjacent to an actionable text area.
+ *
+ * The markup structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as `.slds-order--[#]`.
+ *
+ * #### 1.3\. Building the Icons in the Navigation Bar
+ *
+ * The icons in the navigation bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.
+ *
+ * The class used to indicate a button icon will sit adjacent to another actionable item is `.slds-context-bar__icon-action`. If you two icons in an item, each icon should be contained in it’s own `.slds-context-bar__icon-action` element.
+ *
+ * The look and feel of the button icon is dependant on the modifiers used from [Button Icon Variant Component](/components/buttons/#icon) page.
+ *
+ * The `.slds-context-bar__icon-action` styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class `.slds-p-left--none`.
+ *
+ * If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class `.slds-hint-parent` to the hover region, most cases would be `.slds-context-bar__icon-action` element.
+ *
+ * #### 1.4\. Menu trigger area on Navigation Bar Items
+ *
+ * When a navigation bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:
+ *
+ * 1.  `.slds-context-bar__dropdown-trigger` — Add a hoverable zone below the action so that the dropdown doesn’t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar
+ * 2.  `.slds-dropdown-trigger` — Globally used utility that notifies the element there is a dropdown menu
+ * 3.  `.slds-dropdown-trigger--[interaction]` — Specify which type of interaction the menu should appear with “hover” or “click”. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.
+ *
+ * If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the `.slds-context-bar__label-action` and `.slds-context-bar__icon-action`. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the `.slds-context-bar__icon-action`.
+ *
+ * #### 1.5\. Specifics of the Navigation Bar - App Launcher
+ *
+ * The app launcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app launcher dropdown. Please use JavaScript to accommodate this requirement.
+ *
+ * #### 1.6\. Specifics of the Navigation Bar - App Name
+ *
+ * The application name needs to receive the `.slds-context-bar__app-name` class. This class will handle such things as its unique font sizing and truncation widths.
+ *
+ * #### 1.7\. Specifics of the Navigation Bar - Divider
+ *
+ * Due to the platform-esc nature of the navigation bar, there is an available element utility to apply a divider between sections where needed. The `.slds-context-bar__vertical-divider` class should be applied to an empty `<div>` and placed within the markup of your navigation bar for a visual divider.
+ *
+ * Alternatively, two classes are available to add border using css. Adding the class `.slds-context-bar__item--divider-left` will add a left border to a navigation bar item while `.slds-context-bar__item--divider-right` will add a right border.
+ *
+ * @summary Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
+ *
+ * @base
+ * @name global-navigation
+ * @selector .slds-context-bar
+ * @support dev-ready
+ * @category feature
+ * @type navigation
+ * @role navigation
+ *
+ */
+
+/**
+ * @summary Navigation bar wrapper
+ *
+ * @name navigation-bar
+ * @selector .slds-context-bar
+ * @restrict div
+ * @variant
+ */
 .slds-context-bar {
   display: flex;
   height: $height-context-bar;
@@ -15,8 +102,14 @@
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
-  padding: 0 0 0 $spacing-medium;
+  padding: 0 0 0 $spacing-large;
 
+  /**
+   * Primary zone
+   *
+   * @selector .slds-context-bar__primary
+   * @restrict .slds-context-bar div
+   */
   &__primary,
   &__secondary,
   &__tertiary {
@@ -24,6 +117,13 @@
     flex-shrink: 0;
   }
 
+
+  /**
+   * Secondary zone
+   *
+   * @selector .slds-context-bar__secondary
+   * @restrict .slds-context-bar div
+   */
   // Context nav items go in the secondary region
   // and secondary region needs to respect the width
   // of the context bar parent for JavaScript to work
@@ -33,17 +133,26 @@
     min-width: 0;
   }
 
-  // Manually add a divider between items
+  /**
+   * Manually add a vertical divider between elements
+   *
+   * @selector .slds-context-bar__vertical-divider
+   * @restrict div
+   */
   &__vertical-divider {
     width: 0;
     overflow: hidden;
     border-left: $border-width-thin solid $color-border;
   }
 
-  // Any item on the horizontal axis of the context nav bar
-  //
-  // Interactions such as hovers + active are defaults, bottom of the
-  // file deals with light / dark theme thresholds
+  /** Any item on the horizontal axis of the context nav bar
+   *
+   * Interactions such as hovers + active are defaults, bottom of the
+   * file deals with light / dark theme thresholds
+   *
+   * @selector .slds-context-bar__item
+   * @restrict .slds-context-bar li
+   */
   &__item {
     display: flex;
     align-content: center;
@@ -52,6 +161,13 @@
     position: relative;
     max-width: $size-small;
 
+    /**
+     * Active state of an item
+     *
+     * @selector .slds-is-active
+     * @restrict .slds-context-bar__item:not(.slds-no-hover)
+     * @modifier
+     */
     &:not(.slds-no-hover):hover,
     &.slds-is-active {
       outline: 0;
@@ -116,7 +232,13 @@
       border-left: 0;
     }
 
-    // Toggled focused class applied via JavaScript
+    /**
+     * Toggled focused class applied via JavaScript
+     *
+     * @selector .slds-has-focus
+     * @restrict .slds-context-bar__item
+     * @modifier
+     */
     &.slds-has-focus,
     &.slds-has-focus:hover {
 
@@ -126,16 +248,37 @@
       }
     }
 
+    /**
+     * Add a left border to a context bar item
+     *
+     * @selector .slds-context-bar__item--divider-left
+     * @restrict .slds-context-bar__item
+     * @modifier
+     */
+    &_divider-left,
     &--divider-left {
       border-left: $border-width-thin solid $color-border;
     }
 
+    /**
+     * Add a right border to a context bar item
+     *
+     * @selector .slds-context-bar__item--divider-right
+     * @restrict .slds-context-bar__item
+     * @modifier
+     */
+    &_divider-right,
     &--divider-right {
       border-right: $border-width-thin solid $color-border;
     }
   }
 
-  // Actionable Text Links
+  /**
+   * Actionable Text Links
+   *
+   * @selector .slds-context-bar__label-action
+   * @restrict .slds-context-bar__item
+   */
   &__label-action {
     display: flex;
     align-content: center;
@@ -168,14 +311,19 @@
     }
   }
 
-  // Actionable Icons
+  /**
+   * Actionable Icons
+   *
+   * @selector .slds-context-bar__icon-action
+   * @restrict .slds-context-bar__item
+   */
   &__icon-action {
     display: flex;
     align-items: center;
     align-content: center;
-    color: $color-text-context-bar;
     margin-left: ($spacing-xx-small * -1);
     padding: 0 $spacing-x-small;
+    color: $color-text-context-bar;
     border-radius: 0;
 
     &:focus {
@@ -199,32 +347,45 @@
     &:active {
       color: $color-text-context-bar;
     }
+
+    .slds-icon-waffle_container {
+      @include square($square-icon-large-content);
+      margin: {
+        right: $spacing-xx-small;
+        left: -$spacing-x-small;
+      }
+    }
+
+    .slds-icon-waffle {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
   }
 
   // Button inside of actionable container
   .slds-context-bar__button {
     color: inherit;
-
-    // The blue box-shadow on buttons does not pass a11y requirements when on different background colors
-    // Setting custom focus thats specific to context bar
-    &:focus {
-      box-shadow: none;
-    }
   }
 
-  // Workspace tabs
-  //
-  // Consumes tab structure but looks like gnav
-  // ------------
-  &--tabs {
-
-    // Need to reset styles from default
-    .slds-context-bar__icon-action {
-      margin-left: auto;
-    }
+  // Need to reset styles from default
+  .slds-context-bar__icon-action {
+    margin-left: auto;
   }
 
-  // Tab context bar items
+  /**
+   * Tab modifier when using a tabset
+   *
+   * @name navigation-tab-bar
+   * @selector .slds-context-bar__item--tab
+   * @restrict .slds-context-bar__item
+   * @notes Only use on tabset version
+   * @required
+   * @variant
+   *
+   */
+  &__item_tab,
   &__item--tab {
     width: $size-x-small;
     border-right: $border-width-thin solid $color-border;
@@ -246,8 +407,14 @@
       }
     }
 
-    // Pinned state
-    // Toggles visibility of elements inside of tab
+    /**
+     * Pinned state
+     * Toggles visibility of elements inside of tab
+     *
+     * @selector .slds-is-pinned
+     * @restrict .slds-context-bar__item--tab
+     * @modifier
+     */
     &.slds-is-pinned {
       width: auto;
       padding-right: $spacing-x-small;
@@ -269,7 +436,13 @@
   }
 }
 
-// Unsaved indicator - This can probably be used in other locations as well
+/**
+ * Unsaved indicator - This can probably be used in other locations as well
+ *
+ * @selector .slds-indicator--unsaved
+ * @restrict .slds-context-bar__item span
+ */
+.slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
   align-self: center;
@@ -294,7 +467,12 @@
   }
 }
 
-// app-name
+/**
+ * Styles for application name region
+ *
+ * @selector .slds-context-bar__app-name
+ * @restrict .slds-context-bar__label-action
+ */
 .slds-context-bar__app-name {
   padding: 0 $spacing-large 0 0;
   font-size: rem(18px); // @todo tokenize
@@ -302,7 +480,13 @@
   line-height: $line-height-heading;
 }
 
-// object-switcher
+/**
+ * Styles for object switcher region
+ *
+ * @selector .slds-context-bar__object-switcher
+ * @restrict .slds-context-bar__item
+ * @required
+ */
 .slds-context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
@@ -315,6 +499,7 @@
 // Using mixin to determine text color and interactive states
 //
 // Marketing - temp
+.slds-context-bar_theme-marketing,
 .slds-context-bar--theme-marketing {
   border-bottom-color: #f59331;
 
@@ -331,166 +516,5 @@
     &:hover {
       border-bottom-color: $color-background-context-bar-item-hover;
     }
-  }
-}
-
-// Waffle Icon + animation
-.slds-icon-waffle_container {
-  outline: 0;
-}
-
-.slds-icon-waffle {
-  @include square(rem(21px));
-  position: relative;
-}
-
-// scss-lint:disable MergeableSelector
-.slds-icon-waffle div {
-  @include square(rem(5px));
-  background: $color-background-icon-waffle;
-  display: inline-block;
-  position: absolute;
-  border-radius: $border-radius-circle;
-  transition: background 100ms;
-  transform-origin: 50% 50%;
-}
-
-.slds-icon-waffle .slds-r1 {
-  top: 0;
-  left: 0;
-}
-
-.slds-icon-waffle .slds-r2 {
-  top: 0;
-  left: rem(8px);
-}
-
-.slds-icon-waffle .slds-r3 {
-  top: 0;
-  right: 0;
-}
-
-.slds-icon-waffle .slds-r4 {
-  top: rem(8px);
-  left: 0;
-}
-
-.slds-icon-waffle .slds-r5 {
-  top: rem(8px);
-  left: rem(8px);
-}
-
-.slds-icon-waffle .slds-r6 {
-  top: rem(8px);
-  right: 0;
-}
-
-.slds-icon-waffle .slds-r7 {
-  bottom: 0;
-  left: 0;
-}
-
-.slds-icon-waffle .slds-r8 {
-  bottom: 0;
-  left: rem(8px);
-}
-
-.slds-icon-waffle .slds-r9 {
-  bottom: 0;
-  right: 0;
-}
-
-.slds-icon-waffle_container:hover .slds-icon-waffle,
-.slds-icon-waffle_container:focus .slds-icon-waffle {
-  cursor: pointer;
-}
-
-.slds-icon-waffle_container:hover .slds-r1,
-.slds-icon-waffle_container:hover .slds-r2,
-.slds-icon-waffle_container:hover .slds-r3,
-.slds-icon-waffle_container:focus .slds-r1,
-.slds-icon-waffle_container:focus .slds-r2,
-.slds-icon-waffle_container:focus .slds-r3 {
-  background: #418fde;
-}
-
-.slds-icon-waffle_container:hover .slds-r4,
-.slds-icon-waffle_container:hover .slds-r5,
-.slds-icon-waffle_container:hover .slds-r7,
-.slds-icon-waffle_container:focus .slds-r4,
-.slds-icon-waffle_container:focus .slds-r5,
-.slds-icon-waffle_container:focus .slds-r7 {
-  background: #ed8b00;
-}
-
-.slds-icon-waffle_container:hover .slds-r6,
-.slds-icon-waffle_container:hover .slds-r8,
-.slds-icon-waffle_container:hover .slds-r9,
-.slds-icon-waffle_container:focus .slds-r6,
-.slds-icon-waffle_container:focus .slds-r8,
-.slds-icon-waffle_container:focus .slds-r9 {
-  background: #ffb60f;
-}
-
-.slds-icon-waffle_container:hover .slds-r2,
-.slds-icon-waffle_container:hover .slds-r4,
-.slds-icon-waffle_container:focus .slds-r2,
-.slds-icon-waffle_container:focus .slds-r4 {
-  transition-delay: 50ms;
-  animation-delay: 50ms;
-}
-
-.slds-icon-waffle_container:hover .slds-icon-waffle div,
-.slds-icon-waffle_container:focus .slds-icon-waffle div {
-  animation: throb 2 200ms alternate;
-}
-
-.slds-icon-waffle_container:hover .slds-r3,
-.slds-icon-waffle_container:hover .slds-r5,
-.slds-icon-waffle_container:hover .slds-r7,
-.slds-icon-waffle_container:focus .slds-r3,
-.slds-icon-waffle_container:focus .slds-r5,
-.slds-icon-waffle_container:focus .slds-r7 {
-  transition-delay: 100ms;
-  animation-delay: 100ms;
-}
-
-.slds-icon-waffle_container:hover .slds-r6,
-.slds-icon-waffle_container:hover .slds-r8,
-.slds-icon-waffle_container:focus .slds-r6,
-.slds-icon-waffle_container:focus .slds-r8 {
-  transition-delay: 150ms;
-  animation-delay: 150ms;
-}
-
-.slds-icon-waffle_container:hover .slds-r9,
-.slds-icon-waffle_container:focus .slds-r9 {
-  transition-delay: 200ms;
-  animation-delay: 200ms;
-}
-
-.slds-icon-waffle_container .slds-r1 {
-  transition-delay: 200ms;
-}
-
-.slds-icon-waffle_container .slds-r2,
-.slds-icon-waffle_container .slds-r4 {
-  transition-delay: 150ms;
-}
-
-.slds-icon-waffle_container .slds-r3,
-.slds-icon-waffle_container .slds-r5,
-.slds-icon-waffle_container .slds-r7 {
-  transition-delay: 100ms;
-}
-
-.slds-icon-waffle_container .slds-r6,
-.slds-icon-waffle_container .slds-r8 {
-  transition-delay: 50ms;
-}
-
-@keyframes throb {
-  100% {
-    transform: scale(1.5);
   }
 }

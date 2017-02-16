@@ -61,7 +61,7 @@ let AdditionalItems = props =>
     </li>
 
     <li id="tree0-node1-1-1" role="treeitem" aria-level="3">
-      <TreeItem><Pill /></TreeItem>
+      <TreeItem />
     </li>
 
     <li id="tree0-node1-1-2" role="treeitem" aria-level="3" aria-expanded="false">
@@ -75,7 +75,7 @@ let AdditionalItems = props =>
         </li>
 
         <li id="tree0-node1-1-2-1" role="treeitem" aria-level="4">
-          <TreeItem><Pill /></TreeItem>
+          <TreeItem />
         </li>
 
         <li id="tree0-node1-1-2-2" role="treeitem" aria-level="4">
@@ -96,7 +96,7 @@ let AdditionalItems = props =>
         </li>
 
         <li id="tree0-node1-1-3-2" role="treeitem" aria-level="4">
-          <TreeItem><Pill /></TreeItem>
+          <TreeItem />
         </li>
 
         <li id="tree0-node1-1-3-3" role="treeitem" aria-level="4">
@@ -114,7 +114,7 @@ let AdditionalItems = props =>
             </li>
 
             <li id="tree0-node1-1-3-4-2" role="treeitem" aria-level="5">
-              <TreeItem><Pill /></TreeItem>
+              <TreeItem />
             </li>
 
             <li id="tree0-node1-1-3-4-3" role="treeitem" aria-level="5">
@@ -193,11 +193,6 @@ export let states = [
     id: 'expanded',
     label: 'Expanded',
     element: <Default isExpanded="tree0-node1" />
-  },
-  {
-    id: 'with-label',
-    label: 'Pill in an item',
-    element: <Default itemContent={<Pill />} />
   },
   {
     id: 'deep-nesting',

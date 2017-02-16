@@ -21,11 +21,6 @@ import classNames from 'classnames';
 
 export default React.createClass({
 
-  defaultProps: {
-    component: React.PropTypes.object,
-    docs: React.PropTypes.node
-  },
-
   render() {
     const { component } = this.props;
     return (
@@ -99,16 +94,20 @@ export default React.createClass({
   },
 
   renderIntro() {
-    return this.props.docs && this.props.docs.intro ? this.props.docs.intro : null;
+    return this.props.component.summary
+      ? <div dangerouslySetInnerHTML={{ __html: this.props.component.summary }} />
+      : null;
   },
 
   renderDocs() {
-    return this.props.docs ? this.props.docs.default : null;
+    return this.props.component.description
+      ? <div className="site-component-description" dangerouslySetInnerHTML={{ __html: this.props.component.description }} />
+      : null;
   },
 
   renderComponentOverviewLink() {
-    let info = this.props.component.info;
-    if (info.tableYaml) {
+    const { component } = this.props;
+    if (component.table) {
       return (
         <div className="slds-align-middle">
           <a className="slds-button slds-button--inverse" href="#overview">Component Overview</a>
@@ -129,8 +128,8 @@ export default React.createClass({
 
   renderInfoTable() {
     const { component } = this.props;
-    if (component.info.tableYaml) {
-      return <TableYAML data={component.info.tableYaml} />;
+    if (component.table) {
+      return <TableYAML data={component.table} />;
     } else {
       return null;
     }

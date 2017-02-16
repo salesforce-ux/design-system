@@ -7,16 +7,53 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * #### Accessibility
+ *
+ * Most feeds have a media object containing the user's name and avatar image.
+ * If both the image and the name link to the same location, add `tab-index="-1"`
+ * to the `<a>` element so that assistive technology does not read out
+ * duplicate links.
+ *
+ * @summary A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
+ *
+ * @base
+ * @name feeds
+ * @selector .slds-feed
+ * @support dev-ready
+ * @category complex
+ * @type data-display
+ */
+
+/**
+ * A discussion feed consists of a list of posts. A `.slds-feed__item` contains a post and comments related to that post.
+ *
+ * @name feed-list
+ * @selector .slds-feed
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
 .slds-feed {
   position: relative;
   max-width: rem(784px);
   margin: auto;
 
+  /**
+   * @selector .slds-feed__list
+   * @restrict .slds-feed ul
+   * @required
+   */
   &__list {
     margin: 0;
     padding: 0;
   }
 
+  /**
+   * @selector .slds-feed__item
+   * @restrict .slds-feed__list li
+   * @required
+   */
   &__item {
     padding: $spacing-x-small 0;
 

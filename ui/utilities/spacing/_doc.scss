@@ -1,0 +1,27 @@
+// Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+/**
+ * Spacing indicates `margin` and `padding`. The base unit of all our spacing metrics is **4**.
+ *
+ * - Most components already come with spacing included. These utility classes are for added convenience in laying out components.
+ * - Classes prefixed by `.slds-m-` are used for adding **margins**. Classes prefixed in `.slds-p-` are used for adding **padding**
+ * - The directions available for the spacing classes are `top`, `right`, `bottom`, and `left`.
+ * - You can use the `vertical` shortcut for both `top` and `bottom`, `horizontal` for both `right` and `left`, and `around` for all sides.
+ * - Use the `--xxx-small` through `--xx-large` scale to choose the size needed.
+ * - Where **vertical centering** is required, check out our [/components/utilities/media-objects/#center](centered media object) instead of applying extra `margin` or `padding`.
+ *
+ * @summary Adjust whitespace with horizontal and vertical spacing helpers
+ *
+ * @utility
+ * @name spacing
+ * @selector [class*='slds-m-'], [class*='slds-p-']
+ * @support dev-ready
+ */

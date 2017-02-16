@@ -1,5 +1,0 @@
-status: 'dev-ready'
-className: 'input'
-lightning:
-  namespace: lightning:input
-  url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_input.htm

@@ -17,7 +17,12 @@ import MediaObject from 'ui/utilities/media-objects/index.react';
 //////////////////////////////////////////////
 
 const image = (
-  <img src="/assets/images/avatar3.jpg" className="slds-avatar--large" alt="Placeholder" />
+  <img
+    alt="Person name"
+    className="slds-avatar--large"
+    src="/assets/images/avatar3.jpg"
+    title="User avatar"
+  />
 );
 
 //////////////////////////////////////////////

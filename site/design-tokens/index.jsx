@@ -15,6 +15,7 @@ import PageBody from 'app_modules/site/components/page/body';
 import Sticky from 'app_modules/site/components/sticky';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import classNames from 'classnames';
+import { kebabCase } from 'theo';
 
 import sets from '.generated/ui.tokens';
 import categories from './_categories';
@@ -23,7 +24,7 @@ const nameFormats = [
   {
     role: 'regular',
     name: 'Sass',
-    formatter: name => `$${_.kebabCase(name)}`
+    formatter: name => `$${kebabCase(name)}`
   },
   {
     role: 'aura',

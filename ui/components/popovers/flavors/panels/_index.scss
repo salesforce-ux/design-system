@@ -8,7 +8,13 @@
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
+/**
+ * @name panels
+ * @selector .slds-popover--panel
+ * @restrict .slds-popover
+ * @variant
+ */
+.slds-popover_panel,
 .slds-popover--panel {
 
   .slds-popover__header {
@@ -16,6 +22,7 @@
     padding: $spacing-large $spacing-large $spacing-small;
     border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
     border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
+    border-bottom: 0;
   }
 
   .slds-popover__body {
@@ -28,9 +35,13 @@
   }
 
   // Deal with Nubbin Color
+  &.slds-nubbin_left-top,
   &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
   &.slds-nubbin--right-top,
+  &.slds-nubbin_top-left,
   &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
   &.slds-nubbin--top-right {
 
     &:before,
@@ -40,7 +51,9 @@
   }
 
   // Align nubbin to the icon
+  &.slds-nubbin_left-top,
   &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
   &.slds-nubbin--right-top {
 
     &:before,

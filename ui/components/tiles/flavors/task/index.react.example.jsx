@@ -11,7 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
-import { Checkbox } from 'ui/components/forms/flavors/checkbox/index.react.example';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
 import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example';
 import classNames from 'classnames';
 
@@ -25,7 +25,10 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> }>
+        <TileMedia
+          title="Contact Trammel Crow Company"
+          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+        >
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>
@@ -35,7 +38,11 @@ export let states = [
     label: 'With actions',
     element:
       <div className="demo-only" style={{ width: '320px' }}>
-        <TileMedia title="The Trammel Crow Company" media={ <Checkbox label="Did you complete this task?" hideLabel /> } actions>
+        <TileMedia
+          title="Contact Trammel Crow Company"
+          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+          actions
+        >
           <p className="slds-truncate">Assignee</p>
         </TileMedia>
       </div>

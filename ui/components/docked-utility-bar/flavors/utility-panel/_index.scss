@@ -7,6 +7,14 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+/**
+ * Container of the utility panel
+ *
+ * @selector .slds-utility-panel
+ * @restrict .slds-utility-bar_container section
+ * @required
+ */
 .slds-utility-panel {
   position: fixed;
   bottom: $line-height-button;
@@ -18,11 +26,23 @@
   }
   transform: translateY(100%);
 
+  /**
+   * @selector .slds-is-open
+   * @restrict .slds-utility-panel
+   * @modifier
+   */
   &.slds-is-open {
     box-shadow: $shadow-docked;
     transform: translateY(0);
   }
 
+  /**
+   * Header that contains an icon, title and panel actions such as minimizing the panel
+   *
+   * @selector .slds-utility-panel__header
+   * @restrict header
+   * @required
+   */
   &__header {
     background: $color-background-docked-panel-header;
     border-bottom: $border-width-thick solid $color-border-brand;
@@ -30,6 +50,13 @@
     padding: $spacing-x-small $spacing-small;
   }
 
+  /**
+   * Area that contains the utility panel feature
+   *
+   * @selector .slds-utility-panel__body
+   * @restrict div
+   * @required
+   */
   &__body {
     display: flex;
     flex: 1 1 0%;

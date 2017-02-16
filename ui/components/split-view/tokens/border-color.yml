@@ -8,5 +8,5 @@ imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 props:
   SPLIT_VIEW_COLOR_BORDER:
-    value: '{!EBONY_CLAY}'
+    value: '{!MISCHKA}'
     comment: Row dividers in Split View list

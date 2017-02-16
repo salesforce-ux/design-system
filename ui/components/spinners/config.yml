@@ -1,8 +1,8 @@
 status: 'dev-ready'
 flavors:
+  - containers
   - colors
   - sizes
-  - containers
 lightning:
   namespace: lightning:spinner
   url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_spinner.htm

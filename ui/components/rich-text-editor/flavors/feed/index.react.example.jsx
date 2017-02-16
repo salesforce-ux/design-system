@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { Demo, RichTextEditor, RteToolbar, RteFormatText, RteFormatBody, RteAlignText, RteInsertContent, RteInsertUser, RteTextarea, RteClearFormatting, RteOverflow } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
+import { Demo, RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteInsertUser, RteTextarea, RteClearFormatting, RteOverflow, RteOverflowDown } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 import classNames from 'classnames';
 
@@ -122,7 +122,7 @@ export let states = [
       <Demo>
         <RichTextEditor>
           <RteToolbar>
-            <RteFormatText tabIndexSetting="0" />
+            <RteFormatText tabIndexSetting="0" hasTooltip />
             <RteFormatBody />
             <RteAlignText />
             <RteInsertContent />
@@ -150,7 +150,9 @@ export let states = [
             <RteAlignText />
             <RteInsertContent />
             <RteInsertUser />
-            <RteOverflow />
+            <RteOverflow>
+              <RteOverflowDown />
+            </RteOverflow>
           </RteToolbar>
 
           <RteTextarea />

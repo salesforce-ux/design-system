@@ -13,8 +13,8 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
-import { Image } from 'ui/components/images/flavors/figure/index.react.example';
-import { AttachmentLink } from 'ui/components/files/flavors/attachment/index.react.example';
+import { Image } from 'ui/components/files/flavors/image-attachment/index.react.example';
+import { AttachmentLink } from 'ui/components/files/flavors/link-attachment/index.react.example';
 
 
 ///////////////////////////////////////////

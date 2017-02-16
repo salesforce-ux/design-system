@@ -15,6 +15,7 @@ import gulpIgnore from 'gulp-ignore';
 import gutil from 'gulp-util';
 import path from 'path';
 import through from 'through2';
+import { kebabCase } from 'theo';
 
 const _category = () => ({
   /**
@@ -119,7 +120,7 @@ const generate = () => {
       const symbolName = path.basename(file.path, '.svg');
       const className = category.getClassName(
         spriteName,
-        _.kebabCase(symbolName.toLowerCase())
+        kebabCase(symbolName.toLowerCase())
       );
       const icon = {
         sprite: spriteName,

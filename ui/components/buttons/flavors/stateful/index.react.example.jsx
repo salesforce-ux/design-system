@@ -18,7 +18,7 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 let StatefulButton = props =>
-  <button className={classNames('slds-button', props.className)} disabled={props.disabled} aria-live="assertive">
+  <button className={classNames('slds-button slds-button--stateful', props.className)} disabled={props.disabled} aria-live="assertive">
     <span className="slds-text-not-selected">
       <SvgIcon className="slds-button__icon--stateful slds-button__icon--left" sprite="utility" symbol="add" />
       Follow
@@ -37,16 +37,22 @@ let StatefulButton = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <StatefulButton className="slds-button--neutral" />
+);
+
 export let states = [
   {
     id: 'button-neutral-stateful-not-selected',
     label: 'Neutral - Not Selected',
-    element: <StatefulButton className="slds-button--neutral slds-not-selected" />
+    element:
+      <StatefulButton className="slds-button--neutral slds-not-selected" />
   },
   {
     id: 'button-neutral-stateful-selected',
     label: 'Neutral - Selected',
-    element: <StatefulButton className="slds-button--neutral slds-is-selected" />
+    element:
+      <StatefulButton className="slds-button--neutral slds-is-selected" />
   },
   {
     id: 'button-inverse-stateful-not-selected',

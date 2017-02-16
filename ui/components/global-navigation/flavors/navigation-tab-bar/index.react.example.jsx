@@ -12,7 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { WaffleIcon } from 'ui/components/global-navigation/flavors/navigation-bar/index.react.example';
+import { WaffleIcon } from 'ui/components/dynamic-icons/flavors/waffle/index.react.example';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -20,6 +20,12 @@ import _ from 'lodash';
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
+
+let ShortCutKey = props =>
+  <span className="slds-text-body--small slds-text-color--weak slds-p-left--large">
+    <span className="slds-assistive-text">:</span>
+    { props.children }
+  </span>;
 
 // Context Tab
 let ContextTab = props =>
@@ -38,12 +44,15 @@ let ContextTab = props =>
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="chevrondown"
         aria-haspopup="true"
-        assistiveText={ 'Actions for ' + props.title } />
+        assistiveText={ 'Actions for ' + props.title }
+        title={ 'Actions for ' + props.title }
+      />
       <Menu className="slds-dropdown--right">
         <MenuList>
-          <MenuItem>Refresh Tab</MenuItem>
-          <MenuItem>Pin Tab</MenuItem>
-          <MenuItem>Close Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>r</ShortCutKey>}>Refresh Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>⇧ + n</ShortCutKey>}>Open in a new window</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>p</ShortCutKey>}>Pin Tab</MenuItem>
+          <MenuItem iconRight={<ShortCutKey>w</ShortCutKey>}>Close Tab</MenuItem>
         </MenuList>
       </Menu>
     </div>
@@ -52,7 +61,9 @@ let ContextTab = props =>
         className="slds-button--icon-container slds-button--icon-x-small"
         tabIndex={ props.itemActive ? '0' : '-1' }
         symbol="close"
-        assistiveText={ 'Close ' + props.title } />
+        assistiveText={ 'Close ' + props.title }
+        title={ 'Close ' + props.title }
+      />
     </div>
   </li>;
 
@@ -67,15 +78,15 @@ export let ContextTabBar = props =>
     <div className="slds-context-bar__primary">
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
         <div className="slds-context-bar__icon-action">
-          { <WaffleIcon /> }
+          <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title="{ props.appName || 'App Name' }">{ props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title={ props.appName || 'App Name' }>{ props.appName || 'App Name' }</span>
         </span>
       </div>
 
       <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
-        <a href="javascript:void(0);" title="Context" className="slds-context-bar__label-action">
+        <a href="javascript:void(0);" title="Object" className="slds-context-bar__label-action">
           <span className="slds-truncate">Object</span>
         </a>
         <div className="slds-context-bar__icon-action">
@@ -83,7 +94,9 @@ export let ContextTabBar = props =>
             className="slds-button--icon-container slds-button--icon-x-small"
             symbol="chevrondown"
             aria-haspopup="true"
-            assistiveText="Open object switcher menu" />
+            assistiveText="Open object switcher menu"
+            title="Open object switcher menu"
+          />
         </div>
         <Menu className="slds-dropdown--right">
           <MenuList>
@@ -108,7 +121,9 @@ export let ContextTabBar = props =>
             className={ classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
             aria-haspopup="true"
-            assistiveText="Toggle split view" />
+            assistiveText="Toggle split view"
+            title="Toggle split view"
+          />
         </div>
       </div>
       <div className="slds-context-bar__vertical-divider"></div>
@@ -117,11 +132,12 @@ export let ContextTabBar = props =>
           <ButtonIcon
             className="slds-button--icon-container slds-button--icon-small"
             symbol="add"
-            aria-haspopup="true"
-            assistiveText="Open object switcher menu" />
+            assistiveText="Open a New Tab"
+            title="Open a New Tab"
+          />
         </div>
         { props.addTabActive ?
-          <div className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+          <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
             <div className="slds-popover__body">
               <div className="slds-form-element">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
@@ -131,7 +147,7 @@ export let ContextTabBar = props =>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         : null }
       </div>
     </div>
@@ -193,7 +209,7 @@ export let states = [
     id: 'tab-item-action-menu-open',
     label: 'Tab - Action Overflow',
     element:
-      <div className="demo-only" style={{height: '10rem'}}>
+      <div className="demo-only" style={{height: '12rem'}}>
         <ContextTabBar>
           <ContextTab title="Home" symbol="home" />
           <ContextTab title="Tab Item 1" itemActive actionOverflow="true" />

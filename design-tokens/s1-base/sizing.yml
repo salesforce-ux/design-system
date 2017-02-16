@@ -27,9 +27,6 @@ props:
   HEIGHT_OVERFLOW_START:
     value: 144px
     comment: Space above overflow menu before scrolling.
-  MAX_HEIGHT_ACTION_OVERFLOW_MENU:
-    value: 628px
-    comment: "Maximum height for action overflow menu so that it's not full-screen for tablet initially."
   MAX_HEIGHT_CARD_MEDIA:
     value: 144px
     comment: Maximum height for photos and such in cards.
@@ -38,12 +35,6 @@ props:
     value: 32px
     comment: Maximum height for brand logos in header.
     deprecated: true
-  MAX_WIDTH_ACTION_BAR:
-    value: 600px
-    comment: Maximum width for action icons in action bar.
-  MAX_WIDTH_ACTION_BAR_ITEM:
-    value: 120px
-    comment: Max-width of an action bar item
   MAX_WIDTH_ACTION_BAR_WITH_LABELS:
     value: 320px
     comment: Maximum width for action icons in action bar when there are only 2 items with labels.

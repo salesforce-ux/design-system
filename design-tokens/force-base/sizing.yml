@@ -92,6 +92,7 @@ props:
   SQUARE_ICON_XX_SMALL_CONTENT:
     value: .875rem
     comment: Very small icons to replace force font with temporary override.
+    deprecated: true
   SQUARE_ICON_LARGE:
     value: 3.125rem
     comment: Large tap target size.

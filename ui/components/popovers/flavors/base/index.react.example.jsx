@@ -46,7 +46,7 @@ export let Popover = props => {
           assistiveText={ props.headerAssistiveText }
         />
       : props.header }
-      <div className={ classNames('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId } role={ props.bodyRole }>
+      <div className={ classNames('slds-popover__body', props.bodyClassName) } id={ bodyUniqueId }>
         {props.children}
       </div>
       { props.footer ?
@@ -73,23 +73,23 @@ let Header = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Popover
+    closeButton={ true }
+    title="Dialog Title">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </Popover>
+);
+
 export let states = [
   {
     id: 'default',
     label: 'Default',
     element:
       <Popover
-        className="slds-nubbin--left">
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="javascript:void(0);">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </Popover>
-  },
-  {
-    id: 'with-close',
-    label: 'With Close',
-    element:
-      <Popover
         className="slds-nubbin--left"
-        closeButton={ true }>
+        closeButton={ true }
+        title="Dialog Title">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
@@ -111,7 +111,8 @@ export let states = [
       <Popover
         className="slds-nubbin--left"
         footer={ <p>Footer Item</p> }
-        closeButton={ true }>
+        closeButton={ true }
+        title="Dialog Title">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   }

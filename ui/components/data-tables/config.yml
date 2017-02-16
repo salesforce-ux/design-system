@@ -1,6 +1,6 @@
 status: 'dev-ready'
 flavors:
-  - basic
+  - base
   - advanced
   - inline-edit
   - responsive

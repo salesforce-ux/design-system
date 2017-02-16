@@ -35,3 +35,19 @@
 
   @return $string;
 }
+
+/// Fix IE Rounding
+///
+/// IE computes 0.875rem into 13.92px instead of 14px
+/// but is better at rounding values using calc()
+/// so we use calc as a hack to get the correct width
+///
+/// This is required for closely positioning elements on a pixel grid
+/// e.g. in an icon where pixel perfection is important
+///
+/// @param {Number} $width - unitless width
+/// @param {Number} $base-font-size [16]
+/// @return {Expression} same as $width, but in rem using calc - e.g. calc(2rem / 16)
+@function fix-ie-rounding($width, $base-font-size: 16) {
+  @return calc(#{$width * 1rem} / #{$base-font-size});
+}

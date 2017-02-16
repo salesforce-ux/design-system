@@ -16,6 +16,7 @@
 
     thead {
       // scss-lint:disable ImportantRule
+      /* stylelint-disable declaration-no-important */
       position: absolute !important;
       margin: -1px !important;
       border: 0 !important;
@@ -24,6 +25,7 @@
       height: 1px !important;
       overflow: hidden !important;
       clip: rect(0 0 0 0) !important;
+      /* stylelint-enable declaration-no-important */
     }
 
     th {
@@ -67,11 +69,13 @@
     &:not(.slds-no-row-hover) tbody tr:hover {
 
       // scss-lint:disable ImportantRule
+      /* stylelint-disable declaration-no-important */
       td,
       th {
         background-color: inherit !important;
         box-shadow: none !important;
       }
+      /* stylelint-enable declaration-no-important */
     }
 
     .slds-is-interactive .slds-button {

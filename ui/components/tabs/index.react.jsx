@@ -72,7 +72,7 @@ class TabItem extends React.Component {
     const classNameComputed = classNames(
       className,
       classNames(`slds-tabs--${flavor}__item`, {
-        'slds-active': current
+        'slds-is-active': current
       })
     );
     const tabIndex = current ? 0 : -1;
@@ -97,7 +97,7 @@ class TabItemOverflow extends React.Component {
     const classNameComputed = classNames(
       className,
       classNames('slds-tabs__item--overflow', {
-        'slds-active': current
+        'slds-is-active': current
       })
     );
     const tabIndex = current ? 0 : -1;

@@ -12,12 +12,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import Checkbox from 'ui/components/forms/flavors/checkbox/index.react';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
 export let TimelineIcon = props =>
-  <div className="slds-icon_container">
+  <div className="slds-icon_container" title={props.symbol == 'log_a_call' ? 'call' : props.symbol }>
     <SvgIcon className={classNames('slds-icon slds-icon--small', props.symbol == 'log_a_call' ? 'slds-icon-standard-log-a-call' : 'slds-icon-standard-' + props.symbol)} sprite="standard" symbol={ props.symbol } />
   </div>;
 
@@ -29,12 +29,12 @@ export let TimelineActions = props =>
 
 export default (
 <div className="demo-only">
-  <ul>
+  <ul className="slds-timeline">
     <li>
       <span className="slds-assistive-text">Task</span>
       <MediaObject figureRight={ <TimelineActions title="More Options for Task, Review proposals" assistiveText="More Options for Task, Review proposals" /> }>
-        <MediaObject className="slds-media--timeline slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
-          <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox assistiveText="mark-complete" /> }>
+        <MediaObject className="slds-timeline__media slds-timeline__media--task" figureLeft={ <TimelineIcon symbol="task" /> } figureLeftClassName="slds-timeline__icon">
+          <MediaObject title="Review proposals for EBC deck with larger team and have marketing review this" figureLeft={ <Checkbox hideLabel label="mark-complete" /> }>
             <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">
               <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>
             </h3>
@@ -55,7 +55,7 @@ export default (
     <li>
       <span className="slds-assistive-text">Event</span>
       <MediaObject figureRight={ <TimelineActions title="More Options for Event, Company One" assistiveText="More Options for Event, Company One" /> }>
-        <MediaObject className="slds-media--timeline slds-timeline__media--event" figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName="slds-timeline__icon">
+        <MediaObject className="slds-timeline__media slds-timeline__media--event" figureLeft={ <TimelineIcon symbol="event" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Company One — EBC Meeting">
             <a href="javascript:void(0);">Company One — EBC Meeting</a>
           </h3>
@@ -80,7 +80,7 @@ export default (
     <li>
       <span className="slds-assistive-text">Call</span>
       <MediaObject figureRight={ <TimelineActions title="More Options for Call, Mobile conversation" assistiveText="More Options for Call, Mobile conversation" /> }>
-        <MediaObject className="slds-media--timeline slds-timeline__media--call" figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName="slds-timeline__icon">
+        <MediaObject className="slds-timeline__media slds-timeline__media--call" figureLeft={ <TimelineIcon symbol="log_a_call" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
           </h3>
@@ -101,7 +101,7 @@ export default (
     <li>
       <span className="slds-assistive-text">Email</span>
       <MediaObject figureRight={ <TimelineActions title="More Options for Email, Mobile conversation" assistiveText="More Options for Email, Mobile conversation" /> }>
-        <MediaObject className="slds-media--timeline slds-timeline__media--email" figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName="slds-timeline__icon">
+        <MediaObject className="slds-timeline__media slds-timeline__media--email" figureLeft={ <TimelineIcon symbol="email" /> } figureLeftClassName="slds-timeline__icon">
           <h3 className="slds-truncate" title="Mobile conversation on Monday">
             <a href="javascript:void(0);">Mobile conversation on Monday</a>
           </h3>

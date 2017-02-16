@@ -6,7 +6,7 @@ Redistributions of source code must retain the above copyright notice, this list
 Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICHorizAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import React from 'react';
@@ -14,8 +14,10 @@ import classNames from 'classnames';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
-import { Pill, PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { FormElement, FormElementLabel, FormElementControl, Input } from 'ui/components/forms/flavors/input/index.react.example';
+import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
+import { ListboxPill, ListboxHoriz, ListItemHoriz } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
+import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
+import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import _ from 'lodash';
 
 ///////////////////////////////////////////
@@ -23,13 +25,12 @@ import _ from 'lodash';
 ///////////////////////////////////////////
 
 export let Listbox = props =>
-  <div className={classNames('slds-dropdown', props.className)} role="listbox">
+  <div className={props.className} id={ props.id || 'option-list-01' } role="listbox">
     {props.children}
   </div>;
 
 export let ListboxList = props =>
   <ul
-    id={ props.id || 'option-list-01' }
     className={classNames('slds-dropdown__list', props.className)}
     role={ props.role == 'group' ? 'group' : 'presentation' }
     aria-label={ props.role == 'group' ? props['aria-label'] : null }
@@ -45,7 +46,7 @@ export let ListboxItem = props => {
       <span
         className={ classNames( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
         role={ !props.role ? 'option' : props.role}
-        tabIndex={ props.tabIndex || '-1' }
+        tabIndex={ props.tabIndex }
         id={ uniqueId }
       >
         { props.isSelectable ?
@@ -62,21 +63,35 @@ export let ListboxItem = props => {
   );
 };
 
+export const PickList = props =>
+  <div
+    aria-expanded={ props.isOpen ? 'true' : 'false' }
+    aria-haspopup="listbox"
+    className={ classNames('slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click', { 'slds-is-open': props.isOpen, 'slds-picklist--fluid': props.isFluid }, props.classNames) }
+    role="combobox"
+  >
+    { props.children }
+  </div>;
+
 let ComboboxSearchInput = props =>
-  <FormElement>
-    <FormElementLabel>Categories</FormElementLabel>
-    <FormElementControl className="slds-input-has-icon slds-input-has-icon--right slds-picklist__input">
+  <FormElement
+    label="Categories"
+    inputId="text-input-01"
+    inputIcon="right"
+    formControlClassName="slds-picklist__input"
+  >
       <input
-        id="text-input-01"
-        className="slds-lookup__search-input slds-input"
-        type="search"
-        placeholder={ props.placeholder || 'Select an Option' }
-        aria-owns="option-list-01"
-        role="combobox"
         aria-activedescendant=""
-        aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
-        readOnly={!props.autocomplete}
-        aria-autocomplete={props.autocomplete ? 'list' : null}
+        aria-autocomplete={ props.autocomplete ? 'list' : null }
+        aria-controls="option-list-01"
+        autoComplete="off"
+        className="slds-lookup__search-input slds-input"
+        id="text-input-01"
+        placeholder={ props.placeholder || 'Select an Option' }
+        readOnly={ !props.autocomplete }
+        role="textbox"
+        type="search"
+        value={ props.value }
       />
       {
         !props.autocomplete ?
@@ -84,13 +99,13 @@ let ComboboxSearchInput = props =>
           className="slds-input__icon slds-text-color--default"
           symbol="down"
           assistiveText="Expand category options"
+          title="Expand category options"
           aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
           iconClassName="slds-button__icon"
           tabIndex="-1"
           />
         : null
       }
-    </FormElementControl>
   </FormElement>;
 
 ///////////////////////////////////////////
@@ -102,11 +117,11 @@ export let states = [
     id: 'picklist-closed',
     label: 'Closed',
     element:
-      <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
+      <PickList>
         <ComboboxSearchInput />
-        <Listbox className="slds-dropdown--left">
-          <ListboxList className="slds-dropdown--length-5">
-            <ListboxItem isSelectable text tabIndex="0">Option A</ListboxItem>
+        <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
+          <ListboxList>
+            <ListboxItem isSelectable text>Option A</ListboxItem>
             <ListboxItem isSelectable text>Option B</ListboxItem>
             <ListboxItem isSelectable text>Option C</ListboxItem>
             <ListboxItem isSelectable text>Option D</ListboxItem>
@@ -114,18 +129,18 @@ export let states = [
             <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
           </ListboxList>
         </Listbox>
-      </div>
+      </PickList>
   },
   {
     id: 'picklist-open',
     label: 'Open',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput dropdown="open" />
-          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
-              <ListboxItem isSelectable text tabIndex="0">Option A</ListboxItem>
+              <ListboxItem isSelectable text>Option A</ListboxItem>
               <ListboxItem isSelectable text>Option B</ListboxItem>
               <ListboxItem isSelectable text>Option C</ListboxItem>
               <ListboxItem isSelectable text>Option D</ListboxItem>
@@ -133,7 +148,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -141,11 +156,11 @@ export let states = [
     label: 'Item selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput placeholder="Option A" dropdown="open" />
-          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+        <PickList isOpen>
+          <ComboboxSearchInput value="Option A" dropdown="open" />
+          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" text isSelectable tabIndex="0">
+              <ListboxItem className="slds-is-selected" isSelected="true" text isSelectable>
                 <span className="slds-assistive-text">Current Selection:</span>Option A
               </ListboxItem>
               <ListboxItem isSelectable text>Option B</ListboxItem>
@@ -155,7 +170,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -163,11 +178,11 @@ export let states = [
     label: 'Multiple items selected',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+        <PickList isOpen>
+          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
                 <span className="slds-assistive-text">Current Selection:</span>Option A
               </ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
@@ -179,7 +194,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -187,11 +202,11 @@ export let states = [
     label: 'Closed - Multiple items selected',
     element:
       <div className="demo-only">
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click">
-          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown--left">
+        <PickList>
+          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown slds-dropdown--left">
             <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
                 <span className="slds-assistive-text">Current Selection:</span>Option A
               </ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
@@ -203,10 +218,16 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
         <PillContainer className="slds-pill_container--bare">
-          <Pill label="Option A" unlinked />
-          <Pill label="Option B" unlinked />
+          <ListboxHoriz>
+            <ListItemHoriz>
+              <ListboxPill label="Option A" tabIndex="0" />
+            </ListItemHoriz>
+            <ListItemHoriz>
+              <ListboxPill label="Option B" />
+            </ListItemHoriz>
+          </ListboxHoriz>
         </PillContainer>
       </div>
   },
@@ -215,12 +236,12 @@ export let states = [
     label: 'With Header',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
-          <ComboboxSearchInput placeholder="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+        <PickList isOpen>
+          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
+          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList role="group" aria-label="Recently Viewed">
               <ListboxItem role="presentation" headerText="Recently Viewed" />
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
                 <span className="slds-assistive-text">Current Selection:</span>Option A
               </ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
@@ -232,7 +253,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   },
   {
@@ -240,12 +261,12 @@ export let states = [
     label: 'Autocomplete',
     element:
       <div className="demo-only" style={{height: '240px'}}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+        <PickList isOpen>
           <ComboboxSearchInput placeholder="Find Option" dropdown="open" autocomplete />
-          <Listbox className="slds-dropdown--left slds-dropdown--length-5">
+          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
             <ListboxList role="group" aria-label="Recently Viewed">
               <ListboxItem role="presentation" headerText="Recently Viewed" />
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text tabIndex="0">
+              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
                 <span className="slds-assistive-text">Current Selection:</span>Option A
               </ListboxItem>
               <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
@@ -266,7 +287,7 @@ export let states = [
               <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
             </ListboxList>
           </Listbox>
-        </div>
+        </PickList>
       </div>
   }
 ];

@@ -7,14 +7,47 @@
 
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * @summary A panel provides contextual and detailed information based on an click or hover interaction of data by a user.
+ *
+ * @base
+ * @name panels
+ * @selector .slds-panel
+ * @support dev-ready
+ * @category complex
+ * @type data-display, user-input
+ */
+
+/**
+ * @summary Initiates a panel
+ *
+ * @name detail
+ * @selector .slds-panel
+ * @restrict div
+ * @variant
+ */
 .slds-panel {
   background: $color-background-alt;
   border-radius: $border-radius-medium;
 
+  /**
+   * Contains sub sections of a panel
+   *
+   * @selector .slds-panel__section
+   * @restrict .slds-panel div
+   * @required
+   */
   &__section {
     padding: $spacing-medium;
   }
 
+  /**
+   * Contains form actions at the bottom of a panel
+   *
+   * @selector .slds-panel__actions
+   * @restrict .slds-panel div
+   * @required
+   */
   &__actions {
     padding: $spacing-small;
   }

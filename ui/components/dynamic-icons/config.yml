@@ -1,0 +1,8 @@
+status: 'dev-ready'
+flavors:
+  - ellie
+  - eq
+  - score
+  - strength
+  - trend
+  - waffle

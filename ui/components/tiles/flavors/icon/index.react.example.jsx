@@ -15,7 +15,9 @@ import { TileMedia } from 'ui/components/tiles/flavors/base/index.react.example'
 import classNames from 'classnames';
 
 const icon = (
-  <SvgIcon className="slds-icon slds-icon-standard-groups" sprite="standard" symbol="groups" />
+  <span className="slds-icon_container" title="description of icon when needed">
+    <SvgIcon className="slds-icon slds-icon-standard-groups" sprite="standard" symbol="groups" />
+  </span>
 );
 
 ///////////////////////////////////////////

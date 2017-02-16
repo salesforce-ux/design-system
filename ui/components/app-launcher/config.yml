@@ -1,6 +1,6 @@
 status: 'prototype'
 flavors:
-  - default
+  - base
   - search
   - tile
   - tile-small

@@ -32,7 +32,7 @@ body {
 }
 
 // @TODO - this is temporarily here as a fix till BLC is fixed and DF is completed - @Stef
-.demo-only--center-card-body .#{$css-prefix}card__body {
+.demo-only--center-card-body .slds-card__body {
   text-align: center;
 }
 
@@ -84,13 +84,6 @@ body {
   }
 }
 
-// For the .button--hint demo - parent needs to have some space
-.hint-parent-demo {
-  padding: 20px;
-  background-color: rgba($color-brand, 0.35);
-  border: 1px solid rgba($color-brand, 0.1);
-}
-
 // To space separate rows of demo items apart
 .demo-space {
   margin: 1rem 0 0;
@@ -110,6 +103,9 @@ body {
     margin-bottom: 25px;
   }
 }
+
+// Alignment Utility
+.demo-only--alignment > div { height: 9.375rem; }
 
 // For spacing demo
 .demo-only--spacing {
@@ -165,19 +161,19 @@ body {
 }
 
 // Responsive Visibility Table
-.demo-visibility-chart {
-  .visible,
-  .hidden {
-    text-align: center;
-  }
-  .visible {
-    background: $color-background-success;
-    color: $color-text-inverse;
-  }
-  .hidden {
-    color: $color-text-weak;
-    opacity: 0.5;
-  }
+.demo-visibility-chart__visible,
+.demo-visibility-chart__hidden {
+  text-align: center;
+}
+
+.demo-visibility-chart__visible {
+  background: $color-background-success;
+  color: $color-text-inverse;
+}
+
+.demo-visibility-chart__hidden {
+  color: $color-text-weak;
+  opacity: 0.5;
 }
 
 .demo-visibility [class*="-hide"] {

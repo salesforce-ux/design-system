@@ -22,15 +22,25 @@ import { Tile, TileMedia } from 'ui/components/tiles/flavors/base/index.react.ex
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
     <Card className="slds-card--narrow">
-      <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Contacts (3)</span></CardHeader>
+      <CardHeader actions="overflow" symbol="contact">
+        <span className="slds-text-heading--small">Contacts (3)</span>
+      </CardHeader>
       <CardBody>
-        <div className="slds-card__body--inner">
-          <Tile title="Related Record Title 1" />
-          <Tile title="Related Record Title 2" />
-          <Tile title="Related Record Title 3" />
-        </div>
+        <ul className="slds-card__body--inner">
+          <li>
+            <Tile title="Related Record Title 1" />
+          </li>
+          <li className="slds-m-top--x-small">
+            <Tile title="Related Record Title 2" />
+          </li>
+          <li className="slds-m-top--x-small">
+            <Tile title="Related Record Title 3" />
+          </li>
+        </ul>
       </CardBody>
-      <CardFooter><a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a></CardFooter>
+      <CardFooter>
+        <a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a>
+      </CardFooter>
     </Card>
   </div>
 );

@@ -94,13 +94,13 @@ let ButtonEdit = props =>
   </button>;
 
 let EditPanel = props =>
-  <div className="slds-popover slds-popover--edit" role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
+  <section className="slds-popover slds-popover--edit" role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
     <span id="form-start" tabIndex="0"></span>
     <div className="slds-popover__body">
       { props.children }
     </div>
     <span id="form-end" tabIndex="0"></span>
-  </div>;
+  </section>;
 
 let TableFocusInfo = props =>
   <div className="slds-box slds-table--edit_container-message">

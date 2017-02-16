@@ -1,3 +1,6 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 aliases:
   OFFSET_NONE: "0" # Needs to be quoted or will be interpreted as 'false'
   OFFSET_X_SMALL: 2

@@ -27,6 +27,6 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 
 ## Licenses
 
-* Source code is licensed under [BSD License Clause 2](http://opensource.org/licenses/BSD-2-Clause)
-* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
-* The font is licensed under our [font license](https://www.lightningdesignsystem.com/assets/licenses/License-for-font.txt)
+* Source code is licensed under [BSD 3-Clause](https://git.io/sfdc-license)
+* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
+* The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)

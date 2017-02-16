@@ -13,7 +13,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
-import { Image } from 'ui/components/files/flavors/image-attachment/index.react.example';
+import { File } from 'ui/components/files/flavors/file-attachment/index.react.example';
 import { AttachmentLink } from 'ui/components/files/flavors/link-attachment/index.react.example';
 
 
@@ -53,26 +53,26 @@ export let states = [
         </PostContent>
         <div className="slds-post__payload">
           <ul className="slds-grid slds-grid--pull-padded">
-          <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
-              <Image
-                className="slds-image--card"
-                cropClass="slds-image__crop--16-by-9"
-                titleClass="slds-image__title--card"
+          <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+              <File
+                className="slds-file--card"
+                cropClass="slds-file__crop--16-by-9"
+                titleClass="slds-file__title--card"
                 symbol="image"
                 image />
           </li>
-          <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show">
-              <Image
-                className="slds-image--card"
-                cropClass="slds-image__crop--16-by-9"
-                titleClass="slds-image__title--card"
+          <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show">
+              <File
+                className="slds-file--card"
+                cropClass="slds-file__crop--16-by-9"
+                titleClass="slds-file__title--card"
                 symbol="pdf" />
             </li>
-            <li className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-3">
-              <Image
-                className="slds-image--card"
-                cropClass="slds-image__crop--16-by-9"
-                titleClass="slds-image__title--overlay slds-align--absolute-center slds-text-heading--large"
+            <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+              <File
+                className="slds-file--card"
+                cropClass="slds-file__crop--16-by-9"
+                titleClass="slds-file__title--overlay slds-align--absolute-center slds-text-heading--large"
                 title="22+"
                 image
                 overlay />

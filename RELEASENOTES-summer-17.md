@@ -39,6 +39,10 @@ The following changes have been made in this release:
 - Update focus state for pills
   - Added `slds-pill--link` to modify pill for when we want the hyperlink to take up 100% of the available pill
   - Added `slds-pill__action` to the actionable link element inside of `slds-pill--link`
+- Files Component:
+  - Updated the actions menu location
+  - Added state for no title
+  - Added loading state
 
 **FIXED**
 

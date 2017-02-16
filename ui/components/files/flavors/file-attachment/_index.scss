@@ -16,7 +16,7 @@
  *
  * @base
  * @name files
- * @selector .slds-image
+ * @selector .slds-file
  * @support dev-ready
  */
 
@@ -24,22 +24,33 @@
  * A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop--16-by-9`.
  *
  *
- * @summary Initializes an image component
+ * @summary Initializes a file component
  *
- * @name image-attachment
- * @selector .slds-image
+ * @name file-attachment
+ * @selector .slds-file
  * @restrict figure
  * @variant
  */
-.slds-image {
+.slds-image,
+.slds-file {
   display: block;
   position: relative;
 
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  &:focus {
+    border: $border-width-thin solid $color-border-brand-dark;
+    box-shadow: $elevation-shadow-4;
+  }
+
   /**
-   * Set crop boundaries to an image component
+   * Set crop boundaries to a file component
    *
-   * @selector .slds-image__crop
-   * @restrict .slds-image
+   * @selector .slds-file__crop
+   * @restrict .slds-file
    */
   &__crop {
     display: block;
@@ -60,10 +71,10 @@
     }
 
     /**
-     * Crops image to a ratio of 1:1
+     * Crops file to a ratio of 1:1
      *
-     * @selector .slds-image--1-by-1
-     * @restrict .slds-image
+     * @selector .slds-file_1-by-1
+     * @restrict .slds-file
      * @modifier
      * @group ratio
      */
@@ -73,10 +84,10 @@
     }
 
     /**
-     * Crops image to a ratio of 16:9
+     * Crops file to a ratio of 16:9
      *
-     * @selector .slds-image--16-by-9
-     * @restrict .slds-image
+     * @selector .slds-file_16-by-9
+     * @restrict .slds-file
      * @modifier
      * @group ratio
      */
@@ -86,10 +97,10 @@
     }
 
     /**
-     * Crops image to a ratio of 4:3
+     * Crops file to a ratio of 4:3
      *
-     * @selector .slds-image--4-by-3
-     * @restrict .slds-image
+     * @selector .slds-file_4-by-3
+     * @restrict .slds-file
      * @modifier
      * @group ratio
      */
@@ -100,15 +111,23 @@
   }
 
   /**
-   * Image caption associated to an image
+   * Image caption associated to a file
    *
-   * @selector .slds-image__title
-   * @restrict .slds-image figcaption
+   * @selector .slds-file__title
+   * @restrict .slds-file figure
    */
   &__title {
     display: flex;
     align-items: center;
     padding: $spacing-x-small;
+
+    /**
+     * Adds overlay to file
+     *
+     * @selector .slds-file__title_overlay
+     * @restrict .slds-file__title div
+     * @modifier
+     */
 
     &_overlay,
     &--overlay {
@@ -119,14 +138,38 @@
       right: 0;
       bottom: 0;
 
-      .slds-image__text {
+      .slds-media__body {
         z-index: 1;
       }
     }
 
+    /**
+     * Creates card title bar on file
+     *
+     * @selector .slds-file__title_card
+     * @restrict .slds-file__title div
+     * @modifier
+     */
+
     &_card,
     &--card {
       background: $color-background;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /**
+     * Creates gradient scrim bar on file
+     *
+     * @selector .slds-file__title_scrim
+     * @restrict .slds-file__title div
+     * @modifier
+     */
+
+    &_scrim {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
       position: absolute;
       bottom: 0;
       left: 0;
@@ -137,8 +180,8 @@
   /**
    * If text sits on top of image, apply an overlay with this class
    *
-   * @selector .slds-image--overlay
-   * @restrict .slds-image
+   * @selector .slds-file_overlay
+   * @restrict .slds-file
    * @modifier
    */
   &_overlay,
@@ -157,22 +200,21 @@
   /**
    * Change style of image to a card look
    *
-   * @selector .slds-image--card
-   * @restrict .slds-image
+   * @selector .slds-file_card
+   * @restrict .slds-file
    * @modifier
    */
   &_card,
   &--card {
     background: $color-background-alt;
-    border-top: $border-width-thin solid $color-border-separator;
-    box-shadow: $shadow-image;
+    border: $border-width-thin solid rgba(0, 0, 0, 0.16);
   }
 
   /**
    * When only image type is available, this class help position the file type icon
    *
-   * @selector .slds-image__icon
-   * @restrict .slds-image span
+   * @selector .slds-file__icon
+   * @restrict .slds-file span
    */
   &__icon {
     position: absolute;
@@ -183,14 +225,45 @@
   }
 
   /**
-   * Actions menu placement that sits on top of image
+   * This adds an external icon to the top left side of the card
    *
-   * @selector .slds-image__actions
-   * @restrict .slds-image div
+   * @selector .slds-file__external-icon
+   * @restrict .slds-file div
+   * @required
    */
-  &__actions {
+
+  &__external-icon {
     position: absolute;
-    top: $spacing-x-small;
-    right: $spacing-x-small;
+    top: $spacing-small;
+    left: $spacing-small;
+  }
+
+  /**
+   * This changes the color of the loading icon
+   *
+   * @selector .slds-file__loading-icon
+   * @restrict .slds-file div
+   * @required
+   */
+
+  &__loading-icon {
+    fill: $color-text-icon-default-disabled;
+  }
+
+  /**
+   * This vertically centers the icon when there is no title bar
+   *
+   * @selector .slds-file_center-icon
+   * @restrict .slds-file div
+   * @required
+   * @modifier
+   */
+
+  &_center-icon {
+
+    .slds-file__icon {
+      margin-top: 0;
+    }
+
   }
 }

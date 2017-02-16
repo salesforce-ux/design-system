@@ -131,6 +131,14 @@
     "type": "git",
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
+  "greenkeeper": {
+    "ignore": [
+      "theo",
+      "webpack",
+      "@salesforce-ux/icons",
+      "karma-webpack"
+    ]
+  },
   "scripts": {
     "build": "gulp build",
     "build-prod": "gulp build",

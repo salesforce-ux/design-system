@@ -50,6 +50,10 @@
 // This class goes on the table and deals with some items inside
 .slds-table--edit {
 
+  th {
+    padding: 0;
+  }
+
   .slds-cell-error {
     padding-left: 0;
   }

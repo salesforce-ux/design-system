@@ -4,6 +4,19 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## February 16, 2017
+
+**ADDED**
+
+The following classes are now available:
+
+- Added `slds-table--resizable-cols` as a modifier to `slds-table`. Should be used if your table supports resizable columns.
+
+**FIXES**
+
+The following issues have now been resolved:
+
+- `slds-table--fixed-layout` can be used with the basic table now - [#396](https://github.com/salesforce-ux/design-system/issues/396)
 
 ## February 3, 2017
 

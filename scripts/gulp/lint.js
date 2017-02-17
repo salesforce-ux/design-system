@@ -44,6 +44,8 @@ gulp.task('lint:spaces', () =>
     '*.{js,json,md,yml,txt}',
     '.*',
     '!.DS_Store',
+    '!LICENSE-icons-images.txt',
+    '!CONTRIBUTING.md',
     'ui/**/*.*',
     'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
     'scripts/**/*.{js,sh,jsx}'

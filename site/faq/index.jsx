@@ -190,7 +190,7 @@ class FAQ extends React.Component {
 <ltng:require styles="/resource/${compactVersion}/assets/styles/${g.moduleName}-ltng.min.css" />
           `}</CodeBlock>
         </div>
-        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">The tool to create your custom CSS is available here.</a></p>
+        <p><a href="https://tools.lightningdesignsystem.com/css-customizer">The tool to create your custom CSS is available here</a>.</p>
       </div>
     );
     this.addContentItem(

@@ -64,7 +64,7 @@ bower install salesforce-lightning-design-system --save
     </p>
     <p><strong>Note:</strong> If you need to use the scoped files that were previously included in the download, we have <a href="https://tools.lightningdesignsystem.com/css-customizer">provided a tool for you to create your custom-scoped CSS</a>. You will need to scope to your own unique scoping class name instead of <code>.slds</code>.</p>
     <p>
-      All source code is licensed under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD License Clause 2</a>. All icons and images are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0</a>. The font is licensed under our <a href="/assets/licenses/License-for-font.txt">font license</a>.
+      Source code is licensed under <a href="https://git.io/sfdc-license">BSD 3-Clause</a>. All icons and images are licensed under <a href="https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt">Creative Commons Attribution-NoDerivatives 4.0</a>. The Salesforce Sans font is licensed under our <a href="https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt">font license</a>.
     </p>
     <form action={`/${g.downloadPath(process.env.SLDS_VERSION)}`}>
       <CTALink eventName="Download" eventType="css">

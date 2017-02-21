@@ -29,7 +29,7 @@
     "@salesforce-ux/icons": "7.7.0",
     "app-module-path": "2.2.0",
     "async": "2.1.4",
-    "autoprefixer": "6.7.3",
+    "autoprefixer": "6.7.4",
     "babel-cli": "6.23.0",
     "babel-core": "6.23.1",
     "babel-loader": "6.3.2",

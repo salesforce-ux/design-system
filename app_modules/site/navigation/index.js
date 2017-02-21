@@ -254,7 +254,7 @@ const nav = formatNavItem({
           path: '/components-overview',
           label: 'Overview'
         }
-      ].concat([utilities, touch]).concat(components)
+      ].concat([utilities]).concat(components)
     },
     {
       label: 'Design Tokens'

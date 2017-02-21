@@ -102,9 +102,7 @@
  */
 .slds-icon_container,
 .slds-icon__container {
-
   @include deprecate('4.0.0', 'slds-icon__container is deprecated. Use slds-icon_container instead.');
-  color: $color-text-icon-inverse;
   display: inline-block;
   border-radius: $border-radius-medium;
 
@@ -193,47 +191,13 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
- * @summary Doctype icons
- *
- * @name doctype
- * @selector [class*='slds-icon-doctype-']
- * @restrict .slds-icon_container
- * @notes Doctype icons have specific colors that cannot be changed with the `fill` CSS property.
- * @variant
- */
-
-/**
- * Utility icons have no background color.
- *
- * ### Changing the color of an icon
- *
- * Icon color is changed using the `fill` CSS property.
- * You may also use these helper classes:
-
- * - `.slds-icon-text-default`: same as default text
- * - `.slds-icon-text-warning`: yellow
- * - `.slds-icon-text-error`: red
- *
- * @summary Utility icons
- *
- * @name utility
- * @selector [class*='slds-icon-utility-']
- * @restrict .slds-icon_container
- * @variant
- */
-
-[class*='slds-icon-utility-'] {
-  color: $color-text-icon-default;
-}
-
-/**
  * @selector .slds-icon
  * @restrict .slds-icon_container svg
  * @required
  */
 .slds-icon {
   @include square($square-icon-medium-boundary);
-  fill: currentColor;
+  fill: $color-text-icon-inverse;
 }
 
 // Crispy
@@ -243,7 +207,6 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
   .slds-icon,
   &.slds-icon {
-    color: $color-text-inverse;
     border-radius: $border-radius-medium;
   }
 }

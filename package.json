@@ -80,7 +80,7 @@
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "4.0.0",
     "invariant": "2.2.2",
-    "js-beautify": "1.6.9",
+    "js-beautify": "1.6.10",
     "js-yaml": "3.8.1",
     "karma": "1.5.0",
     "karma-chai": "0.1.0",

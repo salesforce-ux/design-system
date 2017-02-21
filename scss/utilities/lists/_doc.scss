@@ -1,0 +1,18 @@
+// Lightning Design System 2.3.0-alpha.6
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * This CSS framework is built to create enterprise applications, so lists rarely need their default styling. All lists start by having their defaults reset to `margin: 0` and `padding: 0` with no list markers. When using a screen reader, a list is announced along with the number of items it contains.
+ *
+ * When creating a basic page rather than application style, surround the group of headings, paragraphs, and lists with the `.slds-text-longform` class to retain their default spacing.
+ *
+ * By default, a list is vertical, but you can change it to horizontal using these utility classes.
+ *
+ * @summary A list groups related content together.
+ *
+ * @utility
+ * @name lists
+ * @selector [class*='slds-list']
+ * @support dev-ready
+ */

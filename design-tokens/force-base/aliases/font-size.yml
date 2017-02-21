@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+  FONT_SIZE_1: ".625rem"
+  FONT_SIZE_2: ".75rem"
+  FONT_SIZE_3: ".8125rem"
+  FONT_SIZE_4: ".875rem"
+  FONT_SIZE_5: "1rem"
+  FONT_SIZE_6: "1.125rem"
+  FONT_SIZE_7: "1.25rem"
+  FONT_SIZE_8: "1.5rem"
+  FONT_SIZE_9: "2rem"

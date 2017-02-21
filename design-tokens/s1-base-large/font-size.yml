@@ -1,0 +1,28 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  cssProperties:
+  - font
+  - font-size
+  category: font-size
+props:
+  FONT_SIZE_SMALL:
+    value: 0.75rem
+    deprecated: true
+  FONT_SIZE_MEDIUM:
+    value: 0.8125rem
+    deprecated: true
+  FONT_SIZE_MEDIUM_A:
+    value: 0.875rem
+    deprecated: true
+  FONT_SIZE_LARGE:
+    value: 1rem
+    deprecated: true
+  FONT_SIZE_X_LARGE:
+    value: 1.25rem
+    deprecated: true
+  FONT_SIZE_XX_LARGE:
+    value: 1.75rem
+    deprecated: true

@@ -1,0 +1,22 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: line-height
+  type: number
+  cssProperties:
+  - font
+  - '*height'
+props:
+  LINE_HEIGHT_HEADING:
+    value: '1.25'
+    comment: Unitless line-heights for reusability
+  LINE_HEIGHT_TEXT:
+    value: '1.375'
+    comment: Unitless line-heights for reusability
+  LINE_HEIGHT_RESET:
+    value: '1'
+    comment: Remove extra leading. Unitless line-heights for reusability
+  LINE_HEIGHT_TAB:
+    value: 2.5rem
+    comment: Line heights for tabs

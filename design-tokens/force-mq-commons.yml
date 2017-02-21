@@ -1,0 +1,27 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: media-query
+  type: media-query
+props:
+  MQ_SMALL:
+    value: 'only screen and (max-width: 47.9375em)'
+    comment: 'Small form factor: devices smaller than tablet'
+  MQ_MEDIUM:
+    value: 'only screen and (min-width: 48em)'
+    comment: 'Medium form factor:  devices larger than phone'
+  MQ_MEDIUM_LANDSCAPE:
+    value: 'only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)'
+    comment: 'Medium form factor, landscape:  devices larger than phone, in landscape orientation'
+  MQ_LARGE:
+    value: 'only screen and (min-width: 64.0625em)'
+    comment: 'Large form factor:  devices larger than tablet'
+  MQ_HIGH_RES:
+    value: 'only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)'
+    deprecated: true
+    comment: Retina displays
+  MQ_SINGLE_COLUMN_RECORD_LAYOUT:
+    value: '(max-width: 599px)'
+    deprecated: true
+    comment: Make record layout 1 col when its view port is < 600px

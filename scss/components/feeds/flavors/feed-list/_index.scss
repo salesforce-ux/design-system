@@ -1,0 +1,63 @@
+// Lightning Design System 2.3.0-alpha.6
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * Most feeds have a media object containing the user's name and avatar image.
+ * If both the image and the name link to the same location, add `tab-index="-1"`
+ * to the `<a>` element so that assistive technology does not read out
+ * duplicate links.
+ *
+ * @summary A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
+ *
+ * @base
+ * @name feeds
+ * @selector .slds-feed
+ * @support dev-ready
+ * @category complex
+ * @type data-display
+ */
+
+/**
+ * A discussion feed consists of a list of posts. A `.slds-feed__item` contains a post and comments related to that post.
+ *
+ * @name feed-list
+ * @selector .slds-feed
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-feed {
+  position: relative;
+  max-width: rem(784px);
+  margin: auto;
+
+  /**
+   * @selector .slds-feed__list
+   * @restrict .slds-feed ul
+   * @required
+   */
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  /**
+   * @selector .slds-feed__item
+   * @restrict .slds-feed__list li
+   * @required
+   */
+  &__item {
+    padding: $spacing-x-small 0;
+
+    @include mq-medium-min {
+      padding: $spacing-medium 0;
+    }
+
+    @include mq-large-min {
+      padding: $spacing-large 0;
+    }
+  }
+}

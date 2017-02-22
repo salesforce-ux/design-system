@@ -1,0 +1,554 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base/aliases/color.yml
+- ./force-base/spacing.yml
+props:
+  FONT_FAMILY_BODY:
+    value: "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    type: font
+    category: font
+    cssProperties:
+    - font
+    - font-family
+    comment: "font-face should be 'Salesforce Sans'."
+  FONT_WEIGHT_LIGHT:
+    value: '300'
+    type: number
+    category: font-weight
+    cssProperties:
+    - font
+    - font-weight
+    comment: Salesforce Sans Light
+  FONT_WEIGHT_REGULAR:
+    value: '400'
+    type: number
+    category: font-weight
+    cssProperties:
+    - font
+    - font-weight
+    comment: Salesforce Sans Regular
+  FONT_WEIGHT_BOLD:
+    value: '700'
+    type: number
+    category: font-weight
+    cssProperties:
+    - font
+    - font-weight
+    comment: Salesforce Sans Bold
+  FONT_SIZE_X_SMALL:
+    value: 0.625rem
+    type: size
+    category: font-size
+    cssProperties:
+    - font
+    - font-size
+    comment: ''
+  FONT_SIZE_SMALL:
+    value: 0.75rem
+    type: size
+    category: font-size
+    cssProperties:
+    - font
+    - font-size
+    comment: ''
+  FONT_SIZE_X_MEDIUM:
+    value: 0.875rem
+    type: size
+    cssProperties:
+    - font
+    - font-size
+    category: font-size
+    comment: ''
+  FONT_SIZE_MEDIUM:
+    value: 1rem
+    type: size
+    cssProperties:
+    - font
+    - font-size
+    category: font-size
+    comment: ''
+  FONT_SIZE_LARGE:
+    value: 1.125rem
+    type: size
+    cssProperties:
+    - font
+    - font-size
+    category: font-size
+    comment: ''
+  FONT_SIZE_X_LARGE:
+    value: 1.25rem
+    type: size
+    cssProperties:
+    - font
+    - font-size
+    category: font-size
+    comment: ''
+  FONT_SIZE_XX_LARGE:
+    value: 1.5rem
+    type: size
+    cssProperties:
+    - font
+    - font-size
+    category: font-size
+    comment: ''
+  BORDER_RADIUS_SMALL:
+    value: .125rem
+    type: size
+    cssProperties:
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    category: radius
+    comment: ''
+  BORDER_RADIUS_MEDIUM:
+    value: .25rem
+    type: size
+    cssProperties:
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    category: radius
+    comment: ''
+  BORDER_RADIUS_LARGE:
+    value: .5rem
+    type: size
+    cssProperties:
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    category: radius
+    comment: ''
+  BORDER_RADIUS_PILL:
+    value: 5rem
+    type: size
+    cssProperties:
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    category: radius
+    comment: ''
+  BORDER_RADIUS_CIRCLE:
+    value: '50%'
+    type: size
+    cssProperties:
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    category: radius
+    comment: ''
+  SPACING_LARGE:
+    value: 2rem
+    category: spacing
+    type: size
+    cssProperties:
+    - margin
+    - margin-top
+    - margin-right
+    - margin-bottom
+    - margin-left
+    - padding
+    - padding-top
+    - padding-right
+    - padding-bottom
+    - padding-left
+    comment: ''
+  SPACING_X_LARGE:
+    value: 4rem
+    category: spacing
+    type: size
+    cssProperties:
+    - margin
+    - margin-top
+    - margin-right
+    - margin-bottom
+    - margin-left
+    - padding
+    - padding-top
+    - padding-right
+    - padding-bottom
+    - padding-left
+    comment: ''
+  SPACING_XX_LARGE:
+    value: 8rem
+    category: spacing
+    type: size
+    cssProperties:
+    - margin
+    - margin-top
+    - margin-right
+    - margin-bottom
+    - margin-left
+    - padding
+    - padding-top
+    - padding-right
+    - padding-bottom
+    - padding-left
+    comment: ''
+  LINE_HEIGHT_RESET:
+    value: '1'
+    type: number
+    category: line-height
+    cssProperties:
+    - font
+    - line-height
+    comment: ''
+  LINE_HEIGHT_HEADING:
+    value: '1.25'
+    type: number
+    category: line-height
+    cssProperties:
+    - font
+    - line-height
+    comment: ''
+  LINE_HEIGHT_TEXT:
+    value: '1.5'
+    type: number
+    category: line-height
+    cssProperties:
+    - font
+    - line-height
+    comment: ''
+  MQ_SMALL:
+    value: 'only screen and (min-width: 28em)'
+    category: media-query
+    type: media-query
+    comment: '448px, for phone devices and larger.'
+  MQ_MEDIUM:
+    value: 'only screen and (min-width: 48em)'
+    category: media-query
+    type: media-query
+    comment: '768px, for phone devices and larger.'
+  MQ_LARGE:
+    value: 'only screen and (min-width: 64em)'
+    category: media-query
+    type: media-query
+    comment: '1024px, for tablet devices and larger.'
+  MQ_X_LARGE:
+    value: 'only screen and (min-width: 80em)'
+    category: media-query
+    type: media-query
+    comment: '1280px, for desktop screens and larger.'
+  TIMING_1:
+    value: .1s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  TIMING_2:
+    value: .2s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  TIMING_3:
+    value: .4s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  TIMING_4:
+    value: .6s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  TIMING_5:
+    value: .8s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  TIMING_TEST:
+    value: 5s
+    category: motion
+    type: time
+    cssProperties:
+    - animation
+    - animation-duration
+    comment: ''
+  COLOR_WHITE:
+    value: '{!WHITE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SEA_100:
+    value: '{!SEA_GREEN_100}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SEA_300:
+    value: '{!SEA_GREEN_300}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SEA_500:
+    value: '{!SEA_GREEN_500}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SEA_700:
+    value: '{!SEA_GREEN_700}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SEA_900:
+    value: '{!SEA_GREEN_900}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SKY_100:
+    value: '{!SKY_BLUE_100}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SKY_300:
+    value: '{!SKY_BLUE_300}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SKY_500:
+    value: '{!SKY_BLUE_500}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SKY_700:
+    value: '{!SKY_BLUE_700}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SKY_900:
+    value: '{!SKY_BLUE_900}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_PURPLE_RAIN_100:
+    value: '{!RAIN_PURPLE_100}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_PURPLE_RAIN_300:
+    value: '{!RAIN_PURPLE_300}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_PURPLE_RAIN_500:
+    value: '{!RAIN_PURPLE_500}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_PURPLE_RAIN_700:
+    value: '{!RAIN_PURPLE_700}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_PURPLE_RAIN_900:
+    value: '{!RAIN_PURPLE_900}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_ATHENS:
+    value: '{!ATHENS_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SPARTA:
+    value: '{!SPARTA_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_ROME:
+    value: '{!ROME_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SPIDER:
+    value: '{!SPIDER_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_GHOST:
+    value: '{!GHOST_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_ALUMINIUM:
+    value: '{!ALUMINIUM_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_ROLLINGSTONE:
+    value: '{!ROLLINGSTONE_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_RHINO:
+    value: '{!RHINO_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_ZODIAC:
+    value: '{!ZODIAC_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_BIGSTONE_BLUE:
+    value: '{!BIGSTONE_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_ORANGE_ALERT:
+    value: '{!KOROMIKO}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_RED_ERROR:
+    value: '{!VALENCIA}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_GREEN_SUCCESS:
+    value: '{!EMERALD}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: ''
+  COLOR_BLUE_SCIENCE:
+    value: '{!SCIENCE_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: Link color (508)
+  COLOR_BLUE_ENDEAVOUR:
+    value: '{!ENDEAVOUR}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: Hover and focus link color
+  COLOR_BLUE_MIDNIGHT_BLUE:
+    value: '{!MIDNIGHT_BLUE}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: Active link color
+  COLOR_BLUE_BISCAY:
+    value: '{!BISCAY}'
+    type: color
+    category: background-color
+    cssProperties:
+    - background
+    - background-color
+    comment: Disabled link color

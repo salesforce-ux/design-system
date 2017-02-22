@@ -77,3 +77,4 @@ The following tokens have been add/removed/deprecated in this release:
   - Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
   - Removed `MAX_WIDTH_ACTION_BAR`
   - Removed `MAX_WIDTH_ACTION_BAR_ITEM`
+- Added `UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS`

@@ -44,7 +44,7 @@
    * Set crop boundaries to a file component
    *
    * @selector .slds-file__crop
-   * @restrict .slds-file
+   * @restrict .slds-file div
    */
   &__crop {
     display: block;
@@ -68,7 +68,7 @@
      * Crops file to a ratio of 1:1
      *
      * @selector .slds-file_1-by-1
-     * @restrict .slds-file
+     * @restrict .slds-file div
      * @modifier
      * @group ratio
      */
@@ -81,7 +81,7 @@
      * Crops file to a ratio of 16:9
      *
      * @selector .slds-file_16-by-9
-     * @restrict .slds-file
+     * @restrict .slds-file div
      * @modifier
      * @group ratio
      */
@@ -94,7 +94,7 @@
      * Crops file to a ratio of 4:3
      *
      * @selector .slds-file_4-by-3
-     * @restrict .slds-file
+     * @restrict .slds-file div
      * @modifier
      * @group ratio
      */
@@ -108,7 +108,7 @@
    * Image caption associated to a file
    *
    * @selector .slds-file__title
-   * @restrict .slds-file figure
+   * @restrict .slds-file div
    */
   &__title {
     display: flex;
@@ -119,7 +119,7 @@
      * Adds overlay to file
      *
      * @selector .slds-file__title_overlay
-     * @restrict .slds-file__title div
+     * @restrict .slds-file__title figcaption
      * @modifier
      */
 
@@ -141,7 +141,7 @@
      * Creates card title bar on file
      *
      * @selector .slds-file__title_card
-     * @restrict .slds-file__title div
+     * @restrict .slds-file__title figcaption
      * @modifier
      */
 
@@ -158,7 +158,7 @@
      * Creates gradient scrim bar on file
      *
      * @selector .slds-file__title_scrim
-     * @restrict .slds-file__title div
+     * @restrict .slds-file__title figcaption
      * @modifier
      */
 
@@ -172,10 +172,22 @@
   }
 
   /**
+   * Hack to accomodate for text truncation next to actions menu buttons
+   *
+   * @selector .slds-file-has-actions
+   * @restrict .slds-file__title figcaption
+   * @modifier
+   */
+
+  &-has-actions {
+    padding-right: $spacing-xx-large;
+  }
+
+  /**
    * If text sits on top of image, apply an overlay with this class
    *
    * @selector .slds-file_overlay
-   * @restrict .slds-file
+   * @restrict .slds-file div
    * @modifier
    */
   &_overlay,
@@ -195,7 +207,7 @@
    * Change style of image to a card look
    *
    * @selector .slds-file_card
-   * @restrict .slds-file
+   * @restrict .slds-file div
    * @modifier
    */
   &_card,
@@ -208,7 +220,7 @@
    * When only image type is available, this class help position the file type icon
    *
    * @selector .slds-file__icon
-   * @restrict .slds-file span
+   * @restrict .slds-file div
    */
   &__icon {
     position: absolute;
@@ -216,6 +228,18 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
+  }
+
+  /**
+   * This positions the action menu on the title bar
+   *
+   * @selector .slds-file__actions-menu
+   * @restrict .slds-file div
+   */
+  &__actions-menu {
+    position: absolute;
+    bottom: $spacing-x-small;
+    right: $spacing-xx-small;
   }
 
   /**
@@ -228,8 +252,8 @@
 
   &__external-icon {
     position: absolute;
-    top: $spacing-small;
-    left: $spacing-small;
+    top: ($spacing-x-large + $spacing-x-small);
+    left: $spacing-large;
   }
 
   /**

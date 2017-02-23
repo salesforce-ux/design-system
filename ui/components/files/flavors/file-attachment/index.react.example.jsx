@@ -18,7 +18,7 @@ let ActionsMenu = props => {
   }
 
   return (
-    <div className="slds-col--bump-left">
+    <div className="slds-file__actions-menu">
       <ButtonGroup className={props.className}>
         <ButtonIcon
           className={classNames('slds-button--icon slds-button--icon-x-small', buttonIconClassName)}
@@ -38,33 +38,38 @@ let ActionsMenu = props => {
   );
 };
 
+let ActionsConditional = props =>
+  props.scrim ?
+    <div className="slds-file__title slds-file__title_scrim">
+      <ActionsMenu whiteIcons={ props.whiteIcons } />
+    </div>
+  :
+    <ActionsMenu whiteIcons={ props.whiteIcons } />;
+
 export let ExternalIcon = props =>
-  <div className="slds-image__external-icon">
-    <ButtonIcon
-      className="slds-button--icon"
-      iconClassName="slds-button__icon--large"
-      symbol="salesforce1"
-      assistiveText="salesforce1"
-      title="salesforce1"
-    />
+  <div className="slds-file__external-icon">
+    <span className="slds-file__icon slds-icon_container" title={ 'salesforce1' || props.symbol }>
+      <SvgIcon className="slds-icon slds-icon-text-default" sprite="utility" symbol={ 'salesforce1' || props.symbol } />
+      <span className="slds-assistive-text">Data provided by: { 'salesforce1' || props.symbol }</span>
+    </span>
   </div>;
 
 export let File = props =>
-  <figure className={classNames('slds-file', props.className)}>
-    <a href="javascript:void(0);" className={classNames('slds-file__crop', props.cropClass)}>
-      { props.overlay ? <div className="slds-file--overlay"></div> : null }
-      { props.image ?
-        <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
-        <span className="slds-file__icon slds-icon_container" title={ props.symbol || 'unknown file type' }>
-          <SvgIcon className={classNames('slds-icon', props.iconType)} sprite={ props.sprite || 'doctype' } symbol={ props.symbol || 'unknown' } />
-          <span className="slds-assistive-text">{ props.title || 'Image Title' }</span>
-        </span>
-      }
-    </a>
-    { !props.noTitle ?
-      <div className={classNames('slds-file__title', props.titleClass)}>
-        { !props.noCaption ?
-          <figcaption className="slds-media slds-media--small slds-media--center">
+  <div className={classNames('slds-file', props.className)}>
+    <figure>
+      <a href="javascript:void(0);" className={classNames('slds-file__crop', props.cropClass)}>
+        { props.overlay ? <div className="slds-file--overlay"></div> : null }
+        { props.image ?
+          <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" /> :
+          <span className="slds-file__icon slds-icon_container" title={ props.symbol || 'unknown file type' }>
+            <SvgIcon className={classNames('slds-icon', props.iconType)} sprite={ props.sprite || 'doctype' } symbol={ props.symbol || 'unknown' } />
+            <span className="slds-assistive-text">{ props.title || 'Image Title' }</span>
+          </span>
+        }
+      </a>
+      { !props.noCaption ?
+        <figcaption className={classNames('slds-file__title', props.titleClass, { 'slds-file-has-actions': props.actions } )}>
+          <div className="slds-media slds-media--small slds-media--center">
             <div className="slds-media__figure slds-line-height--reset">
               { props.symbol ?
                 <span className="slds-icon_container" title={ props.symbol || 'unknown file type' }>
@@ -83,14 +88,14 @@ export let File = props =>
                 { props.overlay ? <span className="slds-assistive-text">more files</span> : null }
               </span>
             </div>
-          </figcaption>
-        : null }
-        { props.actions ?
-          <ActionsMenu whiteIcons={ props.whiteIcons } />
-        : null }
-      </div>
+          </div>
+        </figcaption>
+      : null }
+    </figure>
+    { props.actions ?
+      <ActionsConditional scrim={ props.scrim } whiteIcons={ props.whiteIcons } />
     : null }
-  </figure>;
+  </div>;
 
 //////////////////////////////////////////////
 // Export
@@ -132,7 +137,7 @@ export let states = [
         <File
           className="slds-file--card"
           cropClass="slds-file__crop--16-by-9"
-          noTitle
+          noCaption
           symbol="pdf"
           image />
       </div>
@@ -160,11 +165,11 @@ export let states = [
         <File
           className="slds-file--card"
           cropClass="slds-file__crop--16-by-9"
-          titleClass="slds-file__title_scrim"
           symbol="pdf"
           title="Proposal.pdf"
           actions
           whiteIcons
+          scrim
           noCaption
           image />
       </div>
@@ -209,7 +214,7 @@ export let states = [
           iconType="slds-file__loading-icon slds-icon_large"
           sprite="utility"
           symbol="image"
-          noTitle
+          noCaption
         />
       </div>
   }

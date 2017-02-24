@@ -80,12 +80,12 @@
 
     &:focus {
 
-      & + .slds-checkbox_faux,
-      & + .slds-checkbox--faux,
-      & ~ .slds-checkbox_faux,
-      & ~ .slds-checkbox--faux,
-      & + .slds-checkbox_faux_container .slds-checkbox_faux,
-      & + .slds-checkbox--faux_container .slds-checkbox--faux {
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
         background-color: $color-background-toggle-hover;
         border-color: $color-border-input-active;
         box-shadow: $shadow-button-focus;
@@ -98,8 +98,8 @@
       // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_off,
       + .slds-checkbox--faux_container .slds-checkbox--off {
-          display: none;
-        }
+        display: none;
+      }
 
       // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_on,
@@ -107,12 +107,12 @@
         display: block;
       }
 
-      & + .slds-checkbox_faux,
-      & + .slds-checkbox--faux,
-      & ~ .slds-checkbox_faux,
-      & ~ .slds-checkbox--faux,
-      & + .slds-checkbox_faux_container .slds-checkbox_faux,
-      & + .slds-checkbox--faux_container .slds-checkbox--faux {
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
         border-color: $color-background-toggle-active;
         background-color: $color-background-toggle-active;
 
@@ -150,12 +150,12 @@
 
       &:focus {
 
-        & + .slds-checkbox_faux,
-        & + .slds-checkbox--faux,
-        & ~ .slds-checkbox_faux,
-        & ~ .slds-checkbox--faux,
-        & + .slds-checkbox_faux_container .slds-checkbox_faux,
-        & + .slds-checkbox--faux_container .slds-checkbox--faux {
+        + .slds-checkbox_faux,
+        + .slds-checkbox--faux,
+        ~ .slds-checkbox_faux,
+        ~ .slds-checkbox--faux,
+        + .slds-checkbox_faux_container .slds-checkbox_faux,
+        + .slds-checkbox--faux_container .slds-checkbox--faux {
           background-color: $color-background-toggle-active-hover;
         }
       }
@@ -165,12 +165,12 @@
     &[disabled] {
     // scss-lint:disable NestingDepth
 
-      & + .slds-checkbox_faux,
-      & + .slds-checkbox--faux,
-      & ~ .slds-checkbox_faux,
-      & ~ .slds-checkbox--faux,
-      & + .slds-checkbox_faux_container .slds-checkbox_faux,
-      & + .slds-checkbox--faux_container .slds-checkbox--faux {
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
         // scss-lint:disable NestingDepth
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
@@ -188,8 +188,8 @@
 
       &:checked {
 
-        & + .slds-checkbox_faux_container .slds-checkbox_faux,
-        & + .slds-checkbox--faux_container .slds-checkbox--faux {
+        + .slds-checkbox_faux_container .slds-checkbox_faux,
+        + .slds-checkbox--faux_container .slds-checkbox--faux {
 
           &:before {
             background-color: $color-background-input-checkbox-disabled;

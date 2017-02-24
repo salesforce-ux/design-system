@@ -5,12 +5,17 @@
 
 <!-- ## [Unreleased] -->
 
+## February 24, 2017
+
+**SITE IA/ENHANCEMENTS**
+
+- Updated [iOS implementation documentation](/platforms/ios/)
+
 ## February 3, 2017
 
 **SITE IA/ENHANCEMENTS**
 
 - New and improved [Messaging Guidelines](/guidelines/messaging-overview)
-- Updated [iOS implementation documentation](/platforms/ios/)
 
 ## Release [2.2.1] - January 9, 2017
 

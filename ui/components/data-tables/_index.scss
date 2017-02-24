@@ -217,8 +217,9 @@
   // Box shadow used to eliminate jumpiness on hover
   &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
   &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset,
-                $color-border 0 ($border-width-thin) 0 inset;
+    box-shadow:
+      $color-border 0 ($border-width-thin * -1) 0 inset,
+      $color-border 0 ($border-width-thin) 0 inset;
   }
 }
 

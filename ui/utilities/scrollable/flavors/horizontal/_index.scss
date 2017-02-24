@@ -12,7 +12,6 @@
 .slds-scrollable--x {
   @include enable-ios-momentum-scrolling;
   max-width: 100%;
-  overflow: hidden {
-    x: auto;
-  };
+  overflow: hidden;
+  overflow-x: auto;
 }

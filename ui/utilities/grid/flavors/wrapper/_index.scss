@@ -86,6 +86,7 @@
 }
 
 @include deprecate('4.0.0', 'Use .slds-{size}-nowrap instead') {
+
   .slds-nowrap_small,
   .slds-nowrap--small {
     @include mq-small-min {
@@ -120,8 +121,10 @@
  */
 @each $size in map-keys($breakpoints) {
   $breakpoint: map-get($breakpoints, $size);
+
   @each $key in $size {
     @media (min-width: #{pem($breakpoint)}) {
+
       .slds-#{$size}-nowrap {
         flex: 1 1 auto;
         flex-wrap: nowrap;

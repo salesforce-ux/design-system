@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 .slds-has-divider {
-
   @include deprecate('4.0.0') {
     margin-top: $spacing-x-small;
     padding-top: $spacing-x-small;

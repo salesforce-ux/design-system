@@ -84,6 +84,7 @@
   }
 
   @include deprecate('4.0.0', 'Use .slds-lookup__item-action instead') {
+
     &__item {
 
       > a,

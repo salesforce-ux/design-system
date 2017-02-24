@@ -23,7 +23,6 @@
  */
 .slds-col_rule-top,
 .slds-col--rule-top {
-
   @include mq-large-min {
     border-top: 1px solid $color-border-separator;
   }
@@ -38,7 +37,6 @@
  */
 .slds-col_rule-right,
 .slds-col--rule-right {
-
   @include mq-large-min {
     border-right: 1px solid $color-border-separator;
   }
@@ -53,7 +51,6 @@
  */
 .slds-col_rule-bottom,
 .slds-col--rule-bottom {
-
   @include mq-large-min {
     border-bottom: 1px solid $color-border-separator;
   }
@@ -68,7 +65,6 @@
  */
 .slds-col_rule-left,
 .slds-col--rule-left {
-
   @include mq-large-min {
     border-left: 1px solid $color-border-separator;
   }
@@ -153,6 +149,7 @@
 
 
 @include deprecate('4.0.0', 'Use spacing utilities instead instead of .slds-col--padded-*') {
+
   .slds-col_padded,
   .slds-col--padded {
     padding: {
@@ -193,10 +190,9 @@
   }
 }
 
-@include deprecate('4.0.0', 'Use .slds-col--rule-{position} instead of .slds-col-rule--*') {
+@include deprecate('4.0.0', 'Use .slds-col--rule-<position> instead of .slds-col-rule--*') {
 
   .slds-col-rule {
-
     @include mq-large-min {
 
       &_top,

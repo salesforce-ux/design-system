@@ -31,6 +31,7 @@
 
 // Deprecate in 0.15.0
 @include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+
   .slds-list_horizontal.slds-has-dividers > .slds-list__item,
   .slds-list--horizontal.slds-has-dividers > .slds-list__item {
     @include dot-separator;

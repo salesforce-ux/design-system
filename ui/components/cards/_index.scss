@@ -139,6 +139,7 @@
    * @deprecated
    */
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
+
     .slds-card_empty .slds-card__body,
     .slds-card--empty .slds-card__body {
       text-align: center;

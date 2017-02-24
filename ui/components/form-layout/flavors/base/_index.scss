@@ -71,7 +71,6 @@
  */
 .slds-form_horizontal,
 .slds-form--horizontal {
-
   @include mq-medium-min {
     text-align: right;
   }
@@ -80,7 +79,6 @@
 
     > .slds-form-element__legend,
     > .slds-form-element__label {
-
       @include mq-medium-min {
         float: left;
         text-align: right;
@@ -89,10 +87,8 @@
         vertical-align: top;
         position: relative;
         top: (($line-height-button / 2) - ($line-height-text / 2));
-        margin: {
-          right: 0;
-          bottom: 0;
-        }
+        margin-right: 0;
+        margin-bottom: 0;
       }
     }
 

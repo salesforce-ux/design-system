@@ -29,7 +29,6 @@
  */
 .slds-tree-container,
 .slds-tree_container {
-
   @include deprecate('4.0.0', '.slds-tree-container is deprecated, use .slds-tree_container instead.');
   min-width: rem(120px);
   max-width: rem(400px);
@@ -46,7 +45,6 @@
  * @required
  */
 .slds-tree {
-
   /**
    * @selector .slds-tree__item
    * @restrict .slds-tree div
@@ -126,7 +124,9 @@
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;
+
   @for $current-level from 1 through $max-nesting-depth {
+
     [aria-level="#{$current-level}"] > .slds-tree__item {
       padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }

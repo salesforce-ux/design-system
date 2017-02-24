@@ -64,7 +64,6 @@
   }
 
   li {
-
     /**
      * Set default state of icon for when a listbox option is selected
      *
@@ -130,6 +129,7 @@
 }
 
 @include deprecate('4.0.0', 'Use lookup classes instead') {
+
   .slds-picklist__label {
     padding-right: $spacing-x-large;
     width: $size-small;

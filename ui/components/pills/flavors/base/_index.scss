@@ -92,7 +92,6 @@
   &__container,
   &-container,
   &_container {
-
     @include deprecate('4.0.0', 'Use .slds-pill_container');
     padding: $spacing-xxx-small;
     border: $border-width-thin solid $color-border;
@@ -112,7 +111,6 @@
   &__container--bare,
   &_container_bare,
   &_container--bare {
-
     @include deprecate('4.0.0');
     padding: $spacing-xxx-small;
     border: 0;

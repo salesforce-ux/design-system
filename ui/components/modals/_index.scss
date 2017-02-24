@@ -77,8 +77,9 @@
 .slds-modal {
   opacity: 0;
   visibility: hidden;
-  transition: transform $duration-quickly linear,
-                opacity $duration-quickly linear;
+  transition:
+    transform $duration-quickly linear,
+    opacity $duration-quickly linear;
   position: fixed;
   top: 0;
   right: 0;
@@ -97,8 +98,9 @@
   &__container {
     position: relative;
     transform: translate(0, 0);
-    transition: transform $duration-quickly linear,
-                  opacity $duration-quickly linear;
+    transition:
+      transform $duration-quickly linear,
+      opacity $duration-quickly linear;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,7 +170,7 @@
 
   &__header_empty + .slds-modal__content,
   &__header--empty + .slds-modal__content {
-      border: {
+    border: {
       top: {
         right-radius: $border-radius-medium;
         left-radius: $border-radius-medium;
@@ -328,7 +330,6 @@
 
 // old class
 .slds-modal-backdrop {
-
   @include deprecate('4.0.0') {
     @include backdrop;
   }
@@ -380,15 +381,17 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0, 0);
-  transition: opacity $duration-quickly linear,
-              transform $duration-promptly linear;
+  transition:
+    opacity $duration-quickly linear,
+    transform $duration-promptly linear;
 
   .slds-modal__container-reset {
     opacity: 0;
     visibility: hidden;
     transform: translate(0, $spacing-medium);
-    transition: opacity $duration-promptly linear,
-                transform $duration-promptly linear;
+    transition:
+      opacity $duration-promptly linear,
+      transform $duration-promptly linear;
   }
 }
 

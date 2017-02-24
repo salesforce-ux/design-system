@@ -18,7 +18,9 @@
     stroke-width: 0.95px;
     fill: transparent;
     stroke: #ccc;
-    transition: all 0.4s ease-in-out; // 2
+    transition: // 2
+      fill 0.4s ease-in-out,
+      stroke 0.4s ease-in-out;
     will-change: fill, stroke; // 3
   }
 
@@ -57,6 +59,7 @@
   //
   // Add .slds-is-animated to the SVG to enhance the icon with an animation.
   &.slds-is-animated {
+
     circle {
       // Adjust this value to add a delay to the whole animation
       $_strength-offset-delay: 1s;
@@ -66,6 +69,7 @@
       &:nth-child(2) {
         animation-delay: ($_strength-offset-delay + 0.4s);
       }
+
       &:nth-child(3) {
         animation-delay: ($_strength-offset-delay + 0.8s);
       }
@@ -100,6 +104,8 @@
 }
 
 // scss-lint:disable SingleLinePerProperty
+// Improve readability of animations
+// stylelint-disable
 @keyframes slds-icon-strength-positive-load {
   0%   { fill: transparent; stroke: #ccc; }
   100% { fill: #04844b; stroke: #04844b; }

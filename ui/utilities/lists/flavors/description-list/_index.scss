@@ -13,7 +13,6 @@
   @include clearfix;
 
   @include mq-medium-min {
-
     /**
      * Marks a term
      *
@@ -47,7 +46,6 @@
  */
 .slds-dl_horizontal,
 .slds-dl--horizontal {
-
   @include mq-medium-min {
     @include flex-wrap(true);
     display: flex;

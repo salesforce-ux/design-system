@@ -57,9 +57,10 @@
   visibility: visible;
   opacity: 1;
   transform: translate(0%, 0%);
-  transition: opacity $duration-quickly linear,
-              visibility $duration-quickly linear,
-              transform $duration-quickly linear;
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
   will-change: transform;
 }
 
@@ -73,9 +74,10 @@
   visibility: hidden;
   opacity: 0;
   transform: translate(0%, 0%);
-  transition: opacity $duration-quickly linear,
-              visibility $duration-quickly linear,
-              transform $duration-quickly linear;
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
   will-change: transform;
 }
 
@@ -101,7 +103,6 @@
 
 // Done-zo -- DON'T USE
 .slds-tooltip {
-
   @include deprecate('4.0.0') {
     @include popover($color: $color-background-inverse);
 

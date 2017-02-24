@@ -153,9 +153,8 @@
     min-height: $size-xx-small;
     resize: none;
     line-height: $line-height-text;
-    overflow: hidden {
-      y: auto;
-    }
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   /**
@@ -200,18 +199,15 @@
   }
 
   @include deprecate('4.0.0', 'Use docked-composer--overflow__button instead') {
+
     &_overflow__pill,
     &--overflow__pill {
       display: flex;
       padding: 0 $spacing-small;
       height: inherit;
       white-space: nowrap;
-      border: {
-        bottom: {
-          left-radius: $border-radius-medium;
-          right-radius: $border-radius-medium;
-        }
-      }
+      border-bottom-left-radius: $border-radius-medium;
+      border-bottom-right-radius: $border-radius-medium;
 
       &:hover,
       &:focus {

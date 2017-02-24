@@ -30,13 +30,13 @@
   border-bottom: $border-width-thin solid $color-border;
   background: $color-background-page-header;
 
-/**
- * Page title (header text).
- *
- * @selector .slds-page-header__title
- * @restrict .slds-page-header p
- * @required
- */
+  /**
+   * Page title (header text).
+   *
+   * @selector .slds-page-header__title
+   * @restrict .slds-page-header p
+   * @required
+   */
 
   &__title {
     font: {

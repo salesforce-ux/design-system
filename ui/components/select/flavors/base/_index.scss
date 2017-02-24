@@ -58,8 +58,10 @@
     // Normalize the <select> appearance in various browsers
     // See https://github.com/salesforce-ux/design-system/issues/122
     .slds-select {
+      // stylelint-disable property-no-vendor-prefix
       -moz-appearance: none;
       -webkit-appearance: none;
+      // stylelint-enable property-no-vendor-prefix
       padding: {
         left: $spacing-x-small;
         right: $spacing-large;

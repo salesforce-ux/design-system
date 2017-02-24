@@ -47,6 +47,7 @@ $_eq-bar-height-max: 14px;
 }
 
 @keyframes slds-icon-eq {
+
   to {
     transform: scaleY(#{$_eq-bar-height-max / $_eq-bar-height-min});
   }

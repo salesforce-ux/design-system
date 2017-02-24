@@ -20,32 +20,38 @@
     .slds-r3 {
       background-color: #418fde;
     }
+
     .slds-r4,
     .slds-r5,
     .slds-r7 {
       background-color: #ed8b00;
     }
+
     .slds-r6,
     .slds-r8,
     .slds-r9 {
       background-color: #ffb60f;
     }
+
     .slds-r2,
     .slds-r4 {
       transition-delay: 50ms;
       animation-delay: 50ms;
     }
+
     .slds-r3,
     .slds-r5,
     .slds-r7 {
       transition-delay: 100ms;
       animation-delay: 100ms;
     }
+
     .slds-r6,
     .slds-r8 {
       transition-delay: 150ms;
       animation-delay: 150ms;
     }
+
     .slds-r9 {
       transition-delay: 200ms;
       animation-delay: 200ms;
@@ -120,15 +126,18 @@
   .slds-r1 {
     transition-delay: 200ms;
   }
+
   .slds-r2,
   .slds-r4 {
     transition-delay: 150ms;
   }
+
   .slds-r3,
   .slds-r5,
   .slds-r7 {
     transition-delay: 100ms;
   }
+
   .slds-r6,
   .slds-r8 {
     transition-delay: 50ms;
@@ -136,6 +145,7 @@
 }
 
 @keyframes slds-icon-waffle-throb {
+
   to {
     transform: scale(1.5);
   }

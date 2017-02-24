@@ -23,15 +23,18 @@ $_icon-trend-one: 1.125px;
   display: inline-block;
 
   &.slds-is-animated {
+
     .slds-icon-trend__arrow {
       animation: slds-icon-trend-arrow ($duration-slowly * 2) ($duration-slowly) ease-in-out both;
     }
+
     .slds-icon-trend__circle {
       animation: slds-icon-trend-circle ($duration-slowly * 2) ease-in-out both;
     }
   }
 
   &.slds-is-paused {
+
     .slds-icon-trend__arrow,
     .slds-icon-trend__circle {
       animation-play-state: paused;
@@ -43,9 +46,11 @@ $_icon-trend-one: 1.125px;
   color: #c23934;
   transform: rotate(45deg);
 }
+
 .slds-icon-trend[data-slds-trend="neutral"] {
   color: #979797;
 }
+
 .slds-icon-trend[data-slds-trend="up"] {
   color: #028048;
   transform: rotate(-45deg);
@@ -70,12 +75,14 @@ $_icon-trend-one: 1.125px;
 }
 
 @keyframes slds-icon-trend-arrow {
+
   from {
     stroke-dashoffset: $_icon-trend-arrow-length * 2;
   }
 }
 
 @keyframes slds-icon-trend-circle {
+
   from {
     stroke-dasharray: $_icon-trend-zero, $_icon-trend-circumference;
   }

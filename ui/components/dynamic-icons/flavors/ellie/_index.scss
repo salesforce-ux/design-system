@@ -41,6 +41,7 @@ $_ellie-frameset: (
   }
 
   &.slds-is-paused {
+
     &,
     svg {
       animation-play-state: paused;
@@ -52,11 +53,13 @@ $_ellie-frameset: (
     vertical-align: top;
     color: #00a0e3;
   }
+
   circle:nth-child(2n + 1) {
     fill: currentColor;
     stroke: currentColor;
     stroke-width: 4px;
   }
+
   circle:nth-child(2n) {
     fill: #fff;
     stroke: #fff;
@@ -67,10 +70,12 @@ $_ellie-frameset: (
 // Generate styles for each frame, based on steps defined in $_ellie-frameset
 @each $frame in map-keys($_ellie-frameset) {
   $nth-child: $frame * 2 - 1;
+
   .slds-icon-ellie circle:nth-child(#{$nth-child}),
   .slds-icon-ellie circle:nth-last-child(#{$nth-child + 1}) {
     stroke-width: map-get(map-get($_ellie-frameset, $frame), outer);
   }
+
   .slds-icon-ellie circle:nth-child(#{$nth-child + 1}),
   .slds-icon-ellie circle:nth-last-child(#{$nth-child}) {
     stroke-width: map-get(map-get($_ellie-frameset, $frame), inner);
@@ -78,6 +83,7 @@ $_ellie-frameset: (
 }
 
 // Animations
+// stylelint-disable
 @keyframes slds-icon-ellie-pop {
   0%   { transform: scale(0.2); }
   70%  { transform: scale(1.1); }

@@ -58,17 +58,17 @@
   position: relative;
   display: inline-block;
   padding: 0;
-  background: transparent {
-    clip: border-box;
-  };
-  border: $border-width-thin solid transparent {
-    radius: $border-radius-medium;
-  };
+  background: transparent;
+  background-clip: border-box;
+  border: $border-width-thin solid transparent;
+  border-radius: $border-radius-medium;
   font-size: $font-size-small;
   line-height: $line-height-button;
   text-decoration: none;
   color: $color-text-link;
+  // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none;
+  // stylelint-enable property-no-vendor-prefix
   white-space: normal;
   user-select: none;
   transition:
@@ -115,7 +115,6 @@
   }
   // Add spacing when another button is adjacent to it
   + .slds-button {
-
     @include deprecate('4.0.0') {
       margin-left: $spacing-xx-small;
     }
@@ -297,7 +296,6 @@ a.slds-button--inverse:focus {
  * @deprecated
  */
 .slds-button-space-left {
-
   @include deprecate('4.0.0', 'Use spacing utilities instead') {
     margin-left: $spacing-xx-small;
   }

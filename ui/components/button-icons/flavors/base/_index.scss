@@ -49,6 +49,7 @@
 }
 
 @include deprecate('4.0.0', 'Use .slds-button--icon instead') {
+
   .slds-button_icon-bare,
   .slds-button--icon-bare {
     line-height: $line-height-reset;

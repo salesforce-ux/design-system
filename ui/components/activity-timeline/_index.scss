@@ -75,7 +75,6 @@
 }
 
 .slds-timeline {
-
   /**
    * Icon associated with timeline item
    *
@@ -85,10 +84,9 @@
    */
   &__icon {
     margin-top: ($spacing-small * -1);
-    border: $border-width-thick solid #fff {
-      top-width: $spacing-small;
-      bottom-width: $spacing-small;
-    };
+    border: $border-width-thick solid #fff;
+    border-top-width: $spacing-small;
+    border-bottom-width: $spacing-small;
   }
 
   /**

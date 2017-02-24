@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @include deprecate('4.0', 'Use Progress Indicator instead') {
+
   .slds-wizard {
     position: relative;
 
@@ -34,7 +35,7 @@
         text-decoration: none;
 
         .slds-wizard__marker {
-          background: rgb(216, 221, 230); //@TODO - no matching token
+          background: rgb(216, 221, 230); // @TODO - no matching token
         }
       }
     }

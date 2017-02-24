@@ -48,16 +48,18 @@ export default (
             <li>Helper Classes</li>
           </ul>
 
-          <p>While we encourage a holistic integration of the entire design system,
-          you are free to include as many or as few of the following modules
-          as you need in your app. Each module will import a small subset
-          of design tokens or icons.</p>
+          <p>
+            While we encourage a holistic integration of the entire design system,
+            you are free to include as many or as few of the following modules
+            as you need in your app. Each module will import a small subset
+            of design tokens or icons.
+          </p>
 
           <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
             Setup
           </Heading>
 
-            <p>The iOS Design Tokesn use <a href="https://cocoapods.org/">Cocoapods</a> to integrate with your project. If you are already set up with pods add the line below to your Podfile. Otherwise go to <a href="https://cocoapods.org/">cocoapods.org</a> to get set up.</p>
+          <p>The iOS Design Tokesn use <a href="https://cocoapods.org/">Cocoapods</a> to integrate with your project. If you are already set up with pods add the line below to your Podfile. Otherwise go to <a href="https://cocoapods.org/">cocoapods.org</a> to get set up.</p>
         </div>
 
         <div className="site-code--content slds-scrollable--x">
@@ -126,8 +128,8 @@ let backgroundColor = UIColor.sldsBackgroundColor(.colorBackgroundBrand)
         </div>
 
         <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-            <p>Fonts and Text Sizes</p>
-            <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
+          <p>Fonts and Text Sizes</p>
+          <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
         </Heading>
 
         <div className="site-code--content slds-scrollable--x">

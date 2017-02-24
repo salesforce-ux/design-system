@@ -1,0 +1,32 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @summary Initializes a hero link component
+ *
+ * @name link
+ * @selector .slds-hero-tile
+ * @restrict .slds-hero
+ * @variant
+ */
+.slds-hero-tile {
+  display: flex;
+  align-items: stretch;
+  margin: $spacing-x-small 0;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * Tile title and description
+ *
+ * @selector .slds-hero-tile__body
+ * @restrict .slds-hero-tile a
+ */
+.slds-hero-tile__body {
+  flex: 1 1 auto;
+  border-left: $border-width-thin solid $color-border;
+  padding: $spacing-x-small $spacing-small;
+  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+}

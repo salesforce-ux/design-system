@@ -15,7 +15,7 @@ export let Fieldset = props =>
   </fieldset>;
 
 export let Legend = props =>
-  <legend className="slds-form-element__legend slds-form-element__label">{props.children}</legend>;
+  <legend className={classNames('slds-form-element__legend slds-form-element__label', props.className)}>{props.children}</legend>;
 
 export let FormElementControl = props =>
   <div className={classNames('slds-form-element__control', props.className)}>

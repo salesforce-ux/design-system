@@ -10,6 +10,7 @@
 **SITE IA/ENHANCEMENTS**
 
 - New and improved [Messaging Guidelines](/guidelines/messaging-overview)
+- Updated [iOS implementation documentation](/platforms/ios/)
 
 ## Release [2.2.1] - January 9, 2017
 

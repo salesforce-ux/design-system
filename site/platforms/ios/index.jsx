@@ -16,6 +16,8 @@ import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
 import g from 'app_modules/global';
 
+
+
 export default (
   <PageBody anchorTitle="iOS">
     <div className="slds-grid slds-wrap">
@@ -23,14 +25,8 @@ export default (
         <div className="site-menu--jump-links">
           <ul className="slds-list--vertical slds-has-block-links">
             <li><a href="#setup">Setup</a></li>
-            <li>
-              <a href="#usage">Usage</a>
-              <ul className="slds-list--vertical slds-has-block-links slds-is-nested">
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#fonts">Fonts and Text Sizes</a></li>
-                <li><a href="#icons">Icons</a></li>
-              </ul>
-            </li>
+            <li><a href="#swift-usage">Swift Usage</a></li>
+            <li><a href="#obj-c-usage">Obj-C Usage</a></li>
           </ul>
         </div>
       </StickyNav>
@@ -52,11 +48,18 @@ export default (
             <li>Helper Classes</li>
           </ul>
 
+          <p>
+            While we encourage a holistic integration of the entire design system,
+            you are free to include as many or as few of the following modules
+            as you need in your app. Each module will import a small subset
+            of design tokens or icons.
+          </p>
+
           <Heading textLabel="Setup" type="h2" id="setup" className="site-text-heading--large">
             Setup
           </Heading>
 
-          <p>Add this to your Podfile:</p>
+          <p>The iOS Design Tokesn use <a href="https://cocoapods.org/">Cocoapods</a> to integrate with your project. If you are already set up with pods add the line below to your Podfile. Otherwise go to <a href="https://cocoapods.org/">cocoapods.org</a> to get set up.</p>
         </div>
 
         <div className="site-code--content slds-scrollable--x">
@@ -79,15 +82,117 @@ pod install
           `}</CodeBlock>
         </div>
 
-        <div className="slds-container--large">
-          <Heading textLabel="Usage" type="h2" id="usage" className="site-text-heading--large">
-            Usage
+              <div className="slds-container--large">
+          <Heading textLabel="Swift Usage" type="h2" id="swift-usage" className="site-text-heading--large">
+            Swift Usage
           </Heading>
+        </div>
 
-          <p>While we encourage a holistic integration of the entire design system,
-          you are free to include as many or as few of the following modules
-          as you need in your app. Each module will import a small subset
-          of design tokens or icons.</p>
+        <Heading textLabel="Swift Integration" type="h3" id="swift-integration" className="site-text-heading--medium">
+          Swift Integration
+        </Heading>
+
+        <p className="slds-m-top--small">To use the SLDS library in Swift, create a bridging header:</p>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+#ifndef slds_bridging_header_h
+#define slds_bridging_header_h
+
+#import <SalesforceDesignSystem/SalesforceDesignSystemExtended.h>
+
+#endif
+          `}</CodeBlock>
+        </div>
+
+        <ol>
+          <li>Create slds-bridging-header.h.</li>
+          <li>In build settings, locate the “Swift Compiler – Code Generation” section.</li>
+          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. slds-bridging-header.h).</li>
+        </ol>
+
+        <p>SLDS extensions and constants are now accessible to all files in your project/workspace. There is no need to import the Design system to each file.</p>
+
+        <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
+          Colors
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let textColor = UIColor.sldsTextColor(.colorTextDefault)
+
+let borderColor = UIColor.sldsBorderColor(.colorBorderSeparatorAlt)
+
+let backgroundColor = UIColor.sldsBackgroundColor(.colorBackgroundBrand)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
+          <p>Fonts and Text Sizes</p>
+          <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
+        </Heading>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+label.font = UIFont.sldsFont(.bold, with: .medium)
+
+// Setup and use a custom font
+UIFont.sldsUse("customFontName", fromBundle: "CustomFontBundleName", for: .light)
+label.font = UIFont.sldsFont(.bold, with: .light)
+
+// Undo a custom font override
+UIFont.sldsUseDefaultFont(for: .light)
+          `}</CodeBlock>
+        </div>
+
+        <Heading textLabel="Icons" type="h3" id="icons" className="site-text-heading--medium">
+          Icons
+        </Heading>
+
+        <h4 className="site-text-heading--label">Action Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsActionIcon(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsActionIcon(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Custom Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsCustomIcon(.custom1, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsCustomIcon(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Standard Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsStandardIcon(.account, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsStandardIcon(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <h4 className="site-text-heading--label">Utility Icons</h4>
+
+        <div className="site-code--content slds-scrollable--x">
+          <CodeBlock language="bash">{`
+let icon = UIImage.sldsUtilityIcon(.addContact, withSize: SLDSSquareIconLarge)
+
+let iconWithColor = UIImage.sldsUtilityIcon(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+          `}</CodeBlock>
+        </div>
+
+        <div className="slds-container--large">
+          <Heading textLabel="Obj-C Usage" type="h2" id="obj-c-usage" className="site-text-heading--large">
+            Obj-C Usage
+          </Heading>
         </div>
 
         <Heading textLabel="Colors" type="h3" id="colors" className="site-text-heading--medium">
@@ -102,7 +207,7 @@ pod install
 
 ...
 
-UIColor* c = [UIColor sldsColorText:SLDSColorTextInverse];
+UIColor* c = [UIColor sldsTextColor:SLDSColorTextInverse];
           `}</CodeBlock>
         </div>
 
@@ -130,45 +235,9 @@ UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
           `}</CodeBlock>
         </div>
 
-        <h4 className="site-text-heading--label">Button Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsButtonColor:SLDSColorBtnBackgroundButtonBrand];
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Input Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsInputColor:SLDSColorInputBackgroundInputActive];
-
-          `}</CodeBlock>
-        </div>
-
-        <h4 className="site-text-heading--label">Messaging Colors</h4>
-
-        <div className="site-code--content slds-scrollable--x">
-          <CodeBlock language="bash">{`
-#import <DesignSystem/DesignSystem.h>
-
-...
-
-UIColor* c = [UIColor sldsMessagingColor:SLDSColorMsgBackgroundSuccess];
-          `}</CodeBlock>
-        </div>
-
         <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-          Fonts and Text Sizes
+          <p>Fonts and Text Sizes</p>
+          <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
         </Heading>
 
         <div className="site-code--content slds-scrollable--x">
@@ -182,6 +251,13 @@ UIFont* lightFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
 UIFont* regularFont = [UIFont sldsFontRegularWithSize:SLDSFontSizeXLarge];
 
 UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
+
+// Override with a custom font
+[UIFont sldsUse:"customFontName", fromBundle: "CustomFontBundleName", for: SLDSFontTypeLight];
+UIFont* customFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
+
+// Undo a font override
+[UIFont sldsUseDefaultFontFor: SLDSFontTypeLight];
           `}</CodeBlock>
         </div>
 
@@ -197,7 +273,7 @@ UIFont* strongFont = [UIFont sldsFontStrongWithSize:SLDSFontSizeXLarge];
 
 ...
 
-UIImage* actionIcon = [UIImage sldsIconAction:SLDSIconActionApproval withSize:SLDSSquareIconSmall];
+UIImage* actionIcon = [UIImage sldsActionIcon:SLDSIconActionApproval withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -209,7 +285,7 @@ UIImage* actionIcon = [UIImage sldsIconAction:SLDSIconActionApproval withSize:SL
 
 ...
 
-UIImage* customIcon = [UIImage sldsIconCustom:SLDSIconCustom1 withSize:SLDSSquareIconSmall];
+UIImage* customIcon = [UIImage sldsCustomIcon:SLDSIconCustom1 withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -221,7 +297,7 @@ UIImage* customIcon = [UIImage sldsIconCustom:SLDSIconCustom1 withSize:SLDSSquar
 
 ...
 
-UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSize:SLDSSquareIconSmall];
+UIImage* standardIcon = [UIImage sldsStandardIcon:SLDSIconStandardAccount withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -233,10 +309,11 @@ UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSi
 
 ...
 
-UIImage* utilityIcon = [UIImage sldsIconUtility:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
+UIImage* utilityIcon = [UIImage sldsUtilityIcon:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
       </div>
+
     </div>
   </PageBody>
 );

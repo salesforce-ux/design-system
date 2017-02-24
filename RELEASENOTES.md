@@ -5,6 +5,12 @@
 
 <!-- ## [Unreleased] -->
 
+## February 24, 2017
+
+**SITE IA/ENHANCEMENTS**
+
+- Updated [iOS implementation documentation](/platforms/ios/)
+
 ## February 3, 2017
 
 **SITE IA/ENHANCEMENTS**

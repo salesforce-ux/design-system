@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @mixin core($scoped: false, $globals: false) {
+
   *,
   *:before,
   *:after {
@@ -116,7 +117,7 @@
 
 
 
-  input[type=search] {
+  input[type="search"] {
     box-sizing: border-box;
   }
 

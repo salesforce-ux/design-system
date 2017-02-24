@@ -16,19 +16,19 @@
       margin-left: (($size / 2) * -1);
     }
 
-    @elseif $position == bottom {
+    @else if $position == bottom {
       left: 50%;
       bottom: (($size / 2) * -1);
       margin-left: (($size / 2) * -1);
     }
 
-    @elseif $position == left  {
+    @else if $position == left {
       top: 50%;
       left: (($size / 2) * -1);
       margin-top: (($size / 2) * -1);
     }
 
-    @elseif $position == right  {
+    @else if $position == right {
       top: 50%;
       right: (($size / 2) * -1);
       margin-top: (($size / 2) * -1);
@@ -37,7 +37,6 @@
 }
 
 @mixin popover-nubbins($color: inherit, $shadow: true) {
-
   /**
    * @selector .slds-nubbin--top
    * @restrict .slds-popover

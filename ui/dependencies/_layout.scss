@@ -3,14 +3,12 @@
 
 // TINY - 320px - 20rem
 @mixin mq-x-small-min {
-
   @media (min-width: pem($mq-x-small)) {
     @content;
   }
 }
 
 @mixin mq-x-small-max {
-
   @media (max-width: pem($mq-x-small)) {
     @content;
   }
@@ -20,14 +18,12 @@
 
 // SMALL - 480px - 30rem
 @mixin mq-small-min {
-
   @media (min-width: pem($mq-small)) {
     @content;
   }
 }
 
 @mixin mq-small-max {
-
   @media (max-width: pem($mq-small)) {
     @content;
   }
@@ -37,14 +33,12 @@
 
 // MEDIUM - 768px - 48rem
 @mixin mq-medium-min {
-
   @media (min-width: pem($mq-medium)) {
     @content;
   }
 }
 
 @mixin mq-medium-max {
-
   @media (max-width: pem($mq-medium)) {
     @content;
   }
@@ -54,14 +48,12 @@
 
 // LARGE - 1024px - 64rem
 @mixin mq-large-min {
-
   @media (min-width: pem($mq-large)) {
     @content;
   }
 }
 
 @mixin mq-large-max {
-
   @media (max-width: pem($mq-large)) {
     @content;
   }
@@ -69,16 +61,14 @@
 
 
 
-//HUGE - 1224px - 76.5rem
+// HUGE - 1224px - 76.5rem
 @mixin mq-huge-min {
-
   @media (min-width: pem(1224)) {
     @content;
   }
 }
 
 @mixin mq-huge-max {
-
   @media (max-width: pem(1224)) {
     @content;
   }
@@ -88,14 +78,12 @@
 
 // SUPER - 1824px - 114rem
 @mixin mq-super-min {
-
   @media (min-width: pem(1824)) {
     @content;
   }
 }
 
 @mixin mq-super-max {
-
   @media (max-width: pem(1824)) {
     @content;
   }
@@ -109,12 +97,12 @@
 
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {
-
     @if ($breakpoint != null) {
       $breakpoint-string: if($max, 'max-', '') + $breakpoint + '-';
     }
 
     @for $i from 1 through $denominator {
+
       .slds-#{$breakpoint-string}size_#{$i}-of-#{$denominator},
       .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
         width: ($i / $denominator) * 100%;
@@ -127,7 +115,6 @@
 
 // Sizing Helper
 @mixin flex-size($span: 1, $spread: 12) {
-
   @if type-of($span) == number and unitless($span) == false {
     flex: 0 0 rem($span);
     max-width: rem($span);
@@ -144,7 +131,6 @@
 
 // Wrapping Helper
 @mixin flex-wrap($wrap: true) {
-
   @if $wrap {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -160,7 +146,6 @@
 
 // Children - Flexbox Item
 @mixin flex-item($size: expand) {
-
   @if (type-of($size) == 'number') {
     @include flex-size($size, $columns);
   }
@@ -235,10 +220,14 @@
       @each $position in $positions {
         // Only apply !important to spacing--none utilities
         @if $size == 0 {
+
+          // stylelint-disable max-nesting-depth,declaration-no-important
           .slds-#{$prop-prefix}-#{$position}_#{$spacing},
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
+            // stylelint-disable
             #{$property}-#{$position}: 0 !important;
           }
+          // stylelint-enable max-nesting-depth,declaration-no-important
         }
         // Generate directional spacing utilities
         @else {
@@ -248,6 +237,7 @@
           }
         }
       }
+
       // Generate vertical spacing utilities
       .slds-#{$prop-prefix}-vertical_#{$spacing},
       .slds-#{$prop-prefix}-vertical--#{$spacing} {
@@ -320,10 +310,10 @@
     }
     /* stylelint-enable selector-class-pattern */
   }
+
   @if $max {
 
     .slds-max-#{$class-name}-hide {
-
       @media (max-width: $max - 1) {
         display: none;
       }
@@ -343,6 +333,7 @@
   }
 
   @if $children != null {
+
     > #{$children} {
       align-self: center;
     }

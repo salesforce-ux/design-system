@@ -4,9 +4,8 @@
 @mixin form-input-container {
   background-color: $color-background-input;
   color: $color-text-default;
-  border: $border-width-thin solid $color-border-input {
-    radius: $border-radius-medium;
-  };
+  border: $border-width-thin solid $color-border-input;
+  border-radius: $border-radius-medium;
   width: 100%;
 }
 
@@ -39,6 +38,7 @@
 
 @mixin form-element-required($element: null) {
   @if $element != null {
+
     > #{$element}:before {
       content: '*';
       color: $color-text-error;
@@ -50,6 +50,7 @@
 
 @mixin form-input-error($element: null) {
   @if $element != null {
+
     #{$element} {
       background-color: $color-background-input;
       border-color: $color-border-error;

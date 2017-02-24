@@ -9,7 +9,15 @@
 /// @param $line-height {String} Line-height of list items
 /// @param $padding {String} Vertical padding of list items
 /// @param $icon {String} Size of icon in list items
-@mixin dropdown-overflow-length($length, $font-size: $font-size-medium, $line-height: $line-height-text, $padding: $spacing-medium, $icon-size: null) {
+@mixin dropdown-overflow-length(
+  $length,
+  $font-size: $font-size-medium,
+  $line-height: $line-height-text,
+  $padding: $spacing-medium,
+  $icon-size: null
+) {
+  @include enable-ios-momentum-scrolling;
+
   // Calculate icon and padding since icon will always be taller than line height of text
   @if $icon-size != null {
     max-height: calc((#{$icon-size} + #{$padding}) * #{$length});
@@ -19,5 +27,4 @@
     max-height: calc(((#{$font-size} * #{$line-height}) + #{$padding}) * #{$length});
   }
   overflow-y: auto;
-  @include enable-ios-momentum-scrolling;
 }

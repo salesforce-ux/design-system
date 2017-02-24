@@ -5,7 +5,6 @@
 //
 // Use - apply to repeating list items
 @mixin gradient-horizontal($start, $end, $direction: right) {
-
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
     background-image: linear-gradient(to $direction, rgba($start, 0), $end);
@@ -19,7 +18,6 @@
 
 
 @mixin gradient-vertical($start, $end, $direction: bottom) {
-
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
     background-image: linear-gradient(to $direction, rgba($start, 0), $end);
@@ -69,19 +67,24 @@
 
   @for $i from 1 through length($support) {
     @if nth($support, $i) == 'text-utilities' {
+
       .slds-text-title,
       .slds-text-title_caps,
       .slds-text-title--caps {
         color: $color-text-inverse-weak;
       }
     }
+
     @else if nth($support, $i) == 'buttons' {
       $link-selector: 'a:not(.slds-button--neutral), button:not(.slds-button--neutral)';
     }
+
     @else if nth($support, $i) == 'borders' {
       border-color: $color-border-inverse;
     }
+
     @else if nth($support, $i) == 'icons' {
+
       .slds-icon {
         fill: currentColor;
       }
@@ -113,17 +116,13 @@
 
 // Border Helper
 @mixin border($borders: null, $radius: null) {
-
   @if $borders != null {
-
     @if $borders == around {
       border: $border-width-thin solid $color-border;
     }
 
     @else {
-
       @each $positions in $borders {
-
         @each $position in $positions {
           border-#{$position}: $border-width-thin solid $color-border;
         }
@@ -141,24 +140,23 @@
 
 // Theme Helper
 @mixin theme($theme, $borders: null) {
-
   @if $theme == shade {
     background-color: $color-background;
   }
 
-  @elseif $theme == inverse {
+  @else if $theme == inverse {
+    @include inverse-links;
     background-color: $color-background-inverse;
-    @include inverse-links;
   }
 
-  @elseif $theme == alt-inverse {
+  @else if $theme == alt-inverse {
+    @include inverse-links;
     background-color: $color-background-alt-inverse;
-    @include inverse-links;
   }
 
-  @elseif $theme == brand {
-    background-color: $color-background-modal-brand;
+  @else if $theme == brand {
     @include inverse-links;
+    background-color: $color-background-modal-brand;
   }
 
   @else {
@@ -183,11 +181,11 @@
     @include theme($theme);
   }
 
-  @elseif $theme != null and $borders != null {
+  @else if $theme != null and $borders != null {
     @include theme($theme, $borders);
   }
 
-  @elseif $theme == null and $borders != null {
+  @else if $theme == null and $borders != null {
     @include border($borders);
   }
 }
@@ -195,7 +193,6 @@
 
 // Striped Gradient
 @mixin gradient-striped($stripe-color: rgba(#000, 0.025), $angle: 45deg, $color: null) {
-
   @if $color != null {
     background-color: $color;
   }

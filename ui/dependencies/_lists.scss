@@ -57,6 +57,7 @@
   align-items: center;
 
   @if $direction == right {
+
     &:after {
       @include square($size);
       content: '';
@@ -78,7 +79,8 @@
     }
   }
 
-  @elseif $direction == left {
+  @else if $direction == left {
+
     &:before {
       @include square($size);
       content: '';
@@ -103,8 +105,8 @@
   }
 
   @if $mq != null {
-
     @include mq-medium-max {
+
       &:before,
       &:after {
         content: none;

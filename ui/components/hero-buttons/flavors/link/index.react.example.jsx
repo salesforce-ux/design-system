@@ -11,7 +11,7 @@ import classNames from 'classnames';
 
 export let HeroTileButton = props =>
   <div className="slds-hero">
-    <a href="javascript:void(0);" className={classNames('slds-hero-tile slds-text-link--reset slds-p-vertical--x-small', props.className)}>
+    <a href="javascript:void(0);" className={classNames('slds-hero-tile slds-text-link--reset slds-align--absolute-center slds-p-vertical--x-small', props.className)}>
       <div className="slds-p-around--small">
         <span className="slds-icon_container" title="description of icon when needed">
           <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } />

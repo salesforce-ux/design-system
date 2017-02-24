@@ -13,7 +13,8 @@
 .slds-hero {
 
   input:not(:disabled) ~ label:hover .slds-hero-button__figure,
-  .slds-hero-tile:hover {
+  .slds-hero-tile:hover,
+  .slds-hero-tile:focus {
     cursor: pointer;
     outline: 0;
     border: $border-width-thin solid $color-border-selection-hover;

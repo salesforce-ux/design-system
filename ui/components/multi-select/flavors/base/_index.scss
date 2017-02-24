@@ -58,9 +58,8 @@
 }
 
 .slds-picklist__options {
-  border: $border-width-thin solid $color-border-input {
-    radius: $border-radius-medium;
-  };
+  border: $border-width-thin solid $color-border-input;
+  border-radius: $border-radius-medium;
   padding: $spacing-xx-small 0;
   width: $size-small;
   height: $size-small;

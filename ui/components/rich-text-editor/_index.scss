@@ -53,6 +53,22 @@
   border-bottom: $border-width-thin solid $color-border;
 }
 
+@include mq-medium-min {
+
+  .slds-rich-text-editor__toolbar,
+  .slds-rich-text-editor__toolbar-bottom {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .slds-rich-text-editor__toolbar .slds-button-group-list,
+  .slds-rich-text-editor__toolbar-bottom .slds-button-group-list {
+    margin-right: $spacing-xx-small;
+    margin-bottom: $spacing-xx-small;
+    margin-left: 0;
+  }
+}
+
 /**
  * Container for Rich Text Editor Bottom Toolbar
  *

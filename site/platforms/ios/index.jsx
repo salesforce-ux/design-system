@@ -119,11 +119,11 @@ pod install
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
-let textColor = UIColor.sldsTextColor(.colorTextDefault)
+let textColor = UIColor.sldsColorText(.default)
 
-let borderColor = UIColor.sldsBorderColor(.colorBorderSeparatorAlt)
+let borderColor = UIColor.sldsColorBorder(.brand)
 
-let backgroundColor = UIColor.sldsBackgroundColor(.colorBackgroundBrand)
+let backgroundColor = UIColor.sldsColorBackground(.brand)
           `}</CodeBlock>
         </div>
 
@@ -153,9 +153,9 @@ UIFont.sldsUseDefaultFont(for: .light)
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
-let icon = UIImage.sldsActionIcon(.addContact, withSize: SLDSSquareIconLarge)
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
 
-let iconWithColor = UIImage.sldsActionIcon(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
           `}</CodeBlock>
         </div>
 
@@ -163,9 +163,9 @@ let iconWithColor = UIImage.sldsActionIcon(.addContact, with: UIColor.black, and
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
-let icon = UIImage.sldsCustomIcon(.custom1, withSize: SLDSSquareIconLarge)
+let icon = UIImage.sldsIconAction(.custom1, withSize: SLDSSquareIconLarge)
 
-let iconWithColor = UIImage.sldsCustomIcon(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+let iconWithColor = UIImage.sldsIconAction(.custom1, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
           `}</CodeBlock>
         </div>
 
@@ -173,9 +173,9 @@ let iconWithColor = UIImage.sldsCustomIcon(.custom1, with: UIColor.black, andBGC
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
-let icon = UIImage.sldsStandardIcon(.account, withSize: SLDSSquareIconLarge)
+let icon = UIImage.sldsIconAction(.account, withSize: SLDSSquareIconLarge)
 
-let iconWithColor = UIImage.sldsStandardIcon(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+let iconWithColor = UIImage.sldsIconAction(.account, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
           `}</CodeBlock>
         </div>
 
@@ -183,9 +183,9 @@ let iconWithColor = UIImage.sldsStandardIcon(.account, with: UIColor.black, andB
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`
-let icon = UIImage.sldsUtilityIcon(.addContact, withSize: SLDSSquareIconLarge)
+let icon = UIImage.sldsIconAction(.addContact, withSize: SLDSSquareIconLarge)
 
-let iconWithColor = UIImage.sldsUtilityIcon(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
+let iconWithColor = UIImage.sldsIconAction(.addContact, with: UIColor.black, andBGColor: UIColor.white, andSize: SLDSSquareIconLarge)
           `}</CodeBlock>
         </div>
 
@@ -207,7 +207,7 @@ let iconWithColor = UIImage.sldsUtilityIcon(.addContact, with: UIColor.black, an
 
 ...
 
-UIColor* c = [UIColor sldsTextColor:SLDSColorTextInverse];
+UIColor* c = [UIColor sldsColorText:SLDSColorTextInverse];
           `}</CodeBlock>
         </div>
 
@@ -219,7 +219,7 @@ UIColor* c = [UIColor sldsTextColor:SLDSColorTextInverse];
 
 ...
 
-UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
+UIColor* c = [UIColor sldsColorBackground:SLDSColorBackgroundAltInverse];
           `}</CodeBlock>
         </div>
 
@@ -231,7 +231,7 @@ UIColor* c = [UIColor sldsBackgroundColor:SLDSColorBackgroundAltInverse];
 
 ...
 
-UIColor* c = [UIColor sldsBorderColor:SLDSColorBorderBrand];
+UIColor* c = [UIColor sldsColorBorder:SLDSColorBorderBrand];
           `}</CodeBlock>
         </div>
 
@@ -273,7 +273,7 @@ UIFont* customFont = [UIFont sldsFontLightWithSize:SLDSFontSizeXLarge];
 
 ...
 
-UIImage* actionIcon = [UIImage sldsActionIcon:SLDSIconActionApproval withSize:SLDSSquareIconSmall];
+UIImage* actionIcon = [UIImage sldsIconAction:SLDSIconActionApproval withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -285,7 +285,7 @@ UIImage* actionIcon = [UIImage sldsActionIcon:SLDSIconActionApproval withSize:SL
 
 ...
 
-UIImage* customIcon = [UIImage sldsCustomIcon:SLDSIconCustom1 withSize:SLDSSquareIconSmall];
+UIImage* customIcon = [UIImage sldsIconCustom:SLDSIconCustom1 withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -297,7 +297,7 @@ UIImage* customIcon = [UIImage sldsCustomIcon:SLDSIconCustom1 withSize:SLDSSquar
 
 ...
 
-UIImage* standardIcon = [UIImage sldsStandardIcon:SLDSIconStandardAccount withSize:SLDSSquareIconSmall];
+UIImage* standardIcon = [UIImage sldsIconStandard:SLDSIconStandardAccount withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
 
@@ -309,7 +309,7 @@ UIImage* standardIcon = [UIImage sldsStandardIcon:SLDSIconStandardAccount withSi
 
 ...
 
-UIImage* utilityIcon = [UIImage sldsUtilityIcon:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
+UIImage* utilityIcon = [UIImage sldsIconUtility:SLDSIconUtilityAnnouncement withSize:SLDSSquareIconSmall];
           `}</CodeBlock>
         </div>
       </div>

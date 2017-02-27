@@ -346,7 +346,7 @@
       @include square($square-icon-large-content);
       margin: {
         right: $spacing-xx-small;
-        left: -$spacing-x-small;
+        left: ($spacing-x-small * -1);
       }
     }
 

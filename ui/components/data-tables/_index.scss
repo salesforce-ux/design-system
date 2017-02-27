@@ -302,11 +302,8 @@
   }
 }
 
-.slds-table--resizable-cols {
-
-  th {
-    padding: 0; // Reset padding so actionable link bleeds to edge
-  }
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 }
 
 .slds-table--compact {

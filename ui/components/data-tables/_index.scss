@@ -208,7 +208,6 @@
 
 // Provide an indicator that resizing is available
 .slds-is-resizable {
-  padding: 0; // Reset padding so actionable link bleeds to edge
 
   .slds-th__action:hover,
   .slds-th__action:focus {
@@ -275,10 +274,6 @@
 
   thead {
     background-color: $color-background-alt;
-
-    th {
-      padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
-    }
   }
 
   tbody {
@@ -305,6 +300,10 @@
       padding-left: $spacing-x-small;
     }
   }
+}
+
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 }
 
 .slds-table--compact {

@@ -92,6 +92,11 @@ module.exports = {
       status: 301
     },
     {
+      source: '/components/navigation',
+      destination: '/components/vertical-navigation',
+      status: 301
+    },
+    {
       source: '/resources/tokens',
       destination: '/design-tokens',
       status: 301

@@ -31,7 +31,6 @@ components:
   - menus
   - modals
   - multi-select
-  - navigation
   - page-headers
   - panels
   - path
@@ -55,4 +54,5 @@ components:
   - toast
   - tooltips
   - trees
+  - vertical-navigation
   - walkthrough

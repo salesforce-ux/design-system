@@ -26,3 +26,4 @@ imports:
 - ../ui/components/progress-indicator/tokens/sizing.yml
 - ../ui/components/split-view/tokens/background-color.yml
 - ../ui/components/split-view/tokens/border-color.yml
+- ../ui/components/vertical-navigation/tokens/background-color.yml

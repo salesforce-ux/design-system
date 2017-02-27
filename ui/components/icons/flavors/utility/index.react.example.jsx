@@ -9,7 +9,7 @@ export let UtilityIcon = props => {
   const symbol = props.symbol || 'announcement';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon-utility-' + symbol) }
+      className={ classNames('slds-icon_container slds-icon-utility-' + symbol, props.containerClassName) }
       title={ props.title || 'Description of icon when needed' }
     >
       <SvgIcon

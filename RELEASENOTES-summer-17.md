@@ -20,6 +20,7 @@ The following components are now available:
 - Added Split View List - [Split view](/components/split-view)
 - Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
 - Added Hero Buttons - [Hero Buttons](/components/hero-buttons)
+- Added improved version of Vertical Navigation - [Vertical Navigation](/components/vertical-navigation/)
 
 **ADDED**
 
@@ -61,6 +62,8 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
+- Navigation was removed from site navigation and replaced with improved Vertical Navigation - [Vertical Navigation](/components/vertical-navigation/)
+
 **REMOVED**
 
 The following features are being removed in this release:
@@ -79,3 +82,5 @@ The following tokens have been add/removed/deprecated in this release:
   - Removed `MAX_WIDTH_ACTION_BAR`
   - Removed `MAX_WIDTH_ACTION_BAR_ITEM`
 - Added `UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS`
+- Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER`
+- Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE`

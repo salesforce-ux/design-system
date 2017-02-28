@@ -10,24 +10,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const exec = require('child_process').exec;
-const through = require('through2');
-const gutil = require('gulp-util');
-const path = require('path');
-const merge = require('merge');
 const _ = require('lodash');
-const vnuJarPath = require('vnu-jar');
-const PluginError = gutil.PluginError;
+const jar = require('vnu-jar/vnu-jar');
 
-// We disliked the original gulp plugin, but wanted it simply for its ability to host
-// vnu.jar for us on npm. What follows is the plugin code altered to our liking.
-// Differences:
-// 1) This doesn't blow up on error,
-// 2) it returns a vinyl file with the report contents
-// 3) it prints a . per test instead of silence
-const lint = function(opt) {
-  let vnu = 'java -jar ' + vnuJarPath + ' ';
+const lint = function(dir, opt, cb) {
+  let vnu = 'java -jar ' + jar;
 
-  const options = merge({
+  const options = _.assign({
     'errors-only': false,
     'format': 'gnu',
     'html': false,
@@ -42,67 +31,22 @@ const lint = function(opt) {
     if (val === true) vnu += '--' + key + ' ';
   });
 
-  const stream = through.obj((file, enc, cb) => {
-    if (file.isNull()) return cb(null, file);
-    if (file.isStream()) {
-      return cb(new PluginError('gulp-html', 'Streaming not supported'));
-    }
-
-    exec(vnu + file.history, (err, stdout, stderr) => {
-      process.stdout.write('.');
-      const fl = new gutil.File({
-        path: file.path,
-        contents: new Buffer(stderr.trim())
-      });
-
-      if (err) {
-        process.stdout.write('\n');
-        process.stdout.write(stderr);
-      }
-      cb(null, fl);
-    });
-  });
-  return stream;
+  exec(`${vnu} ${dir}`, {maxBuffer: Infinity}, (err, stdout, stderr) => cb(err, stdout, stderr));
 };
 
 const parseLine = file => {
   const rest = _.last(file.split('/.html/'));
   const name = rest.split('.html')[0];
   const [_name, line, type, val] = rest.split(':');
-  return {name, line, val, type: type.trim()};
+  return {name, line, val, type: String(type).trim()};
 };
 
-const makeReport = files =>
-  _(files)
-  .flatMap(f => f.split('\n'))
+const report = output =>
+  _(output.split('\n'))
   .flatMap(parseLine)
   .groupBy('name')
   .mapValues(groups =>
     groups.map(({line, type, val}) =>
       ({[line]: {[type]: val}}))).value();
-
-// This is our custom report file - not part of the vnu gulp plugin
-const report = () => {
-  let files = [];
-
-  const transform = (file, enc, next) => {
-    const contents = String(file.contents);
-    if (contents) {
-      files.push(contents);
-    }
-    next(null, null);
-  };
-
-  const flush = function(next) {
-    const json = JSON.stringify(makeReport(files), null, 2);
-    this.push(new gutil.File({
-      path: 'index.json',
-      contents: new Buffer(json)
-    }));
-    next();
-  };
-
-  return through.obj(transform, flush);
-};
 
 module.exports = {lint, report};

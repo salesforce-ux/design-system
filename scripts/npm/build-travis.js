@@ -38,7 +38,7 @@ const setEnvironment = () => {
 };
 
 const runScript = () =>
-  exec('NODE_ENV=production npm run build && npm run test && npm run lint');
+  exec('NODE_ENV=production npm run build && npm run test && npm run lint && npm run report');
 
 const publishBuild = () =>
   exec('NODE_ENV=production npm run build-server');

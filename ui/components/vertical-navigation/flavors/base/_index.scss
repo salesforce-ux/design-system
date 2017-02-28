@@ -129,7 +129,7 @@
  * @restrict .slds-nav-vertical__item
  * @modifier
  */
-.slds-is-active {
+.slds-nav-vertical__item.slds-is-active {
   color: $color-text-link;
 
   .slds-nav-vertical__action {

@@ -133,6 +133,7 @@ gulp.task('clean', () => del.sync([
   __PATHS__.dist,
   __PATHS__.logs,
   __PATHS__.build,
+  //__PATHS__.reports, OMITTED FOR NOW
   __PATHS__.html,
   path.join(__PATHS__.designTokens, 'dist')
 ]));

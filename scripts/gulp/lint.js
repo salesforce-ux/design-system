@@ -11,6 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import gulp from 'gulp';
 import cache from 'gulp-cached';
+import gutil from 'gulp-util';
 import gulpif from 'gulp-if';
 import runSequence from 'run-sequence';
 import lintspaces from 'gulp-lintspaces';
@@ -22,6 +23,7 @@ import tokenlint from './plugins/lint-tokens';
 import yamlValidate from 'gulp-yaml-validate';
 import vnu from './vnu-lint';
 import minimist from 'minimist';
+import through from 'through2';
 
 gulp.task('lint:sass', () =>
   gulp.src([
@@ -147,10 +149,20 @@ gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tok
 const parseComponentArgument = argv =>
   minimist(argv.slice(2)).component || '*';
 
-gulp.task('lint:vnu', ['generate:wrappedexamples'], () =>
-  gulp.src(`.html/${parseComponentArgument(process.argv)}`)
-  .pipe(vnu.lint())
-  .pipe(vnu.report())
-  .pipe(gulp.dest('.reports/')));
+const createVnuReport = stream =>
+  vnu.lint(`.html/${parseComponentArgument(process.argv)}`, {}, (err, stdout, stderr) => {
+    const contents = JSON.stringify(vnu.report(stderr), null, 2);
+    stream.write(
+      new gutil.File({
+        path: 'vnu_report.json',
+        contents: new Buffer(contents)
+      }));
+  });
 
-gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html']);
+// gulp lint:vnu
+// gulp lint:vnu --component data-tabl*
+gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
+  const stream = through.obj();
+  createVnuReport(stream);
+  return stream.pipe(gulp.dest('.reports/'));
+});

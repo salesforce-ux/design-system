@@ -125,6 +125,7 @@ const siteMiddleware = (req, res, next) => {
   }
 };
 
+// NOTE: Don't remove reports on purpose. This exception is already fixed on the remove-website branch.
 gulp.task('clean', () => del.sync([
   __PATHS__.www,
   __PATHS__.generated,
@@ -132,7 +133,7 @@ gulp.task('clean', () => del.sync([
   __PATHS__.dist,
   __PATHS__.logs,
   __PATHS__.build,
-  __PATHS__.reports,
+  //__PATHS__.reports, OMITTED FOR NOW
   __PATHS__.html,
   path.join(__PATHS__.designTokens, 'dist')
 ]));

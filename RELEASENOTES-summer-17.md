@@ -47,6 +47,7 @@ The following changes have been made in this release:
   - Updated the actions menu location
   - Added state for no title
   - Added loading state
+- Changed spacing between feed items from 1.5rem to .75rem
 
 **FIXED**
 

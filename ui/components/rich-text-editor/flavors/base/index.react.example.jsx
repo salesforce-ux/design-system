@@ -271,8 +271,8 @@ export let RteTextarea = props =>
   <div className="slds-rich-text-editor__textarea">
     <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid">
       { props.text ?
-        <div aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
-        <div aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
           {props.placeholder}
         </div>
       }

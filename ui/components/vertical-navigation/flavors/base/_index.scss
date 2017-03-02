@@ -11,8 +11,19 @@
   position: relative;
 }
 
-.slds-nav-vertical_compact .slds-nav-vertical__action {
-  padding: $spacing-xx-small $spacing-large;
+/**
+ * Modifer to reduce spacing between navigation items
+ *
+ * @selector .slds-nav-vertical_compact
+ * @restrict .slds-nav-vertical
+ * @modifier
+ */
+.slds-nav-vertical_compact {
+
+  .slds-nav-vertical__title,
+  .slds-nav-vertical__action {
+    padding: $spacing-xx-small $spacing-large;
+  }
 }
 
 /**
@@ -48,7 +59,7 @@
  * @restrict .slds-nav-vertical h2
  */
 .slds-nav-vertical__title {
-  padding: $spacing-medium;
+  padding: $spacing-x-small $spacing-medium;
   padding-left: $spacing-large;
 
   &:not(:first-of-type) {

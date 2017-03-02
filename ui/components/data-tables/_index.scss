@@ -90,6 +90,8 @@
    */
   .slds-cell-wrap {
     white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   // Reduce cell to the width of its content, if space is available

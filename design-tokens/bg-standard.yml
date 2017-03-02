@@ -277,3 +277,5 @@ props:
     value: '#7E8BE4'
   LIVE_CHAT:
     value: '#F88960'
+  SHIPMENT:
+    value: '#7E8BE4'

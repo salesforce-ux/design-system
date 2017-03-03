@@ -54,6 +54,12 @@
     @include button-interactions;
   }
 
+  &[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
   /**
    * Removes aesthetic nature from an input
    *

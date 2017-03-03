@@ -111,6 +111,15 @@ let RowData = props => {
   );
 };
 
+let FilteredItem = props =>
+  <PillContainer className="slds-pill_container--bare">
+    <Listbox horizontal={true}>
+      <ListboxItem>
+        <ListboxPill label="Analytics" tabIndex="0" />
+      </ListboxItem>
+    </Listbox>
+  </PillContainer>;
+
 let FilteredItems = props =>
   <PillContainer className="slds-pill_container--bare">
     <Listbox horizontal={true}>
@@ -175,7 +184,7 @@ export let states = [
         </ModalHeader>
         <ModalContent className="slds-grid slds-nowrap">
           <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
-            <ProductListHeader itemsSelected="1" />
+            <ProductListHeader selectedFilters={ <FilteredItem /> } itemsSelected="1" />
             <ProductList>
               { _.times(rows.length, i =>
                 <RowData

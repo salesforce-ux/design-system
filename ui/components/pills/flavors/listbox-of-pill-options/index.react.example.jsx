@@ -23,7 +23,7 @@ export let ListboxPill = props =>
   </span>;
 
 export let ListboxHoriz = props =>
-  <ul className="slds-listbox--horizontal" role="listbox" aria-orientation="horizontal">
+  <ul className="slds-listbox--horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal">
     {props.children}
   </ul>;
 

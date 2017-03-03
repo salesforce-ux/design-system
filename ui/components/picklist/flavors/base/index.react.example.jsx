@@ -83,7 +83,7 @@ let ComboboxSearchInput = props =>
         placeholder={ props.placeholder || 'Select an Option' }
         readOnly={ !props.autocomplete }
         role="textbox"
-        type="search"
+        type="text"
         value={ props.value }
       />
       {

@@ -125,7 +125,7 @@ export let states = [
               id="text-input-01"
               placeholder="Search Accounts"
               role="textbox"
-              type="search"
+              type="text"
             />
           </FormElement>
           <Listbox className="slds-dropdown--length-10" id="option-list-01">

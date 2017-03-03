@@ -58,7 +58,7 @@ let LookupSearchInput = props =>
         id={ props.id }
         placeholder={ props.placeholder || 'Search Accounts' }
         role="textbox"
-        type="search"
+        type="text"
       />
     </div>
   </div>;

@@ -60,7 +60,7 @@ let GlobalSearch = props =>
         id="global-search-01"
         placeholder="Search Salesforce"
         role="textbox"
-        type="search"
+        type="text"
         defaultValue={ props.value }
       />
       {

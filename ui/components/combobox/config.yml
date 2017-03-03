@@ -1,0 +1,10 @@
+status: 'dev-ready'
+flavors:
+  - readonly-single-selection
+  - readonly-multi-selection
+  - autocomplete-single-selection
+  - autocomplete-multi-selection
+  - autocomplete-inline-multi-selection
+  - polymorphic-autocomplete-multi-selection
+  - polymorphic-autocomplete-inline-multi-selection
+  - non-modal-dialog

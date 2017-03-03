@@ -9,7 +9,7 @@ export let StandardIcon = props => {
   const symbol = props.symbol || 'account';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon-standard-' + symbol) }
+      className={ classNames('slds-icon_container slds-icon-standard-' + symbol, props.containerClassName) }
       title={ props.title || 'Description of icon when needed' }
     >
       <SvgIcon

@@ -13,7 +13,7 @@ import classNames from 'classnames';
 ///////////////////////////////////////////
 
 export let ListboxPill = props =>
-  <span className={classNames('slds-pill', props.className)} role="option" tabIndex={props.tabIndex}>
+  <span className={classNames('slds-pill', props.className)} role="option" tabIndex={props.tabIndex} aria-selected="true">
     {props.children}
     <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
@@ -23,14 +23,14 @@ export let ListboxPill = props =>
   </span>;
 
 export let ListboxHoriz = props =>
-  <ul className="slds-pill-listbox" role="listbox" aria-orientation="horizontal">
+  <ul className="slds-listbox--horizontal" role="listbox" aria-orientation="horizontal">
     {props.children}
   </ul>;
 
 export let ListItemHoriz = props =>
-    <li role="presentation">
-      {props.children}
-    </li>;
+  <li role="presentation">
+    {props.children}
+  </li>;
 
 
 ///////////////////////////////////////////

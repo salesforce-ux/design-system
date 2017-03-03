@@ -7,7 +7,8 @@ import { CheckboxAddButton } from 'ui/components/checkbox/flavors/button/index.r
 import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { ListboxPill, ListboxHoriz, ListItemHoriz } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
+import { Listbox, ListboxItem } from 'ui/components/combobox/flavors/base/index.react.example';
+import { ListboxPill } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -112,14 +113,14 @@ let RowData = props => {
 
 let FilteredItems = props =>
   <PillContainer className="slds-pill_container--bare">
-    <ListboxHoriz>
-      <ListItemHoriz>
+    <Listbox horizontal={true}>
+      <ListboxItem>
         <ListboxPill label="Option A" tabIndex="0" />
-      </ListItemHoriz>
-      <ListItemHoriz>
+      </ListboxItem>
+      <ListboxItem>
         <ListboxPill label="Option B" />
-      </ListItemHoriz>
-    </ListboxHoriz>
+      </ListboxItem>
+    </Listbox>
   </PillContainer>;
 
 ///////////////////////////////////////////

@@ -11,6 +11,7 @@ components:
   - button-groups
   - cards
   - checkbox
+  - combobox
   - data-tables
   - datepickers
   - docked-composer

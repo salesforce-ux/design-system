@@ -264,6 +264,21 @@
   }
 
   /**
+   * Sets min-width of 25rem/400px
+   *
+   * @selector .slds-dropdown--large
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_fluid,
+  &--fluid {
+    min-width: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /**
    * Forces overflow scrolling after 5 list items
    *
    * @selector .slds-dropdown--length-5

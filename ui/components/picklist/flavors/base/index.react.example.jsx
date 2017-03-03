@@ -7,7 +7,8 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
-import { ListboxPill, ListboxHoriz, ListItemHoriz } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
+import { Listbox as ListboxHoriz, ListboxItem as ListItemHoriz } from 'ui/components/combobox/flavors/base/index.react.example';
+import { ListboxPill } from 'ui/components/pills/flavors/listbox-of-pill-options/index.react.example';
 import { FormElement } from 'ui/components/form-layout/flavors/element/index.react.example';
 import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import _ from 'lodash';
@@ -212,7 +213,7 @@ export let states = [
           </Listbox>
         </PickList>
         <PillContainer className="slds-pill_container--bare">
-          <ListboxHoriz>
+          <ListboxHoriz horizontal={true}>
             <ListItemHoriz>
               <ListboxPill label="Option A" tabIndex="0" />
             </ListItemHoriz>

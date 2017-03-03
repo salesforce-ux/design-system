@@ -16,26 +16,49 @@ const errorId = 'error-message-unique-id';
 
 
 export let FormElement = props => {
-  let formControlClassName;
-  if ( props.inputIcon === 'left' ) {
-    formControlClassName = 'slds-input-has-icon slds-input-has-icon--left';
-  } else if ( props.inputIcon === 'right' ) {
-    formControlClassName = 'slds-input-has-icon slds-input-has-icon--right';
+  const {
+    className,
+    formControlClassName,
+    required,
+    label,
+    hideLabel,
+    inputId,
+    inputIcon,
+    errorId,
+    tooltip,
+    message,
+    role,
+    listbox,
+    children,
+    ...rest
+  } = props;
+
+  let inputIconPosition;
+  if ( inputIcon === 'left' ) {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--left';
+  } else if ( inputIcon === 'right' ) {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--right';
+  } else if (inputIcon === 'both') {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--left-right';
   }
+
   return (
-    <div className={ classNames('slds-form-element', props.className) }>
-      { props.label ?
+    <div {...rest} className={ classNames('slds-form-element', className) } role={ role }>
+      { label ?
         <label
-          className={ classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null) }
-          htmlFor={ props.inputId }
+          className={ classNames(
+            'slds-form-element__label',
+            { 'slds-assistive-text': hideLabel }
+          )}
+          htmlFor={ inputId }
         >
-          { props.required ?
+          { required ?
             <abbr className="slds-required" title="required">*</abbr>
           : null }
-          { props.label }
+          { label }
         </label>
       : null }
-      { props.tooltip ?
+      { tooltip ?
         <div className="slds-form-element__icon">
           <button aria-describedby="help" className="slds-button slds-button--icon">
             <SvgIcon
@@ -47,14 +70,21 @@ export let FormElement = props => {
           </button>
         </div>
       : null }
-      <div className={ classNames('slds-form-element__control', formControlClassName, props.formControlClassName) }>
-        { props.children }
+      <div
+        className={ classNames(
+          'slds-form-element__control',
+          inputIconPosition,
+          formControlClassName
+        )}
+      >
+        { children }
       </div>
-      { props.message ?
-        <div className="slds-form-element__help" id={ props.errorId }>
-          { props.message }
+      { message ?
+        <div className="slds-form-element__help" id={ errorId }>
+          { message }
         </div>
       : null }
+      { role === 'combobox' ? listbox : null }
     </div>
   );
 };

@@ -16,6 +16,7 @@ The following site enhancements are now available:
 
 The following components are now available:
 
+- Added Combobox - [Combobox](/components/combobox)
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
 - Added Split View List - [Split view](/components/split-view)
 - Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
@@ -25,6 +26,9 @@ The following components are now available:
 **ADDED**
 
 The following classes are now available:
+
+- Added `slds-has-input-focus` utility class to provide focus styles on an element
+- Added `slds-dropdown--fluid` to adjust the width of a dropdown so it can be fluid to its container
 
 **CHANGES**
 

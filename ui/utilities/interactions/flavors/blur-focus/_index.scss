@@ -22,3 +22,16 @@
     @include focus-button;
   }
 }
+
+/**
+ * Input focus styles, this is applied via JavaScript when needing to apply focus styles to a containing element when the input gets focus
+ *
+ * @selector .slds-has-input-focus
+ * @modifier
+ */
+.slds-has-input-focus {
+  outline: 0;
+  border-color: $color-border-input-active;
+  background-color: $color-background-input-active;
+  box-shadow: $shadow-button-focus;
+}

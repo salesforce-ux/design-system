@@ -11,6 +11,7 @@
 }
 
 @mixin button-interactions {
+
   &:hover,
   &:focus {
     background-color: $color-background-button-default-hover;
@@ -22,8 +23,9 @@
 }
 
 @mixin button-base {
-  border: $border-width-thin solid $color-border-button-default;
+
   @include button-interactions;
+  border: $border-width-thin solid $color-border-button-default;
 }
 
 @mixin button-brand {
@@ -75,17 +77,18 @@
 @mixin button-success {
   background-color: $color-background-button-success;
   border: $border-width-thin solid $color-border-success;
-  color: $color-text-inverse;
+  color: $color-text-default;
 
   &:link,
   &:visited,
   &:active {
-    color: $color-text-inverse;
+    color: $color-text-default;
   }
 
   &:hover,
   &:focus {
     background-color: $color-background-button-success-hover;
+    border-color: $color-border-success-dark;
     color: $color-text-inverse;
   }
 

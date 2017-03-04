@@ -37,15 +37,6 @@ const execute = (cmd, done) =>
     done(null, out.trim());
   });
 
-const getDependencies = (done) => {
-  const deps = _.assign({},
-    packageJSON.devDependencies, packageJSON.dependencies);
-  done(null, _.keys(deps)
-      .filter(k => k.match(/@salesforce/i))
-      .reduce((acc, k) =>
-        _.assign(acc, { [k.split('/')[1]]: deps[k] }), {}));
-};
-
 const formatStats = stats => ({
   kbSize: stats.size,
   gzipSize: stats.gzipSize,
@@ -63,6 +54,24 @@ const formatTestCounts = out => {
     allyTests: parseInt(matches[2])
   };
 };
+
+const hasError = x =>
+  Object.keys(x).some(k => Object.keys(x[k]).includes('error'));
+
+const formatVnuCount = report =>
+({
+  htmlErrors: Object.keys(report).reduce((acc, k) =>
+    acc + report[k].filter(hasError).length, 0)
+});
+
+const formatA11yCount = issues =>
+({
+  allyErrors:
+  _.flatMap(issues, i =>
+    _.flatMap(i.violations, v =>
+      v.nodes.length))
+  .reduce((acc, x) => acc + x, 0)
+});
 
 const zip = (src, done) =>
   gulp.src(paths.build(`${src}/**/*`))
@@ -106,23 +115,29 @@ const prepare = (done) => {
         let css = fs.readFileSync(paths.buildDist(CSS_PATH), 'utf8');
         let stats = cssstats(css);
         done(null, formatStats(stats));
-      }
-    ], (err, [counts, tests]) => {
+      },
+      (done) => {
+        let report = fs.readFileSync(`${__PATHS__.reports}/vnu_report.json`, 'utf-8') || '';
+        done(null, formatVnuCount(JSON.parse(report)));
+      },
+      (done) => {
+        let report = fs.readFileSync(`${__PATHS__.reports}/a11y.json`, 'utf-8') || '';
+        done(null, formatA11yCount(JSON.parse(report)));
+      },
+    ], (err, [counts, tests, html, a11y]) => {
       if (err) return done(err);
-      done(null, _.assign({}, counts, tests));
+      done(null, _.assign({}, counts, tests, html, a11y));
     }),
     // SHA
     async.apply(execute, 'git rev-parse HEAD'),
-    // Dependencies
-    getDependencies,
     // zip
     async.apply(zip, 'dist'),
     async.apply(zip, 'examples'),
     async.apply(zip, 'www'),
     async.apply(zip, 'design-tokens')
-  ], (err, [_prepare, _dist, _examples, _snaps, _website, _tokens, info, stats, sha, dependencies, _zip]) => {
+  ], (err, [_prepare, _dist, _examples, _snaps, _website, _tokens, info, stats, sha, _zip]) => {
     if (err) return done(err);
-    let result = _.assign({}, { sha, info, stats, dependencies }, {
+    let result = _.assign({}, { sha, info, stats }, {
       tag: process.env.TRAVIS_TAG || '',
       pullRequest: process.env.TRAVIS_PULL_REQUEST || '',
       branch: process.env.TRAVIS_BRANCH || '',

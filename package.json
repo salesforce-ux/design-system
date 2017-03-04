@@ -137,7 +137,6 @@
     "ignore": [
       "theo",
       "webpack",
-      "@salesforce-ux/icons",
       "karma-webpack"
     ]
   },

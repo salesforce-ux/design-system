@@ -6,3 +6,4 @@ flavors:
   - post-with-comments
   - comment
   - feed-list
+  - small-column

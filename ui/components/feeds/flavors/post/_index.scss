@@ -89,6 +89,12 @@
   text-align: center;
   order: 1;
 
+  @include mq-small-max {
+    border-top: $border-width-thin solid $color-border;
+    margin: 0 ($spacing-small * -1) ($spacing-small * -1);
+    padding: 0 $spacing-medium;
+  }
+
   @include mq-medium-min {
     order: 0;
   }
@@ -106,6 +112,7 @@
   justify-content: center;
   color: $color-text-default;
   padding: $spacing-small 0;
+  line-height: 1;
 
   @include mq-medium-min {
     margin-right: $spacing-medium;
@@ -175,10 +182,17 @@
     flex-direction: column;
   }
 
+  .slds-post__footer-action {
+    padding: $spacing-small 0;
+  }
+
   // Modifying .slds-post__footer-actions-list when inside a region with the
   // class .slds-region--narrow
   .slds-post__footer-actions-list {
     order: 1;
+    border-top: $border-width-thin solid $color-border;
+    margin: 0 ($spacing-small * -1) ($spacing-small * -1);
+    padding: 0 $spacing-medium;
   }
 
   // Modifying .slds-post__footer-meta-list when inside a region with the

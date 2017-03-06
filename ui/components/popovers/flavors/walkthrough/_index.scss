@@ -25,3 +25,16 @@
     border: 0;
   }
 }
+
+/**
+ * Alternate background for walkthrough non-modal dialog
+ *
+ * @selector .slds-popover_walkthrough-alt
+ * @restrict .slds-popover_walkthrough
+ * @modifier
+ */
+.slds-popover_walkthrough-alt {
+  border-color: $color-border-brand-dark;
+  background: $color-brand-dark;
+  color: $color-text-inverse;
+}

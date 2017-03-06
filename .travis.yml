@@ -6,6 +6,9 @@ env:
     - CHROME_BIN=chromium-browser
     - DISPLAY=:99.0
 before_install:
+  - sudo apt-get update
+  - sudo apt-get install oracle-java8-installer
+  - sudo update-java-alternatives -s java-8-oracle
   - sh -e /etc/init.d/xvfb start
   - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
 script:

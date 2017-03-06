@@ -106,6 +106,14 @@
   display: inline-block;
   border-radius: $border-radius-medium;
 
+  /**
+   * @summary Circle container for icons
+   *
+   * @selector .slds-icon_container--circle
+   * @restrict .slds-icon_container
+   * @modifier
+   */
+
   &_circle,
   &--circle {
     padding: $spacing-x-small;
@@ -217,7 +225,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon--xx-small
- * @restrict [class*='slds-icon-utility-'] .slds-icon
+ * @restrict .slds-icon
  * @modifier
  * @group size
  * depreacted
@@ -230,7 +238,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon--x-small
- * @restrict [class*='slds-icon-utility-'] .slds-icon
+ * @restrict .slds-icon
  * @modifier
  * @group size
  */
@@ -265,7 +273,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon-text-default
- * @restrict [class*='slds-icon-utility-'] .slds-icon
+ * @restrict .slds-icon
  * @modifier
  * @group color
  */
@@ -275,7 +283,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon-text-warning
- * @restrict [class*='slds-icon-utility-'] .slds-icon
+ * @restrict .slds-icon
  * @modifier
  * @group color
  */
@@ -285,7 +293,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon-text-error
- * @restrict [class*='slds-icon-utility-'] .slds-icon
+ * @restrict .slds-icon
  * @modifier
  * @group color
  */

@@ -4,7 +4,7 @@ node_js:
 addons:
   apt:
     packages:
-      - oracle-java8-installer
+      - oracle-java8-set-default
 env:
   global:
     - CHROME_BIN=chromium-browser

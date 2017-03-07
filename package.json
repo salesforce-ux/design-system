@@ -98,7 +98,7 @@
     "nconf-yaml": "1.0.2",
     "no-case": "2.3.1",
     "node-sass": "4.5.0",
-    "postcss": "5.2.15",
+    "postcss": "5.2.16",
     "pretty-time": "0.2.0",
     "react": "15.4.2",
     "react-addons-test-utils": "15.4.2",

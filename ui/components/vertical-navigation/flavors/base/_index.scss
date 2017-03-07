@@ -157,7 +157,7 @@
  */
 @include deprecate('4.0.0', 'Do not use slds-navigation-list--vertical anymore, please use newer version slds-nav-vertical') {
 
-  .slds-navigation-list_vertical,
+  .slds-navigation-list-vertical,
   .slds-navigation-list--vertical {
     /**
      * Active item in vertical navigation list
@@ -169,7 +169,7 @@
     .slds-is-active {
       color: $color-text-link;
 
-      .slds-navigation-list_vertical__action,
+      .slds-navigation-list-vertical__action,
       .slds-navigation-list--vertical__action {
         background-color: $color-background-row-selected;
         border-color: $color-border;
@@ -191,7 +191,8 @@
    * @modifier
    * @group theme
    */
-  .slds-navigation-list_vertical--shade,
+  .slds-navigation-list-vertical_shade,
+  .slds-navigation-list-vertical--shade,
   .slds-navigation-list--vertical-inverse { // <= bad legacy
 
     .slds-is-active .slds-navigation-list-vertical__action,
@@ -207,7 +208,7 @@
    * @restrict .slds-navigation-list-vertical a
    * @required
    */
-  .slds-navigation-list_vertical__action,
+  .slds-navigation-list-vertical__action,
   .slds-navigation-list--vertical__action {
     display: block;
     border: {

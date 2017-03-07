@@ -41,7 +41,7 @@ const rows = [{
 ///////////////////////////////////////////
 
 let Table = props =>
-  <table className={classNames('slds-table slds-table--bordered', props.className)} role="grid">
+  <table className={classNames('slds-table slds-table--bordered slds-table--resizable-cols', props.className)} role="grid">
     {props.children}
   </table>;
 

@@ -14,9 +14,9 @@
 **NEW IOS RELEASE (3.0.0)**
   
 - Substantial script rewrite to handle future token changes
-- Added support and documentation for token usage with Swift
-- iOS library now reflects most current tokens
-- See detailed [RELEASENOTES](https://github.com/salesforce-ux/design-system-ios/blob/master/CHANGELOG.md) for design-system-ios
+- You can now use design tokens in Swift
+- Updated tokens to Spring ’17
+- See detailed [release notes](https://github.com/salesforce-ux/design-system-ios/blob/master/CHANGELOG.md) for design-system-ios
 
 ## February 3, 2017
 

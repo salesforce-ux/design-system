@@ -275,10 +275,6 @@
 
   thead {
     background-color: $color-background-alt;
-
-    th {
-      padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
-    }
   }
 
   // Tap into hardware acceleration for performance of large amounts of rows
@@ -400,14 +396,24 @@
 }
 
 /**
+ * Resizable data table columns
+ *
+ * @selector .slds-table--resizable-cols
+ * @restrict .slds-table--fixed-layout
+ */
+.slds-table_resizable-cols thead th,
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
+}
+
+
+/**
  * Provide an indicator that resizing is available
  *
  * @selector .slds-is-resizable
- * @restrict .slds-table--fixed-layout th
+ * @restrict .slds-table--resizable-cols th
  */
 .slds-is-resizable {
-  padding: 0; // Reset padding so actionable link bleeds to edge
-
   .slds-th__action:hover,
   .slds-th__action:focus {
     box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;

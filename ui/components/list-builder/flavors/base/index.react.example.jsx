@@ -69,7 +69,7 @@ let ProductListHeader = props =>
 
 let ProductList = props =>
   <div className="slds-scrollable slds-grow">
-    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-no-row-hover slds-scrollable--none">
+    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-table--resizable-cols slds-no-row-hover slds-scrollable--none">
       <thead>
         <tr className="slds-line-height--reset">
           <th scope="col" style={{ width: '3.75rem' }}></th>

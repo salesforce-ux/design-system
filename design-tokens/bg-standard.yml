@@ -279,3 +279,23 @@ props:
     value: '#F88960'
   SHIPMENT:
     value: '#7E8BE4'
+  MAINTENANCE_PLAN:
+    value: '#2A739E'
+  MAINTENANCE_ASSET:
+    value: '#2A739E'
+  SERVICE_TERRITORY_LOCATION:
+    value: '#7E8BE4'
+  PRODUCT_REQUEST:
+    value: '#88C651'
+  PRODUCT_REQUEST_LINE_ITEM:
+    value: '#88C651'
+  ENTITY_MILESTONE:
+    value: '#F49756'
+  CASE_MILESTONE:
+    value: '#F2CF5B'
+  ENTITLEMENT_PROCESS:
+    value: '#7E8BE4'
+  ENTITLEMENT_TEMPLATE:
+    value: '#7E8BE4'
+  BUSINESS_HOURS:
+    value: '#7DC37D'

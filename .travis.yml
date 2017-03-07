@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - 6
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
 env:
   global:
     - CHROME_BIN=chromium-browser

@@ -161,6 +161,7 @@
 
   &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .slds-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
     cursor: default;
+    text-decoration: none;
   }
 
   &:hover {

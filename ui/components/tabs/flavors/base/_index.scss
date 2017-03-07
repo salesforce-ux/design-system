@@ -5,12 +5,13 @@
  * Because tab sets can be nested, pay close attention to the markup. They are
  * constructed to prevent styles from leaking from parent tab sets into child tab sets.
  *
- * <h4 class="site-text-heading--label">JavaScript Needs</h4>
+ * #### JavaScript Needs
  *
  * The active tab has two markup requirements:
  *
  * - The `.slds-active` class should be placed on the `li` with `.slds-tabs--{variant}__item`.
  * - The corresponding `.slds-tabs--{variant}__content` container receives `.slds-show`.
+ * - In order to achieve the focus state styling, apply `.slds-has-focus` to the parent `li`.
  *
  * Inactive `.slds-tabs--{variant}__content` containers receive `.slds-hide`.
  * When the user clicks a different tab, move the `.slds-active` class and

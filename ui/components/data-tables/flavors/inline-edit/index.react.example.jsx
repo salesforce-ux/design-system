@@ -46,7 +46,7 @@ let Container = props =>
   </div>;
 
 export let Table = props =>
-  <table className={classNames('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout', props.className)} role="grid" style={{ width: '66.75rem' }}>
+  <table className={classNames('slds-table slds-table--edit slds-table--bordered slds-table--fixed-layout slds-table--resizable-cols', props.className)} role="grid" style={{ width: '66.75rem' }}>
     {props.children}
   </table>;
 

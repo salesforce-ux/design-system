@@ -275,10 +275,6 @@
 
   thead {
     background-color: $color-background-alt;
-
-    th {
-      padding: 0; // Due to HTML structure, need to reset the padding on all th elements in thead
-    }
   }
 
   // Tap into hardware acceleration for performance of large amounts of rows
@@ -406,7 +402,6 @@
  * @restrict .slds-table--fixed-layout th
  */
 .slds-is-resizable {
-  padding: 0; // Reset padding so actionable link bleeds to edge
 
   .slds-th__action:hover,
   .slds-th__action:focus {
@@ -466,4 +461,8 @@
   &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
   }
+}
+
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
 }

@@ -82,7 +82,7 @@ pod install
           `}</CodeBlock>
         </div>
 
-              <div className="slds-container--large">
+        <div className="slds-container--large">
           <Heading textLabel="Swift Usage" type="h2" id="swift-usage" className="site-text-heading--large">
             Swift Usage
           </Heading>
@@ -106,9 +106,9 @@ pod install
         </div>
 
         <ol>
-          <li>Create slds-bridging-header.h.</li>
+          <li>Create <code>slds-bridging-header.h.</code></li>
           <li>In build settings, locate the “Swift Compiler – Code Generation” section.</li>
-          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. slds-bridging-header.h).</li>
+          <li>Next to “Objective-C Bridging Header,” add the header file (e.g. <code>slds-bridging-header.h</code>).</li>
         </ol>
 
         <p>SLDS extensions and constants are now accessible to all files in your project/workspace. There is no need to import the Design system to each file.</p>
@@ -128,9 +128,10 @@ let backgroundColor = UIColor.sldsColorBackground(.brand)
         </div>
 
         <Heading textLabel="Fonts and Text Sizes" type="h3" id="fonts" className="site-text-heading--medium">
-          <p>Fonts and Text Sizes</p>
-          <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
+          Fonts and Text Sizes
         </Heading>
+
+        <p>In addition to supporting the default (SaleforceSans) font, users can substitute fonts as needed.</p>
 
         <div className="site-code--content slds-scrollable--x">
           <CodeBlock language="bash">{`

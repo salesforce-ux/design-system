@@ -79,6 +79,11 @@
  */
 .slds-table_edit,
 .slds-table--edit {
+
+  thead th {
+    padding: 0;
+  }
+
   /**
    * Cell that has error icon appear within
    *

@@ -279,7 +279,7 @@ props:
     value: '#F88960'
   SHIPMENT:
     value: '#7E8BE4'
-  MAINTENTANCE_PLAN:
+  MAINTENANCE_PLAN:
     value: '#2A739E'
   MAINTENANCE_ASSET:
     value: '#2A739E'

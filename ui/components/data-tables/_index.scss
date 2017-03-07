@@ -414,6 +414,7 @@
  * @restrict .slds-table--resizable-cols th
  */
 .slds-is-resizable {
+
   .slds-th__action:hover,
   .slds-th__action:focus {
     box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;

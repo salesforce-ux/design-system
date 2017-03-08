@@ -3,7 +3,9 @@
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## Release [2.2.2] - March 8th, 2017
 
 **ADDED**
 
@@ -15,7 +17,7 @@ The following classes are now available:
 
 The following issues have now been resolved:
 
-- `slds-table--fixed-layout` can be used with the basic table now - [#396](https://github.com/salesforce-ux/design-system/issues/396)
+- `slds-table--fixed-layout` can now be used with the basic table - [#396](https://github.com/salesforce-ux/design-system/issues/396)
 
 ## February 24, 2017
 
@@ -971,7 +973,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.1...spring-17
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.2.2...spring-17
+[2.2.2]: https://github.com/salesforce-ux/design-system/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/salesforce-ux/design-system/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/salesforce-ux/design-system/compare/v2.1.4...v2.2.0
 [2.1.4]: https://github.com/salesforce-ux/design-system/compare/v2.1.3...v2.1.4

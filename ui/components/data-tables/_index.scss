@@ -396,10 +396,22 @@
 }
 
 /**
+ * Resizable data table columns
+ *
+ * @selector .slds-table--resizable-cols
+ * @restrict .slds-table--fixed-layout
+ */
+.slds-table_resizable-cols thead th,
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
+}
+
+
+/**
  * Provide an indicator that resizing is available
  *
  * @selector .slds-is-resizable
- * @restrict .slds-table--fixed-layout th
+ * @restrict .slds-table--resizable-cols th
  */
 .slds-is-resizable {
 
@@ -461,8 +473,4 @@
   &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
   }
-}
-
-.slds-table--resizable-cols thead th {
-  padding: 0; // Reset padding so actionable link bleeds to edge
 }

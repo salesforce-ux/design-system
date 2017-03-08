@@ -23,6 +23,13 @@ The following issues have now been resolved:
 
 - Updated [iOS implementation documentation](/platforms/ios/)
 
+**NEW IOS RELEASE (3.0.0)**
+  
+- Substantial script rewrite to handle future token changes
+- You can now use design tokens in Swift
+- Updated tokens to Spring ’17
+- See detailed [release notes](https://github.com/salesforce-ux/design-system-ios/blob/master/CHANGELOG.md) for design-system-ios
+
 ## February 3, 2017
 
 **SITE IA/ENHANCEMENTS**

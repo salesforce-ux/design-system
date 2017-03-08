@@ -36,13 +36,13 @@ export const preview = (
 
 export const code = (
 <div className="demo-only demo-container">
-  <div className="slds-container--small">Contents go here.</div>
-  <div className="slds-container--medium">Contents go here.</div>
-  <div className="slds-container--large">Contents go here.</div>
-  <div className="slds-container--x-large">Contents go here.</div>
-  <div className="slds-container--fluid">Contents go here.</div>
-  <div className="slds-container--left slds-container--small">Contents go here.</div>
-  <div className="slds-container--center slds-container--small">Contents go here.</div>
-  <div className="slds-container--right slds-container--small">Contents go here.</div>
+  <div className="slds-container--small">Max Width: 480px</div>
+  <div className="slds-container--medium">Max Width: 768px</div>
+  <div className="slds-container--large">Max Width: 1024px</div>
+  <div className="slds-container--x-large">Max Width: 1280px</div>
+  <div className="slds-container--fluid">Width 100%</div>
+  <div className="slds-container--left slds-container--small">Left Aligned</div>
+  <div className="slds-container--center slds-container--small">Center Aligned</div>
+  <div className="slds-container--right slds-container--small">Right Aligned</div>
 </div>
 );

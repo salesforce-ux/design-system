@@ -1,0 +1,141 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- ./aliases/color.yml
+- ./aliases/offset.yml
+props:
+  SHADOW_ACTION_OVERFLOW_FOOTER:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!LINK_WATER}'
+    comment: Shadow above overflow menu close bar.
+  SHADOW_OVERLAY:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
+    comment: Shadow for overlays.
+    deprecated: true
+  SHADOW_DRAG:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_40}'
+    comment: Shadow for drag-n-drop.
+  SHADOW_DROP_DOWN:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Shadow for drop down.
+  SHADOW_HEADER:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
+    comment: Shadow for header.
+  SHADOW_BUTTON:
+    value: '{!OFFSET_NONE} 1px 1px {!OFFSET_NONE} {!BLACK_TRANSPARENT_05}'
+    comment: Shadow for buttons.
+    deprecated: true
+  SHADOW_BUTTON_FOCUS:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!SCIENCE_BLUE}'
+    comment: Custom glow for focus states on UI elements with explicit containers.
+  SHADOW_BUTTON_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!STEAM}'
+    comment: Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.
+  SHADOW_INLINE_EDIT:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_16}'
+    comment: Shadow to make inline edit card pop out.
+  SHADOW_FOCUS_INSET:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!AZURE} inset'
+    comment: Inset shadow for editable grid
+  SHADOW_DOCKED:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Shadow on elements that are docked to the bottom of the viewport.
+  SHADOW_IMAGE:
+    value: '{!OFFSET_NONE} 1px 1px {!BLACK_TRANSPARENT_16}'
+    comment: Shadow on images.
+  ELEVATION_3_INSET:
+    value: '-{!OFFSET_SMALL}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_0:
+    value: '{!OFFSET_NONE}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_2:
+    value: '{!OFFSET_X_SMALL}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_4:
+    value: '{!OFFSET_MEDIUM}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_8:
+    value: '{!OFFSET_LARGE}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_16:
+    value: '{!OFFSET_X_LARGE}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_32:
+    value: '{!OFFSET_XX_LARGE}'
+    comment: Deprecated
+    type: number
+    deprecated: true
+  ELEVATION_SHADOW_3_BELOW:
+    value: '{!OFFSET_NONE} {!OFFSET_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16} inset'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_0:
+    value: none
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_2:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_4:
+    value: '{!OFFSET_NONE} {!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_8:
+    value: '{!OFFSET_NONE} {!OFFSET_LARGE}px {!OFFSET_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_16:
+    value: '{!OFFSET_NONE} {!OFFSET_X_LARGE}px {!OFFSET_X_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_SHADOW_32:
+    value: '{!OFFSET_NONE} {!OFFSET_XX_LARGE}px {!OFFSET_XX_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_3_BELOW:
+    value: '{!OFFSET_NONE} -{!OFFSET_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16} inset'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_0:
+    value: none
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_2:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: 'Deprecated: Use SHADOW_DOCKED'
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_4:
+    value: '{!OFFSET_NONE} -{!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_8:
+    value: '{!OFFSET_NONE} -{!OFFSET_LARGE}px {!OFFSET_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_16:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_LARGE}px {!OFFSET_X_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true
+  ELEVATION_INVERSE_SHADOW_32:
+    value: '{!OFFSET_NONE} -{!OFFSET_XX_LARGE}px {!OFFSET_XX_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+    deprecated: true

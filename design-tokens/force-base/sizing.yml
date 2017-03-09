@@ -1,0 +1,105 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  SIZE_XX_SMALL:
+    value: 6rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_X_SMALL:
+    value: 12rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_SMALL:
+    value: 15rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_MEDIUM:
+    value: 20rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_LARGE:
+    value: 25rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_X_LARGE:
+    value: 40rem
+    comment: Generic sizing token scale for UI components.
+  SIZE_XX_LARGE:
+    value: 60rem
+    comment: Generic sizing token scale for UI components.
+  SQUARE_ICON_UTILITY_SMALL:
+    value: 1rem
+    comment: Small utility icon without border.
+  SQUARE_ICON_UTILITY_MEDIUM:
+    value: 1.25rem
+    comment: Medium utility icon without border.
+  SQUARE_ICON_UTILITY_LARGE:
+    value: 1.5rem
+    comment: Large utility icon without border.
+  SQUARE_ICON_LARGE_BOUNDARY:
+    value: 3rem
+    comment: 'Anchor: Outer colored tile'
+  SQUARE_ICON_LARGE_BOUNDARY_ALT:
+    value: 5rem
+    comment: 'Anchor: avatar'
+  SQUARE_ICON_LARGE_CONTENT:
+    value: 2rem
+    comment: 'Anchor: Icon content (white shape)'
+  SQUARE_ICON_MEDIUM:
+    value: 2.375rem
+    comment: Use squareIconMediumBoundary
+    deprecated: true
+  SQUARE_ICON_MEDIUM_BOUNDARY:
+    value: 2rem
+    comment: 'Stage left & actions: Outer colored tile'
+  SQUARE_ICON_MEDIUM_BOUNDARY_ALT:
+    value: 2.25rem
+    comment: Icon button boundary.
+  SQUARE_ICON_MEDIUM_CONTENT:
+    value: 1rem
+    comment: 'Stage left & actions: Icon content (white shape)'
+  SQUARE_ICON_MEDIUM_CONTENT_ALT:
+    value: 0.875rem
+    comment: Alternate medium tap target size
+  SQUARE_ICON_SMALL:
+    value: 1rem
+    comment: Small tap target size
+    deprecated: true
+  SQUARE_ICON_SMALL_BOUNDARY:
+    value: 1.5rem
+    comment: 'Search Results: Outer colored tile'
+  SQUARE_ICON_SMALL_CONTENT:
+    value: .75rem
+    comment: 'Search Results: Icon content (white shape)'
+  SQUARE_ICON_X_SMALL_BOUNDARY:
+    value: 1.25rem
+    comment: Very small icon button boundary.
+  SQUARE_ICON_X_SMALL_CONTENT:
+    value: .5rem
+    comment: Very small icons in icon buttons.
+  SQUARE_ICON_XX_SMALL_BOUNDARY:
+    value: 1rem
+    comment: Very very small icon button boundary.
+  SQUARE_ICON_XX_SMALL_CONTENT:
+    value: .875rem
+    comment: Very small icons to replace force font with temporary override.
+    deprecated: true
+  SQUARE_ICON_LARGE:
+    value: 3.125rem
+    comment: Large tap target size.
+    deprecated: true
+  HEIGHT_PILL:
+    value: 1.625rem
+    comment: Minimum height of a pill.

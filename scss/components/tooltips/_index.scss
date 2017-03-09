@@ -1,0 +1,116 @@
+// Lightning Design System 2.3.0-alpha.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Nubbins are indicators that inform the user of the direction of the content associated with the tooltip. A tooltip can accept the following nubbin position classes, `.slds-nubbin--left`, `.slds-nubbin--left-top`, `.slds-nubbin--left-bottom`, `.slds-nubbin--top-left`, `.slds-nubbin--top-right`, `.slds-nubbin--right-top`, `.slds-nubbin--right-bottom`, `.slds-nubbin--bottom-left`, `.slds-nubbin--bottom-right`.
+ *
+ * Learn more about how to use them at the [Nubbins documentation](/components/popovers/#flavor-nubbins).
+ *
+ * #### Accessibility
+ *
+ * Showing the tooltip on hover or on keyboard focus of a focusable element ensures that all users can access it, even if they aren’t using a mouse. Examples of focusable elements include links, buttons, and inputs. Give the tooltip an ID and use that as the value of the `aria-describedby` attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.
+ *
+ * @summary A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.
+ *
+ * @base
+ * @name tooltips
+ * @selector .slds-popover--tooltip
+ * @support dev-ready
+ * @category simple
+ * @type messaging
+ * @role tooltip
+ */
+
+/**
+ * The tooltip should be positioned with JavaScript.
+ *
+ * You can include inline help tooltips for form elements and any focusable items, such as anchor links, buttons, etc. If your tooltips are available on hover, also make sure that they’re available on keyboard focus. To allow screen readers to access the tooltip, the HTML form field element must  have an `aria-describedby` attribute that points to the tooltip `ID` of the tooltip.
+ *
+ * @summary Initializes a tooltip
+ *
+ * @variant
+ * @name base
+ * @selector .slds-popover--tooltip
+ * @restrict div
+ * @support dev-ready
+ */
+.slds-popover_tooltip,
+.slds-popover--tooltip {
+  width: auto;
+  max-width: $size-medium;
+  background: $color-background-alt-inverse;
+  border: 0;
+
+  .slds-popover__body {
+    font-size: $font-size-small;
+    color: $color-text-inverse;
+  }
+}
+
+/**
+ * @selector .slds-rise-from-ground
+ * @restrict .slds-popover--tooltip
+ * @modifier
+ * @group toggle
+ */
+.slds-rise-from-ground {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0%, 0%);
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
+  will-change: transform;
+}
+
+/**
+ * @selector .slds-fall-into-ground
+ * @restrict .slds-popover--tooltip
+ * @modifier
+ * @group toggle
+ */
+.slds-fall-into-ground {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0%, 0%);
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
+  will-change: transform;
+}
+
+.slds-slide-from-bottom-to-top {
+  transform: translateY(10%);
+  will-change: transform;
+}
+
+.slds-slide-from-top-to-bottom {
+  transform: translateY(-10%);
+  will-change: transform;
+}
+
+.slds-slide-from-right-to-left {
+  transform: translateX(5%);
+  will-change: transform;
+}
+
+.slds-slide-from-left-to-right {
+  transform: translateX(-5%);
+  will-change: transform;
+}
+
+// Done-zo -- DON'T USE
+.slds-tooltip {
+  @include deprecate('4.0.0') {
+    @include popover($color: $color-background-inverse);
+
+    &__body {
+      padding: $spacing-x-small $spacing-small;
+      font-size: $font-size-small;
+      color: $color-text-inverse;
+    }
+  }
+}

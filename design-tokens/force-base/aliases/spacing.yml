@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+  SPACING_NONE: '0' # Needs to be quoted or will be interpreted as 'false'
+  SPACING_XXX_SMALL: '0.125rem'
+  SPACING_XX_SMALL: '0.25rem'
+  SPACING_X_SMALL: '0.5rem'
+  SPACING_SMALL: '0.75rem'
+  SPACING_MEDIUM: '1rem'
+  SPACING_LARGE: '1.5rem'
+  SPACING_X_LARGE: '2rem'
+  SPACING_XX_LARGE: '3rem'

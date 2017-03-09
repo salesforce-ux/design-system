@@ -25,6 +25,7 @@
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^2.0.2",
     "@salesforce-ux/create-snap": "0.0.6",
+    "@salesforce-ux/design-system-markup": "0.0.2",
     "@salesforce-ux/design-system-parser": "0.0.8",
     "@salesforce-ux/design-system-previewer": "1.0.0",
     "@salesforce-ux/icons": "7.12.0",
@@ -153,7 +154,7 @@
     "lint": "gulp lint",
     "start": "gulp",
     "previewer": "babel-node scripts/previewer",
-    "report": "gulp lint:vnu a11y",
+    "report": "gulp lint:vnu lint:validate a11y",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
     "test-browser": "karma start",

@@ -53,6 +53,11 @@
       text-decoration: none;
       color: $color-text-link;
       text-transform: uppercase;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      text-overflow: ellipsis;
     }
 
     .context {

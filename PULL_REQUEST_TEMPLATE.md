@@ -1,3 +1,8 @@
+<!--
+NOTE: Please make site changes for summer-17/winter-18 directly on the new site's repository.
+      Pull requests that don't follow this rule will get closed.
+-->
+
 Changes proposed in this pull request:
 
 * 

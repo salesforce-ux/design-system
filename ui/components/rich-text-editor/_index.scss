@@ -46,26 +46,12 @@
  * @required
  */
 .slds-rich-text-editor__toolbar {
+  flex-wrap: wrap;
+  align-items: flex-start;
   white-space: nowrap;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid $color-border;
-}
-
-@include mq-medium-min {
-
-  .slds-rich-text-editor__toolbar,
-  .slds-rich-text-editor__toolbar-bottom {
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .slds-rich-text-editor__toolbar .slds-button-group-list,
-  .slds-rich-text-editor__toolbar-bottom .slds-button-group-list {
-    margin-right: $spacing-xx-small;
-    margin-bottom: $spacing-xx-small;
-    margin-left: 0;
-  }
 }
 
 /**
@@ -77,10 +63,29 @@
  * @variant
  */
 .slds-rich-text-editor__toolbar-bottom {
+  flex-wrap: wrap;
+  align-items: flex-start;
   white-space: nowrap;
   border-bottom-left-radius: $border-radius-medium;
   border-bottom-right-radius: $border-radius-medium;
   border-top: $border-width-thin solid $color-border;
+}
+
+/**
+ * Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left. There's some icky stuff here — first-of-type and straight up button-group. This may be too brittle, let us watch it.
+ */
+
+.slds-rich-text-editor {
+
+  .slds-button-group,
+  .slds-button-group-list:first-of-type,
+  .slds-button-group+.slds-button-group-list,
+  .slds-button-group-list+.slds-button-group,
+  .slds-button-group-list+.slds-button-group-list {
+    margin-right: $spacing-xx-small;
+    margin-left: 0;
+    margin-bottom: $spacing-xx-small;
+  }
 }
 
 /**

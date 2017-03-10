@@ -26,18 +26,10 @@ let formatTransforms = _({
   'web': [
     'styl',
     'less',
-    // 'sass',
-    // 'default.sass',
-    // 'scss',
     'default.scss',
     'map.scss',
-    // 'map.variables.scss',
-    // 'html',
     'json',
-    'raw.json',
     'common.js',
-    // 'amd.js',
-    // 'aura.theme',
     'aura.tokens'
   ],
   'ios': ['ios.json'],

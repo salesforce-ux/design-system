@@ -232,7 +232,7 @@ async.series([
   ////////////////////////////////////
 
   /**
-   * Move component design tokens
+   * Move design tokens
    */
   (done) => {
     // Bundle everything in the npm package
@@ -245,6 +245,19 @@ async.series([
       cwd: `${__PATHS__.designTokens}`
     })
     .pipe(gulp.dest(distPath('design-tokens')))
+    .on('error', done)
+    .on('finish', done);
+  },
+
+  /**
+   * Move component design tokens
+   */
+  (done) => {
+    gulp.src('components/**/tokens/**/*.yml', {
+      base: path.resolve(__PATHS__.ui),
+      cwd: path.resolve(__PATHS__.ui)
+    })
+    .pipe(gulp.dest(distPath('ui')))
     .on('error', done)
     .on('finish', done);
   },

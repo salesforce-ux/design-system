@@ -48,15 +48,17 @@ let ContextTab = props =>
         </MenuList>
       </Menu>
     </div>
-    <div className={classNames('slds-context-bar__icon-action slds-col--bump-left slds-p-left--none', props.pinned ? 'slds-assistive-text' : null)}>
-      <ButtonIcon
-        className="slds-button--icon-container slds-button--icon-x-small"
-        tabIndex={ props.itemActive ? '0' : '-1' }
-        symbol="close"
-        assistiveText={ 'Close ' + props.title }
-        title={ 'Close ' + props.title }
-      />
-    </div>
+    { !props.pinned ?
+      <div className="slds-context-bar__icon-action slds-col--bump-left slds-p-left--none">
+        <ButtonIcon
+          className="slds-button--icon-container slds-button--icon-x-small"
+          tabIndex={ props.itemActive ? '0' : '-1' }
+          symbol="close"
+          assistiveText={ 'Close ' + props.title }
+          title={ 'Close ' + props.title }
+        />
+      </div>
+    : null }
   </li>;
 
 //////////////////////////////////////////////

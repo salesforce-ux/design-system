@@ -34,11 +34,11 @@ export let RteToolbarBottom = props =>
   </div>;
 
 export let RteFormatFont = props =>
-  <div className="slds-button-group" role="group" aria-label="Format font family & size">
+  <div className="slds-grid" role="group" aria-label="Format font family & size">
     <div className="slds-button-group">
       <span className="slds-assistive-text" id="choose-font">Choose a Font</span>
 
-      <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
+      <div className="slds-picklist slds-picklist--fluid slds-shrink-none">
         <button aria-describedby="choose-font" tabIndex="0" aria-haspopup="true" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
           Font <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
         </button>
@@ -48,7 +48,7 @@ export let RteFormatFont = props =>
     <div className="slds-button-group">
       <span className="slds-assistive-text" id="choose-size">Choose a Font Size</span>
 
-      <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
+      <div className="slds-picklist slds-picklist--fluid slds-shrink-none">
         <button aria-describedby="choose-size" aria-haspopup="true" tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
           14 <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
         </button>
@@ -239,34 +239,6 @@ export let RteClearFormatting = props =>
     </li>
   </ButtonGroupList>;
 
-export let RteOverflow = props =>
-  <div className="slds-m-left--xx-small slds-is-relative">
-    <ButtonGroupList>
-      <li>
-        <ButtonIcon
-          aria-haspopup="true"
-          tabIndex="-1"
-          className="slds-button--icon-border-filled"
-          symbol="down"
-          disabled={ props.disabledButtons }
-          assistiveText="More Actions" />
-      </li>
-    </ButtonGroupList>
-    {props.children}
-  </div>;
-
-export let RteOverflowDown = props =>
-  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36px', right: '0'}}>
-    <RteInsertContent overflow />
-    <RteClearFormatting overflow />
-  </div>;
-
-export let RteOverflowUp = props =>
-  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', bottom: '36px', right: '0'}}>
-    <RteInsertContent overflow />
-    <RteClearFormatting overflow />
-  </div>;
-
 export let RteTextarea = props =>
   <div className="slds-rich-text-editor__textarea">
     <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid">
@@ -377,22 +349,5 @@ export let states = [
           </Tooltip>
         </RichTextEditor>
       </Demo>
-  },
-  {
-    id: 'overflow',
-    label: 'Overflow',
-    element:
-      <Demo>
-      <RichTextEditor>
-        <RteToolbar>
-          <RteFormatText tabIndexSetting="0" />
-          <RteFormatBody />
-          <RteOverflow>
-            <RteOverflowDown />
-          </RteOverflow>
-        </RteToolbar>
-        <RteTextarea placeholder="Compose text..." />
-      </RichTextEditor>
-    </Demo>
   }
 ];

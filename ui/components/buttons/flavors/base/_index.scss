@@ -156,10 +156,10 @@ a.slds-button--inverse:focus {
 /**
  * Creates the gray border with white background default style
  *
- * @name button-neutral
  * @selector .slds-button--neutral
  * @restrict .slds-button
  * @modifier
+ * @group theme
  */
 .slds-button_neutral,
 .slds-button--neutral {
@@ -176,10 +176,10 @@ a.slds-button--inverse:focus {
 /**
  * Creates the brand blue Salesforce style
  *
- * @name button-brand
  * @selector .slds-button--brand
  * @restrict .slds-button
  * @modifier
+ * @group theme
  */
 .slds-button_brand,
 .slds-button--brand {
@@ -196,10 +196,10 @@ a.slds-button--inverse:focus {
 /**
  * Creates the inverse style for dark backgrounds
  *
- * @name button-inverse
  * @selector .slds-button--inverse
  * @restrict .slds-button
  * @modifier
+ * @group theme
  */
 .slds-button_inverse,
 .slds-button--inverse {
@@ -243,9 +243,9 @@ a.slds-button--inverse:focus {
 /**
  * Creates a red button style
  *
- * @name button-destructive
  * @selector .slds-button--destructive
  * @restrict .slds-button
+ * @group theme
  * @modifier
  */
 .slds-button_destructive,
@@ -263,9 +263,9 @@ a.slds-button--inverse:focus {
 /**
  * Creates a green button style
  *
- * @name button-success
  * @selector .slds-button--success
  * @restrict .slds-button
+ * @group theme
  * @modifier
  */
 .slds-button_success,
@@ -277,10 +277,10 @@ a.slds-button--inverse:focus {
 /**
  * Creates a smaller button style
  *
- * @name button-small
  * @selector .slds-button--small
  * @restrict .slds-button
  * @modifier
+ * @deprecated
  */
 .slds-button_small,
 .slds-button--small {
@@ -301,11 +301,8 @@ a.slds-button--inverse:focus {
   }
 }
 
-/**
-* @selector .slds-button--hint
-* @restrict .slds-button
-* @modifier
-*/
+// This isn't a pattern and isn't used anywhere and shouldn't be exposed,
+// rather it should probably be deleted....
 .slds-button_hint,
 .slds-button--hint {
   color: $color-text-button-default-hint;
@@ -317,16 +314,6 @@ a.slds-button--inverse:focus {
   }
 }
 
-/**
- * A parent class must be put on anything that contains
- * a .slds-button--hint so that the child reacts
- * when the parent is hovered.
- *
- * @name hint-hover
- * @selector .slds-button--hint
- * @restrict .slds-button
- * @variant
- */
 .slds-hint-parent {
 
   &:hover,

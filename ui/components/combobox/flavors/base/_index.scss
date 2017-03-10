@@ -23,7 +23,6 @@
 
   .slds-dropdown {
     display: none;
-    top: calc(#{$height-input} + (#{$border-width-thin} * 2));
   }
 
   /**
@@ -255,6 +254,7 @@
 .slds-listbox--object-switcher,
 .slds-listbox--object-switcher {
   flex-shrink: 0;
+  padding: $spacing-xxx-small;
 }
 
 /**
@@ -268,7 +268,6 @@
 .slds-has-inline-listbox,
 .slds-has-object-switcher {
   flex-direction: row;
-  padding: $spacing-xxx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 
@@ -282,6 +281,8 @@
     min-height: $height-pill;
     line-height: $height-pill;
     border: 0;
+    padding-top: $spacing-xxx-small;
+    padding-bottom: $spacing-xxx-small;
 
     &:focus {
       outline: 0;

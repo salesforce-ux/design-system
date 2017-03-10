@@ -34,6 +34,7 @@ let formatTransforms = _({
     // 'map.variables.scss',
     // 'html',
     'json',
+    'raw.json',
     'common.js',
     // 'amd.js',
     // 'aura.theme',

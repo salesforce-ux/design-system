@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Demo, RichTextEditor, RteToolbar, RteToolbarBottom, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting, RteOverflow, RteOverflowDown, RteOverflowUp } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
+import { Demo, RichTextEditor, RteToolbar, RteToolbarBottom, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from 'ui/components/rich-text-editor/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -103,23 +103,6 @@ export let states = [
           <Tooltip className="slds-nubbin--bottom-left" id="bold" style={{position: 'absolute', top: '60px', left: '2px'}}>
             Bold <kbd>cmd+b</kbd>
           </Tooltip>
-        </RichTextEditor>
-      </Demo>
-  },
-  {
-    id: 'overflow',
-    label: 'Overflow',
-    element:
-      <Demo>
-        <RichTextEditor>
-          <RteTextarea placeholder="Compose text..." />
-          <RteToolbarBottom>
-            <RteFormatText tabIndexSetting="0" />
-            <RteFormatBody />
-            <RteOverflow>
-              <RteOverflowUp />
-            </RteOverflow>
-          </RteToolbarBottom>
         </RichTextEditor>
       </Demo>
   }

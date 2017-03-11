@@ -91,6 +91,8 @@ const prepare = (done) => {
     async.apply(execute, `cp -a ${__PATHS__.generated}/examples/. ${__PATHS__.build}/examples`),
     // snaps
     async.apply(execute, `create-snap ${__PATHS__.generated}/examples/ ${__PATHS__.build} ${__PATHS__.build}/dist/assets/styles/salesforce-lightning-design-system.css`),
+    // website
+    async.apply(execute, `cp -a ${__PATHS__.www}/. ${__PATHS__.build}/www`),
     // tokens
     async.apply(execute, `cp -a ${__PATHS__.designTokens}/. ${__PATHS__.build}/design-tokens`),
     // git info
@@ -123,8 +125,9 @@ const prepare = (done) => {
     // zip
     async.apply(zip, 'dist'),
     async.apply(zip, 'examples'),
+    async.apply(zip, 'www'),
     async.apply(zip, 'design-tokens')
-  ], (err, [_prepare, _dist, _examples, _snaps, _tokens, info, stats, sha, _zip]) => {
+  ], (err, [_prepare, _dist, _examples, _snaps, _website, _tokens, info, stats, sha, _zip]) => {
     if (err) return done(err);
     let result = _.assign({}, { sha, info, stats }, {
       tag: process.env.TRAVIS_TAG || '',
@@ -133,8 +136,7 @@ const prepare = (done) => {
       commitRange: process.env.TRAVIS_COMMIT_RANGE || '',
       commit: process.env.TRAVIS_COMMIT || '',
       eventType: process.env.TRAVIS_EVENT_TYPE || '',
-      version: packageJSON.version,
-      isNew: true
+      version: packageJSON.version
     });
     done(null, result);
   });
@@ -144,7 +146,7 @@ module.exports = (done) => prepare((err, result) => {
   if (err) return done(err);
   publish({
     result,
-    zips: ['dist.zip', 'examples.zip', 'snapshot.json', 'design-tokens.zip']
+    zips: ['dist.zip', 'examples.zip', 'www.zip', 'snapshot.json', 'design-tokens.zip']
       .map((p) => paths.build(p)),
     project: 'design-system'
   }, done);

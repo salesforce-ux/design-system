@@ -6,6 +6,7 @@ import { ButtonGroupList } from 'ui/components/button-groups/flavors/list/index.
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
+import { ComboboxContainer } from 'ui/components/combobox/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -30,24 +31,28 @@ export let RteToolbar = props =>
 
 export let RteFormatFont = props =>
   <div className="slds-grid" role="group" aria-label="Format font family & size">
-    <div className="slds-button-group">
+    <div className="slds-rich-text-editor__select">
       <span className="slds-assistive-text" id="choose-font">Choose a Font</span>
 
-      <div className="slds-picklist slds-picklist--fluid slds-shrink-none">
-        <button aria-describedby="choose-font" tabIndex="0" aria-haspopup="true" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
-          Font <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
-        </button>
-      </div>
+      <ComboboxContainer
+          isOpen={ false }
+          inputIcon="right"
+          inputIconRightSymbol="down"
+          value="Font"
+          aria-describedby="choose-font"
+        />
     </div>
 
-    <div className="slds-button-group">
+    <div className="slds-rich-text-editor__select">
       <span className="slds-assistive-text" id="choose-size">Choose a Font Size</span>
 
-      <div className="slds-picklist slds-picklist--fluid slds-shrink-none">
-        <button aria-describedby="choose-size" aria-haspopup="true" tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
-          14 <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
-        </button>
-      </div>
+      <ComboboxContainer
+          isOpen={ false }
+          inputIcon="right"
+          inputIconRightSymbol="down"
+          value="14"
+          aria-describedby="choose-size"
+        />
     </div>
   </div>;
 

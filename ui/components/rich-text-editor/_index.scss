@@ -64,7 +64,7 @@
  * @name bottom-toolbar
  * @selector .slds-rich-text-editor__toolbar-bottom
  * @restrict .slds-rich-text-editor__toolbar
- * @variant
+ * @modifier
  */
 .slds-rich-text-editor__toolbar_bottom {
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
@@ -73,13 +73,11 @@
 }
 
 /**
- * Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left. There's some icky stuff here — :first-of-type and straight up button-group. This may be too brittle, let us watch it closely. May be ammended when proper dropdown is instituted.
+ * Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left.
  */
 
 .slds-rich-text-editor {
 
-  .slds-button-group,
-  .slds-button-group-list:first-of-type,
   .slds-button-group+.slds-button-group-list,
   .slds-button-group-list+.slds-button-group,
   .slds-button-group-list+.slds-button-group-list {
@@ -87,6 +85,18 @@
     margin-left: 0;
     margin-bottom: $spacing-xx-small;
   }
+}
+
+/**
+ * Container for Rich Text Editor Combobox
+ *
+ * @selector .slds-rich-text-editor__select
+ * @restrict .slds-rich-text-editor__toolbar div
+ * @variant
+ */
+.slds-rich-text-editor__select {
+  max-width: $size-xx-small;
+  margin-right: $spacing-xx-small;
 }
 
 /**

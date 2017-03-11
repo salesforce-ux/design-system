@@ -16,11 +16,11 @@ export default (
     <RichTextEditor>
       <RteTextarea placeholder="Compose text..." />
 
-      <RteToolbarBottom>
+      <RteToolbar className="slds-rich-text-editor__toolbar_bottom">
         <RteFormatText tabIndexSetting="0" />
         <RteFormatBody />
         <RteClearFormatting />
-      </RteToolbarBottom>
+      </RteToolbar>
     </RichTextEditor>
   </Demo>
 );

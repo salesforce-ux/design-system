@@ -24,12 +24,7 @@ export let RichTextEditor = props =>
   </div>;
 
 export let RteToolbar = props =>
-  <div role="toolbar" aria-label={props.disabledLabel} className="slds-rich-text-editor__toolbar slds-is-relative slds-shrink-none slds-p-around--x-small slds-grid slds-theme--shade">
-    {props.children}
-  </div>;
-
-export let RteToolbarBottom = props =>
-  <div role="toolbar" aria-label={props.disabledLabel} className="slds-rich-text-editor__toolbar-bottom slds-is-relative slds-shrink-none slds-p-around--x-small slds-grid slds-theme--shade">
+  <div role="toolbar" aria-label={props.disabledLabel} className={classNames('slds-rich-text-editor__toolbar slds-shrink-none', props.className)}>
     {props.children}
   </div>;
 
@@ -240,15 +235,13 @@ export let RteClearFormatting = props =>
   </ButtonGroupList>;
 
 export let RteTextarea = props =>
-  <div className="slds-rich-text-editor__textarea">
-    <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid">
+  <div className="slds-rich-text-editor__textarea slds-text-longform slds-grid">
       { props.text ?
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-grow">{props.text}</div> :
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-text-color--weak slds-grow">
           {props.placeholder}
         </div>
       }
-    </div>
   </div>;
 
 ///////////////////////////////////////////

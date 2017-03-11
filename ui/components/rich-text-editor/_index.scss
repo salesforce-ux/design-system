@@ -130,8 +130,9 @@
  * @required
  */
 .slds-rich-text-area__content {
+  @include hyphenate;
+  overflow-y: auto;
   max-height: $size-small;
-  overflow: auto;
   padding: $spacing-medium;
 }
 

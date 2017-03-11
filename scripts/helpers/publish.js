@@ -116,9 +116,13 @@ const prepare = (done) => {
         let report = fs.readFileSync(`${__PATHS__.reports}/a11y.json`, 'utf-8') || '';
         done(null, formatA11yCount(JSON.parse(report)));
       },
-    ], (err, [counts, tests, html, a11y]) => {
+      (done) => {
+        let report = fs.readFileSync(`${__PATHS__.reports}/validations.json`, 'utf-8') || '';
+        done(null, {validationFailures: JSON.parse(report).total});
+      },
+    ], (err, [counts, tests, html, a11y, validations]) => {
       if (err) return done(err);
-      done(null, _.assign({}, counts, tests, html, a11y));
+      done(null, _.assign({}, counts, tests, html, a11y, validations));
     }),
     // SHA
     async.apply(execute, 'git rev-parse HEAD'),

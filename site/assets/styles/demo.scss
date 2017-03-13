@@ -36,10 +36,6 @@ body {
   text-align: center;
 }
 
-.demo-only--top {
-  padding-top: 9rem;
-}
-
 // Inverse Demo
 .demo--inverse {
   padding: 12px;
@@ -48,6 +44,7 @@ body {
 
 // For MASS demos
 .demo-container {
+
   &-with-squares > div {
     @include square(60px);
     display: inline-block;
@@ -84,28 +81,10 @@ body {
   }
 }
 
-// To space separate rows of demo items apart
-.demo-space {
-  margin: 1rem 0 0;
-}
-
-// @TODO - this is here until we can decide how to handle all this icon stuff so it doesn't step on the other icon stuff
-.demo-svg {
-  display: inline-block;
-  margin-right: $spacing-x-small;
-}
-
-// stacking the grids in the dl demo
-.demo-stack {
-  width: 75%;
-
-  dl {
-    margin-bottom: 25px;
-  }
-}
-
 // Alignment Utility
-.demo-only--alignment > div { height: 9.375rem; }
+.demo-only--alignment > div {
+  height: 9.375rem;
+}
 
 // For spacing demo
 .demo-only--spacing {
@@ -178,18 +157,4 @@ body {
 
 .demo-visibility [class*="-hide"] {
   opacity: 0.5;
-}
-
-.demo-class-pill {
-  border-top: $border-width-thin solid $color-border;
-  margin: {
-    top: $spacing-large;
-    bottom: $spacing-large;
-  }
-
-  &__content {
-    display: inline-block;
-    background: $color-background-alt-2;
-    padding: 0 $spacing-x-small;
-  }
 }

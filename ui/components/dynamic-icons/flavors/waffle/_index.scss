@@ -59,6 +59,7 @@
 .slds-icon-waffle {
   @include square(rem(21px));
   position: relative;
+  display: block;
   cursor: pointer;
 
   [class*="slds-r"] {

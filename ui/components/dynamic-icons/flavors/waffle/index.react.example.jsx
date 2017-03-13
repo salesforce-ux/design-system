@@ -9,17 +9,17 @@ export let WaffleIcon = props =>
     {...props}
     className={classNames('slds-button slds-icon-waffle_container', props.className)}
     title="Description of the icon when needed">
-    <div className="slds-icon-waffle">
-      <div className="slds-r1"></div>
-      <div className="slds-r2"></div>
-      <div className="slds-r3"></div>
-      <div className="slds-r4"></div>
-      <div className="slds-r5"></div>
-      <div className="slds-r6"></div>
-      <div className="slds-r7"></div>
-      <div className="slds-r8"></div>
-      <div className="slds-r9"></div>
-    </div>
+    <span className="slds-icon-waffle">
+      <span className="slds-r1"></span>
+      <span className="slds-r2"></span>
+      <span className="slds-r3"></span>
+      <span className="slds-r4"></span>
+      <span className="slds-r5"></span>
+      <span className="slds-r6"></span>
+      <span className="slds-r7"></span>
+      <span className="slds-r8"></span>
+      <span className="slds-r9"></span>
+    </span>
     <span className="slds-assistive-text">Open App Launcher</span>
   </button>;
 

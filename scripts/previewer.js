@@ -18,7 +18,7 @@ const { getComments, getMarkup } = require('./markup-style');
 const {watchPaths, removeFromCache} = require('./watch');
 
 const getComments_ = done =>
-  getComments(x => done(null, x));
+  getComments().fork(done, x => done(null, x));
 
 const getMarkup_ = (component, variant, done) =>
   getMarkup(component, variant)

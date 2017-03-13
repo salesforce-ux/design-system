@@ -23,7 +23,7 @@ let Button = props =>
 // State Constructor(s)
 ///////////////////////////////////////////
 
-let Reset = props =>
+let Default = props =>
   <Demo>
     <Button>Button</Button>
   </Demo>;
@@ -91,8 +91,8 @@ let InverseDisabled = props =>
 export let states = [
   {
     id: 'button',
-    label: 'Reset',
-    element: <Reset />
+    label: 'Default',
+    element: <Default />
   },
   {
     id: 'button-neutral',

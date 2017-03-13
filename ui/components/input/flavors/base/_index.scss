@@ -216,13 +216,12 @@
 /**
  * Positions the close icon and spinner on the right side of the input while searching
  *
- * @name with-spinner
- * @selector .slds-input__icon_container
- * @restrict div
+ * @selector .slds-input__icon-group
+ * @restrict .slds-input-has-icon div
  * @modifier
  * @group position
  */
-.slds-input__icon_container {
+.slds-input__icon-group {
   position: absolute;
   right: 0;
   top: 50%;

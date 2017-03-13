@@ -22,7 +22,7 @@ export let states = [
             symbol="search"
           />
           <Input />
-          <div className="slds-input__icon_container">
+          <div className="slds-input__icon-group">
             <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
             <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
               <SvgIcon

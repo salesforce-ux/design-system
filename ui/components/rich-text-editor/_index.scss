@@ -33,7 +33,6 @@
  * @variant
  */
 .slds-rich-text-editor {
-  min-height: $size-xx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 }
@@ -51,7 +50,7 @@
   align-items: flex-start;
   white-space: nowrap;
   position: relative;
-  padding: $spacing-x-small;
+  padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid $color-border;
@@ -76,14 +75,13 @@
  * Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left.
  */
 
-.slds-rich-text-editor {
+.slds-rich-text-editor .slds-button-group-list {
+  margin-right: $spacing-xx-small;
+  margin-bottom: $spacing-xx-small;
+  margin-left: 0;
 
-  .slds-button-group+.slds-button-group-list,
-  .slds-button-group-list+.slds-button-group,
-  .slds-button-group-list+.slds-button-group-list {
-    margin-right: $spacing-xx-small;
-    margin-left: 0;
-    margin-bottom: $spacing-xx-small;
+  &:last-child {
+    margin-right: 0;
   }
 }
 
@@ -132,6 +130,7 @@
 .slds-rich-text-area__content {
   @include hyphenate;
   overflow-y: auto;
+  min-height: $size-xx-small;
   max-height: $size-small;
   padding: $spacing-medium;
 }

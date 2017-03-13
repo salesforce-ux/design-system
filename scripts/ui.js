@@ -1,3 +1,6 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 const createParser = require('@salesforce-ux/design-system-parser');
 const Task = require('data.task');
 const {List, Map} = require('immutable');

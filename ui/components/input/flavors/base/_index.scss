@@ -223,10 +223,13 @@
  */
 .slds-input__icon-group {
   position: absolute;
-  right: 0;
-  top: 50%;
   height: $square-icon-medium-content;
   margin-top: (($square-icon-medium-content / 2) * -1);
+}
+
+.slds-input__icon-group_right {
+  right: 0;
+  top: 50%;
 
   .slds-input__icon_right,
   .slds-input__icon--right {

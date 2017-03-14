@@ -25,7 +25,7 @@
   "devDependencies": {
     "@salesforce-ux/build-server-api": "^2.0.2",
     "@salesforce-ux/create-snap": "0.0.6",
-    "@salesforce-ux/design-system-markup": "0.0.2",
+    "@salesforce-ux/design-system-markup": "0.0.4",
     "@salesforce-ux/design-system-parser": "0.0.8",
     "@salesforce-ux/design-system-previewer": "1.0.0",
     "@salesforce-ux/icons": "7.12.0",

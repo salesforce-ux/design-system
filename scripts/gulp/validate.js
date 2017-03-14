@@ -35,8 +35,8 @@ const renderReport = fullReport =>
   fullReport
 });
 
-const printToConsole = report =>
-  console.log(report);
+const printToConsole = (...xs) =>
+  console.log.apply(console, xs);
 
 const report = validate => {
   const fullReport = {};
@@ -50,8 +50,8 @@ const report = validate => {
 
   const flush = function(next) {
     const report = renderReport(fullReport);
+    printToConsole(report, 'Full info in .reports/validate.json');
     const json = JSON.stringify(report, null, 2);
-    printToConsole(json);
     this.push(new gutil.File({
       path: 'validations.json',
       contents: new Buffer(json)

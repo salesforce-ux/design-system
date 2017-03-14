@@ -177,7 +177,7 @@ export let ComboboxContainer = props =>
           id={ props.id || comboboxId }
           aria-activedescendant={ props['aria-activedescendant'] }
           aria-autocomplete={ props.autocomplete ? 'list' : null }
-          aria-controls={ listboxId }
+          aria-controls={ props.listboxId || listboxId }
           autoComplete="off"
           role="textbox"
           type="text"

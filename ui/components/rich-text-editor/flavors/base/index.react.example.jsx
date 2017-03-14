@@ -12,6 +12,8 @@ import _ from 'lodash';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
+const listboxOptionId04 = 'listbox-option-unique-id-04';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -33,7 +35,7 @@ export let RteToolbar = props =>
   </div>;
 
 const FontFamilyDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } listboxId="family-listbox">
     <ListboxItem>
       <Option
         id={ listboxOptionId01 }
@@ -49,10 +51,10 @@ const FontFamilyDropdown = props =>
   </Listbox>;
 
 const FontSizeDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } id="family-listbox">
     <ListboxItem>
       <Option
-        id={ listboxOptionId01 }
+        id={ listboxOptionId03 }
         title="12px"
         focused={ props.focused }
         selected={ props.selected }
@@ -60,7 +62,7 @@ const FontSizeDropdown = props =>
       />
     </ListboxItem>
     <ListboxItem>
-      <Option id={ listboxOptionId02 } title="14px" hideIcon={true} />
+      <Option id={ listboxOptionId04 } title="14px" hideIcon={true} />
     </ListboxItem>
   </Listbox>;
 
@@ -70,10 +72,12 @@ export let RteFormatFont = props =>
 
       <ComboboxContainer
           className="slds-size--x-small"
+          id="font-family"
           inputIcon="right"
           inputIconRightSymbol="down"
           value="Font"
           label="Choose a Font"
+          aria-controls="family-listbox"
           listbox={ <FontFamilyDropdown /> }
         />
     </div>
@@ -82,10 +86,12 @@ export let RteFormatFont = props =>
 
       <ComboboxContainer
           className="slds-size--xx-small"
+          id="font-size"
           inputIcon="right"
           inputIconRightSymbol="down"
           value="Size"
           label="Choose a Font Size"
+          aria-controls="size-listbox"
           listbox={ <FontSizeDropdown /> }
         />
     </div>

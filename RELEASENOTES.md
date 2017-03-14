@@ -80,7 +80,7 @@ The following classes are now available:
 - Added `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
 - Added `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 - Added `slds-is-absolute` utility for overriding a components default positioning - [Utilities › Position › Absolute](/components/utilities/position/#flavor-absolute)
-- Added addtional spacing support for normalizing padding on a grid region
+- Added additional spacing support for normalizing padding on a grid region
 - Added `slds-border--bottom` utility [Utilities › Borders › Border Bottom](/components/utilities/borders/#flavor-border-bottom)
 - Added `slds-border--left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
 - Added `slds-border--right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
@@ -800,7 +800,7 @@ The following features are being marked as deprecated in this release and will b
   - `slds-tabs--scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--scoped__item` instead
   - `slds-tabs--scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--scoped__content` instead
   - `slds-tabs--scoped > a` deprecated in version 0.12.0, use `slds-tabs--scoped__link` instead
-- Decendent selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
+- Descendant selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
 
 ## Release 0.11.0 - October 29, 2015
 
@@ -922,7 +922,7 @@ The following features are being marked as deprecated in this release and will b
   - CSS files scoped in `.slds` have been added/updated for the following:
   - Visualforce (`-vf`)
   - Lightning Platform (`-ltng`)
-  - General Use (Most likely in conjuction with other frameworks) (`-scoped`)
+  - General Use (Most likely in conjunction with other frameworks) (`-scoped`)
 
 ### Site
 

@@ -148,7 +148,7 @@ export let ComboboxContainer = props =>
       <FormElement
         className={ classNames('slds-combobox__form-element', props.comboboxClassName) }
         formControlClassName={ props.formControlClassName }
-        label="Search"
+        label={ props.label || 'Search' }
         inputId={ props.id || comboboxId }
         inputIcon={ props.inputIcon }
         hideLabel={ true }
@@ -277,13 +277,15 @@ export let Option = props =>
       props.className
     )}
   >
-    <span className="slds-media__figure">
-      <SvgIcon
-        className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
-        sprite="utility"
-        symbol="check"
-      />
-    </span>
+    { !props.hideIcon ?
+      <span className="slds-media__figure">
+        <SvgIcon
+          className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
+          sprite="utility"
+          symbol="check"
+        />
+      </span>
+    : null }
     <span className="slds-media__body">
       <span className="slds-truncate" title={ props.title }>
         { props.selected ? <span className="slds-assistive-text">Current Selection:</span> : null } { props.title }

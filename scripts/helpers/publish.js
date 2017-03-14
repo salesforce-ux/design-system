@@ -42,8 +42,7 @@ const formatTestCounts = out => {
   if (!matches) return {};
   return {
     unitTests: parseInt(matches[0]),
-    integrationTests: parseInt(matches[1]),
-    allyTests: parseInt(matches[2])
+    integrationTests: parseInt(matches[1])
   };
 };
 
@@ -140,7 +139,8 @@ const prepare = (done) => {
       commitRange: process.env.TRAVIS_COMMIT_RANGE || '',
       commit: process.env.TRAVIS_COMMIT || '',
       eventType: process.env.TRAVIS_EVENT_TYPE || '',
-      version: packageJSON.version
+      version: packageJSON.version,
+      isNew: true
     });
     done(null, result);
   });

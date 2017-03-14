@@ -6,9 +6,12 @@ import { ButtonGroupList } from 'ui/components/button-groups/flavors/list/index.
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
-import { ComboboxContainer } from 'ui/components/combobox/flavors/base/index.react.example';
+import { ComboboxContainer, Listbox, ListboxItem, Option } from 'ui/components/combobox/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
+
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -29,29 +32,61 @@ export let RteToolbar = props =>
     {props.children}
   </div>;
 
+const FontFamilyDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+    <ListboxItem>
+      <Option
+        id={ listboxOptionId01 }
+        title="Times New Roman"
+        focused={ props.focused }
+        selected={ props.selected }
+        hideIcon={true}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={ listboxOptionId02 } title="Arial" hideIcon={true} />
+    </ListboxItem>
+  </Listbox>;
+
+const FontSizeDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+    <ListboxItem>
+      <Option
+        id={ listboxOptionId01 }
+        title="12px"
+        focused={ props.focused }
+        selected={ props.selected }
+        hideIcon={true}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={ listboxOptionId02 } title="14px" hideIcon={true} />
+    </ListboxItem>
+  </Listbox>;
+
 export let RteFormatFont = props =>
-  <div className="slds-grid" role="group" aria-label="Format font family & size">
+  <div className="slds-grid" role="group" aria-label="Format font family &amp; size">
     <div className="slds-rich-text-editor__select">
-      <span className="slds-assistive-text" id="choose-font">Choose a Font</span>
 
       <ComboboxContainer
-          isOpen={ false }
+          className="slds-size--x-small"
           inputIcon="right"
           inputIconRightSymbol="down"
           value="Font"
-          aria-describedby="choose-font"
+          label="Choose a Font"
+          listbox={ <FontFamilyDropdown /> }
         />
     </div>
 
     <div className="slds-rich-text-editor__select">
-      <span className="slds-assistive-text" id="choose-size">Choose a Font Size</span>
 
       <ComboboxContainer
-          isOpen={ false }
+          className="slds-size--xx-small"
           inputIcon="right"
           inputIconRightSymbol="down"
-          value="14"
-          aria-describedby="choose-size"
+          value="Size"
+          label="Choose a Font Size"
+          listbox={ <FontSizeDropdown /> }
         />
     </div>
   </div>;

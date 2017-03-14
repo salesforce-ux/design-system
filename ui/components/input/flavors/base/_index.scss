@@ -46,7 +46,7 @@
 .slds-input {
   @include form-states;
   display: inline-block;
-  padding: 0 $spacing-medium 0 $spacing-small;
+  padding: 0 $spacing-medium;
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 

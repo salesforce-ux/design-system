@@ -214,12 +214,10 @@
 }
 
 /**
- * Positions the close icon and spinner on the right side of the input while searching
+ * Positions two items (icons and/or spinners) on one side or the other of the input
  *
  * @selector .slds-input__icon-group
  * @restrict .slds-input-has-icon div
- * @modifier
- * @group position
  */
 .slds-input__icon-group {
   position: absolute;
@@ -227,6 +225,14 @@
   margin-top: (($square-icon-medium-content / 2) * -1);
 }
 
+/**
+ * Positions the close icon and spinner on the right side of the input while searching
+ *
+ * @selector .slds-input__icon-group_right
+ * @restrict .slds-input__icon-group
+ * @modifier
+ * @group position
+ */
 .slds-input__icon-group_right {
   right: 0;
   top: 50%;

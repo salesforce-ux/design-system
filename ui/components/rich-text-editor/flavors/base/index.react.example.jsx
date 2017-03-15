@@ -69,31 +69,30 @@ const FontSizeDropdown = props =>
 export let RteFormatFont = props =>
   <div className="slds-grid" role="group" aria-label="Format font family &amp; size">
     <div className="slds-rich-text-editor__select">
-
       <ComboboxContainer
-          className="slds-size--x-small"
-          id="font-family"
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="Font"
-          label="Choose a Font"
-          aria-controls="family-listbox"
-          listbox={ <FontFamilyDropdown /> }
-        />
+        className="slds-size--x-small"
+        id="font-family"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Font"
+        label="Choose a Font"
+        aria-controls="family-listbox"
+        listbox={ <FontFamilyDropdown /> }
+      />
     </div>
 
     <div className="slds-rich-text-editor__select">
-
       <ComboboxContainer
-          className="slds-size--xx-small"
-          id="font-size"
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="Size"
-          label="Choose a Font Size"
-          aria-controls="size-listbox"
-          listbox={ <FontSizeDropdown /> }
-        />
+        className="slds-size--xx-small"
+        id="font-size"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Size"
+        label="Choose a Font Size"
+        aria-controls="size-listbox"
+        tabIndex="-1"
+        listbox={ <FontSizeDropdown /> }
+      />
     </div>
   </div>;
 

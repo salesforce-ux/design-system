@@ -7,7 +7,8 @@
  *
  * @summary Creates truncated text
  *
- * @selector .slds-truncate[title]
+ * @selector .slds-truncate
+ * @restrict [title]
  * @modifier
  */
 .slds-truncate {

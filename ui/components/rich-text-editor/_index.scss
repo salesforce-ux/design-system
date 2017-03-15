@@ -134,3 +134,111 @@
 [contenteditable]:focus {
   outline: none;
 }
+
+/**
+ * These are the overrides for both input and output from the RTE.
+ * We may need to add or adjust these later based on further input.
+ */
+.slds-rich-text-editor__textarea,
+.slds-rich-text-editor__output {
+
+  h1 {
+    font-size: $font-size-heading-large;
+  }
+
+  h2 {
+    font-size: $font-size-heading-medium;
+    font-weight: $font-weight-bold;
+  }
+
+  h3 {
+    font-size: $font-size-heading-medium;
+  }
+
+  h4 {
+    font-size: $font-size-heading-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h5 {
+    font-size: $font-size-heading-small;
+  }
+
+  h6 {
+    font-size: $font-size-heading-x-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  img {
+    margin-bottom: $spacing-small;
+  }
+
+  blockquote {
+    margin: $spacing-x-large $spacing-large;
+  }
+
+  ul {
+    @include list-has-bullets;
+
+    ul {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: circle;
+
+      ul {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: square;
+      }
+    }
+
+    ol {
+      @include list-has-numbers;
+    }
+  }
+
+  ol {
+    @include list-has-numbers;
+
+    ol {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: lower-alpha;
+
+      ol {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: lower-roman;
+      }
+    }
+
+    ul {
+      @include list-has-bullets;
+    }
+  }
+
+  abbr[title],
+  acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  table {
+    width: auto;
+
+    caption {
+      text-align: center;
+    }
+  }
+
+  th,
+  td {
+    padding: $spacing-x-small;
+  }
+}

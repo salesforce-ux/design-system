@@ -53,7 +53,7 @@
     "eslint": "3.17.0",
     "express": "4.14.1",
     "fastdom": "1.0.5",
-    "fs-extra": "2.1.0",
+    "fs-extra": "2.1.1",
     "gator": "1.2.4",
     "glob": "7.1.1",
     "gulp": "3.9.1",

@@ -21,7 +21,10 @@
   }
 
   .slds-form-element {
-    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
+    // Default - Stretch 100% unless told otherwise using sizing helpers
+    &:not([class*="slds-size--"]) {
+      width: 100%;
+    }
 
     + .slds-form-element {
       padding-left: $spacing-x-small;

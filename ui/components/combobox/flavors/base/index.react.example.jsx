@@ -119,6 +119,8 @@ export let ListboxOption = props =>
   * @prop {boolean} inputButtonIcon
   * @prop {string}  value
   * @prop {boolean} autocomplete
+  * @prop {string}  tabIndex
+  * @prop {string}  aria-controls
   */
 }
 export let ComboboxContainer = props =>
@@ -177,13 +179,14 @@ export let ComboboxContainer = props =>
           id={ props.id || comboboxId }
           aria-activedescendant={ props['aria-activedescendant'] }
           aria-autocomplete={ props.autocomplete ? 'list' : null }
-          aria-controls={ props.listboxId || listboxId }
+          aria-controls={ props['aria-controls'] || listboxId }
           autoComplete="off"
           role="textbox"
           type="text"
           placeholder={ props.autocomplete ? 'Search Salesforce' : 'Select an Option' }
           readOnly={ !props.autocomplete || props.value }
           value={ props.value }
+          tabIndex={ props.tabIndex }
         />
         { props.inputIcon === 'right' ?
           <SvgIcon

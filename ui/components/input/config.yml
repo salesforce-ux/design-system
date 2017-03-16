@@ -4,6 +4,7 @@ flavors:
   - base
   - fixed-text
   - with-icon
+  - with-spinner
   - read-only
   - field-level-help
 lightning:

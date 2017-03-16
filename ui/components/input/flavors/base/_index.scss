@@ -122,8 +122,10 @@
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
 
+    /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
       fill: $color-text-input-icon;
+      color: $color-text-input-icon;
     }
   }
 
@@ -212,6 +214,41 @@
 }
 
 /**
+ * Positions two items (icons and/or spinners) on one side or the other of the input
+ *
+ * @selector .slds-input__icon-group
+ * @restrict .slds-input-has-icon div
+ */
+.slds-input__icon-group {
+  position: absolute;
+  height: $square-icon-medium-content;
+  margin-top: (($square-icon-medium-content / 2) * -1);
+}
+
+/**
+ * Positions the close icon and spinner on the right side of the input while searching
+ *
+ * @selector .slds-input__icon-group_right
+ * @restrict .slds-input__icon-group
+ * @modifier
+ * @group position
+ */
+.slds-input__icon-group_right {
+  right: 0;
+  top: 50%;
+
+  .slds-input__icon_right,
+  .slds-input__icon--right {
+    right: $spacing-x-small;
+  }
+
+  .slds-input__spinner {
+    right: $spacing-large;
+    left: auto;
+  }
+}
+
+/**
  * @summary Use on input container to let it know there is fixed text to the left or right of the input
  *
  * @name fixed-text
@@ -247,5 +284,6 @@
 
   .slds-input__icon {
     fill: $color-text-error;
+    color: $color-text-error;
   }
 }

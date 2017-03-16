@@ -34,23 +34,21 @@ export default (
     <legend className="slds-form-element__label slds-text-title--caps">Address</legend>
     <div className="slds-form-element__group">
       <div className="slds-form-element__row">
-        <div className="slds-form-element slds-size--1-of-1">
+        <div className="slds-form-element">
           <label className="slds-form-element__label" htmlFor="input-03">Street</label>
           <input id="input-03" className="slds-input" type="text" />
         </div>
       </div>
       <div className="slds-form-element__row">
-        <div className="slds-form-element slds-size--1-of-2">
+        <div className="slds-form-element slds-size--3-of-5">
           <label className="slds-form-element__label" htmlFor="input-04">City</label>
           <input id="input-04" className="slds-input" type="text" />
         </div>
-        <div className="slds-form-element slds-size--1-of-2">
+        <div className="slds-form-element slds-size--1-of-5">
           <label className="slds-form-element__label" htmlFor="input-05">State</label>
           <input id="input-05" className="slds-input" type="text" />
         </div>
-      </div>
-      <div className="slds-form-element__row">
-        <div className="slds-form-element slds-size--1-of-2">
+        <div className="slds-form-element slds-size--1-of-5">
           <label className="slds-form-element__label" htmlFor="input-06">ZIP Code</label>
           <input id="input-06" className="slds-input" type="text" />
         </div>

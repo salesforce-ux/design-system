@@ -46,9 +46,11 @@ export let states = [
     label: 'With icon',
     element:
       <Pill>
-        <span className="slds-icon_container slds-icon-standard-account slds-pill__icon_container" title="Account">
-          <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
-          <span className="slds-assistive-text">Account</span>
+        <span className="slds-pill__icon_container">
+          <span className="slds-icon_container slds-icon-standard-account" title="Account">
+            <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
+            <span className="slds-assistive-text">Account</span>
+          </span>
         </span>
       </Pill>
   },
@@ -57,12 +59,14 @@ export let states = [
     label: 'With avatar',
     element:
       <Pill>
-        <span className="slds-avatar slds-avatar--x-small slds-avatar--circle slds-pill__icon_container" title="User avatar">
-          <img
-            alt="Person name"
-            src="/assets/images/avatar2.jpg"
-            title="User avatar"
-          />
+        <span className="slds-pill__icon_container">
+          <span className="slds-avatar slds-avatar--circle" title="User avatar">
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
         </span>
       </Pill>
   },
@@ -91,9 +95,11 @@ export let states = [
     label: 'Error',
     element:
       <Pill className="slds-has-error">
-        <span className="slds-icon_container slds-pill__icon_container slds-m-left--xx-small" title="Error">
-          <SvgIcon className="icon-error slds-icon--x-small slds-icon-text-error" sprite="utility" symbol="warning" />
-          <span className="slds-assistive-text">Warning</span>
+        <span className="slds-pill__icon_container">
+          <span className="slds-icon_container" title="Error">
+            <SvgIcon className="slds-icon slds-icon-text-error" sprite="utility" symbol="warning" />
+            <span className="slds-assistive-text">Warning</span>
+          </span>
         </span>
       </Pill>
   }

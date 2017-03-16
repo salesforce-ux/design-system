@@ -148,8 +148,10 @@
     @include square($square-icon-x-small-boundary);
     margin-right: $spacing-xx-small;
 
-    .slds-icon {
+    .slds-icon,
+    .slds-avatar {
       @include square($square-icon-x-small-boundary);
+      font-size: $font-size-heading-xx-small;
     }
 
     ~ .slds-pill__action {

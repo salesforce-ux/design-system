@@ -63,7 +63,11 @@
 // These styles show/hide text based on interaction
 .slds-text-not-selected,
 .slds-text-selected,
-.slds-text-selected-focus,
+.slds-text-selected-focus {
+  display: block;
+}
+
+.slds-is-selected:focus .slds-text-selected,
 .slds-is-selected[disabled]:hover .slds-text-selected,
 .slds-is-selected[disabled]:focus .slds-text-selected {
   display: block;
@@ -79,11 +83,14 @@
  * @group interaction
  */
 .slds-not-selected .slds-text-selected,
-.slds-not-selected .slds-text-selected-focus,
+.slds-not-selected .slds-text-selected-focus {
+  display: none;
+}
+
 .slds-is-selected .slds-text-not-selected,
 .slds-is-selected:not(:hover):not(:focus) .slds-text-selected-focus,
 .slds-is-selected[disabled]:hover .slds-text-selected-focus,
 .slds-is-selected:hover .slds-text-selected,
-.slds-is-selected:focus .slds-text-selected {
+.slds-is-selected:focus .slds-text-selected-focus {
   display: none;
 }

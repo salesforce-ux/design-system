@@ -280,7 +280,7 @@ export let RteClearFormatting = props =>
   </ButtonGroupList>;
 
 export let RteTextarea = props =>
-  <div className="slds-rich-text-editor__textarea slds-text-longform slds-grid">
+  <div className="slds-rich-text-editor__textarea slds-grid">
       { props.text ?
         <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-grow">{props.text}</div> :
         <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-text-color--weak slds-grow">

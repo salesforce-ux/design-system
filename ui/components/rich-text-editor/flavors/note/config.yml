@@ -1,1 +1,5 @@
 status: 'dev-ready'
+showFormFactors:
+  - large
+  - medium
+  - small

@@ -33,8 +33,6 @@
  * @variant
  */
 .slds-rich-text-editor {
-  min-width: $size-medium;
-  min-height: $size-xx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 }
@@ -44,62 +42,52 @@
  *
  * @selector .slds-rich-text-editor__toolbar
  * @restrict .slds-rich-text-editor div
- * @required
  */
 .slds-rich-text-editor__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   white-space: nowrap;
+  position: relative;
+  padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid $color-border;
-}
-
-@include mq-medium-min {
-
-  .slds-rich-text-editor__toolbar,
-  .slds-rich-text-editor__toolbar-bottom {
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .slds-rich-text-editor__toolbar .slds-button-group-list,
-  .slds-rich-text-editor__toolbar-bottom .slds-button-group-list {
-    margin-right: $spacing-xx-small;
-    margin-bottom: $spacing-xx-small;
-    margin-left: 0;
-  }
+  background-color: $color-background;
 }
 
 /**
  * Container for Rich Text Editor Bottom Toolbar
  *
- * @name bottom-toolbar
  * @selector .slds-rich-text-editor__toolbar-bottom
- * @restrict .slds-rich-text-editor div
- * @variant
+ * @restrict .slds-rich-text-editor__toolbar
+ * @modifier
  */
-.slds-rich-text-editor__toolbar-bottom {
-  white-space: nowrap;
-  border-bottom-left-radius: $border-radius-medium;
-  border-bottom-right-radius: $border-radius-medium;
+.slds-rich-text-editor__toolbar_bottom {
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
   border-top: $border-width-thin solid $color-border;
+  border-bottom: 0;
+}
+
+// Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left
+.slds-rich-text-editor .slds-button-group-list {
+  margin-right: $spacing-xx-small;
+  margin-bottom: $spacing-xx-small;
+  margin-left: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 /**
- * Textarea for Rich Text Editor containing editable div
+ * Container for Rich Text Editor Combobox
  *
- * @selector .slds-textarea
- * @restrict .slds-rich-text-editor__textarea div
- * @required
+ * @selector .slds-rich-text-editor__select
+ * @restrict .slds-rich-text-editor__toolbar div
  */
-.slds-rich-text-editor__textarea .slds-textarea {
-  min-height: $size-xx-small;
-  vertical-align: middle;
-  border: 0;
-
-  &:focus,
-  &:active {
-    box-shadow: none;
-  }
+.slds-rich-text-editor__select {
+  margin-right: $spacing-xx-small;
 }
 
 /**
@@ -123,10 +111,20 @@
  */
 .slds-rich-text-editor.slds-has-error {
   border: $border-width-thick solid $color-border-error;
+}
 
-  .slds-textarea {
-    box-shadow: none;
-  }
+/**
+ * Textarea for Rich Text Editor which is an editable div
+ *
+ * @selector .slds-textarea__content
+ * @restrict .slds-rich-text-editor__textarea div
+ */
+.slds-rich-text-area__content {
+  @include hyphenate;
+  overflow-y: auto;
+  min-height: $size-xx-small;
+  max-height: $size-small;
+  padding: $spacing-medium;
 }
 
 .slds-picklist__label[disabled] .slds-icon {

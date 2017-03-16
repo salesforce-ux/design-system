@@ -119,6 +119,8 @@ export let ListboxOption = props =>
   * @prop {boolean} inputButtonIcon
   * @prop {string}  value
   * @prop {boolean} autocomplete
+  * @prop {string}  tabIndex
+  * @prop {string}  aria-controls
   */
 }
 export let ComboboxContainer = props =>
@@ -148,7 +150,7 @@ export let ComboboxContainer = props =>
       <FormElement
         className={ classNames('slds-combobox__form-element', props.comboboxClassName) }
         formControlClassName={ props.formControlClassName }
-        label="Search"
+        label={ props.label || 'Search' }
         inputId={ props.id || comboboxId }
         inputIcon={ props.inputIcon }
         hideLabel={ true }
@@ -177,13 +179,14 @@ export let ComboboxContainer = props =>
           id={ props.id || comboboxId }
           aria-activedescendant={ props['aria-activedescendant'] }
           aria-autocomplete={ props.autocomplete ? 'list' : null }
-          aria-controls={ listboxId }
+          aria-controls={ props['aria-controls'] || listboxId }
           autoComplete="off"
           role="textbox"
           type="text"
           placeholder={ props.autocomplete ? 'Search Salesforce' : 'Select an Option' }
           readOnly={ !props.autocomplete || props.value }
           value={ props.value }
+          tabIndex={ props.tabIndex }
         />
         { props.inputIcon === 'right' ?
           <SvgIcon
@@ -277,13 +280,15 @@ export let Option = props =>
       props.className
     )}
   >
-    <span className="slds-media__figure">
-      <SvgIcon
-        className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
-        sprite="utility"
-        symbol="check"
-      />
-    </span>
+    { !props.hideIcon ?
+      <span className="slds-media__figure">
+        <SvgIcon
+          className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
+          sprite="utility"
+          symbol="check"
+        />
+      </span>
+    : null }
     <span className="slds-media__body">
       <span className="slds-truncate" title={ props.title }>
         { props.selected ? <span className="slds-assistive-text">Current Selection:</span> : null } { props.title }

@@ -6,8 +6,14 @@ import { ButtonGroupList } from 'ui/components/button-groups/flavors/list/index.
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
+import { ComboboxContainer, Listbox, ListboxItem, Option } from 'ui/components/combobox/flavors/base/index.react.example';
 import classNames from 'classnames';
 import _ from 'lodash';
+
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
+const listboxOptionId04 = 'listbox-option-unique-id-04';
 
 ///////////////////////////////////////////
 // Partial(s)
@@ -24,35 +30,69 @@ export let RichTextEditor = props =>
   </div>;
 
 export let RteToolbar = props =>
-  <div role="toolbar" aria-label={props.disabledLabel} className="slds-rich-text-editor__toolbar slds-is-relative slds-shrink-none slds-p-around--x-small slds-grid slds-theme--shade">
+  <div role="toolbar" aria-label={props.disabledLabel} className={classNames('slds-rich-text-editor__toolbar slds-shrink-none', props.className)}>
     {props.children}
   </div>;
 
-export let RteToolbarBottom = props =>
-  <div role="toolbar" aria-label={props.disabledLabel} className="slds-rich-text-editor__toolbar-bottom slds-is-relative slds-shrink-none slds-p-around--x-small slds-grid slds-theme--shade">
-    {props.children}
-  </div>;
+const FontFamilyDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } listboxId="family-listbox">
+    <ListboxItem>
+      <Option
+        id={ listboxOptionId01 }
+        title="Times New Roman"
+        focused={ props.focused }
+        selected={ props.selected }
+        hideIcon={true}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={ listboxOptionId02 } title="Arial" hideIcon={true} />
+    </ListboxItem>
+  </Listbox>;
+
+const FontSizeDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } id="family-listbox">
+    <ListboxItem>
+      <Option
+        id={ listboxOptionId03 }
+        title="12px"
+        focused={ props.focused }
+        selected={ props.selected }
+        hideIcon={true}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={ listboxOptionId04 } title="14px" hideIcon={true} />
+    </ListboxItem>
+  </Listbox>;
 
 export let RteFormatFont = props =>
-  <div className="slds-button-group" role="group" aria-label="Format font family & size">
-    <div className="slds-button-group">
-      <span className="slds-assistive-text" id="choose-font">Choose a Font</span>
-
-      <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
-        <button aria-describedby="choose-font" tabIndex="0" aria-haspopup="true" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
-          Font <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
-        </button>
-      </div>
+  <div className="slds-grid" role="group" aria-label="Format font family &amp; size">
+    <div className="slds-rich-text-editor__select">
+      <ComboboxContainer
+        className="slds-size--x-small"
+        id="font-family"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Font"
+        label="Choose a Font"
+        aria-controls="family-listbox"
+        listbox={ <FontFamilyDropdown /> }
+      />
     </div>
 
-    <div className="slds-button-group">
-      <span className="slds-assistive-text" id="choose-size">Choose a Font Size</span>
-
-      <div className="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
-        <button aria-describedby="choose-size" aria-haspopup="true" tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
-          14 <SvgIcon className="slds-icon slds-icon--small" sprite="utility" symbol="down" />
-        </button>
-      </div>
+    <div className="slds-rich-text-editor__select">
+      <ComboboxContainer
+        className="slds-size--xx-small"
+        id="font-size"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Size"
+        label="Choose a Font Size"
+        aria-controls="size-listbox"
+        tabIndex="-1"
+        listbox={ <FontSizeDropdown /> }
+      />
     </div>
   </div>;
 
@@ -239,44 +279,14 @@ export let RteClearFormatting = props =>
     </li>
   </ButtonGroupList>;
 
-export let RteOverflow = props =>
-  <div className="slds-m-left--xx-small slds-is-relative">
-    <ButtonGroupList>
-      <li>
-        <ButtonIcon
-          aria-haspopup="true"
-          tabIndex="-1"
-          className="slds-button--icon-border-filled"
-          symbol="down"
-          disabled={ props.disabledButtons }
-          assistiveText="More Actions" />
-      </li>
-    </ButtonGroupList>
-    {props.children}
-  </div>;
-
-export let RteOverflowDown = props =>
-  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', top: '36px', right: '0'}}>
-    <RteInsertContent overflow />
-    <RteClearFormatting overflow />
-  </div>;
-
-export let RteOverflowUp = props =>
-  <div role="menu" className="slds-button-group-list slds-box slds-box--x-small slds-theme--shade" style={{position: 'absolute', bottom: '36px', right: '0'}}>
-    <RteInsertContent overflow />
-    <RteClearFormatting overflow />
-  </div>;
-
 export let RteTextarea = props =>
-  <div className="slds-rich-text-editor__textarea">
-    <div className="slds-textarea slds-p-around--medium slds-text-longform slds-grid">
+  <div className="slds-rich-text-editor__textarea slds-text-longform slds-grid">
       { props.text ?
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-grow">{props.text}</div> :
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-text-color--weak slds-grow">
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-grow">{props.text}</div> :
+        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-text-color--weak slds-grow">
           {props.placeholder}
         </div>
       }
-    </div>
   </div>;
 
 ///////////////////////////////////////////
@@ -377,22 +387,5 @@ export let states = [
           </Tooltip>
         </RichTextEditor>
       </Demo>
-  },
-  {
-    id: 'overflow',
-    label: 'Overflow',
-    element:
-      <Demo>
-      <RichTextEditor>
-        <RteToolbar>
-          <RteFormatText tabIndexSetting="0" />
-          <RteFormatBody />
-          <RteOverflow>
-            <RteOverflowDown />
-          </RteOverflow>
-        </RteToolbar>
-        <RteTextarea placeholder="Compose text..." />
-      </RichTextEditor>
-    </Demo>
   }
 ];

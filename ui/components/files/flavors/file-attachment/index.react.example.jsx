@@ -92,6 +92,9 @@ export let File = props =>
         </figcaption>
       : null }
     </figure>
+    { props.externalSource ?
+      <ExternalIcon />
+    : null }
     { props.actions ?
       <ActionsConditional scrim={ props.scrim } whiteIcons={ props.whiteIcons } />
     : null }
@@ -184,8 +187,9 @@ export let states = [
           cropClass="slds-file__crop--16-by-9"
           titleClass="slds-file__title--card"
           symbol="pdf"
-          title="Proposal.pdf" />
-        <ExternalIcon />
+          title="Proposal.pdf"
+          externalSource={true}
+        />
       </div>
   },
   {

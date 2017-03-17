@@ -44,9 +44,9 @@ const results = [{
 }];
 
 let LookupSearchInput = props =>
-  <div className={classNames('slds-form-element__control', props.polymorphic ? 'slds-grid slds-box--border' : null)}>
+  <div className={classNames('slds-form-element__control slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grid slds-box--border' : null)}>
     { props.polymorphic ? <LookupEntity showEntityDropdown={ props.showEntityDropdown } /> : null }
-    <div className={classNames('slds-input-has-icon slds-input-has-icon--right', props.polymorphic ? 'slds-grow' : null)}>
+    <div className={props.polymorphic ? 'slds-grow' : null}>
       <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
       <input
         aria-activedescendant=""
@@ -64,7 +64,7 @@ let LookupSearchInput = props =>
   </div>;
 
 let LookupEntity = props =>
-  <div className={classNames('slds-dropdown--trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
+  <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-align-middle slds-m-left--xx-small slds-shrink-none', props.showEntityDropdown ? 'slds-is-open' : null)}>
     <span className="slds-icon_container slds-icon-standard-account" title="Accounts">
       <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
       <span className="slds-assistive-text">Searching in: Accounts</span>

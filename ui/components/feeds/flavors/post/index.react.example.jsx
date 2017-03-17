@@ -93,37 +93,47 @@ export let states = [
     id: 'post',
     label: 'Default',
     element:
-      <Post>
-        <PostHeader />
-        <PostContent>
-          <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-        </PostContent>
-        <PostFooter>
-          <PostFooterActions />
-          <PostFooterMeta />
-        </PostFooter>
-      </Post>
+      <div className="slds-feed">
+        <ul className="slds-feed__list">
+          <li className="slds-feed__item">
+            <Post>
+              <PostHeader />
+              <PostContent>
+                <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+              </PostContent>
+              <PostFooter>
+                <PostFooterActions />
+                <PostFooterMeta />
+              </PostFooter>
+            </Post>
+          </li>
+        </ul>
+      </div>
   },
   {
     id: 'post-with-liker-bar',
     label: 'Like',
     element:
-      <div className="demo-only">
-        <Post>
-          <PostHeader />
-          <PostContent>
-            <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter>
-            <PostFooterActions liked />
-            <PostFooterMeta liked />
-          </PostFooter>
-        </Post>
-        <Comments>
-          <div className="slds-p-horizontal--medium slds-p-vertical--x-small">
-            <a href="javascript:void(0);">You</a> liked this post
-          </div>
-        </Comments>
-      </div>
+      <div className="slds-feed">
+        <ul className="slds-feed__list">
+          <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions liked />
+              <PostFooterMeta liked />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <div className="slds-p-horizontal--medium slds-p-vertical--x-small">
+              <a href="javascript:void(0);">You</a> liked this post
+            </div>
+          </Comments>
+        </li>
+      </ul>
+    </div>
   }
 ];

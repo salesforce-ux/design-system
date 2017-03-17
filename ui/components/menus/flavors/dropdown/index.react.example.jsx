@@ -66,7 +66,7 @@ export let MenuItem = props => {
         role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
         aria-checked={ ariaChecked }
         tabIndex={ tabIndex || '-1' }>
-        <span className="slds-truncate">
+        <span className="slds-truncate" title={children}>
           { isSelectable ? <SvgIcon
                             className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
                             sprite="utility"
@@ -149,12 +149,12 @@ let SubHeader = props =>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown--left slds-dropdown--small">
         <MenuList>
-          <li className="slds-dropdown__header slds-truncate" role="separator">
+          <li className="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
             <span className="slds-text-title--caps">Menu Sub Heading</span>
           </li>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
-          <li className="slds-dropdown__header slds-truncate" role="separator">
+          <li className="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
             <span className="slds-text-title--caps">Menu Sub Heading</span>
           </li>
           <MenuItem>Menu Item One</MenuItem>

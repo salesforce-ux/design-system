@@ -41,7 +41,7 @@
    * Modifier to rotate the left arrow icon on close
    *
    * @selector .slds-is-closed
-   * @restrict .slds-split-view_container
+   * @restrict .slds-split-view_container, .slds-split-view__toggle-button
    * @modifier
    * @group toggle
    */
@@ -60,7 +60,7 @@
    * Toggles open/close state of split view container
    *
    * @selector .slds-is-open
-   * @restrict .slds-split-view_container
+   * @restrict .slds-split-view_container, .slds-split-view__toggle-button
    * @modifier
    * @group toggle
    */

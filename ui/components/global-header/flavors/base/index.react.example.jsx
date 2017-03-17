@@ -132,7 +132,7 @@ let GlobalSearchSearchOptions = props =>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-lookup__item-action--label slds-text-body--small slds-has-focus" id="option-00" role="option">
         <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="search" />
-        <span className="slds-truncate">"ibm" in Salesforce</span>
+        <span className="slds-truncate" title="'ibm' in Salesforce">"ibm" in Salesforce</span>
       </span>
     </li>
     <li role="presentation">

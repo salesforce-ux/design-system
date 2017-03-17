@@ -28,7 +28,7 @@ export default (
       </ModalHeader>
       <ModalContent>
         <h3 className="slds-section-title--divider">Section Information</h3>
-        <div className="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
           <FormElement label="Name Suffix" inputId={ inputId01 }>
             <Input id={ inputId01 } placeholder="Ms." />
           </FormElement>
@@ -54,7 +54,7 @@ export default (
           </FormElement>
         </div>
         <h3 className="slds-section-title--divider">Section Information</h3>
-        <div className="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
           <FormElement label="Text Input" inputId={ inputId05 }>
             <Input id={ inputId05 } placeholder="" />
           </FormElement>

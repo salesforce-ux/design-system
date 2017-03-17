@@ -6,6 +6,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Trigger } from 'ui/components/menus/flavors/dropdown/index.react.example';
 import { GlobalHeader } from 'ui/components/global-header/flavors/base/index.react.example';
+import { Avatar } from 'ui/components/avatar/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 //////////////////////////////////////////////
@@ -32,18 +33,19 @@ let NotificationItem = props =>
   <li className={classNames('slds-global-header__notification slds-p-around--xx-small', props.className)}>
     <div className="slds-media slds-has-flexi-truncate slds-p-around--x-small">
       <div className="slds-media__figure">
-        <img
-          alt={props.username}
-          className="slds-avatar--small slds-avatar--circle"
-          src="/assets/images/avatar3.jpg"
-          title={`${props.username} avatar`}
-        />
+        <Avatar className="slds-avatar--small slds-avatar--circle">
+          <img
+            alt={props.username}
+            src="/assets/images/avatar3.jpg"
+            title={`${props.username} avatar`}
+          />
+        </Avatar>
       </div>
       <div className="slds-media__body">
         <div className="slds-grid slds-grid--align-spread">
           <a href="javascript:void(0);" className="slds-text-link--reset slds-has-flexi-truncate">
-            <h3 className="slds-truncate"><strong>{`${props.username} ${props.messageTitle}`}</strong></h3>
-            <p className="slds-truncate">{props.message}</p>
+            <h3 className="slds-truncate" title={`${props.username} ${props.messageTitle}`}><strong>{`${props.username} ${props.messageTitle}`}</strong></h3>
+            <p className="slds-truncate" title={props.message}>{props.message}</p>
             <p className="slds-m-top--x-small slds-text-color--weak">{props.messageTime}</p>
           </a>
           <div className="slds-no-flex slds-grid slds-grid--vertical">

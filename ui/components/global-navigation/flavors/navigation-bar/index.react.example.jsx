@@ -62,12 +62,12 @@ export let ContextBar = props =>
       <ul className="slds-grid">
         <li className="slds-context-bar__item">
           <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Home">
-            <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
+            <span className="slds-truncate" title="Home">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
         <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover">
           <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Menu Item">
-            <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
+            <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
           <div className="slds-context-bar__icon-action slds-p-left--none">
             <ButtonIcon
@@ -83,7 +83,7 @@ export let ContextBar = props =>
           _.times(3, i =>
             <li className="slds-context-bar__item" key={ i }>
               <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
-                <span className="slds-truncate">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item ' + i }</span>
+                <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item ' + i }</span>
               </a>
             </li>
           ) : props.children }
@@ -122,13 +122,13 @@ export let states = [
           <li className="slds-context-bar__item slds-is-active">
             <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
               <span className="slds-assistive-text">Current Page:</span>
-              <span className="slds-truncate">Menu Item</span>
+              <span className="slds-truncate" title="Menu Item">Menu Item</span>
             </a>
           </li>
           { _.times(2, i =>
             <li className="slds-context-bar__item" key={ i }>
               <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
-                <span className="slds-truncate">Menu Item</span>
+                <span className="slds-truncate" title="Menu Item">Menu Item</span>
               </a>
             </li>
           )}

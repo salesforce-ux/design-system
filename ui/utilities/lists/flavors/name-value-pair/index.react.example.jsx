@@ -10,9 +10,9 @@ export let states = [
     element:
       <div className="slds-list--horizontal slds-wrap">
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</div>
-        <div className="slds-item--detail slds-truncate">Description for first label</div>
+        <div className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</div>
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</div>
-        <div className="slds-item--detail slds-truncate">Description for second label</div>
+        <div className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</div>
       </div>
   },
   {
@@ -21,9 +21,9 @@ export let states = [
     element:
       <div className="slds-list--inline">
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</div>
-        <div className="slds-item--detail slds-truncate">Description for first label</div>
+        <div className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</div>
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</div>
-        <div className="slds-item--detail slds-truncate">Description for second label</div>
+        <div className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</div>
       </div>
   },
   {
@@ -32,9 +32,9 @@ export let states = [
     element:
       <div className="slds-list--stacked">
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</div>
-        <div className="slds-item--detail slds-truncate">Description for first label</div>
+        <div className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</div>
         <div className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</div>
-        <div className="slds-item--detail slds-truncate">Second description</div>
+        <div className="slds-item--detail slds-truncate" title="Second description">Second description</div>
       </div>
   }
 ];

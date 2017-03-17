@@ -55,7 +55,7 @@
  *
  * @name dropdown
  * @selector .slds-dropdown-trigger
- * @restrict div
+ * @restrict div, span, li
  * @variant
  */
 .slds-dropdown-trigger {
@@ -123,7 +123,7 @@
   /**
    * If someone is using javascript for click to toggle - this modifier will help
    *
-   * @selector .slds-dropdown-trigger--click
+   * @selector .slds-dropdown-trigger--click, .slds-dropdown-trigger_click
    * @restrict .slds-dropdown-trigger
    * @modifier
    * @group trigger
@@ -169,7 +169,7 @@
  * Initializes dropdown
  *
  * @selector .slds-dropdown
- * @restrict .slds-dropdown-trigger div
+ * @restrict .slds-dropdown-trigger div, .slds-dropdown-trigger ul
  * @notes Applies positioning and container styles, by default, dropdown appears below and center of target
  */
 .slds-dropdown {
@@ -289,7 +289,7 @@
    * Forces overflow scrolling after 5 list items
    *
    * @selector .slds-dropdown--length-5
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */
@@ -302,7 +302,7 @@
    * Forces overflow scrolling after 7 list items
    *
    * @selector .slds-dropdown--length-7
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */
@@ -315,7 +315,7 @@
    * Forces overflow scrolling after 10 list items
    *
    * @selector .slds-dropdown--length-10
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */
@@ -328,7 +328,7 @@
    * Forces overflow scrolling after 5 list items with an icon
    *
    * @selector .slds-dropdown--length-with-icon-5
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */
@@ -341,7 +341,7 @@
    * Forces overflow scrolling after 7 list items with an icon
    *
    * @selector .slds-dropdown--length-with-icon-7
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */
@@ -354,7 +354,7 @@
    * Forces overflow scrolling after 10 list items with an icon
    *
    * @selector .slds-dropdown--length-with-icon-10
-   * @restrict .slds-dropdown
+   * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
    */

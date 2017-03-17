@@ -16,7 +16,7 @@ let Demo = props =>
 
 export let ButtonIcon = props =>
   <button
-    className={classNames('slds-button', props.className, props.selected ? 'slds-is-selected' : null)}
+    className={classNames('slds-button slds-button--icon', props.className, props.selected ? 'slds-is-selected' : null)}
     disabled={ props.disabled }
     role={ props.role }
     aria-describedby={ props['aria-describedby'] }
@@ -44,7 +44,7 @@ export let states = [
   {
     id: 'button-icon',
     label: 'Default',
-    element: <Demo><ButtonIcon className="slds-button--icon" /></Demo>
+    element: <Demo><ButtonIcon /></Demo>
   },
   {
     id: 'button-icon-error',
@@ -54,7 +54,7 @@ export let states = [
   {
     id: 'button-icon-disabled',
     label: 'Disabled',
-    element: <Demo><ButtonIcon className="slds-button--icon" disabled /></Demo>
+    element: <Demo><ButtonIcon disabled /></Demo>
   },
   {
     id: 'button-icon-inverse',

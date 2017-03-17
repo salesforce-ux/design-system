@@ -135,7 +135,7 @@ let CoachExample1 = props =>
       </dl>
     </div>
     <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">
-      <h2 className="slds-text-title--caps slds-p-bottom--small slds-has-divider--bottom">Guidance for Success</h2>
+      <h2 className="slds-text-title--caps slds-p-bottom--small slds-border--bottom">Guidance for Success</h2>
       <div className="slds-text-longform slds-p-top--medium">
         <p>Regularly cross-sell related products using <a href="javascript:void(0);">cross-sell tactics and principles</a>.</p>
         <p>Prepare demo deck using the <a href="javascript:void(0);">latest template</a> and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.</p>
@@ -161,7 +161,7 @@ let CoachExample2 = props =>
       </dl>
     </div>
     <div className="slds-coach__guidance slds-size--1-of-2 slds-m-left--x-large">
-      <h2 className="slds-text-title--caps slds-p-bottom--small slds-has-divider--bottom">Guidance for Success</h2>
+      <h2 className="slds-text-title--caps slds-p-bottom--small slds-border--bottom">Guidance for Success</h2>
       <div className="slds-text-longform slds-p-top--medium">
         <p>Check out the latest Negotiation and Review tactics on our <a href="javascript:void(0);">online portal here</a>.</p>
         <p>Review Quote with the Legal and Marketing team and be sure to approve with Exec.</p>

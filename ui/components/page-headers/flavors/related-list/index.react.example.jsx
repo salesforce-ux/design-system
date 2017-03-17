@@ -10,7 +10,7 @@ import Heading from 'ui/components/heading/index.react';
 
 
 export default (
-  <header className="slds-page-header">
+  <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <BreadCrumbs className="slds-m-bottom--xx-small">
@@ -72,5 +72,5 @@ export default (
         </div>
       </div>
     </div>
-  </header>
+  </div>
 );

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { UtilityIcon } from 'ui/components/icons/flavors/utility/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
@@ -47,9 +48,10 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="info" containerClassName="slds-is-relative">
-          <SvgIcon
-            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
-            sprite="utility"
+          <UtilityIcon
+            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+            className="slds-icon--small"
+            assistiveText={false}
             symbol="info"
           />
           <div className="slds-notify__content">
@@ -64,9 +66,10 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="success" containerClassName="slds-is-relative">
-          <SvgIcon
-            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
-            sprite="utility"
+          <UtilityIcon
+            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+            className="slds-icon--small"
+            assistiveText={false}
             symbol="success"
           />
           <div className="slds-notify__content">
@@ -81,9 +84,10 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="warning" containerClassName="slds-is-relative">
-          <SvgIcon
-            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
-            sprite="utility"
+          <UtilityIcon
+            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+            className="slds-icon--small"
+            assistiveText={false}
             symbol="warning"
           />
           <div className="slds-notify__content">
@@ -98,10 +102,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="error" containerClassName="slds-is-relative">
-          <SvgIcon
-            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
-            sprite="utility"
-            symbol="warning"
+          <UtilityIcon
+            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+            className="slds-icon--small"
+            assistiveText={false}
+            symbol="error"
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading--small ">Can’t save lead “Sally Wong” because another lead has the same name.</h2>
@@ -115,10 +120,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="error" containerClassName="slds-is-relative">
-          <SvgIcon
-            className="slds-icon slds-icon--small slds-m-right--small slds-no-flex slds-align-top"
-            sprite="utility"
-            symbol="warning"
+          <UtilityIcon
+            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+            className="slds-icon--small"
+            assistiveText={false}
+            symbol="error"
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>

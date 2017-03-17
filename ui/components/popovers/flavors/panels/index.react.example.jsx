@@ -108,7 +108,7 @@ export default (
         </dd>
         {/* Opportunity Two */}
         <dd className="slds-m-top--x-small">
-          <p className="slds-truncate">
+          <p className="slds-truncate" title="Tesla - Anypoint Studios">
             <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
           </p>
           <dl className="slds-list--horizontal slds-wrap slds-text-body--small">

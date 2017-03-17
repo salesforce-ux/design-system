@@ -66,7 +66,6 @@
  * @summary Allows columns to wrap when they exceed 100% of their parent’s width
  *
  * @selector .slds-wrap
- * @restrict .slds-grid
  * @modifier
  */
 .slds-wrap {
@@ -77,7 +76,6 @@
  * @summary Keeps columns on one line. Allows columns to stretch and fill 100% of the parent&rsquo;s width and height.
  *
  * @selector .slds-nowrap
- * @restrict .slds-grid
  * @modifier
  */
 .slds-nowrap {
@@ -116,7 +114,6 @@
  * @summary .slds-{size}-nowrap used for responsive design
  *
  * @selector [class*='-nowrap']
- * @restrict .slds-grid
  * @modifier
  */
 @each $size in map-keys($breakpoints) {

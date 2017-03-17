@@ -48,7 +48,7 @@ export let ListboxItem = props => {
         { props.headerText ?
           <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
         : (props.text ?
-          <span className="slds-truncate" title={ props.title }>{ props.children }</span>
+          <span className="slds-truncate" title={ props.children }>{ props.children }</span>
         : props.children
         )}
       </span>

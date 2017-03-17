@@ -20,14 +20,14 @@
     + .slds-form-element__row {
       clear: both;
     }
+
+    .slds-form-element + .slds-form-element {
+      padding-left: $spacing-x-small;
+    }
   }
 
   .slds-form-element {
     width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
-
-    + .slds-form-element {
-      padding-left: $spacing-x-small;
-    }
   }
 
   @include deprecate('4.0.0') {

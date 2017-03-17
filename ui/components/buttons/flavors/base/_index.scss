@@ -2,24 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Create a button with a `button` or `a` element to retain the
- * native click function.
- * Use a disabled attribute when a button can’t be clicked.
- *
- * @summary Buttons are used to invoke an event
- *
- * @name buttons
- * @base
- * @selector .slds-button
- * @category simple
- * @type action
- * @role button
- * @support dev-ready
- * @layout responsive
- *
- */
-
-/**
  * The base `.slds-button` looks like a plain text link. It removes all the
  * styling of the native button. It’s typically used to trigger a modal or
  * display a “like” link. All button variations are built by adding another
@@ -50,7 +32,7 @@
  *
  * @name base
  * @selector .slds-button
- * @restrict button, a
+ * @restrict button, a, span
  * @variant
  */
 
@@ -138,7 +120,7 @@ a.slds-button--inverse:focus {
  * Resets attributes of .slds-button back to the browser default
  *
  * @selector .slds-button--reset
- * @restrict .slds-button
+ * @restrict button
  * @modifier
  */
 .slds-button_reset,

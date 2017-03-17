@@ -104,7 +104,7 @@
  * Action items within the feed post footer
  *
  * @selector .slds-post__footer-action
- * @restrict .slds-post__footer-actions button
+ * @restrict .slds-post__footer-actions-list button
  */
 .slds-post__footer-action {
   display: flex;
@@ -123,6 +123,13 @@
     margin-right: $spacing-xx-small;
   }
 
+  /**
+   * Active state for like button
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-post__footer-action
+   * @modifier
+   */
   &:hover,
   &:focus,
   &.slds-is-active {
@@ -139,7 +146,7 @@
  * Footer region that contains read only items for post
  *
  * @selector .slds-post__footer-meta-list
- * @restrict div
+ * @restrict .slds-post__footer ul
  */
 .slds-post__footer-meta-list {
   margin-bottom: $spacing-medium;

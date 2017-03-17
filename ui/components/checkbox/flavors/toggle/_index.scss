@@ -14,13 +14,6 @@
 .slds-checkbox--toggle {
   width: 100%;
 
-  /**
-   * Creates a custom styled checkbox
-   *
-   * @selector .slds-checkbox--faux
-   * @restrict .slds-checkbox--toggle span
-   * @required
-   */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
     display: block;

@@ -41,7 +41,7 @@
 
 /**
  * @name base
- * @selector .slds-popover
+ * @selector .slds-popover:not('slds-popover--tooltip')
  * @restrict section
  * @variant
  */
@@ -68,7 +68,7 @@
    * Applies styles for top area of popover
    *
    * @selector .slds-popover__header
-   * @restrict .slds-popover header
+   * @restrict .slds-popover header, .slds-popover div
    * @required
    */
   &__header {

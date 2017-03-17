@@ -14,18 +14,11 @@
  *
  * @base
  * @name spinners
- * @selector .slds-spinner_container
+ * @selector .slds-spinner
  * @support dev-ready
  * @category feature
  * @type loading
  * @role alert
- */
-
-/**
- * @name base
- * @selector .slds-spinner_container
- * @restrict div
- * @variant
  */
 
 .slds-spinner_container {
@@ -59,9 +52,10 @@
 /**
  * This is the gray base class for spinner
  *
+ * @name sizes
  * @selector .slds-spinner
- * @restrict .slds-spinner_container div
- * @required
+ * @restrict div
+ * @variant
  */
 
 .slds-spinner {

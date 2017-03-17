@@ -14,8 +14,8 @@ const icon = (
 );
 
 const image = (
-  <span className="slds-icon_container">
-    <SvgIcon className="slds-icon slds-icon-standard-lead" sprite="standard" symbol="lead" />
+  <span className="slds-icon_container slds-icon-standard-lead">
+    <SvgIcon className="slds-icon" sprite="standard" symbol="lead" />
   </span>
 );
 
@@ -27,9 +27,9 @@ export default (
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">
           <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
           <h1 className="slds-page-header__title slds-p-right--x-small">
-            <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="this should match My Leads">
+            <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
               <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
-                <span className="slds-truncate">My Leads</span>
+                <span className="slds-truncate" title="this should match My Leads">My Leads</span>
                 {icon}
               </span>
             </button>

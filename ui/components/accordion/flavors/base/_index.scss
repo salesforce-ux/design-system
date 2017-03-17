@@ -2,17 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary An accordion allows a user to toggle the display of a section of content.
- *
- * @base
- * @name accordion
- * @selector .slds-accordion
- * @support dev-ready
- * @category complex
- * @type expandable-panel
- */
-
-/**
  * @summary Initializes an accordion list with more than one section that will have its display toggled by invoking an interaction on the summary title
  *
  * @name base
@@ -45,7 +34,7 @@
  * Summary title for each expandable panel inside of an accordion
  *
  * @selector .slds-accordion__summary
- * @restrict .slds-accordion__section h3
+ * @restrict .slds-accordion__section div
  * @required
  */
 .slds-accordion__summary {
@@ -118,7 +107,7 @@
  * Toggle visibility of accordion section + rotate icon
  *
  * @selector .slds-is-open
- * @restrict .slds-accordion
+ * @restrict .slds-accordion__section
  * @modifier
  */
 .slds-is-open {

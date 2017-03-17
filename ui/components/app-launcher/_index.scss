@@ -84,7 +84,7 @@
    * Tile cards that contains the app information, the icon and description
    *
    * @selector .slds-app-launcher__tile
-   * @restrict .slds-app-launcher a
+   * @restrict a
    * @required
    */
   &__tile {
@@ -126,6 +126,8 @@
    * @required
    */
   &__tile-figure {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     padding: $spacing-small;
     color: $color-text-inverse;

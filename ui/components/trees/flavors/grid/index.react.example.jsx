@@ -38,7 +38,7 @@ let Default = props =>
     <td data-label="Employees"><div className="slds-truncate" title="3,100">3,100</div></td>
     <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
     <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate">Phoenix, AZ</div></td>
+    <td data-label="Billing City"><div className="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div></td>
     <td className="slds-cell-shrink">
       <ButtonIcon
         className="slds-button--icon-border-filled slds-button--icon-x-small"
@@ -90,7 +90,7 @@ let Default = props =>
     <td data-label="Employees"><div className="slds-truncate" title="1,234">1,234</div></td>
     <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
     <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate">Paris, France</div></td>
+    <td data-label="Billing City"><div className="slds-truncate" title="Paris, France">Paris, France</div></td>
     <td className="slds-cell-shrink">
       <ButtonIcon
         className="slds-button--icon-border-filled slds-button--icon-x-small"
@@ -112,7 +112,7 @@ let DeepNesting = props =>
     <td data-label="Employees"><div className="slds-truncate" title="3,100">3,100</div></td>
     <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
     <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate">Phoenix, AZ</div></td>
+    <td data-label="Billing City"><div className="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div></td>
     <td className="slds-cell-shrink">
       <ButtonIcon
         className="slds-button--icon-border-filled slds-button--icon-x-small"

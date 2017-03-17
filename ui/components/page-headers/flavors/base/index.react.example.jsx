@@ -3,18 +3,14 @@
 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-
-const image = (
-  <SvgIcon className="slds-icon slds-icon-standard-opportunity" sprite="standard" symbol="opportunity" />
-);
+import { StandardIcon } from 'ui/components/icons/flavors/standard/index.react.example';
 
 export default (
   <div className="slds-page-header">
-    <MediaObject figureLeft={image}>
-      <p className="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">
+    <MediaObject figureLeft={<StandardIcon symbol="opportunity" assistiveText={false} />}>
+      <h1 className="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
-      </p>
+      </h1>
       <p className="slds-text-body--small slds-line-height--reset">
         Mark Jaeckal
         &bull;

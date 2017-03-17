@@ -4,6 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
+import { Avatar } from 'ui/components/avatar/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 
@@ -26,9 +27,13 @@ export let AppLauncherTile = props =>
       'slds-app-launcher__tile-figure--small': props.flavor === 'small'
     })}
   >
-    { props.symbol ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } /> :
-      <abbr className={classNames('slds-avatar slds-avatar--large slds-align--absolute-center', props.figureClass)}>{props.objectInitials}</abbr>
-      }
+    {props.symbol ?
+      <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={ props.symbol } />
+    :
+      <Avatar className="slds-avatar--large">
+        <abbr className={classNames('slds-avatar__initials', props.figureClass)} title="company name">{props.objectInitials}</abbr>
+      </Avatar>
+    }
       { props.draggable ?
         <span className="slds-icon_container" title="Drag item to a new location">
           <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="rows" />

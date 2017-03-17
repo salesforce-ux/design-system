@@ -95,7 +95,7 @@
  *
  * @name base
  * @selector .slds-icon_container
- * @restrict span
+ * @restrict span, div
  * @notes Used when an icon with a background color is accompanied by `.slds-assistive-text` and also receives a `background-color` class
  * @required
  * @variant
@@ -113,7 +113,6 @@
    * @restrict .slds-icon_container
    * @modifier
    */
-
   &_circle,
   &--circle {
     padding: $spacing-x-small;
@@ -204,7 +203,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon
- * @restrict .slds-icon_container svg
+ * @restrict .slds-icon_container svg, svg
  * @required
  */
 .slds-icon {

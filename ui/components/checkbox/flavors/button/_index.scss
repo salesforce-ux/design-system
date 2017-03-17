@@ -28,13 +28,6 @@
 .slds-checkbox_add-button,
 .slds-checkbox--add-button {
 
-  /**
-   * Creates a custom styled checkbox
-   *
-   * @selector .slds-checkbox--faux
-   * @restrict .slds-checkbox--add-button span
-   * @required
-   */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
     @include square($square-icon-medium-boundary);

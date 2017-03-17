@@ -18,7 +18,7 @@
  *
  * @name base
  * @selector .slds-checkbox--button-group
- * @restrict span
+ * @restrict div, span
  * @required
  * @variant
  */
@@ -33,7 +33,7 @@
  * Initializes checkbox inside a button group
  *
  * @selector .slds-checkbox--button
- * @restrict .slds-checkbox--button-group button
+ * @restrict .slds-checkbox--button-group span
  * @required
  */
 .slds-checkbox_button,

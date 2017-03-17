@@ -25,43 +25,43 @@ let Checkbox = props =>
 let HeadRowData = props =>
   <tr className="slds-text-title--caps">
     <th className="slds-cell-shrink" scope="col"><Checkbox label="Select All" checked={props.checked} /></th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Close Date">
         Opportunity Name
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Account Name">
         Account Name
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Close Date">
         Close Date
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Stage">
         Stage
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Confidence">
         Confidence
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Amount">
         Amount
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-is-sortable" scope="col">
+    <th scope="col">
       <div className="slds-truncate" title="Contact">
         Contact
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />

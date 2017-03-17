@@ -5,7 +5,6 @@
  * @summary Bumps grid item(s) away from the other grid items to sit at the top, taking up the remaining white-space of the grid container
  *
  * @selector .slds-col--bump-top
- * @restrict .slds-grid > *
  * @modifier
  */
 .slds-col_bump-top,
@@ -17,7 +16,6 @@
  * @summary Bumps grid item(s) away from the other grid items to sit to the right, taking up the remaining white-space of the grid container
  *
  * @selector .slds-col--bump-right
- * @restrict .slds-grid > *
  * @modifier
  */
 .slds-col_bump-right,
@@ -29,7 +27,6 @@
  * @summary Bumps grid item(s) away from the other grid items to sit at the bottom, taking up the remaining white-space of the grid container
  *
  * @selector .slds-col--bump-bottom
- * @restrict .slds-grid > *
  * @modifier
  */
 .slds-col_bump-bottom,
@@ -41,7 +38,6 @@
  * @summary Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container
  *
  * @selector .slds-col--bump-left
- * @restrict .slds-grid > *
  * @modifier
  */
 .slds-col_bump-left,

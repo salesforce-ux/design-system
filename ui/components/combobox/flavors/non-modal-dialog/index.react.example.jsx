@@ -67,6 +67,7 @@ export default (
       inputIconRightSymbol="search"
       formControlClassName="slds-m-around--small"
       listbox={ <ListboxList /> }
+      staticListbox={true}
     />
   </Popover>
 );

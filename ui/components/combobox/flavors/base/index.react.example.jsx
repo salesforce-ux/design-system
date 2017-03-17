@@ -125,11 +125,13 @@ export let ListboxOption = props =>
 }
 export let ComboboxContainer = props =>
   <div className={classNames(
-      'slds-combobox_container',
-      { 'slds-is-open': props.isOpen },
-      props.containerClassName
-    )}
-  >
+    'slds-combobox_container',
+    {
+      'slds-dropdown-trigger slds-dropdown-trigger_click': !props.staticListbox,
+      'slds-is-open': props.isOpen
+    },
+    props.containerClassName
+  )}>
     <div className={classNames(
       'slds-combobox',
       {
@@ -237,9 +239,8 @@ export let EntityOption = props =>
     )}
   >
     <span className="slds-media__figure">
-      <SvgIcon
-        className="slds-icon slds-icon-standard-account slds-icon--small"
-        sprite="standard"
+      <StandardIcon
+        className="slds-icon--small"
         symbol={ props.entityType || 'account' }
       />
     </span>
@@ -306,7 +307,7 @@ export let Option = props =>
 }
 let ObjectSwitcher = props =>
   <div className={classNames(
-    'slds-listbox--object-switcher slds-dropdown--trigger slds-dropdown-trigger--click',
+    'slds-listbox--object-switcher slds-dropdown-trigger slds-dropdown-trigger--click',
     props.className
   )}>
     <button

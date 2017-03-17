@@ -25,7 +25,7 @@ export default (
         hideLabel={true}
       >
         <SvgIcon
-          className="slds-input__icon slds-input__icon--right slds-icon-text-default"
+          className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
           sprite="utility"
           symbol="search"
         />

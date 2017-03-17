@@ -339,7 +339,7 @@
  * Creates the shaded backdrop used behind the modal.
  *
  * @selector .slds-backdrop
- * @restrict .slds-modal div
+ * @restrict .slds-modal ~ div
  * @notes This should follow after the `.slds-modal` as an empty element.
  * @required
  */

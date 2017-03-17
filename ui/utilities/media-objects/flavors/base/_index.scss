@@ -16,7 +16,6 @@
    * Defines the figure area
    *
    * @selector .slds-media__figure
-   * @restrict .slds-media div
    */
   &__figure {
     flex-shrink: 0;
@@ -27,7 +26,6 @@
    * Defines the body area
    *
    * @selector .slds-media__body
-   * @restrict .slds-media div
    */
   &__body {
     flex: 1;

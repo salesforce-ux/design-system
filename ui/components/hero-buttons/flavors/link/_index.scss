@@ -7,7 +7,7 @@
  *
  * @name link
  * @selector .slds-hero-tile
- * @restrict .slds-hero
+ * @restrict .slds-hero a
  * @variant
  */
 .slds-hero-tile {
@@ -22,7 +22,7 @@
  * Tile title and description
  *
  * @selector .slds-hero-tile__body
- * @restrict .slds-hero-tile a
+ * @restrict .slds-hero-tile div
  */
 .slds-hero-tile__body {
   flex: 1 1 auto;

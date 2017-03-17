@@ -154,7 +154,7 @@
  * Informs a table cell that it has editing capabilities
  *
  * @selector .slds-cell-edit
- * @restrict .slds-table--edit td
+ * @restrict .slds-table--edit th, .slds-table--edit td
  */
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
@@ -311,12 +311,6 @@
   }
 }
 
-/**
- * Provides hint behavior to action overflow on row hover
- *
- * @selector .slds-hint-parent
- * @restrict .slds-table--fixed-layout tr
- */
 .slds-hint-parent .slds-cell-edit {
 
   .slds-button__icon_edit,

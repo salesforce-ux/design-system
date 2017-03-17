@@ -11,9 +11,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 export default (
   <div className="demo-only" style={{ paddingTop: '5rem' }}>
     <div className="slds-form-element">
-      <div className="slds-form-element__label">
-        <label className="slds-align-middle" htmlFor="form-help">Text Label</label>
-      </div>
+      <label className="slds-form-element__label slds-align-middle" htmlFor="form-help">Text Label</label>
       <div className="slds-form-element__icon">
         <button aria-describedby="help" className="slds-button slds-button--icon">
           <SvgIcon

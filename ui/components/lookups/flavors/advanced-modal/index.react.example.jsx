@@ -18,7 +18,7 @@ export default (
         <div className="slds-form-element slds-p-top--medium slds-p-horizontal--medium slds-m-bottom--small">
           <label className="slds-form-element__label" htmlFor="lookup">Accounts</label>
           <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
-            <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
+            <SvgIcon className="slds-icon slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
             <input id="lookup" className="slds-input" type="text" aria-haspopup="true" aria-autocomplete="list" role="combobox" aria-activedescendant="" />
           </div>
         </div>

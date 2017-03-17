@@ -2,31 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * #### Accessibility
- *
- * Notifications should contain `role="alert"` on the container to signal to
- * assistive technology that they require the user’s immediate attention. Use a
- * span with `.slds-assistive-text` to let the user know what type of notification it is.
- *
- * @summary Alert banners communicates a state that affects the entire system, not just a feature or page. It persists over a session and appear without user initiating the action.
- *
- * @base
- * @name alert
- * @selector .slds-notify--alert
- * @support dev-ready
- * @category complex
- * @type messaging
- * @role alert
- */
-
-/**
  * @summary Initializes alert notification
  *
  * @name base
  * @selector .slds-notify--alert
  * @restrict div
  * @variant
- * @required
  */
 .slds-notify_alert,
 .slds-notify--alert {
@@ -45,8 +26,7 @@
    * Alert close button
    *
    * @selector .slds-notify__close
-   * @restrict .slds-notify--alert button
-   * @required
+   * @restrict .slds-notify button
    */
   .slds-notify__close {
     float: right;

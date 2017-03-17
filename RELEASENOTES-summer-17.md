@@ -52,6 +52,14 @@ The following changes have been made in this release:
   - Added state for no title
   - Added loading state
 - Changed spacing between feed items from 1.5rem to .75rem
+- The [Button Icon](/components/button-icons/) component is required to have `slds-button--icon` applied to the `<button />` element. Before, `slds-button--icon-inverse`, `slds-button--icon-container`, `slds-button--icon-border`, `slds-button--icon-border-filled`, `slds-button--icon-border-inverse`, `slds-button--icon-more`, and `slds-button--icon-error` were used in conjunction with just the `slds-button` classname but we now require `slds-button--icon` to be apart of this grouping of classnames.
+- The [Stateful Button](/components/buttons#flavor-stateful) component is required to have `slds-button--stateful` applied to the `<button />` element
+- The [Alert](/components/avatar/) component icon is now contained within `slds-icon_container`
+- The [Toast](/components/toast/) component icon is now contained within `slds-icon_container`
+- The [Page Header](/components/page-headers) component "entity" icon is now contained within `slds-icon_container`
+- The [Feeds](/components/feeds/) component "Post" examples have been updated to be contained within the `slds-feed` list
+- The [Compound Form Layout](/components/form-layout/#flavor-compound) example was updated so each `fieldset` is correctly using the `slds-form-element` class and the whole form is now contained in `slds-form--compound`
+- Unless the HTML output is represented as a list — so a `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom--[position]` instead of `slds-has-divider--[position]`
 
 **FIXED**
 
@@ -63,7 +71,12 @@ The following issues have now been resolved:
 - Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
 - Fixed a bug where the task2 icon corresponding class name was incorrectly named "task-2"
 - Fix for `::-ms-clear` to remove native clear button in IE
-- Fixed an issue where assistive text in an parent with `text-transform: uppercase` would get read as full-caps (e.g. "Sorted ascending" in data table headers getting read as "SORTED ASCENDING")
+- Whenever `slds-truncate` is used, it is required to be used in conjunction with a [title] attribute
+- Whenever `slds-dropdown` is used, it is required to be contained inside an element that has the classname `slds-dropdown-trigger`
+- Whenever `slds-form--stacked`, `slds-form--horizontal`, and `slds-form--compound` is used, it is required to be used in conjunction with `slds-form`
+- Whenever `slds-icon-text-default`, `slds-icon-text-warning`, or `slds-icon-text-error` is used, it is required to be used in conjunction with `slds-icon`
+- Scoped :focus style for data-tables to `slds-table`
+- Fixed an issue where assistive text in an parent with `text-transform: uppercase` would get read as full-caps (e.g. "Sorted ascending" in data table headers getting read as
 
 **DEPRECATED**
 

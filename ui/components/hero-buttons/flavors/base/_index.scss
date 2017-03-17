@@ -168,7 +168,7 @@
  * Centers icon in an icon-only button
  *
  * @selector .slds-hero-button__icon
- * @restrict .slds-hero-tile a, .slds-hero-button div
+ * @restrict .slds-hero-tile a, .slds-hero-button div, .slds-hero-button span
  */
 
 .slds-hero-button__icon {
@@ -186,7 +186,7 @@
  * Button size medium
  *
  * @selector .slds-hero-button_medium
- * @restrict .slds-hero-button div
+ * @restrict .slds-hero-button
  * @modifier
  */
 .slds-hero-button_medium {
@@ -224,7 +224,7 @@
  * Image or icon of a small tile
  *
  * @selector .slds-hero-button__text-check
- * @restrict .slds-hero-button
+ * @restrict .slds-hero-button span
  */
 .slds-hero-button__text-check {
   position: absolute;
@@ -238,7 +238,7 @@
  * Button/tile title, no description
  *
  * @selector .slds-hero-button__body
- * @restrict .slds-hero-button div
+ * @restrict .slds-hero-button span
  */
 .slds-hero-button__body {
   display: block;

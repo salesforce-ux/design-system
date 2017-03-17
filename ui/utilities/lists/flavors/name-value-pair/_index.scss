@@ -8,7 +8,7 @@
    * @summary Label of the name-value pair variant. Layout is modified by its parent class.
    *
    * @selector .slds-item--label
-   * @restrict li
+   * @restrict li, dt, div
    */
   .slds-item_label,
   .slds-item--label {
@@ -20,7 +20,7 @@
    * @summary Label of the name-value pair variant. Layout is modified by its parent class.
    *
    * @selector .slds-item--detail
-   * @restrict li
+   * @restrict li, dd, div
    */
   .slds-item_detail,
   .slds-item--detail {

@@ -64,7 +64,7 @@
    * Removes aesthetic nature from an input
    *
    * @selector .slds-input--bare
-   * @restrict .slds-input
+   * @restrict input, textarea
    * @modifier
    */
   &_bare,
@@ -114,7 +114,7 @@
    * Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
-   * @restrict .slds-input-has-icon svg
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
    */
   .slds-input__icon {
     @include square($square-icon-medium-content);
@@ -264,7 +264,7 @@
  * Fixed text that sits to the left or right of an input
  *
  * @selector .slds-form-element__addon
- * @restrict .slds-input-has-fixed-addon span
+ * @restrict .slds-form-element span
  */
 .slds-form-element__addon {
   display: inline-block;

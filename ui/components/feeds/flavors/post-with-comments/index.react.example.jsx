@@ -38,71 +38,83 @@ export let states = [
     id: 'post-with-comments',
     label: 'Default',
     element:
-      <div className="demo-only">
-        <Post>
-          <PostHeader />
-          <PostContent>
-            <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter>
-            <PostFooterActions />
-            <PostFooterMeta comments="2" />
-          </PostFooter>
-        </Post>
-        <Comments>
-          <CommentList comments="2" />
-          <Publisher />
-        </Comments>
-      </div>
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="2" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <CommentList comments="2" />
+            <Publisher />
+          </Comments>
+        </li>
+      </ul>
+    </div>
   },
   {
     id: 'post-with-overflow',
     label: 'Overflow Bar',
     element:
-      <div className="demo-only">
-        <Post>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter>
-            <PostFooterActions />
-            <PostFooterMeta comments="8" />
-          </PostFooter>
-        </Post>
-        <Comments>
-          <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
-            <button className="slds-button--reset slds-text-link">More comments</button>
-            <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
-          </div>
-          <CommentList />
-          <Publisher />
-        </Comments>
-      </div>
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="8" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
+              <button className="slds-button--reset slds-text-link">More comments</button>
+              <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
+            </div>
+            <CommentList />
+            <Publisher />
+          </Comments>
+        </li>
+      </ul>
+    </div>
   },
   {
     id: 'post-with-publisher-active',
     label: 'Publisher active',
     element:
-      <div className="demo-only">
-        <Post>
-          <PostHeader />
-          <PostContent>
-            <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-          </PostContent>
-          <PostFooter>
-            <PostFooterActions />
-            <PostFooterMeta comments="8" />
-          </PostFooter>
-        </Post>
-        <Comments>
-          <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
-            <button className="slds-button--reset slds-text-link">More comments</button>
-            <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
-          </div>
-          <CommentList />
-          <Publisher className="slds-is-active slds-has-focus" />
-        </Comments>
-      </div>
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="8" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
+              <button className="slds-button--reset slds-text-link">More comments</button>
+              <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
+            </div>
+            <CommentList />
+            <Publisher className="slds-is-active slds-has-focus" />
+          </Comments>
+        </li>
+      </ul>
+    </div>
   }
 ];

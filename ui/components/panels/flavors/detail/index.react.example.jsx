@@ -24,7 +24,7 @@ export let Panel = props =>
   </div>;
 
 export let PanelBody = props =>
-  <div className={classNames('slds-form--stacked slds-grow slds-scrollable--y', props.className)}>
+  <div className={classNames('slds-form slds-form--stacked slds-grow slds-scrollable--y', props.className)}>
     {props.children}
   </div>;
 
@@ -62,7 +62,7 @@ let PanelHeader = props =>
   </div>;
 
 let FormElementStatic = props =>
-  <li className={ classNames('slds-form-element slds-hint-parent slds-has-divider--bottom', props.inlineEdit ? 'slds-form-element--edit' : null) }>
+  <li className={ classNames('slds-form-element slds-hint-parent slds-border--bottom', props.inlineEdit ? 'slds-form-element--edit' : null) }>
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span className={ classNames('slds-form-element__static', props.longform ? 'slds-text-longform' : null)}>{props.text}</span>
@@ -102,7 +102,7 @@ let Default = props =>
   <Demo>
     <Panel containerClassName="panel_container--space">
       <PanelBody>
-        <PanelSection className="slds-has-divider--bottom">
+        <PanelSection className="slds-border--bottom">
           <PanelHeader />
         </PanelSection>
         <PanelSection>
@@ -131,7 +131,7 @@ let HasEditing = props =>
   <Demo>
     <Panel containerClassName="panel_container--space">
       <PanelBody>
-        <PanelSection className="slds-has-divider--bottom">
+        <PanelSection className="slds-border--bottom">
           <PanelHeader />
         </PanelSection>
         <PanelSection>
@@ -160,7 +160,7 @@ let IsEditing = props =>
   <Demo>
     <Panel containerClassName="panel_container--space" className="slds-is-editing">
       <PanelBody>
-        <PanelSection className="slds-has-divider--bottom">
+        <PanelSection className="slds-border--bottom">
           <PanelHeader />
         </PanelSection>
         <PanelSection>
@@ -227,7 +227,7 @@ let IsEditing = props =>
           </ul>
         </PanelSection>
       </PanelBody>
-      <div className="slds-panel__actions slds-has-divider--top">
+      <div className="slds-panel__actions slds-border--top">
         <div className="slds-grid slds-grid--align-center">
           <button type="button" className="slds-button slds-button--neutral">Cancel</button>
           <button type="button" className="slds-button slds-button--brand">Save</button>

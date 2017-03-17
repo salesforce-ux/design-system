@@ -116,7 +116,7 @@
    * Secondary zone
    *
    * @selector .slds-context-bar__secondary
-   * @restrict .slds-context-bar div
+   * @restrict .slds-context-bar nav, .slds-context-bar div
    */
   // Context nav items go in the secondary region
   // and secondary region needs to respect the width
@@ -131,7 +131,7 @@
    * Manually add a vertical divider between elements
    *
    * @selector .slds-context-bar__vertical-divider
-   * @restrict div
+   * @restrict .slds-context-bar div
    */
   &__vertical-divider {
     width: 0;
@@ -145,7 +145,7 @@
    * file deals with light / dark theme thresholds
    *
    * @selector .slds-context-bar__item
-   * @restrict .slds-context-bar li
+   * @restrict .slds-context-bar div, .slds-context-bar li
    */
   &__item {
     display: flex;
@@ -246,7 +246,7 @@
      * Add a left border to a context bar item
      *
      * @selector .slds-context-bar__item--divider-left
-     * @restrict .slds-context-bar__item
+     * @restrict .slds-context-bar div, .slds-context-bar li
      * @modifier
      */
     &_divider-left,
@@ -258,7 +258,7 @@
      * Add a right border to a context bar item
      *
      * @selector .slds-context-bar__item--divider-right
-     * @restrict .slds-context-bar__item
+     * @restrict .slds-context-bar div, .slds-context-bar li
      * @modifier
      */
     &_divider-right,
@@ -271,7 +271,7 @@
    * Actionable Text Links
    *
    * @selector .slds-context-bar__label-action
-   * @restrict .slds-context-bar__item
+   * @restrict .slds-context-bar__item a, .slds-context-bar__item span, .slds-context-bar__item button
    */
   &__label-action {
     display: flex;
@@ -309,7 +309,7 @@
    * Actionable Icons
    *
    * @selector .slds-context-bar__icon-action
-   * @restrict .slds-context-bar__item
+   * @restrict .slds-context-bar div
    */
   &__icon-action {
     display: flex;
@@ -434,7 +434,7 @@
  * Unsaved indicator - This can probably be used in other locations as well
  *
  * @selector .slds-indicator--unsaved
- * @restrict .slds-context-bar__item span
+ * @restrict .slds-context-bar__item span, abbr
  */
 .slds-indicator_unsaved,
 .slds-indicator--unsaved {

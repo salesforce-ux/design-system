@@ -3,14 +3,16 @@
 
 import React from 'react';
 import MediaObject from 'ui/utilities/media-objects/index.react';
+import { Avatar } from 'ui/components/avatar/flavors/base/index.react.example';
 
 const image = (
-  <img
-    alt="Person name"
-    className="slds-avatar--large"
-    src="/assets/images/avatar2.jpg"
-    title="User avatar"
-  />
+  <Avatar className="slds-avatar--large">
+    <img
+      alt="Person name"
+      src="/assets/images/avatar2.jpg"
+      title="User avatar"
+    />
+  </Avatar>
 );
 
 export default (

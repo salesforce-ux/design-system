@@ -31,7 +31,7 @@ export let states = [
     element:
       <FormElement>
         <span className="slds-form-element__label">Input Label</span>
-        <FormElementControl className="slds-has-divider--bottom">
+        <FormElementControl className="slds-border--bottom">
           <span className="slds-form-element__static">Read Only</span>
         </FormElementControl>
       </FormElement>
@@ -42,7 +42,7 @@ export let states = [
     element:
       <FormElement>
         <span className="slds-form-element__label">Input Label</span>
-        <FormElementControl className="slds-has-divider--bottom">
+        <FormElementControl className="slds-border--bottom">
           <span className="slds-form-element__addon">$</span>
           <span className="slds-form-element__static">Read Only</span>
           <span className="slds-form-element__addon">%</span>

@@ -21,7 +21,7 @@ export let states = [
           title="Contact Trammel Crow Company"
           media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
         >
-          <p className="slds-truncate">Assignee</p>
+          <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>
       </div>
   },
@@ -35,7 +35,7 @@ export let states = [
           media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
           actions
         >
-          <p className="slds-truncate">Assignee</p>
+          <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>
       </div>
   }

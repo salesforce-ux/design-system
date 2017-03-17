@@ -60,7 +60,7 @@
  *
  * @name base
  * @selector .slds-checkbox
- * @restrict span
+ * @restrict span, label
  * @required
  * @variant
  */
@@ -71,7 +71,7 @@
    * Creates a custom styled checkbox
    *
    * @selector .slds-checkbox--faux
-   * @restrict .slds-checkbox span
+   * @restrict [class*='slds-checkbox'] span, [class*='slds-checkbox'] label
    * @required
    */
   .slds-checkbox_faux,

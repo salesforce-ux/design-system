@@ -72,7 +72,7 @@ const Option = props =>
     role="option"
     tabIndex={ props.option.tabIndex }
   >
-    <span className="slds-truncate">{ props.option.text }</span>
+    <span className="slds-truncate" title={ props.option.text }>{ props.option.text }</span>
   </li>;
 
 ///////////////////////////////////////////

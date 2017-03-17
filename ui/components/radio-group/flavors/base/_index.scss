@@ -58,7 +58,7 @@
    * Creates a custom styled radio button
    *
    * @selector .slds-radio--faux
-   * @restrict .slds-radio span
+   * @restrict [class*='slds-radio'] span
    */
   .slds-radio_faux,
   .slds-radio--faux {
@@ -78,10 +78,6 @@
     font-size: $font-size-medium;
   }
 
-  /**
-   * @selector [type="radio"]
-   * @restrict .slds-radio input
-   */
   [type="radio"] {
     @include square(1px);
     border: 0;

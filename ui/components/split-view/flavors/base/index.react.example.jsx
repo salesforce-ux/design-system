@@ -92,9 +92,9 @@ let SplitView = props =>
               </div>
               <div className="slds-media__body">
                 <h1 className="slds-text-heading--small slds-text-color--default slds-p-right--x-small">
-                  <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="My Leads">
+                  <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
                     <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
-                      <span className="slds-truncate">My Leads</span>
+                      <span className="slds-truncate" title="My Leads">My Leads</span>
                       <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
                     </span>
                   </button>

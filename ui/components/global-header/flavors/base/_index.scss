@@ -195,6 +195,13 @@
       }
     }
 
+    /**
+     * Disabled state for favorites button
+     *
+     * @selector .slds-is-disabled
+     * @restrict .slds-global-header__button--icon-favorites
+     * @modifier
+     */
     &.slds-is-disabled .slds-icon,
     &.slds-is-disabled .slds-button__icon,
     &:disabled .slds-icon,

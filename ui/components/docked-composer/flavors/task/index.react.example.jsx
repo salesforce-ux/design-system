@@ -16,7 +16,7 @@ export default (
       headerSymbol="task"
       footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Save</button> }
     >
-      <fieldset className="slds-form--compound">
+      <fieldset className="slds-form slds-form--compound">
         <legend className="slds-assistive-text">Log new task</legend>
         <div className="form-element__group">
           <div className="slds-form-element__row">

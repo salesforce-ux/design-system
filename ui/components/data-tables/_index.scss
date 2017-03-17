@@ -71,7 +71,13 @@
     }
   }
 
-  // Selected Table Row + Hover
+  /**
+   * Selected Table Row + Hover
+   *
+   * @selector .slds-is-selected
+   * @restrict .slds-table tr
+   * @modifier
+   */
   tbody tr.slds-is-selected,
   &:not(.slds-no-row-hover) tr.slds-is-selected:hover {
 
@@ -136,6 +142,26 @@
       content: counter(row-number);
     }
   }
+
+  /**
+   * Focus state on a cell
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-table th, .slds-table td
+   * @modifier
+   */
+  [role="gridcell"]:focus {
+    outline: 0;
+  }
+
+  [role="gridcell"]:focus,
+  [role="gridcell"].slds-has-focus {
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+
+  [role="gridcell"]:active {
+    box-shadow: none;
+  }
 }
 
 /**
@@ -160,26 +186,6 @@
   tr > td:last-child {
     padding-right: $spacing-large;
   }
-}
-
-/**
- * Focus state on a cell
- *
- * @selector .slds-has-focus
- * @restrict .slds-table th, .slds-table td
- * @modifier
- */
-[role="gridcell"]:focus {
-  outline: 0;
-}
-
-[role="gridcell"]:focus,
-[role="gridcell"].slds-has-focus {
-  box-shadow: $color-border-selection 0 0 0 1px inset;
-}
-
-[role="gridcell"]:active {
-  box-shadow: none;
 }
 
 /**
@@ -332,7 +338,7 @@
  * Actionable area inside th
  *
  * @selector .slds-th__action
- * @restrict .slds-table--fixed-layout th a
+ * @restrict .slds-table--fixed-layout th div, .slds-table--fixed-layout th a
  */
 .slds-th__action {
   display: flex;

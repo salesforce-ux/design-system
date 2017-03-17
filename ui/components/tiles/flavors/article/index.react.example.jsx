@@ -40,14 +40,14 @@ export let states = [
           <p>Last Modified: 1/14/16</p>
           <ul className="slds-list--horizontal slds-m-top--xx-small">
             <li className="slds-m-right--small">
-              <button className="slds-button slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
                 <SvgIcon className="slds-button__icon" sprite="utility" symbol="like" />
                 <span className="slds-assistive-text">Upvote</span>
               </button>
               <span className="slds-align-middle">1320</span>
             </li>
             <li>
-              <button className="slds-button slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
                 <SvgIcon className="slds-button__icon" sprite="utility" symbol="dislike" />
                 <span className="slds-assistive-text">Downvote</span>
               </button>

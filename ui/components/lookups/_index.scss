@@ -130,7 +130,7 @@
    * Actionable element inside of a lookup item
    *
    * @selector .slds-lookup__item-action
-   * @restrict .slds-lookup a, .slds-lookup span
+   * @restrict .slds-lookup a, .slds-lookup button, .slds-lookup span
    */
   &__item-action {
     font-size: $font-size-medium;

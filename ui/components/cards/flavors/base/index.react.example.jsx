@@ -4,6 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Menu, MenuList, MenuItem } from 'ui/components/menus/flavors/dropdown/index.react.example';
+import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 const headerActionOverflow = (
@@ -45,13 +46,21 @@ export let CardHeader = props =>
         </div> : null }
       <div className="slds-media__body">
         <h2>
-          <a href="javascript:void(0);" className="slds-card__header-link slds-truncate">{ props.children }</a>
+          <a href="javascript:void(0);" className="slds-card__header-link slds-truncate" title={props.children}>{ props.children }</a>
         </h2>
       </div>
     </header>
     { props.search ? headerSearch : null }
     <div className={classNames('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
-      { props.actions == 'overflow' ? headerActionOverflow : headerAction }
+      { props.actions == 'overflow' ?
+        <ButtonIcon
+          className="slds-button--icon-border-filled slds-button--icon-x-small"
+          symbol="down"
+          title="More Options"
+          assistiveText="More Options"
+          aria-haspopup="true"
+        />
+      : headerAction }
     </div>
   </div>;
 

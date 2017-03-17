@@ -25,7 +25,7 @@ export let Demo = props =>
   </div>;
 
 export let RichTextEditor = props =>
-  <div {...props} className={classNames('slds-rich-text-editor slds-grid slds-grid--vertical slds-nowrap', props.className)}>
+  <div {...props} className={classNames('slds-rich-text-editor slds-form-element slds-grid slds-grid--vertical slds-nowrap', props.className)}>
     {props.children}
   </div>;
 
@@ -139,7 +139,7 @@ export let RteFormatText = props =>
 export let RteFormatColor = props =>
   <ButtonGroupList aria-label="Format background & text color">
     <li>
-      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
+      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
         <SvgIcon className="slds-button__icon" sprite="utility" symbol="text_background_color" />
         <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
         <span className="slds-assistive-text">Background Color</span>
@@ -147,7 +147,7 @@ export let RteFormatColor = props =>
     </li>
 
     <li>
-      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
+      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
         <SvgIcon className="slds-button__icon" sprite="utility" symbol="text_color" />
         <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
         <span className="slds-assistive-text">Text Color</span>

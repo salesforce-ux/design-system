@@ -35,7 +35,7 @@ export let SectionTitleAction = props =>
     className="slds-button slds-section__title-action"
   >
     <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
-    <span className="slds-truncate">{props.children}</span>
+    <span className="slds-truncate" title={props.children}>{props.children}</span>
   </button>;
 
 ///////////////////////////////////////////
@@ -77,7 +77,7 @@ export let states = [
     element:
       <Section className="slds-is-open">
         <SectionTitle className="slds-theme--shade">
-          <span className="slds-truncate slds-p-horizontal--small">Section Title</span>
+          <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
         </SectionTitle>
         <SectionContent isOpen={true}>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>

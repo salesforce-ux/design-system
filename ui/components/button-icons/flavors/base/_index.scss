@@ -2,24 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
-* #### Accessibility
-*
-* If an icon button doesn’t include a label, use a `title` attribute to show on hover for sighted users, and a span with `.slds-assistive-text` to describe the icon for screen readers.
- *
- * @summary Buttons are used to invoke an event
- *
- * @base
- * @name button-icons
- * @selector .slds-button--icon
- * @category simple
- * @type action
- * @role button
- * @support dev-ready
- * @layout responsive
- *
- */
-
-/**
 * @summary Creates a button that looks like a plain icon
 *
 * @name base
@@ -202,7 +184,7 @@
  * Button icon container - size small modifier
  *
  * @selector .slds-button--icon-small
- * @restrict .slds-button--icon-border, .slds-button--icon-container
+ * @restrict [class*='slds-button--icon']
  * @modifier
  */
 .slds-button_icon-small,
@@ -215,7 +197,7 @@
  * Button icon container - size x-small modifier
  *
  * @selector .slds-button--icon-x-small
- * @restrict .slds-button--icon-border, .slds-button--icon-container
+ * @restrict [class*='slds-button--icon']
  * @modifier
  */
 .slds-button_icon-x-small,
@@ -233,7 +215,7 @@
  * Button icon container - size xx-small modifier
  *
  * @selector .slds-button--icon-xx-small
- * @restrict .slds-button--icon-border, .slds-button--icon-container
+ * @restrict [class*='slds-button--icon']
  * @modifier
  */
 .slds-button_icon-xx-small,
@@ -314,7 +296,7 @@
  *
  * @name stateful
  * @selector .slds-is-selected
- * @restrict .slds-button--icon-container
+ * @restrict [class*='slds-button--icon']
  * @variant
  */
 .slds-button--icon-container.slds-is-selected,
@@ -334,12 +316,11 @@
   }
 }
 
-
 /**
  * Sizing for icon that sits inside button--icon
  *
  * @selector .slds-button__icon
- * @restrict .slds-button--icon svg
+ * @restrict .slds-button svg
  */
 .slds-button__icon { // This is the icon inside the button--icon button
   @include square($square-icon-medium-content-alt);

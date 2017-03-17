@@ -41,13 +41,13 @@
 
 /**
  * @selector .slds-tree
- * @restrict .slds-tree_container div
+ * @restrict .slds-tree_container ul, table
  * @required
  */
 .slds-tree {
   /**
    * @selector .slds-tree__item
-   * @restrict .slds-tree div
+   * @restrict .slds-tree div, .slds-tree th
    * @required
    */
   &__item {

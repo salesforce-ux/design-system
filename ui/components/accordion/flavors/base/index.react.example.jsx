@@ -35,7 +35,7 @@ let AccordionSection = props =>
           </button>
         </h3>
         <button
-          className="slds-button slds-button--icon-border-filled slds-button--icon-x-small slds-shrink-none" aria-haspopup="true"
+          className="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small slds-shrink-none" aria-haspopup="true"
         >
           <SvgIcon
             className="slds-button__icon"

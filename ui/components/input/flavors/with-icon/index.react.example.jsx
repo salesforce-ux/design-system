@@ -16,7 +16,7 @@ export let states = [
         <FormElementLabel>Input Label</FormElementLabel>
         <FormElementControl className="slds-input-has-icon slds-input-has-icon--left" >
           <SvgIcon
-            className="slds-input__icon slds-input__icon--left slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
@@ -32,7 +32,7 @@ export let states = [
         <FormElementLabel>Input Label</FormElementLabel>
         <FormElementControl className="slds-input-has-icon slds-input-has-icon--right" >
           <SvgIcon
-            className="slds-input__icon slds-input__icon--right slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
@@ -48,7 +48,7 @@ export let states = [
         <FormElementLabel>Input Label</FormElementLabel>
         <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right" >
           <SvgIcon
-            className="slds-input__icon slds-input__icon--left slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />

@@ -6,7 +6,7 @@
  *
  * @name element
  * @selector .slds-form-element
- * @restrict .slds-form div, .slds-form fieldset
+ * @restrict div, fieldset, li
  * @variant
  */
 .slds-form-element {
@@ -23,7 +23,7 @@
    * Creates label styles for our form elements
    *
    * @selector .slds-form-element__label
-   * @restrict .slds-form-element label
+   * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, [class*='slds-checkbox'] span, [class*='slds-radio'] span
    */
   &__label {
     display: inline-block;
@@ -92,7 +92,7 @@
  * Required Star
  *
  * @selector .slds-required
- * @restrict .slds-form-element__label abbr
+ * @restrict .slds-form-element abbr, abbr
  */
 .slds-required {
   color: $color-text-error;

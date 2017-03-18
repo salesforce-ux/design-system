@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/base/index.react.example';
 
-// Available props in ui/components/lookups/flavors/single/index.react.example.jsx
+// Available props in ui/components/lookups/flavors/base/index.react.example.jsx
 
 ///////////////////////////////////////////
 // Export

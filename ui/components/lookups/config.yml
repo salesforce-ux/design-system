@@ -1,4 +1,4 @@
 flavors:
-  - single
+  - base
   - polymorphic
   - advanced-modal

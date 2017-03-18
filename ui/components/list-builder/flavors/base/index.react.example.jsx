@@ -4,7 +4,7 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 import { CheckboxAddButton } from 'ui/components/checkbox/flavors/button/index.react.example';
-import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/base/index.react.example';
 import { Th } from 'ui/components/data-tables/flavors/advanced/index.react.example';
 import { PillContainer } from 'ui/components/pills/flavors/base/index.react.example';
 import { Listbox, ListboxItem } from 'ui/components/combobox/flavors/base/index.react.example';

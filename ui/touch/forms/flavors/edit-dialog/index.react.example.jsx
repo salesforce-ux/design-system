@@ -7,7 +7,7 @@ import { FormElement } from 'ui/components/form-layout/flavors/element/index.rea
 import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import { Select } from 'ui/components/select/flavors/base/index.react.example';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
-import { Lookup } from 'ui/components/lookups/flavors/single/index.react.example';
+import { Lookup } from 'ui/components/lookups/flavors/base/index.react.example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';

@@ -2,18 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary A datepicker is a non text input form element. You can select a single date or date range from a popup or inline calendar.
- *
- * @base
- * @name datepickers
- * @selector .slds-datepicker
- * @support dev-ready
- * @category complex
- * @type data-entry
- * @role grid
- */
-
-/**
  * If you desire a multi-select date range, the selected cell will need to have
  * `.slds-is-selected-multi` applied. Another scenario would be a multi range
  * selection spanning over two or more weeks. If this scenario is true, each

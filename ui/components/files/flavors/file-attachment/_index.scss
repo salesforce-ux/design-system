@@ -2,19 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * #### Accessibility
- *
- * Every `<img>` you add to your site needs to have an `alt` attribute. If the image is informational, set the `alt` equal to a descriptive alternative for that image. If the image is decorative or redundant to adjacent text, set `alt=""`, which conveys to assistive technology users that the image isn’t necessary for understanding the page. Avoid using generic strings like **photo**, **image**, or **icon** as alt values, as they don’t communicate valuable content to the user.
- *
- * @summary Files are a representation of content uploaded as an attachment.
- *
- * @base
- * @name files
- * @selector .slds-file
- * @support dev-ready
- */
-
-/**
  * A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop--16-by-9`.
  *
  *

@@ -23,16 +23,16 @@
   x-large: $mq-x-large,
 ) {
   @media(min-width: $value) {
-    // [EXAMPLE] hide--medium:
+    // [EXAMPLE] slds-hide--medium:
     // HIDES the element when window is BIGGER than medium.
     // element will be displayed normaly when window is smaller.
-    .hide--#{$key} { display: none; }
+    .slds-hide--#{$key} { display: none; }
   }
 
   @media(max-width: $value - 1px) {
-    // [EXAMPLE] show--medium:
+    // [EXAMPLE] slds-show--medium:
     // HIDES the element when window is SMALLER than medium.
     // element will be displayed normaly when window is bigger.
-    .show--#{$key} { display: none; }
+    .slds-show--#{$key} { display: none; }
   }
 }

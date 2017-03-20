@@ -83,7 +83,7 @@
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "4.0.0",
     "invariant": "2.2.2",
-    "js-beautify": "1.6.11",
+    "js-beautify": "1.6.12",
     "js-yaml": "3.8.2",
     "lodash": "4.17.4",
     "markdown-it": "8.3.1",

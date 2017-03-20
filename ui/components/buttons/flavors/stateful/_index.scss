@@ -90,7 +90,7 @@
 .slds-is-selected .slds-text-not-selected,
 .slds-is-selected:not(:hover):not(:focus) .slds-text-selected-focus,
 .slds-is-selected[disabled]:hover .slds-text-selected-focus,
-.slds-is-selected:hover .slds-text-selected,
+.slds-is-selected:hover:not(:focus) .slds-text-selected,
 .slds-is-selected:focus .slds-text-selected-focus {
   display: none;
 }

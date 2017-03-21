@@ -303,5 +303,5 @@ props:
     value: '#7E8BE4'
   TIMESHEETS_ENTRIES:
     value: '#7DC37D'
-  ASSET_RELATIONS:
+  ASSET_RELATIONSHIPS:
     value: '#FA975C'

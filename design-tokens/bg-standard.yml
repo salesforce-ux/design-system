@@ -299,3 +299,9 @@ props:
     value: '#7E8BE4'
   BUSINESS_HOURS:
     value: '#7DC37D'
+  TIMESHEETS:
+    value: '#7E8BE4'
+  TIMESHEETS_ENTRIES:
+    value: '#7DC37D'
+  ASSET_RELATIONS:
+    value: '#FA975C'

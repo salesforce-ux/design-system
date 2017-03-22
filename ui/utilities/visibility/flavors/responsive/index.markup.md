@@ -6,51 +6,34 @@
       <tr class="site-text-heading--label">
         <th scope="col"><span class="slds-assistive-text">Class Name</span></th>
         <th scope="col">Less than 320px</th>
-        <th scope="col">X-Small (320px)</th>
-        <th scope="col">Small (480px)</th>
-        <th scope="col">Medium (768px)</th>
-        <th scope="col">Large (1024px)</th>
-        <th scope="col">Greater than 1024px</th>
+        <th scope="col">X-Small (>= 320px)</th>
+        <th scope="col">Small (>= 480px)</th>
+        <th scope="col">Medium (>= 768px)</th>
+        <th scope="col">Large (>= 1024px)</th>
+        <th scope="col">X-Large (>= 1280px)</th>
       </tr>
       <tr>
-        <th><code>.slds-x-small-show</code></th>
+        <th><code>.slds-hide--x-small</code></th>
+        <td class="visible">Show</td>
         <td class="hidden">Hide</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.slds-small-show</code></th>
-        <td class="hidden">Hide</td>
+        <th><code>.slds-show--x-small</code></th>
         <td class="hidden">Hide</td>
         <td class="visible">Show</td>
         <td class="visible">Show</td>
-        <td class="visible">Show</td>
-        <td class="visible">Show</td>
-      </tr>
-      <tr>
-        <th><code>.slds-medium-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
         <td class="visible">Show</td>
         <td class="visible">Show</td>
         <td class="visible">Show</td>
       </tr>
+
       <tr>
-        <th><code>.slds-large-show</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
+        <th><code>.slds-hide--small</code></th>
         <td class="visible">Show</td>
-        <td class="visible">Show</td>
-      </tr>
-      <tr>
-        <th><code>.slds-x-small-show-only</code></th>
-        <td class="hidden">Hide</td>
         <td class="visible">Show</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
@@ -58,49 +41,70 @@
         <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.slds-small-show-only</code></th>
+        <th><code>.slds-show--small</code></th>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+      </tr>
+
+      <tr>
+        <th><code>.slds-hide--medium</code></th>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
         <td class="visible">Show</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.slds-medium-show-only</code></th>
+        <th><code>.slds-show--medium</code></th>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+      </tr>
+
+      <tr>
+        <th><code>.slds-hide--large</code></th>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
         <td class="visible">Show</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.slds-max-x-small-hide</code></th>
+        <th><code>.slds-show--large</code></th>
         <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+      </tr>
+
+      <tr>
+        <th><code>.slds-hide--x-large</code></th>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="visible">Show</td>
+        <td class="hidden">Hide</td>
       </tr>
       <tr>
-        <th><code>.slds-max-small-hide</code></th>
-        <td class="hidden">Hide</td>
-        <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-      </tr>
-      <tr>
-        <th><code>.slds-max-medium-hide</code></th>
+        <th><code>.slds-show--x-large</code></th>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
         <td class="hidden">Hide</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
-        <td class="visible">Initial</td>
+        <td class="hidden">Hide</td>
+        <td class="hidden">Hide</td>
+        <td class="visible">Show</td>
       </tr>
     </table>
   </div>

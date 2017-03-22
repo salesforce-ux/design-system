@@ -396,3 +396,7 @@ props:
     value: '#ef6e64'
   ACTION_VIEW_RELATIONSHIP:
     value: '#3c97dd'
+  ACTION_ADD_FILE:
+    value: '#7e8be4'
+  ACTION_ADD_PHOTO_VIDEO:
+    value: '#00cdc0'

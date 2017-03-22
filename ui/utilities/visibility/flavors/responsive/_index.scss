@@ -28,7 +28,7 @@
     // element will be displayed normaly when window is smaller.
     .slds-hide--#{$key} {
       // !important is required to increase specificity
-      display: none!important;
+      display: none !important;
     }
   }
 
@@ -38,7 +38,7 @@
     // element will be displayed normaly when window is bigger.
     .slds-show--#{$key} {
       // !important is required to increase specificity
-      display: none!important;
+      display: none !important;
     }
   }
 }

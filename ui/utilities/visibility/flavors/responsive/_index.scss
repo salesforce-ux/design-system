@@ -16,18 +16,19 @@
 
 // Generates responsive visibility tags
 @each $key, $value in (
-  x-small: $mq-x-small,
-  small: $mq-small,
-  medium: $mq-medium,
-  large: $mq-large,
-  x-large: $mq-x-large,
+  'x-small': $mq-x-small,
+  'small': $mq-small,
+  'medium': $mq-medium,
+  'large': $mq-large,
+  'x-large': $mq-x-large,
 ) {
   @media(min-width: $value) {
     // [EXAMPLE] slds-hide--medium:
     // HIDES the element when window is BIGGER than medium.
     // element will be displayed normaly when window is smaller.
     .slds-hide--#{$key} {
-      display: none;
+      // !important is required to increase specificity
+      display: none!important;
     }
   }
 
@@ -36,7 +37,8 @@
     // HIDES the element when window is SMALLER than medium.
     // element will be displayed normaly when window is bigger.
     .slds-show--#{$key} {
-      display: none;
+      // !important is required to increase specificity
+      display: none!important;
     }
   }
 }

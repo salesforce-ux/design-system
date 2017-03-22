@@ -24,7 +24,6 @@ components:
   - form-layout
   - global-header
   - global-navigation
-  - hero-buttons
   - icons
   - input
   - list-builder
@@ -56,4 +55,5 @@ components:
   - tooltips
   - trees
   - vertical-navigation
+  - visual-picker
   - walkthrough

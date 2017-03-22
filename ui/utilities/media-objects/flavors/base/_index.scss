@@ -20,6 +20,10 @@
   &__figure {
     flex-shrink: 0;
     margin-right: $spacing-small;
+
+    &_fixed-width {
+      min-width: $square-icon-large-boundary; // accommodate largest icon size
+    }
   }
 
   /**

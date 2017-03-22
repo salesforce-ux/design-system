@@ -52,3 +52,29 @@
     @include box($padding: 0, $borders: around);
   }
 }
+
+/**
+ * @summary Handles interactions if the box is applied to an actionable element
+ *
+ * @selector .slds-box_link
+ * @restrict .slds-box
+ * @modifier
+ */
+.slds-box_link {
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: 0;
+    border: $border-width-thin solid $color-border-selection-hover;
+    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+  }
+}

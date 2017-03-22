@@ -1,0 +1,5 @@
+status: 'dev-ready'
+flavors:
+  - coverable-content
+  - non-coverable-content
+  - link

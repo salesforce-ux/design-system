@@ -1,5 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - checkbox
-  - link
-  - radio-button

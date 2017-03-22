@@ -305,3 +305,5 @@ props:
     value: '#7DC37D'
   ASSET_RELATIONSHIPS:
     value: '#FA975C'
+  CMS:
+    value: '#88C651'

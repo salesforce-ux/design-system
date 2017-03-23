@@ -19,10 +19,21 @@
   .slds-popover__header {
     background: $color-background-alt-inverse;
     border-color: inherit;
+    padding: $spacing-small $spacing-medium;
+  }
+
+  .slds-popover__body,
+  .slds-popover__footer {
+    padding: $spacing-medium;
   }
 
   .slds-popover__footer {
     border: 0;
+  }
+
+  .slds-popover__close {
+    margin-top: $spacing-x-small;
+    margin-right: $spacing-x-small;
   }
 }
 

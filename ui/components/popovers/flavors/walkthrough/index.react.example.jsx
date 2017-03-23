@@ -7,12 +7,15 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import { Popover } from 'ui/components/popovers/flavors/base/index.react.example';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
-// Partial(s)
-//////////////////////////////////////////////
+const headingUniqueId = 'dialog-heading-id-01';
+
+let Header = props =>
+  <header className="slds-popover__header slds-p-vertical--medium">
+    <h2 id={headingUniqueId} className="slds-text-heading--medium">{ props.title }</h2>
+  </header>;
 
 let Footer = props =>
-  <div className="slds-grid slds-grid--vertical-align-center slds-p-vertical--x-small">
+  <div className="slds-grid slds-grid--vertical-align-center">
     <span className="slds-text-title">Step 2 of 4</span>
     { props.skipButton ?
       <button className="slds-button slds-button--brand slds-col--bump-left">Skip</button>
@@ -36,11 +39,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-nubbin--left"
-        headerClassName="slds-p-vertical--small"
-        headerTitle="Manage your channels"
-        footer={ <Footer nextButton /> }
-        closeButton
-        inverse>
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer nextButton={true} />}
+        closeButton={true}
+        inverse={true}
+      >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
@@ -50,11 +54,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-nubbin--left"
-        headerClassName="slds-p-vertical--small"
-        headerTitle="Manage your channels"
-        footer={ <Footer setupButton nextButton /> }
-        closeButton
-        inverse>
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer setupButton={true} nextButton={true} />}
+        closeButton={true}
+        inverse={true}
+      >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
@@ -64,11 +69,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-nubbin--left"
-        headerClassName="slds-p-vertical--small"
-        headerTitle="Manage your channels"
-        footer={ <Footer skipButton setupButton /> }
-        closeButton
-        inverse>
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer skipButton={true} setupButton={true} />}
+        closeButton={true}
+        inverse={true}
+      >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
@@ -78,11 +84,12 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-nubbin--left"
-        headerClassName="slds-p-vertical--small"
-        headerTitle="Manage your channels"
-        footer={ <Footer skipButton /> }
-        closeButton
-        inverse>
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer skipButton={true} />}
+        closeButton={true}
+        inverse={true}
+      >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
   },
@@ -92,9 +99,9 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-nubbin--left"
-        headerClassName="slds-p-vertical--small"
-        headerTitle="Manage your channels"
-        footer={ <Footer skipButton nextButton /> }
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer skipButton={true} nextButton={true} />}
         closeButton={true}
         inverse={true}
       >
@@ -117,7 +124,7 @@ export let states = [
         closeButton={true}
         inverse={true}
       >
-        <div className="slds-p-vertical--small slds-media slds-media--center">
+        <div className="slds-media slds-media--center">
           <div className="slds-media__figure">
             <span className="slds-icon_container" title="description of icon when needed">
               <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="touch_action" />
@@ -141,7 +148,7 @@ export let states = [
         closeButton={true}
         inverse={true}
       >
-        <div className="slds-p-vertical--small slds-media">
+        <div className="slds-media">
           <div className="slds-media__figure">
             <span className="slds-icon_container" title="description of icon when needed">
               <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="touch_action" />

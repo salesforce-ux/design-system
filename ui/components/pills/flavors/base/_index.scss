@@ -126,6 +126,7 @@
     .slds-icon,
     .slds-avatar {
       @include square($square-icon-x-small-boundary);
+      display: block;
       font-size: $font-size-heading-xx-small;
     }
 
@@ -165,13 +166,18 @@
   padding: 0;
 
   .slds-pill__icon_container {
+    display: inline-block;
     position: absolute;
+    top: 50%;
     left: $spacing-xxx-small;
+    transform: translateY(-50%);
   }
 
   .slds-pill__remove {
     position: absolute;
+    top: 50%;
     right: $spacing-xxx-small;
+    transform: translateY(-50%);
   }
 }
 

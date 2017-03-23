@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system-markup": "0.0.4",
     "@salesforce-ux/design-system-parser": "0.0.9",
     "@salesforce-ux/design-system-previewer": "1.0.0",
-    "@salesforce-ux/icons": "7.14.0",
+    "@salesforce-ux/icons": "7.15.0",
     "app-module-path": "2.2.0",
     "async": "2.1.5",
     "autoprefixer": "6.7.7",

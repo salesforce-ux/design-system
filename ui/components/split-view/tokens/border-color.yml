@@ -1,0 +1,12 @@
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  SPLIT_VIEW_COLOR_BORDER:
+    value: '{!MISCHKA}'
+    comment: Row dividers in Split View list

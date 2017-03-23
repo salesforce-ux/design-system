@@ -1,0 +1,24 @@
+// Lightning Design System 2.3.0-beta.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-table_tree,
+.slds-table--tree {
+
+  .slds-tree__item {
+    line-height: ($line-height-text * 1rem);
+
+    a {
+      color: $color-text-link;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.slds-table_tree__toggle,
+.slds-table--tree__toggle {
+  margin-left: ($spacing-xx-small * -1);
+}

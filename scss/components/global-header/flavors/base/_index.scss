@@ -1,0 +1,219 @@
+// Lightning Design System 2.3.0-beta.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary The global header is the anchor for the Salesforce platform and spans all other parts of the UI. The functionality in the header is applicable across all contexts in the Salesforce ecosystem (internal or 3rd party).
+ *
+ * @base
+ * @name global-header
+ * @selector .slds-global-header_container
+ * @category feature
+ * @type layout
+ * @support dev-ready
+ */
+
+/**
+ * Container that fixes the global header to the top of the viewport,
+ * contains global header element
+ *
+ * @name base
+ * @selector .slds-global-header_container
+ * @restrict header
+ * @variant
+ */
+.slds-global-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sticky;
+
+  // Position for when assistive text becomes into focus
+  .slds-assistive-text_focus,
+  .slds-assistive-text--focus {
+    background: $color-background-alt;
+    top: 0;
+  }
+}
+
+/**
+ * @selector .slds-global-header
+ * @restrict .slds-global-header_container div
+ */
+.slds-global-header {
+  background: $color-background-alt;
+  box-shadow: $shadow-header;
+  padding: $spacing-x-small 0;
+  height: $height-header;
+  align-items: center;
+
+  /**
+   * A region within the global header
+   *
+   * @selector .slds-global-header__item
+   * @restrict .slds-global-header div, .slds-global-header ul
+   */
+  &__item {
+    padding: 0 $spacing-medium;
+  }
+
+  /**
+   * Region that contains the search input, handles sizing
+   *
+   * @selector .slds-global-header__item--search
+   * @restrict .slds-global-header__item:nth-child(2)
+   * @modifier
+   * @required
+   */
+  &__item_search,
+  &__item--search {
+    flex: 0 1 rem(440px);
+    padding: 0;
+  }
+
+  /**
+   * Container of the global header logo
+   *
+   * @selector .slds-global-header__logo
+   * @restrict .slds-global-header__item div
+   * @required
+   */
+  &__logo {
+    flex-shrink: 0;
+    width: rem(45px);
+  }
+
+  /**
+   * Button icons on the global header
+   *
+   * @selector .slds-global-header__button--icon
+   * @restrict .slds-global-header__item button
+   * @required
+   */
+  &__button_icon,
+  &__button--icon {
+    margin: 0 $spacing-xx-small;
+    color: $fill-header-button;
+
+    .slds-icon {
+      fill: $fill-header-button; // backwards compatible for old implementations
+    }
+
+    &:hover:not(:disabled),
+    &:focus {
+      color: $fill-header-button-hover;
+    }
+
+    &:hover:not(:disabled) .slds-icon,
+    &:focus .slds-icon {
+      fill: $fill-header-button-hover; // backwards compatible for old implementations
+    }
+  }
+
+  /**
+   * Button icon specifically for global actions
+   *
+   * @selector .slds-global-header__button--icon-actions
+   * @restrict .slds-global-header__item button
+   * @required
+   */
+  &__button_icon-actions,
+  &__button--icon-actions {
+    background: $fill-header-button;
+    border-radius: $border-radius-medium;
+    color: $color-text-icon-inverse;
+
+    &:hover,
+    &:focus {
+      background-color: $fill-header-button-hover;
+      color: $color-text-icon-inverse;
+    }
+  }
+
+  /**
+   * Button icon specifically for global actions
+   *
+   * @selector .slds-global-header__button--icon-favorites
+   * @restrict .slds-global-header__item button
+   * @required
+   */
+  &__button_icon-favorites,
+  &__button--icon-favorites {
+    color: $color-text-icon-inverse;
+
+    .slds-icon,
+    .slds-button__icon {
+      color: $color-text-icon-inverse;
+      stroke: $color-stroke-header-button;
+      stroke-width: $border-stroke-width-thick;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    &:hover .slds-icon,
+    &:hover .slds-button__icon,
+    &:focus .slds-icon,
+    &:focus .slds-button__icon {
+      color: $color-text-icon-inverse;
+      stroke: $color-stroke-brand-hover;
+    }
+
+    &:active .slds-icon,
+    &:active .slds-button__icon {
+      stroke: $color-stroke-brand-active;
+    }
+
+    /**
+     * Selected state for favorites button
+     *
+     * @selector .slds-is-selected
+     * @restrict .slds-global-header__button--icon-favorites
+     * @modifier
+     * @group stateful
+     */
+    &.slds-is-selected {
+
+      .slds-icon,
+      .slds-button__icon {
+        color: $fill-brand;
+        stroke: $color-stroke-brand;
+        stroke-width: $border-stroke-width-thin;
+      }
+
+      &:hover .slds-icon,
+      &:hover .slds-button__icon,
+      &:focus .slds-icon,
+      &:focus .slds-button__icon {
+        color: $fill-brand-hover;
+        stroke: $color-stroke-brand-hover;
+      }
+
+      &:active .slds-icon,
+      &:active .slds-button__icon {
+        color: $fill-brand-active;
+        stroke: $color-stroke-brand-active;
+      }
+    }
+
+    &.slds-is-disabled .slds-icon,
+    &.slds-is-disabled .slds-button__icon,
+    &:disabled .slds-icon,
+    &:disabled .slds-button__icon {
+      stroke: $color-stroke-disabled;
+    }
+  }
+
+  /**
+   * Deal with sizing for global header icons
+   *
+   * @selector .global-header__icon
+   * @restrict .slds-global-header__item svg
+   * @required
+   */
+  &__icon,
+  &__icon .slds-icon,
+  &__icon .slds-button__icon {
+    @include square($square-icon-global-identity-icon);
+  }
+}

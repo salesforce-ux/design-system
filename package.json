@@ -1,0 +1,32 @@
+{
+  "name": "@salesforce-ux/design-system",
+  "description": "Salesforce Lightning Design System",
+  "version": "2.3.0-beta.1",
+  "author": "Salesforce",
+  "slds": {
+    "name": "Summer ’17",
+    "id": "208"
+  },
+  "private": true,
+  "config": {
+    "slds": {
+      "internal": true
+    },
+    "search": {
+      "appId": "B2KKG101RI",
+      "apiKey": "f289c1dd954797a3e57158c04a897d46",
+      "indexName": "summer-17"
+    }
+  },
+  "license": "SEE LICENSE IN README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:salesforce-ux/design-system.git"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "theo",
+      "webpack"
+    ]
+  }
+}

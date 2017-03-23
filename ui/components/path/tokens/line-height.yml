@@ -1,0 +1,10 @@
+global:
+  category: line-height
+  type: number
+  cssProperties:
+  - font
+  - '*height'
+props:
+  LINE_HEIGHT_SALESPATH:
+    value: 1.5rem
+    comment: Line heights for salespath

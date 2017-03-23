@@ -1,0 +1,189 @@
+// Lightning Design System 2.3.0-beta.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import
+
+  // Activity Timeline
+  'activity-timeline/index',
+
+  // Badges
+  'badges/flavors/base/index',
+
+  // Breadcrumbs
+  'breadcrumbs/flavors/base/index',
+
+  // Button Groups
+  'button-groups/index',
+
+  // Button
+  'buttons/flavors/base/index',
+  'buttons/flavors/stateful/index',
+
+  // Button Icon
+  'button-icons/flavors/base/index',
+
+  // Icons
+  'icons/index',
+
+  // Accordion
+  'accordion/flavors/base/index',
+
+  // Dynamic icons
+  'dynamic-icons/flavors/ellie/index',
+  'dynamic-icons/flavors/eq/index',
+  'dynamic-icons/flavors/score/index',
+  'dynamic-icons/flavors/strength/index',
+  'dynamic-icons/flavors/trend/index',
+  'dynamic-icons/flavors/waffle/index',
+
+  // Card
+  'cards/index',
+
+  // Forms
+  'form-layout/flavors/element/index',
+  'input/flavors/base/index',
+  'input/flavors/read-only/index',
+  'textarea/flavors/base/index',
+  'radio-group/flavors/base/index',
+  'radio-button-group/flavors/base/index',
+  'checkbox/flavors/base/index',
+  'checkbox/flavors/toggle/index',
+  'checkbox/flavors/button/index',
+  'checkbox-button-group/flavors/base/index',
+  'select/flavors/base/index',
+  'multi-select/flavors/base/index',
+  'form-layout/flavors/base/index',
+  'form-layout/flavors/compound/index',
+  'docked-form-footer/flavors/base/index',
+
+  // File selector
+  'file-selector/index',
+
+  // Page Headers
+  'page-headers/index',
+  'page-headers/flavors/record-home/index',
+  'page-headers/flavors/record-home-vertical/index',
+  'page-headers/flavors/object-home/index',
+
+  // Panels
+  'panels/index',
+  'panels/flavors/filtering/index',
+
+  // Popovers
+  'popovers/index',
+  'popovers/flavors/panels/index',
+  'popovers/flavors/nubbins/index',
+  'popovers/flavors/walkthrough/index',
+
+  // Tooltips
+  'tooltips/index',
+
+  // Menus
+  'menus/index',
+  'menus/flavors/action-overflow/index',
+
+  // Picklist
+  'picklist/index',
+
+  // Combobox
+  'combobox/doc',
+  'combobox/flavors/base/index',
+
+  // Datepicker
+  'datepickers/index',
+  'datepickers/flavors/time/index',
+
+  // Docked Composer
+  'docked-composer/index',
+  'docked-composer/flavors/email/index',
+
+  // Docked Utility Bar
+  'docked-utility-bar/flavors/utility-bar/index',
+  'docked-utility-bar/flavors/utility-panel/index',
+
+  // Global Header
+  'global-header/flavors/base/index',
+  'global-header/flavors/notifications/index',
+
+  // Global Navigation
+  'global-navigation/index',
+
+  // Publishers
+  'publishers/flavors/base/index',
+  'publishers/flavors/comment/index',
+
+  // Discussion Feed
+  'feeds/flavors/feed-list/index',
+  'feeds/flavors/comment/index',
+  'feeds/flavors/post/index',
+  'feeds/flavors/post-with-attachments/index',
+
+  // Modal
+  'modals/index',
+
+  // App Launcher
+  'app-launcher/index',
+
+  // Hero Buttons
+  'hero-buttons/flavors/base/index',
+  'hero-buttons/flavors/link/index',
+
+  // Pills
+  'pills/flavors/base/index',
+
+  // Process
+  'process/flavors/wizard/index',
+  'path/flavors/base/index',
+
+  // Progress Indicator
+  'progress-bar/flavors/base/index',
+  'progress-indicator/index',
+
+  // Rich Text Editor
+  'rich-text-editor/index',
+
+  // Spinners
+  'spinners/index',
+  'spinners/flavors/sizes/index',
+  'spinners/flavors/colors/index',
+
+  // Split view list
+  'split-view/index',
+
+  // Title
+  'tiles/index',
+  'tiles/flavors/board/index',
+
+  // Tabs
+  'tabs/flavors/base/index',
+  'scoped-tabs/flavors/base/index',
+  'tabs/flavors/scrolling/index',
+
+  // Navigation
+  'vertical-navigation/flavors/base/index',
+  'vertical-navigation/flavors/expandable-section/index',
+
+  // Notifications -- Toasts & Alerts
+  'alert/flavors/base/index',
+  'prompt/flavors/base/index',
+  'toast/flavors/base/index',
+  'notifications/flavors/modal-toast/index',
+  'walkthrough/flavors/header/index',
+
+  // Lookup
+  'lookups/index',
+
+  // Images
+  'avatar/flavors/base/index',
+  'files/flavors/file-attachment/index',
+
+  // Tables
+  'data-tables/index',
+  'data-tables/flavors/responsive/index',
+  'data-tables/flavors/inline-edit/index',
+  'data-tables/flavors/fixed-header/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

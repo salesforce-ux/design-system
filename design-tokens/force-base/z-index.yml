@@ -31,6 +31,9 @@ props:
   Z_INDEX_DEFAULT:
     value: '1'
     comment: Default
+  Z_INDEX_DOCKED:
+    value: '4'
+    comment: Docked element
   Z_INDEX_DEEPDIVE:
     value: '-99999'
     comment: Deep dive

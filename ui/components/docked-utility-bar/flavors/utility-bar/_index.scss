@@ -31,7 +31,7 @@
   height: $height-docked-bar;
   background: $color-background;
   box-shadow: $shadow-docked;
-  z-index: $z-index-overlay; // Better token - more specific to docked stuff
+  z-index: $z-index-docked;
 
   /**
    * Notification indicator

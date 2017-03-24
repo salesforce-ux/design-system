@@ -108,7 +108,7 @@
     "strip-indent": "2.0.0",
     "stylelint": "7.9.0",
     "stylelint-config-slds": "^1.0.5",
-    "stylestats": "7.0.0",
+    "stylestats": "7.0.1",
     "temp": "0.8.3",
     "theo": "5.0.0",
     "through2": "2.0.3",

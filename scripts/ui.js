@@ -3,19 +3,23 @@
 
 const createParser = require('@salesforce-ux/design-system-parser');
 const Task = require('data.task');
-const {List, Map} = require('immutable');
+const Immutable = require('immutable');
 const {getMarkup, getComments} = require('./markup-style');
 require('./helpers/setup');
 
 const createUI = parser =>
-  Map({components: parser.component,  utilities: parser.utility})
+  Immutable.Map({components: parser.component,  utilities: parser.utility})
   .map((fn, group) =>
     parser[group]()
     .reduce((ac, c) =>
-      ac.set(c.get('id'), fn(c.get('id')).get()), Map()));
+      ac.set(c.get('id'), fn(c.get('id')).get()), Immutable.Map()));
 
-const requireMarkup = name => x =>
-  x.set('markup', getMarkup(name, x.get('id')).getOrElse(List()));
+const requireMarkup = componentId => variant => {
+  const markup = getMarkup(componentId, variant.get('id'));
+  return variant
+    .set('markup', markup.get('sections'))
+    .set('markupContext', markup.get('context'));
+};
 
 const requireIfVariant = name => x =>
   x.getIn(['annotations', 'variant'])

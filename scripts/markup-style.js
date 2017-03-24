@@ -3,7 +3,7 @@
 
 const Either = require('data.either');
 const Task = require('data.task');
-const {List, Map} = require('immutable-ext');
+const Immutable = require('immutable-ext');
 const beautify = require('js-beautify');
 const glob = require('glob');
 const fs = require('fs');
@@ -13,7 +13,7 @@ const ReactDOM = require('react-dom/server');
 
 const designSystemPath = path.resolve.bind(path, __dirname, '../ui');
 
-const VALID_EXPORTS = new Set(['preview', 'default', 'states', 'examples']);
+const VALID_MARKUP_EXPORTS = new Set(['preview', 'default', 'states', 'examples']);
 
 const getMarkup = (() => {
   const prettyHTML = html => beautify.html(html, {
@@ -33,15 +33,15 @@ const getMarkup = (() => {
 
   const toMarkupItem = (id, element) =>
     Array.isArray(element) // states vs default
-      ? List(element).map(Map)
-      : List.of(Map({ id, element }));
+      ? Immutable.List(element).map(Immutable.Map)
+      : Immutable.List.of(Immutable.Map({ id, element }));
 
   const exportsToMarkups = exports =>
-    Object
-    .keys(exports)
-    .filter(title => VALID_EXPORTS.has(title))
+    Immutable.List(Object.keys(exports))
+    .filter(title =>
+      VALID_MARKUP_EXPORTS.has(title))
     .map(title =>
-      Map({ title, items: toMarkupItem(title, exports[title]) }));
+      Immutable.Map({ title, items: toMarkupItem(title, exports[title]) }));
 
   // gets the first state right now...
   const requireVariant = (component, variant) =>
@@ -51,9 +51,7 @@ const getMarkup = (() => {
     )
     .orElse(() =>
       tryRequire(`${utils(component, 'flavors', variant, 'index.react.example.jsx')}`)
-    )
-    .map(exportsToMarkups)
-    .map(x => List(x));
+    );
   const renderMarkup = c =>
     Either
       .of(c)
@@ -61,21 +59,65 @@ const getMarkup = (() => {
         React.isValidElement(c) ? Either.Right(c) : Either.Left('Invalid Component'))
       .chain(Either.try(ReactDOM.renderToStaticMarkup))
       .chain(Either.try(prettyHTML));
-  const render = (component, variant) =>
-    requireVariant(component, variant)
-    .map(sections =>
-      sections.map(section =>
-        section.update('items', items =>
-          items.map(item =>
-            item
-              .set('markup', renderMarkup(item.get('element'))
-                .fold(e => `<div>Error: ${e}</div>`, x => x)
+  const render = (component, variant) => {
+    const variantModule = requireVariant(component, variant);
+    // If the variant module exports a "Context" React Component, convert it to markup
+    // This can be used by consumers of the example markup (such as the site)
+    // to wrap the example markup in some presentation context that is not actually
+    // part of the component
+    const context = variantModule
+      .chain(m => {
+        if (m.hasOwnProperty('Context')) {
+          // Create a unique identifier to render in place of {props.children}
+          const children = 'children'
+            .split('')
+            .map(s => s.charCodeAt(0))
+            .map(i => i.toString(16))
+            .join('');
+          // Render the markup and then split it on the identifier created above
+          const markup = Immutable.List(
+              ReactDOM.renderToStaticMarkup(
+                React.createElement(m.Context, null, children)
               )
-              .delete('element')
+              .split(children)
+          );
+          // If successful, we should have a list with two items:
+          //   [0] string of markup that should be prepended to the actual component markup
+          //   [1] string of markup that should be appended to the actual component markup
+          // If there were not two items, that probably means that <Context />
+          // did not use {props.children} anywhere in the render() function
+          return markup.count() === 2
+            ? Either.Right(markup)
+            : Either.Left();
+        }
+        return Either.Left();
+      })
+      .getOrElse(Immutable.List());
+    return variantModule
+      .map(exportsToMarkups)
+      .map(sections =>
+        sections.map(section =>
+          section.update('items', items =>
+            items.map(item =>
+              item
+                .set('markup', renderMarkup(item.get('element'))
+                  .fold(e => `<div>Error: ${e}</div>`, x => x)
+                )
+                .delete('element')
+            )
           )
         )
       )
-    );
+      .fold(
+        () => Immutable.Map({
+          sections: Immutable.List()
+        }),
+        sections => Immutable.Map({
+          sections,
+          context
+        })
+      );
+  };
   return render;
 })();
 

@@ -77,7 +77,6 @@
       border-radius: $border-radius-medium;
       background-clip: padding-box;
       background-color: #fff;
-      left: 30%;
       top: 92%;
       z-index: $z-index-dropdown;
       -webkit-transform: translate(-50%, 0%);
@@ -86,6 +85,32 @@
       -o-transform: translate(-50%, 0%);
       transform: translate(-50%, 0%);
       @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+
+      > li > a {
+        max-width: 100%;
+        white-space: nowrap;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0 4px;
+        border-bottom: 2px solid transparent;
+        padding: 0 16px;
+        height: 40px;
+        overflow: visible;
+        font-size: 12px;
+        line-height: 40px;
+        color: #16325c;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: $color-background-row-hover;
+        }
+      }
+    }
+
+     .overflow-menu-centered {
+       left: 30%;
 
       :after, :before {
         bottom: 100%;
@@ -109,27 +134,32 @@
         border-width: 7px;
         margin-left: -7px;
       }
+    }
 
-      > li > a {
-        max-width: 100%;
-        white-space: nowrap;
-        display: block;
-        text-decoration: none;
-        cursor: pointer;
-        margin: 0 4px;
-        border-bottom: 2px solid transparent;
-        padding: 0 16px;
-        height: 40px;
-        overflow: visible;
-        font-size: 12px;
-        line-height: 40px;
-        color: #16325c;
+     .overflow-menu-left-aligned {
+      left: 870%;
 
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          background-color: $color-background-row-hover;
-        }
+      :after, :before {
+        bottom: 100%;
+        left: 3%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      :after {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #ffffff;
+        border-width: 6px;
+        margin-left: -6px;
+      }
+      :before {
+        border-color: rgba(201, 201, 201, 0);
+        border-bottom-color: #c9c9c9;
+        border-width: 7px;
+        margin-left: -7px;
       }
     }
 

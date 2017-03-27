@@ -21,8 +21,7 @@ const getComments_ = done =>
   getComments().fork(done, x => done(null, x));
 
 const getMarkup_ = (component, variant, done) =>
-  getMarkup(component, variant)
-    .fold(done, x => done(null, x));
+  done(null, getMarkup(component, variant));
 
 const previewer = createPreviewer({
   // where are your static assets

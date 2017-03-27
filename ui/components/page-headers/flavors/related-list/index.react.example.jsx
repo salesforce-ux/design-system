@@ -21,7 +21,7 @@ export default (
         </h1>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
-        <div className="slds-button-group">
+        <div className="slds-button-group" role="group">
           <button className="slds-button slds-button--neutral">
             Add Contact
           </button>

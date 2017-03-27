@@ -114,9 +114,10 @@ export let ContextTabBar = props =>
           <ButtonIcon
             className={ classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
-            aria-haspopup="true"
             assistiveText="Toggle split view"
             title="Toggle split view"
+            aria-expanded={ props.splitViewActive ? 'true' : 'false' }
+            aria-controls="id_of_split_view_container"
           />
         </div>
       </div>

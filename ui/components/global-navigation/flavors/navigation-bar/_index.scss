@@ -290,7 +290,15 @@
   }
 
   /**
-   * Tab modifier when using a tabset
+   *
+   * #### Accessibility
+   *
+   * On the Split View Toggle button, `aria-expanded` is set to `false` by default.
+   * Set `aria-expanded` to `true` when  Split View is active. When Split View is active,
+   * set the value of `aria-controls` on the Split View Toggle button, to the `ID` of the
+   * wrapper element that contains the Split View List.
+   *
+   * @summary Tab modifier when using a tabset
    *
    * @name navigation-tab-bar
    * @selector .slds-context-bar__item--tab

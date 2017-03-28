@@ -33,8 +33,10 @@
  * @restrict .slds-combobox_container > div
  */
 .slds-combobox {
+  position: static;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 /**
@@ -44,7 +46,6 @@
  * @restrict .slds-combobox > div
  */
 .slds-combobox__form-element {
-  position: static;
   flex: 1 1 auto;
 }
 
@@ -68,8 +69,13 @@
 .slds-listbox--inline {
   display: inline-flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
   max-width: 75%;
   align-items: center;
+
+  li {
+    display: flex;
+  }
 
   li + li {
     padding-left: $spacing-xxx-small;
@@ -257,7 +263,7 @@
  * inside of a combobox
  *
  * @selector .slds-has-inline-listbox
- * @restrict .slds-combobox
+ * @restrict .slds-combobox_container
  * @modifier
  */
 .slds-has-inline-listbox,
@@ -279,7 +285,8 @@
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
 
-    &:focus {
+    &:focus,
+    &:active {
       outline: 0;
       box-shadow: none;
     }
@@ -313,8 +320,4 @@
       margin-top: ($spacing-x-small * -1);
     }
   }
-}
-
-.slds-has-inline-listbox .slds-dropdown {
-  top: 100%;
 }

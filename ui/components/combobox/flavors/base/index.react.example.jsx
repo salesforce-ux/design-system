@@ -105,10 +105,10 @@ export let ListboxOption = props =>
   * listbox of pill options and object switcher.
   * @name ComboboxContainer
   * @prop {string}  id
-  * @prop {string}  className - A CSS class for the combobox element
-  * @prop {string}  containerClassName - A CSS class for the parent element containing the combobox
-  * @prop {string}  comboboxClassName
-  * @prop {string}  formControlClassName
+  * @prop {string}  className - A CSS class for the element containing the input
+  * @prop {string}  containerClassName - A CSS class for the element containing the input and listbox
+  * @prop {string}  formClassName - A CSS class for the form element
+  * @prop {string}  formControlClassName - A CSS class for the form element control
   * @prop {boolean} isOpen
   * @prop {boolean} selectedOptionsInline - Specifies that the listbox of pill options are displayed inlined to its adjacent elements
   * @prop {boolean} objectSwitcherInline - Specifies that the object switcher is displayed inlined to its adjacent elements
@@ -119,96 +119,142 @@ export let ListboxOption = props =>
   * @prop {boolean} inputButtonIcon
   * @prop {string}  value
   * @prop {boolean} autocomplete
+  * @prop {boolean} readonly
   * @prop {string}  tabIndex
   * @prop {string}  aria-controls
+  * @prop {boolean} hideLabel
+  * @prop {string}  placeholder
   */
 }
 export let ComboboxContainer = props =>
-  <div className={classNames(
-    'slds-combobox_container',
-    {
-      'slds-dropdown-trigger slds-dropdown-trigger_click': !props.staticListbox,
-      'slds-is-open': props.isOpen
-    },
-    props.containerClassName
-  )}>
-    <div className={classNames(
-      'slds-combobox',
-      {
-        'slds-has-inline-listbox': props.selectedOptionsInline,
-        'slds-has-object-switcher': props.objectSwitcherInline
-      },
-      props.className
-    )}>
-      { props.inputIcon === 'left' && props.selectedOptionsInline ?
-        <SvgIcon
-          className="slds-icon slds-icon--x-small slds-combobox_container__icon"
-          sprite="utility"
-          symbol="search"
-        />
-      : null }
-      { props.objectSwitcher ? <ObjectSwitcher /> : null }
-      { props.selectedOptionsInline ? props.children : null }
-      <FormElement
-        className={ classNames('slds-combobox__form-element', props.comboboxClassName) }
-        formControlClassName={ props.formControlClassName }
-        label={ props.label || 'Search' }
-        inputId={ props.id || comboboxId }
-        inputIcon={ props.inputIcon }
-        hideLabel={ true }
-        aria-expanded={ props.isOpen ? 'true' : 'false' }
-        aria-haspopup="listbox"
-        role="combobox"
-        listbox={ props.listbox }
+  <div className={classNames('slds-form-element',props.formClassName)}>
+    <label
+      className={classNames(
+        'slds-form-element__label',
+        { 'slds-assistive-text': props.hideLabel }
+      )}
+      htmlFor={ props.id || comboboxId }
+    >
+      { props.label || 'Search' }
+    </label>
+    {/* Form Element Control */}
+    <div
+      className={classNames(
+        'slds-form-element__control',
+        props.formControlClassName
+      )}
+    >
+      {/* Combobox container */}
+      <div
+        className={classNames(
+          'slds-combobox_container',
+          {
+            'slds-has-inline-listbox': props.selectedOptionsInline,
+            'slds-has-object-switcher': props.objectSwitcherInline,
+          },
+          props.containerClassName
+        )}
       >
-        { props.inputIcon === 'left' || props.inputIcon ==='both' && props.inputIconLeftSprite === 'standard' ?
-          <StandardIcon
-            containerClassName="slds-combobox__input-entity-icon"
-            className="slds-icon--small"
-            symbol={ props.inputIconLeftSymbol || 'account' }
-            title={ props.inputIconLeftSymbol || 'account' }
-            assistiveText={ props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value }
-          />
-        : (props.inputIcon ==='left' || props.inputIcon === 'both' ?
+        {/* Search icon before the listbox of selected items */}
+        { props.inputIcon === 'left' && props.selectedOptionsInline ?
           <SvgIcon
-            className="slds-icon slds-icon--x-small slds-input__icon slds-input__icon--left"
+            className="slds-icon slds-icon--x-small slds-combobox_container__icon"
             sprite="utility"
-            symbol={props.inputIconLeftSymbol || 'search'}
-          />
-        : null)}
-        <Input
-          className="slds-combobox__input"
-          id={ props.id || comboboxId }
-          aria-activedescendant={ props['aria-activedescendant'] }
-          aria-autocomplete={ props.autocomplete ? 'list' : null }
-          aria-controls={ props['aria-controls'] || listboxId }
-          autoComplete="off"
-          role="textbox"
-          type="text"
-          placeholder={ props.autocomplete ? 'Search Salesforce' : 'Select an Option' }
-          readOnly={ !props.autocomplete || props.value }
-          value={ props.value }
-          tabIndex={ props.tabIndex }
-        />
-        { props.inputIcon === 'right' ?
-          <SvgIcon
-            className="slds-icon slds-icon--x-small slds-input__icon slds-input__icon--right"
-            sprite="utility"
-            symbol={ props.inputIconRightSymbol || 'search' }
+            symbol="search"
           />
         : null }
-        { props.inputButtonIcon && props.inputIconRightSymbol ==='close' ?
-          <ButtonIcon
-            className="slds-button--icon slds-input__icon slds-input__icon--right"
-            symbol="close"
-            title="Remove selected option"
-            assistiveText="Remove selected option"
-          />
-        : null }
-      </FormElement>
+        {/* Show object switcher here */}
+        { props.objectSwitcher ? <ObjectSwitcher /> : null }
+        {/* If inline listbox - Show selected options here */}
+        { props.selectedOptionsInline ? props.children : null }
+        {/* Combobox - role=combobox */}
+        <div
+          className={classNames(
+            'slds-combobox',
+            {
+              'slds-dropdown-trigger slds-dropdown-trigger_click': !props.staticListbox,
+              'slds-is-open': props.isOpen
+            },
+            props.className
+          )}
+          aria-expanded={ props.isOpen ? 'true' : 'false' }
+          aria-haspopup="listbox"
+          role="combobox"
+        >
+          <div
+            className={classNames(
+              'slds-combobox__form-element',
+              {
+
+                'slds-input-has-icon slds-input-has-icon--left': props.inputIcon === 'left',
+                'slds-input-has-icon slds-input-has-icon--right': props.inputIcon === 'right',
+                'slds-input-has-icon slds-input-has-icon--left-right': props.inputIcon === 'both'
+              },
+              props.inputContainerClassName
+            )}
+          >
+            {/*
+              If inputIcon is on both sides of input AND a standard sprite,
+              Makes autocomplete single selection look like a pill
+            */}
+            {props.inputIcon ==='both' && props.inputIconLeftSprite === 'standard'
+            ?
+              <StandardIcon
+                containerClassName="slds-combobox__input-entity-icon"
+                className="slds-icon--small"
+                symbol={ props.inputIconLeftSymbol || 'account' }
+                title={ props.inputIconLeftSymbol || 'account' }
+                assistiveText={ props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value }
+              />
+            : (props.inputIcon ==='left' || props.inputIcon === 'both' ?
+              <UtilityIcon
+                containerClassName="slds-input__icon slds-input__icon--left"
+                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                symbol={props.inputIconLeftSymbol || 'search'}
+              />
+            : null)}
+            {/* Input */}
+            <Input
+              className="slds-combobox__input"
+              id={ props.id || comboboxId }
+              aria-activedescendant={ props['aria-activedescendant'] }
+              aria-autocomplete={ props.autocomplete ? 'list' : null }
+              aria-controls={ props['aria-controls'] || listboxId }
+              autoComplete="off"
+              role="textbox"
+              type="text"
+              placeholder={ !props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder }
+              readOnly={ props['readonly'] || props.value }
+              value={ props.value }
+              tabIndex={ props.tabIndex }
+            />
+            {/* If inputIcon is right, show icon here  */}
+            { props.inputIcon === 'right' && props.inputButtonIcon != true ?
+              <UtilityIcon
+                containerClassName="slds-input__icon slds-input__icon--right"
+                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                symbol={props.inputIconLeftSymbol || 'search'}
+              />
+            : null }
+            {/* If close button, show buttonIcon here */}
+            { props.inputButtonIcon && props.inputIconRightSymbol === 'close' ?
+              <ButtonIcon
+                className="slds-input__icon slds-input__icon--right"
+                symbol="close"
+                title="Remove selected option"
+                assistiveText="Remove selected option"
+              />
+            : null }
+          </div>
+          {/* Pass listbox into combobox here */}
+          { props.listbox }
+        </div>
+      </div>
+      {/* If NOT inline listbox - Show selected options here */}
+      { !props.selectedOptionsInline ? props.children : null }
     </div>
-    { !props.selectedOptionsInline ? props.children : null }
   </div>;
+
 {
   /**
   * An entity option is a type of listbox option, it contains a standard icon,

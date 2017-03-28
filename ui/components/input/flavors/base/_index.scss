@@ -71,7 +71,7 @@
  *
  * @name with-icon
  * @selector .slds-input-has-icon
- * @restrict .slds-form-element .slds-form-element__control
+ * @restrict .slds-form-element div
  * @variant
  */
 .slds-input-has-icon {
@@ -88,6 +88,7 @@
     position: absolute;
     top: 50%;
     margin-top: (($square-icon-medium-content / 2) * -1);
+    line-height: 1;
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {

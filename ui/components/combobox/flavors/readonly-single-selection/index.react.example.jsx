@@ -37,6 +37,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
+          readonly={true}
           isOpen={ true }
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -53,6 +54,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
+          readonly={true}
           isOpen={ true }
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -67,6 +69,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
+          readonly={true}
           isOpen={ true }
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -80,6 +83,7 @@ export let states = [
     label: 'Option Selected',
     element:
       <ComboboxContainer
+        readonly={true}
         inputIcon="right"
         inputButtonIcon={true}
         inputIconRightSymbol="close"

@@ -48,7 +48,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          className="slds-has-input-focus"
+          containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline={ true }
@@ -114,7 +114,7 @@ export let states = [
           isOpen={ true }
           inputIcon="right"
           inputIconRightSymbol="search"
-          className="slds-has-input-focus"
+          containerClassName="slds-has-input-focus"
           selectedOptionsInline={ true }
           autocomplete={ true }
           listbox={ <ListboxDropdown /> }

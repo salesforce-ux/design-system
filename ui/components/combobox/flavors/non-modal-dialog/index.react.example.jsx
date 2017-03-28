@@ -61,13 +61,15 @@ export default (
     bodyClassName="slds-p-horizontal--none"
   >
     <ComboboxContainer
+      inputContainerClassName="slds-m-around--small"
+      hideLabel={true}
       autocomplete={ true }
       isOpen={true}
-      inputIcon="right"
-      inputIconRightSymbol="search"
-      formControlClassName="slds-m-around--small"
+      inputIcon="left"
+      inputIconLeftSymbol="search"
       listbox={ <ListboxList /> }
       staticListbox={true}
+      placeholder="Quick find..."
     />
   </Popover>
 );

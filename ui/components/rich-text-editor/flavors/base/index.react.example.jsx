@@ -76,6 +76,7 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Font"
         label="Choose a Font"
+        hideLabel={true}
         aria-controls="family-listbox"
         listbox={ <FontFamilyDropdown /> }
       />
@@ -89,6 +90,7 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Size"
         label="Choose a Font Size"
+        hideLabel={true}
         aria-controls="size-listbox"
         tabIndex="-1"
         listbox={ <FontSizeDropdown /> }

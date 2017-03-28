@@ -1,0 +1,1084 @@
+{
+  "properties": [
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "1px",
+      "name": "borderWidthThin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2px",
+      "name": "borderWidthThick"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "1px",
+      "name": "borderStrokeWidthThin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2px",
+      "name": "borderStrokeWidthThick"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "0",
+      ".alias": {
+        "value": "0"
+      },
+      "name": "spacingNone"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "2",
+      ".alias": {
+        "value": "0.125rem"
+      },
+      "name": "spacingXxxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "4",
+      ".alias": {
+        "value": "0.25rem"
+      },
+      "name": "spacingXxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "8",
+      ".alias": {
+        "value": "0.5rem"
+      },
+      "name": "spacingXSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "12",
+      ".alias": {
+        "value": "0.75rem"
+      },
+      "name": "spacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "16",
+      ".alias": {
+        "value": "1rem"
+      },
+      "name": "spacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "32",
+      ".alias": {
+        "value": "1.5rem"
+      },
+      "name": "spacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "64",
+      ".alias": {
+        "value": "2rem"
+      },
+      "name": "spacingXLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "stroke",
+        "stroke-width"
+      ],
+      "value": "128",
+      ".alias": {
+        "value": "3rem"
+      },
+      "name": "spacingXxLarge"
+    },
+    {
+      "value": "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type": "font",
+      "category": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "comment": "font-face should be 'Salesforce Sans'.",
+      "name": "fontFamilyBody"
+    },
+    {
+      "value": "300",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Light",
+      "name": "fontWeightLight"
+    },
+    {
+      "value": "400",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Regular",
+      "name": "fontWeightRegular"
+    },
+    {
+      "value": "700",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Bold",
+      "name": "fontWeightBold"
+    },
+    {
+      "value": "10",
+      "type": "size",
+      "category": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "comment": "",
+      "name": "fontSizeXSmall"
+    },
+    {
+      "value": "12",
+      "type": "size",
+      "category": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "comment": "",
+      "name": "fontSizeSmall"
+    },
+    {
+      "value": "14",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "name": "fontSizeXMedium"
+    },
+    {
+      "value": "16",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "name": "fontSizeMedium"
+    },
+    {
+      "value": "18",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "name": "fontSizeLarge"
+    },
+    {
+      "value": "20",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "name": "fontSizeXLarge"
+    },
+    {
+      "value": "24",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "name": "fontSizeXxLarge"
+    },
+    {
+      "value": "2",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "name": "borderRadiusSmall"
+    },
+    {
+      "value": "4",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "name": "borderRadiusMedium"
+    },
+    {
+      "value": "8",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "name": "borderRadiusLarge"
+    },
+    {
+      "value": "80",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "name": "borderRadiusPill"
+    },
+    {
+      "value": "0.5",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "name": "borderRadiusCircle"
+    },
+    {
+      "value": "1",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "name": "lineHeightReset"
+    },
+    {
+      "value": "1.25",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "name": "lineHeightHeading"
+    },
+    {
+      "value": "1.5",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "name": "lineHeightText"
+    },
+    {
+      "value": "only screen and (min-width: 28em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "448px, for phone devices and larger.",
+      "name": "mqSmall"
+    },
+    {
+      "value": "only screen and (min-width: 48em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "768px, for phone devices and larger.",
+      "name": "mqMedium"
+    },
+    {
+      "value": "only screen and (min-width: 64em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "1024px, for tablet devices and larger.",
+      "name": "mqLarge"
+    },
+    {
+      "value": "only screen and (min-width: 80em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "1280px, for desktop screens and larger.",
+      "name": "mqXLarge"
+    },
+    {
+      "value": ".1s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timing1"
+    },
+    {
+      "value": ".2s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timing2"
+    },
+    {
+      "value": ".4s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timing3"
+    },
+    {
+      "value": ".6s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timing4"
+    },
+    {
+      "value": ".8s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timing5"
+    },
+    {
+      "value": "5s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "name": "timingTest"
+    },
+    {
+      "value": "rgb(255, 255, 255)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "#FFFFFF"
+      },
+      "name": "colorWhite"
+    },
+    {
+      "value": "rgb(53, 212, 204)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(177, 64.7%, 51.9%)"
+      },
+      "name": "colorGreenSea100"
+    },
+    {
+      "value": "rgb(46, 194, 186)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(177, 61.3%, 47.1%)"
+      },
+      "name": "colorGreenSea300"
+    },
+    {
+      "value": "rgb(39, 171, 164)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(177, 62.6%, 41.2%)"
+      },
+      "name": "colorGreenSea500"
+    },
+    {
+      "value": "rgb(32, 150, 145)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(177, 65.3%, 35.7%)"
+      },
+      "name": "colorGreenSea700"
+    },
+    {
+      "value": "rgb(27, 130, 125)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(177, 65.3%, 30.9%)"
+      },
+      "name": "colorGreenSea900"
+    },
+    {
+      "value": "rgb(108, 183, 250)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(208, 93.3%, 70.1%)"
+      },
+      "name": "colorBlueSky100"
+    },
+    {
+      "value": "rgb(68, 162, 245)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(208, 89.6%, 61.4%)"
+      },
+      "name": "colorBlueSky300"
+    },
+    {
+      "value": "rgb(45, 147, 237)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(208, 84.3%, 55.3%)"
+      },
+      "name": "colorBlueSky500"
+    },
+    {
+      "value": "rgb(32, 129, 214)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(208, 73.9%, 48.3%)"
+      },
+      "name": "colorBlueSky700"
+    },
+    {
+      "value": "rgb(25, 112, 189)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(208, 77%, 41.8%)"
+      },
+      "name": "colorBlueSky900"
+    },
+    {
+      "value": "rgb(173, 144, 245)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(257, 83.1%, 76.3%)"
+      },
+      "name": "colorPurpleRain100"
+    },
+    {
+      "value": "rgb(146, 113, 232)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(257, 72.2%, 67.6%)"
+      },
+      "name": "colorPurpleRain300"
+    },
+    {
+      "value": "rgb(122, 86, 214)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(257, 61.2%, 58.8%)"
+      },
+      "name": "colorPurpleRain500"
+    },
+    {
+      "value": "rgb(100, 63, 192)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(257, 50.2%, 50%)"
+      },
+      "name": "colorPurpleRain700"
+    },
+    {
+      "value": "rgb(89, 65, 149)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(257, 39.2%, 42%)"
+      },
+      "name": "colorPurpleRain900"
+    },
+    {
+      "value": "rgb(242, 246, 250)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 42.36%, 96.53%)"
+      },
+      "name": "colorBlueAthens"
+    },
+    {
+      "value": "rgb(230, 236, 242)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 32.2%, 92.62%)"
+      },
+      "name": "colorBlueSparta"
+    },
+    {
+      "value": "rgb(197, 211, 224)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 30.56%, 82.72%)"
+      },
+      "name": "colorBlueRome"
+    },
+    {
+      "value": "rgb(163, 184, 204)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 28.57%, 72%)"
+      },
+      "name": "colorBlueSpider"
+    },
+    {
+      "value": "rgb(125, 152, 179)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 25.93%, 59.5%)"
+      },
+      "name": "colorBlueGhost"
+    },
+    {
+      "value": "rgb(92, 122, 153)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 25%, 48%)"
+      },
+      "name": "colorBlueAluminium"
+    },
+    {
+      "value": "rgb(64, 96, 127)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 33.33%, 37.5%)"
+      },
+      "name": "colorBlueRollingstone"
+    },
+    {
+      "value": "rgb(41, 71, 102)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 42.86%, 28%)"
+      },
+      "name": "colorBlueRhino"
+    },
+    {
+      "value": "rgb(23, 50, 77)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 53.85%, 19.5%)"
+      },
+      "name": "colorBlueZodiac"
+    },
+    {
+      "value": "rgb(10, 31, 51)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "hsl(210, 66.67%, 12%)"
+      },
+      "name": "colorBlueBigstoneBlue"
+    },
+    {
+      "value": "rgb(255, 183, 93)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "#FFB75D"
+      },
+      "name": "colorOrangeAlert"
+    },
+    {
+      "value": "rgb(212, 80, 76)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "#D4504C"
+      },
+      "name": "colorRedError"
+    },
+    {
+      "value": "rgb(75, 202, 129)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      ".alias": {
+        "value": "#4BCA81"
+      },
+      "name": "colorGreenSuccess"
+    },
+    {
+      "value": "rgb(0, 112, 210)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Link color (508)",
+      ".alias": {
+        "value": "#0070D2"
+      },
+      "name": "colorBlueScience"
+    },
+    {
+      "value": "rgb(0, 95, 178)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Hover and focus link color",
+      ".alias": {
+        "value": "#005FB2"
+      },
+      "name": "colorBlueEndeavour"
+    },
+    {
+      "value": "rgb(0, 57, 107)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Active link color",
+      ".alias": {
+        "value": "#00396B"
+      },
+      "name": "colorBlueMidnightBlue"
+    },
+    {
+      "value": "rgb(22, 50, 92)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Disabled link color",
+      ".alias": {
+        "value": "#16325C"
+      },
+      "name": "colorBlueBiscay"
+    }
+  ]
+}

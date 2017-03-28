@@ -1,0 +1,172 @@
+{
+  "properties": [
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(244, 246, 249)",
+      "comment": "Default Card component background color.",
+      ".alias": {
+        "value": "#F4F6F9"
+      },
+      "name": "cardColorBackground"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "64",
+      "comment": "Stage left for desktop when closed (showing icons only).",
+      "name": "widthStageLeftCollapsed"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "240",
+      "comment": "Stage left for desktop when open.",
+      "name": "widthStageLeftExpanded"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "50",
+      "comment": "Header for desktop.",
+      "name": "heightHeader"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "32",
+      "comment": "Medium tap target size",
+      "name": "squareIconMedium"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "12",
+      "deprecated": true,
+      "name": "fontSizeSmall"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "13",
+      "deprecated": true,
+      "name": "fontSizeMedium"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "14",
+      "deprecated": true,
+      "name": "fontSizeMediumA"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "16",
+      "deprecated": true,
+      "name": "fontSizeLarge"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "20",
+      "deprecated": true,
+      "name": "fontSizeXLarge"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "28",
+      "deprecated": true,
+      "name": "fontSizeXxLarge"
+    },
+    {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.5",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightText"
+    }
+  ]
+}

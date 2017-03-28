@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="CARD_COLOR_BACKGROUND" category="background-color">#fff4f6f9</color>
+  <property name="WIDTH_STAGE_LEFT_COLLAPSED" category="sizing">64</property>
+  <property name="WIDTH_STAGE_LEFT_EXPANDED" category="sizing">240</property>
+  <property name="HEIGHT_HEADER" category="sizing">50</property>
+  <property name="SQUARE_ICON_MEDIUM" category="sizing">32</property>
+  <property name="FONT_SIZE_SMALL" category="font-size">12</property>
+  <property name="FONT_SIZE_MEDIUM" category="font-size">13</property>
+  <property name="FONT_SIZE_MEDIUM_A" category="font-size">14</property>
+  <property name="FONT_SIZE_LARGE" category="font-size">16</property>
+  <property name="FONT_SIZE_X_LARGE" category="font-size">20</property>
+  <property name="FONT_SIZE_XX_LARGE" category="font-size">28</property>
+  <property name="LINE_HEIGHT_TEXT" category="line-height">1.5</property>
+</resources>

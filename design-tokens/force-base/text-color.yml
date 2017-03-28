@@ -1,0 +1,225 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ./aliases/color.yml
+props:
+  COLOR_TEXT_ACTION_LABEL:
+    value: '{!KASHMIR_BLUE}'
+    comment: Action label text color
+  COLOR_TEXT_ACTION_LABEL_ACTIVE:
+    value: '{!BISCAY}'
+    comment: Action label active text color
+  COLOR_TEXT_BRAND:
+    value: '{!AZURE}'
+    comment: Our product brand blue.
+  COLOR_TEXT_BROWSER:
+    value: '{!WHITE}'
+    comment: Top bar icon color
+  COLOR_TEXT_BROWSER_ACTIVE:
+    value: '{!BLACK_TRANSPARENT_40}'
+    comment: Top bar active icon color
+  COLOR_TEXT_CUSTOMER:
+    value: '{!TANGERINE}'
+    comment: Customer text used in anchor subtitle
+  COLOR_TEXT_DEFAULT:
+    value: '{!BISCAY}'
+    comment: Body text color
+  COLOR_TEXT_ERROR:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Error text for inputs and error misc
+  COLOR_TEXT_INPUT_DISABLED:
+    value: '{!KASHMIR_BLUE}'
+    comment: Input disabled text
+  COLOR_TEXT_INPUT_FOCUS_INVERSE:
+    value: '{!BISCAY}'
+    comment: Typed input text
+  COLOR_TEXT_INPUT_ICON:
+    value: '{!CASPER}'
+    comment: Input icon
+  COLOR_TEXT_INVERSE:
+    value: '{!WHITE}'
+    comment: Inverse text color for dark backgrounds
+  COLOR_TEXT_INVERSE_WEAK:
+    value: '{!CASPER}'
+    comment: Weak inverse text color for dark backgrounds
+  COLOR_TEXT_INVERSE_ACTIVE:
+    value: '{!MALIBU}'
+    comment: Active state on a standalone link on a dark background.
+  COLOR_TEXT_INVERSE_HOVER:
+    value: '{!CASPER}'
+    comment: Hover state on a standalone link on a dark background.
+  COLOR_TEXT_LINK:
+    value: '{!SCIENCE_BLUE}'
+    comment: Link text (508)
+  COLOR_TEXT_LINK_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Active link text
+  COLOR_TEXT_LINK_DISABLED:
+    value: '{!BISCAY}'
+    comment: Disabled link text
+  COLOR_TEXT_LINK_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Focus link text
+  COLOR_TEXT_LINK_HOVER:
+    value: '{!ENDEAVOUR}'
+    cssProperties:
+      - color
+      - 'border*'
+    comment: Hover link text
+  COLOR_TEXT_LINK_INVERSE:
+    value: '{!WHITE}'
+    comment: Link color on dark background
+  COLOR_TEXT_LINK_INVERSE_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Link color on dark background - hover state
+  COLOR_TEXT_LINK_INVERSE_ACTIVE:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Link color on dark background - active state
+  COLOR_TEXT_LINK_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Link color on dark background - disabled state
+  COLOR_TEXT_MODAL:
+    value: '{!WHITE}'
+    comment: Modal header title
+  COLOR_TEXT_MODAL_BUTTON:
+    value: '{!KASHMIR_BLUE}'
+    comment: Modal header button text color
+  COLOR_TEXT_STAGE_LEFT:
+    value: '{!STEAM}'
+    comment: Text in stage left navigation.
+  COLOR_TEXT_TAB_LABEL:
+    value: '{!BISCAY}'
+    comment: Color for default text in a tab group.
+  COLOR_TEXT_TAB_LABEL_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Color for text on a selected tab in a tab group.
+  COLOR_TEXT_TAB_LABEL_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Color for text in hover state in a tab group.
+  COLOR_TEXT_TAB_LABEL_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Color for text in focus state in a tab group.
+  COLOR_TEXT_TAB_LABEL_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Color for text in active state in a tab group.
+  COLOR_TEXT_TAB_LABEL_DISABLED:
+    value: '{!STEAM}'
+    comment: Color for disabled text in a tab group.
+  COLOR_TEXT_TOAST:
+    value: '{!STEAM}'
+    comment: Color for text on toast messages.
+  COLOR_TEXT_WARNING:
+    value: '{!KOROMIKO}'
+    comment: Color for texts or icons that are related to warnings on a dark background.
+  COLOR_TEXT_WARNING_ALT:
+    value: '{!CINNAMON}'
+    comment: Color for texts that are related to warnings on a light background.
+  COLOR_TEXT_WEAK:
+    value: '{!KASHMIR_BLUE}'
+    comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
+  COLOR_TEXT_ICON_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Color for non-interactive icons that represent a selected item in a list
+  COLOR_TEXT_ICON_UTILITY:
+    value: '{!HIT_GREY}'
+    comment: Color for interactive utility icons
+  COLOR_TEXT_TOGGLE_DISABLED:
+    value: '{!GEYSER}'
+    comment: Color for disabled toggles
+  COLOR_TEXT_BUTTON_BRAND:
+    value: '{!WHITE}'
+    comment: Text color for brandable primary button
+  COLOR_TEXT_BUTTON_BRAND_HOVER:
+    value: '{!WHITE}'
+    comment: Text color for brandable primary button - hover state
+  COLOR_TEXT_BUTTON_BRAND_ACTIVE:
+    value: '{!WHITE}'
+    comment: Text color for brandable primary button - active state
+  COLOR_TEXT_BUTTON_BRAND_DISABLED:
+    value: '{!WHITE}'
+    comment: Text color for brandable primary button - disabled state
+  COLOR_TEXT_BUTTON_DEFAULT:
+    value: '{!SCIENCE_BLUE}'
+    comment: Text color for default secondary button
+  COLOR_TEXT_BUTTON_DEFAULT_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    comment: Text color for default secondary button - hover state
+  COLOR_TEXT_BUTTON_DEFAULT_ACTIVE:
+    value: '{!SCIENCE_BLUE}'
+    comment: Text color for default secondary button - active state
+  COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
+    value: '{!GEYSER}'
+    comment: Text color for default secondary button - disabled state
+  COLOR_TEXT_BUTTON_DEFAULT_HINT:
+    value: '{!CASPER}'
+    comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_BUTTON_INVERSE:
+    value: '{!STEAM}'
+    comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_BUTTON_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_DEFAULT:
+    value: '{!KASHMIR_BLUE}'
+    comment: Default icon color.
+  COLOR_TEXT_ICON_DEFAULT_HINT:
+    value: '{!CASPER}'
+    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_INVERSE_HINT:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Icon color for a button that has a parent element that has a hover state on a dark background. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
+    value: '{!STEAM}'
+    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_DEFAULT_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    comment: Default icon color - hover state.
+  COLOR_TEXT_ICON_DEFAULT_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Default icon color - active state.
+  COLOR_TEXT_ICON_DEFAULT_DISABLED:
+    value: '{!GEYSER}'
+    comment: Default icon color - disabled state
+  COLOR_TEXT_ICON_INVERSE:
+    value: '{!WHITE}'
+    comment: Icon color on dark background
+  COLOR_TEXT_ICON_INVERSE_HOVER:
+    value: '{!WHITE}'
+    comment: Icon color on dark background - hover state
+  COLOR_TEXT_ICON_INVERSE_ACTIVE:
+    value: '{!WHITE}'
+    comment: Icon color on dark background - active state
+  COLOR_TEXT_ICON_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Icon color on dark background - disabled state
+  COLOR_TEXT_ICON_INVERSE_HINT_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Hovered icon color for a button that has a parent element that has a hover state
+  COLOR_TEXT_LABEL:
+    value: '{!KASHMIR_BLUE}'
+    comment: Text color for field labels.
+  COLOR_TEXT_PLACEHOLDER:
+    value: '{!KASHMIR_BLUE}'
+    comment: Input placeholder text.
+  COLOR_TEXT_PLACEHOLDER_INVERSE:
+    value: '{!STEAM}'
+    comment: Input placeholder text on dark backgrounds.
+  COLOR_TEXT_REQUIRED:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Color of required field marker.
+  COLOR_TEXT_PILL:
+    value: '{!SCIENCE_BLUE}'
+    comment: Text color for pills.
+  COLOR_TEXT_SUCCESS:
+    value: '{!FUN_GREEN}'
+    comment: Text color for success text.
+  COLOR_TEXT_SUCCESS_INVERSE:
+    value: '{!EMERALD}'
+    comment: Text color for success text on dark backgrounds.

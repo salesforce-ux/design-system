@@ -1,0 +1,50 @@
+// Lightning Design System 2.3.0-beta.2
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiates publisher that is specific to commenting in threads
+ *
+ * @name comment
+ * @selector .slds-publisher--comment
+ * @restrict .slds-publisher
+ * @required
+ * @variant
+ */
+.slds-publisher_comment,
+.slds-publisher--comment {
+  @include form-input-container;
+  position: relative;
+  min-height: calc(#{$line-height-button} + 2px);
+  max-height: calc(#{$line-height-button} + 2px);
+
+  &.slds-is-active {
+    min-height: $size-xx-small;
+    max-height: $size-small;
+
+    .slds-publisher__actions {
+      display: flex;
+    }
+  }
+
+  /**
+   * Applies focus to comment publisher container when inside `textarea`
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-publisher--comment
+   * @notes Added through JavaScript
+   * @modifier
+   */
+  &.slds-has-focus {
+    @include form-input-focus;
+  }
+
+  .slds-publisher__actions {
+    display: none;
+    padding: 0 $spacing-small $spacing-small;
+  }
+
+  .slds-attachments {
+    padding: $spacing-x-small $spacing-small;
+  }
+}

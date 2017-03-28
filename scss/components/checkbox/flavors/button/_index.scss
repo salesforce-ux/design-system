@@ -1,0 +1,131 @@
+// Lightning Design System 2.3.0-beta.2
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The ‘add button’ is similar to a checkbox in that it presents a user with a
+ * binary choice for an item. However, the only action a user can take is to
+ * add (or remove) an entity. When a user clicks the add button, the entity is
+ * stored, similar to an ‘add to cart’ experience, until the user saves changes.
+ *
+ * The add button is useful for increasing clarity. Since the button only adds
+ * or removes entities, the user knows the action they will prompt upon click.
+ * The add button also provides a clear visual affordance (in SLDS, we use the
+ * ‘+’ icon as an metaphor for ‘add’) and a large target to take this action.
+ *
+ * Use the add button if the component you’re building:
+ * - Exists without other multi-select elements (i.e. checkboxes)
+ * - Allows users to select multiple entities
+ * - Semantically fits the add/remove model
+ *
+ * @summary Initializes checkbox add button
+ *
+ * @name base
+ * @selector .slds-checkbox--add-button
+ * @restrict div
+ * @required
+ * @variant
+ */
+.slds-checkbox_add-button,
+.slds-checkbox--add-button {
+
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    @include square($square-icon-medium-boundary);
+    position: relative;
+    display: inline-block;
+    border: $border-width-thin solid $color-border-button-default;
+    border-radius: $border-radius-medium;
+    background-color: $color-background-input;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: rem(14px);
+      width: rem(2px);
+      margin: auto;
+      background: $color-brand-dark;
+    }
+
+    &:after {
+      width: rem(14px);
+      height: rem(2px);
+    }
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]) {
+      border: $border-width-thin solid $color-border-button-default;
+      background-color: $color-background-button-default-hover;
+    }
+
+    &:active {
+      background-color: $color-background-button-default-active;
+    }
+  }
+
+  input[type=checkbox]:checked {
+
+    ~ .slds-checkbox_faux,
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox_faux,
+    + .slds-checkbox--faux {
+      border-color: transparent;
+      background: $color-background-success;
+
+      &:before,
+      &:after {
+        background: $color-background-alt;
+      }
+
+      &:before {
+        top: rem(-2px);
+        left: rem(7px);
+        width: rem(3px);
+        height: rem(17px);
+        transform: rotate(40deg);
+      }
+
+      &:after {
+        top: rem(5px);
+        left: rem(-10px);
+        width: rem(10px);
+        height: rem(3px);
+        transform: rotate(36deg);
+      }
+    }
+  }
+
+  input[type=checkbox]:focus {
+
+    ~ .slds-checkbox_faux,
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox_faux,
+    + .slds-checkbox--faux {
+      @include focus-button;
+      border-color: $color-border-input-active;
+    }
+  }
+
+  input[type=checkbox][disabled] {
+
+    ~ .slds-checkbox_faux,
+    ~ .slds-checkbox--faux,
+    + .slds-checkbox_faux,
+    + .slds-checkbox--faux {
+      background-color: $color-background-button-brand-disabled;
+      border-color: $color-border-button-brand-disabled;
+      color: $color-text-button-brand-disabled;
+
+      &:before,
+      &:after {
+        background: $color-background-alt;
+      }
+    }
+  }
+}

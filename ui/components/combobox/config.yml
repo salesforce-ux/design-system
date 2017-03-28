@@ -1,4 +1,4 @@
-status: 'dev-ready'
+status: 'prototype'
 flavors:
   - readonly-single-selection
   - readonly-multi-selection

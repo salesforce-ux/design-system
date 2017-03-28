@@ -87,7 +87,6 @@
       @include box-shadow(0 6px 12px rgba(0,0,0,.175));
 
       > li > a {
-        max-width: 100%;
         white-space: nowrap;
         display: block;
         text-decoration: none;
@@ -96,7 +95,8 @@
         border-bottom: 2px solid transparent;
         padding: 0 16px;
         height: 40px;
-        overflow: visible;
+        max-width: 266px;
+        overflow: hidden;
         font-size: 12px;
         line-height: 40px;
         color: #16325c;

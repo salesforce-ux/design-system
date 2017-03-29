@@ -113,7 +113,7 @@ export let states = [
             label="Categories"
             hideLabel={ true }
             inputId="text-input-01"
-            inputIcon="right"
+            inputIcon="left"
           >
             <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
             <input
@@ -123,7 +123,7 @@ export let states = [
               autoComplete="off"
               className="slds-input slds-lookup__search-input"
               id="text-input-01"
-              placeholder="Search Accounts"
+              placeholder="Quick find&hellip;"
               role="textbox"
               type="text"
             />

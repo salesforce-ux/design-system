@@ -47,6 +47,24 @@ export let states = [
       <StatefulButton className="slds-button--neutral slds-is-selected" />
   },
   {
+    id: 'button-neutral-stateful-selected-clicked',
+    label: 'Neutral - Clicked - Selected',
+    element:
+      <StatefulButton className="slds-button--neutral slds-is-selected-clicked" />
+  },
+  {
+    id: 'button-neutral-stateful-not-selected-disabled',
+    label: 'Neutral - Not Selected - Disabled',
+    element:
+      <StatefulButton disabled className="slds-button--neutral slds-not-selected" />
+  },
+  {
+    id: 'button-neutral-stateful-is-selected-disabled',
+    label: 'Neutral - Selected - Disabled',
+    element:
+      <StatefulButton disabled className="slds-button--neutral slds-is-selected" />
+  },
+  {
     id: 'button-inverse-stateful-not-selected',
     label: 'Inverse - Not Selected',
     element:

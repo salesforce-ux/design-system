@@ -22,15 +22,6 @@
  * @variant
  */
 
-/**
- * Notifies a stateful button that it has been pressed
- *
- * @selector .slds-is-selected
- * @restrict .slds-button--stateful
- * @notes This class should be toggled with JavaScript
- * @modifier
- * @group interaction
- */
 .slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
   border-color: transparent;
@@ -42,7 +33,7 @@
     background-color: $color-background-button-default-hover;
   }
 
-  &:active {
+  &:active:not([disabled]) {
     background-color: $color-background-button-default-active;
   }
 }
@@ -60,19 +51,6 @@
   border-color: transparent;
 }
 
-// These styles show/hide text based on interaction
-.slds-text-not-selected,
-.slds-text-selected,
-.slds-text-selected-focus {
-  display: block;
-}
-
-.slds-is-selected:focus .slds-text-selected,
-.slds-is-selected[disabled]:hover .slds-text-selected,
-.slds-is-selected[disabled]:focus .slds-text-selected {
-  display: block;
-}
-
 /**
  * Default state of a stateful button
  *
@@ -82,15 +60,84 @@
  * @modifier
  * @group interaction
  */
-.slds-not-selected .slds-text-selected,
-.slds-not-selected .slds-text-selected-focus {
-  display: none;
+.slds-not-selected {
+
+  .slds-text-selected {
+    display: none;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  .slds-text-not-selected {
+    display: block;
+  }
 }
 
-.slds-is-selected .slds-text-not-selected,
-.slds-is-selected:not(:hover):not(:focus) .slds-text-selected-focus,
-.slds-is-selected[disabled]:hover .slds-text-selected-focus,
-.slds-is-selected:hover:not(:focus) .slds-text-selected,
-.slds-is-selected:focus .slds-text-selected-focus {
-  display: none;
+/**
+ * When button is selected and still has focus from click
+ *
+ * @selector .slds-is-selected-clicked
+ * @restrict .slds-button--stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-is-selected-clicked,
+.slds-is-selected[disabled],
+.slds-is-selected[disabled]:hover,
+.slds-is-selected[disabled]:focus {
+
+  .slds-text-selected {
+    display: block;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  .slds-text-not-selected {
+    display: none;
+  }
+}
+
+/**
+ * When button is pressed and selected
+ *
+ * @selector .slds-is-selected
+ * @restrict .slds-button--stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-is-selected {
+
+  .slds-text-not-selected {
+    display: none;
+  }
+
+  .slds-text-selected {
+    display: block;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+
+    .slds-text-not-selected {
+      display: none;
+    }
+
+    .slds-text-selected {
+      display: none;
+    }
+
+    .slds-text-selected-focus {
+      display: block;
+    }
+  }
 }

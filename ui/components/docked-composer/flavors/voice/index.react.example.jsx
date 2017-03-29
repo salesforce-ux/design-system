@@ -113,6 +113,7 @@ export let states = [
             symbol="unmuted"
             assistiveText="Mute Yourself"
             title="Mute Yourself"
+            aria-pressed="false"
           />
         </div>
         <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
@@ -283,7 +284,13 @@ export let states = [
           </div>
         </div>
         <div className="slds-docked-composer__toolbar">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-small" symbol="unmuted" assistiveText="Mute Yourself" title="Mute Yourself" />
+          <ButtonIcon
+            className="slds-button--icon-border-filled slds-button--icon-small"
+            symbol="unmuted"
+            assistiveText="Mute Yourself"
+            title="Mute Yourself"
+            aria-pressed="false"
+          />
         </div>
         <label className="slds-assistive-text" htmlFor="composer-text-input-1">Take notes</label>
         <textarea id="composer-text-input-1" className="slds-docked-composer__input slds-input--bare slds-text-longform slds-grow" placeholder="Jot down notes here..." />
@@ -319,12 +326,12 @@ export let states = [
           </p>
         </div>
         <div className="slds-p-horizontal--x-small slds-text-align--left slds-size--1-of-1">
-          <p className="slds-m-bottom--x-small">Recent Activity</p>
+          <h3 className="slds-m-bottom--x-small">Recent Activity</h3>
           <ul className="slds-has-dividers--around-space">
             <li className="slds-item slds-theme--shade slds-grid">
               <span className="slds-icon_container slds-icon-standard-task slds-m-right--x-small">
                 <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="task" />
-                <span className="slds-assistive-text">Task Icon</span>
+                <span className="slds-assistive-text">Task</span>
               </span>
               Discussed New Pricing Models
               <span className="slds-col--bump-left">Yesterday</span>
@@ -332,7 +339,7 @@ export let states = [
             <li className="slds-item slds-theme--shade slds-grid">
               <span className="slds-icon_container slds-icon-standard-email slds-m-right--x-small">
                 <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="email" />
-                <span className="slds-assistive-text">Task Icon</span>
+                <span className="slds-assistive-text">Email</span>
               </span>
               Re: Updated Proposals
               <span className="slds-col--bump-left">4 Hours Ago</span>
@@ -340,7 +347,7 @@ export let states = [
             <li className="slds-item slds-theme--shade slds-grid">
               <span className="slds-icon_container slds-icon-standard-note slds-m-right--x-small">
                 <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="note" />
-                <span className="slds-assistive-text">Task Icon</span>
+                <span className="slds-assistive-text">Note</span>
               </span>
               Discuss Slides for Nov EBC
               <span className="slds-col--bump-left">2 Days Ago</span>

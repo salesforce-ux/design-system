@@ -233,7 +233,7 @@ export let ComboboxContainer = props =>
               <UtilityIcon
                 containerClassName="slds-input__icon slds-input__icon--right"
                 className="slds-icon slds-icon--x-small slds-icon-text-default"
-                symbol={props.inputIconLeftSymbol || 'search'}
+                symbol={props.inputIconRightSymbol || 'search'}
               />
             : null }
             {/* If close button, show buttonIcon here */}

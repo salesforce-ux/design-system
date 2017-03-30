@@ -26,7 +26,7 @@ export let states = [
             <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
             <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
               <SvgIcon
-                className="slds-button__icon"
+                className="slds-button__icon slds-icon-text-light"
                 sprite="utility"
                 symbol="clear"
               />

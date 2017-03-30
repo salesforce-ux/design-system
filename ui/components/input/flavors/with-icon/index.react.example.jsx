@@ -55,7 +55,7 @@ export let states = [
           <Input />
           <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
             <SvgIcon
-              className="slds-button__icon"
+              className="slds-button__icon slds-icon-text-light"
               sprite="utility"
               symbol="clear"
             />

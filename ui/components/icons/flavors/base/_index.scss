@@ -210,3 +210,13 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 .slds-icon-text-error {
   fill: $color-text-error;
 }
+
+/**
+ * @selector .slds-icon-text-light
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-light {
+  fill: $color-text-input-icon;
+}

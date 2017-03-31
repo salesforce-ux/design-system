@@ -14,6 +14,7 @@ const ReactDOM = require('react-dom/server');
 const designSystemPath = path.resolve.bind(path, __dirname, '../ui');
 
 const VALID_MARKUP_EXPORTS = new Set(['preview', 'default', 'states', 'examples']);
+const NOT_FOUND_ERROR = Symbol('NOT_FOUND_ERROR');
 
 const getMarkup = (() => {
   const prettyHTML = html => beautify.html(html, {
@@ -29,7 +30,15 @@ const getMarkup = (() => {
   const utils = path.resolve.bind(path, designSystemPath('utilities'));
 
   // path -> Either Error Module
-  const tryRequire = p => Either.try(require)(p);
+  const tryRequire = p =>
+    fs.existsSync(p)
+      ? Either.try(require)(p)
+      : Either.Left(
+        Object.assign(
+          new Error(`Module Not Found: ${p}`), {
+            [NOT_FOUND_ERROR]: true
+          })
+      );
 
   const toMarkupItem = (id, element) =>
     Array.isArray(element) // states vs default
@@ -46,11 +55,15 @@ const getMarkup = (() => {
   // gets the first state right now...
   const requireVariant = (component, variant) =>
     tryRequire(`${components(component, variant, 'example.jsx')}`)
-    .orElse(() =>
-      tryRequire(`${components(component, 'flavors', variant, 'index.react.example.jsx')}`)
+    .orElse(error =>
+      error[NOT_FOUND_ERROR]
+        ? tryRequire(`${components(component, 'flavors', variant, 'index.react.example.jsx')}`)
+        : Either.Left(error)
     )
-    .orElse(() =>
-      tryRequire(`${utils(component, 'flavors', variant, 'index.react.example.jsx')}`)
+    .orElse(error =>
+      error[NOT_FOUND_ERROR]
+        ? tryRequire(`${utils(component, 'flavors', variant, 'index.react.example.jsx')}`)
+        : Either.Left(error)
     );
   const renderMarkup = c =>
     Either
@@ -108,13 +121,10 @@ const getMarkup = (() => {
           )
         )
       )
-      .fold(
-        () => Immutable.Map({
-          sections: Immutable.List()
-        }),
-        sections => Immutable.Map({
-          sections,
-          context
+      .map(sections =>
+        Immutable.Map({
+          context,
+          sections
         })
       );
   };
@@ -129,4 +139,8 @@ const getComments = () =>
       fs.readFileSync(scssPath, 'utf-8'))
     .join('\n')));
 
-module.exports = {getComments, getMarkup};
+module.exports = {
+  NOT_FOUND_ERROR,
+  getComments,
+  getMarkup
+};

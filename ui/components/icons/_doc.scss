@@ -54,9 +54,9 @@
  * icon has visible descriptive text, no `title` or extra `.slds-assistive-text`
  * is required.
  *
- * - *Note:** You must include the SVG sprites to link to them. If you’re using
- * Visualforce, see [the Visualforce tutorial](/platforms/visualforce). If you’re
- * using [Lightning components, see tutorial](/resources/lightning-svg-icon-component-helper).
+ * - **Note:** You must require SLDS in your application for SVG sprites to work.
+ * If you’re using Visualforce, see [the Visualforce tutorial](/platforms/visualforce).
+ * If you’re using [Lightning components, see this documentation](/platforms/lightning).
  *
  * You can access the SVG sprites by downloading the entire [CSS Framework or
  * just the icons](/downloads). To include a sprite in your application, the

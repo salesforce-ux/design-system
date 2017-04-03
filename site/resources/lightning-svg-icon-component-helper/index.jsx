@@ -13,6 +13,7 @@ import React from 'react';
 import PageBody from 'app_modules/site/components/page/body';
 import StickyNav from 'app_modules/site/components/sticky/nav';
 import CodeBlock from 'app_modules/ui/code-block';
+import SvgIcon from 'app_modules/ui/svg-icon';
 
 import g from 'app_modules/global';
 
@@ -32,13 +33,20 @@ export default (
     </StickyNav>
 
     <div className="site-main-content slds-col slds-col-rule--right slds-size--1-of-1 slds-large-size--4-of-6 slds-large-order--1">
+      <div className="slds-box slds-theme--shade slds-m-bottom--large">
+        <div className="slds-inline--icon_text slds-grid">
+          <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex slds-icon-text-default" sprite="utility" symbol="info" />
+
+          <div className="slds-col slds-align-middle">
+            <p>
+              This helper is was deprecated in the Spring ’17 release, in favor of using the <code>lightning:icon</code> component.<br />
+              Visit the <a href="https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_icon.htm"><code>lightning:icon</code> documentation</a> for more information.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="slds-container--large">
-        <p className="site-text-introduction">Currently, you will need to install a helper Lightning Component to render the {g.displayName} sprited icons. This is for several reasons:</p>
-        <ul>
-          <li>Sprited non-inline SVGs are not supported in Lightning yet</li>
-          <li>Accessibility compatibility</li>
-          <li>Fill coloring can be styled with CSS</li>
-        </ul>
+        <p className="site-text-introduction">In the past, you needed to install a helper Lightning Component to render the {g.displayName} sprited icons. <strong>This method is deprecated</strong>. The documentation below serves as a reference for developers who have used this method.</p>
 
         <h2 id="step-1" className="site-text-heading--large">Step 1: Create the Lightning Component</h2>
         <p>

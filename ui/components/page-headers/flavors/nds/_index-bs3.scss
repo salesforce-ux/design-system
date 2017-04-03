@@ -62,6 +62,10 @@
 
     .context {
       color: $color-text-default !important;
+
+      &.full-width{
+        max-width: 100%;
+      }
     }
 
     .overflow-menu {

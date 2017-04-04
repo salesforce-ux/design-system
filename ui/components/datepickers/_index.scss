@@ -71,7 +71,7 @@
     }
     // re-calculate for first child
     .slds-is-selected-multi:first-child > .slds-day:before {
-      #{$left}:0;
+      #{$left}: 0;
       @include if-ltr {
         transform: translateX($spacing-xx-small * -1);
       }
@@ -81,8 +81,8 @@
     }
     // re-calculate for last child
     .slds-is-selected-multi:last-child > .slds-day:after {
-      #{$left}:auto;
-      #{$right}:0;
+      #{$left}: auto;
+      #{$right}: 0;
       @include if-ltr {
         transform: translateX($spacing-xx-small);
       }

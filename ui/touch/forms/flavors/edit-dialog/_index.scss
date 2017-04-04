@@ -33,13 +33,13 @@
 
     &:first-child {
       float: $left;
-      margin-#{$right}:$spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
 
       + .slds-button {
         float: $right;
         margin: {
           top: 0;
-          #{$left}:$spacing-x-small;
+          #{$left}: $spacing-x-small;
         }
       }
     }

@@ -40,7 +40,7 @@
   // Apply left borders to anything radio button
   // after the first button
   + .slds-radio--button {
-    border-#{$left}:$border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
     border-radius: 0;
     margin: 0;
   }

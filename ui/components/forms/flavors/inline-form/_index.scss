@@ -24,7 +24,7 @@
   @include mq-small-min {
 
     .slds-form-element {
-      margin-#{$right}:$spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
 
       + .slds-form-element {
         margin-top: 0;

@@ -15,7 +15,7 @@
   display: flex;
   position: fixed;
   bottom: 0;
-  #{$left}:0;
+  #{$left}: 0;
   width: 100%;
   height: $height-docked-bar;
   background: $color-background;
@@ -24,7 +24,7 @@
 
   &__item {
     display: flex;
-    margin-#{$right}:$border-width-thin;
+    margin-#{$right}: $border-width-thin;
   }
 
   // Button that invokes utility panel
@@ -39,8 +39,8 @@
       content: '';
       position: absolute;
       bottom: 0;
-      #{$left}:0;
-      #{$right}:0;
+      #{$left}: 0;
+      #{$right}: 0;
       height: 2px;
       background: transparent;
     }

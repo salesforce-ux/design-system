@@ -29,7 +29,7 @@
         position: relative;
         top: (($line-height-button / 2) - ($line-height-text / 2));
         margin: {
-          #{$right}:0;
+          #{$right}: 0;
           bottom: 0;
         }
       }

@@ -51,7 +51,7 @@
   position: absolute;
   background: $color-background-button-brand-hover;
   top: 0;
-  #{$left}:-50%;
+  #{$left}: -50%;
   height: 100%;
   width: ($square-icon-medium-boundary + $spacing-x-small);
   transform: translateX($spacing-x-small * if-ltr(-1, 1));

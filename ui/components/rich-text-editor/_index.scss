@@ -37,8 +37,8 @@
   &__table {
     list-style: none;
     margin: 0 {
-      #{$right}:($spacing-xxx-small * -1);
-      #{$left}:($spacing-xxx-small * -1);
+      #{$right}: ($spacing-xxx-small * -1);
+      #{$left}: ($spacing-xxx-small * -1);
     }
     padding: 0;
     width: 8.25rem;

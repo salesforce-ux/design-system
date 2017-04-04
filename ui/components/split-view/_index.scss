@@ -64,7 +64,7 @@
     @include square(8px);
     position: absolute;
     top: $spacing-medium;
-    #{$left}:$spacing-x-small;
+    #{$left}: $spacing-x-small;
     border-radius: $border-radius-circle;
     display: block;
     background: $color-background-alt;
@@ -84,7 +84,7 @@
 // Expand/Collapse button
 .slds-split-view__toggle-button {
   position: absolute;
-  #{$right}:(0.75rem * -1);
+  #{$right}: (0.75rem * -1);
   top: 50%;
   margin-top: (($size-xx-small / 2) * -1);
   height: $size-xx-small;

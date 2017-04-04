@@ -19,7 +19,7 @@
 
     &__detail {
       float: $left;
-      padding-#{$left}:$spacing-xx-small;
+      padding-#{$left}: $spacing-xx-small;
     }
   }
 }
@@ -32,7 +32,7 @@
 
     &__label {
       width: 30%;
-      padding-#{$right}:$spacing-small;
+      padding-#{$right}: $spacing-small;
     }
 
     &__detail {

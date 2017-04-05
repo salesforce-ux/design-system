@@ -6,52 +6,58 @@ import gutil from 'gulp-util';
 import concat from 'gulp-concat';
 import _ from 'lodash';
 import through from 'through2';
+import path from 'path';
 import { createValidator } from '@salesforce-ux/design-system-markup/server';
 import { getComments } from '../markup-style';
 import createParser from '@salesforce-ux/design-system-parser';
 
 const renderMessage = result =>
-  `${result.get('selector')} did not satisfy ${result.get('restrict')} (${result.get('lines').join(', ')})`;
+  `${result.selector} did not satisfy ${result.restrict})`;
 
-const renderResults = results =>
-  _(results.toArray())
-  .uniqBy(e => e.get('lines').join(','))
-  .map(renderMessage)
-  .value();
+const sumBy = (f, xs) => xs.reduce((acc, x) => acc + f(x), 0);
 
-const formatResults = results =>
-  ({
-    total: results.count(),
-    failures: renderResults(results)
-  });
-
-const renderReport = fullReport =>
+const renderReport = (fullReport, fileCount) =>
 ({
+  uniqueErrors: Object.keys(fullReport).length,
   total: Object
          .keys(fullReport)
-         .reduce((acc, k) =>
-            acc + fullReport[k].total, 0),
-  fileCount: Object.keys(fullReport).length,
+         .reduce((acc, k) => acc + sumBy(x => x.lines.length, fullReport[k]), 0),
+  fileCount,
   fullReport
 });
+
+const renderItem = (filepath, lines) =>
+({
+  file: path.basename(filepath, '.html'),
+  lines
+});
+
+const create = filepath => (fullReport, r) => {
+  const msg = renderMessage(r);
+  return Object.assign(fullReport, {[msg]: (fullReport[msg] || []).concat(renderItem(filepath, r.lines))});
+};
 
 const printToConsole = (...xs) =>
   console.log.apply(console, xs);
 
 const report = validate => {
   const fullReport = {};
+  let count = 0;
   const transform = (file, enc, next) => {
     const results = validate(file.contents);
-    if(results.count()) {
-      fullReport[file.path] = formatResults(results);
+    if(results.length) {
+      _(results)
+      .uniqBy(e => e.lines.join(','))
+      .reduce(create(file.path), fullReport);
     }
+    count += 1;
     next(null, file, enc);
   };
 
   const flush = function(next) {
-    const report = renderReport(fullReport);
-    printToConsole(report, 'Full info in .reports/validate.json');
+    const report = renderReport(fullReport, count);
     const json = JSON.stringify(report, null, 2);
+    printToConsole(json, 'Full info in .reports/validate.json');
     this.push(new gutil.File({
       path: 'validations.json',
       contents: new Buffer(json)
@@ -71,7 +77,7 @@ const runValidations = validate =>
 const validate = () =>
   getComments()
   .map(createParser)
-  .map(parser => createValidator(parser.comments))
+  .map(parser => createValidator(parser.comments.map(c => c.get('annotations'))))
   .map(runValidations);
 
 module.exports = { validate };

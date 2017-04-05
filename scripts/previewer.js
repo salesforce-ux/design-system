@@ -55,5 +55,5 @@ previewer.listen(3003, ({ server, emit }) => {
     emit('styles');
   });
 
-  console.log(`Previewer available at: http://localhost:${server.address().port}/preview/buttons`);
+  console.log(`Previewer available at: http://localhost:${server.address().port}/preview`);
 });

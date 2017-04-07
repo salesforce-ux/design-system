@@ -132,13 +132,13 @@ export let ContextTabBar = props =>
           />
         </div>
         { props.addTabActive ?
-          <section className="slds-popover slds-nubbin--top" role="dialog" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+          <section className="slds-popover slds-nubbin--top" role="dialog" aria-label="Add tab by URL or ID" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
             <div className="slds-popover__body">
               <div className="slds-form-element">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
                 <div className="slds-form-element__control slds-grid">
                   <input id="text-input-01" className="slds-input" type="text" placeholder="Placeholder Text" />
-                  <button className="slds-button slds-button--brand slds-shrink-none slds-m-left--small">Add Tab</button>
+                  <button className="slds-button slds-button--brand slds-shrink-none slds-m-left--small" type="submit">Add Tab</button>
                 </div>
               </div>
             </div>

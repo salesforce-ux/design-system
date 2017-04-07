@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Intializes docked composer containter window
+ * Intializes docked composer container window
  *
  * @selector .slds-docked_container
  * @restrict div
@@ -33,6 +33,15 @@
   box-shadow: $elevation-inverse-shadow-2;
   border: $border-width-thin solid $color-border {
     bottom: none;
+  }
+
+/**
+ * @selector .slds-has-focus
+ * @restrict .slds-docked-composer
+ * @modifier
+ */
+  &.slds-has-focus {
+    box-shadow: 0 0 4px 2px $color-border-brand;
   }
 
   /**

@@ -136,12 +136,43 @@ export let states = [
     </Demo>
   },
   {
+    id: 'single-composer-focused',
+    label: 'Focused',
+    element:
+    <Demo>
+      <div className="slds-docked_container">
+        <DockedComposerPanel
+          className="slds-is-open slds-has-focus"
+          footer={ <Footer /> }
+        >
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
+        </DockedComposerPanel>
+      </div>
+    </Demo>
+  },
+  {
     id: 'single-composer-closed',
     label: 'Closed',
     element:
     <Demo>
       <div className="slds-docked_container">
         <DockedComposerPanel
+          dialogClosed
+          footer={ <Footer /> }
+        >
+          <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
+        </DockedComposerPanel>
+      </div>
+    </Demo>
+  },
+  {
+    id: 'single-composer-closed-focused',
+    label: 'Closed Focused',
+    element:
+    <Demo>
+      <div className="slds-docked_container">
+        <DockedComposerPanel
+          className="slds-has-focus"
           dialogClosed
           footer={ <Footer /> }
         >

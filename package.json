@@ -84,7 +84,7 @@
     "gulp-zip": "4.0.0",
     "invariant": "2.2.2",
     "js-beautify": "1.6.12",
-    "js-yaml": "3.8.2",
+    "js-yaml": "3.8.3",
     "lodash": "4.17.4",
     "markdown-it": "8.3.1",
     "minimist": "1.2.0",

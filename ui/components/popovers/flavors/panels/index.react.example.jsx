@@ -33,7 +33,8 @@ export default (
   <section
     aria-labelledby="panel-heading-id"
     className="slds-popover slds-popover--panel slds-nubbin--left-top"
-    role="dialog">
+    role="dialog"
+  >
     <ButtonIcon
       className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close"
       symbol="close"

@@ -1,38 +1,37 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-.slds-docked-composer__body_email,
-.slds-docked-composer__body--email {
-  justify-content: flex-start;
+.slds-email-composer {
+  position: relative;
+  flex: 1 1 auto;
 
-  .slds-input {
+  .slds-rich-text-editor {
+    border: 0;
+    border-top: $border-width-thin solid $color-border;
     border-radius: 0;
-
-    &:focus {
-      z-index: 1;
-    }
-
-    &:not(:focus) {
-      border: {
-        color: transparent;
-        top: $border-width-thin solid $color-border;
-      }
-    }
-  }
-
-  .slds-picklist__label {
-    padding: {
-      left: $spacing-small;
-      right: $spacing-large;
-    }
-
-    .slds-icon {
-      right: $spacing-x-small;
-    }
   }
 }
 
-.slds-email-composer__label {
-  width: $spacing-x-large;
-  font-size: $font-size-small;
+.slds-email-composer__combobox {
+  padding-left: $spacing-xx-large;
+  border: 0;
+  border-bottom: $border-width-thin solid $color-border;
+  border-radius: 0;
+
+  .slds-form-element__label {
+    position: absolute;
+    left: $spacing-small;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slds-combobox_container {
+    border: 0;
+  }
+}
+
+.slds-email-composer__recipient {
+  position: absolute;
+  top: 0;
+  right: $spacing-small;
 }

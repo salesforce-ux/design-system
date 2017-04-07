@@ -2,8 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const Either = require('data.either');
+const {Left, Right} = Either;
 const Task = require('data.task');
-const Immutable = require('immutable-ext');
+const I = require('immutable-ext');
 const beautify = require('js-beautify');
 const glob = require('glob');
 const fs = require('fs');
@@ -33,7 +34,7 @@ const getMarkup = (() => {
   const tryRequire = p =>
     fs.existsSync(p)
       ? Either.try(require)(p)
-      : Either.Left(
+      : Left(
         Object.assign(
           new Error(`Module Not Found: ${p}`), {
             [NOT_FOUND_ERROR]: true
@@ -42,34 +43,43 @@ const getMarkup = (() => {
 
   const toMarkupItem = (id, element) =>
     Array.isArray(element) // states vs default
-      ? Immutable.List(element).map(Immutable.Map)
-      : Immutable.List.of(Immutable.Map({ id, element }));
+      ? I.List(element).map(I.Map)
+      : I.List.of(I.Map({ id, element }));
 
   const exportsToMarkups = exports =>
-    Immutable.List(Object.keys(exports))
+    I.List(Object.keys(exports))
     .filter(title =>
       VALID_MARKUP_EXPORTS.has(title))
     .map(title =>
-      Immutable.Map({ title, items: toMarkupItem(title, exports[title]) }));
+      I.Map({ title, items: toMarkupItem(title, exports[title]) }));
 
-  // gets the first state right now...
-  const requireVariant = (component, variant) =>
-    tryRequire(`${components(component, variant, 'example.jsx')}`)
-    .orElse(error =>
-      error[NOT_FOUND_ERROR]
-        ? tryRequire(`${components(component, 'flavors', variant, 'index.react.example.jsx')}`)
-        : Either.Left(error)
-    )
-    .orElse(error =>
-      error[NOT_FOUND_ERROR]
-        ? tryRequire(`${utils(component, 'flavors', variant, 'index.react.example.jsx')}`)
-        : Either.Left(error)
+  // Needs change of type signature to know if
+  // util or not. Multiple places use this so check
+  // everything for now, but could lead to name conflicts
+  const requireChain = (component, variant) =>
+    I.List.of(
+      components(component, variant, 'example.jsx'),
+      components(component, 'flavors', variant, 'index.react.example.jsx'),
+      utils(component, 'flavors', variant, 'index.react.example.jsx'),
+      utils(component, 'example.jsx'),
+      utils(component, 'index.react.example.jsx')
     );
+
+  const requireVariant = (component, variant) =>
+    requireChain(component, variant)
+    .reduce((acc, x) =>
+      acc
+      .fold(e => e[NOT_FOUND_ERROR]
+                 ? tryRequire(x)
+                 : Left(e),
+            x => Right(x))
+    , Left({[NOT_FOUND_ERROR]: true}));
+
   const renderMarkup = c =>
     Either
       .of(c)
       .chain(c =>
-        React.isValidElement(c) ? Either.Right(c) : Either.Left('Invalid Component'))
+        React.isValidElement(c) ? Right(c) : Left('Invalid Component'))
       .chain(Either.try(ReactDOM.renderToStaticMarkup))
       .chain(Either.try(prettyHTML));
   const render = (component, variant) => {
@@ -88,7 +98,7 @@ const getMarkup = (() => {
             .map(i => i.toString(16))
             .join('');
           // Render the markup and then split it on the identifier created above
-          const markup = Immutable.List(
+          const markup = I.List(
               ReactDOM.renderToStaticMarkup(
                 React.createElement(m.Context, null, children)
               )
@@ -100,12 +110,12 @@ const getMarkup = (() => {
           // If there were not two items, that probably means that <Context />
           // did not use {props.children} anywhere in the render() function
           return markup.count() === 2
-            ? Either.Right(markup)
-            : Either.Left();
+            ? Right(markup)
+            : Left();
         }
-        return Either.Left();
+        return Left();
       })
-      .getOrElse(Immutable.List());
+      .getOrElse(I.List());
     return variantModule
       .map(exportsToMarkups)
       .map(sections =>
@@ -122,7 +132,7 @@ const getMarkup = (() => {
         )
       )
       .map(sections =>
-        Immutable.Map({
+        I.Map({
           context,
           sections
         })

@@ -33,16 +33,16 @@
 
   &--center {
     margin: {
-      left: auto;
-      right: auto;
+      #{$left}: auto;
+      #{$right}: auto;
     }
   }
 
   &--left {
-    margin-right: auto;
+    margin-#{$right}: auto;
   }
 
   &--right {
-    margin-left: auto;
+    margin-#{$left}: auto;
   }
 }

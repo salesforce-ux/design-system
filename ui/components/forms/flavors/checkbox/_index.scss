@@ -131,5 +131,5 @@
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }

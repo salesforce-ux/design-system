@@ -21,8 +21,8 @@
     > li {
       white-space: nowrap;
       padding: $spacing-x-small {
-        left: $spacing-x-large;
-        right: $spacing-x-large;
+        #{$left}: $spacing-x-large;
+        #{$right}: $spacing-x-large;
       }
 
       &:hover,

@@ -49,7 +49,7 @@
       content: '*';
       color: $color-text-error;
       position: absolute;
-      left: ($spacing-x-small * -1);
+      #{$left}: ($spacing-x-small * -1);
     }
   }
 }

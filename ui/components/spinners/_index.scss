@@ -11,9 +11,9 @@
 .slds-spinner_container {
   position: absolute;
   top: 0;
-  right: 0;
+  #{$right}: 0;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   z-index: calc(#{$z-index-modal} + 2);
   background-color: $color-background-temp-modal-tint-alt;
   visibility: visible;
@@ -36,7 +36,7 @@
 .slds-spinner {
   position: absolute;
   top: 50%;
-  left: 50%;
+  #{$left}: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -50,7 +50,7 @@
 .slds-spinner__dot-b {
   position: absolute;
   top: 0;
-  left: 0;
+  #{$left}: 0;
   width: 100%;
 }
 

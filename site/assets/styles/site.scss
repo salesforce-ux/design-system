@@ -10,7 +10,8 @@
 
 @import
   'ui/design-tokens',
-  'ui/config';
+  'ui/config',
+  'ui/vendor/directional';
 
 // Site-wide variables
 $height-searchfield: calc(#{$line-height-button-small} + #{$border-width-thin * 2}); // Height of a text input

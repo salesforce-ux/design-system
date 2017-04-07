@@ -16,7 +16,7 @@
     @include tabs-nav;
     background-color: $color-background;
     border: $border-width-thin solid $color-border-button-default;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    border-radius: corner-values($border-radius-medium $border-radius-medium 0 0);
   }
 
   @include deprecate('4.0.0') {
@@ -26,12 +26,12 @@
       margin-bottom: ($border-width-thin * -1);
 
       + .slds-tabs__item {
-        margin-left: ($border-width-thin * -1);
+        margin-#{$left}: ($border-width-thin * -1);
       }
 
       &:first-child > a {
-        border-left: 0;
-        border-radius: $border-radius-medium 0 0 0;
+        border-#{$left}: 0;
+        border-radius: corner-values($border-radius-medium 0 0 0);
       }
 
       > a {
@@ -42,8 +42,8 @@
         color: $color-text-weak;
         background-clip: padding-box;
         border: {
-          left: $border-width-thin solid transparent;
-          right: $border-width-thin solid transparent;
+          #{$left}: $border-width-thin solid transparent;
+          #{$right}: $border-width-thin solid transparent;
         }
 
         &:hover,
@@ -69,7 +69,7 @@
       background-color: $color-background-alt;
       border: $border-width-thin solid $color-border-button-default;
       border-top: 0;
-      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+      border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
       padding: $spacing-medium;
     }
   }
@@ -80,12 +80,12 @@
   margin-bottom: ($border-width-thin * -1);
 
   + .slds-tabs--scoped__item {
-    margin-left: ($border-width-thin * -1);
+    margin-#{$left}: ($border-width-thin * -1);
   }
 
   &:first-child .slds-tabs--scoped__link {
-    border-left: 0;
-    border-radius: $border-radius-medium 0 0 0;
+    border-#{$left}: 0;
+    border-radius: corner-values($border-radius-medium 0 0 0);
   }
 }
 
@@ -93,7 +93,7 @@
   background-color: $color-background-alt;
   border: $border-width-thin solid $color-border-button-default;
   border-top: 0;
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
   padding: $spacing-medium;
 }
 
@@ -105,8 +105,8 @@
   color: $color-text-weak;
   background-clip: padding-box;
   border: {
-    left: $border-width-thin solid transparent;
-    right: $border-width-thin solid transparent;
+    #{$left}: $border-width-thin solid transparent;
+    #{$right}: $border-width-thin solid transparent;
   }
 
   &:hover,

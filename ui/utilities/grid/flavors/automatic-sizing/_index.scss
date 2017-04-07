@@ -42,21 +42,21 @@
 
   .slds-col--padded {
     padding: {
-      right: $spacing-small;
-      left: $spacing-small;
+      #{$right}: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     &-medium {
       padding: {
-        right: $spacing-medium;
-        left: $spacing-medium;
+        #{$right}: $spacing-medium;
+        #{$left}: $spacing-medium;
       }
     }
 
     &-large {
       padding: {
-        right: $spacing-large;
-        left: $spacing-large;
+        #{$right}: $spacing-large;
+        #{$left}: $spacing-large;
       }
     }
 
@@ -76,42 +76,42 @@
 
 .slds-grid--pull-padded {
   margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
+    #{$right}: ($spacing-small * -1);
+    #{$left}: ($spacing-small * -1);
   }
 
   &-xxx-small {
     margin: {
-      right: ($spacing-xxx-small * -1);
-      left: ($spacing-xxx-small * -1);
+      #{$right}: ($spacing-xxx-small * -1);
+      #{$left}: ($spacing-xxx-small * -1);
     }
   }
 
   &-xx-small {
     margin: {
-      right: ($spacing-xx-small * -1);
-      left: ($spacing-xx-small * -1);
+      #{$right}: ($spacing-xx-small * -1);
+      #{$left}: ($spacing-xx-small * -1);
     }
   }
 
   &-x-small {
     margin: {
-      right: ($spacing-x-small * -1);
-      left: ($spacing-x-small * -1);
+      #{$right}: ($spacing-x-small * -1);
+      #{$left}: ($spacing-x-small * -1);
     }
   }
 
   &-medium {
     margin: {
-      right: ($spacing-medium * -1);
-      left: ($spacing-medium * -1);
+      #{$right}: ($spacing-medium * -1);
+      #{$left}: ($spacing-medium * -1);
     }
   }
 
   &-large {
     margin: {
-      right: ($spacing-large * -1);
-      left: ($spacing-large * -1);
+      #{$right}: ($spacing-large * -1);
+      #{$left}: ($spacing-large * -1);
     }
   }
 }
@@ -128,7 +128,7 @@
       }
 
       &--right {
-        border-right: 1px solid $color-border-separator;
+        border-#{$right}: 1px solid $color-border-separator;
       }
 
       &--bottom {
@@ -136,7 +136,7 @@
       }
 
       &--left {
-        border-left: 1px solid $color-border-separator;
+        border-#{$left}: 1px solid $color-border-separator;
       }
     }
   }
@@ -152,7 +152,7 @@
     }
 
     &-right {
-      border-right: 1px solid $color-border-separator;
+      border-#{$right}: 1px solid $color-border-separator;
     }
 
     &-bottom {
@@ -160,7 +160,7 @@
     }
 
     &-left {
-      border-left: 1px solid $color-border-separator;
+      border-#{$left}: 1px solid $color-border-separator;
     }
   }
 }
@@ -244,6 +244,6 @@
 
 // Resets spacing/bullets for when grids are used on unordered lists
 .slds-text-longform ul.slds-grid {
-  margin-left: 0;
+  margin-#{$left}: 0;
   list-style: none;
 }

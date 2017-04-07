@@ -22,6 +22,7 @@ The following components are now available:
 - Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
 - Added Visual Picker - [Visual Picker](/components/visual-picker)
 - Added improved version of Vertical Navigation - [Vertical Navigation](/components/vertical-navigation/)
+- Added a variant for Search input with loading spinner - [Input with Spinner](/components/input#flavor-with-spinner)
 
 **ADDED**
 
@@ -29,6 +30,8 @@ The following classes are now available:
 
 - Added `slds-has-input-focus` utility class to provide focus styles on an element
 - Added `slds-dropdown--fluid` to adjust the width of a dropdown so it can be fluid to its container
+- Added updated styles for base HTML elements in the Rich Text Editor.
+- Added the same updated styles in the output of the Rich Text Editor using the `.slds-rich-text-editor__output` class.
 
 **CHANGES**
 
@@ -52,14 +55,14 @@ The following changes have been made in this release:
   - Added state for no title
   - Added loading state
 - Changed spacing between feed items from 1.5rem to .75rem
-- The [Button Icon](/components/button-icons/) component is required to have `slds-button--icon` applied to the `<button />` element. Before, `slds-button--icon-inverse`, `slds-button--icon-container`, `slds-button--icon-border`, `slds-button--icon-border-filled`, `slds-button--icon-border-inverse`, `slds-button--icon-more`, and `slds-button--icon-error` were used in conjunction with just the `slds-button` classname but we now require `slds-button--icon` to be apart of this grouping of classnames.
+- The [Button Icon](/components/button-icons/) component is required to have `slds-button--icon` applied to the `<button />` element. Before, `slds-button--icon-inverse`, `slds-button--icon-container`, `slds-button--icon-border`, `slds-button--icon-border-filled`, `slds-button--icon-border-inverse`, `slds-button--icon-more`, and `slds-button--icon-error` were used in conjunction with the `slds-button` classname but we now require `slds-button--icon` to be a part of this grouping of classnames.
 - The [Stateful Button](/components/buttons#flavor-stateful) component is required to have `slds-button--stateful` applied to the `<button />` element
 - The [Alert](/components/avatar/) component icon is now contained within `slds-icon_container`
 - The [Toast](/components/toast/) component icon is now contained within `slds-icon_container`
 - The [Page Header](/components/page-headers) component "entity" icon is now contained within `slds-icon_container`
 - The [Feeds](/components/feeds/) component "Post" examples have been updated to be contained within the `slds-feed` list
 - The [Compound Form Layout](/components/form-layout/#flavor-compound) example was updated so each `fieldset` is correctly using the `slds-form-element` class and the whole form is now contained in `slds-form--compound`
-- Unless the HTML output is represented as a list — so a `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom--[position]` instead of `slds-has-divider--[position]`
+- Unless the HTML output is represented as a list — `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom--[position]` instead of `slds-has-divider--[position]`
 
 **FIXED**
 

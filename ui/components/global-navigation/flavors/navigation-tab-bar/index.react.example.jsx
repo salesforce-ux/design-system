@@ -9,6 +9,13 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 import classNames from 'classnames';
 import _ from 'lodash';
 
+const tabPanelId01 = 'context-tab-panel-1';
+const tabPanelId02 = 'context-tab-panel-2';
+const tabPanelId03 = 'context-tab-panel-3';
+const tabId01 = 'context-tab-id-1';
+const tabId02 = 'context-tab-id-2';
+const tabId03 = 'context-tab-id-3';
+
 //////////////////////////////////////////////
 // Partial(s)
 //////////////////////////////////////////////
@@ -22,7 +29,7 @@ let ShortCutKey = props =>
 // Context Tab
 let ContextTab = props =>
   <li className={classNames('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
-    <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' }>
+    <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' } aria-controls={ props.tabPanelId } id={ props.id }>
       { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
       <div className="slds-icon_container" title={ _.startCase(props.symbol) || 'Case' }>
         <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.symbol || 'case' } />
@@ -60,6 +67,19 @@ let ContextTab = props =>
       </div>
     : null }
   </li>;
+
+let ContextTabPanel = props =>
+  <div
+    id={props.id}
+    className={classNames(
+      'slds-p-vertical--medium',
+      props.show ? 'slds-show' : 'slds-hide'
+    )}
+    role="tabpanel"
+    aria-labelledby={props.tabId}
+  >
+    {props.children}
+  </div>;
 
 //////////////////////////////////////////////
 // State Constructor(s)
@@ -164,41 +184,182 @@ export let states = [
     id: 'default',
     label: 'Default',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2"  />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'split-view',
     label: 'Split View - Active',
     element:
-      <ContextTabBar splitViewActive>
-        <ContextTab title="Home" symbol="home" itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2"  />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar splitViewActive={true}>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'tab-active',
     label: 'Tab - Active',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" />
-        <ContextTab title="Tab Item 1" itemActive />
-        <ContextTab title="Tab Item 2"  />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'tab-active-focus',
     label: 'Tab - Active Focus',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" />
-        <ContextTab title="Tab Item 1" className="slds-has-focus" itemActive />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive={true}
+            className="slds-has-focus"
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'tab-item-action-menu-open',
@@ -206,77 +367,328 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '12rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" symbol="home" />
-          <ContextTab title="Tab Item 1" itemActive actionOverflow="true" />
-          <ContextTab title="Tab Item 2" />
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive={true}
+            actionOverflow="true"
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
         </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
       </div>
   },
   {
     id: 'pinned-tab',
     label: 'Pinned Tab',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" pinned />
-        <ContextTab title="Tab Item 1" itemActive />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            pinned={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'pinned-tab-active',
     label: 'Pinned Tab - Active',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" pinned itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+            pinned={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'pinned-tab-active-focus',
     label: 'Pinned Tab - Active Focus',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" className="slds-has-focus" pinned itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+            pinned={true}
+            className="slds-has-focus"
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'unsaved-pinned-tab',
     label: 'Unsaved Pinned Tab',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" pinned itemUnsaved />
-        <ContextTab title="Tab Item 1" itemActive />
-        <ContextTab title="Tab Item 2" />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            pinned={true}
+            itemUnsaved={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'unsaved-tab',
     label: 'Unsaved Tab',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2" itemUnsaved />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+            itemUnsaved={true}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'overflow-tabs',
     label: 'Overflow Tabs',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2" />
-        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
-          <button className="slds-button slds-context-bar__label-action" aria-haspopup="true">
-            <span className="slds-p-left--xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
-            <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
-          </button>
-        </li>
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
+            <button className="slds-button slds-context-bar__label-action" aria-haspopup="true">
+              <span className="slds-p-left--xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+            </button>
+          </li>
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'overflow-tabs-open',
@@ -284,9 +696,23 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" symbol="home" itemActive />
-          <ContextTab title="Tab Item 1" />
-          <ContextTab title="Tab Item 2" />
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
           <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
             <button className="slds-button slds-context-bar__label-action" aria-haspopup="true">
               <span className="slds-p-left--xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
@@ -306,24 +732,78 @@ export let states = [
             </Menu>
           </li>
         </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
       </div>
   },
   {
     id: 'unsaved-overflow-tabs',
     label: 'Unsaved Overflow Tabs',
     element:
-      <ContextTabBar>
-        <ContextTab title="Home" symbol="home" itemActive />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2" />
-        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-unsaved">
-          <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
-            <abbr className="slds-indicator--unsaved" title="Tab(s) within menu not saved">*</abbr>
-            <span className="slds-p-left--xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
-            <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
-          </button>
-        </li>
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-unsaved">
+            <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+              <abbr className="slds-indicator--unsaved" title="Tab(s) within menu not saved">*</abbr>
+              <span className="slds-p-left--xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+            </button>
+          </li>
+        </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'unsaved-overflow-tabs-open',
@@ -331,9 +811,23 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '8rem'}}>
         <ContextTabBar>
-          <ContextTab title="Home" symbol="home" itemActive />
-          <ContextTab title="Tab Item 1" />
-          <ContextTab title="Tab Item 2" />
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive={true}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
           <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-is-unsaved">
             <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
               <abbr className="slds-indicator--unsaved" title="Tab(s) within menu not saved">*</abbr>
@@ -355,17 +849,69 @@ export let states = [
             </Menu>
           </li>
         </ContextTabBar>
+        <ContextTabPanel
+          show={true}
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
       </div>
   },
   {
     id: 'object-switcher-active',
     label: 'Object Switcher - Active',
     element:
-      <ContextTabBar objectSwitchClassName="slds-is-active">
-        <ContextTab title="Home" symbol="home" />
-        <ContextTab title="Tab Item 1" />
-        <ContextTab title="Tab Item 2"  />
-      </ContextTabBar>
+      <div className="demo-only">
+        <ContextTabBar objectSwitchClassName="slds-is-active">
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
   },
   {
     id: 'object-switcher-menu-open',
@@ -373,10 +919,41 @@ export let states = [
     element:
       <div className="demo-only" style={{height: '11rem'}}>
         <ContextTabBar objectSwitchClassName="slds-is-open">
-          <ContextTab title="Home" symbol="home" />
-          <ContextTab title="Tab Item 1" />
-          <ContextTab title="Tab Item 2"  />
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
         </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
       </div>
   },
   {
@@ -384,11 +961,42 @@ export let states = [
     label: 'Add Tab Dialog - Open',
     element:
       <div className="demo-only" style={{height: '8rem'}}>
-        <ContextTabBar addTabActive>
-          <ContextTab title="Home" symbol="home" />
-          <ContextTab title="Tab Item 1" />
-          <ContextTab title="Tab Item 2"  />
+        <ContextTabBar addTabActive={true}>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
         </ContextTabBar>
+        <ContextTabPanel
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
       </div>
   }
 ];

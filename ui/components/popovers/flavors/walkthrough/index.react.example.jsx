@@ -143,7 +143,6 @@ export let states = [
     element:
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin--top-left"
-        title="Action dialog"
         headingId="dialog-heading-id-01"
         closeButton={true}
         inverse={true}

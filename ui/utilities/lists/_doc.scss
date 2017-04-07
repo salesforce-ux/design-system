@@ -8,6 +8,13 @@
  *
  * By default, a list is vertical, but you can change it to horizontal using these utility classes.
  *
+ * #### Accessibility
+ *
+ * In most cases, you should always try to be using ordered/unordered list or
+ * description list HTML structure. If for reasons unknown, you cannot use a list,
+ * please make sure you add `role="list"` to your top level element and `role="listitem"`
+ * to each descendant element under `role="list"`.
+ *
  * @summary A list groups related content together.
  *
  * @utility

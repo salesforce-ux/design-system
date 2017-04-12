@@ -147,7 +147,7 @@ module.exports = (done) => prepare((err, result) => {
   if (err) return done(err);
   publish({
     result,
-    zips: ['dist.zip', 'examples.zip', 'www.zip', 'snapshot.json', 'design-tokens.zip']
+    zips: ['dist.zip', 'examples.zip', 'snapshot.json', 'design-tokens.zip']
       .map((p) => paths.build(p)),
     project: 'design-system'
   }, done);

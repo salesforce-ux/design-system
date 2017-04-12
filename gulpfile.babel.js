@@ -38,8 +38,8 @@ gulp.task('build', callback => {
       'assets',
       'assets:icons',
       'generate:tokens:all',
-      'generate:examples',
-      'styles'
+      'generate:examples'
     ],
+    'styles',
   callback);
 });

@@ -12,22 +12,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import '../helpers/setup';
 
 import autoprefixer from 'gulp-autoprefixer';
-import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import minifycss from 'gulp-minify-css';
-import path from 'path';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
 import runSequence from 'run-sequence';
 
+import './generate-tokens-components';
+
 const sign = x => (x < 0) ? '' : '+';
 
-Number.prototype.toKB = function () {
-  return (this / 1024).toFixed(2);
-};
+const toKB = n => (n / 1024).toFixed(2);
 
 gulp.task('stylestats', ['styles'], done => {
   const localFile = '.www/assets/styles/slds.css';
@@ -38,6 +36,7 @@ gulp.task('stylestats', ['styles'], done => {
   const remote = {};
 
   remoteStats.parse((error, result) => {
+    if (error) throw error;
     remote.size = result.size;
     remote.gzippedSize = result.gzippedSize;
     remote.rules = result.rules;
@@ -52,9 +51,9 @@ gulp.task('stylestats', ['styles'], done => {
       diff.selectors = result.selectors - remote.selectors;
 
       gutil.log(gutil.colors.green(`slds.scss (minified):
-            ${result.size.toKB()}KB (${result.gzippedSize.toKB()}KB gzipped)`));
+            ${toKB(result.size)}KB (${toKB(result.gzippedSize)}KB gzipped)`));
 
-      gutil.log(gutil.colors.gray(`That's ${sign(diff.size)}${diff.size.toKB()}KB (${sign(diff.gzippedSize)}${diff.gzippedSize.toKB()}KB gzipped) than the current public version.`));
+      gutil.log(gutil.colors.gray(`That's ${sign(diff.size)}${toKB(diff.size)}KB (${sign(diff.gzippedSize)}${diff.gzippedSize.toKB()}KB gzipped) than the current public version.`));
 
       gutil.log(`Additional stats:
             Rules: ${result.rules} (${sign(diff.rules)}${diff.rules})
@@ -64,9 +63,9 @@ gulp.task('stylestats', ['styles'], done => {
   });
 });
 
-gulp.task('styles:site', ['generate:tokens:sass'], () =>
+gulp.task('styles:framework', ['generate:tokens:sass'], () =>
   gulp
-    .src('site/assets/styles/*.scss')
+    .src('ui/index.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass.sync({
@@ -80,7 +79,6 @@ gulp.task('styles:site', ['generate:tokens:sass'], () =>
     .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.www/assets/styles'))
-    .pipe(browserSync.stream({ match: '**/*.css' }))
 );
 
 // Quick check that all variants compile correctly to CSS
@@ -96,5 +94,5 @@ gulp.task('styles:test', () =>
 );
 
 gulp.task('styles', callback => {
-  runSequence('styles:site', 'styles:test', callback);
+  runSequence('styles:framework', 'styles:test', callback);
 });

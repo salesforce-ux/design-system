@@ -14,10 +14,6 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
 import theo from 'theo';
-import concat from 'gulp-concat';
-import zip from 'gulp-zip';
-import replace from 'gulp-replace';
-import rename from 'gulp-rename';
 import through from 'through2';
 import _ from 'lodash';
 
@@ -75,7 +71,7 @@ gulp.task('generate:tokens:components:imports', (done) =>
         , '# File generated automatically, do not edit manually\nimports:');
       const file = new gutil.File({
         path: 'components.yml',
-        contents: new Buffer(componentTokenImports)
+        contents: Buffer.from(componentTokenImports)
       });
       next(null, file);
     }))

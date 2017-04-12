@@ -11,9 +11,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import path from 'path';
 import gulp from 'gulp';
-import zip from 'gulp-zip';
 
-export const ignore = 'jsx,js,scss';
 export const getPath = (a, b) => path.resolve(__PATHS__[a], (b || ''));
 
 gulp.task('assets:icons', () =>
@@ -24,21 +22,13 @@ gulp.task('assets:icons', () =>
     .pipe(gulp.dest(getPath('www', 'assets/icons')))
 );
 
-gulp.task('assets:icons:zip', () =>
+gulp.task('assets', () =>
   gulp
-    .src([getPath('icons', '**/*'), getPath('icons', '../../RELEASENOTES.md')])
-    .pipe(zip('salesforce_icons.zip'))
-    .pipe(gulp.dest(getPath('www', 'assets/downloads')))
-);
-
-gulp.task('assets:config', () =>
-  gulp
-    .src(['site/*-config.js'])
-    .pipe(gulp.dest(__PATHS__.www))
-);
-
-gulp.task('assets', ['assets:icons', 'assets:icons:zip', 'assets:config'], () =>
-  gulp
-    .src(['site/**/*.*', `!site/**/*.{${ignore}}`])
-    .pipe(gulp.dest(__PATHS__.www))
+    .src([
+      'site/assets/fonts/**/*',
+      'site/assets/images/**/*'
+    ], {
+      base: 'site'
+    })
+    .pipe(gulp.dest(getPath('www')))
 );

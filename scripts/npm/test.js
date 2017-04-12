@@ -15,7 +15,6 @@ import async from 'async';
 import { spawn } from 'child_process';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
-import path from 'path';
 import stripAnsi from 'strip-ansi';
 
 mkdirp(__PATHS__.logs);
@@ -32,7 +31,7 @@ let run = (script, done) => {
     }
   };
 
-  let command = spawn('npm',  ['run', script.test, '--', '--color'], {
+  let command = spawn('npm', ['run', script.test, '--', '--color'], {
     cwd: __PATHS__.root,
     stdio: ['inherit', 'pipe', 'inherit']
   });
@@ -46,8 +45,7 @@ let run = (script, done) => {
 };
 
 const tests = [
-  {test: 'test-unit'},
-  {test: 'test-integration'}
+  { test: 'test-unit' }
 ];
 
 // HACK: The order of these tests is directly related

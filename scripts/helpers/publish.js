@@ -127,7 +127,7 @@ const prepare = (done) => {
     async.apply(zip, 'dist'),
     async.apply(zip, 'examples'),
     async.apply(zip, 'design-tokens')
-  ], (err, [_prepare, _dist, _examples, _snaps, _website, _tokens, info, stats, sha, _zip]) => {
+  ], (err, [_prepare, _dist, _examples, _snaps, _tokens, info, stats, sha, _zip]) => {
     if (err) return done(err);
     let result = _.assign({}, { sha, info, stats }, {
       tag: process.env.TRAVIS_TAG || '',

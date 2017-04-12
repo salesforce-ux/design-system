@@ -1,6 +1,0 @@
-classBase: 'notify'
-status: 'prototype'
-flavors:
-  - alert
-  - toast
-  - prompt

@@ -1,8 +1,0 @@
-classBase: 'rich-text-editor'
-status: 'dev-ready'
-flavors:
-  - base
-  - feed
-  - note
-  - email
-  - bottom-toolbar

@@ -1,7 +1,0 @@
-classBase: 'docked'
-status: 'prototype'
-flavors:
-  - base
-  - voice
-  - email
-  - task

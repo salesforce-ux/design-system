@@ -1,5 +1,0 @@
-classBase: 'publisher'
-status: 'dev-ready'
-flavors:
-  - base
-  - comment

@@ -1,7 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - dropdown
-  - dropdown-positioning
-  - dropdown-height
-  - action-overflow
-  - dynamic-list

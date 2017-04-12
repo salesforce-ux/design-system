@@ -120,53 +120,49 @@ let RowData = props => {
   );
 };
 
-
-
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Table className="slds-table--fixed-layout">
+    <thead>
+      <tr className="slds-line-height--reset">
+        <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
+          <div className="slds-th__action slds-th__action--form">
+            <Checkbox label="Select All" hideLabel />
+          </div>
+        </th>
+        { _.times(columns.length, i =>
+          <Th key={ i }
+            columnName={ columns[i] }
+            focusable />
+        )}
+        <th scope="col" style={{ width: '3.25rem' }}>
+          <div className="slds-th__action">
+            <span className="slds-assistive-text">Actions</span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      { _.times(rows.length, i =>
+        <RowData key={ i }
+          index={ i + 1 }
+          recordName={ rows[i].recordName }
+          accountName={ rows[i].accountName }
+          closeDate={ rows[i].closeDate }
+          stage={ rows[i].stage }
+          confidence={ rows[i].confidence }
+          amount={ rows[i].amount }
+          contact={ rows[i].contact }
+        />
+      )}
+    </tbody>
+  </Table>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Table className="slds-table--fixed-layout">
-        <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
-                <Checkbox label="Select All" hideLabel />
-              </div>
-            </th>
-            { _.times(columns.length, i =>
-              <Th key={ i }
-                columnName={ columns[i] }
-                focusable />
-            )}
-            <th scope="col" style={{ width: '3.25rem' }}>
-              <div className="slds-th__action">
-                <span className="slds-assistive-text">Actions</span>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          { _.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
-            />
-          )}
-        </tbody>
-      </Table>
-  },
   {
     id: 'row-selected',
     label: 'Row Selected',

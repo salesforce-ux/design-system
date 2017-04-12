@@ -175,7 +175,7 @@ let CoachExample2 = props =>
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let StateA = props =>
+let Default = props =>
   <Coach>
     <Path>
       <ListMain listRole="listbox">
@@ -220,7 +220,7 @@ let StateA = props =>
     </Path>
   </Coach>;
 
-let StateB = props =>
+let PathCoach = props =>
   <Coach>
     <Path>
       <Trigger />
@@ -280,7 +280,7 @@ let StateB = props =>
   </Coach>;
 
 
-let StateD = props =>
+let PathCoachVisible = props =>
   <Demo>
     <Coach isExpanded>
       <Path>
@@ -341,7 +341,7 @@ let StateD = props =>
     </Coach>
   </Demo>;
 
-let StateE = props =>
+let PathStageSelected = props =>
   <Demo>
     <Coach isExpanded>
       <Path>
@@ -402,7 +402,7 @@ let StateE = props =>
     </Coach>
   </Demo>;
 
-let StateF = props =>
+let PathStageLost = props =>
   <Coach>
     <Path>
       <Trigger />
@@ -460,7 +460,7 @@ let StateF = props =>
     </CoachContent>
   </Coach>;
 
-let StateG = props =>
+let PathStageWon = props =>
   <Coach>
     <Path>
       <Trigger />
@@ -523,36 +523,34 @@ let StateG = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Default />
+);
 
 export let states = [
   {
-    id: 'without-coaching',
-    label: 'Without Coaching',
-    element: <StateA />
-  },
-  {
     id: 'with-coaching',
     label: 'With Coaching Available',
-    element: <StateB />
+    element: <PathCoach />
   },
   {
     id: 'current-coaching',
     label: 'Current Stage Coaching Visible',
-    element: <StateD />
+    element: <PathCoachVisible />
   },
   {
     id: 'different-coaching',
     label: 'With Different Stage Selected',
-    element: <StateE />
+    element: <PathStageSelected />
   },
   {
     id: 'lost',
     label: 'Lost',
-    element: <StateF />
+    element: <PathStageLost />
   },
   {
     id: 'won',
     label: 'Won',
-    element: <StateG />
+    element: <PathStageWon />
   }
 ];

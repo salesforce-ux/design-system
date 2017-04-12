@@ -1,5 +1,5 @@
 status: 'dev-ready'
 flavors:
-  - files
+  - base
   - image
   - integrated

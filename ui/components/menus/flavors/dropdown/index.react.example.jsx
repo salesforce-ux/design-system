@@ -207,43 +207,26 @@ let IconRight = props =>
 // Export
 //////////////////////////////////////////////
 
+export const Context = props =>
+  <div style={{height: '260px'}}>
+    {props.children}
+  </div>;
+
 export default (
-  <Demo style={{height: '220px'}}>
-    <Trigger>
-      <Menu className="slds-dropdown--left">
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider--top-space" role="separator"></li>
-          <MenuItem>Menu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown--left">
+      <MenuList>
+        <MenuItem tabIndex="0">Menu Item One</MenuItem>
+        <MenuItem>Menu Item Two</MenuItem>
+        <MenuItem>Menu Item Three</MenuItem>
+        <li className="slds-has-divider--top-space" role="separator"></li>
+        <MenuItem>Menu Item Four</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-export let states = [
-  {
-    id: 'dropdown-menu',
-    label: 'Default',
-    element: <Default />
-  },
-  {
-    id: 'dropdown-menu-small',
-    label: 'Small',
-    element: <Small />
-  },
-  {
-    id: 'dropdown-menu-medium',
-    label: 'Medium',
-    element: <Medium />
-  },
-  {
-    id: 'dropdown-menu-large',
-    label: 'Large',
-    element: <Large />
-  },
+export let examples = [
   {
     id: 'dropdown-menu-header',
     label: 'Sub Heading',
@@ -263,5 +246,31 @@ export let states = [
     id: 'dropdown-menu-icon-right',
     label: 'Single Icon - Right',
     element: <IconRight />
+  },
+  {
+    id: 'action-overflow',
+    label: 'Overflow menu with actions',
+    element:
+      <Trigger
+        className="slds-is-open"
+        triggerIcon={
+          <ButtonIcon
+            className="slds-button--icon-border-filled slds-button--icon-x-small"
+            sprite="utility"
+            symbol="down"
+            assistiveText="Show More"
+            aria-haspopup="true"
+            title="Show More"
+          />
+        }
+      >
+        <Menu className="slds-dropdown--left slds-dropdown--actions">
+          <MenuList>
+            <MenuItem tabIndex="0">Action One</MenuItem>
+            <MenuItem>Action Two</MenuItem>
+            <MenuItem>Action Three</MenuItem>
+          </MenuList>
+        </Menu>
+      </Trigger>
   }
 ];

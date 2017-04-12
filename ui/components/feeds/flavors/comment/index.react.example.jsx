@@ -68,19 +68,17 @@ export let CommentFooter = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Comment>
+    <CommentHeader />
+    <CommentContent>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </CommentContent>
+    <CommentFooter />
+  </Comment>
+);
+
 export let states = [
-  {
-    id: 'comment',
-    label: 'Default',
-    element:
-      <Comment>
-        <CommentHeader />
-        <CommentContent>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </CommentContent>
-        <CommentFooter />
-      </Comment>
-  },
   {
     id: 'comment-liked',
     label: 'Like',

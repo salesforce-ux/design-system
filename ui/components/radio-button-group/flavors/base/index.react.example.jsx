@@ -52,23 +52,6 @@ export default (
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Fieldset>
-        <Legend>Radio Group Label</Legend>
-        <FormElementControl>
-          <RadioButtonGroup>
-            <RadioButton id="monday">Mon</RadioButton>
-            <RadioButton id="tuesday">Tue</RadioButton>
-            <RadioButton id="wednesday">Wed</RadioButton>
-            <RadioButton id="thursday">Thu</RadioButton>
-            <RadioButton id="friday">Fri</RadioButton>
-          </RadioButtonGroup>
-        </FormElementControl>
-      </Fieldset>
-  },
-  {
     id: 'disabled',
     label: 'Disabled',
     element:

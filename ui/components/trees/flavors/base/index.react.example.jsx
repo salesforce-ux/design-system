@@ -175,12 +175,11 @@ let Default = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Default />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element: <Default />
-  },
   {
     id: 'expanded',
     label: 'Expanded',

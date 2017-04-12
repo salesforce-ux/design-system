@@ -35,12 +35,11 @@ export let PillContainer = props =>
 // Export
 ///////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element: <Pill />
-  },
+export default (
+  <Pill />
+);
+
+export let examples = [
   {
     id: 'icon',
     label: 'With icon',

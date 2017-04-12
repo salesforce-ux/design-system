@@ -136,42 +136,40 @@ let FilteredItems = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <div className="demo-only" style={{height: '640px'}}>
+    <Modal className="slds-modal--large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
+      <ModalHeader>
+        <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
+        <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+      </ModalHeader>
+      <ModalContent className="slds-grid slds-grow">
+        <div className="slds-grid slds-grid--vertical">
+          <ProductListHeader />
+          <ProductList>
+            { _.times(rows.length, i =>
+              <RowData
+                key={ i }
+                index={ i+1 }
+                name={ rows[i].name }
+                productCode={ rows[i].productCode }
+                listPrice={ rows[i].listPrice }
+                productFamily={ rows[i].productFamily }
+              />
+            )}
+          </ProductList>
+        </div>
+      </ModalContent>
+      <ModalFooter>
+        <button className="slds-button slds-button--neutral">Cancel</button>
+        <button className="slds-button slds-button--brand">Next</button>
+      </ModalFooter>
+    </Modal>
+    <div className="slds-backdrop slds-backdrop--open" />
+  </div>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
-          <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
-          </ModalHeader>
-          <ModalContent className="slds-grid slds-grow">
-            <div className="slds-grid slds-grid--vertical">
-              <ProductListHeader />
-              <ProductList>
-                { _.times(rows.length, i =>
-                  <RowData
-                    key={ i }
-                    index={ i+1 }
-                    name={ rows[i].name }
-                    productCode={ rows[i].productCode }
-                    listPrice={ rows[i].listPrice }
-                    productFamily={ rows[i].productFamily }
-                  />
-                )}
-              </ProductList>
-            </div>
-          </ModalContent>
-          <ModalFooter>
-            <button className="slds-button slds-button--neutral">Cancel</button>
-            <button className="slds-button slds-button--brand">Next</button>
-          </ModalFooter>
-        </Modal>
-        <div className="slds-backdrop slds-backdrop--open" />
-      </div>
-  },
   {
     id: 'items-selected',
     label: 'Items selected',

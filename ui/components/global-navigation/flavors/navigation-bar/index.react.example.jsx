@@ -98,41 +98,34 @@ export let ContextBar = props =>
 // Export
 //////////////////////////////////////////////
 
+export const Context = props =>
+  <div style={{height: '16rem'}}>
+    {props.children}
+  </div>;
+
 export default (
-  <div className="demo-only" style={{height: '16rem'}}>
-    <ContextBar itemActive />
-  </div>
+  <ContextBar itemActive />
 );
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{height: '14rem'}}>
-        <ContextBar />
-      </div>
-  },
-  {
     id: 'item-active',
     label: 'Item Active',
     element:
-      <div className="demo-only" style={{height: '14rem'}}>
-        <ContextBar>
-          <li className="slds-context-bar__item slds-is-active">
-            <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
-              <span className="slds-assistive-text">Current Page:</span>
+      <ContextBar>
+        <li className="slds-context-bar__item slds-is-active">
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
+            <span className="slds-assistive-text">Current Page:</span>
+            <span className="slds-truncate" title="Menu Item">Menu Item</span>
+          </a>
+        </li>
+        { _.times(2, i =>
+          <li className="slds-context-bar__item" key={ i }>
+            <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
               <span className="slds-truncate" title="Menu Item">Menu Item</span>
             </a>
           </li>
-          { _.times(2, i =>
-            <li className="slds-context-bar__item" key={ i }>
-              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
-                <span className="slds-truncate" title="Menu Item">Menu Item</span>
-              </a>
-            </li>
-          )}
-        </ContextBar>
-      </div>
+        )}
+      </ContextBar>
   }
 ];

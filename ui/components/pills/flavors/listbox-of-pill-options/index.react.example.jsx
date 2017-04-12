@@ -37,22 +37,20 @@ export let ListItemHoriz = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <PillContainer>
+    <ListboxHoriz>
+      <ListItemHoriz>
+        <ListboxPill tabIndex="0" />
+      </ListItemHoriz>
+      <ListItemHoriz>
+        <ListboxPill />
+      </ListItemHoriz>
+    </ListboxHoriz>
+  </PillContainer>
+);
+
 export let states = [
-  {
-    id: 'listbox-pill',
-    label: 'Default',
-    element:
-      <PillContainer>
-        <ListboxHoriz>
-          <ListItemHoriz>
-            <ListboxPill tabIndex="0" />
-          </ListItemHoriz>
-          <ListItemHoriz>
-            <ListboxPill />
-          </ListItemHoriz>
-        </ListboxHoriz>
-      </PillContainer>
-  },
   {
     id: 'listbox-pill-with-icon',
     label: 'With icon',

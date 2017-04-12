@@ -281,45 +281,54 @@ export let GlobalHeader = props =>
 // Export
 //////////////////////////////////////////////
 
+export const Context = props =>
+  <div className="demo-only" style={{ height: '340px' }}>
+    {props.children}
+  </div>;
+
+export default (
+  <GlobalHeader />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ height: '60px' }}>
-        <GlobalHeader />
-      </div>
-  },
   {
     id: 'favorites-selected',
     label: 'Favorites selected',
     element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader favoritesSelected />
-      </div>
+      <GlobalHeader favoritesSelected />
   },
   {
     id: 'favorites-disabled',
     label: 'Favorites disabled',
     element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader favoritesDisabled />
-      </div>
+      <GlobalHeader favoritesDisabled />
   },
   {
     id: 'actions-active',
     label: 'Global actions active',
     element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader actions />
-      </div>
+      <GlobalHeader actions />
   },
   {
     id: 'global-header-setup-active',
     label: 'Setup active',
     element:
-      <div className="demo-only" style={{ height: '190px' }}>
-        <GlobalHeader setup />
-      </div>
+      <GlobalHeader setup />
+  },
+  {
+    id: 'global-header-search-active',
+    label: 'Active',
+    element: <GlobalHeader expanded />,
+    script: `
+      document.getElementById('global-search-01').focus()
+    `
+  },
+  {
+    id: 'global-header-search-typeahead',
+    label: 'Typeahead',
+    element: <GlobalHeader expanded searchingFor="ibm" />,
+    script: `
+      document.getElementById('global-search-01').focus()
+    `
   }
 ];

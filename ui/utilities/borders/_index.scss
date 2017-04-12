@@ -1,0 +1,50 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Adds a bottom border to an element
+ *
+ * @selector .slds-border--bottom
+ * @modifier
+ * @group position
+ */
+.slds-border_bottom,
+.slds-border--bottom {
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Adds a left border to an element
+ *
+ * @selector .slds-border--left
+ * @modifier
+ * @group position
+ */
+.slds-border_left,
+.slds-border--left {
+  border-left: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Adds a right border to an element
+ *
+ * @selector .slds-border--right
+ * @modifier
+ * @group position
+ */
+.slds-border_right,
+.slds-border--right {
+  border-right: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Adds a top border to an element
+ *
+ * @selector .slds-border--top
+ * @modifier
+ * @group position
+ */
+.slds-border_top,
+.slds-border--top {
+  border-top: $border-width-thin solid $color-border;
+}

@@ -39,9 +39,8 @@ const mapTree = (x, f) =>
   f(x).set('restrictees', x.get('restrictees', []).map(r => mapTree(r, f)));
 
 const reduceTree = (f, empty, x) =>
-  f(x.get('restrictees', [])
-  .reduce((ac, y) =>
-    reduceTree(f, ac, y), empty), x);
+  x.get('restrictees', Immutable.List()).reduce((ac, y) =>
+    reduceTree(f, ac, y), f(empty, x));
 
 const foldMap = (f, empty, x) =>
   reduceTree((acc, y) => acc.concat(f(y)), empty, x);
@@ -59,4 +58,4 @@ const ui = () =>
   .map(addMarkup('components', requireIfVariant))
   .map(addMarkup('utilities', requireMarkup));
 
-module.exports = {ui, mapTree, foldMap};
+module.exports = { ui, reduceTree, mapTree, foldMap };

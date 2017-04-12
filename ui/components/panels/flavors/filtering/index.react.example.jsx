@@ -203,12 +203,11 @@ let Locked = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Default />
+);
+
 export let states = [
-  {
-    id: 'filtering-default',
-    label: 'Default',
-    element: <Default />
-  },
   {
     id: 'filtering-new-object',
     label: 'New filter',

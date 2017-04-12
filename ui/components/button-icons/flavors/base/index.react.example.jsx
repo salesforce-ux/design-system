@@ -5,15 +5,6 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let Demo = props =>
-  <div className="demo-only" style={props.inverse ? { padding: '0.5rem', background: '#16325c' }: { padding: '0.5rem' }}>
-    { props.children }
-  </div>;
-
 export let ButtonIcon = props =>
   <button
     className={classNames('slds-button slds-button--icon', props.className, props.selected ? 'slds-is-selected' : null)}
@@ -40,30 +31,45 @@ export let ButtonIcon = props =>
 // Export
 ///////////////////////////////////////////
 
+export const Context = props =>
+  <div style={{ padding: '0.5rem' }}>
+    {props.children}
+  </div>;
+
+export default (
+  <ButtonIcon />
+);
+
 export let states = [
-  {
-    id: 'button-icon',
-    label: 'Default',
-    element: <Demo><ButtonIcon /></Demo>
-  },
   {
     id: 'button-icon-error',
     label: 'Error',
-    element: <Demo><ButtonIcon className="slds-button--icon-error" symbol="warning" title="Warning" assistiveText="Warning" /></Demo>
+    element: <ButtonIcon className="slds-button--icon-error" symbol="warning" title="Warning" assistiveText="Warning" />
   },
   {
     id: 'button-icon-disabled',
     label: 'Disabled',
-    element: <Demo><ButtonIcon disabled /></Demo>
+    element: <ButtonIcon disabled />
+  }
+];
+
+export let examples = [
+  {
+    id: 'hint-hover',
+    label: 'Hint on hover',
+    element:
+      <div className="slds-hint-parent">
+        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--hint" />
+      </div>
   },
   {
     id: 'button-icon-inverse',
     label: 'Inverse',
-    element: <Demo inverse><ButtonIcon inverse className="slds-button--icon-inverse" /></Demo>
+    element: <ButtonIcon inverse className="slds-button--icon-inverse" />
   },
   {
     id: 'button-icon-inverse-disabled',
     label: 'Inverse disabled',
-    element: <Demo inverse><ButtonIcon inverse className="slds-button--icon-inverse" disabled /></Demo>
+    element: <ButtonIcon inverse className="slds-button--icon-inverse" disabled />
   }
 ];

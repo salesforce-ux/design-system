@@ -240,12 +240,11 @@ let IsEditing = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Default />
+);
+
 export let states = [
-  {
-    id: 'panel-form',
-    label: 'Default',
-    element: <Default />
-  },
   {
     id: 'panel-form-edit-mode',
     label: 'Form with Inline Edit',

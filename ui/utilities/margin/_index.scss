@@ -1,0 +1,85 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Adds .125rem margin to the side specified
+ *
+ * @selector .slds-m-*--xxx-small
+ * @modifier
+ */
+
+/**
+ * Adds .25rem margin to the side specified
+ *
+ * @selector .slds-m-*--xx-small
+ * @modifier
+ */
+
+/**
+ * Adds .5rem margin to the side specified
+ *
+ * @selector .slds-m-*--x-small
+ * @modifier
+ */
+
+/**
+ * Adds .75rem margin to the side specified
+ *
+ * @selector .slds-m-*--small
+ * @modifier
+ */
+
+/**
+ * Adds 1rem margin to the side specified
+ *
+ * @selector .slds-m-*--medium
+ * @modifier
+ */
+
+/**
+ * Adds 1.5rem margin to the side specified
+ *
+ * @selector .slds-m-*--large
+ * @modifier
+ */
+
+/**
+ * Adds 2rem margin to the side specified
+ *
+ * @selector .slds-m-*--x-large
+ * @modifier
+ */
+
+/**
+ * Adds 3rem margin to the side specified
+ *
+ * @selector .slds-m-*--xx-large
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin to both top and bottom
+ *
+ * @selector .slds-m-*-vertical--*
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin to both sides
+ *
+ * @selector .slds-m-*-horizontal--*
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin all the way around the element
+ *
+ * @selector .slds-m-*-around--*
+ * @modifier
+ */
+@include spacing(margin);
+
+.slds-m-bottom_none,
+.slds-m-bottom--none {
+  margin-bottom: 0;
+}

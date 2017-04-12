@@ -2,7 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { Checkbox } from 'ui/components/checkbox/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////
@@ -66,25 +68,148 @@ let Detail = props =>
     <dd className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</dd>
   </dl>;
 
+const icon = (
+  <span className="slds-icon_container" title="description of icon when needed">
+    <SvgIcon className="slds-icon slds-icon-standard-groups" sprite="standard" symbol="groups" />
+  </span>
+);
+
+const avatar = (
+  <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
+    <img
+      alt=""
+      src="/assets/images/avatar2.jpg"
+      title="Lexee L. Jackson avatar"
+    />
+  </span>
+);
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
-export let states = [
+export default (
+  <div className="demo-only" style={{ width: '30rem' }}>
+    <Tile title="Salesforce UX" />
+  </div>
+);
+
+export let examples = [
   {
-    id: 'tile',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '30rem' }}>
-        <Tile title="Salesforce UX" />
-      </div>
-  },
-  {
-    id: 'tile-with-action',
+    id: 'with-action',
     label: 'Default with actions',
     element:
       <div className="demo-only" style={{ width: '30rem' }}>
         <Tile title="Salesforce UX" actions />
       </div>
+  },
+  {
+    id: 'with-icon',
+    label: 'With icon',
+    element:
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <TileMedia title="Salesforce UX" media={ icon } />
+      </div>
+  },
+  {
+    id: 'with-avatar',
+    label: 'With avatar',
+    element:
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <TileMedia title="Lexee L. Jackson" media={ avatar } />
+      </div>
+  },
+  {
+    id: 'task',
+    label: 'Task',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <TileMedia
+          title="Contact Trammel Crow Company"
+          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+        >
+          <p className="slds-truncate" title="Assignee">Assignee</p>
+        </TileMedia>
+      </div>
+  },
+  {
+    id: 'article',
+    label: 'Article',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
+          <p>by Steve Author</p>
+          <ul className="slds-list--horizontal slds-has-dividers--right">
+            <li className="slds-item">Breaking News</li>
+            <li className="slds-item">1 day ago</li>
+          </ul>
+        </Tile>
+      </div>
+  },
+  {
+    id: 'article-liker-bar',
+    label: 'Article With like bar',
+    element:
+      <div className="demo-only" style={{ width: '320px' }}>
+        <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
+          <p>...an introduction for beginners about climbing ropes and how they can use...</p>
+          <ul className="slds-list--horizontal slds-has-dividers--right slds-m-top--xx-small">
+            <li className="slds-item">000001296</li>
+            <li className="slds-item">Published</li>
+            <li className="slds-item">How to Guide</li>
+          </ul>
+          <p>Last Modified: 1/14/16</p>
+          <ul className="slds-list--horizontal slds-m-top--xx-small">
+            <li className="slds-m-right--small">
+              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+                <SvgIcon className="slds-button__icon" sprite="utility" symbol="like" />
+                <span className="slds-assistive-text">Upvote</span>
+              </button>
+              <span className="slds-align-middle">1320</span>
+            </li>
+            <li>
+              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+                <SvgIcon className="slds-button__icon" sprite="utility" symbol="dislike" />
+                <span className="slds-assistive-text">Downvote</span>
+              </button>
+              <span className="slds-align-middle">362</span>
+            </li>
+          </ul>
+        </Tile>
+      </div>
+  },
+  {
+    id: 'board',
+    label: 'Board',
+    element:
+    <div className="demo-only" style={{ width: '320px' }}>
+      <ul className="slds-has-dividers--around-space">
+        <li className="slds-item">
+          <Tile title="Anypoint Connectors" className="slds-tile--board">
+            <p className="slds-text-heading--medium">$500,000</p>
+            <p className="slds-truncate" title="Company One"><a href="javascript:void(0);">Company One</a></p>
+            <p className="slds-truncate" title="Closing 9/30/2015">Closing 9/30/2015</p>
+          </Tile>
+        </li>
+        <li className="slds-item">
+          <Tile title="Cloudhub" className="slds-tile--board">
+            <p className="slds-text-heading--medium">$185,000</p>
+            <p className="slds-truncate" title="Company Two"><a href="javascript:void(0);">Company Two</a></p>
+            <p className="slds-truncate slds-has-alert" title="Closing 12/15/2015">Closing 12/15/2015</p>
+            <span className="slds-icon_container slds-tile--board__icon" title="description of icon when needed">
+              <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
+              <span className="slds-assistive-text">Warning Icon</span>
+            </span>
+          </Tile>
+        </li>
+        <li className="slds-item">
+          <Tile title="600 Widgets" className="slds-tile--board">
+            <p className="slds-text-heading--medium">$35,000</p>
+            <p className="slds-truncate" title="Company Three"><a href="javascript:void(0);">Company Three</a></p>
+            <p className="slds-truncate" title="Closing 10/12/2015">Closing 10/12/2015</p>
+          </Tile>
+        </li>
+      </ul>
+    </div>
   }
 ];

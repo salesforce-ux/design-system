@@ -58,13 +58,11 @@ let Header = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Header />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Header />
-  },
   {
     id: 'menu-open',
     label: 'Tour Menu Open',

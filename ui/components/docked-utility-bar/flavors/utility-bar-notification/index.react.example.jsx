@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/utility-bar/index.react.example';
+import { UtilityBar, UtilityBarItem } from 'ui/components/docked-utility-bar/flavors/base/index.react.example';
 
 
 ///////////////////////////////////////////

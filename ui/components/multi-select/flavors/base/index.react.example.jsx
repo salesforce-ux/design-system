@@ -443,13 +443,11 @@ const MoveToSnapShot = {
   ]
 };
 
+export default (
+  <MultiSelect dataSet={ DefaultSnapShot }></MultiSelect>
+);
+
 export let states = [
-  {
-    id: 'multi-select',
-    label: 'Default',
-    element:
-      <MultiSelect dataSet={ DefaultSnapShot }></MultiSelect>
-  },
   {
     id: 'multi-select-selected-item',
     label: 'Selected Item',

@@ -1,1 +1,0 @@
-This divider utility can be applied to any vertical list item or menu item to separate the items within. It creates a single border with space.

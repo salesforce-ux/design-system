@@ -29,77 +29,37 @@ export default (
   </Avatar>
 );
 
-export let states = [
+export let examples = [
   {
-    id: 'avatar-square',
-    label: 'Square',
+    id: 'fallback-user-initials',
+    label: 'Fallbak - User initials',
     element:
-      <Avatar className="slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+      <Avatar className="slds-avatar--circle">
+        <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
       </Avatar>
   },
   {
-    id: 'avatar-circle',
-    label: 'Circle',
+    id: 'fallback-user-icon',
+    label: 'Fallbak - User icon',
     element:
-      <Avatar className="slds-avatar--circle slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+      <Avatar className="slds-avatar--circle">
+        <StandardIcon symbol="user" />
       </Avatar>
   },
   {
-    id: 'size-x-small',
-    label: 'Size - X Small',
+    id: 'fallback-entity-initials',
+    label: 'Fallback - Entity Initials',
     element:
-      <Avatar className="slds-avatar--x-small">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+      <Avatar>
+        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
   {
-    id: 'size-small',
-    label: 'Size - Small',
+    id: 'fallback-entity-icon',
+    label: 'Fallback - Entity Icon',
     element:
-      <Avatar className="slds-avatar--small">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
+      <Avatar>
+        <StandardIcon />
       </Avatar>
   },
-  {
-    id: 'size-medium',
-    label: 'Size - Medium',
-    element:
-      <Avatar className="slds-avatar--medium">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
-      </Avatar>
-  },
-  {
-    id: 'size-large',
-    label: 'Size - Large',
-    element:
-      <Avatar className="slds-avatar--large">
-        <img
-          alt="Person name"
-          src="/assets/images/avatar2.jpg"
-          title="User avatar"
-        />
-      </Avatar>
-  }
 ];

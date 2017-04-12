@@ -79,17 +79,19 @@ let Overflowing = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Default />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Item One Selected',
-    element: <Default />
-  },
   {
     id: 'selected',
     label: 'Item Two Selected',
     element: <Default selectedIndex={1} />
-  },
+  }
+];
+
+export let examples = [
   {
     id: 'overflow',
     label: 'Overflowing items',

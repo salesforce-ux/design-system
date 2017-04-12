@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
+import { FileSelector } from 'ui/components/file-selector/flavors/base/index.react.example';
 
 let IntegratedFileSelector = props =>
   <div className={classNames('slds-file-selector slds-file-selector--integrated', props.className)}>
@@ -30,16 +30,6 @@ export default (
 );
 
 export let states = [
-  {
-    id: 'integrated-file-selector-default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileSelector className="slds-file-selector--integrated">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileSelector>
-      </div>
-  },
   {
     id: 'integrated-file-selector-drag',
     label: 'Drag',

@@ -13,7 +13,7 @@ export let Tooltip = props =>
   </div>;
 
 export default (
-  <div className="demo-only" style={{ paddingLeft: '2rem', paddingTop: '5rem' }}>
+  <div style={{ paddingLeft: '2rem', paddingTop: '5rem', position: 'relative' }}>
     <div className="slds-form-element">
       <div className="slds-form-element__icon slds-align-middle">
         <ButtonIcon

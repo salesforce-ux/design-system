@@ -107,21 +107,6 @@ export default (
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element:
-      <FormElement>
-        <FormElementLabel>Select Label</FormElementLabel>
-        <FormElementControl>
-          <Select>
-            <option>Option One</option>
-            <option>Option Two</option>
-            <option>Option Three</option>
-          </Select>
-        </FormElementControl>
-      </FormElement>
-  },
-  {
     id: 'select-required',
     label: 'Required',
     element: <Required />

@@ -295,22 +295,20 @@ export let RteTextarea = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Demo>
+    <RichTextEditor>
+      <RteToolbar>
+        <RteFormatText tabIndexSetting="0" />
+        <RteFormatBody />
+        <RteClearFormatting />
+      </RteToolbar>
+      <RteTextarea placeholder="Compose text..." />
+    </RichTextEditor>
+  </Demo>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Demo>
-        <RichTextEditor>
-          <RteToolbar>
-            <RteFormatText tabIndexSetting="0" />
-            <RteFormatBody />
-            <RteClearFormatting />
-          </RteToolbar>
-          <RteTextarea placeholder="Compose text..." />
-        </RichTextEditor>
-      </Demo>
-  },
   {
     id: 'focused',
     label: 'Focused',
@@ -389,5 +387,79 @@ export let states = [
           </Tooltip>
         </RichTextEditor>
       </Demo>
+  }
+];
+
+export let examples = [
+  {
+    id: 'bottom-toolbar',
+    label: 'Bottom toolbar',
+    element:
+    <Demo>
+      <RichTextEditor>
+        <RteTextarea placeholder="Compose text..." />
+
+        <RteToolbar className="slds-rich-text-editor__toolbar_bottom">
+          <RteFormatText tabIndexSetting="0" />
+          <RteFormatBody />
+          <RteClearFormatting />
+        </RteToolbar>
+      </RichTextEditor>
+    </Demo>
+  },
+  {
+    id: 'email',
+    label: 'Email',
+    element:
+    <Demo>
+      <RichTextEditor>
+        <RteToolbar>
+          <RteFormatFont />
+          <RteFormatText tabIndexSetting="-1" />
+          <RteFormatColor />
+          <RteFormatBody />
+          <RteAlignText />
+          <RteInsertContent />
+          <RteClearFormatting />
+        </RteToolbar>
+
+        <RteTextarea placeholder="Compose Email..." />
+      </RichTextEditor>
+    </Demo>
+  },
+  {
+    id: 'feed',
+    label: 'Feed',
+    element:
+    <Demo>
+      <RichTextEditor>
+        <RteToolbar>
+          <RteFormatText tabIndexSetting="0" />
+          <RteFormatBody />
+          <RteAlignText />
+          <RteInsertContent />
+          <RteInsertUser />
+          <RteClearFormatting />
+        </RteToolbar>
+
+        <RteTextarea placeholder="Post to feed..." />
+      </RichTextEditor>
+    </Demo>
+  },
+  {
+    id: 'note',
+    label: 'Notes',
+    element:
+    <Demo>
+      <RichTextEditor>
+        <RteToolbar>
+          <RteFormatText tabIndexSetting="0" />
+          <RteFormatBody />
+          <RteInsertContent />
+          <RteClearFormatting />
+        </RteToolbar>
+        <RteTextarea placeholder="Compose Note..." />
+      </RichTextEditor>
+    </Demo>
   }
 ];

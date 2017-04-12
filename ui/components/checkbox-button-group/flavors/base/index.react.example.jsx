@@ -8,11 +8,6 @@ import classNames from 'classnames';
 // Partial(s)
 ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>;
-
 let Fieldset = props =>
   <fieldset className={classNames('slds-form-element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">Scheduled Day(s)</legend>
@@ -43,67 +38,49 @@ let Checkbox = props =>
   </span>;
 
 ///////////////////////////////////////////
-// State Constructor(s)
-///////////////////////////////////////////
-
-let StateA = props =>
-  <Demo>
-    <Fieldset>
-      <CheckboxGroup>
-        <Checkbox id="monday">Mon</Checkbox>
-        <Checkbox id="tuesday">Tue</Checkbox>
-        <Checkbox id="wednesday">Wed</Checkbox>
-        <Checkbox id="thursday">Thu</Checkbox>
-        <Checkbox id="friday">Fri</Checkbox>
-      </CheckboxGroup>
-    </Fieldset>
-  </Demo>;
-
-let StateB = props =>
-  <Demo>
-    <Fieldset className="slds-has-error">
-      <CheckboxGroup>
-        <Checkbox errorId="error_01" id="monday">Mon</Checkbox>
-        <Checkbox errorId="error_01" id="tuesday">Tue</Checkbox>
-        <Checkbox errorId="error_01" id="wednesday">Wed</Checkbox>
-        <Checkbox errorId="error_01" id="thursday">Thu</Checkbox>
-        <Checkbox errorId="error_01" id="friday">Fri</Checkbox>
-      </CheckboxGroup>
-      <div id="error_01" className="slds-form-element__help">This field is required</div>
-    </Fieldset>
-  </Demo>;
-
-let StateC = props =>
-  <Demo>
-    <Fieldset>
-      <CheckboxGroup>
-        <Checkbox id="monday" disabled="true">Mon</Checkbox>
-        <Checkbox id="tuesday" disabled="true">Tue</Checkbox>
-        <Checkbox id="wednesday" disabled="true">Wed</Checkbox>
-        <Checkbox id="thursday" disabled="true">Thu</Checkbox>
-        <Checkbox id="friday" disabled="true">Fri</Checkbox>
-      </CheckboxGroup>
-    </Fieldset>
-  </Demo>;
-
-///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Fieldset>
+    <CheckboxGroup>
+      <Checkbox id="monday">Mon</Checkbox>
+      <Checkbox id="tuesday">Tue</Checkbox>
+      <Checkbox id="wednesday">Wed</Checkbox>
+      <Checkbox id="thursday">Thu</Checkbox>
+      <Checkbox id="friday">Fri</Checkbox>
+    </CheckboxGroup>
+  </Fieldset>
+);
+
 export let states = [
   {
-    id: 'checkbox-alt',
-    label: 'Default',
-    element: <StateA />
+    id: 'has-error',
+    label: 'Error',
+    element:
+      <Fieldset className="slds-has-error">
+        <CheckboxGroup>
+          <Checkbox errorId="error_01" id="monday">Mon</Checkbox>
+          <Checkbox errorId="error_01" id="tuesday">Tue</Checkbox>
+          <Checkbox errorId="error_01" id="wednesday">Wed</Checkbox>
+          <Checkbox errorId="error_01" id="thursday">Thu</Checkbox>
+          <Checkbox errorId="error_01" id="friday">Fri</Checkbox>
+        </CheckboxGroup>
+        <div id="error_01" className="slds-form-element__help">This field is required</div>
+      </Fieldset>
   },
   {
-    id: 'checkbox-alt-has-error',
-    label: 'Has error',
-    element: <StateB />
-  },
-  {
-    id: 'checkbox-alt-disabled',
+    id: 'disabled',
     label: 'Disabled',
-    element: <StateC />
+    element:
+      <Fieldset>
+        <CheckboxGroup>
+          <Checkbox id="monday" disabled="true">Mon</Checkbox>
+          <Checkbox id="tuesday" disabled="true">Tue</Checkbox>
+          <Checkbox id="wednesday" disabled="true">Wed</Checkbox>
+          <Checkbox id="thursday" disabled="true">Thu</Checkbox>
+          <Checkbox id="friday" disabled="true">Fri</Checkbox>
+        </CheckboxGroup>
+      </Fieldset>
   }
 ];

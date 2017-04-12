@@ -16,7 +16,7 @@ import '../../app_modules/util/lodash_id_overwrite';
 import './generate-icons';
 import './generate-release-notes';
 import './generate-tokens-zip';
-import './generate-cmps';
+// import './generate-cmps';
 import './generate-tokens-components';
 import './generate-tokens-ui';
 import './generate-ui';
@@ -34,6 +34,6 @@ gulp.task('generate', callback =>
       'generate:ui'
     ],
     'generate:examples',
-    'generate:cmps',
+    // 'generate:cmps',
     callback)
 );

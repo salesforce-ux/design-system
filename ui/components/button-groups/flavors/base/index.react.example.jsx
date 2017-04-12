@@ -16,34 +16,56 @@ export let ButtonGroup = props =>
     {props.children}
   </div>;
 
+export let ButtonGroupList = props =>
+  <ul className={classNames('slds-button-group-list', props.className)}>
+    {props.children}
+  </ul>;
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonGroup>
+    <button className="slds-button slds-button--neutral">Refresh</button>
+    <button className="slds-button slds-button--neutral">Edit</button>
+    <button className="slds-button slds-button--neutral">Save</button>
+  </ButtonGroup>
+);
+
 export let states = [
   {
-    id: 'button-group',
-    label: 'Default',
-    element:
-      <ButtonGroup>
-        <button className="slds-button slds-button--neutral">Refresh</button>
-        <button className="slds-button slds-button--neutral">Edit</button>
-        <button className="slds-button slds-button--neutral">Save</button>
-      </ButtonGroup>
-  },
-  {
-    id: 'button-group-disabled',
-    label: 'Default Disabled',
+    id: 'disabled',
+    label: 'Disabled',
     element:
       <ButtonGroup>
         <button className="slds-button slds-button--neutral">Refresh</button>
         <button className="slds-button slds-button--neutral">Edit</button>
         <button className="slds-button slds-button--neutral" disabled>Save</button>
       </ButtonGroup>
+  }
+];
+
+export let examples = [
+  {
+    id: 'list',
+    label: 'List',
+    element:
+      <ButtonGroupList>
+        <li>
+          <button className="slds-button slds-button--neutral">Refresh</button>
+        </li>
+        <li>
+          <button className="slds-button slds-button--neutral">Edit</button>
+        </li>
+        <li>
+          <button className="slds-button slds-button--neutral">Save</button>
+        </li>
+      </ButtonGroupList>
   },
   {
-    id: 'button-group-more',
-    label: 'More Icon',
+    id: 'overflow',
+    label: 'Overflow menu icon',
     element:
       <ButtonGroup>
         <button className="slds-button slds-button--neutral">Refresh</button>
@@ -54,7 +76,7 @@ export let states = [
   },
   {
     id: 'button-group-more-open',
-    label: 'More Icon Open',
+    label: 'Overflow menu icon - Open',
     element:
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
@@ -75,7 +97,7 @@ export let states = [
   },
   {
     id: 'button-group-icon-disabled',
-    label: 'More Icon Disabled',
+    label: 'Overflow menu icon - Disabled',
     element:
       <ButtonGroup>
         <button className="slds-button slds-button--neutral">Refresh</button>
@@ -156,5 +178,59 @@ export let states = [
           </div>
         </ButtonGroup>
       </div>
+  },
+  {
+    id: 'button-group-icon',
+    label: 'Icon group',
+    element:
+      <ButtonGroup>
+        <ButtonIcon
+          className="slds-button--icon-border"
+          symbol="chart"
+          assistiveText="Charts"
+          title="Charts"
+          aria-pressed="false"
+        />
+        <ButtonIcon
+          className="slds-button--icon-border"
+          symbol="filterList"
+          assistiveText="Filter List"
+          title="Filter List"
+          aria-pressed="false"
+        />
+        <ButtonIcon
+          className="slds-button--icon-more"
+          hasDropdown={true}
+          assitiveText="More Actions"
+          title="More Actions"
+        />
+      </ButtonGroup>
+  },
+  {
+    id: 'button-group-icon-selected',
+    label: 'Icon group - Selected',
+    element:
+      <ButtonGroup>
+        <ButtonIcon
+          className="slds-button--icon-border slds-is-selected"
+          symbol="chart"
+          assistiveText="Charts"
+          title="Charts"
+          aria-pressed="true"
+        />
+        <ButtonIcon
+          className="slds-button--icon-border"
+          symbol="filterList"
+          assistiveText="Filter List"
+          title="Filter List"
+          aria-pressed="false"
+        />
+        <ButtonIcon
+          className="slds-button--icon-more"
+          hasDropdown={true}
+          assitiveText="More Actions"
+          title="More Actions"
+        />
+      </ButtonGroup>
   }
 ];

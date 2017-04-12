@@ -4,17 +4,15 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import { FileSelector } from 'ui/components/file-selector/flavors/files/index.react.example';
+import { FileSelector } from 'ui/components/file-selector/flavors/base/index.react.example';
+
+export default (
+  <div className="demo-only" style={{ maxWidth: '320px' }}>
+    <FileSelector className="slds-file-selector--images" />
+  </div>
+);
 
 export let states = [
-  {
-    id: 'file-selector-images',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector--images" />
-      </div>
-  },
   {
     id: 'file-selector-images-error',
     label: 'Error',

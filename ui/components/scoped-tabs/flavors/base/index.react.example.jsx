@@ -25,12 +25,11 @@ export let Default = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Default />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Item One Selected',
-    element: <Default />
-  },
   {
     id: 'selected',
     label: 'Item Two Selected',

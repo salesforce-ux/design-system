@@ -191,38 +191,36 @@ export let RowData = props => {
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Container>
+    <Table className="slds-no-cell-focus">
+      <Thead>
+        { _.times(columns.length, i =>
+          <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+        )}
+      </Thead>
+      <tbody>
+        { _.times(rows.length, i =>
+          <RowData key={ i }
+            index={ i + 1 }
+            recordName={ rows[i].recordName }
+            accountName={ rows[i].accountName }
+            closeDate={ rows[i].closeDate }
+            stage={ rows[i].stage }
+            confidence={ rows[i].confidence }
+            amount={ rows[i].amount }
+            contact={ rows[i].contact }
+            initialCellTabIndex={ (i===0) ? '0' : '-1' }
+            thClassName={ (i===0) ? 'slds-has-focus' : null }
+            buttonInvisible="slds-hidden"
+          />
+        )}
+      </tbody>
+    </Table>
+  </Container>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Container>
-        <Table className="slds-no-cell-focus">
-          <Thead>
-            { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
-            )}
-          </Thead>
-          <tbody>
-            { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
-                initialCellTabIndex={ (i===0) ? '0' : '-1' }
-                thClassName={ (i===0) ? 'slds-has-focus' : null }
-                buttonInvisible="slds-hidden"
-              />
-            )}
-          </tbody>
-        </Table>
-      </Container>
-  },
   {
     id: 'with-link',
     label: 'Cell focused - Link',

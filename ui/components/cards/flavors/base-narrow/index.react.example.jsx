@@ -10,19 +10,17 @@ import classNames from 'classnames';
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <div className="demo-only demo-only--center-card-body" style={{ minWidth: '320px', maxWidth: '360px' }}>
+    <Card className="slds-card--narrow">
+      <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
+      <CardBody>Card Body (custom goes in here)</CardBody>
+      <CardFooter>Card Footer</CardFooter>
+    </Card>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'card-narrow',
-    label: 'Default',
-    element:
-      <div className="demo-only demo-only--center-card-body" style={{ minWidth: '320px', maxWidth: '360px' }}>
-        <Card className="slds-card--narrow">
-          <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
-          <CardBody>Card Body (custom goes in here)</CardBody>
-          <CardFooter>Card Footer</CardFooter>
-        </Card>
-      </div>
-  },
   {
     id: 'card-narrow-empty',
     label: 'Empty',

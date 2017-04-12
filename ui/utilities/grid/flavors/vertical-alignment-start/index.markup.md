@@ -1,1 +1,0 @@
-To align a single row or multi-line rows to the beginning of the cross axis, apply the class `.slds-grid--vertical-align-start`. Note, to vertically align elements on a cross-axis of a `.slds-grid`, the elements need available vertical white space. This is usually achieved by having a height applied to the `.slds-grid`.

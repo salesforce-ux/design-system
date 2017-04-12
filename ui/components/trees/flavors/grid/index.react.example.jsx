@@ -380,20 +380,25 @@ let TreeGrid = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <TreeGrid><Default /></TreeGrid>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element: <TreeGrid><Default /></TreeGrid>
-  },
   {
     id: 'expanded',
     label: 'Expanded',
-    element: <TreeGrid><Default isExpanded="tree0-node1" additionalItem={<Expanded />} /></TreeGrid>
+    element:
+    <TreeGrid>
+      <Default isExpanded="tree0-node1" additionalItem={<Expanded />} />
+    </TreeGrid>
   },
   {
     id: 'deep-nesting',
     label: 'Deeply nested branches',
-    element: <TreeGrid><DeepNesting /></TreeGrid>
+    element:
+    <TreeGrid>
+      <DeepNesting />
+    </TreeGrid>
   }
 ];

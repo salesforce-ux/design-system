@@ -31,7 +31,7 @@
    * Removes aesthetic nature from an input
    *
    * @selector .slds-input--bare
-   * @restrict input, textarea
+   * @restrict .slds-input, input, textarea
    * @modifier
    */
   &_bare,
@@ -59,7 +59,6 @@
    *
    * @selector .slds-input--height
    * @restrict .slds-input
-   * @modifier
    */
   &_height,
   &--height {

@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import {UtilityIcon} from 'ui/components/icons/flavors/utility/index.react.example';
+import {UtilityIcon} from 'ui/components/icons/flavors/base/index.react.example';
 
 ///////////////////////////////////////////
 // Partial(s)

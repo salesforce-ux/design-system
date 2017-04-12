@@ -89,7 +89,11 @@ export let FormElement = props => {
   );
 };
 
-
+export default (
+  <FormElement label={ inputLabel } inputId={ inputId }>
+    <Input id={ inputId } />
+  </FormElement>
+);
 
 export let states = [
   {

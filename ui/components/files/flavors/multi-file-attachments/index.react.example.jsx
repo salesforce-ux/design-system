@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { File } from 'ui/components/files/flavors/file-attachment/index.react.example';
+import { File } from 'ui/components/files/flavors/base/index.react.example';
 
 //////////////////////////////////////////////
 // Export

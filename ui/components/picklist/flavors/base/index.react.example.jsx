@@ -105,6 +105,24 @@ let ComboboxSearchInput = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <div className="demo-only" style={{height: '240px'}}>
+    <PickList isOpen>
+      <ComboboxSearchInput dropdown="open" />
+      <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
+        <ListboxList>
+          <ListboxItem isSelectable text>Option A</ListboxItem>
+          <ListboxItem isSelectable text>Option B</ListboxItem>
+          <ListboxItem isSelectable text>Option C</ListboxItem>
+          <ListboxItem isSelectable text>Option D</ListboxItem>
+          <ListboxItem isSelectable text>Option E</ListboxItem>
+          <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
+        </ListboxList>
+      </Listbox>
+    </PickList>
+  </div>
+);
+
 export let states = [
   {
     id: 'picklist-closed',
@@ -123,26 +141,6 @@ export let states = [
           </ListboxList>
         </Listbox>
       </PickList>
-  },
-  {
-    id: 'picklist-open',
-    label: 'Open',
-    element:
-      <div className="demo-only" style={{height: '240px'}}>
-        <PickList isOpen>
-          <ComboboxSearchInput dropdown="open" />
-          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList>
-              <ListboxItem isSelectable text>Option A</ListboxItem>
-              <ListboxItem isSelectable text>Option B</ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-      </div>
   },
   {
     id: 'picklist-open-item-selected',

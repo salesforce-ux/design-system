@@ -1,1 +1,0 @@
-This helper sets the line-height to the value of 1. You usually don&rsquo;t need this class since most components will inherit this globally from the `body` element. It exists if you still need to specifically set it.

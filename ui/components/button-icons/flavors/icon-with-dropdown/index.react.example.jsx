@@ -8,45 +8,58 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonIcon
+    hasDropdown={true}
+    className="slds-button--icon slds-button--icon-more"
+    assistiveText="More options"
+    title="More Options"
+  />
+);
+
 export let states = [
-  {
-    id: 'button-icon-with-dropdown',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon slds-button--icon-more" assistiveText="More options" title="More Options" />
-      </div>
-  },
   {
     id: 'button-icon-container-with-dropdown',
     label: 'Default - Container Only',
     element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon slds-button--icon-container-more" assistiveText="More options" title="More Options" />
-      </div>
+      <ButtonIcon
+        hasDropdown={true}
+        className="slds-button--icon slds-button--icon-container-more"
+        assistiveText="More options"
+        title="More Options"
+      />
   },
   {
     id: 'button-icon-with-dropdown-filled',
     label: 'Filled',
     element:
-      <div className="demo-only" style={{ padding: '0.5rem' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-more slds-button--icon-more-filled" assistiveText="More options" title="More Options" />
-      </div>
+      <ButtonIcon
+        hasDropdown={true}
+        className="slds-button--icon-more slds-button--icon-more-filled"
+        assistiveText="More options"
+        title="More Options"
+      />
   },
   {
     id: 'button-icon-with-dropdown-inverse',
     label: 'Inverse',
     element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-more" assistiveText="More options" title="More Options" />
-      </div>
+      <ButtonIcon
+        hasDropdown={true}
+        className="slds-button--icon-inverse slds-button--icon-more"
+        assistiveText="More options"
+        title="More Options"
+      />
   },
   {
     id: 'button-icon-container-with-dropdown-inverse',
     label: 'Inverse - Container Only',
     element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon hasDropdown className="slds-button--icon-inverse slds-button--icon-container-more" assistiveText="More options" title="More Options" />
-      </div>
+      <ButtonIcon
+        hasDropdown={true}
+        className="slds-button--icon-inverse slds-button--icon-container-more"
+        assistiveText="More options"
+        title="More Options"
+      />
   }
 ];

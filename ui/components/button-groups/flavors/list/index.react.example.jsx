@@ -15,25 +15,23 @@ export let ButtonGroupList = props =>
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonGroupList>
+    <li>
+      <button className="slds-button slds-button--neutral">Refresh</button>
+    </li>
+
+    <li>
+      <button className="slds-button slds-button--neutral">Edit</button>
+    </li>
+
+    <li>
+      <button className="slds-button slds-button--neutral">Save</button>
+    </li>
+  </ButtonGroupList>
+);
+
 export let states = [
-  {
-    id: 'button-group',
-    label: 'Default',
-    element:
-      <ButtonGroupList>
-        <li>
-          <button className="slds-button slds-button--neutral">Refresh</button>
-        </li>
-
-        <li>
-          <button className="slds-button slds-button--neutral">Edit</button>
-        </li>
-
-        <li>
-          <button className="slds-button slds-button--neutral">Save</button>
-        </li>
-      </ButtonGroupList>
-  },
   {
     id: 'button-group-disabled',
     label: 'Default Disabled',

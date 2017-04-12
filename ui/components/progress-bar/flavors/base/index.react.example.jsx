@@ -19,13 +19,11 @@ export let ProgressBar = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <ProgressBar className="slds-progress-bar--large slds-progress-bar--circular" value="25" />
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <ProgressBar className="slds-progress-bar--large slds-progress-bar--circular" value="25" />
-  },
   {
     id: 'x-small',
     label: 'X-small',

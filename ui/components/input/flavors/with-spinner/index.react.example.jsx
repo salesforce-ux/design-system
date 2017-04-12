@@ -6,7 +6,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import { FormElement, FormElementLabel, FormElementControl }
   from 'ui/components/input/flavors/base/index.react.example';
-import { SpinnerContainer, Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
+import { SpinnerContainer, Spinner } from 'ui/components/spinners/flavors/base/index.react.example';
 
 export let states = [
   {

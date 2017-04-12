@@ -3,9 +3,13 @@
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
+import { File } from 'ui/components/files/flavors/base/index.react.example';
+import { AttachmentLink } from 'ui/components/files/flavors/link-attachment/index.react.example';
+import { Publisher } from 'ui/components/publishers/flavors/comment/index.react.example';
+import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/flavors/comment/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
-
+import _ from 'lodash';
 
 export let PostFooterActions = props =>
   <ul className="slds-post__footer-actions-list slds-list--horizontal">
@@ -84,32 +88,45 @@ export let Comments = props =>
     { props.children }
   </div>;
 
+const CommentList = props =>
+  <ul>
+    {_.times(props.comments || 1, i =>
+    <li key={`comment-${i}`}>
+      <Comment>
+        <CommentHeader />
+        <CommentContent>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </CommentContent>
+        <CommentFooter />
+      </Comment>
+    </li>
+    )}
+  </ul>;
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <div className="slds-feed">
+    <ul className="slds-feed__list">
+      <li className="slds-feed__item">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta />
+          </PostFooter>
+        </Post>
+      </li>
+    </ul>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'post',
-    label: 'Default',
-    element:
-      <div className="slds-feed">
-        <ul className="slds-feed__list">
-          <li className="slds-feed__item">
-            <Post>
-              <PostHeader />
-              <PostContent>
-                <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-              </PostContent>
-              <PostFooter>
-                <PostFooterActions />
-                <PostFooterMeta />
-              </PostFooter>
-            </Post>
-          </li>
-        </ul>
-      </div>
-  },
   {
     id: 'post-with-liker-bar',
     label: 'Like',
@@ -132,6 +149,189 @@ export let states = [
               <a href="javascript:void(0);">You</a> liked this post
             </div>
           </Comments>
+        </li>
+      </ul>
+    </div>
+  }
+];
+
+export let examples = [
+  {
+    id: 'post-attachment-link',
+    label: 'Link attachment',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <div className="slds-post__payload">
+              <AttachmentLink
+                articleTitle="Maui By Air The Best Way Around The Island"
+                articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt." />
+            </div>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta />
+            </PostFooter>
+          </Post>
+        </li>
+      </ul>
+    </div>
+  },
+  {
+    id: 'post-attachment-files',
+    label: 'Files(s) attachment',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <div className="slds-post__payload">
+              <ul className="slds-grid slds-grid--pull-padded">
+              <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+                  <File
+                    className="slds-file--card"
+                    cropClass="slds-file__crop--16-by-9"
+                    titleClass="slds-file__title--card"
+                    symbol="image"
+                    image />
+              </li>
+              <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3 slds-medium-show">
+                  <File
+                    className="slds-file--card"
+                    cropClass="slds-file__crop--16-by-9"
+                    titleClass="slds-file__title--card"
+                    symbol="pdf" />
+                </li>
+                <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+                  <File
+                    className="slds-file--card"
+                    cropClass="slds-file__crop--16-by-9"
+                    titleClass="slds-file__title--overlay slds-align--absolute-center slds-text-heading--large"
+                    title="22+"
+                    image
+                    overlay />
+                </li>
+              </ul>
+            </div>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta />
+            </PostFooter>
+          </Post>
+        </li>
+      </ul>
+    </div>
+  },
+  {
+    id: 'post-with-comments',
+    label: 'With replies',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="2" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <CommentList comments="2" />
+            <Publisher />
+          </Comments>
+        </li>
+      </ul>
+    </div>
+  },
+  {
+    id: 'post-with-overflow',
+    label: 'Replies - Overflow Bar',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="8" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
+              <button className="slds-button--reset slds-text-link">More comments</button>
+              <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
+            </div>
+            <CommentList />
+            <Publisher />
+          </Comments>
+        </li>
+      </ul>
+    </div>
+  },
+  {
+    id: 'post-with-publisher-active',
+    label: 'Replies - Publisher active',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <p>Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta comments="8" />
+            </PostFooter>
+          </Post>
+          <Comments>
+            <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
+              <button className="slds-button--reset slds-text-link">More comments</button>
+              <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
+            </div>
+            <CommentList />
+            <Publisher className="slds-is-active slds-has-focus" />
+          </Comments>
+        </li>
+      </ul>
+    </div>
+  },
+  {
+    id: 'questions',
+    label: 'Question',
+    element:
+    <div className="slds-feed">
+      <ul className="slds-feed__list">
+        <li className="slds-feed__item">
+          <Post>
+            <PostHeader />
+            <PostContent>
+              <h3 className="slds-text-heading--small">Barbecue Party Tips For A Truly Amazing Event?</h3>
+              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+            </PostContent>
+            <PostFooter>
+              <PostFooterActions />
+              <PostFooterMeta />
+            </PostFooter>
+          </Post>
         </li>
       </ul>
     </div>

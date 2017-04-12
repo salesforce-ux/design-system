@@ -7,6 +7,7 @@ import SvgIcon from 'app_modules/ui/svg-icon';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
 import { Tooltip } from 'ui/components/tooltips/flavors/base/index.react.example';
 import { ProgressBar } from 'ui/components/progress-bar/flavors/base/index.react.example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/flavors/base/index.react.example';
 
 //////////////////////////////////////////////
 // Partial(s)
@@ -49,21 +50,19 @@ export let Step = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <div className="demo-only" style={{ padding: '1rem' }}>
+    <Progress value="0">
+      <Step active>Step 1</Step>
+      <Step>Step 2</Step>
+      <Step>Step 3</Step>
+      <Step>Step 4</Step>
+      <Step>Step 5</Step>
+    </Progress>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ padding: '1rem' }}>
-        <Progress value="0">
-          <Step active>Step 1</Step>
-          <Step>Step 2</Step>
-          <Step>Step 3</Step>
-          <Step>Step 4</Step>
-          <Step>Step 5</Step>
-        </Progress>
-      </div>
-  },
   {
     id: 'next-step',
     label: 'Next Step',
@@ -107,6 +106,48 @@ export let states = [
         <Tooltip className="slds-nubbin--bottom" id="step-3-tooltip" style={{position: 'absolute', top: '0px', left: 'calc(50% + 7px)', transform: 'translateX(-50%)'}}>
           Verify Email
         </Tooltip>
+      </div>
+  }
+];
+
+export let examples = [
+  {
+    id: 'modal',
+    label: 'In a modal',
+    element:
+    <div className="demo-only" style={{height: '640px'}}>
+      <Modal className="slds-modal--large" aria-labelledby="header43">
+        <ModalHeader>
+          <h2 id="header43" className="slds-text-heading--medium">Modal Header</h2>
+        </ModalHeader>
+        <ModalContent className="slds-grow slds-p-around--medium" />
+        <ModalFooter className="slds-grid slds-grid--align-spread">
+          <button className="slds-button slds-button--neutral">Cancel</button>
+          <Progress className="slds-progress--shade" value="25">
+            <Step done>Step 1</Step>
+            <Step active>Step 2</Step>
+            <Step>Step 3</Step>
+            <Step>Step 4</Step>
+            <Step>Step 5</Step>
+          </Progress>
+          <button className="slds-button slds-button--brand">Save</button>
+        </ModalFooter>
+      </Modal>
+      <div className="slds-backdrop slds-backdrop--open" />
+    </div>
+  },
+  {
+    id: 'shade',
+    label: 'On a gray background',
+    element:
+      <div className="demo-only" style={{ background: '#f4f6f9', padding: '1rem' }}>
+        <Progress className="slds-progress--shade" value="25">
+          <Step done>Step 1</Step>
+          <Step active>Step 2</Step>
+          <Step>Step 3</Step>
+          <Step>Step 4</Step>
+          <Step>Step 5</Step>
+        </Progress>
       </div>
   }
 ];

@@ -10,12 +10,11 @@ import classNames from 'classnames';
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
+);
+
 export let states = [
-  {
-    id: 'button-icon-container-size-default',
-    label: 'Default',
-    element: <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />
-  },
   {
     id: 'button-icon-container-size-small',
     label: 'Small',

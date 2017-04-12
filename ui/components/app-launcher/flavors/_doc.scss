@@ -1,0 +1,36 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * Each App Launcher section uses the [Section Title](/components/utilities/text/#flavor-section-title-section-title-open) component. It contains a button heading that opens and closes the content below it. The button heading needs to be associated with the content so that assistive technology knows what the button opens and closes. The button and section also need aria attributes to indicate the open and closed state of the section.
+ *
+ * **Notable attributes**
+ *
+ * Button:
+ * - `aria-controls` is used to create an association between the button and the section. If the section has an `id="content"`, then the button should have `aria-controls="content"`.
+ * - `aria-expanded` indicates if the section is open or closed and is read aloud by assitive technology when the button is focused.
+ *
+ * Section:
+ * - `aria-hidden` indicates if the section is open or closed, and if set to `true`, assistive technology hides the section.
+ *
+ * **Keyboard navigation**
+ *
+ * - The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+ *
+ * **Updating Operation and State**
+ *
+ * - When the user interacts with the button to open the section, `aria-expanded` on the button should be `true` and `aria-hidden` on the section should be `false`.
+ * - When the user interacts with the button to close the section, `aria-expanded` on the button should be `false` and `aria-hidden` on the section should be `true`.
+ *
+ * @summary The App Launcher allows the user to quickly access all the apps and functionality with their organization.
+ *
+ * @base
+ * @name app-launcher
+ * @selector .slds-app-launcher
+ * @support prototype
+ * @category feature
+ * @type navigation
+ * @role modal-dialog
+ */

@@ -32,33 +32,30 @@ const CommentList = props =>
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
+export default (
+  <div className="slds-feed">
+    <ul className="slds-feed__list">
+      <li className="slds-feed__item">
+        <Post>
+          <PostHeader />
+          <PostContent>
+            <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
+          </PostContent>
+          <PostFooter>
+            <PostFooterActions />
+            <PostFooterMeta comments="2" />
+          </PostFooter>
+        </Post>
+        <Comments>
+          <CommentList comments="2" />
+          <Publisher />
+        </Comments>
+      </li>
+    </ul>
+  </div>
+);
 
 export let states = [
-  {
-    id: 'post-with-comments',
-    label: 'Default',
-    element:
-    <div className="slds-feed">
-      <ul className="slds-feed__list">
-        <li className="slds-feed__item">
-          <Post>
-            <PostHeader />
-            <PostContent>
-              <p>Hey there! Here's the latest demo presentation <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>, let me know if there are any changes. I've updated slides 3-8 and slides 16-18 slides with new product shots.</p>
-            </PostContent>
-            <PostFooter>
-              <PostFooterActions />
-              <PostFooterMeta comments="2" />
-            </PostFooter>
-          </Post>
-          <Comments>
-            <CommentList comments="2" />
-            <Publisher />
-          </Comments>
-        </li>
-      </ul>
-    </div>
-  },
   {
     id: 'post-with-overflow',
     label: 'Overflow Bar',

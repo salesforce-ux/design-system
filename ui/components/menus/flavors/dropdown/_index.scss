@@ -54,8 +54,6 @@
    *
    * @selector .slds-dropdown-trigger--hover
    * @restrict .slds-dropdown-trigger
-   * @modifier
-   * @group trigger
    */
   &_hover,
   &--hover {
@@ -81,10 +79,8 @@
   /**
    * If someone is using javascript for click to toggle - this modifier will help
    *
-   * @selector .slds-dropdown-trigger--click, .slds-dropdown-trigger_click
+   * @selector .slds-dropdown-trigger--click
    * @restrict .slds-dropdown-trigger
-   * @modifier
-   * @group trigger
    */
   &_click,
   &--click {

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { UtilityIcon } from 'ui/components/icons/flavors/utility/index.react.example';
+import { UtilityIcon } from 'ui/components/icons/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 //////////////////////////////////////////////
@@ -43,21 +43,19 @@ export let Alert = props => {
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Alert type="info">
+    <UtilityIcon
+      containerClassName="slds-m-right--x-small"
+      className="slds-icon--x-small"
+      assistiveText={false}
+      symbol="user"
+    />
+    <h2>Logged in as John Smith (johnsmith@acme.com). <a href="javascript:void(0);">Log out</a></h2>
+  </Alert>
+);
+
 export let states = [
-  {
-    id: 'informational',
-    label: 'Informational',
-    element:
-      <Alert type="info">
-        <UtilityIcon
-          containerClassName="slds-m-right--x-small"
-          className="slds-icon--x-small"
-          assistiveText={false}
-          symbol="user"
-        />
-        <h2>Logged in as John Smith (johnsmith@acme.com). <a href="javascript:void(0);">Log out</a></h2>
-      </Alert>
-  },
   {
     id: 'warning',
     label: 'Warning',

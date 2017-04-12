@@ -84,12 +84,9 @@ let StateC = props =>
 // Export
 ///////////////////////////////////////////
 
+export default <StateA />;
+
 export let states = [
-  {
-    id: 'checkbox-toggle',
-    label: 'Default',
-    element: <StateA />
-  },
   {
     id: 'checkbox-toggle-checked',
     label: 'Checked',

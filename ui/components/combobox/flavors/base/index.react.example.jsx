@@ -18,7 +18,7 @@ import { FormElement } from 'ui/components/form-layout/flavors/element/index.rea
 import { Input } from 'ui/components/input/flavors/base/index.react.example';
 import { Popover } from 'ui/components/popovers/flavors/base/index.react.example';
 import { StandardIcon } from 'ui/components/icons/flavors/standard/index.react.example';
-import { UtilityIcon } from 'ui/components/icons/flavors/utility/index.react.example';
+import { UtilityIcon } from 'ui/components/icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -372,3 +372,184 @@ let ObjectSwitcher = props =>
       />
     </button>
   </div>;
+
+//------------------------------------------------------------------------------
+
+const ListboxDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+    <ListboxItem>
+      <EntityOption
+        id={ listboxOptionId01 }
+        entityTitle="Acme"
+        entityMeta={ true }
+        focused={ props.focused }
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption
+        id={ listboxOptionId02 }
+        entityTitle="Salesforce.com, Inc."
+        entityMeta={ true }
+      />
+    </ListboxItem>
+  </Listbox>;
+
+const ListboxList = props =>
+  <Listbox className="slds-dropdown--length-10" vertical={ true }>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta={ true } />
+    </ListboxItem>
+    <ListboxItem>
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta={ true } />
+    </ListboxItem>
+  </Listbox>;
+
+export default (
+  <div className="demo-only" style={{ height: '10rem' }}>
+    <ComboboxContainer
+      autocomplete={ true }
+      inputIcon="right"
+      inputIconRightSymbol="search"
+      listbox={ <ListboxDropdown /> }
+    />
+  </div>
+);
+
+export let states = [
+  {
+    id: 'focused',
+    label: 'Focused',
+    element:
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <ComboboxContainer
+          isOpen={ true }
+          autocomplete={ true }
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          listbox={ <ListboxDropdown /> }
+        />
+      </div>,
+    script: `
+      document.getElementById('combobox-unique-id').focus()
+    `
+  },
+  {
+    id: 'open-item-focused',
+    label: 'Open - Item Focused',
+    element:
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <ComboboxContainer
+          isOpen={ true }
+          autocomplete={ true }
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          listbox={ <ListboxDropdown focused={true} /> }
+          aria-activedescendant={ listboxOptionId01 }
+        />
+      </div>
+  },
+  {
+    id: 'closed-option-selected',
+    label: 'Option Selected',
+    element:
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <ComboboxContainer
+          autocomplete={ true }
+          inputIcon="both"
+          inputIconLeftSprite="standard"
+          inputIconLeftSymbol="account"
+          inputButtonIcon={true}
+          inputIconRightSymbol="close"
+          value="Salesforce.com, Inc."
+          listbox={ <ListboxDropdown /> }
+        />
+      </div>
+  },
+  {
+    id: 'closed-options-selected',
+    label: 'Option(s) Selected',
+    element:
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <ComboboxContainer
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          autocomplete={ true }
+          listbox={ <ListboxDropdown /> }
+        >
+          <Listbox
+            id={listboxSelectionsId}
+            aria-label="Selected Options:"
+            className="slds-p-top--xxx-small"
+            horizontal={ true }
+          >
+            <ListboxItem>
+              <ListboxPill label="Acme" tabIndex="0">
+                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                  <StandardIcon />
+                </Avatar>
+              </ListboxPill>
+            </ListboxItem>
+            <ListboxItem>
+              <ListboxPill label="Salesforce.com, Inc.">
+                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                  <StandardIcon />
+                </Avatar>
+              </ListboxPill>
+            </ListboxItem>
+          </Listbox>
+        </ComboboxContainer>
+      </div>
+  }
+];
+
+export let examples = [
+  {
+    id: 'non-modal-dialog',
+    label: 'Non-modal Dialog',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+      >
+        <ComboboxContainer
+          autocomplete={ true }
+          isOpen={true}
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          formControlClassName="slds-m-around--small"
+          listbox={ <ListboxList /> }
+          staticListbox={true}
+        />
+      </Popover>
+  }
+];

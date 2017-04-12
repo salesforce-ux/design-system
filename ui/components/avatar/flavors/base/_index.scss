@@ -127,10 +127,8 @@
  * the fallback should be the icon for the entity or object.
  *
  * @summary Used for initials inside an avatar
- * @name initials
  * @selector .slds-avatar__initials
  * @restrict .slds-avatar abbr
- * @variant
  */
 .slds-avatar__initials {
   @include absolute-center;

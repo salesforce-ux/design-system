@@ -1,6 +1,6 @@
 status: 'dev-ready'
 flavors:
-  - containers
+  - base
   - colors
   - sizes
 lightning:

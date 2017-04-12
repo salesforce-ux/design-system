@@ -67,24 +67,14 @@ let Header = props =>
 
 export default (
   <Popover
+    className="slds-nubbin--left"
     closeButton={ true }
     title="Dialog Title">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </Popover>
 );
 
-export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Popover
-        className="slds-nubbin--left"
-        closeButton={ true }
-        title="Dialog Title">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </Popover>
-  },
+export let examples = [
   {
     id: 'header',
     label: 'With Header',

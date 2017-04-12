@@ -40,18 +40,16 @@ export let Textarea = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <FormElement>
+    <FormElementLabel>Textarea Label</FormElementLabel>
+    <FormElementControl>
+      <Textarea />
+    </FormElementControl>
+  </FormElement>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <FormElement>
-        <FormElementLabel>Textarea Label</FormElementLabel>
-        <FormElementControl>
-          <Textarea />
-        </FormElementControl>
-      </FormElement>
-  },
   {
     id: 'disabled',
     label: 'Disabled',

@@ -14,6 +14,7 @@
  * @selector .slds-form--stacked
  * @restrict .slds-form
  * @modifier
+ * @group layout
  */
 .slds-form_stacked .slds-form-element,
 .slds-form--stacked .slds-form-element {
@@ -35,6 +36,7 @@
  * @selector .slds-form--horizontal
  * @restrict .slds-form
  * @modifier
+ * @group layout
  */
 .slds-form_horizontal,
 .slds-form--horizontal {
@@ -80,7 +82,6 @@
  *
  * @selector .slds-form--inline
  * @restrict .slds-form
- * @modifier
  */
 .slds-form_inline,
 .slds-form--inline {

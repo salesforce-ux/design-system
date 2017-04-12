@@ -54,109 +54,87 @@ export let Checkbox = props => {
 // State Constructor(s)
 //////////////////////////////////////////////
 
-let Default = props =>
-  <Demo>
-    <FormElement>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
-
 let Indeterminate = props =>
-  <Demo>
-    <FormElement>
-      <FormElementControl>
-        <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" />
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
+  <FormElement>
+    <FormElementControl>
+      <Checkbox id="checkbox-indeterminate-01" label="Indeterminate Checkbox Label" />
+    </FormElementControl>
+  </FormElement>;
 
 let Required = props =>
-  <Demo>
-    <FormElement>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label"><abbr className="slds-required" title="required">*</abbr></Checkbox>
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
+  <FormElement>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label"><abbr className="slds-required" title="required">*</abbr></Checkbox>
+    </FormElementControl>
+  </FormElement>;
 
 let ErrorState = props =>
-  <Demo>
-    <FormElement className="slds-has-error">
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" errorId="error_01"><abbr className="slds-required" title="required">*</abbr></Checkbox>
-      </FormElementControl>
-      <div id="error_01" className="slds-form-element__help">This field is required</div>
-    </FormElement>
-  </Demo>;
+  <FormElement className="slds-has-error">
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" errorId="error_01"><abbr className="slds-required" title="required">*</abbr></Checkbox>
+    </FormElementControl>
+    <div id="error_01" className="slds-form-element__help">This field is required</div>
+  </FormElement>;
 
 let Disabled = props =>
-  <Demo>
-    <FormElement>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" disabled />
-      </FormElementControl>
-    </FormElement>
-  </Demo>;
+  <FormElement>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" disabled />
+    </FormElementControl>
+  </FormElement>;
 
 let Group = props =>
-  <Demo>
-    <Fieldset>
-      <Legend>Checkbox Group Label</Legend>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-        <Checkbox label="Checkbox Label" />
-      </FormElementControl>
-    </Fieldset>
-  </Demo>;
+  <Fieldset>
+    <Legend>Checkbox Group Label</Legend>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" checked />
+      <Checkbox label="Checkbox Label" />
+    </FormElementControl>
+  </Fieldset>;
 
 let GroupRequired = props =>
-  <Demo>
-    <Fieldset>
-      <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-        <Checkbox label="Checkbox Label" />
-      </FormElementControl>
-    </Fieldset>
-  </Demo>;
+  <Fieldset>
+    <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" checked />
+      <Checkbox label="Checkbox Label" />
+    </FormElementControl>
+  </Fieldset>;
 
 let GroupError = props =>
-  <Demo>
-    <Fieldset className="slds-has-error">
-      <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
-      <FormElementControl>
-        <Checkbox errorId="error_01" label="Checkbox Label" checked />
-        <Checkbox errorId="error_01" label="Checkbox Label" />
-      </FormElementControl>
-      <div id="error_01" className="slds-form-element__help">This field is required</div>
-    </Fieldset>
-  </Demo>;
+  <Fieldset className="slds-has-error">
+    <Legend><abbr className="slds-required" title="required">*</abbr> Checkbox Group Label</Legend>
+    <FormElementControl>
+      <Checkbox errorId="error_01" label="Checkbox Label" checked />
+      <Checkbox errorId="error_01" label="Checkbox Label" />
+    </FormElementControl>
+    <div id="error_01" className="slds-form-element__help">This field is required</div>
+  </Fieldset>;
 
 let GroupDisabled = props =>
-  <Demo>
-    <Fieldset>
-      <Legend>Checkbox Group Label</Legend>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" disabled></Checkbox>
-        <Checkbox label="Checkbox Label" disabled></Checkbox>
-      </FormElementControl>
-    </Fieldset>
-  </Demo>;
+  <Fieldset>
+    <Legend>Checkbox Group Label</Legend>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" disabled></Checkbox>
+      <Checkbox label="Checkbox Label" disabled></Checkbox>
+    </FormElementControl>
+  </Fieldset>;
 
 //////////////////////////////////////////////
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <FormElement>
+    <FormElementControl>
+      <Checkbox label="Checkbox Label" checked />
+    </FormElementControl>
+  </FormElement>
+);
+
 export let states = [
   {
-    id: 'checkbox',
-    label: 'Default',
-    element: <Default />
-  },
-  {
-    id: 'checkbox-indeterminate',
+    id: 'indeterminate',
     label: 'Indeterminate',
     element: <Indeterminate />,
     script: `
@@ -165,37 +143,40 @@ export let states = [
     `
   },
   {
-    id: 'checkbox-required',
+    id: 'required',
     label: 'Required',
     element: <Required />
   },
   {
-    id: 'checkbox-error',
+    id: 'error',
     label: 'Error',
     element: <ErrorState />
   },
   {
-    id: 'checkbox-disabled',
+    id: 'disabled',
     label: 'Disabled',
     element: <Disabled />
-  },
+  }
+];
+
+export let examples = [
   {
-    id: 'checkbox-group',
+    id: 'group',
     label: 'Group',
     element: <Group />
   },
   {
-    id: 'checkbox-group-required',
+    id: 'group-required',
     label: 'Group Required',
     element: <GroupRequired />
   },
   {
-    id: 'checkbox-group-error',
+    id: 'group-error',
     label: 'Group with error',
     element: <GroupError />
   },
   {
-    id: 'checkbox-group-disabled',
+    id: 'group-disabled',
     label: 'Group Disabled',
     element: <GroupDisabled />
   }

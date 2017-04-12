@@ -179,52 +179,55 @@ export let ContextTabBar = props =>
 // Export
 //////////////////////////////////////////////
 
+export const Context = props =>
+  <div style={{height: '16rem'}}>
+    {props.children}
+  </div>;
+
+export default (
+  <div className="demo-only">
+    <ContextTabBar>
+      <ContextTab
+        title="Home"
+        symbol="home"
+        tabPanelId={tabPanelId01}
+        id={tabId01}
+        itemActive={true}
+      />
+      <ContextTab
+        title="Tab Item 1"
+        tabPanelId={tabPanelId02}
+        id={tabId02}
+      />
+      <ContextTab
+        title="Tab Item 2"
+        tabPanelId={tabPanelId03}
+        id={tabId03}
+      />
+    </ContextTabBar>
+    <ContextTabPanel
+      show={true}
+      id={tabPanelId01}
+      tabId={tabId01}
+    >
+      Tab Home Content
+    </ContextTabPanel>
+    <ContextTabPanel
+      id={tabPanelId02}
+      tabId={tabId02}
+    >
+      Tab One Content
+    </ContextTabPanel>
+    <ContextTabPanel
+      id={tabPanelId03}
+      tabId={tabId03}
+    >
+      Tab Two Content
+    </ContextTabPanel>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only">
-        <ContextTabBar>
-          <ContextTab
-            title="Home"
-            symbol="home"
-            tabPanelId={tabPanelId01}
-            id={tabId01}
-            itemActive={true}
-          />
-          <ContextTab
-            title="Tab Item 1"
-            tabPanelId={tabPanelId02}
-            id={tabId02}
-          />
-          <ContextTab
-            title="Tab Item 2"
-            tabPanelId={tabPanelId03}
-            id={tabId03}
-          />
-        </ContextTabBar>
-        <ContextTabPanel
-          show={true}
-          id={tabPanelId01}
-          tabId={tabId01}
-        >
-          Tab Home Content
-        </ContextTabPanel>
-        <ContextTabPanel
-          id={tabPanelId02}
-          tabId={tabId02}
-        >
-          Tab One Content
-        </ContextTabPanel>
-        <ContextTabPanel
-          id={tabPanelId03}
-          tabId={tabId03}
-        >
-          Tab Two Content
-        </ContextTabPanel>
-      </div>
-  },
   {
     id: 'split-view',
     label: 'Split View - Active',

@@ -57,7 +57,7 @@
   'docked-form-footer/flavors/base/index',
 
   // File selector
-  'file-selector/flavors/files/index',
+  'file-selector/flavors/base/index',
 
   // Page Headers
   'page-headers/flavors/base/index',
@@ -98,7 +98,7 @@
   'docked-composer/flavors/email/index',
 
   // Docked Utility Bar
-  'docked-utility-bar/flavors/utility-bar/index',
+  'docked-utility-bar/flavors/base/index',
   'docked-utility-bar/flavors/utility-panel/index',
 
   // Global Header
@@ -113,7 +113,7 @@
   'publishers/flavors/comment/index',
 
   // Discussion Feed
-  'feeds/flavors/feed-list/index',
+  'feeds/flavors/base/index',
   'feeds/flavors/comment/index',
   'feeds/flavors/post/index',
   'feeds/flavors/post-with-attachments/index',
@@ -122,10 +122,11 @@
   'modals/flavors/base/index',
 
   // App Launcher
-  'app-launcher/index',
+  'app-launcher/flavors/base/index',
 
   // Hero Buttons
   'visual-picker/flavors/coverable-content/index',
+  'visual-picker/flavors/non-coverable-content/index',
 
   // Pills
   'pills/flavors/base/index',
@@ -142,16 +143,13 @@
   'rich-text-editor/flavors/base/index',
 
   // Spinners
-  'spinners/index',
-  'spinners/flavors/sizes/index',
-  'spinners/flavors/colors/index',
+  'spinners/flavors/base/index',
 
   // Split view list
   'split-view/flavors/base/index',
 
   // Title
   'tiles/flavors/base/index',
-  'tiles/flavors/board/index',
 
   // Tabs
   'tabs/flavors/base/index',
@@ -174,7 +172,7 @@
 
   // Images
   'avatar/flavors/base/index',
-  'files/flavors/file-attachment/index',
+  'files/flavors/base/index',
 
   // Tables
   'data-tables/flavors/base/index',
@@ -184,4 +182,7 @@
 
   // Tree (Order matters)
   'trees/flavors/base/index',
-  'trees/flavors/grid/index';
+  'trees/flavors/grid/index',
+
+  // Expandable
+  'expandable-section/flavors/base/index';

@@ -51,18 +51,16 @@ export let AppLauncherTile = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <div className="demo-only" style={{ width: '20rem' }}>
+    <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27">
+      <h2 className="slds-text-link">Sales Cloud</h2>
+      <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
+    </AppLauncherTile>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="demo-only" style={{ width: '20rem' }}>
-        <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27">
-          <h2 className="slds-text-link">Sales Cloud</h2>
-          <p>The primary internal Salesforce org. Used to run our...<span className="slds-text-link">More</span></p>
-        </AppLauncherTile>
-      </div>
-  },
   {
     id: 'draggable',
     label: 'Draggable',

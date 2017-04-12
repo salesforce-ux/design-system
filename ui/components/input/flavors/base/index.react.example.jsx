@@ -4,6 +4,7 @@
 import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
+import { SpinnerContainer, Spinner } from 'ui/components/spinners/flavors/base/index.react.example';
 
 let inputId = 'text-input-id-1';
 
@@ -106,11 +107,6 @@ export default (
 
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element: <Default />
-  },
-  {
     id: 'input-required',
     label: 'Required',
     element: <Required />
@@ -129,5 +125,153 @@ export let states = [
     id: 'input-error-icon',
     label: 'Error with icon',
     element: <ErrorIcon errorId="error-message" />
+  },
+  {
+    id: 'read-only',
+    label: 'Readonly',
+    element:
+      <FormElement>
+        <span className="slds-form-element__label">Input Label</span>
+        <FormElementControl className="slds-border--bottom">
+          <span className="slds-form-element__static">Read Only</span>
+        </FormElementControl>
+      </FormElement>
+  }
+];
+
+export let examples = [
+  {
+    id: 'left-icon',
+    label: 'Left Icon',
+    element:
+      <FormElement>
+        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left" >
+          <SvgIcon
+            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            sprite="utility"
+            symbol="search"
+          />
+          <Input />
+        </FormElementControl>
+      </FormElement>
+  },
+  {
+    id: 'right-icon',
+    label: 'Right Icon',
+    element:
+      <FormElement>
+        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon--right" >
+          <SvgIcon
+            className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
+            sprite="utility"
+            symbol="search"
+          />
+          <Input />
+        </FormElementControl>
+      </FormElement>
+  },
+  {
+    id: 'double-icon',
+    label: 'Left & Right Icon',
+    element:
+      <FormElement>
+        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right" >
+          <SvgIcon
+            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            sprite="utility"
+            symbol="search"
+          />
+          <Input />
+          <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+            <SvgIcon
+              className="slds-button__icon slds-icon-text-light"
+              sprite="utility"
+              symbol="clear"
+            />
+            <span className="slds-assistive-text">Clear</span>
+          </button>
+        </FormElementControl>
+      </FormElement>
+  },
+  {
+    id: 'double-icon-spinner',
+    label: 'Icons with Spinner',
+    element:
+      <FormElement>
+        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right" >
+          <SvgIcon
+            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            sprite="utility"
+            symbol="search"
+          />
+          <Input />
+          <div className="slds-input__icon-group slds-input__icon-group_right">
+            <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
+            <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+              <SvgIcon
+                className="slds-button__icon slds-icon-text-light"
+                sprite="utility"
+                symbol="clear"
+              />
+              <span className="slds-assistive-text">Clear</span>
+            </button>
+          </div>
+        </FormElementControl>
+      </FormElement>
+  },
+  {
+    id: 'fixed-text',
+    label: 'Fixed text',
+    element:
+      <FormElement>
+        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementControl className="slds-input-has-fixed-addon">
+          <span className="slds-form-element__addon">$</span>
+          <Input />
+          <span className="slds-form-element__addon">euro</span>
+        </FormElementControl>
+      </FormElement>
+  },
+  {
+    id: 'field-level-help',
+    label: 'Field level help',
+    element:
+    <div className="demo-only" style={{ paddingTop: '5rem' }}>
+      <div className="slds-form-element">
+        <label className="slds-form-element__label slds-align-middle" htmlFor="form-help">Text Label</label>
+        <div className="slds-form-element__icon">
+          <button aria-describedby="help" className="slds-button slds-button--icon">
+            <SvgIcon
+              className="slds-icon slds-icon--x-small slds-icon-text-default"
+              sprite="utility"
+              symbol="info"
+            />
+            <span className="slds-assistive-text">Help</span>
+          </button>
+        </div>
+        <div className="slds-form-element__control">
+          <input
+            className="slds-input"
+            id="form-help"
+            placeholder="Field Level Help"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="slds-popover slds-popover--tooltip slds-nubbin--bottom-left"
+        id="help"
+        role="tooltip"
+        style={{position: 'absolute', top: '15px', left: '72px', marginLeft: '-1rem', width: '20rem'}}
+      >
+        <div className="slds-popover__body slds-text-longform">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere eligendi reiciendis obcaecati.</p>
+        </div>
+      </div>
+    </div>
   }
 ];

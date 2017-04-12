@@ -49,12 +49,11 @@ let Form = props =>
     </fieldset>
   </div>;
 
+export default (
+  <Form className="slds-form--stacked" />
+);
+
 export let states = [
-  {
-    id: 'stacked',
-    label: 'Stacked',
-    element: <Form className="slds-form--stacked" />
-  },
   {
     id: 'horizontal',
     label: 'Horizontal',

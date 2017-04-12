@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/flavors/post/index.react.example';
-import { File } from 'ui/components/files/flavors/file-attachment/index.react.example';
+import { File } from 'ui/components/files/flavors/base/index.react.example';
 import { AttachmentLink } from 'ui/components/files/flavors/link-attachment/index.react.example';
 
 

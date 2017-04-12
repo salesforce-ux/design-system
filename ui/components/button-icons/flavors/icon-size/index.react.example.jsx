@@ -8,12 +8,11 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonIcon className="slds-button--icon" />
+);
+
 export let states = [
-  {
-    id: 'button-icon-size-default',
-    label: 'Default',
-    element: <ButtonIcon className="slds-button--icon" />
-  },
   {
     id: 'button-icon-size-large',
     label: 'Large',

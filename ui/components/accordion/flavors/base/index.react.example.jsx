@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import { Section, SectionContent, SectionTitle, SectionTitleAction }
-  from 'ui/utilities/text/flavors/section-title/index.react.example';
+  from 'ui/components/expandable-section/flavors/base/index.react.example';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';

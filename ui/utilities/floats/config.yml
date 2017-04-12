@@ -1,6 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - float-left
-  - float-right
-  - float-none
-  - clearfix

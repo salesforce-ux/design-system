@@ -8,7 +8,6 @@
  * @selector .slds-icon_container
  * @restrict span, div
  * @notes Used when an icon with a background color is accompanied by `.slds-assistive-text` and also receives a `background-color` class
- * @required
  * @variant
  */
 .slds-icon_container,
@@ -22,7 +21,6 @@
    *
    * @selector .slds-icon_container--circle
    * @restrict .slds-icon_container
-   * @modifier
    */
   &_circle,
   &--circle {
@@ -31,14 +29,6 @@
   }
 }
 
-/**
- * @summary Action icons
- *
- * @name action
- * @selector [class*='slds-icon-action-']
- * @restrict .slds-icon_container
- * @variant
- */
 [class*='slds-icon-action-'] {
   padding: $spacing-x-small;
   border-radius: $border-radius-circle;
@@ -51,17 +41,6 @@
   }
 }
 
-/**
- * Custom icons have a rounded square shape and use a class on the container
- * for the background color.
- *
- * @summary Custom icons
- *
- * @name custom
- * @selector [class*='slds-icon-custom-']
- * @restrict .slds-icon_container
- * @variant
- */
 
 // TODO: Depend on a correct map to generate icons named slds-icon-custom-customXX
 @each $name, $color in $bg-custom-map {
@@ -81,19 +60,6 @@
     color: $color-text-inverse; // This is for text based icon created with just the first letters of the words
   }
 }
-
-
-/**
- * Standard icons have a rounded square shape and use a class on the container
- * for the background color.
- *
- * @summary Standard icons
- *
- * @name standard
- * @selector [class*='slds-icon-standard-']
- * @restrict .slds-icon_container
- * @variant
- */
 
 @include deprecate('3.0.0', 'This should be fixed at Theo’s level');
 $task2-monkey-patch: (

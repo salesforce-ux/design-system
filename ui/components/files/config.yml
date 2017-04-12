@@ -1,5 +1,5 @@
 status: 'dev-ready'
 flavors:
-  - file-attachment
+  - base
   - multi-file-attachments
   - link-attachment

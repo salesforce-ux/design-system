@@ -32,22 +32,20 @@ let Footer = props =>
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Popover
-        className="slds-popover_walkthrough slds-nubbin--left"
-        headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
-        footer={<Footer nextButton={true} />}
-        closeButton={true}
-        inverse={true}
-      >
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </Popover>
-  },
+export default (
+  <Popover
+    className="slds-popover_walkthrough slds-nubbin--left"
+    headingId={headingUniqueId}
+    header={<Header title="Manage your channels" />}
+    footer={<Footer nextButton={true} />}
+    closeButton={true}
+    inverse={true}
+  >
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </Popover>
+);
+
+export let examples = [
   {
     id: 'micro-setup',
     label: 'Micro Setup',

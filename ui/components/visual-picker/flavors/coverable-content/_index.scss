@@ -150,6 +150,7 @@
  * @selector .slds-visual-picker_medium
  * @restrict .slds-visual-picker
  * @modifier
+ * @group size
  */
 .slds-visual-picker_medium {
 
@@ -169,6 +170,7 @@
  * @selector .slds-visual-picker_large
  * @restrict .slds-visual-picker
  * @modifier
+ * @group size
  */
 .slds-visual-picker_large {
 
@@ -182,19 +184,6 @@
   }
 }
 
-/**
- * Checkmark that is visibily toggled when input is checked
- *
- * @selector .slds-visual-picker__text-check
- * @restrict .slds-visual-picker span
- */
-.slds-visual-picker__text-check {
-  position: absolute;
-  top: rem(-1px);
-  right: rem(10px);
-  width: $square-icon-x-small-content;
-  height: $square-icon-x-small-content;
-}
 
 /**
  * Text area that sits outside the visual picker

@@ -1,6 +1,6 @@
 classBase: 'docked'
 status: 'prototype'
 flavors:
-  - utility-bar
+  - base
   - utility-bar-notification
   - utility-panel

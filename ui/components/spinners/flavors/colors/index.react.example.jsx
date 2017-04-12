@@ -3,8 +3,8 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { SpinnerContainer } from 'ui/components/spinners/flavors/containers/index.react.example';
-import { Spinner } from 'ui/components/spinners/flavors/containers/index.react.example';
+import { SpinnerContainer } from 'ui/components/spinners/flavors/base/index.react.example';
+import { Spinner } from 'ui/components/spinners/flavors/base/index.react.example';
 
 ///////////////////////////////////////////
 // Partial(s)

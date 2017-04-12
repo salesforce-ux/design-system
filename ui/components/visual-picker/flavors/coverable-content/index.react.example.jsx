@@ -94,20 +94,63 @@ export let VisualPicker = props => {
   );
 };
 
+export let VisualPickerMediaObject = props =>
+  <a
+    href="javascript:void(0);"
+    className={classNames(
+      'slds-box slds-box_link slds-box--x-small slds-media',
+      props.className
+    )}
+  >
+    <div className="slds-media__figure slds-media__figure_fixed-width slds-align--absolute-center slds-m-left--xx-small">
+      <UtilityIcon
+        className="slds-icon-text-default"
+        symbol="knowledge_base"
+      />
+    </div>
+    <div className="slds-media__body slds-border--left slds-p-around--small">
+      {props.children}
+    </div>
+  </a>;
+
 ///////////////////////////////////////////
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <Fieldset>
+    <Legend>Select an app</Legend>
+    <FormElementControl>
+      <VisualPicker
+        type="radio"
+        icon={true}
+        sprite="utility"
+        symbol="connected_apps"
+        label="Connected App"
+        size="medium"
+      />
+      <VisualPicker
+        type="radio"
+        icon={true}
+        sprite="utility"
+        symbol="custom_apps"
+        label="Custom App"
+        size="medium"
+      />
+    </FormElementControl>
+  </Fieldset>
+);
+
 export let states = [
   {
-    id: 'radio-group',
-    label: 'Radio group',
+    id: 'disabled',
+    label: 'Disabled option',
     element:
       <Fieldset>
         <Legend>Select an app</Legend>
         <FormElementControl>
           <VisualPicker
-            type="radio"
+            type="checkbox"
             icon={true}
             sprite="utility"
             symbol="connected_apps"
@@ -115,7 +158,8 @@ export let states = [
             size="medium"
           />
           <VisualPicker
-            type="radio"
+            type="checkbox"
+            disabled={true}
             icon={true}
             sprite="utility"
             symbol="custom_apps"
@@ -124,7 +168,10 @@ export let states = [
           />
         </FormElementControl>
       </Fieldset>
-  },
+  }
+];
+
+export let examples = [
   {
     id: 'checkbox-group',
     label: 'Checkbox group',
@@ -155,59 +202,6 @@ export let states = [
             symbol="orders"
             label="Orders"
             size="medium"
-          />
-        </FormElementControl>
-      </Fieldset>
-  },
-  {
-    id: 'disabled',
-    label: 'Disabled option',
-    element:
-      <Fieldset>
-        <Legend>Select an app</Legend>
-        <FormElementControl>
-          <VisualPicker
-            type="checkbox"
-            icon={true}
-            sprite="utility"
-            symbol="connected_apps"
-            label="Connected App"
-            size="medium"
-          />
-          <VisualPicker
-            type="checkbox"
-            disabled={true}
-            icon={true}
-            sprite="utility"
-            symbol="custom_apps"
-            label="Custom App"
-            size="medium"
-          />
-        </FormElementControl>
-      </Fieldset>
-  },
-  {
-    id: 'size-large',
-    label: 'Size - Large Picker',
-    element:
-      <Fieldset>
-        <Legend>Select an app</Legend>
-        <FormElementControl>
-          <VisualPicker
-            type="radio"
-            icon={true}
-            sprite="utility"
-            symbol="connected_apps"
-            label="Connected App"
-            size="large"
-          />
-          <VisualPicker
-            type="radio"
-            icon={true}
-            sprite="utility"
-            symbol="custom_apps"
-            label="Custom App"
-            size="large"
           />
         </FormElementControl>
       </Fieldset>

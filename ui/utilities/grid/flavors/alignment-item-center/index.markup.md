@@ -1,1 +1,0 @@
-When `.slds-grid--vertical-align-center` is used in conjunction with `.slds-grid--align-center`, the outcome would horizontally and vertically center align your content in the center of the `.slds-grid`.

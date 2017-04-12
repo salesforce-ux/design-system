@@ -47,19 +47,17 @@ export let Radio = props => {
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Fieldset>
+    <Legend>Radio Group Label</Legend>
+    <FormElementControl>
+      <Radio checked label="Radio Label One" />
+      <Radio label="Radio Label Two" />
+    </FormElementControl>
+  </Fieldset>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <Fieldset>
-        <Legend>Radio Group Label</Legend>
-        <FormElementControl>
-          <Radio checked label="Radio Label One" />
-          <Radio label="Radio Label Two" />
-        </FormElementControl>
-      </Fieldset>
-  },
   {
     id: 'disabled',
     label: 'Disabled',

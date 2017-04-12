@@ -85,10 +85,9 @@
   /**
    * @summary Modifies styles for card in a narrow column
    *
-   * @name base-narrow
    * @selector .slds-card--narrow
    * @restrict .slds-card
-   * @variant
+   * @modifier
    */
   &_narrow,
   &--narrow {
@@ -112,12 +111,6 @@
     }
   }
 
-  /**
-   * @selector .slds-card--empty
-   * @restrict .slds-card
-   * @modifier
-   * @deprecated
-   */
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
 
     .slds-card_empty .slds-card__body,

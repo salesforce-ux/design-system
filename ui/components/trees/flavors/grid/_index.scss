@@ -1,6 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+/**
+ * @name grid
+ * @selector .slds-table--tree
+ * @restrict .slds-tree
+ * @variant
+ */
 .slds-table_tree,
 .slds-table--tree {
 
@@ -17,6 +23,10 @@
   }
 }
 
+/**
+ * @selector .slds-table--tree__toggle
+ * @restrict .slds-table--tree button
+ */
 .slds-table_tree__toggle,
 .slds-table--tree__toggle {
   margin-left: ($spacing-xx-small * -1);

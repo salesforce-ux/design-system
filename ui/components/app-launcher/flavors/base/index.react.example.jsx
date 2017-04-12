@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/flavors/base/index.react.example';
 import { AppLauncherTile } from 'ui/components/app-launcher/flavors/tile/index.react.example';
-import { Section, SectionContent, SectionTitle, SectionTitleAction } from 'ui/utilities/text/flavors/section-title/index.react.example';
+import { Section, SectionContent, SectionTitle, SectionTitleAction } from 'ui/components/expandable-section/flavors/base/index.react.example';
 import classNames from 'classnames';
 
 
@@ -168,25 +168,23 @@ const appTilesMoved = moveItemPosition(appTiles, 0, 2);
 appTilesMoved[2] = Object.assign({}, appTilesMoved[2], {grabbed: true});
 const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
+export default (
+  <div className="demo-only" style={{ height: '800px' }}>
+    <AppLauncherModal
+      appTiles={appTiles}
+      dragDropId={dragDropId}
+      dragDropInstructions="Press space bar to move this app within the list."
+      dragDropLiveRegion=""
+      itemTiles={itemTiles}
+    />
+    <div className="slds-backdrop slds-backdrop--open" />
+  </div>
+);
+
 export let states = [
   {
-    id: 'default',
-    label: 'Default',
-    element:
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTiles}
-        dragDropId={dragDropId}
-        dragDropInstructions="Press space bar to move this app within the list."
-        dragDropLiveRegion=""
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop--open" />
-    </div>
-  },
-  {
     id: 'grabbed',
-    label: 'Grabbed',
+    label: 'Tile grabbed',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
@@ -202,7 +200,7 @@ export let states = [
   },
   {
     id: 'moved',
-    label: 'Moved in list',
+    label: 'Tile moved in list',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
@@ -217,7 +215,7 @@ export let states = [
   },
   {
     id: 'dropped',
-    label: 'Dropped',
+    label: 'Tile dropped',
     element:
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal

@@ -39,21 +39,19 @@ let RowData = props =>
 // Export
 //////////////////////////////////////////////
 
+export default (
+  <Table>
+    <thead>
+      <HeadRowData />
+    </thead>
+    <tbody>
+      <RowData title="Cloudhub" />
+      <RowData title="Cloudhub + Anypoint Connectors" />
+    </tbody>
+  </Table>
+);
+
 export let states = [
-  {
-    id: 'data-table',
-    label: 'Default',
-    element:
-      <Table>
-        <thead>
-          <HeadRowData />
-        </thead>
-        <tbody>
-          <RowData title="Cloudhub" />
-          <RowData title="Cloudhub + Anypoint Connectors" />
-        </tbody>
-      </Table>
-  },
   {
     id: 'data-table-striped-rows',
     label: 'With striped rows',

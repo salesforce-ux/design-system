@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.example';
-import { UtilityIcon } from 'ui/components/icons/flavors/utility/index.react.example';
+import { UtilityIcon } from 'ui/components/icons/flavors/base/index.react.example';
 import SvgIcon from 'app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
@@ -41,25 +41,23 @@ export let Toast = props => {
 // Export
 //////////////////////////////////////////////
 
-export let states = [
-  {
-    id: 'informational',
-    label: 'Informational',
-    element:
-      <div className="demo-only" style={{ height: '4rem' }}>
-        <Toast type="info" containerClassName="slds-is-relative">
-          <UtilityIcon
-            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-            className="slds-icon--small"
-            assistiveText={false}
-            symbol="info"
-          />
-          <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
-          </div>
-        </Toast>
+export default (
+  <div className="demo-only" style={{ height: '4rem' }}>
+    <Toast type="info" containerClassName="slds-is-relative">
+      <UtilityIcon
+        containerClassName="slds-m-right--small slds-no-flex slds-align-top"
+        className="slds-icon--small"
+        assistiveText={false}
+        symbol="info"
+      />
+      <div className="slds-notify__content">
+        <h2 className="slds-text-heading--small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
       </div>
-  },
+    </Toast>
+  </div>
+);
+
+export let states = [
   {
     id: 'success',
     label: 'Success',
@@ -132,7 +130,10 @@ export let states = [
           </div>
         </Toast>
       </div>
-  },
+  }
+];
+
+export let examples = [
   {
     id: 'small',
     label: 'Small Column',

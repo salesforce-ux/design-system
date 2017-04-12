@@ -9,34 +9,32 @@ import { ButtonIcon } from 'ui/components/button-icons/flavors/base/index.react.
 // Export
 ///////////////////////////////////////////
 
+export default (
+  <ButtonGroup>
+    <ButtonIcon
+      className="slds-button--icon-border"
+      symbol="chart"
+      assistiveText="Charts"
+      title="Charts"
+      aria-pressed="false"
+    />
+    <ButtonIcon
+      className="slds-button--icon-border"
+      symbol="filterList"
+      assistiveText="Filter List"
+      title="Filter List"
+      aria-pressed="false"
+    />
+    <ButtonIcon
+      className="slds-button--icon-more"
+      hasDropdown={true}
+      assitiveText="More Actions"
+      title="More Actions"
+    />
+  </ButtonGroup>
+);
+
 export let states = [
-  {
-    id: 'button-group-icon',
-    label: 'Default',
-    element:
-      <ButtonGroup>
-        <ButtonIcon
-          className="slds-button--icon-border"
-          symbol="chart"
-          assistiveText="Charts"
-          title="Charts"
-          aria-pressed="false"
-        />
-        <ButtonIcon
-          className="slds-button--icon-border"
-          symbol="filterList"
-          assistiveText="Filter List"
-          title="Filter List"
-          aria-pressed="false"
-        />
-        <ButtonIcon
-          className="slds-button--icon-more"
-          hasDropdown={true}
-          assitiveText="More Actions"
-          title="More Actions"
-        />
-      </ButtonGroup>
-  },
   {
     id: 'button-group-icon-selected',
     label: 'Selected',

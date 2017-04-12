@@ -139,8 +139,8 @@ const parseComponentArgument = argv =>
   minimist(argv.slice(2)).component || '*';
 
 const createVnuReport = stream =>
+  // eslint-disable-next-line handle-callback-err
   vnu.lint(`.html/${parseComponentArgument(process.argv)}`, {}, (err, stdout, stderr) => {
-    if (err) throw err;
     const contents = JSON.stringify(vnu.report(stderr), null, 2);
     stream.write(
       new gutil.File({

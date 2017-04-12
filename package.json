@@ -146,7 +146,7 @@
     "gulp": "gulp",
     "lint": "gulp lint",
     "start": "npm run previewer",
-    "previewer": "abel-node scripts/previewer",
+    "previewer": "babel-node scripts/previewer",
     "report": "gulp lint:vnu lint:validate a11y",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",

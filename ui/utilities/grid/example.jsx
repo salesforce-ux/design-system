@@ -4,7 +4,7 @@
 import React from 'react';
 
 export const Context = props =>
-  <div className="demo-only-grid" style={{ minHeight: '8rem' }}>
+  <div className="demo-only-grid">
     {props.children}
   </div>;
 

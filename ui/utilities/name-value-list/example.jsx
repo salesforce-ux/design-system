@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export let states = [
+export let examples = [
   {
     id: 'name-value-pair-horizontal',
     label: 'Horizontal',

@@ -4,7 +4,7 @@
 import React from 'react';
 
 export const Context = props =>
-  <div className="demo-only--spacing demo-only--padding-theme">
+  <div className="demo-only-spacing demo-only-padding">
     {props.children}
   </div>;
 

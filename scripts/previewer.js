@@ -9,6 +9,7 @@ const { getComments, getMarkup } = require('./markup-style');
 const { watchPaths, removeFromCache } = require('./watch');
 
 require('./gulp/styles');
+require('./gulp/assets');
 
 const getComments_ = done =>
   getComments().fork(done, x => done(null, x));
@@ -41,6 +42,8 @@ previewer.listen(3003, ({ server, emit }) => {
     emit('comments');
   });
   gulp.start('styles:framework');
+  gulp.start('assets');
+  gulp.start('assets:icons');
   // JS
   gulp.watch(watchPaths.js, event => {
     removeFromCache(require.resolve(event.path));

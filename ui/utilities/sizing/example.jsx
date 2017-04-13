@@ -2,12 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import globals from 'app_modules/global';
 
 let SizePreviewExample = props =>
-<div className={`slds-size--${props.size}`}>
-  <div className="slds-box slds-box--x-small slds-text-align--center slds-m-around--x-small">.slds-size--{props.size}</div>
-</div>;
+  <div className={`slds-size--${props.size}`}>
+    <div className="slds-box slds-box--x-small slds-text-align--center slds-m-around--x-small">.slds-size--{props.size}</div>
+  </div>;
 
 export let examples = [
   {

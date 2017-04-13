@@ -89,11 +89,10 @@
   }
 
   /**
-   *
+   * Use when modal header has no content
    *
    * @selector .slds-modal__header--empty
    * @restrict .slds-modal__header
-   * @modifier
    */
   &__header_empty,
   &__header--empty {
@@ -184,6 +183,7 @@
      * @restrict .slds-modal__footer
      * @notes This is only needed when you have two buttons that indicate a back and forward navigation.
      * @modifier
+     * @group direction
      */
     &_directional .slds-button:first-child,
     &--directional .slds-button:first-child {
@@ -248,7 +248,7 @@
  * @selector .slds-modal--large
  * @restrict .slds-modal
  * @modifier
- * @group width
+ * @group size
  */
 .slds-modal_large .slds-modal__container,
 .slds-modal--large .slds-modal__container {

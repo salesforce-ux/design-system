@@ -137,7 +137,6 @@
     "build-server": "babel-node scripts/npm/build-server.js",
     "build-travis": "babel-node scripts/npm/build-travis.js",
     "dist": "babel-node scripts/dist.js",
-    "dist-npm": "babel-node scripts/dist.js --npm",
     "gulp": "gulp",
     "lint": "gulp lint",
     "start": "npm run previewer",

@@ -82,8 +82,8 @@ const prepare = (done) => {
     ], done),
     // dist
     (done) => async.series([
-      async.apply(execute, 'npm run dist-npm'),
-      async.apply(execute, `cp -a ${paths.npm}/. ${paths.build}/dist`),
+      async.apply(execute, 'npm run dist'),
+      async.apply(execute, `cp -a ${paths.dist}/. ${paths.build}/dist`),
       async.apply(execute, `rm -rf ${paths.build}/dist/*.zip`)
     ], done),
     // examples

@@ -8,9 +8,7 @@ const autoprefixer = require('autoprefixer');
 const gulp = require('gulp');
 const gulpfile = require('gulp-file');
 const gulpinsert = require('gulp-insert');
-const gulpzip = require('gulp-zip');
 const gulprename = require('gulp-rename');
-const minimist = require('minimist');
 const postcss = require('gulp-postcss');
 const rimraf = require('rimraf');
 const sass = require('gulp-sass');
@@ -25,20 +23,11 @@ const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
 
-const argv = minimist(process.argv.slice(2));
-const isNpm = argv.npm === true;
-
-const sanitizeVersion = version =>
-  version.replace(/\s+|\(|\)/g, '_');
-
-const zipName = (version) =>
-  MODULE_NAME + '-' + sanitizeVersion(version) + '.zip';
-
 // /////////////////////////////////////////////////////////////
 // Helpers
 // /////////////////////////////////////////////////////////////
 
-const distPath = path.resolve.bind(path, isNpm ? paths.npm : paths.dist);
+const distPath = path.resolve.bind(path, paths.dist);
 
 // /////////////////////////////////////////////////////////////
 // Tasks
@@ -217,12 +206,7 @@ async.series([
    * Move design tokens
    */
   (done) => {
-    // Bundle everything in the npm package
-    // but only sources and Sass files in the zip
-    // because it would make the zip too large to be imported
-    // as a Static Resource in a Salesforce Org (limited to 5MB)
-    const src = isNpm ? '**/*.*' : ['**/*.yml', '**/*.scss'];
-    gulp.src(src, {
+    gulp.src('**/*.*', {
       base: `${paths.designTokens}`,
       cwd: `${paths.designTokens}`
     })

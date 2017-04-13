@@ -23,15 +23,9 @@ Install [gulp](http://gulpjs.com/) globally:
 npm install --global gulp
 ```
 
-### `gulp`
+### `npm start`
 
-Generate and run the Lightning Design System.
-
-### `gulp serve`
-
-Run the lightning design system.
-
-Faster than `gulp`, as it won't re-generate the whole site before starting the server. Useful when mainly working on styles.
+Start the Lightning Design System preview app.
 
 ### `gulp lint`
 
@@ -52,9 +46,13 @@ gulp lint:vnu (optional: --component "{trees_base_with*,trees_base_deep*}")
 
 ### Compilation
 
-`gulp pages`: generate the site’s pages.
+### `npm run build && npm run dist`
 
-`gulp styles`: compile Sass to CSS.
+Generate the Lightning Design System into the `.dist` directory.
+
+### `gulp styles`
+
+Compile Sass to CSS into `.assets/styles`.
 
 ### `gulp clean`
 

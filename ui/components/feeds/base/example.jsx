@@ -5,9 +5,9 @@ import React from 'react';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from '../post/example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="slds-feed">

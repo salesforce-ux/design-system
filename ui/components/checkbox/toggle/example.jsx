@@ -4,9 +4,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only slds-size--1-of-2" {...props}>
@@ -39,14 +39,14 @@ let Checkbox = props =>
 
 let Toggle = props =>
   <span id="toggle-desc" className={classNames('slds-checkbox--faux_container', props.className)} aria-live="assertive">
-    <span className="slds-checkbox--faux"></span>
+    <span className="slds-checkbox--faux" />
     <span className={classNames('slds-checkbox--on', props.className)}>Enabled</span>
     <span className={classNames('slds-checkbox--off', props.className)}>Disabled</span>
   </span>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // State Constructor(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 let StateA = props =>
   <Demo>
     <LabelWrapper>
@@ -80,9 +80,9 @@ let StateC = props =>
     </LabelWrapper>
   </Demo>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default <StateA />;
 

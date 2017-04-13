@@ -74,7 +74,6 @@ const runValidations = validate =>
   .pipe(report(validate))
   .pipe(gulp.dest('.reports/'));
 
-
 const validate = () =>
   getComments()
   .map(createParser)

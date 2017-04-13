@@ -9,24 +9,24 @@ export let StandardIcon = props => {
   const symbol = props.symbol || 'account';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon-standard-' + symbol, props.containerClassName) }
-      title={ props.title || 'Description of icon when needed' }
+      className={classNames('slds-icon_container slds-icon-standard-' + symbol, props.containerClassName)}
+      title={props.title || 'Description of icon when needed'}
     >
       <SvgIcon
-        className={ classNames('slds-icon', props.className) }
+        className={classNames('slds-icon', props.className)}
         sprite="standard"
-        symbol={ symbol }
+        symbol={symbol}
       />
-      {props.assistiveText != false ?
-        <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
+      {props.assistiveText != false
+        ? <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
       : null}
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <StandardIcon />

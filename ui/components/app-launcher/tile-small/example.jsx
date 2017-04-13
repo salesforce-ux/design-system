@@ -7,10 +7,9 @@ import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
 import { AppLauncherTile } from '../tile/example';
 import classNames from 'classnames';
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>

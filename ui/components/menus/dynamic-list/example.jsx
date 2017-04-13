@@ -8,9 +8,9 @@ import { FormElement } from '../../form-layout/element/example';
 import SvgIcon from '../../../shared/svg-icon';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Footer = props =>
   <ul>
@@ -28,9 +28,9 @@ let Footer = props =>
     </li>
   </ul>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let states = [
   {
@@ -41,7 +41,7 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-around--medium"
         footerClassName="slds-p-horizontal--none"
-        footer={ <Footer /> }
+        footer={<Footer />}
       >
         <h3 className="slds-text-title--caps slds-m-bottom--x-small" role="presentation">My Favorites</h3>
         <p>You can favorite any page!</p>
@@ -55,7 +55,7 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        footer={ <Footer /> }
+        footer={<Footer />}
       >
         <Listbox className="slds-dropdown--length-10">
           <ListboxList role="group" aria-label="My Favorites">
@@ -79,13 +79,13 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        footer={ <Footer /> }
+        footer={<Footer />}
       >
         <Listbox className="slds-dropdown--length-10">
           <ListboxList role="group" aria-label="My Favorites">
             <ListboxItem role="presentation" headerText="My Favorites" />
             { _.times(7, i =>
-              <ListboxItem tabIndex={ (i===0) ? '0' : null } key={`listbox-${i}`}>
+              <ListboxItem tabIndex={(i === 0) ? '0' : null} key={`listbox-${i}`}>
                 <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
                 <span className="slds-media__body">
                   <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
@@ -105,13 +105,13 @@ export let states = [
         className="slds-nubbin--top-right"
         bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
         footerClassName="slds-p-horizontal--none"
-        footer={ <Footer /> }
+        footer={<Footer />}
       >
         <PickList classNames="slds-size--1-of-1" isOpen>
           <FormElement
             className="slds-p-around--small"
             label="Categories"
-            hideLabel={ true }
+            hideLabel
             inputId="text-input-01"
             inputIcon="left"
           >

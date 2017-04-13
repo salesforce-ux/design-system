@@ -16,9 +16,9 @@ const avatar = (
   </span>
 );
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let states = [
   {
@@ -26,7 +26,7 @@ export let states = [
     label: 'Default',
     element:
       <div className="demo-only" style={{ width: '30rem' }}>
-        <TileMedia title="Lexee L. Jackson" media={ avatar } />
+        <TileMedia title="Lexee L. Jackson" media={avatar} />
       </div>
   },
   {
@@ -34,7 +34,7 @@ export let states = [
     label: 'With actions',
     element:
       <div className="demo-only" style={{ width: '30rem' }}>
-        <TileMedia title="Lexee L. Jackson" media={ avatar } actions />
+        <TileMedia title="Lexee L. Jackson" media={avatar} actions />
       </div>
   }
 ];

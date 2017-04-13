@@ -23,20 +23,20 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId01 }
+        id={listboxOptionId01}
         entityTitle="Acme"
-        entityMeta={ true }
-        focused={ props.focused }
+        entityMeta
+        focused={props.focused}
       />
     </ListboxItem>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId02 }
+        id={listboxOptionId02}
         entityTitle="Salesforce.com, Inc."
-        entityMeta={ true }
+        entityMeta
       />
     </ListboxItem>
   </Listbox>;
@@ -50,9 +50,9 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          autocomplete={ true }
-          isOpen={ true }
-          listbox={ <ListboxDropdown /> }
+          autocomplete
+          isOpen
+          listbox={<ListboxDropdown />}
         />
       </div>,
     script: `
@@ -67,10 +67,10 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          autocomplete={ true }
-          isOpen={ true }
-          listbox={ <ListboxDropdown focused /> }
-          aria-activedescendant={ listboxOptionId01 }
+          autocomplete
+          isOpen
+          listbox={<ListboxDropdown focused />}
+          aria-activedescendant={listboxOptionId01}
         />
       </div>
   },
@@ -81,13 +81,13 @@ export let states = [
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
-        autocomplete={ true }
+        autocomplete
       >
         <Listbox
           id={listboxSelectionsId}
           aria-label="Selected Options:"
           className="slds-p-top--xxx-small"
-          horizontal={ true }
+          horizontal
         >
           <ListboxItem>
             <ListboxPill label="Acme" tabIndex="0">

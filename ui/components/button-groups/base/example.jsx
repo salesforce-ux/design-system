@@ -6,10 +6,9 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Menu, MenuList, MenuItem, Trigger } from '../../menus/dropdown/example';
 import classNames from 'classnames';
 
-
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let ButtonGroup = props =>
   <div className={classNames('slds-button-group', props.className)} role="group">
@@ -21,9 +20,9 @@ export let ButtonGroupList = props =>
     {props.children}
   </ul>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <ButtonGroup>
@@ -200,7 +199,7 @@ export let examples = [
         />
         <ButtonIcon
           className="slds-button--icon-more"
-          hasDropdown={true}
+          hasDropdown
           assitiveText="More Actions"
           title="More Actions"
         />
@@ -227,7 +226,7 @@ export let examples = [
         />
         <ButtonIcon
           className="slds-button--icon-more"
-          hasDropdown={true}
+          hasDropdown
           assitiveText="More Actions"
           title="More Actions"
         />

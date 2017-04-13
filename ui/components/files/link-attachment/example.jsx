@@ -4,16 +4,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let AttachmentLink = props =>
   <a href="javascript:void(0);" className="slds-media slds-box slds-grow slds-text-link--reset">
     <div className="slds-media__figure slds-medium-show">
       <div className="slds-file slds-size--small">
         <div className="slds-file__crop slds-file__crop--16-by-9">
-          <img src="/assets/images/placeholder-img@16x9.jpg" alt={ props.title || 'Image Title' } />
+          <img src="/assets/images/placeholder-img@16x9.jpg" alt={props.title || 'Image Title'} />
         </div>
       </div>
     </div>
@@ -24,9 +24,9 @@ export let AttachmentLink = props =>
     </div>
   </a>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <AttachmentLink

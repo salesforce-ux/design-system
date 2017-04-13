@@ -6,9 +6,9 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Comment = props =>
   <article className={classNames('slds-comment slds-media slds-hint-parent', props.className)}>
@@ -54,7 +54,7 @@ export let CommentFooter = props =>
         <button
           className="slds-button--reset slds-text-color--weak"
           title="Like this item"
-          aria-pressed={ props.liked ? true : false }
+          aria-pressed={!!props.liked}
         >
           { props.liked ? 'Liked' : 'Like' }
         </button>
@@ -64,9 +64,9 @@ export let CommentFooter = props =>
     </ul>
   </footer>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Comment>

@@ -7,9 +7,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 const path1Id = 'path-1';
 const path2Id = 'path-2';
@@ -61,12 +61,12 @@ let Action = props =>
 
 let ListMain = props => {
   let ariaOrientation;
-  if(props.listRole === 'listbox') {
+  if (props.listRole === 'listbox') {
     ariaOrientation = 'horizontal';
   }
-  return(
+  return (
     <div className="slds-tabs--path" role="application">
-      <ul className="slds-tabs--path__nav" role={props.listRole} aria-orientation={ ariaOrientation }>
+      <ul className="slds-tabs--path__nav" role={props.listRole} aria-orientation={ariaOrientation}>
         {props.children}
       </ul>
     </div>
@@ -75,19 +75,19 @@ let ListMain = props => {
 
 let ListItem = props => {
   let ariaExpanded;
-  if(props.role === 'tab') {
+  if (props.role === 'tab') {
     ariaExpanded = props.ariaExpanded || 'false';
   }
 
-  return(
+  return (
     <li className={classNames('slds-tabs--path__item', props.className)} role="presentation">
       <a
-        aria-controls={ props.ariaControls }
-        aria-expanded={ ariaExpanded }
+        aria-controls={props.ariaControls}
+        aria-expanded={ariaExpanded}
         aria-selected={props.tabIndex ? 'true' : 'false'}
         className="slds-tabs--path__link"
         href="javascript:void(0);"
-        id={ props.id }
+        id={props.id}
         role={props.role}
         tabIndex={props.tabIndex || '-1'}
       >
@@ -106,11 +106,11 @@ let CoachContent = props => {
     }
   );
 
-  return(
+  return (
     <div
-      aria-labelledby={ props.ariaLabelledby }
-      className={ contentClassNames }
-      id={ props.id }
+      aria-labelledby={props.ariaLabelledby}
+      className={contentClassNames}
+      id={props.id}
       role="tabpanel"
     >
       { props.children }
@@ -170,43 +170,42 @@ let CoachExample2 = props =>
     </div>
   </div>;
 
-
-///////////////////////////////////////////////
+/// ////////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Default = props =>
   <Coach>
     <Path>
       <ListMain listRole="listbox">
-        <ListItem className="slds-is-complete" id={ path1Id } role="option">
+        <ListItem className="slds-is-complete" id={path1Id} role="option">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Contacted</span>
         </ListItem>
-        <ListItem className="slds-is-complete" id={ path2Id } role="option">
+        <ListItem className="slds-is-complete" id={path2Id} role="option">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Open</span>
         </ListItem>
-        <ListItem className="slds-is-current" id={ path3Id } role="option" tabIndex="0">
+        <ListItem className="slds-is-current" id={path3Id} role="option" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Current Stage:</span>
           </span>
           <span className="slds-tabs--path__title">Unqualified</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path4Id } role="option">
+        <ListItem className="slds-is-incomplete" id={path4Id} role="option">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path5Id } role="option">
+        <ListItem className="slds-is-incomplete" id={path5Id} role="option">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
@@ -225,34 +224,34 @@ let PathCoach = props =>
     <Path>
       <Trigger />
       <ListMain listRole="tablist">
-        <ListItem className="slds-is-complete" id={ path1Id } ariaControls={ pathContent1Id } role="tab">
+        <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Contacted</span>
         </ListItem>
-        <ListItem className="slds-is-complete" id={ path2Id } ariaControls={ pathContent2Id } role="tab">
+        <ListItem className="slds-is-complete" id={path2Id} ariaControls={pathContent2Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Open</span>
         </ListItem>
-        <ListItem className="slds-is-current" id={ path3Id } ariaControls={ pathContent3Id } role="tab" tabIndex="0">
+        <ListItem className="slds-is-current" id={path3Id} ariaControls={pathContent3Id} role="tab" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Current Stage:</span>
           </span>
           <span className="slds-tabs--path__title">Unqualified</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path4Id } ariaControls={ pathContent4Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path4Id} ariaControls={pathContent4Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path5Id } ariaControls={ pathContent5Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path5Id} ariaControls={pathContent5Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
@@ -262,23 +261,22 @@ let PathCoach = props =>
       <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
       Mark Status as Complete</Action>
     </Path>
-    <CoachContent id={ pathContent1Id } ariaLabelledby={ path1Id }>
+    <CoachContent id={pathContent1Id} ariaLabelledby={path1Id}>
       <h2>Path 1 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent2Id } ariaLabelledby={ path2Id }>
+    <CoachContent id={pathContent2Id} ariaLabelledby={path2Id}>
       <h2>Path 2 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent3Id } ariaLabelledby={ path3Id }>
+    <CoachContent id={pathContent3Id} ariaLabelledby={path3Id}>
       <h2>Path 3 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent4Id } ariaLabelledby={ path4Id }>
+    <CoachContent id={pathContent4Id} ariaLabelledby={path4Id}>
       <h2>Path 4 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent5Id } ariaLabelledby={ path5Id }>
+    <CoachContent id={pathContent5Id} ariaLabelledby={path5Id}>
       <h2>Path 5 Content</h2>
     </CoachContent>
   </Coach>;
-
 
 let PathCoachVisible = props =>
   <Demo>
@@ -286,34 +284,34 @@ let PathCoachVisible = props =>
       <Path>
         <Triggerup />
         <ListMain listRole="tablist">
-          <ListItem className="slds-is-complete" id={ path1Id } ariaControls={ pathContent1Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Stage Complete</span>
             </span>
             <span className="slds-tabs--path__title">Contacted</span>
           </ListItem>
-          <ListItem className="slds-is-complete" id={ path2Id } ariaControls={ pathContent2Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-complete" id={path2Id} ariaControls={pathContent2Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Stage Complete</span>
             </span>
             <span className="slds-tabs--path__title">Open</span>
           </ListItem>
-          <ListItem className="slds-is-current" id={ path3Id } ariaControls={ pathContent3Id } ariaExpanded="true" role="tab" tabIndex="0">
+          <ListItem className="slds-is-current" id={path3Id} ariaControls={pathContent3Id} ariaExpanded="true" role="tab" tabIndex="0">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Current Stage:</span>
             </span>
             <span className="slds-tabs--path__title">Unqualified</span>
           </ListItem>
-          <ListItem className="slds-is-incomplete" id={ path4Id } ariaControls={ pathContent4Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-incomplete" id={path4Id} ariaControls={pathContent4Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
             <span className="slds-tabs--path__title">Nurturing</span>
           </ListItem>
-          <ListItem className="slds-is-incomplete" id={ path5Id } ariaControls={ pathContent5Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-incomplete" id={path5Id} ariaControls={pathContent5Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
@@ -323,19 +321,19 @@ let PathCoachVisible = props =>
         <Action><SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="check" />
           Mark Status as Complete</Action>
       </Path>
-      <CoachContent id={ pathContent1Id } ariaLabelledby={ path1Id }>
+      <CoachContent id={pathContent1Id} ariaLabelledby={path1Id}>
         <h2>Path 1 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent2Id } ariaLabelledby={ path2Id }>
+      <CoachContent id={pathContent2Id} ariaLabelledby={path2Id}>
         <h2>Path 2 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent3Id } ariaLabelledby={ path3Id } isActive>
+      <CoachContent id={pathContent3Id} ariaLabelledby={path3Id} isActive>
         <CoachExample1 />
       </CoachContent>
-      <CoachContent id={ pathContent4Id } ariaLabelledby={ path4Id }>
+      <CoachContent id={pathContent4Id} ariaLabelledby={path4Id}>
         <h2>Path 4 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent5Id } ariaLabelledby={ path5Id }>
+      <CoachContent id={pathContent5Id} ariaLabelledby={path5Id}>
         <h2>Path 5 Content</h2>
       </CoachContent>
     </Coach>
@@ -347,34 +345,34 @@ let PathStageSelected = props =>
       <Path>
         <Triggerup />
         <ListMain listRole="tablist">
-          <ListItem className="slds-is-complete" id={ path1Id } ariaControls={ pathContent1Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Stage Complete</span>
             </span>
             <span className="slds-tabs--path__title">Contacted</span>
           </ListItem>
-          <ListItem className="slds-is-complete" id={ path2Id } ariaControls={ pathContent2Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-complete" id={path2Id} ariaControls={pathContent2Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Stage Complete</span>
             </span>
             <span className="slds-tabs--path__title">Open</span>
           </ListItem>
-          <ListItem className="slds-is-current" id={ path3Id } ariaControls={ pathContent3Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-current" id={path3Id} ariaControls={pathContent3Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
               <span className="slds-assistive-text">Current Stage:</span>
             </span>
             <span className="slds-tabs--path__title">Unqualified</span>
           </ListItem>
-          <ListItem className="slds-is-incomplete slds-is-active" id={ path4Id } ariaControls={ pathContent4Id } ariaExpanded="true" role="tab" tabIndex="0">
+          <ListItem className="slds-is-incomplete slds-is-active" id={path4Id} ariaControls={pathContent4Id} ariaExpanded="true" role="tab" tabIndex="0">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
             <span className="slds-tabs--path__title">Nurturing</span>
           </ListItem>
-          <ListItem className="slds-is-incomplete" id={ path5Id } ariaControls={ pathContent5Id } ariaExpanded="true" role="tab">
+          <ListItem className="slds-is-incomplete" id={path5Id} ariaControls={pathContent5Id} ariaExpanded="true" role="tab">
             <span className="slds-tabs--path__stage">
               <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             </span>
@@ -384,19 +382,19 @@ let PathStageSelected = props =>
         <Action className="slds-path__mark-current">
           Mark as Current Stage</Action>
       </Path>
-      <CoachContent id={ pathContent1Id } ariaLabelledby={ path1Id }>
+      <CoachContent id={pathContent1Id} ariaLabelledby={path1Id}>
         <h2>Path 1 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent2Id } ariaLabelledby={ path2Id }>
+      <CoachContent id={pathContent2Id} ariaLabelledby={path2Id}>
         <h2>Path 2 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent3Id } ariaLabelledby={ path3Id }>
+      <CoachContent id={pathContent3Id} ariaLabelledby={path3Id}>
         <h2>Path 3 Content</h2>
       </CoachContent>
-      <CoachContent id={ pathContent4Id } ariaLabelledby={ path4Id } isActive>
+      <CoachContent id={pathContent4Id} ariaLabelledby={path4Id} isActive>
         <CoachExample2 />
       </CoachContent>
-      <CoachContent id={ pathContent5Id } ariaLabelledby={ path5Id }>
+      <CoachContent id={pathContent5Id} ariaLabelledby={path5Id}>
         <h2>Path 5 Content</h2>
       </CoachContent>
     </Coach>
@@ -407,33 +405,33 @@ let PathStageLost = props =>
     <Path>
       <Trigger />
       <ListMain listRole="tablist">
-        <ListItem className="slds-is-incomplete" id={ path1Id } ariaControls={ pathContent1Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path1Id} ariaControls={pathContent1Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Contacted</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path2Id } ariaControls={ pathContent2Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path2Id} ariaControls={pathContent2Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Open</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path3Id } ariaControls={ pathContent3Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path3Id} ariaControls={pathContent3Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Unqualified</span>
         </ListItem>
-        <ListItem className="slds-is-incomplete" id={ path4Id } ariaControls={ pathContent4Id } role="tab">
+        <ListItem className="slds-is-incomplete" id={path4Id} ariaControls={pathContent4Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </ListItem>
-        <ListItem className="slds-is-lost" id={ path5Id } ariaControls={ pathContent5Id } role="tab" tabIndex="0">
+        <ListItem className="slds-is-lost" id={path5Id} ariaControls={pathContent5Id} role="tab" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Current Stage:</span>
@@ -443,19 +441,19 @@ let PathStageLost = props =>
       </ListMain>
       <Action>Change Closed State</Action>
     </Path>
-    <CoachContent id={ pathContent1Id } ariaLabelledby={ path1Id }>
+    <CoachContent id={pathContent1Id} ariaLabelledby={path1Id}>
       <h2>Path 1 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent2Id } ariaLabelledby={ path2Id }>
+    <CoachContent id={pathContent2Id} ariaLabelledby={path2Id}>
       <h2>Path 2 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent3Id } ariaLabelledby={ path3Id }>
+    <CoachContent id={pathContent3Id} ariaLabelledby={path3Id}>
       <h2>Path 3 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent4Id } ariaLabelledby={ path4Id }>
+    <CoachContent id={pathContent4Id} ariaLabelledby={path4Id}>
       <h2>Path 4 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent5Id } ariaLabelledby={ path5Id }>
+    <CoachContent id={pathContent5Id} ariaLabelledby={path5Id}>
       <h2>Path 5 Content</h2>
     </CoachContent>
   </Coach>;
@@ -465,33 +463,33 @@ let PathStageWon = props =>
     <Path>
       <Trigger />
       <ListMain listRole="tablist">
-        <ListItem className="slds-is-complete" id={ path1Id } ariaControls={ pathContent1Id } role="tab">
+        <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Contacted</span>
         </ListItem>
-        <ListItem className="slds-is-complete" id={ path2Id } ariaControls={ pathContent2Id } role="tab">
+        <ListItem className="slds-is-complete" id={path2Id} ariaControls={pathContent2Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Stage Complete</span>
           </span>
           <span className="slds-tabs--path__title">Open</span>
         </ListItem>
-        <ListItem className="slds-is-complete" id={ path3Id } ariaControls={ pathContent3Id } role="tab">
+        <ListItem className="slds-is-complete" id={path3Id} ariaControls={pathContent3Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Unqualified</span>
         </ListItem>
-        <ListItem className="slds-is-complete" id={ path4Id } ariaControls={ pathContent4Id } role="tab">
+        <ListItem className="slds-is-complete" id={path4Id} ariaControls={pathContent4Id} role="tab">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
           </span>
           <span className="slds-tabs--path__title">Nurturing</span>
         </ListItem>
-        <ListItem className="slds-is-complete slds-is-won" id={ path5Id } ariaControls={ pathContent5Id } role="tab" tabIndex="0">
+        <ListItem className="slds-is-complete slds-is-won" id={path5Id} ariaControls={pathContent5Id} role="tab" tabIndex="0">
           <span className="slds-tabs--path__stage">
             <SvgIcon className="slds-icon slds-icon--x-small" sprite="utility" symbol="check" />
             <span className="slds-assistive-text">Current Stage:</span>
@@ -501,27 +499,26 @@ let PathStageWon = props =>
       </ListMain>
       <Action>Change Closed State</Action>
     </Path>
-    <CoachContent id={ pathContent1Id } ariaLabelledby={ path1Id }>
+    <CoachContent id={pathContent1Id} ariaLabelledby={path1Id}>
       <h2>Path 1 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent2Id } ariaLabelledby={ path2Id }>
+    <CoachContent id={pathContent2Id} ariaLabelledby={path2Id}>
       <h2>Path 2 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent3Id } ariaLabelledby={ path3Id }>
+    <CoachContent id={pathContent3Id} ariaLabelledby={path3Id}>
       <h2>Path 3 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent4Id } ariaLabelledby={ path4Id }>
+    <CoachContent id={pathContent4Id} ariaLabelledby={path4Id}>
       <h2>Path 4 Content</h2>
     </CoachContent>
-    <CoachContent id={ pathContent5Id } ariaLabelledby={ path5Id }>
+    <CoachContent id={pathContent5Id} ariaLabelledby={path5Id}>
       <h2>Path 5 Content</h2>
     </CoachContent>
   </Coach>;
 
-
-///////////////////////////////////////////////
+/// ////////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Default />

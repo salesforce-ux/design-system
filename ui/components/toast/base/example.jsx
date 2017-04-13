@@ -7,9 +7,9 @@ import { UtilityIcon } from '../../icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let Toast = props => {
   const {
@@ -21,8 +21,8 @@ export let Toast = props => {
   } = props;
 
   return (
-    <div className={ classNames('slds-notify_container', containerClassName) }>
-      <div className={ classNames('slds-notify slds-notify--toast', className, type ? 'slds-theme--' + type : null) } role="alert">
+    <div className={classNames('slds-notify_container', containerClassName)}>
+      <div className={classNames('slds-notify slds-notify--toast', className, type ? 'slds-theme--' + type : null)} role="alert">
         <span className="slds-assistive-text">{ type || 'info' }</span>
         { children }
         <ButtonIcon
@@ -37,9 +37,9 @@ export let Toast = props => {
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ height: '4rem' }}>

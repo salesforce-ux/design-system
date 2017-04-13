@@ -4,9 +4,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className={classNames('demo-only', props.className)} style={{height: '6rem'}}>
@@ -18,17 +18,16 @@ export let SpinnerContainer = props =>
     {props.children}
   </div>;
 
-
 export let Spinner = props =>
   <div role="status" className={classNames('slds-spinner', props.className)}>
     <span className="slds-assistive-text">Loading</span>
-    <div className="slds-spinner__dot-a"></div>
-    <div className="slds-spinner__dot-b"></div>
+    <div className="slds-spinner__dot-a" />
+    <div className="slds-spinner__dot-b" />
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Demo>

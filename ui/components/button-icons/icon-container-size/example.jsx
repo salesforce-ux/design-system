@@ -6,9 +6,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import { ButtonIcon } from '../base/example';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <ButtonIcon className="slds-button--icon-border" symbol="down" assistiveText="More Options" aria-haspopup="true" title="More Options" />

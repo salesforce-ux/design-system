@@ -9,14 +9,13 @@ import { GlobalHeader } from '../base/example';
 import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partials
-/////////////////////////////////////////////
+/// //////////////////////////////////////////
 
 const MoreIcon = (
   <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" />
 );
-
 
 let TriggerButton = props =>
   <Trigger className="slds-is-open" triggerIcon={MoreIcon}>
@@ -27,7 +26,6 @@ let UnreadIcon = props =>
   <div className="slds-align-middle">
     <abbr className="slds-required slds-text-link" title="unread">●</abbr>
   </div>;
-
 
 let NotificationItem = props =>
   <li className={classNames('slds-global-header__notification slds-p-around--xx-small', props.className)}>
@@ -65,9 +63,9 @@ let PopoverMenu = props =>
     </div>
   </section>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-/////////////////////////////////////////////
+/// //////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ height: '28.571rem' }}>

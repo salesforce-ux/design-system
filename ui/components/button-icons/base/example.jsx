@@ -8,28 +8,28 @@ import classNames from 'classnames';
 export let ButtonIcon = props =>
   <button
     className={classNames('slds-button slds-button--icon', props.className, props.selected ? 'slds-is-selected' : null)}
-    disabled={ props.disabled }
-    role={ props.role }
-    aria-describedby={ props['aria-describedby'] }
-    aria-haspopup={ props.hasDropdown ? 'true' : props['aria-haspopup'] }
-    aria-expanded={ props['aria-expanded'] }
-    aria-controls={ props['aria-controls'] }
-    aria-hidden={ props['aria-hidden'] }
-    aria-pressed={ props['aria-pressed'] }
-    aria-live={ props.assertive ? 'assertive' : props['aria-live'] }
-    tabIndex={ props.tabIndex }
-    title={ props.title || 'Provide description of action' } >
+    disabled={props.disabled}
+    role={props.role}
+    aria-describedby={props['aria-describedby']}
+    aria-haspopup={props.hasDropdown ? 'true' : props['aria-haspopup']}
+    aria-expanded={props['aria-expanded']}
+    aria-controls={props['aria-controls']}
+    aria-hidden={props['aria-hidden']}
+    aria-pressed={props['aria-pressed']}
+    aria-live={props.assertive ? 'assertive' : props['aria-live']}
+    tabIndex={props.tabIndex}
+    title={props.title || 'Provide description of action'} >
     <SvgIcon
       className={classNames('slds-button__icon', props.iconClassName)}
       sprite="utility"
-      symbol={ props.symbol || 'settings' } />
+      symbol={props.symbol || 'settings'} />
     { props.hasDropdown ? <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" /> : null }
     <span className="slds-assistive-text">{ props.assistiveText || 'Provide description of action' }</span>
   </button>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export const Context = props =>
   <div style={{ padding: '0.5rem' }}>

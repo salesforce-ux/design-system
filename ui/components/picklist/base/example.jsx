@@ -13,20 +13,20 @@ import { FormElement } from '../../form-layout/element/example';
 import { Input } from '../../input/base/example';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Listbox = props =>
-  <div className={props.className} id={ props.id || 'option-list-01' } role="listbox">
+  <div className={props.className} id={props.id || 'option-list-01'} role="listbox">
     {props.children}
   </div>;
 
 export let ListboxList = props =>
   <ul
     className={classNames('slds-dropdown__list', props.className)}
-    role={ props.role == 'group' ? 'group' : 'presentation' }
-    aria-label={ props.role == 'group' ? props['aria-label'] : null }
+    role={props.role == 'group' ? 'group' : 'presentation'}
+    aria-label={props.role == 'group' ? props['aria-label'] : null}
   >
     {props.children}
   </ul>;
@@ -35,20 +35,20 @@ export let ListboxItem = props => {
   const uniqueId = _.uniqueId('listbox-option-');
 
   return (
-    <li className={ props.className } role="presentation">
+    <li className={props.className} role="presentation">
       <span
-        className={ classNames( props.role == 'presentation' ? 'slds-lookup__item--label' : ( props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
-        role={ !props.role ? 'option' : props.role}
-        tabIndex={ props.tabIndex }
-        id={ uniqueId }
+        className={classNames(props.role == 'presentation' ? 'slds-lookup__item--label' : (props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
+        role={!props.role ? 'option' : props.role}
+        tabIndex={props.tabIndex}
+        id={uniqueId}
       >
-        { props.isSelectable ?
-          <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
+        { props.isSelectable
+          ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
         : null }
-        { props.headerText ?
-          <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
-        : (props.text ?
-          <span className="slds-truncate" title={ props.children }>{ props.children }</span>
+        { props.headerText
+          ? <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
+        : (props.text
+          ? <span className="slds-truncate" title={props.children}>{ props.children }</span>
         : props.children
         )}
       </span>
@@ -58,9 +58,9 @@ export let ListboxItem = props => {
 
 export const PickList = props =>
   <div
-    aria-expanded={ props.isOpen ? 'true' : 'false' }
+    aria-expanded={props.isOpen ? 'true' : 'false'}
     aria-haspopup="listbox"
-    className={ classNames('slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click', { 'slds-is-open': props.isOpen, 'slds-picklist--fluid': props.isFluid }, props.classNames) }
+    className={classNames('slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click', { 'slds-is-open': props.isOpen, 'slds-picklist--fluid': props.isFluid }, props.classNames)}
     role="combobox"
   >
     { props.children }
@@ -75,25 +75,25 @@ let ComboboxSearchInput = props =>
   >
       <input
         aria-activedescendant=""
-        aria-autocomplete={ props.autocomplete ? 'list' : null }
+        aria-autocomplete={props.autocomplete ? 'list' : null}
         aria-controls="option-list-01"
         autoComplete="off"
         className="slds-lookup__search-input slds-input"
         id="text-input-01"
-        placeholder={ props.placeholder || 'Select an Option' }
-        readOnly={ !props.autocomplete }
+        placeholder={props.placeholder || 'Select an Option'}
+        readOnly={!props.autocomplete}
         role="textbox"
         type="text"
-        value={ props.value }
+        value={props.value}
       />
       {
-        !props.autocomplete ?
-        <ButtonIcon
+        !props.autocomplete
+        ? <ButtonIcon
           className="slds-input__icon slds-text-color--default"
           symbol="down"
           assistiveText="Expand category options"
           title="Expand category options"
-          aria-expanded={ props.dropdown == 'open' ? 'true' : 'false' }
+          aria-expanded={props.dropdown == 'open' ? 'true' : 'false'}
           iconClassName="slds-button__icon"
           tabIndex="-1"
           />
@@ -101,9 +101,9 @@ let ComboboxSearchInput = props =>
       }
   </FormElement>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{height: '240px'}}>
@@ -211,7 +211,7 @@ export let states = [
           </Listbox>
         </PickList>
         <PillContainer className="slds-pill_container--bare">
-          <ListboxHoriz horizontal={true}>
+          <ListboxHoriz horizontal>
             <ListItemHoriz>
               <ListboxPill label="Option A" tabIndex="0" />
             </ListItemHoriz>

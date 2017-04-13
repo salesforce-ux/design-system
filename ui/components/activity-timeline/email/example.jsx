@@ -18,7 +18,7 @@ export let ActivityTimelineItem = props =>
     >
       <MediaObject
         className="slds-timeline__media slds-timeline__media--email"
-        figureLeft={ <TimelineIcon symbol="email" /> }
+        figureLeft={<TimelineIcon symbol="email" />}
         figureLeftClassName="slds-timeline__icon"
       >
         <h3 className="slds-truncate" title="Mobile conversation on Monday">

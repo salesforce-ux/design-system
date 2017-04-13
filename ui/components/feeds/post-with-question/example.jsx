@@ -6,9 +6,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from '../post/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="slds-feed">

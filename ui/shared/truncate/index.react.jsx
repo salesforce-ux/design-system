@@ -6,7 +6,7 @@ import React from 'react';
 
 class Truncate extends React.Component {
   // TODO: Remove span
-  render() {
+  render () {
     const {children, amount} = this.props;
     return <span title={children}>
       {amount ? _.truncate(children, amount) : children}

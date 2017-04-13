@@ -6,7 +6,6 @@ import SvgIcon from '../../../shared/svg-icon';
 import MediaObject from '../../../utilities/media-objects/index.react';
 import { ButtonIcon } from '../../button-icons/base/example';
 
-
 const iconHeader = (
   <span className="slds-icon_container slds-icon-standard-account">
     <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />

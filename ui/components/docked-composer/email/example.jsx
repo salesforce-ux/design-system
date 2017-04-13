@@ -63,23 +63,23 @@ export default (
       className="slds-is-open"
       header="New Email"
       headerSymbol="email"
-      footer={ <Footer /> }
+      footer={<Footer />}
     >
       <div className="slds-email-composer">
         <ComboboxContainer
           id="recipients-to"
           formClassName="slds-email-composer__combobox"
           aria-controls="selected-recipients-to"
-          selectedOptionsInline={true}
-          staticListbox={true}
+          selectedOptionsInline
+          staticListbox
           label="To"
           placeholder=" "
-          autocomplete={true}
+          autocomplete
         >
           <Listbox
             id="selected-recipients-to"
             aria-label="Recipients:"
-            inline={ true }
+            inline
           >
             <ListboxItem>
               <ListboxPill label="jrogers@cloudhub.com" tabIndex="0">
@@ -97,24 +97,24 @@ export default (
         <ComboboxContainer
           id="recipients-bcc"
           formClassName="slds-email-composer__combobox"
-          selectedOptionsInline={true}
-          staticListbox={true}
+          selectedOptionsInline
+          staticListbox
           label="Bcc"
           placeholder=" "
-          autocomplete={true}
+          autocomplete
         />
         <ComboboxContainer
           id="recipients-cc"
           formClassName="slds-email-composer__combobox"
-          selectedOptionsInline={true}
-          staticListbox={true}
+          selectedOptionsInline
+          staticListbox
           label="Cc"
           placeholder=" "
-          autocomplete={true}
+          autocomplete
         />
         <FormElement
           label="Enter subject"
-          hideLabel={true}
+          hideLabel
           inputId="input-subject-01"
         >
           <Input

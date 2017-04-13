@@ -19,12 +19,12 @@ export let ActivityTimelineItem = props =>
     >
       <MediaObject
         className="slds-timeline__media slds-timeline__media--task"
-        figureLeft={ <TimelineIcon symbol="task" /> }
+        figureLeft={<TimelineIcon symbol="task" />}
         figureLeftClassName="slds-timeline__icon"
       >
         <MediaObject
           title="Review proposals for EBC deck with larger team and have marketing review this"
-          figureLeft={ <Checkbox hideLabel label="mark-complete" /> }
+          figureLeft={<Checkbox hideLabel label="mark-complete" />}
         >
           <h3 className="slds-truncate" title="Review proposals for EBC deck with larger team and have marketing review this">
             <a href="javascript:void(0);">Review proposals for EBC deck with larger team and have marketing review this</a>

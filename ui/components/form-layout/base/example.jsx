@@ -14,12 +14,12 @@ const inputId02 = 'input-id-02';
 const inputId03 = 'input-id-03';
 
 let Form = props =>
-  <div className={ classNames('slds-form', props.className) }>
-    <FormElement label="Text Input" inputId={ inputId01 }>
-      <Input id={ inputId01 } />
+  <div className={classNames('slds-form', props.className)}>
+    <FormElement label="Text Input" inputId={inputId01}>
+      <Input id={inputId01} />
     </FormElement>
-    <FormElement label="Textarea Label" inputId={ inputId02 }>
-      <Textarea id={ inputId02 } />
+    <FormElement label="Textarea Label" inputId={inputId02}>
+      <Textarea id={inputId02} />
     </FormElement>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>

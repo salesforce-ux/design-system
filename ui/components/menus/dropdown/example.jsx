@@ -6,9 +6,9 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only" {...props}>
@@ -29,7 +29,7 @@ const ListIcon = (
 
 export let Trigger = props =>
   <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.className)}>
-    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={ classNames( props.inverse ? 'slds-button--icon-border-inverse' : 'slds-button--icon-border-filled')} symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" /> }
+    { props.triggerIcon ? props.triggerIcon : <ButtonIcon className={classNames(props.inverse ? 'slds-button--icon-border-inverse' : 'slds-button--icon-border-filled')} symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" /> }
     {props.children}
   </div>;
 
@@ -55,7 +55,7 @@ export let MenuItem = props => {
   } = props;
   let ariaChecked;
 
-  if(isSelectable) {
+  if (isSelectable) {
     ariaChecked = isSelected ? 'true' : 'false';
   }
 
@@ -63,26 +63,25 @@ export let MenuItem = props => {
     <li {...rest} className={classNames('slds-dropdown__item', className)} role="presentation">
       <a
         href="javascript:void(0);"
-        role={ isSelectable ? 'menuitemcheckbox' : 'menuitem' }
-        aria-checked={ ariaChecked }
-        tabIndex={ tabIndex || '-1' }>
+        role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
+        aria-checked={ariaChecked}
+        tabIndex={tabIndex || '-1'}>
         <span className="slds-truncate" title={children}>
           { isSelectable ? <SvgIcon
-                            className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
-                            sprite="utility"
-                            symbol="check" /> : null }
+            className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
+            sprite="utility"
+            symbol="check" /> : null }
           { children }
         </span>
-        { iconRight ? iconRight : null }
+        { iconRight || null }
       </a>
     </li>
   );
 };
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Default = props =>
   <Demo style={{height: '220px'}}>
@@ -92,7 +91,7 @@ let Default = props =>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider--top-space" role="separator"></li>
+          <li className="slds-has-divider--top-space" role="separator" />
           <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
@@ -107,7 +106,7 @@ let Small = props =>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider--top-space" role="separator"></li>
+          <li className="slds-has-divider--top-space" role="separator" />
           <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
@@ -122,7 +121,7 @@ let Medium = props =>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider--top-space" role="separator"></li>
+          <li className="slds-has-divider--top-space" role="separator" />
           <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
@@ -137,7 +136,7 @@ let Large = props =>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider--top-space" role="separator"></li>
+          <li className="slds-has-divider--top-space" role="separator" />
           <MenuItem>Menu Item Four</MenuItem>
         </MenuList>
       </Menu>
@@ -203,9 +202,9 @@ let IconRight = props =>
     </Trigger>
   </Demo>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export const Context = props =>
   <div style={{height: '260px'}}>
@@ -219,7 +218,7 @@ export default (
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
         <MenuItem>Menu Item Three</MenuItem>
-        <li className="slds-has-divider--top-space" role="separator"></li>
+        <li className="slds-has-divider--top-space" role="separator" />
         <MenuItem>Menu Item Four</MenuItem>
       </MenuList>
     </Menu>

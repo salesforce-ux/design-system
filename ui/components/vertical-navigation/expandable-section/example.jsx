@@ -17,43 +17,43 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <NavVertical>
-          <NavVerticalSection id={ sectionId01 } title="Reports">
-            <NavVerticalItem aria-describedby={ sectionId01 } active={ true }>
+          <NavVerticalSection id={sectionId01} title="Reports">
+            <NavVerticalItem aria-describedby={sectionId01} active>
               Recent
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Created by Me
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Private Reports
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Public Reports
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               All Reports
             </NavVerticalItem>
           </NavVerticalSection>
-          <NavVerticalSection id={ sectionId02 } title="Folders">
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+          <NavVerticalSection id={sectionId02} title="Folders">
+            <NavVerticalItem aria-describedby={sectionId02}>
               Created by Me
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Shared with Me
             </NavVerticalItem>
           </NavVerticalSection>
           <NavVerticalSection
             title="Folders"
-            collapsed={ true }
-            listId={ sectionId03 }
+            collapsed
+            listId={sectionId03}
           >
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item One
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item Two
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item Three
             </NavVerticalItem>
           </NavVerticalSection>
@@ -66,43 +66,43 @@ export let states = [
     element:
       <div className="demo-only" style={{ width: '320px' }}>
         <NavVertical>
-          <NavVerticalSection id={ sectionId01 } title="Reports">
-            <NavVerticalItem aria-describedby={ sectionId01 } active={ true }>
+          <NavVerticalSection id={sectionId01} title="Reports">
+            <NavVerticalItem aria-describedby={sectionId01} active>
               Recent
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Created by Me
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Private Reports
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               Public Reports
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId01 }>
+            <NavVerticalItem aria-describedby={sectionId01}>
               All Reports
             </NavVerticalItem>
           </NavVerticalSection>
-          <NavVerticalSection id={ sectionId02 } title="Folders">
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+          <NavVerticalSection id={sectionId02} title="Folders">
+            <NavVerticalItem aria-describedby={sectionId02}>
               Created by Me
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Shared with Me
             </NavVerticalItem>
           </NavVerticalSection>
           <NavVerticalSection
             title="Folders"
-            expanded={ true }
-            listId={ sectionId03 }
+            expanded
+            listId={sectionId03}
           >
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item One
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item Two
             </NavVerticalItem>
-            <NavVerticalItem aria-describedby={ sectionId02 }>
+            <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item Three
             </NavVerticalItem>
           </NavVerticalSection>

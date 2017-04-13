@@ -9,22 +9,22 @@ export let CustomIcon = props => {
   const symbol = props.symbol || 'custom5';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon-custom-' + symbol) }
-      title={ props.title || 'Description of icon when needed' }
+      className={classNames('slds-icon_container slds-icon-custom-' + symbol)}
+      title={props.title || 'Description of icon when needed'}
     >
       <SvgIcon
-        className={ classNames('slds-icon', props.className) }
+        className={classNames('slds-icon', props.className)}
         sprite="custom"
-        symbol={ symbol }
+        symbol={symbol}
       />
       <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <CustomIcon />

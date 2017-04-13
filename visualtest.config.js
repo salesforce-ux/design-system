@@ -1,6 +1,6 @@
 const hooks = require('./test/visual/hooks');
 
-module.exports = function() {
+module.exports = function () {
   return {
     test_workers: true,
     setup: hooks.setup,

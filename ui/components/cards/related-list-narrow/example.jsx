@@ -7,9 +7,9 @@ import { Card, CardHeader, CardBody, CardFooter } from '../base/example';
 import classNames from 'classnames';
 import { Tile, TileMedia } from '../../tiles/base/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>

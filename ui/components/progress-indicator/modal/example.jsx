@@ -5,9 +5,9 @@ import React from 'react';
 import { Progress, Step } from '../base/example';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>

@@ -24,9 +24,9 @@ const composers = [{
   'title': 'August 14 Meeting Notes'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 const Footer = props =>
   <div className="slds-col--bump-left slds-text-align--right">
@@ -36,9 +36,9 @@ const Footer = props =>
 export let DockedComposerPanel = props =>
   <section
     className={classNames('slds-docked-composer slds-grid slds-grid--vertical', props.className, props.dialogClosed ? 'slds-is-closed' : null)}
-    role={ !props.nestedDialog ? 'dialog' : null}
-    aria-labelledby={ !props.nestedDialog ? dialogHeadingId : null }
-    aria-describedby={ !props.nestedDialog ? dialogBodyId : null }
+    role={!props.nestedDialog ? 'dialog' : null}
+    aria-labelledby={!props.nestedDialog ? dialogHeadingId : null}
+    aria-describedby={!props.nestedDialog ? dialogBodyId : null}
   >
     <header className="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
       <div className="slds-media slds-media--center slds-size--1-of-1 slds-no-space">
@@ -47,15 +47,15 @@ export let DockedComposerPanel = props =>
             <SvgIcon
               className="slds-icon slds-icon--small slds-icon-text-default"
               sprite="standard"
-              symbol={ props.headerSymbol || 'call' }
+              symbol={props.headerSymbol || 'call'}
             />
           </span>
         </div>
         <div className="slds-media__body">
-          { props.dialogClosed ?
-            <span className="slds-assistive-text">Minimized</span>
+          { props.dialogClosed
+            ? <span className="slds-assistive-text">Minimized</span>
           : null }
-          <h2 className="slds-truncate" id={ dialogHeadingId } title={ props.header || 'Header' }>{ props.header || 'Header' }</h2>
+          <h2 className="slds-truncate" id={dialogHeadingId} title={props.header || 'Header'}>{ props.header || 'Header' }</h2>
         </div>
       </div>
       <div className="slds-col--bump-left slds-shrink-none">
@@ -79,11 +79,11 @@ export let DockedComposerPanel = props =>
         />
       </div>
     </header>
-    <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={ dialogBodyId }>
+    <div className={classNames('slds-docked-composer__body', props.bodyClassName)} id={dialogBodyId}>
       { props.children }
     </div>
-    { props.footer ?
-      <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
+    { props.footer
+      ? <footer className={classNames('slds-docked-composer__footer slds-shrink-none', props.footerClassName)}>
         { props.footer }
       </footer>
     : null }
@@ -99,9 +99,9 @@ let ComposerOverflowMenu = props =>
     <Menu className="slds-dropdown--left slds-dropdown--bottom slds-dropdown--medium slds-nubbin--bottom-left">
       <MenuList className="slds-dropdown--length-with-icon-7">
         { _.times(composers.length, i =>
-          <MenuItem key={ i }>
+          <MenuItem key={i}>
             <span className={'slds-icon_container slds-icon-standard-' + composers[i].entity + ' slds-m-right--x-small'}>
-              <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={ composers[i].entity } />
+              <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={composers[i].entity} />
               <span className="slds-assistive-text">{ composers[i].entity }</span>
             </span>
             { composers[i].title }
@@ -111,9 +111,9 @@ let ComposerOverflowMenu = props =>
     </Menu>
   </div>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export const Context = props =>
   <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
@@ -124,7 +124,7 @@ export default (
   <div className="slds-docked_container">
     <DockedComposerPanel
       className="slds-is-open"
-      footer={ <Footer /> }
+      footer={<Footer />}
     >
       <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
     </DockedComposerPanel>
@@ -139,7 +139,7 @@ export let states = [
       <div className="slds-docked_container">
         <DockedComposerPanel
           className="slds-is-open"
-          footer={ <Footer /> }
+          footer={<Footer />}
         >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
@@ -152,7 +152,7 @@ export let states = [
       <div className="slds-docked_container">
         <DockedComposerPanel
           className="slds-is-open slds-has-focus"
-          footer={ <Footer /> }
+          footer={<Footer />}
         >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
@@ -165,7 +165,7 @@ export let states = [
       <div className="slds-docked_container">
         <DockedComposerPanel
           dialogClosed
-          footer={ <Footer /> }
+          footer={<Footer />}
         >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
@@ -179,7 +179,7 @@ export let states = [
         <DockedComposerPanel
           className="slds-has-focus"
           dialogClosed
-          footer={ <Footer /> }
+          footer={<Footer />}
         >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
@@ -192,12 +192,12 @@ export let states = [
     <div>
       <Modal className="slds-docked-composer-modal" aria-labelledby={dialogHeadingId} aria-describedby={dialogBodyId}>
         <ModalContent>
-          <DockedComposerPanel footer={ <Footer /> } nestedDialog>
+          <DockedComposerPanel footer={<Footer />} nestedDialog>
             <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
           </DockedComposerPanel>
         </ModalContent>
       </Modal>
-      <div className="slds-backdrop slds-backdrop--open"></div>
+      <div className="slds-backdrop slds-backdrop--open" />
     </div>
   },
   {
@@ -208,7 +208,7 @@ export let states = [
         <ComposerOverflowMenu />
         <DockedComposerPanel
           className="slds-is-open"
-          footer={ <Footer /> }
+          footer={<Footer />}
         >
           <div className="slds-align--absolute-center">Docked Composer Panel Body <br /> This area consumes the feature</div>
         </DockedComposerPanel>
@@ -227,7 +227,7 @@ export let examples = [
         bodyClassName="slds-docked-composer__body--form"
         header="New Task"
         headerSymbol="task"
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Save</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Save</button>}
       >
         <fieldset className="slds-form slds-form--compound">
           <legend className="slds-assistive-text">Log new task</legend>
@@ -303,7 +303,7 @@ export let examples = [
         className="slds-is-open"
         bodyClassName="slds-align--absolute-center"
         header="Lei Chan - Dialing..."
-        footer={ <button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button> }
+        footer={<button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button>}
       >
         <div className="slds-text-align--center slds-align-middle">
           <span className="slds-avatar slds-avatar--large">
@@ -333,7 +333,7 @@ export let examples = [
       <DockedComposerPanel
         className="slds-is-open"
         header="Lei Chan - Call in Progress"
-        footer={ <button className="slds-button slds-button--destructive slds-col--bump-left">End Call</button> }
+        footer={<button className="slds-button slds-button--destructive slds-col--bump-left">End Call</button>}
       >
         <div className="slds-docked-composer__lead">
           <div className="slds-media">
@@ -510,7 +510,7 @@ export let examples = [
       <DockedComposerPanel
         className="slds-is-open"
         header="Lei Chan - Call Finished"
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>}
       >
         <div className="slds-docked-composer__lead">
           <div className="slds-media">
@@ -555,7 +555,7 @@ export let examples = [
         className="slds-is-open"
         bodyClassName="slds-align--absolute-center slds-size--1-of-1"
         header="Lei Chan - Incoming Call..."
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>}
       >
         <div className="slds-text-align--center slds-align-middle">
           <span className="slds-avatar slds-avatar--large">
@@ -615,7 +615,7 @@ export let examples = [
         className="slds-is-open"
         bodyClassName="slds-docked-composer__body--form"
         header="Lei Chan"
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Save</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Save</button>}
       >
         <fieldset className="slds-form slds-form--compound">
           <legend className="slds-assistive-text">Log a call</legend>

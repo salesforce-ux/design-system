@@ -29,14 +29,14 @@ export default (
       <ModalContent>
         <h3 className="slds-section-title--divider">Section Information</h3>
         <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
-          <FormElement label="Name Suffix" inputId={ inputId01 }>
-            <Input id={ inputId01 } placeholder="Ms." />
+          <FormElement label="Name Suffix" inputId={inputId01}>
+            <Input id={inputId01} placeholder="Ms." />
           </FormElement>
-          <FormElement label="First Name" inputId={ inputId02 }>
-            <Input id={ inputId02 } placeholder="Esther" />
+          <FormElement label="First Name" inputId={inputId02}>
+            <Input id={inputId02} placeholder="Esther" />
           </FormElement>
-          <FormElement label="Last Name" inputId={ inputId03 }>
-            <Input id={ inputId03 } placeholder="Lewis" />
+          <FormElement label="Last Name" inputId={inputId03}>
+            <Input id={inputId03} placeholder="Lewis" />
           </FormElement>
           <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
             <Lookup label="Lookup" placeholder=" " />
@@ -49,23 +49,23 @@ export default (
             </Select>
           </div>
 
-          <FormElement label="Text Input" inputId={ inputId04 }>
-            <Input id={ inputId04 } placeholder="" />
+          <FormElement label="Text Input" inputId={inputId04}>
+            <Input id={inputId04} placeholder="" />
           </FormElement>
         </div>
         <h3 className="slds-section-title--divider">Section Information</h3>
         <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
-          <FormElement label="Text Input" inputId={ inputId05 }>
-            <Input id={ inputId05 } placeholder="" />
+          <FormElement label="Text Input" inputId={inputId05}>
+            <Input id={inputId05} placeholder="" />
           </FormElement>
-          <FormElement label="Text Input" inputId={ inputId06 }>
-            <Input id={ inputId06 } placeholder="" />
+          <FormElement label="Text Input" inputId={inputId06}>
+            <Input id={inputId06} placeholder="" />
           </FormElement>
-          <FormElement label="Text Input" inputId={ inputId07 }>
-            <Input id={ inputId07 } placeholder="" />
+          <FormElement label="Text Input" inputId={inputId07}>
+            <Input id={inputId07} placeholder="" />
           </FormElement>
-          <FormElement label="Text Input" inputId={ inputId08 }>
-            <Input id={ inputId08 } />
+          <FormElement label="Text Input" inputId={inputId08}>
+            <Input id={inputId08} />
           </FormElement>
         </div>
       </ModalContent>

@@ -9,9 +9,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let states = [
   {
@@ -54,7 +54,7 @@ export let states = [
         className="slds-is-open"
         bodyClassName="slds-align--absolute-center"
         header="Lei Chan - Dialing..."
-        footer={ <button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button> }
+        footer={<button className="slds-button slds-button--destructive slds-size--1-of-1">End Call</button>}
       >
         <div className="slds-text-align--center slds-align-middle">
           <span className="slds-avatar slds-avatar--large">
@@ -84,7 +84,7 @@ export let states = [
       <DockedComposerPanel
         className="slds-is-open"
         header="Lei Chan - Call in Progress"
-        footer={ <button className="slds-button slds-button--destructive slds-col--bump-left">End Call</button> }
+        footer={<button className="slds-button slds-button--destructive slds-col--bump-left">End Call</button>}
       >
         <div className="slds-docked-composer__lead">
           <div className="slds-media">
@@ -261,7 +261,7 @@ export let states = [
       <DockedComposerPanel
         className="slds-is-open"
         header="Lei Chan - Call Finished"
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>}
       >
         <div className="slds-docked-composer__lead">
           <div className="slds-media">
@@ -306,7 +306,7 @@ export let states = [
         className="slds-is-open"
         bodyClassName="slds-align--absolute-center slds-size--1-of-1"
         header="Lei Chan - Incoming Call..."
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Finish Notes</button>}
       >
         <div className="slds-text-align--center slds-align-middle">
           <span className="slds-avatar slds-avatar--large">
@@ -366,7 +366,7 @@ export let states = [
         className="slds-is-open"
         bodyClassName="slds-docked-composer__body--form"
         header="Lei Chan"
-        footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Save</button> }
+        footer={<button className="slds-button slds-button--brand slds-col--bump-left">Save</button>}
       >
         <fieldset className="slds-form slds-form--compound">
           <legend className="slds-assistive-text">Log a call</legend>

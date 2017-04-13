@@ -7,9 +7,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Th = props =>
   <th className={props.className} scope={props.scope} style={props.style}>
@@ -35,7 +35,7 @@ let ProductList = props =>
           <Th className="slds-is-sortable" scope="col" title="Date">Date</Th>
           <Th className="slds-is-sortable" scope="col" title="Product Family">Product Family</Th>
           <Th className="slds-is-sortable" scope="col" title="Total Price">Total Price</Th>
-          <th className="slds-cell-shrink" scope="col"></th>
+          <th className="slds-cell-shrink" scope="col" />
         </tr>
       </thead>
       <tbody>
@@ -44,9 +44,9 @@ let ProductList = props =>
     </table>
   </div>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>

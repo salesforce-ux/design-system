@@ -3,7 +3,6 @@
 
 import React from 'react';
 
-
 export let examples = [
   {
     id: 'fixed',

@@ -18,7 +18,7 @@ export let ActivityTimelineItem = props =>
     >
       <MediaObject
         className="slds-timeline__media slds-timeline__media--event"
-        figureLeft={ <TimelineIcon symbol="event" /> }
+        figureLeft={<TimelineIcon symbol="event" />}
         figureLeftClassName="slds-timeline__icon"
       >
         <h3 className="slds-truncate" title="Company One — EBC Meeting">

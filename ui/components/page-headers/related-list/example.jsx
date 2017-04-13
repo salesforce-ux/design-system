@@ -2,12 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import BreadCrumbs from '../../breadcrumbs/index.react';
-const {Crumb} = BreadCrumbs;
+import BreadCrumbs, { Crumb} from '../../breadcrumbs/index.react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
-
 
 export default (
   <div className="slds-page-header">

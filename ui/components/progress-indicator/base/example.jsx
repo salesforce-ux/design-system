@@ -9,12 +9,12 @@ import { Tooltip } from '../../tooltips/base/example';
 import { ProgressBar } from '../../progress-bar/base/example';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let Progress = props =>
-  <div className={ classNames('slds-progress', props.className) }>
+  <div className={classNames('slds-progress', props.className)}>
     <ol className="slds-progress__list">
       { props.children }
     </ol>
@@ -22,33 +22,32 @@ export let Progress = props =>
   </div>;
 
 export let Step = props =>
-  <li className={ classNames('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null, props.error ? 'slds-has-error' : null) }>
-    { props.done && !props.error ?
-      <ButtonIcon
+  <li className={classNames('slds-progress__item', props.className, props.active ? 'slds-is-active' : null, props.done ? 'slds-is-completed' : null, props.error ? 'slds-has-error' : null)}>
+    { props.done && !props.error
+      ? <ButtonIcon
         className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
         symbol="success"
-        aria-describedby={ props['aria-describedby'] }
-        assistiveText={ props.done ? props.children + ' - Completed' : null }
-        title={ props.done ? props.children + ' - Completed' : null }
+        aria-describedby={props['aria-describedby']}
+        assistiveText={props.done ? props.children + ' - Completed' : null}
+        title={props.done ? props.children + ' - Completed' : null}
       />
-    : (props.error ?
-      <ButtonIcon
+    : (props.error
+      ? <ButtonIcon
         className="slds-button--icon slds-progress__marker slds-progress__marker--icon"
         symbol="warning"
-        aria-describedby={ props['aria-describedby'] }
-        assistiveText={ props.error ? props.children + ' - Error' : null }
-        title={ props.error ? props.children + ' - Error' : null }
+        aria-describedby={props['aria-describedby']}
+        assistiveText={props.error ? props.children + ' - Error' : null}
+        title={props.error ? props.children + ' - Error' : null}
       />
-    :
-      <button className="slds-button slds-progress__marker" aria-describedby={ props['aria-describedby'] }>
+    : <button className="slds-button slds-progress__marker" aria-describedby={props['aria-describedby']}>
         <span className="slds-assistive-text">{ props.children } { props.active ? '- Active' : null }</span>
       </button>
     )}
   </li>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ padding: '1rem' }}>

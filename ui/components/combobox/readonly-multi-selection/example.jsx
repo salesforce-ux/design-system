@@ -20,20 +20,20 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
     <ListboxItem>
       <Option
-        id={ listboxOptionId01 }
+        id={listboxOptionId01}
         title="Option A"
-        focused={ props.focused }
-        selected={ props.selected }
+        focused={props.focused}
+        selected={props.selected}
       />
     </ListboxItem>
     <ListboxItem>
       <Option
-        id={ listboxOptionId02 }
+        id={listboxOptionId02}
         title="Option B"
-        selected={ props.selected }
+        selected={props.selected}
       />
     </ListboxItem>
   </Listbox>;
@@ -45,11 +45,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          readonly={true}
-          isOpen={ true }
+          readonly
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
-          listbox={ <ListboxDropdown /> }
+          listbox={<ListboxDropdown />}
         />
       </div>,
     script: `
@@ -62,12 +62,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          readonly={true}
-          isOpen={ true }
+          readonly
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
-          listbox={ <ListboxDropdown focused={true} /> }
-          aria-activedescendant={ listboxOptionId01 }
+          listbox={<ListboxDropdown focused />}
+          aria-activedescendant={listboxOptionId01}
         />
       </div>
   },
@@ -77,12 +77,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          readonly={true}
-          isOpen={ true }
+          readonly
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
           value="2 Options Selected"
-          listbox={ <ListboxDropdown selected={true} /> }
+          listbox={<ListboxDropdown selected />}
         />
       </div>
   },
@@ -91,18 +91,17 @@ export let states = [
     label: 'Option(s) Selected',
     element:
       <ComboboxContainer
-        readonly={true}
+        readonly
         inputIcon="right"
         inputIconRightSymbol="down"
-        value="Option A"
         value="2 Options Selected"
-        listbox={ <ListboxDropdown selected={true} /> }
+        listbox={<ListboxDropdown selected />}
       >
       <Listbox
         id={listboxSelectionsId}
         aria-label="Selected Options:"
         className="slds-p-top--xxx-small"
-        horizontal={ true }
+        horizontal
       >
         <ListboxItem>
           <ListboxPill label="Option A" tabIndex="0" />

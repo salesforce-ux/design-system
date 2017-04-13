@@ -9,24 +9,24 @@ export let UtilityIcon = props => {
   const symbol = props.symbol || 'announcement';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon-utility-' + symbol, props.containerClassName) }
-      title={ props.title || 'Description of icon when needed' }
+      className={classNames('slds-icon_container slds-icon-utility-' + symbol, props.containerClassName)}
+      title={props.title || 'Description of icon when needed'}
     >
       <SvgIcon
-        className={ classNames('slds-icon', props.className) }
+        className={classNames('slds-icon', props.className)}
         sprite="utility"
-        symbol={ symbol }
+        symbol={symbol}
       />
-      {props.assistiveText != false ?
-        <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
+      {props.assistiveText != false
+        ? <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
       : null}
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <UtilityIcon className="slds-icon-text-default" />

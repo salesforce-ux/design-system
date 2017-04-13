@@ -12,18 +12,18 @@ const referenceId02 = 'accordion-details-02';
 const referenceId03 = 'accordion-details-03';
 
 let Accordion = props =>
-  <ul className={ classNames('slds-accordion', props.className) }>
+  <ul className={classNames('slds-accordion', props.className)}>
     { props.children }
   </ul>;
 
 let AccordionSection = props =>
   <li className="slds-accordion__list-item">
-    <section className={ classNames('slds-accordion__section', props.isOpen ? 'slds-is-open' : null) }>
-      <div className={ classNames('slds-accordion__summary', props.className) }>
-        <h3 className={ classNames('slds-text-heading--small slds-accordion__summary-heading', props.className) }>
+    <section className={classNames('slds-accordion__section', props.isOpen ? 'slds-is-open' : null)}>
+      <div className={classNames('slds-accordion__summary', props.className)}>
+        <h3 className={classNames('slds-text-heading--small slds-accordion__summary-heading', props.className)}>
           <button
-            aria-controls={ props.referenceId }
-            aria-expanded={ props.isOpen }
+            aria-controls={props.referenceId}
+            aria-expanded={props.isOpen}
             className="slds-button slds-button--reset slds-accordion__summary-action"
           >
             <SvgIcon
@@ -31,7 +31,7 @@ let AccordionSection = props =>
               sprite="utility"
               symbol="switch"
             />
-            <span className="slds-truncate" title={ props.summary }>{ props.summary }</span>
+            <span className="slds-truncate" title={props.summary}>{ props.summary }</span>
           </button>
         </h3>
         <button
@@ -46,9 +46,9 @@ let AccordionSection = props =>
         </button>
       </div>
       <div
-        aria-hidden={ !props.isOpen }
-        className={ classNames('slds-accordion__content', props.className) }
-        id={ props.referenceId }
+        aria-hidden={!props.isOpen}
+        className={classNames('slds-accordion__content', props.className)}
+        id={props.referenceId}
       >
         { props.children }
       </div>
@@ -59,22 +59,22 @@ export default (
   <Accordion>
     <AccordionSection
       summary="Accordion summary"
-      isOpen={ true }
-      referenceId={ referenceId01 }
+      isOpen
+      referenceId={referenceId01}
     >
       Accordion details - A
     </AccordionSection>
     <AccordionSection
       summary="Accordion summary"
-      isOpen={ false }
-      referenceId={ referenceId02 }
+      isOpen={false}
+      referenceId={referenceId02}
     >
       Accordion details - B
     </AccordionSection>
     <AccordionSection
       summary="Accordion summary"
-      isOpen={ false }
-      referenceId={ referenceId03 }
+      isOpen={false}
+      referenceId={referenceId03}
     >
       Accordion details - C
     </AccordionSection>
@@ -89,22 +89,22 @@ export let states = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ true }
-          referenceId={ referenceId01 }
+          isOpen
+          referenceId={referenceId01}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId02 }
+          isOpen={false}
+          referenceId={referenceId02}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId03 }
+          isOpen={false}
+          referenceId={referenceId03}
         >
           Accordion details - C
         </AccordionSection>
@@ -117,22 +117,22 @@ export let states = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId01 }
+          isOpen={false}
+          referenceId={referenceId01}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ true }
-          referenceId={ referenceId02 }
+          isOpen
+          referenceId={referenceId02}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId03 }
+          isOpen={false}
+          referenceId={referenceId03}
         >
           Accordion details - C
         </AccordionSection>
@@ -145,22 +145,22 @@ export let states = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId01 }
+          isOpen={false}
+          referenceId={referenceId01}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ false }
-          referenceId={ referenceId02 }
+          isOpen={false}
+          referenceId={referenceId02}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={ true }
-          referenceId={ referenceId03 }
+          isOpen
+          referenceId={referenceId03}
         >
           Accordion details - C
         </AccordionSection>
@@ -174,22 +174,22 @@ export let states = [
         <Accordion>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={ true }
-            referenceId={ referenceId01 }
+            isOpen
+            referenceId={referenceId01}
           >
             Accordion details - A
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={ false }
-            referenceId={ referenceId02 }
+            isOpen={false}
+            referenceId={referenceId02}
           >
             Accordion details - B
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={ false }
-            referenceId={ referenceId03 }
+            isOpen={false}
+            referenceId={referenceId03}
           >
             Accordion details - C
           </AccordionSection>

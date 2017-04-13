@@ -7,9 +7,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import { ButtonIcon } from '../../button-icons/base/example';
 import _ from 'lodash';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Subtab = props =>
   <li className={classNames('slds-tabs--default__item slds-grid slds-grid--vertical-align-center', props.hasFocus ? 'slds-has-focus' : null, props.active ? 'slds-active' : null, props.className)} role="presentation">
@@ -17,44 +17,44 @@ let Subtab = props =>
       href="javascript:void(0);"
       className="slds-tabs--default__link slds-p-horizontal--xx-small"
       role="tab"
-      title={ props.title || 'Subtab Name'}
-      aria-selected={ props.active ? 'true' : 'false' }
-      tabIndex={ props.active ? '0' : '-1' }
-      id={ props.tabItemId }
-      aria-controls={ props.tabPanelId }>
+      title={props.title || 'Subtab Name'}
+      aria-selected={props.active ? 'true' : 'false'}
+      tabIndex={props.active ? '0' : '-1'}
+      id={props.tabItemId}
+      aria-controls={props.tabPanelId}>
       { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
-      <div className="slds-icon_container" title={ _.startCase(props.symbol) || 'Case' }>
-        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.symbol || 'case' } />
+      <div className="slds-icon_container" title={_.startCase(props.symbol) || 'Case'}>
+        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
-      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'Subtab Name'}>{ props.title || 'Subtab Name'}</span>
+      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={props.title || 'Subtab Name'}>{ props.title || 'Subtab Name'}</span>
     </a>
-    { props.menuIcon ?
-      <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
+    { props.menuIcon
+      ? <div className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
         <ButtonIcon
           className="slds-button--icon-container slds-button--icon-x-small"
-          tabIndex={ props.active ? '0' : '-1' }
+          tabIndex={props.active ? '0' : '-1'}
           symbol="chevrondown"
           aria-haspopup="true"
-          assistiveText={ 'Actions for ' + props.title }
-          title={ 'Actions for ' + props.title }
+          assistiveText={'Actions for ' + props.title}
+          title={'Actions for ' + props.title}
         />
       </div>
     : null }
     <div className={classNames('slds-col--bump-left slds-p-left--none slds-p-right--none', props.pinned ? 'slds-assistive-text' : null)}>
       <ButtonIcon
         className="slds-button--icon-container slds-button--icon-x-small"
-        tabIndex={ props.active ? '0' : '-1' }
+        tabIndex={props.active ? '0' : '-1'}
         symbol="close"
-        assistiveText={ 'Close ' + props.title }
-        title={ 'Close ' + props.title }
+        assistiveText={'Close ' + props.title}
+        title={'Close ' + props.title}
       />
     </div>
   </li>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let states = [
   {

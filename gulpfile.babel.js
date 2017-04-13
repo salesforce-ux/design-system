@@ -8,7 +8,7 @@ const runSequence = require('run-sequence');
 
 const paths = require('./scripts/helpers/paths');
 
-require('./app_modules/util/lodash_id_overwrite');
+require('./scripts/helpers/lodash-overwrite');
 require('./scripts/gulp/accessibility');
 require('./scripts/gulp/assets');
 require('./scripts/gulp/generate-examples');

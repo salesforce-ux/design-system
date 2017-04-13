@@ -5,7 +5,6 @@ import './scripts/helpers/setup';
 
 import del from 'del';
 import gulp from 'gulp';
-import nconf from 'nconf';
 import path from 'path';
 import runSequence from 'run-sequence';
 
@@ -16,8 +15,6 @@ import './scripts/gulp/generate-examples';
 import './scripts/gulp/generate-tokens-components';
 import './scripts/gulp/lint';
 import './scripts/gulp/styles';
-
-nconf.formats.yaml = require('nconf-yaml');
 
 // NOTE: Don't remove reports on purpose. This exception is already fixed on the remove-website branch.
 gulp.task('clean', () => del.sync([

@@ -1,20 +1,21 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import gulp from 'gulp';
-import gutil from 'gulp-util';
-import concat from 'gulp-concat';
-import _ from 'lodash';
-import through from 'through2';
-import path from 'path';
-import { createValidator } from '@salesforce-ux/design-system-markup/server';
-import { getComments } from '../markup-style';
-import createParser from '@salesforce-ux/design-system-parser';
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const _ = require('lodash');
+const through = require('through2');
+const path = require('path');
+const { createValidator } = require('@salesforce-ux/design-system-markup/server');
+const createParser = require('@salesforce-ux/design-system-parser');
+
+const { getComments } = require('../markup-style');
 
 const renderMessage = result =>
   `${result.selector} did not satisfy ${result.restrict})`;
 
-const sumBy = (f, xs) => xs.reduce((acc, x) => acc + f(x), 0);
+const sumBy = (f, xs) =>
+  xs.reduce((acc, x) => acc + f(x), 0);
 
 const renderReport = (fullReport, fileCount) =>
 ({
@@ -45,7 +46,7 @@ const report = validate => {
   let count = 0;
   const transform = (file, enc, next) => {
     const results = validate(file.contents);
-    if(results.length) {
+    if (results.length) {
       _(results)
       .uniqBy(e => e.lines.join(','))
       .reduce(create(file.path), fullReport);
@@ -54,13 +55,13 @@ const report = validate => {
     next(null, file, enc);
   };
 
-  const flush = function(next) {
+  const flush = function (next) {
     const report = renderReport(fullReport, count);
     const json = JSON.stringify(report, null, 2);
     printToConsole(json, 'Full info in .reports/validate.json');
     this.push(new gutil.File({
       path: 'validations.json',
-      contents: new Buffer(json)
+      contents: Buffer.from(json)
     }));
     next();
   };

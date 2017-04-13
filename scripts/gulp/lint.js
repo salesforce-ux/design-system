@@ -1,19 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import gulp from 'gulp';
-import cache from 'gulp-cached';
-import gutil from 'gulp-util';
-import lintspaces from 'gulp-lintspaces';
-import eslint from 'gulp-eslint';
-import stylelint from 'gulp-stylelint';
-import htmlhint from 'gulp-htmlhint';
-import tokenlint from './plugins/lint-tokens';
-import yamlValidate from 'gulp-yaml-validate';
-import vnu from './vnu-lint';
-import {validate} from './validate';
-import minimist from 'minimist';
-import through from 'through2';
+const gulp = require('gulp');
+const cache = require('gulp-cached');
+const gutil = require('gulp-util');
+const lintspaces = require('gulp-lintspaces');
+const eslint = require('gulp-eslint');
+const stylelint = require('gulp-stylelint');
+const htmlhint = require('gulp-htmlhint');
+const tokenlint = require('./plugins/lint-tokens');
+const yamlValidate = require('gulp-yaml-validate');
+const vnu = require('./vnu-lint');
+const {validate} = require('./validate');
+const minimist = require('minimist');
+const through = require('through2');
 
 gulp.task('lint:sass', () =>
   gulp.src([

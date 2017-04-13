@@ -1,26 +1,27 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import './helpers/setup';
+require('./helpers/setup');
 
-import fs from 'fs';
-import path from 'path';
-import async from 'async';
-import autoprefixer from 'autoprefixer';
-import gulp from 'gulp';
-import gulpfile from 'gulp-file';
-import gulpinsert from 'gulp-insert';
-import gulpzip from 'gulp-zip';
-import gulprename from 'gulp-rename';
-import minimist from 'minimist';
-import postcss from 'gulp-postcss';
-import rimraf from 'rimraf';
-import sass from 'gulp-sass';
-import minifycss from 'gulp-minify-css';
-import Task from 'data.task';
-import {ui} from './ui';
+const fs = require('fs');
+const path = require('path');
+const async = require('async');
+const autoprefixer = require('autoprefixer');
+const gulp = require('gulp');
+const gulpfile = require('gulp-file');
+const gulpinsert = require('gulp-insert');
+const gulpzip = require('gulp-zip');
+const gulprename = require('gulp-rename');
+const minimist = require('minimist');
+const postcss = require('gulp-postcss');
+const rimraf = require('rimraf');
+const sass = require('gulp-sass');
+const minifycss = require('gulp-minify-css');
+const Task = require('data.task');
+const { ui } = require('./ui');
 
-import packageJSON from '../package.json';
+const packageJSON = require('../package.json');
+const paths = require('./helpers/paths');
 
 const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
@@ -39,7 +40,7 @@ const zipName = (version) =>
 // Helpers
 // /////////////////////////////////////////////////////////////
 
-const distPath = path.resolve.bind(path, isNpm ? __PATHS__.npm : __PATHS__.dist);
+const distPath = path.resolve.bind(path, isNpm ? paths.npm : paths.dist);
 
 // /////////////////////////////////////////////////////////////
 // Tasks
@@ -61,7 +62,7 @@ async.series([
       './README-dist.md',
       './RELEASENOTES*'
     ], {
-      base: __PATHS__.root
+      base: paths.root
     })
     .pipe(gulp.dest(distPath()))
     .on('error', done)
@@ -96,8 +97,8 @@ async.series([
    */
   (done) => {
     gulp.src('**/*.scss', {
-      base: __PATHS__.ui,
-      cwd: __PATHS__.ui
+      base: paths.ui,
+      cwd: paths.ui
     })
     .pipe(gulp.dest(distPath('scss')))
     .on('error', done)
@@ -109,7 +110,7 @@ async.series([
    */
   (done) => {
     gulp.src('assets/licenses/License-for-Sass.txt', {
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('scss')))
     .on('error', done)
@@ -125,7 +126,7 @@ async.series([
    */
   (done) => {
     gulp.src('@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**', {
-      cwd: __PATHS__.node_modules
+      cwd: paths.node_modules
     })
     .pipe(gulp.dest(distPath('assets/icons')))
     .on('error', done)
@@ -141,7 +142,7 @@ async.series([
    */
   (done) => {
     gulp.src('assets/fonts/**/*', {
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('assets/fonts')))
     .on('error', done)
@@ -153,7 +154,7 @@ async.series([
    */
   (done) => {
     gulp.src('assets/licenses/License-for-font.txt', {
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('assets/fonts')))
     .on('error', done)
@@ -175,7 +176,7 @@ async.series([
       'assets/images/logo-noname.svg'
     ], {
       base: 'site/assets/images',
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('assets/images')))
     .on('error', done)
@@ -187,7 +188,7 @@ async.series([
    */
   (done) => {
     gulp.src('assets/licenses/License-for-images.txt', {
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('assets/images')))
     .on('error', done)
@@ -203,7 +204,7 @@ async.series([
    */
   (done) => {
     gulp.src('assets/downloads/swatches/**', {
-      cwd: __PATHS__.site
+      cwd: paths.site
     })
     .pipe(gulp.dest(distPath('swatches')))
     .on('error', done)
@@ -224,8 +225,8 @@ async.series([
     // as a Static Resource in a Salesforce Org (limited to 5MB)
     const src = isNpm ? '**/*.*' : ['**/*.yml', '**/*.scss'];
     gulp.src(src, {
-      base: `${__PATHS__.designTokens}`,
-      cwd: `${__PATHS__.designTokens}`
+      base: `${paths.designTokens}`,
+      cwd: `${paths.designTokens}`
     })
     .pipe(gulp.dest(distPath('design-tokens')))
     .on('error', done)
@@ -237,8 +238,8 @@ async.series([
    */
   (done) => {
     gulp.src('components/**/tokens/**/*.yml', {
-      base: path.resolve(__PATHS__.ui),
-      cwd: path.resolve(__PATHS__.ui)
+      base: path.resolve(paths.ui),
+      cwd: path.resolve(paths.ui)
     })
     .pipe(gulp.dest(distPath('ui')))
     .on('error', done)
@@ -253,7 +254,7 @@ async.series([
       .pipe(sass({
         precision: 10,
         includePaths: [
-          __PATHS__.node_modules
+          paths.node_modules
         ]
       }))
       .pipe(sass().on('error', sass.logError))
@@ -363,7 +364,7 @@ async.series([
     .on('error', done)
     .pipe(gulp.dest(distPath()))
     .on('error', done)
-    .pipe(gulp.dest(path.resolve(__PATHS__.www, 'assets/downloads')))
+    .pipe(gulp.dest(path.resolve(paths.www, 'assets/downloads')))
     .on('error', done)
     .on('finish', done);
   }

@@ -1,21 +1,15 @@
-/*
-Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+const async = require('async');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const path = require('path');
+const theo = require('theo');
+const through = require('through2');
+const _ = require('lodash');
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-
-import async from 'async';
-import gulp from 'gulp';
-import gutil from 'gulp-util';
-import path from 'path';
-import theo from 'theo';
-import through from 'through2';
-import _ from 'lodash';
+const paths = require('../helpers/paths');
 
 // Some transforms are commented out because the use cases are lacking
 let formatTransforms = _({
@@ -39,35 +33,35 @@ let formatTransforms = _({
 
 gulp.task('generate:tokens:all', ['generate:tokens:components:imports'], (done) => {
   const convert = ({name, transform}, done) =>
-    gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
+    gulp.src(path.resolve(paths.designTokens, '*.yml'))
       .pipe(theo.plugins.transform(transform))
       .pipe(theo.plugins.format(name))
-      .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist')))
+      .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
       .on('finish', done);
   async.each(formatTransforms, convert, done);
 });
 
 gulp.task('generate:tokens:sass:default', () =>
-  gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
+  gulp.src(path.resolve(paths.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('default.scss'))
-    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:sass:map', () =>
-  gulp.src(path.resolve(__PATHS__.designTokens, '*.yml'))
+  gulp.src(path.resolve(paths.designTokens, '*.yml'))
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('map.scss'))
-    .pipe(gulp.dest(path.resolve(__PATHS__.designTokens, 'dist'))));
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:sass', ['generate:tokens:sass:default', 'generate:tokens:sass:map']);
 
 gulp.task('generate:tokens:components:imports', (done) =>
-  gulp.src(path.resolve(__PATHS__.ui, 'components/**/tokens/**/*.yml'))
+  gulp.src(path.resolve(paths.ui, 'components/**/tokens/**/*.yml'))
     .pipe(gutil.buffer())
     .pipe(through.obj((files, enc, next) => {
       const filepaths = files.map((file) => file.path).sort();
       const componentTokenImports = filepaths.reduce((prev, filepath) =>
-          `${prev}\n- ${path.relative(__PATHS__.designTokens, filepath)}`
+          `${prev}\n- ${path.relative(paths.designTokens, filepath)}`
         , '# File generated automatically, do not edit manually\nimports:');
       const file = new gutil.File({
         path: 'components.yml',
@@ -75,5 +69,5 @@ gulp.task('generate:tokens:components:imports', (done) =>
       });
       next(null, file);
     }))
-    .pipe(gulp.dest(__PATHS__.designTokens))
+    .pipe(gulp.dest(paths.designTokens))
 );

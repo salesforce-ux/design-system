@@ -1,30 +1,30 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import './setup';
-import _ from 'lodash';
-import async from 'async';
-import cssstats from 'cssstats';
-import { exec } from 'child_process';
-import fs from 'fs';
-import gulp from 'gulp';
-import gulpzip from 'gulp-zip';
-import path from 'path';
-import buildServerApi from '@salesforce-ux/build-server-api';
+const _ = require('lodash');
+const async = require('async');
+const cssstats = require('cssstats');
+const { exec } = require('child_process');
+const fs = require('fs');
+const gulp = require('gulp');
+const gulpzip = require('gulp-zip');
+const path = require('path');
+const buildServerApi = require('@salesforce-ux/build-server-api');
+
+const packageJSON = require('../../package.json');
+const paths = require('./paths');
 
 const { publish } = buildServerApi(process.env.BUILD_SERVER_HOST_NEW);
 
-const packageJSON = require('../../package.json');
-
 const CSS_PATH = 'assets/styles/salesforce-lightning-design-system.css';
 
-const paths = {
-  build: path.resolve.bind(path, __PATHS__.build),
-  buildDist: path.resolve.bind(path, __PATHS__.build, 'dist')
+const buildPaths = {
+  build: path.resolve.bind(path, paths.build),
+  buildDist: path.resolve.bind(path, paths.build, 'dist')
 };
 
 const execute = (cmd, done) =>
-  exec(cmd, { cwd: __PATHS__.root, stdio: 'inherit' }, (err, out, stderr) => {
+  exec(cmd, { cwd: paths.root, stdio: 'inherit' }, (err, out, stderr) => {
     if (err) return done(err);
     done(null, out.trim());
   });
@@ -65,10 +65,10 @@ const formatA11yCount = issues =>
 });
 
 const zip = (src, done) =>
-  gulp.src(paths.build(`${src}/**/*`))
+  gulp.src(buildPaths.build(`${src}/**/*`))
   .pipe(gulpzip(`${src}.zip`))
   .on('error', done)
-  .pipe(gulp.dest(paths.build()))
+  .pipe(gulp.dest(buildPaths.build()))
   .on('error', done)
   .on('finish', done);
 
@@ -77,44 +77,44 @@ const prepare = (done) => {
   return async.series([
     // clean
     (done) => async.series([
-      async.apply(execute, `rm -rf ${__PATHS__.build}`),
-      async.apply(execute, `mkdir ${__PATHS__.build}`)
+      async.apply(execute, `rm -rf ${paths.build}`),
+      async.apply(execute, `mkdir ${paths.build}`)
     ], done),
     // dist
     (done) => async.series([
       async.apply(execute, 'npm run dist-npm'),
-      async.apply(execute, `cp -a ${__PATHS__.npm}/. ${__PATHS__.build}/dist`),
-      async.apply(execute, `rm -rf ${__PATHS__.build}/dist/*.zip`)
+      async.apply(execute, `cp -a ${paths.npm}/. ${paths.build}/dist`),
+      async.apply(execute, `rm -rf ${paths.build}/dist/*.zip`)
     ], done),
     // examples
-    async.apply(execute, `cp -a ${__PATHS__.generated}/examples/. ${__PATHS__.build}/examples`),
+    async.apply(execute, `cp -a ${paths.generated}/examples/. ${paths.build}/examples`),
     // snaps
-    async.apply(execute, `create-snap ${__PATHS__.generated}/examples/ ${__PATHS__.build} ${__PATHS__.build}/dist/assets/styles/salesforce-lightning-design-system.css`),
+    async.apply(execute, `create-snap ${paths.generated}/examples/ ${paths.build} ${paths.build}/dist/assets/styles/salesforce-lightning-design-system.css`),
     // tokens
-    async.apply(execute, `cp -a ${__PATHS__.designTokens}/. ${__PATHS__.build}/design-tokens`),
+    async.apply(execute, `cp -a ${paths.designTokens}/. ${paths.build}/design-tokens`),
     // git info
     async.apply(execute, 'git show --format="%an|%ae|%ad|%s" | head -n 1'),
     // stats
     (done) => async.series([
       (done) => {
-        let counts = fs.readFileSync(`${__PATHS__.logs}/test.txt`, 'utf-8') || '';
+        let counts = fs.readFileSync(`${paths.logs}/test.txt`, 'utf-8') || '';
         done(null, formatTestCounts(counts));
       },
       (done) => {
-        let css = fs.readFileSync(paths.buildDist(CSS_PATH), 'utf8');
+        let css = fs.readFileSync(buildPaths.buildDist(CSS_PATH), 'utf8');
         let stats = cssstats(css);
         done(null, formatStats(stats));
       },
       (done) => {
-        let report = fs.readFileSync(`${__PATHS__.reports}/vnu_report.json`, 'utf-8') || '';
+        let report = fs.readFileSync(`${paths.reports}/vnu_report.json`, 'utf-8') || '';
         done(null, formatVnuCount(JSON.parse(report)));
       },
       (done) => {
-        let report = fs.readFileSync(`${__PATHS__.reports}/a11y.json`, 'utf-8') || '';
+        let report = fs.readFileSync(`${paths.reports}/a11y.json`, 'utf-8') || '';
         done(null, formatA11yCount(JSON.parse(report)));
       },
       (done) => {
-        let report = fs.readFileSync(`${__PATHS__.reports}/validations.json`, 'utf-8') || '';
+        let report = fs.readFileSync(`${paths.reports}/validations.json`, 'utf-8') || '';
         done(null, {validationFailures: JSON.parse(report).total});
       }
     ], (err, [counts, tests, html, a11y, validations]) => {
@@ -148,7 +148,7 @@ module.exports = (done) => prepare((err, result) => {
   publish({
     result,
     zips: ['dist.zip', 'examples.zip', 'snapshot.json', 'design-tokens.zip']
-      .map((p) => paths.build(p)),
+      .map((p) => buildPaths.build(p)),
     project: 'design-system'
   }, done);
 });

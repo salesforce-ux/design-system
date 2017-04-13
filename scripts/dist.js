@@ -20,11 +20,14 @@ import minifycss from 'gulp-minify-css';
 import Task from 'data.task';
 import {ui} from './ui';
 
-const argv = minimist(process.argv.slice(2));
-const isNpm = argv.npm === true;
+import packageJSON from '../package.json';
 
+const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
+
+const argv = minimist(process.argv.slice(2));
+const isNpm = argv.npm === true;
 
 const sanitizeVersion = version =>
   version.replace(/\s+|\(|\)/g, '_');
@@ -296,7 +299,7 @@ async.series([
       base: distPath(),
       cwd: distPath()
     })
-    .pipe(gulpinsert.prepend(`/*! ${DISPLAY_NAME} ${process.env.SLDS_VERSION} */\n`))
+    .pipe(gulpinsert.prepend(`/*! ${DISPLAY_NAME} ${SLDS_VERSION} */\n`))
     .pipe(gulp.dest(distPath()))
     .on('error', done)
     .on('finish', done);
@@ -310,7 +313,7 @@ async.series([
       base: distPath(),
       cwd: distPath()
     })
-    .pipe(gulpinsert.prepend(`// ${DISPLAY_NAME} ${process.env.SLDS_VERSION}\n`))
+    .pipe(gulpinsert.prepend(`// ${DISPLAY_NAME} ${SLDS_VERSION}\n`))
     .pipe(gulp.dest(distPath()))
     .on('error', done)
     .on('finish', done);
@@ -323,7 +326,7 @@ async.series([
     gulp.src(distPath('README-dist.md'))
     .pipe(gulprename('README.md'))
     .on('error', done)
-    .pipe(gulpinsert.prepend(`# ${DISPLAY_NAME} \n# Version: ${process.env.SLDS_VERSION} \n`))
+    .pipe(gulpinsert.prepend(`# ${DISPLAY_NAME} \n# Version: ${SLDS_VERSION} \n`))
     .on('error', done)
     .pipe(gulp.dest(distPath()))
     .on('error', done)
@@ -356,7 +359,7 @@ async.series([
    */
   (done) => {
     gulp.src(distPath('**/*'))
-    .pipe(gulpzip(zipName(process.env.SLDS_VERSION)))
+    .pipe(gulpzip(zipName(SLDS_VERSION)))
     .on('error', done)
     .pipe(gulp.dest(distPath()))
     .on('error', done)

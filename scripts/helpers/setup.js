@@ -12,7 +12,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import paths from './paths';
 import appModulePath from 'app-module-path';
 
-import './env';
-
 paths.install();
 appModulePath.addPath(__PATHS__.root);

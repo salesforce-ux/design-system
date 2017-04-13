@@ -11,7 +11,7 @@ const yaml = require('js-yaml');
 // Documentation:
 // https://github.com/salesforce-ux/design-system/wiki/Design-Tokens
 
-export const prefixes = [
+const prefixes = [
   'BORDER_RADIUS',
   'BORDER_WIDTH',
   'COLOR',
@@ -99,7 +99,6 @@ TokenLint.prototype.tokenNameLint = function (tokenName) {
   if (errors.length) {
     throw errors;
   }
-  return;
 };
 
 /**
@@ -140,4 +139,4 @@ tokenlintPlugin.report = (reporter) =>
     cb(error, file);
   });
 
-export default tokenlintPlugin;
+module.exports = tokenlintPlugin;

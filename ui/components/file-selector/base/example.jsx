@@ -26,7 +26,7 @@ export let FileSelector = props =>
 
 export default (
   <FileSelector
-    files={true}
+    files
     className="slds-file-selector--files"
   />
 );

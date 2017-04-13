@@ -12,9 +12,9 @@ const icon = (
   </span>
 );
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let states = [
   {
@@ -22,7 +22,7 @@ export let states = [
     label: 'Default',
     element:
     <div className="demo-only" style={{ width: '30rem' }}>
-      <TileMedia title="Salesforce UX" media={ icon } />
+      <TileMedia title="Salesforce UX" media={icon} />
     </div>
   },
   {
@@ -30,7 +30,7 @@ export let states = [
     label: 'With actions',
     element:
     <div className="demo-only" style={{ width: '30rem' }}>
-      <TileMedia title="Salesforce UX" media={ icon } actions />
+      <TileMedia title="Salesforce UX" media={icon} actions />
     </div>
   }
 ];

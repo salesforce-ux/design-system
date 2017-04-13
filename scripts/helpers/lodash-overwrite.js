@@ -8,11 +8,14 @@ const PREFIXES = {};
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing
 const _ = require('lodash');
 
-const newCounter = prefix =>
+const newCounter = prefix => {
   PREFIXES[prefix] = 0;
+};
 
-const incCounter = prefix =>
+const incCounter = prefix => {
   PREFIXES[prefix] = PREFIXES[prefix] + 1;
+  return PREFIXES[prefix];
+};
 
 const initCounterForPrefix = prefix =>
   PREFIXES[prefix] != null

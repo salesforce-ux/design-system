@@ -5,9 +5,9 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Fieldset = props =>
   <fieldset className={classNames('slds-form-element', props.className)}>
@@ -26,26 +26,26 @@ export let Radio = props => {
   const uniqueId = _.uniqueId('radio-');
 
   return (
-    <span className={ classNames('slds-radio', props.className) }>
+    <span className={classNames('slds-radio', props.className)}>
       <input
         type="radio"
-        id={ uniqueId }
-        name={ props.name || 'options' }
+        id={uniqueId}
+        name={props.name || 'options'}
         disabled={props.disabled}
         defaultChecked={props.checked}
         aria-describedby={props.errorId}
       />
-      <label className="slds-radio__label" htmlFor={ uniqueId }>
-        <span className="slds-radio--faux"></span>
+      <label className="slds-radio__label" htmlFor={uniqueId}>
+        <span className="slds-radio--faux" />
         <span className="slds-form-element__label">{props.label}</span>
       </label>
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Fieldset>

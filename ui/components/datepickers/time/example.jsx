@@ -3,7 +3,6 @@
 
 import React from 'react';
 
-
 export default (
 <div className="demo-only" style={{height: '225px'}}>
   <div className="slds-dropdown slds-dropdown--left slds-datepicker--time" aria-hidden="false" data-selection="time">

@@ -4,13 +4,13 @@
 import React from 'react';
 import { ButtonIcon } from '../base/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <ButtonIcon
-    hasDropdown={true}
+    hasDropdown
     className="slds-button--icon slds-button--icon-more"
     assistiveText="More options"
     title="More Options"
@@ -23,7 +23,7 @@ export let states = [
     label: 'Default - Container Only',
     element:
       <ButtonIcon
-        hasDropdown={true}
+        hasDropdown
         className="slds-button--icon slds-button--icon-container-more"
         assistiveText="More options"
         title="More Options"
@@ -34,7 +34,7 @@ export let states = [
     label: 'Filled',
     element:
       <ButtonIcon
-        hasDropdown={true}
+        hasDropdown
         className="slds-button--icon-more slds-button--icon-more-filled"
         assistiveText="More options"
         title="More Options"
@@ -45,7 +45,7 @@ export let states = [
     label: 'Inverse',
     element:
       <ButtonIcon
-        hasDropdown={true}
+        hasDropdown
         className="slds-button--icon-inverse slds-button--icon-more"
         assistiveText="More options"
         title="More Options"
@@ -56,7 +56,7 @@ export let states = [
     label: 'Inverse - Container Only',
     element:
       <ButtonIcon
-        hasDropdown={true}
+        hasDropdown
         className="slds-button--icon-inverse slds-button--icon-container-more"
         assistiveText="More options"
         title="More Options"

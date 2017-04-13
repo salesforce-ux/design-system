@@ -6,9 +6,9 @@ import classNames from 'classnames';
 
 const textareaId = 'textarea-id-01';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let FormElement = props =>
   <div className={classNames('slds-form-element', props.className)}>
@@ -18,7 +18,7 @@ export let FormElement = props =>
 export let FormElementLabel = props =>
   <label
     className="slds-form-element__label"
-    htmlFor={ textareaId }
+    htmlFor={textareaId}
   >
     {props.children}
   </label>;
@@ -31,14 +31,14 @@ export let FormElementControl = props =>
 export let Textarea = props =>
   <textarea
     {...props}
-    id={ props.id || textareaId }
+    id={props.id || textareaId}
     className={classNames('slds-textarea', props.className)}
-    placeholder={ props.placeholder || 'Placeholder Text' }
+    placeholder={props.placeholder || 'Placeholder Text'}
   />;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <FormElement>

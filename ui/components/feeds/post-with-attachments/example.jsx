@@ -8,10 +8,9 @@ import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFoote
 import { File } from '../../files/base/example';
 import { AttachmentLink } from '../../files/link-attachment/example';
 
-
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let states = [
   {

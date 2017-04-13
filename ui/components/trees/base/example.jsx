@@ -5,9 +5,9 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let TreeItem = props =>
 <div className="slds-tree__item">
@@ -128,9 +128,9 @@ let AdditionalItems = props =>
   </ul>
 </li>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Default = props =>
 <div className="slds-tree_container" role="application">
@@ -142,7 +142,7 @@ let Default = props =>
       <TreeItem>{props.itemContent}</TreeItem>
     </li>
 
-    <li id="tree0-node1" role="treeitem" aria-level="1" aria-expanded={props.isExpanded ? true : false}>
+    <li id="tree0-node1" role="treeitem" aria-level="1" aria-expanded={!!props.isExpanded}>
       <TreeBranch ariaControls="tree0-node1" />
 
       <ul className={props.isExpanded ? 'slds-is-expanded' : 'slds-is-collapsed'} role="group" aria-labelledby="tree0-node1__label">
@@ -170,10 +170,9 @@ let Default = props =>
   </ul>
 </div>;
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Default />

@@ -17,29 +17,29 @@ let Header = props =>
 let Footer = props =>
   <div className="slds-grid slds-grid--vertical-align-center">
     <span className="slds-text-title">Step 2 of 4</span>
-    { props.skipButton ?
-      <button className="slds-button slds-button--brand slds-col--bump-left">Skip</button>
+    { props.skipButton
+      ? <button className="slds-button slds-button--brand slds-col--bump-left">Skip</button>
     : null }
-    { props.setupButton ?
-      <button className="slds-button slds-button--success slds-col--bump-left">Setup Email</button>
+    { props.setupButton
+      ? <button className="slds-button slds-button--success slds-col--bump-left">Setup Email</button>
     : null }
-    { props.nextButton ?
-      <button className="slds-button slds-button--brand slds-col--bump-left">Next</button>
+    { props.nextButton
+      ? <button className="slds-button slds-button--brand slds-col--bump-left">Next</button>
     : null }
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Popover
     className="slds-popover_walkthrough slds-nubbin--left"
     headingId={headingUniqueId}
     header={<Header title="Manage your channels" />}
-    footer={<Footer nextButton={true} />}
-    closeButton={true}
-    inverse={true}
+    footer={<Footer nextButton />}
+    closeButton
+    inverse
   >
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </Popover>
@@ -54,9 +54,9 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin--left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer setupButton={true} nextButton={true} />}
-        closeButton={true}
-        inverse={true}
+        footer={<Footer setupButton nextButton />}
+        closeButton
+        inverse
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
@@ -69,9 +69,9 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin--left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton={true} setupButton={true} />}
-        closeButton={true}
-        inverse={true}
+        footer={<Footer skipButton setupButton />}
+        closeButton
+        inverse
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
@@ -84,9 +84,9 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin--left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton={true} />}
-        closeButton={true}
-        inverse={true}
+        footer={<Footer skipButton />}
+        closeButton
+        inverse
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </Popover>
@@ -99,9 +99,9 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin--left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton={true} nextButton={true} />}
-        closeButton={true}
-        inverse={true}
+        footer={<Footer skipButton nextButton />}
+        closeButton
+        inverse
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="slds-form-element slds-p-top--small">
@@ -119,8 +119,8 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin--top-left"
         title="Action dialog"
-        closeButton={true}
-        inverse={true}
+        closeButton
+        inverse
       >
         <div className="slds-media slds-media--center">
           <div className="slds-media__figure">
@@ -142,8 +142,8 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin--top-left"
         headingId="dialog-heading-id-01"
-        closeButton={true}
-        inverse={true}
+        closeButton
+        inverse
       >
         <div className="slds-media">
           <div className="slds-media__figure">

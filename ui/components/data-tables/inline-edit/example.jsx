@@ -36,9 +36,9 @@ const rows = [{
   'contact': 'nathan@salesforce.com'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Container = props =>
   <div className="slds-table--edit_container slds-is-relative" tabIndex={props.tabIndex} id={props.id}>
@@ -75,7 +75,7 @@ let Thead = props =>
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
-    <span className="slds-checkbox--faux"></span>
+    <span className="slds-checkbox--faux" />
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
@@ -87,11 +87,11 @@ let ButtonEdit = props =>
 
 let EditPanel = props =>
   <section className="slds-popover slds-popover--edit" role="dialog" style={{ position: 'absolute', top: '0', left: '0.0625rem' }}>
-    <span id="form-start" tabIndex="0"></span>
+    <span id="form-start" tabIndex="0" />
     <div className="slds-popover__body">
       { props.children }
     </div>
-    <span id="form-end" tabIndex="0"></span>
+    <span id="form-end" tabIndex="0" />
   </section>;
 
 let TableFocusInfo = props =>
@@ -108,67 +108,67 @@ let ErrorPanel = props =>
 export let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
-  return(
-    <tr className="slds-hint-parent" aria-selected={ props.checked }>
-      <td id={ props.cellID } tabIndex={ props.errorindex } role="gridcell" className={classNames('slds-cell-edit slds-cell-error', props.editName)}>
+  return (
+    <tr className="slds-hint-parent" aria-selected={props.checked}>
+      <td id={props.cellID} tabIndex={props.errorindex} role="gridcell" className={classNames('slds-cell-edit slds-cell-error', props.editName)}>
         <button
-          id={ 'error-0' + props.index }
+          id={'error-0' + props.index}
           className={classNames('slds-button slds-button--icon slds-button--icon-error slds-m-horizontal--xxx-small', props.buttonInvisible)}
-          tabIndex={ props.errorindex || '-1' }
-          aria-hidden={ props.buttonInvisible ? 'true' : null }
-          aria-describedby={ props.buttonInvisible ? null : 'error-tooltip-01' }>
+          tabIndex={props.errorindex || '-1'}
+          aria-hidden={props.buttonInvisible ? 'true' : null}
+          aria-describedby={props.buttonInvisible ? null : 'error-tooltip-01'}>
           <span className="slds-assistive-text">{'Item ' + props.index + ' has errors'}</span>
           <SvgIcon className="slds-button__icon" sprite="utility" symbol="warning" />
         </button>
-        <span className="slds-row-number slds-text-body--small slds-text-color--weak"></span>
+        <span className="slds-row-number slds-text-body--small slds-text-color--weak" />
       </td>
-      <td role="gridcell" className={ classNames('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
-        <Checkbox label={ checkboxLabel } tabIndex={ !props.focusable ? '-1' : '0' } checkID="checkbox-01" />
+      <td role="gridcell" className={classNames('slds-cell-edit', props.checkClass)} aria-selected={props.checkSelected}>
+        <Checkbox label={checkboxLabel} tabIndex={!props.focusable ? '-1' : '0'} checkID="checkbox-01" />
       </td>
-      <th scope="row" tabIndex={ props.initialCellTabIndex } aria-selected={props.defaultSelected} className={classNames('slds-cell-edit', props.thClassName)}>
+      <th scope="row" tabIndex={props.initialCellTabIndex} aria-selected={props.defaultSelected} className={classNames('slds-cell-edit', props.thClassName)}>
         <span className="slds-grid slds-grid--align-spread">
-          <a href="javascript:void(0);" className="slds-truncate" tabIndex={ props.initialCellTabIndex || '-1' } id={ props.linkId } title={ props.recordName }>
+          <a href="javascript:void(0);" className="slds-truncate" tabIndex={props.initialCellTabIndex || '-1'} id={props.linkId} title={props.recordName}>
             { props.recordName }
           </a>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ props.initialCellTabIndex } alt={ 'Edit Name: Item ' + props.index } />
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={props.initialCellTabIndex} alt={'Edit Name: Item ' + props.index} />
         </span>
       </th>
-      { !props.children ?
-          <td role="gridcell" className="slds-cell-edit">
+      { !props.children
+          ? <td role="gridcell" className="slds-cell-edit">
             <span className="slds-grid slds-grid--align-spread">
-              <span className="slds-truncate" title={ props.accountName }>{ props.accountName }</span>
-              <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Account Name: Item ' + props.index } />
+              <span className="slds-truncate" title={props.accountName}>{ props.accountName }</span>
+              <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={!props.focusable ? '-1' : '0'} alt={'Edit Account Name: Item ' + props.index} />
             </span>
           </td>
         : props.children }
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Close Date: Item ' + props.index } />
+          <span className="slds-truncate" title={props.closeDate}>{ props.closeDate }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={!props.focusable ? '-1' : '0'} alt={'Edit Close Date: Item ' + props.index} />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title={ props.stage }>{ props.stage }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Stage: Item ' + props.index } />
+          <span className="slds-truncate" title={props.stage}>{ props.stage }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={!props.focusable ? '-1' : '0'} alt={'Edit Stage: Item ' + props.index} />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit" aria-readonly="true">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title={ props.confidence }>{ props.confidence }</span>
-          <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" symbol="lock" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Confidence: Item ' + props.index } disabled />
+          <span className="slds-truncate" title={props.confidence}>{ props.confidence }</span>
+          <ButtonEdit iconClassName="slds-button__icon--lock slds-button__icon--small" symbol="lock" tabIndex={!props.focusable ? '-1' : '0'} alt={'Confidence: Item ' + props.index} disabled />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title={ props.amount }>{ props.amount }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Amount: Item ' + props.index } />
+          <span className="slds-truncate" title={props.amount}>{ props.amount }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={!props.focusable ? '-1' : '0'} alt={'Edit Amount: Item ' + props.index} />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
         <span className="slds-grid slds-grid--align-spread">
-          <span className="slds-truncate" title={ props.contact }>{ props.contact }</span>
-          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={ !props.focusable ? '-1' : '0' } alt={ 'Edit Contact: Item ' + props.index } />
+          <span className="slds-truncate" title={props.contact}>{ props.contact }</span>
+          <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex={!props.focusable ? '-1' : '0'} alt={'Edit Contact: Item ' + props.index} />
         </span>
       </td>
       <td role="gridcell" className="slds-cell-edit">
@@ -179,7 +179,7 @@ export let RowData = props => {
             symbol="down"
             assistiveText="Show More"
             title="Show More"
-            tabIndex={ !props.focusable ? '-1' : '0' }
+            tabIndex={!props.focusable ? '-1' : '0'}
           />
         </div>
       </td>
@@ -187,31 +187,31 @@ export let RowData = props => {
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Container>
     <Table className="slds-no-cell-focus">
       <Thead>
         { _.times(columns.length, i =>
-          <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+          <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
         )}
       </Thead>
       <tbody>
         { _.times(rows.length, i =>
-          <RowData key={ i }
-            index={ i + 1 }
-            recordName={ rows[i].recordName }
-            accountName={ rows[i].accountName }
-            closeDate={ rows[i].closeDate }
-            stage={ rows[i].stage }
-            confidence={ rows[i].confidence }
-            amount={ rows[i].amount }
-            contact={ rows[i].contact }
-            initialCellTabIndex={ (i===0) ? '0' : '-1' }
-            thClassName={ (i===0) ? 'slds-has-focus' : null }
+          <RowData key={i}
+            index={i + 1}
+            recordName={rows[i].recordName}
+            accountName={rows[i].accountName}
+            closeDate={rows[i].closeDate}
+            stage={rows[i].stage}
+            confidence={rows[i].confidence}
+            amount={rows[i].amount}
+            contact={rows[i].contact}
+            initialCellTabIndex={(i === 0) ? '0' : '-1'}
+            thClassName={(i === 0) ? 'slds-has-focus' : null}
             buttonInvisible="slds-hidden"
           />
         )}
@@ -229,26 +229,26 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
-                initialCellTabIndex={ (i===0) ? '0' : '-1' }
-                thClassName={ (i===0) ? 'slds-has-focus' : null }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
+                initialCellTabIndex={(i === 0) ? '0' : '-1'}
+                thClassName={(i === 0) ? 'slds-has-focus' : null}
                 buttonInvisible="slds-hidden"
 
-                linkId={ (i===0) ? 'link-01' : null }
-                defaultSelected={ (i===0) ? true : null }
+                linkId={(i === 0) ? 'link-01' : null}
+                defaultSelected={(i === 0) ? true : null}
               />
             )}
           </tbody>
@@ -266,25 +266,25 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
-                initialCellTabIndex={ (i===0) ? '0' : '-1' }
-                checkClass={ (i===0) ? 'slds-has-focus' : null }
-                checkSelected={ (i===0) ? true : null }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
+                initialCellTabIndex={(i === 0) ? '0' : '-1'}
+                checkClass={(i === 0) ? 'slds-has-focus' : null}
+                checkSelected={(i === 0) ? true : null}
                 buttonInvisible="slds-hidden"
-                defaultSelected={ (i===0) ? true : null }
+                defaultSelected={(i === 0) ? true : null}
               />
             )}
           </tbody>
@@ -302,24 +302,24 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden"
-                defaultSelected={ (i===0) ? true : null }>
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-focus">
+                defaultSelected={(i === 0) ? true : null}>
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-focus">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
@@ -343,23 +343,23 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden">
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
@@ -394,23 +394,23 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden">
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
@@ -446,23 +446,23 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden">
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit">
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
@@ -499,23 +499,23 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden">
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-is-edited">
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-is-edited">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: Acme" />
@@ -536,23 +536,23 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
-                buttonInvisible={ (i!=0) ? 'slds-hidden' : null }>
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error slds-has-focus">
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
+                buttonInvisible={(i != 0) ? 'slds-hidden' : null}>
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error slds-has-focus">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="0" alt="Edit Name: {field error} Edited: Acme" />
@@ -576,25 +576,25 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+              <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
-                editName={ (i===0) ? 'slds-has-focus' : null }
-                errorindex={ (i===0) ? '0' : null }
-                buttonInvisible={ (i!=0) ? 'slds-hidden' : null }>
-                { (i===0) ?
-                  <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
+                editName={(i === 0) ? 'slds-has-focus' : null}
+                errorindex={(i === 0) ? '0' : null}
+                buttonInvisible={(i != 0) ? 'slds-hidden' : null}>
+                { (i === 0)
+                  ? <td role="gridcell" aria-selected="true" className="slds-cell-edit slds-has-error">
                     <span className="slds-grid slds-grid--align-spread">
                       <span className="slds-truncate" title="Acme">Acme</span>
                       <ButtonEdit id="button-01" iconClassName="slds-button__icon--edit" tabIndex="-1" alt="Edit Name: {field error} Edited: Acme" />
@@ -619,24 +619,24 @@ export let states = [
         <Table>
           <Thead>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                className={ (i===0) ? 'slds-has-focus' : null }
-                columnName={ columns[i] }
+              <Th key={i}
+                className={(i === 0) ? 'slds-has-focus' : null}
+                columnName={columns[i]}
                 focusable
                 style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden"
               />
             )}
@@ -652,23 +652,23 @@ export let states = [
         <Table className="slds-no-cell-focus">
           <Thead>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                className={ (i===0) ? 'slds-has-focus' : null }
-                columnName={ columns[i] }
+              <Th key={i}
+                className={(i === 0) ? 'slds-has-focus' : null}
+                columnName={columns[i]}
                 style={{ width: '8.75rem' }} />
             )}
           </Thead>
           <tbody>
             { _.times(rows.length, i =>
-              <RowData key={ i }
-                index={ i + 1 }
-                recordName={ rows[i].recordName }
-                accountName={ rows[i].accountName }
-                closeDate={ rows[i].closeDate }
-                stage={ rows[i].stage }
-                confidence={ rows[i].confidence }
-                amount={ rows[i].amount }
-                contact={ rows[i].contact }
+              <RowData key={i}
+                index={i + 1}
+                recordName={rows[i].recordName}
+                accountName={rows[i].accountName}
+                closeDate={rows[i].closeDate}
+                stage={rows[i].stage}
+                confidence={rows[i].confidence}
+                amount={rows[i].amount}
+                contact={rows[i].contact}
                 buttonInvisible="slds-hidden"
               />
             )}

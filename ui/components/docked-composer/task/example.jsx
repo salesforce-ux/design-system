@@ -14,7 +14,7 @@ export default (
       bodyClassName="slds-docked-composer__body--form"
       header="New Task"
       headerSymbol="task"
-      footer={ <button className="slds-button slds-button--brand slds-col--bump-left">Save</button> }
+      footer={<button className="slds-button slds-button--brand slds-col--bump-left">Save</button>}
     >
       <fieldset className="slds-form slds-form--compound">
         <legend className="slds-assistive-text">Log new task</legend>

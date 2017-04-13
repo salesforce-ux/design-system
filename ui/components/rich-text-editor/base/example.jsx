@@ -15,9 +15,9 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
 const listboxOptionId03 = 'listbox-option-unique-id-03';
 const listboxOptionId04 = 'listbox-option-unique-id-04';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Demo = props =>
   <div className="demo-only" style={{minHeight: '180px'}}>
@@ -35,34 +35,34 @@ export let RteToolbar = props =>
   </div>;
 
 const FontFamilyDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } listboxId="family-listbox">
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical listboxId="family-listbox">
     <ListboxItem>
       <Option
-        id={ listboxOptionId01 }
+        id={listboxOptionId01}
         title="Times New Roman"
-        focused={ props.focused }
-        selected={ props.selected }
-        hideIcon={true}
+        focused={props.focused}
+        selected={props.selected}
+        hideIcon
       />
     </ListboxItem>
     <ListboxItem>
-      <Option id={ listboxOptionId02 } title="Arial" hideIcon={true} />
+      <Option id={listboxOptionId02} title="Arial" hideIcon />
     </ListboxItem>
   </Listbox>;
 
 const FontSizeDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true } id="family-listbox">
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical id="family-listbox">
     <ListboxItem>
       <Option
-        id={ listboxOptionId03 }
+        id={listboxOptionId03}
         title="12px"
-        focused={ props.focused }
-        selected={ props.selected }
-        hideIcon={true}
+        focused={props.focused}
+        selected={props.selected}
+        hideIcon
       />
     </ListboxItem>
     <ListboxItem>
-      <Option id={ listboxOptionId04 } title="14px" hideIcon={true} />
+      <Option id={listboxOptionId04} title="14px" hideIcon />
     </ListboxItem>
   </Listbox>;
 
@@ -76,9 +76,9 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Font"
         label="Choose a Font"
-        hideLabel={true}
+        hideLabel
         aria-controls="family-listbox"
-        listbox={ <FontFamilyDropdown /> }
+        listbox={<FontFamilyDropdown />}
       />
     </div>
 
@@ -90,10 +90,10 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Size"
         label="Choose a Font Size"
-        hideLabel={true}
+        hideLabel
         aria-controls="size-listbox"
         tabIndex="-1"
-        listbox={ <FontSizeDropdown /> }
+        listbox={<FontSizeDropdown />}
       />
     </div>
   </div>;
@@ -104,9 +104,9 @@ export let RteFormatText = props =>
       <ButtonIcon
         className="slds-button--icon-border-filled"
         symbol="bold"
-        tabIndex={ props.tabIndexSetting }
-        aria-describedby={ props.hasTooltip ? 'bold' : null }
-        disabled={ props.disabledButtons }
+        tabIndex={props.tabIndexSetting}
+        aria-describedby={props.hasTooltip ? 'bold' : null}
+        disabled={props.disabledButtons}
         assistiveText="Bold" />
     </li>
 
@@ -115,7 +115,7 @@ export let RteFormatText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="italic"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Italic" />
     </li>
 
@@ -124,7 +124,7 @@ export let RteFormatText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="underline"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Underline" />
     </li>
 
@@ -133,7 +133,7 @@ export let RteFormatText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="strikethrough"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Strike Through" />
     </li>
   </ButtonGroupList>;
@@ -141,7 +141,7 @@ export let RteFormatText = props =>
 export let RteFormatColor = props =>
   <ButtonGroupList aria-label="Format background & text color">
     <li>
-      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
+      <button tabIndex="-1" disabled={props.disabledButtons} className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
         <SvgIcon className="slds-button__icon" sprite="utility" symbol="text_background_color" />
         <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
         <span className="slds-assistive-text">Background Color</span>
@@ -149,7 +149,7 @@ export let RteFormatColor = props =>
     </li>
 
     <li>
-      <button tabIndex="-1" disabled={ props.disabledButtons } className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
+      <button tabIndex="-1" disabled={props.disabledButtons} className="slds-button slds-button--icon slds-button--icon-more slds-button--icon-more-filled" aria-haspopup="true">
         <SvgIcon className="slds-button__icon" sprite="utility" symbol="text_color" />
         <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
         <span className="slds-assistive-text">Text Color</span>
@@ -164,7 +164,7 @@ export let RteFormatBody = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="richtextbulletedlist"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Bulleted List" />
     </li>
     <li>
@@ -172,7 +172,7 @@ export let RteFormatBody = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="richtextnumberedlist"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Numbered List" />
     </li>
     <li>
@@ -180,7 +180,7 @@ export let RteFormatBody = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="richtextindent"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Indent" />
     </li>
     <li>
@@ -188,7 +188,7 @@ export let RteFormatBody = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="richtextoutdent"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Outdent" />
     </li>
   </ButtonGroupList>;
@@ -200,7 +200,7 @@ export let RteAlignText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="left_align_text"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Left Align Text" />
     </li>
     <li>
@@ -208,7 +208,7 @@ export let RteAlignText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="center_align_text"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Center Align Text" />
     </li>
     <li>
@@ -216,40 +216,40 @@ export let RteAlignText = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="right_align_text"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Right Align Text" />
     </li>
   </ButtonGroupList>;
 
 export let RteInsertContent = props =>
   <ButtonGroupList
-    role={ props.overflow ? 'presentation' : null }
-    aria-label={ !props.overflow ? 'Insert content' : null}>
-    <li role={ props.overflow ? 'presentation' : null }>
+    role={props.overflow ? 'presentation' : null}
+    aria-label={!props.overflow ? 'Insert content' : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={ props.overflow ? 'menuitem' : null }
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="emoji"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Add Emoji" />
     </li>
-    <li role={ props.overflow ? 'presentation' : null }>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={ props.overflow ? 'menuitem' : null }
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="image"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Add Image" />
     </li>
-    <li role={ props.overflow ? 'presentation' : null }>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={ props.overflow ? 'menuitem' : null }
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="link"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Add Link" />
     </li>
   </ButtonGroupList>;
@@ -261,39 +261,39 @@ export let RteInsertUser = props =>
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="adduser"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Add User" />
     </li>
   </ButtonGroupList>;
 
 export let RteClearFormatting = props =>
   <ButtonGroupList
-    role={ props.overflow ? 'presentation' : null }
-    aria-label={ !props.overflow ? 'Remove Formatting' : null}>
-    <li role={ props.overflow ? 'presentation' : null }>
+    role={props.overflow ? 'presentation' : null}
+    aria-label={!props.overflow ? 'Remove Formatting' : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={ props.overflow ? 'menuitem' : null }
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button--icon-border-filled"
         symbol="remove_formatting"
-        disabled={ props.disabledButtons }
+        disabled={props.disabledButtons}
         assistiveText="Remove Formatting" />
     </li>
   </ButtonGroupList>;
 
 export let RteTextarea = props =>
   <div className="slds-rich-text-editor__textarea slds-grid">
-      { props.text ?
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-grow">{props.text}</div> :
-        <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={ !props.disabled ? 'true' : null } suppressContentEditableWarning className="slds-rich-text-area__content slds-text-color--weak slds-grow">
+      { props.text
+        ? <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={!props.disabled ? 'true' : null} suppressContentEditableWarning className="slds-rich-text-area__content slds-grow">{props.text}</div>
+        : <div aria-describedby={props['aria-describedby']} aria-label="Compose text" contentEditable={!props.disabled ? 'true' : null} suppressContentEditableWarning className="slds-rich-text-area__content slds-text-color--weak slds-grow">
           {props.placeholder}
         </div>
       }
   </div>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Demo>

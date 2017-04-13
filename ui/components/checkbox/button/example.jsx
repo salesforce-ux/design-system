@@ -6,26 +6,26 @@ import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let CheckboxAddButton = props => {
   const uniqueId = _.uniqueId('add-checkbox-');
 
   return (
     <div className="slds-checkbox--add-button">
-      <input className="slds-assistive-text" type="checkbox" id={ uniqueId } disabled={ props.disabled } defaultChecked={ props.checked } tabIndex={ props.tabIndex }/>
-      <label htmlFor={ uniqueId } className="slds-checkbox--faux">
+      <input className="slds-assistive-text" type="checkbox" id={uniqueId} disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex} />
+      <label htmlFor={uniqueId} className="slds-checkbox--faux">
         <span className="slds-assistive-text">{ props.label || 'Add product' }</span>
       </label>
     </div>
   );
 };
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <CheckboxAddButton />

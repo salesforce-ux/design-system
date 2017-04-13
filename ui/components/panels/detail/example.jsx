@@ -9,9 +9,9 @@ import { Pill, PillContainer } from '../../pills/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only slds-grid" style={{ height: '845px', maxWidth: '420px', background: '#f4f6f9', padding: '1rem' }}>
@@ -62,12 +62,12 @@ let PanelHeader = props =>
   </div>;
 
 let FormElementStatic = props =>
-  <li className={ classNames('slds-form-element slds-hint-parent slds-border--bottom', props.inlineEdit ? 'slds-form-element--edit' : null) }>
+  <li className={classNames('slds-form-element slds-hint-parent slds-border--bottom', props.inlineEdit ? 'slds-form-element--edit' : null)}>
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
-      <span className={ classNames('slds-form-element__static', props.longform ? 'slds-text-longform' : null)}>{props.text}</span>
-      { props.inlineEdit ?
-        <ButtonIcon
+      <span className={classNames('slds-form-element__static', props.longform ? 'slds-text-longform' : null)}>{props.text}</span>
+      { props.inlineEdit
+        ? <ButtonIcon
           className="slds-float--right slds-button--icon slds-button--icon-small"
           iconClassName="slds-button__icon--hint"
           symbol="edit"
@@ -94,9 +94,9 @@ let Lookup = props =>
     </div>
   </div>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // State Constructor(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Default = props =>
   <Demo>
@@ -236,9 +236,9 @@ let IsEditing = props =>
     </Panel>
   </Demo>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Default />

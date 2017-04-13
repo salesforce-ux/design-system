@@ -30,18 +30,16 @@ const comboboxId = 'combobox-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
-{
-  /**
-  * Generic Listbox container
-  * @name Listbox
-  * @prop {string}  id - Unique ID of listbox, targetted by the combobox container
-  * @prop {string}  className - A CSS class for the outer element
-  * @prop {boolean} vertical - Vertical Orientation
-  * @prop {boolean} horizontal - Horizontal Orientation
-  * @prop {boolean} inline - Horizontal Orientation but inlined with adjacent elements
-  * @prop {string}  aria-label -
-  */
-}
+/**
+* Generic Listbox container
+* @name Listbox
+* @prop {string}  id - Unique ID of listbox, targetted by the combobox container
+* @prop {string}  className - A CSS class for the outer element
+* @prop {boolean} vertical - Vertical Orientation
+* @prop {boolean} horizontal - Horizontal Orientation
+* @prop {boolean} inline - Horizontal Orientation but inlined with adjacent elements
+* @prop {string}  aria-label -
+*/
 export let Listbox = props =>
   <ul
     id={props.id || listboxId}
@@ -61,13 +59,11 @@ export let Listbox = props =>
     {props.children}
   </ul>;
 
-{
-  /**
-  * Generic list item within a listbox
-  * @name ListboxItem
-  * @prop {string}  className - A CSS class for the outer element
-  */
-}
+/**
+* Generic list item within a listbox
+* @name ListboxItem
+* @prop {string}  className - A CSS class for the outer element
+*/
 export let ListboxItem = props =>
   <li
     role="presentation"
@@ -76,13 +72,11 @@ export let ListboxItem = props =>
     {props.children}
   </li>;
 
-{
-  /**
-  * Generic listbox option within a listbox
-  * @name ListboxItemOption
-  * @prop {string}  className - A CSS class for the outer element
-  */
-}
+/**
+* Generic listbox option within a listbox
+* @name ListboxItemOption
+* @prop {string}  className - A CSS class for the outer element
+*/
 export let ListboxOption = props =>
   <span
     id={props.id || 'listbox-option-unique-id'}
@@ -99,41 +93,39 @@ export let ListboxOption = props =>
     {props.children}
   </span>;
 
-{
-  /**
-  * Combobox container for text input, text input icons, listbox of options,
-  * listbox of pill options and object switcher.
-  * @name ComboboxContainer
-  * @prop {string}  id
-  * @prop {string}  className - A CSS class for the element containing the input
-  * @prop {string}  containerClassName - A CSS class for the element containing the input and listbox
-  * @prop {string}  formClassName - A CSS class for the form element
-  * @prop {string}  formControlClassName - A CSS class for the form element control
-  * @prop {boolean} isOpen
-  * @prop {boolean} selectedOptionsInline - Specifies that the listbox of pill options are displayed inlined to its adjacent elements
-  * @prop {boolean} objectSwitcherInline - Specifies that the object switcher is displayed inlined to its adjacent elements
-  * @prop {string}  inputIcon - Specifies the position of an input icon
-  * @prop {string}  inputIconLeftSprite
-  * @prop {string}  inputIconLeftSymbol
-  * @prop {string}  inputIconRightSymbol
-  * @prop {boolean} inputButtonIcon
-  * @prop {string}  value
-  * @prop {boolean} autocomplete
-  * @prop {boolean} readonly
-  * @prop {string}  tabIndex
-  * @prop {string}  aria-controls
-  * @prop {boolean} hideLabel
-  * @prop {string}  placeholder
-  */
-}
+/**
+* Combobox container for text input, text input icons, listbox of options,
+* listbox of pill options and object switcher.
+* @name ComboboxContainer
+* @prop {string}  id
+* @prop {string}  className - A CSS class for the element containing the input
+* @prop {string}  containerClassName - A CSS class for the element containing the input and listbox
+* @prop {string}  formClassName - A CSS class for the form element
+* @prop {string}  formControlClassName - A CSS class for the form element control
+* @prop {boolean} isOpen
+* @prop {boolean} selectedOptionsInline - Specifies that the listbox of pill options are displayed inlined to its adjacent elements
+* @prop {boolean} objectSwitcherInline - Specifies that the object switcher is displayed inlined to its adjacent elements
+* @prop {string}  inputIcon - Specifies the position of an input icon
+* @prop {string}  inputIconLeftSprite
+* @prop {string}  inputIconLeftSymbol
+* @prop {string}  inputIconRightSymbol
+* @prop {boolean} inputButtonIcon
+* @prop {string}  value
+* @prop {boolean} autocomplete
+* @prop {boolean} readonly
+* @prop {string}  tabIndex
+* @prop {string}  aria-controls
+* @prop {boolean} hideLabel
+* @prop {string}  placeholder
+*/
 export let ComboboxContainer = props =>
-  <div className={classNames('slds-form-element',props.formClassName)}>
+  <div className={classNames('slds-form-element', props.formClassName)}>
     <label
       className={classNames(
         'slds-form-element__label',
         { 'slds-assistive-text': props.hideLabel }
       )}
-      htmlFor={ props.id || comboboxId }
+      htmlFor={props.id || comboboxId}
     >
       { props.label || 'Search' }
     </label>
@@ -150,14 +142,14 @@ export let ComboboxContainer = props =>
           'slds-combobox_container',
           {
             'slds-has-inline-listbox': props.selectedOptionsInline,
-            'slds-has-object-switcher': props.objectSwitcherInline,
+            'slds-has-object-switcher': props.objectSwitcherInline
           },
           props.containerClassName
         )}
       >
         {/* Search icon before the listbox of selected items */}
-        { props.inputIcon === 'left' && props.selectedOptionsInline ?
-          <SvgIcon
+        { props.inputIcon === 'left' && props.selectedOptionsInline
+          ? <SvgIcon
             className="slds-icon slds-icon--x-small slds-combobox_container__icon"
             sprite="utility"
             symbol="search"
@@ -177,7 +169,7 @@ export let ComboboxContainer = props =>
             },
             props.className
           )}
-          aria-expanded={ props.isOpen ? 'true' : 'false' }
+          aria-expanded={props.isOpen ? 'true' : 'false'}
           aria-haspopup="listbox"
           role="combobox"
         >
@@ -197,17 +189,16 @@ export let ComboboxContainer = props =>
               If inputIcon is on both sides of input AND a standard sprite,
               Makes autocomplete single selection look like a pill
             */}
-            {props.inputIcon ==='both' && props.inputIconLeftSprite === 'standard'
-            ?
-              <StandardIcon
-                containerClassName="slds-combobox__input-entity-icon"
-                className="slds-icon--small"
-                symbol={ props.inputIconLeftSymbol || 'account' }
-                title={ props.inputIconLeftSymbol || 'account' }
-                assistiveText={ props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value }
+            {props.inputIcon === 'both' && props.inputIconLeftSprite === 'standard'
+            ? <StandardIcon
+              containerClassName="slds-combobox__input-entity-icon"
+              className="slds-icon--small"
+              symbol={props.inputIconLeftSymbol || 'account'}
+              title={props.inputIconLeftSymbol || 'account'}
+              assistiveText={props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value}
               />
-            : (props.inputIcon ==='left' || props.inputIcon === 'both' ?
-              <UtilityIcon
+            : (props.inputIcon === 'left' || props.inputIcon === 'both'
+              ? <UtilityIcon
                 containerClassName="slds-input__icon slds-input__icon--left"
                 className="slds-icon slds-icon--x-small slds-icon-text-default"
                 symbol={props.inputIconLeftSymbol || 'search'}
@@ -216,29 +207,29 @@ export let ComboboxContainer = props =>
             {/* Input */}
             <Input
               className="slds-combobox__input"
-              id={ props.id || comboboxId }
-              aria-activedescendant={ props['aria-activedescendant'] }
-              aria-autocomplete={ props.autocomplete ? 'list' : null }
-              aria-controls={ props['aria-controls'] || listboxId }
+              id={props.id || comboboxId}
+              aria-activedescendant={props['aria-activedescendant']}
+              aria-autocomplete={props.autocomplete ? 'list' : null}
+              aria-controls={props['aria-controls'] || listboxId}
               autoComplete="off"
               role="textbox"
               type="text"
-              placeholder={ !props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder }
-              readOnly={ props['readonly'] || props.value }
-              value={ props.value }
-              tabIndex={ props.tabIndex }
+              placeholder={!props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder}
+              readOnly={props['readonly'] || props.value}
+              value={props.value}
+              tabIndex={props.tabIndex}
             />
             {/* If inputIcon is right, show icon here  */}
-            { props.inputIcon === 'right' && props.inputButtonIcon != true ?
-              <UtilityIcon
+            { props.inputIcon === 'right' && props.inputButtonIcon != true
+              ? <UtilityIcon
                 containerClassName="slds-input__icon slds-input__icon--right"
                 className="slds-icon slds-icon--x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
               />
             : null }
             {/* If close button, show buttonIcon here */}
-            { props.inputButtonIcon && props.inputIconRightSymbol === 'close' ?
-              <ButtonIcon
+            { props.inputButtonIcon && props.inputIconRightSymbol === 'close'
+              ? <ButtonIcon
                 className="slds-input__icon slds-input__icon--right"
                 symbol="close"
                 title="Remove selected option"
@@ -255,25 +246,23 @@ export let ComboboxContainer = props =>
     </div>
   </div>;
 
-{
-  /**
-  * An entity option is a type of listbox option, it contains a standard icon,
-  * a result name and an optional second line of text that sits below the result name
-  * @name EntityOption
-  * @prop {string}  id
-  * @prop {string}  className
-  * @prop {boolean} selected
-  * @prop {boolean} focused
-  * @prop {boolean} entityMeta - A secondary line of additional information below the result name
-  * @prop {string}  entityType - Type of entity, such as account or lead
-  * @prop {string}  entityTitle - Name of result
-  * @prop {string}  entityLocation - Physical location of entity, such as 'San Francisco'
-  */
-}
+/**
+* An entity option is a type of listbox option, it contains a standard icon,
+* a result name and an optional second line of text that sits below the result name
+* @name EntityOption
+* @prop {string}  id
+* @prop {string}  className
+* @prop {boolean} selected
+* @prop {boolean} focused
+* @prop {boolean} entityMeta - A secondary line of additional information below the result name
+* @prop {string}  entityType - Type of entity, such as account or lead
+* @prop {string}  entityTitle - Name of result
+* @prop {string}  entityLocation - Physical location of entity, such as 'San Francisco'
+*/
 export let EntityOption = props =>
   <ListboxOption
     type="entity"
-    id={ props.id }
+    id={props.id}
     className={classNames(
       {
         'slds-media--center': !props.entityMeta,
@@ -287,38 +276,36 @@ export let EntityOption = props =>
     <span className="slds-media__figure">
       <StandardIcon
         className="slds-icon--small"
-        symbol={ props.entityType || 'account' }
+        symbol={props.entityType || 'account'}
       />
     </span>
     <span className="slds-media__body">
       <span className="slds-listbox__option-text slds-listbox__option-text--entity">
         { props.typeahead ? props.children : props.entityTitle || 'Salesforce.com, Inc.' }
       </span>
-      { props.entityMeta ?
-        <span className="slds-listbox__option-meta slds-listbox__option-meta--entity">
+      { props.entityMeta
+        ? <span className="slds-listbox__option-meta slds-listbox__option-meta--entity">
         { _.upperFirst(props.entityType) || 'Account' } &bull; { _.upperFirst(props.entityLocation) || ' San Francisco' }
         </span>
       : null }
     </span>
   </ListboxOption>;
 
-{
-  /**
-  * A plain option is a type of listbox option, it contains a string of text and
-  * a tick mark to show an option has been selected
-  * @name Option
-  * @prop {string}  id
-  * @prop {string}  className
-  * @prop {boolean} selected
-  * @prop {boolean} focused
-  * @prop {string}  title
-  */
-}
+/**
+* A plain option is a type of listbox option, it contains a string of text and
+* a tick mark to show an option has been selected
+* @name Option
+* @prop {string}  id
+* @prop {string}  className
+* @prop {boolean} selected
+* @prop {boolean} focused
+* @prop {string}  title
+*/
 export let Option = props =>
   <ListboxOption
     type="plain"
-    id={ props.id }
-    className={ classNames(
+    id={props.id}
+    className={classNames(
       'slds-media--center',
       {
         'slds-is-selected': props.selected,
@@ -327,8 +314,8 @@ export let Option = props =>
       props.className
     )}
   >
-    { !props.hideIcon ?
-      <span className="slds-media__figure">
+    { !props.hideIcon
+      ? <span className="slds-media__figure">
         <SvgIcon
           className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
           sprite="utility"
@@ -337,20 +324,18 @@ export let Option = props =>
       </span>
     : null }
     <span className="slds-media__body">
-      <span className="slds-truncate" title={ props.title }>
+      <span className="slds-truncate" title={props.title}>
         { props.selected ? <span className="slds-assistive-text">Current Selection:</span> : null } { props.title }
       </span>
     </span>
   </ListboxOption>;
 
-{
-  /**
-  * Object switcher is a popup menu button, its visually displayed inlined with
-  * its adjacent objects. A "polymorphic" combobox example uses this.
-  * @name ObjectSwitcher
-  * @prop {string}  className
-  */
-}
+/**
+* Object switcher is a popup menu button, its visually displayed inlined with
+* its adjacent objects. A "polymorphic" combobox example uses this.
+* @name ObjectSwitcher
+* @prop {string}  className
+*/
 let ObjectSwitcher = props =>
   <div className={classNames(
     'slds-listbox--object-switcher slds-dropdown-trigger slds-dropdown-trigger--click',
@@ -373,74 +358,74 @@ let ObjectSwitcher = props =>
     </button>
   </div>;
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId01 }
+        id={listboxOptionId01}
         entityTitle="Acme"
-        entityMeta={ true }
-        focused={ props.focused }
+        entityMeta
+        focused={props.focused}
       />
     </ListboxItem>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId02 }
+        id={listboxOptionId02}
         entityTitle="Salesforce.com, Inc."
-        entityMeta={ true }
+        entityMeta
       />
     </ListboxItem>
   </Listbox>;
 
 const ListboxList = props =>
-  <Listbox className="slds-dropdown--length-10" vertical={ true }>
+  <Listbox className="slds-dropdown--length-10" vertical>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta />
     </ListboxItem>
   </Listbox>;
 
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
     <ComboboxContainer
-      autocomplete={ true }
+      autocomplete
       inputIcon="right"
       inputIconRightSymbol="search"
-      listbox={ <ListboxDropdown /> }
+      listbox={<ListboxDropdown />}
     />
   </div>
 );
@@ -452,11 +437,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={ true }
-          autocomplete={ true }
+          isOpen
+          autocomplete
           inputIcon="right"
           inputIconRightSymbol="search"
-          listbox={ <ListboxDropdown /> }
+          listbox={<ListboxDropdown />}
         />
       </div>,
     script: `
@@ -469,12 +454,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={ true }
-          autocomplete={ true }
+          isOpen
+          autocomplete
           inputIcon="right"
           inputIconRightSymbol="search"
-          listbox={ <ListboxDropdown focused={true} /> }
-          aria-activedescendant={ listboxOptionId01 }
+          listbox={<ListboxDropdown focused />}
+          aria-activedescendant={listboxOptionId01}
         />
       </div>
   },
@@ -484,14 +469,14 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          autocomplete={ true }
+          autocomplete
           inputIcon="both"
           inputIconLeftSprite="standard"
           inputIconLeftSymbol="account"
-          inputButtonIcon={true}
+          inputButtonIcon
           inputIconRightSymbol="close"
           value="Salesforce.com, Inc."
-          listbox={ <ListboxDropdown /> }
+          listbox={<ListboxDropdown />}
         />
       </div>
   },
@@ -503,14 +488,14 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          autocomplete={ true }
-          listbox={ <ListboxDropdown /> }
+          autocomplete
+          listbox={<ListboxDropdown />}
         >
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
             className="slds-p-top--xxx-small"
-            horizontal={ true }
+            horizontal
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
@@ -542,13 +527,13 @@ export let examples = [
         bodyClassName="slds-p-horizontal--none"
       >
         <ComboboxContainer
-          autocomplete={ true }
-          isOpen={true}
+          autocomplete
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="search"
           formControlClassName="slds-m-around--small"
-          listbox={ <ListboxList /> }
-          staticListbox={true}
+          listbox={<ListboxList />}
+          staticListbox
         />
       </Popover>
   }

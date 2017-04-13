@@ -8,10 +8,9 @@ import { AppLauncherTile } from '../tile/example';
 import { Section, SectionContent, SectionTitle, SectionTitleAction } from '../../expandable-section/base/example';
 import classNames from 'classnames';
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 let AppLauncherModal = props =>
   <Modal className="slds-modal--large slds-app-launcher" aria-labelledby="header43">
     <ModalHeader className="slds-app-launcher__header slds-grid slds-grid--align-spread slds-grid--vertical-align-center">
@@ -30,11 +29,11 @@ let AppLauncherModal = props =>
     <ModalContent className="slds-app-launcher__content slds-p-around--medium">
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction isOpen={true} referenceId="appsContent">
+          <SectionTitleAction isOpen referenceId="appsContent">
             All Apps
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={true} referenceId="appsContent">
+        <SectionContent isOpen referenceId="appsContent">
           <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">
             {props.dragDropLiveRegion}
           </div>
@@ -58,11 +57,11 @@ let AppLauncherModal = props =>
       <hr />
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction isOpen={true} referenceId="itemsContent">
+          <SectionTitleAction isOpen referenceId="itemsContent">
             All Items
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={true} referenceId="itemsContent">
+        <SectionContent isOpen referenceId="itemsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             {props.itemTiles.map((tile, i) => {
               return (
@@ -79,9 +78,9 @@ let AppLauncherModal = props =>
     </ModalContent>
   </Modal>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 /*
  * DragDropId relates app launcher tile anchor aria-describedby to the div that holds the instructions for drag & drop
@@ -95,7 +94,7 @@ const itemTiles = [
   { label: 'Campaigns', symbol: 'campaign' },
   { label: 'Cases', symbol: 'case' },
   { label: 'Coaching', symbol: 'coaching' },
-  { label: 'Contacts', symbol: 'contact' },
+  { label: 'Contacts', symbol: 'contact' }
 ];
 
 /*
@@ -156,7 +155,7 @@ const appTiles = [
 /*
  * Helpers to position the App Tile for each state (ie. moved, dropped, etc.)
  */
-const moveItemPosition = function(arr, from, to) {
+const moveItemPosition = function (arr, from, to) {
   let copyArr = arr.slice(0);
   copyArr.splice(to, 0, copyArr.splice(from, 1)[0]);
   return copyArr;

@@ -16,9 +16,9 @@ const tabId01 = 'context-tab-id-1';
 const tabId02 = 'context-tab-id-2';
 const tabId03 = 'context-tab-id-3';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let ShortCutKey = props =>
   <span className="slds-text-body--small slds-text-color--weak slds-p-left--large">
@@ -29,22 +29,22 @@ let ShortCutKey = props =>
 // Context Tab
 let ContextTab = props =>
   <li className={classNames('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
-    <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={ props.title || 'tab name'}  aria-selected={ props.itemActive ? 'true' : 'false' } tabIndex={ props.itemActive ? '0' : '-1' } aria-controls={ props.tabPanelId } id={ props.id }>
+    <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={props.title || 'tab name'} aria-selected={props.itemActive ? 'true' : 'false'} tabIndex={props.itemActive ? '0' : '-1'} aria-controls={props.tabPanelId} id={props.id}>
       { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
-      <div className="slds-icon_container" title={ _.startCase(props.symbol) || 'Case' }>
-        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={ props.symbol || 'case' } />
+      <div className="slds-icon_container" title={_.startCase(props.symbol) || 'Case'}>
+        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
-      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={ props.title || 'tab name'}>{ props.title || 'tab name'}</span>
+      <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
     <div className={classNames('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
       <ButtonIcon
         className="slds-button--icon-container slds-button--icon-x-small"
-        tabIndex={ props.itemActive ? '0' : '-1' }
+        tabIndex={props.itemActive ? '0' : '-1'}
         symbol="chevrondown"
         aria-haspopup="true"
-        assistiveText={ 'Actions for ' + props.title }
-        title={ 'Actions for ' + props.title }
+        assistiveText={'Actions for ' + props.title}
+        title={'Actions for ' + props.title}
       />
       <Menu className="slds-dropdown--right">
         <MenuList>
@@ -55,14 +55,14 @@ let ContextTab = props =>
         </MenuList>
       </Menu>
     </div>
-    { !props.pinned ?
-      <div className="slds-context-bar__icon-action slds-col--bump-left slds-p-left--none">
+    { !props.pinned
+      ? <div className="slds-context-bar__icon-action slds-col--bump-left slds-p-left--none">
         <ButtonIcon
           className="slds-button--icon-container slds-button--icon-x-small"
-          tabIndex={ props.itemActive ? '0' : '-1' }
+          tabIndex={props.itemActive ? '0' : '-1'}
           symbol="close"
-          assistiveText={ 'Close ' + props.title }
-          title={ 'Close ' + props.title }
+          assistiveText={'Close ' + props.title}
+          title={'Close ' + props.title}
         />
       </div>
     : null }
@@ -81,9 +81,9 @@ let ContextTabPanel = props =>
     {props.children}
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let ContextTabBar = props =>
 
@@ -95,7 +95,7 @@ export let ContextTabBar = props =>
           <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title={ props.appName || 'App Name' }>{ props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title={props.appName || 'App Name'}>{ props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -132,16 +132,16 @@ export let ContextTabBar = props =>
       <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className={ classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
+            className={classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
             assistiveText="Toggle split view"
             title="Toggle split view"
-            aria-expanded={ props.splitViewActive ? 'true' : 'false' }
+            aria-expanded={props.splitViewActive ? 'true' : 'false'}
             aria-controls="id_of_split_view_container"
           />
         </div>
       </div>
-      <div className="slds-context-bar__vertical-divider"></div>
+      <div className="slds-context-bar__vertical-divider" />
       <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
@@ -151,8 +151,8 @@ export let ContextTabBar = props =>
             title="Open a New Tab"
           />
         </div>
-        { props.addTabActive ?
-          <section className="slds-popover slds-nubbin--top" role="dialog" aria-label="Add tab by URL or ID" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+        { props.addTabActive
+          ? <section className="slds-popover slds-nubbin--top" role="dialog" aria-label="Add tab by URL or ID" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
             <div className="slds-popover__body">
               <div className="slds-form-element">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
@@ -168,16 +168,16 @@ export let ContextTabBar = props =>
     </div>
 
     <div className="slds-context-bar__secondary">
-      <div className="slds-context-bar__vertical-divider"></div>
+      <div className="slds-context-bar__vertical-divider" />
       <ul className="slds-grid" role="tablist">
         { props.children }
       </ul>
     </div>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export const Context = props =>
   <div style={{height: '16rem'}}>
@@ -192,7 +192,7 @@ export default (
         symbol="home"
         tabPanelId={tabPanelId01}
         id={tabId01}
-        itemActive={true}
+        itemActive
       />
       <ContextTab
         title="Tab Item 1"
@@ -206,7 +206,7 @@ export default (
       />
     </ContextTabBar>
     <ContextTabPanel
-      show={true}
+      show
       id={tabPanelId01}
       tabId={tabId01}
     >
@@ -233,13 +233,13 @@ export let states = [
     label: 'Split View - Active',
     element:
       <div className="demo-only">
-        <ContextTabBar splitViewActive={true}>
+        <ContextTabBar splitViewActive>
           <ContextTab
             title="Home"
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -253,7 +253,7 @@ export let states = [
           />
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -289,7 +289,7 @@ export let states = [
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 2"
@@ -304,7 +304,7 @@ export let states = [
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -334,7 +334,7 @@ export let states = [
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive={true}
+            itemActive
             className="slds-has-focus"
           />
           <ContextTab
@@ -350,7 +350,7 @@ export let states = [
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -380,7 +380,7 @@ export let states = [
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive={true}
+            itemActive
             actionOverflow="true"
           />
           <ContextTab
@@ -396,7 +396,7 @@ export let states = [
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -421,13 +421,13 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            pinned={true}
+            pinned
           />
           <ContextTab
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 2"
@@ -442,7 +442,7 @@ export let states = [
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -467,8 +467,8 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
-            pinned={true}
+            itemActive
+            pinned
           />
           <ContextTab
             title="Tab Item 1"
@@ -482,7 +482,7 @@ export let states = [
           />
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -513,8 +513,8 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
-            pinned={true}
+            itemActive
+            pinned
             className="slds-has-focus"
           />
           <ContextTab
@@ -529,7 +529,7 @@ export let states = [
           />
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -560,14 +560,14 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            pinned={true}
-            itemUnsaved={true}
+            pinned
+            itemUnsaved
           />
           <ContextTab
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 2"
@@ -582,7 +582,7 @@ export let states = [
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -607,7 +607,7 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -618,11 +618,11 @@ export let states = [
             title="Tab Item 2"
             tabPanelId={tabPanelId03}
             id={tabId03}
-            itemUnsaved={true}
+            itemUnsaved
           />
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -653,7 +653,7 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -673,7 +673,7 @@ export let states = [
           </li>
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -704,7 +704,7 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -736,7 +736,7 @@ export let states = [
           </li>
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -767,7 +767,7 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -788,7 +788,7 @@ export let states = [
           </li>
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -819,7 +819,7 @@ export let states = [
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive={true}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
@@ -853,7 +853,7 @@ export let states = [
           </li>
         </ContextTabBar>
         <ContextTabPanel
-          show={true}
+          show
           id={tabPanelId01}
           tabId={tabId01}
         >
@@ -964,7 +964,7 @@ export let states = [
     label: 'Add Tab Dialog - Open',
     element:
       <div className="demo-only" style={{height: '8rem'}}>
-        <ContextTabBar addTabActive={true}>
+        <ContextTabBar addTabActive>
           <ContextTab
             title="Home"
             symbol="home"

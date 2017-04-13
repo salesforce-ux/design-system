@@ -9,10 +9,9 @@ import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 // Context Item Dropdown
 const contextDropdown = (
@@ -31,9 +30,9 @@ const contextDropdown = (
     </MenuList>
   </Menu>);
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let ContextBar = props =>
 
@@ -49,7 +48,7 @@ export let ContextBar = props =>
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title={ props.appName || 'App Name' }>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
+          <span className="slds-truncate" title={props.appName || 'App Name'}>{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : props.appName || 'App Name' }</span>
         </span>
       </div>
 
@@ -79,10 +78,10 @@ export let ContextBar = props =>
           </div>
           { !props.hideDropdown ? contextDropdown : null }
         </li>
-        { !props.children ?
-          _.times(3, i =>
-            <li className="slds-context-bar__item" key={ i }>
-              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
+        { !props.children
+          ? _.times(3, i =>
+            <li className="slds-context-bar__item" key={i}>
+              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={'Menu Item ' + i}>
                 <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item ' + i }</span>
               </a>
             </li>
@@ -94,9 +93,9 @@ export let ContextBar = props =>
     {/* Tertiary Section Goes Here */}
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export const Context = props =>
   <div style={{height: '16rem'}}>
@@ -114,14 +113,14 @@ export let states = [
     element:
       <ContextBar>
         <li className="slds-context-bar__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item'}>
+          <a href="javascript:void(0);" className="slds-context-bar__label-action" title={'Menu Item'}>
             <span className="slds-assistive-text">Current Page:</span>
             <span className="slds-truncate" title="Menu Item">Menu Item</span>
           </a>
         </li>
         { _.times(2, i =>
-          <li className="slds-context-bar__item" key={ i }>
-            <a href="javascript:void(0);" className="slds-context-bar__label-action" title={ 'Menu Item ' + i }>
+          <li className="slds-context-bar__item" key={i}>
+            <a href="javascript:void(0);" className="slds-context-bar__label-action" title={'Menu Item ' + i}>
               <span className="slds-truncate" title="Menu Item">Menu Item</span>
             </a>
           </li>

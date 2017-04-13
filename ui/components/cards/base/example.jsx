@@ -28,9 +28,9 @@ const headerSearch = (
   </div>
 );
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Card = props =>
   <article className={classNames('slds-card', props.className)}>
@@ -40,10 +40,10 @@ export let Card = props =>
 export let CardHeader = props =>
   <div className={classNames('slds-card__header slds-grid', props.className)}>
     <header className={classNames('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
-      { props.symbol ?
-        <div className="slds-media__figure">
+      { props.symbol
+        ? <div className="slds-media__figure">
           <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
-            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={ props.symbol } />
+            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={props.symbol} />
             </span>
         </div> : null }
       <div className="slds-media__body">
@@ -54,8 +54,8 @@ export let CardHeader = props =>
     </header>
     { props.search ? headerSearch : null }
     <div className={classNames('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
-      { props.actions == 'overflow' ?
-        <ButtonIcon
+      { props.actions == 'overflow'
+        ? <ButtonIcon
           className="slds-button--icon-border-filled slds-button--icon-x-small"
           symbol="down"
           title="More Options"
@@ -76,9 +76,9 @@ export let CardFooter = props =>
     { props.children }
   </footer>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Card>
@@ -95,8 +95,8 @@ export let states = [
     element:
       <Card>
         <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
-        <CardBody></CardBody>
-        <CardFooter></CardFooter>
+        <CardBody />
+        <CardFooter />
       </Card>
   }
 ];
@@ -145,7 +145,7 @@ export let examples = [
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ <StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" /> }
+              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>
@@ -153,7 +153,7 @@ export let examples = [
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ <StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" /> }
+              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>
@@ -161,7 +161,7 @@ export let examples = [
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ <StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" /> }
+              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>

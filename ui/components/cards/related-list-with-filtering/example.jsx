@@ -15,7 +15,7 @@ export default (
             <th className="slds-cell-shrink" scope="col">
               <label className="slds-checkbox" htmlFor="select-all">
                 <input type="checkbox" name="options" id="select-all" />
-                <span className="slds-checkbox--faux"></span>
+                <span className="slds-checkbox--faux" />
                 <span className="slds-assistive-text">Select All</span>
               </label>
             </th>
@@ -30,7 +30,7 @@ export default (
             <td className="slds-cell-shrink">
               <label className="slds-checkbox" htmlFor="select-row-01">
                 <input type="checkbox" name="options" id="select-row-01" defaultChecked />
-                <span className="slds-checkbox--faux"></span>
+                <span className="slds-checkbox--faux" />
                 <span className="slds-assistive-text">Select Row</span>
               </label>
             </td>
@@ -43,7 +43,7 @@ export default (
             <td className="slds-cell-shrink">
               <label className="slds-checkbox" htmlFor="select-row-01">
                 <input type="checkbox" name="options" id="select-row-01" />
-                <span className="slds-checkbox--faux"></span>
+                <span className="slds-checkbox--faux" />
                 <span className="slds-assistive-text">Select Row</span>
               </label>
             </td>

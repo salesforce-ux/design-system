@@ -20,39 +20,39 @@ export default (
       <FormElement
         className="slds-p-horizontal--large"
         label="Filter navigation items"
-        inputId={ inputId01 }
+        inputId={inputId01}
         inputIcon="left"
-        hideLabel={true}
+        hideLabel
       >
         <SvgIcon
           className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
           sprite="utility"
           symbol="search"
         />
-        <Input type="search" id={ inputId01 } placeholder="Quick Find" />
+        <Input type="search" id={inputId01} placeholder="Quick Find" />
       </FormElement>
-      <NavVerticalSection id={ sectionId01 } title="Reports">
-        <NavVerticalItem aria-describedby={ sectionId01 } active={ true }>
+      <NavVerticalSection id={sectionId01} title="Reports">
+        <NavVerticalItem aria-describedby={sectionId01} active>
           Recent
         </NavVerticalItem>
-        <NavVerticalItem aria-describedby={ sectionId01 }>
+        <NavVerticalItem aria-describedby={sectionId01}>
           Created by Me
         </NavVerticalItem>
-        <NavVerticalItem aria-describedby={ sectionId01 }>
+        <NavVerticalItem aria-describedby={sectionId01}>
           Private Reports
         </NavVerticalItem>
-        <NavVerticalItem aria-describedby={ sectionId01 }>
+        <NavVerticalItem aria-describedby={sectionId01}>
           Public Reports
         </NavVerticalItem>
-        <NavVerticalItem aria-describedby={ sectionId01 }>
+        <NavVerticalItem aria-describedby={sectionId01}>
           All Reports
         </NavVerticalItem>
       </NavVerticalSection>
-      <NavVerticalSection id={ sectionId02 } title="Folders">
-        <NavVerticalItem aria-describedby={ sectionId02 }>
+      <NavVerticalSection id={sectionId02} title="Folders">
+        <NavVerticalItem aria-describedby={sectionId02}>
           Created by Me
         </NavVerticalItem>
-        <NavVerticalItem aria-describedby={ sectionId02 }>
+        <NavVerticalItem aria-describedby={sectionId02}>
           Shared with Me
         </NavVerticalItem>
       </NavVerticalSection>

@@ -8,7 +8,7 @@ import classNames from 'classnames';
 const PT = React.PropTypes;
 
 class TabContent extends React.Component {
-  render() {
+  render () {
     const { className, current, flavor, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
@@ -38,7 +38,7 @@ TabContent.propTypes = {
 TabContent.defaultProps = { current: true };
 
 class TabItem extends React.Component {
-  renderCustom(tabIndex) {
+  renderCustom (tabIndex) {
     return React.cloneElement(this.props.content, {
       tabIndex: tabIndex,
       className: `slds-tabs--${this.props.flavor}__link`,
@@ -46,7 +46,7 @@ class TabItem extends React.Component {
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
-  renderDefault(tabIndex) {
+  renderDefault (tabIndex) {
     return (
       <a
         className={`slds-tabs--${this.props.flavor}__link`}
@@ -59,7 +59,7 @@ class TabItem extends React.Component {
       </a>
     );
   }
-  render() {
+  render () {
     const { className, id, role, current, flavor, content, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
@@ -74,7 +74,6 @@ class TabItem extends React.Component {
       </li>
     );
   }
-
 }
 
 TabItem.propTypes = {
@@ -84,7 +83,7 @@ TabItem.propTypes = {
 };
 
 class TabItemOverflow extends React.Component {
-  render() {
+  render () {
     const { className, id, role, current, flavor, children, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
@@ -93,7 +92,7 @@ class TabItemOverflow extends React.Component {
       })
     );
     const tabIndex = current ? 0 : -1;
-    const contents = React.Children.map(children, function(c,i) {
+    const contents = React.Children.map(children, function (c, i) {
       return React.cloneElement(c);
     });
     return (
@@ -111,11 +110,11 @@ TabItemOverflow.propTypes = {
 };
 
 class Tabs extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = { currentTab: this.props.selectedIndex };
   }
-  tabs() {
+  tabs () {
     return React.Children.map(this.props.children, (c, i) => {
       return React.cloneElement(c, {
         current: this.state.currentTab === i,
@@ -123,7 +122,7 @@ class Tabs extends React.Component {
       });
     });
   }
-  currentPanel() {
+  currentPanel () {
     return React.Children.map(this.props.children, (c, i) => {
       if (c.type === TabItemOverflow) {
         return null;
@@ -145,7 +144,7 @@ class Tabs extends React.Component {
       }
     });
   }
-  render() {
+  render () {
     const { className, flavor, panel, selectedIndex, ...rest } = this.props;
     const composedClassName = classNames(
       className,
@@ -158,7 +157,7 @@ class Tabs extends React.Component {
           role="tablist">
         {this.tabs()}
         </ul>
-        {panel ? panel : this.currentPanel()}
+        {panel || this.currentPanel()}
       </div>
     );
   }
@@ -173,7 +172,6 @@ Tabs.defaultProps = {
   selectedIndex: 0,
   flavor: 'default'
 };
-
 
 Tabs.Item = TabItem;
 Tabs.ItemOverflow = TabItemOverflow;

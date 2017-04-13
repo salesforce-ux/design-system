@@ -3,7 +3,6 @@
 
 import React from 'react';
 
-
 export default (
 <div className="demo-only" style={{width: '440px'}}>
   <div className="slds-form slds-form--compound">

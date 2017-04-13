@@ -5,9 +5,9 @@ import React from 'react';
 import { ButtonGroup } from '../base/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <ButtonGroup>
@@ -27,7 +27,7 @@ export default (
     />
     <ButtonIcon
       className="slds-button--icon-more"
-      hasDropdown={true}
+      hasDropdown
       assitiveText="More Actions"
       title="More Actions"
     />
@@ -56,7 +56,7 @@ export let states = [
         />
         <ButtonIcon
           className="slds-button--icon-more"
-          hasDropdown={true}
+          hasDropdown
           assitiveText="More Actions"
           title="More Actions"
         />

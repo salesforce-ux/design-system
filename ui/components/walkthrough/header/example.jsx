@@ -7,15 +7,15 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Header = props =>
   <div className="slds-trial-header slds-grid">
     <div className="slds-grid">
       <button className="slds-button slds-m-right--small">Take the salesforce tour</button>
-      <div className={ classNames('slds-grid slds-dropdown-trigger slds-dropdown-trigger--click', props.tourMenuOpen ? 'slds-is-open' : null)}>
+      <div className={classNames('slds-grid slds-dropdown-trigger slds-dropdown-trigger--click', props.tourMenuOpen ? 'slds-is-open' : null)}>
         <button className="slds-button" aria-haspopup="true">
           <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="right" />
           Choose your tour
@@ -38,7 +38,7 @@ let Header = props =>
               <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="check" />
               Finish it up in a Flash
             </MenuItem>
-            <li className="slds-has-divider--top-space" role="separator"></li>
+            <li className="slds-has-divider--top-space" role="separator" />
             <MenuItem>
               <SvgIcon className="slds-icon slds-icon--x-small slds-m-right--x-small" sprite="utility" symbol="upload" />
               Import Contacts and Accounts
@@ -54,9 +54,9 @@ let Header = props =>
     </div>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Header />

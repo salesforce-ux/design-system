@@ -8,7 +8,6 @@ import MediaObject from '../../../utilities/media-objects/index.react';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
 
-
 const icon = (
   <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
 );

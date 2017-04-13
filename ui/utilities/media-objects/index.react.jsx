@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 class Component extends React.Component {
-  render() {
+  render () {
     const className = classNames('slds-media', this.props.className, {
       [`slds-media--${this.props.flavor}`]: this.props.flavor
     });
@@ -29,7 +29,7 @@ class Component extends React.Component {
       </div>
     );
   }
-  renderFigure(figure, className) {
+  renderFigure (figure, className) {
     if (!figure) return null;
     className = classNames('slds-media__figure', className);
     return (

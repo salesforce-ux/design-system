@@ -60,25 +60,25 @@ const results = [{
   'colFour': 'New'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let SplitView = props =>
-  <div className={ classNames('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open') }>
+  <div className={classNames('slds-split-view_container', props.hidden ? 'slds-is-closed' : 'slds-is-open')}>
     <ButtonIcon
       aria-controls="split-view-id"
-      aria-expanded={ props.hidden ? 'false' : 'true' }
-      className={ classNames('slds-button--icon slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open') }
+      aria-expanded={props.hidden ? 'false' : 'true'}
+      className={classNames('slds-button--icon slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open')}
       iconClassName="slds-button__icon--x-small"
       symbol="left"
-      assistiveText={ props.hidden ? 'Open Split View' : 'Close Split View' }
-      title={ props.hidden ? 'Open Split View' : 'Close Split View' }
+      assistiveText={props.hidden ? 'Open Split View' : 'Close Split View'}
+      title={props.hidden ? 'Open Split View' : 'Close Split View'}
     />
     <article
-      aria-hidden={ props.hidden ? 'true' : 'false' }
+      aria-hidden={props.hidden ? 'true' : 'false'}
       id="split-view-id"
-      className={ classNames('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className) }
+      className={classNames('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className)}
     >
       <header className="slds-split-view__header">
         <div className="slds-grid slds-grid--vertical-align-center slds-m-bottom--xx-small">
@@ -139,7 +139,7 @@ let SplitView = props =>
           <span className="slds-assistive-text">Sorted by:</span>
           <span>Lead Score
             <SvgIcon
-              className="slds-icon slds-icon--xx-small slds-icon-text-default slds-align-top"   sprite="utility"
+              className="slds-icon slds-icon--xx-small slds-icon-text-default slds-align-top" sprite="utility"
               symbol="arrowdown"
             />
           </span>
@@ -153,47 +153,47 @@ let SplitView = props =>
   </div>;
 
 let Row = props =>
-  <li className={ classNames('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null) } role="presentation">
-    <a href="javascript:void(0);" aria-selected={ props.selected ? true : false } role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
-      { props.unread ?
-        <abbr className="slds-indicator--unread" title="Unread Item" aria-label="Unread Item">
+  <li className={classNames('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null)} role="presentation">
+    <a href="javascript:void(0);" aria-selected={!!props.selected} role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
+      { props.unread
+        ? <abbr className="slds-indicator--unread" title="Unread Item" aria-label="Unread Item">
           <span className="slds-assistive-text">●</span>
         </abbr>
       : null }
       <div className="slds-grid slds-wrap">
-        <span className="slds-truncate slds-text-body--regular slds-text-color--default" title={ props.colOne || 'Object Name' }>
+        <span className="slds-truncate slds-text-body--regular slds-text-color--default" title={props.colOne || 'Object Name'}>
           { props.colOne || 'Column 1' }
         </span>
-        <span className="slds-truncate slds-col--bump-left" title={ props.colTwo || 'Column 2' }>
+        <span className="slds-truncate slds-col--bump-left" title={props.colTwo || 'Column 2'}>
           { props.colTwo || 'Column 2' }
         </span>
       </div>
       <div className="slds-grid slds-wrap">
-        <span className="slds-truncate" title={ props.colThree || 'Column 3' }>
+        <span className="slds-truncate" title={props.colThree || 'Column 3'}>
           { props.colThree || 'Column 3' }
         </span>
-        <span className="slds-truncate slds-col--bump-left" title={ props.colFour || 'Column 4' }>
+        <span className="slds-truncate slds-col--bump-left" title={props.colFour || 'Column 4'}>
           { props.colFour || 'Column 4' }
         </span>
       </div>
     </a>
   </li>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ display: 'flex', width: '20rem', height: '37.5rem' }}>
     <SplitView>
       { results.slice(0, 5).map((result, i) =>
         <Row
-          key={ i }
-          colOne={ result.colOne }
-          colTwo={ result.colTwo }
-          colThree={ result.colThree }
-          colFour={ result.colFour }
-          tabIndex={ (i===0) ? 0 : -1 }
+          key={i}
+          colOne={result.colOne}
+          colTwo={result.colTwo}
+          colThree={result.colThree}
+          colFour={result.colFour}
+          tabIndex={(i === 0) ? 0 : -1}
         />
       )}
     </SplitView>
@@ -209,13 +209,13 @@ export let states = [
         <SplitView>
           { results.slice(0, 5).map((result, i) =>
             <Row
-              key={ i }
-              selected={ result.selected }
-              colOne={ result.colOne }
-              colTwo={ result.colTwo }
-              colThree={ result.colThree }
-              colFour={ result.colFour }
-              tabIndex={ (i===0) ? 0 : -1 }
+              key={i}
+              selected={result.selected}
+              colOne={result.colOne}
+              colTwo={result.colTwo}
+              colThree={result.colThree}
+              colFour={result.colFour}
+              tabIndex={(i === 0) ? 0 : -1}
             />
           )}
         </SplitView>
@@ -229,12 +229,12 @@ export let states = [
         <SplitView>
           { results.map((result, i) =>
             <Row
-              key={ i }
-              colOne={ result.colOne }
-              colTwo={ result.colTwo }
-              colThree={ result.colThree }
-              colFour={ result.colFour }
-              tabIndex={ (i===0) ? 0 : -1 }
+              key={i}
+              colOne={result.colOne}
+              colTwo={result.colTwo}
+              colThree={result.colThree}
+              colFour={result.colFour}
+              tabIndex={(i === 0) ? 0 : -1}
             />
           )}
         </SplitView>
@@ -248,13 +248,13 @@ export let states = [
         <SplitView>
           { results.map((result, i) =>
             <Row
-              key={ i }
-              unread={ result.unread }
-              colOne={ result.colOne }
-              colTwo={ result.colTwo }
-              colThree={ result.colThree }
-              colFour={ result.colFour }
-              tabIndex={ (i===0) ? 0 : -1 }
+              key={i}
+              unread={result.unread}
+              colOne={result.colOne}
+              colTwo={result.colTwo}
+              colThree={result.colThree}
+              colFour={result.colFour}
+              tabIndex={(i === 0) ? 0 : -1}
             />
           )}
         </SplitView>
@@ -268,13 +268,13 @@ export let states = [
         <SplitView hidden>
           { results.map((result, i) =>
             <Row
-              key={ i }
-              unread={ result.unread }
-              colOne={ result.colOne }
-              colTwo={ result.colTwo }
-              colThree={ result.colThree }
-              colFour={ result.colFour }
-              tabIndex={ (i===0) ? 0 : -1 }
+              key={i}
+              unread={result.unread}
+              colOne={result.colOne}
+              colTwo={result.colTwo}
+              colThree={result.colThree}
+              colFour={result.colFour}
+              tabIndex={(i === 0) ? 0 : -1}
             />
           )}
         </SplitView>

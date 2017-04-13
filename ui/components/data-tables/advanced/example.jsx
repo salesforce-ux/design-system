@@ -36,9 +36,9 @@ const rows = [{
   'contact': 'nathan@salesforce.com'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Table = props =>
   <table className={classNames('slds-table slds-table--bordered slds-table--resizable-cols', props.className)} role="grid">
@@ -46,18 +46,17 @@ let Table = props =>
   </table>;
 
 export let Th = props => {
-
   const { columnName, focusable, ...rest } = props;
   const tabIndex = focusable ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
   let sortDirection;
   if (props['aria-sort']) {
-    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
+    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending');
   }
 
   return (
     <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ tabIndex }>
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={tabIndex}>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
         <div className="slds-icon_container">
@@ -67,9 +66,9 @@ export let Th = props => {
       </a>
       <div className="slds-resizable">
         <label htmlFor={uniqueId} className="slds-assistive-text">{ columnName || 'Column Name' } column width</label>
-        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ tabIndex } />
+        <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={tabIndex} />
         <span className="slds-resizable__handle">
-          <span className="slds-resizable__divider"></span>
+          <span className="slds-resizable__divider" />
         </span>
       </div>
     </th>
@@ -79,33 +78,33 @@ export let Th = props => {
 let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
-  return(
-    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={ props.checked }>
+  return (
+    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={props.checked}>
       <td role="gridcell" className="slds-text-align--right" style={{ width: '3.25rem' }}>
-        <Checkbox label={ checkboxLabel } checked={ props.checked } hideLabel />
+        <Checkbox label={checkboxLabel} checked={props.checked} hideLabel />
       </td>
       <th scope="row">
-        <div className="slds-truncate" title={ props.recordName }>
+        <div className="slds-truncate" title={props.recordName}>
           <a href="javascript:void(0);">{ props.recordName }</a>
         </div>
       </th>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.accountName }>{ props.accountName }</div>
+        <div className="slds-truncate" title={props.accountName}>{ props.accountName }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.closeDate }>{ props.closeDate }</div>
+        <div className="slds-truncate" title={props.closeDate}>{ props.closeDate }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.stage }>{ props.stage }</div>
+        <div className="slds-truncate" title={props.stage}>{ props.stage }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.confidence }>{ props.confidence }</div>
+        <div className="slds-truncate" title={props.confidence}>{ props.confidence }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.amount }>{ props.amount }</div>
+        <div className="slds-truncate" title={props.amount}>{ props.amount }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.contact }><a href="javascript:void(0);">{ props.contact }</a></div>
+        <div className="slds-truncate" title={props.contact}><a href="javascript:void(0);">{ props.contact }</a></div>
       </td>
       <td role="gridcell" style={{ width: '3.25rem' }}>
         <ButtonIcon
@@ -120,9 +119,9 @@ let RowData = props => {
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Table className="slds-table--fixed-layout">
@@ -134,8 +133,8 @@ export default (
           </div>
         </th>
         { _.times(columns.length, i =>
-          <Th key={ i }
-            columnName={ columns[i] }
+          <Th key={i}
+            columnName={columns[i]}
             focusable />
         )}
         <th scope="col" style={{ width: '3.25rem' }}>
@@ -147,15 +146,15 @@ export default (
     </thead>
     <tbody>
       { _.times(rows.length, i =>
-        <RowData key={ i }
-          index={ i + 1 }
-          recordName={ rows[i].recordName }
-          accountName={ rows[i].accountName }
-          closeDate={ rows[i].closeDate }
-          stage={ rows[i].stage }
-          confidence={ rows[i].confidence }
-          amount={ rows[i].amount }
-          contact={ rows[i].contact }
+        <RowData key={i}
+          index={i + 1}
+          recordName={rows[i].recordName}
+          accountName={rows[i].accountName}
+          closeDate={rows[i].closeDate}
+          stage={rows[i].stage}
+          confidence={rows[i].confidence}
+          amount={rows[i].amount}
+          contact={rows[i].contact}
         />
       )}
     </tbody>
@@ -176,8 +175,8 @@ export let states = [
               </div>
             </th>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                columnName={ columns[i] }
+              <Th key={i}
+                columnName={columns[i]}
                 focusable />
             )}
             <th scope="col" style={{ width: '3.25rem' }}>
@@ -189,17 +188,17 @@ export let states = [
         </thead>
         <tbody>
           { _.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
-              className={ (i===1) ? 'slds-is-selected' : null }
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
-              checked={ (i===1) ? true : null }
+            <RowData key={i}
+              index={i + 1}
+              className={(i === 1) ? 'slds-is-selected' : null}
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
+              checked={(i === 1) ? true : null}
             />
           )}
         </tbody>
@@ -218,8 +217,8 @@ export let states = [
               </div>
             </th>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                columnName={ columns[i] }
+              <Th key={i}
+                columnName={columns[i]}
                 focusable />
             )}
             <th scope="col" style={{ width: '3.25rem' }}>
@@ -231,16 +230,16 @@ export let states = [
         </thead>
         <tbody>
           { _.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
+            <RowData key={i}
+              index={i + 1}
               className="slds-is-selected"
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
               checked
             />
           )}
@@ -260,10 +259,10 @@ export let states = [
               </div>
             </th>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                className={ (i===1) ? 'slds-is-sorted slds-is-sorted--asc' : null }
-                aria-sort={ (i===1) ? 'ascending' : null }
-                columnName={ columns[i] }
+              <Th key={i}
+                className={(i === 1) ? 'slds-is-sorted slds-is-sorted--asc' : null}
+                aria-sort={(i === 1) ? 'ascending' : null}
+                columnName={columns[i]}
                 focusable
               />
             )}
@@ -276,15 +275,15 @@ export let states = [
         </thead>
         <tbody>
           { _.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
+            <RowData key={i}
+              index={i + 1}
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
             />
           )}
         </tbody>
@@ -303,10 +302,10 @@ export let states = [
               </div>
             </th>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                className={ (i===1) ? 'slds-is-sorted slds-is-sorted--desc' : null }
-                aria-sort={ (i===1) ? 'descending' : null }
-                columnName={ columns[i] }
+              <Th key={i}
+                className={(i === 1) ? 'slds-is-sorted slds-is-sorted--desc' : null}
+                aria-sort={(i === 1) ? 'descending' : null}
+                columnName={columns[i]}
                 focusable
               />
             )}
@@ -319,15 +318,15 @@ export let states = [
         </thead>
         <tbody>
           { _.reverse(_.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
+            <RowData key={i}
+              index={i + 1}
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
             />
           ))}
         </tbody>
@@ -346,9 +345,9 @@ export let states = [
               </div>
             </th>
             { _.times(columns.length, i =>
-              <Th key={ i }
-                style={{ width: (i===0) ? '300px' : null }}
-                columnName={ columns[i] }
+              <Th key={i}
+                style={{ width: (i === 0) ? '300px' : null }}
+                columnName={columns[i]}
                 focusable
               />
             )}
@@ -361,15 +360,15 @@ export let states = [
         </thead>
         <tbody>
           { _.times(rows.length, i =>
-            <RowData key={ i }
-              index={ i + 1 }
-              recordName={ rows[i].recordName }
-              accountName={ rows[i].accountName }
-              closeDate={ rows[i].closeDate }
-              stage={ rows[i].stage }
-              confidence={ rows[i].confidence }
-              amount={ rows[i].amount }
-              contact={ rows[i].contact }
+            <RowData key={i}
+              index={i + 1}
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
             />
           )}
         </tbody>

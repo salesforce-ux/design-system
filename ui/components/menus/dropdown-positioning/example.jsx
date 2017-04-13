@@ -8,17 +8,17 @@ import { Menu } from '../dropdown/example';
 import { MenuList } from '../dropdown/example';
 import { MenuItem } from '../dropdown/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 const settingsIcon = (
   <ButtonIcon className="slds-button--icon-container" symbol="settings" assistiveText="Settings" title="Settings" aria-haspopup="true" />
 );
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let TopLeft = props =>
   <div className="demo-only" style={{height: '185px', paddingLeft: '2rem'}}>
@@ -60,7 +60,7 @@ let TopRight = props =>
   </div>;
 
 let BottomLeft = props =>
-  <div className="demo-only slds-grid slds-grid--vertical-align-end"  style={{height: '185px', paddingLeft: '2rem'}}>
+  <div className="demo-only slds-grid slds-grid--vertical-align-end" style={{height: '185px', paddingLeft: '2rem'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown--bottom slds-dropdown--left slds-nubbin--bottom-left">
         <MenuList>
@@ -98,9 +98,9 @@ let BottomRight = props =>
     </Trigger>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let states = [
   {

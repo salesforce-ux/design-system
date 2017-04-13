@@ -56,13 +56,13 @@ const rows = [{
   'productFamily': 'Analytics Product'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let ProductListHeader = props =>
   <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
-    <Lookup hideLabel showLookupDropdown={ props.showLookupDropdown } />
+    <Lookup hideLabel showLookupDropdown={props.showLookupDropdown} />
     { props.selectedFilters ? props.selectedFilters : null }
     <div className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</div>
   </div>;
@@ -72,10 +72,10 @@ let ProductList = props =>
     <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-table--resizable-cols slds-no-row-hover slds-scrollable--none">
       <thead>
         <tr className="slds-line-height--reset">
-          <th scope="col" style={{ width: '3.75rem' }}></th>
+          <th scope="col" style={{ width: '3.75rem' }} />
           { _.times(columns.length, i =>
-            <Th key={ i }
-              columnName={ columns[i] }
+            <Th key={i}
+              columnName={columns[i]}
               aria-label={columns[i]}
             />
           )}
@@ -90,22 +90,22 @@ let ProductList = props =>
 let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
-  return(
-    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={ props.checked }>
-      <td role="gridcell" tabIndex={ (props.index === 1) ? '0': '-1' } className="slds-text-align--right" style={{ width: '3.75rem' }}>
-        <CheckboxAddButton label={ checkboxLabel } checked={ props.checked } tabIndex="-1" />
+  return (
+    <tr className={classNames('slds-hint-parent', props.className)} aria-selected={props.checked}>
+      <td role="gridcell" tabIndex={(props.index === 1) ? '0' : '-1'} className="slds-text-align--right" style={{ width: '3.75rem' }}>
+        <CheckboxAddButton label={checkboxLabel} checked={props.checked} tabIndex="-1" />
       </td>
       <th scope="row">
-        <div className="slds-truncate" title={ props.name }>{ props.name }</div>
+        <div className="slds-truncate" title={props.name}>{ props.name }</div>
       </th>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.productCode }>{ props.productCode }</div>
+        <div className="slds-truncate" title={props.productCode}>{ props.productCode }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.listPrice }>{ props.listPrice }</div>
+        <div className="slds-truncate" title={props.listPrice}>{ props.listPrice }</div>
       </td>
       <td role="gridcell">
-        <div className="slds-truncate" title={ props.productFamily }>{ props.productFamily }</div>
+        <div className="slds-truncate" title={props.productFamily}>{ props.productFamily }</div>
       </td>
     </tr>
   );
@@ -113,7 +113,7 @@ let RowData = props => {
 
 let FilteredItem = props =>
   <PillContainer className="slds-pill_container--bare">
-    <Listbox horizontal={true}>
+    <Listbox horizontal>
       <ListboxItem>
         <ListboxPill label="Analytics" tabIndex="0" />
       </ListboxItem>
@@ -122,7 +122,7 @@ let FilteredItem = props =>
 
 let FilteredItems = props =>
   <PillContainer className="slds-pill_container--bare">
-    <Listbox horizontal={true}>
+    <Listbox horizontal>
       <ListboxItem>
         <ListboxPill label="Option A" tabIndex="0" />
       </ListboxItem>
@@ -132,9 +132,9 @@ let FilteredItems = props =>
     </Listbox>
   </PillContainer>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
@@ -149,12 +149,12 @@ export default (
           <ProductList>
             { _.times(rows.length, i =>
               <RowData
-                key={ i }
-                index={ i+1 }
-                name={ rows[i].name }
-                productCode={ rows[i].productCode }
-                listPrice={ rows[i].listPrice }
-                productFamily={ rows[i].productFamily }
+                key={i}
+                index={i + 1}
+                name={rows[i].name}
+                productCode={rows[i].productCode}
+                listPrice={rows[i].listPrice}
+                productFamily={rows[i].productFamily}
               />
             )}
           </ProductList>
@@ -182,17 +182,17 @@ export let states = [
         </ModalHeader>
         <ModalContent className="slds-grid slds-nowrap">
           <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
-            <ProductListHeader selectedFilters={ <FilteredItem /> } itemsSelected="1" />
+            <ProductListHeader selectedFilters={<FilteredItem />} itemsSelected="1" />
             <ProductList>
               { _.times(rows.length, i =>
                 <RowData
-                  key={ i }
-                  index={ i+1 }
-                  checked={ (i===0) ? true : null }
-                  name={ rows[i].name }
-                  productCode={ rows[i].productCode }
-                  listPrice={ rows[i].listPrice }
-                  productFamily={ rows[i].productFamily }
+                  key={i}
+                  index={i + 1}
+                  checked={(i === 0) ? true : null}
+                  name={rows[i].name}
+                  productCode={rows[i].productCode}
+                  listPrice={rows[i].listPrice}
+                  productFamily={rows[i].productFamily}
                 />
               )}
             </ProductList>
@@ -224,12 +224,12 @@ export let states = [
               <ProductList>
                 { _.times(rows.length, i =>
                   <RowData
-                    key={ i }
-                    index={ i+1 }
-                    name={ rows[i].name }
-                    productCode={ rows[i].productCode }
-                    listPrice={ rows[i].listPrice }
-                    productFamily={ rows[i].productFamily }
+                    key={i}
+                    index={i + 1}
+                    name={rows[i].name}
+                    productCode={rows[i].productCode}
+                    listPrice={rows[i].listPrice}
+                    productFamily={rows[i].productFamily}
                   />
                 )}
               </ProductList>
@@ -255,14 +255,14 @@ export let states = [
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
             <div className="slds-grid slds-grid--vertical">
-              <ProductListHeader selectedFilters={ <FilteredItems /> } itemsSelected="2" />
+              <ProductListHeader selectedFilters={<FilteredItems />} itemsSelected="2" />
               <ProductList>
                 <RowData
-                  index={ 1 }
-                  name={ rows[0].name }
-                  productCode={ rows[0].productCode }
-                  listPrice={ rows[0].listPrice }
-                  productFamily={ rows[0].productFamily }
+                  index={1}
+                  name={rows[0].name}
+                  productCode={rows[0].productCode}
+                  listPrice={rows[0].listPrice}
+                  productFamily={rows[0].productFamily}
                 />
               </ProductList>
             </div>

@@ -8,10 +8,9 @@ import { AppLauncherTile } from '../tile/example';
 import { Section, SectionContent, SectionTitle, SectionTitleAction } from '../../expandable-section/base/example';
 import classNames from 'classnames';
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let AppLauncherModal = props =>
   <Modal aria-labelledby="header43" className="slds-modal--large slds-app-launcher">
@@ -31,11 +30,11 @@ let AppLauncherModal = props =>
     <ModalContent className="slds-app-launcher__content slds-p-around--medium">
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction isOpen={true} referenceId="appsContent">
+          <SectionTitleAction isOpen referenceId="appsContent">
             All Apps
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={true} referenceId="appsContent">
+        <SectionContent isOpen referenceId="appsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
               <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27" draggable>
@@ -51,11 +50,11 @@ let AppLauncherModal = props =>
 
       <Section className="slds-is-open">
         <SectionTitle>
-          <SectionTitleAction isOpen={true} referenceId="itemsContent">
+          <SectionTitleAction isOpen referenceId="itemsContent">
             All Items
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent isOpen={true} referenceId="itemsContent">
+        <SectionContent isOpen referenceId="itemsContent">
           <ul className="slds-grid slds-grid--pull-padded slds-wrap">
             <li className="slds-p-horizontal--small slds-size--xx-small">
               <AppLauncherTile flavor="small" symbol="account">
@@ -73,9 +72,9 @@ let AppLauncherModal = props =>
     </ModalContent>
   </Modal>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ height: '800px' }}>

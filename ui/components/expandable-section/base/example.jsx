@@ -5,9 +5,9 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Section = props =>
   <div className={classNames('slds-section', props.className)}>
@@ -38,18 +38,18 @@ export let SectionTitleAction = props =>
     <span className="slds-truncate" title={props.children}>{props.children}</span>
   </button>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Section className="slds-is-open">
     <SectionTitle>
-      <SectionTitleAction isOpen={true} referenceId="contentClosed">
+      <SectionTitleAction isOpen referenceId="contentClosed">
         Section Title
       </SectionTitleAction>
     </SectionTitle>
-    <SectionContent isOpen={true} referenceId="contentClosed">
+    <SectionContent isOpen referenceId="contentClosed">
       <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
     </SectionContent>
   </Section>
@@ -82,7 +82,7 @@ export let examples = [
         <SectionTitle className="slds-theme--shade">
           <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
         </SectionTitle>
-        <SectionContent isOpen={true}>
+        <SectionContent isOpen>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
         </SectionContent>
       </Section>

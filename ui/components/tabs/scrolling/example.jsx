@@ -5,9 +5,9 @@ import React from 'react';
 import Tabs from '../index.react';
 import { ButtonIcon } from '../../button-icons/base/example';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let Scroller = props =>
   <div className="slds-tabs__nav-scroller slds-has-overflow">
@@ -16,9 +16,9 @@ export let Scroller = props =>
     </div>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let states = [
   {
@@ -70,7 +70,7 @@ export let states = [
       <div id="tab-default-11" className="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-11__item">Item Eleven Content</div>
       <div id="tab-default-12" className="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-12__item">Item Twelve Content</div>
     </div>
-  },{
+  }, {
     id: 'scoped',
     label: 'Scoped',
     element:

@@ -6,9 +6,9 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Table = props =>
   <table className={classNames('slds-table slds-table--bordered', props.className)}>
@@ -18,7 +18,7 @@ let Table = props =>
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} />
-    <span className="slds-checkbox--faux"></span>
+    <span className="slds-checkbox--faux" />
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
@@ -67,7 +67,7 @@ let HeadRowData = props =>
         <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" symbol="arrowdown" assistiveText="Sort" title="Sort" />
       </div>
     </th>
-    <th className="slds-cell-shrink" scope="col"></th>
+    <th className="slds-cell-shrink" scope="col" />
   </tr>;
 
 let RowData = props =>
@@ -90,9 +90,9 @@ let RowData = props =>
     </td>
   </tr>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Overflow = props =>
   <div className="slds-scrollable--x">
@@ -129,9 +129,9 @@ let Horizontal = props =>
     </tbody>
   </Table>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let states = [
   {

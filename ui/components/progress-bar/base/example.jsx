@@ -4,9 +4,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export let ProgressBar = props =>
   <div className={classNames('slds-progress-bar', props.className)} aria-valuemin="0" aria-valuemax="100" aria-valuenow={props.value} role="progressbar">
@@ -15,9 +15,9 @@ export let ProgressBar = props =>
     </span>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <ProgressBar className="slds-progress-bar--large slds-progress-bar--circular" value="25" />
@@ -41,5 +41,5 @@ export let states = [
     label: 'Medium',
     element:
       <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="25" />
-  },
+  }
 ];

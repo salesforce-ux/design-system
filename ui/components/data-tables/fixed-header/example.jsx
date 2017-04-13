@@ -36,9 +36,9 @@ const rows = [{
   'contact': 'nathan@salesforce.com'
 }];
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Container = props =>
   <div className="slds-table--header-fixed_container" tabIndex={props.tabIndex} id={props.id}>
@@ -54,13 +54,13 @@ let Th = props => {
   const uniqueId = _.uniqueId('cell-resize-handle-');
   let sortDirection;
   if (props['aria-sort']) {
-    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending' );
+    sortDirection = (props['aria-sort'] === 'ascending' ? 'Sorted ascending' : 'Sorted descending');
   }
 
   return (
     <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
       <div className="slds-cell-fixed" style={{ width: '8.75rem' }}>
-        <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={ !props.focusable ? '-1' : '0' }>
+        <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={!props.focusable ? '-1' : '0'}>
           <span className="slds-assistive-text">Sort </span>
           <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
           <div className="slds-icon_container">
@@ -70,9 +70,9 @@ let Th = props => {
         </a>
         <div className="slds-resizable">
           <label htmlFor={uniqueId} className="slds-assistive-text">{ columnName || 'Column Name' } column width</label>
-          <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={ !props.focusable ? '-1' : '0' } />
+          <input className="slds-resizable__input slds-assistive-text" type="range" min="20" max="1000" id={uniqueId} tabIndex={!props.focusable ? '-1' : '0'} />
           <span className="slds-resizable__handle">
-            <span className="slds-resizable__divider"></span>
+            <span className="slds-resizable__divider" />
           </span>
         </div>
       </div>
@@ -83,13 +83,13 @@ let Th = props => {
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
-    <span className="slds-checkbox--faux"></span>
+    <span className="slds-checkbox--faux" />
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Container>
@@ -107,7 +107,7 @@ export default (
             </div>
           </th>
           { _.times(columns.length, i =>
-            <Th columnName={ columns[i] } key={ i } style={{ width: '8.75rem' }} />
+            <Th columnName={columns[i]} key={i} style={{ width: '8.75rem' }} />
           )}
           <th scope="col" style={{ width: '3.25rem' }}>
             <div style={{ width: '2.75rem' }} className="slds-th__action slds-cell-fixed">
@@ -118,14 +118,14 @@ export default (
       </thead>
       <tbody>
         { _.times(rows.length, i =>
-          <RowData key={ i }
-            recordName={ rows[i].recordName }
-            accountName={ rows[i].accountName }
-            closeDate={ rows[i].closeDate }
-            stage={ rows[i].stage }
-            confidence={ rows[i].confidence }
-            amount={ rows[i].amount }
-            contact={ rows[i].contact }
+          <RowData key={i}
+            recordName={rows[i].recordName}
+            accountName={rows[i].accountName}
+            closeDate={rows[i].closeDate}
+            stage={rows[i].stage}
+            confidence={rows[i].confidence}
+            amount={rows[i].amount}
+            contact={rows[i].contact}
             buttonInvisible="slds-hidden"
           />
         )}

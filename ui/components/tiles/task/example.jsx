@@ -7,9 +7,9 @@ import { Checkbox } from '../../checkbox/base/example';
 import { TileMedia } from '../base/example';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let states = [
   {
@@ -19,7 +19,7 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
-          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+          media={<Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel />}
         >
           <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>
@@ -32,7 +32,7 @@ export let states = [
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
-          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+          media={<Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel />}
           actions
         >
           <p className="slds-truncate" title="Assignee">Assignee</p>

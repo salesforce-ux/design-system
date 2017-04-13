@@ -5,15 +5,14 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-
 export let Button = props =>
   <button className={classNames('slds-button', props.className)} disabled={props.disabled}>
     {props.children}
   </button>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Button>Button</Button>

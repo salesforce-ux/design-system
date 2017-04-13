@@ -7,9 +7,9 @@ import { Card, CardHeader, CardBody, CardFooter } from '../base/example';
 import classNames from 'classnames';
 import { TileMedia } from '../../tiles/base/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 const icon = (
   <div className="slds-icon_container slds-icon-standard-contact" title="if needed">
@@ -18,9 +18,9 @@ const icon = (
   </div>
 );
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 export default (
   <Card>
     <CardHeader actions symbol="contact">
@@ -32,7 +32,7 @@ export default (
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ icon }
+              media={icon}
               title="Related Record Title 1"
             />
           </li>
@@ -40,7 +40,7 @@ export default (
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ icon }
+              media={icon}
               title="Related Record Title 1"
             />
           </li>
@@ -48,7 +48,7 @@ export default (
             <TileMedia
               actions
               className="slds-card__tile"
-              media={ icon }
+              media={icon}
               title="Related Record Title 1"
             />
           </li>

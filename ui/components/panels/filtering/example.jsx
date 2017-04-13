@@ -9,9 +9,9 @@ import { Panel } from '../detail/example';
 import { PanelBody } from '../detail/example';
 import { PanelSection } from '../detail/example';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only slds-grid" style={{ height: '800px', maxWidth: '420px', overflow: 'hidden' }}>
@@ -51,35 +51,35 @@ export let FilterObject = props => {
         <button
           href="javascript:void(0);"
           className="slds-button--reset slds-grow slds-has-blur-focus"
-          aria-describedby={ ariaDesribedBy }
-          disabled={ props.disabled }
+          aria-describedby={ariaDesribedBy}
+          disabled={props.disabled}
         >
           <span className="slds-assistive-text">Edit filter:</span>
-          {props.type ?
-            <p className="slds-text-body--small">{props.type}</p>
+          {props.type
+            ? <p className="slds-text-body--small">{props.type}</p>
           : null }
           <p>{props.children}</p>
         </button>
-        { props.removable ?
-          <ButtonIcon
+        { props.removable
+          ? <ButtonIcon
             className="slds-button--icon slds-button--icon-small"
             iconClassName="slds-button__icon--hint"
             symbol="close"
-            assistiveText={ props.type ? 'Remove filter: ' + props.type + ' ' + props.children : 'Remove filter: ' + props.children }
+            assistiveText={props.type ? 'Remove filter: ' + props.type + ' ' + props.children : 'Remove filter: ' + props.children}
             title={'Remove ' + props.children}
           />
         : null }
       </div>
-      { props.errorMessage ?
-        <p id={ ariaDesribedBy } className="slds-text-color--error slds-m-top--xx-small">{props.errorMessage}</p>
+      { props.errorMessage
+        ? <p id={ariaDesribedBy} className="slds-text-color--error slds-m-top--xx-small">{props.errorMessage}</p>
       : null }
     </li>
   );
 };
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // State Constructor(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Default = props =>
   <Demo>
@@ -199,9 +199,9 @@ let Locked = props =>
     </Panel>
   </Demo>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Default />

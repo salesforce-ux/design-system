@@ -6,9 +6,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Card, CardHeader, CardBody, CardFooter } from '../base/example';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only demo-only--center-card-body" style={{ minWidth: '320px', maxWidth: '360px' }}>
@@ -28,8 +28,8 @@ export let states = [
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
         <Card className="slds-card--narrow">
           <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
-          <CardBody></CardBody>
-          <CardFooter></CardFooter>
+          <CardBody />
+          <CardFooter />
         </Card>
       </div>
   }

@@ -5,9 +5,9 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only" {...props}>
@@ -41,18 +41,18 @@ export let Checkbox = props => {
   return (
     <span className="slds-checkbox">
       {props.children}
-      <input type="checkbox" name={ props.name || 'options' } id={ props.id ? props.id : uniqueId } disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
-      <label className={classNames('slds-checkbox__label', props.className)} htmlFor={ props.id ? props.id : uniqueId }>
-        <span className="slds-checkbox--faux"></span>
+      <input type="checkbox" name={props.name || 'options'} id={props.id ? props.id : uniqueId} disabled={props.disabled} defaultChecked={props.checked} aria-describedby={props.errorId} />
+      <label className={classNames('slds-checkbox__label', props.className)} htmlFor={props.id ? props.id : uniqueId}>
+        <span className="slds-checkbox--faux" />
         <span className={classNames('slds-form-element__label', props.hideLabel ? 'slds-assistive-text' : null)}>{props.label}</span>
       </label>
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Indeterminate = props =>
   <FormElement>
@@ -115,14 +115,14 @@ let GroupDisabled = props =>
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
     <FormElementControl>
-      <Checkbox label="Checkbox Label" disabled></Checkbox>
-      <Checkbox label="Checkbox Label" disabled></Checkbox>
+      <Checkbox label="Checkbox Label" disabled />
+      <Checkbox label="Checkbox Label" disabled />
     </FormElementControl>
   </Fieldset>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <FormElement>

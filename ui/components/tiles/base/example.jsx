@@ -7,23 +7,22 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Tile = props =>
   <article className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
-    { props.actions ?
-      <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
-        <h3 className="slds-truncate" title={ props.title || 'Title' }>
+    { props.actions
+      ? <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        <h3 className="slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
           <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
         </div>
       </div>
-    :
-      <h3 className="slds-truncate" title={ props.title || 'Title' }>
+    : <h3 className="slds-truncate" title={props.title || 'Title'}>
         <a href="javascript:void(0);">{ props.title || 'Title' }</a>
       </h3>
     }
@@ -34,23 +33,22 @@ export let Tile = props =>
 
 export let TileMedia = props =>
   <article className={classNames('slds-tile slds-media', props.className, props.actions ? 'slds-hint-parent' : null)}>
-    { props.media ?
-      <div className="slds-media__figure">
+    { props.media
+      ? <div className="slds-media__figure">
         { props.media }
       </div>
     : null }
     <div className="slds-media__body">
-      { props.actions ?
-        <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
-          <h3 className="slds-truncate" title={ props.title || 'Title' }>
+      { props.actions
+        ? <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <h3 className="slds-truncate" title={props.title || 'Title'}>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
             <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
           </div>
         </div>
-      :
-        <h3 className="slds-truncate" title={ props.title || 'Title' }>
+      : <h3 className="slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
       }
@@ -84,9 +82,9 @@ const avatar = (
   </span>
 );
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="demo-only" style={{ width: '30rem' }}>
@@ -108,7 +106,7 @@ export let examples = [
     label: 'With icon',
     element:
       <div className="demo-only" style={{ width: '30rem' }}>
-        <TileMedia title="Salesforce UX" media={ icon } />
+        <TileMedia title="Salesforce UX" media={icon} />
       </div>
   },
   {
@@ -116,7 +114,7 @@ export let examples = [
     label: 'With avatar',
     element:
       <div className="demo-only" style={{ width: '30rem' }}>
-        <TileMedia title="Lexee L. Jackson" media={ avatar } />
+        <TileMedia title="Lexee L. Jackson" media={avatar} />
       </div>
   },
   {
@@ -126,7 +124,7 @@ export let examples = [
       <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
-          media={ <Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel /> }
+          media={<Checkbox label="Did you complete the task: Contact Trammel Crow Company?" hideLabel />}
         >
           <p className="slds-truncate" title="Assignee">Assignee</p>
         </TileMedia>

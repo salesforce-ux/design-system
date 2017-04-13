@@ -6,14 +6,14 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export let Pill = props =>
-  <span className={ classNames('slds-pill slds-pill--link', props.className) }>
+  <span className={classNames('slds-pill slds-pill--link', props.className)}>
     { props.children }
-    <a href="javascript:void(0);" className="slds-pill__action" title={ props.label || 'Full pill label verbiage mirrored here' }>
+    <a href="javascript:void(0);" className="slds-pill__action" title={props.label || 'Full pill label verbiage mirrored here'}>
       <span className="slds-pill__label">
         { props.label || 'Pill Label' }
       </span>
@@ -31,9 +31,9 @@ export let PillContainer = props =>
     {props.children}
   </div>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Pill />

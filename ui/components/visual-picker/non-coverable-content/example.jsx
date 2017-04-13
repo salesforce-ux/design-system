@@ -24,7 +24,6 @@ const PackageThree = ([
   <span className="slds-text-title" key={_.uniqueId()}>Complete support with enterprise-grade customization</span>
 ]);
 
-
 export let VisualPickerMediaObject = props =>
   <a
     href="javascript:void(0);"
@@ -44,9 +43,9 @@ export let VisualPickerMediaObject = props =>
     </div>
   </a>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <Fieldset>
@@ -94,7 +93,7 @@ export let states = [
               <span className="slds-text-title">USD/user/month *</span>
             </span>
           </VisualPicker>
-          <VisualPicker type="radio" size="medium" disabled={true} label={PackageThree}>
+          <VisualPicker type="radio" size="medium" disabled label={PackageThree}>
             <span>
               <span className="slds-text-heading--large">$300</span>
               <span className="slds-text-title">USD/user/month *</span>

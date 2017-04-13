@@ -8,9 +8,9 @@ import { SpinnerContainer, Spinner } from '../../spinners/base/example';
 
 let inputId = 'text-input-id-1';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 // Might need to move this to its own component example
 export let FormElement = props =>
@@ -20,8 +20,8 @@ export let FormElement = props =>
 
 export let FormElementLabel = props =>
   <label
-    className={ classNames('slds-form-element__label', props.className)}
-    htmlFor={ inputId }
+    className={classNames('slds-form-element__label', props.className)}
+    htmlFor={inputId}
   >
     {props.children}
   </label>;
@@ -32,21 +32,20 @@ export let FormElementControl = props =>
   </div>;
 
 export let Input = props => {
-
   return (
     <input
       {...props}
-      id={ props.id || inputId }
+      id={props.id || inputId}
       className={classNames('slds-input', props.className)}
-      type={ props.type || 'text'}
-      placeholder={ props.placeholder || 'Placeholder Text' }
+      type={props.type || 'text'}
+      placeholder={props.placeholder || 'Placeholder Text'}
     />
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Default = props =>
     <FormElement>
@@ -55,7 +54,6 @@ let Default = props =>
         <Input />
       </FormElementControl>
     </FormElement>;
-
 
 let Required = props =>
     <FormElement>
@@ -92,9 +90,9 @@ let Disabled = props =>
       </FormElementControl>
     </FormElement>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <FormElement>

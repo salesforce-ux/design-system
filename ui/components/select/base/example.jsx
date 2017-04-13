@@ -4,9 +4,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Partial(s)
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 let FormElement = props =>
   <div className={classNames('slds-form-element', props.className)}>
@@ -24,10 +24,10 @@ let FormElementControl = props =>
 export let Select = props =>
   <div className="slds-select_container">
     <select
-      aria-describedby={ props['aria-describedby'] }
+      aria-describedby={props['aria-describedby']}
       className={classNames('slds-select', props.className)}
       disabled={props.disabled}
-      id={ props.id || 'select-01'}
+      id={props.id || 'select-01'}
       required={props.required}
       multiple={props.multiple}
     >
@@ -35,9 +35,9 @@ export let Select = props =>
     </select>
   </div>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Required = props =>
     <FormElement>
@@ -88,9 +88,9 @@ let Multiple = props =>
       </FormElementControl>
     </FormElement>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <FormElement>

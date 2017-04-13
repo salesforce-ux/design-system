@@ -9,22 +9,22 @@ export let ActionIcon = props => {
   const symbol = props.symbol || 'description';
   return (
     <span
-      className={ classNames('slds-icon_container slds-icon_container--circle slds-icon-action-' + symbol) }
-      title={ props.title || 'Description of icon when needed' }
+      className={classNames('slds-icon_container slds-icon_container--circle slds-icon-action-' + symbol)}
+      title={props.title || 'Description of icon when needed'}
     >
       <SvgIcon
-        className={ classNames('slds-icon', props.className) }
+        className={classNames('slds-icon', props.className)}
         sprite="action"
-        symbol={ symbol }
+        symbol={symbol}
       />
       <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
     </span>
   );
 };
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <ActionIcon />

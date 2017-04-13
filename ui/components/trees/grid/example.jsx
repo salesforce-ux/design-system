@@ -5,9 +5,9 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Expanded = props =>
 <tr className="slds-hint-parent" id="tree0-node1-0" role="row" aria-level="2">
@@ -47,7 +47,7 @@ let Default = props =>
         assistiveText="Show More" />
     </td>
   </tr>
-  <tr className="slds-hint-parent" id="tree0-node1" role="row" aria-level="1" aria-owns={props.isExpanded ? 'tree0-node1-0' : null} aria-expanded={props.isExpanded ? true : false}>
+  <tr className="slds-hint-parent" id="tree0-node1" role="row" aria-level="1" aria-owns={props.isExpanded ? 'tree0-node1-0' : null} aria-expanded={!!props.isExpanded}>
     <th data-label="Account Name" scope="row" className="slds-tree__item">
       <ButtonIcon aria-controls="tree0-node1" className="slds-button--icon slds-button--icon-x-small slds-m-right--x-small" iconClassName="slds-button__icon--small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
       <div className="slds-truncate" title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
@@ -100,7 +100,6 @@ let Default = props =>
     </td>
   </tr>
 </tbody>;
-
 
 let DeepNesting = props =>
 <tbody>
@@ -175,7 +174,7 @@ let DeepNesting = props =>
   <tr className="slds-hint-parent" id="tree0-node1-0-1" role="row" aria-level="3">
     <th data-label="Account Name" scope="row" className="slds-tree__item">
       <ButtonIcon className="slds-button--icon slds-m-right--x-small slds-is-disabled" iconClassName="slds-button__icon--small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      {/*<ButtonIcon className="slds-m-right--x-small slds-is-disabled" flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />*/}
+      {/* <ButtonIcon className="slds-m-right--x-small slds-is-disabled" flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled /> */}
       <div className="slds-truncate" title="Acme Corporation (San Francisco)"><a href="javascript:void(0);">Acme Corporation (San Francisco)</a></div>
     </th>
     <td data-label="Employees"><div className="slds-truncate" title="578">578</div></td>
@@ -345,9 +344,9 @@ let DeepNesting = props =>
   </tr>
 </tbody>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let TreeGrid = props =>
 <table className="slds-table slds-table--bordered slds-tree slds-table--tree" role="treegrid" aria-owns="tree0-node0 tree0-node1 tree0-node2 tree0-node3" aria-readonly="true">
@@ -375,10 +374,9 @@ let TreeGrid = props =>
   {props.children}
 </table>;
 
-
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <TreeGrid><Default /></TreeGrid>

@@ -5,9 +5,9 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import classNames from 'classnames';
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Partial(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Demo = props =>
   <div className="demo-only" {...props}>
@@ -20,7 +20,7 @@ export let Modal = props =>
     role="dialog"
     tabIndex="-1"
     {...props}
-    aria-describedby={ props['aria-describedby'] || 'modal-content-id-1' }
+    aria-describedby={props['aria-describedby'] || 'modal-content-id-1'}
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">
@@ -30,8 +30,8 @@ export let Modal = props =>
 
 export let ModalHeader = props =>
   <header className={classNames('slds-modal__header', props.className)}>
-    {props.closeButton != 'false' ?
-      <ButtonIcon
+    {props.closeButton != 'false'
+      ? <ButtonIcon
         className="slds-modal__close slds-button--icon-inverse"
         iconClassName="slds-button__icon--large"
         symbol="close"
@@ -41,7 +41,7 @@ export let ModalHeader = props =>
   </header>;
 
 export let ModalContent = props =>
-  <div className={classNames('slds-modal__content', props.className)} id={ props['aria-describedby'] || 'modal-content-id-1' }>
+  <div className={classNames('slds-modal__content', props.className)} id={props['aria-describedby'] || 'modal-content-id-1'}>
     {props.children}
   </div>;
 
@@ -50,9 +50,9 @@ export let ModalFooter = props =>
     {props.children}
   </footer>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // State Constructor(s)
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 let Default = props =>
   <Demo style={{height: '640px'}}>
@@ -167,9 +167,9 @@ let Footless = props =>
     </Modal>
   </Demo>;
 
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 // Export
-//////////////////////////////////////////////
+/// ///////////////////////////////////////////
 
 export default (
   <Demo style={{height: '640px'}}>

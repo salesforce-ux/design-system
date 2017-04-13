@@ -14,7 +14,7 @@ import _ from 'lodash';
 export let PostFooterActions = props =>
   <ul className="slds-post__footer-actions-list slds-list--horizontal">
     <li className="slds-col slds-item slds-m-right--medium">
-      <button title="Like this item" className={classNames('slds-button--reset slds-post__footer-action', props.liked ? 'slds-is-active' : null)} aria-pressed={ props.liked ? true : false }>
+      <button title="Like this item" className={classNames('slds-button--reset slds-post__footer-action', props.liked ? 'slds-is-active' : null)} aria-pressed={!!props.liked}>
         <SvgIcon className="slds-icon slds-icon-text-default slds-icon--x-small slds-align-middle" sprite="utility" symbol="like" />
         { props.liked ? 'Liked' : 'Like' }
       </button>
@@ -103,9 +103,9 @@ const CommentList = props =>
     )}
   </ul>;
 
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 // Export
-///////////////////////////////////////////
+/// ////////////////////////////////////////
 
 export default (
   <div className="slds-feed">

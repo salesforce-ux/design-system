@@ -15,20 +15,20 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={ true }>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId01 }
+        id={listboxOptionId01}
         entityTitle="Acme"
-        entityMeta={ true }
-        focused={ props.focused }
+        entityMeta
+        focused={props.focused}
       />
     </ListboxItem>
     <ListboxItem>
       <EntityOption
-        id={ listboxOptionId02 }
+        id={listboxOptionId02}
         entityTitle="Salesforce.com, Inc."
-        entityMeta={ true }
+        entityMeta
       />
     </ListboxItem>
   </Listbox>;
@@ -38,9 +38,9 @@ export default (
     <ComboboxContainer
       inputIcon="right"
       inputIconRightSymbol="search"
-      selectedOptionsInline={ true }
-      autocomplete={ true }
-      listbox={ <ListboxDropdown /> }
+      selectedOptionsInline
+      autocomplete
+      listbox={<ListboxDropdown />}
     />
   </div>
 );
@@ -55,10 +55,10 @@ export let states = [
           className="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={ true }
-          autocomplete={ true }
-          isOpen={ true }
-          listbox={ <ListboxDropdown /> }
+          selectedOptionsInline
+          autocomplete
+          isOpen
+          listbox={<ListboxDropdown />}
         />
       </div>,
     script: `
@@ -73,11 +73,11 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={ true }
-          autocomplete={ true }
-          isOpen={ true }
-          listbox={ <ListboxDropdown focused /> }
-          aria-activedescendant={ listboxOptionId01 }
+          selectedOptionsInline
+          autocomplete
+          isOpen
+          listbox={<ListboxDropdown focused />}
+          aria-activedescendant={listboxOptionId01}
         />
       </div>
   },
@@ -89,11 +89,11 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={ true }
-          autocomplete={ true }
-          listbox={ <ListboxDropdown /> }
+          selectedOptionsInline
+          autocomplete
+          listbox={<ListboxDropdown />}
         >
-          <Listbox aria-label="Selected Options:" inline={ true }>
+          <Listbox aria-label="Selected Options:" inline>
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
                 <Avatar className="slds-avatar--x-small slds-pill__icon_container">
@@ -118,18 +118,18 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={ true }
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="search"
           className="slds-has-input-focus"
-          selectedOptionsInline={ true }
-          autocomplete={ true }
-          listbox={ <ListboxDropdown /> }
+          selectedOptionsInline
+          autocomplete
+          listbox={<ListboxDropdown />}
         >
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
-            inline={ true }
+            inline
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">

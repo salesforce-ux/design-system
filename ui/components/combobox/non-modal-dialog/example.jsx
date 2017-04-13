@@ -16,42 +16,42 @@ import { Popover } from '../../popovers/base/example';
 import _ from 'lodash';
 
 const ListboxList = props =>
-  <Listbox className="slds-dropdown--length-10" vertical={ true }>
+  <Listbox className="slds-dropdown--length-10" vertical>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta={ true } />
+      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta />
     </ListboxItem>
   </Listbox>;
 
@@ -62,13 +62,13 @@ export default (
   >
     <ComboboxContainer
       inputContainerClassName="slds-m-around--small"
-      hideLabel={true}
-      autocomplete={ true }
-      isOpen={true}
+      hideLabel
+      autocomplete
+      isOpen
       inputIcon="left"
       inputIconLeftSymbol="search"
-      listbox={ <ListboxList /> }
-      staticListbox={true}
+      listbox={<ListboxList />}
+      staticListbox
       placeholder="Quick find..."
     />
   </Popover>

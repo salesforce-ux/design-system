@@ -5,23 +5,18 @@ import './helpers/setup';
 
 import fs from 'fs';
 import path from 'path';
-import _ from 'lodash';
 import async from 'async';
 import autoprefixer from 'autoprefixer';
 import globals from '../app_modules/global';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import gulpfile from 'gulp-file';
-import gulpif from 'gulp-if';
 import gulpinsert from 'gulp-insert';
 import gulpzip from 'gulp-zip';
 import gulprename from 'gulp-rename';
 import minimist from 'minimist';
 import postcss from 'gulp-postcss';
-import rem2px from 'gulp-rem2px';
 import rimraf from 'rimraf';
 import sass from 'gulp-sass';
-import through from 'through2';
 import minifycss from 'gulp-minify-css';
 import Task from 'data.task';
 import {ui} from './ui';
@@ -31,26 +26,15 @@ const isNpm = argv.npm === true;
 
 const MODULE_NAME = globals.moduleName;
 
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 // Helpers
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
 const distPath = path.resolve.bind(path, isNpm ? __PATHS__.npm : __PATHS__.dist);
 
-function commentBanner(messages) {
-  messages = messages.map(function(message) {
-    return ' * ' + message;
-  }).join('\n');
-  return [
-    '/***',
-    messages,
-    ' */\n'
-  ].join('\n');
-}
-
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 // Tasks
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
 async.series([
 
@@ -64,8 +48,9 @@ async.series([
    */
   (done) => {
     gulp.src([
+      './package.json',
       './README-dist.md',
-      './package.json'
+      './RELEASENOTES*'
     ], {
       base: __PATHS__.root
     })
@@ -93,9 +78,9 @@ async.series([
     );
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Sass
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Move all the scss files to dist/scss
@@ -122,9 +107,9 @@ async.series([
     .on('finish', done);
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Icons
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Copy all the icons to assets/icons
@@ -138,9 +123,9 @@ async.series([
     .on('finish', done);
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Fonts
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Copy all the fonts to assets/fonts
@@ -166,9 +151,9 @@ async.series([
     .on('finish', done);
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Images
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Copy select images directories
@@ -200,9 +185,9 @@ async.series([
     .on('finish', done);
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Swatches
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Copy the swatches
@@ -216,9 +201,9 @@ async.series([
     .on('finish', done);
   },
 
-  ////////////////////////////////////
+  // //////////////////////////////////
   // Design Tokens
-  ////////////////////////////////////
+  // //////////////////////////////////
 
   /**
    * Move design tokens
@@ -264,7 +249,7 @@ async.series([
       }))
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss([ autoprefixer({ remove: false }) ]))
-      .pipe(gulprename(function(path) {
+      .pipe(gulprename(function (path) {
         path.basename = MODULE_NAME + path.basename.substring('index'.length);
         path.extname = '.css';
         return path;
@@ -284,7 +269,7 @@ async.series([
         advanced: false,
         roundingPrecision: '-1'
       }))
-      .pipe(gulprename(function(path) {
+      .pipe(gulprename(function (path) {
         path.basename += '.min';
         return path;
       }))

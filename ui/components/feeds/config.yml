@@ -1,9 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - base
-  - post
-  - post-with-question
-  - post-with-attachments
-  - post-with-comments
-  - comment
-  - small-column

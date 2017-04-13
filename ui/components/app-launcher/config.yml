@@ -1,6 +1,0 @@
-status: 'prototype'
-flavors:
-  - base
-  - search
-  - tile
-  - tile-small

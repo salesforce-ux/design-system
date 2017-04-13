@@ -1,6 +1,0 @@
-classBase: 'docked'
-status: 'prototype'
-flavors:
-  - base
-  - utility-bar-notification
-  - utility-panel

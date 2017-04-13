@@ -13,9 +13,12 @@ import './helpers/setup';
 
 const path = require('path');
 const gulp = require('gulp');
-const createPreviewer = require('../../design-system-previewer');
+const createPreviewer = require('@salesforce-ux/design-system-previewer');
+
 const { getComments, getMarkup } = require('./markup-style');
 const { watchPaths, removeFromCache } = require('./watch');
+
+require('./gulp/styles');
 
 const getComments_ = done =>
   getComments().fork(done, x => done(null, x));
@@ -34,7 +37,7 @@ const previewer = createPreviewer({
     ]
   },
   // where is your css?
-  cssUrl: '/assets/styles/slds.css',
+  cssUrl: '/assets/styles/index.css',
   // get me some comments as a string
   getComments: getComments_,
   // get me some markup for a component/variant
@@ -42,15 +45,20 @@ const previewer = createPreviewer({
 });
 
 previewer.listen(3003, ({ server, emit }) => {
-  gulp.watch(watchPaths.sass.concat(watchPaths.tokens), event => {
+  // Sass
+  const sassWatcher = gulp.watch(
+    watchPaths.sass.concat(watchPaths.tokens),
+    ['styles:framework'] // This will trigger watchPaths.css
+  );
+  sassWatcher.on('change', () => {
     emit('comments');
   });
-
+  // JS
   gulp.watch(watchPaths.js, event => {
     removeFromCache(require.resolve(event.path));
     emit('markup');
   });
-
+  // CSS
   gulp.watch(watchPaths.css, event => {
     emit('styles');
   });

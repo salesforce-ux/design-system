@@ -1,16 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-
 import gulp from 'gulp';
 import cache from 'gulp-cached';
 import gutil from 'gulp-util';
-import gulpif from 'gulp-if';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import stylelint from 'gulp-stylelint';
-import concat from 'gulp-concat';
-import browserSync from 'browser-sync';
 import htmlhint from 'gulp-htmlhint';
 import tokenlint from './plugins/lint-tokens';
 import yamlValidate from 'gulp-yaml-validate';
@@ -18,7 +14,6 @@ import vnu from './vnu-lint';
 import {validate} from './validate';
 import minimist from 'minimist';
 import through from 'through2';
-
 
 gulp.task('lint:sass', () =>
   gulp.src([
@@ -57,13 +52,12 @@ gulp.task('lint:spaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-function lintjs(files, options) {
+function lintjs (files, options) {
   return () => {
     return gulp.src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format('codeframe'))
-      .pipe(gulpif(!browserSync.active, eslint.failAfterError()));
+      .pipe(eslint.format('codeframe'));
   };
 }
 
@@ -145,12 +139,13 @@ const parseComponentArgument = argv =>
   minimist(argv.slice(2)).component || '*';
 
 const createVnuReport = stream =>
+  // eslint-disable-next-line handle-callback-err
   vnu.lint(`.html/${parseComponentArgument(process.argv)}`, {}, (err, stdout, stderr) => {
     const contents = JSON.stringify(vnu.report(stderr), null, 2);
     stream.write(
       new gutil.File({
         path: 'vnu_report.json',
-        contents: new Buffer(contents)
+        contents: Buffer.from(contents)
       }));
   });
 

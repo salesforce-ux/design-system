@@ -1,8 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - base
-  - icon-group
-  - list
-lightning:
-  namespace: lightning:buttonGroup
-  url: https://developer.salesforce.com/docs/atlas.en-us.206.0.lightning.meta/lightning/aura_compref_lightning_buttonGroup.htm

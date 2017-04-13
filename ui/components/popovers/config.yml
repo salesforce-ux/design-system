@@ -1,8 +1,0 @@
-status: 'dev-ready'
-classBase: 'popover'
-flavors:
-  - base
-  - panels
-  - themes
-  - nubbins
-  - walkthrough

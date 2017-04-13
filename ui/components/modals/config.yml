@@ -1,7 +1,0 @@
-status: 'prototype'
-classBase: 'modal'
-flavors:
-  - base
-dependencies:
-  - core/icons
-  - components/buttons

@@ -19,7 +19,7 @@ import { Input } from '../../input/base/example';
 import { Popover } from '../../popovers/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

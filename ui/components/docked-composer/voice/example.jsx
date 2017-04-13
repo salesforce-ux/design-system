@@ -5,7 +5,7 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Lookup } from '../../lookups/base/example';
 import { DockedComposerPanel } from '../base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

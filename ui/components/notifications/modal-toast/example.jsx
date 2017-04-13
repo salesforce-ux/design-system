@@ -4,7 +4,7 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 import { ButtonIcon } from '../../button-icons/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>

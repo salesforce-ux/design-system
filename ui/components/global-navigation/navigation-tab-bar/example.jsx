@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import { ButtonIcon } from '../../button-icons/base/example';

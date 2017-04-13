@@ -5,7 +5,7 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { PillContainer } from '../base/example';
 import { Avatar } from '../../avatar/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////

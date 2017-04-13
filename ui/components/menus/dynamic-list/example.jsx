@@ -5,7 +5,7 @@ import React from 'react';
 import { Listbox, ListboxList, ListboxItem, PickList } from '../../picklist/base/example';
 import { Popover } from '../../popovers/base/example';
 import { FormElement } from '../../form-layout/element/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import _ from 'lodash';
 
 ///////////////////////////////////////////

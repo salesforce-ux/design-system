@@ -7,7 +7,7 @@ import { ActivityTimelineItem as Event } from '../event/example';
 import { ActivityTimelineItem as Call } from '../call/example';
 import { ActivityTimelineItem as Email } from '../email/example';
 import { ActivityTimelineItem as Task } from '../task/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 export let TimelineIcon = props =>

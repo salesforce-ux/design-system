@@ -5,7 +5,7 @@ import React from 'react';
 import BreadCrumbs from '../../breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
 import { ButtonIcon } from '../../button-icons/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
 
 

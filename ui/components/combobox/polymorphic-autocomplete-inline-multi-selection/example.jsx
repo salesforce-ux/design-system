@@ -16,7 +16,7 @@ import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
   from '../base/example';
 import { ListboxPill }
   from '../../pills/listbox-of-pill-options/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 
 const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';

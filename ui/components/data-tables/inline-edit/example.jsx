@@ -4,7 +4,7 @@
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Th } from '../advanced/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

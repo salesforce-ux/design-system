@@ -6,7 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Modal, ModalContent } from '../../modals/base/example';
 import { Lookup } from '../../lookups/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

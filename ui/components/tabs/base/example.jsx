@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Tabs from '../index.react';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
 

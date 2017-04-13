@@ -5,7 +5,7 @@ import React from 'react';
 import { UtilityIcon } from '../../icons/base/example.jsx';
 import { FormElement } from '../../form-layout/element/example';
 import { Input } from '../../input/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 const inputId01 = 'input-id-01';

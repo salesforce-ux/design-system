@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Trigger, Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { PillContainer } from '../../pills/base/example';

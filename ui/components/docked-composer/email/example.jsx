@@ -10,7 +10,7 @@ import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
   from '../../combobox/base/example';
 import { ListboxPill }
   from '../../pills/listbox-of-pill-options/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from '../../rich-text-editor/base/example';
 import { FormElement } from '../../form-layout/element/example';
 import { Input } from '../../input/base/example';

@@ -7,7 +7,7 @@ import { File } from '../../files/base/example';
 import { AttachmentLink } from '../../files/link-attachment/example';
 import { Publisher } from '../../publishers/comment/example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

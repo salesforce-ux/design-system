@@ -19,11 +19,8 @@ const getMarkup_ = (component, variant, done) =>
 const previewer = createPreviewer({
   // where are your static assets
   publicPath: {
-    '/': [
-      path.resolve(__dirname, '../.www')
-    ],
     '/assets': [
-      path.resolve(__dirname, '../assets')
+      path.resolve(__dirname, '../.assets')
     ]
   },
   // where is your css?
@@ -43,6 +40,7 @@ previewer.listen(3003, ({ server, emit }) => {
   sassWatcher.on('change', () => {
     emit('comments');
   });
+  gulp.start('styles:framework');
   // JS
   gulp.watch(watchPaths.js, event => {
     removeFromCache(require.resolve(event.path));

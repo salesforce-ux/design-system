@@ -14,8 +14,7 @@ module.exports = {
   app_modules,
   node_modules,
 
-  scripts: path.resolve(root, 'scripts'),
-  site: path.resolve(root, 'site'),
+  assets: path.resolve(root, 'assets'),
   ui: path.resolve(root, 'ui'),
   designTokens: path.resolve(root, 'design-tokens'),
 
@@ -29,7 +28,6 @@ module.exports = {
   html: path.resolve(root, '.html'),
   tmp: path.resolve(root, '.tmp'),
   test: path.resolve(root, '.test'),
-  www: path.resolve(root, '.www'),
   logs: path.resolve(root, '.logs'),
   reports: path.resolve(root, '.reports')
 };

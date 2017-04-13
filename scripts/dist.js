@@ -107,8 +107,8 @@ async.series([
    * Copy the Sass license
    */
   (done) => {
-    gulp.src('assets/licenses/License-for-Sass.txt', {
-      cwd: paths.site
+    gulp.src('licenses/License-for-Sass.txt', {
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('scss')))
     .on('error', done)
@@ -139,8 +139,8 @@ async.series([
    * Copy all the fonts to assets/fonts
    */
   (done) => {
-    gulp.src('assets/fonts/**/*', {
-      cwd: paths.site
+    gulp.src('fonts/**/*', {
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('assets/fonts')))
     .on('error', done)
@@ -151,8 +151,8 @@ async.series([
    * Copy font license
    */
   (done) => {
-    gulp.src('assets/licenses/License-for-font.txt', {
-      cwd: paths.site
+    gulp.src('licenses/License-for-font.txt', {
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('assets/fonts')))
     .on('error', done)
@@ -168,13 +168,13 @@ async.series([
    */
   (done) => {
     gulp.src([
-      'assets/images/spinners/*',
-      'assets/images/avatar*',
+      'images/spinners/*',
+      'images/avatar*',
       // Used in the Global Header
-      'assets/images/logo-noname.svg'
+      'images/logo-noname.svg'
     ], {
-      base: 'site/assets/images',
-      cwd: paths.site
+      base: 'assets/images',
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('assets/images')))
     .on('error', done)
@@ -185,8 +185,8 @@ async.series([
    * Copy images license
    */
   (done) => {
-    gulp.src('assets/licenses/License-for-images.txt', {
-      cwd: paths.site
+    gulp.src('licenses/License-for-images.txt', {
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('assets/images')))
     .on('error', done)
@@ -201,8 +201,8 @@ async.series([
    * Copy the swatches
    */
   (done) => {
-    gulp.src('assets/downloads/swatches/**', {
-      cwd: paths.site
+    gulp.src('downloads/swatches/**', {
+      cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('swatches')))
     .on('error', done)
@@ -351,21 +351,7 @@ async.series([
         .pipe(gulp.dest(distPath()))
         .on('finish', res)
         .on('error', rej)))
-    .fork(done, () => done(null, null)),
-
-  /**
-   * Zip everything up
-   */
-  (done) => {
-    gulp.src(distPath('**/*'))
-    .pipe(gulpzip(zipName(SLDS_VERSION)))
-    .on('error', done)
-    .pipe(gulp.dest(distPath()))
-    .on('error', done)
-    .pipe(gulp.dest(path.resolve(paths.www, 'assets/downloads')))
-    .on('error', done)
-    .on('finish', done);
-  }
+    .fork(done, () => done(null, null))
 
 ], err => {
   if (err) throw err;

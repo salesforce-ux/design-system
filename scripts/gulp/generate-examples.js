@@ -13,7 +13,7 @@ const paths = require('../helpers/paths');
 gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
     .src(`${paths.generated}/examples/*.html`)
-    .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../.www/assets/styles/slds.css" /></head><body>', '</body></html>'))
+    .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../.assets/styles/index.css" /></head><body>', '</body></html>'))
     .pipe(gulp.dest(paths.html)));
 
 gulp.task('generate:examples', () => {

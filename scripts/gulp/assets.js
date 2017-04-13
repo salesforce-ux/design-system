@@ -13,16 +13,16 @@ gulp.task('assets:icons', () =>
     .src(getPath('icons', '**/*.{svg,png}'), {
       base: paths.icons
     })
-    .pipe(gulp.dest(getPath('www', 'assets/icons')))
+    .pipe(gulp.dest('.assets/icons'))
 );
 
 gulp.task('assets', () =>
   gulp
     .src([
-      'site/assets/fonts/**/*',
-      'site/assets/images/**/*'
+      'assets/fonts/**/*',
+      'assets/images/**/*'
     ], {
-      base: 'site'
+      base: 'assets'
     })
-    .pipe(gulp.dest(getPath('www')))
+    .pipe(gulp.dest('.assets'))
 );

@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import { Avatar } from 'ui/components/avatar/base/example';
+import MediaObject from './index.react';
+import { Avatar } from '../../components/avatar/base/example';
 
 //////////////////////////////////////////////
 // Partial(s)

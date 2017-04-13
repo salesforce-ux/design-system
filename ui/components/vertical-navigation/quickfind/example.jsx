@@ -3,10 +3,10 @@
 
 import React from 'react';
 import { NavVertical, NavVerticalItem, NavVerticalSection }
-  from 'ui/components/vertical-navigation/base/example';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+  from '../base/example';
+import { FormElement } from '../../form-layout/element/example';
+import { Input } from '../../input/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
 const inputId01 = 'input-id-01';

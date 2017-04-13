@@ -3,14 +3,14 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Trigger, Menu, MenuList, MenuItem } from 'ui/components/menus/dropdown/example';
-import { PillContainer } from 'ui/components/pills/base/example';
-import { Listbox as ListboxHoriz, ListboxItem as ListItemHoriz } from 'ui/components/combobox/base/example';
-import { ListboxPill } from 'ui/components/pills/listbox-of-pill-options/example';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Trigger, Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { PillContainer } from '../../pills/base/example';
+import { Listbox as ListboxHoriz, ListboxItem as ListItemHoriz } from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import { FormElement } from '../../form-layout/element/example';
+import { Input } from '../../input/base/example';
 import _ from 'lodash';
 
 ///////////////////////////////////////////

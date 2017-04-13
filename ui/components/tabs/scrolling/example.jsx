@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Tabs from 'ui/components/tabs/index.react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import Tabs from '../index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 //////////////////////////////////////////////
 // State Constructor(s)

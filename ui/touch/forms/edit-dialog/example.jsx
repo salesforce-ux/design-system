@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
-import { Select } from 'ui/components/select/base/example';
-import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/base/example';
-import { Lookup } from 'ui/components/lookups/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { FormElement } from '../../../components/form-layout/element/example';
+import { Input } from '../../../components/input/base/example';
+import { Select } from '../../../components/select/base/example';
+import { Modal, ModalHeader, ModalContent } from '../../../components/modals/base/example';
+import { Lookup } from '../../../components/lookups/base/example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';

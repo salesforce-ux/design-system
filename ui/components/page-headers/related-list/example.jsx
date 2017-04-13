@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import BreadCrumbs from 'ui/components/breadcrumbs/index.react';
+import BreadCrumbs from '../../breadcrumbs/index.react';
 const {Crumb} = BreadCrumbs;
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import Heading from 'ui/components/heading/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import Heading from '../../heading/index.react';
 
 
 export default (

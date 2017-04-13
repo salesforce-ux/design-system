@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from 'ui/components/feeds/post/example';
-import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/comment/example';
+import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from '../post/example';
+import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
 
 ///////////////////////////////////////////
 // Export

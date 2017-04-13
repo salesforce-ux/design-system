@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Tile, TileMedia } from 'ui/components/tiles/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Tile, TileMedia } from '../base/example';
 
 export default (
   <div className="demo-only" style={{ width: '320px' }}>

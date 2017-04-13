@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { UtilityIcon } from 'ui/components/icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { UtilityIcon } from '../../icons/base/example';
 import classNames from 'classnames';
 
 //////////////////////////////////////////////

@@ -10,7 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
-import { ComboboxContainer, Listbox, ListboxItem, Option } from 'ui/components/combobox/base/example';
+import { ComboboxContainer, Listbox, ListboxItem, Option } from '../base/example';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';

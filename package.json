@@ -29,7 +29,6 @@
     "@salesforce-ux/design-system-parser": "0.0.9",
     "@salesforce-ux/design-system-previewer": "1.0.1",
     "@salesforce-ux/icons": "7.17.0",
-    "app-module-path": "2.2.0",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",
@@ -93,8 +92,6 @@
     "mkdirp": "0.5.1",
     "mocha": "3.2.0",
     "moment": "2.18.1",
-    "nconf": "0.8.4",
-    "nconf-yaml": "1.0.2",
     "no-case": "2.3.1",
     "node-sass": "4.5.2",
     "postcss": "5.2.16",
@@ -150,6 +147,6 @@
     "report": "gulp lint:vnu lint:validate a11y",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
-    "test-unit": "mocha --compilers js:babel-register --require scripts/helpers/setup.js --reporter min 'test/unit/**/*.js'"
+    "test-unit": "mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'"
   }
 }

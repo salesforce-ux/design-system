@@ -1,14 +1,17 @@
-import map from 'map-stream';
-import gutil from 'gulp-util';
-import _ from 'lodash';
-import yaml from 'js-yaml';
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+const map = require('map-stream');
+const gutil = require('gulp-util');
+const _ = require('lodash');
+const yaml = require('js-yaml');
 
 // Token linting tasks
 //
 // Documentation:
 // https://github.com/salesforce-ux/design-system/wiki/Design-Tokens
 
-export const prefixes = [
+const prefixes = [
   'BORDER_RADIUS',
   'BORDER_WIDTH',
   'COLOR',
@@ -96,7 +99,6 @@ TokenLint.prototype.tokenNameLint = function (tokenName) {
   if (errors.length) {
     throw errors;
   }
-  return;
 };
 
 /**
@@ -137,4 +139,4 @@ tokenlintPlugin.report = (reporter) =>
     cb(error, file);
   });
 
-export default tokenlintPlugin;
+module.exports = tokenlintPlugin;

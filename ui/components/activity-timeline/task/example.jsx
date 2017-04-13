@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import { Checkbox } from 'ui/components/checkbox/base/example';
-import { TimelineIcon, TimelineActions } from 'ui/components/activity-timeline/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import { Checkbox } from '../../checkbox/base/example';
+import { TimelineIcon, TimelineActions } from '../base/example';
 
 export let ActivityTimelineItem = props =>
   <div className="slds-timeline__item">

@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Card, CardHeader, CardBody, CardFooter } from 'ui/components/cards/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { Card, CardHeader, CardBody, CardFooter } from '../base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 
 export default (
   <Card>

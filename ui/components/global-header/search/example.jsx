@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Menu, MenuList, MenuItem } from 'ui/components/menus/dropdown/example';
-import { GlobalHeader } from 'ui/components/global-header/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { GlobalHeader } from '../base/example';
 import classNames from 'classnames';
 
 

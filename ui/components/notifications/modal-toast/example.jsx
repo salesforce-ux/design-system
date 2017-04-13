@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/base/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>

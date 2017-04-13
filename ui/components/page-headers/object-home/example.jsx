@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Truncate from 'ui/components/lib/truncate/index.react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import Heading from 'ui/components/heading/index.react';
+import Truncate from '../../lib/truncate/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import Heading from '../../heading/index.react';
 
 
 const icon = (

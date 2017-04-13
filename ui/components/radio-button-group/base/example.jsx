@@ -3,8 +3,8 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { FormElementControl } from 'ui/components/radio-group/base/example';
-import { Fieldset, Legend } from 'ui/components/radio-group/base/example';
+import { FormElementControl } from '../../radio-group/base/example';
+import { Fieldset, Legend } from '../../radio-group/base/example';
 
 ///////////////////////////////////////////
 // Partial(s)

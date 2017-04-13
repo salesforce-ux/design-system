@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Menu, MenuList, MenuItem } from 'ui/components/menus/dropdown/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { TileMedia } from 'ui/components/tiles/base/example';
-import { StandardIcon } from 'ui/components/icons/standard/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { TileMedia } from '../../tiles/base/example';
+import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 
 const headerActionOverflow = (

@@ -2,13 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/base/example';
-import { CheckboxAddButton } from 'ui/components/checkbox/button/example';
-import { Lookup } from 'ui/components/lookups/base/example';
-import { Th } from 'ui/components/data-tables/advanced/example';
-import { PillContainer } from 'ui/components/pills/base/example';
-import { Listbox, ListboxItem } from 'ui/components/combobox/base/example';
-import { ListboxPill } from 'ui/components/pills/listbox-of-pill-options/example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
+import { CheckboxAddButton } from '../../checkbox/button/example';
+import { Lookup } from '../../lookups/base/example';
+import { Th } from '../../data-tables/advanced/example';
+import { PillContainer } from '../../pills/base/example';
+import { Listbox, ListboxItem } from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import classNames from 'classnames';
 import _ from 'lodash';
 

@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import { StandardIcon } from 'ui/components/icons/standard/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import { StandardIcon } from '../../icons/standard/example';
 
 export default (
   <div className="slds-page-header">

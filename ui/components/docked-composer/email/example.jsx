@@ -2,18 +2,18 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Avatar } from 'ui/components/avatar/base/example';
-import { Pill } from 'ui/components/pills/base/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { DockedComposerPanel } from 'ui/components/docked-composer/base/example';
+import { Avatar } from '../../avatar/base/example';
+import { Pill } from '../../pills/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { DockedComposerPanel } from '../base/example';
 import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
-  from 'ui/components/combobox/base/example';
+  from '../../combobox/base/example';
 import { ListboxPill }
-  from 'ui/components/pills/listbox-of-pill-options/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from 'ui/components/rich-text-editor/base/example';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
+  from '../../pills/listbox-of-pill-options/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from '../../rich-text-editor/base/example';
+import { FormElement } from '../../form-layout/element/example';
+import { Input } from '../../input/base/example';
 
 const Footer = props =>
   <div className="slds-col--bump-left slds-grid slds-grid--vertical-align-center">

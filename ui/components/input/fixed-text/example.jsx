@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Input } from 'ui/components/input/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Input } from '../base/example';
 import { FormElement, FormElementLabel, FormElementControl }
-  from 'ui/components/input/base/example';
+  from '../base/example';
 
 export default (
   <FormElement>

@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { ActivityTimelineItem as Event } from 'ui/components/activity-timeline/event/example';
-import { ActivityTimelineItem as Call } from 'ui/components/activity-timeline/call/example';
-import { ActivityTimelineItem as Email } from 'ui/components/activity-timeline/email/example';
-import { ActivityTimelineItem as Task } from 'ui/components/activity-timeline/task/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { ActivityTimelineItem as Event } from '../event/example';
+import { ActivityTimelineItem as Call } from '../call/example';
+import { ActivityTimelineItem as Email } from '../email/example';
+import { ActivityTimelineItem as Task } from '../task/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 
 export let TimelineIcon = props =>

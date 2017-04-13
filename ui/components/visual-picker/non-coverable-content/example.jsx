@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
-import { Fieldset, Legend, FormElementControl } from 'ui/components/radio-group/base/example';
-import { VisualPicker } from 'ui/components/visual-picker/coverable-content/example';
-import {UtilityIcon} from 'ui/components/icons/base/example';
+import { Fieldset, Legend, FormElementControl } from '../../radio-group/base/example';
+import { VisualPicker } from '../coverable-content/example';
+import {UtilityIcon} from '../../icons/base/example';
 
 const PackageOne = ([
   <span className="slds-text-heading--small" key={_.uniqueId()}>Lightning Professional</span>,

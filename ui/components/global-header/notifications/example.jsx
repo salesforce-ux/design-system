@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Trigger } from 'ui/components/menus/dropdown/example';
-import { GlobalHeader } from 'ui/components/global-header/base/example';
-import { Avatar } from 'ui/components/avatar/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Trigger } from '../../menus/dropdown/example';
+import { GlobalHeader } from '../base/example';
+import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 
 //////////////////////////////////////////////

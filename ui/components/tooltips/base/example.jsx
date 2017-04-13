@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 export let Tooltip = props =>
   <div className={classNames('slds-popover slds-popover--tooltip', props.className)} role="tooltip" id={props.id} style={props.style}>

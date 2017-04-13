@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/base/example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
 export default (
   <div className="demo-only" style={{height: '24rem'}}>

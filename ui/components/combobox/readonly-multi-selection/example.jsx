@@ -11,9 +11,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ComboboxContainer, Listbox, ListboxItem, Option }
-  from 'ui/components/combobox/base/example';
+  from '../base/example';
 import { ListboxPill }
-  from 'ui/components/pills/listbox-of-pill-options/example';
+  from '../../pills/listbox-of-pill-options/example';
 
 const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';

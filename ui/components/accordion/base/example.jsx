@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import { Section, SectionContent, SectionTitle, SectionTitleAction }
-  from 'ui/components/expandable-section/base/example';
+  from '../../expandable-section/base/example';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';

@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import _ from 'lodash';
-import path from 'path';
+const _ = require('lodash');
+const path = require('path');
 
 /**
  * Remove a module from the cache
@@ -29,7 +29,7 @@ export const removeFromCache = (() => {
 
 export const watchPaths = {
   css: [
-    '.www/**/*.css'
+    '.assets/**/*.css'
   ],
   sass: [
     'ui/**/*.scss',

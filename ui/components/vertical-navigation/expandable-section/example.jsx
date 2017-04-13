@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { NavVertical, NavVerticalItem, NavVerticalSection }
-  from 'ui/components/vertical-navigation/base/example';
+  from '../base/example';
 import classNames from 'classnames';
 
 const sectionId01 = 'entity-header';

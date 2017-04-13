@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 
 const Image = (
   <SvgIcon className="slds-icon slds-icon-standard-opportunity" sprite="standard" symbol="opportunity" />

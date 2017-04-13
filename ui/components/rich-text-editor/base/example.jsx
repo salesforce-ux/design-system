@@ -4,7 +4,7 @@
 import React from 'react';
 import { ButtonGroupList } from '../../button-groups/list/example';
 import { ButtonIcon } from '../../button-icons/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
 import { ComboboxContainer, Listbox, ListboxItem, Option } from '../../combobox/base/example';
 import classNames from 'classnames';

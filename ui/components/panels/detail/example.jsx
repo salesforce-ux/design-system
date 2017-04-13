@@ -6,7 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Select } from '../../select/base/example';
 import { Pill, PillContainer } from '../../pills/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
 export default (

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import MediaObject from '../../../utilities/media-objects/index.react';
-import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import SvgIcon from '../../../shared/svg-icon';
 
 const image = (
   <SvgIcon className="slds-icon slds-icon-standard-opportunity" sprite="standard" symbol="opportunity" />

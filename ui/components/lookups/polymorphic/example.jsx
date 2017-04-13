@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Lookup } from 'ui/components/lookups/base/example';
+import { Lookup } from '../base/example';
 
 // Available props in ui/components/lookups/base/example.jsx
 

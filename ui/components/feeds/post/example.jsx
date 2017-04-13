@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { File } from 'ui/components/files/base/example';
-import { AttachmentLink } from 'ui/components/files/link-attachment/example';
-import { Publisher } from 'ui/components/publishers/comment/example';
-import { Comment, CommentHeader, CommentContent, CommentFooter } from 'ui/components/feeds/comment/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { File } from '../../files/base/example';
+import { AttachmentLink } from '../../files/link-attachment/example';
+import { Publisher } from '../../publishers/comment/example';
+import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Truncate from 'ui/components/lib/truncate/index.react';
-import Heading from 'ui/components/heading/index.react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { StandardIcon } from 'ui/components/icons/standard/example';
+import Truncate from '../../lib/truncate/index.react';
+import Heading from '../../heading/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
 
 export default (
   <div className="slds-page-header">

@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
-import { Fieldset, Legend, FormElementControl } from 'ui/components/radio-group/base/example';
+import { Fieldset, Legend, FormElementControl } from '../../radio-group/base/example';
 
 ///////////////////////////////////////////
 // Partial(s)

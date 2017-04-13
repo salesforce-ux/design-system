@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Listbox, ListboxList, ListboxItem, PickList } from 'ui/components/picklist/base/example';
-import { Popover } from 'ui/components/popovers/base/example';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { Listbox, ListboxList, ListboxItem, PickList } from '../../picklist/base/example';
+import { Popover } from '../../popovers/base/example';
+import { FormElement } from '../../form-layout/element/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import _ from 'lodash';
 
 ///////////////////////////////////////////

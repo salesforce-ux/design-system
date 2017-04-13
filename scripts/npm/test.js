@@ -1,8 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-require('../helpers/setup');
-
 const async = require('async');
 const { spawn } = require('child_process');
 const fs = require('fs');

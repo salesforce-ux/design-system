@@ -3,11 +3,11 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Tooltip } from 'ui/components/tooltips/base/example';
-import { ProgressBar } from 'ui/components/progress-bar/base/example';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Tooltip } from '../../tooltips/base/example';
+import { ProgressBar } from '../../progress-bar/base/example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
 //////////////////////////////////////////////
 // Partial(s)

@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 import classNames from 'classnames';
-import { Select } from 'ui/components/select/base/example';
+import { Select } from '../../select/base/example';
 
 ///////////////////////////////////////////
 // Partial(s)

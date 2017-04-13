@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Progress, Step } from 'ui/components/progress-indicator/base/example';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from 'ui/components/modals/base/example';
+import { Progress, Step } from '../base/example';
+import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
 //////////////////////////////////////////////
 // Export

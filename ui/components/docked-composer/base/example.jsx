@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Menu, MenuList, MenuItem } from 'ui/components/menus/dropdown/example';
-import { Modal, ModalContent } from 'ui/components/modals/base/example';
-import { Lookup } from 'ui/components/lookups/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { Modal, ModalContent } from '../../modals/base/example';
+import { Lookup } from '../../lookups/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

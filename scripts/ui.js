@@ -5,8 +5,6 @@ const createParser = require('@salesforce-ux/design-system-parser');
 const Immutable = require('immutable');
 const { NOT_FOUND_ERROR, getMarkup, getComments } = require('./markup-style');
 
-require('./helpers/setup');
-
 const createUI = parser =>
   Immutable.Map({ components: parser.component, utilities: parser.utility })
   .map((fn, group) =>

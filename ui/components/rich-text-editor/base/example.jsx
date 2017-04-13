@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonGroupList } from 'ui/components/button-groups/list/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Tooltip } from 'ui/components/tooltips/base/example';
-import { ComboboxContainer, Listbox, ListboxItem, Option } from 'ui/components/combobox/base/example';
+import { ButtonGroupList } from '../../button-groups/list/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Tooltip } from '../../tooltips/base/example';
+import { ComboboxContainer, Listbox, ListboxItem, Option } from '../../combobox/base/example';
 import classNames from 'classnames';
 import _ from 'lodash';
 

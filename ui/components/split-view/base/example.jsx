@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 const results = [{
   'unread': true,

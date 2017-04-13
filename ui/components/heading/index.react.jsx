@@ -5,7 +5,7 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 
-import Truncate from 'ui/components/lib/truncate/index.react.jsx';
+import Truncate from '../lib/truncate/index.react.jsx';
 
 class LabelHeading extends React.Component {
   render() {

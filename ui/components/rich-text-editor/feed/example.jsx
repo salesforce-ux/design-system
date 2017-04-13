@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Demo, RichTextEditor, RteToolbar, RteFormatText, RteFormatBody, RteAlignText, RteInsertContent, RteInsertUser, RteTextarea, RteClearFormatting } from 'ui/components/rich-text-editor/base/example';
-import { Tooltip } from 'ui/components/tooltips/base/example';
+import { Demo, RichTextEditor, RteToolbar, RteFormatText, RteFormatBody, RteAlignText, RteInsertContent, RteInsertUser, RteTextarea, RteClearFormatting } from '../base/example';
+import { Tooltip } from '../../tooltips/base/example';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////

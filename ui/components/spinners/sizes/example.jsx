@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { SpinnerContainer, Spinner } from 'ui/components/spinners/base/example';
+import { SpinnerContainer, Spinner } from '../base/example';
 
 //////////////////////////////////////////////
 // Partials

@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonGroup } from 'ui/components/button-groups/base/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import { ButtonGroup } from '../base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 ///////////////////////////////////////////
 // Export

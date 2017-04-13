@@ -1,8 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-require('./scripts/helpers/setup');
-
 const del = require('del');
 const gulp = require('gulp');
 const path = require('path');

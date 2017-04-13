@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import MediaObject from 'ui/utilities/media-objects/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
 import classNames from 'classnames';
 
 ///////////////////////////////////////////

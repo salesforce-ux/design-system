@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Tabs from 'ui/components/tabs/index.react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Menu, MenuList, MenuItem } from 'ui/components/menus/dropdown/example';
-import { Default as ScopedTabs } from 'ui/components/scoped-tabs/base/example';
+import Tabs from '../index.react';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
 
 //////////////////////////////////////////////
 // State Constructor(s)

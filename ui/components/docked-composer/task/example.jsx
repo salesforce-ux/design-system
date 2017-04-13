@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Lookup } from 'ui/components/lookups/base/example';
-import { DockedComposerPanel } from 'ui/components/docked-composer/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Lookup } from '../../lookups/base/example';
+import { DockedComposerPanel } from '../base/example';
 import classNames from 'classnames';
 
 export default (

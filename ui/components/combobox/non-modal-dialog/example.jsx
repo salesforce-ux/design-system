@@ -11,8 +11,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
-  from 'ui/components/combobox/base/example';
-import { Popover } from 'ui/components/popovers/base/example';
+  from '../base/example';
+import { Popover } from '../../popovers/base/example';
 import _ from 'lodash';
 
 const ListboxList = props =>

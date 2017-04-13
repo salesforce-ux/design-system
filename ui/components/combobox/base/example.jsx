@@ -11,15 +11,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 import React from 'react';
 import { ListboxPill }
-  from 'ui/components/pills/listbox-of-pill-options/example';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import { Avatar } from 'ui/components/avatar/base/example';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
-import { Popover } from 'ui/components/popovers/base/example';
-import { StandardIcon } from 'ui/components/icons/standard/example';
-import { UtilityIcon } from 'ui/components/icons/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+  from '../../pills/listbox-of-pill-options/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Avatar } from '../../avatar/base/example';
+import { FormElement } from '../../form-layout/element/example';
+import { Input } from '../../input/base/example';
+import { Popover } from '../../popovers/base/example';
+import { StandardIcon } from '../../icons/standard/example';
+import { UtilityIcon } from '../../icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 

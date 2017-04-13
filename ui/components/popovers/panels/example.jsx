@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import MediaObject from 'ui/utilities/media-objects/index.react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 
 const iconHeader = (

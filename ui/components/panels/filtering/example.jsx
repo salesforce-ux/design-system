@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from 'ui/components/button-icons/base/example';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import { Panel } from 'ui/components/panels/detail/example';
-import { PanelBody } from 'ui/components/panels/detail/example';
-import { PanelSection } from 'ui/components/panels/detail/example';
+import { Panel } from '../detail/example';
+import { PanelBody } from '../detail/example';
+import { PanelSection } from '../detail/example';
 
 ///////////////////////////////////////////
 // Partial(s)

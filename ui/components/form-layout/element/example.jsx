@@ -3,11 +3,11 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Input } from 'ui/components/input/base/example';
-import { Textarea } from 'ui/components/textarea/base/example';
-import { Checkbox } from 'ui/components/checkbox/base/example';
-import { Radio } from 'ui/components/radio-group/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Input } from '../../input/base/example';
+import { Textarea } from '../../textarea/base/example';
+import { Checkbox } from '../../checkbox/base/example';
+import { Radio } from '../../radio-group/base/example';
 
 
 const inputLabel = 'Form Element Label';

@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Trigger } from 'ui/components/menus/dropdown/example';
-import { Menu } from 'ui/components/menus/dropdown/example';
-import { MenuList } from 'ui/components/menus/dropdown/example';
-import { MenuItem } from 'ui/components/menus/dropdown/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Trigger } from '../dropdown/example';
+import { Menu } from '../dropdown/example';
+import { MenuList } from '../dropdown/example';
+import { MenuItem } from '../dropdown/example';
 
 //////////////////////////////////////////////
 // State Constructor(s)

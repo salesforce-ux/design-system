@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Tabs from 'ui/components/tabs/index.react';
+import Tabs from '../../tabs/index.react';
 
 //////////////////////////////////////////////
 // State Constructor(s)

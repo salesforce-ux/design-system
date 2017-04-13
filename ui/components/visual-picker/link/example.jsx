@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
 import classNames from 'classnames';
-import {UtilityIcon} from 'ui/components/icons/base/example';
+import {UtilityIcon} from '../../icons/base/example';
 
 ///////////////////////////////////////////
 // Partial(s)

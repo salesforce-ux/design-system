@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { File } from 'ui/components/files/base/example';
+import { File } from '../base/example';
 
 //////////////////////////////////////////////
 // Export

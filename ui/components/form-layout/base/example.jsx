@@ -3,11 +3,11 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { FormElement } from 'ui/components/form-layout/element/example';
-import { Input } from 'ui/components/input/base/example';
-import { Textarea } from 'ui/components/textarea/base/example';
-import { Radio } from 'ui/components/radio-group/base/example';
-import { Checkbox } from 'ui/components/checkbox/base/example';
+import { FormElement } from '../element/example';
+import { Input } from '../../input/base/example';
+import { Textarea } from '../../textarea/base/example';
+import { Radio } from '../../radio-group/base/example';
+import { Checkbox } from '../../checkbox/base/example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';

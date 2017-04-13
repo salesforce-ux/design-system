@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from 'app_modules/ui/svg-icon';
-import { Modal, ModalHeader, ModalContent } from 'ui/components/modals/base/example';
-import { Avatar } from 'ui/components/avatar/base/example';
+import SvgIcon from '../../../../app_modules/ui/svg-icon';
+import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 
 

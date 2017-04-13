@@ -23,31 +23,5 @@ export let states = [
     id: 'disabled',
     label: 'Disabled',
     element: <Button disabled>Button</Button>
-  },
-  {
-    id: 'icon-left',
-    label: 'Neutral with left icon',
-    element:
-      <Button>
-        <SvgIcon
-          className="slds-button__icon slds-button__icon--left"
-          sprite="utility"
-          symbol="download"
-        />
-        Button Neutral
-      </Button>
-  },
-  {
-    id: 'icon-right',
-    label: 'Neutral with right icon',
-    element:
-      <Button>
-        Button Neutral
-        <SvgIcon
-          className="slds-button__icon slds-button__icon--right"
-          sprite="utility"
-          symbol="down"
-        />
-      </Button>
   }
 ];

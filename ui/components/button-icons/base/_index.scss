@@ -325,58 +325,11 @@
 }
 
 /**
- * Sizing for icon that sits inside button--icon
- *
- * @selector .slds-button__icon
- * @restrict .slds-button svg
- */
-.slds-button__icon { // This is the icon inside the button--icon button
-  @include square($square-icon-medium-content-alt);
-  fill: currentColor;
-
-  /**
-   * Large size button icon svg
-   *
-   * @selector .slds-button__icon--large
-   * @restrict .slds-button__icon
-   * @modifier
-   */
-  &_large,
-  &--large { // Usually used for the large close button
-    @include square($square-icon-utility-large);
-  }
-
-  /**
-   * Small size button icon svg
-   *
-   * @selector .slds-button__icon--small
-   * @restrict .slds-button__icon
-   * @modifier
-   */
-  &_small,
-  &--small {
-    @include square($square-icon-small-content);
-  }
-
-  /**
-   * x-small size button icon svg
-   *
-   * @selector .slds-button__icon--x-small
-   * @restrict .slds-button__icon
-   * @modifier
-   */
-  &_x-small,
-  &--x-small {
-    @include square($square-icon-x-small-content);
-  }
-}
-
-/**
  * @summary A parent class must be put on anything that contains a .slds-button__icon--hint so that the child reacts when the parent is hovered.
  *
  * @name icon-with-hint-hover
  * @selector .slds-button__icon--hint
- * @restrict .slds-button__icon
+ * @restrict .slds-button--icon .slds-button__icon
  * @variant
  */
 .slds-button__icon_hint,
@@ -390,7 +343,7 @@
  * when the parent is hovered. This is for a dark background.
  *
  * @selector .slds-button__icon--inverse-hint
- * @restrict .slds-button__icon
+ * @restrict .slds-button--icon .slds-button__icon
  */
 .slds-button__icon_inverse-hint,
 .slds-button__icon--inverse-hint {

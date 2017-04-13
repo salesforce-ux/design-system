@@ -12,7 +12,7 @@
  * Vertically aligns form label and control, provides spacing between form elements
  *
  * @selector .slds-form--stacked
- * @restrict .slds-form
+ * @restrict .slds-form:not(.slds-form--compound)
  * @modifier
  * @group layout
  */
@@ -34,7 +34,7 @@
  * Horizontally aligns a single form label and control on the same line
  *
  * @selector .slds-form--horizontal
- * @restrict .slds-form
+ * @restrict .slds-form:not(.slds-form--compound)
  * @modifier
  * @group layout
  */

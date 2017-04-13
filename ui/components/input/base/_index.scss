@@ -69,10 +69,8 @@
 /**
  * @summary Modifier if text input has svg icon adjacent to input
  *
- * @name with-icon
  * @selector .slds-input-has-icon
  * @restrict .slds-form-element div
- * @variant
  */
 .slds-input-has-icon {
   position: relative;
@@ -218,10 +216,8 @@
 /**
  * @summary Use on input container to let it know there is fixed text to the left or right of the input
  *
- * @name fixed-text
  * @selector .slds-input-has-fixed-addon
  * @restrict .slds-form-element .slds-form-element__control
- * @variant
  */
 .slds-input-has-fixed-addon {
   display: flex;
@@ -237,6 +233,36 @@
   display: inline-block;
   margin: 0 $spacing-x-small;
   align-self: center;
+}
+
+/**
+ * Read-only components are used to display immutable data within a form
+ *
+ * @summary Initializes read-only form element
+ *
+ * @selector .slds-form-element__static
+ * @restrict .slds-form-element span, .slds-form-element div
+ */
+.slds-form-element__static {
+  display: inline-block;
+  line-height: $line-height-button;
+  min-height: calc(#{$line-height-button} + 2px); // For IE
+
+  // If read only state is longform
+  // Apply text line height
+  &.slds-text-longform {
+    line-height: $line-height-text;
+  }
+
+  /**
+   * Inline Edit on static form element
+   *
+   * @selector .slds-form-element__static--edit
+   * @restrict .slds-form-element__static
+   */
+  &--edit {
+    width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
+  }
 }
 
 /**

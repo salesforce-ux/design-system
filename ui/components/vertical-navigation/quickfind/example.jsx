@@ -4,7 +4,7 @@
 import React from 'react';
 import { NavVertical, NavVerticalItem, NavVerticalSection }
   from '../base/example';
-import { FormElement } from '../../form-layout/element/example';
+import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';

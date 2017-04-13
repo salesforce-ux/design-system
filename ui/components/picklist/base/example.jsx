@@ -9,7 +9,7 @@ import { Trigger, Menu, MenuList, MenuItem } from '../../menus/dropdown/example'
 import { PillContainer } from '../../pills/base/example';
 import { Listbox as ListboxHoriz, ListboxItem as ListItemHoriz } from '../../combobox/base/example';
 import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
-import { FormElement } from '../../form-layout/element/example';
+import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 import _ from 'lodash';
 

@@ -14,7 +14,7 @@ import { ListboxPill }
   from '../../pills/listbox-of-pill-options/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Avatar } from '../../avatar/base/example';
-import { FormElement } from '../../form-layout/element/example';
+import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 import { Popover } from '../../popovers/base/example';
 import { StandardIcon } from '../../icons/standard/example';

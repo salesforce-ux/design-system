@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { UtilityIcon } from '../../icons/base/example.jsx';
-import { FormElement } from '../../form-layout/element/example';
+import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';

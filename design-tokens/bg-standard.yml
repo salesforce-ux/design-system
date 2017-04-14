@@ -311,3 +311,5 @@ props:
     value: '#22B0E6'
   QUIP:
     value: '#25B4E9'
+  TOPIC2:
+    value: '#56AAD0'

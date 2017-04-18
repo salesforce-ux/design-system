@@ -58,7 +58,7 @@ let Taglines = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium slds-hyphenate">Modal Header</h2>
         <p className="slds-m-top--x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend
           across mulitple lines, so I&rsquo;m making up content to show that
@@ -82,7 +82,7 @@ let Large = props =>
   <Demo style={{height: '640px'}}>
     <Modal className="slds-modal--large" aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium slds-hyphenate">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -101,7 +101,7 @@ let Directional = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium slds-hyphenate">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -137,7 +137,7 @@ let Footless = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium slds-hyphenate">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
@@ -156,7 +156,7 @@ export default (
   <Demo style={{height: '640px'}}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-text-heading--medium">Modal Header</h2>
+        <h2 id="modal-heading-01" className="slds-text-heading--medium slds-hyphenate">Modal Header</h2>
       </ModalHeader>
       <ModalContent className="slds-p-around--medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore

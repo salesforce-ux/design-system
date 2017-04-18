@@ -15,7 +15,14 @@ export let CheckboxAddButton = props => {
 
   return (
     <div className="slds-checkbox--add-button">
-      <input className="slds-assistive-text" type="checkbox" id={uniqueId} disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex} />
+      <input
+        className="slds-assistive-text"
+        type="checkbox"
+        id={uniqueId}
+        disabled={props.disabled}
+        defaultChecked={props.checked}
+        tabIndex={props.tabIndex}
+      />
       <label htmlFor={uniqueId} className="slds-checkbox--faux">
         <span className="slds-assistive-text">{ props.label || 'Add product' }</span>
       </label>

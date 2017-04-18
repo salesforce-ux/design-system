@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
-import { CheckboxAddButton } from '../../checkbox/button/example';
+import { CheckboxAddButton } from '../../checkbox-button/base/example';
 import { Lookup } from '../../lookups/base/example';
 import { Th } from '../../data-tables/advanced/example';
 import { PillContainer } from '../../pills/base/example';

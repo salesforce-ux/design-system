@@ -61,18 +61,22 @@ export let examples = [
     label: 'Responsive',
     element:
       <div className="demo-only demo-visibility">
-        <div className="slds-x-small-show">Show on 320px and up</div>
-        <div className="slds-x-small-show-only">Show only between 320px and 479px</div>
-        <div className="slds-max-x-small-hide">Hide on 319px and down</div>
-        <div className="slds-small-show">Show on 480px and up</div>
-        <div className="slds-small-show-only">Show only between 480px and 767px</div>
-        <div className="slds-max-small-hide">Hide on 479px and down</div>
-        <div className="slds-medium-show">Show on 768px and up</div>
-        <div className="slds-medium-show-only">Show only between 768px and 1023px</div>
-        <div className="slds-max-medium-hide">Hide on 1023px and down</div>
-        <div className="slds-large-show">Show on 1024px and up</div>
+        <div className="slds-show--x-small">Hides on 319px and down</div>
+        <div className="slds-hide--x-small">Hides on 320px and up</div>
+
+        <div className="slds-show--small">Hides on 479px and down</div>
+        <div className="slds-hide--small">Hides on 480px and up</div>
+
+        <div className="slds-show--medium">Hides on 767px and down</div>
+        <div className="slds-hide--medium">Hides on 768px and up</div>
+
+        <div className="slds-show--large">Hides on 1023px and down</div>
+        <div className="slds-hide--large">Hides on 1024px and up</div>
+
+        <div className="slds-show--x-large">Hides on 1279px and down</div>
+        <div className="slds-hide--x-large">Hides on 1280px and up</div>
       </div>,
-    description: `Responsive visibility classes will show and hide content on specific breakpoints. By default, \`-show\` renders as \`display: block;\`, but you may pass through a display property of your choice by adding a modifier to the end of the classname. For example, you may need to render an element as \`display: inline-block\` at a medium breakpoint, adding \`--inline-block\` to the end of \`.slds-medium-show\` to produce the class of \`.slds-medium-show--inline-block\` will give you that outcome.
+    description: `Responsive visibility classes will hide content on specific breakpoints. \`slds-show--[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide--[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
 
     <div class="demo-visibility-chart slds-m-bottom--large">
       <div class="slds-scrollable--x">
@@ -80,101 +84,101 @@ export let examples = [
           <tr class="site-text-heading--label">
             <th scope="col"><span class="slds-assistive-text">Class Name</span></th>
             <th scope="col">Less than 320px</th>
-            <th scope="col">X-Small (320px)</th>
-            <th scope="col">Small (480px)</th>
-            <th scope="col">Medium (768px)</th>
-            <th scope="col">Large (1024px)</th>
-            <th scope="col">Greater than 1024px</th>
+            <th scope="col">X-Small (>= 320px)</th>
+            <th scope="col">Small (>= 480px)</th>
+            <th scope="col">Medium (>= 768px)</th>
+            <th scope="col">Large (>= 1024px)</th>
+            <th scope="col">X-Large (>= 1280px)</th>
           </tr>
           <tr>
-            <th><code>.slds-x-small-show</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
+            <th><code>.slds-hide--x-small</code></th>
+            <td class="visible">Show</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
           </tr>
           <tr>
-            <th><code>.slds-small-show</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
+            <th><code>.slds-show--x-small</code></th>
+            <td class="hidden">Hide</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
           </tr>
           <tr>
-            <th><code>.slds-medium-show</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
+            <th><code>.slds-hide--small</code></th>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
           </tr>
           <tr>
-            <th><code>.slds-large-show</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__visible">Show</td>
+            <th><code>.slds-show--small</code></th>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
           </tr>
           <tr>
-            <th><code>.slds-x-small-show-only</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
+            <th><code>.slds-hide--medium</code></th>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
           </tr>
           <tr>
-            <th><code>.slds-small-show-only</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
+            <th><code>.slds-show--medium</code></th>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
           </tr>
           <tr>
-            <th><code>.slds-medium-show-only</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Show</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
+            <th><code>.slds-hide--large</code></th>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
           </tr>
           <tr>
-            <th><code>.slds-max-x-small-hide</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
+            <th><code>.slds-show--large</code></th>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
           </tr>
           <tr>
-            <th><code>.slds-max-small-hide</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
+            <th><code>.slds-hide--x-large</code></th>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="visible">Show</td>
+            <td class="hidden">Hide</td>
           </tr>
           <tr>
-            <th><code>.slds-max-medium-hide</code></th>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__hidden">Hide</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
-            <td class="demo-visibility-chart__visible">Initial</td>
+            <th><code>.slds-show--x-large</code></th>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="hidden">Hide</td>
+            <td class="visible">Show</td>
           </tr>
         </table>
       </div>

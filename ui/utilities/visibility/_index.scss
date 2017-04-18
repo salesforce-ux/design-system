@@ -174,3 +174,40 @@
 @include visibility(small, $mq-small, $mq-medium);
 @include visibility(medium, $mq-medium, $mq-large);
 @include visibility(large, $mq-large);
+
+// Generates responsive visibility tags
+@each $key, $value in (
+  'x-small': $mq-x-small,
+  'small': $mq-small,
+  'medium': $mq-medium,
+  'large': $mq-large,
+  'x-large': $mq-x-large,
+) {
+  @media(min-width: $value) {
+    /**
+     * @summary Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large.
+     *
+     * @selector .slds-hide--*
+     * @notes Element will be displayed normally when the window is smaller
+     * @modifier
+     */
+    .slds-hide--#{$key} {
+      // scss-lint:disable ImportantRule
+      display: none !important;
+    }
+  }
+
+  @media(max-width: $value - 1px) {
+    /**
+     * @summary Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large.
+     *
+     * @selector .slds-show--*
+     * @notes Element will be displayed normally when the window is bigger
+     * @modifier
+     */
+    .slds-show--#{$key} {
+      // scss-lint:disable ImportantRule
+      display: none !important;
+    }
+  }
+}

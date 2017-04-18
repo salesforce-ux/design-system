@@ -32,7 +32,7 @@ export default (
 export let examples = [
   {
     id: 'fallback-user-initials',
-    label: 'Fallbak - User initials',
+    label: 'Fallback - User initials',
     element:
       <Avatar className="slds-avatar--circle">
         <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
@@ -40,7 +40,7 @@ export let examples = [
   },
   {
     id: 'fallback-user-icon',
-    label: 'Fallbak - User icon',
+    label: 'Fallback - User icon',
     element:
       <Avatar className="slds-avatar--circle">
         <StandardIcon symbol="user" />

@@ -97,11 +97,6 @@
       + .slds-checkbox__label .slds-checkbox--faux {
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
-
-
-        &:after {
-          border-color: $color-background-input;
-        }
       }
     }
   }

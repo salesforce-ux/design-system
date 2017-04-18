@@ -6,6 +6,7 @@
  *
  * @utility
  * @name visibility
- * @selector *
+ * @selector [class*='show'], [class*='hide'], [class*='assistive-text']
  * support dev-ready
+ * @layout responsive
  */

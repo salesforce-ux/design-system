@@ -76,112 +76,21 @@ export let examples = [
         <div className="slds-show--x-large">Hides on 1279px and down</div>
         <div className="slds-hide--x-large">Hides on 1280px and up</div>
       </div>,
-    description: `Responsive visibility classes will hide content on specific breakpoints. \`slds-show--[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide--[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
+    description: `
+Responsive visibility classes will hide content on specific breakpoints. \`slds-show--[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide--[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
 
-    <div class="demo-visibility-chart slds-m-bottom--large">
-      <div class="slds-scrollable--x">
-        <table class="slds-table slds-table--bordered slds-no-row-hover">
-          <tr class="site-text-heading--label">
-            <th scope="col"><span class="slds-assistive-text">Class Name</span></th>
-            <th scope="col">Less than 320px</th>
-            <th scope="col">X-Small (>= 320px)</th>
-            <th scope="col">Small (>= 480px)</th>
-            <th scope="col">Medium (>= 768px)</th>
-            <th scope="col">Large (>= 1024px)</th>
-            <th scope="col">X-Large (>= 1280px)</th>
-          </tr>
-          <tr>
-            <th><code>.slds-hide--x-small</code></th>
-            <td class="visible">Show</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-          </tr>
-          <tr>
-            <th><code>.slds-show--x-small</code></th>
-            <td class="hidden">Hide</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-          </tr>
-          <tr>
-            <th><code>.slds-hide--small</code></th>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-          </tr>
-          <tr>
-            <th><code>.slds-show--small</code></th>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-          </tr>
-          <tr>
-            <th><code>.slds-hide--medium</code></th>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-          </tr>
-          <tr>
-            <th><code>.slds-show--medium</code></th>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-          </tr>
-          <tr>
-            <th><code>.slds-hide--large</code></th>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-          </tr>
-          <tr>
-            <th><code>.slds-show--large</code></th>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-          </tr>
-          <tr>
-            <th><code>.slds-hide--x-large</code></th>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="visible">Show</td>
-            <td class="hidden">Hide</td>
-          </tr>
-          <tr>
-            <th><code>.slds-show--x-large</code></th>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="hidden">Hide</td>
-            <td class="visible">Show</td>
-          </tr>
-        </table>
-      </div>
-    </div>`
+|Class Name|Less than 320px|X-Small (>= 320px)|Small (>= 480px)|Medium (>= 768px)|Large (>= 1024px)|X-Large (>= 1280px)|
+|---|---|---|---|---|---|---|
+|\`.slds-hide--x-small\`|Show|Hide|Hide|Hide|Hide|Hide|
+|\`.slds-show--x-small\`|Hide|Show|Show|Show|Show|Show|
+|\`.slds-hide--small\`|Show|Show|Hide|Hide|Hide|Hide|
+|\`.slds-show--small\`|Hide|Hide|Show|Show|Show|Show|
+|\`.slds-hide--medium\`|Show|Show|Show|Hide|Hide|Hide|
+|\`.slds-show--medium\`|Hide|Hide|Hide|Show|Show|Show|
+|\`.slds-hide--large\`|Show|Show|Show|Show|Hide|Hide|
+|\`.slds-show--large\`|Hide|Hide|Hide|Hide|Show|Show|
+|\`.slds-hide--x-large\`|Show|Show|Show|Show|Show|Hide|
+|\`.slds-show--x-large\`|Hide|Hide|Hide|Hide|Hide|Show|
+    `
   }
 ];

@@ -1,0 +1,188 @@
+// Lightning Design System 2.3.0-beta.3
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import
+
+  // Activity Timeline
+  'activity-timeline/flavors/base/index',
+
+  // Badges
+  'badges/flavors/base/index',
+
+  // Breadcrumbs
+  'breadcrumbs/flavors/base/index',
+
+  // Button Groups
+  'button-groups/flavors/base/index',
+
+  // Button
+  'buttons/flavors/base/index',
+  'buttons/flavors/stateful/index',
+
+  // Button Icon
+  'button-icons/flavors/base/index',
+
+  // Icons
+  'icons/flavors/base/index',
+
+  // Accordion
+  'accordion/flavors/base/index',
+
+  // Dynamic icons
+  'dynamic-icons/flavors/ellie/index',
+  'dynamic-icons/flavors/eq/index',
+  'dynamic-icons/flavors/score/index',
+  'dynamic-icons/flavors/strength/index',
+  'dynamic-icons/flavors/trend/index',
+  'dynamic-icons/flavors/waffle/index',
+
+  // Card
+  'cards/flavors/base/index',
+
+  // Forms
+  'form-layout/flavors/element/index',
+  'input/flavors/base/index',
+  'input/flavors/read-only/index',
+  'textarea/flavors/base/index',
+  'radio-group/flavors/base/index',
+  'radio-button-group/flavors/base/index',
+  'checkbox/flavors/base/index',
+  'checkbox/flavors/toggle/index',
+  'checkbox/flavors/button/index',
+  'checkbox-button-group/flavors/base/index',
+  'select/flavors/base/index',
+  'multi-select/flavors/base/index',
+  'form-layout/flavors/base/index',
+  'form-layout/flavors/compound/index',
+  'docked-form-footer/flavors/base/index',
+
+  // File selector
+  'file-selector/flavors/files/index',
+
+  // Page Headers
+  'page-headers/flavors/base/index',
+  'page-headers/flavors/record-home/index',
+  'page-headers/flavors/record-home-vertical/index',
+  'page-headers/flavors/object-home/index',
+
+  // Panels
+  'panels/flavors/detail/index',
+  'panels/flavors/filtering/index',
+
+  // Popovers
+  'popovers/flavors/base/index',
+  'popovers/flavors/panels/index',
+  'popovers/flavors/nubbins/index',
+  'popovers/flavors/walkthrough/index',
+
+  // Tooltips
+  'tooltips/flavors/base/index',
+
+  // Menus
+  'menus/flavors/dropdown/index',
+  'menus/flavors/action-overflow/index',
+
+  // Picklist
+  'picklist/flavors/base/index',
+
+  // Combobox
+  'combobox/doc',
+  'combobox/flavors/base/index',
+
+  // Datepicker
+  'datepickers/flavors/base/index',
+  'datepickers/flavors/time/index',
+
+  // Docked Composer
+  'docked-composer/flavors/base/index',
+  'docked-composer/flavors/email/index',
+
+  // Docked Utility Bar
+  'docked-utility-bar/flavors/utility-bar/index',
+  'docked-utility-bar/flavors/utility-panel/index',
+
+  // Global Header
+  'global-header/flavors/base/index',
+  'global-header/flavors/notifications/index',
+
+  // Global Navigation
+  'global-navigation/flavors/navigation-bar/index',
+
+  // Publishers
+  'publishers/flavors/base/index',
+  'publishers/flavors/comment/index',
+
+  // Discussion Feed
+  'feeds/flavors/feed-list/index',
+  'feeds/flavors/comment/index',
+  'feeds/flavors/post/index',
+  'feeds/flavors/post-with-attachments/index',
+
+  // Modal
+  'modals/flavors/base/index',
+
+  // App Launcher
+  'app-launcher/index',
+
+  // Hero Buttons
+  'visual-picker/flavors/coverable-content/index',
+
+  // Pills
+  'pills/flavors/base/index',
+
+  // Process
+  'process/flavors/wizard/index',
+  'path/flavors/base/index',
+
+  // Progress Indicator
+  'progress-bar/flavors/base/index',
+  'progress-indicator/flavors/base/index',
+
+  // Rich Text Editor
+  'rich-text-editor/flavors/base/index',
+
+  // Spinners
+  'spinners/index',
+  'spinners/flavors/sizes/index',
+  'spinners/flavors/colors/index',
+
+  // Split view list
+  'split-view/flavors/base/index',
+
+  // Title
+  'tiles/flavors/base/index',
+  'tiles/flavors/board/index',
+
+  // Tabs
+  'tabs/flavors/base/index',
+  'scoped-tabs/flavors/base/index',
+  'tabs/flavors/scrolling/index',
+
+  // Navigation
+  'vertical-navigation/flavors/base/index',
+  'vertical-navigation/flavors/expandable-section/index',
+
+  // Notifications -- Toasts & Alerts
+  'alert/flavors/base/index',
+  'prompt/flavors/base/index',
+  'toast/flavors/base/index',
+  'notifications/flavors/modal-toast/index',
+  'walkthrough/flavors/header/index',
+
+  // Lookup
+  'lookups/flavors/base/index',
+
+  // Images
+  'avatar/flavors/base/index',
+  'files/flavors/file-attachment/index',
+
+  // Tables
+  'data-tables/flavors/base/index',
+  'data-tables/flavors/responsive/index',
+  'data-tables/flavors/inline-edit/index',
+  'data-tables/flavors/fixed-header/index',
+
+  // Tree (Order matters)
+  'trees/flavors/base/index',
+  'trees/flavors/grid/index';

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="WIDTH_STAGE_LEFT" category="sizing">0.88</property>
+  <property name="HEIGHT_FOOTER" category="sizing">60</property>
+  <property name="HEIGHT_HEADER" category="sizing">44</property>
+  <property name="HEIGHT_INPUT" category="sizing">30</property>
+  <property name="HEIGHT_OVERFLOW_START" category="sizing">144px</property>
+  <property name="MAX_HEIGHT_CARD_MEDIA" category="sizing">144px</property>
+  <property name="MAX_HEIGHT_HEADER_BRAND" category="sizing">32px</property>
+  <property name="MAX_WIDTH_ACTION_BAR_WITH_LABELS" category="sizing">320px</property>
+  <property name="MAX_WIDTH_ACTION_OVERFLOW_MENU" category="sizing">512px</property>
+  <property name="MAX_WIDTH_HEADER_BRAND" category="sizing">156px</property>
+  <property name="SQUARE_RECORD_ANCHOR_PIC" category="sizing">48</property>
+  <property name="SQUARE_TAPPABLE" category="sizing">44</property>
+  <property name="FLEX_MASTER_PANEL" category="sizing">7</property>
+  <property name="SQUARE_TOOLTIP" category="sizing">20</property>
+  <property name="SQUARE_TOOLTIP_NUBBIN" category="sizing">16</property>
+  <property name="FLEX_DETAIL_PANEL" category="sizing">3</property>
+  <property name="DURATION_SLIDE" category="time">0.25s</property>
+</resources>

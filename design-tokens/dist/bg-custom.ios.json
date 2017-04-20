@@ -1,0 +1,1134 @@
+{
+  "properties": [
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 123, 132)",
+      "name": "custom1"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(207, 208, 92)",
+      "name": "custom2"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(236, 180, 108)",
+      "name": "custom3"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(225, 217, 81)",
+      "name": "custom4"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(159, 219, 102)",
+      "name": "custom5"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 196, 115)",
+      "name": "custom6"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(106, 137, 229)",
+      "name": "custom7"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(80, 206, 185)",
+      "name": "custom8"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 158, 226)",
+      "name": "custom9"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(100, 136, 227)",
+      "name": "custom10"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(135, 132, 234)",
+      "name": "custom11"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(220, 113, 209)",
+      "name": "custom12"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(223, 97, 132)",
+      "name": "custom13"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 194, 179)",
+      "name": "custom14"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(247, 126, 117)",
+      "name": "custom15"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 175, 103)",
+      "name": "custom16"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(172, 211, 96)",
+      "name": "custom17"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(77, 202, 118)",
+      "name": "custom18"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(58, 190, 177)",
+      "name": "custom19"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(72, 199, 200)",
+      "name": "custom20"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(138, 122, 237)",
+      "name": "custom21"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 133, 249)",
+      "name": "custom22"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(176, 112, 230)",
+      "name": "custom23"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(229, 103, 152)",
+      "name": "custom24"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(228, 111, 190)",
+      "name": "custom25"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(118, 152, 240)",
+      "name": "custom26"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(90, 176, 210)",
+      "name": "custom27"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(137, 192, 89)",
+      "name": "custom28"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(189, 210, 95)",
+      "name": "custom29"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(245, 159, 113)",
+      "name": "custom30"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 104, 127)",
+      "name": "custom31"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(56, 195, 147)",
+      "name": "custom32"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(151, 207, 93)",
+      "name": "custom33"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(213, 138, 106)",
+      "name": "custom34"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 99, 126)",
+      "name": "custom35"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(212, 114, 212)",
+      "name": "custom36"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(140, 137, 242)",
+      "name": "custom37"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(83, 182, 215)",
+      "name": "custom38"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(79, 190, 117)",
+      "name": "custom39"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(131, 199, 94)",
+      "name": "custom40"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(67, 181, 181)",
+      "name": "custom41"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(207, 208, 91)",
+      "name": "custom42"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(127, 147, 249)",
+      "name": "custom43"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(200, 202, 88)",
+      "name": "custom44"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(217, 88, 121)",
+      "name": "custom45"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(103, 165, 231)",
+      "name": "custom46"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(95, 204, 100)",
+      "name": "custom47"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(239, 105, 127)",
+      "name": "custom48"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(226, 92, 128)",
+      "name": "custom49"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(73, 188, 211)",
+      "name": "custom50"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(216, 199, 96)",
+      "name": "custom51"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(238, 142, 111)",
+      "name": "custom52"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(243, 110, 131)",
+      "name": "custom53"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(234, 112, 177)",
+      "name": "custom54"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(214, 110, 224)",
+      "name": "custom55"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(113, 141, 235)",
+      "name": "custom56"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(90, 156, 221)",
+      "name": "custom57"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 181, 157)",
+      "name": "custom58"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(227, 208, 103)",
+      "name": "custom59"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(191, 90, 136)",
+      "name": "custom60"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(245, 115, 118)",
+      "name": "custom61"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 146, 220)",
+      "name": "custom62"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(124, 207, 96)",
+      "name": "custom63"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(97, 143, 216)",
+      "name": "custom64"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 121, 171)",
+      "name": "custom65"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(216, 190, 95)",
+      "name": "custom66"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 125, 118)",
+      "name": "custom67"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 105, 121)",
+      "name": "custom68"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(237, 99, 135)",
+      "name": "custom69"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(231, 105, 180)",
+      "name": "custom70"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(227, 110, 227)",
+      "name": "custom71"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(141, 155, 251)",
+      "name": "custom72"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(103, 158, 240)",
+      "name": "custom73"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(65, 200, 160)",
+      "name": "custom74"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(205, 159, 101)",
+      "name": "custom75"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(219, 109, 122)",
+      "name": "custom76"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(181, 93, 91)",
+      "name": "custom77"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(90, 149, 221)",
+      "name": "custom78"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(142, 211, 99)",
+      "name": "custom79"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(101, 154, 213)",
+      "name": "custom80"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(218, 98, 127)",
+      "name": "custom81"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(209, 91, 151)",
+      "name": "custom82"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(231, 128, 111)",
+      "name": "custom83"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(246, 112, 123)",
+      "name": "custom84"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 104, 145)",
+      "name": "custom85"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(226, 96, 171)",
+      "name": "custom86"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(216, 118, 229)",
+      "name": "custom87"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(153, 111, 230)",
+      "name": "custom88"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(62, 153, 190)",
+      "name": "custom89"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(34, 164, 138)",
+      "name": "custom90"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(191, 123, 102)",
+      "name": "custom91"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(81, 126, 130)",
+      "name": "custom92"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(144, 77, 76)",
+      "name": "custom93"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(67, 156, 186)",
+      "name": "custom94"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 207, 106)",
+      "name": "custom95"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(109, 157, 227)",
+      "name": "custom96"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(221, 96, 133)",
+      "name": "custom97"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(225, 190, 92)",
+      "name": "custom98"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(240, 133, 110)",
+      "name": "custom99"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(225, 93, 118)",
+      "name": "custom100"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom101"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom102"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom103"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom104"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom105"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom106"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom107"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom108"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom109"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom110"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom111"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom112"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 139, 0)",
+      "name": "custom113"
+    }
+  ]
+}

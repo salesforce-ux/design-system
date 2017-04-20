@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="BORDER_WIDTH_THIN" category="spacing">1px</property>
+  <property name="BORDER_WIDTH_THICK" category="spacing">2px</property>
+  <property name="BORDER_STROKE_WIDTH_THIN" category="spacing">1px</property>
+  <property name="BORDER_STROKE_WIDTH_THICK" category="spacing">2px</property>
+  <property name="SPACING_NONE" category="spacing">0</property>
+  <property name="SPACING_XXX_SMALL" category="spacing">2</property>
+  <property name="SPACING_XX_SMALL" category="spacing">4</property>
+  <property name="SPACING_X_SMALL" category="spacing">8</property>
+  <property name="SPACING_SMALL" category="spacing">12</property>
+  <property name="SPACING_MEDIUM" category="spacing">16</property>
+  <property name="SPACING_LARGE" category="spacing">32</property>
+  <property name="SPACING_X_LARGE" category="spacing">64</property>
+  <property name="SPACING_XX_LARGE" category="spacing">128</property>
+  <property name="FONT_FAMILY_BODY" category="font">'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif</property>
+  <property name="FONT_WEIGHT_LIGHT" category="font-weight">300</property>
+  <property name="FONT_WEIGHT_REGULAR" category="font-weight">400</property>
+  <property name="FONT_WEIGHT_BOLD" category="font-weight">700</property>
+  <property name="FONT_SIZE_X_SMALL" category="font-size">10</property>
+  <property name="FONT_SIZE_SMALL" category="font-size">12</property>
+  <property name="FONT_SIZE_X_MEDIUM" category="font-size">14</property>
+  <property name="FONT_SIZE_MEDIUM" category="font-size">16</property>
+  <property name="FONT_SIZE_LARGE" category="font-size">18</property>
+  <property name="FONT_SIZE_X_LARGE" category="font-size">20</property>
+  <property name="FONT_SIZE_XX_LARGE" category="font-size">24</property>
+  <property name="BORDER_RADIUS_SMALL" category="radius">2</property>
+  <property name="BORDER_RADIUS_MEDIUM" category="radius">4</property>
+  <property name="BORDER_RADIUS_LARGE" category="radius">8</property>
+  <property name="BORDER_RADIUS_PILL" category="radius">80</property>
+  <property name="BORDER_RADIUS_CIRCLE" category="radius">0.5</property>
+  <property name="LINE_HEIGHT_RESET" category="line-height">1</property>
+  <property name="LINE_HEIGHT_HEADING" category="line-height">1.25</property>
+  <property name="LINE_HEIGHT_TEXT" category="line-height">1.5</property>
+  <property name="MQ_SMALL" category="media-query">only screen and (min-width: 28em)</property>
+  <property name="MQ_MEDIUM" category="media-query">only screen and (min-width: 48em)</property>
+  <property name="MQ_LARGE" category="media-query">only screen and (min-width: 64em)</property>
+  <property name="MQ_X_LARGE" category="media-query">only screen and (min-width: 80em)</property>
+  <property name="TIMING_1" category="motion">.1s</property>
+  <property name="TIMING_2" category="motion">.2s</property>
+  <property name="TIMING_3" category="motion">.4s</property>
+  <property name="TIMING_4" category="motion">.6s</property>
+  <property name="TIMING_5" category="motion">.8s</property>
+  <property name="TIMING_TEST" category="motion">5s</property>
+  <color name="COLOR_WHITE" category="background-color">#ffffffff</color>
+  <color name="COLOR_GREEN_SEA_100" category="background-color">#ff35d4cc</color>
+  <color name="COLOR_GREEN_SEA_300" category="background-color">#ff2ec2ba</color>
+  <color name="COLOR_GREEN_SEA_500" category="background-color">#ff27aba4</color>
+  <color name="COLOR_GREEN_SEA_700" category="background-color">#ff209691</color>
+  <color name="COLOR_GREEN_SEA_900" category="background-color">#ff1b827d</color>
+  <color name="COLOR_BLUE_SKY_100" category="background-color">#ff6cb7fa</color>
+  <color name="COLOR_BLUE_SKY_300" category="background-color">#ff44a2f5</color>
+  <color name="COLOR_BLUE_SKY_500" category="background-color">#ff2d93ed</color>
+  <color name="COLOR_BLUE_SKY_700" category="background-color">#ff2081d6</color>
+  <color name="COLOR_BLUE_SKY_900" category="background-color">#ff1970bd</color>
+  <color name="COLOR_PURPLE_RAIN_100" category="background-color">#ffad90f5</color>
+  <color name="COLOR_PURPLE_RAIN_300" category="background-color">#ff9271e8</color>
+  <color name="COLOR_PURPLE_RAIN_500" category="background-color">#ff7a56d6</color>
+  <color name="COLOR_PURPLE_RAIN_700" category="background-color">#ff643fc0</color>
+  <color name="COLOR_PURPLE_RAIN_900" category="background-color">#ff594195</color>
+  <color name="COLOR_BLUE_ATHENS" category="background-color">#fff2f6fa</color>
+  <color name="COLOR_BLUE_SPARTA" category="background-color">#ffe6ecf2</color>
+  <color name="COLOR_BLUE_ROME" category="background-color">#ffc5d3e0</color>
+  <color name="COLOR_BLUE_SPIDER" category="background-color">#ffa3b8cc</color>
+  <color name="COLOR_BLUE_GHOST" category="background-color">#ff7d98b3</color>
+  <color name="COLOR_BLUE_ALUMINIUM" category="background-color">#ff5c7a99</color>
+  <color name="COLOR_BLUE_ROLLINGSTONE" category="background-color">#ff40607f</color>
+  <color name="COLOR_BLUE_RHINO" category="background-color">#ff294766</color>
+  <color name="COLOR_BLUE_ZODIAC" category="background-color">#ff17324d</color>
+  <color name="COLOR_BLUE_BIGSTONE_BLUE" category="background-color">#ff0a1f33</color>
+  <color name="COLOR_ORANGE_ALERT" category="background-color">#ffffb75d</color>
+  <color name="COLOR_RED_ERROR" category="background-color">#ffd4504c</color>
+  <color name="COLOR_GREEN_SUCCESS" category="background-color">#ff4bca81</color>
+  <color name="COLOR_BLUE_SCIENCE" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BLUE_ENDEAVOUR" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BLUE_MIDNIGHT_BLUE" category="background-color">#ff00396b</color>
+  <color name="COLOR_BLUE_BISCAY" category="background-color">#ff16325c</color>
+</resources>

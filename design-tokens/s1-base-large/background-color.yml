@@ -1,0 +1,16 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../force-base/aliases/color.yml"
+props:
+  CARD_COLOR_BACKGROUND:
+    value: '{!LINK_WATER}'
+    comment: Default Card component background color.

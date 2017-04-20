@@ -56,6 +56,14 @@
   &__item--search {
     flex: 0 1 rem(440px);
     padding: 0;
+
+    .slds-input {
+      padding-left: ($spacing-large * 2);
+    }
+
+    .slds-input__icon--left {
+      left: ($spacing-medium + $spacing-xx-small);
+    }
   }
 
   /**

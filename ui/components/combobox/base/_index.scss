@@ -72,6 +72,8 @@
   flex-shrink: 0;
   max-width: 75%;
   align-items: center;
+  margin-left: $spacing-xxx-small;
+  margin-right: $spacing-xxx-small;
 
   li {
     display: flex;
@@ -145,7 +147,7 @@
    * @restrict .slds-listbox__option
    */
   .slds-listbox__option--plain {
-    padding: $spacing-x-small $spacing-medium;
+    padding: $spacing-x-small $spacing-small;
   }
 
   /**
@@ -155,7 +157,7 @@
    * @restrict .slds-listbox__option
    */
   .slds-listbox__option--entity {
-    padding: $spacing-xx-small $spacing-medium;
+    padding: $spacing-xx-small $spacing-small;
 
     .slds-media__figure {
       margin-right: $spacing-x-small;
@@ -264,7 +266,6 @@
  *
  * @selector .slds-has-inline-listbox
  * @restrict .slds-combobox_container
- * @modifier
  */
 .slds-has-inline-listbox,
 .slds-has-object-switcher {

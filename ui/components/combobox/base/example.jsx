@@ -306,7 +306,7 @@ export let Option = props =>
     type="plain"
     id={props.id}
     className={classNames(
-      'slds-media--center',
+      'slds-media--small slds-media--center',
       {
         'slds-is-selected': props.selected,
         'slds-has-focus': props.focused
@@ -351,7 +351,7 @@ let ObjectSwitcher = props =>
         <span className="slds-assistive-text">Searching in: Accounts</span>
       </span>
       <SvgIcon
-        className="slds-button__icon"
+        className="slds-button__icon slds-button__icon--x-small"
         sprite="utility"
         symbol="down"
       />
@@ -527,8 +527,9 @@ export let examples = [
         bodyClassName="slds-p-horizontal--none"
       >
         <ComboboxContainer
-          autocomplete
-          isOpen
+          autocomplete={true}
+          isOpen={true}
+          hideLabel={true}
           inputIcon="right"
           inputIconRightSymbol="search"
           formControlClassName="slds-m-around--small"

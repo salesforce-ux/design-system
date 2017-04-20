@@ -134,6 +134,7 @@
   min-width: $size-xx-small;
   max-width: $size-medium;
   margin-top: $spacing-xxx-small;
+  margin-bottom: $spacing-xxx-small;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   padding: $spacing-xx-small 0;
@@ -182,6 +183,32 @@
   &_bottom,
   &--bottom {
     bottom: 100%;
+  }
+
+  /**
+   * Sets min-width of 6rem/96px
+   *
+   * @selector .slds-dropdown--xx-small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_xx-small,
+  &--xx-small {
+    min-width: $size-x-small;
+  }
+
+  /**
+   * Sets min-width of 12rem/192px
+   *
+   * @selector .slds-dropdown--x-small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_x-small,
+  &--x-small {
+    min-width: $size-x-small;
   }
 
   /**

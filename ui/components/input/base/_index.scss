@@ -106,13 +106,13 @@
   &--left {
 
     .slds-input__icon {
-      left: ($spacing-medium + $spacing-xx-small);
+      left: $spacing-small;
     }
 
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-left: $spacing-xx-large;
+      padding-left: $spacing-x-large;
     }
   }
 
@@ -128,13 +128,13 @@
   &--right {
 
     .slds-input__icon {
-      right: ($spacing-medium + $spacing-xx-small);
+      right: $spacing-small;
     }
 
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-right: $spacing-xx-large;
+      padding-right: $spacing-x-large;
     }
   }
 
@@ -156,7 +156,7 @@
      */
     .slds-input__icon_left,
     .slds-input__icon--left {
-      left: ($spacing-medium + $spacing-xx-small);
+      left: $spacing-small;
     }
 
     /**
@@ -167,13 +167,13 @@
      */
     .slds-input__icon_right,
     .slds-input__icon--right {
-      right: ($spacing-medium + $spacing-xx-small);
+      right: $spacing-small;
     }
 
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding: 0 $spacing-xx-large;
+      padding: 0 $spacing-x-large;
     }
   }
 }

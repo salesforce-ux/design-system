@@ -38,8 +38,8 @@ export default (
     <ComboboxContainer
       inputIcon="right"
       inputIconRightSymbol="search"
-      selectedOptionsInline
-      autocomplete
+      selectedOptionsInline={true}
+      autocomplete={true}
       listbox={<ListboxDropdown />}
     />
   </div>
@@ -52,12 +52,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          className="slds-has-input-focus"
+          containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
-          autocomplete
-          isOpen
+          autocomplete={true}
+          isOpen={true}
           listbox={<ListboxDropdown />}
         />
       </div>,
@@ -74,8 +74,8 @@ export let states = [
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
-          autocomplete
-          isOpen
+          autocomplete={true}
+          isOpen={true}
           listbox={<ListboxDropdown focused />}
           aria-activedescendant={listboxOptionId01}
         />
@@ -90,7 +90,7 @@ export let states = [
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
-          autocomplete
+          autocomplete={true}
           listbox={<ListboxDropdown />}
         >
           <Listbox aria-label="Selected Options:" inline>
@@ -121,7 +121,7 @@ export let states = [
           isOpen
           inputIcon="right"
           inputIconRightSymbol="search"
-          className="slds-has-input-focus"
+          containerClassName="slds-has-input-focus"
           selectedOptionsInline
           autocomplete
           listbox={<ListboxDropdown />}

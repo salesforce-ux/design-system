@@ -106,8 +106,7 @@ export let states = [
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           inputIcon="right"
-          inputButtonIcon
-          inputIconRightSymbol="close"
+          inputIconRightSymbol="down"
           value="Option A"
           listbox={<ListboxDropdown focused optionOneSelected />}
         />

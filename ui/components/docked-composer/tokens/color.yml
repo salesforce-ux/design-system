@@ -1,0 +1,13 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - background*
+  - border*
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_DOCKED_PANEL_HEADER:
+    value: '{!CATSKILL_WHITE}'
+    comment: Docked panel header’s background color.

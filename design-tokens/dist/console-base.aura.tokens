@@ -1,0 +1,5 @@
+<aura:tokens>
+  <aura:token name="cardSpacingMedium" value="0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardSpacingLarge" value="0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="tableSpacingXSmall" value="0.25rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+</aura:tokens>

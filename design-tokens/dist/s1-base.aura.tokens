@@ -1,0 +1,20 @@
+<aura:tokens extends="force:base">
+  <aura:import name="one:actionBackgrounds" />
+  <aura:token name="widthStageLeft" value="88%" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightFooter" value="3.75rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightHeader" value="2.75rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightInput" value="1.875rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightOverflowStart" value="144px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="maxHeightCardMedia" value="144px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="maxHeightHeaderBrand" value="32px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="maxWidthActionBarWithLabels" value="320px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="maxWidthActionOverflowMenu" value="512px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="maxWidthHeaderBrand" value="156px" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="squareRecordAnchorPic" value="3rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="squareTappable" value="2.75rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="flexMasterPanel" value="7" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="squareTooltip" value="1.25rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="squareTooltipNubbin" value="1rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="flexDetailPanel" value="3" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="durationSlide" value="0.25s" property="animation*,transition*" />
+</aura:tokens>

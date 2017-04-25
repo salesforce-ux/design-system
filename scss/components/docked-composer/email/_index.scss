@@ -1,0 +1,38 @@
+// Lightning Design System 2.3.0-rc.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-email-composer {
+  position: relative;
+  flex: 1 1 auto;
+
+  .slds-rich-text-editor {
+    border: 0;
+    border-top: $border-width-thin solid $color-border;
+    border-radius: 0;
+  }
+}
+
+.slds-email-composer__combobox {
+  padding-left: $spacing-xx-large;
+  border: 0;
+  border-bottom: $border-width-thin solid $color-border;
+  border-radius: 0;
+
+  .slds-form-element__label {
+    position: absolute;
+    left: $spacing-small;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slds-combobox_container {
+    border: 0;
+  }
+}
+
+.slds-email-composer__recipient {
+  position: absolute;
+  top: 0;
+  right: $spacing-small;
+}

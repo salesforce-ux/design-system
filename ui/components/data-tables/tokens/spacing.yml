@@ -1,0 +1,20 @@
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/spacing.yml"
+props:
+  TABLE_SPACING_X_SMALL:
+    value: '{!SPACING_X_SMALL}'

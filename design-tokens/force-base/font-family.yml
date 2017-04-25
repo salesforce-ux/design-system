@@ -1,0 +1,20 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font
+  cssProperties:
+  - 'font'
+  - 'font-family'
+imports:
+- ./aliases/font-family.yml
+props:
+  FONT_FAMILY:
+    value: '{!SANS_SERIF}'
+    deprecated: true
+    comment: 'Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.'
+  FONT_FAMILY_TEXT:
+    value: '{!SANS_SERIF}'
+  FONT_FAMILY_HEADING:
+    value: '{!SANS_SERIF}'

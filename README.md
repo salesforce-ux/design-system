@@ -8,7 +8,6 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ## Quick start
 
 ```bash
-gem install bundler
 npm install
 npm start
 ```

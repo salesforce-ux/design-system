@@ -10,9 +10,84 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ```bash
 npm install
 npm start
+# visit http://localhost:3003/preview
 ```
 
 Having trouble getting these steps to work on your machine? Follow the [troubleshooting](#troubleshooting) guide below.
+
+
+## Previewer
+
+<img src="docs/previewer.png" alt="previewer component/variant/modifier selection" width="600px"/>
+
+The previewer is an interactive tool for creating components.
+
+It runs at the designated url on startup and is the primary means of viewing your work - it will live update as you make changes.
+
+You can choose the component, variant, and modifiers to preview as well as background color and screen size. It also previews the sass docs.
+
+Everything in the design system is driven by [annotations](#annotations) and the previewer is no different. **To see any work in the previewer, you must add annotations to your code.**
+
+
+## Annotations
+
+Annotations are the metadata that describe the entire system.
+
+The most intriguing part is the `@selector/@restrict` pair. Each CSS selector should have a corresponding selector describing where it can be applied.
+
+For example:
+
+```
+/**
+ * @selector .slds-button
+ * @restrict button, a, span
+ */
+.slds-button {
+}
+
+/**
+ * @selector .slds-button--brand
+ * @restrict .slds-button
+ */
+.slds-button--brand {
+}
+```
+
+In this example we can see that `.slds-button--brand` must be applied to a `.slds-button`, which, in turn, must be applied to a `button, a, span`.
+
+It's important to know that `slds-button--brand` will only be associated to the button component via this `@restrict` chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
+
+While there is a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
+
+`@base`: creates a new component
+
+`@variant`: a component implementation with corresponding markup
+
+`@modifier`: a class that alters appearance when applied to existing markup
+
+
+The markup for a `@variant` will be required from the `/ui/:component/:variant/example.jsx`.
+
+For example:
+
+```
+/**
+ * @name advanced
+ * @selector .slds-table--fixed-layout
+ * @restrict .slds-table
+ * @variant
+ */
+
+```
+
+<img src="docs/variant.png" alt="folder structure for variant markup" width="200px"/>
+
+
+All other selectors which are not `@base/@variant/@modifier` are considered child elements of a component.
+
+For more information see the [Full annotation docs](https://github.com/salesforce-ux/design-system-internal/wiki/Documentation-Styleguide)
+
+
 
 ## Tasks
 

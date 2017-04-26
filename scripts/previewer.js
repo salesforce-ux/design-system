@@ -1,6 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+const paths = require('./helpers/paths');
 const path = require('path');
 const gulp = require('gulp');
 const createPreviewer = require('@salesforce-ux/design-system-previewer');
@@ -9,7 +10,6 @@ const { getComments, getMarkup } = require('./markup-style');
 const { watchPaths, removeFromCache } = require('./watch');
 
 require('./gulp/styles');
-require('./gulp/assets');
 
 const getComments_ = done =>
   getComments().fork(done, x => done(null, x));
@@ -20,9 +20,8 @@ const getMarkup_ = (component, variant, done) =>
 const previewer = createPreviewer({
   // where are your static assets
   publicPath: {
-    '/assets': [
-      path.resolve(__dirname, '../.assets')
-    ]
+    '/assets': [ path.resolve(__dirname, '../assets') ],
+    '/assets/icons': [ paths.icons ]
   },
   // where is your css?
   cssUrl: '/assets/styles/index.css',
@@ -42,8 +41,6 @@ previewer.listen(3003, ({ server, emit }) => {
     emit('comments');
   });
   gulp.start('styles:framework');
-  gulp.start('assets');
-  gulp.start('assets:icons');
   // JS
   gulp.watch(watchPaths.js, event => {
     removeFromCache(require.resolve(event.path));

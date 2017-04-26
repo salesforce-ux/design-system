@@ -8,22 +8,22 @@ global:
   - src
 props:
   SALESFORCE_SANS_REGULAR_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Regular.woff2
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2
   SALESFORCE_SANS_REGULAR_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Regular.woff
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Regular.woff
   SALESFORCE_SANS_LIGHT_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Light.woff2
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Light.woff2
   SALESFORCE_SANS_LIGHT_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Light.woff
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Light.woff
   SALESFORCE_SANS_BOLD_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff2
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2
   SALESFORCE_SANS_BOLD_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Bold.woff
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Bold.woff
   SALESFORCE_SANS_BOLD_ITALIC_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2
+     value: /_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2
   SALESFORCE_SANS_BOLD_ITALIC_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff
+     value: /_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff
   SALESFORCE_SANS_ITALIC_WOFF2:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Italic.woff2
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2
   SALESFORCE_SANS_ITALIC_WOFF:
-     value: /slds/fonts/v2.3.0/SalesforceSans-Italic.woff
+     value: /_slds/fonts/v2.3.0/SalesforceSans-Italic.woff

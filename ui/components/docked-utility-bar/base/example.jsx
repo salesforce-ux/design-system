@@ -124,20 +124,6 @@ export let states = [
       </UtilityBar>
   },
   {
-    id: 'item-active',
-    label: 'Item Active',
-    element:
-      <UtilityBar>
-        <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
-        <UtilityBarItem symbol="clock">History</UtilityBarItem>
-        <UtilityBarItem symbol="note">Notes</UtilityBarItem>
-        <UtilityBarItem symbol="omni_channel">
-          <span className="slds-m-bottom--xxx-small">Online</span>
-          <span>Omni-Channel</span>
-        </UtilityBarItem>
-      </UtilityBar>
-  },
-  {
     id: 'notification',
     label: 'Item has notification',
     element:

@@ -2,10 +2,19 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { Avatar } from '../../avatar/base/example';
+import { Pill } from '../../pills/base/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Modal, ModalContent } from '../../modals/base/example';
 import { Lookup } from '../../lookups/base/example';
+import { RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from '../../rich-text-editor/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
+import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
+  from '../../combobox/base/example';
+import { ListboxPill }
+  from '../../pills/listbox-of-pill-options/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -31,6 +40,48 @@ const composers = [{
 const Footer = props =>
   <div className="slds-col--bump-left slds-text-align--right">
     <button className="slds-button slds-button--brand">Action</button>
+  </div>;
+
+const EmailFooter = props =>
+  <div className="slds-col--bump-left slds-grid slds-grid--vertical-align-center">
+    <div className="slds-grid slds-m-right--small" role="toolbar">
+      <ul className="slds-grid" aria-label="Insert content">
+        <li>
+          <ButtonIcon
+            className="slds-button--icon-small"
+            symbol="link"
+            assistiveText="Attach File"
+            title="Attach File"
+          />
+        </li>
+        <li>
+          <ButtonIcon
+            className="slds-button--icon-small"
+            symbol="insert_template"
+            assistiveText="Insert Template"
+            title="Insert Template"
+            tabIndex="-1"
+          />
+        </li>
+        <li>
+          <ButtonIcon
+            className="slds-button--icon-small"
+            symbol="insert_tag_field"
+            assistiveText="Insert HTML"
+            title="Insert HTML"
+            tabIndex="-1"
+          />
+        </li>
+      </ul>
+      <ButtonIcon
+        className="slds-button--icon-small"
+        symbol="preview"
+        assistiveText="Preview"
+        title="Preview"
+        tabIndex="-1"
+      />
+    </div>
+    <button className="slds-button slds-button--brand">Send</button>
   </div>;
 
 export let DockedComposerPanel = props =>
@@ -642,6 +693,92 @@ export let examples = [
             </div>
           </div>
         </fieldset>
+      </DockedComposerPanel>
+    </div>
+  },
+  {
+    id: 'email',
+    label: 'Email Composer',
+    element:
+    <div className="slds-docked_container">
+      <DockedComposerPanel
+        className="slds-is-open"
+        header="New Email"
+        headerSymbol="email"
+        footer={<EmailFooter />}
+      >
+        <div className="slds-email-composer">
+          <ComboboxContainer
+            id="recipients-to"
+            formClassName="slds-email-composer__combobox"
+            aria-controls="selected-recipients-to"
+            selectedOptionsInline
+            staticListbox
+            label="To"
+            placeholder=" "
+            autocomplete
+          >
+            <Listbox
+              id="selected-recipients-to"
+              aria-label="Recipients:"
+              inline
+            >
+              <ListboxItem>
+                <ListboxPill label="jrogers@cloudhub.com" tabIndex="0">
+                  <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                    <img
+                      alt="Person name"
+                      src="/assets/images/avatar2.jpg"
+                      title="User avatar"
+                    />
+                  </Avatar>
+                </ListboxPill>
+              </ListboxItem>
+            </Listbox>
+          </ComboboxContainer>
+          <ComboboxContainer
+            id="recipients-bcc"
+            formClassName="slds-email-composer__combobox"
+            selectedOptionsInline
+            staticListbox
+            label="Bcc"
+            placeholder=" "
+            autocomplete
+          />
+          <ComboboxContainer
+            id="recipients-cc"
+            formClassName="slds-email-composer__combobox"
+            selectedOptionsInline
+            staticListbox
+            label="Cc"
+            placeholder=" "
+            autocomplete
+          />
+          <FormElement
+            label="Enter subject"
+            hideLabel
+            inputId="input-subject-01"
+          >
+            <Input
+              id="input-subject-01"
+              className="slds-input--bare"
+              placeholder="Enter Subject"
+            />
+          </FormElement>
+          <RichTextEditor>
+            <RteToolbar>
+              <RteFormatFont />
+              <RteFormatText tabIndexSetting="-1" />
+              <RteFormatColor />
+              <RteFormatBody />
+              <RteAlignText />
+              <RteInsertContent />
+              <RteClearFormatting />
+            </RteToolbar>
+
+            <RteTextarea placeholder="Compose Email..." />
+          </RichTextEditor>
+        </div>
       </DockedComposerPanel>
     </div>
   }

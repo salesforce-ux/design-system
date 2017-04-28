@@ -15,6 +15,12 @@
     bottom: $spacing-x-small;
   }
 
+  /**
+   * @summary Element containing the title of a section
+   *
+   * @selector .slds-section__title
+   * @restrict .slds-section h3
+   */
   &__title {
     display: flex;
     align-items: center;
@@ -24,6 +30,12 @@
     border-radius: $border-radius-medium;
   }
 
+  /**
+   * @summary Element containing the action inside of an expandable section title
+   *
+   * @selector .slds-section__title-action
+   * @restrict .slds-section-title button
+   */
   &__title-action {
     display: flex;
     align-items: center;
@@ -43,6 +55,12 @@
     }
   }
 
+  /**
+   * @summary Element containing the content of an expandable section
+   *
+   * @selector .slds-section__title
+   * @restrict .slds-section h3
+   */
   &__content {
     visibility: hidden;
     opacity: 0;
@@ -59,6 +77,7 @@
    * @selector .slds-is-open
    * @restrict .slds-section
    * @modifier
+   * @group visibility
    */
   &.slds-is-open {
 

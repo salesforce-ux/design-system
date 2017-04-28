@@ -10,6 +10,7 @@
 .slds-progress-bar {
   display: block;
   width: 100%;
+  height: ($progress-bar-height * 4);
   background: $progress-bar-color-background;
   border: 0;
   appearance: none;
@@ -73,6 +74,7 @@
    * @selector .slds-progress-bar--circular
    * @restrict .slds-progress-bar
    * @modifier
+   * @group radius
    */
   &_circular,
   &--circular {
@@ -89,7 +91,6 @@
  *
  * @selector .slds-progress-bar__value
  * @restrict .slds-progress-bar span
- * @required
  */
 .slds-progress-bar__value {
   display: block;

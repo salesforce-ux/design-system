@@ -6,7 +6,6 @@
  *
  * @selector .slds-utility-panel
  * @restrict .slds-utility-bar_container section
- * @required
  */
 .slds-utility-panel {
   position: fixed;
@@ -34,7 +33,6 @@
    *
    * @selector .slds-utility-panel__header
    * @restrict header
-   * @required
    */
   &__header {
     background: $color-background-docked-panel-header;
@@ -48,7 +46,6 @@
    *
    * @selector .slds-utility-panel__body
    * @restrict div
-   * @required
    */
   &__body {
     display: flex;

@@ -1,6 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+/**
+ * @summary Initiazes email composer inside of a docked composer
+ *
+ * @selector .slds-email-composer
+ * @restrict .slds-docked-composer__body div
+ */
 .slds-email-composer {
   position: relative;
   flex: 1 1 auto;
@@ -12,6 +18,12 @@
   }
 }
 
+/**
+ * @summary Modifier combobox when used inside of email composer
+ *
+ * @selector .slds-email-composer__combobox
+ * @restrict .slds-email-composer div
+ */
 .slds-email-composer__combobox {
   padding-left: $spacing-xx-large;
   border: 0;
@@ -30,6 +42,12 @@
   }
 }
 
+/**
+ * @summary Provides styles for recipient labels inside of email composer
+ *
+ * @selector .slds-email-composer__recipient
+ * @restrict .slds-email-composer label
+ */
 .slds-email-composer__recipient {
   position: absolute;
   top: 0;

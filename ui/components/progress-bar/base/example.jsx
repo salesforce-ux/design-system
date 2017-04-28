@@ -20,26 +20,38 @@ export let ProgressBar = props =>
 /// ///////////////////////////////////////////
 
 export default (
-  <ProgressBar className="slds-progress-bar--large slds-progress-bar--circular" value="25" />
+  <ProgressBar value="25" />
 );
 
 export let states = [
   {
-    id: 'x-small',
-    label: 'X-small',
+    id: 'zero',
+    label: '0% complete',
     element:
-      <ProgressBar className="slds-progress-bar--x-small slds-progress-bar--circular" value="25" />
+      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="0" />
   },
   {
-    id: 'small',
-    label: 'Small',
-    element:
-      <ProgressBar className="slds-progress-bar--small slds-progress-bar--circular" value="25" />
-  },
-  {
-    id: 'medium',
-    label: 'Medium',
+    id: '25',
+    label: '15% complete',
     element:
       <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="25" />
+  },
+  {
+    id: '50',
+    label: '50% complete',
+    element:
+      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="50" />
+  },
+  {
+    id: '75',
+    label: '75% complete',
+    element:
+      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="75" />
+  },
+  {
+    id: '100',
+    label: '100% complete',
+    element:
+      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="100" />
   }
 ];

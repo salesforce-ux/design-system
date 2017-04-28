@@ -35,11 +35,12 @@
     bottom: none;
   }
 
-/**
- * @selector .slds-has-focus
- * @restrict .slds-docked-composer
- * @modifier
- */
+  /**
+   * @selector .slds-has-focus
+   * @restrict .slds-docked-composer
+   * @modifier
+   * @group interaction
+   */
   &.slds-has-focus {
     box-shadow: 0 0 4px 2px $color-border-brand;
   }
@@ -48,7 +49,7 @@
    * @selector .slds-is-open
    * @restrict .slds-docked-composer
    * @modifier
-   * @group toggle
+   * @group visibility
    */
   &.slds-is-open {
     height: 480px;
@@ -58,9 +59,10 @@
    * @selector .slds-is-closed
    * @restrict .slds-docked-composer
    * @modifier
-   * @group toggle
+   * @group visibility
    */
   &.slds-is-closed {
+    height: $height-docked-bar;
 
     .slds-docked-composer__body,
     .slds-docked-composer__footer {
@@ -106,7 +108,6 @@
   /**
    * @selector .slds-docked-composer__body--form
    * @restrict .slds-docked-composer__body
-   * @modifier
    */
   &__body_form,
   &__body--form {

@@ -8,7 +8,6 @@
  * @selector .slds-utility-bar_container
  * @restrict footer
  * @support dev-ready
- * @required
  * @variant
  */
 .slds-utility-bar_container {
@@ -20,7 +19,6 @@
  *
  * @selector .slds-utility-bar
  * @restrict .slds-utility-bar_container ul
- * @required
  */
 .slds-utility-bar {
   display: flex;
@@ -131,7 +129,6 @@
  *
  * @selector .slds-has-notification
  * @restrict .slds-utility-bar__item
- * @modifier
  */
 .slds-has-notification {
 

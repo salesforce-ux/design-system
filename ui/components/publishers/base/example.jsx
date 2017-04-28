@@ -48,22 +48,3 @@ export default (
     <PublisherActions />
   </Publisher>
 );
-
-export let states = [
-  {
-    id: 'publisher-feed-default',
-    label: 'Default',
-    element:
-    <Publisher>
-      <PublisherActions />
-    </Publisher>
-  },
-  {
-    id: 'publisher-feed-active',
-    label: 'Active',
-    element:
-    <Publisher className="slds-is-active">
-      <PublisherActions />
-    </Publisher>
-  }
-];

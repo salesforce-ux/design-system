@@ -43,35 +43,17 @@ export let SectionTitleAction = props =>
 /// ////////////////////////////////////////
 
 export default (
-  <Section className="slds-is-open">
+  <Section>
     <SectionTitle>
-      <SectionTitleAction isOpen referenceId="contentClosed">
+      <SectionTitleAction referenceId="contentClosed">
         Section Title
       </SectionTitleAction>
     </SectionTitle>
-    <SectionContent isOpen referenceId="contentClosed">
+    <SectionContent referenceId="contentClosed">
       <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
     </SectionContent>
   </Section>
 );
-
-export let states = [
-  {
-    id: 'closed',
-    label: 'Closed',
-    element:
-      <Section>
-        <SectionTitle>
-          <SectionTitleAction isOpen={false} referenceId="contentOpen">
-            Section Title
-          </SectionTitleAction>
-        </SectionTitle>
-        <SectionContent isOpen={false} referenceId="contentOpen">
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
-        </SectionContent>
-      </Section>
-  }
-];
 
 export let examples = [
   {

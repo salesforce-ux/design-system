@@ -55,21 +55,3 @@ export let Default = props =>
 export default (
   <Publisher />
 );
-
-export let states = [
-  {
-    id: 'publisher-comment-default',
-    label: 'Default',
-    element: <Publisher />
-  },
-  {
-    id: 'publisher-comment-active',
-    label: 'Active',
-    element: <Publisher className="slds-is-active" />
-  },
-  {
-    id: 'publisher-comment-active-focus',
-    label: 'Focused',
-    element: <Publisher className="slds-is-active slds-has-focus" />
-  }
-];

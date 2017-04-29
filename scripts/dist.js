@@ -14,7 +14,7 @@ const rimraf = require('rimraf');
 const sass = require('gulp-sass');
 const minifycss = require('gulp-minify-css');
 const Task = require('data.task');
-const { ui } = require('./ui');
+const { ui, examples } = require('./ui');
 
 const packageJSON = require('../package.json');
 const paths = require('./helpers/paths');
@@ -28,6 +28,17 @@ const MODULE_NAME = 'salesforce-lightning-design-system';
 // /////////////////////////////////////////////////////////////
 
 const distPath = path.resolve.bind(path, paths.dist);
+
+const writeFile = (name, getContents, done) =>
+  getContents()
+  .map(x => JSON.stringify(x, null, 2))
+  .chain(json =>
+    new Task((rej, res) =>
+      gulpfile(name, json, { src: true })
+      .pipe(gulp.dest(distPath()))
+      .on('finish', res)
+      .on('error', rej)))
+  .fork(done, () => done(null, null));
 
 // /////////////////////////////////////////////////////////////
 // Tasks
@@ -324,18 +335,11 @@ async.series([
   },
 
   /**
-   * Add ui.json
+   * Add ui.json and ui.examples.json
    */
-  (done) =>
-    ui()
-    .map(ui => JSON.stringify(ui, null, 2))
-    .chain(json =>
-      new Task((rej, res) =>
-        gulpfile('ui.json', json, { src: true })
-        .pipe(gulp.dest(distPath()))
-        .on('finish', res)
-        .on('error', rej)))
-    .fork(done, () => done(null, null))
+  (done) => writeFile('ui.json', ui, done),
+
+  (done) => writeFile('ui.examples.json', examples, done)
 
 ], err => {
   if (err) throw err;

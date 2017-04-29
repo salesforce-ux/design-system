@@ -20,6 +20,9 @@
 # directory to check it in the repository
 !.gitkeep
 
+# Ignore generated styles
+/assets/styles
+
 # Ignore modules
 /node_modules
 

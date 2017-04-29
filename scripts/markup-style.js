@@ -60,7 +60,6 @@ const getMarkup = (() => {
     I.List.of(
       components(component, variant, 'example.jsx'),
       components(component, 'flavors', variant, 'index.react.example.jsx'),
-      utils(component, 'flavors', variant, 'index.react.example.jsx'),
       utils(component, 'example.jsx'),
       utils(component, 'index.react.example.jsx')
     );

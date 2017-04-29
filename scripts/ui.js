@@ -2,22 +2,44 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const createParser = require('@salesforce-ux/design-system-parser');
-const Immutable = require('immutable');
+const {mapTree, toList, reduceTree} = require('@salesforce-ux/design-system-previewer/lib/tree');
+const I = require('immutable');
+const { fromNullable } = require('data.either');
 const { NOT_FOUND_ERROR, getMarkup, getComments } = require('./markup-style');
 
+const isVariant = x =>
+  x.getIn(['annotations', 'variant']);
+
+const getMark = (cid, vid) =>
+  getMarkup(cid, vid).getOrElse(I.List());
+
+const variants = c =>
+  toList(c)
+  .filter(isVariant);
+
+const markupMap = (c, vs) =>
+  vs.reduce((acc, v) =>
+    acc.set(v.get('id'), getMark(c.get('id'), v.get('id'))), I.Map());
+
+const toMap = f => (ac, c) =>
+  ac.set(c.get('id'), f(c.get('id')).get());
+
 const createUI = parser =>
-  Immutable.Map({ components: parser.component, utilities: parser.utility })
-  .map((fn, group) =>
-    parser[group]()
-    .reduce((ac, c) =>
-      ac.set(c.get('id'), fn(c.get('id')).get()), Immutable.Map()));
+  I.Map({
+    components: parser
+                .components()
+                .reduce(toMap(parser.component), I.Map()),
+    utilities: parser
+               .utilities()
+               .reduce(toMap(parser.utility), I.Map())
+  });
 
 const requireMarkup = componentId => variant =>
   getMarkup(componentId, variant.get('id'))
     .fold(
       (error) => {
         if (error[NOT_FOUND_ERROR]) {
-          return variant.set('markup', Immutable.List());
+          return variant.set('markup', I.List());
         }
         throw error;
       },
@@ -27,32 +49,44 @@ const requireMarkup = componentId => variant =>
           .set('markupContext', markup.get('context'))
     );
 
+// We only want default for markup
+const onlyKeepDefault = variant =>
+  variant.update('markup', markup =>
+    fromNullable(markup.find(s => s.get('title') === 'default'))
+    .map(d => d.get('items').first().get('markup'))
+    .getOrElse(''));
+
+// We don't want default in the examples
+const removeDefaultSection = markup =>
+  markup.update('sections', sections =>
+    sections.filter(s => s.get('title') !== 'default'));
+
 const requireIfVariant = name => x =>
-  x.getIn(['annotations', 'variant'])
-  ? requireMarkup(name)(x)
+  isVariant(x)
+  ? onlyKeepDefault(requireMarkup(name)(x))
   : x;
 
-const mapTree = (x, f) =>
-  f(x).set('restrictees', x.get('restrictees', []).map(r => mapTree(r, f)));
-
-const reduceTree = (f, empty, x) =>
-  x.get('restrictees', Immutable.List()).reduce((ac, y) =>
-    reduceTree(f, ac, y), f(empty, x));
-
-const foldMap = (f, empty, x) =>
-  reduceTree((acc, y) => acc.concat(f(y)), empty, x);
-
-const addMarkup = (group, f) => ui =>
-  ui
-  .update(group, cs =>
-    cs.map((value, name) =>
-      mapTree(value, f(name))));
+const addMarkup = components =>
+  components.map((value, name) =>
+    mapTree(value, requireIfVariant(name)));
 
 const ui = () =>
   getComments()
   .map(createParser)
   .map(createUI)
-  .map(addMarkup('components', requireIfVariant))
-  .map(addMarkup('utilities', requireMarkup));
+  .map(ui => ui.update('components', addMarkup));
 
-module.exports = { ui, reduceTree, mapTree, foldMap };
+const mappings = {
+  components: comp => markupMap(comp, variants(comp)).map(removeDefaultSection),
+  utilities: u => getMark(u.get('id'), 'IGNORE_VARIANT')
+};
+
+const examples = () =>
+  getComments()
+  .map(createParser)
+  .map(createUI)
+  .map(u =>
+    u.map((group, id) =>
+      group.map(comp => mappings[id](comp))));
+
+module.exports = { examples, ui, isVariant };

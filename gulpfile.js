@@ -12,7 +12,6 @@ const paths = require('./scripts/helpers/paths');
 
 require('./scripts/helpers/lodash-overwrite');
 require('./scripts/gulp/accessibility');
-require('./scripts/gulp/assets');
 require('./scripts/gulp/generate-examples');
 require('./scripts/gulp/generate-tokens-components');
 require('./scripts/gulp/lint');
@@ -35,8 +34,6 @@ gulp.task('build', callback => {
   runSequence(
     'clean',
     [
-      'assets',
-      'assets:icons',
       'generate:tokens:all',
       'generate:examples'
     ],

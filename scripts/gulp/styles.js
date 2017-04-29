@@ -19,7 +19,7 @@ const sign = x => (x < 0) ? '' : '+';
 const toKB = n => (n / 1024).toFixed(2);
 
 gulp.task('stylestats', ['styles'], done => {
-  const localFile = '.assets/styles/slds.css';
+  const localFile = 'assets/styles/slds.css';
   const remoteFile = 'https://www.lightningdesignsystem.com/assets/styles/slds.css';
 
   const localStats = new StyleStats(localFile, '.stylestatsrc');
@@ -69,7 +69,7 @@ gulp.task('styles:framework', ['generate:tokens:sass'], () =>
     .pipe(autoprefixer({ remove: false }))
     .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('.assets/styles'))
+    .pipe(gulp.dest('assets/styles'))
 );
 
 // Quick check that all variants compile correctly to CSS
@@ -81,7 +81,7 @@ gulp.task('styles:test', () =>
         paths.node_modules
       ]
     }).on('error', sass.logError))
-    .pipe(gulp.dest('.assets/styles/.test'))
+    .pipe(gulp.dest('assets/styles/.test'))
 );
 
 gulp.task('styles', callback => {

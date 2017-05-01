@@ -6,7 +6,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from '../post/example';
 import { File } from '../../files/base/example';
-import { AttachmentLink } from '../../files/link-attachment/example';
+import { AttachmentLink } from '../../files/base/example';
 
 /// ////////////////////////////////////////
 // Export

@@ -33,7 +33,7 @@ Everything in the design system is driven by [annotations](#annotations) and the
 
 Annotations are the metadata that describe the entire system.
 
-The most intriguing part is the `@selector/@restrict` pair. Each CSS selector should have a corresponding selector describing where it can be applied.
+The most intriguing part is the `@selector/@restrict` pair. Each CSS selector should have a corresponding selector describing where it can be applied. Both are normal CSS selectors that will behave like a DOM query.
 
 For example:
 
@@ -56,6 +56,8 @@ For example:
 In this example we can see that `.slds-button--brand` must be applied to a `.slds-button`, which, in turn, must be applied to a `button, a, span`.
 
 It's important to know that `slds-button--brand` will only be associated to the button component via this `@restrict` chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
+
+For a more complex example, see: https://github.com/salesforce-ux/design-system-internal/blob/summer-17/ui/components/combobox/base/_index.scss
 
 While there is a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
 

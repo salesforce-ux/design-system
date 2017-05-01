@@ -17,6 +17,12 @@ $_icon-trend-zero: 0.1px;
 // which improves rendering at small size
 $_icon-trend-one: 1.125px;
 
+/**
+ * @name trend
+ * @selector .slds-icon-trend
+ * @restrict .slds-icon-animated
+ * @variant
+ */
 .slds-icon-trend {
   width: 1rem;
   height: 1rem;

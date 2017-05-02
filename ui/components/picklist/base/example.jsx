@@ -25,7 +25,11 @@ const listboxOptionId03 = 'listbox-option-unique-id-03';
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={true}>
+  <Listbox
+    aria-label={props.heading ? props.heading : null}
+    className="slds-dropdown slds-dropdown--fluid"
+    vertical={true}
+  >
     {props.heading ?
       <li role="presentation" className="slds-listbox__item">
         <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={listboxOptionId00}>

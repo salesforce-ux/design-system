@@ -7,14 +7,27 @@ import { Pill } from '../../pills/base/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Modal, ModalContent } from '../../modals/base/example';
-import { Lookup } from '../../lookups/base/example';
-import { RichTextEditor, RteToolbar, RteFormatFont, RteFormatText, RteFormatColor, RteFormatBody, RteAlignText, RteInsertContent, RteTextarea, RteClearFormatting } from '../../rich-text-editor/base/example';
+import {
+  RichTextEditor,
+  RteToolbar,
+  RteFormatFont,
+  RteFormatText,
+  RteFormatColor,
+  RteFormatBody,
+  RteAlignText,
+  RteInsertContent,
+  RteTextarea,
+  RteClearFormatting
+} from '../../rich-text-editor/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
-import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
-  from '../../combobox/base/example';
-import { ListboxPill }
-  from '../../pills/listbox-of-pill-options/example';
+import {
+  ComboboxContainer,
+  Listbox,
+  ListboxItem,
+  EntityOption
+} from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -306,8 +319,26 @@ export let examples = [
               </div>
             </div>
             <div className="slds-form-element__row">
-              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
-              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
+              <ComboboxContainer
+                formClassName="slds-size--1-of-2"
+                autocomplete={true}
+                label="Name"
+                placeholder="Search Leads"
+                inputIcon="right"
+                inputIconRightSymbol="search"
+                objectSwitcher={true}
+                objectSwitcherInline={true}
+              />
+              <ComboboxContainer
+                formClassName="slds-size--1-of-2"
+                autocomplete={true}
+                label="Name"
+                placeholder="Search Accounts"
+                inputIcon="right"
+                inputIconRightSymbol="search"
+                objectSwitcher={true}
+                objectSwitcherInline={true}
+              />
             </div>
           </div>
         </fieldset>
@@ -688,8 +719,26 @@ export let examples = [
               </div>
             </div>
             <div className="slds-form-element__row">
-              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Leads" />
-              <Lookup className="slds-size--1-of-2" polymorphic label="Name" placeholder="Search Accounts" />
+              <ComboboxContainer
+                formClassName="slds-size--1-of-2"
+                autocomplete={true}
+                label="Name"
+                placeholder="Search Leads"
+                inputIcon="right"
+                inputIconRightSymbol="search"
+                objectSwitcher={true}
+                objectSwitcherInline={true}
+              />
+              <ComboboxContainer
+                formClassName="slds-size--1-of-2"
+                autocomplete={true}
+                label="Name"
+                placeholder="Search Accounts"
+                inputIcon="right"
+                inputIconRightSymbol="search"
+                objectSwitcher={true}
+                objectSwitcherInline={true}
+              />
             </div>
           </div>
         </fieldset>

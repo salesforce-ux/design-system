@@ -2,9 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * A picklist is a list of actionable items that is invoked by selection of a
- * particular item. That value is then shown as selected and its value of the
- * readonly input is updated as well.
+ * **Note** — A picklist is a readonly combobox component, please find
+ * implementation documentation under the combobox component
+ *
+ * A picklist is a list of pre-defined selectable options. That value is then
+ * shown as selected and its value of the readonly input is updated as well.
  *
  * A multi-select picklist is a list of actionable items that is invoked by
  * selection of a particular item(s). The multi-select picklist can have more
@@ -41,7 +43,7 @@
  *
  * @base
  * @name picklist
- * @selector .slds-combobox
+ * @selector .slds-combobox-picklist
  * @support dev-ready
  * @category experience
  * @type user-input

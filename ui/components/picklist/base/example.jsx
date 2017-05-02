@@ -1,14 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react'
+import React from 'react';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   Option
-} from '../../combobox/base/example'
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example'
+} from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 
 /* -----------------------------------------------------------------------------
     Variables
@@ -70,6 +70,7 @@ export const Context = props =>
 // Default
 export default (
   <ComboboxContainer
+    className="slds-combobox-picklist"
     containerClassName="slds-size--small"
     inputIcon="right"
     inputIconRightSymbol="down"

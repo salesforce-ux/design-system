@@ -1,17 +1,8 @@
-/*
-Copyright (c) 2015, salesforce.com, inc. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICHorizAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ListboxPill }
-  from '../../pills/listbox-of-pill-options/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Avatar } from '../../avatar/base/example';
 import { FormElement } from '../../form-element/base/example';
@@ -23,7 +14,10 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-// Variables
+/* -----------------------------------------------------------------------------
+    Variables
+----------------------------------------------------------------------------- */
+
 const listboxId = 'listbox-unique-id';
 const listboxSelectionsId = 'listbox-selections-unique-id';
 const comboboxId = 'combobox-unique-id';
@@ -358,7 +352,9 @@ let ObjectSwitcher = props =>
     </button>
   </div>;
 
-// ------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
   <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
@@ -380,49 +376,102 @@ const ListboxDropdown = props =>
   </Listbox>;
 
 const ListboxList = props =>
-  <Listbox className="slds-dropdown--length-10" vertical>
+  <Listbox className="slds-dropdown--length-10" vertical={true}>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Acme" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="Acme"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Edge SLA" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="Edge SLA"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Express Logistics SLA" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="Express Logistics SLA"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint Lab Generators" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="GenePoint Lab Generators"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="GenePoint SLA" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="GenePoint SLA"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="Pyramid Emergency Generators" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="Pyramid Emergency Generators"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Installations" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="United Oil Installations"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Plant Standby Generators" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="United Oil Plant Standby Generators"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil SLA" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="United Oil SLA"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="United Oil Standby Generators" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="United Oil Standby Generators"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Installations" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="University of AZ Installations"
+        entityMeta={true}
+      />
     </ListboxItem>
     <ListboxItem>
-      <EntityOption id={_.uniqueId('listbox-option-id-')} entityTitle="University of AZ Portable Generators" entityMeta />
+      <EntityOption
+        id={_.uniqueId('listbox-option-id-')}
+        entityTitle="University of AZ Portable Generators"
+        entityMeta={true}
+      />
     </ListboxItem>
   </Listbox>;
 
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+// Default
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
     <ComboboxContainer
-      autocomplete
+      autocomplete={true}
       inputIcon="right"
       inputIconRightSymbol="search"
       listbox={<ListboxDropdown />}
@@ -430,6 +479,7 @@ export default (
   </div>
 );
 
+// States
 export let states = [
   {
     id: 'focused',
@@ -437,8 +487,8 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen
-          autocomplete
+          isOpen={true}
+          autocomplete={true}
           inputIcon="right"
           inputIconRightSymbol="search"
           listbox={<ListboxDropdown />}
@@ -454,29 +504,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen
-          autocomplete
+          isOpen={true}
+          autocomplete={true}
           inputIcon="right"
           inputIconRightSymbol="search"
-          listbox={<ListboxDropdown focused />}
+          listbox={<ListboxDropdown focused={true} />}
           aria-activedescendant={listboxOptionId01}
-        />
-      </div>
-  },
-  {
-    id: 'closed-option-selected',
-    label: 'Option Selected',
-    element:
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
-          autocomplete
-          inputIcon="both"
-          inputIconLeftSprite="standard"
-          inputIconLeftSymbol="account"
-          inputButtonIcon
-          inputIconRightSymbol="close"
-          value="Salesforce.com, Inc."
-          listbox={<ListboxDropdown />}
         />
       </div>
   },
@@ -488,14 +521,14 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          autocomplete
+          autocomplete={true}
           listbox={<ListboxDropdown />}
         >
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
             className="slds-p-top--xxx-small"
-            horizontal
+            horizontal={true}
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
@@ -517,6 +550,7 @@ export let states = [
   }
 ];
 
+// Examples
 export let examples = [
   {
     id: 'non-modal-dialog',
@@ -534,7 +568,7 @@ export let examples = [
           inputIconRightSymbol="search"
           formControlClassName="slds-m-around--small"
           listbox={<ListboxList />}
-          staticListbox
+          staticListbox={true}
         />
       </Popover>
   }

@@ -4,7 +4,6 @@
 /**
  * A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop--16-by-9`.
  *
- *
  * @summary Initializes a file component
  *
  * @name base
@@ -28,7 +27,7 @@
   }
 
   /**
-   * Set crop boundaries to a file component
+   * Set crop boundaries to a file component, set to 16:9 by default
    *
    * @selector .slds-file__crop
    * @restrict .slds-file div, .slds-file a
@@ -37,6 +36,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    padding-top: 56.25%;
 
     img {
       position: absolute;
@@ -54,8 +54,8 @@
     /**
      * Crops file to a ratio of 1:1
      *
-     * @selector .slds-file_1-by-1
-     * @restrict .slds-file div
+     * @selector .slds-file__crop_1-by-1
+     * @restrict .slds-file__crop
      * @modifier
      * @group ratio
      */
@@ -67,8 +67,8 @@
     /**
      * Crops file to a ratio of 16:9
      *
-     * @selector .slds-file_16-by-9
-     * @restrict .slds-file div
+     * @selector .slds-file__crop_16-by-9
+     * @restrict .slds-file__crop
      * @modifier
      * @group ratio
      */
@@ -80,8 +80,8 @@
     /**
      * Crops file to a ratio of 4:3
      *
-     * @selector .slds-file_4-by-3
-     * @restrict .slds-file div
+     * @selector .slds-file__crop_4-by-3
+     * @restrict .slds-file__crop
      * @modifier
      * @group ratio
      */

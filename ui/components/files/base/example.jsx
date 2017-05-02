@@ -123,7 +123,6 @@ export default (
   <div style={{ width: '20rem' }}>
     <File
       className="slds-file--card"
-      cropClass="slds-file__crop--16-by-9"
       titleClass="slds-file__title--card"
       symbol="pdf"
       title="Proposal.pdf"
@@ -132,7 +131,7 @@ export default (
   </div>
 );
 
-export let states = [
+export let examples = [
   {
     id: 'attachment-file-no-image',
     label: 'File with no image',
@@ -140,7 +139,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         titleClass="slds-file__title--card"
         symbol="image"
         title="Image Title"
@@ -154,7 +152,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         noCaption
         symbol="pdf"
         image
@@ -168,7 +165,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         titleClass="slds-file__title--card"
         symbol="pdf"
         title="Proposal.pdf"
@@ -184,7 +180,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         symbol="pdf"
         title="Proposal.pdf"
         actions
@@ -202,7 +197,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         titleClass="slds-file__title--card"
         symbol="pdf"
         title="Proposal.pdf"
@@ -217,7 +211,6 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card"
-        cropClass="slds-file__crop--16-by-9"
         titleClass="slds-file__title--card"
         iconType="slds-file__loading-icon slds-icon_large"
         sprite="utility"
@@ -232,17 +225,13 @@ export let states = [
     <div style={{ width: '20rem' }}>
       <File
         className="slds-file--card slds-file_center-icon"
-        cropClass="slds-file__crop--16-by-9"
         iconType="slds-file__loading-icon slds-icon_large"
         sprite="utility"
         symbol="image"
         noCaption
       />
     </div>
-  }
-];
-
-export let examples = [
+  },
   {
     id: 'multi-attachments',
     label: '< 3 file attachments',
@@ -251,7 +240,6 @@ export let examples = [
         <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
           <File
             className="slds-file--card"
-            cropClass="slds-file__crop--16-by-9"
             titleClass="slds-file__title--card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -260,7 +248,6 @@ export let examples = [
         <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
           <File
             className="slds-file--card"
-            cropClass="slds-file__crop--16-by-9"
             titleClass="slds-file__title--card"
             symbol="pdf"
             title="Proposal.pdf" />
@@ -275,7 +262,6 @@ export let examples = [
         <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
           <File
             className="slds-file--card"
-            cropClass="slds-file__crop--16-by-9"
             titleClass="slds-file__title--card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -284,7 +270,6 @@ export let examples = [
       <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3  slds-medium-show">
           <File
             className="slds-file--card"
-            cropClass="slds-file__crop--16-by-9"
             titleClass="slds-file__title--card"
             symbol="pdf"
             title="Proposal.pdf" />
@@ -292,7 +277,6 @@ export let examples = [
         <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
           <File
             className="slds-file--card"
-            cropClass="slds-file__crop--16-by-9"
             titleClass="slds-file__title--overlay slds-align--absolute-center slds-text-heading--large"
             title="+22"
             image

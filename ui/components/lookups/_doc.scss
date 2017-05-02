@@ -2,6 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * **Note** — A lookup is a combobox component, please find implementation documentation under the
+ * combobox component
+ *
  * The lookup can parse through single or multi scoped datasets. The parsed
  * dataset can be filtered by single or multi option selects.
  *
@@ -31,11 +34,11 @@
  * - Enter key selects highlighted option and collapses the results list
  * - Escape key collapses the results list
  *
- * @summary Lookup is an advanced inline search form.
+ * @summary Lookup is an autocomplete combobox that will search against a database object.
  *
  * @base
  * @name lookups
- * @selector .slds-lookup
+ * @selector .slds-combobox-lookup
  * @support dev-ready
  * @category experience
  * @type user-input

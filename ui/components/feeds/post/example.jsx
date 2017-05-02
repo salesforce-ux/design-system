@@ -4,7 +4,7 @@
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { File } from '../../files/base/example';
-import { AttachmentLink } from '../../files/link-attachment/example';
+import { AttachmentLink } from '../../files/base/example';
 import { Publisher } from '../../publishers/comment/example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
 import SvgIcon from '../../../shared/svg-icon';

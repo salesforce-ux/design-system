@@ -7,7 +7,6 @@ import { FormElement } from '../../../components/form-layout/element/example';
 import { Input } from '../../../components/input/base/example';
 import { Select } from '../../../components/select/base/example';
 import { Modal, ModalHeader, ModalContent } from '../../../components/modals/base/example';
-import { Lookup } from '../../../components/lookups/base/example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';
@@ -17,6 +16,7 @@ const inputId05 = 'input-id-05';
 const inputId06 = 'input-id-06';
 const inputId07 = 'input-id-07';
 const inputId08 = 'input-id-08';
+const inputId09 = 'input-id-09';
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
@@ -39,7 +39,7 @@ export default (
             <Input id={inputId03} placeholder="Lewis" />
           </FormElement>
           <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
-            <Lookup label="Lookup" placeholder=" " />
+            <Input id={inputId09} placeholder=" " />
           </div>
 
           <div className="slds-form-element slds-m-top--medium">

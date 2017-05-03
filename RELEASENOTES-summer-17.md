@@ -1,76 +1,195 @@
-# Salesforce Lightning Design System
-# Release notes
+##### Salesforce Lightning Design System - Release notes
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
-## Release 2.3.0 - Future, 2017
+## **Release 2.3.0 - Future, 2017**
 
-**SITE IA/ENHANCEMENTS**
+## Features
 
-The following site enhancements are now available:
+The following are now available:
 
-- Added additional Popover accessibility/interaction guidelines - [Popover](/components/popovers/#overview)
-- Removed touch examples
+**Accordion**
 
-**NEW COMPONENTS AND VARIANTS**
+* Added Accordion component —  [Accordion](/components/accordion)
 
-The following components are now available:
+**Button**
 
-- Added Combobox - [Combobox](/components/combobox)
-- Added Progress Bar - [Progress Bar](/components/progress-bar)
-- Added Split View List - [Split view](/components/split-view)
-- Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
-- Added Visual Picker - [Visual Picker](/components/visual-picker)
-- Added improved version of Vertical Navigation - [Vertical Navigation](/components/vertical-navigation/)
-- Added a variant for Search input with loading spinner - [Input with Spinner](/components/input#flavor-with-spinner)
+* Added class `slds-is-selected-clicked` to handle click event on stateful button - [Stateful Button](/components/buttons?modifiers=.slds-is-selected-clicked&variant=stateful)
 
-**ADDED**
+**Combobox**
 
-The following classes are now available:
+* Added Combobox component — [Combobox](/components/combobox)
 
-- Added `slds-has-input-focus` utility class to provide focus styles on an element
-- Added `slds-dropdown--fluid` to adjust the width of a dropdown so it can be fluid to its container
-- Added updated styles for base HTML elements in the Rich Text Editor.
-- Added the same updated styles in the output of the Rich Text Editor using the `.slds-rich-text-editor__output` class.
+**Docked Utility Bar**
 
-**CHANGES**
+* Added two line support for docked utility bar items
 
-The following changes have been made in this release:
+**Dueling Picklist**
 
-- Rounded corners have been removed from utility icons so that they no longer
-  clip incorrectly.
-- Update focus state for pills
-  - Added `slds-pill--link` to modify pill for when we want the hyperlink to take up 100% of the available pill
-  - Added `slds-pill__action` to the actionable link element inside of `slds-pill--link`
-- Files Component:
-  - Updated the actions menu location
-  - Added state for no title
-  - Added loading state
-- Changed spacing between feed items from 1.5rem to .75rem
-- The [Button Icon](/components/button-icons/) component is required to have `slds-button--icon` applied to the `<button />` element. Before, `slds-button--icon-inverse`, `slds-button--icon-container`, `slds-button--icon-border`, `slds-button--icon-border-filled`, `slds-button--icon-border-inverse`, `slds-button--icon-more`, and `slds-button--icon-error` were used in conjunction with the `slds-button` classname but we now require `slds-button--icon` to be a part of this grouping of classnames.
-- The [Stateful Button](/components/buttons#flavor-stateful) component is required to have `slds-button--stateful` applied to the `<button />` element
-- The [Alert](/components/avatar/) component icon is now contained within `slds-icon_container`
-- The [Toast](/components/toast/) component icon is now contained within `slds-icon_container`
-- The [Page Header](/components/page-headers) component "entity" icon is now contained within `slds-icon_container`
-- The [Feeds](/components/feeds/) component "Post" examples have been updated to be contained within the `slds-feed` list
-- The [Compound Form Layout](/components/form-layout/#flavor-compound) example was updated so each `fieldset` is correctly using the `slds-form-element` class and the whole form is now contained in `slds-form--compound`
-- Unless the HTML output is represented as a list — `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom--[position]` instead of `slds-has-divider--[position]`
+* Re-named from Multi-select — [Dueling Picklist](/components/dueling-picklist)
 
-**FIXED**
+**Dynamic Icons**
+
+* Added Ellie animated icon
+* Added Equalizer animated icon
+* Added Score animated icon
+* Added Waffle animated icon
+* Added Strength animated icon
+* Added Trend animated icon
+
+**Expandable Section**
+
+* Added Expandable section component — [Expandable Section](/components/expandable-section?modifiers=.slds-is-open&variant=base)
+* Added non-collapsable example
+
+**Input**
+
+* Added an example for Search input with loading spinner - [Input with spinner](/components/input?example=double-icon-spinner&variant=base)
+* Added `slds-has-input-focus` utility class to provide focus styles on an element
+
+**Lookups**
+
+* Uses new combobox HTML
+
+**Menus**
+
+* Added `slds-dropdown—fluid` to adjust the width of a dropdown so it can be fluid to its container
+* Added updated styles for base HTML elements in the Rich Text Editor
+* Added the same updated styles in the output of the Rich Text Editor using the `.slds-rich-text-editor__output` class
+* Added `slds-pill--link` to modify pill for when we want the hyperlink to take up 100% of the available pill
+* Added `slds-pill__action` to the actionable link element inside of `slds-pill—link`
+
+**Path**
+
+* Re-named from Process
+
+**Picklist**
+
+* Uses new combobox HTML
+
+**Pills**
+
+* Added listbox of pill option variant — [Listbox of Pill Options](/components/pills?variant=listbox-of-pill-options)
+
+**Popover**
+
+* Added `slds-popover_walkthrough-alt` to modify the background of a walkthrough popover - [Walkthrough Popover](/components/popovers?example=action-popover&variant=walkthrough)
+
+**Progress Bar**
+
+* Added Progress Bar component — [Progress Bar](/components/progress-bar)
+
+**Rich text editor**
+
+* Added bottom toolbar support - [Bottom toolbar example](/components/rich-text-editor?example=bottom-toolbar&variant=base)
+* Added long-form formatting support
+
+**Spinner**
+
+* Xx-small Spinner variant — [Spinner](/components/spinners?modifiers=.slds-spinner--xx-small&variant=base)
+
+**Split View List**
+
+* Added Split View component — [Split View](/components/split-view)
+
+**Visual Picker**
+
+* Added Visual Picker component — [Visual Picker](/components/visual-picker)
+
+**Vertical Navigation**
+
+* Added Vertical Navigation component — [Vertical Navigation](/components/vertical-navigation/)
+* Deprecated Navigation component for this improved version
+
+**Visibility**
+
+* Improved visibility classes for responsive design — [#429](https://github.com/salesforce-ux/design-system/pull/429) - Thanks [@3den](https://github.com/3den)!
+
+## Fixes
 
 The following issues have now been resolved:
 
-- Added truncation to menu dropdown sub heading - [Dropdown Menu](components/menus/#flavor-dropdown-dropdown-menu-header)
-- Fixed a bug where the task2 icon corresponding class name was incorrectly named "task-2"
-- Fix for `::-ms-clear` to remove native clear button in IE
-- Whenever `slds-truncate` is used, it is required to be used in conjunction with a [title] attribute
-- Whenever `slds-dropdown` is used, it is required to be contained inside an element that has the classname `slds-dropdown-trigger`
-- Whenever `slds-form--stacked`, `slds-form--horizontal`, and `slds-form--compound` is used, it is required to be used in conjunction with `slds-form`
-- Whenever `slds-icon-text-default`, `slds-icon-text-warning`, or `slds-icon-text-error` is used, it is required to be used in conjunction with `slds-icon`
-- Scoped :focus style for data-tables to `slds-table`
-- Fixed an issue where assistive text in an parent with `text-transform: uppercase` would get read as full-caps (e.g. "Sorted ascending" in data table headers getting read as
+* Fix for `::-ms-clear` to remove native clear button in IE
+* Whenever `slds-truncate` is used, it is required to be used in conjunction with a [title] attribute
+* The Alert component icon is now contained within `slds-icon_container`
+* The Button icon component is required to have `slds-button—icon` applied to the `<button />` element. Before, `slds-button—icon-inverse`, `slds-button—icon-container`, `slds-button—icon-border`, `slds-button—icon-border-filled`, `slds-button—icon-border-inverse`, `slds-button—icon-more`, and `slds-button—icon-error` were used in conjunction with the `slds-button` classname but we now require `slds-button—icon` to be a part of this grouping of classnames
+* The Stateful button component is required to have `slds-button—stateful` applied to the `<button />` element
+* The Toast component icon is now contained within `slds-icon_container`
+* The Page header component "entity" icon is now contained within `slds-icon_container`
+* The Feeds component "Post" examples have been updated to be contained within the `slds-feed` list
+* The Compound Form Layout example was updated so each `fieldset` is correctly using the `slds-form-element` class and the whole form is now contained in `slds-form—compound`
+* Unless the HTML output is represented as a list — `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom—[position]` instead of `slds-has-divider—[position]`
+* Whenever `slds-dropdown` is used, it is required to be contained inside an element that has the classname `slds-dropdown-trigger`
+* Whenever `slds-form—stacked`, `slds-form—horizontal`, and `slds-form—compound` is used, it is required to be used in conjunction with `slds-form`
+* Whenever `slds-icon-text-default`, `slds-icon-text-warning`, or `slds-icon-text-error` is used, it is required to be used in conjunction with `slds-icon`
+* Fixed a bug where the task2 icon corresponding class name was incorrectly named "task-2"
+* Scoped :focus style for data-tables to `slds-table`
+* Fixed an issue where assistive text in an parent with `text-transform: uppercase` would get read as full-caps (e.g. "Sorted ascending" in data table headers getting read as
+* Rounded corners have been removed from utility icons so that they no longer clip incorrectly
+* Breadcrumbs now wrap properly
+* Focus state for pills has been moved to the containing element, rather than just the text inside of the pill
+* Updated z-index of Docked Utility Bar to 4 to play nicely with others
+* Prevent docked composer content from collapsing in Safari
+* Updated cursor style for disabled state on radio button groups
 
-**ACCESSIBILITY**
+## Deprecated
+
+The following features are being marked as deprecated in this release and will be removed in three releases:
+
+* Navigation was removed from site navigation and replaced with improved Vertical Navigation — [Vertical Navigation](/components/vertical-navigation/)
+
+## Design
+
+The following updates have been made to component designs:
+
+* Touch components have been removed from the site
+
+**Dropdown Menus:**
+
+* Sub-headings inside of dropdown menus should now be truncated
+
+**Docked Composer:**
+
+* Added focus state around entire composer panel
+* Title inside of composer panel header should truncate instead of wrap to two lines
+
+**Feeds:**
+
+* Removed the like count in the bottom right of the Feed post
+* Changed spacing between feed posts from 1.5rem to .75rem
+* Add top border to feed footer on mobile
+
+**Files:**
+
+* Added example for no title
+* Added example for loading state
+* Updated location of the files action menu
+
+**Popovers**
+
+* Always have a close button icon
+
+## Tokens
+
+The following changes have been made to tokens:
+
+* `TASK_2` was renamed into `TASK2`
+* Standard icon set: Added `ENTITLEMENT`
+* Standard icon set: Added `LIVE_CHAT`
+
+**s1-base/sizing**
+
+* Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
+* Removed `MAX_WIDTH_ACTION_BAR`
+* Removed `MAX_WIDTH_ACTION_BAR_ITEM`
+* Added `UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS`
+* Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER`
+* Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE`
+
+
+## Accessibility
+
+The following changes have been made to make our product more accessible:
 
 **Activity Timeline**
 
@@ -377,30 +496,3 @@ The following issues have now been resolved:
 **Utilities - List**
 
 - Name Value Pairs changed to definition lists
-
-**DEPRECATED**
-
-The following features are being marked as deprecated in this release and will be removed in three releases:
-
-- Navigation was removed from site navigation and replaced with improved Vertical Navigation - [Vertical Navigation](/components/vertical-navigation/)
-
-**REMOVED**
-
-The following features are being removed in this release:
-
-- Removed the like count in the bottom right of the Feed card.
-
-**TOKENS**
-
-The following tokens have been add/removed/deprecated in this release:
-
-- `TASK_2` was renamed into `TASK2`
-- Standard icon set: Added `ENTITLEMENT`
-- Standard icon set: Added `LIVE_CHAT`
-- s1-base/sizing
-  - Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
-  - Removed `MAX_WIDTH_ACTION_BAR`
-  - Removed `MAX_WIDTH_ACTION_BAR_ITEM`
-- Added `UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS`
-- Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER`
-- Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE`

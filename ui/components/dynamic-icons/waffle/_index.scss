@@ -6,8 +6,11 @@
 
 /**
  * @summary Container element that holds the cirlces for the waffle
+ *
+ * @name waffle
  * @selector .slds-icon-waffle_container
- * @restrict slds-icon-animated
+ * @restrict span
+ * @variant
  */
 .slds-icon-waffle_container {
   border: 0;

@@ -12,11 +12,19 @@ import _ from 'lodash';
 
 const MultiSelect = (props) => {
   return (
-    <div className="slds-picklist--draggable slds-grid">
-      <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">{ props.dataSet.liveRegionText }</div>
-      <div className="slds-assistive-text" id="option-drag-label">{ props.dataSet.optionDragLabel }</div>
+    <div className="slds-dueling-list">
+      <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">
+        { props.dataSet.liveRegionText }
+      </div>
+      <div className="slds-assistive-text" id="option-drag-label">
+        { props.dataSet.optionDragLabel }
+      </div>
       <SelectionGroup group={props.dataSet.selectionGroups[0]} />
-      <MoveButtons direction="horizontal" targetA={props.dataSet.selectionGroups[0].label} targetB={props.dataSet.selectionGroups[1].label} />
+      <MoveButtons
+        direction="horizontal"
+        targetA={props.dataSet.selectionGroups[0].label}
+        targetB={props.dataSet.selectionGroups[1].label}
+      />
       <SelectionGroup group={props.dataSet.selectionGroups[1]} />
       <MoveButtons direction="vertical" />
     </div>
@@ -24,21 +32,38 @@ const MultiSelect = (props) => {
 };
 
 const MoveButtons = props =>
-  <div className="slds-grid slds-grid--vertical">
-    <button className="slds-button slds-button--icon-container" title={'Move Selection ' + (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB}>
-      <SvgIcon className="slds-button__icon" sprite="utility" symbol={(props.direction === 'vertical') ? 'up' : 'right'} />
-      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB }</span>
+  <div className="slds-dueling-list__column">
+    <button
+      className="slds-button slds-button--icon slds-button--icon-container"
+      title={'Move Selection ' + (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB}
+    >
+      <SvgIcon
+        className="slds-button__icon"
+        sprite="utility"
+        symbol={(props.direction === 'vertical') ? 'up' : 'right'}
+      />
+      <span className="slds-assistive-text">
+        Move Selection { (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB }
+      </span>
     </button>
-    <button className="slds-button slds-button--icon-container" title={'Move Selection ' + (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA}>
-      <SvgIcon className="slds-button__icon" sprite="utility" symbol={(props.direction === 'vertical') ? 'down' : 'left'} />
-      <span className="slds-assistive-text">Move Selection { (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA }</span>
+    <button
+      className="slds-button slds-button--icon slds-button--icon-container"
+      title={'Move Selection ' + (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA}
+    >
+      <SvgIcon
+        className="slds-button__icon"
+        sprite="utility" symbol={(props.direction === 'vertical') ? 'down' : 'left'}
+      />
+      <span className="slds-assistive-text">
+        Move Selection { (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA }
+      </span>
     </button>
   </div>;
 
 const SelectionGroup = (props) => {
   const groupLabelID = _.uniqueId('label-');
   return (
-    <div className="slds-form-element">
+    <div className="slds-dueling-list__column">
       <span className="slds-form-element__label" id={groupLabelID}>{ props.group.label }</span>
       <ListBox options={props.group.options} ariaLabelledby={groupLabelID} />
     </div>
@@ -46,15 +71,12 @@ const SelectionGroup = (props) => {
 };
 
 const ListBox = props =>
-  <div
-    className="slds-picklist"
-    role="application"
-  >
+  <div className="slds-dueling-list__options" role="application">
     <ul
       aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}
       aria-multiselectable="true"
-      className="slds-picklist__options slds-picklist__options--multi"
+      className="slds-listbox slds-listbox--vertical"
       role="listbox"
       tabIndex="0"
     >
@@ -65,14 +87,22 @@ const ListBox = props =>
   </div>;
 
 const Option = props =>
-  <li
-    aria-selected={props.option.isSelected}
-    className={classNames('slds-picklist__item slds-is-draggable', props.option.isGrabbed ? 'slds-is-grabbed' : null)}
-    draggable="true"
-    role="option"
-    tabIndex={props.option.tabIndex}
-  >
-    <span className="slds-truncate" title={props.option.text}>{ props.option.text }</span>
+  <li role="presentation" className="slds-listbox__item">
+    <span
+      className={classNames(
+        'slds-listbox__option slds-listbox__option--plain slds-media',
+        {
+          'slds-is-grabbed': props.option.isGrabbed,
+          'slds-is-selected': props.option.isSelected
+        }
+      )}
+      aria-selected={props.option.isSelected}
+      draggable="true"
+      role="option"
+      tabIndex={props.option.tabIndex}
+    >
+      <span className="slds-truncate" title={props.option.text}>{ props.option.text }</span>
+    </span>
   </li>;
 
 /// ////////////////////////////////////////

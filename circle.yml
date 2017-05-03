@@ -21,7 +21,7 @@ dependencies:
     - cd $DEPLOY_TOOLKIT && npm install -g
   override:
     - sfdeploy -d report_build_info -lt off || ( touch $FAILURE_FILE && exit 1 )
-    - npm install
+    - sfdeploy -d npm_install -s ui/ -lt file -ll $LOG_LEVEL -lp $DEPENDENCY_LOG -ci || ( touch $FAILURE_FILE && exit 1 )
   cache_directories:
     - "/opt/circleci/python/2.7.11/lib/python2.7/site-packages"
     - "~/design-system/node_modules"

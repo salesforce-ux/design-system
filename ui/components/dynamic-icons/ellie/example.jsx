@@ -30,20 +30,36 @@ Ellie.propTypes = {
   assistiveText: React.PropTypes.string.isRequired
 };
 
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+export default (
+  <Ellie
+    className="slds-is-animated"
+    title="Description of the icon"
+    assistiveText="Text alternative"
+  />
+);
+
 export let states = [
-  {
-    id: 'animated',
-    label: 'Animated',
-    element: <Ellie className="slds-is-animated" title="Description of the icon" assistiveText="Text alternative" />
-  },
   {
     id: 'paused',
     label: 'Paused',
-    element: <Ellie className="slds-is-animated slds-is-paused" title="Description of the icon" assistiveText="Text alternative" />
+    element:
+      <Ellie
+        className="slds-is-animated slds-is-paused"
+        title="Description of the icon"
+        assistiveText="Text alternative"
+      />
   },
   {
     id: 'static',
     label: 'Static (no animation)',
-    element: <Ellie title="Description of the icon" assistiveText="Text alternative" />
+    element:
+      <Ellie
+        title="Description of the icon"
+        assistiveText="Text alternative"
+      />
   }
 ];

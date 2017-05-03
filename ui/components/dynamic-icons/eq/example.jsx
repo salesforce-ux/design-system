@@ -11,6 +11,10 @@ export let EqIcon = () =>
     <span className="slds-assistive-text">Text alternative when needed</span>
   </div>;
 
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
 export default (
   <EqIcon />
 );

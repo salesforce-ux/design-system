@@ -4,6 +4,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
+
 let Strength = props =>
   <span
     {...props}
@@ -17,16 +21,17 @@ let Strength = props =>
     <span className="slds-assistive-text">Text alternative when needed</span>
   </span>;
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
+// Default
+export default (
+  <Strength data-slds-strength="0" />
+);
+
+// States
 export let states = [
-  {
-    id: 'strength-0',
-    label: 'Default',
-    element: <Strength data-slds-strength="0" />
-  },
   {
     id: 'strength-1',
     label: 'Strength: 1',

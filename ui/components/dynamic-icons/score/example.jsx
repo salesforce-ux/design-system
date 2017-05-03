@@ -18,10 +18,16 @@ let Score = props =>
     <span className="slds-assistive-text">Text alternative when needed</span>
   </span>;
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
+// Default
+export default (
+  <Score data-slds-state="positive" />
+);
+
+// States
 export let states = [
   {
     id: 'positive',

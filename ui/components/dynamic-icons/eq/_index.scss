@@ -7,7 +7,7 @@ $_eq-bar-height-max: 14px;
 /**
  * @name eq
  * @selector .slds-icon-eq
- * @restrict span
+ * @restrict div
  * @variant
  */
 .slds-icon-eq {
@@ -15,6 +15,12 @@ $_eq-bar-height-max: 14px;
   width: fix-ie-rounding(14);
   height: fix-ie-rounding($_eq-bar-height-max / 1px);
 
+  /**
+   * @summary Turn animation on for animated icon
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-eq
+   */
   &.slds-is-animated {
 
     .slds-icon-eq__bar {
@@ -34,6 +40,12 @@ $_eq-bar-height-max: 14px;
   }
 }
 
+/**
+ * @summary Vertical bar for equalizer icon
+ *
+ * @selector .slds-icon-eq__bar
+ * @restrict .slds-icon-eq div
+ */
 .slds-icon-eq__bar {
   position: absolute;
   bottom: 0;

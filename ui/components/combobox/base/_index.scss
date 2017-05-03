@@ -116,6 +116,11 @@
   &:focus {
     outline: 0;
   }
+
+  .slds-truncate {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 /**
@@ -189,10 +194,15 @@
  * @restrict .slds-combobox__form-element span
  */
 .slds-combobox__input-entity-icon {
+  @include square($square-icon-x-small-boundary);
   position: absolute;
   top: 50%;
-  left: $spacing-xx-small;
-  margin-top: (($square-icon-small-boundary / 2) * -1);
+  left: calc(#{$spacing-xx-small} + 1px);
+  transform: translateY(-50%);
+
+  .slds-icon {
+    @include square($square-icon-x-small-boundary);
+  }
 }
 
 /**
@@ -321,4 +331,9 @@
       margin-top: ($spacing-x-small * -1);
     }
   }
+}
+
+.slds-has-inline-listbox .slds-combobox__input[value] {
+  box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+  // border: $border-width-thin solid #fff;
 }

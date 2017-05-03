@@ -2,283 +2,193 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
-import { ButtonIcon } from '../../button-icons/base/example';
-import { Trigger, Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { PillContainer } from '../../pills/base/example';
-import { Listbox as ListboxHoriz, ListboxItem as ListItemHoriz } from '../../combobox/base/example';
+import {
+  ComboboxContainer,
+  Listbox,
+  ListboxItem,
+  Option
+} from '../../combobox/base/example';
 import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
-import { FormElement } from '../../form-element/base/example';
-import { Input } from '../../input/base/example';
-import _ from 'lodash';
 
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Variables
+----------------------------------------------------------------------------- */
 
-export let Listbox = props =>
-  <div className={props.className} id={props.id || 'option-list-01'} role="listbox">
-    {props.children}
-  </div>;
+const listboxSelectionsId = 'listbox-selections-unique-id';
+const listboxOptionId00 = 'listbox-option-unique-id-00';
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
 
-export let ListboxList = props =>
-  <ul
-    className={classNames('slds-dropdown__list', props.className)}
-    role={props.role == 'group' ? 'group' : 'presentation'}
-    aria-label={props.role == 'group' ? props['aria-label'] : null}
-  >
-    {props.children}
-  </ul>;
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
 
-export let ListboxItem = props => {
-  const uniqueId = _.uniqueId('listbox-option-');
-
-  return (
-    <li className={props.className} role="presentation">
-      <span
-        className={classNames(props.role == 'presentation' ? 'slds-lookup__item--label' : (props.text ? 'slds-lookup__item-action slds-lookup__item-action--label' : 'slds-lookup__item-action slds-media'))}
-        role={!props.role ? 'option' : props.role}
-        tabIndex={props.tabIndex}
-        id={uniqueId}
-      >
-        { props.isSelectable
-          ? <SvgIcon className="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small slds-shrink-none" sprite="utility" symbol="check" />
-        : null }
-        { props.headerText
-          ? <h3 className="slds-text-title--caps" role="presentation">{ props.headerText }</h3>
-        : (props.text
-          ? <span className="slds-truncate" title={props.children}>{ props.children }</span>
-        : props.children
-        )}
-      </span>
-    </li>
-  );
-};
-
-export const PickList = props =>
-  <div
-    aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup="listbox"
-    className={classNames('slds-picklist slds-dropdown-trigger slds-dropdown-trigger--click', { 'slds-is-open': props.isOpen, 'slds-picklist--fluid': props.isFluid }, props.classNames)}
-    role="combobox"
-  >
-    { props.children }
-  </div>;
-
-let ComboboxSearchInput = props =>
-  <FormElement
-    label="Categories"
-    inputId="text-input-01"
-    inputIcon="right"
-    formControlClassName="slds-picklist__input"
-  >
-      <input
-        aria-activedescendant=""
-        aria-autocomplete={props.autocomplete ? 'list' : null}
-        aria-controls="option-list-01"
-        autoComplete="off"
-        className="slds-lookup__search-input slds-input"
-        id="text-input-01"
-        placeholder={props.placeholder || 'Select an Option'}
-        readOnly={!props.autocomplete}
-        role="textbox"
-        type="text"
-        value={props.value}
+const ListboxDropdown = props =>
+  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={true}>
+    {props.heading ?
+      <li role="presentation" className="slds-listbox__item">
+        <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={listboxOptionId00}>
+          <h3 className="slds-text-title--caps" role="presentation">{props.heading}</h3>
+        </span>
+      </li>
+    : null}
+    <ListboxItem>
+      <Option
+        id={listboxOptionId01}
+        title="Option A"
+        focused={props.focused}
+        selected={props.optionOneSelected}
       />
-      {
-        !props.autocomplete
-        ? <ButtonIcon
-          className="slds-input__icon slds-text-color--default"
-          symbol="down"
-          assistiveText="Expand category options"
-          title="Expand category options"
-          aria-expanded={props.dropdown == 'open' ? 'true' : 'false'}
-          iconClassName="slds-button__icon"
-          tabIndex="-1"
-          />
-        : null
-      }
-  </FormElement>;
+    </ListboxItem>
+    <ListboxItem>
+      <Option
+        id={listboxOptionId02}
+        title="Option B"
+        selected={props.optionTwoSelected}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option
+        id={listboxOptionId03}
+        title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        selected={props.optionThreeSelected}
+      />
+    </ListboxItem>
+  </Listbox>;
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
+// Demo wrapper
+export const Context = props =>
+  <div style={{ height: '14rem' }}>
+    {props.children}
+  </div>;
+
+// Default
 export default (
-  <div className="demo-only" style={{height: '240px'}}>
-    <PickList isOpen>
-      <ComboboxSearchInput dropdown="open" />
-      <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-        <ListboxList>
-          <ListboxItem isSelectable text>Option A</ListboxItem>
-          <ListboxItem isSelectable text>Option B</ListboxItem>
-          <ListboxItem isSelectable text>Option C</ListboxItem>
-          <ListboxItem isSelectable text>Option D</ListboxItem>
-          <ListboxItem isSelectable text>Option E</ListboxItem>
-          <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-        </ListboxList>
-      </Listbox>
-    </PickList>
-  </div>
+  <ComboboxContainer
+    className="slds-combobox-picklist"
+    containerClassName="slds-size--small"
+    inputIcon="right"
+    inputIconRightSymbol="down"
+    listbox={<ListboxDropdown />}
+  />
 );
 
+// States
 export let states = [
   {
-    id: 'picklist-closed',
-    label: 'Closed',
+    id: 'focused',
+    label: 'Focused',
     element:
-      <PickList>
-        <ComboboxSearchInput />
-        <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-          <ListboxList>
-            <ListboxItem isSelectable text>Option A</ListboxItem>
-            <ListboxItem isSelectable text>Option B</ListboxItem>
-            <ListboxItem isSelectable text>Option C</ListboxItem>
-            <ListboxItem isSelectable text>Option D</ListboxItem>
-            <ListboxItem isSelectable text>Option E</ListboxItem>
-            <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-          </ListboxList>
-        </Listbox>
-      </PickList>
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        isOpen={true}
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        listbox={<ListboxDropdown />}
+      />,
+    script: `
+      document.getElementById('combobox-unique-id').focus()
+    `
   },
   {
-    id: 'picklist-open-item-selected',
-    label: 'Item selected',
+    id: 'open-item-focused',
+    label: 'Open - Item Focused',
     element:
-      <div className="demo-only" style={{height: '240px'}}>
-        <PickList isOpen>
-          <ComboboxSearchInput value="Option A" dropdown="open" />
-          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" text isSelectable>
-                <span className="slds-assistive-text">Current Selection:</span>Option A
-              </ListboxItem>
-              <ListboxItem isSelectable text>Option B</ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-      </div>
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        isOpen={true}
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        listbox={<ListboxDropdown focused={true} />}
+        aria-activedescendant={listboxOptionId01}
+      />
   },
   {
-    id: 'picklist-open-item-multi-selected',
-    label: 'Multiple items selected',
+    id: 'open-option-selected',
+    label: 'Open - Option Selected',
     element:
-      <div className="demo-only" style={{height: '240px'}}>
-        <PickList isOpen>
-          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option A
-              </ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option B
-              </ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-      </div>
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        isOpen={true}
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Option A"
+        listbox={<ListboxDropdown optionOneSelected={true} />}
+      />
   },
   {
-    id: 'picklist-closed-item-multi-selected',
-    label: 'Closed - Multiple items selected',
+    id: 'open-options-selected',
+    label: 'Open - Option(s) Selected',
     element:
-      <div className="demo-only">
-        <PickList>
-          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown slds-dropdown--left">
-            <ListboxList>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option A
-              </ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option B
-              </ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-        <PillContainer className="slds-pill_container--bare">
-          <ListboxHoriz horizontal>
-            <ListItemHoriz>
-              <ListboxPill label="Option A" tabIndex="0" />
-            </ListItemHoriz>
-            <ListItemHoriz>
-              <ListboxPill label="Option B" />
-            </ListItemHoriz>
-          </ListboxHoriz>
-        </PillContainer>
-      </div>
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        isOpen={true}
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="2 Options Selected"
+        listbox={
+          <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
+        }
+      />
   },
   {
-    id: 'picklist-with-header',
-    label: 'With Header',
+    id: 'closed-option-selected',
+    label: 'Option Selected',
     element:
-      <div className="demo-only" style={{height: '240px'}}>
-        <PickList isOpen>
-          <ComboboxSearchInput value="2 Options selected" dropdown="open" />
-          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList role="group" aria-label="Recently Viewed">
-              <ListboxItem role="presentation" headerText="Recently Viewed" />
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option A
-              </ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option B
-              </ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-      </div>
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Option A"
+        listbox={<ListboxDropdown focused={true} optionOneSelected={true} />}
+      />
   },
   {
-    id: 'picklist-with-autocomplete',
-    label: 'Autocomplete',
+    id: 'closed-options-selected',
+    label: 'Option(s) Selected',
     element:
-      <div className="demo-only" style={{height: '240px'}}>
-        <PickList isOpen>
-          <ComboboxSearchInput placeholder="Find Option" dropdown="open" autocomplete />
-          <Listbox className="slds-dropdown slds-dropdown--left slds-dropdown--length-5">
-            <ListboxList role="group" aria-label="Recently Viewed">
-              <ListboxItem role="presentation" headerText="Recently Viewed" />
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option A
-              </ListboxItem>
-              <ListboxItem className="slds-is-selected" isSelected="true" isSelectable text>
-                <span className="slds-assistive-text">Current Selection:</span>Option B
-              </ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-            <ListboxList role="group" aria-label="Another List" className="slds-has-divider--top-space">
-              <ListboxItem role="presentation" headerText="Another List" />
-              <ListboxItem isSelectable text>Option A</ListboxItem>
-              <ListboxItem isSelectable text>Option B</ListboxItem>
-              <ListboxItem isSelectable text>Option C</ListboxItem>
-              <ListboxItem isSelectable text>Option D</ListboxItem>
-              <ListboxItem isSelectable text>Option E</ListboxItem>
-              <ListboxItem isSelectable text title="Option FGHIJKLMNOPQRSTUVWXYZ">Option FGHIJKLMNOPQRSTUVWXYZ</ListboxItem>
-            </ListboxList>
-          </Listbox>
-        </PickList>
-      </div>
-  }
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="2 Options Selected"
+        listbox={
+          <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
+        }
+      >
+      <Listbox
+        id={listboxSelectionsId}
+        aria-label="Selected Options:"
+        className="slds-p-top--xxx-small"
+        horizontal
+      >
+        <ListboxItem>
+          <ListboxPill label="Option A" tabIndex="0" />
+        </ListboxItem>
+        <ListboxItem>
+          <ListboxPill label="Option B" />
+        </ListboxItem>
+      </Listbox>
+    </ComboboxContainer>
+  },
+  {
+    id: 'group-heading',
+    label: 'Group heading label',
+    element:
+      <ComboboxContainer
+        containerClassName="slds-size--small"
+        isOpen={true}
+        inputIcon="right"
+        inputIconRightSymbol="down"
+        value="Option A"
+        listbox={
+          <ListboxDropdown optionOneSelected={true} heading="Recently Viewed" />
+        }
+      />
+  },
 ];

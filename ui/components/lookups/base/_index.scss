@@ -2,11 +2,14 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
  * @name base
- * @selector .slds-lookup
+ * @selector .slds-combobox-lookup
  * @restrict div
  * @variant
  */
+
 .slds-lookup {
   position: relative;
   width: 100%; // Fill up parent container

@@ -3,81 +3,84 @@
 
 /**
  * @name base
- * @selector .slds-picklist
+ * @selector .slds-combobox-picklist
  * @restrict div
- * @required
  * @variant
  */
-.slds-picklist {
-  position: relative;
 
-  // Force width on picklist
-  .slds-dropdown {
-    width: $size-small;
-  }
+@include deprecate('4.0.0', 'A picklist should use the readonly version of a combobox') {
 
-  li {
-    /**
-     * Set default state of icon for when a listbox option is selected
-     *
-     * @selector .slds-icon--selected
-     * @restrict .slds-picklist li svg
-     * @required
-     */
-    .slds-icon_selected,
-    .slds-icon--selected {
-      opacity: 0;
-      transition: opacity $duration-immediately ease;
+  .slds-picklist {
+    position: relative;
+
+    // Force width on picklist
+    .slds-dropdown {
+      width: $size-small;
+    }
+
+    li {
+      /**
+       * Set default state of icon for when a listbox option is selected
+       *
+       * @selector .slds-icon--selected
+       * @restrict .slds-picklist li svg
+       * @required
+       */
+      .slds-icon_selected,
+      .slds-icon--selected {
+        opacity: 0;
+        transition: opacity $duration-immediately ease;
+      }
+
+      /**
+       * Toggles state of icon for when a listbox option is selected
+       *
+       * @selector .slds-is-selected
+       * @restrict .slds-picklist li
+       * @modifier
+       * @required
+       */
+      &.slds-is-selected .slds-icon_selected,
+      &.slds-is-selected .slds-icon--selected {
+        fill: $color-text-icon-default-hover;
+        opacity: 1;
+      }
     }
 
     /**
-     * Toggles state of icon for when a listbox option is selected
+     * Resets explicit width on picklist to be fluid to its parent element
      *
-     * @selector .slds-is-selected
-     * @restrict .slds-picklist li
+     * @selector .slds-picklist--fluid
+     * @restrict .slds-picklist
      * @modifier
-     * @required
      */
-    &.slds-is-selected .slds-icon_selected,
-    &.slds-is-selected .slds-icon--selected {
-      fill: $color-text-icon-default-hover;
-      opacity: 1;
+    &_fluid,
+    &--fluid {
+
+      .slds-picklist__input,
+      .slds-picklist__label,
+      .slds-dropdown,
+      .slds-lookup {
+        width: auto;
+        min-width: 0;
+        max-width: $size-small;
+      }
     }
   }
 
   /**
-   * Resets explicit width on picklist to be fluid to its parent element
+   * Read-only input element for picklist
    *
-   * @selector .slds-picklist--fluid
-   * @restrict .slds-picklist
-   * @modifier
+   * @selector .slds-picklist__input
+   * @restrict .slds-picklist .slds-form-element__control
+   * @required
    */
-  &_fluid,
-  &--fluid {
+  .slds-picklist__input {
+    width: $size-small;
 
-    .slds-picklist__input,
-    .slds-picklist__label,
-    .slds-dropdown,
-    .slds-lookup {
-      width: auto;
-      min-width: 0;
-      max-width: $size-small;
+    .slds-button {
+      line-height: 0;
     }
-  }
-}
-
-/**
- * Read-only input element for picklist
- *
- * @selector .slds-picklist__input
- * @restrict .slds-picklist .slds-form-element__control
- * @required
- */
-.slds-picklist__input {
-  width: $size-small;
-
-  .slds-button {
-    line-height: 0;
   }
 }
 

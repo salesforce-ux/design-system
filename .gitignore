@@ -26,3 +26,6 @@
 
 # Legacy folders
 /git_modules
+
+# Ignore illuminated cloud
+design-system.iml

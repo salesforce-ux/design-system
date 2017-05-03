@@ -7,7 +7,7 @@ machine:
     LOG_LEVEL: DEBUG
     DEPLOY_TOOLKIT_BRANCH: <DEPLOY_TOOLKIT_BRANCH>
   node:
-    version: 6.10.3
+    version: 4.5.0
   ruby:
     version: 2.2.7
 

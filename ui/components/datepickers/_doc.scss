@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary A datepicker is a non text input form element. You can select a single date or date range from a popup or inline calendar.
+ * @summary A datepicker is a text input to capture a date. You can select a single date, date range or date and time.
  *
  * @base
  * @name datepickers
@@ -10,5 +10,5 @@
  * @support dev-ready
  * @category experience
  * @type data-entry
- * @role grid
+ * @role grid, combobox
  */

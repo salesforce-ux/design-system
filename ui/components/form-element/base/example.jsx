@@ -26,7 +26,7 @@ export let FormElement = props => {
     tooltip,
     message,
     role,
-    listbox,
+    dropdown,
     children,
     ...rest
   } = props;
@@ -82,7 +82,7 @@ export let FormElement = props => {
           { message }
         </div>
       : null }
-      { role === 'combobox' ? listbox : null }
+      { dropdown ? dropdown : null }
     </div>
   );
 };

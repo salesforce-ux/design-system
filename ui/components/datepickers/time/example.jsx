@@ -2,60 +2,205 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import {
+  ComboboxContainer,
+  Listbox,
+  ListboxItem,
+  Option
+} from '../../combobox/base/example';
+import { DatePicker } from '../base/example';
+import { UtilityIcon } from '../../icons/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
 
+/* -----------------------------------------------------------------------------
+    Variables
+----------------------------------------------------------------------------- */
+
+const dateInputId = 'date-input-id';
+const timeInputId = 'time-input-id';
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
+const listboxOptionId04 = 'listbox-option-unique-id-04';
+const listboxOptionId05 = 'listbox-option-unique-id-05';
+const listboxOptionId06 = 'listbox-option-unique-id-06';
+const listboxOptionId07 = 'listbox-option-unique-id-07';
+const listboxOptionId08 = 'listbox-option-unique-id-08';
+const listboxOptionId09 = 'listbox-option-unique-id-09';
+const listboxOptionId10 = 'listbox-option-unique-id-10';
+const listboxOptionId11 = 'listbox-option-unique-id-11';
+const listboxOptionId12 = 'listbox-option-unique-id-12';
+
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
+
+const ListboxDropdown = props =>
+  <Listbox
+    className="slds-dropdown slds-dropdown--fluid slds-dropdown--length-5"
+    vertical={true}
+  >
+    <ListboxItem>
+      <Option id={listboxOptionId01} title="6:00am" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId02} title="7:00am" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option
+        id={listboxOptionId03}
+        title="8:00am"
+        selected={props.optionSelected}
+      />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId04} title="9:00am" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId05} title="10:00am" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId06} title="11:00am" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId07} title="12:00pm" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId08} title="1:00pm" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId09} title="2:00pm" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId10} title="3:00pm" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId11} title="4:00pm" />
+    </ListboxItem>
+    <ListboxItem>
+      <Option id={listboxOptionId12} title="5:00pm" />
+    </ListboxItem>
+  </Listbox>;
+
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+// Demo wrapper
+export const Context = props =>
+  <div style={{ height: '25rem' }}>
+    {props.children}
+  </div>;
+
+// Default
 export default (
-<div className="demo-only" style={{height: '225px'}}>
-  <div className="slds-dropdown slds-dropdown--left slds-datepicker--time" aria-hidden="false" data-selection="time">
-    <ul className="slds-datepicker--time__list">
-      <li aria-selected="false">12:00am</li>
-      <li aria-selected="false">12:30am</li>
-      <li aria-selected="false">1:00am</li>
-      <li aria-selected="false">1:30am</li>
-      <li aria-selected="false">2:00am</li>
-      <li aria-selected="false">2:30am</li>
-      <li aria-selected="false">3:00am</li>
-      <li aria-selected="false">3:30am</li>
-      <li aria-selected="false">4:00am</li>
-      <li aria-selected="false">4:30am</li>
-      <li aria-selected="false">5:00am</li>
-      <li aria-selected="false">5:30am</li>
-      <li aria-selected="false">6:00am</li>
-      <li aria-selected="false">6:30am</li>
-      <li aria-selected="false">7:00am</li>
-      <li aria-selected="false">7:30am</li>
-      <li aria-selected="false">8:00am</li>
-      <li aria-selected="false">8:30am</li>
-      <li aria-selected="false">9:00am</li>
-      <li aria-selected="false">9:30am</li>
-      <li aria-selected="false">10:00am</li>
-      <li aria-selected="false">10:30am</li>
-      <li aria-selected="false">11:00am</li>
-      <li aria-selected="false">11:30am</li>
-      <li aria-selected="false">12:00pm</li>
-      <li aria-selected="false">12:30pm</li>
-      <li aria-selected="false">1:00pm</li>
-      <li aria-selected="false">1:30pm</li>
-      <li aria-selected="false">2:00pm</li>
-      <li aria-selected="false">2:30pm</li>
-      <li aria-selected="false">3:00pm</li>
-      <li aria-selected="false">3:30pm</li>
-      <li aria-selected="false">4:00pm</li>
-      <li aria-selected="false">4:30pm</li>
-      <li aria-selected="false">5:00pm</li>
-      <li aria-selected="false">5:30pm</li>
-      <li aria-selected="false">6:00pm</li>
-      <li aria-selected="false">6:30pm</li>
-      <li aria-selected="false">7:00pm</li>
-      <li aria-selected="false">7:30pm</li>
-      <li aria-selected="false">8:00pm</li>
-      <li aria-selected="false">8:30pm</li>
-      <li aria-selected="false">9:00pm</li>
-      <li aria-selected="false">9:30pm</li>
-      <li aria-selected="false">10:00pm</li>
-      <li aria-selected="false">10:30pm</li>
-      <li aria-selected="false">11:00pm</li>
-      <li aria-selected="false">11:30pm</li>
-    </ul>
+  <div className="slds-form slds-form--compound">
+    <fieldset className="slds-form-element">
+      <legend className="slds-form-element__label">Date and Time</legend>
+      <div className="slds-form-element__group">
+        <div className="slds-form-element__row">
+          <FormElement
+            className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+            label="Date"
+            inputId={dateInputId}
+            inputIcon="right"
+            dropdown={<DatePicker todayActive={true} />}
+          >
+            <Input id={dateInputId} placeholder=" " />
+            <UtilityIcon
+              containerClassName="slds-input__icon slds-input__icon--right"
+              className="slds-icon slds-icon--x-small slds-icon-text-default"
+              symbol="event"
+            />
+          </FormElement>
+          <ComboboxContainer
+            label="Time"
+            className="slds-combobox-picklist slds-timepicker"
+            inputIcon="right"
+            inputIconRightSymbol="clock"
+            placeholder=" "
+            listbox={<ListboxDropdown />}
+          />
+        </div>
+      </div>
+    </fieldset>
   </div>
-</div>
 );
+
+export let states = [
+  {
+    id: 'date-selection',
+    label: 'Date selected',
+    element:
+      <div className="slds-form slds-form--compound">
+        <fieldset className="slds-form-element">
+          <legend className="slds-form-element__label">Date and Time</legend>
+          <div className="slds-form-element__group">
+            <div className="slds-form-element__row">
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                label="Date"
+                inputId={dateInputId}
+                inputIcon="right"
+                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+              >
+                <Input id={dateInputId} placeholder=" " value="06/24/2014" />
+                <UtilityIcon
+                  containerClassName="slds-input__icon slds-input__icon--right"
+                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                  symbol="event"
+                />
+              </FormElement>
+              <ComboboxContainer
+                label="Time"
+                className="slds-combobox-picklist slds-timepicker"
+                inputIcon="right"
+                inputIconRightSymbol="clock"
+                placeholder=" "
+                listbox={<ListboxDropdown />}
+              />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  },
+  {
+    id: 'time-selection',
+    label: 'Time selected',
+    element:
+      <div className="slds-form slds-form--compound">
+        <fieldset className="slds-form-element">
+          <legend className="slds-form-element__label">Date and Time</legend>
+          <div className="slds-form-element__group">
+            <div className="slds-form-element__row">
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click"
+                label="Date"
+                inputId={dateInputId}
+                inputIcon="right"
+                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+              >
+                <Input id={dateInputId} placeholder=" " value="06/24/2014" />
+                <UtilityIcon
+                  containerClassName="slds-input__icon slds-input__icon--right"
+                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                  symbol="event"
+                />
+              </FormElement>
+              <ComboboxContainer
+                label="Time"
+                isOpen={true}
+                className="slds-combobox-picklist slds-timepicker"
+                inputIcon="right"
+                inputIconRightSymbol="clock"
+                placeholder=" "
+                value="8:00am"
+                listbox={<ListboxDropdown optionSelected={true} />}
+              />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  }
+];

@@ -1,28 +1,43 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-.slds-datepicker_time,
-.slds-datepicker--time {
-  max-width: $size-x-small;
-  max-height: (($line-height-text + ($spacing-x-small * 2)) * 6) - ($spacing-small * 2);
-  overflow: hidden {
-    y: auto;
-  }
+/**
+ * A timepicker is used to select a single time. The component is using the combobox
+ * HTML structure. Please see the combobox component for implementation details.
+ *
+ * @summary Initializes a timepicker
+ *
+ * @name time
+ * @selector .slds-timepicker
+ * @restrict .slds-datepicker
+ * @variant
+ */
 
-  &__list {
+@include deprecate('4.0.0', 'Time picker should use a picklist') {
 
-    > li {
-      white-space: nowrap;
-      padding: $spacing-x-small {
-        left: $spacing-x-large;
-        right: $spacing-x-large;
-      }
+  .slds-datepicker_time,
+  .slds-datepicker--time {
+    max-width: $size-x-small;
+    max-height: (($line-height-text + ($spacing-x-small * 2)) * 6) - ($spacing-small * 2);
+    overflow: hidden {
+      y: auto;
+    }
 
-      &:hover,
-      &:focus {
-        background: $color-background-row-hover;
-        text-decoration: none;
-        cursor: pointer;
+    &__list {
+
+      > li {
+        white-space: nowrap;
+        padding: $spacing-x-small {
+          left: $spacing-x-large;
+          right: $spacing-x-large;
+        }
+
+        &:hover,
+        &:focus {
+          background: $color-background-row-hover;
+          text-decoration: none;
+          cursor: pointer;
+        }
       }
     }
   }

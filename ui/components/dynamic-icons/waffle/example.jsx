@@ -11,7 +11,7 @@ import classNames from 'classnames';
 export let WaffleIcon = props =>
   <button
     {...props}
-    className={classNames('slds-icon-animated slds-button slds-icon-waffle_container', props.className)}
+    className={classNames('slds-button slds-icon-waffle_container', props.className)}
     title="Description of the icon when needed">
     <span className="slds-icon-waffle">
       <span className="slds-r1" />

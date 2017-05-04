@@ -10,7 +10,7 @@ import classNames from 'classnames';
 const frames = 20;
 
 export const Ellie = props =>
-  <span className={classNames('slds-icon-animated slds-icon-ellie', props.className)} title={props.title}>
+  <span className={classNames('slds-icon-ellie', props.className)} title={props.title}>
     <svg
       viewBox={`0 0 ${frames * 14} 14`}
       aria-hidden="true">

@@ -29,7 +29,7 @@ export const removeFromCache = (() => {
 
 export const watchPaths = {
   css: [
-    '.assets/**/*.css'
+    'assets/**/*.css'
   ],
   sass: [
     'ui/**/*.scss',

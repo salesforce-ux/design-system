@@ -2,44 +2,35 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * **Note** — A picklist is a readonly combobox component, please find
- * implementation documentation under the combobox component
+ * A picklist is a widget that displays a list of selectable options.
+ * When an option is selected, it is shown as selected and the value of the
+ * read-only input is updated to match it.
  *
- * A picklist is a list of pre-defined selectable options. That value is then
- * shown as selected and its value of the readonly input is updated as well.
- *
- * A multi-select picklist is a list of actionable items that is invoked by
- * selection of a particular item(s). The multi-select picklist can have more
- * than one selected option. When more than one option has been selected, the
- * value of readonly input should update with the total number of selected
- * items, such as "3 options selected". When the picklist loses focus but has
- * items selected, a listbox of pill options should be display below the
- * readonly input with the selected options represented as pills, allowing a user to
- * easily remove selected items.
+ * A multi-select picklist is widget that displays a list of selectable options, where
+ * more than one option can be chosen. When more than one option has been selected, the
+ * value of the read-only input should update with the total number of selected
+ * items, such as "3 options selected". When a picklist with multiple selected options is closed,
+ * a listbox of pills is also used to represent those selected options.
+ * The listbox of pills is positioned below the read-only input, each pill represents a selected option.
+ * This allows a user to easily see and remove selected items.
  *
  * The target HTML element, `slds-combobox` and dropdown need to be wrapped in the class
  * `.slds-dropdown-trigger dropdown-trigger--click`.
  *
  * #### Accessibility
  *
- * The main thing that distinguishes menus from other popover blocks is keyboard
- * navigation: elsewhere, users press the Tab key to navigate through actionable
- * items, but in a menu, users press the arrow keys to navigate.
+ * A Picklist allows a user to select and set a value from a pre-defined list of options. As such
+ * we follow the ARIA Combobox widget pattern to implement it as it's the most appropriate concept to achieve this.
+ * The variant of Combobox we chose is the "Read-only" version, as a users keyboard input cannot directly affect
+ * the value set in the Combobox, but can only select a value from a pre-definied list. It also does not perform
+ * a search, or autocomplete function. It most closely resembles the HTML `select` element.
  *
- * **Expected markup:**
+ * Implementing a multi-select pattern with a Combobox is not standard, nor is it technically supported by the specification.
+ * Therefore great care should be paid to the extra steps we take to try and communicate multi-selection.
  *
- * - Menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
- * - Menu has `role="menu"` and an `aria-labelledby` attribute whose value is the id of the menu trigger
- * - Menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`
+ * Please refer to the [Combobox](/components/combobox) documentation relating to read-only implementation guidelines.
  *
- * **Expected keyboard interactions:**
- *
- * - Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)
- * - Tab key closes menu and moves focus to the next focusable element on the page
- * - Esc key closes menu and moves focus back to the menu trigger
- * - Any character key moves focus to the next menu item that starts with that character, if applicable
- *
- * @summary A Picklist provides a user with an readonly input field that is accompanied with a listbox of pre-defined options. A picklist has a single and multi-selection pattern.
+ * @summary A Picklist provides a user with an read-only input field that is accompanied with a listbox of pre-defined options. A picklist has a single and multi-selection pattern.
  *
  * @base
  * @name picklist

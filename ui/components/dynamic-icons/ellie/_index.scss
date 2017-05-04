@@ -24,12 +24,24 @@ $_ellie-frameset: (
   // frames 11 to 20 are frames 1 to 10 in reverse order
 );
 
+/**
+ * @name ellie
+ * @selector .slds-icon-ellie
+ * @restrict span
+ * @variant
+ */
 .slds-icon-ellie {
   width: fix-ie-rounding($_ellie-icon-width);
   height: fix-ie-rounding($_ellie-icon-width);
   display: inline-block;
   overflow: hidden;
 
+  /**
+   * @summary Add .slds-is-animated to the SVG to enhance the icon with an animation.
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-ellie
+   */
   &.slds-is-animated {
     will-change: transform;
     animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
@@ -40,6 +52,12 @@ $_ellie-frameset: (
     }
   }
 
+  /**
+   * @summary Add .slds-is-paused to the SVG to pause the icon with an animation.
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-ellie
+   */
   &.slds-is-paused {
 
     &,

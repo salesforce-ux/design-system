@@ -17,11 +17,25 @@ $_icon-trend-zero: 0.1px;
 // which improves rendering at small size
 $_icon-trend-one: 1.125px;
 
+/**
+ * @summary Initializes trend icon
+ *
+ * @name trend
+ * @selector .slds-icon-trend
+ * @restrict span
+ * @variant
+ */
 .slds-icon-trend {
   width: 1rem;
   height: 1rem;
   display: inline-block;
 
+  /**
+   * @summary Add .slds-is-animated to the SVG to enhance the icon with an animation.
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-trend
+   */
   &.slds-is-animated {
 
     .slds-icon-trend__arrow {
@@ -33,6 +47,12 @@ $_icon-trend-one: 1.125px;
     }
   }
 
+  /**
+   * @summary Add .slds-is-paused to the SVG to pause the icon with an animation.
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-trend
+   */
   &.slds-is-paused {
 
     .slds-icon-trend__arrow,
@@ -65,11 +85,23 @@ $_icon-trend-one: 1.125px;
   stroke-width: $_icon-trend-one;
 }
 
+/**
+ * @summary Arrow element inside of trend icon
+ *
+ * @selector .slds-icon-trend__arrow
+ * @restrict .slds-icon-trend path
+ */
 .slds-icon-trend__arrow {
   stroke-dashoffset: $_icon-trend-zero;
   stroke-dasharray: $_icon-trend-arrow-length * 2 - $_icon-trend-one;
 }
 
+/**
+ * @summary Circle element inside of trend icon
+ *
+ * @selector .slds-icon-trend__circle
+ * @restrict .slds-icon-trend circle
+ */
 .slds-icon-trend__circle {
   stroke-dasharray: ($_icon-trend-circumference - 4px), $_icon-trend-circumference;
 }

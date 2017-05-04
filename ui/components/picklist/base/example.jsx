@@ -25,7 +25,11 @@ const listboxOptionId03 = 'listbox-option-unique-id-03';
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical={true}>
+  <Listbox
+    aria-label={props.heading ? props.heading : null}
+    className="slds-dropdown slds-dropdown--fluid"
+    vertical={true}
+  >
     {props.heading ?
       <li role="presentation" className="slds-listbox__item">
         <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={listboxOptionId00}>
@@ -75,6 +79,7 @@ export default (
     inputIcon="right"
     inputIconRightSymbol="down"
     listbox={<ListboxDropdown />}
+    readonly
   />
 );
 
@@ -90,6 +95,7 @@ export let states = [
         inputIcon="right"
         inputIconRightSymbol="down"
         listbox={<ListboxDropdown />}
+        readonly
       />,
     script: `
       document.getElementById('combobox-unique-id').focus()
@@ -106,6 +112,7 @@ export let states = [
         inputIconRightSymbol="down"
         listbox={<ListboxDropdown focused={true} />}
         aria-activedescendant={listboxOptionId01}
+        readonly
       />
   },
   {
@@ -119,6 +126,7 @@ export let states = [
         inputIconRightSymbol="down"
         value="Option A"
         listbox={<ListboxDropdown optionOneSelected={true} />}
+        readonly
       />
   },
   {
@@ -134,6 +142,7 @@ export let states = [
         listbox={
           <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
         }
+        readonly
       />
   },
   {
@@ -146,6 +155,7 @@ export let states = [
         inputIconRightSymbol="down"
         value="Option A"
         listbox={<ListboxDropdown focused={true} optionOneSelected={true} />}
+        readonly
       />
   },
   {
@@ -160,6 +170,7 @@ export let states = [
         listbox={
           <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
         }
+        readonly
       >
       <Listbox
         id={listboxSelectionsId}
@@ -189,6 +200,7 @@ export let states = [
         listbox={
           <ListboxDropdown optionOneSelected={true} heading="Recently Viewed" />
         }
+        readonly
       />
-  },
+  }
 ];

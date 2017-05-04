@@ -1,6 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// I need to associate slds-icon-animated with something since there isn't a base variant
+
+
+/**
+ * @summary Containing actionable element that holds the waffle icon
+ *
+ * @name waffle
+ * @selector .slds-icon-waffle_container
+ * @restrict button
+ * @variant
+ */
 .slds-icon-waffle_container {
   border: 0;
   outline: 0;
@@ -56,6 +67,12 @@
   }
 }
 
+/**
+ * @summary Element container circles for the waffle icon
+ *
+ * @selector .slds-icon-waffle
+ * @restrict .slds-icon-waffle_container
+ */
 .slds-icon-waffle {
   @include square(rem(21px));
   position: relative;

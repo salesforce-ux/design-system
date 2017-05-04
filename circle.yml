@@ -2,21 +2,29 @@ machine:
   environment:
     DEPLOY_TOOLKIT: $HOME/deploy_toolkit
     FAILURE_FILE: /tmp/build_failures.txt
+    DEPENDENCY_LOG:  $CIRCLE_ARTIFACTS/dependency.log
+    TESTING_LOG:  $CIRCLE_ARTIFACTS/testing.log
+    LOG_LEVEL: DEBUG
+    DEPLOY_TOOLKIT_BRANCH: <DEPLOY_TOOLKIT_BRANCH>
+  node:
+    version: 4.5.0
+  ruby:
+    version: 2.2.7
 
 dependencies:
   pre:
-    - git clone -b master git@github.com:loanlifecycle/deploy_toolkit.git $DEPLOY_TOOLKIT
-    # These are used by build_notifications.py
-    - pip install paho-mqtt mock nose2 cov-core requests pycurl
+    - |
+      if [ "$DEPLOY_TOOLKIT_BRANCH" == "<DEPLOY_TOOLKIT_BRANCH>" ]; then DEPLOY_TOOLKIT_BRANCH="master"; fi
+      echo "Checking out branch: $DEPLOY_TOOLKIT_BRANCH\n"
+      git clone -b $DEPLOY_TOOLKIT_BRANCH git@github.com:loanlifecycle/deploy_toolkit.git $DEPLOY_TOOLKIT
+    - $DEPLOY_TOOLKIT/scripts/installation/install_dependencies_for_python.sh
+    - cd $DEPLOY_TOOLKIT && npm install -g
   override:
-    - npm install
-
-# Just stubbing this since there is no need for anything to run here.
-database:
-  pre:
-    - echo "Database:pre section is empty."
-  override:
-    - echo "Database:override section is empty."
+    - sfdeploy -d report_build_info -lt off || ( touch $FAILURE_FILE && exit 1 )
+    - sfdeploy -d npm_install -s ui/ -lt file -ll $LOG_LEVEL -lp $DEPENDENCY_LOG -ci || ( touch $FAILURE_FILE && exit 1 )
+  cache_directories:
+    - "/opt/circleci/python/2.7.11/lib/python2.7/site-packages"
+    - "~/design-system/node_modules"
 
 test:
   override:

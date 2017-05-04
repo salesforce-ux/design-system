@@ -36,6 +36,7 @@ export default (
       inputIcon="right"
       inputIconRightSymbol="down"
       listbox={<ListboxDropdown />}
+      readonly
     />
   </div>
 );
@@ -51,6 +52,7 @@ export let states = [
           inputIcon="right"
           inputIconRightSymbol="down"
           listbox={<ListboxDropdown />}
+          readonly
         />
       </div>,
     script: `
@@ -68,6 +70,7 @@ export let states = [
           inputIconRightSymbol="down"
           listbox={<ListboxDropdown focused />}
           aria-activedescendant={listboxOptionId01}
+          readonly
         />
       </div>
   },
@@ -82,6 +85,7 @@ export let states = [
           inputIconRightSymbol="down"
           value="Option A"
           listbox={<ListboxDropdown optionOneSelected />}
+          readonly
         />
       </div>
   },
@@ -96,6 +100,7 @@ export let states = [
           inputIconRightSymbol="down"
           value="2 Options Selected"
           listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
+          readonly
         />
       </div>
   },
@@ -109,6 +114,7 @@ export let states = [
           inputIconRightSymbol="down"
           value="Option A"
           listbox={<ListboxDropdown focused optionOneSelected />}
+          readonly
         />
       </div>
   },
@@ -122,6 +128,7 @@ export let states = [
           inputIconRightSymbol="down"
           value="2 Options Selected"
           listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
+          readonly
         >
         <Listbox
           id={listboxSelectionsId}

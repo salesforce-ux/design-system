@@ -4,12 +4,25 @@
 $_eq-bar-height-min: 3px;
 $_eq-bar-height-max: 14px;
 
+/**
+ * @name eq
+ * @selector .slds-icon-eq
+ * @restrict div
+ * @variant
+ */
 .slds-icon-eq {
   position: relative;
   width: fix-ie-rounding(14);
   height: fix-ie-rounding($_eq-bar-height-max / 1px);
 
+  /**
+   * @summary Turn animation on for animated icon
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-eq
+   */
   &.slds-is-animated {
+
     .slds-icon-eq__bar {
       animation: slds-icon-eq 0.25s ease-in-out infinite alternate;
       will-change: transform;
@@ -19,6 +32,7 @@ $_eq-bar-height-max: 14px;
       &:nth-of-type(2) {
         animation-duration: 0.65s;
       }
+
       &:nth-of-type(3) {
         animation-duration: 0.35s;
       }
@@ -26,6 +40,12 @@ $_eq-bar-height-max: 14px;
   }
 }
 
+/**
+ * @summary Vertical bar for equalizer icon
+ *
+ * @selector .slds-icon-eq__bar
+ * @restrict .slds-icon-eq div
+ */
 .slds-icon-eq__bar {
   position: absolute;
   bottom: 0;
@@ -40,6 +60,7 @@ $_eq-bar-height-max: 14px;
     left: fix-ie-rounding(5);
     height: rem($_eq-bar-height-max);
   }
+
   &:nth-of-type(3) {
     left: fix-ie-rounding(10);
     height: rem($_eq-bar-height-min) * 4;

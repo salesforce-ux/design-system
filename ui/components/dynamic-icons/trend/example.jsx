@@ -5,6 +5,10 @@ import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
+
 let Trend = props => {
   const { assistiveText, ...rest } = props;
 
@@ -26,21 +30,27 @@ Trend.propTypes = {
   assistiveText: React.PropTypes.string.isRequired
 };
 
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+// Default
+export default (
+  <Trend
+    data-slds-trend="neutral"
+    className="slds-is-animated"
+    title="Description of the icon"
+    assistiveText="Text alternative"
+  />
+);
+
+// States
 export let states = [
   {
     id: 'down',
     label: 'Down',
     element: <Trend
       data-slds-trend="down"
-      className="slds-is-animated"
-      title="Description of the icon"
-      assistiveText="Text alternative" />
-  },
-  {
-    id: 'neutral',
-    label: 'Neutral',
-    element: <Trend
-      data-slds-trend="neutral"
       className="slds-is-animated"
       title="Description of the icon"
       assistiveText="Text alternative" />

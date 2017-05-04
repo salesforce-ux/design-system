@@ -4,6 +4,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
+/* -----------------------------------------------------------------------------
+    Public
+----------------------------------------------------------------------------- */
+
 export let WaffleIcon = props =>
   <button
     {...props}
@@ -23,8 +27,11 @@ export let WaffleIcon = props =>
     <span className="slds-assistive-text">Open App Launcher</span>
   </button>;
 
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+// Default
 export default (
-  <div className="demo-only" style={{ height: '2rem' }}>
-    <WaffleIcon />
-  </div>
+  <WaffleIcon />
 );

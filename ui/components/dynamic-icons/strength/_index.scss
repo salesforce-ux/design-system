@@ -9,6 +9,15 @@
 //    animate the dots nicely.
 // 3. Let the browser know which properties are going to change,
 //    enabling it to optimize rendering speed as best it can
+
+/**
+ * @summary Initializes strength icon
+ *
+ * @name strength
+ * @selector .slds-icon-strength
+ * @restrict span
+ * @variant
+ */
 .slds-icon-strength {
   width: 1.6875rem;
   height: 0.4375rem;
@@ -55,9 +64,12 @@
     stroke: #c23934;
   }
 
-  // Animated state
-  //
-  // Add .slds-is-animated to the SVG to enhance the icon with an animation.
+  /**
+   * @summary Add .slds-is-animated to the SVG to enhance the icon with an animation.
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-strength
+   */
   &.slds-is-animated {
 
     circle {
@@ -95,6 +107,12 @@
     }
   }
 
+  /**
+   * @summary Add .slds-is-paused to the SVG to pause the icon with an animation.
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-strength
+   */
   &.slds-is-paused circle {
     // scss-lint:disable ImportantRule
     /* stylelint-disable declaration-no-important */

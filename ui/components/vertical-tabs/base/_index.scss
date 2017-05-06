@@ -1,0 +1,112 @@
+// ui/components/vertical-tabs/base/_index.scss
+
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The default variant of Vertical Tabs does not truncate tab content,
+ * and has a static width for the tab area.
+ *
+ * @summary Description of classname
+ *
+ * @name base
+ * @selector .slds-vertical-tabs
+ * @restrict div, section
+ * @variant
+ */
+.slds-vertical-tabs {
+  display: flex;
+  overflow: hidden;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * @summary Tab navigation container element
+ *
+ * @selector .slds-vertical-tabs__nav
+ * @restrict .slds-vertical-tabs > ul
+ */
+.slds-vertical-tabs__nav {
+	width: $size-x-small;
+	border-right: $border-width-thin solid $color-border;
+	background: $color-background;
+}
+
+/**
+ * Tab navigation item
+ * 
+ * @selector .slds-vertical-tabs__nav-item
+ * @restrict .slds-vertical-tabs__nav li
+ */
+.slds-vertical-tabs__nav-item {
+  overflow: hidden;
+	border-bottom: $border-width-thin solid $color-border;
+  color: $color-text-action-label;
+
+	&:last-child {
+		margin-bottom: -1px;
+	}
+}
+
+/**
+ * Tab Navigation Link
+ *
+ * @selector .slds-vertical-tabs__link
+ * @restrict .slds-vertical-tabs__nav-item a
+ */
+.slds-vertical-tabs__link {
+  display: block;
+  padding: $spacing-small;
+  color: currentcolor;
+
+	&:hover {
+    background: $color-background-path-incomplete-hover;
+		color: $color-text-action-label-active;
+    text-decoration: none;
+	}
+}
+
+/**
+ * Tab Content Container
+ *
+ * @selector .slds-vertical-tabs__content
+ * @restrict .slds-vertical-tabs div
+ */
+.slds-vertical-tabs__content {
+	flex: 1;
+	padding: $spacing-medium;
+  background: $color-background-alt;
+}
+
+/**
+ * Focus state for a tab navigation item
+ *
+ * @selector .slds-has-focus
+ * @restrict .slds-vertical-tabs__nav-item
+ * @modifier
+ */
+.slds-vertical-tabs__nav-item.slds-has-focus {
+
+}
+
+
+/**
+ * Active state for a tab navigation item
+ *
+ * @selector .slds-is-active
+ * @restrict .slds-vertical-tabs__nav-item
+ * @notes Required on the `<li>` element that is associated with the current active tab
+ * @modifier
+ */
+.slds-vertical-tabs__nav-item.slds-is-active {
+	border-right: none;
+	background: $color-background-alt;
+	margin-right: -1px;
+	color: $color-text-brand;
+
+  .slds-vertical-tabs__link:hover {
+    color: currentcolor;
+    background: $color-background-alt;
+  }
+}

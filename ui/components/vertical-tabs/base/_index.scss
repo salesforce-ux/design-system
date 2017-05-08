@@ -29,9 +29,9 @@
  * @restrict .slds-vertical-tabs > ul
  */
 .slds-vertical-tabs__nav {
-	width: $size-x-small;
-	border-right: $border-width-thin solid $color-border;
-	background: $color-background;
+  width: $size-x-small;
+  border-right: $border-width-thin solid $color-border;
+  background: $color-background;
 }
 
 /**
@@ -42,12 +42,12 @@
  */
 .slds-vertical-tabs__nav-item {
   overflow: hidden;
-	border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid $color-border;
   color: $color-text-action-label;
 
-	&:last-child {
-		margin-bottom: -1px;
-	}
+  &:last-child {
+    margin-bottom: -1px;
+  }
 }
 
 /**
@@ -61,9 +61,9 @@
   padding: $spacing-small;
   color: currentcolor;
 
-	&:hover {
+  &:hover {
     background: $color-background-path-incomplete-hover;
-		color: $color-text-action-label-active;
+    color: $color-text-action-label-active;
     text-decoration: none;
 	}
 }
@@ -75,8 +75,8 @@
  * @restrict .slds-vertical-tabs div
  */
 .slds-vertical-tabs__content {
-	flex: 1;
-	padding: $spacing-medium;
+  flex: 1;
+  padding: $spacing-medium;
   background: $color-background-alt;
 }
 
@@ -89,10 +89,10 @@
  * @modifier
  */
 .slds-vertical-tabs__nav-item.slds-is-active {
-	border-right: none;
-	background: $color-background-alt;
-	margin-right: -1px;
-	color: $color-text-brand;
+  border-right: none;
+  background: $color-background-alt;
+  margin-right: -1px;
+  color: $color-text-brand;
 
   .slds-vertical-tabs__link:hover {
     color: currentcolor;
@@ -108,7 +108,7 @@
  * @modifier
  */
 .slds-vertical-tabs__nav-item.slds-has-focus {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /**

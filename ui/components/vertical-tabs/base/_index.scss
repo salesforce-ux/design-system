@@ -4,10 +4,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The default variant of Vertical Tabs does not truncate tab content,
- * and has a static width for the tab area.
+ * The default Vertical Tabs component renders a list of tabs and their
+ * related content. The tab list is not truncated by default, but truncation
+ * can be added with a modifier class on the link elements.
  *
- * @summary Description of classname
+ * @summary Renders a vertical tablist.
  *
  * @name base
  * @selector .slds-vertical-tabs

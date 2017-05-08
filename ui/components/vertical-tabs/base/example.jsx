@@ -84,6 +84,7 @@ let exampleTabs = [{
   label: 'Tab 1',
   content: (
     <div className='slds-text-longform'>
+      <h3 className='slds-text-heading--medium'>Tab Title</h3>
       <p>Content for Tab 1</p>
       <p>Lorem ipsum dolor...</p>
       <p>Lorem ipsum dolor...</p>

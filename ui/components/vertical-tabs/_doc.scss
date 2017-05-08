@@ -5,14 +5,20 @@
 
 /**
  * The Vertical Tabs component serves as a container to show groups of content,
- * divided into tabs. Each tab should correspond with a block of related content.
+ * divided into tabs. Each tab label should correspond with a block of related content.
  * Only one tab's contents are visible at any given time.
  *
- * This component varies from the regular 'tabs' component, with the tabs
- * arranged on the left in a vertical space, instead of on the top in a horizontal space.
+ * This component varies from the regular 'tabs' component, with the tabs arranged
+ * on the left in a vertical space, instead of on the top in a horizontal space.
  *
- * #### Javascript Needs
- * *todo*
+ * #### Implementation Notes and Requirements
+ * 
+ * The Tab Component has the following markup requirements:
+ *
+ * - The `.slds-is-active` class is required on the `.slds-vertical-tabs__nav-item` element that is active (its content is being shown).
+ * - The `.slds-has-focus` class is required on the `.slds-vertical-tabs__nav-item` element that has focus.
+ * - The `.slds-show` class is required on the `.slds-vertical-tabs__content` element that is being shown (their tab label is selected).
+ * - The `.slds-hide` class is required on all `.slds-vertical-tabs__content` elements that are not being shown (their tab label is not selected).
  *
  * #### Accessibility
  * 

@@ -80,18 +80,6 @@
 }
 
 /**
- * Focus state for a tab navigation item
- *
- * @selector .slds-has-focus
- * @restrict .slds-vertical-tabs__nav-item
- * @modifier
- */
-.slds-vertical-tabs__nav-item.slds-has-focus {
-
-}
-
-
-/**
  * Active state for a tab navigation item
  *
  * @selector .slds-is-active
@@ -110,3 +98,20 @@
     background: $color-background-alt;
   }
 }
+
+/**
+ * Focus state for a tab navigation item
+ *
+ * @selector .slds-has-focus
+ * @restrict .slds-vertical-tabs__nav-item
+ * @modifier
+ */
+.slds-vertical-tabs__nav-item.slds-has-focus {
+	text-decoration: underline;
+}
+
+/**
+ * @selector .slds-truncate
+ * @restrict .slds-vertical-tabs__link
+ * @modifier
+ */

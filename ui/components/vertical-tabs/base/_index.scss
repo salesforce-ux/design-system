@@ -36,7 +36,7 @@
 
 /**
  * Tab navigation item
- * 
+ *
  * @selector .slds-vertical-tabs__nav-item
  * @restrict .slds-vertical-tabs__nav li
  */
@@ -89,7 +89,7 @@
  * @modifier
  */
 .slds-vertical-tabs__nav-item.slds-is-active {
-  border-right: none;
+  border-right: 0;
   background: $color-background-alt;
   margin-right: -1px;
   color: $color-text-brand;

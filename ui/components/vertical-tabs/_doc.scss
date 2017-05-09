@@ -22,7 +22,7 @@
  * #### Accessibility
  *
  * Vertical Tabbed UIs have three parts with specific **ARIA** role requirements:
- * 
+ *
  * - The tab list, which should have `role="tablist"`
  * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` li
  * - The tab panels, which display each tab's content and should each have `role="tabpanel"`

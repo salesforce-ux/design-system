@@ -18,6 +18,7 @@ The following components are now available:
 
 - Added Combobox - [Combobox](/components/combobox)
 - Added Progress Bar - [Progress Bar](/components/progress-bar)
+- Added Reminder Notification - [Reminders](/components/reminders)
 - Added Split View List - [Split view](/components/split-view)
 - Added Xx-small Spinner - [Spinner](/components/spinners/#flavor-sizes-xx-small)
 - Added Visual Picker - [Visual Picker](/components/visual-picker)

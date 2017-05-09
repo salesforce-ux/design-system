@@ -13,6 +13,9 @@ props:
   Z_INDEX_MODAL:
     value: '9000'
     comment: Modal
+  Z_INDEX_REMINDER:
+    value: '8500'
+    comment: Notifications under modals
   Z_INDEX_OVERLAY:
     value: '8000'
     comment: Overlay

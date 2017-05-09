@@ -28,7 +28,8 @@
  * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` li
  * - The tab panels, which display each tab's content and should each have `role="tabpanel"`
  *
- *  **Expected markup:**
+ * **Expected markup:**
+ *
  * - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
  * - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
  * - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`

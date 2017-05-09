@@ -89,14 +89,14 @@
  * @modifier
  */
 .slds-vertical-tabs__nav-item.slds-is-active {
+  margin-right: -1px;
   border-right: 0;
   background: $color-background-alt;
-  margin-right: -1px;
   color: $color-text-brand;
 
   .slds-vertical-tabs__link:hover {
-    color: currentcolor;
     background: $color-background-alt;
+    color: currentcolor;
   }
 }
 
@@ -116,3 +116,4 @@
  * @restrict .slds-vertical-tabs__link
  * @modifier
  */
+ 

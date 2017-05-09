@@ -96,7 +96,6 @@
  * @restrict .slds-rich-text-editor__textarea div
  */
 .slds-rich-text-area__content {
-  @include hyphenate;
   overflow-y: auto;
   min-height: $size-xx-small;
   max-height: $size-small;
@@ -117,6 +116,14 @@
  */
 .slds-rich-text-editor__textarea,
 .slds-rich-text-editor__output {
+  line-height: $line-height-text;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: manual;
+
+  a {
+    word-break: break-all;
+  }
 
   h1 {
     font-size: $font-size-heading-large;

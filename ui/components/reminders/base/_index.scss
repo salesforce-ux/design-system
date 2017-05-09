@@ -19,13 +19,13 @@
 }
 
 /**
- * Initializes reminder
+ * @summary Initializes reminder
  *
  * @selector .slds-reminder
  * @restrict .slds-reminder_container a
  */
 .slds-reminder {
-  padding: $spacing-small $spacing-medium $spacing-medium $spacing-small;
+  padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
   border-radius: $border-radius-medium;
   background-color: $color-background-alt;
   color: $color-text-default;
@@ -35,16 +35,17 @@
     background-color: $color-background;
     text-decoration: none;
   }
-
-  /**
-   * Reminder close button
-   *
-   * @selector .slds-reminder__close
-   * @restrict .slds-reminder button
-   */
-  .slds-reminder__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
+
+/**
+ * @summary Reminder close button
+ *
+ * @selector .slds-reminder__close
+ * @restrict .slds-reminder__container button
+ */
+.slds-reminder__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

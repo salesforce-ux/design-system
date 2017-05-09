@@ -20,15 +20,15 @@ let Reminder = props => {
 
   return (
     <div className="slds-reminder_container">
-      <a className="slds-reminder slds-media" role="alert">
+      <a className="slds-reminder slds-media" role="dialog">
         { children }
-        <ButtonIcon
-          className="slds-button--icon-container slds-reminder__close"
-          symbol="close"
-          assistiveText="Close"
-          title="Close"
-        />
       </a>
+      <ButtonIcon
+        className="slds-button--icon-container slds-reminder__close"
+        symbol="close"
+        assistiveText="Close"
+        title="Close"
+        />
     </div>
   );
 };

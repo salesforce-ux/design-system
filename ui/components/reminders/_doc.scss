@@ -2,20 +2,22 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * Reminders serve as a feedback & confirmation mechanism that comes in at the top right. The tile is a clickable region that will prompt an additional browser tab with that record loaded and dismiss the reminder tile notification. It is also dismissable by clicking the X icon.
+
+ * @summary Reminders serve as a feedback & confirmation mechanism that comes into the page at the top right.
+
  * #### Accessibility
  *
- * Notifications should contain `role="alert"` on the container to signal to
- * assistive technology that they require the user’s immediate attention. Use a
- * span with `.slds-assistive-text` to let the user know what type of notification it is.
+ * Reminders should contain `role="dialog"` on the container to signal to
+ * assistive technology that they require the user’s immediate attention.
  *
- * @summary Reminders serve as a feedback & confirmation mechanism that comes in at the top right. The tile is a clickable region that will prompt an additional browser tab with that record loaded and dismiss the reminder tile notification. It is also dismissable by clicking the X icon.
 
  * #### Implementation Notes and Requirements
  * The reminder notification will consist of the following:
- * *Entity icon w/ background color
- * *Subject field from the reminder
- * *The time/date of when the event/task is occurring
- * *An‘X’ icon to dismiss the reminder
+ * * Entity icon with background color
+ * * Subject field for the reminder
+ * * The time/date of when the event/task is occurring
+ * * An‘X’ icon to dismiss the reminder
 
  *
  * @base
@@ -24,5 +26,5 @@
  * @support dev-ready
  * @category experience
  * @type messaging
- * @role alert
+ * @role dialog
  */

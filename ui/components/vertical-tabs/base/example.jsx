@@ -1,5 +1,3 @@
-// ui/components/vertical-tab/base/example.jsx
-
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
@@ -12,13 +10,7 @@ class VerticalTabs extends React.Component {
     
     this.state = {
       currentTabIndex: 0
-    }
-
-    this.changeTab = this.changeTab.bind(this);
-  }
-
-  changeTab(event) {
-    // todo...
+    };
   }
 
   render() {
@@ -80,38 +72,34 @@ class VerticalTabs extends React.Component {
   }
 }
 
-let exampleTabs = [{
-  label: 'Tab 1',
-  content: (
-    <div className='slds-text-longform'>
-      <h3 className='slds-text-heading--medium'>Tab Title</h3>
-      <p>Content for Tab 1</p>
-      <p>Lorem ipsum dolor...</p>
-      <p>Lorem ipsum dolor...</p>
-    </div>
-  )
-},{
-  label: 'Tab 2',
-  content: (
-    <div className='slds-text-longform'>
-      <p>Content for Tab 2</p>
-    </div>
-  )
-},{
-  label: 'Tab 3 has a really long label and can wrap or truncate',
-  content: (
-    <div className='slds-text-longform'>
-      <p>Content for Tab 3</p>
-    </div>
-  )
-},];
+let exampleTabs = [
+  {
+    label: 'Tab 1',
+    content: (
+      <div className='slds-text-longform'>
+        <h3 className='slds-text-heading--medium'>Tab Title</h3>
+        <p>Content for Tab 1</p>
+        <p>Lorem ipsum dolor...</p>
+        <p>Lorem ipsum dolor...</p>
+      </div>
+    )
+  },{
+    label: 'Tab 2',
+    content: (
+      <div className='slds-text-longform'>
+        <p>Content for Tab 2</p>
+      </div>
+    )
+  },{
+    label: 'Tab 3 has a really long label and can wrap or truncate',
+    content: (
+      <div className='slds-text-longform'>
+        <p>Content for Tab 3</p>
+      </div>
+    )
+  }
+];
 
 export default (
   <VerticalTabs tabs={exampleTabs} />
 );
-
-// export const examples = [{
-//   id: 'Living Example',
-//   label: 'Living Example',
-//   element: <VerticalTabs tabs={exampleTabs} />
-// }];

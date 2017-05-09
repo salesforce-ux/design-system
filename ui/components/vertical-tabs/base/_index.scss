@@ -35,7 +35,7 @@
 }
 
 /**
- * Tab navigation item
+ * @summary Tab navigation item
  *
  * @selector .slds-vertical-tabs__nav-item
  * @restrict .slds-vertical-tabs__nav li
@@ -51,7 +51,7 @@
 }
 
 /**
- * Tab Navigation Link
+ * @summary Tab Navigation Link
  *
  * @selector .slds-vertical-tabs__link
  * @restrict .slds-vertical-tabs__nav-item a
@@ -69,7 +69,7 @@
 }
 
 /**
- * Tab Content Container
+ * @summary Tab Content Container
  *
  * @selector .slds-vertical-tabs__content
  * @restrict .slds-vertical-tabs div
@@ -81,7 +81,7 @@
 }
 
 /**
- * Active state for a tab navigation item
+ * @summary Active state for a tab navigation item
  *
  * @selector .slds-is-active
  * @restrict .slds-vertical-tabs__nav-item
@@ -101,7 +101,7 @@
 }
 
 /**
- * Focus state for a tab navigation item
+ * @summary Focus state for a tab navigation item
  *
  * @selector .slds-has-focus
  * @restrict .slds-vertical-tabs__nav-item
@@ -116,4 +116,3 @@
  * @restrict .slds-vertical-tabs__link
  * @modifier
  */
- 

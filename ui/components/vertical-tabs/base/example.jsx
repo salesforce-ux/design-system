@@ -26,7 +26,7 @@ class VerticalTabs extends React.Component {
 
     return (
       <div className='slds-vertical-tabs'>
-        <ul className='slds-vertical-tabs__nav' role='tablist'>
+        <ul className='slds-vertical-tabs__nav' role='tablist' aria-orientation='vertical'>
           {this.props.tabs.map((tab, index) => {
             const isActive = index === currentTabIndex ? 'slds-is-active' : '';
             const tabIndex = index === currentTabIndex ? 0 : -1;

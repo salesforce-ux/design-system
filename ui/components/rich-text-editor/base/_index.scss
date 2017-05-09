@@ -117,6 +117,7 @@
  */
 .slds-rich-text-editor__textarea,
 .slds-rich-text-editor__output {
+  line-height: $line-height-text;
 
   h1 {
     font-size: $font-size-heading-large;

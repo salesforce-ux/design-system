@@ -1,0 +1,51 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-reminder_container
+ * @restrict div
+ * @variant
+ */
+.slds-reminder_container {
+  position: fixed;
+  display: block;
+  width: $size-medium; // this is 320, not 300px
+  right: 5px;
+  top: 5px;
+  z-index: $z-index-reminder;
+  border-radius: $border-radius-medium;
+  box-shadow: $shadow-reminder;
+}
+
+/**
+ * @summary Initializes reminder
+ *
+ * @selector .slds-reminder
+ * @restrict .slds-reminder_container a
+ */
+.slds-reminder {
+  padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
+  border-radius: $border-radius-medium;
+  background-color: $color-background-alt;
+  color: $color-text-default;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background;
+    text-decoration: none;
+  }
+}
+
+/**
+ * @summary Reminder close button
+ *
+ * @selector .slds-reminder__close
+ * @restrict .slds-reminder__container button
+ */
+.slds-reminder__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

@@ -72,7 +72,7 @@
      * @selector .slds-is-selected
      * @restrict .slds-datepicker td
      */
-    &.slds-is-selected:not(.slds-disabled-text) > .slds-day {
+    &.slds-is-selected:not(.slds-disabled-text):not(.slds-is-today) > .slds-day {
       background: $color-background-button-brand-hover;
       color: $color-text-button-brand-hover;
     }

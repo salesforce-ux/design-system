@@ -160,7 +160,12 @@ export let DatePicker = props =>
           </Day>
           <Day
             aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
-            className={props.dateSelected && props.dateRange ? 'slds-is-selected slds-is-selected-multi' : null}
+            className={classNames(
+              {
+                'slds-is-selected slds-is-selected-multi': props.dateSelected && props.dateRange,
+                'slds-is-today': props.todayActiveInRange
+              }
+            )}
           >
             25
           </Day>

@@ -192,5 +192,47 @@ export let states = [
           </div>
         </fieldset>
       </div>
+  },
+  {
+    id: 'today-in-range',
+    label: 'Today - In selected range',
+    element:
+      <div className="slds-form slds-form--compound">
+        <fieldset className="slds-form-element">
+          <legend className="slds-form-element__label">Start and End Date</legend>
+          <div className="slds-form-element__group">
+            <div className="slds-form-element__row">
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click"
+                label="Start Date"
+                inputId={dateRangeInputId01}
+                inputIcon="right"
+                dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} />}
+              >
+                <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
+                <UtilityIcon
+                  containerClassName="slds-input__icon slds-input__icon--right"
+                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                  symbol="event"
+                />
+              </FormElement>
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                label="End Date"
+                inputId={dateRangeInputId02}
+                inputIcon="right"
+                dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} dateRange="weeks" />}
+              >
+                <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
+                <UtilityIcon
+                  containerClassName="slds-input__icon slds-input__icon--right"
+                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                  symbol="event"
+                />
+              </FormElement>
+            </div>
+          </div>
+        </fieldset>
+      </div>
   }
 ];

@@ -10,6 +10,7 @@ import { Input } from '../../input/base/example';
 import { Popover } from '../../popovers/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
+import { SpinnerContainer, Spinner } from '../../spinners/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -220,6 +221,19 @@ export let ComboboxContainer = props =>
                 className="slds-icon slds-icon--x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
               />
+            : null }
+            {/* If loading, show buttonIcon and spinner here */}
+            { props.loading
+              ?
+              <div className="slds-input__icon-group slds-input__icon-group_right">
+                <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
+                  symbol={props.inputIconRightSymbol || 'close'}
+                  title="Remove selected option"
+                  assistiveText="Remove selected option"
+                />
+              </div>
             : null }
             {/* If close button, show buttonIcon here */}
             { props.inputButtonIcon && props.inputIconRightSymbol === 'close'

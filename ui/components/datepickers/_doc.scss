@@ -15,11 +15,11 @@
  * - The `.slds-is-selected-multi` modifier class is required on the `td` element that contains a selected day within a range.
  *
  * **Mobile**
- * - When on mobile, we want to leverage the native datetime picker by changing the `input` type from `text` to `date`
+ * - When on mobile, we want to leverage the native date picker by changing the `input` type from `text` to `date`
  * - The `input type="date"` will create an input field allowing a date and time to be easily entered — this includes year, month, day.
- * - When switching `input type="text"` to `input type="date"` for mobile, we need to remove the ARIA specifications that describe the input as a combobox.
- *   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup` since we won't be controlling a listbox on native.
- *   - On the `input` that we just added `type="date"` too, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
+ * - When switching `input type="text"` to `input type="date"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
+ *   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup`.
+ *   - On the `input` that we just added `type="date"` to, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
  *
  * @summary A datepicker is a text input to capture a date. You can select a single date, date range or date and time.
  *

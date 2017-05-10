@@ -13,8 +13,8 @@
  *
  * **Mobile**
  * - When on mobile, we want to leverage the native timepicker by changing the `input` type from `text` to `time`
- * - When switching `input type="text"` to `input type="time"` for mobile, we need to remove the ARIA specifications that describe the input as a combobox.
- *   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup` since we won't be controlling a listbox on native.
+ * - When switching `input type="text"` to `input type="time"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
+ *   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup`.
  *   - On the `input` that we just added `type="time"` too, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
  *
  * #### Accessibility

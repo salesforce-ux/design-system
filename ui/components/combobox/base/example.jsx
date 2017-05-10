@@ -209,7 +209,7 @@ export let ComboboxContainer = props =>
               role="textbox"
               type="text"
               placeholder={!props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder}
-              readOnly={props['readonly'] || props.value}
+              readOnly={props['readonly']}
               value={props.value}
               tabIndex={props.tabIndex}
             />

@@ -105,7 +105,7 @@ export let states = [
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           selectedOptionsInline={true}
-          autocomplete={true}
+          readonly={true}
           inputIcon="both"
           inputIconLeftSprite="standard"
           inputIconLeftSymbol="account"

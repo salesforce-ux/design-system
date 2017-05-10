@@ -8,7 +8,7 @@ import {
   ListboxItem,
   Option
 } from '../../combobox/base/example';
-import { DatePicker } from '../base/example';
+import { DatePicker } from '../../datepickers/base/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';

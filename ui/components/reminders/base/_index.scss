@@ -2,6 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ *
+ * @summary Outer container for reminder
+ *
  * @name base
  * @selector .slds-reminder_container
  * @restrict div
@@ -11,15 +14,15 @@
   position: fixed;
   display: block;
   width: $size-medium; // this is 320, not 300px
-  right: 5px;
-  top: 5px;
+  right: $spacing-xx-small;
+  top: $spacing-xx-small;
   z-index: $z-index-reminder;
   border-radius: $border-radius-medium;
   box-shadow: $shadow-reminder;
 }
 
 /**
- * @summary Initializes reminder
+ * @summary Main reminder component
  *
  * @selector .slds-reminder
  * @restrict .slds-reminder_container a

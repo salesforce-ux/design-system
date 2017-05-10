@@ -21,6 +21,7 @@
    * @variant
    */
   .slds-has-multi-selection {
+    // scss-lint:disable SelectorDepth
     // re-calculate for last child
     .slds-is-selected-multi:last-child > .slds-day:after {
       left: auto;

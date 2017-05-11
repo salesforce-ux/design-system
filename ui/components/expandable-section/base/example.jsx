@@ -5,10 +5,15 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Variables
+----------------------------------------------------------------------------- */
 
+const referenceId = 'expando-unique-id';
+
+/* -----------------------------------------------------------------------------
+    Public
+----------------------------------------------------------------------------- */
 export let Section = props =>
   <div className={classNames('slds-section', props.className)}>
     {props.children}
@@ -16,9 +21,9 @@ export let Section = props =>
 
 export let SectionContent = props =>
   <div
-    aria-hidden={!props.isOpen}
+    aria-hidden={props.isOpen ? 'false' : 'true'}
     className={classNames('slds-section__content', props.className)}
-    id={props.referenceId}
+    id={referenceId}
   >
     {props.children}
   </div>;
@@ -30,32 +35,51 @@ export let SectionTitle = props =>
 
 export let SectionTitleAction = props =>
   <button
-    aria-controls={props.referenceId}
-    aria-expanded={props.isOpen}
+    aria-controls={referenceId}
+    aria-expanded={props.isOpen ? 'true' : 'false'}
     className="slds-button slds-section__title-action"
   >
-    <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
+    <SvgIcon
+      className="slds-section__title-action-icon slds-button__icon slds-button__icon--left"
+      sprite="utility"
+      symbol="switch"
+    />
     <span className="slds-truncate" title={props.children}>{props.children}</span>
   </button>;
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
 export default (
-  <Section>
+  <Section className="slds-is-open">
     <SectionTitle>
-      <SectionTitleAction referenceId="contentClosed">
+      <SectionTitleAction isOpen={true}>
         Section Title
       </SectionTitleAction>
     </SectionTitle>
-    <SectionContent referenceId="contentClosed">
+    <SectionContent isOpen={true}>
       <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
     </SectionContent>
   </Section>
 );
 
 export let examples = [
+  {
+    id: 'closed',
+    label: 'Closed',
+    element:
+      <Section>
+        <SectionTitle>
+          <SectionTitleAction>
+            Section Title
+          </SectionTitleAction>
+        </SectionTitle>
+        <SectionContent>
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+        </SectionContent>
+      </Section>
+  },
   {
     id: 'non-collapsable',
     label: 'Non-collapsable',
@@ -64,7 +88,7 @@ export let examples = [
         <SectionTitle className="slds-theme--shade">
           <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
         </SectionTitle>
-        <SectionContent isOpen>
+        <SectionContent isOpen={true}>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
         </SectionContent>
       </Section>

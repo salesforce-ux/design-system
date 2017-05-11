@@ -66,6 +66,22 @@ export default (
 
 export let examples = [
   {
+    id: 'non-collapsable',
+    label: 'Non-collapsable',
+    element:
+      <Section className="slds-is-open">
+        <SectionTitle className="slds-theme--shade">
+          <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
+        </SectionTitle>
+        <SectionContent isOpen={true}>
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+        </SectionContent>
+      </Section>
+  }
+];
+
+export let states = [
+  {
     id: 'closed',
     label: 'Closed',
     element:
@@ -76,19 +92,6 @@ export let examples = [
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent>
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
-        </SectionContent>
-      </Section>
-  },
-  {
-    id: 'non-collapsable',
-    label: 'Non-collapsable',
-    element:
-      <Section className="slds-is-open">
-        <SectionTitle className="slds-theme--shade">
-          <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
-        </SectionTitle>
-        <SectionContent isOpen={true}>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
         </SectionContent>
       </Section>

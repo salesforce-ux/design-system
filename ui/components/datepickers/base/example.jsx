@@ -92,9 +92,9 @@ let Day = props =>
     <span className="slds-day">{props.children}</span>
   </td>;
 
-  /* -----------------------------------------------------------------------------
-      Public
-  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+    Public
+----------------------------------------------------------------------------- */
 
 export let DatePicker = props =>
   <DatepickerContainer className="slds-dropdown slds-dropdown--left">
@@ -230,10 +230,12 @@ export default (
     dropdown={<DatePicker todayActive={true} />}
   >
     <Input id={dateInputId} placeholder=" " />
-    <UtilityIcon
-      containerClassName="slds-input__icon slds-input__icon--right"
-      className="slds-icon slds-icon--x-small slds-icon-text-default"
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon--right"
       symbol="event"
+      aria-haspopup="true"
+      assistiveText="Select a date"
+      title="Select a date"
     />
   </FormElement>
 );
@@ -251,10 +253,12 @@ export let states = [
         dropdown={<DatePicker todayActive={true} dateSelected={true} />}
       >
         <Input id={dateInputId} placeholder=" " value="06/23/2014" />
-        <UtilityIcon
-          containerClassName="slds-input__icon slds-input__icon--right"
-          className="slds-icon slds-icon--x-small slds-icon-text-default"
+        <ButtonIcon
+          className="slds-input__icon slds-input__icon--right"
           symbol="event"
+          aria-haspopup="true"
+          assistiveText="Select a date"
+          title="Select a date"
         />
       </FormElement>
   }

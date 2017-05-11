@@ -4,6 +4,7 @@
 import React from 'react';
 import { DatePicker } from '../base/example';
 import { UtilityIcon } from '../../icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 
@@ -40,10 +41,12 @@ export default (
             dropdown={<DatePicker todayActive={true} />}
           >
             <Input id={dateRangeInputId01} placeholder=" " />
-            <UtilityIcon
-              containerClassName="slds-input__icon slds-input__icon--right"
-              className="slds-icon slds-icon--x-small slds-icon-text-default"
+            <ButtonIcon
+              className="slds-input__icon slds-input__icon--right"
               symbol="event"
+              aria-haspopup="true"
+              assistiveText="Select a date"
+              title="Select a date"
             />
           </FormElement>
           <FormElement
@@ -54,10 +57,12 @@ export default (
             dropdown={<DatePicker todayActive={true} />}
           >
             <Input id={dateRangeInputId02} placeholder=" " />
-            <UtilityIcon
-              containerClassName="slds-input__icon slds-input__icon--right"
-              className="slds-icon slds-icon--x-small slds-icon-text-default"
+            <ButtonIcon
+              className="slds-input__icon slds-input__icon--right"
               symbol="event"
+              aria-haspopup="true"
+              assistiveText="Select a date"
+              title="Select a date"
             />
           </FormElement>
         </div>
@@ -84,10 +89,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <FormElement
@@ -98,10 +105,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
             </div>
@@ -126,10 +135,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <FormElement
@@ -140,10 +151,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} dateRange="week" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/27/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
             </div>
@@ -168,10 +181,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <FormElement
@@ -182,10 +197,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} dateRange="weeks" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
             </div>
@@ -210,10 +227,12 @@ export let states = [
                 dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <FormElement
@@ -224,10 +243,12 @@ export let states = [
                 dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} dateRange="weeks" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
             </div>

@@ -10,6 +10,7 @@ import {
 } from '../../combobox/base/example';
 import { DatePicker } from '../../datepickers/base/example';
 import { UtilityIcon } from '../../icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 
@@ -108,10 +109,12 @@ export default (
             dropdown={<DatePicker todayActive={true} />}
           >
             <Input id={dateInputId} placeholder=" " />
-            <UtilityIcon
-              containerClassName="slds-input__icon slds-input__icon--right"
-              className="slds-icon slds-icon--x-small slds-icon-text-default"
+            <ButtonIcon
+              className="slds-input__icon slds-input__icon--right"
               symbol="event"
+              aria-haspopup="true"
+              assistiveText="Select a date"
+              title="Select a date"
             />
           </FormElement>
           <ComboboxContainer
@@ -146,10 +149,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateInputId} placeholder=" " value="06/24/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <ComboboxContainer
@@ -182,10 +187,12 @@ export let states = [
                 dropdown={<DatePicker todayActive={true} dateSelected={true} />}
               >
                 <Input id={dateInputId} placeholder=" " value="06/24/2014" />
-                <UtilityIcon
-                  containerClassName="slds-input__icon slds-input__icon--right"
-                  className="slds-icon slds-icon--x-small slds-icon-text-default"
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
                   symbol="event"
+                  aria-haspopup="true"
+                  assistiveText="Select a date"
+                  title="Select a date"
                 />
               </FormElement>
               <ComboboxContainer

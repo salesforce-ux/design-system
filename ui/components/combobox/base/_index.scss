@@ -66,6 +66,7 @@
  * @restrict .slds-listbox
  * @modifier
  */
+.slds-listbox_inline,
 .slds-listbox--inline {
   display: inline-flex;
   flex-wrap: wrap;
@@ -91,6 +92,7 @@
  * @restrict .slds-listbox
  * @modifier
  */
+.slds-listbox_horizontal,
 .slds-listbox--horizontal {
   display: inline-flex;
   flex-wrap: wrap;
@@ -130,6 +132,7 @@
  * @restrict .slds-listbox
  * @modifier
  */
+.slds-listbox_vertical,
 .slds-listbox--vertical {
   /**
    * Focus state of a vertical listbox option
@@ -145,12 +148,18 @@
     text-decoration: none;
   }
 
+  .slds-listbox__option[role="presentation"]:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+
   /**
    * Modifies the listbox option if it contains an plain object or string
    *
    * @selector .slds-listbox__option--plain
    * @restrict .slds-listbox__option
    */
+  .slds-listbox__option_plain,
   .slds-listbox__option--plain {
     padding: $spacing-x-small $spacing-small;
   }
@@ -161,6 +170,7 @@
    * @selector .slds-listbox__option--entity
    * @restrict .slds-listbox__option
    */
+  .slds-listbox__option_entity,
   .slds-listbox__option--entity {
     padding: $spacing-xx-small $spacing-small;
 
@@ -175,6 +185,7 @@
    * @selector .slds-listbox__option--has-meta
    * @restrict .slds-listbox__option
    */
+  .slds-listbox__option_has-meta,
   .slds-listbox__option--has-meta {
 
     .slds-media__figure {
@@ -183,6 +194,7 @@
   }
 }
 
+[class*="slds-input-has-icon_left"] .slds-combobox__input[value],
 [class*="slds-input-has-icon--left"] .slds-combobox__input[value] {
   padding-left: ($square-icon-small-boundary + $spacing-small);
 }
@@ -246,6 +258,7 @@
  * @selector .slds-listbox__option-text--entity
  * @restrict .slds-listbox__option span
  */
+.slds-listbox__option-text_entity,
 .slds-listbox__option-text--entity {
   @include truncate; // truncate mixin used so class wouldn't need to be repeated in DOM
   display: block;
@@ -258,13 +271,14 @@
  * @selector .slds-listbox__option-meta--entity
  * @restrict .slds-listbox__option span
  */
+.slds-listbox__option-meta_entity,
 .slds-listbox__option-meta--entity {
   display: block;
   margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
   color: $color-text-label;
 }
 
-.slds-listbox--object-switcher,
+.slds-listbox_object-switcher,
 .slds-listbox--object-switcher {
   flex-shrink: 0;
   padding: $spacing-xxx-small;
@@ -303,7 +317,9 @@
     }
   }
 
+  .slds-listbox_object-switcher ~ .slds-listbox_inline,
   .slds-listbox--object-switcher ~ .slds-listbox--inline,
+  .slds-combobox_container__icon ~ .slds-listbox_inline,
   .slds-combobox_container__icon ~ .slds-listbox--inline {
     margin-left: $spacing-x-small;
   }
@@ -335,5 +351,4 @@
 
 .slds-has-inline-listbox .slds-combobox__input[value] {
   box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
-  // border: $border-width-thin solid #fff;
 }

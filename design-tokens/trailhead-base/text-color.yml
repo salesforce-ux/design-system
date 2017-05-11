@@ -1,0 +1,30 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ./aliases/color.yml
+props:
+  COLOR_TEXT_PRIMARY:
+    value: '{!GRAY_TEXT_PRIMARY}'
+    comment: Primary body text color
+  COLOR_TEXT_SECONDARY:
+    value: '{!GRAY_TEXT_SECONDARY}'
+    comment: Secondary body text color
+  COLOR_TEXT_TERTIARY:
+    value: '{!GRAY_TEXT_TERTIARY}'
+    comment: Tertiary body text color
+  COLOR_TEXT_LINK_PRIMARY:
+    value: "{!BLUE_TEXT_PRIMARY}"
+  ## INTERACTIONS
+  COLOR_TEXT_LINK_HOVER:
+    value: "{!BLUE_TEXT_SECONDARY}"
+  COLOR_TEXT_LINK_ACTIVE:
+    value: "{!BLUE_TEXT_SECONDARY}"
+  COLOR_TEXT_LINK_FOCUS:
+    value: "{!BLUE_TEXT_SECONDARY}"

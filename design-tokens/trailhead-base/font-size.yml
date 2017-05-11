@@ -1,0 +1,72 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font-size
+  type: font-size
+  cssProperties:
+  - font
+  - font-size
+imports:
+- ./aliases/font-size.yml
+props:
+  FONT_SIZE_X_SMALL:
+    value: 0.625rem
+    deprecated: true
+  FONT_SIZE_SMALL:
+    value: 0.875rem
+    deprecated: true
+  FONT_SIZE_MEDIUM:
+    value: 1rem
+    deprecated: true
+  FONT_SIZE_MEDIUM_A:
+    value: 1.125rem
+    deprecated: true
+  FONT_SIZE_LARGE:
+    value: 1.25rem
+    deprecated: true
+  FONT_SIZE_X_LARGE:
+    value: 1.5rem
+    deprecated: true
+  FONT_SIZE_X_LARGE_A:
+    value: 1.57rem
+    deprecated: true
+  FONT_SIZE_XX_LARGE:
+    value: 2rem
+    deprecated: true
+  FONT_SIZE_TEXT_XX_SMALL:
+    value: '{!FONT_SIZE_1}'
+    comment: Extra extra small text.
+  FONT_SIZE_TEXT_X_SMALL:
+    value: '{!FONT_SIZE_2}'
+    comment: Extra small body text.
+  FONT_SIZE_TEXT_SMALL:
+    value: '{!FONT_SIZE_3}'
+    comment: Small body text.
+  FONT_SIZE_TEXT_MEDIUM:
+    value: '{!FONT_SIZE_5}'
+    comment: Medium body text.
+  FONT_SIZE_TEXT_LARGE:
+    value: '{!FONT_SIZE_6}'
+    comment: Large body text.
+  FONT_SIZE_TEXT_X_LARGE:
+    value: '{!FONT_SIZE_7}'
+    comment: Extra large body text.
+  FONT_SIZE_HEADING_XX_SMALL:
+    value: '{!FONT_SIZE_1}'
+    comment: Extra Extra small headings.
+  FONT_SIZE_HEADING_X_SMALL:
+    value: '{!FONT_SIZE_2}'
+    comment: Extra small headings.
+  FONT_SIZE_HEADING_SMALL:
+    value: '{!FONT_SIZE_4}'
+    comment: Small headings.
+  FONT_SIZE_HEADING_MEDIUM:
+    value: '{!FONT_SIZE_6}'
+    comment: Medium headings.
+  FONT_SIZE_HEADING_LARGE:
+    value: '{!FONT_SIZE_8}'
+    comment: Large headings.
+  FONT_SIZE_HEADING_X_LARGE:
+    value: '{!FONT_SIZE_9}'
+    comment: Extra large headings.

@@ -4,11 +4,11 @@
 imports:
 - ./trailhead-base/background-color.yml
 - ./trailhead-base/border-color.yml
+- ./trailhead-base/border-width.yml
 - ./trailhead-base/border-radius.yml
 - ./trailhead-base/box-shadow.yml
 - ./trailhead-base/font-size.yml
 - ./trailhead-base/font-weight.yml
-- ./trailhead-base/sizing.yml
 - ./trailhead-base/spacing.yml
 - ./trailhead-base/text-color.yml
 - ./components.yml

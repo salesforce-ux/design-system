@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+props:
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!GRAY_BACKGROUND_PRIMARY}'
+    comment: Default background color for the whole app.
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!GRAY_BACKGROUND_SECONDARY}'
+    comment: Default background color for the whole app.

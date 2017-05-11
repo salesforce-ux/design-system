@@ -12,28 +12,40 @@ import SvgIcon from '../../../shared/svg-icon';
 let TreeItem = props =>
 <div className="slds-tree__item">
   <ButtonIcon
-    disabled
+    aria-hidden="true"
+    assistiveText="Expand Tree Item"
     className="slds-button_icon slds-m-right_x-small slds-is-disabled"
     iconClassName="slds-button__icon_small"
     symbol="chevronright"
-    assistiveText="Toggle"
-    title="Toggle" />
-  <a href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Item">Tree Item</a>
+    tabIndex="-1"
+    title="Expand Tree Item"
+  />
+  <span
+    className="slds-truncate"
+    title="Tree Item"
+  >
+    Tree Item
+  </span>
   {props.children}
 </div>;
 
 let TreeBranch = props =>
 <div className="slds-tree__item">
   <ButtonIcon
-    aria-controls={props.ariaControls}
+    aria-hidden="true"
+    assistiveText="Expand Tree Branch"
     className="slds-button_icon slds-m-right_x-small"
     iconClassName="slds-button__icon_small"
     symbol="chevronright"
-    assistiveText="Toggle"
-    title="Toggle" />
-  <a
-    id={props.ariaControls + '__label'}
-    href="javascript:void(0);" tabIndex="-1" role="presentation" className="slds-truncate" title="Tree Branch">Tree Branch</a>
+    tabIndex="-1"
+    title="Expand Tree Branch"
+  />
+  <span
+    className="slds-truncate"
+    title="Tree Branch"
+  >
+    Tree Branch
+  </span>
 </div>;
 
 let Pill = props =>
@@ -42,87 +54,67 @@ let Pill = props =>
 </span>;
 
 let AdditionalItems = props =>
-<li id="tree0-node1-1" role="treeitem" aria-level="2" aria-expanded="true">
-
-  <TreeBranch ariaControls="tree0-node1-1" />
-
-  <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1__label">
-
-    <li id="tree0-node1-1-0" role="treeitem" aria-level="3">
+<li
+  aria-expanded="true"
+  aria-label="Tree Branch"
+  aria-level="2"
+  id="tree0-node1-1"
+  role="treeitem"
+>
+  <TreeBranch />
+  <ul role="group">
+    <li role="treeitem" aria-level="3">
       <TreeItem />
     </li>
-
-    <li id="tree0-node1-1-1" role="treeitem" aria-level="3">
+    <li role="treeitem" aria-level="3">
       <TreeItem />
     </li>
-
-    <li id="tree0-node1-1-2" role="treeitem" aria-level="3" aria-expanded="false">
-
-      <TreeBranch ariaControls="tree0-node1-1-2" />
-
-      <ul className="slds-is-collapsed" role="group" aria-labelledby="tree0-node1-1-2__label">
-
-        <li id="tree0-node1-1-2-0" role="treeitem" aria-level="4">
+    <li role="treeitem" aria-level="3" aria-expanded="false" aria-label="Tree Branch">
+      <TreeBranch />
+      <ul role="group">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
-        <li id="tree0-node1-1-2-1" role="treeitem" aria-level="4">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
-        <li id="tree0-node1-1-2-2" role="treeitem" aria-level="4">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
       </ul>
     </li>
-
-    <li id="tree0-node1-1-3" role="treeitem" aria-level="3" aria-expanded="true">
-
-      <TreeBranch ariaControls="tree0-node1-1-3" />
-
-      <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1-3__label">
-
-        <li id="tree0-node1-1-3-1" role="treeitem" aria-level="4">
+    <li role="treeitem" aria-level="3" aria-expanded="true" aria-label="Tree Branch">
+      <TreeBranch />
+      <ul role="group">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
-        <li id="tree0-node1-1-3-2" role="treeitem" aria-level="4">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
-        <li id="tree0-node1-1-3-3" role="treeitem" aria-level="4">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
-
-        <li id="tree0-node1-1-3-4" role="treeitem" aria-level="4" aria-expanded="true">
-
-          <TreeBranch ariaControls="tree0-node1-1-3-4" />
-
-          <ul className="slds-is-expanded" role="group" aria-labelledby="tree0-node1-1-3-4__label">
-
-            <li id="tree0-node1-1-3-4-1" role="treeitem" aria-level="5">
+        <li role="treeitem" aria-level="4" aria-expanded="true" aria-label="Tree Branch">
+          <TreeBranch />
+          <ul role="group">
+            <li role="treeitem" aria-level="5">
               <TreeItem />
             </li>
-
-            <li id="tree0-node1-1-3-4-2" role="treeitem" aria-level="5">
+            <li role="treeitem" aria-level="5">
               <TreeItem />
             </li>
-
-            <li id="tree0-node1-1-3-4-3" role="treeitem" aria-level="5">
+            <li role="treeitem" aria-level="5">
               <TreeItem />
             </li>
-
           </ul>
         </li>
-
-        <li id="tree0-node1-1-3-5" role="treeitem" aria-level="4">
+        <li role="treeitem" aria-level="4">
           <TreeItem />
         </li>
       </ul>
     </li>
-
-    <li id="tree0-node1-1-4" role="treeitem" aria-level="3">
+    <li role="treeitem" aria-level="3">
       <TreeItem />
     </li>
   </ul>
@@ -136,35 +128,28 @@ let Default = props =>
 <div className="slds-tree_container" role="application">
   <h4 className="slds-text-title_caps" id="treeheading">Tree Group Header</h4>
 
-  <ul className="slds-tree" role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
-
-    <li id="tree0-node0" role="treeitem" aria-level="1">
+  <ul className="slds-tree" role="tree" aria-labelledby="treeheading">
+    <li role="treeitem" aria-level="1" tabIndex={!props.isSelected ? '0' : null}>
       <TreeItem>{props.itemContent}</TreeItem>
     </li>
-
-    <li id="tree0-node1" role="treeitem" aria-level="1" aria-expanded={!!props.isExpanded}>
-      <TreeBranch ariaControls="tree0-node1" />
-
-      <ul className={props.isExpanded ? 'slds-is-expanded' : 'slds-is-collapsed'} role="group" aria-labelledby="tree0-node1__label">
-
-        <li id="tree0-node1-0" role="treeitem" aria-level="2">
+    <li role="treeitem" aria-level="1" aria-expanded={!!props.isExpanded} aria-label="Tree Branch">
+      <TreeBranch />
+      <ul role="group">
+        <li role="treeitem" aria-level="2" aria-selected={!!props.isSelected} tabIndex={props.isSelected ? '0' : null}>
           <TreeItem />
         </li>
-
         {props.additionalItems}
       </ul>
     </li>
-    <li id="tree0-node2" role="treeitem" aria-level="1">
-      <TreeBranch ariaControls="tree0-node2" />
-
-      <ul className="slds-is-collapsed" role="group" aria-labelledby="tree0-node2__label">
-
-        <li id="tree0-node2-0" role="treeitem" aria-level="2">
+    <li role="treeitem" aria-level="1" aria-expanded="false" aria-label="Tree Branch">
+      <TreeBranch />
+      <ul role="group">
+        <li role="treeitem" aria-level="2">
           <TreeItem />
         </li>
       </ul>
     </li>
-    <li id="tree0-node3" role="treeitem" aria-level="1">
+    <li role="treeitem" aria-level="1">
       <TreeItem>{props.itemContent}</TreeItem>
     </li>
   </ul>
@@ -182,11 +167,16 @@ export let states = [
   {
     id: 'expanded',
     label: 'Expanded',
-    element: <Default isExpanded="tree0-node1" />
+    element: <Default isExpanded />
+  },
+  {
+    id: 'selected',
+    label: 'Item Selected',
+    element: <Default isExpanded isSelected />
   },
   {
     id: 'deep-nesting',
     label: 'Deeply nested branches',
-    element: <Default isExpanded="tree0-node1" additionalItems={<AdditionalItems />} />
+    element: <Default isExpanded additionalItems={<AdditionalItems />} />
   }
 ];

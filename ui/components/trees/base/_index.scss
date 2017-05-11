@@ -48,18 +48,21 @@
       visibility: hidden;
     }
 
-    a {
-      color: $color-text-default;
+    @include deprecate('5.0.0', 'Use of anchor tags is deprecated in slds-tree') {
 
-      &:hover {
-        text-decoration: none;
-      }
+      a {
+        color: $color-text-default;
 
-      &:focus {
-        outline: 0;
-        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: 0;
+          text-decoration: underline;
+        }
       }
-    }
+    };
 
     /**
      * Hover state for a tree item
@@ -77,6 +80,44 @@
     }
   }
 
+  [role="treeitem"] {
+
+    &:focus {
+      outline: 0;
+
+      > .slds-tree__item {
+        background: $color-background-row-hover;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    &[aria-selected="true"] > .slds-tree__item {
+      background: $color-background-row-selected;
+      box-shadow: $color-background-button-brand 4px 0 0 inset;
+    }
+
+    > [role="group"] {
+      display: none;
+    }
+
+    &[aria-expanded="true"] > [role="group"] {
+      display: block;
+    }
+
+    // scss-lint:disable SelectorDepth
+    &[aria-expanded="false"] > .slds-tree__item .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(0deg);
+    }
+
+    &[aria-expanded="true"] > .slds-tree__item .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(90deg);
+    }
+    // scss-lint:enable SelectorDepth
+  }
+
   /**
    * Selected state for a tree item
    *
@@ -86,10 +127,13 @@
    * @required
    * @modifier
    */
-  .slds-is-selected {
-    background: $color-background-row-selected;
-    box-shadow: $color-background-button-brand 4px 0 0 inset;
-  }
+  @include deprecate('5.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
+
+    .slds-is-selected {
+      background: $color-background-row-selected;
+      box-shadow: $color-background-button-brand 4px 0 0 inset;
+    }
+  };
 
   /**
    * Focus state for a tree item
@@ -99,9 +143,12 @@
    * @required
    * @modifier
    */
-  .slds-is-focused {
-    text-decoration: underline;
-  }
+  @include deprecate('5.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
+
+    .slds-is-focused {
+      text-decoration: underline;
+    }
+  };
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;
@@ -112,17 +159,20 @@
       padding-left: ((($spacing-medium * $current-level) + ($spacing-x-small * $current-level)));
     }
   }
-  // scss-lint:disable SelectorDepth
-  [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
-  [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
-    transition: $duration-promptly transform ease-in-out;
-    transform: rotate(0deg);
-  }
 
-  [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
-  [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
-    transition: $duration-promptly transform ease-in-out;
-    transform: rotate(90deg);
+  @include deprecate('5.0.0', 'Use of aria-controls in slds-tree is deprecated') {
+    // scss-lint:disable SelectorDepth
+    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
+    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(0deg);
+    }
+
+    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
+    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(90deg);
+    }
   }
 
   .slds-button {

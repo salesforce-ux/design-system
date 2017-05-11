@@ -1,7 +1,9 @@
 # File generated automatically, do not edit manually
 imports:
+- ../ui/components/buttons/tokens/border-color.yml
 - ../ui/components/buttons/tokens/color.yml
 - ../ui/components/buttons/tokens/line-height.yml
+- ../ui/components/buttons/tokens/text-color.yml
 - ../ui/components/cards/tokens/background-color.yml
 - ../ui/components/cards/tokens/spacing.yml
 - ../ui/components/checkbox-toggle/tokens/line-height.yml

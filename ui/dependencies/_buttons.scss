@@ -23,15 +23,20 @@
 }
 
 @mixin button-base {
-
   @include button-interactions;
-  border: $border-width-thin solid $color-border-button-default;
+  // border: $border-width-thin solid $color-border-button-default;
+  border: $border-width-thick solid $button-color-border-default;
+  box-shadow: $shadow-soft-primary;
 }
 
 @mixin button-brand {
-  background-color: $color-background-button-brand;
-  border: $border-width-thin solid $color-border-button-brand;
-  color: $color-text-button-brand;
+  // background-color: $color-background-button-brand;
+  background-color: $button-color-background-primary;
+  // border: $border-width-thin solid $color-border-button-brand;
+  border: $border-width-thick solid $button-color-border-primary;
+  // color: $color-text-button-brand;
+  color: $button-color-text-primary;
+  box-shadow: $shadow-soft-primary;
 
   &:link,
   &:visited,

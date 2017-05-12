@@ -32,7 +32,7 @@ export let states = [
   },
   {
     id: '25',
-    label: '15% complete',
+    label: '25% complete',
     element:
       <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="25" />
   },

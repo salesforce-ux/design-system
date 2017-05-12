@@ -4,7 +4,7 @@
 /**
  * @summary Causes items of a list to display horizontally
  *
- * @selector .slds-list--horizontal
+ * @selector .slds-list_horizontal
  * @modifier
  */
 .slds-list_horizontal,
@@ -23,7 +23,7 @@
 /**
  * @summary Adds dot separators to the left of horizontal list items
  *
- * @selector .slds-has-dividers--left
+ * @selector .slds-has-dividers_left
  * @modifier
  */
 .slds-has-dividers_left > .slds-list__item,
@@ -36,7 +36,7 @@
 /**
  * @summary Adds dot separators to the right of horizontal list items
  *
- * @selector .slds-has-dividers--right
+ * @selector .slds-has-dividers_right
  * @modifier
  */
 .slds-has-dividers_right > .slds-list__item,

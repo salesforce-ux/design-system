@@ -3,7 +3,7 @@
 
 /**
  * @name filtering
- * @selector .slds-panel--filters
+ * @selector .slds-panel_filters
  * @restrict .slds-panel
  * @variant
  */
@@ -16,7 +16,7 @@
 
 /**
  * @selector .slds-filters
- * @restrict .slds-panel--filters div
+ * @restrict .slds-panel_filters div
  * @required
  */
 .slds-filters {
@@ -27,7 +27,7 @@
  * Filters Header
  *
  * @selector .slds-filters__header
- * @restrict .slds-panel--filters div
+ * @restrict .slds-panel_filters div
  * @required
  */
 .slds-filters__header {
@@ -38,7 +38,7 @@
  * Filters Body
  *
  * @selector .slds-filters__body
- * @restrict .slds-panel--filters div
+ * @restrict .slds-panel_filters div
  * @required
  */
 .slds-filters__body {
@@ -49,7 +49,7 @@
  * Filters Footer
  *
  * @selector .slds-filters__footer
- * @restrict .slds-panel--filters div
+ * @restrict .slds-panel_filters div
  * @required
  */
 .slds-filters__footer {
@@ -60,7 +60,7 @@
  * Filterable Item
  *
  * @selector .slds-filters__item
- * @restrict .slds-panel--filters li div
+ * @restrict .slds-panel_filters li div
  * @required
  */
 .slds-filters__item {

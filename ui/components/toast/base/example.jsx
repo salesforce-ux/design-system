@@ -22,12 +22,12 @@ export let Toast = props => {
 
   return (
     <div className={classNames('slds-notify_container', containerClassName)}>
-      <div className={classNames('slds-notify slds-notify--toast', className, type ? 'slds-theme--' + type : null)} role="alert">
+      <div className={classNames('slds-notify slds-notify_toast', className, type ? 'slds-theme_' + type : null)} role="alert">
         <span className="slds-assistive-text">{ type || 'info' }</span>
         { children }
         <ButtonIcon
-          className="slds-notify__close slds-button--icon-inverse"
-          iconClassName="slds-button__icon--large"
+          className="slds-notify__close slds-button_icon-inverse"
+          iconClassName="slds-button__icon_large"
           symbol="close"
           assistiveText="Close"
           title="Close"
@@ -45,13 +45,13 @@ export default (
   <div className="demo-only" style={{ height: '4rem' }}>
     <Toast type="info" containerClassName="slds-is-relative">
       <UtilityIcon
-        containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-        className="slds-icon--small"
+        containerClassName="slds-m-right_small slds-no-flex slds-align-top"
+        className="slds-icon_small"
         assistiveText={false}
         symbol="info"
       />
       <div className="slds-notify__content">
-        <h2 className="slds-text-heading--small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
+        <h2 className="slds-text-heading_small">26 potential duplicate leads were found. <a href="javascript:void(0);">Select Leads to Merge</a></h2>
       </div>
     </Toast>
   </div>
@@ -65,13 +65,13 @@ export let states = [
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="success" containerClassName="slds-is-relative">
           <UtilityIcon
-            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-            className="slds-icon--small"
+            containerClassName="slds-m-right_small slds-no-flex slds-align-top"
+            className="slds-icon_small"
             assistiveText={false}
             symbol="success"
           />
           <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small ">Account <a href="javascript:void(0);">ACME - 100</a> widgets was created.</h2>
+            <h2 className="slds-text-heading_small ">Account <a href="javascript:void(0);">ACME - 100</a> widgets was created.</h2>
           </div>
         </Toast>
       </div>
@@ -83,13 +83,13 @@ export let states = [
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="warning" containerClassName="slds-is-relative">
           <UtilityIcon
-            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-            className="slds-icon--small"
+            containerClassName="slds-m-right_small slds-no-flex slds-align-top"
+            className="slds-icon_small"
             assistiveText={false}
             symbol="warning"
           />
           <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small ">Can’t share file “report-q3.pdf” with the selected users.</h2>
+            <h2 className="slds-text-heading_small ">Can’t share file “report-q3.pdf” with the selected users.</h2>
           </div>
         </Toast>
       </div>
@@ -101,13 +101,13 @@ export let states = [
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="error" containerClassName="slds-is-relative">
           <UtilityIcon
-            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-            className="slds-icon--small"
+            containerClassName="slds-m-right_small slds-no-flex slds-align-top"
+            className="slds-icon_small"
             assistiveText={false}
             symbol="error"
           />
           <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small ">Can’t save lead “Sally Wong” because another lead has the same name.</h2>
+            <h2 className="slds-text-heading_small ">Can’t save lead “Sally Wong” because another lead has the same name.</h2>
           </div>
         </Toast>
       </div>
@@ -119,13 +119,13 @@ export let states = [
       <div className="demo-only" style={{ height: '4rem' }}>
         <Toast type="error" containerClassName="slds-is-relative">
           <UtilityIcon
-            containerClassName="slds-m-right--small slds-no-flex slds-align-top"
-            className="slds-icon--small"
+            containerClassName="slds-m-right_small slds-no-flex slds-align-top"
+            className="slds-icon_small"
             assistiveText={false}
             symbol="error"
           />
           <div className="slds-notify__content">
-            <h2 className="slds-text-heading--small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
+            <h2 className="slds-text-heading_small">You've encountered some errors when trying to save edits to Samuel Smith.</h2>
             <p>Here's some detail of what happened, being very descriptive and transparent.</p>
           </div>
         </Toast>
@@ -142,7 +142,7 @@ export let examples = [
         <div className="slds-region_narrow slds-is-relative">
           <Toast type="info" containerClassName="slds-is-absolute">
             <div className="slds-notify__content">
-              <h2 className="slds-text-heading--small">26 potential duplicate leads were found.</h2>
+              <h2 className="slds-text-heading_small">26 potential duplicate leads were found.</h2>
             </div>
           </Toast>
         </div>

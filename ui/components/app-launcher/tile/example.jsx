@@ -16,29 +16,29 @@ export let AppLauncherTile = props =>
     aria-describedby={props.draggable ? props.referenceId : null}
     draggable={props.draggable}
     href="javascript:void(0);"
-    className={classNames('slds-app-launcher__tile slds-text-link--reset', props.className, {
+    className={classNames('slds-app-launcher__tile slds-text-link_reset', props.className, {
       'slds-is-draggable': props.draggable,
-      'slds-app-launcher__tile--small': props.flavor === 'small',
+      'slds-app-launcher__tile_small': props.flavor === 'small',
       'slds-is-grabbed': props.grabbed
     })}
   >
     <div className={classNames('slds-app-launcher__tile-figure', {
-      'slds-app-launcher__tile-figure--small': props.flavor === 'small'
+      'slds-app-launcher__tile-figure_small': props.flavor === 'small'
     })}
   >
     {props.symbol
-      ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon--large'} sprite="standard" symbol={props.symbol} />
-    : <Avatar className="slds-avatar--large">
+      ? <SvgIcon className={'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon_large'} sprite="standard" symbol={props.symbol} />
+    : <Avatar className="slds-avatar_large">
         <abbr className={classNames('slds-avatar__initials', props.figureClass)} title="company name">{props.objectInitials}</abbr>
       </Avatar>
     }
       { props.draggable
         ? <span className="slds-icon_container" title="Drag item to a new location">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="rows" />
+          <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="rows" />
         </span> : null}
       </div>
       <div className={classNames('slds-app-launcher__tile-body', {
-        'slds-app-launcher__tile-body--small': props.flavor === 'small'
+        'slds-app-launcher__tile-body_small': props.flavor === 'small'
       })}
     >
       {props.children}

@@ -26,7 +26,7 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}
@@ -131,14 +131,14 @@ export let states = [
           <Listbox aria-label="Selected Options:" inline>
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
             </ListboxItem>
             <ListboxItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
@@ -168,14 +168,14 @@ export let states = [
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
             </ListboxItem>
             <ListboxItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>

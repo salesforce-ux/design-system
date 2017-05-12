@@ -11,8 +11,8 @@
 /**
  * Vertically aligns form label and control, provides spacing between form elements
  *
- * @selector .slds-form--stacked
- * @restrict .slds-form:not(.slds-form--compound)
+ * @selector .slds-form_stacked
+ * @restrict .slds-form:not(.slds-form_compound)
  * @modifier
  * @group layout
  */
@@ -33,8 +33,8 @@
 /**
  * Horizontally aligns a single form label and control on the same line
  *
- * @selector .slds-form--horizontal
- * @restrict .slds-form:not(.slds-form--compound)
+ * @selector .slds-form_horizontal
+ * @restrict .slds-form:not(.slds-form_compound)
  * @modifier
  * @group layout
  */
@@ -80,7 +80,7 @@
 /**
  * Horizontally align multiple form elements on the same axis
  *
- * @selector .slds-form--inline
+ * @selector .slds-form_inline
  * @restrict .slds-form
  */
 .slds-form_inline,

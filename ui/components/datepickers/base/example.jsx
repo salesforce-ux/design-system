@@ -27,11 +27,11 @@ let Datepicker = props =>
 
 let DatepickerHeader = props =>
   <div className="slds-datepicker__filter slds-grid">
-    <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+    <div className="slds-datepicker__filter_month slds-grid slds-grid_align-spread slds-grow">
       <div className="slds-align-middle">
         <ButtonIcon
           assistiveText="Previous Month"
-          className="slds-button--icon-container"
+          className="slds-button_icon-container"
           symbol="left"
           title="Previous Month"
         />
@@ -42,7 +42,7 @@ let DatepickerHeader = props =>
       <div className="slds-align-middle">
         <ButtonIcon
           assistiveText="Next Month"
-          className="slds-button--icon-container"
+          className="slds-button_icon-container"
           symbol="right"
           title="Next Month"
         />
@@ -95,7 +95,7 @@ export const Context = props =>
   </div>;
 
 export default (
-  <Datepicker className="slds-dropdown slds-dropdown--left">
+  <Datepicker className="slds-dropdown slds-dropdown_left">
     <DatepickerHeader />
     <table aria-labelledby="month" aria-multiselectable="true" className="slds-datepicker__month" role="grid">
       <thead>
@@ -149,7 +149,7 @@ export default (
         </Week>
         <tr>
           <td colSpan="7" role="gridcell">
-            <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+            <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
               Today
             </span>
           </td>
@@ -164,7 +164,7 @@ export let states = [
     id: 'datepicker-day-selected',
     label: 'Date selected',
     element:
-      <Datepicker className="slds-dropdown slds-dropdown--left">
+      <Datepicker className="slds-dropdown slds-dropdown_left">
         <DatepickerHeader />
         <table className="slds-datepicker__month" aria-labelledby="month" role="grid">
           <thead>
@@ -221,7 +221,7 @@ export let states = [
             </Week>
             <tr>
               <td colSpan="7" role="gridcell">
-                <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+                <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
                   Today
                 </span>
               </td>
@@ -234,7 +234,7 @@ export let states = [
     id: 'datepicker-multi-day-selected',
     label: 'Multiple Date Range Selected',
     element:
-      <Datepicker className="slds-dropdown slds-dropdown--left">
+      <Datepicker className="slds-dropdown slds-dropdown_left">
         <DatepickerHeader />
         <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
           <thead>
@@ -291,7 +291,7 @@ export let states = [
             </Week>
             <tr>
               <td colSpan="7" role="gridcell">
-                <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+                <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
                   Today
                 </span>
               </td>

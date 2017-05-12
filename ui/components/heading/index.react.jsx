@@ -9,7 +9,7 @@ import Truncate from '../../shared/truncate/index.react.jsx';
 
 class LabelHeading extends React.Component {
   render () {
-    const className = classNames('slds-text-title--caps', this.props.className);
+    const className = classNames('slds-text-title_caps', this.props.className);
     return (
       <p {...this.props} className={className}>
         {this.props.children}
@@ -20,7 +20,7 @@ class LabelHeading extends React.Component {
 
 class MediumHeading extends React.Component {
   render () {
-    const className = classNames('slds-text-heading--medium', this.props.className);
+    const className = classNames('slds-text-heading_medium', this.props.className);
     return (
       <h1 {...this.props} className={className}>
         {this.props.children}

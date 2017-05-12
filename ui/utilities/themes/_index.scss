@@ -5,7 +5,7 @@
   /**
    * @summary Sets the background color to white
    *
-   * @selector .slds-theme--default
+   * @selector .slds-theme_default
    * @modifier
    */
   &_default,
@@ -16,7 +16,7 @@
   /**
    * @summary Sets the background color to gray
    *
-   * @selector .slds-theme--shade
+   * @selector .slds-theme_shade
    * @modifier
    */
   &_shade,
@@ -27,7 +27,7 @@
   /**
    * @summary Sets the background color to dark blue
    *
-   * @selector .slds-theme--inverse
+   * @selector .slds-theme_inverse
    * @modifier
    */
   &_inverse,
@@ -39,7 +39,7 @@
   /**
    * @summary Sets the background color to darker blue
    *
-   * @selector .slds-theme--alt-inverse
+   * @selector .slds-theme_alt-inverse
    * @modifier
    */
   &_alt-inverse,
@@ -51,7 +51,7 @@
   /**
    * @summary Sets the background color to green
    *
-   * @selector .slds-theme--success
+   * @selector .slds-theme_success
    * @modifier
    */
   &_success,
@@ -63,7 +63,7 @@
   /**
    * @summary Sets the background color to gray-ish blue
    *
-   * @selector .slds-theme--info
+   * @selector .slds-theme_info
    * @modifier
    */
   &_info,
@@ -75,7 +75,7 @@
   /**
    * @summary Sets the background color to yellow
    *
-   * @selector .slds-theme--warning
+   * @selector .slds-theme_warning
    * @modifier
    */
   &_warning,
@@ -98,7 +98,7 @@
   /**
    * @summary Sets the background color to red
    *
-   * @selector .slds-theme--error
+   * @selector .slds-theme_error
    * @modifier
    */
   &_error,
@@ -110,7 +110,7 @@
   /**
    * @summary Sets the background color to black
    *
-   * @selector .slds-theme--offline
+   * @selector .slds-theme_offline
    * @modifier
    */
   &_offline,
@@ -122,7 +122,7 @@
   /**
    * @summary Adds striped background
    *
-   * @selector .slds-theme--alert-texture
+   * @selector .slds-theme_alert-texture
    * @modifier
    */
   &_alert-texture,

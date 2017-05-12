@@ -7,13 +7,13 @@ export let examples = [
   {
     id: 'reset',
     label: 'Link reset',
-    element: <a href="javascript:void(0);" className="slds-text-link--reset">Link</a>
+    element: <a href="javascript:void(0);" className="slds-text-link_reset">Link</a>
   },
   {
     id: 'link',
     label: 'Link reset with text link inside',
     element:
-      <a href="javascript:void(0);" className="slds-text-link--reset">
+      <a href="javascript:void(0);" className="slds-text-link_reset">
         This text is a link but looks like normal text...<span className="slds-text-link">More</span>.
       </a>
   },
@@ -25,11 +25,11 @@ export let examples = [
   {
     id: 'button-reset',
     label: 'Button reset with halo focus',
-    element: <button className="slds-button slds-text-link--reset">Button</button>
+    element: <button className="slds-button slds-text-link_reset">Button</button>
   },
   {
     id: 'faux',
     label: 'Faux Link on a span',
-    element: <span className="slds-text-link--faux">Span with faux link interactions</span>
+    element: <span className="slds-text-link_faux">Span with faux link interactions</span>
   }
 ];

@@ -50,13 +50,13 @@ let Form = props =>
   </div>;
 
 export default (
-  <Form className="slds-form--stacked" />
+  <Form className="slds-form_stacked" />
 );
 
 export let states = [
   {
     id: 'horizontal',
     label: 'Horizontal',
-    element: <Form className="slds-form--horizontal" />
+    element: <Form className="slds-form_horizontal" />
   }
 ];

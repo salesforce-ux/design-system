@@ -7,30 +7,30 @@ import classNames from 'classnames';
 let ListItem = props =>
   <li
     className={classNames(
-      'slds-list__item slds-m-right--large slds-grid',
+      'slds-list__item slds-m-right_large slds-grid',
       props.className
     )}
   >
     <span>To:</span>
-    <span className="slds-m-left--xx-small slds-truncate" title={props.title}>
+    <span className="slds-m-left_xx-small slds-truncate" title={props.title}>
       {props.children}</span>
-    <span className="slds-m-left--xx-small slds-no-flex"> + 44 more</span>
+    <span className="slds-m-left_xx-small slds-no-flex"> + 44 more</span>
   </li>;
 
 let List = props =>
   <ul>
-    <ListItem title="Lei Chan" className={'slds-truncate_container--' + props.width}>
+    <ListItem title="Lei Chan" className={'slds-truncate_container_' + props.width}>
       <a href="javascript:void(0);">Lei Chan</a>
     </ListItem>
     <ListItem
       title="Lei Chan with Long Name"
-      className={'slds-truncate_container--' + props.width}
+      className={'slds-truncate_container_' + props.width}
     >
       <a href="javascript:void(0);">Lei Chan with Long Name</a>
     </ListItem>
     <ListItem
       title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
-      className={'slds-truncate_container--' + props.width}
+      className={'slds-truncate_container_' + props.width}
     >
       <a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
     </ListItem>
@@ -41,7 +41,7 @@ export let examples = [
     id: 'fluid',
     label: 'Fluid',
     element:
-      <div className="slds-size--1-of-2">
+      <div className="slds-size_1-of-2">
         <p
           className="slds-truncate"
           title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages."

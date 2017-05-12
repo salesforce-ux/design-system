@@ -14,19 +14,19 @@ import classNames from 'classnames';
 export let Tile = props =>
   <article className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions
-      ? <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+      ? <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
         <h3 className="slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
-          <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
+          <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" iconClassName="slds-button__icon_hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
         </div>
       </div>
     : <h3 className="slds-truncate" title={props.title || 'Title'}>
         <a href="javascript:void(0);">{ props.title || 'Title' }</a>
       </h3>
     }
-    <div className="slds-tile__detail slds-text-body--small">
+    <div className="slds-tile__detail slds-text-body_small">
       { props.children ? props.children : <Detail /> }
     </div>
   </article>;
@@ -40,30 +40,30 @@ export let TileMedia = props =>
     : null }
     <div className="slds-media__body">
       { props.actions
-        ? <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+        ? <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
           <h3 className="slds-truncate" title={props.title || 'Title'}>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
-            <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" iconClassName="slds-button__icon--hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
+            <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" iconClassName="slds-button__icon_hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
           </div>
         </div>
       : <h3 className="slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
       }
-      <div className="slds-tile__detail slds-text-body--small">
+      <div className="slds-tile__detail slds-text-body_small">
         { props.children ? props.children : <Detail /> }
       </div>
     </div>
   </article>;
 
 let Detail = props =>
-  <dl className="slds-list--horizontal slds-wrap">
-    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
-    <dd className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</dd>
-    <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
-    <dd className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</dd>
+  <dl className="slds-list_horizontal slds-wrap">
+    <dt className="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+    <dd className="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+    <dt className="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+    <dd className="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
   </dl>;
 
 const icon = (
@@ -73,7 +73,7 @@ const icon = (
 );
 
 const avatar = (
-  <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
+  <span className="slds-avatar slds-avatar_circle slds-avatar_medium">
     <img
       alt=""
       src="/assets/images/avatar2.jpg"
@@ -137,7 +137,7 @@ export let examples = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
-          <ul className="slds-list--horizontal slds-has-dividers--right">
+          <ul className="slds-list_horizontal slds-has-dividers_right">
             <li className="slds-item">Breaking News</li>
             <li className="slds-item">1 day ago</li>
           </ul>
@@ -151,22 +151,22 @@ export let examples = [
       <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>...an introduction for beginners about climbing ropes and how they can use...</p>
-          <ul className="slds-list--horizontal slds-has-dividers--right slds-m-top--xx-small">
+          <ul className="slds-list_horizontal slds-has-dividers_right slds-m-top_xx-small">
             <li className="slds-item">000001296</li>
             <li className="slds-item">Published</li>
             <li className="slds-item">How to Guide</li>
           </ul>
           <p>Last Modified: 1/14/16</p>
-          <ul className="slds-list--horizontal slds-m-top--xx-small">
-            <li className="slds-m-right--small">
-              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+          <ul className="slds-list_horizontal slds-m-top_xx-small">
+            <li className="slds-m-right_small">
+              <button className="slds-button slds-button_icon slds-button_icon-border slds-button_icon-x-small" aria-pressed="false">
                 <SvgIcon className="slds-button__icon" sprite="utility" symbol="like" />
                 <span className="slds-assistive-text">Upvote</span>
               </button>
               <span className="slds-align-middle">1320</span>
             </li>
             <li>
-              <button className="slds-button slds-button--icon slds-button--icon-border slds-button--icon-x-small" aria-pressed="false">
+              <button className="slds-button slds-button_icon slds-button_icon-border slds-button_icon-x-small" aria-pressed="false">
                 <SvgIcon className="slds-button__icon" sprite="utility" symbol="dislike" />
                 <span className="slds-assistive-text">Downvote</span>
               </button>
@@ -181,28 +181,28 @@ export let examples = [
     label: 'Board',
     element:
     <div className="demo-only" style={{ width: '320px' }}>
-      <ul className="slds-has-dividers--around-space">
+      <ul className="slds-has-dividers_around-space">
         <li className="slds-item">
-          <Tile title="Anypoint Connectors" className="slds-tile--board">
-            <p className="slds-text-heading--medium">$500,000</p>
+          <Tile title="Anypoint Connectors" className="slds-tile_board">
+            <p className="slds-text-heading_medium">$500,000</p>
             <p className="slds-truncate" title="Company One"><a href="javascript:void(0);">Company One</a></p>
             <p className="slds-truncate" title="Closing 9/30/2015">Closing 9/30/2015</p>
           </Tile>
         </li>
         <li className="slds-item">
-          <Tile title="Cloudhub" className="slds-tile--board">
-            <p className="slds-text-heading--medium">$185,000</p>
+          <Tile title="Cloudhub" className="slds-tile_board">
+            <p className="slds-text-heading_medium">$185,000</p>
             <p className="slds-truncate" title="Company Two"><a href="javascript:void(0);">Company Two</a></p>
             <p className="slds-truncate slds-has-alert" title="Closing 12/15/2015">Closing 12/15/2015</p>
-            <span className="slds-icon_container slds-tile--board__icon" title="description of icon when needed">
-              <SvgIcon className="slds-icon slds-icon-text-warning slds-icon--x-small" sprite="utility" symbol="warning" />
+            <span className="slds-icon_container slds-tile_board__icon" title="description of icon when needed">
+              <SvgIcon className="slds-icon slds-icon-text-warning slds-icon_x-small" sprite="utility" symbol="warning" />
               <span className="slds-assistive-text">Warning Icon</span>
             </span>
           </Tile>
         </li>
         <li className="slds-item">
-          <Tile title="600 Widgets" className="slds-tile--board">
-            <p className="slds-text-heading--medium">$35,000</p>
+          <Tile title="600 Widgets" className="slds-tile_board">
+            <p className="slds-text-heading_medium">$35,000</p>
             <p className="slds-truncate" title="Company Three"><a href="javascript:void(0);">Company Three</a></p>
             <p className="slds-truncate" title="Closing 10/12/2015">Closing 10/12/2015</p>
           </Tile>

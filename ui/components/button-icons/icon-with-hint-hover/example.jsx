@@ -11,7 +11,7 @@ import { ButtonIcon } from '../base/example';
 export default (
   <div className="demo-only" style={{ padding: '0.5rem' }}>
     <div className="slds-hint-parent">
-      <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--hint" />
+      <ButtonIcon className="slds-button_icon" iconClassName="slds-button__icon_hint" />
     </div>
   </div>
 );
@@ -22,7 +22,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem' }}>
         <div className="slds-hint-parent">
-          <ButtonIcon className="slds-button--icon-border" iconClassName="slds-button__icon--hint" />
+          <ButtonIcon className="slds-button_icon-border" iconClassName="slds-button__icon_hint" />
         </div>
       </div>
   },
@@ -32,7 +32,7 @@ export let states = [
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <div className="slds-hint-parent">
-          <ButtonIcon className="slds-button--icon-inverse" iconClassName="slds-button__icon--inverse-hint" />
+          <ButtonIcon className="slds-button_icon-inverse" iconClassName="slds-button__icon_inverse-hint" />
         </div>
       </div>
   },
@@ -42,7 +42,7 @@ export let states = [
     element:
     <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
       <div className="slds-hint-parent">
-        <ButtonIcon className="slds-button--icon-border-inverse" iconClassName="slds-button__icon--inverse-hint" />
+        <ButtonIcon className="slds-button_icon-border-inverse" iconClassName="slds-button__icon_inverse-hint" />
       </div>
     </div>
   }

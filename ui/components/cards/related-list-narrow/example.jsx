@@ -13,19 +13,19 @@ import { Tile, TileMedia } from '../../tiles/base/example';
 
 export default (
   <div className="demo-only" style={{ minWidth: '230px', maxWidth: '320px' }}>
-    <Card className="slds-card--narrow">
+    <Card className="slds-card_narrow">
       <CardHeader actions="overflow" symbol="contact">
-        <span className="slds-text-heading--small">Contacts (3)</span>
+        <span className="slds-text-heading_small">Contacts (3)</span>
       </CardHeader>
       <CardBody>
-        <ul className="slds-card__body--inner">
+        <ul className="slds-card__body_inner">
           <li>
             <Tile title="Related Record Title 1" />
           </li>
-          <li className="slds-m-top--x-small">
+          <li className="slds-m-top_x-small">
             <Tile title="Related Record Title 2" />
           </li>
-          <li className="slds-m-top--x-small">
+          <li className="slds-m-top_x-small">
             <Tile title="Related Record Title 3" />
           </li>
         </ul>

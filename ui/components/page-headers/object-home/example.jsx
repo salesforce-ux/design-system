@@ -9,7 +9,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
 
 const icon = (
-  <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
+  <SvgIcon className="slds-button__icon slds-button__icon_right slds-no-flex" sprite="utility" symbol="down" />
 );
 
 const image = (
@@ -19,15 +19,15 @@ const image = (
 );
 
 export default (
-  <div className="slds-page-header slds-page-header--object-home">
+  <div className="slds-page-header slds-page-header_object-home">
     <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
       <div className="slds-col slds-has-flexi-truncate">
         <MediaObject figureLeft={image} className="slds-no-space slds-grow">
-          <Heading className="slds-line-height--reset" flavor="label">Leads</Heading>
-          <h1 className="slds-page-header__title slds-p-right--x-small">
-            <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
-              <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+          <Heading className="slds-line-height_reset" flavor="label">Leads</Heading>
+          <h1 className="slds-page-header__title slds-p-right_x-small">
+            <button className="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+              <span className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
                 <span className="slds-truncate" title="this should match My Leads">My Leads</span>
                 {icon}
               </span>
@@ -37,17 +37,17 @@ export default (
       </div>
       {/* Close Col */}
       {/* Open Right Aligned Icon Grouping */}
-      <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+      <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
         <div className="slds-button-group" role="group">
-          <button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button_neutral">
             New Lead
           </button>
-          <button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button_neutral">
             Import Leads
           </button>
-          <div className="slds-button--last">
+          <div className="slds-button_last">
             <ButtonIcon
-              className="slds-button--icon-border-filled"
+              className="slds-button_icon-border-filled"
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions"
@@ -61,43 +61,43 @@ export default (
     {/* Close Grid */}
     <div className="slds-grid">
       <div className="slds-col slds-align-bottom">
-        <p className="slds-text-body--small">10 items &bull; Sorted by Name</p>
+        <p className="slds-text-body_small">10 items &bull; Sorted by Name</p>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
-        <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small" aria-expanded="false">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
           <ButtonIcon
-            className="slds-button--icon-more"
+            className="slds-button_icon-more"
             symbol="settings"
             hasDropdown
             assistiveText="List View Controls"
             title="List View Controls" />
         </div>
-        <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small" aria-expanded="false">
           <ButtonIcon
-            className="slds-button--icon-more"
+            className="slds-button_icon-more"
             symbol="table"
             hasDropdown
             assistiveText="Change view"
             title="Change view" />
         </div>
         <ButtonIcon
-          className="slds-m-left--xx-small slds-button--icon-border"
+          className="slds-m-left_xx-small slds-button_icon-border"
           symbol="edit"
           assistiveText="Edit List"
           title="Edit List" />
         <ButtonIcon
-          className="slds-m-left--xx-small slds-button--icon-border"
+          className="slds-m-left_xx-small slds-button_icon-border"
           symbol="refresh"
           assistiveText="Refresh"
           title="Refresh" />
         <div className="slds-button-group" role="group">
           <ButtonIcon
-            className="slds-button--icon-border"
+            className="slds-button_icon-border"
             symbol="chart"
             assistiveText="Charts"
             title="Charts" />
           <ButtonIcon
-            className="slds-button--icon-border"
+            className="slds-button_icon-border"
             symbol="filterList"
             assistiveText="Filters"
             title="Filters" />

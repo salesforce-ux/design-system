@@ -91,7 +91,7 @@
   /**
    * Use when modal header has no content
    *
-   * @selector .slds-modal__header--empty
+   * @selector .slds-modal__header_empty
    * @restrict .slds-modal__header
    */
   &__header_empty,
@@ -179,7 +179,7 @@
     /**
      * Makes buttons inside the footer spread to both left and right.
      *
-     * @selector .slds-modal__footer--directional
+     * @selector .slds-modal__footer_directional
      * @restrict .slds-modal__footer
      * @notes This is only needed when you have two buttons that indicate a back and forward navigation.
      * @modifier
@@ -228,7 +228,7 @@
   /**
    * Allows the backdrop to be visible.
    *
-   * @selector .slds-backdrop--open
+   * @selector .slds-backdrop_open
    * @restrict .slds-backdrop
    * @notes Apply this class to a modal backdrop with JavaScript to make it visible.
    * @modifier
@@ -245,7 +245,7 @@
 /**
  * Widens the modal to take more horizontal space
  *
- * @selector .slds-modal--large
+ * @selector .slds-modal_large
  * @restrict .slds-modal
  * @modifier
  * @group size

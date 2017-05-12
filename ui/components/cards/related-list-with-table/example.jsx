@@ -7,11 +7,11 @@ import SvgIcon from '../../../shared/svg-icon';
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Contacts (1)</span></CardHeader>
+    <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Contacts (1)</span></CardHeader>
     <CardBody>
-      <table className="slds-table slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+      <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
         <thead>
-          <tr className="slds-text-title--caps">
+          <tr className="slds-text-title_caps">
             <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>
             <th scope="col"><div className="slds-truncate" title="Company">Company</div></th>
             <th scope="col"><div className="slds-truncate" title="Title">Title</div></th>

@@ -78,7 +78,7 @@
   /**
    * Non-actionable label inside of a lookup item
    *
-   * @selector .slds-lookup__item--label
+   * @selector .slds-lookup__item_label
    * @restrict .slds-lookup h3
    */
   &__item_label,
@@ -132,7 +132,7 @@
   /**
    * Actionable element inside of a lookup item that's output is single line text
    *
-   * @selector .slds-lookup__item-action--label
+   * @selector .slds-lookup__item-action_label
    * @restrict .slds-lookup__item-action
    */
   &__item-action_label,

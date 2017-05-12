@@ -72,8 +72,8 @@
  * @summary Initiates inline-edit mode for data-tables
  *
  * @name inline-edit
- * @selector .slds-table--edit
- * @restrict .slds-table--fixed-layout
+ * @selector .slds-table_edit
+ * @restrict .slds-table_fixed-layout
  * @required
  * @variant
  */
@@ -88,7 +88,7 @@
    * Cell that has error icon appear within
    *
    * @selector .slds-cell-error
-   * @restrict .slds-table--edit td
+   * @restrict .slds-table_edit td
    * @required
    */
   .slds-cell-error {
@@ -154,7 +154,7 @@
  * Informs a table cell that it has editing capabilities
  *
  * @selector .slds-cell-edit
- * @restrict .slds-table--edit th, .slds-table--edit td
+ * @restrict .slds-table_edit th, .slds-table--edit td
  */
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
@@ -230,7 +230,7 @@
  * Handles children of the table where we don't want any focusable cells
  *
  * @selector .slds-no-cell-focus
- * @restrict .slds-table--edit
+ * @restrict .slds-table_edit
  * @modifier
  */
 .slds-no-cell-focus {
@@ -348,8 +348,8 @@
 }
 
 /**
- * @selector .slds-form-element__label--edit
- * @restrict .slds-popover--edit label
+ * @selector .slds-form-element__label_edit
+ * @restrict .slds-popover_edit label
  */
 .slds-form-element__label_edit,
 .slds-form-element__label--edit {
@@ -359,7 +359,7 @@
 /**
  * Dialog specific for inline-edit popover
  *
- * @selector .slds-popover--edit
+ * @selector .slds-popover_edit
  * @restrict .slds-popover
  * @required
  */

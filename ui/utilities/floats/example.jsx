@@ -20,7 +20,7 @@ export let examples = [
     label: 'Left',
     element:
     <div className="slds-clearfix">
-      <div className="slds-float--left">
+      <div className="slds-float_left">
         <p>I’m floooaaaating</p>
       </div>
     </div>
@@ -30,7 +30,7 @@ export let examples = [
     label: 'Right',
     element:
     <div className="slds-clearfix">
-      <div className="slds-float--right">
+      <div className="slds-float_right">
         <p>I’m floooaaaating</p>
       </div>
     </div>
@@ -39,7 +39,7 @@ export let examples = [
     id: 'none',
     label: 'None',
     element:
-      <div className="slds-float--none">
+      <div className="slds-float_none">
         <p>I’m not floooaaaating</p>
       </div>
   },
@@ -48,10 +48,10 @@ export let examples = [
     label: 'Clearfix',
     element:
       <div className="slds-clearfix">
-        <div className="slds-float--left">
+        <div className="slds-float_left">
           <p>I’m floooaaaating</p>
         </div>
-        <div className="slds-float--right">
+        <div className="slds-float_right">
           <p>I’m floooaaaating</p>
         </div>
       </div>

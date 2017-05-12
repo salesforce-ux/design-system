@@ -16,7 +16,7 @@ export let examples = [
     id: 'small',
     label: 'Size - small',
     element:
-      <div className="slds-box slds-box--small">
+      <div className="slds-box slds-box_small">
         <p>This is a small box.</p>
       </div>
   },
@@ -24,7 +24,7 @@ export let examples = [
     id: 'x-small',
     label: 'Size - x-xmall',
     element:
-      <div className="slds-box slds-box--x-small">
+      <div className="slds-box slds-box_x-small">
         <p>This is an extra-small box.</p>
       </div>
   },
@@ -32,7 +32,7 @@ export let examples = [
     id: 'xx-small',
     label: 'Size - xx-small',
     element:
-      <div className="slds-box slds-box--xx-small">
+      <div className="slds-box slds-box_xx-small">
         <p>This is an extra-extra-small box.</p>
       </div>
   }

@@ -50,23 +50,23 @@ let Overflowing = props =>
     <Tabs.Item title="Item Seven" id="tab-default-7">
       <h2>Item Seven Content</h2>
     </Tabs.Item>
-    <Tabs.ItemOverflow title="More tabs" className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-tabs--default__item">
-      <a className="slds-tabs--default__link" href="javascript:void(0);" aria-haspopup="true">
+    <Tabs.ItemOverflow title="More tabs" className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-tabs_default__item">
+      <a className="slds-tabs_default__link" href="javascript:void(0);" aria-haspopup="true">
         <span className="slds-truncate" title="More tabs">More <span className="slds-assistive-text">tabs</span></span>
-        <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" />
+        <SvgIcon className="slds-button__icon slds-button__icon_x-small" sprite="utility" symbol="down" />
       </a>
-      <Menu className="slds-dropdown--right">
-        <MenuList className="slds-dropdown--length-with-icon-10">
+      <Menu className="slds-dropdown_right">
+        <MenuList className="slds-dropdown_length-with-icon-10">
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Accounts
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Approvals
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Lead
           </MenuItem>
         </MenuList>

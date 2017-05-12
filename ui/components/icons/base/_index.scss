@@ -19,7 +19,7 @@
   /**
    * @summary Circle container for icons
    *
-   * @selector .slds-icon_container--circle
+   * @selector .slds-icon_container_circle
    * @restrict .slds-icon_container
    */
   &_circle,
@@ -100,7 +100,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
- * @selector .slds-icon--xx-small
+ * @selector .slds-icon_xx-small
  * @restrict .slds-icon
  * @modifier
  * @group size
@@ -113,7 +113,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
- * @selector .slds-icon--x-small
+ * @selector .slds-icon_x-small
  * @restrict .slds-icon
  * @modifier
  * @group size
@@ -125,7 +125,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
- * @selector .slds-icon--small
+ * @selector .slds-icon_small
  * @restrict .slds-icon
  * @modifier
  * @group size
@@ -137,7 +137,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
- * @selector .slds-icon--large
+ * @selector .slds-icon_large
  * @restrict .slds-icon
  * @modifier
  * @group size

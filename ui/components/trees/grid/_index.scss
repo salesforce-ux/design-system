@@ -3,7 +3,7 @@
 
 /**
  * @name grid
- * @selector .slds-table--tree
+ * @selector .slds-table_tree
  * @restrict .slds-tree
  * @variant
  */
@@ -24,8 +24,8 @@
 }
 
 /**
- * @selector .slds-table--tree__toggle
- * @restrict .slds-table--tree button
+ * @selector .slds-table_tree__toggle
+ * @restrict .slds-table_tree button
  */
 .slds-table_tree__toggle,
 .slds-table--tree__toggle {

@@ -3,14 +3,12 @@
 
 /**
  *
- * @summary Outer container for reminder
- *
  * @name base
- * @selector .slds-reminder_container
- * @restrict div
+ * @selector .slds-notification
+ * @restrict div, section
  * @variant
  */
-.slds-reminder_container {
+.slds-notification {
   position: fixed;
   display: block;
   width: $size-medium; // this is 320, not 300px
@@ -24,10 +22,10 @@
 /**
  * @summary Main reminder component
  *
- * @selector .slds-reminder
- * @restrict .slds-reminder_container a
+ * @selector .slds-notification__target
+ * @restrict .slds-notification__body a
  */
-.slds-reminder {
+.slds-notification__target {
   padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
   border-radius: $border-radius-medium;
   background-color: $color-background-alt;
@@ -41,12 +39,22 @@
 }
 
 /**
- * @summary Reminder close button
+ * @summary Optional notification footer
  *
- * @selector .slds-reminder__close
- * @restrict .slds-reminder__container button
+ * @selector .slds-notification__footer
+ * @restrict .slds-notification div
  */
-.slds-reminder__close {
+ .slds-notification__footer {
+  padding: $spacing-small $spacing-small $spacing-medium $spacing-small;
+ }
+
+/**
+ * @summary Notification close button
+ *
+ * @selector .slds-notification__close
+ * @restrict .slds-notification__body button
+ */
+.slds-notification__close {
   position: absolute;
   top: 0;
   right: 0;

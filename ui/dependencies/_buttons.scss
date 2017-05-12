@@ -8,13 +8,22 @@
   }
   text-align: center;
   vertical-align: middle;
+  border: $border-width-thick solid;
+  border-top-width: $border-width-thin;
+  box-shadow: $theme-shadow-soft-secondary;
 }
 
-@mixin button-interactions {
+@mixin button-base {
+  border-color: $button-color-border-default;
+  background-color: $button-color-background-default;
 
   &:hover,
   &:focus {
     background-color: $color-background-button-default-hover;
+  }
+
+  &:focus {
+    border-color: $theme-color-border-brand-primary;
   }
 
   &:active {
@@ -22,43 +31,41 @@
   }
 }
 
-@mixin button-base {
-  @include button-interactions;
-  // border: $border-width-thin solid $color-border-button-default;
-  border: $border-width-thick solid $button-color-border-default;
-  box-shadow: $theme-shadow-soft-primary;
-}
-
 @mixin button-brand {
-  // background-color: $color-background-button-brand;
-  background-color: $button-color-background-primary;
-  // border: $border-width-thin solid $color-border-button-brand;
-  border: $border-width-thick solid $button-color-border-primary;
-  // color: $color-text-button-brand;
-  color: $button-color-text-primary;
-  box-shadow: $theme-shadow-soft-primary;
+  background-color: $theme-color-background-brand-primary;
+  border-color: $button-color-border-primary;
+  color: $theme-color-text-brand-primary;
 
   &:link,
   &:visited,
   &:active {
-    color: $color-text-button-brand;
+    color: $theme-color-text-brand-primary;
   }
 
   &:hover,
   &:focus {
-    background-color: $color-background-button-brand-hover;
-    color: $color-text-button-brand-hover;
+    background-color: $theme-color-background-brand-primary-hover;
+    border-color: $theme-color-border-brand-primary-hover;
+    color: $theme-color-text-brand-primary;
   }
 
   &:active {
-    background-color: $color-background-button-brand-active;
+    background-color: $theme-color-background-brand-primary-active;
+    border-color: $theme-color-border-brand-primary-active;
+  }
+}
+
+@mixin button-transparent {
+  border-color: $button-color-border-default;
+
+  &:focus {
+    border-color: $theme-color-border-brand-primary;
   }
 }
 
 @mixin button-destructive {
-  // @TODO - update when new tokens hit the repo
   background-color: $color-background-destructive;
-  border: $border-width-thin solid $color-background-destructive;
+  border-color: $color-background-destructive;
   color: $color-text-inverse;
 
   &:link,
@@ -81,7 +88,7 @@
 
 @mixin button-success {
   background-color: $color-background-button-success;
-  border: $border-width-thin solid $color-border-success;
+  border-color: $color-border-success;
   color: $color-text-default;
 
   &:link,
@@ -100,5 +107,17 @@
   &:active {
     background-color: $color-background-button-success-active;
     border-color: $color-border-success-dark;
+  }
+}
+
+@mixin button-interactions {
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-default-active;
   }
 }

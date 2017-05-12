@@ -18,7 +18,7 @@
   // Cells
   th,
   td {
-    padding: $table-spacing-x-small;
+    padding: $table-cell-spacing;
     white-space: nowrap;
     position: relative;
   }
@@ -30,6 +30,11 @@
     &:focus {
       outline: 0;
     }
+  }
+
+  tbody tr:nth-of-type(even) > td,
+  tbody tr:nth-of-type(even) > th {
+    background-color: $table-color-background-stripes;
   }
 
   /**
@@ -202,8 +207,8 @@
   &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
   &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
     box-shadow:
-      $color-border 0 ($border-width-thin * -1) 0 inset,
-      $color-border 0 ($border-width-thin) 0 inset;
+      $theme-color-border-brand-primary 0 ($border-width-thin * -1) 0 inset,
+      $theme-color-border-brand-primary 0 ($border-width-thin) 0 inset;
   }
 }
 
@@ -318,7 +323,7 @@
  */
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small $table-spacing-x-small;
+  padding: $spacing-x-small $table-cell-spacing;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,

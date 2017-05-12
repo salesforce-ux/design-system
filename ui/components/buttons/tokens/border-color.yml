@@ -11,7 +11,7 @@ imports:
 - "../../../../design-tokens/theme-base/aliases/color.yml"
 props:
   BUTTON_COLOR_BORDER_DEFAULT:
-    value: '{!WHITE_BORDER_PRIMARY}'
+    value: '{!GRAY_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_PRIMARY:
     value: '{!BLUE_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_SECONDARY:

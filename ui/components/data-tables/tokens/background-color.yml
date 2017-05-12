@@ -1,0 +1,12 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/theme-base/aliases/color.yml"
+props:
+  TABLE_COLOR_BACKGROUND_STRIPES:
+    value: '{!GRAY_CONTRAST_PRIMARY}'

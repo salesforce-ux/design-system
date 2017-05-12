@@ -73,6 +73,8 @@
 .slds-button_icon-border,
 .slds-button--icon-border {
   @include button-base;
+  border: $border-width-thick solid $theme-color-border-primary;
+  box-shadow: $theme-shadow-soft-primary;
 
   // Disabled
   &[disabled] {
@@ -97,6 +99,8 @@
   @include button-base;
   background-color: $color-background-button-inverse;
   color: $color-text-link-inverse;
+  border: $border-width-thick solid;
+  box-shadow: $theme-shadow-soft-tertiary;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;

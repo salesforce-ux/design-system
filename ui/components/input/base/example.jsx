@@ -96,7 +96,7 @@ let Readonly = props =>
   <FormElement>
     <FormElementLabel>Input Label</FormElementLabel>
     <FormElementControl>
-      <Input readOnly value="Read Only" placeholder="" />
+      <Input readonly value="Read Only" placeholder="" />
     </FormElementControl>
   </FormElement>;
 

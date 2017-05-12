@@ -15,8 +15,8 @@ import { MenuItem } from '../dropdown/example';
 let Length5 = props =>
   <div className="demo-only" style={{height: '260px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-5">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-5">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
@@ -35,8 +35,8 @@ let Length5 = props =>
 let Length7 = props =>
   <div className="demo-only" style={{height: '300px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-7">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-7">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
@@ -55,8 +55,8 @@ let Length7 = props =>
 let Length10 = props =>
   <div className="demo-only" style={{height: '430px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-10">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-10">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
@@ -75,46 +75,46 @@ let Length10 = props =>
 let IconLength5 = props =>
   <div className="demo-only" style={{height: '260px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-with-icon-5">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-with-icon-5">
           <MenuItem tabIndex="0">
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Two
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Three
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Four
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Five
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item Six
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Seven
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Eight
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Nine
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Ten
           </MenuItem>
         </MenuList>
@@ -125,46 +125,46 @@ let IconLength5 = props =>
 let IconLength7 = props =>
   <div className="demo-only" style={{height: '320px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-with-icon-7">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-with-icon-7">
           <MenuItem tabIndex="0">
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Two
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Three
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Four
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Five
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item Six
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Seven
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Eight
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Nine
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Ten
           </MenuItem>
         </MenuList>
@@ -175,46 +175,46 @@ let IconLength7 = props =>
 let IconLength10 = props =>
   <div className="demo-only" style={{height: '450px'}}>
     <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown--left slds-dropdown--small">
-        <MenuList className="slds-dropdown--length-with-icon-10">
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList className="slds-dropdown_length-with-icon-10">
           <MenuItem tabIndex="0">
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item One
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Two
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Three
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Four
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Five
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
             Menu Item Six
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-approval slds-m-right--small" sprite="standard" symbol="approval" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small" sprite="standard" symbol="approval" />
             Menu Item Seven
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-lead slds-m-right--small" sprite="standard" symbol="lead" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small" sprite="standard" symbol="lead" />
             Menu Item Eight
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-opportunity slds-m-right--small" sprite="standard" symbol="opportunity" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-opportunity slds-m-right_small" sprite="standard" symbol="opportunity" />
             Menu Item Nine
           </MenuItem>
           <MenuItem>
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-product slds-m-right--small" sprite="standard" symbol="product" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-product slds-m-right_small" sprite="standard" symbol="product" />
             Menu Item Ten
           </MenuItem>
         </MenuList>

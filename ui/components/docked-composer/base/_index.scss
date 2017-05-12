@@ -106,7 +106,7 @@
   }
 
   /**
-   * @selector .slds-docked-composer__body--form
+   * @selector .slds-docked-composer__body_form
    * @restrict .slds-docked-composer__body
    */
   &__body_form,
@@ -169,7 +169,7 @@
   /**
    * When the number of docked composer exceed the width of the viewport, this class modifies the docked composer styles
    *
-   * @selector .slds-docked-composer--overflow
+   * @selector .slds-docked-composer_overflow
    * @restrict .slds-docked-composer
    * @required
    */

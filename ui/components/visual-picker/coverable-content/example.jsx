@@ -37,14 +37,14 @@ export let VisualPicker = props => {
         { props.icon
           ? <span
             className={classNames(
-              'slds-visual-picker__figure slds-visual-picker__icon slds-align--absolute-center',
+              'slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center',
               props.className
             )}
           >
             <span className="slds-is-selected">
               <span className="slds-icon_container" title="description of icon when needed">
                 <SvgIcon
-                  className="slds-icon slds-icon--large slds-icon-action-check"
+                  className="slds-icon slds-icon_large slds-icon-action-check"
                   sprite="action"
                   symbol="check"
                 />
@@ -57,7 +57,7 @@ export let VisualPicker = props => {
                   className={classNames(
                     'slds-icon slds-icon-' +
                     props.sprite + '-' +
-                    props.symbol + ' slds-icon--large',
+                    props.symbol + ' slds-icon_large',
                     { 'slds-icon-text-default': props.sprite === 'utility' }
                   )}
                   sprite={props.sprite || 'action'}
@@ -69,7 +69,7 @@ export let VisualPicker = props => {
           </span>
         : <span
           className={classNames(
-              'slds-visual-picker__figure slds-visual-picker__text slds-align--absolute-center',
+              'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center',
               props.className
             )}
           >
@@ -84,7 +84,7 @@ export let VisualPicker = props => {
         { !props.icon
           ? <span className="slds-icon_container slds-visual-picker__text-check">
             <SvgIcon
-              className="slds-icon slds-icon-text-check slds-icon--x-small"
+              className="slds-icon slds-icon-text-check slds-icon_x-small"
               sprite="utility"
               symbol="check"
             />
@@ -99,17 +99,17 @@ export let VisualPickerMediaObject = props =>
   <a
     href="javascript:void(0);"
     className={classNames(
-      'slds-box slds-box_link slds-box--x-small slds-media',
+      'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
   >
-    <div className="slds-media__figure slds-media__figure_fixed-width slds-align--absolute-center slds-m-left--xx-small">
+    <div className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
       <UtilityIcon
         className="slds-icon-text-default"
         symbol="knowledge_base"
       />
     </div>
-    <div className="slds-media__body slds-border--left slds-p-around--small">
+    <div className="slds-media__body slds-border_left slds-p-around_small">
       {props.children}
     </div>
   </a>;

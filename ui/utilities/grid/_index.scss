@@ -14,7 +14,7 @@
 /**
  * @summary Initializes grid
  *
- * @selector .slds-grid--frame
+ * @selector .slds-grid_frame
  * @modifier
  */
 .slds-grid_frame,
@@ -27,7 +27,7 @@
 /**
  * @summary Initializes grid
  *
- * @selector .slds-grid--vertical
+ * @selector .slds-grid_vertical
  * @modifier
  */
 .slds-grid_vertical,
@@ -38,7 +38,7 @@
 /**
  * @summary Initializes grid
  *
- * @selector .slds-grid--vertical-reverse
+ * @selector .slds-grid_vertical-reverse
  * @modifier
  */
 .slds-grid_vertical-reverse,
@@ -49,7 +49,7 @@
 /**
  * @summary Initializes grid
  *
- * @selector .slds-grid--reverse
+ * @selector .slds-grid_reverse
  * @modifier
  */
 .slds-grid_reverse,
@@ -129,7 +129,7 @@
 /**
  * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
  *
- * @selector .slds-grid--pull-padded
+ * @selector .slds-grid_pull-padded
  * @modifier
  */
 .slds-grid_pull-padded,
@@ -143,7 +143,7 @@
 /**
  * @summary Normalizes the 0.125rem of padding when nesting a grid in a region with `.slds-p-horizontal--xxx-small`
  *
- * @selector .slds-grid--pull-padded-xxx-small
+ * @selector .slds-grid_pull-padded-xxx-small
  * @modifier
  */
 .slds-grid_pull-padded-xxx-small,
@@ -157,7 +157,7 @@
 /**
  * @summary Normalizes the 0.25rem of padding when nesting a grid in a region with `.slds-p-horizontal--xx-small`
  *
- * @selector .slds-grid--pull-padded-xx-small
+ * @selector .slds-grid_pull-padded-xx-small
  * @modifier
  */
 .slds-grid_pull-padded-xx-small,
@@ -171,7 +171,7 @@
 /**
  * @summary Normalizes the 0.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--x-small`
  *
- * @selector .slds-grid--pull-padded-x-small
+ * @selector .slds-grid_pull-padded-x-small
  * @modifier
  */
 .slds-grid_pull-padded-x-small,
@@ -185,7 +185,7 @@
 /**
  * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
  *
- * @selector .slds-grid--pull-padded-small
+ * @selector .slds-grid_pull-padded-small
  * @modifier
  */
 .slds-grid_pull-padded-small,
@@ -199,7 +199,7 @@
 /**
  * @summary Normalizes the 1rem of padding when nesting a grid in a region with `.slds-p-horizontal--medium`
  *
- * @selector .slds-grid--pull-padded-medium
+ * @selector .slds-grid_pull-padded-medium
  * @modifier
  */
 .slds-grid_pull-padded-medium,
@@ -213,7 +213,7 @@
 /**
  * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--large`
  *
- * @selector .slds-grid--pull-padded-large
+ * @selector .slds-grid_pull-padded-large
  * @modifier
  */
 .slds-grid_pull-padded-large,
@@ -240,7 +240,7 @@
 /**
  * @summary Adds border to top side of column
  *
- * @selector .slds-col--rule-top
+ * @selector .slds-col_rule-top
  * @restrict .slds-col
  * @modifier
  */
@@ -254,7 +254,7 @@
 /**
  * @summary Adds border to right side of column
  *
- * @selector .slds-col--rule-right
+ * @selector .slds-col_rule-right
  * @restrict .slds-col
  * @modifier
  */
@@ -268,7 +268,7 @@
 /**
  * @summary Adds border to bottom side of column
  *
- * @selector .slds-col--rule-bottom
+ * @selector .slds-col_rule-bottom
  * @restrict .slds-col
  * @modifier
  */
@@ -282,7 +282,7 @@
 /**
  * @summary Adds border to left side of column
  *
- * @selector .slds-col--rule-left
+ * @selector .slds-col_rule-left
  * @restrict .slds-col
  * @modifier
  */
@@ -444,7 +444,7 @@
 /**
  * @summary Columns align in the center to the main axis and expand in each direction
  *
- * @selector .slds-grid--align-center
+ * @selector .slds-grid_align-center
  * @modifier
  */
 .slds-grid_align-center,
@@ -461,7 +461,7 @@
 /**
  * @summary Columns are evenly distributed with equal space around them all
  *
- * @selector .slds-grid--align-space
+ * @selector .slds-grid_align-space
  * @modifier
  */
 .slds-grid_align-space,
@@ -478,7 +478,7 @@
 /**
  * @summary Columns align to the left and right followed by center. Space is equal between them
  *
- * @selector .slds-grid--align-spread
+ * @selector .slds-grid_align-spread
  * @notes With only two columns &mdash; you can get a similar effect by setting one of the columns to `.slds-no-flex`
  * @modifier
  */
@@ -496,7 +496,7 @@
 /**
  * @summary Columns start on the opposite end of the grid's main axis
  *
- * @selector .slds-grid--align-end
+ * @selector .slds-grid_align-end
  * @modifier
  */
 .slds-grid_align-end,
@@ -513,7 +513,7 @@
 /**
  * @summary Columns start at the beginning of the grid's cross axis
  *
- * @selector .slds-grid--vertical-align-start
+ * @selector .slds-grid_vertical-align-start
  * @modifier
  */
 .slds-grid_vertical-align-start,
@@ -525,7 +525,7 @@
 /**
  * @summary Columns align in the center to the cross axis and expand it each direction
  *
- * @selector .slds-grid--vertical-align-center
+ * @selector .slds-grid_vertical-align-center
  * @modifier
  */
 .slds-grid_vertical-align-center,
@@ -537,7 +537,7 @@
 /**
  * @summary Columns start on the opposite end of the grid's cross axis
  *
- * @selector .slds-grid--vertical-align-end
+ * @selector .slds-grid_vertical-align-end
  * @modifier
  */
 .slds-grid_vertical-align-end,
@@ -590,7 +590,7 @@
 /**
  * @summary Bumps grid item(s) away from the other grid items to sit at the top, taking up the remaining white-space of the grid container
  *
- * @selector .slds-col--bump-top
+ * @selector .slds-col_bump-top
  * @modifier
  */
 .slds-col_bump-top,
@@ -601,7 +601,7 @@
 /**
  * @summary Bumps grid item(s) away from the other grid items to sit to the right, taking up the remaining white-space of the grid container
  *
- * @selector .slds-col--bump-right
+ * @selector .slds-col_bump-right
  * @modifier
  */
 .slds-col_bump-right,
@@ -612,7 +612,7 @@
 /**
  * @summary Bumps grid item(s) away from the other grid items to sit at the bottom, taking up the remaining white-space of the grid container
  *
- * @selector .slds-col--bump-bottom
+ * @selector .slds-col_bump-bottom
  * @modifier
  */
 .slds-col_bump-bottom,
@@ -623,7 +623,7 @@
 /**
  * @summary Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container
  *
- * @selector .slds-col--bump-left
+ * @selector .slds-col_bump-left
  * @modifier
  */
 .slds-col_bump-left,
@@ -635,7 +635,7 @@
 /**
  * @summary Stretch the grid items for both single row and multi-line rows to fill the height of the parent grid container
  *
- * @selector .slds-grid--vertical-stretch
+ * @selector .slds-grid_vertical-stretch
  * @notes Grid items will stretch the height of the parent grid container by default, unless `&lt;wrap&gt;` is used
  * @modifier
  */
@@ -648,7 +648,7 @@
 /**
  * @summary Restrict width of containers to a maximum of 480px
  *
- * @selector .slds-container--small
+ * @selector .slds-container_small
  * @modifier
  */
 .slds-container_small,
@@ -659,7 +659,7 @@
 /**
  * @summary Restrict width of containers to a maximum of 768px
  *
- * @selector .slds-container--medium
+ * @selector .slds-container_medium
  * @modifier
  */
 .slds-container_medium,
@@ -670,7 +670,7 @@
 /**
  * @summary Restrict width of containers to a maximum of 1024px
  *
- * @selector .slds-container--large
+ * @selector .slds-container_large
  * @modifier
  */
 .slds-container_large,
@@ -681,7 +681,7 @@
 /**
  * @summary Restrict width of containers to a maximum of 1280px
  *
- * @selector .slds-container--large
+ * @selector .slds-container_large
  * @modifier
  */
 .slds-container_x-large,
@@ -692,7 +692,7 @@
 /**
  * @summary Width of container takes up 100% of viewport
  *
- * @selector .slds-container--fluid
+ * @selector .slds-container_fluid
  * @modifier
  */
 .slds-container_fluid,
@@ -703,7 +703,7 @@
 /**
  * @summary Horizontally positions containers in the center of the viewport
  *
- * @selector .slds-container--center
+ * @selector .slds-container_center
  * @modifier
  */
 .slds-container_center,
@@ -717,7 +717,7 @@
 /**
  * @summary Horizontally positions containers to the left of the viewport
  *
- * @selector .slds-container--left
+ * @selector .slds-container_left
  * @modifier
  */
 .slds-container_left,
@@ -728,7 +728,7 @@
 /**
  * @summary Horizontally positions containers to the right of the viewport
  *
- * @selector .slds-container--right
+ * @selector .slds-container_right
  * @modifier
  */
 .slds-container_right,

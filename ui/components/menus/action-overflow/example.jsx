@@ -13,7 +13,7 @@ import { MenuItem } from '../dropdown/example';
 /// ////////////////////////////////////////
 
 const moreIcon = (
-  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" title="Show More" />
+  <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" aria-haspopup="true" title="Show More" />
 );
 
 /// ///////////////////////////////////////////
@@ -23,7 +23,7 @@ const moreIcon = (
 export default (
 <div className="demo-only" style={{height: '165px'}}>
   <Trigger className="slds-is-open" triggerIcon={moreIcon}>
-    <Menu className="slds-dropdown--left slds-dropdown--actions">
+    <Menu className="slds-dropdown_left slds-dropdown_actions">
       <MenuList>
         <MenuItem tabIndex="0">Action One</MenuItem>
         <MenuItem>Action Two</MenuItem>

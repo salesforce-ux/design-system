@@ -4,7 +4,7 @@
 import React from 'react';
 
 const Crumb = props =>
-  <li className="slds-breadcrumb__item slds-text-title--caps">
+  <li className="slds-breadcrumb__item slds-text-title_caps">
     <a href={props.href}>{props.children}</a>
   </li>;
 
@@ -12,7 +12,7 @@ Crumb.propTypes = { href: React.PropTypes.string };
 
 const BreadCrumbs = props =>
   <nav {...props} role="navigation" aria-label="Breadcrumbs">
-    <ol className="slds-breadcrumb slds-list--horizontal slds-wrap">
+    <ol className="slds-breadcrumb slds-list_horizontal slds-wrap">
       {props.children}
     </ol>
   </nav>;

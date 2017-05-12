@@ -21,16 +21,16 @@ export let Alert = props => {
   return (
     <div
       className={classNames(
-        'slds-notify slds-notify--alert slds-theme--alert-texture',
+        'slds-notify slds-notify_alert slds-theme_alert-texture',
         className,
-        type ? 'slds-theme--' + type : null
+        type ? 'slds-theme_' + type : null
       )}
       role="alert"
     >
       <span className="slds-assistive-text">{ type || 'info' }</span>
       { children }
       <ButtonIcon
-        className="slds-notify__close slds-button--icon-inverse"
+        className="slds-notify__close slds-button_icon-inverse"
         symbol="close"
         assistiveText="Close"
         title="Close"
@@ -46,8 +46,8 @@ export let Alert = props => {
 export default (
   <Alert type="info">
     <UtilityIcon
-      containerClassName="slds-m-right--x-small"
-      className="slds-icon--x-small"
+      containerClassName="slds-m-right_x-small"
+      className="slds-icon_x-small"
       assistiveText={false}
       symbol="user"
     />
@@ -62,8 +62,8 @@ export let states = [
     element:
       <Alert type="warning">
         <UtilityIcon
-          containerClassName="slds-m-right--x-small"
-          className="slds-icon--x-small"
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
           assistiveText={false}
           symbol="warning"
         />
@@ -76,8 +76,8 @@ export let states = [
     element:
       <Alert type="error">
         <UtilityIcon
-          containerClassName="slds-m-right--x-small"
-          className="slds-icon--x-small"
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
           assistiveText={false}
           symbol="ban"
         />
@@ -90,8 +90,8 @@ export let states = [
     element:
       <Alert type="offline">
         <UtilityIcon
-          containerClassName="slds-m-right--x-small"
-          className="slds-icon--x-small"
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
           assistiveText={false}
           symbol="offline"
         />

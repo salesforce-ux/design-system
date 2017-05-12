@@ -83,7 +83,7 @@
  * Dedicated dropzone when there are multiple dropzones in the form or when
  * the input is positioned among other form inputs.
  *
- * @selector .slds-file-selector--files
+ * @selector .slds-file-selector_files
  * @restrict .slds-file-selector
  * @required
  */
@@ -126,7 +126,7 @@
  * cropping control.
  *
  * @name image
- * @selector .slds-file-selector--images
+ * @selector .slds-file-selector_images
  * @restrict .slds-file-selector
  * @required
  * @variant
@@ -162,7 +162,7 @@
  * The container should have a visible boundary, like a modal, composer, or page.
  *
  * @name integrated
- * @selector .slds-file-selector--integrated
+ * @selector .slds-file-selector_integrated
  * @restrict .slds-file-selector
  * @required
  * @variant
@@ -177,8 +177,8 @@
 /**
  * Specific to integrated file selector — region that a file can be dropped within
  *
- * @selector .slds-file-selector__dropzone--integrated
- * @restrict .slds-file-selector--integrated div
+ * @selector .slds-file-selector__dropzone_integrated
+ * @restrict .slds-file-selector_integrated div
  * @required
  */
 .slds-file-selector__dropzone_integrated,
@@ -197,7 +197,7 @@
    * Informs dropzone that file has been dragged into the viewport
    *
    * @selector .slds-has-drag
-   * @restrict .slds-file-selector__dropzone--integrated
+   * @restrict .slds-file-selector__dropzone_integrated
    * @notes To be added with JavaScript
    * @required
    * @modifier
@@ -212,7 +212,7 @@
    * Informs dropzone that file has been dragged into its region
    *
    * @selector .slds-has-drag-over
-   * @restrict .slds-file-selector__dropzone--integrated
+   * @restrict .slds-file-selector__dropzone_integrated
    * @notes To be added with JavaScript
    * @required
    * @modifier
@@ -227,8 +227,8 @@
  * Specific to integrated file selector — container for file selector
  * content, specifically within the dropzone
  *
- * @selector .slds-file-selector__body--integrated
- * @restrict .slds-file-selector--integrated label
+ * @selector .slds-file-selector__body_integrated
+ * @restrict .slds-file-selector_integrated label
  * @required
  */
 .slds-file-selector__body_integrated,
@@ -245,8 +245,8 @@
 /**
  * Specific to integrated file selector — Descriptive call back text
  *
- * @selector .slds-file-selector__text--integrated
- * @restrict .slds-file-selector--integrated span
+ * @selector .slds-file-selector__text_integrated
+ * @restrict .slds-file-selector_integrated span
  * @required
  */
 .slds-file-selector__text_integrated,

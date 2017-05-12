@@ -14,7 +14,7 @@ export let states = [
     label: 'No border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className="slds-button--icon-container" />
+        <ButtonIcon className="slds-button_icon-container" />
       </div>
   },
   {
@@ -22,7 +22,7 @@ export let states = [
     label: 'With border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className="slds-button--icon-border" />
+        <ButtonIcon className="slds-button_icon-border" />
       </div>
   },
   {
@@ -30,7 +30,7 @@ export let states = [
     label: 'Filled — with border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#F4F6F9' }}>
-        <ButtonIcon className="slds-button--icon-border-filled" />
+        <ButtonIcon className="slds-button_icon-border-filled" />
       </div>
   },
   {
@@ -38,7 +38,7 @@ export let states = [
     label: 'Inverse - with border',
     element:
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
-        <ButtonIcon inverse className="slds-button--icon-border-inverse" />
+        <ButtonIcon inverse className="slds-button_icon-border-inverse" />
       </div>
   }
 ];

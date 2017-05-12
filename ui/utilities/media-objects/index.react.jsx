@@ -7,13 +7,13 @@ import classNames from 'classnames';
 class Component extends React.Component {
   render () {
     const className = classNames('slds-media', this.props.className, {
-      [`slds-media--${this.props.flavor}`]: this.props.flavor
+      [`slds-media_${this.props.flavor}`]: this.props.flavor
     });
     return (
       <div className={className}>
         {this.renderFigure(
           this.props.figureCenter,
-          classNames('slds-media__figure--stacked', this.props.figureCenterClassName)
+          classNames('slds-media__figure_stacked', this.props.figureCenterClassName)
         )}
         {this.renderFigure(
           this.props.figureLeft,
@@ -24,7 +24,7 @@ class Component extends React.Component {
         </div>
         {this.renderFigure(
           this.props.figureRight,
-          classNames('slds-media__figure--reverse', this.props.figureRightClassName)
+          classNames('slds-media__figure_reverse', this.props.figureRightClassName)
         )}
       </div>
     );

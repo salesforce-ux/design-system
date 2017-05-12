@@ -6,16 +6,16 @@ import SvgIcon from '../../../shared/svg-icon';
 
 export default (
 <div className="demo-only" style={{height: '640px'}}>
-  <section aria-hidden="false" role="dialog" className="slds-action-overflow--touch">
-    <div className="slds-action-overflow--touch__container">
-      <div className="slds-action-overflow--touch__content">
-        <div className="slds-action-overflow--touch__body">
-          <ul role="menu" className="slds-list--vertical slds-has-block-links--space slds-has-dividers--bottom">
+  <section aria-hidden="false" role="dialog" className="slds-action-overflow_touch">
+    <div className="slds-action-overflow_touch__container">
+      <div className="slds-action-overflow_touch__content">
+        <div className="slds-action-overflow_touch__body">
+          <ul role="menu" className="slds-list_vertical slds-has-block-links_space slds-has-dividers_bottom">
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Post">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-share-post slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="share_post" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="share_post" />
                   </span>
                   <span>Post</span>
                 </p>
@@ -24,8 +24,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Task">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-task slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_task" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_task" />
                   </span>
                   <span>New Task</span>
                 </p>
@@ -34,8 +34,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Contact">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-contact slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_contact" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_contact" />
                   </span>
                   <span>New Contact</span>
                 </p>
@@ -44,8 +44,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Opportunity">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-opportunity slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_opportunity" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_opportunity" />
                   </span>
                   <span>New Opportunity</span>
                 </p>
@@ -54,8 +54,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Convert">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-lead-convert slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="lead_convert" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="lead_convert" />
                   </span>
                   <span>Convert</span>
                 </p>
@@ -64,8 +64,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Edit">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-edit slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="edit" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="edit" />
                   </span>
                   <span>Edit</span>
                 </p>
@@ -74,8 +74,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Post">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-share-post slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="share_post" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="share_post" />
                   </span>
                   <span>Post</span>
                 </p>
@@ -84,8 +84,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Task">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-task slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_task" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_task" />
                   </span>
                   <span>New Task</span>
                 </p>
@@ -94,8 +94,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Contact">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-contact slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_contact" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_contact" />
                   </span>
                   <span>New Contact</span>
                 </p>
@@ -104,8 +104,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Opportunity">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-opportunity slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_opportunity" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_opportunity" />
                   </span>
                   <span>New Opportunity</span>
                 </p>
@@ -114,8 +114,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Convert">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-lead-convert slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="lead_convert" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="lead_convert" />
                   </span>
                   <span>Convert</span>
                 </p>
@@ -124,8 +124,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Edit">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-edit slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="edit" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="edit" />
                   </span>
                   <span>Edit</span>
                 </p>
@@ -134,8 +134,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Post">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-share-post slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="share_post" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="share_post" />
                   </span>
                   <span>Post</span>
                 </p>
@@ -144,8 +144,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Task">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-task slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_task" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_task" />
                   </span>
                   <span>New Task</span>
                 </p>
@@ -154,8 +154,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Contact">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-contact slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_contact" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_contact" />
                   </span>
                   <span>New Contact</span>
                 </p>
@@ -164,8 +164,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="New Opportunity">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-new-opportunity slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="new_opportunity" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="new_opportunity" />
                   </span>
                   <span>New Opportunity</span>
                 </p>
@@ -174,8 +174,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Convert">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-lead-convert slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="lead_convert" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="lead_convert" />
                   </span>
                   <span>Convert</span>
                 </p>
@@ -184,8 +184,8 @@ export default (
             <li className="slds-item">
               <a role="menuitem" href="javascript:void(0)">
                 <p className="slds-truncate" title="Edit">
-                  <span className="slds-icon_container slds-icon_container--circle slds-icon-action-edit slds-m-right--medium">
-                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon--small" sprite="action" symbol="edit" />
+                  <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
+                    <SvgIcon aria-hidden="true" className="slds-icon slds-icon_small" sprite="action" symbol="edit" />
                   </span>
                   <span>Edit</span>
                 </p>
@@ -194,11 +194,11 @@ export default (
           </ul>
         </div>
       </div>
-      <footer className="slds-action-overflow--touch__footer slds-text-align--center">
-        <button className="slds-button slds-button--neutral">Cancel</button>
+      <footer className="slds-action-overflow_touch__footer slds-text-align_center">
+        <button className="slds-button slds-button_neutral">Cancel</button>
       </footer>
     </div>
   </section>
-  <div className="slds-backdrop slds-backdrop--open" />
+  <div className="slds-backdrop slds-backdrop_open" />
 </div>
 );

@@ -56,7 +56,7 @@ The following are now available:
 * Added `slds-dropdown—fluid` to adjust the width of a dropdown so it can be fluid to its container
 * Added updated styles for base HTML elements in the Rich Text Editor
 * Added the same updated styles in the output of the Rich Text Editor using the `.slds-rich-text-editor__output` class
-* Added `slds-pill--link` to modify pill for when we want the hyperlink to take up 100% of the available pill
+* Added `slds-pill_link` to modify pill for when we want the hyperlink to take up 100% of the available pill
 * Added `slds-pill__action` to the actionable link element inside of `slds-pill—link`
 
 **Path**
@@ -86,7 +86,7 @@ The following are now available:
 
 **Spinner**
 
-* Xx-small Spinner variant — [Spinner](/components/spinners?modifiers=.slds-spinner--xx-small&variant=base)
+* Xx-small Spinner variant — [Spinner](/components/spinners?modifiers=.slds-spinner_xx-small&variant=base)
 
 **Split View List**
 
@@ -382,10 +382,10 @@ The following changes have been made to make our product more accessible:
   - Changed `type` attribute on the `input` element to be `text`
 - Upgraded `listbox` markup to include option group headings being accessible, to match Picklist
   - Moved `role="listbox"` attribute from the `ul` element to the `slds-lookup__menu` root element
-  - When a `listbox` has option groups (a `slds-lookup__item--label`)
-    - `ul` element has `role="group"` with an `aria-label` of the same text as the `slds-lookup__item--label` text
-    - `slds-lookup__item--label`, becomes a presentational list item by placing it inside an `li[role="presentation"]` and being a child of the `ul`, as the `aria-label` on the `group` replaces its function
-  - When a `listbox` has no option groups (no `slds-lookup__item--label`)
+  - When a `listbox` has option groups (a `slds-lookup__item_label`)
+    - `ul` element has `role="group"` with an `aria-label` of the same text as the `slds-lookup__item_label` text
+    - `slds-lookup__item_label`, becomes a presentational list item by placing it inside an `li[role="presentation"]` and being a child of the `ul`, as the `aria-label` on the `group` replaces its function
+  - When a `listbox` has no option groups (no `slds-lookup__item_label`)
     - `ul` element has `role="presentation"` and no `aria-label`
 - Fixed Listbox `option`'s markup to not wrap `div` elements in `span` elements
 
@@ -430,7 +430,7 @@ The following changes have been made to make our product more accessible:
 - Update `aria-controls` on each `tab` to match a unique ID
 - Updates to expandable coaching tab panels
   - Update button text on coaching expand/collapse toggle button so it's clear
-  - Add aria-expanded="false" by default to the `slds-tabs--path__link` which have `role="tab"`
+  - Add aria-expanded="false" by default to the `slds-tabs_path__link` which have `role="tab"`
   - When the `tabpanel` is expanded, `aria-expanded="true"` is set on the currently selected `tab`
 - Change the "edit" link to be a `<button />` in the coaching panels
 

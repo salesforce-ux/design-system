@@ -18,15 +18,15 @@ export let ButtonGroupList = props =>
 export default (
   <ButtonGroupList>
     <li>
-      <button className="slds-button slds-button--neutral">Refresh</button>
+      <button className="slds-button slds-button_neutral">Refresh</button>
     </li>
 
     <li>
-      <button className="slds-button slds-button--neutral">Edit</button>
+      <button className="slds-button slds-button_neutral">Edit</button>
     </li>
 
     <li>
-      <button className="slds-button slds-button--neutral">Save</button>
+      <button className="slds-button slds-button_neutral">Save</button>
     </li>
   </ButtonGroupList>
 );
@@ -38,15 +38,15 @@ export let states = [
     element:
       <ButtonGroupList>
         <li>
-          <button className="slds-button slds-button--neutral">Refresh</button>
+          <button className="slds-button slds-button_neutral">Refresh</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral">Edit</button>
+          <button className="slds-button slds-button_neutral">Edit</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral" disabled>Save</button>
+          <button className="slds-button slds-button_neutral" disabled>Save</button>
         </li>
       </ButtonGroupList>
   },
@@ -56,19 +56,19 @@ export let states = [
     element:
       <ButtonGroupList>
         <li>
-          <button className="slds-button slds-button--neutral">Refresh</button>
+          <button className="slds-button slds-button_neutral">Refresh</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral">Edit</button>
+          <button className="slds-button slds-button_neutral">Edit</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral">Save</button>
+          <button className="slds-button slds-button_neutral">Save</button>
         </li>
 
         <li>
-          <Trigger className="slds-button--last" ariaExpanded="false" />
+          <Trigger className="slds-button_last" ariaExpanded="false" />
         </li>
       </ButtonGroupList>
   },
@@ -79,20 +79,20 @@ export let states = [
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroupList>
           <li>
-            <button className="slds-button slds-button--neutral">Refresh</button>
+            <button className="slds-button slds-button_neutral">Refresh</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--neutral">Edit</button>
+            <button className="slds-button slds-button_neutral">Edit</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--neutral">Save</button>
+            <button className="slds-button slds-button_neutral">Save</button>
           </li>
 
           <li>
-            <Trigger className="slds-button--last slds-is-open">
-              <Menu className="slds-dropdown--right">
+            <Trigger className="slds-button_last slds-is-open">
+              <Menu className="slds-dropdown_right">
                 <MenuList>
                   <MenuItem tabIndex="0">Overflow Item One</MenuItem>
                   <MenuItem>Overflow Item Two</MenuItem>
@@ -110,21 +110,21 @@ export let states = [
     element:
       <ButtonGroupList>
         <li>
-          <button className="slds-button slds-button--neutral">Refresh</button>
+          <button className="slds-button slds-button_neutral">Refresh</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral">Edit</button>
+          <button className="slds-button slds-button_neutral">Edit</button>
         </li>
 
         <li>
-          <button className="slds-button slds-button--neutral">Save</button>
+          <button className="slds-button slds-button_neutral">Save</button>
         </li>
 
         <li>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
-              className="slds-button--icon-border"
+              className="slds-button_icon-border"
               assistiveText="More Actions"
               disabled
               aria-haspopup="true"
@@ -142,21 +142,21 @@ export let states = [
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroupList>
           <li>
-            <button className="slds-button slds-button--inverse">Refresh</button>
+            <button className="slds-button slds-button_inverse">Refresh</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse">Edit</button>
+            <button className="slds-button slds-button_inverse">Edit</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse">Save</button>
+            <button className="slds-button slds-button_inverse">Save</button>
           </li>
 
           <li>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
-                className="slds-button--icon-border-inverse"
+                className="slds-button_icon-border-inverse"
                 assistiveText="More Actions"
                 aria-haspopup="true"
                 symbol="down"
@@ -174,21 +174,21 @@ export let states = [
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroupList>
           <li>
-            <button className="slds-button slds-button--inverse">Refresh</button>
+            <button className="slds-button slds-button_inverse">Refresh</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse" disabled>Edit</button>
+            <button className="slds-button slds-button_inverse" disabled>Edit</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse" >Save</button>
+            <button className="slds-button slds-button_inverse" >Save</button>
           </li>
 
           <li>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
-                className="slds-button--icon-border-inverse"
+                className="slds-button_icon-border-inverse"
                 assistiveText="More Actions"
                 aria-haspopup="true"
                 symbol="down"
@@ -206,21 +206,21 @@ export let states = [
       <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
         <ButtonGroupList>
           <li>
-            <button className="slds-button slds-button--inverse">Refresh</button>
+            <button className="slds-button slds-button_inverse">Refresh</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse">Edit</button>
+            <button className="slds-button slds-button_inverse">Edit</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button--inverse">Save</button>
+            <button className="slds-button slds-button_inverse">Save</button>
           </li>
 
           <li>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
-                className="slds-button--icon-border-inverse"
+                className="slds-button_icon-border-inverse"
                 assistiveText="More Actions"
                 disabled
                 aria-haspopup="true"

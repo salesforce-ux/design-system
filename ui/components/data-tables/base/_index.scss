@@ -84,7 +84,7 @@
   /**
    * Use to add a left padding buffer to cells
    *
-   * @selector .slds-cell-buffer--left
+   * @selector .slds-cell-buffer_left
    * @restrict .slds-table th, .slds-table td
    * @modifier
    */
@@ -96,7 +96,7 @@
   /**
    * Use to add a right padding buffer to cells
    *
-   * @selector .slds-cell-buffer--right
+   * @selector .slds-cell-buffer_right
    * @restrict .slds-table th, .slds-table td
    * @modifier
    */
@@ -143,7 +143,7 @@
 /**
  * Add left and right padding to the first and last cells of a table
  *
- * @selector .slds-table--cell-buffer
+ * @selector .slds-table_cell-buffer
  * @restrict .slds-table
  * @required
  * @modifier
@@ -167,7 +167,7 @@
 /**
  * Add vertical borders to a table
  *
- * @selector .slds-table--bordered
+ * @selector .slds-table_bordered
  * @restrict .slds-table
  * @modifier
  */
@@ -210,7 +210,7 @@
 /**
  * Add column borders
  *
- * @selector .slds-table--col-bordered
+ * @selector .slds-table_col-bordered
  * @restrict .slds-table
  * @modifier
  */
@@ -228,7 +228,7 @@
 /**
  * Add alternating strips to rows
  *
- * @selector .slds-table--striped
+ * @selector .slds-table_striped
  * @restrict .slds-table
  * @modifier
  */
@@ -245,7 +245,7 @@
  * @summary Set table to use fixed layout for width and truncation purposes
  *
  * @name advanced
- * @selector .slds-table--fixed-layout
+ * @selector .slds-table_fixed-layout
  * @restrict .slds-table
  * @variant
  */
@@ -291,7 +291,7 @@
  * region of the `<th>` cell
  *
  * @selector .slds-is-sortable
- * @restrict .slds-table--fixed-layout th
+ * @restrict .slds-table_fixed-layout th
  */
 .slds-is-sortable {
 
@@ -314,7 +314,7 @@
  * Actionable area inside th
  *
  * @selector .slds-th__action
- * @restrict .slds-table--fixed-layout th div, .slds-table--fixed-layout th a
+ * @restrict .slds-table_fixed-layout th div, .slds-table--fixed-layout th a
  */
 .slds-th__action {
   display: flex;
@@ -330,7 +330,7 @@
   /**
    * Allows for alignment of form element, such as a checkbox
    *
-   * @selector .slds-th__action--form
+   * @selector .slds-th__action_form
    * @restrict .slds-th__action
    */
   &_form,
@@ -355,7 +355,7 @@
  * Active state of sorted column
  *
  * @selector .slds-is-sorted
- * @restrict .slds-table--fixed-layout th
+ * @restrict .slds-table_fixed-layout th
  */
 .slds-is-sorted {
 
@@ -367,7 +367,7 @@
    * Change direction of arrow
    *
    * @name sorted-ascending
-   * @selector .slds-is-sorted--asc
+   * @selector .slds-is-sorted_asc
    * @restrict .slds-is-sorted
    * @modifier
    */
@@ -380,8 +380,8 @@
 /**
  * Resizable data table columns
  *
- * @selector .slds-table--resizable-cols
- * @restrict .slds-table--fixed-layout
+ * @selector .slds-table_resizable-cols
+ * @restrict .slds-table_fixed-layout
  */
 .slds-table_resizable-cols thead th,
 .slds-table--resizable-cols thead th {
@@ -393,7 +393,7 @@
  * Provide an indicator that resizing is available
  *
  * @selector .slds-is-resizable
- * @restrict .slds-table--resizable-cols th
+ * @restrict .slds-table_resizable-cols th
  */
 .slds-is-resizable {
 

@@ -21,7 +21,7 @@
 /**
  * Initializes toast notification
  *
- * @selector .slds-notify--toast
+ * @selector .slds-notify_toast
  * @restrict .slds-notify_container div
  * @required
  */
@@ -44,7 +44,7 @@
    * Alert close button
    *
    * @selector .slds-notify__close
-   * @restrict .slds-notify--toast button
+   * @restrict .slds-notify_toast button
    * @required
    */
   .slds-notify__close {
@@ -62,6 +62,7 @@
 
   // Modifying .slds-notify--toast when inside a region with the
   // class .slds-region--narrow
+  .slds-notify_toast,
   .slds-notify--toast {
     min-width: auto;
     width: 100%;

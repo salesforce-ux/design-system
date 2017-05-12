@@ -49,7 +49,7 @@
   /**
    * Region that contains the search input, handles sizing
    *
-   * @selector .slds-global-header__item--search
+   * @selector .slds-global-header__item_search
    * @restrict .slds-global-header__item:nth-child(2)
    */
   &__item_search,
@@ -61,6 +61,7 @@
       padding-left: ($spacing-large * 2);
     }
 
+    .slds-input__icon_left,
     .slds-input__icon--left {
       left: ($spacing-medium + $spacing-xx-small);
     }
@@ -81,7 +82,7 @@
   /**
    * Button icons on the global header
    *
-   * @selector .slds-global-header__button--icon
+   * @selector .slds-global-header__button_icon
    * @restrict .slds-global-header__item button
    * @required
    */
@@ -108,7 +109,7 @@
   /**
    * Button icon specifically for global actions
    *
-   * @selector .slds-global-header__button--icon-actions
+   * @selector .slds-global-header__button_icon-actions
    * @restrict .slds-global-header__item button
    * @required
    */
@@ -128,7 +129,7 @@
   /**
    * Button icon specifically for global actions
    *
-   * @selector .slds-global-header__button--icon-favorites
+   * @selector .slds-global-header__button_icon-favorites
    * @restrict .slds-global-header__item button
    * @required
    */
@@ -162,7 +163,7 @@
      * Selected state for favorites button
      *
      * @selector .slds-is-selected
-     * @restrict .slds-global-header__button--icon-favorites
+     * @restrict .slds-global-header__button_icon-favorites
      * @modifier
      * @group stateful
      */
@@ -194,7 +195,7 @@
      * Disabled state for favorites button
      *
      * @selector .slds-is-disabled
-     * @restrict .slds-global-header__button--icon-favorites
+     * @restrict .slds-global-header__button_icon-favorites
      * @modifier
      */
     &.slds-is-disabled .slds-icon,

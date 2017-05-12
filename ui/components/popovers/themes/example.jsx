@@ -12,10 +12,10 @@ let Popover = props =>
 <div
   aria-label="Dialog title"
   aria-describedby="popover-body-id"
-  className={`slds-popover slds-nubbin--left slds-theme--${props.theme}`}
+  className={`slds-popover slds-nubbin_left slds-theme_${props.theme}`}
   role="dialog">
   <ButtonIcon
-    className="slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close"
+    className="slds-button_icon-inverse slds-button_icon-small slds-float_right slds-popover__close"
     symbol="close"
     assistiveText="Close dialog"
     title="Close dialog"

@@ -7,15 +7,15 @@ import SvgIcon from '../../../shared/svg-icon';
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions="search" search><span className="slds-text-heading--small">Contacts (2)</span></CardHeader>
+    <CardHeader symbol="contact" actions="search" search><span className="slds-text-heading_small">Contacts (2)</span></CardHeader>
     <CardBody>
-      <table className="slds-table slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+      <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
         <thead>
-          <tr className="slds-text-title--caps">
+          <tr className="slds-text-title_caps">
             <th className="slds-cell-shrink" scope="col">
               <label className="slds-checkbox" htmlFor="select-all">
                 <input type="checkbox" name="options" id="select-all" />
-                <span className="slds-checkbox--faux" />
+                <span className="slds-checkbox_faux" />
                 <span className="slds-assistive-text">Select All</span>
               </label>
             </th>
@@ -30,7 +30,7 @@ export default (
             <td className="slds-cell-shrink">
               <label className="slds-checkbox" htmlFor="select-row-01">
                 <input type="checkbox" name="options" id="select-row-01" defaultChecked />
-                <span className="slds-checkbox--faux" />
+                <span className="slds-checkbox_faux" />
                 <span className="slds-assistive-text">Select Row</span>
               </label>
             </td>
@@ -43,7 +43,7 @@ export default (
             <td className="slds-cell-shrink">
               <label className="slds-checkbox" htmlFor="select-row-01">
                 <input type="checkbox" name="options" id="select-row-01" />
-                <span className="slds-checkbox--faux" />
+                <span className="slds-checkbox_faux" />
                 <span className="slds-assistive-text">Select Row</span>
               </label>
             </td>

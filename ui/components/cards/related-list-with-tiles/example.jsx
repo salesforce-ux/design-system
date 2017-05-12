@@ -13,7 +13,7 @@ import { TileMedia } from '../../tiles/base/example';
 
 const icon = (
   <div className="slds-icon_container slds-icon-standard-contact" title="if needed">
-    <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="contact" />
+    <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol="contact" />
     <span className="slds-assistive-text">Contact</span>
   </div>
 );
@@ -24,11 +24,11 @@ const icon = (
 export default (
   <Card>
     <CardHeader actions symbol="contact">
-      <span className="slds-text-heading--small">Contacts (3)</span>
+      <span className="slds-text-heading_small">Contacts (3)</span>
     </CardHeader>
     <CardBody>
-        <ul className="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+        <ul className="slds-card__body_inner slds-grid slds-wrap slds-grid_pull-padded">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"
@@ -36,7 +36,7 @@ export default (
               title="Related Record Title 1"
             />
           </li>
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"
@@ -44,7 +44,7 @@ export default (
               title="Related Record Title 1"
             />
           </li>
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"

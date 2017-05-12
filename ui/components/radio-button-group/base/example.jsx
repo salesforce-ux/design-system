@@ -11,12 +11,12 @@ import { Fieldset, Legend } from '../../radio-group/base/example';
 /// ////////////////////////////////////////
 
 let RadioButtonGroup = props =>
-  <div className="slds-radio--button-group">
+  <div className="slds-radio_button-group">
     {props.children}
   </div>;
 
 let RadioButton = props =>
-  <span className={classNames('slds-button slds-radio--button', props.className)}>
+  <span className={classNames('slds-button slds-radio_button', props.className)}>
     <input
       name="radio"
       type="radio"
@@ -24,8 +24,8 @@ let RadioButton = props =>
       disabled={props.disabled}
       aria-describedby={props.errorId}
     />
-    <label className="slds-radio--button__label" htmlFor={props.id}>
-      <span className="slds-radio--faux">
+    <label className="slds-radio_button__label" htmlFor={props.id}>
+      <span className="slds-radio_faux">
         {props.children}
       </span>
     </label>

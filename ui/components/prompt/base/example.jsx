@@ -11,23 +11,23 @@ export default (
       role="alertdialog"
       aria-labelledby="prompt-heading-id"
       aria-describedby="prompt-message-wrapper"
-      className="slds-modal--prompt"
+      className="slds-modal_prompt"
     >
-      <ModalHeader className="slds-theme--error slds-theme--alert-texture" closeButton={false}>
-        <h2 className="slds-text-heading--medium" id="prompt-heading-id">
+      <ModalHeader className="slds-theme_error slds-theme_alert-texture" closeButton={false}>
+        <h2 className="slds-text-heading_medium" id="prompt-heading-id">
           Service Unavailable
         </h2>
       </ModalHeader>
 
-      <ModalContent className="slds-p-around--medium">
+      <ModalContent className="slds-p-around_medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
           quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
       </ModalContent>
 
-      <ModalFooter className="slds-theme--default">
-        <button className="slds-button slds-button--neutral">Okay</button>
+      <ModalFooter className="slds-theme_default">
+        <button className="slds-button slds-button_neutral">Okay</button>
       </ModalFooter>
     </Modal>
-    <div className="slds-backdrop slds-backdrop--open" />
+    <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );

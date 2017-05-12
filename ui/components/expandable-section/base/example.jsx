@@ -34,7 +34,7 @@ export let SectionTitleAction = props =>
     aria-expanded={props.isOpen}
     className="slds-button slds-section__title-action"
   >
-    <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon--left" sprite="utility" symbol="switch" />
+    <SvgIcon className="slds-section__title-action-icon slds-button__icon slds-button__icon_left" sprite="utility" symbol="switch" />
     <span className="slds-truncate" title={props.children}>{props.children}</span>
   </button>;
 
@@ -61,8 +61,8 @@ export let examples = [
     label: 'Non-collapsable',
     element:
       <Section className="slds-is-open">
-        <SectionTitle className="slds-theme--shade">
-          <span className="slds-truncate slds-p-horizontal--small" title="Section Title">Section Title</span>
+        <SectionTitle className="slds-theme_shade">
+          <span className="slds-truncate slds-p-horizontal_small" title="Section Title">Section Title</span>
         </SectionTitle>
         <SectionContent isOpen>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>

@@ -4,77 +4,77 @@
 /**
  * Adds .125rem margin to the side specified
  *
- * @selector .slds-m-*--xxx-small
+ * @selector .slds-m-*_xxx-small
  * @modifier
  */
 
 /**
  * Adds .25rem margin to the side specified
  *
- * @selector .slds-m-*--xx-small
+ * @selector .slds-m-*_xx-small
  * @modifier
  */
 
 /**
  * Adds .5rem margin to the side specified
  *
- * @selector .slds-m-*--x-small
+ * @selector .slds-m-*_x-small
  * @modifier
  */
 
 /**
  * Adds .75rem margin to the side specified
  *
- * @selector .slds-m-*--small
+ * @selector .slds-m-*_small
  * @modifier
  */
 
 /**
  * Adds 1rem margin to the side specified
  *
- * @selector .slds-m-*--medium
+ * @selector .slds-m-*_medium
  * @modifier
  */
 
 /**
  * Adds 1.5rem margin to the side specified
  *
- * @selector .slds-m-*--large
+ * @selector .slds-m-*_large
  * @modifier
  */
 
 /**
  * Adds 2rem margin to the side specified
  *
- * @selector .slds-m-*--x-large
+ * @selector .slds-m-*_x-large
  * @modifier
  */
 
 /**
  * Adds 3rem margin to the side specified
  *
- * @selector .slds-m-*--xx-large
+ * @selector .slds-m-*_xx-large
  * @modifier
  */
 
 /**
  * Adds the specified margin to both top and bottom
  *
- * @selector .slds-m-*-vertical--*
+ * @selector .slds-m-*-vertical_*
  * @modifier
  */
 
 /**
  * Adds the specified margin to both sides
  *
- * @selector .slds-m-*-horizontal--*
+ * @selector .slds-m-*-horizontal_*
  * @modifier
  */
 
 /**
  * Adds the specified margin all the way around the element
  *
- * @selector .slds-m-*-around--*
+ * @selector .slds-m-*-around_*
  * @modifier
  */
 @include spacing(margin);

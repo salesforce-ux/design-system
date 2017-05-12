@@ -36,7 +36,7 @@ export let Radio = props => {
         aria-describedby={props.errorId}
       />
       <label className="slds-radio__label" htmlFor={uniqueId}>
-        <span className="slds-radio--faux" />
+        <span className="slds-radio_faux" />
         <span className="slds-form-element__label">{props.label}</span>
       </label>
     </span>

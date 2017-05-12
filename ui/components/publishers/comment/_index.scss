@@ -29,7 +29,7 @@
  * @summary Initiates publisher that is specific to commenting in threads
  *
  * @name comment
- * @selector .slds-publisher--comment
+ * @selector .slds-publisher_comment
  * @restrict .slds-publisher
  * @required
  * @variant
@@ -54,7 +54,7 @@
    * Applies focus to comment publisher container when inside `textarea`
    *
    * @selector .slds-has-focus
-   * @restrict .slds-publisher--comment
+   * @restrict .slds-publisher_comment
    * @notes Added through JavaScript
    * @modifier
    */

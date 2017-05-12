@@ -42,9 +42,9 @@ export let Listbox = props =>
     className={classNames(
       'slds-listbox',
       {
-        'slds-listbox--vertical': props.vertical,
-        'slds-listbox--horizontal': props.horizontal,
-        'slds-listbox--inline': props.inline
+        'slds-listbox_vertical': props.vertical,
+        'slds-listbox_horizontal': props.horizontal,
+        'slds-listbox_inline': props.inline
       },
       props.className
     )}
@@ -79,8 +79,8 @@ export let ListboxOption = props =>
     className={classNames(
       'slds-media slds-listbox__option',
       {
-        'slds-listbox__option--plain': props.type === 'plain',
-        'slds-listbox__option--entity': props.type === 'entity'
+        'slds-listbox__option_plain': props.type === 'plain',
+        'slds-listbox__option_entity': props.type === 'entity'
       },
       props.className
     )}
@@ -146,7 +146,7 @@ export let ComboboxContainer = props =>
         {/* Search icon before the listbox of selected items */}
         { props.inputIcon === 'left' && props.selectedOptionsInline
           ? <SvgIcon
-            className="slds-icon slds-icon--x-small slds-combobox_container__icon"
+            className="slds-icon slds-icon_x-small slds-combobox_container__icon"
             sprite="utility"
             symbol="search"
           />
@@ -174,9 +174,9 @@ export let ComboboxContainer = props =>
               'slds-combobox__form-element',
               {
 
-                'slds-input-has-icon slds-input-has-icon--left': props.inputIcon === 'left',
-                'slds-input-has-icon slds-input-has-icon--right': props.inputIcon === 'right',
-                'slds-input-has-icon slds-input-has-icon--left-right': props.inputIcon === 'both'
+                'slds-input-has-icon slds-input-has-icon_left': props.inputIcon === 'left',
+                'slds-input-has-icon slds-input-has-icon_right': props.inputIcon === 'right',
+                'slds-input-has-icon slds-input-has-icon_left-right': props.inputIcon === 'both'
               },
               props.inputContainerClassName
             )}
@@ -188,15 +188,15 @@ export let ComboboxContainer = props =>
             {props.inputIcon === 'both' && props.inputIconLeftSprite === 'standard'
             ? <StandardIcon
               containerClassName="slds-combobox__input-entity-icon"
-              className="slds-icon--small"
+              className="slds-icon_small"
               symbol={props.inputIconLeftSymbol || 'account'}
               title={props.inputIconLeftSymbol || 'account'}
               assistiveText={props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value}
               />
             : (props.inputIcon === 'left' || props.inputIcon === 'both'
               ? <UtilityIcon
-                containerClassName="slds-input__icon slds-input__icon--left"
-                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                containerClassName="slds-input__icon slds-input__icon_left"
+                className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconLeftSymbol || 'search'}
               />
             : null)}
@@ -218,8 +218,8 @@ export let ComboboxContainer = props =>
             {/* If inputIcon is right, show icon here  */}
             { props.inputIcon === 'right' && props.inputButtonIcon != true
               ? <UtilityIcon
-                containerClassName="slds-input__icon slds-input__icon--right"
-                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                containerClassName="slds-input__icon slds-input__icon_right"
+                className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
               />
             : null }
@@ -239,7 +239,7 @@ export let ComboboxContainer = props =>
             {/* If close button, show buttonIcon here */}
             { props.inputButtonIcon && props.inputIconRightSymbol === 'close'
               ? <ButtonIcon
-                className="slds-input__icon slds-input__icon--right"
+                className="slds-input__icon slds-input__icon_right"
                 symbol="close"
                 title="Remove selected option"
                 assistiveText="Remove selected option"
@@ -274,8 +274,8 @@ export let EntityOption = props =>
     id={props.id}
     className={classNames(
       {
-        'slds-media--center': !props.entityMeta,
-        'slds-listbox__option--has-meta': props.entityMeta,
+        'slds-media_center': !props.entityMeta,
+        'slds-listbox__option_has-meta': props.entityMeta,
         'slds-is-selected': props.selected,
         'slds-has-focus': props.focused
       },
@@ -284,16 +284,16 @@ export let EntityOption = props =>
   >
     <span className="slds-media__figure">
       <StandardIcon
-        className="slds-icon--small"
+        className="slds-icon_small"
         symbol={props.entityType || 'account'}
       />
     </span>
     <span className="slds-media__body">
-      <span className="slds-listbox__option-text slds-listbox__option-text--entity">
+      <span className="slds-listbox__option-text slds-listbox__option-text_entity">
         { props.typeahead ? props.children : props.entityTitle || 'Salesforce.com, Inc.' }
       </span>
       { props.entityMeta
-        ? <span className="slds-listbox__option-meta slds-listbox__option-meta--entity">
+        ? <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
         { _.upperFirst(props.entityType) || 'Account' } &bull; { _.upperFirst(props.entityLocation) || ' San Francisco' }
         </span>
       : null }
@@ -315,7 +315,7 @@ export let Option = props =>
     type="plain"
     id={props.id}
     className={classNames(
-      'slds-media--small slds-media--center',
+      'slds-media_small slds-media_center',
       {
         'slds-is-selected': props.selected,
         'slds-has-focus': props.focused
@@ -326,7 +326,7 @@ export let Option = props =>
     { !props.hideIcon
       ? <span className="slds-media__figure">
         <SvgIcon
-          className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
+          className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
           sprite="utility"
           symbol="check"
         />
@@ -347,20 +347,20 @@ export let Option = props =>
 */
 let ObjectSwitcher = props =>
   <div className={classNames(
-    'slds-listbox--object-switcher slds-dropdown-trigger slds-dropdown-trigger--click',
+    'slds-listbox_object-switcher slds-dropdown-trigger slds-dropdown-trigger_click',
     props.className
   )}>
     <button
-      className="slds-button slds-button--icon"
+      className="slds-button slds-button_icon"
       aria-haspopup="true"
       title="Select object to search in"
     >
       <span className="slds-icon_container slds-icon-standard-account" title="Accounts">
-        <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol="account" />
         <span className="slds-assistive-text">Searching in: Accounts</span>
       </span>
       <SvgIcon
-        className="slds-button__icon slds-button__icon--x-small"
+        className="slds-button__icon slds-button__icon_x-small"
         sprite="utility"
         symbol="down"
       />
@@ -372,7 +372,7 @@ let ObjectSwitcher = props =>
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}
@@ -488,19 +488,19 @@ export let states = [
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
-            className="slds-p-top--xxx-small"
+            className="slds-p-top_xxx-small"
             horizontal={true}
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
             </ListboxItem>
             <ListboxItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
@@ -568,7 +568,7 @@ export let examples = [
           hideLabel={true}
           inputIcon="right"
           inputIconRightSymbol="search"
-          inputContainerClassName="slds-m-around--small"
+          inputContainerClassName="slds-m-around_small"
           listbox={<ListboxList length="12" />}
           staticListbox={true}
         />

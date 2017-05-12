@@ -15,7 +15,7 @@ export default (
       <p className="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </p>
-      <p className="slds-text-body--small">
+      <p className="slds-text-body_small">
         Mark Jaeckal
         &bull;
         Unlimited Customer

@@ -9,12 +9,12 @@ import classNames from 'classnames';
 /// ////////////////////////////////////////
 
 let Table = props =>
-  <table className={classNames('slds-table slds-table--bordered slds-table--cell-buffer', props.className)}>
+  <table className={classNames('slds-table slds-table_bordered slds-table_cell-buffer', props.className)}>
     {props.children}
   </table>;
 
 let HeadRowData = props =>
-  <tr className="slds-text-title--caps">
+  <tr className="slds-text-title_caps">
     <th scope="col"><div className="slds-truncate" title="Opportunity Name">Opportunity Name</div></th>
     <th scope="col"><div className="slds-truncate" title="Account Name">Account Name</div></th>
     <th scope="col"><div className="slds-truncate" title="Close Date">Close Date</div></th>
@@ -56,7 +56,7 @@ export let states = [
     id: 'data-table-striped-rows',
     label: 'With striped rows',
     element:
-      <Table className="slds-table--striped">
+      <Table className="slds-table_striped">
         <thead>
           <HeadRowData />
         </thead>
@@ -85,7 +85,7 @@ export let states = [
     id: 'data-table-vertical-borders',
     label: 'With vertical borders',
     element:
-      <Table className="slds-table--col-bordered">
+      <Table className="slds-table_col-bordered">
         <thead>
           <HeadRowData />
         </thead>

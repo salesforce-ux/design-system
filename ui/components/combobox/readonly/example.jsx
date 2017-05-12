@@ -12,7 +12,7 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <Option
         id={listboxOptionId01}
@@ -133,7 +133,7 @@ export let states = [
         <Listbox
           id={listboxSelectionsId}
           aria-label="Selected Options:"
-          className="slds-p-top--xxx-small"
+          className="slds-p-top_xxx-small"
           horizontal
         >
           <ListboxItem>

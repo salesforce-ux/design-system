@@ -62,7 +62,7 @@
 /**
  * Inline listbox
  *
- * @selector .slds-listbox--inline
+ * @selector .slds-listbox_inline
  * @restrict .slds-listbox
  * @modifier
  */
@@ -88,7 +88,7 @@
 /**
  * Horizontal listbox
  *
- * @selector .slds-listbox--horizontal
+ * @selector .slds-listbox_horizontal
  * @restrict .slds-listbox
  * @modifier
  */
@@ -128,7 +128,7 @@
 /**
  * Creates a vertical listbox
  *
- * @selector .slds-listbox--vertical
+ * @selector .slds-listbox_vertical
  * @restrict .slds-listbox
  * @modifier
  */
@@ -156,7 +156,7 @@
   /**
    * Modifies the listbox option if it contains an plain object or string
    *
-   * @selector .slds-listbox__option--plain
+   * @selector .slds-listbox__option_plain
    * @restrict .slds-listbox__option
    */
   .slds-listbox__option_plain,
@@ -167,7 +167,7 @@
   /**
    * Modifies the listbox option if it contains an entity object
    *
-   * @selector .slds-listbox__option--entity
+   * @selector .slds-listbox__option_entity
    * @restrict .slds-listbox__option
    */
   .slds-listbox__option_entity,
@@ -182,7 +182,7 @@
   /**
    * If the listbox option has metadata or secondary information that sits below its primary text
    *
-   * @selector .slds-listbox__option--has-meta
+   * @selector .slds-listbox__option_has-meta
    * @restrict .slds-listbox__option
    */
   .slds-listbox__option_has-meta,
@@ -255,7 +255,7 @@
 /**
  * The main text of an entity listbox
  *
- * @selector .slds-listbox__option-text--entity
+ * @selector .slds-listbox__option-text_entity
  * @restrict .slds-listbox__option span
  */
 .slds-listbox__option-text_entity,
@@ -268,7 +268,7 @@
 /**
  * The metadata or secondary text of an entity listbox
  *
- * @selector .slds-listbox__option-meta--entity
+ * @selector .slds-listbox__option-meta_entity
  * @restrict .slds-listbox__option span
  */
 .slds-listbox__option-meta_entity,

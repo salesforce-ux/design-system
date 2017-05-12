@@ -17,7 +17,7 @@ export let ActivityTimelineItem = props =>
       }
     >
       <MediaObject
-        className="slds-timeline__media slds-timeline__media--call"
+        className="slds-timeline__media slds-timeline__media_call"
         figureLeft={<TimelineIcon symbol="log_a_call" />}
         figureLeftClassName="slds-timeline__icon"
       >
@@ -25,14 +25,14 @@ export let ActivityTimelineItem = props =>
           <a href="javascript:void(0);">Mobile conversation on Monday</a>
         </h3>
         <p className="slds-truncate" title="Lei seemed interested in closing this deal quickly! Let&rsquo;s move.">Lei seemed interested in closing this deal quickly! Let&rsquo;s move.</p>
-        <ul className="slds-list--horizontal slds-wrap">
-          <li className="slds-m-right--large">
+        <ul className="slds-list_horizontal slds-wrap">
+          <li className="slds-m-right_large">
             <span className="slds-text-title">Name:</span>
-            <span className="slds-text-body--small"><a href="javascript:void(0);">Lei Chan</a></span>
+            <span className="slds-text-body_small"><a href="javascript:void(0);">Lei Chan</a></span>
           </li>
-          <li className="slds-m-right--large">
+          <li className="slds-m-right_large">
             <span className="slds-text-title">Assigned to:</span>
-            <span className="slds-text-body--small"><a href="javascript:void(0);">Betty Mason</a></span>
+            <span className="slds-text-body_small"><a href="javascript:void(0);">Betty Mason</a></span>
           </li>
         </ul>
       </MediaObject>

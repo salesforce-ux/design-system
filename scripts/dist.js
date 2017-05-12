@@ -131,6 +131,18 @@ async.series([
     .on('finish', done);
   },
 
+  /**
+   * Copy the list to assets/icons
+   */
+  (done) => {
+    gulp.src('@salesforce-ux/icons/dist/ui.icons.json', {
+      cwd: paths.node_modules
+    })
+    .pipe(gulp.dest(distPath()))
+    .on('error', done)
+    .on('finish', done);
+  },
+
   // //////////////////////////////////
   // Fonts
   // //////////////////////////////////

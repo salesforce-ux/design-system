@@ -7,16 +7,13 @@ global:
   cssProperties:
   - 'border*radius'
 props:
-  BORDER_RADIUS_X_SMALL:
+  THEME_BORDER_RADIUS_X_SMALL:
     value: .1rem
-  BORDER_RADIUS_SMALL:
+  THEME_BORDER_RADIUS_SMALL:
     value: .125rem
-  BORDER_RADIUS_MEDIUM:
+  THEME_BORDER_RADIUS_MEDIUM:
     value: .25rem
-  BORDER_RADIUS_LARGE:
+  THEME_BORDER_RADIUS_LARGE:
     value: .5rem
-  BORDER_RADIUS_X_LARGE:
+  THEME_BORDER_RADIUS_X_LARGE:
     value: .75rem
-  BORDER_RADIUS_CIRCLE:
-    value: '50%'
-    comment: 'Circle for global use, action icon bgd shape'

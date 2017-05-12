@@ -10,10 +10,13 @@ global:
 imports:
 - ./aliases/color.yml
 props:
-  COLOR_BORDER:
+  ## DEFAULT
+  THEME_COLOR_BORDER_PRIMARY:
     value: '{!GRAY_BORDER_PRIMARY}'
-    cssProperties:
-    - 'border*'
-    - box-shadow
-    - 'background*'
-    comment: Default border color for UI elements.
+  THEME_COLOR_BORDER_SECONDARY:
+    value: '{!GRAY_BORDER_SECONDARY}'
+  THEME_COLOR_BORDER_TERTIARY:
+    value: '{!WHITE_BORDER_PRIMARY}'
+  ## BRANDING
+  THEME_COLOR_BORDER_BRAND_PRIMARY:
+    value: '{!BLUE_BORDER_PRIMARY}'

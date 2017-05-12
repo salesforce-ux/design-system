@@ -8,7 +8,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/trailhead-base/aliases/color.yml"
+- "../../../../design-tokens/theme-base/aliases/color.yml"
 props:
   BUTTON_COLOR_BORDER_DEFAULT:
     value: '{!WHITE_BORDER_PRIMARY}'

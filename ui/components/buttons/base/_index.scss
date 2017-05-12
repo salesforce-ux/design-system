@@ -145,9 +145,20 @@ a.slds-button--inverse:focus {
 .slds-button_neutral,
 .slds-button--neutral {
   @include button;
-  @include button-base;
+  // border: $border-width-thin solid $color-border-button-default;
+  border: $border-width-thick solid $button-color-border-default;
+  box-shadow: $theme-shadow-soft-primary;
   // background-color: $color-background-button-default;
   background-color: $button-color-background-default;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-default-active;
+  }
 
   &[disabled] {
     background-color: $color-background-button-default-disabled;
@@ -166,7 +177,29 @@ a.slds-button--inverse:focus {
 .slds-button_brand,
 .slds-button--brand {
   @include button;
-  @include button-brand;
+  // background-color: $color-background-button-brand;
+  background-color: $theme-color-background-brand-primary;
+  // border: $border-width-thin solid $color-border-button-brand;
+  border: $border-width-thick solid $button-color-border-primary;
+  // color: $color-text-button-brand;
+  color: $theme-color-text-brand-primary;
+  box-shadow: $theme-shadow-soft-primary;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-button-brand;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-brand-hover;
+    color: $color-text-button-brand-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-brand-active;
+  }
 
   &[disabled] {
     background: $color-background-button-brand-disabled;
@@ -186,7 +219,7 @@ a.slds-button--inverse:focus {
 .slds-button_transparent {
   @include button;
   border: $border-width-thick solid $button-color-border-default;
-  box-shadow: $shadow-hard-primary;
+  box-shadow: $theme-shadow-soft-primary;
 }
 
 /**

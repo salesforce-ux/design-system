@@ -26,7 +26,7 @@
   @include button-interactions;
   // border: $border-width-thin solid $color-border-button-default;
   border: $border-width-thick solid $button-color-border-default;
-  box-shadow: $shadow-soft-primary;
+  box-shadow: $theme-shadow-soft-primary;
 }
 
 @mixin button-brand {
@@ -36,7 +36,7 @@
   border: $border-width-thick solid $button-color-border-primary;
   // color: $color-text-button-brand;
   color: $button-color-text-primary;
-  box-shadow: $shadow-soft-primary;
+  box-shadow: $theme-shadow-soft-primary;
 
   &:link,
   &:visited,

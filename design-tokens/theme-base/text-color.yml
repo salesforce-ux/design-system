@@ -10,21 +10,25 @@ global:
 imports:
 - ./aliases/color.yml
 props:
-  COLOR_TEXT_PRIMARY:
+  ## DEFAULT
+  THEME_COLOR_TEXT_PRIMARY:
     value: '{!GRAY_TEXT_PRIMARY}'
     comment: Primary body text color
-  COLOR_TEXT_SECONDARY:
+  THEME_COLOR_TEXT_SECONDARY:
     value: '{!GRAY_TEXT_SECONDARY}'
     comment: Secondary body text color
-  COLOR_TEXT_TERTIARY:
+  THEME_COLOR_TEXT_TERTIARY:
     value: '{!GRAY_TEXT_TERTIARY}'
     comment: Tertiary body text color
-  COLOR_TEXT_LINK_PRIMARY:
-    value: "{!BLUE_TEXT_PRIMARY}"
+  ## BRANDING
+  THEME_COLOR_TEXT_BRAND_PRIMARY:
+    value: '{!WHITE_TEXT_PRIMARY}'
   ## INTERACTIONS
-  COLOR_TEXT_LINK_HOVER:
+  THEME_COLOR_TEXT_LINK_PRIMARY:
+    value: "{!BLUE_TEXT_PRIMARY}"
+  THEME_COLOR_TEXT_LINK_HOVER:
     value: "{!BLUE_TEXT_SECONDARY}"
-  COLOR_TEXT_LINK_ACTIVE:
+  THEME_COLOR_TEXT_LINK_ACTIVE:
     value: "{!BLUE_TEXT_SECONDARY}"
-  COLOR_TEXT_LINK_FOCUS:
+  THEME_COLOR_TEXT_LINK_FOCUS:
     value: "{!BLUE_TEXT_SECONDARY}"

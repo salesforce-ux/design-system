@@ -11,9 +11,16 @@ global:
 imports:
 - ./aliases/color.yml
 props:
-  COLOR_BACKGROUND_PRIMARY:
+  ## DEFAULT
+  THEME_COLOR_BACKGROUND_PRIMARY:
     value: '{!GRAY_BACKGROUND_PRIMARY}'
-    comment: Default background color for the whole app.
-  COLOR_BACKGROUND_SECONDARY:
+  THEME_COLOR_FOREGROUND_PRIMARY:
+    value: '{!WHITE_BACKGROUND_PRIMARY}'
+  THEME_COLOR_BACKGROUND_SECONDARY:
     value: '{!GRAY_BACKGROUND_SECONDARY}'
-    comment: Default background color for the whole app.
+  ## BRANDING
+  THEME_COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: '{!BLUE_PRIMARY}'
+  ## PAGE
+  THEME_PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!GRAY_BACKGROUND_PRIMARY}'

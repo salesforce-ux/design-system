@@ -39,7 +39,7 @@ export let Input = props => {
       className={classNames('slds-input', props.className)}
       type={props.type || 'text'}
       placeholder={props.placeholder || 'Placeholder Text'}
-      readonly={props.readOnly}
+      readOnly={props['readOnly']}
       value={props.value}
     />
   );

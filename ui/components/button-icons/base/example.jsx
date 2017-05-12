@@ -65,11 +65,17 @@ export let examples = [
   {
     id: 'button-icon-inverse',
     label: 'Inverse',
-    element: <ButtonIcon inverse className="slds-button_icon-inverse" />
+    element:
+    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+      <ButtonIcon inverse className="slds-button_icon-inverse" />
+    </div>
   },
   {
     id: 'button-icon-inverse-disabled',
     label: 'Inverse disabled',
-    element: <ButtonIcon inverse className="slds-button_icon-inverse" disabled />
+    element:
+    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+      <ButtonIcon inverse className="slds-button_icon-inverse" disabled />
+    </div>
   }
 ];

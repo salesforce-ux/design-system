@@ -1,0 +1,176 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+props:
+  COLOR_BORDER:
+    value: '{!GEYSER}'
+    cssProperties:
+    - 'border*'
+    - box-shadow
+    - 'background*'
+    comment: Default border color for UI elements.
+  COLOR_BORDER_BRAND:
+    value: '{!AZURE}'
+    cssProperties:
+    - 'border*'
+    - box-shadow
+    - outline
+    - outline-color
+    comment: Our product brand blue.
+  COLOR_BORDER_BRAND_DARK:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+  COLOR_BORDER_CUSTOMER:
+    value: '{!TANGERINE}'
+    comment: Border color for UI elements related to the concept of an external user or customer.
+  COLOR_BORDER_DESTRUCTIVE:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_DESTRUCTIVE_HOVER:
+    value: '{!TABASCO}'
+    comment: Hover border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_DESTRUCTIVE_ACTIVE:
+    value: '{!MAROON}'
+    comment: Active border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_INFO:
+    value: '{!KASHMIR_BLUE}'
+    comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BORDER_ERROR:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Border color for UI elements that have to do with errors.
+  COLOR_BORDER_ERROR_ALT:
+    value: '{!DEEP_BLUSH}'
+    comment: Alternative border color for UI elements related to errors.
+  COLOR_BORDER_ERROR_DARK:
+    value: '{!DEEP_BLUSH}'
+    comment: Dark alternative border color for UI elements related to errors.
+  COLOR_BORDER_OFFLINE:
+    value: '{!TUNDORA}'
+    comment: Border color for UI elements related to the offline state.
+  COLOR_BORDER_SUCCESS:
+    value: '{!EMERALD}'
+    comment: Border color for UI elements that have to do with success.
+  COLOR_BORDER_SUCCESS_DARK:
+    value: '{!SALEM}'
+    comment: Dark alternative border color for UI elements that have to do with success.
+  COLOR_BORDER_WARNING:
+    value: '{!KOROMIKO}'
+    comment: Border color for UI elements that have to do with warnings.
+  COLOR_BORDER_INVERSE:
+    value: '{!DEEP_COVE}'
+    comment: Border color to match UI elements using color-background-inverse.
+  COLOR_BORDER_TAB_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Border color for a selected tab in a tab group.
+  COLOR_BORDER_TAB_ACTIVE:
+    value: "{!WHITE}"
+    comment: Border color for an active tab.
+  COLOR_BORDER_SEPARATOR:
+    value: '{!LINK_WATER}'
+    comment: Lightest separator color - used as default separator on white backgrounds.
+  COLOR_BORDER_SEPARATOR_ALT:
+    value: '{!GEYSER}'
+    comment: Medium separator color - used as default separator on light gray backgrounds.
+  COLOR_BORDER_SEPARATOR_ALT_2:
+    value: '{!CADET_BLUE}'
+    comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
+  COLOR_BORDER_SEPARATOR_INVERSE:
+    value: '{!SAN_JUAN}'
+    comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
+  COLOR_BORDER_ROW_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Used as the border color for selected rows or items on list-like components.
+  COLOR_BORDER_ROW_SELECTED_HOVER:
+    value: '{!AZURE}'
+    comment: Used as the border color for the hover state on selected rows or items on list-like components.
+  COLOR_BORDER_HINT:
+    value: '{!SAN_JUAN}'
+    specificity: builders
+    comment: Used to delineate the boundary of a specific region. Specific to builders.
+    deprecated: true
+  COLOR_BORDER_SELECTION:
+    value: '{!SCIENCE_BLUE}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected component. Specific to builders.
+  COLOR_BORDER_SELECTION_HOVER:
+    value: '{!AZURE}'
+    specificity: builders
+    comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
+  COLOR_BORDER_SELECTION_ACTIVE:
+    value: '{!LINK_WATER}'
+    specificity: builders
+    comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.
+  COLOR_BORDER_CANVAS_ELEMENT_SELECTION:
+    value: '{!MALIBU}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected canvas element. Specific to builders.
+  COLOR_BORDER_CANVAS_ELEMENT_SELECTION_HOVER:
+    value: '{!ENDEAVOUR}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
+  COLOR_BORDER_ICON_INVERSE_HINT:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Border color for a button with an icon that has a parent element that has a hover state
+  COLOR_BORDER_ICON_INVERSE_HINT_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Hovered border color for a button with an icon that has a parent element that has a hover state
+  COLOR_BORDER_BUTTON_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Border color for brandable primary button
+  COLOR_BORDER_BUTTON_BRAND_DISABLED:
+    value: '{!TRANSPARENT}'
+    comment: Border color for brandable primary button - disabled state
+  COLOR_BORDER_BUTTON_DEFAULT:
+    value: '{!GEYSER}'
+    comment: Border color for default secondary button
+  COLOR_BORDER_BUTTON_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Border color for disabled inverse button.
+  COLOR_BORDER_INPUT:
+    value: '{!GEYSER}'
+    comment: Border color on form elements.
+  COLOR_BORDER_INPUT_ACTIVE:
+    value: '{!AZURE}'
+    comment: Border color on active form elements.
+  COLOR_BORDER_INPUT_DISABLED:
+    value: '{!CADET_BLUE}'
+    comment: Border color on disabled form elements.
+  COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
+    value: '{!WHITE}'
+    comment: The borders to create the checkmark
+  COLOR_BORDER_TOGGLE_CHECKED:
+    value: '{!WHITE}'
+    comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
+  COLOR_STROKE_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Our product brand blue.
+  COLOR_STROKE_BRAND_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Hover stroke color for our product brand blue.
+  COLOR_STROKE_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    cssProperties:
+    - stroke
+    comment: Active stroke color for our product brand blue.
+  COLOR_STROKE_DISABLED:
+    value: '{!STEAM}'
+    cssProperties:
+    - stroke
+    comment: Disabled stroke color.
+  COLOR_STROKE_HEADER_BUTTON:
+    value: '{!CASPER}'
+    cssProperties:
+    - stroke
+    comment: Stroke color for our global header buttons.

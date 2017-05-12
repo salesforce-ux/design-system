@@ -1,0 +1,32 @@
+$width-stage-left: 88% !default;
+// Action footer menu. Phone 44px; Tablet 50px
+$height-footer: 3.75rem !default;
+// Brand header. Phone 44px; Tablet 50px
+$height-header: 2.75rem !default;
+// Text input height
+$height-input: 1.875rem !default;
+// Space above overflow menu before scrolling.
+$height-overflow-start: 144px !default;
+// Maximum height for photos and such in cards.
+$max-height-card-media: 144px !default;
+// Maximum height for brand logos in header.
+$max-height-header-brand: 32px !default;
+// Maximum width for action icons in action bar when there are only 2 items with labels.
+$max-width-action-bar-with-labels: 320px !default;
+// Maximum width for action overflow menu so that it's not full-screen for tablet.
+$max-width-action-overflow-menu: 512px !default;
+// Maximum width for brand logos in header.
+$max-width-header-brand: 156px !default;
+// Use squareIconLargeBoundary
+$square-record-anchor-pic: 3rem !default;
+// Tap target Size
+$square-tappable: 2.75rem !default;
+// 2 Column Layout - Master
+$flex-master-panel: 7 !default;
+// Tooltip square size
+$square-tooltip: 1.25rem !default;
+// Tooltip nubbin square size
+$square-tooltip-nubbin: 1rem !default;
+// 2 Column Layout - Detail
+$flex-detail-panel: 3 !default;
+$duration-slide: 0.25s !default;

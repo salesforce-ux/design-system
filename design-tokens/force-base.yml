@@ -1,0 +1,24 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base/spacing.yml
+- ./force-base/sizing.yml
+- ./force-base/fill.yml
+- ./force-base/font-weight.yml
+- ./force-base/font-size.yml
+- ./force-base/line-height.yml
+- ./force-base/font-family.yml
+- ./force-base/border-radius.yml
+- ./force-base/border-color.yml
+- ./force-base/background-color.yml
+- ./force-base/box-shadow.yml
+- ./force-base/text-color.yml
+- ./force-base/text-transform.yml
+- ./force-base/opacity.yml
+- ./force-base/duration.yml
+- ./force-base/z-index.yml
+- ./components.yml
+auraImports:
+- 'force:mqCommons'
+- 'force:fontCommons'

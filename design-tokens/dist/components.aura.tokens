@@ -1,0 +1,83 @@
+<aura:tokens>
+  <aura:token name="colorBackgroundButtonBrand" value="rgb(0, 112, 210)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonBrandActive" value="rgb(0, 57, 107)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonBrandHover" value="rgb(0, 95, 178)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonBrandDisabled" value="rgb(224, 229, 238)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonDefault" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonDefaultHover" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonDefaultFocus" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonDefaultActive" value="rgb(238, 241, 246)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonDefaultDisabled" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonIcon" value="rgba(0, 0, 0, 0)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonIconHover" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonIconFocus" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonIconActive" value="rgb(238, 241, 246)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonIconDisabled" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonInverse" value="rgba(0, 0, 0, 0)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonInverseActive" value="rgba(0, 0, 0, 0.24)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundButtonInverseDisabled" value="rgba(0, 0, 0, 0)" property="background*,border*,box-shadow" />
+  <aura:token name="lineHeightButton" value="1.875rem" property="font,*height,bottom" />
+  <aura:token name="lineHeightButtonSmall" value="1.75rem" property="font,*height" />
+  <aura:token name="cardColorBackground" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="cardSpacingSmall" value="0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardSpacingMedium" value="1rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardSpacingLarge" value="1.5rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="lineHeightToggle" value="1.3rem" property="font,*height" />
+  <aura:token name="squareToggleSlider" value="1.25rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="widthToggle" value="3rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="heightToggle" value="1.5rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="tableSpacingXSmall" value="0.5rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="colorBackgroundDockedPanelHeader" value="rgb(247, 249, 251)" property="background*,border*,box-shadow" />
+  <aura:token name="heightDockedBar" value="2.5rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="utilityBarColorBackgroundNotificationBadge" value="rgb(212, 80, 76)" property="background*,border*,box-shadow" />
+  <aura:token name="utilityBarColorBackgroundNotificationFocus" value="rgb(168, 183, 199)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundIconWaffle" value="rgb(84, 105, 141)" property="background*,border*,box-shadow" />
+  <aura:token name="squareIconGlobalIdentityIcon" value="1.25rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="colorBackgroundContextBar" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarBrandAccent" value="rgb(0, 161, 223)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarItemHover" value="rgb(247, 249, 251)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarItemActive" value="rgb(247, 249, 251)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextTabBarItem" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarInverseItemHover" value="rgba(255, 255, 255, 0.2)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarInverseItemActive" value="rgba(255, 255, 255, 0.4)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarShadow" value="linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundContextBarActionHighlight" value="rgba(255, 255, 255, 0.2)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBorderContextBarDivider" value="rgba(255, 255, 255, 0.2)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarItem" value="rgba(0, 0, 0, 0.2)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarInverseItem" value="rgba(255, 255, 255, 0.2)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarThemeDefault" value="rgb(0, 161, 223)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarThemeDefaultAlt" value="rgb(228, 233, 243)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarThemeDefaultHover" value="rgb(11, 35, 153)" property="border*,box-shadow" />
+  <aura:token name="colorBorderContextBarThemeDefaultActive" value="rgb(228, 233, 243)" property="border*,box-shadow" />
+  <aura:token name="heightContextBar" value="2.5rem" property="font,font-size,*width,*height,flex,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="colorTextContextBar" value="rgb(84, 105, 141)" property="color,fill" />
+  <aura:token name="colorTextContextBarInverse" value="rgb(255, 255, 255)" property="color,fill" />
+  <aura:token name="colorTextContextBarActionTrigger" value="rgba(255, 255, 255, 0.4)" property="color,fill" />
+  <aura:token name="colorBackgroundAnchor" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPageHeader" value="rgb(247, 249, 251)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathComplete" value="rgb(75, 202, 129)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathCompleteHover" value="rgb(4, 132, 75)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathCurrent" value="rgb(0, 112, 210)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathCurrentHover" value="rgb(0, 95, 178)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathIncomplete" value="rgb(224, 229, 238)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathIncompleteHover" value="rgb(216, 221, 230)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundPathLost" value="rgb(194, 57, 52)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBackgroundGuidance" value="rgb(250, 250, 251)" property="background*,border*,box-shadow" />
+  <aura:token name="colorBorderPathDivider" value="rgb(255, 255, 255)" property="border*,box-shadow" />
+  <aura:token name="lineHeightSalespath" value="1.5rem" property="font,*height" />
+  <aura:token name="heightSalesPath" value="2rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="progressColorBackground" value="rgb(255, 255, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="progressColorBackgroundShade" value="rgb(244, 246, 249)" property="background*,border*,box-shadow" />
+  <aura:token name="progressBarColorBackground" value="rgb(216, 221, 230)" property="background*,border*,box-shadow" />
+  <aura:token name="progressBarColorBackgroundFill" value="rgb(94, 180, 255)" property="background*,border*,box-shadow" />
+  <aura:token name="progressColorBorder" value="rgb(255, 255, 255)" property="border*,box-shadow" />
+  <aura:token name="progressColorBorderShade" value="rgb(244, 246, 249)" property="border*,box-shadow" />
+  <aura:token name="progressColorBorderHover" value="rgb(0, 112, 210)" property="border*,box-shadow" />
+  <aura:token name="progressColorBorderActive" value="rgb(21, 137, 238)" property="border*,box-shadow" />
+  <aura:token name="progressBarHeight" value="0.125rem" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" />
+  <aura:token name="splitViewColorBackground" value="rgb(228, 233, 243)" property="background*,border*,box-shadow" />
+  <aura:token name="splitViewColorBackgroundRowHover" value="rgb(238, 241, 246)" property="background*,border*,box-shadow" />
+  <aura:token name="splitViewColorBorder" value="rgb(206, 213, 225)" property="border*,box-shadow" />
+  <aura:token name="verticalNavigationColorBackgroundShadeRowHover" value="rgb(238, 241, 246)" property="background*,border*,box-shadow" />
+  <aura:token name="verticalNavigationColorBackgroundShadeRowActive" value="rgb(232, 236, 243)" property="background*,border*,box-shadow" />
+</aura:tokens>

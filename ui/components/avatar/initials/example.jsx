@@ -21,7 +21,7 @@ export let states = [
     id: 'avatar-square-initials',
     label: 'Square Initials',
     element:
-      <Avatar className="slds-avatar--medium">
+      <Avatar className="slds-avatar_medium">
         <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
@@ -29,7 +29,7 @@ export let states = [
     id: 'avatar-circle-initials',
     label: 'Circle Initials',
     element:
-      <Avatar className="slds-avatar--circle slds-avatar--medium">
+      <Avatar className="slds-avatar_circle slds-avatar_medium">
         <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
       </Avatar>
   },
@@ -37,7 +37,7 @@ export let states = [
     id: 'size-x-small',
     label: 'Size - X Small',
     element:
-      <Avatar className="slds-avatar--x-small">
+      <Avatar className="slds-avatar_x-small">
         <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
@@ -45,7 +45,7 @@ export let states = [
     id: 'size-small',
     label: 'Size - Small',
     element:
-      <Avatar className="slds-avatar--small">
+      <Avatar className="slds-avatar_small">
         <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
@@ -53,7 +53,7 @@ export let states = [
     id: 'size-medium',
     label: 'Size - Medium',
     element:
-      <Avatar className="slds-avatar--medium">
+      <Avatar className="slds-avatar_medium">
         <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   },
@@ -61,7 +61,7 @@ export let states = [
     id: 'size-large',
     label: 'Size - Large',
     element:
-      <Avatar className="slds-avatar--large">
+      <Avatar className="slds-avatar_large">
         <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
       </Avatar>
   }

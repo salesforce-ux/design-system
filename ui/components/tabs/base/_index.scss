@@ -21,7 +21,7 @@
  * @summary Initializes a default tablist
  *
  * @name base
- * @selector .slds-tabs--default
+ * @selector .slds-tabs_default
  * @restrict div
  * @required
  * @variant
@@ -33,8 +33,8 @@
   /**
    * Creates the container for the default tabs
    *
-   * @selector .slds-tabs--default__nav
-   * @restrict .slds-tabs--default ul
+   * @selector .slds-tabs_default__nav
+   * @restrict .slds-tabs_default ul
    * @required
    */
   &__nav {
@@ -96,8 +96,8 @@
 /**
  * Styles each list item as a single tab
  *
- * @selector .slds-tabs--default__item
- * @restrict .slds-tabs--default ul li
+ * @selector .slds-tabs_default__item
+ * @restrict .slds-tabs_default ul li
  * @required
  */
 .slds-tabs_default__item,
@@ -120,7 +120,7 @@
    * Active state for a tab item
    *
    * @selector .slds-is-active
-   * @restrict .slds-tabs--default__item
+   * @restrict .slds-tabs_default__item
    * @notes Required on the `<li>` element that is associated with the active tab panel
    * @modifier
    */
@@ -152,7 +152,7 @@
    * Focus state for a tab item
    *
    * @selector .slds-has-focus
-   * @restrict .slds-tabs--default__item
+   * @restrict .slds-tabs_default__item
    * @modifier
    */
   &:focus,
@@ -170,8 +170,8 @@
 /**
  * Styles each actionable element inside each tab item
  *
- * @selector .slds-tabs--default__link
- * @restrict .slds-tabs--default__item a
+ * @selector .slds-tabs_default__link
+ * @restrict .slds-tabs_default__item a
  * @required
  */
 .slds-tabs_default__link,
@@ -190,8 +190,8 @@
 /**
  * Styles each tab content wrapper
  *
- * @selector .slds-tabs--default__content
- * @restrict .slds-tabs--default div
+ * @selector .slds-tabs_default__content
+ * @restrict .slds-tabs_default div
  * @required
  */
 .slds-tabs_default__content,

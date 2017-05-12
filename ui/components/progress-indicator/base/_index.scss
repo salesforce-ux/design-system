@@ -16,7 +16,7 @@
   /**
    * When on a shaded background such as the modal footer
    *
-   * @selector .slds-progress--shade
+   * @selector .slds-progress_shade
    * @restrict .slds-progress
    * @modifier
    */
@@ -182,7 +182,7 @@
   /**
    * Modifier that notifies the marker indicator that the step has been completed and its getting an icon
    *
-   * @selector .slds-progress__marker--icon
+   * @selector .slds-progress__marker_icon
    * @restrict .slds-progress__marker
    * @required
    */

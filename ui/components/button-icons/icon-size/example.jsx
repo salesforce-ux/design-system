@@ -9,23 +9,23 @@ import { ButtonIcon } from '../base/example';
 /// ////////////////////////////////////////
 
 export default (
-  <ButtonIcon className="slds-button--icon" />
+  <ButtonIcon className="slds-button_icon" />
 );
 
 export let states = [
   {
     id: 'button-icon-size-large',
     label: 'Large',
-    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--large" />
+    element: <ButtonIcon className="slds-button_icon" iconClassName="slds-button__icon_large" />
   },
   {
     id: 'button-icon-size-small',
     label: 'Small',
-    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--small" />
+    element: <ButtonIcon className="slds-button_icon" iconClassName="slds-button__icon_small" />
   },
   {
     id: 'button-icon-size-x-small',
     label: 'x-Small',
-    element: <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--x-small" />
+    element: <ButtonIcon className="slds-button_icon" iconClassName="slds-button__icon_x-small" />
   }
 ];

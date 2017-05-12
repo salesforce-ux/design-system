@@ -54,7 +54,7 @@
 /**
  * @summary Marks a vertical list with .5rem spacing around
  *
- * @selector .slds-list--vertical-space
+ * @selector .slds-list_vertical-space
  * @modifier
  */
 .slds-list_vertical-space,
@@ -69,7 +69,7 @@
 /**
  * @summary Marks a vertical list with 1rem spacing around
  *
- * @selector .slds-list--vertical-space-medium
+ * @selector .slds-list_vertical-space-medium
  * @modifier
  */
 .slds-list_vertical-space-medium,
@@ -94,7 +94,7 @@
 /**
  * @summary Creates an unordered list with markers
  *
- * @selector .slds-list--dotted
+ * @selector .slds-list_dotted
  * @modifier
  */
 .slds-list_dotted,
@@ -105,7 +105,7 @@
 /**
  * @summary Creates an ordered list with decimals
  *
- * @selector .slds-list--ordered
+ * @selector .slds-list_ordered
  * @modifier
  */
 .slds-list_ordered,
@@ -117,7 +117,7 @@
 /**
  * @summary Adds 1px border divider above list items
  *
- * @selector .slds-has-dividers--top
+ * @selector .slds-has-dividers_top
  * @modifier
  */
 .slds-has-dividers_top,
@@ -131,7 +131,7 @@
   /**
    * @summary Adds 1px border divider above list items and 0.5rem padding between items
    *
-   * @selector .slds-has-dividers--top-space
+   * @selector .slds-has-dividers_top-space
    * @modifier
    */
   &-space > .slds-list__item,
@@ -148,7 +148,7 @@
 /**
  * @summary Adds 1px border divider below list items
  *
- * @selector .slds-has-dividers--top
+ * @selector .slds-has-dividers_top
  * @modifier
  */
 .slds-has-dividers_bottom,
@@ -162,7 +162,7 @@
   /**
    * @summary Adds 1px border divider below list items and 0.5rem padding between items
    *
-   * @selector .slds-has-dividers--bottom-space
+   * @selector .slds-has-dividers_bottom-space
    * @modifier
    */
   &-space > .slds-list__item,
@@ -179,7 +179,7 @@
 /**
  * @summary Adds 1px border divider around list items
  *
- * @selector .slds-has-dividers--around
+ * @selector .slds-has-dividers_around
  * @modifier
  */
 .slds-has-dividers_around,
@@ -196,7 +196,7 @@
   /**
    * @summary Adds 1px border divider around list items and 0.5rem padding between items
    *
-   * @selector .slds-has-dividers--around-space
+   * @selector .slds-has-dividers_around-space
    * @modifier
    */
   &-space {
@@ -279,7 +279,7 @@
   /**
    * @summary Adds 1px border divider above an HTML element
    *
-   * @selector .slds-has-divider--top
+   * @selector .slds-has-divider_top
    * @restrict li
    * @modifier
    */
@@ -297,7 +297,7 @@
   /**
    * @summary Adds dot separator to the right of an HTML element
    *
-   * @selector .slds-has-divider--right
+   * @selector .slds-has-divider_right
    * @restrict li
    * @modifier
    */
@@ -309,7 +309,7 @@
   /**
    * @summary Adds 1px border divider below an HTML element
    *
-   * @selector .slds-has-divider--bottom
+   * @selector .slds-has-divider_bottom
    * @restrict li
    * @modifier
    */
@@ -327,7 +327,7 @@
   /**
    * @summary Adds dot separator to the left of an HTML element
    *
-   * @selector .slds-has-divider--left
+   * @selector .slds-has-divider_left
    * @restrict li
    * @modifier
    */

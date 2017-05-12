@@ -11,7 +11,7 @@ export default (
       <h1 className="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">
         Rohde Corp - 80,000 Widgets
       </h1>
-      <p className="slds-text-body--small slds-line-height--reset">
+      <p className="slds-text-body_small slds-line-height_reset">
         Mark Jaeckal
         &bull;
         Unlimited Customer

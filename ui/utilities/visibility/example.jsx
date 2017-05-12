@@ -42,9 +42,9 @@ export let examples = [
       <div className="demo-only">
         <div className="slds-hide">I am hidden</div>
         <div className="slds-show">I am shown as a block</div>
-        <div className="slds-show--inline-block">I am shown as an inline-block</div>
+        <div className="slds-show_inline-block">I am shown as an inline-block</div>
       </div>,
-    description: 'To hide an element and have it not take up space on the page, use the  `.slds-hide` class. You can toggle the state with JavaScript to show the element at a later&nbsp;time. To make the element visible again, use `.slds-show`. If you need to make the hidden element visible again in an inline-block state, use  `.slds-show--inline-block`.'
+    description: 'To hide an element and have it not take up space on the page, use the  `.slds-hide` class. You can toggle the state with JavaScript to show the element at a later&nbsp;time. To make the element visible again, use `.slds-show`. If you need to make the hidden element visible again in an inline-block state, use  `.slds-show_inline-block`.'
   },
   {
     id: 'transition-hide-show',
@@ -61,36 +61,36 @@ export let examples = [
     label: 'Responsive',
     element:
       <div className="demo-only demo-visibility">
-        <div className="slds-show--x-small">Hides on 319px and down</div>
-        <div className="slds-hide--x-small">Hides on 320px and up</div>
+        <div className="slds-show_x-small">Hides on 319px and down</div>
+        <div className="slds-hide_x-small">Hides on 320px and up</div>
 
-        <div className="slds-show--small">Hides on 479px and down</div>
-        <div className="slds-hide--small">Hides on 480px and up</div>
+        <div className="slds-show_small">Hides on 479px and down</div>
+        <div className="slds-hide_small">Hides on 480px and up</div>
 
-        <div className="slds-show--medium">Hides on 767px and down</div>
-        <div className="slds-hide--medium">Hides on 768px and up</div>
+        <div className="slds-show_medium">Hides on 767px and down</div>
+        <div className="slds-hide_medium">Hides on 768px and up</div>
 
-        <div className="slds-show--large">Hides on 1023px and down</div>
-        <div className="slds-hide--large">Hides on 1024px and up</div>
+        <div className="slds-show_large">Hides on 1023px and down</div>
+        <div className="slds-hide_large">Hides on 1024px and up</div>
 
-        <div className="slds-show--x-large">Hides on 1279px and down</div>
-        <div className="slds-hide--x-large">Hides on 1280px and up</div>
+        <div className="slds-show_x-large">Hides on 1279px and down</div>
+        <div className="slds-hide_x-large">Hides on 1280px and up</div>
       </div>,
     description: `
-Responsive visibility classes will hide content on specific breakpoints. \`slds-show--[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide--[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
+Responsive visibility classes will hide content on specific breakpoints. \`slds-show_[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide_[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
 
 |Class Name|Less than 320px|X-Small (>= 320px)|Small (>= 480px)|Medium (>= 768px)|Large (>= 1024px)|X-Large (>= 1280px)|
 |---|---|---|---|---|---|---|
-|\`.slds-hide--x-small\`|Show|Hide|Hide|Hide|Hide|Hide|
-|\`.slds-show--x-small\`|Hide|Show|Show|Show|Show|Show|
-|\`.slds-hide--small\`|Show|Show|Hide|Hide|Hide|Hide|
-|\`.slds-show--small\`|Hide|Hide|Show|Show|Show|Show|
-|\`.slds-hide--medium\`|Show|Show|Show|Hide|Hide|Hide|
-|\`.slds-show--medium\`|Hide|Hide|Hide|Show|Show|Show|
-|\`.slds-hide--large\`|Show|Show|Show|Show|Hide|Hide|
-|\`.slds-show--large\`|Hide|Hide|Hide|Hide|Show|Show|
-|\`.slds-hide--x-large\`|Show|Show|Show|Show|Show|Hide|
-|\`.slds-show--x-large\`|Hide|Hide|Hide|Hide|Hide|Show|
+|\`.slds-hide_x-small\`|Show|Hide|Hide|Hide|Hide|Hide|
+|\`.slds-show_x-small\`|Hide|Show|Show|Show|Show|Show|
+|\`.slds-hide_small\`|Show|Show|Hide|Hide|Hide|Hide|
+|\`.slds-show_small\`|Hide|Hide|Show|Show|Show|Show|
+|\`.slds-hide_medium\`|Show|Show|Show|Hide|Hide|Hide|
+|\`.slds-show_medium\`|Hide|Hide|Hide|Show|Show|Show|
+|\`.slds-hide_large\`|Show|Show|Show|Show|Hide|Hide|
+|\`.slds-show_large\`|Hide|Hide|Hide|Hide|Show|Show|
+|\`.slds-hide_x-large\`|Show|Show|Show|Show|Show|Hide|
+|\`.slds-show_x-large\`|Hide|Hide|Hide|Hide|Hide|Show|
     `
   }
 ];

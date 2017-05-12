@@ -14,20 +14,20 @@ import classNames from 'classnames';
 let ActionsMenu = props => {
   let buttonIconClassName;
   if (props.whiteIcons) {
-    buttonIconClassName = 'slds-button--icon-inverse';
+    buttonIconClassName = 'slds-button_icon-inverse';
   }
 
   return (
     <div className="slds-file__actions-menu">
       <ButtonGroup className={props.className}>
         <ButtonIcon
-          className={classNames('slds-button--icon slds-button--icon-x-small', buttonIconClassName)}
+          className={classNames('slds-button_icon slds-button_icon-x-small', buttonIconClassName)}
           symbol="download"
           assistiveText="Download"
           title="Download"
         />
         <ButtonIcon
-          className={classNames('slds-button--icon slds-button--icon-x-small', buttonIconClassName)}
+          className={classNames('slds-button_icon slds-button_icon-x-small', buttonIconClassName)}
           symbol="down"
           aria-haspopup="true"
           assistiveText="More Actions"
@@ -57,7 +57,7 @@ export let File = props =>
   <div className={classNames('slds-file', props.className)}>
     <figure>
       <a href="javascript:void(0);" className={classNames('slds-file__crop', props.cropClass)}>
-        { props.overlay ? <div className="slds-file--overlay" /> : null }
+        { props.overlay ? <div className="slds-file_overlay" /> : null }
         { props.image
           ? <img src="/assets/images/placeholder-img@16x9.jpg" alt="Description of the image" />
           : <span className="slds-file__icon slds-icon_container" title={props.symbol || 'unknown file type'}>
@@ -68,12 +68,12 @@ export let File = props =>
       </a>
       { !props.noCaption
         ? <figcaption className={classNames('slds-file__title', props.titleClass, { 'slds-file-has-actions': props.actions })}>
-          <div className="slds-media slds-media--small slds-media--center">
-            <div className="slds-media__figure slds-line-height--reset">
+          <div className="slds-media slds-media_small slds-media_center">
+            <div className="slds-media__figure slds-line-height_reset">
               { props.symbol
                 ? <span className="slds-icon_container" title={props.symbol || 'unknown file type'}>
                   <SvgIcon
-                    className="slds-icon slds-icon--x-small"
+                    className="slds-icon slds-icon_x-small"
                     sprite="doctype"
                     symbol={props.symbol || 'unknown'}
                   />
@@ -100,18 +100,18 @@ export let File = props =>
   </div>;
 
 export let AttachmentLink = props =>
-  <a href="javascript:void(0);" className="slds-media slds-box slds-grow slds-text-link--reset">
+  <a href="javascript:void(0);" className="slds-media slds-box slds-grow slds-text-link_reset">
     <div className="slds-media__figure slds-medium-show">
-      <div className="slds-file slds-size--small">
-        <div className="slds-file__crop slds-file__crop--16-by-9">
+      <div className="slds-file slds-size_small">
+        <div className="slds-file__crop slds-file__crop_16-by-9">
           <img src="/assets/images/placeholder-img@16x9.jpg" alt={props.title || 'Image Title'} />
         </div>
       </div>
     </div>
     <div className="slds-media__body">
-      <h3 className="slds-text-heading--small">{ props.articleTitle || 'Article Title' }</h3>
+      <h3 className="slds-text-heading_small">{ props.articleTitle || 'Article Title' }</h3>
       <p>{ props.articleDescription || 'Article Description' }</p>
-      <span className="slds-text-body--small">{ props.articleTitle || 'http://www.linkurl.com' }</span>
+      <span className="slds-text-body_small">{ props.articleTitle || 'http://www.linkurl.com' }</span>
     </div>
   </a>;
 
@@ -122,8 +122,8 @@ export let AttachmentLink = props =>
 export default (
   <div style={{ width: '20rem' }}>
     <File
-      className="slds-file--card"
-      titleClass="slds-file__title--card"
+      className="slds-file_card"
+      titleClass="slds-file__title_card"
       symbol="pdf"
       title="Proposal.pdf"
       image
@@ -138,8 +138,8 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
-        titleClass="slds-file__title--card"
+        className="slds-file_card"
+        titleClass="slds-file__title_card"
         symbol="image"
         title="Image Title"
       />
@@ -151,7 +151,7 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
+        className="slds-file_card"
         noCaption
         symbol="pdf"
         image
@@ -164,8 +164,8 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
-        titleClass="slds-file__title--card"
+        className="slds-file_card"
+        titleClass="slds-file__title_card"
         symbol="pdf"
         title="Proposal.pdf"
         actions
@@ -179,7 +179,7 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
+        className="slds-file_card"
         symbol="pdf"
         title="Proposal.pdf"
         actions
@@ -196,8 +196,8 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
-        titleClass="slds-file__title--card"
+        className="slds-file_card"
+        titleClass="slds-file__title_card"
         symbol="pdf"
         title="Proposal.pdf"
         externalSource
@@ -210,8 +210,8 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card"
-        titleClass="slds-file__title--card"
+        className="slds-file_card"
+        titleClass="slds-file__title_card"
         iconType="slds-file__loading-icon slds-icon_large"
         sprite="utility"
         symbol="image"
@@ -224,7 +224,7 @@ export let examples = [
     element:
     <div style={{ width: '20rem' }}>
       <File
-        className="slds-file--card slds-file_center-icon"
+        className="slds-file_card slds-file_center-icon"
         iconType="slds-file__loading-icon slds-icon_large"
         sprite="utility"
         symbol="image"
@@ -236,19 +236,19 @@ export let examples = [
     id: 'multi-attachments',
     label: '< 3 file attachments',
     element:
-      <ul className="slds-grid slds-grid--pull-padded">
-        <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+      <ul className="slds-grid slds-grid_pull-padded">
+        <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file--card"
-            titleClass="slds-file__title--card"
+            className="slds-file_card"
+            titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
             image />
         </li>
-        <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+        <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file--card"
-            titleClass="slds-file__title--card"
+            className="slds-file_card"
+            titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf" />
         </li>
@@ -258,26 +258,26 @@ export let examples = [
     id: 'multi-attachments-overflow',
     label: '> 3 file attachments',
     element:
-      <ul className="slds-grid slds-grid--pull-padded">
-        <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+      <ul className="slds-grid slds-grid_pull-padded">
+        <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file--card"
-            titleClass="slds-file__title--card"
+            className="slds-file_card"
+            titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
             image />
         </li>
-      <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3  slds-medium-show">
+      <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3  slds-medium-show">
           <File
-            className="slds-file--card"
-            titleClass="slds-file__title--card"
+            className="slds-file_card"
+            titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf" />
         </li>
-        <li className="slds-p-horizontal--xx-small slds-size--1-of-2 slds-medium-size--1-of-3">
+        <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file--card"
-            titleClass="slds-file__title--overlay slds-align--absolute-center slds-text-heading--large"
+            className="slds-file_card"
+            titleClass="slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
             title="+22"
             image
             overlay />

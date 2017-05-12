@@ -45,7 +45,7 @@
 /**
  * Adjusts whitespace on smaller media objects
  *
- * @selector .slds-media--small
+ * @selector .slds-media_small
  * @modifier
  */
 .slds-media_small .slds-media__figure,
@@ -61,7 +61,7 @@
 /**
  * Adjusts whitespace on larger media objects
  *
- * @selector .slds-media--large
+ * @selector .slds-media_large
  * @modifier
  */
 .slds-media_large .slds-media__figure,
@@ -77,7 +77,7 @@
 /**
  * Aligns the content in the .slds-media__body to the middle of the .slds-media__figure
  *
- * @selector .slds-media--center
+ * @selector .slds-media_center
  * @modifier
  */
 .slds-media_center,
@@ -88,7 +88,7 @@
 /**
  * Defines the figure area on the other side
  *
- * @selector .slds-media__figure--reverse
+ * @selector .slds-media__figure_reverse
  * @modifier
  */
 .slds-media__figure_reverse,
@@ -134,7 +134,7 @@
   /**
    * @summary .slds-media__figure and .slds-media__body stack on smaller screens
    *
-   * @selector .slds-media--responsive
+   * @selector .slds-media_responsive
    * @modifer
    */
   .slds-media_responsive,

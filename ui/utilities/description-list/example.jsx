@@ -19,22 +19,22 @@ export let examples = [
     id: 'description-list-inline',
     label: 'Inline',
     element:
-      <dl className="slds-dl--inline">
-        <dt className="slds-dl--inline__label">First Label:</dt>
-        <dd className="slds-dl--inline__detail">Description for first label</dd>
-        <dt className="slds-dl--inline__label">Second Label:</dt>
-        <dd className="slds-dl--inline__detail">Description for second label</dd>
+      <dl className="slds-dl_inline">
+        <dt className="slds-dl_inline__label">First Label:</dt>
+        <dd className="slds-dl_inline__detail">Description for first label</dd>
+        <dt className="slds-dl_inline__label">Second Label:</dt>
+        <dd className="slds-dl_inline__detail">Description for second label</dd>
       </dl>
   },
   {
     id: 'description-list-horizontal',
     label: 'Horizontal',
     element:
-      <dl className="slds-dl--horizontal">
-        <dt className="slds-dl--horizontal__label">First Label:</dt>
-        <dd className="slds-dl--horizontal__detail">Description for first label</dd>
-        <dt className="slds-dl--horizontal__label">Second Label:</dt>
-        <dd className="slds-dl--horizontal__detail">Second description</dd>
+      <dl className="slds-dl_horizontal">
+        <dt className="slds-dl_horizontal__label">First Label:</dt>
+        <dd className="slds-dl_horizontal__detail">Description for first label</dd>
+        <dt className="slds-dl_horizontal__label">Second Label:</dt>
+        <dd className="slds-dl_horizontal__detail">Second description</dd>
       </dl>
   }
 ];

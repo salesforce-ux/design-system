@@ -120,7 +120,7 @@
   /**
    * Tile card that containes the just app icon and title
    *
-   * @selector .slds-app-launcher__tile--small
+   * @selector .slds-app-launcher__tile_small
    * @restrict .slds-app-launcher__tile
    * @required
    * @modifier
@@ -147,7 +147,7 @@
   /**
    * App image or icon of a small tile
    *
-   * @selector .slds-app-launcher__tile-figure--small
+   * @selector .slds-app-launcher__tile-figure_small
    * @restrict .slds-app-launcher__tile-figure
    * @required
    * @modifier
@@ -161,7 +161,7 @@
   /**
    * App title, no description
    *
-   * @selector .slds-app-launcher__tile-body--small
+   * @selector .slds-app-launcher__tile-body_small
    * @restrict .slds-app-launcher__tile-body
    * @required
    * @modifier

@@ -26,7 +26,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--medium" />
+          <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
       </Demo>
   },
@@ -36,7 +36,7 @@ export let states = [
     element:
     <Demo>
       <SpinnerContainer>
-        <Spinner className="slds-spinner--medium slds-spinner--brand" />
+        <Spinner className="slds-spinner_medium slds-spinner_brand" />
       </SpinnerContainer>
     </Demo>
   },
@@ -46,7 +46,7 @@ export let states = [
     element:
     <Demo className="demo--inverse">
       <SpinnerContainer>
-        <Spinner className="slds-spinner--medium slds-spinner--inverse" />
+        <Spinner className="slds-spinner_medium slds-spinner_inverse" />
       </SpinnerContainer>
     </Demo>
   }

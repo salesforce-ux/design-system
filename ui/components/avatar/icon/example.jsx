@@ -22,7 +22,7 @@ export let states = [
     id: 'avatar-square-icon',
     label: 'Square Icon Fallback',
     element:
-      <Avatar className="slds-avatar--medium">
+      <Avatar className="slds-avatar_medium">
         <StandardIcon />
       </Avatar>
   },
@@ -30,7 +30,7 @@ export let states = [
     id: 'avatar-circle-icon',
     label: 'Circle Icon Fallback',
     element:
-      <Avatar className="slds-avatar--circle slds-avatar--medium">
+      <Avatar className="slds-avatar_circle slds-avatar_medium">
         <StandardIcon symbol="user" />
       </Avatar>
   },
@@ -38,7 +38,7 @@ export let states = [
     id: 'size-x-small',
     label: 'Size - X Small',
     element:
-      <Avatar className="slds-avatar--x-small">
+      <Avatar className="slds-avatar_x-small">
         <StandardIcon />
       </Avatar>
   },
@@ -46,7 +46,7 @@ export let states = [
     id: 'size-small',
     label: 'Size - Small',
     element:
-      <Avatar className="slds-avatar--small">
+      <Avatar className="slds-avatar_small">
         <StandardIcon />
       </Avatar>
   },
@@ -54,7 +54,7 @@ export let states = [
     id: 'size-medium',
     label: 'Size - Medium',
     element:
-      <Avatar className="slds-avatar--medium">
+      <Avatar className="slds-avatar_medium">
         <StandardIcon />
       </Avatar>
   },
@@ -62,7 +62,7 @@ export let states = [
     id: 'size-large',
     label: 'Size - Large',
     element:
-      <Avatar className="slds-avatar--large">
+      <Avatar className="slds-avatar_large">
         <StandardIcon />
       </Avatar>
   }

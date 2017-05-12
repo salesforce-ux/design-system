@@ -20,15 +20,15 @@ const inputId09 = 'input-id-09';
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
-    <Modal className="slds-modal--form">
+    <Modal className="slds-modal_form">
       <ModalHeader closeButton="false">
-        <button className="slds-button slds-button--neutral">Cancel</button>
-        <button className="slds-button slds-button--neutral">Save</button>
-        <h2 className="slds-text-heading--medium slds-truncate" title="New Contact">New Contact</h2>
+        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral">Save</button>
+        <h2 className="slds-text-heading_medium slds-truncate" title="New Contact">New Contact</h2>
       </ModalHeader>
       <ModalContent>
-        <h3 className="slds-section-title--divider">Section Information</h3>
-        <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <h3 className="slds-section-title_divider">Section Information</h3>
+        <div className="slds-form slds-form_stacked slds-p-around_medium slds-m-bottom_x-small">
           <FormElement label="Name Suffix" inputId={inputId01}>
             <Input id={inputId01} placeholder="Ms." />
           </FormElement>
@@ -38,11 +38,11 @@ export default (
           <FormElement label="Last Name" inputId={inputId03}>
             <Input id={inputId03} placeholder="Lewis" />
           </FormElement>
-          <div className="slds-m-top--medium" data-select="multi" data-scope="single" data-typeahead="true">
+          <div className="slds-m-top_medium" data-select="multi" data-scope="single" data-typeahead="true">
             <Input id={inputId09} placeholder=" " />
           </div>
 
-          <div className="slds-form-element slds-m-top--medium">
+          <div className="slds-form-element slds-m-top_medium">
             <label className="slds-form-element__label" htmlFor="select-01">Select</label>
             <Select id="select-01">
               <option>Select an Option</option>
@@ -53,8 +53,8 @@ export default (
             <Input id={inputId04} placeholder="" />
           </FormElement>
         </div>
-        <h3 className="slds-section-title--divider">Section Information</h3>
-        <div className="slds-form slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <h3 className="slds-section-title_divider">Section Information</h3>
+        <div className="slds-form slds-form_stacked slds-p-around_medium slds-m-bottom_x-small">
           <FormElement label="Text Input" inputId={inputId05}>
             <Input id={inputId05} placeholder="" />
           </FormElement>

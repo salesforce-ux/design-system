@@ -8,7 +8,7 @@ import { FileSelector } from '../base/example';
 
 export default (
   <div className="demo-only" style={{ maxWidth: '320px' }}>
-    <FileSelector className="slds-file-selector--images" />
+    <FileSelector className="slds-file-selector_images" />
   </div>
 );
 
@@ -18,7 +18,7 @@ export let states = [
     label: 'Error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector--images" error />
+        <FileSelector className="slds-file-selector_images" error />
       </div>
   },
   {
@@ -26,7 +26,7 @@ export let states = [
     label: 'Dragover',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector--images" draggover />
+        <FileSelector className="slds-file-selector_images" draggover />
       </div>
   },
   {
@@ -34,7 +34,7 @@ export let states = [
     label: 'Dragover with error',
     element:
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector--images" draggoverError error />
+        <FileSelector className="slds-file-selector_images" draggoverError error />
       </div>
   }
 ];

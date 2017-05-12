@@ -17,7 +17,7 @@
  * @summary Initiates a stateful button
  *
  * @name stateful
- * @selector .slds-button--stateful
+ * @selector .slds-button_stateful
  * @restrict .slds-button
  * @variant
  */
@@ -55,7 +55,7 @@
  * Default state of a stateful button
  *
  * @selector .slds-not-selected
- * @restrict .slds-button--stateful
+ * @restrict .slds-button_stateful
  * @notes This class should be toggled with JavaScript
  * @modifier
  * @group interaction
@@ -79,7 +79,7 @@
  * When button is selected and still has focus from click
  *
  * @selector .slds-is-selected-clicked
- * @restrict .slds-button--stateful
+ * @restrict .slds-button_stateful
  * @notes This class should be toggled with JavaScript
  * @modifier
  * @group interaction
@@ -106,7 +106,7 @@
  * When button is pressed and selected
  *
  * @selector .slds-is-selected
- * @restrict .slds-button--stateful
+ * @restrict .slds-button_stateful
  * @notes This class should be toggled with JavaScript
  * @modifier
  * @group interaction

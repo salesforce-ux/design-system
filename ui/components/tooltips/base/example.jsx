@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { ButtonIcon } from '../../button-icons/base/example';
 
 export let Tooltip = props =>
-  <div className={classNames('slds-popover slds-popover--tooltip', props.className)} role="tooltip" id={props.id} style={props.style}>
+  <div className={classNames('slds-popover slds-popover_tooltip', props.className)} role="tooltip" id={props.id} style={props.style}>
     <div className="slds-popover__body">
       { props.children }
     </div>
@@ -17,7 +17,7 @@ export default (
     <div className="slds-form-element">
       <div className="slds-form-element__icon slds-align-middle">
         <ButtonIcon
-          className="slds-button slds-button--icon"
+          className="slds-button slds-button_icon"
           symbol="info"
           aria-describedby="help"
           assistiveText="Help"
@@ -25,7 +25,7 @@ export default (
         />
       </div>
     </div>
-    <Tooltip className="slds-nubbin--bottom-left" id="help" style={{position: 'absolute', top: '0px', left: '15px'}}>
+    <Tooltip className="slds-nubbin_bottom-left" id="help" style={{position: 'absolute', top: '0px', left: '15px'}}>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
     </Tooltip>
   </div>

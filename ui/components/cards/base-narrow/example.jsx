@@ -12,8 +12,8 @@ import classNames from 'classnames';
 
 export default (
   <div className="demo-only demo-only--center-card-body" style={{ minWidth: '320px', maxWidth: '360px' }}>
-    <Card className="slds-card--narrow">
-      <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
+    <Card className="slds-card_narrow">
+      <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading_small">Card Header</span></CardHeader>
       <CardBody>Card Body (custom goes in here)</CardBody>
       <CardFooter>Card Footer</CardFooter>
     </Card>
@@ -26,8 +26,8 @@ export let states = [
     label: 'Empty',
     element:
       <div className="demo-only" style={{ minWidth: '320px', maxWidth: '360px' }}>
-        <Card className="slds-card--narrow">
-          <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading--small">Card Header</span></CardHeader>
+        <Card className="slds-card_narrow">
+          <CardHeader symbol="contact" actions="overflow"><span className="slds-text-heading_small">Card Header</span></CardHeader>
           <CardBody />
           <CardFooter />
         </Card>

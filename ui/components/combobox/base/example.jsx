@@ -37,23 +37,27 @@ const accounts = ['Acme','Edge SLA','Express Logistics SLA','GenePoint Lab Gener
 * @prop {string}  aria-label -
 */
 export let Listbox = props =>
-  <ul
+  <div
     id={props.id || listboxId}
-    className={classNames(
-      'slds-listbox',
-      {
-        'slds-listbox_vertical': props.vertical,
-        'slds-listbox_horizontal': props.horizontal,
-        'slds-listbox_inline': props.inline
-      },
-      props.className
-    )}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
-    aria-label={props['aria-label']}
   >
-    {props.children}
-  </ul>;
+    <ul
+      className={classNames(
+        'slds-listbox',
+        {
+          'slds-listbox_vertical': props.vertical,
+          'slds-listbox_horizontal': props.horizontal,
+          'slds-listbox_inline': props.inline
+        },
+        props.className
+      )}
+      role={props['aria-label'] ? 'group' : 'presentation'}
+      aria-label={props['aria-label']}
+    >
+      {props.children}
+    </ul>
+  </div>;
 
 /**
 * Generic list item within a listbox

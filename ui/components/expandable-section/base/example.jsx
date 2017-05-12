@@ -23,7 +23,7 @@ export let SectionContent = props =>
   <div
     aria-hidden={props.isOpen ? 'false' : 'true'}
     className={classNames('slds-section__content', props.className)}
-    id={referenceId}
+    id={props.referenceId}
   >
     {props.children}
   </div>;
@@ -35,7 +35,7 @@ export let SectionTitle = props =>
 
 export let SectionTitleAction = props =>
   <button
-    aria-controls={referenceId}
+    aria-controls={props.referenceId}
     aria-expanded={props.isOpen ? 'true' : 'false'}
     className="slds-button slds-section__title-action"
   >
@@ -54,11 +54,11 @@ export let SectionTitleAction = props =>
 export default (
   <Section className="slds-is-open">
     <SectionTitle>
-      <SectionTitleAction isOpen={true}>
+      <SectionTitleAction referenceId={referenceId} isOpen={true}>
         Section Title
       </SectionTitleAction>
     </SectionTitle>
-    <SectionContent isOpen={true}>
+    <SectionContent referenceId={referenceId} isOpen={true}>
       <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
     </SectionContent>
   </Section>
@@ -87,11 +87,11 @@ export let states = [
     element:
       <Section>
         <SectionTitle>
-          <SectionTitleAction>
+          <SectionTitleAction referenceId={referenceId}>
             Section Title
           </SectionTitleAction>
         </SectionTitle>
-        <SectionContent>
+        <SectionContent referenceId={referenceId}>
           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
         </SectionContent>
       </Section>

@@ -28,7 +28,7 @@
    */
   &__nav {
     @include tabs-nav;
-    background-color: $color-background;
+    background-color: $theme-color-contrast-primary;
     border: $border-width-thin solid $color-border-button-default;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
   }
@@ -121,11 +121,12 @@
  */
 .slds-tabs_scoped__content,
 .slds-tabs--scoped__content {
-  background-color: $color-background-alt;
+  background-color: $theme-color-foreground-primary;
   border: $border-width-thin solid $color-border-button-default;
   border-top: 0;
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
   padding: $spacing-medium;
+  box-shadow: $theme-shadow-hard-primary;
 }
 
 /**
@@ -168,7 +169,7 @@
 .slds-active .slds-tabs--scoped__link,
 .slds-is-active .slds-tabs_scoped__link,
 .slds-is-active .slds-tabs--scoped__link {
-  background-color: $color-background-alt;
+  background-color: $theme-color-foreground-primary;
   color: $color-text-link;
   border-color: $color-border;
 

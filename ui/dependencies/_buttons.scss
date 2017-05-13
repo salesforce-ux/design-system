@@ -8,8 +8,7 @@
   }
   text-align: center;
   vertical-align: middle;
-  border: $border-width-thick solid;
-  border-top-width: $border-width-thin;
+  border: $border-width-thin solid transparent;
   box-shadow: $theme-shadow-soft-secondary;
 }
 

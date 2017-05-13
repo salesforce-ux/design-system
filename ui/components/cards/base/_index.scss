@@ -21,7 +21,7 @@
   border: $border-width-thin solid $theme-color-border-tertiary;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
-  box-shadow: $theme-shadow-soft-primary;
+  box-shadow: $theme-shadow-hard-primary;
 
   // Adds spacing between cards
   + .slds-card {

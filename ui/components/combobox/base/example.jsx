@@ -24,6 +24,7 @@ const listboxSelectionsId = 'listbox-selections-unique-id';
 const comboboxId = 'combobox-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
+const accounts = ['Acme','Edge SLA','Express Logistics SLA','GenePoint Lab Generators','GenePoint SLA','Pyramid Emergency Generators','United Oil Installations','United Oil Plant Standby Generators','University of AZ Installations','University of AZ Portable Generators'];
 
 /**
 * Generic Listbox container
@@ -36,23 +37,27 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
 * @prop {string}  aria-label -
 */
 export let Listbox = props =>
-  <ul
+  <div
     id={props.id || listboxId}
-    className={classNames(
-      'slds-listbox',
-      {
-        'slds-listbox_vertical': props.vertical,
-        'slds-listbox_horizontal': props.horizontal,
-        'slds-listbox_inline': props.inline
-      },
-      props.className
-    )}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
-    aria-label={props['aria-label']}
   >
-    {props.children}
-  </ul>;
+    <ul
+      className={classNames(
+        'slds-listbox',
+        {
+          'slds-listbox_vertical': props.vertical,
+          'slds-listbox_horizontal': props.horizontal,
+          'slds-listbox_inline': props.inline
+        },
+        props.className
+      )}
+      role={props['aria-label'] ? 'group' : 'presentation'}
+      aria-label={props['aria-label']}
+    >
+      {props.children}
+    </ul>
+  </div>;
 
 /**
 * Generic list item within a listbox
@@ -390,92 +395,38 @@ const ListboxDropdown = props =>
   </Listbox>;
 
 const ListboxList = props =>
-  <Listbox className="slds-dropdown_length-10" vertical={true}>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Acme"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Edge SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Express Logistics SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="GenePoint Lab Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="GenePoint SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Pyramid Emergency Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Installations"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Plant Standby Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Standby Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="University of AZ Installations"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="University of AZ Portable Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
+  <Listbox className="slds-dropdown--length-10" vertical={true}>
+    <li role="presentation" className="slds-listbox__item">
+      <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={_.uniqueId('listbox-option-id-')}>
+        <h3 className="slds-text-title--caps" role="presentation">My Favorites</h3>
+      </span>
+    </li>
+    { accounts.slice(0, props.length).map(value =>
+      <ListboxItem key={value}>
+        <EntityOption
+          id={_.uniqueId('listbox-option-id-')}
+          entityTitle={value}
+          entityMeta={true}
+        />
+      </ListboxItem>
+    )}
   </Listbox>;
+
+const Footer = props =>
+  <ul>
+    <li>
+      <button className="slds-button slds-button--reset slds-p-vertical--xx-small slds-size--1-of-1" role="presentation">
+        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="add" />
+        Favorite this page
+      </button>
+    </li>
+    <li>
+      <button className="slds-button slds-button--reset slds-p-vertical--xx-small slds-size--1-of-1" role="presentation">
+        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="edit" />
+        Edit Favorites
+      </button>
+    </li>
+  </ul>;
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -567,21 +518,62 @@ export let states = [
 // Examples
 export let examples = [
   {
-    id: 'non-modal-dialog',
-    label: 'Non-modal Dialog',
+    id: 'non-modal-dialog-list-0-items',
+    label: 'Dynamic list — 0 Items (Non-modal Dialog)',
     element:
       <Popover
-        className="slds-nubbin_top-left"
-        bodyClassName="slds-p-horizontal_none"
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-vertical--medium slds-p-horizontal--small"
+        footer={<Footer />}
+      >
+        <h3 className="slds-text-title--caps slds-m-bottom--x-small" role="presentation">
+          My Favorites
+        </h3>
+        <p>You can favorite any page!</p>
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-1-item',
+    label: 'Dynamic list — 1 Item (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
+      >
+        <ListboxList length="1" />
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-sub-10-item',
+    label: 'Dynamic list — <10 Items (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
+      >
+        <ListboxList length="6" />
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-over-10-item',
+    label: 'Dynamic list — >10 Items (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
       >
         <ComboboxContainer
           autocomplete={true}
           isOpen={true}
+          placeholder="Search Accounts"
           hideLabel={true}
           inputIcon="right"
           inputIconRightSymbol="search"
-          formControlClassName="slds-m-around_small"
-          listbox={<ListboxList />}
+          inputContainerClassName="slds-m-around_small"
+          listbox={<ListboxList length="12" />}
           staticListbox={true}
         />
       </Popover>

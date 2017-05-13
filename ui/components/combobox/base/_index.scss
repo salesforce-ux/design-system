@@ -71,7 +71,6 @@
   display: inline-flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-  max-width: 75%;
   align-items: center;
   margin-left: $spacing-xxx-small;
   margin-right: $spacing-xxx-small;
@@ -146,6 +145,11 @@
   .slds-listbox__option.slds-has-focus {
     background-color: $color-background-row-hover;
     text-decoration: none;
+  }
+
+  .slds-listbox__option[role="presentation"]:hover {
+    background-color: transparent;
+    cursor: default;
   }
 
   /**
@@ -344,6 +348,13 @@
   }
 }
 
-.slds-has-inline-listbox .slds-combobox__input[value] {
-  box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+.slds-has-inline-listbox {
+
+  [role="listbox"] {
+    display: inline-flex;
+  }
+
+  .slds-combobox__input[value] {
+    box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+  }
 }

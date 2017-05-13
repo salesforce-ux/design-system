@@ -52,6 +52,7 @@
 [role="combobox"] input[readonly] {
   padding-left: $spacing-small;
   border-color: $color-border-input;
+  background-color: $color-background-input;
 
   &:focus {
     box-shadow: $shadow-button-focus;

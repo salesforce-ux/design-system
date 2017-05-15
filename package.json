@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.3.0-dev",
+  "version": "2.3.0",
   "author": "Salesforce",
   "slds": {
     "name": "Summer ’17",
@@ -11,15 +11,15 @@
     "'private' and 'config.slds.internal' should have the same value",
     "to prevent any accidental public publishes on npm and on our archive server."
   ],
-  "private": true,
+  "private": false,
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
-      "appId": "B2KKG101RI",
-      "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "summer-17"
+      "appId": "Use public DocSearch",
+      "apiKey": "Use public DocSearch",
+      "indexName": "Use public DocSearch"
     }
   },
   "devDependencies": {

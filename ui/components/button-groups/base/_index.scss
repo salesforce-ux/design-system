@@ -34,7 +34,7 @@
 // These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
 .slds-button-group-list li:first-child .slds-button,
 .slds-button-group .slds-button:first-child {
-  border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  border-radius: $border-radius-small 0 0 $border-radius-small;
 }
 
 /**
@@ -54,13 +54,13 @@
 .slds-button-group .slds-button--last .slds-button:only-child,
 .slds-button-group .slds-button.slds-button_last,
 .slds-button-group .slds-button.slds-button--last {
-  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  border-radius: 0 $border-radius-small $border-radius-small 0;
 }
 
 // The following rule must stay at the **bottom** due to the cascade
 .slds-button-group .slds-button:only-child,
 .slds-button-group-list li:only-child .slds-button {
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-small;
 }
 
 .slds-button-group + .slds-button-group,

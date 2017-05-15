@@ -15,11 +15,6 @@
   "config": {
     "slds": {
       "internal": false
-    },
-    "search": {
-      "appId": "Use public DocSearch",
-      "apiKey": "Use public DocSearch",
-      "indexName": "Use public DocSearch"
     }
   },
   "devDependencies": {

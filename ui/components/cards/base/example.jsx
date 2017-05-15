@@ -41,7 +41,7 @@ export let CardHeader = props =>
   <div className={classNames('slds-card__header slds-grid', props.className)}>
     <header className={classNames('slds-media slds-media_center slds-has-flexi-truncate', props.search ? 'slds-size_1-of-3' : null)}>
       { props.symbol
-        ? <div className="slds-media__figure">
+        ? <div className="slds-media__figure slds-hide">
           <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
             <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol={props.symbol} />
             </span>

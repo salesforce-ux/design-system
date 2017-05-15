@@ -52,8 +52,9 @@
     margin-bottom: $spacing-small;
   }
 
-    .slds-media__figure {
-      display: none;
+    .slds-text-heading_small,
+    .slds-text-heading--small {
+      font-size: $font-size-text-large;
     }
 
   &__header-link {

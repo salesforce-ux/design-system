@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export let ButtonIcon = props =>
   <button
-    className={classNames('slds-button slds-button--icon', props.className, props.selected ? 'slds-is-selected' : null)}
+    className={classNames('slds-button slds-button_icon', props.className, props.selected ? 'slds-is-selected' : null)}
     disabled={props.disabled}
     role={props.role}
     aria-describedby={props['aria-describedby']}
@@ -23,7 +23,7 @@ export let ButtonIcon = props =>
       className={classNames('slds-button__icon', props.iconClassName)}
       sprite="utility"
       symbol={props.symbol || 'settings'} />
-    { props.hasDropdown ? <SvgIcon className="slds-button__icon slds-button__icon--x-small" sprite="utility" symbol="down" /> : null }
+    { props.hasDropdown ? <SvgIcon className="slds-button__icon slds-button__icon_x-small" sprite="utility" symbol="down" /> : null }
     <span className="slds-assistive-text">{ props.assistiveText || 'Provide description of action' }</span>
   </button>;
 
@@ -44,7 +44,7 @@ export let states = [
   {
     id: 'button-icon-error',
     label: 'Error',
-    element: <ButtonIcon className="slds-button--icon-error" symbol="warning" title="Warning" assistiveText="Warning" />
+    element: <ButtonIcon className="slds-button_icon-error" symbol="warning" title="Warning" assistiveText="Warning" />
   },
   {
     id: 'button-icon-disabled',
@@ -59,17 +59,23 @@ export let examples = [
     label: 'Hint on hover',
     element:
       <div className="slds-hint-parent">
-        <ButtonIcon className="slds-button--icon" iconClassName="slds-button__icon--hint" />
+        <ButtonIcon className="slds-button_icon" iconClassName="slds-button__icon_hint" />
       </div>
   },
   {
     id: 'button-icon-inverse',
     label: 'Inverse',
-    element: <ButtonIcon inverse className="slds-button--icon-inverse" />
+    element:
+    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+      <ButtonIcon inverse className="slds-button_icon-inverse" />
+    </div>
   },
   {
     id: 'button-icon-inverse-disabled',
     label: 'Inverse disabled',
-    element: <ButtonIcon inverse className="slds-button--icon-inverse" disabled />
+    element:
+    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+      <ButtonIcon inverse className="slds-button_icon-inverse" disabled />
+    </div>
   }
 ];

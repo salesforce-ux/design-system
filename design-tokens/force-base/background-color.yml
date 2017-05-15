@@ -15,7 +15,7 @@ props:
     value: '{!LINK_WATER}'
     comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
-    value: '{!WHITE}'
+    value: '{!ROMANCE}'
     comment: Second default background color for the app.
   COLOR_BACKGROUND_ALT_2:
     value: '{!WHITE_LILAC}'

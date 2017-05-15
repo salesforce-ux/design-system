@@ -8,33 +8,33 @@ export let examples = [
     id: 'name-value-pair-horizontal',
     label: 'Horizontal',
     element:
-      <dl className="slds-list--horizontal slds-wrap">
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</dd>
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</dd>
+      <dl className="slds-list_horizontal slds-wrap">
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
       </dl>
   },
   {
     id: 'name-value-pair-inline',
     label: 'Inline',
     element:
-      <dl className="slds-list--inline">
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</dd>
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Description for second label">Description for second label</dd>
+      <dl className="slds-list_inline">
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
       </dl>
   },
   {
     id: 'name-value-pair-stacked',
     label: 'Stacked',
     element:
-      <dl className="slds-list--stacked">
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="First Label">First Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Description for first label">Description for first label</dd>
-        <dt className="slds-item--label slds-text-color--weak slds-truncate" title="Second Label">Second Label:</dt>
-        <dd className="slds-item--detail slds-truncate" title="Second description">Second description</dd>
+      <dl className="slds-list_stacked">
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+        <dt className="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+        <dd className="slds-item_detail slds-truncate" title="Second description">Second description</dd>
       </dl>
   }
 ];

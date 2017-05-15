@@ -10,21 +10,21 @@ import classNames from 'classnames';
 const headingUniqueId = 'dialog-heading-id-01';
 
 let Header = props =>
-  <header className="slds-popover__header slds-p-vertical--medium">
-    <h2 id={headingUniqueId} className="slds-text-heading--medium">{ props.title }</h2>
+  <header className="slds-popover__header slds-p-vertical_medium">
+    <h2 id={headingUniqueId} className="slds-text-heading_medium">{ props.title }</h2>
   </header>;
 
 let Footer = props =>
-  <div className="slds-grid slds-grid--vertical-align-center">
+  <div className="slds-grid slds-grid_vertical-align-center">
     <span className="slds-text-title">Step 2 of 4</span>
     { props.skipButton
-      ? <button className="slds-button slds-button--brand slds-col--bump-left">Skip</button>
+      ? <button className="slds-button slds-button_brand slds-col_bump-left">Skip</button>
     : null }
     { props.setupButton
-      ? <button className="slds-button slds-button--success slds-col--bump-left">Setup Email</button>
+      ? <button className="slds-button slds-button_success slds-col_bump-left">Setup Email</button>
     : null }
     { props.nextButton
-      ? <button className="slds-button slds-button--brand slds-col--bump-left">Next</button>
+      ? <button className="slds-button slds-button_brand slds-col_bump-left">Next</button>
     : null }
   </div>;
 
@@ -34,7 +34,7 @@ let Footer = props =>
 
 export default (
   <Popover
-    className="slds-popover_walkthrough slds-nubbin--left"
+    className="slds-popover_walkthrough slds-nubbin_left"
     headingId={headingUniqueId}
     header={<Header title="Manage your channels" />}
     footer={<Footer nextButton />}
@@ -51,7 +51,7 @@ export let examples = [
     label: 'Micro Setup',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-nubbin--left"
+        className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
         footer={<Footer setupButton nextButton />}
@@ -66,7 +66,7 @@ export let examples = [
     label: 'Micro Setup - Alternate',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-nubbin--left"
+        className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
         footer={<Footer skipButton setupButton />}
@@ -81,7 +81,7 @@ export let examples = [
     label: 'Micro Setup - In Page',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-nubbin--left"
+        className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
         footer={<Footer skipButton />}
@@ -96,7 +96,7 @@ export let examples = [
     label: 'Micro Setup - Inline Form',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-nubbin--left"
+        className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
         footer={<Footer skipButton nextButton />}
@@ -104,7 +104,7 @@ export let examples = [
         inverse
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div className="slds-form-element slds-p-top--small">
+        <div className="slds-form-element slds-p-top_small">
           <label className="slds-form-element__label slds-assistive-text" htmlFor="email-text-input-01">Email Address</label>
           <div className="slds-form-element__control">
             <input id="email-text-input-01" className="slds-input" type="text" placeholder="Email Address" />
@@ -117,15 +117,15 @@ export let examples = [
     label: 'Action Popover',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin--top-left"
+        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"
         title="Action dialog"
         closeButton
         inverse
       >
-        <div className="slds-media slds-media--center">
+        <div className="slds-media slds-media_center">
           <div className="slds-media__figure">
             <span className="slds-icon_container" title="description of icon when needed">
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="touch_action" />
+              <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="utility" symbol="touch_action" />
               <span className="slds-assistive-text">Description of icon</span>
             </span>
           </div>
@@ -140,7 +140,7 @@ export let examples = [
     label: 'Action Popover - With Heading',
     element:
       <Popover
-        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin--top-left"
+        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"
         headingId="dialog-heading-id-01"
         closeButton
         inverse
@@ -148,12 +148,12 @@ export let examples = [
         <div className="slds-media">
           <div className="slds-media__figure">
             <span className="slds-icon_container" title="description of icon when needed">
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="utility" symbol="touch_action" />
+              <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="utility" symbol="touch_action" />
               <span className="slds-assistive-text">Description of icon</span>
             </span>
           </div>
           <div className="slds-media__body">
-            <h2 id="dialog-heading-id-01" className="slds-text-heading--small">Title</h2>
+            <h2 id="dialog-heading-id-01" className="slds-text-heading_small">Title</h2>
             <p>Text that describes the action</p>
           </div>
         </div>

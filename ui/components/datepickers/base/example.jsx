@@ -34,11 +34,11 @@ let DatepickerContainer = props =>
 
 let DatepickerHeader = props =>
   <div className="slds-datepicker__filter slds-grid">
-    <div className="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+    <div className="slds-datepicker__filter_month slds-grid slds-grid_align-spread slds-grow">
       <div className="slds-align-middle">
         <ButtonIcon
           assistiveText="Previous Month"
-          className="slds-button--icon-container"
+          className="slds-button_icon-container"
           symbol="left"
           title="Previous Month"
         />
@@ -49,7 +49,7 @@ let DatepickerHeader = props =>
       <div className="slds-align-middle">
         <ButtonIcon
           assistiveText="Next Month"
-          className="slds-button--icon-container"
+          className="slds-button_icon-container"
           symbol="right"
           title="Next Month"
         />
@@ -97,7 +97,7 @@ let Day = props =>
 ----------------------------------------------------------------------------- */
 
 export let DatePicker = props =>
-  <DatepickerContainer className="slds-dropdown slds-dropdown--left">
+  <DatepickerContainer className="slds-dropdown slds-dropdown_left">
     <DatepickerHeader />
     <table aria-labelledby="month" aria-multiselectable="true" className="slds-datepicker__month" role="grid">
       <thead>
@@ -203,7 +203,7 @@ export let DatePicker = props =>
         </Week>
         <tr>
           <td colSpan="7" role="gridcell">
-            <span className="slds-show--inline-block slds-text-link slds-p-bottom--x-small">
+            <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
               Today
             </span>
           </td>
@@ -223,7 +223,7 @@ export const Context = props =>
 
 export default (
   <FormElement
-    className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
     label="Date"
     inputId={dateInputId}
     inputIcon="right"
@@ -231,7 +231,7 @@ export default (
   >
     <Input id={dateInputId} placeholder=" " />
     <ButtonIcon
-      className="slds-input__icon slds-input__icon--right"
+      className="slds-input__icon slds-input__icon_right"
       symbol="event"
       aria-haspopup="true"
       assistiveText="Select a date"
@@ -246,7 +246,7 @@ export let states = [
     label: 'Date selected',
     element:
       <FormElement
-        className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         label="Date"
         inputId={dateInputId}
         inputIcon="right"
@@ -254,7 +254,7 @@ export let states = [
       >
         <Input id={dateInputId} placeholder=" " value="06/23/2014" />
         <ButtonIcon
-          className="slds-input__icon slds-input__icon--right"
+          className="slds-input__icon slds-input__icon_right"
           symbol="event"
           aria-haspopup="true"
           assistiveText="Select a date"

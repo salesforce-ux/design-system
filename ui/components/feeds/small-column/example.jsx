@@ -26,9 +26,9 @@ export default (
               </PostFooter>
             </Post>
             <Comments>
-              <div className="slds-p-horizontal--medium slds-p-vertical--x-small slds-grid">
-                <button className="slds-button--reset slds-text-link">More comments</button>
-                <span className="slds-text-body--small slds-col--bump-left">1 of 8</span>
+              <div className="slds-p-horizontal_medium slds-p-vertical_x-small slds-grid">
+                <button className="slds-button_reset slds-text-link">More comments</button>
+                <span className="slds-text-body_small slds-col_bump-left">1 of 8</span>
               </div>
               <ul>
                 <li>

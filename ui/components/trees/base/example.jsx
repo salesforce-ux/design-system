@@ -13,8 +13,8 @@ let TreeItem = props =>
 <div className="slds-tree__item">
   <ButtonIcon
     disabled
-    className="slds-button--icon slds-m-right--x-small slds-is-disabled"
-    iconClassName="slds-button__icon--small"
+    className="slds-button_icon slds-m-right_x-small slds-is-disabled"
+    iconClassName="slds-button__icon_small"
     symbol="chevronright"
     assistiveText="Toggle"
     title="Toggle" />
@@ -26,8 +26,8 @@ let TreeBranch = props =>
 <div className="slds-tree__item">
   <ButtonIcon
     aria-controls={props.ariaControls}
-    className="slds-button--icon slds-m-right--x-small"
-    iconClassName="slds-button__icon--small"
+    className="slds-button_icon slds-m-right_x-small"
+    iconClassName="slds-button__icon_small"
     symbol="chevronright"
     assistiveText="Toggle"
     title="Toggle" />
@@ -134,7 +134,7 @@ let AdditionalItems = props =>
 
 let Default = props =>
 <div className="slds-tree_container" role="application">
-  <h4 className="slds-text-title--caps" id="treeheading">Tree Group Header</h4>
+  <h4 className="slds-text-title_caps" id="treeheading">Tree Group Header</h4>
 
   <ul className="slds-tree" role="tree" aria-labelledby="treeheading" aria-activedescendant={props.isExpanded}>
 

@@ -12,8 +12,8 @@ export const Context = props =>
 
 export default (
   <div className="slds-docked-form-footer">
-    <button type="button" className="slds-button slds-button--neutral">Cancel</button>
-    <button type="button" className="slds-button slds-button--brand">Save</button>
+    <button type="button" className="slds-button slds-button_neutral">Cancel</button>
+    <button type="button" className="slds-button slds-button_brand">Save</button>
   </div>
 );
 
@@ -25,13 +25,13 @@ export let states = [
       <div className="slds-docked-form-footer">
         <ButtonIcon
           assistiveText="Review the Following Errors"
-          className="slds-button--icon slds-button--icon-error"
-          iconClassName="slds-button__icon--large"
+          className="slds-button_icon slds-button_icon-error"
+          iconClassName="slds-button__icon_large"
           symbol="warning"
           title="Review the Following Errors"
         />
-        <button type="button" className="slds-button slds-button--neutral">Cancel</button>
-        <button type="button" className="slds-button slds-button--brand">Save</button>
+        <button type="button" className="slds-button slds-button_neutral">Cancel</button>
+        <button type="button" className="slds-button slds-button_brand">Save</button>
       </div>
   },
   {
@@ -41,15 +41,15 @@ export let states = [
       <div className="slds-docked-form-footer">
         <ButtonIcon
           assistiveText="Review the Following Errors"
-          className="slds-button--icon slds-button--icon-error"
-          iconClassName="slds-button__icon--large"
+          className="slds-button_icon slds-button_icon-error"
+          iconClassName="slds-button__icon_large"
           symbol="warning"
           title="Review the Following Errors"
         />
-        <button type="button" className="slds-button slds-button--neutral">Cancel</button>
-        <button type="button" className="slds-button slds-button--brand">Save</button>
-        <section className="slds-popover slds-nubbin--bottom-left slds-theme--error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{ position: 'absolute', bottom: '56px', left: '50%', marginLeft: '66px', transform: 'translateX(-50%)' }}>
-          <ButtonIcon className="slds-button--icon-inverse slds-button--icon-small slds-float--right slds-popover__close" symbol="close" assistiveText="Close" title="Close" />
+        <button type="button" className="slds-button slds-button_neutral">Cancel</button>
+        <button type="button" className="slds-button slds-button_brand">Save</button>
+        <section className="slds-popover slds-nubbin_bottom-left slds-theme_error" role="dialog" aria-label="Contextual title of this dialog" aria-describedby="dialog-description-01" style={{ position: 'absolute', bottom: '56px', left: '50%', marginLeft: '66px', transform: 'translateX(-50%)' }}>
+          <ButtonIcon className="slds-button_icon-inverse slds-button_icon-small slds-float_right slds-popover__close" symbol="close" assistiveText="Close" title="Close" />
           <div className="slds-popover__body slds-text-longform" id="dialog-description-01">
             <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.</p>
           </div>

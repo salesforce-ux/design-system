@@ -28,7 +28,7 @@ export let states = [
     label: 'Shade',
     element:
       <div className="demo-only" style={{ background: '#f4f6f9', padding: '1rem' }}>
-        <Progress className="slds-progress--shade" value="25">
+        <Progress className="slds-progress_shade" value="25">
           <Step done>Step 1</Step>
           <Step active>Step 2</Step>
           <Step>Step 3</Step>

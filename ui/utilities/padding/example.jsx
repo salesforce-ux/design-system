@@ -14,15 +14,15 @@ export let examples = [
     label: 'Top',
     element:
     <div>
-      <div className="slds-p-top--none" />
-      <div className="slds-p-top--xxx-small" />
-      <div className="slds-p-top--xx-small" />
-      <div className="slds-p-top--x-small" />
-      <div className="slds-p-top--small" />
-      <div className="slds-p-top--medium" />
-      <div className="slds-p-top--large" />
-      <div className="slds-p-top--x-large" />
-      <div className="slds-p-top--xx-large" />
+      <div className="slds-p-top_none" />
+      <div className="slds-p-top_xxx-small" />
+      <div className="slds-p-top_xx-small" />
+      <div className="slds-p-top_x-small" />
+      <div className="slds-p-top_small" />
+      <div className="slds-p-top_medium" />
+      <div className="slds-p-top_large" />
+      <div className="slds-p-top_x-large" />
+      <div className="slds-p-top_xx-large" />
     </div>
   },
   {
@@ -30,15 +30,15 @@ export let examples = [
     label: 'Right',
     element:
     <div>
-      <div className="slds-p-right--none" />
-      <div className="slds-p-right--xxx-small" />
-      <div className="slds-p-right--xx-small" />
-      <div className="slds-p-right--x-small" />
-      <div className="slds-p-right--small" />
-      <div className="slds-p-right--medium" />
-      <div className="slds-p-right--large" />
-      <div className="slds-p-right--x-large" />
-      <div className="slds-p-right--xx-large" />
+      <div className="slds-p-right_none" />
+      <div className="slds-p-right_xxx-small" />
+      <div className="slds-p-right_xx-small" />
+      <div className="slds-p-right_x-small" />
+      <div className="slds-p-right_small" />
+      <div className="slds-p-right_medium" />
+      <div className="slds-p-right_large" />
+      <div className="slds-p-right_x-large" />
+      <div className="slds-p-right_xx-large" />
     </div>
   },
   {
@@ -46,15 +46,15 @@ export let examples = [
     label: 'Bottom',
     element:
     <div>
-      <div className="slds-p-bottom--none" />
-      <div className="slds-p-bottom--xxx-small" />
-      <div className="slds-p-bottom--xx-small" />
-      <div className="slds-p-bottom--x-small" />
-      <div className="slds-p-bottom--small" />
-      <div className="slds-p-bottom--medium" />
-      <div className="slds-p-bottom--large" />
-      <div className="slds-p-bottom--x-large" />
-      <div className="slds-p-bottom--xx-large" />
+      <div className="slds-p-bottom_none" />
+      <div className="slds-p-bottom_xxx-small" />
+      <div className="slds-p-bottom_xx-small" />
+      <div className="slds-p-bottom_x-small" />
+      <div className="slds-p-bottom_small" />
+      <div className="slds-p-bottom_medium" />
+      <div className="slds-p-bottom_large" />
+      <div className="slds-p-bottom_x-large" />
+      <div className="slds-p-bottom_xx-large" />
     </div>
   },
   {
@@ -62,15 +62,15 @@ export let examples = [
     label: 'Left',
     element:
     <div>
-      <div className="slds-p-left--none" />
-      <div className="slds-p-left--xxx-small" />
-      <div className="slds-p-left--xx-small" />
-      <div className="slds-p-left--x-small" />
-      <div className="slds-p-left--small" />
-      <div className="slds-p-left--medium" />
-      <div className="slds-p-left--large" />
-      <div className="slds-p-left--x-large" />
-      <div className="slds-p-left--xx-large" />
+      <div className="slds-p-left_none" />
+      <div className="slds-p-left_xxx-small" />
+      <div className="slds-p-left_xx-small" />
+      <div className="slds-p-left_x-small" />
+      <div className="slds-p-left_small" />
+      <div className="slds-p-left_medium" />
+      <div className="slds-p-left_large" />
+      <div className="slds-p-left_x-large" />
+      <div className="slds-p-left_xx-large" />
     </div>
   },
   {
@@ -78,15 +78,15 @@ export let examples = [
     label: 'Vertical',
     element:
     <div>
-      <div className="slds-p-vertical--none" />
-      <div className="slds-p-vertical--xxx-small" />
-      <div className="slds-p-vertical--xx-small" />
-      <div className="slds-p-vertical--x-small" />
-      <div className="slds-p-vertical--small" />
-      <div className="slds-p-vertical--medium" />
-      <div className="slds-p-vertical--large" />
-      <div className="slds-p-vertical--x-large" />
-      <div className="slds-p-vertical--xx-large" />
+      <div className="slds-p-vertical_none" />
+      <div className="slds-p-vertical_xxx-small" />
+      <div className="slds-p-vertical_xx-small" />
+      <div className="slds-p-vertical_x-small" />
+      <div className="slds-p-vertical_small" />
+      <div className="slds-p-vertical_medium" />
+      <div className="slds-p-vertical_large" />
+      <div className="slds-p-vertical_x-large" />
+      <div className="slds-p-vertical_xx-large" />
     </div>
   },
   {
@@ -94,15 +94,15 @@ export let examples = [
     label: 'Horizontal',
     element:
     <div>
-      <div className="slds-p-horizontal--none" />
-      <div className="slds-p-horizontal--xxx-small" />
-      <div className="slds-p-horizontal--xx-small" />
-      <div className="slds-p-horizontal--x-small" />
-      <div className="slds-p-horizontal--small" />
-      <div className="slds-p-horizontal--medium" />
-      <div className="slds-p-horizontal--large" />
-      <div className="slds-p-horizontal--x-large" />
-      <div className="slds-p-horizontal--xx-large" />
+      <div className="slds-p-horizontal_none" />
+      <div className="slds-p-horizontal_xxx-small" />
+      <div className="slds-p-horizontal_xx-small" />
+      <div className="slds-p-horizontal_x-small" />
+      <div className="slds-p-horizontal_small" />
+      <div className="slds-p-horizontal_medium" />
+      <div className="slds-p-horizontal_large" />
+      <div className="slds-p-horizontal_x-large" />
+      <div className="slds-p-horizontal_xx-large" />
     </div>
   },
   {
@@ -110,15 +110,15 @@ export let examples = [
     label: 'Around',
     element:
     <div>
-      <div className="slds-p-around--none" />
-      <div className="slds-p-around--xxx-small" />
-      <div className="slds-p-around--xx-small" />
-      <div className="slds-p-around--x-small" />
-      <div className="slds-p-around--small" />
-      <div className="slds-p-around--medium" />
-      <div className="slds-p-around--large" />
-      <div className="slds-p-around--x-large" />
-      <div className="slds-p-around--xx-large" />
+      <div className="slds-p-around_none" />
+      <div className="slds-p-around_xxx-small" />
+      <div className="slds-p-around_xx-small" />
+      <div className="slds-p-around_x-small" />
+      <div className="slds-p-around_small" />
+      <div className="slds-p-around_medium" />
+      <div className="slds-p-around_large" />
+      <div className="slds-p-around_x-large" />
+      <div className="slds-p-around_xx-large" />
     </div>
   }
 ];

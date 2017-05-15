@@ -10,7 +10,7 @@
  * @summary Initializes scoped tabs
  *
  * @name base
- * @selector .slds-tabs--scoped
+ * @selector .slds-tabs_scoped
  * @restrict div
  * @required
  * @variant
@@ -22,8 +22,8 @@
   /**
    * Creates the container for the default tabs
    *
-   * @selector .slds-tabs--scoped__nav
-   * @restrict .slds-tabs--scoped ul
+   * @selector .slds-tabs_scoped__nav
+   * @restrict .slds-tabs_scoped ul
    * @required
    */
   &__nav {
@@ -91,8 +91,8 @@
 /**
  * Styles each list item as a single tab
  *
- * @selector .slds-tabs--scoped__item
- * @restrict .slds-tabs--scoped ul li
+ * @selector .slds-tabs_scoped__item
+ * @restrict .slds-tabs_scoped ul li
  * @required
  */
 .slds-tabs_scoped__item,
@@ -115,8 +115,8 @@
 /**
  * Styles each tab content wrapper
  *
- * @selector .slds-tabs--scoped__content
- * @restrict .slds-tabs--scoped div
+ * @selector .slds-tabs_scoped__content
+ * @restrict .slds-tabs_scoped div
  * @required
  */
 .slds-tabs_scoped__content,
@@ -131,8 +131,8 @@
 /**
  * Styles each actionable element inside each tab item
  *
- * @selector .slds-tabs--scoped__link
- * @restrict .slds-tabs--scoped__item a
+ * @selector .slds-tabs_scoped__link
+ * @restrict .slds-tabs_scoped__item a
  * @required
  */
 .slds-tabs_scoped__link,
@@ -160,7 +160,7 @@
  * Active state for a tab item
  *
  * @selector .slds-is-active
- * @restrict .slds-tabs--scoped__item
+ * @restrict .slds-tabs_scoped__item
  * @notes Required on the `<li>` element that is associated with the active tab panel
  * @modifier
  */

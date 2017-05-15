@@ -12,21 +12,21 @@ import classNames from 'classnames';
 // Partial(s)
 /// ///////////////////////////////////////////
 let AppLauncherModal = props =>
-  <Modal className="slds-modal--large slds-app-launcher" aria-labelledby="header43">
-    <ModalHeader className="slds-app-launcher__header slds-grid slds-grid--align-spread slds-grid--vertical-align-center">
-      <h2 id="header43" className="slds-text-heading--medium">App Launcher</h2>
+  <Modal className="slds-modal_large slds-app-launcher" aria-labelledby="header43">
+    <ModalHeader className="slds-app-launcher__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+      <h2 id="header43" className="slds-text-heading_medium">App Launcher</h2>
       <div className="slds-app-launcher__header-search">
         <div className="slds-form-element">
           <label htmlFor="app-launcher-search" className="slds-form-element__label slds-assistive-text">Find an app</label>
-          <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+          <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
             <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
             <input type="search" className="slds-input" id="app-launcher-search" placeholder="Find an app" />
           </div>
         </div>
       </div>
-      <button className="slds-button slds-button--neutral">App Exchange</button>
+      <button className="slds-button slds-button_neutral">App Exchange</button>
     </ModalHeader>
-    <ModalContent className="slds-app-launcher__content slds-p-around--medium">
+    <ModalContent className="slds-app-launcher__content slds-p-around_medium">
       <Section className="slds-is-open">
         <SectionTitle>
           <SectionTitleAction isOpen referenceId="appsContent">
@@ -40,10 +40,10 @@ let AppLauncherModal = props =>
           <div className="slds-assistive-text" id={props.dragDropId}>
             {props.dragDropInstructions}
           </div>
-          <ul className="slds-grid slds-grid--pull-padded slds-wrap">
+          <ul className="slds-grid slds-grid_pull-padded slds-wrap">
             {props.appTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3" key={i}>
+                <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3" key={i}>
                   <AppLauncherTile draggable figureClass={tile.figureClass} grabbed={tile.grabbed} objectInitials={tile.initials} referenceId={tile.dragDropId}>
                     <span className="slds-text-link">{tile.label}</span>
                     <p>{tile.description}<span className="slds-text-link">More</span></p>
@@ -62,10 +62,10 @@ let AppLauncherModal = props =>
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent isOpen referenceId="itemsContent">
-          <ul className="slds-grid slds-grid--pull-padded slds-wrap">
+          <ul className="slds-grid slds-grid_pull-padded slds-wrap">
             {props.itemTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal--small slds-size--xx-small" key={i}>
+                <li className="slds-p-horizontal_small slds-size_xx-small" key={i}>
                   <AppLauncherTile flavor="small" symbol={tile.symbol}>
                     <p className="slds-truncate slds-text-link" title={tile.label}>{tile.label}</p>
                   </AppLauncherTile>
@@ -176,7 +176,7 @@ export default (
       dragDropLiveRegion=""
       itemTiles={itemTiles}
     />
-    <div className="slds-backdrop slds-backdrop--open" />
+    <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );
 
@@ -194,7 +194,7 @@ export let states = [
         grabbed
         itemTiles={itemTiles}
       />
-      <div className="slds-backdrop slds-backdrop--open" />
+      <div className="slds-backdrop slds-backdrop_open" />
     </div>
   },
   {
@@ -209,7 +209,7 @@ export let states = [
         dragDropLiveRegion="Sales Cloud: new position 3 of 6."
         itemTiles={itemTiles}
       />
-      <div className="slds-backdrop slds-backdrop--open" />
+      <div className="slds-backdrop slds-backdrop_open" />
     </div>
   },
   {
@@ -224,7 +224,7 @@ export let states = [
         dragDropLiveRegion="Sales Cloud: final position 4 of 6."
         itemTiles={itemTiles}
       />
-      <div className="slds-backdrop slds-backdrop--open" />
+      <div className="slds-backdrop slds-backdrop_open" />
     </div>
   }
 ];

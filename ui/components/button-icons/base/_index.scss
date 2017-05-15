@@ -5,7 +5,7 @@
 * @summary Creates a button that looks like a plain icon
 *
 * @name base
-* @selector .slds-button--icon
+* @selector .slds-button_icon
 * @restrict button
 * @variant
 */
@@ -43,8 +43,8 @@
 /**
  * Default width + height for button icon with containers
  *
- * @selector .slds-button--icon-container
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-container
+ * @restrict .slds-button_icon
  * @modifier
  */
 
@@ -63,8 +63,8 @@
 /**
  * Creates an icon button with a border
  *
- * @selector .slds-button--icon-border
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-border
+ * @restrict .slds-button_icon
  * @modifier
  * @group borders
  */
@@ -87,8 +87,8 @@
 /**
  * Gives a white icon color on a dark background
  *
- * @selector .slds-button--icon-border-inverse
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-border-inverse
+ * @restrict .slds-button_icon
  * @modifier
  * @group borders
  */
@@ -107,8 +107,8 @@
 /**
  * Button icon with background
  *
- * @selector .slds-button--icon-border-filled
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-border-filled
+ * @restrict .slds-button_icon
  * @modifier
  * @group borders
  */
@@ -125,8 +125,8 @@
 /**
  * Button icon on inversed background
  *
- * @selector .slds-button--icon-inverse
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-inverse
+ * @restrict .slds-button_icon
  * @modifier
  * @group color
  */
@@ -155,8 +155,8 @@
 /**
  * Button icon for errors
  *
- * @selector .slds-button--icon-error
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-error
+ * @restrict .slds-button_icon
  * @modifier
  * @group color
  */
@@ -188,8 +188,8 @@
 /**
  * Button icon container - size small modifier
  *
- * @selector .slds-button--icon-small
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-small
+ * @restrict .slds-button_icon
  * @modifier
   * @group size
  */
@@ -202,8 +202,8 @@
 /**
  * Button icon container - size x-small modifier
  *
- * @selector .slds-button--icon-x-small
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-x-small
+ * @restrict .slds-button_icon
  * @modifier
   * @group size
  */
@@ -221,8 +221,8 @@
 /**
  * Button icon container - size xx-small modifier
  *
- * @selector .slds-button--icon-xx-small
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-xx-small
+ * @restrict .slds-button_icon
  * @modifier
  * @group size
  */
@@ -242,8 +242,8 @@
  * @summary Button icon with dropdown
  *
  * @name icon-with-dropdown
- * @selector .slds-button--icon-more
- * @restrict .slds-button--icon
+ * @selector .slds-button_icon-more
+ * @restrict .slds-button_icon
  * @variant
  */
 .slds-button_icon-more,
@@ -304,7 +304,7 @@
  *
  * @name stateful
  * @selector .slds-is-selected
- * @restrict .slds-button--icon
+ * @restrict .slds-button_icon
  * @variant
  */
 .slds-button--icon-container.slds-is-selected,
@@ -328,8 +328,8 @@
  * @summary A parent class must be put on anything that contains a .slds-button__icon--hint so that the child reacts when the parent is hovered.
  *
  * @name icon-with-hint-hover
- * @selector .slds-button__icon--hint
- * @restrict .slds-button--icon .slds-button__icon
+ * @selector .slds-button__icon_hint
+ * @restrict .slds-button_icon .slds-button__icon
  * @variant
  */
 .slds-button__icon_hint,
@@ -342,8 +342,8 @@
  * a .slds-button__icon--inverse-hint so that the child reacts
  * when the parent is hovered. This is for a dark background.
  *
- * @selector .slds-button__icon--inverse-hint
- * @restrict .slds-button--icon .slds-button__icon
+ * @selector .slds-button__icon_inverse-hint
+ * @restrict .slds-button_icon .slds-button__icon
  */
 .slds-button__icon_inverse-hint,
 .slds-button__icon--inverse-hint {

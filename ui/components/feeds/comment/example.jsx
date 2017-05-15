@@ -13,7 +13,7 @@ import classNames from 'classnames';
 export let Comment = props =>
   <article className={classNames('slds-comment slds-media slds-hint-parent', props.className)}>
     <div className="slds-media__figure">
-      <a href="javascript:void(0);" className="slds-avatar slds-avatar--circle slds-avatar--medium">
+      <a href="javascript:void(0);" className="slds-avatar slds-avatar_circle slds-avatar_medium">
         <img
           alt="Jenna Davis"
           src="/assets/images/avatar2.jpg"
@@ -27,13 +27,13 @@ export let Comment = props =>
   </article>;
 
 export let CommentHeader = props =>
-  <header className="slds-media slds-media--center">
-    <div className="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+  <header className="slds-media slds-media_center">
+    <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
       <p className="slds-truncate" title="Jenna Davis">
         <a href="javascript:void(0);">Jenna Davis</a>
       </p>
       <ButtonIcon
-        className="slds-button--icon-border slds-button--icon-x-small"
+        className="slds-button_icon-border slds-button_icon-x-small"
         aria-haspopup="true"
         symbol="down"
         assistiveText="More Options"
@@ -49,10 +49,10 @@ export let CommentContent = props =>
 
 export let CommentFooter = props =>
   <footer>
-    <ul className="slds-list--horizontal slds-has-dividers--right slds-text-body--small">
+    <ul className="slds-list_horizontal slds-has-dividers_right slds-text-body_small">
       <li className="slds-item">
         <button
-          className="slds-button--reset slds-text-color--weak"
+          className="slds-button_reset slds-text-color_weak"
           title="Like this item"
           aria-pressed={!!props.liked}
         >

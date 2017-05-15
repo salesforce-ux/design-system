@@ -12,10 +12,10 @@ let Popover = props =>
 <section
   aria-label="Dialog title"
   aria-describedby="popover-body-id"
-  className={`slds-popover slds-nubbin--${props.nubbinPosition}`}
+  className={`slds-popover slds-nubbin_${props.nubbinPosition}`}
   role="dialog">
   <ButtonIcon
-    className="slds-button--icon slds-button--icon-small slds-float--right slds-popover__close"
+    className="slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
     symbol="close"
     assistiveText="Close dialog"
     title="Close dialog"
@@ -24,7 +24,7 @@ let Popover = props =>
     <code>
       slds-popover
       <br />
-      {`slds-nubbin--${props.nubbinPosition}`}
+      {`slds-nubbin_${props.nubbinPosition}`}
     </code>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
   </div>

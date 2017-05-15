@@ -21,7 +21,7 @@
 /**
  * Creates the container for tabs in a path
  *
- * @selector .slds-tabs--path
+ * @selector .slds-tabs_path
  * @restrict .slds-path-coach div
  * @required
  */
@@ -32,8 +32,8 @@
   /**
    * Horizontal list of stages in path component
    *
-   * @selector .slds-tabs--path__nav
-   * @restrict .slds-tabs--path ul
+   * @selector .slds-tabs_path__nav
+   * @restrict .slds-tabs_path ul
    * @required
    */
   &__nav {
@@ -44,7 +44,7 @@
    * Creates the completed stage of the path
    *
    * @selector .slds-is-complete
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @modifier
    */
   .slds-is-complete {
@@ -89,7 +89,7 @@
    * Creates the current stage of the path
    *
    * @selector .slds-is-current
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @modifier
    */
   .slds-is-current {
@@ -113,7 +113,7 @@
    * Creates the incomplete stage of the path
    *
    * @selector .slds-is-incomplete
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @modifier
    */
   .slds-is-incomplete {
@@ -133,7 +133,7 @@
    * Creates lost stage of the path
    *
    * @selector .slds-is-lost
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @notes This class must be added to the "closed" stage with JS when the Sales Path is over by losing the opportunity
    * @modifier
    */
@@ -156,7 +156,7 @@
    * Creates the active stage of the sales path
    *
    * @selector .slds-is-active
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @notes This class must be placed on the item programatically when the guidance section is used
    * @modifier
    */
@@ -187,7 +187,7 @@
    * Creates success stage of the path
    *
    * @selector .slds-is-won
-   * @restrict .slds-tabs--path__item
+   * @restrict .slds-tabs_path__item
    * @modifier
    */
   .slds-is-active,
@@ -208,8 +208,8 @@
 /**
  * Individual stages of a path
  *
- * @selector .slds-tabs--path__item
- * @restrict .slds-tabs--path__nav li
+ * @selector .slds-tabs_path__item
+ * @restrict .slds-tabs_path__nav li
  * @required
  */
 .slds-tabs_path__item,
@@ -279,8 +279,8 @@
 /**
  * Contains the name of the stage
  *
- * @selector .slds-tabs--path__title
- * @restrict .slds-tabs--path__link span
+ * @selector .slds-tabs_path__title
+ * @restrict .slds-tabs_path__link span
  * @required
  */
 .slds-tabs_path__title,
@@ -291,8 +291,8 @@
 /**
  * Contains the check mark when the stage is completed
  *
- * @selector .slds-tabs--path__stage
- * @restrict .slds-tabs--path__link span
+ * @selector .slds-tabs_path__stage
+ * @restrict .slds-tabs_path__link span
  * @required
  */
 .slds-tabs_path__stage,
@@ -309,8 +309,8 @@
 /**
  * Creates actionable element inside of each path tab
  *
- * @selector .slds-tabs--path__link
- * @restrict .slds-tabs--path__item a
+ * @selector .slds-tabs_path__link
+ * @restrict .slds-tabs_path__item a
  * @required
  */
 .slds-tabs_path__link,
@@ -399,7 +399,7 @@
 /**
  * Tabpanel of each stage of the path
  *
- * @selector .slds-tabs--path__content
+ * @selector .slds-tabs_path__content
  * @restrict .slds-path-coach div
  * @required
  */
@@ -414,7 +414,7 @@
  * Key field section of expanded tabpanel
  *
  * @selector .slds-coach__keys
- * @restrict .slds-tabs--path__content div
+ * @restrict .slds-tabs_path__content div
  * @required
  */
 .slds-coach__keys {
@@ -425,7 +425,7 @@
  * Guidance section of expanded tabpanel
  *
  * @selector .slds-coach__guidance
- * @restrict .slds-tabs--path__content div
+ * @restrict .slds-tabs_path__content div
  * @required
  */
 .slds-coach__guidance {

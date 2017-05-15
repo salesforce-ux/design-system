@@ -17,12 +17,12 @@ let Fieldset = props =>
   </fieldset>;
 
 let CheckboxGroup = props =>
-  <div className="slds-checkbox--button-group">
+  <div className="slds-checkbox_button-group">
     {props.children}
   </div>;
 
 let Checkbox = props =>
-  <span className={classNames('slds-button slds-checkbox--button', props.className)}>
+  <span className={classNames('slds-button slds-checkbox_button', props.className)}>
     <input
       aria-describedby={props.errorId}
       disabled={props.disabled}
@@ -30,8 +30,8 @@ let Checkbox = props =>
       name="checkbox"
       type="checkbox"
     />
-    <label className="slds-checkbox--button__label" htmlFor={props.id}>
-      <span className="slds-checkbox--faux">
+    <label className="slds-checkbox_button__label" htmlFor={props.id}>
+      <span className="slds-checkbox_faux">
         {props.children}
       </span>
     </label>

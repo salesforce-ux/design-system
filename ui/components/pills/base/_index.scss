@@ -44,7 +44,7 @@
   /**
    * Modifier that removes border and background from a pill
    *
-   * @selector .slds-pill--bare
+   * @selector .slds-pill_bare
    * @restrict .slds-pill
    * @modifier
    */
@@ -78,7 +78,7 @@
   /**
    * Container to hold pill(s) with no borders
    *
-   * @selector .slds-pill_container--bare
+   * @selector .slds-pill_container_bare
    * @restrict .slds-pill_container
    * @modifier
    * @deprecated
@@ -158,9 +158,10 @@
 /**
  * Creates a pill with a hyperlink
  *
- * @selector .slds-pill--link
+ * @selector .slds-pill_link
  * @restrict .slds-pill
  */
+.slds-pill_link,
 .slds-pill--link {
   border: 0;
   padding: 0;
@@ -185,7 +186,7 @@
  * Actionable element inside of pill with hyperlink
  *
  * @selector .slds-pill__action
- * @restrict .slds-pill--link a
+ * @restrict .slds-pill_link a
  */
 .slds-pill__action {
   padding: $spacing-xxx-small;

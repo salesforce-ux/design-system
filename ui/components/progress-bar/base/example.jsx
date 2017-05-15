@@ -28,30 +28,30 @@ export let states = [
     id: 'zero',
     label: '0% complete',
     element:
-      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="0" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="0" />
   },
   {
     id: '25',
-    label: '15% complete',
+    label: '25% complete',
     element:
-      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="25" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="25" />
   },
   {
     id: '50',
     label: '50% complete',
     element:
-      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="50" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="50" />
   },
   {
     id: '75',
     label: '75% complete',
     element:
-      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="75" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="75" />
   },
   {
     id: '100',
     label: '100% complete',
     element:
-      <ProgressBar className="slds-progress-bar--medium slds-progress-bar--circular" value="100" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="100" />
   }
 ];

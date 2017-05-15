@@ -10,7 +10,7 @@ const Image = (
 );
 
 const Button = (
-  <button className="slds-button slds-button--neutral">New</button>
+  <button className="slds-button slds-button_neutral">New</button>
 );
 
 export default (

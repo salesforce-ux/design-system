@@ -163,11 +163,12 @@
   'vertical-navigation/base/index',
   'vertical-navigation/expandable-section/index',
 
-  // Notifications -- Toasts & Alerts
+  // Notifications -- Toasts, Notifications, & Alerts, Prompts
   'alert/base/index',
   'prompt/base/index',
   'toast/base/index',
-  'notifications/modal-toast/index',
+  'notifications/base/index',
+  'toast/modal-toast/index',
   'walkthrough/header/index',
 
   // Lookup
@@ -188,4 +189,7 @@
   'trees/grid/index',
 
   // Expandable
-  'expandable-section/base/index';
+  'expandable-section/base/index',
+
+  // Vertical Tabs
+  'vertical-tabs/base/index';

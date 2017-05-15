@@ -15,14 +15,14 @@ import _ from 'lodash';
 
 // Context Item Dropdown
 const contextDropdown = (
-  <Menu className="slds-dropdown--right">
+  <Menu className="slds-dropdown_right">
     <MenuList>
       <MenuItem>
-        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-m-right--x-small" sprite="utility" symbol="add" />
+        <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" sprite="utility" symbol="add" />
         Main action
       </MenuItem>
-      <li className="slds-dropdown__header slds-has-divider--top-space" role="separator">
-        <span className="slds-text-title--caps">Menu header</span>
+      <li className="slds-dropdown__header slds-has-divider_top-space" role="separator">
+        <span className="slds-text-title_caps">Menu header</span>
       </li>
       <MenuItem>Menu Item One</MenuItem>
       <MenuItem>Menu Item Two</MenuItem>
@@ -39,10 +39,10 @@ export let ContextBar = props =>
   <div className={classNames('slds-context-bar', props.className)}>
 
     {/* Primary Section */}
-    <div className="slds-context-bar__primary slds-context-bar__item--divider-right">
+    <div className="slds-context-bar__primary slds-context-bar__item_divider-right">
 
       {/* App Switcher */}
-      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
+      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
         <div className="slds-context-bar__icon-action">
           <WaffleIcon className="slds-context-bar__button" />
         </div>
@@ -64,13 +64,13 @@ export let ContextBar = props =>
             <span className="slds-truncate" title="Home">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home' }</span>
           </a>
         </li>
-        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover">
+        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
           <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Menu Item">
             <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item' }</span>
           </a>
-          <div className="slds-context-bar__icon-action slds-p-left--none">
+          <div className="slds-context-bar__icon-action slds-p-left_none">
             <ButtonIcon
-              className="slds-button--icon slds-context-bar__button"
+              className="slds-button_icon slds-context-bar__button"
               symbol="chevrondown"
               aria-haspopup="true"
               assistiveText="Open menu item submenu"

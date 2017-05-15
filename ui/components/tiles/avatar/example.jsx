@@ -7,7 +7,7 @@ import { TileMedia } from '../base/example';
 import classNames from 'classnames';
 
 const avatar = (
-  <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
+  <span className="slds-avatar slds-avatar_circle slds-avatar_medium">
     <img
       alt=""
       src="/assets/images/avatar2.jpg"

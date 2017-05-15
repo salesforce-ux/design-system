@@ -5,7 +5,7 @@
  * @summary Initializes checkbox button group
  *
  * @name base
- * @selector .slds-checkbox--button-group
+ * @selector .slds-checkbox_button-group
  * @restrict div, span
  * @required
  * @variant
@@ -20,8 +20,8 @@
 /**
  * Initializes checkbox inside a button group
  *
- * @selector .slds-checkbox--button
- * @restrict .slds-checkbox--button-group span
+ * @selector .slds-checkbox_button
+ * @restrict .slds-checkbox_button-group span
  * @required
  */
 .slds-checkbox_button,
@@ -34,8 +34,8 @@
   /**
    * Creates a custom styled checkbox
    *
-   * @selector .slds-checkbox--faux
-   * @restrict .slds-checkbox--button__label span
+   * @selector .slds-checkbox_faux
+   * @restrict .slds-checkbox_button__label span
    * @required
    */
   .slds-checkbox_faux,
@@ -55,8 +55,8 @@
   /**
    * Creates a custom styled checkbox
    *
-   * @selector .slds-checkbox--button__label
-   * @restrict .slds-checkbox--button label
+   * @selector .slds-checkbox_button__label
+   * @restrict .slds-checkbox_button label
    * @required
    */
   .slds-checkbox_button__label .slds-checkbox_faux,

@@ -39,6 +39,8 @@ export let Input = props => {
       className={classNames('slds-input', props.className)}
       type={props.type || 'text'}
       placeholder={props.placeholder || 'Placeholder Text'}
+      readOnly={props['readOnly']}
+      value={props.value}
     />
   );
 };
@@ -90,6 +92,14 @@ let Disabled = props =>
       </FormElementControl>
     </FormElement>;
 
+let Readonly = props =>
+  <FormElement>
+    <FormElementLabel>Input Label</FormElementLabel>
+    <FormElementControl>
+      <Input readOnly value="Read Only" placeholder="" />
+    </FormElementControl>
+  </FormElement>;
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
@@ -127,10 +137,15 @@ export let states = [
   {
     id: 'read-only',
     label: 'Readonly',
+    element: <Readonly />
+  },
+  {
+    id: 'static',
+    label: 'Static',
     element:
       <FormElement>
         <span className="slds-form-element__label">Input Label</span>
-        <FormElementControl className="slds-border--bottom">
+        <FormElementControl>
           <span className="slds-form-element__static">Read Only</span>
         </FormElementControl>
       </FormElement>

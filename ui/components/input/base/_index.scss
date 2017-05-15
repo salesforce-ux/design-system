@@ -17,8 +17,15 @@
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
-  &:read-only {
-    @include button-interactions;
+  /**
+   *
+   * @selector [readonly]
+   * @restrict .slds-input
+   */
+  &[readonly] {
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
   }
 
   &[type="search"]::-ms-clear {

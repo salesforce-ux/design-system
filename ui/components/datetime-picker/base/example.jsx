@@ -112,7 +112,6 @@ export default (
             <ButtonIcon
               className="slds-input__icon slds-input__icon--right"
               symbol="event"
-              aria-haspopup="true"
               assistiveText="Select a date"
               title="Select a date"
             />
@@ -122,6 +121,7 @@ export default (
             className="slds-combobox-picklist slds-timepicker"
             inputIcon="right"
             inputIconRightSymbol="clock"
+            inputIconRightAssistiveText="Select a time"
             placeholder=" "
             listbox={<ListboxDropdown />}
           />
@@ -152,7 +152,6 @@ export let states = [
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
-                  aria-haspopup="true"
                   assistiveText="Select a date"
                   title="Select a date"
                 />
@@ -162,6 +161,7 @@ export let states = [
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"
                 inputIconRightSymbol="clock"
+                inputIconRightAssistiveText="Select a time"
                 placeholder=" "
                 listbox={<ListboxDropdown />}
               />
@@ -190,7 +190,6 @@ export let states = [
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
-                  aria-haspopup="true"
                   assistiveText="Select a date"
                   title="Select a date"
                 />
@@ -201,6 +200,7 @@ export let states = [
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"
                 inputIconRightSymbol="clock"
+                inputIconRightAssistiveText="Select a time"
                 placeholder=" "
                 value="8:00am"
                 listbox={<ListboxDropdown optionSelected={true} />}

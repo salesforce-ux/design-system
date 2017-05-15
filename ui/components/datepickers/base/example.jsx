@@ -233,7 +233,6 @@ export default (
     <ButtonIcon
       className="slds-input__icon slds-input__icon_right"
       symbol="event"
-      aria-haspopup="true"
       assistiveText="Select a date"
       title="Select a date"
     />
@@ -256,7 +255,6 @@ export let states = [
         <ButtonIcon
           className="slds-input__icon slds-input__icon_right"
           symbol="event"
-          aria-haspopup="true"
           assistiveText="Select a date"
           title="Select a date"
         />

@@ -225,6 +225,7 @@ export let ComboboxContainer = props =>
                 containerClassName="slds-input__icon slds-input__icon_right"
                 className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
+                assistiveText={props.inputIconRightAssistiveText}
               />
             : null }
             {/* If loading, show buttonIcon and spinner here */}

@@ -54,19 +54,19 @@ export let NavVerticalSection = props => {
       { !hasExpando && props.title
         ? <h2
           id={props.id}
-          className={classNames('slds-nav-vertical__title slds-text-title--caps')}
+          className={classNames('slds-nav-vertical__title slds-text-title_caps')}
         >
           {props.title}
         </h2>
       : null }
       { hasExpando
         ? <button
-          className="slds-button slds-button--reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
+          className="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
           aria-controls={props.listId}
           aria-expanded={props.expanded ? 'true' : 'false'}
         >
           <SvgIcon
-            className="slds-button__icon slds-button__icon--left"
+            className="slds-button__icon slds-button__icon_left"
             sprite="utility"
             symbol="chevronright"
           />
@@ -302,7 +302,7 @@ export let examples = [
               <UtilityIcon
                 symbol="open_folder"
                 containerClassName="slds-line-height_reset"
-                className="slds-icon-text-default slds-icon--x-small slds-m-right--x-small"
+                className="slds-icon-text-default slds-icon_x-small slds-m-right_x-small"
                 assistiveText="Folder"
               />
               Created by Me
@@ -311,7 +311,7 @@ export let examples = [
               <UtilityIcon
                 symbol="open_folder"
                 containerClassName="slds-line-height_reset"
-                className="slds-icon-text-default slds-icon--x-small slds-m-right--x-small"
+                className="slds-icon-text-default slds-icon_x-small slds-m-right_x-small"
                 assistiveText="Folder"
               />
               Shared with Me
@@ -332,7 +332,7 @@ export let examples = [
           <NavVerticalSection id={sectionId01} title="Reports" >
             <NavVerticalItem aria-describedby={sectionId01} active>
               Recent
-              <span className="slds-badge slds-col--bump-left">
+              <span className="slds-badge slds-col_bump-left">
                 <span className="slds-assistive-text">:</span>
                 3
                 <span className="slds-assistive-text">New Items</span>
@@ -409,14 +409,14 @@ export let examples = [
     <div className="demo-only" style={{ width: '320px' }}>
       <NavVertical>
         <FormElement
-          className="slds-p-horizontal--large"
+          className="slds-p-horizontal_large"
           label="Filter navigation items"
           inputId={inputId01}
           inputIcon="left"
           hideLabel
         >
           <SvgIcon
-            className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />

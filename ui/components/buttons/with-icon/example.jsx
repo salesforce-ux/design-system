@@ -9,7 +9,7 @@ import { Button } from '../base/example';
 export default (
   <Button>
     <SvgIcon
-      className="slds-button__icon slds-button__icon--left"
+      className="slds-button__icon slds-button__icon_left"
       sprite="utility"
       symbol="download"
     />
@@ -25,7 +25,7 @@ export let examples = [
       <Button>
         Button Neutral
         <SvgIcon
-          className="slds-button__icon slds-button__icon--right"
+          className="slds-button__icon slds-button__icon_right"
           sprite="utility"
           symbol="down"
         />

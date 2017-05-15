@@ -11,21 +11,21 @@ import classNames from 'classnames';
 /// ////////////////////////////////////////
 
 export let UtilityPanel = props =>
-  <section className={classNames('slds-utility-panel slds-grid slds-grid--vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+  <section className={classNames('slds-utility-panel slds-grid slds-grid_vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <header className="slds-utility-panel__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media--center slds-size--1-of-1">
-        <div className="slds-media__figure slds-m-right--x-small">
+      <div className="slds-media slds-media_center slds-size_1-of-1">
+        <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
-            <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="call" />
+            <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="call" />
           </span>
         </div>
         <div className="slds-media__body">
           <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
         </div>
       </div>
-      <div className="slds-col--bump-left slds-shrink-none">
+      <div className="slds-col_bump-left slds-shrink-none">
         <ButtonIcon
-          className="slds-button--icon"
+          className="slds-button_icon"
           symbol="minimize_window"
           assistiveText="Close Panel"
           title="Close Panel"
@@ -51,12 +51,12 @@ export let UtilityBarItem = props =>
       aria-pressed={!!props.active}
     >
       { props.notification
-        ? <abbr className="slds-indicator--unread" title="Unread Item" aria-label="Unread Item">
+        ? <abbr className="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
           <span className="slds-assistive-text">●</span>
         </abbr>
       : null }
       <SvgIcon
-        className="slds-button__icon slds-button__icon--left"
+        className="slds-button__icon slds-button__icon_left"
         sprite="utility"
         symbol={props.symbol}
       />
@@ -77,7 +77,7 @@ export let UtilityBar = props =>
 
 const PanelOpen = (
   <UtilityPanel className="slds-is-open" header="Call">
-    <div className="slds-align--absolute-center">Utility Panel Body</div>
+    <div className="slds-align_absolute-center">Utility Panel Body</div>
   </UtilityPanel>
 );
 
@@ -94,7 +94,7 @@ export default (
   <UtilityBar
     panel={
       <UtilityPanel header="Call">
-        <div className="slds-align--absolute-center">Utility Panel Body</div>
+        <div className="slds-align_absolute-center">Utility Panel Body</div>
       </UtilityPanel>
     }
   >
@@ -102,7 +102,7 @@ export default (
     <UtilityBarItem symbol="clock">History</UtilityBarItem>
     <UtilityBarItem symbol="note">Notes</UtilityBarItem>
     <UtilityBarItem symbol="omni_channel">
-      <span className="slds-m-bottom--xxx-small">Online</span>
+      <span className="slds-m-bottom_xxx-small">Online</span>
       <span>Omni-Channel</span>
     </UtilityBarItem>
   </UtilityBar>
@@ -118,7 +118,7 @@ export let states = [
         <UtilityBarItem symbol="clock">History</UtilityBarItem>
         <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         <UtilityBarItem symbol="omni_channel">
-          <span className="slds-m-bottom--xxx-small">Online</span>
+          <span className="slds-m-bottom_xxx-small">Online</span>
           <span>Omni-Channel</span>
         </UtilityBarItem>
       </UtilityBar>
@@ -132,7 +132,7 @@ export let states = [
         <UtilityBarItem symbol="clock">History</UtilityBarItem>
         <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         <UtilityBarItem symbol="omni_channel" notification>
-          <span className="slds-m-bottom--xxx-small">Online</span>
+          <span className="slds-m-bottom_xxx-small">Online</span>
           <span>Omni-Channel</span>
         </UtilityBarItem>
       </UtilityBar>

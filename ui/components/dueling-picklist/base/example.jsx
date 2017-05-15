@@ -34,7 +34,7 @@ const MultiSelect = (props) => {
 const MoveButtons = props =>
   <div className="slds-dueling-list__column">
     <button
-      className="slds-button slds-button--icon slds-button--icon-container"
+      className="slds-button slds-button_icon slds-button_icon-container"
       title={'Move Selection ' + (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB}
     >
       <SvgIcon
@@ -47,7 +47,7 @@ const MoveButtons = props =>
       </span>
     </button>
     <button
-      className="slds-button slds-button--icon slds-button--icon-container"
+      className="slds-button slds-button_icon slds-button_icon-container"
       title={'Move Selection ' + (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA}
     >
       <SvgIcon
@@ -76,7 +76,7 @@ const ListBox = props =>
       aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}
       aria-multiselectable="true"
-      className="slds-listbox slds-listbox--vertical"
+      className="slds-listbox slds-listbox_vertical"
       role="listbox"
       tabIndex="0"
     >
@@ -90,7 +90,7 @@ const Option = props =>
   <li role="presentation" className="slds-listbox__item">
     <span
       className={classNames(
-        'slds-listbox__option slds-listbox__option--plain slds-media',
+        'slds-listbox__option slds-listbox__option_plain slds-media',
         {
           'slds-is-grabbed': props.option.isGrabbed,
           'slds-is-selected': props.option.isSelected

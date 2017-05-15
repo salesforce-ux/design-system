@@ -10,7 +10,7 @@
  *
  * @variant
  * @name base
- * @selector .slds-popover--tooltip
+ * @selector .slds-popover_tooltip
  * @restrict div
  * @support dev-ready
  */
@@ -29,7 +29,7 @@
 
 /**
  * @selector .slds-rise-from-ground
- * @restrict .slds-popover--tooltip
+ * @restrict .slds-popover_tooltip
  * @modifier
  * @group toggle
  */
@@ -46,7 +46,7 @@
 
 /**
  * @selector .slds-fall-into-ground
- * @restrict .slds-popover--tooltip
+ * @restrict .slds-popover_tooltip
  * @modifier
  * @group toggle
  */

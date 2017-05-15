@@ -71,7 +71,7 @@ const rows = [{
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}
@@ -90,7 +90,7 @@ const ListboxDropdown = props =>
   </Listbox>;
 
 let ProductListHeader = props =>
-  <div className="slds-p-vertical--x-small slds-p-horizontal--large slds-shrink-none slds-theme--shade">
+  <div className="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
     <ComboboxContainer
       autocomplete={true}
       hideLabel={true}
@@ -99,14 +99,14 @@ let ProductListHeader = props =>
       listbox={<ListboxDropdown />}
     />
     { props.selectedFilters ? props.selectedFilters : null }
-    <div className="slds-text-title slds-m-top--x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</div>
+    <div className="slds-text-title slds-m-top_x-small" aria-live="polite">{ props.itemsSelected || '0' } Item(s) Selected</div>
   </div>;
 
 let ProductList = props =>
   <div className="slds-scrollable slds-grow">
-    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-table--resizable-cols slds-no-row-hover slds-scrollable--none">
+    <table role="grid" className="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
       <thead>
-        <tr className="slds-line-height--reset">
+        <tr className="slds-line-height_reset">
           <th scope="col" style={{ width: '3.75rem' }} />
           { _.times(columns.length, i =>
             <Th key={i}
@@ -127,7 +127,7 @@ let RowData = props => {
 
   return (
     <tr className={classNames('slds-hint-parent', props.className)} aria-selected={props.checked}>
-      <td role="gridcell" tabIndex={(props.index === 1) ? '0' : '-1'} className="slds-text-align--right" style={{ width: '3.75rem' }}>
+      <td role="gridcell" tabIndex={(props.index === 1) ? '0' : '-1'} className="slds-text-align_right" style={{ width: '3.75rem' }}>
         <CheckboxAddButton label={checkboxLabel} checked={props.checked} tabIndex="-1" />
       </td>
       <th scope="row">
@@ -147,7 +147,7 @@ let RowData = props => {
 };
 
 let FilteredItem = props =>
-  <PillContainer className="slds-pill_container--bare">
+  <PillContainer className="slds-pill_container_bare">
     <Listbox horizonta={true}>
       <ListboxItem>
         <ListboxPill label="Analytics" tabIndex="0" />
@@ -156,7 +156,7 @@ let FilteredItem = props =>
   </PillContainer>;
 
 let FilteredItems = props =>
-  <PillContainer className="slds-pill_container--bare">
+  <PillContainer className="slds-pill_container_bare">
     <Listbox horizontal={true}>
       <ListboxItem>
         <ListboxPill label="Option A" tabIndex="0" />
@@ -173,13 +173,13 @@ let FilteredItems = props =>
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
-    <Modal className="slds-modal--large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
+    <Modal className="slds-modal_large slds-list-builder" aria-labelledby="id-of-modalheader-h2">
       <ModalHeader>
-        <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
-        <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+        <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">Add Products</h2>
+        <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
       </ModalHeader>
       <ModalContent className="slds-grid slds-grow">
-        <div className="slds-grid slds-grid--vertical">
+        <div className="slds-grid slds-grid_vertical">
           <ProductListHeader />
           <ProductList>
             { _.times(rows.length, i =>
@@ -196,11 +196,11 @@ export default (
         </div>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button--neutral">Cancel</button>
-        <button className="slds-button slds-button--brand">Next</button>
+        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_brand">Next</button>
       </ModalFooter>
     </Modal>
-    <div className="slds-backdrop slds-backdrop--open" />
+    <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );
 
@@ -210,13 +210,13 @@ export let states = [
     label: 'Items selected',
     element:
     <div className="demo-only" style={{height: '640px'}}>
-      <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+      <Modal className="slds-modal_large" aria-labelledby="id-of-modalheader-h2">
         <ModalHeader>
-          <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
-          <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+          <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">Add Products</h2>
+          <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
         </ModalHeader>
         <ModalContent className="slds-grid slds-nowrap">
-          <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
+          <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
             <ProductListHeader selectedFilters={<FilteredItem />} itemsSelected="1" />
             <ProductList>
               { _.times(rows.length, i =>
@@ -234,11 +234,11 @@ export let states = [
           </div>
         </ModalContent>
         <ModalFooter>
-          <button className="slds-button slds-button--neutral">Cancel</button>
-          <button className="slds-button slds-button--brand">Next</button>
+          <button className="slds-button slds-button_neutral">Cancel</button>
+          <button className="slds-button slds-button_brand">Next</button>
         </ModalFooter>
       </Modal>
-      <div className="slds-backdrop slds-backdrop--open" />
+      <div className="slds-backdrop slds-backdrop_open" />
     </div>
   },
   {
@@ -246,13 +246,13 @@ export let states = [
     label: 'Filtered Results',
     element:
       <div className="demo-only" style={{height: '640px'}}>
-        <Modal className="slds-modal--large" aria-labelledby="id-of-modalheader-h2">
+        <Modal className="slds-modal_large" aria-labelledby="id-of-modalheader-h2">
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading--medium">Add Products</h2>
-            <p className="slds-m-top--x-small">Pricebook: Salesforce Products</p>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">Add Products</h2>
+            <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">
-            <div className="slds-grid slds-grid--vertical">
+            <div className="slds-grid slds-grid_vertical">
               <ProductListHeader selectedFilters={<FilteredItems />} itemsSelected="2" />
               <ProductList>
                 <RowData
@@ -266,11 +266,11 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button--neutral">Cancel</button>
-            <button className="slds-button slds-button--brand">Next</button>
+            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>
-        <div className="slds-backdrop slds-backdrop--open" />
+        <div className="slds-backdrop slds-backdrop_open" />
       </div>
   }
 ];

@@ -46,16 +46,16 @@ For example:
 }
 
 /**
- * @selector .slds-button--brand
+ * @selector .slds-button_brand
  * @restrict .slds-button
  */
-.slds-button--brand {
+.slds-button_brand {
 }
 ```
 
-In this example we can see that `.slds-button--brand` must be applied to a `.slds-button`, which, in turn, must be applied to a `button, a, span`.
+In this example we can see that `.slds-button_brand` must be applied to a `.slds-button`, which, in turn, must be applied to a `button, a, span`.
 
-It's important to know that `slds-button--brand` will only be associated to the button component via this `@restrict` chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
+It's important to know that `slds-button_brand` will only be associated to the button component via this `@restrict` chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
 
 For a more complex example, see: https://github.com/salesforce-ux/design-system-internal/blob/summer-17/ui/components/combobox/base/_index.scss
 
@@ -75,7 +75,7 @@ For example:
 ```
 /**
  * @name advanced
- * @selector .slds-table--fixed-layout
+ * @selector .slds-table_fixed-layout
  * @restrict .slds-table
  * @variant
  */

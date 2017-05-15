@@ -37,7 +37,7 @@
   /**
    * Removes aesthetic nature from an input
    *
-   * @selector .slds-input--bare
+   * @selector .slds-input_bare
    * @restrict .slds-input, input, textarea
    * @modifier
    */
@@ -64,7 +64,7 @@
    * Used to apply an input size to another element thats a non input
    * Because sometimes I need elements the same height as inputs
    *
-   * @selector .slds-input--height
+   * @selector .slds-input_height
    * @restrict .slds-input
    */
   &_height,
@@ -104,7 +104,7 @@
   /**
    * Positions .slds-input__icon to the left of the text input
    *
-   * @selector .slds-input-has-icon--left
+   * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
    * @modifier
    * @group position
@@ -126,7 +126,7 @@
   /**
    * Positions .slds-input__icon to the right of the text input
    *
-   * @selector .slds-input-has-icon--right
+   * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
    * @modifier
    * @group position
@@ -148,7 +148,7 @@
   /**
    * Positions .slds-input__icon--left to the left of the text input and .slds-input__icon--right to the right of the text input
    *
-   * @selector .slds-input-has-icon--left-right
+   * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
    * @modifier
    * @group position
@@ -158,7 +158,7 @@
     /**
      * Hook for .slds-input-has-icon--left-right
      *
-     * @selector .slds-input__icon--left
+     * @selector .slds-input__icon_left
      * @restrict .slds-input__icon
      */
     .slds-input__icon_left,
@@ -169,7 +169,7 @@
     /**
      * Hook for .slds-input-has-icon--left-right
      *
-     * @selector .slds-input__icon--right
+     * @selector .slds-input__icon_right
      * @restrict .slds-input__icon
      */
     .slds-input__icon_right,
@@ -264,7 +264,7 @@
   /**
    * Inline Edit on static form element
    *
-   * @selector .slds-form-element__static--edit
+   * @selector .slds-form-element__static_edit
    * @restrict .slds-form-element__static
    */
   &--edit {

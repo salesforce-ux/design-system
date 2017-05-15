@@ -19,7 +19,7 @@
   /**
    * Creates a progress bar height at the smaller .125rem (2px) size
    *
-   * @selector .slds-progress-bar--x-small
+   * @selector .slds-progress-bar_x-small
    * @restrict .slds-progress-bar
    * @modifier
    * @group height
@@ -32,7 +32,7 @@
   /**
    * Creates a progress bar height at the smaller .25rem (4px) size
    *
-   * @selector .slds-progress-bar--small
+   * @selector .slds-progress-bar_small
    * @restrict .slds-progress-bar
    * @modifier
    * @group height
@@ -45,7 +45,7 @@
   /**
    * Creates a progress bar height at the smaller .5rem (8px) size
    *
-   * @selector .slds-progress-bar--medium
+   * @selector .slds-progress-bar_medium
    * @restrict .slds-progress-bar
    * @modifier
    * @group height
@@ -58,7 +58,7 @@
   /**
    * Creates a progress bar height at the smaller .75rem (12px) size
    *
-   * @selector .slds-progress-bar--large
+   * @selector .slds-progress-bar_large
    * @restrict .slds-progress-bar
    * @modifier
    * @group height
@@ -71,7 +71,7 @@
   /**
    * Adds a border radius to the progress bar to give it a circular look
    *
-   * @selector .slds-progress-bar--circular
+   * @selector .slds-progress-bar_circular
    * @restrict .slds-progress-bar
    * @modifier
    * @group radius

@@ -20,14 +20,14 @@ let AccordionSection = props =>
   <li className="slds-accordion__list-item">
     <section className={classNames('slds-accordion__section', props.isOpen ? 'slds-is-open' : null)}>
       <div className={classNames('slds-accordion__summary', props.className)}>
-        <h3 className={classNames('slds-text-heading--small slds-accordion__summary-heading', props.className)}>
+        <h3 className={classNames('slds-text-heading_small slds-accordion__summary-heading', props.className)}>
           <button
             aria-controls={props.referenceId}
             aria-expanded={props.isOpen}
-            className="slds-button slds-button--reset slds-accordion__summary-action"
+            className="slds-button slds-button_reset slds-accordion__summary-action"
           >
             <SvgIcon
-              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon--left"
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
               sprite="utility"
               symbol="switch"
             />
@@ -35,7 +35,7 @@ let AccordionSection = props =>
           </button>
         </h3>
         <button
-          className="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small slds-shrink-none" aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none" aria-haspopup="true"
         >
           <SvgIcon
             className="slds-button__icon"

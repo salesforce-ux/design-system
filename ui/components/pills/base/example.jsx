@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /// ////////////////////////////////////////
 
 export let Pill = props =>
-  <span className={classNames('slds-pill slds-pill--link', props.className)}>
+  <span className={classNames('slds-pill slds-pill_link', props.className)}>
     { props.children }
     <a href="javascript:void(0);" className="slds-pill__action" title={props.label || 'Full pill label verbiage mirrored here'}>
       <span className="slds-pill__label">
@@ -19,7 +19,7 @@ export let Pill = props =>
       </span>
     </a>
     <ButtonIcon
-      className="slds-button--icon slds-pill__remove"
+      className="slds-button_icon slds-pill__remove"
       symbol="close"
       assistiveText="Remove"
       title="Remove"
@@ -59,7 +59,7 @@ export let examples = [
     element:
       <Pill>
         <span className="slds-pill__icon_container">
-          <span className="slds-avatar slds-avatar--circle" title="User avatar">
+          <span className="slds-avatar slds-avatar_circle" title="User avatar">
             <img
               alt="Person name"
               src="/assets/images/avatar2.jpg"

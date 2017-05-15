@@ -77,7 +77,7 @@ let ErrorState = props =>
 let ErrorIcon = props =>
     <FormElement className="slds-has-error">
       <FormElementLabel><abbr className="slds-required" title="required">*</abbr> Input Label</FormElementLabel>
-      <FormElementControl className="slds-input-has-icon slds-input-has-icon--left">
+      <FormElementControl className="slds-input-has-icon slds-input-has-icon_left">
         <SvgIcon className="slds-input__icon" sprite="utility" symbol="warning" />
         <Input required aria-describedby={props.errorId} />
       </FormElementControl>
@@ -159,9 +159,9 @@ export let examples = [
     element:
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left" >
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left" >
           <SvgIcon
-            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
@@ -175,9 +175,9 @@ export let examples = [
     element:
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon--right" >
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon_right" >
           <SvgIcon
-            className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
@@ -191,14 +191,14 @@ export let examples = [
     element:
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right" >
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right" >
           <SvgIcon
-            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
           <Input />
-          <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+          <button className="slds-input__icon slds-input__icon_right slds-button slds-button_icon">
             <SvgIcon
               className="slds-button__icon slds-icon-text-light"
               sprite="utility"
@@ -215,16 +215,16 @@ export let examples = [
     element:
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon--left-right" >
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right" >
           <SvgIcon
-            className="slds-icon slds-input__icon slds-input__icon--left slds-icon-text-default"
+            className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"
             symbol="search"
           />
           <Input />
           <div className="slds-input__icon-group slds-input__icon-group_right">
-            <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
-            <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+            <Spinner className="slds-spinner_brand slds-spinner_x-small slds-input__spinner" />
+            <button className="slds-input__icon slds-input__icon_right slds-button slds-button_icon">
               <SvgIcon
                 className="slds-button__icon slds-icon-text-light"
                 sprite="utility"
@@ -257,9 +257,9 @@ export let examples = [
       <div className="slds-form-element">
         <label className="slds-form-element__label slds-align-middle" htmlFor="form-help">Text Label</label>
         <div className="slds-form-element__icon">
-          <button aria-describedby="help" className="slds-button slds-button--icon">
+          <button aria-describedby="help" className="slds-button slds-button_icon">
             <SvgIcon
-              className="slds-icon slds-icon--x-small slds-icon-text-default"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
               sprite="utility"
               symbol="info"
             />
@@ -276,7 +276,7 @@ export let examples = [
         </div>
       </div>
       <div
-        className="slds-popover slds-popover--tooltip slds-nubbin--bottom-left"
+        className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
         id="help"
         role="tooltip"
         style={{position: 'absolute', top: '15px', left: '72px', marginLeft: '-1rem', width: '20rem'}}

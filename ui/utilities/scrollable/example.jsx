@@ -23,7 +23,7 @@ export let examples = [
     id: 'none',
     label: 'None',
     element:
-    <div className="slds-scrollable--none">
+    <div className="slds-scrollable_none">
       Scrollable Content Here
     </div>
   },
@@ -31,7 +31,7 @@ export let examples = [
     id: 'x-axis',
     label: 'X-axis',
     element:
-    <div className="slds-scrollable--x">
+    <div className="slds-scrollable_x">
       Scrollable Content Here
     </div>
   },
@@ -39,7 +39,7 @@ export let examples = [
     id: 'y-axis',
     label: 'Y-axis',
     element:
-    <div className="slds-scrollable--y">
+    <div className="slds-scrollable_y">
       Scrollable Content Here
     </div>
   }

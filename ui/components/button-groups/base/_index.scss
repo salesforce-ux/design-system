@@ -39,7 +39,7 @@
  * These selectors must remain in long hand in order to zero out borders that
  * we don't want on last-child or :only-child wrapped buttons
  *
- * @selector .slds-button--last
+ * @selector .slds-button_last
  * @restrict .slds-button-group div, .slds-button-group-list div
  */
 .slds-button-group .slds-button:last-child,

@@ -21,7 +21,7 @@ export let TimelineIcon = props =>
     title={props.symbol == 'log_a_call' ? 'call' : props.symbol}
   >
     <SvgIcon
-      className="slds-icon slds-icon--small"
+      className="slds-icon slds-icon_small"
       sprite="standard"
       symbol={props.symbol}
     />
@@ -31,7 +31,7 @@ export let TimelineActions = props =>
   <div className="slds-timeline__actions">
     <p className="slds-timeline__date">{ props.date || 'Feb 24' }</p>
     <ButtonIcon
-      className="slds-button--icon-border-filled slds-button--icon-x-small"
+      className="slds-button_icon-border-filled slds-button_icon-x-small"
       symbol="down"
       assistiveText={props.assistiveText || 'More Options'}
       aria-haspopup="true"

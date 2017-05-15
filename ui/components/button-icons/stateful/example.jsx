@@ -10,7 +10,7 @@ import { ButtonIcon } from '../base/example';
 
 export default (
   <ButtonIcon
-    className="slds-button--icon-border"
+    className="slds-button_icon-border"
     aria-pressed="false"
     symbol="like"
     assistiveText="Like"
@@ -24,7 +24,7 @@ export let states = [
     label: 'Not Selected',
     element:
       <ButtonIcon
-        className="slds-button--icon-border"
+        className="slds-button_icon-border"
         aria-pressed="false"
         symbol="like"
         assistiveText="Like"
@@ -36,7 +36,7 @@ export let states = [
     label: 'Selected',
     element:
       <ButtonIcon
-        className="slds-button--icon-border"
+        className="slds-button_icon-border"
         aria-pressed="true"
         selected
         symbol="like"

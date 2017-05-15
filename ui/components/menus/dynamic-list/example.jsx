@@ -15,14 +15,14 @@ import _ from 'lodash';
 let Footer = props =>
   <ul>
     <li>
-      <button className="slds-button slds-lookup__item-action slds-lookup__item-action--label">
-        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="add" />
+      <button className="slds-button slds-lookup__item-action slds-lookup__item-action_label">
+        <SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="add" />
         Favorite this page
       </button>
     </li>
     <li>
-      <button className="slds-button slds-lookup__item-action slds-lookup__item-action--label">
-        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="edit" />
+      <button className="slds-button slds-lookup__item-action slds-lookup__item-action_label">
+        <SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="edit" />
         Edit Favorites
       </button>
     </li>
@@ -38,12 +38,12 @@ export let states = [
     label: '0 items',
     element:
       <Popover
-        className="slds-nubbin--top-right"
-        bodyClassName="slds-p-around--medium"
-        footerClassName="slds-p-horizontal--none"
+        className="slds-nubbin_top-right"
+        bodyClassName="slds-p-around_medium"
+        footerClassName="slds-p-horizontal_none"
         footer={<Footer />}
       >
-        <h3 className="slds-text-title--caps slds-m-bottom--x-small" role="presentation">My Favorites</h3>
+        <h3 className="slds-text-title_caps slds-m-bottom_x-small" role="presentation">My Favorites</h3>
         <p>You can favorite any page!</p>
       </Popover>
   },
@@ -52,19 +52,19 @@ export let states = [
     label: '1 item',
     element:
       <Popover
-        className="slds-nubbin--top-right"
-        bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
-        footerClassName="slds-p-horizontal--none"
+        className="slds-nubbin_top-right"
+        bodyClassName="slds-p-vertical_xx-small slds-p-horizontal_none"
+        footerClassName="slds-p-horizontal_none"
         footer={<Footer />}
       >
-        <Listbox className="slds-dropdown--length-10">
+        <Listbox className="slds-dropdown_length-10">
           <ListboxList role="group" aria-label="My Favorites">
             <ListboxItem role="presentation" headerText="My Favorites" />
             <ListboxItem tabIndex="0">
-              <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+              <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
               <span className="slds-media__body">
                 <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
-                <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+                <span className="slds-lookup__result-meta slds-text-body_small">Account &bull; San Francisco</span>
               </span>
             </ListboxItem>
           </ListboxList>
@@ -76,20 +76,20 @@ export let states = [
     label: '< 10 items',
     element:
       <Popover
-        className="slds-nubbin--top-right"
-        bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
-        footerClassName="slds-p-horizontal--none"
+        className="slds-nubbin_top-right"
+        bodyClassName="slds-p-vertical_xx-small slds-p-horizontal_none"
+        footerClassName="slds-p-horizontal_none"
         footer={<Footer />}
       >
-        <Listbox className="slds-dropdown--length-10">
+        <Listbox className="slds-dropdown_length-10">
           <ListboxList role="group" aria-label="My Favorites">
             <ListboxItem role="presentation" headerText="My Favorites" />
             { _.times(7, i =>
               <ListboxItem tabIndex={(i === 0) ? '0' : null} key={`listbox-${i}`}>
-                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+                <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
                 <span className="slds-media__body">
                   <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
-                  <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+                  <span className="slds-lookup__result-meta slds-text-body_small">Account &bull; San Francisco</span>
                 </span>
               </ListboxItem>
             )}
@@ -102,14 +102,14 @@ export let states = [
     label: '> 10 items',
     element:
       <Popover
-        className="slds-nubbin--top-right"
-        bodyClassName="slds-p-vertical--xx-small slds-p-horizontal--none"
-        footerClassName="slds-p-horizontal--none"
+        className="slds-nubbin_top-right"
+        bodyClassName="slds-p-vertical_xx-small slds-p-horizontal_none"
+        footerClassName="slds-p-horizontal_none"
         footer={<Footer />}
       >
-        <PickList classNames="slds-size--1-of-1" isOpen>
+        <PickList classNames="slds-size_1-of-1" isOpen>
           <FormElement
-            className="slds-p-around--small"
+            className="slds-p-around_small"
             label="Categories"
             hideLabel
             inputId="text-input-01"
@@ -128,15 +128,15 @@ export let states = [
               type="text"
             />
           </FormElement>
-          <Listbox className="slds-dropdown--length-10" id="option-list-01">
+          <Listbox className="slds-dropdown_length-10" id="option-list-01">
             <ListboxList role="group" aria-label="My Favorites">
               <ListboxItem role="presentation" headerText="My Favorites" />
               { _.times(11, i =>
                 <ListboxItem key={`listbox-${i}`}>
-                  <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+                  <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
                   <span className="slds-media__body">
                     <span className="slds-lookup__result-text">Salesforce.com, Inc.</span>
-                    <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+                    <span className="slds-lookup__result-meta slds-text-body_small">Account &bull; San Francisco</span>
                   </span>
                 </ListboxItem>
               )}

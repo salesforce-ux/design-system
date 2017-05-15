@@ -4,7 +4,7 @@
 /**
  * @summary Creates the 13px regular body copy
  *
- * @selector .slds-text-body--regular
+ * @selector .slds-text-body_regular
  * @modifier
  */
 .slds-text-body_regular,
@@ -15,7 +15,7 @@
 /**
  * @summary Creates a more pale-colored 12px copy
  *
- * @selector .slds-text-body--small
+ * @selector .slds-text-body_small
  * @modifier
  */
 .slds-text-body_small,
@@ -27,7 +27,7 @@
 /**
  * @summary Very large 28px heading
  *
- * @selector .slds-text-heading--large
+ * @selector .slds-text-heading_large
  * @modifier
  */
 .slds-text-heading_large,
@@ -40,7 +40,7 @@
 /**
  * @summary Large 20px heading
  *
- * @selector .slds-text-heading--medium
+ * @selector .slds-text-heading_medium
  * @modifier
  */
 .slds-text-heading_medium,
@@ -53,7 +53,7 @@
 /**
  * @summary Smaller 16px heading
  *
- * @selector .slds-text-heading--small
+ * @selector .slds-text-heading_small
  * @modifier
  */
 .slds-text-heading_small,
@@ -89,7 +89,7 @@
 /**
  * @summary All caps 12px heading
  *
- * @selector .slds-text-title--caps
+ * @selector .slds-text-title_caps
  * @notes Usually labels small content areas like tabs and page header titles.
  * @modifier
  */
@@ -104,7 +104,7 @@
 /**
  * @summary Resets line-height to browser default
  *
- * @selector .slds-line-height--reset
+ * @selector .slds-line-height_reset
  * @modifier
  */
 .slds-line-height_reset,
@@ -116,7 +116,7 @@
 /**
  * @summary Default color of text
  *
- * @selector .slds-text-color--default
+ * @selector .slds-text-color_default
  * @modifier
  */
 .slds-text-color_default,
@@ -127,7 +127,7 @@
 /**
  * @summary Weak color of text
  *
- * @selector .slds-text-color--weak
+ * @selector .slds-text-color_weak
  * @modifier
  */
 .slds-text-color_weak,
@@ -138,7 +138,7 @@
 /**
  * @summary Error color of text
  *
- * @selector .slds-text-color--error
+ * @selector .slds-text-color_error
  * @modifier
  */
 .slds-text-color_error,
@@ -149,7 +149,7 @@
 /**
  * @summary Default color of text on inversed background
  *
- * @selector .slds-text-color--inverse
+ * @selector .slds-text-color_inverse
  * @modifier
  */
 .slds-text-color_inverse,
@@ -160,7 +160,7 @@
 /**
  * @summary Weak color of text on inversed background
  *
- * @selector .slds-text-color--inverse-weak
+ * @selector .slds-text-color_inverse-weak
  * @modifier
  */
 .slds-text-color_inverse-weak,
@@ -171,7 +171,7 @@
 /**
  * @summary Aligns text left
  *
- * @selector .slds-text-align--left
+ * @selector .slds-text-align_left
  * @modifier
  */
 .slds-text-align_left,
@@ -182,7 +182,7 @@
 /**
  * @summary Aligns text center
  *
- * @selector .slds-text-align--center
+ * @selector .slds-text-align_center
  * @modifier
  */
 .slds-text-align_center,
@@ -193,7 +193,7 @@
 /**
  * @summary Aligns text right
  *
- * @selector .slds-text-align--right
+ * @selector .slds-text-align_right
  * @modifier
  */
 .slds-text-align_right,

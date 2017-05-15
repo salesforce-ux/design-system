@@ -15,14 +15,14 @@ $_sizes: (
 );
 
 /**
- * @selector .slds-size--small
+ * @selector .slds-size_small
  * @modifier
  */
 
 // Absolute sizes (rem)
 @each $name, $width in $_sizes {
   /*
-   * @selector .slds-size--#{$name}
+   * @selector .slds-size_#{$name}
    * @modifier
    */
   .slds-size_#{$name},

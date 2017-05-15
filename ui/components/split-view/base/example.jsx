@@ -69,8 +69,8 @@ let SplitView = props =>
     <ButtonIcon
       aria-controls="split-view-id"
       aria-expanded={props.hidden ? 'false' : 'true'}
-      className={classNames('slds-button--icon slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open')}
-      iconClassName="slds-button__icon--x-small"
+      className={classNames('slds-button_icon slds-split-view__toggle-button', props.hidden ? 'slds-is-closed' : 'slds-is-open')}
+      iconClassName="slds-button__icon_x-small"
       symbol="left"
       assistiveText={props.hidden ? 'Open Split View' : 'Close Split View'}
       title={props.hidden ? 'Open Split View' : 'Close Split View'}
@@ -78,12 +78,12 @@ let SplitView = props =>
     <article
       aria-hidden={props.hidden ? 'true' : 'false'}
       id="split-view-id"
-      className={classNames('slds-split-view slds-grid slds-grid--vertical slds-grow', props.className)}
+      className={classNames('slds-split-view slds-grid slds-grid_vertical slds-grow', props.className)}
     >
       <header className="slds-split-view__header">
-        <div className="slds-grid slds-grid--vertical-align-center slds-m-bottom--xx-small">
+        <div className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small">
           <div className="slds-has-flexi-truncate">
-            <div className="slds-media slds-media--center">
+            <div className="slds-media slds-media_center">
               <div className="slds-media__figure">
                 <div className="slds-icon_container slds-icon-standard-lead">
                   <SvgIcon className="slds-icon" sprite="standard" symbol="lead" />
@@ -91,11 +91,11 @@ let SplitView = props =>
                 </div>
               </div>
               <div className="slds-media__body">
-                <h1 className="slds-text-heading--small slds-text-color--default slds-p-right--x-small">
-                  <button className="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
-                    <span className="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+                <h1 className="slds-text-heading_small slds-text-color_default slds-p-right_x-small">
+                  <button className="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+                    <span className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
                       <span className="slds-truncate" title="My Leads">My Leads</span>
-                      <SvgIcon className="slds-button__icon slds-button__icon--right slds-no-flex" sprite="utility" symbol="down" />
+                      <SvgIcon className="slds-button__icon slds-button__icon_right slds-no-flex" sprite="utility" symbol="down" />
                     </span>
                   </button>
                 </h1>
@@ -104,20 +104,20 @@ let SplitView = props =>
           </div>
           <div className="slds-no-flex slds-grid">
             <ButtonIcon
-              className="slds-button--icon-border-filled"
+              className="slds-button_icon-border-filled"
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions"
               title="More Actions" />
           </div>
         </div>
-        <div className="slds-grid slds-grid--vertical-align-center">
-          <p className="slds-text-body--small slds-text-color--weak">42 items &bull; Updated just now</p>
-          <div className="slds-no-flex slds-grid slds-col--bump-left">
+        <div className="slds-grid slds-grid_vertical-align-center">
+          <p className="slds-text-body_small slds-text-color_weak">42 items &bull; Updated just now</p>
+          <div className="slds-no-flex slds-grid slds-col_bump-left">
             <div className="slds-button-group">
               <ButtonIcon
                 hasDropdown
-                className="slds-button--icon slds-button--icon-container-more"
+                className="slds-button_icon slds-button_icon-container-more"
                 symbol="side_list"
                 title="Display As Split View"
                 assistiveText="Display As Split View"
@@ -125,7 +125,7 @@ let SplitView = props =>
             </div>
             <div className="slds-button-group">
               <ButtonIcon
-                className="slds-button--icon slds-button--icon-container"
+                className="slds-button_icon slds-button_icon-container"
                 symbol="refresh"
                 title="Refresh List"
                 assistiveText="Refresh List"
@@ -134,18 +134,18 @@ let SplitView = props =>
           </div>
         </div>
       </header>
-      <div className="slds-grid slds-grid--vertical">
-        <div className="slds-split-view__list-header slds-grid slds-text-title--caps">
+      <div className="slds-grid slds-grid_vertical">
+        <div className="slds-split-view__list-header slds-grid slds-text-title_caps">
           <span className="slds-assistive-text">Sorted by:</span>
           <span>Lead Score
             <SvgIcon
-              className="slds-icon slds-icon--xx-small slds-icon-text-default slds-align-top" sprite="utility"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top" sprite="utility"
               symbol="arrowdown"
             />
           </span>
           <span className="slds-assistive-text">- Descending</span>
         </div>
-        <ul aria-multiselectable="true" className="slds-scrollable--y" role="listbox" aria-label="Select an item to open it in a new workspace tab.">
+        <ul aria-multiselectable="true" className="slds-scrollable_y" role="listbox" aria-label="Select an item to open it in a new workspace tab.">
           { props.children }
         </ul>
       </div>
@@ -156,15 +156,15 @@ let Row = props =>
   <li className={classNames('slds-split-view__list-item', props.className, props.unread ? 'slds-is-unread' : null)} role="presentation">
     <a href="javascript:void(0);" aria-selected={!!props.selected} role="option" className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabIndex={props.tabIndex}>
       { props.unread
-        ? <abbr className="slds-indicator--unread" title="Unread Item" aria-label="Unread Item">
+        ? <abbr className="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
           <span className="slds-assistive-text">●</span>
         </abbr>
       : null }
       <div className="slds-grid slds-wrap">
-        <span className="slds-truncate slds-text-body--regular slds-text-color--default" title={props.colOne || 'Object Name'}>
+        <span className="slds-truncate slds-text-body_regular slds-text-color_default" title={props.colOne || 'Object Name'}>
           { props.colOne || 'Column 1' }
         </span>
-        <span className="slds-truncate slds-col--bump-left" title={props.colTwo || 'Column 2'}>
+        <span className="slds-truncate slds-col_bump-left" title={props.colTwo || 'Column 2'}>
           { props.colTwo || 'Column 2' }
         </span>
       </div>
@@ -172,7 +172,7 @@ let Row = props =>
         <span className="slds-truncate" title={props.colThree || 'Column 3'}>
           { props.colThree || 'Column 3' }
         </span>
-        <span className="slds-truncate slds-col--bump-left" title={props.colFour || 'Column 4'}>
+        <span className="slds-truncate slds-col_bump-left" title={props.colFour || 'Column 4'}>
           { props.colFour || 'Column 4' }
         </span>
       </div>

@@ -21,32 +21,32 @@ const tabId03 = 'context-tab-id-3';
 /// ///////////////////////////////////////////
 
 let ShortCutKey = props =>
-  <span className="slds-text-body--small slds-text-color--weak slds-p-left--large">
+  <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
     <span className="slds-assistive-text">:</span>
     { props.children }
   </span>;
 
 // Context Tab
 let ContextTab = props =>
-  <li className={classNames('slds-context-bar__item slds-context-bar__item--tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
+  <li className={classNames('slds-context-bar__item slds-context-bar__item_tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
     <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={props.title || 'tab name'} aria-selected={props.itemActive ? 'true' : 'false'} tabIndex={props.itemActive ? '0' : '-1'} aria-controls={props.tabPanelId} id={props.id}>
-      { props.itemUnsaved ? <abbr className="slds-indicator--unsaved" title="Tab Not Saved">*</abbr> : null }
+      { props.itemUnsaved ? <abbr className="slds-indicator_unsaved" title="Tab Not Saved">*</abbr> : null }
       <div className="slds-icon_container" title={_.startCase(props.symbol) || 'Case'}>
-        <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
+        <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
       </div>
       <span className={classNames('slds-truncate', props.pinned ? 'slds-assistive-text' : null)} title={props.title || 'tab name'}>{ props.title || 'tab name'}</span>
     </a>
-    <div className={classNames('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-p-left--none slds-p-right--none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
+    <div className={classNames('slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none', props.actionOverflow == 'true' ? 'slds-is-open' : null)}>
       <ButtonIcon
-        className="slds-button--icon-container slds-button--icon-x-small"
+        className="slds-button_icon-container slds-button_icon-x-small"
         tabIndex={props.itemActive ? '0' : '-1'}
         symbol="chevrondown"
         aria-haspopup="true"
         assistiveText={'Actions for ' + props.title}
         title={'Actions for ' + props.title}
       />
-      <Menu className="slds-dropdown--right">
+      <Menu className="slds-dropdown_right">
         <MenuList>
           <MenuItem iconRight={<ShortCutKey>r</ShortCutKey>}>Refresh Tab</MenuItem>
           <MenuItem iconRight={<ShortCutKey>⇧ + n</ShortCutKey>}>Open in a new window</MenuItem>
@@ -56,9 +56,9 @@ let ContextTab = props =>
       </Menu>
     </div>
     { !props.pinned
-      ? <div className="slds-context-bar__icon-action slds-col--bump-left slds-p-left--none">
+      ? <div className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none">
         <ButtonIcon
-          className="slds-button--icon-container slds-button--icon-x-small"
+          className="slds-button_icon-container slds-button_icon-x-small"
           tabIndex={props.itemActive ? '0' : '-1'}
           symbol="close"
           assistiveText={'Close ' + props.title}
@@ -72,7 +72,7 @@ let ContextTabPanel = props =>
   <div
     id={props.id}
     className={classNames(
-      'slds-p-vertical--medium',
+      'slds-p-vertical_medium',
       props.show ? 'slds-show' : 'slds-hide'
     )}
     role="tabpanel"
@@ -87,10 +87,10 @@ let ContextTabPanel = props =>
 
 export let ContextTabBar = props =>
 
-  <div className={classNames('slds-context-bar slds-context-bar--tabs', props.className)}>
+  <div className={classNames('slds-context-bar slds-context-bar_tabs', props.className)}>
 
     <div className="slds-context-bar__primary">
-      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
+      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
         <div className="slds-context-bar__icon-action">
           <WaffleIcon className="slds-context-bar__button" />
         </div>
@@ -99,40 +99,40 @@ export let ContextTabBar = props =>
         </span>
       </div>
 
-      <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click', props.objectSwitchClassName)}>
+      <div className={classNames('slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click', props.objectSwitchClassName)}>
         <a href="javascript:void(0);" className="slds-context-bar__label-action">
           <span className="slds-truncate" title="Object">Object</span>
         </a>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className="slds-button--icon-container slds-button--icon-x-small"
+            className="slds-button_icon-container slds-button_icon-x-small"
             symbol="chevrondown"
             aria-haspopup="true"
             assistiveText="Open object switcher menu"
             title="Open object switcher menu"
           />
         </div>
-        <Menu className="slds-dropdown--right">
+        <Menu className="slds-dropdown_right">
           <MenuList>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-account slds-m-right--small" sprite="standard" symbol="account" />
+              <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" sprite="standard" symbol="account" />
               Accounts
             </MenuItem>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" sprite="standard" symbol="case" />
+              <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-case slds-m-right_small" sprite="standard" symbol="case" />
               Cases
             </MenuItem>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon--small slds-icon-standard-work-order slds-m-right--small" sprite="standard" symbol="work_order" />
+              <SvgIcon className="slds-icon slds-icon_small slds-icon-standard-work-order slds-m-right_small" sprite="standard" symbol="work_order" />
               Insights
             </MenuItem>
           </MenuList>
         </Menu>
       </div>
-      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabClassName)}>
+      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click', props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className={classNames('slds-button--icon-container slds-button--icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
+            className={classNames('slds-button_icon-container slds-button_icon-small', props.splitViewActive ? 'slds-is-selected' : null)}
             symbol="side_list"
             assistiveText="Toggle split view"
             title="Toggle split view"
@@ -142,23 +142,23 @@ export let ContextTabBar = props =>
         </div>
       </div>
       <div className="slds-context-bar__vertical-divider" />
-      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger--click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
+      <div className={classNames('slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click', props.addTabActive ? 'slds-is-open' : null, props.addTabClassName)}>
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
-            className="slds-button--icon-container slds-button--icon-small"
+            className="slds-button_icon-container slds-button_icon-small"
             symbol="add"
             assistiveText="Open a New Tab"
             title="Open a New Tab"
           />
         </div>
         { props.addTabActive
-          ? <section className="slds-popover slds-nubbin--top" role="dialog" aria-label="Add tab by URL or ID" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
+          ? <section className="slds-popover slds-nubbin_top" role="dialog" aria-label="Add tab by URL or ID" style={{ position: 'absolute', left: '1.125rem', top: '2.75rem', marginLeft: '-10rem' }}>
             <div className="slds-popover__body">
               <div className="slds-form-element">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Add Page by URL or ID</label>
                 <div className="slds-form-element__control slds-grid">
                   <input id="text-input-01" className="slds-input" type="text" placeholder="Placeholder Text" />
-                  <button className="slds-button slds-button--brand slds-shrink-none slds-m-left--small" type="submit">Add Tab</button>
+                  <button className="slds-button slds-button_brand slds-shrink-none slds-m-left_small" type="submit">Add Tab</button>
                 </div>
               </div>
             </div>
@@ -665,10 +665,10 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click">
             <button className="slds-button slds-context-bar__label-action" aria-haspopup="true">
-              <span className="slds-p-left--xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
-              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
             </button>
           </li>
         </ContextTabBar>
@@ -716,19 +716,19 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
             <button className="slds-button slds-context-bar__label-action" aria-haspopup="true">
-              <span className="slds-p-left--xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
-              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tab Items">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
             </button>
-            <Menu className="slds-dropdown--right">
+            <Menu className="slds-dropdown_right">
               <MenuList>
                 <MenuItem>
-                  <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="case" />
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
                 <MenuItem>
-                  <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="case" />
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
               </MenuList>
@@ -779,11 +779,11 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-unsaved">
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-unsaved">
             <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
-              <abbr className="slds-indicator--unsaved" title="Tab(s) within menu not saved">*</abbr>
-              <span className="slds-p-left--xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
-              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+              <abbr className="slds-indicator_unsaved" title="Tab(s) within menu not saved">*</abbr>
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
             </button>
           </li>
         </ContextTabBar>
@@ -831,21 +831,21 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open slds-is-unsaved">
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-is-unsaved">
             <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
-              <abbr className="slds-indicator--unsaved" title="Tab(s) within menu not saved">*</abbr>
-              <span className="slds-p-left--xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
-              <SvgIcon className="slds-button__icon slds-button__icon--small slds-button__icon--right" sprite="utility" symbol="chevrondown" />
+              <abbr className="slds-indicator_unsaved" title="Tab(s) within menu not saved">*</abbr>
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
             </button>
-            <Menu className="slds-dropdown--right">
+            <Menu className="slds-dropdown_right">
               <MenuList>
                 <MenuItem className="slds-is-unsaved">
                   <abbr className="slds-unsaved-indicator" title="Tab(s) within menu not saved">*</abbr>
-                  <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="case" />
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
                 <MenuItem>
-                  <SvgIcon className="slds-icon slds-icon--small slds-icon-text-default" sprite="standard" symbol="case" />
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
               </MenuList>

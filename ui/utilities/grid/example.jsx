@@ -23,11 +23,11 @@ export let examples = [
     id: 'stretch-gutters',
     label: 'Column Stretch w/ Gutters',
     element:
-    <div className="slds-grid slds-grid--pull-padded-medium">
-      <div className="slds-col slds-p-horizontal--medium" />
-      <div className="slds-col slds-p-horizontal--medium" />
+    <div className="slds-grid slds-grid_pull-padded-medium">
+      <div className="slds-col slds-p-horizontal_medium" />
+      <div className="slds-col slds-p-horizontal_medium" />
     </div>,
-    description: 'To apply gutters between each grid item, the following spacing classes are available to add your intended gutters, \`.slds-p-horizontal--small\`, \`.slds-p-horizontal--medium\`, \`.slds-p-horizontal--large\`, \`.slds-p-around--small\`, \`.slds-p-around--medium\` and \`.slds-p-around--large\`. You may need to pull the grid items back to their original grid boundaries of the grid container, apply the classes \`.slds-grid--pull-padded\`, \`.slds-grid--pull-padded-medium\` or \`.slds-grid--pull-padded-large\` to the \`.slds-grid\`.'
+    description: 'To apply gutters between each grid item, the following spacing classes are available to add your intended gutters, \`.slds-p-horizontal_small\`, \`.slds-p-horizontal_medium\`, \`.slds-p-horizontal_large\`, \`.slds-p-around_small\`, \`.slds-p-around_medium\` and \`.slds-p-around_large\`. You may need to pull the grid items back to their original grid boundaries of the grid container, apply the classes \`.slds-grid_pull-padded\`, \`.slds-grid_pull-padded-medium\` or \`.slds-grid_pull-padded-large\` to the \`.slds-grid\`.'
   },
   {
     id: 'no-stretch',
@@ -42,25 +42,25 @@ export let examples = [
     id: 'no-stretch-gutters',
     label: 'No Column Stretch w/ Gutters',
     element:
-      <div className="slds-grid slds-grid--pull-padded-medium">
-        <div className="slds-p-horizontal--medium" />
-        <div className="slds-p-horizontal--medium" />
+      <div className="slds-grid slds-grid_pull-padded-medium">
+        <div className="slds-p-horizontal_medium" />
+        <div className="slds-p-horizontal_medium" />
       </div>
   },
   {
     id: 'regions-with-sizing',
     label: 'Manual Sizing',
     element:
-    <div className="slds-grid slds-wrap slds-grid--pull-padded">
-      <div className="slds-p-horizontal--small slds-size--1-of-1" />
-      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--5-of-6 slds-large-size--8-of-12" />
-      <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12" />
-      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3" />
-      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3" />
-      <div className="slds-p-horizontal--small slds-size--1-of-1 slds-large-size--1-of-3">
-        <div className="slds-grid slds-wrap slds-grid--pull-padded">
-          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2" />
-          <div className="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-1 slds-large-size--1-of-2" />
+    <div className="slds-grid slds-wrap slds-grid_pull-padded">
+      <div className="slds-p-horizontal_small slds-size_1-of-1" />
+      <div className="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_8-of-12" />
+      <div className="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_4-of-12" />
+      <div className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3" />
+      <div className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3" />
+      <div className="slds-p-horizontal_small slds-size_1-of-1 slds-large-size_1-of-3">
+        <div className="slds-grid slds-wrap slds-grid_pull-padded">
+          <div className="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2" />
+          <div className="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2" />
         </div>
       </div>
     </div>,
@@ -70,85 +70,85 @@ export let examples = [
     id: 'horizontal-align-center',
     label: 'Horizontal Alignment - Center',
     element:
-    <div className="slds-grid slds-grid--align-center">
+    <div className="slds-grid slds-grid_align-center">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'If you want your columns to grow from the the center of the main (horizontal) axis, apply the class \`slds-grid--align-center\`.'
+    description: 'If you want your columns to grow from the the center of the main (horizontal) axis, apply the class \`slds-grid_align-center\`.'
   },
   {
     id: 'horizontal-align-space',
     label: 'Horizontal Alignment - Space',
     element:
-    <div className="slds-grid slds-grid--align-space">
+    <div className="slds-grid slds-grid_align-space">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'To evenly distribute columns on the main axis with an equal amount of white space separating the columns, apply the class \`slds-grid--align-space\`.'
+    description: 'To evenly distribute columns on the main axis with an equal amount of white space separating the columns, apply the class \`slds-grid_align-space\`.'
   },
   {
     id: 'horizontal-align-spread',
     label: 'Horizontal Alignment - Spread',
     element:
-    <div className="slds-grid slds-grid--align-spread">
+    <div className="slds-grid slds-grid_align-spread">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'To spread out your columns on the main axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class \`.slds-grid--align-spread\`.'
+    description: 'To spread out your columns on the main axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class \`.slds-grid_align-spread\`.'
   },
   {
     id: 'horizontal-align-end',
     label: 'Horizontal Alignment - End',
     element:
-    <div className="slds-grid slds-grid--align-end">
+    <div className="slds-grid slds-grid_align-end">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'If you want your columns to grow from the end of the main axis, apply the class \`.slds-grid--align-end\`.'
+    description: 'If you want your columns to grow from the end of the main axis, apply the class \`.slds-grid_align-end\`.'
   },
   {
     id: 'vertical-align-start',
     label: 'Vertical Alignment - Start',
     element:
-    <div className="slds-grid slds-grid--vertical-align-start">
+    <div className="slds-grid slds-grid_vertical-align-start">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'To align a single row or multi-line rows to the beginning of the cross axis, apply the class \`.slds-grid--vertical-align-start\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
+    description: 'To align a single row or multi-line rows to the beginning of the cross axis, apply the class \`.slds-grid_vertical-align-start\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
   },
   {
     id: 'vertical-align-center',
     label: 'Vertical Alignment - Center',
     element:
-    <div className="slds-grid slds-grid--vertical-align-center">
+    <div className="slds-grid slds-grid_vertical-align-center">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'To vertically center align a single row or multi-line rows to the height of a grid container, apply the class \`.slds-grid--vertical-align-center\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.When \`.slds-grid--vertical-align-center\` is used in conjunction with \`.slds-grid--align-center\`, the outcome would horizontally and vertically center align your content in the center of the \`.slds-grid\`.'
+    description: 'To vertically center align a single row or multi-line rows to the height of a grid container, apply the class \`.slds-grid_vertical-align-center\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.When \`.slds-grid_vertical-align-center\` is used in conjunction with \`.slds-grid_align-center\`, the outcome would horizontally and vertically center align your content in the center of the \`.slds-grid\`.'
   },
   {
     id: 'vertical-align-end',
     label: 'Vertical Alignment - End',
     element:
-    <div className="slds-grid slds-grid--vertical-align-end">
+    <div className="slds-grid slds-grid_vertical-align-end">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'To align a single row or multi-line rows to the end of the cross axis, apply the class \`.slds-grid--vertical-align-center\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
+    description: 'To align a single row or multi-line rows to the end of the cross axis, apply the class \`.slds-grid_vertical-align-center\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
   },
   {
     id: 'vertical-align-item',
@@ -165,13 +165,13 @@ export let examples = [
     id: 'vertical-strecth',
     label: 'Vertical Stretch',
     element:
-    <div className="slds-grid slds-grid--vertical-stretch">
+    <div className="slds-grid slds-grid_vertical-stretch">
       <div />
       <div />
       <div />
       <div />
     </div>,
-    description: 'By default, grid items extend vertically unless \`.slds-wrap\` is applied to your parent grid container or you have multiple rows. If you have need multiple rows that stretch the height of the parent grid container, you can apply the class \`.slds-grid--vertical-stretch\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
+    description: 'By default, grid items extend vertically unless \`.slds-wrap\` is applied to your parent grid container or you have multiple rows. If you have need multiple rows that stretch the height of the parent grid container, you can apply the class \`.slds-grid_vertical-stretch\`. Note, to vertically align elements on a cross-axis of a \`.slds-grid\`, the elements need available vertical white space. This is usually achieved by having a height applied to the \`.slds-grid\`.'
   },
   {
     id: 'align-item-bump',
@@ -182,19 +182,19 @@ export let examples = [
       <div />
       <div />
       <div />
-      <div className="slds-col--bump-left" />
+      <div className="slds-col_bump-left" />
       <div />
     </div>,
-    description: 'To "bump" a single grid item or a grid item plus the precedding grid items that follow, apply the class \`.slds-col--bump-{direction}\`, with \`{direction}\` being either \`left\`, \`right\`, \`top\` or \`bottom\` to a grid item.'
+    description: 'To "bump" a single grid item or a grid item plus the precedding grid items that follow, apply the class \`.slds-col_bump-{direction}\`, with \`{direction}\` being either \`left\`, \`right\`, \`top\` or \`bottom\` to a grid item.'
   },
   {
     id: 'order',
     label: 'Ordering',
     element:
     <div className="slds-grid">
-      <div className="slds-order--2 slds-medium-order--1 slds-large-order--3" />
-      <div className="slds-order--3 slds-medium-order--2 slds-large-order--2" />
-      <div className="slds-order--1 slds-medium-order--3 slds-large-order--1" />
+      <div className="slds-order_2 slds-medium-order_1 slds-large-order_3" />
+      <div className="slds-order_3 slds-medium-order_2 slds-large-order_2" />
+      <div className="slds-order_1 slds-medium-order_3 slds-large-order_1" />
     </div>,
     description: 'These helper classes visually reorder grid elements independently from their position in the markup.'
   },
@@ -202,21 +202,21 @@ export let examples = [
     id: 'container-app-frame',
     label: 'Container - App Frame',
     element:
-    <div className="slds-grid slds-grid--frame">
+    <div className="slds-grid slds-grid_frame">
       <div />
     </div>,
-    description: 'If you want your application to fill 100% of the width and height of the viewport and nest other grids inside, use the top-level app helper class \`.slds-grid--frame\`.'
+    description: 'If you want your application to fill 100% of the width and height of the viewport and nest other grids inside, use the top-level app helper class \`.slds-grid_frame\`.'
   },
   {
     id: 'containers',
     label: 'Containers',
     element:
-    <div className="slds-grid slds-grid--vertical">
-      <div className="slds-container--small" />
-      <div className="slds-container--medium" />
-      <div className="slds-container--large" />
-      <div className="slds-container--x-large" />
-      <div className="slds-container--fluid" />
+    <div className="slds-grid slds-grid_vertical">
+      <div className="slds-container_small" />
+      <div className="slds-container_medium" />
+      <div className="slds-container_large" />
+      <div className="slds-container_x-large" />
+      <div className="slds-container_fluid" />
     </div>,
     description: 'You can use the grid system&rsquo;s containers to constrain your content to a certain width. You can center or left or right align the containers within your viewport.'
   }

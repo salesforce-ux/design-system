@@ -26,7 +26,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--xx-small" />
+          <Spinner className="slds-spinner_xx-small" />
         </SpinnerContainer>
       </Demo>
   },
@@ -37,7 +37,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--x-small" />
+          <Spinner className="slds-spinner_x-small" />
         </SpinnerContainer>
       </Demo>
   },
@@ -47,7 +47,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--small" />
+          <Spinner className="slds-spinner_small" />
         </SpinnerContainer>
       </Demo>
   },
@@ -57,7 +57,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--medium" />
+          <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
       </Demo>
   },
@@ -67,7 +67,7 @@ export let states = [
     element:
       <Demo>
         <SpinnerContainer>
-          <Spinner className="slds-spinner--large" />
+          <Spinner className="slds-spinner_large" />
         </SpinnerContainer>
       </Demo>
   }

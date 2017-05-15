@@ -12,7 +12,7 @@ class TabContent extends React.Component {
     const { className, current, flavor, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
-      classNames(`slds-tabs--${flavor}__content`, {
+      classNames(`slds-tabs_${flavor}__content`, {
         'slds-show': current,
         'slds-hide': !current
       })
@@ -41,7 +41,7 @@ class TabItem extends React.Component {
   renderCustom (tabIndex) {
     return React.cloneElement(this.props.content, {
       tabIndex: tabIndex,
-      className: `slds-tabs--${this.props.flavor}__link`,
+      className: `slds-tabs_${this.props.flavor}__link`,
       'aria-selected': this.props.current,
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
@@ -49,7 +49,7 @@ class TabItem extends React.Component {
   renderDefault (tabIndex) {
     return (
       <a
-        className={`slds-tabs--${this.props.flavor}__link`}
+        className={`slds-tabs_${this.props.flavor}__link`}
         href="javascript:void(0);" role="tab"
         tabIndex={tabIndex}
         aria-selected={this.props.current}
@@ -63,7 +63,7 @@ class TabItem extends React.Component {
     const { className, id, role, current, flavor, content, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
-      classNames(`slds-tabs--${flavor}__item`, {
+      classNames(`slds-tabs_${flavor}__item`, {
         'slds-is-active': current
       })
     );
@@ -87,7 +87,7 @@ class TabItemOverflow extends React.Component {
     const { className, id, role, current, flavor, children, ...rest } = this.props;
     const classNameComputed = classNames(
       className,
-      classNames('slds-tabs__item--overflow', {
+      classNames('slds-tabs__item_overflow', {
         'slds-is-active': current
       })
     );
@@ -148,12 +148,12 @@ class Tabs extends React.Component {
     const { className, flavor, panel, selectedIndex, ...rest } = this.props;
     const composedClassName = classNames(
       className,
-      `slds-tabs--${flavor}`
+      `slds-tabs_${flavor}`
     );
     return (
       <div {...rest} className={composedClassName}>
         <ul
-          className={`slds-tabs--${flavor}__nav`}
+          className={`slds-tabs_${flavor}__nav`}
           role="tablist">
         {this.tabs()}
         </ul>

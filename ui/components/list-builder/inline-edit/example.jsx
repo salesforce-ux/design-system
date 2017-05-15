@@ -13,20 +13,20 @@ import classNames from 'classnames';
 
 let Th = props =>
   <th className={props.className} scope={props.scope} style={props.style}>
-    <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
+    <a href="javascript:void(0);" className="slds-th__action slds-text-link_reset">
       <span className="slds-assistive-text">Sort Column</span>
       <span className="slds-truncate" title={props.title}>{props.children}</span>
       <div className="slds-icon_container" title="Sort Column">
-        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
+        <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
       </div>
     </a>
   </th>;
 
 let ProductList = props =>
   <div className="slds-scrollable">
-    <table role="grid" className="slds-table slds-table--fixed-layout slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+    <table role="grid" className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
       <thead>
-        <tr className="slds-text-title--caps" >
+        <tr className="slds-text-title_caps" >
           <Th className="slds-is-sortable" scope="col" title="Name">Name</Th>
           <Th className="slds-is-sortable" scope="col" title="List Price">List Price</Th>
           <Th className="slds-is-sortable" scope="col" title="Discount">Discount</Th>
@@ -50,13 +50,13 @@ let ProductList = props =>
 
 export default (
   <div className="demo-only" style={{height: '640px'}}>
-    <Modal className="slds-modal--large">
+    <Modal className="slds-modal_large">
       <ModalHeader>
-        <h2 className="slds-text-heading--medium">Edit All Products</h2>
-        <p className="slds-m-top--x-small">Edit the details of the products associated with your opportunity</p>
+        <h2 className="slds-text-heading_medium">Edit All Products</h2>
+        <p className="slds-m-top_x-small">Edit the details of the products associated with your opportunity</p>
       </ModalHeader>
       <ModalContent className="slds-grid slds-nowrap">
-        <div className="slds-col slds-grid slds-grid--vertical slds-nowrap">
+        <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
           <ProductList>
             <tr>
               <th scope="row" data-label="Name"><div className="slds-truncate" title="Beta Product">Beta Product</div></th>
@@ -81,7 +81,7 @@ export default (
               <td data-label="Total Price" role="gridcell"><div className="slds-truncate" title="$4,700.00">$4,700.00</div></td>
               <td role="gridcell">
                 <ButtonIcon
-                  className="slds-button--icon-border-filled slds-button--icon-x-small"
+                  className="slds-button_icon-border-filled slds-button_icon-x-small"
                   symbol="down"
                   assistiveText="Show More"
                   title="Show More" />
@@ -110,30 +110,30 @@ export default (
               <td data-label="Total Price" role="gridcell"><div className="slds-truncate" title="$11,250.00">$11,250.00</div></td>
               <td role="gridcell">
                 <ButtonIcon
-                  className="slds-button--icon-border-filled slds-button--icon-x-small"
+                  className="slds-button_icon-border-filled slds-button_icon-x-small"
                   symbol="down"
                   assistiveText="Show More"
                   title="Show More" />
               </td>
             </tr>
           </ProductList>
-          <div className="slds-grid slds-grid--vertical-align-center slds-p-vertical--x-small slds-p-horizontal--large">
-            <div className="slds-text-title--caps">
-              <span className="slds-m-right--x-small">Total Products</span>
-              <span className="slds-text-heading--small">2</span>
+          <div className="slds-grid slds-grid_vertical-align-center slds-p-vertical_x-small slds-p-horizontal_large">
+            <div className="slds-text-title_caps">
+              <span className="slds-m-right_x-small">Total Products</span>
+              <span className="slds-text-heading_small">2</span>
             </div>
-            <div className="slds-col--bump-left slds-text-title--caps slds-text-align--right">
-              <span className="slds-m-right--x-small">Total</span>
-              <span className="slds-text-heading--small">$15,950</span>
+            <div className="slds-col_bump-left slds-text-title_caps slds-text-align_right">
+              <span className="slds-m-right_x-small">Total</span>
+              <span className="slds-text-heading_small">$15,950</span>
             </div>
           </div>
         </div>
       </ModalContent>
-      <ModalFooter className="slds-modal__footer--directional">
-        <button className="slds-button slds-button--neutral">Cancel</button>
-        <button className="slds-button slds-button--brand">Save</button>
+      <ModalFooter className="slds-modal__footer_directional">
+        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
-    <div className="slds-backdrop slds-backdrop--open" />
+    <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );

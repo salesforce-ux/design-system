@@ -5,8 +5,8 @@ import React from 'react';
 
 export default (
 <div className="demo-only" style={{height: '225px'}}>
-  <div className="slds-dropdown slds-dropdown--left slds-datepicker--time" aria-hidden="false" data-selection="time">
-    <ul className="slds-datepicker--time__list">
+  <div className="slds-dropdown slds-dropdown_left slds-datepicker_time" aria-hidden="false" data-selection="time">
+    <ul className="slds-datepicker_time__list">
       <li aria-selected="false">12:00am</li>
       <li aria-selected="false">12:30am</li>
       <li aria-selected="false">1:00am</li>

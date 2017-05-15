@@ -41,9 +41,9 @@ const rows = [{
 /// ////////////////////////////////////////
 
 let Container = props =>
-  <div className="slds-table--header-fixed_container" tabIndex={props.tabIndex} id={props.id}>
+  <div className="slds-table_header-fixed_container" tabIndex={props.tabIndex} id={props.id}>
     <div className="slds-scrollable" style={{height: '100px', position: 'static'}}>
-      <div className="table--header-fixed_container--inner slds-table--edit_container">
+      <div className="table--header-fixed_container--inner slds-table_edit_container">
         {props.children}
       </div>
     </div>
@@ -58,13 +58,13 @@ let Th = props => {
   }
 
   return (
-    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
+    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title_caps', props.className)} scope="col" style={{ width: '8.75rem' }}>
       <div className="slds-cell-fixed" style={{ width: '8.75rem' }}>
-        <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={!props.focusable ? '-1' : '0'}>
+        <a href="javascript:void(0);" className="slds-th__action slds-text-link_reset" tabIndex={!props.focusable ? '-1' : '0'}>
           <span className="slds-assistive-text">Sort </span>
           <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
           <div className="slds-icon_container">
-            <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
+            <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
           </div>
           <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
         </a>
@@ -83,7 +83,7 @@ let Th = props => {
 let Checkbox = props =>
   <label className="slds-checkbox">
     <input type="checkbox" name="options" disabled={props.disabled} defaultChecked={props.checked} tabIndex={props.tabIndex || '-1'} id={props.checkID} />
-    <span className="slds-checkbox--faux" />
+    <span className="slds-checkbox_faux" />
     <span className="slds-assistive-text">{props.label}</span>
   </label>;
 
@@ -93,16 +93,16 @@ let Checkbox = props =>
 
 export default (
   <Container>
-    <Table className="slds-no-cell-focus slds-table--header-fixed">
+    <Table className="slds-no-cell-focus slds-table_header-fixed">
       <thead>
-        <tr className="slds-line-height--reset">
+        <tr className="slds-line-height_reset">
           <th scope="col" style={{ width: '3.75rem' }}>
             <div style={{ width: '3.75rem' }} className="slds-th__action slds-cell-fixed">
               <span className="slds-assistive-text">Errors</span>
             </div>
           </th>
           <th scope="col" style={{ width: '2rem' }}>
-            <div style={{ width: '2rem' }} className="slds-th__action slds-cell-fixed slds-p-around--x-small">
+            <div style={{ width: '2rem' }} className="slds-th__action slds-cell-fixed slds-p-around_x-small">
               <Checkbox label="Select All" />
             </div>
           </th>

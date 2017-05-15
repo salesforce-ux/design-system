@@ -166,7 +166,7 @@
     /**
      * Add a left border to a context bar item
      *
-     * @selector .slds-context-bar__item--divider-left
+     * @selector .slds-context-bar__item_divider-left
      * @restrict .slds-context-bar div, .slds-context-bar li
      * @modifier
      */
@@ -178,7 +178,7 @@
     /**
      * Add a right border to a context bar item
      *
-     * @selector .slds-context-bar__item--divider-right
+     * @selector .slds-context-bar__item_divider-right
      * @restrict .slds-context-bar div, .slds-context-bar li
      * @modifier
      */
@@ -301,7 +301,7 @@
    * @summary Tab modifier when using a tabset
    *
    * @name navigation-tab-bar
-   * @selector .slds-context-bar__item--tab
+   * @selector .slds-context-bar__item_tab
    * @restrict .slds-context-bar__item
    * @notes Only use on tabset version
    * @required
@@ -335,7 +335,7 @@
      * Toggles visibility of elements inside of tab
      *
      * @selector .slds-is-pinned
-     * @restrict .slds-context-bar__item--tab
+     * @restrict .slds-context-bar__item_tab
      * @modifier
      */
     &.slds-is-pinned {
@@ -362,7 +362,7 @@
 /**
  * Unsaved indicator - This can probably be used in other locations as well
  *
- * @selector .slds-indicator--unsaved
+ * @selector .slds-indicator_unsaved
  * @restrict .slds-context-bar__item span, abbr
  */
 .slds-indicator_unsaved,

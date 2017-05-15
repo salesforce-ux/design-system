@@ -22,7 +22,7 @@
       /**
        * Set default state of icon for when a listbox option is selected
        *
-       * @selector .slds-icon--selected
+       * @selector .slds-icon_selected
        * @restrict .slds-picklist li svg
        * @required
        */
@@ -50,7 +50,7 @@
     /**
      * Resets explicit width on picklist to be fluid to its parent element
      *
-     * @selector .slds-picklist--fluid
+     * @selector .slds-picklist_fluid
      * @restrict .slds-picklist
      * @modifier
      */

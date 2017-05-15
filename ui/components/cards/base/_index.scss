@@ -52,6 +52,10 @@
     margin-bottom: $spacing-small;
   }
 
+    .slds-media__figure {
+      display: none;
+    }
+
   &__header-link {
     color: inherit;
   }
@@ -79,8 +83,11 @@
    */
   &__footer {
     margin-top: $spacing-small;
+    padding-top: $spacing-small;
     padding-bottom: $spacing-small;
-    text-align: right;
+    text-align: center;
+    font-size: $font-size-text-large;
+    border-top: 1px solid $color-border;
   }
 
   /**

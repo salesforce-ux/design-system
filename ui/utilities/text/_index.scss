@@ -58,7 +58,8 @@
  */
 .slds-text-heading_small,
 .slds-text-heading--small {
-  font-size: $font-size-large;
+  // font-size: $font-size-large;
+  font-size: $font-size-heading-large;
   line-height: $line-height-heading;
 }
 

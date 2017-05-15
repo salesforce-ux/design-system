@@ -29,7 +29,7 @@ props:
     value: '{!TANGERINE}'
     comment: Customer text used in anchor subtitle
   COLOR_TEXT_DEFAULT:
-    value: '{!BISCAY}'
+    value: '{!BLACK_TRANSPARENT_80}'
     comment: Body text color
   COLOR_TEXT_ERROR:
     value: '{!FLUSH_MAHOGANY}'

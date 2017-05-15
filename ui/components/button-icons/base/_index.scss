@@ -72,7 +72,8 @@
 .slds-button--icon-border-filled,
 .slds-button_icon-border,
 .slds-button--icon-border {
-  @include button-base;
+  @include button-icon;
+  border-color: $button-color-border-default;
 
   // Disabled
   &[disabled] {
@@ -94,11 +95,9 @@
  */
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
-  @include button-base;
+  @include button-icon;
   background-color: $color-background-button-inverse;
   color: $color-text-link-inverse;
-  border: $border-width-thick solid;
-  box-shadow: $theme-shadow-soft-tertiary;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;
@@ -116,10 +115,10 @@
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
-  background-color: $color-background-button-default;
+  background-color: $button-color-background-default;
 
   &[disabled] {
-    border: $border-width-thin solid $color-border-button-default;
+    border-color: $button-color-border-default;
     background-color: $color-background-button-default-disabled;
   }
 }

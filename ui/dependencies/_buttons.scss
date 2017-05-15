@@ -12,6 +12,24 @@
   box-shadow: $theme-shadow-soft-secondary;
 }
 
+@mixin button-icon {
+  line-height: $line-height-reset;
+  vertical-align: middle;
+  color: $color-text-icon-default;
+  border: $border-width-thick solid transparent;
+  transition: box-shadow 0.15s linear;
+
+  &:hover,
+  &:focus {
+    color: currentColor;
+    box-shadow: $theme-shadow-soft-secondary;
+  }
+
+  &[disabled] {
+    color: $color-text-button-default-disabled;
+  }
+}
+
 @mixin button-base {
   border-color: $button-color-border-default;
   background-color: $button-color-background-default;

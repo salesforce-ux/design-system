@@ -4,7 +4,6 @@
 imports:
 - ./theme-base/background-color.yml
 - ./theme-base/border-color.yml
-- ./theme-base/border-radius.yml
 - ./theme-base/box-shadow.yml
 - ./theme-base/text-color.yml
 - ./components.yml

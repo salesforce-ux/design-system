@@ -11,13 +11,13 @@
 
 The following classes are now available:
 
-- Added `slds-table--resizable-cols` as a modifier to `slds-table`. Should be used if your table supports resizable columns.
+- Added `slds-table_resizable-cols` as a modifier to `slds-table`. Should be used if your table supports resizable columns.
 
 **FIXES**
 
 The following issues have now been resolved:
 
-- `slds-table--fixed-layout` can now be used with the basic table - [#396](https://github.com/salesforce-ux/design-system/issues/396)
+- `slds-table_fixed-layout` can now be used with the basic table - [#396](https://github.com/salesforce-ux/design-system/issues/396)
 
 ## February 24, 2017
 
@@ -74,19 +74,19 @@ The following components are now available:
 
 The following classes are now available:
 
-- Added `slds-float--none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
-- Added `slds-button--icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
-- Added `slds-button--icon-more-filled` for more buttons that require a background.
-- Added `slds-text-color--inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
-- Added `slds-text-color--inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
+- Added `slds-float_none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
+- Added `slds-button_icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
+- Added `slds-button_icon-more-filled` for more buttons that require a background.
+- Added `slds-text-color_inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
+- Added `slds-text-color_inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
 - Added `slds-is-absolute` utility for overriding a components default positioning - [Utilities › Position › Absolute](/components/utilities/position/#flavor-absolute)
 - Added additional spacing support for normalizing padding on a grid region
-- Added `slds-border--bottom` utility [Utilities › Borders › Border Bottom](/components/utilities/borders/#flavor-border-bottom)
-- Added `slds-border--left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
-- Added `slds-border--right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
-- Added `slds-border--top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
-- Added `slds-box--xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
-- Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown--inverse`
+- Added `slds-border_bottom` utility [Utilities › Borders › Border Bottom](/components/utilities/borders/#flavor-border-bottom)
+- Added `slds-border_left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
+- Added `slds-border_right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
+- Added `slds-border_top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
+- Added `slds-box_xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
+- Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown_inverse`
 - Added support for narrow region on feeds.
 
 **CHANGES**
@@ -101,7 +101,7 @@ The following changes have been made in this release:
 - Cards are now responsive - [Cards](/components/cards/)
 - Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
 - Avatars now support initials.
-- Stateful icon buttons are now compatible with `slds-button--icon-container`
+- Stateful icon buttons are now compatible with `slds-button_icon-container`
 - Spacing adjustments made to lookup items
 - Spacing adjustments made to feeds
 
@@ -226,8 +226,8 @@ The following issues have now been resolved:
 
 - Title attributes were added to all button icons and truncated text for accessibility
 - Added line-height fix for `.slds-button—icon-border-inverse`
-- Amended `.slds-button--icon` documentation
-- Removed unnecessary `.slds-not-selected` class from stateful `.slds-button--icon` markup and adjusted documentation
+- Amended `.slds-button_icon` documentation
+- Removed unnecessary `.slds-not-selected` class from stateful `.slds-button_icon` markup and adjusted documentation
 
 ## Release [2.1.3] - September 21, 2016
 
@@ -237,7 +237,7 @@ The following issues have now been resolved:
 
 - Included the logo SVG asset used in the Global header
 - Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
-- Removed the demo style `.slds-text-align--center` from `.slds-card__body`
+- Removed the demo style `.slds-text-align_center` from `.slds-card__body`
 
 **DEPRECATED**
 
@@ -283,12 +283,12 @@ The following classes are now available:
 
 - Text color helpers - [Utilities › Text › Color](/components/utilities/text/#flavor-color)
 - Text title utility - `.slds-text-title` - [Utilities › Text › Text Title](/components/utilities/text/#flavor-title)
-- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
+- Text link utility - Made text inside of `.slds-text-link_reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
 - Truncation containers [Utilities › Truncation](/components/utilities/truncation/#flavor-max-width)
-- Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
+- Absolute sizes utility classes: `.slds-size_xx-small`, `.slds-size_x-small`, `.slds-size_medium`, `.slds-size_large`, `.slds-size_x-large`, `.slds-size_xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 - Position utilities - [Utilities › Position](/components/utilities/position/)
-- Table column borders - Added vertical column borders on a table by applying `.slds-table--col-bordered`
+- Table column borders - Added vertical column borders on a table by applying `.slds-table_col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Utilities › Lists › Name Value Pair](/components/utilities/lists/#flavor-name-value-pair)
 - Generated grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
 - Added archives for previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
@@ -309,8 +309,8 @@ The following changes have been made in this release:
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
-- Improvements made to `.slds-text-link--reset` - [Utilities › Interactions › Text Link Reset](/components/utilities/interactions/#link-reset)
-- Removed light font-weight from the text utility `.slds-text-heading--small` - [Utilities › Text › Text Heading Small](/components/utilities/text/#flavor-heading-heading-small)
+- Improvements made to `.slds-text-link_reset` - [Utilities › Interactions › Text Link Reset](/components/utilities/interactions/#link-reset)
+- Removed light font-weight from the text utility `.slds-text-heading_small` - [Utilities › Text › Text Heading Small](/components/utilities/text/#flavor-heading-heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
 - Added close button to error popover so a screen reader can access popover
@@ -318,7 +318,7 @@ The following changes have been made in this release:
 - Feeds:
   - Changed post's comment metric labels to lowercase
   - Added hint-hover to post's comment action overflow icon
-  - Changed post's comment "link" text to use `.slds-color-link--weak`
+  - Changed post's comment "link" text to use `.slds-color-link_weak`
   - Removed dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
   - Removed truncation from preamble
@@ -339,7 +339,7 @@ The following issues have now been resolved:
   - Modified tab order of global header actions
   - Added `title` attribute to global header actions
   - Changed avatar wrapper from anchor to a button
-  - Allowed `.slds-assistive-text` to become visible on focus if `.slds-assistive-text--focus` is used
+  - Allowed `.slds-assistive-text` to become visible on focus if `.slds-assistive-text_focus` is used
   - Added aria roles to global search input
   - Changed global search listbox options to be non-actionable
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
@@ -360,7 +360,7 @@ The following issues have now been resolved:
   - Placed utility bar buttons inside `<ul>`
 - Files accessibility fixes
   - Fixed invalid markup by moving button group outside of anchor
-  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
+  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image_overlay`
 - Card accessibility fixes
   - Moved `<header>` element to only contain the card header text, rather than the text and overflow menu
   - Changed `<p>` tags with truncation in related list markup to `<span>` tags
@@ -412,7 +412,7 @@ The following issues have now been resolved:
 - Fixed label for / textarea id mismatch in form textarea example
 - Fixed modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
-- Added an example usage of `slds-table--striped` in the basic data table example
+- Added an example usage of `slds-table_striped` in the basic data table example
 - Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
@@ -441,8 +441,8 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Text inputs are referencing the correct 32px tall token - fixes https://github.com/salesforce-ux/design-system/issues/150
-- Resolve issue where `<th>` stayed white on striped row when `slds-table--striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
-- Toggle checkboxes are now aligned vertically with their label (`slds-form-element__label m-bottom--` › `slds-form-element__label slds-m-bottom--none`) — [Checkbox Toggle variant](/components/forms/#flavor-checkbox-toggle)
+- Resolve issue where `<th>` stayed white on striped row when `slds-table_striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
+- Toggle checkboxes are now aligned vertically with their label (`slds-form-element__label m-bottom--` › `slds-form-element__label slds-m-bottom_none`) — [Checkbox Toggle variant](/components/forms/#flavor-checkbox-toggle)
 
 **REMOVED**
 
@@ -508,9 +508,9 @@ The following changes have been made in this release:
 - Visual density changes in cards
 - Visual density changes in popovers
 - "View all" links in cards and popover panels are now aligned to the right
-- `slds-modal--content` should use the additive class of `slds-p-vertical--large` and `slds-p-horizontal--x-large`, instead of `slds-p-around--medium`.
+- `slds-modal_content` should use the additive class of `slds-p-vertical_large` and `slds-p-horizontal_x-large`, instead of `slds-p-around_medium`.
 - Removed first and last cell padding from Data Tables to allow nesting. New
-  class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
+  class `.slds-table_cell-buffer` can be added to the table or `.slds-cell-buffer_left` and `.slds-cell-buffer_right` for individual cell application.
 - Field level help icon moved to the right of the input label
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
 - Data table sortable headings now have actionable area so they can be focusable
@@ -537,41 +537,41 @@ The following features are being marked as deprecated in this release and will b
 - Page headers have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Page Header component](/components/page-headers/)
 - `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
 - `.slds-button-space-left` is no longer supported. Please use spacing utilities instead.
-- `.slds-button--icon-bare` is no longer needed. Please use `.slds-button--icon` instead.
-- `.slds-card--empty` is no longer needed. Please use `.slds-text-align--center` utility class instead.
+- `.slds-button_icon-bare` is no longer needed. Please use `.slds-button_icon` instead.
+- `.slds-card_empty` is no longer needed. Please use `.slds-text-align_center` utility class instead.
 - `.slds-button` inside of `.slds-is-sortable` is no longer needed. The entire cell is hyperlinked now, no need for the button.
 - `.slds-form-element__helper` is no longer supported.
 - `.slds-input__icon` no longer supports a color by default. Please use `.slds-icon-text-default` on the SVG icon instead.
 - `.slds-icon__container` is no longer supported. Please use `.slds-icon_container` instead.
 - `.slds-icon-custom-XX` is no longer supported. Please use `.slds-icon-custom-customXX` instead.
-- `.slds-dropdown--nubbin-top` is no longer supported. Please use `.slds-nubbin--top` instead.
-- `.slds-has-icon--left`, `.slds-has-icon--right`, and `.slds-has-icon--left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
+- `.slds-dropdown_nubbin-top` is no longer supported. Please use `.slds-nubbin_top` instead.
+- `.slds-has-icon_left`, `.slds-has-icon_right`, and `.slds-has-icon_left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
 - `.slds-modal-backdrop` is no longer supported. Please use `.slds-backdrop` instead.
 - `.slds-notify-container` is no longer supported. Please use `.slds-notify_container` instead.
 - `.slds-pill-container` and `.slds-pill__container` are no longer supported. Please use `.slds-pill_container` instead.
-- `.slds-pill__container--bare` is no longer supported. Please use `.slds-pill_container--bare` instead.
-- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs--default__item` or `.slds-tabs--scoped__item`.
+- `.slds-pill__container_bare` is no longer supported. Please use `.slds-pill_container_bare` instead.
+- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs_default__item` or `.slds-tabs_scoped__item`.
 - `.slds-tooltip` and `.slds-tooltip__body` are no longer supported. Please use `.slds-popover` and `.slds-popover__body` instead.
 - `.slds-tree-container` is no longer supported, please use `.slds-tree_container` instead.
-- `.slds-col-rule--left`, `.slds-col-rule--right`, `.slds-col-rule--top`, and `.slds-col-rule--bottom` are no longer supported. Please use `.slds-col--rule-left`, `.slds-col--rule-right`, `.slds-col--rule-top`, and `.slds-col--rule-bottom` instead.
-- `.slds-nowrap--small`, `.slds-nowrap--medium`, and `.slds-nowrap--large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
-- `.slds-align-content-center` is no longer supported. Please use `.slds-align--absolute-center` instead.
-- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers--{position}` instead.
-- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider--{position}` instead.
-- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider--around` instead.
-- `.slds-has-cards--space` is no longer supported. Please use `.slds-has-divider--around-space` instead.
+- `.slds-col-rule_left`, `.slds-col-rule_right`, `.slds-col-rule_top`, and `.slds-col-rule_bottom` are no longer supported. Please use `.slds-col_rule-left`, `.slds-col_rule-right`, `.slds-col_rule-top`, and `.slds-col_rule-bottom` instead.
+- `.slds-nowrap_small`, `.slds-nowrap_medium`, and `.slds-nowrap_large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
+- `.slds-align-content-center` is no longer supported. Please use `.slds-align_absolute-center` instead.
+- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers_{position}` instead.
+- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider_{position}` instead.
+- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider_around` instead.
+- `.slds-has-cards_space` is no longer supported. Please use `.slds-has-divider_around-space` instead.
 - `.slds-section-title` is no longer supported. Please use `.slds-section__title` instead.
 - `.slds-collapsed` is no longer supported. Please use `.slds-is-collapsed` instead.
 - `.slds-expanded` is no longer supported. Please use `.slds-is-expanded` instead.
-- The rule that hides the close button in Notification Prompt `.slds-modal--prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
+- The rule that hides the close button in Notification Prompt `.slds-modal_prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
 
 **REMOVED**
 
 The following features are being removed in this release:
 
 - Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
-- Removed `slds-button--small`, since it’s the same as the new default button size
-- Removed `slds-input--small`, since it’s the same as the new default input size
+- Removed `slds-button_small`, since it’s the same as the new default button size
+- Removed `slds-input_small`, since it’s the same as the new default input size
 - Removed `slds-tile__title`, since it didn't apply any styles
 
 **🗒 Notes About Scoped CSS files, the Unmanaged Package, Visualforce and Lightning Components**
@@ -676,10 +676,10 @@ The following classes are now available:
 - Added max-width sizing utilities - [Max Width sizing](/components/utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
-  - Added `.slds-grid--align-end` for horizontal alignment on main grid axis
-  - Added `.slds-grid--vertical-align-end` and `.slds-grid--vertical-align-center` for vertical alignment on grid cross axis
-  - Added `.slds-grid--stretch` for multi-row vertical stretch support
-  - Added `.slds-grid--reverse` and `.slds-grid--vertical-reverse` to reverse the direction of the grid
+  - Added `.slds-grid_align-end` for horizontal alignment on main grid axis
+  - Added `.slds-grid_vertical-align-end` and `.slds-grid_vertical-align-center` for vertical alignment on grid cross axis
+  - Added `.slds-grid_stretch` for multi-row vertical stretch support
+  - Added `.slds-grid_reverse` and `.slds-grid_vertical-reverse` to reverse the direction of the grid
 - Added `.slds-text-error` for use on icons for validation errors
 - Added color to user selection to force good contrast on dark backgrounds
 
@@ -695,8 +695,8 @@ The following changes have been made in this release:
 - Removed icon color from `.slds-input__icon` so an icon color class is now additionally required
 - Reordered tokens so large form factor has priority
 - Moved Page Header theme from Utilities to its top-level component category [Page Header component](/components/page-headers/)
-- Removed `.slds-m-top--x-small` in the page header and replaced with a new class `.slds-page-header__info`
-- Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
+- Removed `.slds-m-top_x-small` in the page header and replaced with a new class `.slds-page-header__info`
+- Vertical spacing adjusted on *small* viewport for `.slds-form_stacked`, `.slds-form_horizontal` and `.slds-form_inline`
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
 - The last element inside `.slds-text-longform` now retains the bottom margin.
 
@@ -715,20 +715,20 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
-- Deprecated `.slds-card--empty`. Use `.slds-text-align--center` instead. - [Card component](/components/cards/#empty)
+- Deprecated `.slds-card_empty`. Use `.slds-text-align_center` instead. - [Card component](/components/cards/#empty)
 - Deprecated `.slds-section-title`. Use `.slds-section__title` instead - [Section Title](/components/utilities/text/#section-title) for full details
-- Deprecated `.slds-button--icon-bare`. Use `.slds-button--icon` instead - [Button Icon](/components/buttons/#icon)
+- Deprecated `.slds-button_icon-bare`. Use `.slds-button_icon` instead - [Button Icon](/components/buttons/#icon)
 - Deprecated tabs descendant selectors [Tabs component](/components/tabs/):
-  - `.slds-tabs--default > slds-tabs__item` use `.slds-tabs--default__item` instead.
-  - `.slds-tabs--default > slds-tabs__content` use `.slds-tabs--default__content` instead.
-  - `.slds-tabs--default > a` use `.slds-tabs--default__link` instead.
-  - `.slds-tabs--scoped > slds-tabs__item` use `.slds-tabs--scoped__item` instead.
-  - `.slds-tabs--scoped > slds-tabs__content` use `.slds-tabs--scoped__content` instead.
-  - `.slds-tabs--scoped > a` use `.slds-tabs--scoped__link` instead.
-- Deprecated `.slds--tooltip`. Use `.slds-popover--tooltip` instead.
-- Deprecated responsive `.slds-nowrap--{size}` classes due to inconsistent naming. Use `.slds-{size}--nowrap` instead.
-- Deprecated `.slds-modal-backdrop` and `.slds-modal-backdrop--open` in favor of `.slds-backdrop` and `.slds-backdrop--open` to reuse in other components.
-- Deprecated `.slds-col-rule--{position}` classes due to inconsistent naming. Use `.slds-col--rule-{position}` instead.
+  - `.slds-tabs_default > slds-tabs__item` use `.slds-tabs_default__item` instead.
+  - `.slds-tabs_default > slds-tabs__content` use `.slds-tabs_default__content` instead.
+  - `.slds-tabs_default > a` use `.slds-tabs_default__link` instead.
+  - `.slds-tabs_scoped > slds-tabs__item` use `.slds-tabs_scoped__item` instead.
+  - `.slds-tabs_scoped > slds-tabs__content` use `.slds-tabs_scoped__content` instead.
+  - `.slds-tabs_scoped > a` use `.slds-tabs_scoped__link` instead.
+- Deprecated `.slds--tooltip`. Use `.slds-popover_tooltip` instead.
+- Deprecated responsive `.slds-nowrap_{size}` classes due to inconsistent naming. Use `.slds-{size}_nowrap` instead.
+- Deprecated `.slds-modal-backdrop` and `.slds-modal-backdrop_open` in favor of `.slds-backdrop` and `.slds-backdrop_open` to reuse in other components.
+- Deprecated `.slds-col-rule_{position}` classes due to inconsistent naming. Use `.slds-col_rule-{position}` instead.
 
 ## Release 0.12.2 - February 8, 2016
 
@@ -751,7 +751,7 @@ The following features are being marked as deprecated in this release and will b
 **CHANGES**
 - Apply proper accessibility requirements (aria-labelledby) to tabs (fixes https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
-- Make `.slds-text-body--small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
+- Make `.slds-text-body_small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
 - Mark all list utilities "dev-ready" - [/components/utilities/lists](/components/utilities/lists)
 - Field-level help popover background color token update
 - Fix truncation on Sales Path (fixes https://github.com/salesforce-ux/design-system/issues/135)
@@ -773,7 +773,7 @@ The following features are being marked as deprecated in this release and will b
 - Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
 - Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
-- `slds-modal-backdrop` and `slds-modal-backdrop--open` is deprecated in favor of `slds-backdrop` and `slds-backdrop--open` since it is used in other components.
+- `slds-modal-backdrop` and `slds-modal-backdrop_open` is deprecated in favor of `slds-backdrop` and `slds-backdrop_open` since it is used in other components.
 - Removed icon color from `.slds-input__icon` so that an icon color class is required in addition
 
 **CHANGES**
@@ -792,20 +792,20 @@ The following features are being marked as deprecated in this release and will b
 **DEPRECATED**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
 - Name change: Responsive button changed to Horizontal button
-- `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead
+- `slds-modal-backdrop` and `slds-modal-backdrop_open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop_open` instead
 - Descendant selectors on tabs were changed to BEM syntax
-  - `slds-tabs--default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--default__item` instead
-  - `slds-tabs--default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--default__content` instead
-  - `slds-tabs--default > a` deprecated in version 0.12.0, use `slds-tabs--default__link` instead
-  - `slds-tabs--scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--scoped__item` instead
-  - `slds-tabs--scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--scoped__content` instead
-  - `slds-tabs--scoped > a` deprecated in version 0.12.0, use `slds-tabs--scoped__link` instead
+  - `slds-tabs_default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs_default__item` instead
+  - `slds-tabs_default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs_default__content` instead
+  - `slds-tabs_default > a` deprecated in version 0.12.0, use `slds-tabs_default__link` instead
+  - `slds-tabs_scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs_scoped__item` instead
+  - `slds-tabs_scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs_scoped__content` instead
+  - `slds-tabs_scoped > a` deprecated in version 0.12.0, use `slds-tabs_scoped__link` instead
 - Descendant selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
 
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
-- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
+- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top_x-small` is placed on the `p` itself.
 - Stateful button has a `[disabled]` state
 - If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-visibility` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
@@ -828,13 +828,13 @@ The following features are being marked as deprecated in this release and will b
 
 **BREAKING CHANGES**
 
-- Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
-- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
+- Changed `.slds-tooltip` to `.slds-popover_tooltip`, `.slds-tooltip` will become deprecated (*).
+- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider_top`, `.slds-has-divider_bottom`
 - Deprecated "Menu with Icons" dropdown variant
   - No longer depends on class names that deal with icon positioning
   - `.slds-dropdown__item` are set to `display: flex` with `justify-content: space-between` by default now. This allows for icon + text to be left aligned and a single icon to be positioned on the same axis to the right hand side. The icon + text that is positioned to the left requires an HTML element, like a `<p>` with the class `.slds-truncate` applied.
-  - `.slds-has-icon`, `.slds-has-icon--left`, `.slds-has-icon--right` and children classes `.slds-icon--left`, `.slds-icon--right` have been deprecated but will persist in code base (*)
-  - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that SVG now requires a class of `.slds-icon--selected`
+  - `.slds-has-icon`, `.slds-has-icon_left`, `.slds-has-icon_right` and children classes `.slds-icon_left`, `.slds-icon_right` have been deprecated but will persist in code base (*)
+  - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that SVG now requires a class of `.slds-icon_selected`
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
@@ -855,8 +855,8 @@ The following features are being marked as deprecated in this release and will b
 ## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
-- Updated `.slds-button--icon-*` demo and fixed class name typo
-- Added new button variant: `.slds-button--destructive`
+- Updated `.slds-button_icon-*` demo and fixed class name typo
+- Added new button variant: `.slds-button_destructive`
 - Removed max-width (960px) from Modals > Large
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
@@ -865,13 +865,13 @@ The following features are being marked as deprecated in this release and will b
 - `@salesforce-ux/design-system` package now includes */assets/icons* and */assets/images*
 
 **BREAKING CHANGES**
-- Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
-- Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
+- Changed `.slds-button_icon-border-small` to `.slds-button_icon-x-small`. This aligns with our other icon names which separate sizing from style
+- Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button_icon-inverse`. The class `.slds-button__icon_inverse` was removed from the SVG within.
 
 **BUG FIXES**
-- `.slds-button--icon-*` can be placed on an `a` and aligns to the center
-- :hover, :focus state added for `.slds-button--icon-bare`
-- fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
+- `.slds-button_icon-*` can be placed on an `a` and aligns to the center
+- :hover, :focus state added for `.slds-button_icon-bare`
+- fixed line-height in `.slds-button_icon-border-small` and `.slds-button_icon-bare`
 - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 **NEW COMPONENTS**

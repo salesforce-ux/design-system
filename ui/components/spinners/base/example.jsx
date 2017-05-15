@@ -31,7 +31,7 @@ export let Spinner = props =>
 
 export default (
   <Demo>
-    <Spinner className="slds-spinner--medium" />
+    <Spinner className="slds-spinner_medium" />
   </Demo>
 );
 
@@ -42,7 +42,7 @@ export let examples = [
     description: 'A container is not required to use the spinner. Here, it is placed on a dark background to illustrate there is nothing there. The spinner will position itself to the closest positioned parent. So if you want it to spin over a single component, the class <code>.slds-is-relative</code> can be added to the parent.',
     element:
     <Demo className="demo--inverse">
-        <Spinner className="slds-spinner--medium" />
+        <Spinner className="slds-spinner_medium" />
     </Demo>
   },
   {
@@ -52,7 +52,7 @@ export let examples = [
     element:
       <Demo className="demo--inverse">
         <SpinnerContainer>
-          <Spinner className="slds-spinner--medium" />
+          <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
       </Demo>
   },
@@ -63,7 +63,7 @@ export let examples = [
     element:
     <Demo className="demo--inverse">
       <SpinnerContainer className="slds-is-fixed">
-        <Spinner className="slds-spinner--medium" />
+        <Spinner className="slds-spinner_medium" />
       </SpinnerContainer>
     </Demo>
   }

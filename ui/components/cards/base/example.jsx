@@ -10,18 +10,18 @@ import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 
 const headerActionOverflow = (
-  <button className="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true">
+  <button className="slds-button slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true">
     <SvgIcon className="slds-button__icon" sprite="utility" symbol="down" />
     <span className="slds-assistive-text">More Options</span>
   </button>
 );
 
 const headerAction = (
-  <button className="slds-button slds-button--neutral">New</button>
+  <button className="slds-button slds-button_neutral">New</button>
 );
 
 const headerSearch = (
-  <div className="slds-input-has-icon slds-input-has-icon--left slds-size--1-of-3">
+  <div className="slds-input-has-icon slds-input-has-icon_left slds-size_1-of-3">
     <SvgIcon className="slds-input__icon slds-icon-text-default" sprite="utility" symbol="search" />
     <label htmlFor="text-input-01" className="slds-assistive-text">Find in List</label>
     <input id="text-input-01" className="slds-input" type="text" placeholder="Find in List" />
@@ -39,11 +39,11 @@ export let Card = props =>
 
 export let CardHeader = props =>
   <div className={classNames('slds-card__header slds-grid', props.className)}>
-    <header className={classNames('slds-media slds-media--center slds-has-flexi-truncate', props.search ? 'slds-size--1-of-3' : null)}>
+    <header className={classNames('slds-media slds-media_center slds-has-flexi-truncate', props.search ? 'slds-size_1-of-3' : null)}>
       { props.symbol
         ? <div className="slds-media__figure">
           <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
-            <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol={props.symbol} />
+            <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol={props.symbol} />
             </span>
         </div> : null }
       <div className="slds-media__body">
@@ -53,10 +53,10 @@ export let CardHeader = props =>
       </div>
     </header>
     { props.search ? headerSearch : null }
-    <div className={classNames('slds-no-flex', props.search ? 'slds-size--1-of-3' : null)}>
+    <div className={classNames('slds-no-flex', props.search ? 'slds-size_1-of-3' : null)}>
       { props.actions == 'overflow'
         ? <ButtonIcon
-          className="slds-button--icon-border-filled slds-button--icon-x-small"
+          className="slds-button_icon-border-filled slds-button_icon-x-small"
           symbol="down"
           title="More Options"
           assistiveText="More Options"
@@ -82,8 +82,8 @@ export let CardFooter = props =>
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
-    <CardBody className="slds-card__body--inner">Card Body (custom goes in here)</CardBody>
+    <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+    <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
     <CardFooter>Card Footer</CardFooter>
   </Card>
 );
@@ -94,7 +94,7 @@ export let states = [
     label: 'Empty',
     element:
       <Card>
-        <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Card Header</span></CardHeader>
+        <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
         <CardBody />
         <CardFooter />
       </Card>
@@ -107,11 +107,11 @@ export let examples = [
     label: 'With data-table',
     element:
     <Card>
-      <CardHeader symbol="contact" actions><span className="slds-text-heading--small">Contacts (1)</span></CardHeader>
+      <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Contacts (1)</span></CardHeader>
       <CardBody>
-        <table className="slds-table slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+        <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
           <thead>
-            <tr className="slds-text-title--caps">
+            <tr className="slds-text-title_caps">
               <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>
               <th scope="col"><div className="slds-truncate" title="Company">Company</div></th>
               <th scope="col"><div className="slds-truncate" title="Title">Title</div></th>
@@ -137,31 +137,31 @@ export let examples = [
     element:
     <Card>
       <CardHeader actions symbol="contact">
-        <span className="slds-text-heading--small">Contacts (3)</span>
+        <span className="slds-text-heading_small">Contacts (3)</span>
       </CardHeader>
       <CardBody>
-        <ul className="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+        <ul className="slds-card__body_inner slds-grid slds-wrap slds-grid_pull-padded">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"
-              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
+              media={<StandardIcon className="slds-icon_small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"
-              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
+              media={<StandardIcon className="slds-icon_small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>
-          <li className="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3">
+          <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3">
             <TileMedia
               actions
               className="slds-card__tile"
-              media={<StandardIcon className="slds-icon--small" symbol="contact" assistiveText="Contact" />}
+              media={<StandardIcon className="slds-icon_small" symbol="contact" assistiveText="Contact" />}
               title="Related Record Title 1"
             />
           </li>

@@ -17,13 +17,13 @@ export let ListboxPill = props =>
     {props.children}
     <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>{props.label || 'Pill Label'}</span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
-      <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="close" />
+      <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="close" />
       <span className="slds-assistive-text">Press delete or backspace to remove</span>
     </span>
   </span>;
 
 export let ListboxHoriz = props =>
-  <ul className="slds-listbox slds-listbox--horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal">
+  <ul className="slds-listbox slds-listbox_horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal">
     {props.children}
   </ul>;
 
@@ -83,7 +83,7 @@ export let states = [
         <ListboxHoriz>
           <ListItemHoriz>
             <ListboxPill tabIndex="0">
-              <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                 <img
                   alt="Person name"
                   src="/assets/images/avatar2.jpg"
@@ -94,7 +94,7 @@ export let states = [
           </ListItemHoriz>
           <ListItemHoriz>
             <ListboxPill>
-              <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                 <img
                   alt="Person name"
                   src="/assets/images/avatar2.jpg"

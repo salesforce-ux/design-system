@@ -5,7 +5,7 @@
  * @summary Initializes radio button
  *
  * @name base
- * @selector .slds-radio--button-group
+ * @selector .slds-radio_button-group
  * @restrict .slds-form-element div
  * @required
  * @variant
@@ -18,8 +18,8 @@
 }
 
 /**
- * @selector .slds-radio--button
- * @restrict .slds-radio--button-group span
+ * @selector .slds-radio_button
+ * @restrict .slds-radio_button-group span
  */
 .slds-radio_button,
 .slds-radio--button {
@@ -31,8 +31,8 @@
   /**
    * Create styled button when adjacent to the input[radio] element
    *
-   * @selector .slds-radio--faux
-   * @restrict .slds-radio--button span
+   * @selector .slds-radio_faux
+   * @restrict .slds-radio_button span
    */
   .slds-radio_faux,
   .slds-radio--faux {
@@ -127,9 +127,10 @@
 /**
  * Label element inside of a radio button
  *
- * @selector .slds-radio--button__label
- * @restrict .slds-radio--button label
+ * @selector .slds-radio_button__label
+ * @restrict .slds-radio_button label
  */
+.slds-radio_button__label,
 .slds-radio--button__label {
   background-color: $color-background-button-default;
 

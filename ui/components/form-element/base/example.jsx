@@ -33,11 +33,11 @@ export let FormElement = props => {
 
   let inputIconPosition;
   if (inputIcon === 'left') {
-    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--left';
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_left';
   } else if (inputIcon === 'right') {
-    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--right';
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_right';
   } else if (inputIcon === 'both') {
-    inputIconPosition = 'slds-input-has-icon slds-input-has-icon--left-right';
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_left-right';
   }
 
   return (
@@ -58,9 +58,9 @@ export let FormElement = props => {
       : null }
       { tooltip
         ? <div className="slds-form-element__icon">
-          <button aria-describedby="help" className="slds-button slds-button--icon">
+          <button aria-describedby="help" className="slds-button slds-button_icon">
             <SvgIcon
-              className="slds-icon slds-icon--x-small slds-icon-text-default"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
               sprite="utility"
               symbol="info"
             />

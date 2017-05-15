@@ -90,13 +90,6 @@
     border-top: 1px solid $color-border;
   }
 
-  /**
-   * @summary Modifies styles for card in a narrow column
-   *
-   * @selector .slds-card--narrow
-   * @restrict .slds-card
-   * @modifier
-   */
   &_narrow,
   &--narrow {
 

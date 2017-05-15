@@ -18,14 +18,14 @@ export default (
   <div className="demo-only" style={{ width: '320px' }}>
     <NavVertical>
       <FormElement
-        className="slds-p-horizontal--large"
+        className="slds-p-horizontal_large"
         label="Filter navigation items"
         inputId={inputId01}
         inputIcon="left"
         hideLabel
       >
         <SvgIcon
-          className="slds-icon slds-input__icon slds-input__icon--right slds-icon-text-default"
+          className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
           sprite="utility"
           symbol="search"
         />

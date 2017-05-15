@@ -4,7 +4,7 @@
 /**
  * @summary Makes links and buttons appear as regular text
  *
- * @selector .slds-text-link--reset
+ * @selector .slds-text-link_reset
  * @modifier
  */
 .slds-text-link_reset,
@@ -55,7 +55,7 @@
  *
  * @summary Creates a faux link with hover interactions
  *
- * @selector .slds-text-link--faux
+ * @selector .slds-text-link_faux
  * @notes This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
  * @modifier
  */

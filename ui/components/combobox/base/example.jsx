@@ -24,6 +24,7 @@ const listboxSelectionsId = 'listbox-selections-unique-id';
 const comboboxId = 'combobox-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
+const accounts = ['Acme','Edge SLA','Express Logistics SLA','GenePoint Lab Generators','GenePoint SLA','Pyramid Emergency Generators','United Oil Installations','United Oil Plant Standby Generators','University of AZ Installations','University of AZ Portable Generators'];
 
 /**
 * Generic Listbox container
@@ -36,23 +37,27 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
 * @prop {string}  aria-label -
 */
 export let Listbox = props =>
-  <ul
+  <div
     id={props.id || listboxId}
-    className={classNames(
-      'slds-listbox',
-      {
-        'slds-listbox--vertical': props.vertical,
-        'slds-listbox--horizontal': props.horizontal,
-        'slds-listbox--inline': props.inline
-      },
-      props.className
-    )}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
-    aria-label={props['aria-label']}
   >
-    {props.children}
-  </ul>;
+    <ul
+      className={classNames(
+        'slds-listbox',
+        {
+          'slds-listbox_vertical': props.vertical,
+          'slds-listbox_horizontal': props.horizontal,
+          'slds-listbox_inline': props.inline
+        },
+        props.className
+      )}
+      role={props['aria-label'] ? 'group' : 'presentation'}
+      aria-label={props['aria-label']}
+    >
+      {props.children}
+    </ul>
+  </div>;
 
 /**
 * Generic list item within a listbox
@@ -78,8 +83,8 @@ export let ListboxOption = props =>
     className={classNames(
       'slds-media slds-listbox__option',
       {
-        'slds-listbox__option--plain': props.type === 'plain',
-        'slds-listbox__option--entity': props.type === 'entity'
+        'slds-listbox__option_plain': props.type === 'plain',
+        'slds-listbox__option_entity': props.type === 'entity'
       },
       props.className
     )}
@@ -145,7 +150,7 @@ export let ComboboxContainer = props =>
         {/* Search icon before the listbox of selected items */}
         { props.inputIcon === 'left' && props.selectedOptionsInline
           ? <SvgIcon
-            className="slds-icon slds-icon--x-small slds-combobox_container__icon"
+            className="slds-icon slds-icon_x-small slds-combobox_container__icon"
             sprite="utility"
             symbol="search"
           />
@@ -173,9 +178,9 @@ export let ComboboxContainer = props =>
               'slds-combobox__form-element',
               {
 
-                'slds-input-has-icon slds-input-has-icon--left': props.inputIcon === 'left',
-                'slds-input-has-icon slds-input-has-icon--right': props.inputIcon === 'right',
-                'slds-input-has-icon slds-input-has-icon--left-right': props.inputIcon === 'both'
+                'slds-input-has-icon slds-input-has-icon_left': props.inputIcon === 'left',
+                'slds-input-has-icon slds-input-has-icon_right': props.inputIcon === 'right',
+                'slds-input-has-icon slds-input-has-icon_left-right': props.inputIcon === 'both'
               },
               props.inputContainerClassName
             )}
@@ -187,15 +192,15 @@ export let ComboboxContainer = props =>
             {props.inputIcon === 'both' && props.inputIconLeftSprite === 'standard'
             ? <StandardIcon
               containerClassName="slds-combobox__input-entity-icon"
-              className="slds-icon--small"
+              className="slds-icon_small"
               symbol={props.inputIconLeftSymbol || 'account'}
               title={props.inputIconLeftSymbol || 'account'}
               assistiveText={props.inputIconLeftSymbol + ' ' + props.value || 'account ' + props.value}
               />
             : (props.inputIcon === 'left' || props.inputIcon === 'both'
               ? <UtilityIcon
-                containerClassName="slds-input__icon slds-input__icon--left"
-                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                containerClassName="slds-input__icon slds-input__icon_left"
+                className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconLeftSymbol || 'search'}
               />
             : null)}
@@ -217,8 +222,8 @@ export let ComboboxContainer = props =>
             {/* If inputIcon is right, show icon here  */}
             { props.inputIcon === 'right' && props.inputButtonIcon != true
               ? <UtilityIcon
-                containerClassName="slds-input__icon slds-input__icon--right"
-                className="slds-icon slds-icon--x-small slds-icon-text-default"
+                containerClassName="slds-input__icon slds-input__icon_right"
+                className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
               />
             : null }
@@ -238,7 +243,7 @@ export let ComboboxContainer = props =>
             {/* If close button, show buttonIcon here */}
             { props.inputButtonIcon && props.inputIconRightSymbol === 'close'
               ? <ButtonIcon
-                className="slds-input__icon slds-input__icon--right"
+                className="slds-input__icon slds-input__icon_right"
                 symbol="close"
                 title="Remove selected option"
                 assistiveText="Remove selected option"
@@ -273,8 +278,8 @@ export let EntityOption = props =>
     id={props.id}
     className={classNames(
       {
-        'slds-media--center': !props.entityMeta,
-        'slds-listbox__option--has-meta': props.entityMeta,
+        'slds-media_center': !props.entityMeta,
+        'slds-listbox__option_has-meta': props.entityMeta,
         'slds-is-selected': props.selected,
         'slds-has-focus': props.focused
       },
@@ -283,16 +288,16 @@ export let EntityOption = props =>
   >
     <span className="slds-media__figure">
       <StandardIcon
-        className="slds-icon--small"
+        className="slds-icon_small"
         symbol={props.entityType || 'account'}
       />
     </span>
     <span className="slds-media__body">
-      <span className="slds-listbox__option-text slds-listbox__option-text--entity">
+      <span className="slds-listbox__option-text slds-listbox__option-text_entity">
         { props.typeahead ? props.children : props.entityTitle || 'Salesforce.com, Inc.' }
       </span>
       { props.entityMeta
-        ? <span className="slds-listbox__option-meta slds-listbox__option-meta--entity">
+        ? <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
         { _.upperFirst(props.entityType) || 'Account' } &bull; { _.upperFirst(props.entityLocation) || ' San Francisco' }
         </span>
       : null }
@@ -314,7 +319,7 @@ export let Option = props =>
     type="plain"
     id={props.id}
     className={classNames(
-      'slds-media--small slds-media--center',
+      'slds-media_small slds-media_center',
       {
         'slds-is-selected': props.selected,
         'slds-has-focus': props.focused
@@ -325,7 +330,7 @@ export let Option = props =>
     { !props.hideIcon
       ? <span className="slds-media__figure">
         <SvgIcon
-          className="slds-icon slds-icon--x-small slds-listbox__icon-selected"
+          className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
           sprite="utility"
           symbol="check"
         />
@@ -346,20 +351,20 @@ export let Option = props =>
 */
 let ObjectSwitcher = props =>
   <div className={classNames(
-    'slds-listbox--object-switcher slds-dropdown-trigger slds-dropdown-trigger--click',
+    'slds-listbox_object-switcher slds-dropdown-trigger slds-dropdown-trigger_click',
     props.className
   )}>
     <button
-      className="slds-button slds-button--icon"
+      className="slds-button slds-button_icon"
       aria-haspopup="true"
       title="Select object to search in"
     >
       <span className="slds-icon_container slds-icon-standard-account" title="Accounts">
-        <SvgIcon className="slds-icon slds-icon--small" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol="account" />
         <span className="slds-assistive-text">Searching in: Accounts</span>
       </span>
       <SvgIcon
-        className="slds-button__icon slds-button__icon--x-small"
+        className="slds-button__icon slds-button__icon_x-small"
         sprite="utility"
         symbol="down"
       />
@@ -371,7 +376,7 @@ let ObjectSwitcher = props =>
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props =>
-  <Listbox className="slds-dropdown slds-dropdown--fluid" vertical>
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}
@@ -391,91 +396,37 @@ const ListboxDropdown = props =>
 
 const ListboxList = props =>
   <Listbox className="slds-dropdown--length-10" vertical={true}>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Acme"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Edge SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Express Logistics SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="GenePoint Lab Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="GenePoint SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="Pyramid Emergency Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Installations"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Plant Standby Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil SLA"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="United Oil Standby Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="University of AZ Installations"
-        entityMeta={true}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={_.uniqueId('listbox-option-id-')}
-        entityTitle="University of AZ Portable Generators"
-        entityMeta={true}
-      />
-    </ListboxItem>
+    <li role="presentation" className="slds-listbox__item">
+      <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={_.uniqueId('listbox-option-id-')}>
+        <h3 className="slds-text-title--caps" role="presentation">My Favorites</h3>
+      </span>
+    </li>
+    { accounts.slice(0, props.length).map(value =>
+      <ListboxItem key={value}>
+        <EntityOption
+          id={_.uniqueId('listbox-option-id-')}
+          entityTitle={value}
+          entityMeta={true}
+        />
+      </ListboxItem>
+    )}
   </Listbox>;
+
+const Footer = props =>
+  <ul>
+    <li>
+      <button className="slds-button slds-button--reset slds-p-vertical--xx-small slds-size--1-of-1" role="presentation">
+        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="add" />
+        Favorite this page
+      </button>
+    </li>
+    <li>
+      <button className="slds-button slds-button--reset slds-p-vertical--xx-small slds-size--1-of-1" role="presentation">
+        <SvgIcon className="slds-button__icon slds-button__icon--left" sprite="utility" symbol="edit" />
+        Edit Favorites
+      </button>
+    </li>
+  </ul>;
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -541,19 +492,19 @@ export let states = [
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
-            className="slds-p-top--xxx-small"
+            className="slds-p-top_xxx-small"
             horizontal={true}
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
             </ListboxItem>
             <ListboxItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar--x-small slds-pill__icon_container">
+                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
@@ -567,21 +518,62 @@ export let states = [
 // Examples
 export let examples = [
   {
-    id: 'non-modal-dialog',
-    label: 'Non-modal Dialog',
+    id: 'non-modal-dialog-list-0-items',
+    label: 'Dynamic list — 0 Items (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-vertical--medium slds-p-horizontal--small"
+        footer={<Footer />}
+      >
+        <h3 className="slds-text-title--caps slds-m-bottom--x-small" role="presentation">
+          My Favorites
+        </h3>
+        <p>You can favorite any page!</p>
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-1-item',
+    label: 'Dynamic list — 1 Item (Non-modal Dialog)',
     element:
       <Popover
         className="slds-nubbin--top-left"
         bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
+      >
+        <ListboxList length="1" />
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-sub-10-item',
+    label: 'Dynamic list — <10 Items (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
+      >
+        <ListboxList length="6" />
+      </Popover>
+  },
+  {
+    id: 'non-modal-dialog-list-over-10-item',
+    label: 'Dynamic list — >10 Items (Non-modal Dialog)',
+    element:
+      <Popover
+        className="slds-nubbin--top-left"
+        bodyClassName="slds-p-horizontal--none"
+        footer={<Footer />}
       >
         <ComboboxContainer
           autocomplete={true}
           isOpen={true}
+          placeholder="Search Accounts"
           hideLabel={true}
           inputIcon="right"
           inputIconRightSymbol="search"
-          formControlClassName="slds-m-around--small"
-          listbox={<ListboxList />}
+          inputContainerClassName="slds-m-around_small"
+          listbox={<ListboxList length="12" />}
           staticListbox={true}
         />
       </Popover>

@@ -11,7 +11,7 @@ export default (
   <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
-        <BreadCrumbs className="slds-m-bottom--xx-small">
+        <BreadCrumbs className="slds-m-bottom_xx-small">
           <Crumb href="javascript:void(0);">Accounts</Crumb>
           <Crumb href="javascript:void(0);">Company One</Crumb>
         </BreadCrumbs>
@@ -20,12 +20,12 @@ export default (
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
         <div className="slds-button-group" role="group">
-          <button className="slds-button slds-button--neutral">
+          <button className="slds-button slds-button_neutral">
             Add Contact
           </button>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
-              className="slds-button--icon-border-filled"
+              className="slds-button_icon-border-filled"
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions"
@@ -36,32 +36,32 @@ export default (
     </div>
     <div className="slds-grid">
       <div className="slds-col slds-align-bottom">
-        <p className="slds-text-body--small">10 items &bull; sorted by name</p>
+        <p className="slds-text-body_small">10 items &bull; sorted by name</p>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
-        <div className="slds-dropdown-trigger slds-dropdown-trigger--click">
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click">
           <ButtonIcon
-            className="slds-button--icon-more"
+            className="slds-button_icon-more"
             symbol="table"
             hasDropdown
             assistiveText="Change view"
             title="Change view" />
         </div>
-        <div className="slds-button-group slds-m-left--xx-small" role="group">
+        <div className="slds-button-group slds-m-left_xx-small" role="group">
           <ButtonIcon
-            className="slds-button--icon-border"
+            className="slds-button_icon-border"
             symbol="chart"
             assistiveText="Chart"
             title="Chart" />
           <ButtonIcon
-            className="slds-button--icon-border"
+            className="slds-button_icon-border"
             symbol="filterList"
             assistiveText="Filter List"
             title="Filter List"
           />
-          <div className="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
-              className="slds-button--icon-more"
+              className="slds-button_icon-more"
               symbol="sort"
               hasDropdown
               assistiveText="Sort"

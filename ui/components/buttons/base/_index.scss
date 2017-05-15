@@ -118,7 +118,7 @@ a.slds-button--inverse:focus {
 /**
  * Resets attributes of .slds-button back to the browser default
  *
- * @selector .slds-button--reset
+ * @selector .slds-button_reset
  * @restrict button
  * @modifier
  */
@@ -137,7 +137,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates the gray border with white background default style
  *
- * @selector .slds-button--neutral
+ * @selector .slds-button_neutral
  * @restrict .slds-button
  * @modifier
  * @group theme
@@ -156,7 +156,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates the brand blue Salesforce style
  *
- * @selector .slds-button--brand
+ * @selector .slds-button_brand
  * @restrict .slds-button
  * @modifier
  * @group theme
@@ -189,7 +189,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates the inverse style for dark backgrounds
  *
- * @selector .slds-button--inverse
+ * @selector .slds-button_inverse
  * @restrict .slds-button
  * @modifier
  * @group theme
@@ -236,7 +236,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates a red button style
  *
- * @selector .slds-button--destructive
+ * @selector .slds-button_destructive
  * @restrict .slds-button
  * @group theme
  * @modifier
@@ -256,7 +256,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates a green button style
  *
- * @selector .slds-button--success
+ * @selector .slds-button_success
  * @restrict .slds-button
  * @group theme
  * @modifier
@@ -270,7 +270,7 @@ a.slds-button--inverse:focus {
 /**
  * Creates a smaller button style
  *
- * @selector .slds-button--small
+ * @selector .slds-button_small
  * @restrict .slds-button
  * @deprecated
  */

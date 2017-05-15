@@ -12,10 +12,10 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 const SetupDropdown = (
-  <Menu className="slds-dropdown--right slds-nubbin--top-right">
+  <Menu className="slds-dropdown_right slds-nubbin_top-right">
     <MenuList>
       <li className="slds-dropdown__header" role="separator">
-        <span className="slds-text-title--caps">Setup</span>
+        <span className="slds-text-title_caps">Setup</span>
       </li>
       <MenuItem tabIndex="0">Setup Home</MenuItem>
     </MenuList>
@@ -23,14 +23,14 @@ const SetupDropdown = (
 );
 
 const ActionsDropdown = (
-  <Menu className="slds-dropdown--right slds-nubbin--top-right">
+  <Menu className="slds-dropdown_right slds-nubbin_top-right">
     <MenuList>
       <li className="slds-dropdown__header" role="separator">
-        <span className="slds-text-title--caps">Create</span>
+        <span className="slds-text-title_caps">Create</span>
       </li>
-      <MenuItem tabIndex="0"><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-note slds-m-right--x-small" sprite="standard" symbol="note" /> New Note</MenuItem>
-      <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-log-a-call slds-m-right--x-small" sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
-      <MenuItem><SvgIcon className="slds-icon slds-icon--small slds-icon-standard-event slds-m-right--x-small" sprite="standard" symbol="event" /> New Event</MenuItem>
+      <MenuItem tabIndex="0"><SvgIcon className="slds-icon slds-icon_small slds-icon-standard-note slds-m-right_x-small" sprite="standard" symbol="note" /> New Note</MenuItem>
+      <MenuItem><SvgIcon className="slds-icon slds-icon_small slds-icon-standard-log-a-call slds-m-right_x-small" sprite="standard" symbol="log_a_call" /> Log a Call</MenuItem>
+      <MenuItem><SvgIcon className="slds-icon slds-icon_small slds-icon-standard-event slds-m-right_x-small" sprite="standard" symbol="event" /> New Event</MenuItem>
     </MenuList>
   </Menu>
 );
@@ -44,8 +44,8 @@ let GlobalSearch = props =>
   >
     <label className="slds-assistive-text" htmlFor="global-search-01">Search Salesforce</label>
 
-    <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon--left-right">
-      <SvgIcon className="slds-input__icon slds-input__icon--left" sprite="utility" symbol="search" />
+    <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+      <SvgIcon className="slds-input__icon slds-input__icon_left" sprite="utility" symbol="search" />
       <input
         aria-activedescendant=""
         aria-autocomplete="list"
@@ -60,7 +60,7 @@ let GlobalSearch = props =>
       />
       {
         props.value
-          ? <button className="slds-input__icon slds-input__icon--right slds-button slds-button--icon">
+          ? <button className="slds-input__icon slds-input__icon_right slds-button slds-button_icon">
             <SvgIcon className="slds-button__icon" sprite="utility" symbol="clear" />
             <span className="slds-assistive-text">Clear the current search term</span>
           </button>
@@ -78,50 +78,50 @@ let GlobalSearch = props =>
 let GlobalSearchMRUs = props =>
   <ul className="slds-lookup__list" role="group" aria-label="Recent Items">
     <li role="presentation">
-      <h3 role="presentation" className="slds-lookup__item--label slds-text-body--small">Recent Items</h3>
+      <h3 role="presentation" className="slds-lookup__item_label slds-text-body_small">Recent Items</h3>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure" sprite="standard" symbol="opportunity" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">Salesforce - 1,000 Licenses</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Prospecting</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Opportunity &bull; Prospecting</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure" sprite="standard" symbol="contact" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">Art Vandelay</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Contact &bull; avandelay@vandelay.com</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Contact &bull; avandelay@vandelay.com</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">Vandelary Industries</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Account &bull; San Francisco</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Account &bull; San Francisco</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
-        <SvgIcon className="slds-icon slds-icon-custom-8 slds-icon--small slds-media__figure" sprite="custom" symbol="custom8" />
+        <SvgIcon className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure" sprite="custom" symbol="custom8" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">Salesforce UK 2016 Events</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">General Ledger &bull; $20,000</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">General Ledger &bull; $20,000</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-lead slds-icon--small slds-media__figure" sprite="standard" symbol="lead" />
+        <SvgIcon className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure" sprite="standard" symbol="lead" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">H.E. Pennypacker</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Lead &bull; Nursing</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Lead &bull; Nursing</span>
         </span>
       </span>
     </li>
@@ -130,53 +130,53 @@ let GlobalSearchMRUs = props =>
 let GlobalSearchSearchOptions = props =>
   <ul className="slds-lookup__list" role="presentation">
     <li role="presentation">
-      <span className="slds-lookup__item-action slds-lookup__item-action--label slds-text-body--small slds-has-focus" id="option-00" role="option">
-        <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default" sprite="utility" symbol="search" />
+      <span className="slds-lookup__item-action slds-lookup__item-action_label slds-text-body_small slds-has-focus" id="option-00" role="option">
+        <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="search" />
         <span className="slds-truncate" title="'ibm' in Salesforce">"ibm" in Salesforce</span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-01" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure" sprite="standard" symbol="opportunity" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text"><mark>IBM</mark> - 1yr/100k</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity &bull; Proposal/Quote</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Opportunity &bull; Proposal/Quote</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-02" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text"><mark>IBM</mark></span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Account  &bull; Menlo Park</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-03" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon--small slds-media__figure" sprite="standard" symbol="account" />
+        <SvgIcon className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure" sprite="standard" symbol="account" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text"><mark>IBM</mark> Watson</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Account  &bull; Menlo Park</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Account  &bull; Menlo Park</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-04" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon--small slds-media__figure" sprite="standard" symbol="opportunity" />
+        <SvgIcon className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure" sprite="standard" symbol="opportunity" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">200 Service Licenses - <mark>IBM</mark></span>
-          <span className="slds-lookup__result-meta slds-text-body--small">Opportunity  &bull; Close-Won</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">Opportunity  &bull; Close-Won</span>
         </span>
       </span>
     </li>
     <li role="presentation">
       <span className="slds-lookup__item-action slds-media" id="option-05" role="option">
-        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon--small slds-media__figure" sprite="standard" symbol="contact" />
+        <SvgIcon className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure" sprite="standard" symbol="contact" />
         <span className="slds-media__body">
           <span className="slds-lookup__result-text">Art Vandelay (<mark>IBM</mark>)</span>
-          <span className="slds-lookup__result-meta slds-text-body--small">User &bull; Latex Salesman</span>
+          <span className="slds-lookup__result-meta slds-text-body_small">User &bull; Latex Salesman</span>
         </span>
       </span>
     </li>
@@ -184,25 +184,25 @@ let GlobalSearchSearchOptions = props =>
 
 export let GlobalHeader = props =>
   <header className={classNames('slds-global-header_container', props.className)}>
-    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
-    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
-    <div className="slds-global-header slds-grid slds-grid--align-spread">
+    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
+    <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
+    <div className="slds-global-header slds-grid slds-grid_align-spread">
       <div className="slds-global-header__item">
         <div className="slds-global-header__logo">
           <img src="/assets/images/logo-noname.svg" alt="" />
         </div>
       </div>
-      <div className="slds-global-header__item slds-global-header__item--search">
+      <div className="slds-global-header__item slds-global-header__item_search">
         <GlobalSearch
           expanded={props.expanded}
           value={props.searchingFor}
         />
       </div>
-      <ul className="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+      <ul className="slds-global-header__item slds-grid slds-grid_vertical-align-center">
         <li className="slds-grid">
           <ButtonIcon
             className={classNames(
-              'slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon-favorites',
+              'slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites',
               {
                 'slds-is-selected': props.favoritesSelected,
                 'slds-is-disabled': props.favoritesDisabled
@@ -214,9 +214,9 @@ export let GlobalHeader = props =>
             symbol="favorite"
             title="Toggle Favorites"
             assistiveText="Toggle Favorite" />
-          <span className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.actions ? 'slds-is-open' : null)}>
+          <span className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click', props.actions ? 'slds-is-open' : null)}>
             <ButtonIcon
-              className={classNames('slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon slds-m-left--none')}
+              className={classNames('slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none')}
               hasPopup
               disabled={props.favoritesDisabled}
               symbol="chevrondown"
@@ -224,27 +224,27 @@ export let GlobalHeader = props =>
               assistiveText="View Favorites" />
           </span>
         </li>
-        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-p-horizontal--xxx-small', props.actions ? 'slds-is-open' : null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small', props.actions ? 'slds-is-open' : null)}>
           <ButtonIcon
-            className="slds-button--icon slds-button--icon-small slds-button--icon-container slds-button--icon-x-small slds-global-header__button--icon-actions slds-m-horizontal--xx-small"
+            className="slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
             hasPopup
             symbol="add"
             title="Global Actions"
             assistiveText="Global Actions" />
           { props.actions ? ActionsDropdown : null}
         </li>
-        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.help ? 'slds-is-open' : null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click', props.help ? 'slds-is-open' : null)}>
           <ButtonIcon
-            className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
+            className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
             hasPopup
             symbol="question"
             title="Help and Training"
             assistiveText="Help and Training" />
         </li>
-        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open' : null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click', props.setup ? 'slds-is-open' : null)}>
           <ButtonIcon
-            className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
+            className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
             hasPopup
             symbol="setup"
@@ -252,18 +252,18 @@ export let GlobalHeader = props =>
             assistiveText="Setup" />
           { props.setup ? SetupDropdown : null}
         </li>
-        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click', props.setup ? 'slds-is-open' : null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click', props.setup ? 'slds-is-open' : null)}>
           <ButtonIcon
-            className="slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon"
+            className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
             hasPopup
             symbol="notification"
             title="Notifications"
             assistiveText="Notifications" />
         </li>
-        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small', props.setup ? 'slds-is-open' : null)}>
+        <li className={classNames('slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small', props.setup ? 'slds-is-open' : null)}>
           <button className="slds-button" title="person name" aria-haspopup="true">
-            <span className="slds-avatar slds-avatar--circle slds-avatar--medium">
+            <span className="slds-avatar slds-avatar_circle slds-avatar_medium">
               <img
                 alt="Person name"
                 src="/assets/images/avatar2.jpg"

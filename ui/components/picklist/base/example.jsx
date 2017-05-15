@@ -27,13 +27,13 @@ const listboxOptionId03 = 'listbox-option-unique-id-03';
 const ListboxDropdown = props =>
   <Listbox
     aria-label={props.heading ? props.heading : null}
-    className="slds-dropdown slds-dropdown--fluid"
+    className="slds-dropdown slds-dropdown_fluid"
     vertical={true}
   >
     {props.heading ?
       <li role="presentation" className="slds-listbox__item">
-        <span className="slds-media slds-listbox__option slds-listbox__option--plain" role="presentation" id={listboxOptionId00}>
-          <h3 className="slds-text-title--caps" role="presentation">{props.heading}</h3>
+        <span className="slds-media slds-listbox__option slds-listbox__option_plain" role="presentation" id={listboxOptionId00}>
+          <h3 className="slds-text-title_caps" role="presentation">{props.heading}</h3>
         </span>
       </li>
     : null}
@@ -75,7 +75,7 @@ export const Context = props =>
 export default (
   <ComboboxContainer
     className="slds-combobox-picklist"
-    containerClassName="slds-size--small"
+    containerClassName="slds-size_small"
     inputIcon="right"
     inputIconRightSymbol="down"
     listbox={<ListboxDropdown />}
@@ -90,7 +90,7 @@ export let states = [
     label: 'Focused',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         isOpen={true}
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -106,7 +106,7 @@ export let states = [
     label: 'Open - Item Focused',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         isOpen={true}
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -120,7 +120,7 @@ export let states = [
     label: 'Open - Option Selected',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         isOpen={true}
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -134,7 +134,7 @@ export let states = [
     label: 'Open - Option(s) Selected',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         isOpen={true}
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -150,7 +150,7 @@ export let states = [
     label: 'Option Selected',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         inputIcon="right"
         inputIconRightSymbol="down"
         value="Option A"
@@ -163,7 +163,7 @@ export let states = [
     label: 'Option(s) Selected',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         inputIcon="right"
         inputIconRightSymbol="down"
         value="2 Options Selected"
@@ -175,7 +175,7 @@ export let states = [
       <Listbox
         id={listboxSelectionsId}
         aria-label="Selected Options:"
-        className="slds-p-top--xxx-small"
+        className="slds-p-top_xxx-small"
         horizontal
       >
         <ListboxItem>
@@ -192,7 +192,7 @@ export let states = [
     label: 'Group heading label',
     element:
       <ComboboxContainer
-        containerClassName="slds-size--small"
+        containerClassName="slds-size_small"
         isOpen={true}
         inputIcon="right"
         inputIconRightSymbol="down"

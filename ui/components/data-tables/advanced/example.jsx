@@ -41,7 +41,7 @@ const rows = [{
 /// ////////////////////////////////////////
 
 let Table = props =>
-  <table className={classNames('slds-table slds-table--bordered slds-table--resizable-cols', props.className)} role="grid">
+  <table className={classNames('slds-table slds-table_bordered slds-table_resizable-cols', props.className)} role="grid">
     {props.children}
   </table>;
 
@@ -55,12 +55,12 @@ export let Th = props => {
   }
 
   return (
-    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title--caps', props.className)} scope="col">
-      <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset" tabIndex={tabIndex}>
+    <th {...rest} className={classNames('slds-is-sortable slds-is-resizable slds-text-title_caps', props.className)} scope="col">
+      <a href="javascript:void(0);" className="slds-th__action slds-text-link_reset" tabIndex={tabIndex}>
         <span className="slds-assistive-text">Sort </span>
         <span className="slds-truncate" title={columnName || 'Column Name'}>{ columnName || 'Column Name' }</span>
         <div className="slds-icon_container">
-          <SvgIcon className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
+          <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" sprite="utility" symbol="arrowdown" />
         </div>
         <span className="slds-assistive-text" aria-live="assertive" aria-atomic="true">{sortDirection}</span>
       </a>
@@ -80,7 +80,7 @@ let RowData = props => {
 
   return (
     <tr className={classNames('slds-hint-parent', props.className)} aria-selected={props.checked}>
-      <td role="gridcell" className="slds-text-align--right" style={{ width: '3.25rem' }}>
+      <td role="gridcell" className="slds-text-align_right" style={{ width: '3.25rem' }}>
         <Checkbox label={checkboxLabel} checked={props.checked} hideLabel />
       </td>
       <th scope="row">
@@ -108,8 +108,8 @@ let RowData = props => {
       </td>
       <td role="gridcell" style={{ width: '3.25rem' }}>
         <ButtonIcon
-          className="slds-button--icon-border-filled slds-button--icon-x-small"
-          iconClassName="slds-button__icon--hint slds-button__icon--small"
+          className="slds-button_icon-border-filled slds-button_icon-x-small"
+          iconClassName="slds-button__icon_hint slds-button__icon_small"
           symbol="down"
           assistiveText="Show More"
           title="Show More"
@@ -124,11 +124,11 @@ let RowData = props => {
 /// ///////////////////////////////////////////
 
 export default (
-  <Table className="slds-table--fixed-layout">
+  <Table className="slds-table_fixed-layout">
     <thead>
-      <tr className="slds-line-height--reset">
-        <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-          <div className="slds-th__action slds-th__action--form">
+      <tr className="slds-line-height_reset">
+        <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+          <div className="slds-th__action slds-th__action_form">
             <Checkbox label="Select All" hideLabel />
           </div>
         </th>
@@ -166,11 +166,11 @@ export let states = [
     id: 'row-selected',
     label: 'Row Selected',
     element:
-      <Table className="slds-table--fixed-layout">
+      <Table className="slds-table_fixed-layout">
         <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+              <div className="slds-th__action slds-th__action_form">
                 <Checkbox label="Select All" checked hideLabel />
               </div>
             </th>
@@ -208,11 +208,11 @@ export let states = [
     id: 'all-row-selected',
     label: 'All Rows Selected',
     element:
-      <Table className="slds-table--fixed-layout">
+      <Table className="slds-table_fixed-layout">
         <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+              <div className="slds-th__action slds-th__action_form">
                 <Checkbox label="Select All" checked hideLabel />
               </div>
             </th>
@@ -250,17 +250,17 @@ export let states = [
     id: 'sorted-column-asc',
     label: 'Sorted Ascending',
     element:
-      <Table className="slds-table--fixed-layout">
+      <Table className="slds-table_fixed-layout">
         <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+              <div className="slds-th__action slds-th__action_form">
                 <Checkbox label="Select All" hideLabel />
               </div>
             </th>
             { _.times(columns.length, i =>
               <Th key={i}
-                className={(i === 1) ? 'slds-is-sorted slds-is-sorted--asc' : null}
+                className={(i === 1) ? 'slds-is-sorted slds-is-sorted_asc' : null}
                 aria-sort={(i === 1) ? 'ascending' : null}
                 columnName={columns[i]}
                 focusable
@@ -293,17 +293,17 @@ export let states = [
     id: 'sorted-column-desc',
     label: 'Sorted Descending',
     element:
-      <Table className="slds-table--fixed-layout">
+      <Table className="slds-table_fixed-layout">
         <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+              <div className="slds-th__action slds-th__action_form">
                 <Checkbox label="Select All" hideLabel />
               </div>
             </th>
             { _.times(columns.length, i =>
               <Th key={i}
-                className={(i === 1) ? 'slds-is-sorted slds-is-sorted--desc' : null}
+                className={(i === 1) ? 'slds-is-sorted slds-is-sorted_desc' : null}
                 aria-sort={(i === 1) ? 'descending' : null}
                 columnName={columns[i]}
                 focusable
@@ -336,11 +336,11 @@ export let states = [
     id: 'resized-column',
     label: 'Column resized',
     element:
-      <Table className="slds-table--fixed-layout">
+      <Table className="slds-table_fixed-layout">
         <thead>
-          <tr className="slds-line-height--reset">
-            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align--right">
-              <div className="slds-th__action slds-th__action--form">
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.25rem' }} className="slds-text-align_right">
+              <div className="slds-th__action slds-th__action_form">
                 <Checkbox label="Select All" hideLabel />
               </div>
             </th>

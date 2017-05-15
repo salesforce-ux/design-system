@@ -12,21 +12,21 @@ import { ButtonIcon } from '../../button-icons/base/example';
 export default (
   <ButtonGroup>
     <ButtonIcon
-      className="slds-button--icon-border"
+      className="slds-button_icon-border"
       symbol="chart"
       assistiveText="Charts"
       title="Charts"
       aria-pressed="false"
     />
     <ButtonIcon
-      className="slds-button--icon-border"
+      className="slds-button_icon-border"
       symbol="filterList"
       assistiveText="Filter List"
       title="Filter List"
       aria-pressed="false"
     />
     <ButtonIcon
-      className="slds-button--icon-more"
+      className="slds-button_icon-more"
       hasDropdown
       assitiveText="More Actions"
       title="More Actions"
@@ -41,21 +41,21 @@ export let states = [
     element:
       <ButtonGroup>
         <ButtonIcon
-          className="slds-button--icon-border slds-is-selected"
+          className="slds-button_icon-border slds-is-selected"
           symbol="chart"
           assistiveText="Charts"
           title="Charts"
           aria-pressed="true"
         />
         <ButtonIcon
-          className="slds-button--icon-border"
+          className="slds-button_icon-border"
           symbol="filterList"
           assistiveText="Filter List"
           title="Filter List"
           aria-pressed="false"
         />
         <ButtonIcon
-          className="slds-button--icon-more"
+          className="slds-button_icon-more"
           hasDropdown
           assitiveText="More Actions"
           title="More Actions"

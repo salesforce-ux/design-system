@@ -13,7 +13,7 @@ import { MenuItem } from '../dropdown/example';
 /// ////////////////////////////////////////
 
 const settingsIcon = (
-  <ButtonIcon className="slds-button--icon-container" symbol="settings" assistiveText="Settings" title="Settings" aria-haspopup="true" />
+  <ButtonIcon className="slds-button_icon-container" symbol="settings" assistiveText="Settings" title="Settings" aria-haspopup="true" />
 );
 
 /// ///////////////////////////////////////////
@@ -23,7 +23,7 @@ const settingsIcon = (
 let TopLeft = props =>
   <div className="demo-only" style={{height: '185px', paddingLeft: '2rem'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-dropdown--left slds-nubbin--top-left">
+      <Menu className="slds-dropdown_left slds-nubbin_top-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -36,7 +36,7 @@ let TopLeft = props =>
 let Top = props =>
   <div className="demo-only" style={{height: '185px', textAlign: 'center'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-nubbin--top">
+      <Menu className="slds-nubbin_top">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -49,7 +49,7 @@ let Top = props =>
 let TopRight = props =>
   <div className="demo-only" style={{height: '185px', textAlign: 'right', paddingRight: '2rem'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-dropdown--right slds-nubbin--top-right">
+      <Menu className="slds-dropdown_right slds-nubbin_top-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -60,9 +60,9 @@ let TopRight = props =>
   </div>;
 
 let BottomLeft = props =>
-  <div className="demo-only slds-grid slds-grid--vertical-align-end" style={{height: '185px', paddingLeft: '2rem'}}>
+  <div className="demo-only slds-grid slds-grid_vertical-align-end" style={{height: '185px', paddingLeft: '2rem'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-dropdown--bottom slds-dropdown--left slds-nubbin--bottom-left">
+      <Menu className="slds-dropdown_bottom slds-dropdown_left slds-nubbin_bottom-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -73,9 +73,9 @@ let BottomLeft = props =>
   </div>;
 
 let Bottom = props =>
-  <div className="demo-only slds-grid slds-grid--vertical-align-end slds-grid--align-center" style={{height: '185px'}}>
+  <div className="demo-only slds-grid slds-grid_vertical-align-end slds-grid_align-center" style={{height: '185px'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-dropdown--bottom slds-nubbin--bottom">
+      <Menu className="slds-dropdown_bottom slds-nubbin_bottom">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -86,9 +86,9 @@ let Bottom = props =>
   </div>;
 
 let BottomRight = props =>
-  <div className="demo-only slds-grid slds-grid--vertical-align-end slds-grid--align-end" style={{height: '185px', paddingRight: '2rem'}}>
+  <div className="demo-only slds-grid slds-grid_vertical-align-end slds-grid_align-end" style={{height: '185px', paddingRight: '2rem'}}>
     <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
-      <Menu className="slds-dropdown--bottom slds-dropdown--right slds-nubbin--bottom-right">
+      <Menu className="slds-dropdown_bottom slds-dropdown_right slds-nubbin_bottom-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>

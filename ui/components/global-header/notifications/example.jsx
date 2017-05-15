@@ -14,7 +14,7 @@ import classNames from 'classnames';
 /// //////////////////////////////////////////
 
 const MoreIcon = (
-  <ButtonIcon className="slds-button--icon-border-filled slds-button--icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" />
+  <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" sprite="utility" symbol="down" assistiveText="Show More" title="Show More" aria-haspopup="true" />
 );
 
 let TriggerButton = props =>
@@ -28,10 +28,10 @@ let UnreadIcon = props =>
   </div>;
 
 let NotificationItem = props =>
-  <li className={classNames('slds-global-header__notification slds-p-around--xx-small', props.className)}>
-    <div className="slds-media slds-has-flexi-truncate slds-p-around--x-small">
+  <li className={classNames('slds-global-header__notification slds-p-around_xx-small', props.className)}>
+    <div className="slds-media slds-has-flexi-truncate slds-p-around_x-small">
       <div className="slds-media__figure">
-        <Avatar className="slds-avatar--small slds-avatar--circle">
+        <Avatar className="slds-avatar_small slds-avatar_circle">
           <img
             alt={props.username}
             src="/assets/images/avatar3.jpg"
@@ -40,13 +40,13 @@ let NotificationItem = props =>
         </Avatar>
       </div>
       <div className="slds-media__body">
-        <div className="slds-grid slds-grid--align-spread">
-          <a href="javascript:void(0);" className="slds-text-link--reset slds-has-flexi-truncate">
+        <div className="slds-grid slds-grid_align-spread">
+          <a href="javascript:void(0);" className="slds-text-link_reset slds-has-flexi-truncate">
             <h3 className="slds-truncate" title={`${props.username} ${props.messageTitle}`}><strong>{`${props.username} ${props.messageTitle}`}</strong></h3>
             <p className="slds-truncate" title={props.message}>{props.message}</p>
-            <p className="slds-m-top--x-small slds-text-color--weak">{props.messageTime}</p>
+            <p className="slds-m-top_x-small slds-text-color_weak">{props.messageTime}</p>
           </a>
-          <div className="slds-no-flex slds-grid slds-grid--vertical">
+          <div className="slds-no-flex slds-grid slds-grid_vertical">
             {props.children}
           </div>
         </div>
@@ -55,8 +55,8 @@ let NotificationItem = props =>
   </li>;
 
 let PopoverMenu = props =>
-  <section className="slds-popover slds-popover--large slds-nubbin--top-right" role="dialog" aria-label="Notifications" aria-describedby="notifications-container" style={{ position: 'absolute', right: '3.125rem' }}>
-    <div id="notifications-container" className="slds-popover__body slds-p-around--none">
+  <section className="slds-popover slds-popover_large slds-nubbin_top-right" role="dialog" aria-label="Notifications" aria-describedby="notifications-container" style={{ position: 'absolute', right: '3.125rem' }}>
+    <div id="notifications-container" className="slds-popover__body slds-p-around_none">
       <ul>
         {props.children}
       </ul>
@@ -72,7 +72,7 @@ export default (
     <GlobalHeader popoverMenu>
       <PopoverMenu>
         <NotificationItem
-          className="slds-global-header__notification--unread"
+          className="slds-global-header__notification_unread"
           messageTitle="mentioned you in a comment:"
           message="I need you to review this for me @Paulina"
           messageTime="10m ago"

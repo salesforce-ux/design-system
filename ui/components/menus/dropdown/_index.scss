@@ -52,7 +52,7 @@
   /**
    * If someone is using javascript for click to toggle - this modifier will help
    *
-   * @selector .slds-dropdown-trigger--hover
+   * @selector .slds-dropdown-trigger_hover
    * @restrict .slds-dropdown-trigger
    */
   &_hover,
@@ -79,7 +79,7 @@
   /**
    * If someone is using javascript for click to toggle - this modifier will help
    *
-   * @selector .slds-dropdown-trigger--click
+   * @selector .slds-dropdown-trigger_click
    * @restrict .slds-dropdown-trigger
    */
   &_click,
@@ -93,7 +93,7 @@
      * Opens dropdown menu when invoked on click
      *
      * @selector .slds-is-open
-     * @restrict .slds-dropdown-trigger--click
+     * @restrict .slds-dropdown-trigger_click
      * @modifier
      */
     &.slds-is-open .slds-dropdown {
@@ -146,7 +146,7 @@
   /**
    * Positions dropdown to left side of target
    *
-   * @selector .slds-dropdown--left
+   * @selector .slds-dropdown_left
    * @restrict .slds-dropdown
    * @modifier
    * @group position
@@ -160,7 +160,7 @@
   /**
    * Positions dropdown to right side of target
    *
-   * @selector .slds-dropdown--right
+   * @selector .slds-dropdown_right
    * @restrict .slds-dropdown
    * @modifier
    * @group position
@@ -175,7 +175,7 @@
   /**
    * Positions dropdown to above target
    *
-   * @selector .slds-dropdown--bottom
+   * @selector .slds-dropdown_bottom
    * @restrict .slds-dropdown
    * @modifier
    * @group position
@@ -188,7 +188,7 @@
   /**
    * Sets min-width of 6rem/96px
    *
-   * @selector .slds-dropdown--xx-small
+   * @selector .slds-dropdown_xx-small
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -201,7 +201,7 @@
   /**
    * Sets min-width of 12rem/192px
    *
-   * @selector .slds-dropdown--x-small
+   * @selector .slds-dropdown_x-small
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -214,7 +214,7 @@
   /**
    * Sets min-width of 15rem/240px
    *
-   * @selector .slds-dropdown--small
+   * @selector .slds-dropdown_small
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -227,7 +227,7 @@
   /**
    * Sets min-width of 20rem/320px
    *
-   * @selector .slds-dropdown--medium
+   * @selector .slds-dropdown_medium
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -240,7 +240,7 @@
   /**
    * Sets min-width of 25rem/400px
    *
-   * @selector .slds-dropdown--large
+   * @selector .slds-dropdown_large
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -254,7 +254,7 @@
   /**
    * Sets min-width of 25rem/400px
    *
-   * @selector .slds-dropdown--large
+   * @selector .slds-dropdown_large
    * @restrict .slds-dropdown
    * @modifier
    * @group width
@@ -269,7 +269,7 @@
   /**
    * Forces overflow scrolling after 5 list items
    *
-   * @selector .slds-dropdown--length-5
+   * @selector .slds-dropdown_length-5
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -282,7 +282,7 @@
   /**
    * Forces overflow scrolling after 7 list items
    *
-   * @selector .slds-dropdown--length-7
+   * @selector .slds-dropdown_length-7
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -295,7 +295,7 @@
   /**
    * Forces overflow scrolling after 10 list items
    *
-   * @selector .slds-dropdown--length-10
+   * @selector .slds-dropdown_length-10
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -308,7 +308,7 @@
   /**
    * Forces overflow scrolling after 5 list items with an icon
    *
-   * @selector .slds-dropdown--length-with-icon-5
+   * @selector .slds-dropdown_length-with-icon-5
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -321,7 +321,7 @@
   /**
    * Forces overflow scrolling after 7 list items with an icon
    *
-   * @selector .slds-dropdown--length-with-icon-7
+   * @selector .slds-dropdown_length-with-icon-7
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -334,7 +334,7 @@
   /**
    * Forces overflow scrolling after 10 list items with an icon
    *
-   * @selector .slds-dropdown--length-with-icon-10
+   * @selector .slds-dropdown_length-with-icon-10
    * @restrict .slds-dropdown, .slds-dropdown__list
    * @modifier
    * @group height
@@ -347,7 +347,7 @@
   /**
    * Theme
    *
-   * @selector .slds-dropdown--inverse
+   * @selector .slds-dropdown_inverse
    * @restrict .slds-dropdown
    * @modifier
    * @group theme
@@ -497,7 +497,7 @@
     /**
      * If menu contains menuitemcheckbox then this toggles the selected icon when it is selected
      *
-     * @selector .slds-icon--selected
+     * @selector .slds-icon_selected
      * @restrict .slds-dropdown__item svg
      */
     .slds-icon_selected,

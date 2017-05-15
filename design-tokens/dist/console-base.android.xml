@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="CARD_SPACING_MEDIUM" category="spacing">12</property>
+  <property name="CARD_SPACING_LARGE" category="spacing">12</property>
+  <property name="TABLE_SPACING_X_SMALL" category="spacing">4</property>
+</resources>

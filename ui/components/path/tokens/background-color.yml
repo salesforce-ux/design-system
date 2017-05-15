@@ -1,0 +1,34 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_PATH_COMPLETE:
+    value: '{!EMERALD}'
+    comment: The background color for Salespath stages that are complete.
+  COLOR_BACKGROUND_PATH_COMPLETE_HOVER:
+    value: '{!SALEM}'
+    comment: The hover background color for Salespath stages that are complete.
+  COLOR_BACKGROUND_PATH_CURRENT:
+    value: '{!SCIENCE_BLUE}'
+    comment: The background color for Salespath stages that are the current stage.
+  COLOR_BACKGROUND_PATH_CURRENT_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: The hover background color for Salespath stages that are the current stage.
+  COLOR_BACKGROUND_PATH_INCOMPLETE:
+    value: '{!STEAM}'
+    comment: The background color for Salespath stages that have not been completed.
+  COLOR_BACKGROUND_PATH_INCOMPLETE_HOVER:
+    value: '{!GEYSER}'
+    comment: The hover background color for Salespath stages that have not been completed.
+  COLOR_BACKGROUND_PATH_LOST:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: The background color for the final stage of a Salespath when it has been lost.
+  COLOR_BACKGROUND_GUIDANCE:
+    value: '{!ATHENS_GRAY}'
+    comment: The background color for Salespath guidance coaching section.

@@ -1,0 +1,32 @@
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BORDER_CONTEXT_BAR_DIVIDER:
+    value: '{!WHITE_TRANSPARENT_20}'
+    comment: Divider in context bar
+    deprecated: true
+  COLOR_BORDER_CONTEXT_BAR_ITEM:
+    value: '{!BLACK_TRANSPARENT_20}'
+    comment: Border color in context bar
+  COLOR_BORDER_CONTEXT_BAR_INVERSE_ITEM:
+    value: '{!WHITE_TRANSPARENT_20}'
+    comment: Border color in context bar on dark background
+    deprecated: true
+  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT:
+    value: '{!CERULEAN}'
+    comment: Border color in context bar for default theme
+  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ALT:
+    value: '{!MYSTIC}'
+    comment: Alternate border color in context bar for default theme
+  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_HOVER:
+    value: '{!TOREA_BAY}'
+    comment: Hovered border color in context bar for default theme
+  COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ACTIVE:
+    value: '{!MYSTIC}'
+    comment: Active border color in context bar for default theme

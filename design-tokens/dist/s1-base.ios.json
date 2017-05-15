@@ -1,0 +1,322 @@
+{
+  "properties": [
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "0.88",
+      "name": "widthStageLeft"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "60",
+      "comment": "Action footer menu. Phone 44px; Tablet 50px",
+      "name": "heightFooter"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "44",
+      "comment": "Brand header. Phone 44px; Tablet 50px",
+      "name": "heightHeader"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "30",
+      "comment": "Text input height",
+      "name": "heightInput"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "144px",
+      "comment": "Space above overflow menu before scrolling.",
+      "name": "heightOverflowStart"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "144px",
+      "comment": "Maximum height for photos and such in cards.",
+      "deprecated": true,
+      "name": "maxHeightCardMedia"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32px",
+      "comment": "Maximum height for brand logos in header.",
+      "deprecated": true,
+      "name": "maxHeightHeaderBrand"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "320px",
+      "comment": "Maximum width for action icons in action bar when there are only 2 items with labels.",
+      "name": "maxWidthActionBarWithLabels"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "512px",
+      "comment": "Maximum width for action overflow menu so that it's not full-screen for tablet.",
+      "name": "maxWidthActionOverflowMenu"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "156px",
+      "comment": "Maximum width for brand logos in header.",
+      "deprecated": true,
+      "name": "maxWidthHeaderBrand"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "48",
+      "comment": "Use squareIconLargeBoundary",
+      "deprecated": true,
+      "name": "squareRecordAnchorPic"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "44",
+      "comment": "Tap target Size",
+      "name": "squareTappable"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "7",
+      "comment": "2 Column Layout - Master",
+      "name": "flexMasterPanel"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Tooltip square size",
+      "deprecated": true,
+      "name": "squareTooltip"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Tooltip nubbin square size",
+      "name": "squareTooltipNubbin"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "3",
+      "comment": "2 Column Layout - Detail",
+      "name": "flexDetailPanel"
+    },
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "value": "0.25s",
+      "name": "durationSlide"
+    }
+  ]
+}

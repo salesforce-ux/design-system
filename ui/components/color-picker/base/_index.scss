@@ -1,0 +1,203 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The base variant is the fully featured color picker
+ *
+ * @summary Fully featured color picker
+ *
+ * @variant
+ * @name base
+ * @selector .slds-color-picker
+ * @restrict div
+ */
+.slds-color-picker {
+  position: relative;
+}
+
+/**
+ * @summary 'Summary' element for color selection.
+ *
+ * @selector .slds-color-picker__summary
+ * @restrict .slds-color-picker > div
+ */
+.slds-color-picker__summary {
+}
+
+/**
+ * @summary Label for summary input
+ *
+ * @selector .slds-color-picker__summary-label
+ * @restrict .slds-color-picker__summary > label
+ */
+.slds-color-picker__summary-label {
+  display: block;
+}
+
+
+/**
+ * @summary Input field for summary UI
+ *
+ * @selector .slds-color-picker__summary-input
+ * @restrict .slds-color-picker__summary > input
+ */
+.slds-color-picker__summary-input  {
+  width: 100px;
+}
+
+/**
+ * @summary The selector subcomponent. Extends upon a .slds-popover
+ *
+ * @selector .slds-color-picker__selector
+ * @restrict .slds-color-picker > .slds-popover
+ */
+.slds-color-picker__selector {
+  margin-top: 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+
+  &.slds-popover {
+    width: 210px;
+  }
+}
+
+/**
+ * @summary Footer for the Color Selector Picker
+ *
+ * @selector .slds-color-picker__selector-footer
+ * @restrict .slds-color-picker__selector > footer
+ */
+.slds-color-picker__selector-footer {
+  background: $color-background;
+  display: flex;
+
+  .slds-button {
+    flex: 1;
+  }
+}
+
+/**
+ * @summary Swatch container
+ *
+ * @selector .slds-color-picker__swatches
+ * @restrict .slds-color-picker__selector div
+ */
+.slds-color-picker__swatches {
+  font-size: 0;
+}
+
+/**
+ * @summary Custom picker selection container
+ *
+ * @selector .slds-color-picker__custom
+ * @restrict .slds-color-picker__selector div
+ */
+.slds-color-picker__custom {
+
+}
+
+/**
+ * @summary Custom picker range element
+ *
+ * @selector .slds-color-picker__custom-range
+ * @restrict .slds-color-picker__custom div
+ */
+.slds-color-picker__custom-range {
+  position: relative;
+  margin-bottom: 5px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.9) 1%, rgba(0,0,0,0) 99%),
+                linear-gradient(to right, rgba(255,255,255,1) 1%, rgba(255,255,255,0));
+  }
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-color-picker__range-selector
+ * @restrict .slds-color-picker__custom-range > div
+ */
+.slds-color-picker__range-selector {
+  cursor: pointer;
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  border: 2px solid #fff;
+  border-radius: $border-radius-circle;
+  box-shadow: 0 0 2px rgba(0,0,0,0.6),
+              inset 0 0 2px rgba(0,0,0,0.6);
+}
+
+/**
+ * @summary The slide input that controls the hue
+ *
+ * @selector .slds-color-picker__hue-slider
+ * @restrict .slds-color-picker__custom input
+ */
+.slds-color-picker__hue-slider {
+  appearance: none;
+  height: 25px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: $border-radius-small;
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 50%),
+    hsl(45, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(135, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(225, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(315, 100%, 50%),
+    hsl(360, 100%, 50%)
+  );
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 7px;
+    background: #e8eef9;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: $border-radius-small;
+  }
+
+  &::range-track {
+    background: #3071a9;
+    width: 100%;
+  }
+}
+
+/**
+ * @summary A swatch
+ *
+ * @selector .slds-swatch
+ * @restrict .slds-color-picker__swatches > div
+ */
+.slds-swatch {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  margin: 3px;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+}
+

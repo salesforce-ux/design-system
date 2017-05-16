@@ -26,6 +26,8 @@
     padding-left: 0;
     border-color: transparent;
     background-color: transparent;
+    font-size: $font-size-text-medium;
+    font-weight: $font-weight-bold;
   }
 
   &[type="search"]::-ms-clear {
@@ -254,6 +256,8 @@
   display: inline-block;
   line-height: $line-height-button;
   min-height: calc(#{$line-height-button} + 2px); // For IE
+  font-size: $font-size-text-medium;
+  font-weight: $font-weight-bold;
 
   // If read only state is longform
   // Apply text line height

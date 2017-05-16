@@ -33,6 +33,8 @@
   }
 
   thead th {
+    background-color: $table-color-background-header;
+    color: $table-color-text-header;
     padding: $spacing-x-small $table-cell-spacing;
   }
 
@@ -211,8 +213,8 @@
   &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
   &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
     box-shadow:
-      $theme-color-border-brand-primary 0 ($border-width-thin * -1) 0 inset,
-      $theme-color-border-brand-primary 0 ($border-width-thin) 0 inset;
+      $color-border 0 ($border-width-thin * -1) 0 inset,
+      $color-border 0 ($border-width-thin) 0 inset;
   }
 }
 
@@ -309,8 +311,8 @@
   &.slds-has-focus .slds-th__action,
   &.slds-has-focus .slds-th__action:hover,
   &.slds-has-focus .slds-th__action:focus {
-    background-color: $color-background-row-hover;
-    color: $color-text-link;
+    background-color: $table-color-background-header-hover;
+    color: currentColor;
 
     .slds-icon {
       display: inline-block;
@@ -333,7 +335,7 @@
   &:focus,
   &:hover {
     outline: 0;
-    background-color: $color-background-row-hover;
+    background-color: $table-color-background-header-hover;
   }
 
   /**

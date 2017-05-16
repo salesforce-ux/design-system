@@ -252,7 +252,7 @@
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
   vertical-align: middle;
-  border: $border-width-thin solid $color-border-button-default;
+  border: $border-width-thick solid $color-border-button-default;
 
   &-filled {
     background-color: $color-background-button-default;

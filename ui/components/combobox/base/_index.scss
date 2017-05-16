@@ -53,6 +53,12 @@
   padding-left: $spacing-small;
   border-color: $color-border-input;
   background-color: $color-background-input;
+  font-size: inherit;
+  font-weight: $font-weight-regular;
+
+  &:focus {
+    border-color: $theme-color-border-brand-primary;
+  }
 }
 
 /**
@@ -299,7 +305,8 @@
 .slds-has-inline-listbox,
 .slds-has-object-switcher {
   flex-direction: row;
-  border: $border-width-thin solid $color-border;
+  background: $color-background-input;
+  border: $border-width-thick solid $color-border;
   border-radius: $border-radius-medium;
 
   /**

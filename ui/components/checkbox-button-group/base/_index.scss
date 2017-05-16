@@ -13,8 +13,10 @@
 .slds-checkbox_button-group,
 .slds-checkbox--button-group {
   display: inline-flex;
+  background-color: $button-color-background-default;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
+  box-shadow: $theme-shadow-soft-secondary;
 }
 
 /**

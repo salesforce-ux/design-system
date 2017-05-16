@@ -52,13 +52,9 @@
     margin-bottom: $spacing-small;
   }
 
-    .slds-text-heading_small,
-    .slds-text-heading--small {
-      font-size: $font-size-text-large;
-    }
-
   &__header-link {
     color: inherit;
+    font-weight: $font-weight-bold;
   }
 
   /**
@@ -87,7 +83,7 @@
     padding-top: $spacing-small;
     padding-bottom: $spacing-small;
     text-align: center;
-    font-size: $font-size-text-large;
+    font-size: $font-size-text-medium;
     border-top: 1px solid $color-border;
   }
 

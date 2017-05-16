@@ -10,6 +10,20 @@
   vertical-align: middle;
   border: $border-width-thin solid transparent;
   box-shadow: $theme-shadow-soft-secondary;
+  transition: box-shadow 0.15s linear;
+
+  &:focus,
+  &:hover {
+    box-shadow: $theme-shadow-soft-primary-hover;
+  }
+
+  &:active {
+    box-shadow: $theme-shadow-soft-primary-active;
+  }
+
+  &[disabled] {
+    box-shadow: none;
+  }
 }
 
 @mixin button-icon {

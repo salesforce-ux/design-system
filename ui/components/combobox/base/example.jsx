@@ -215,7 +215,7 @@ export let ComboboxContainer = props =>
               role="textbox"
               type="text"
               placeholder={!props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder}
-              readOnly={props['readonly'] || props.value}
+              readOnly={props['readonly']}
               value={props.value}
               tabIndex={props.tabIndex}
             />
@@ -225,6 +225,7 @@ export let ComboboxContainer = props =>
                 containerClassName="slds-input__icon slds-input__icon_right"
                 className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
+                assistiveText={props.inputIconRightAssistiveText}
               />
             : null }
             {/* If loading, show buttonIcon and spinner here */}

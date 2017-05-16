@@ -86,7 +86,7 @@
    * Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
-   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   .slds-input__icon {
     @include square($square-icon-medium-content);

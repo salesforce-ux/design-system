@@ -10,7 +10,7 @@
   vertical-align: middle;
   border: $border-width-thin solid transparent;
   box-shadow: $shadow-soft-secondary;
-  transition: box-shadow 0.15s linear;
+  transition: border 0.15s linear, box-shadow 0.15s linear;
 
   &:focus,
   &:hover {
@@ -30,17 +30,23 @@
   line-height: $line-height-reset;
   vertical-align: middle;
   color: $color-text-icon-default;
-  border: $border-width-thick solid transparent;
-  transition: box-shadow 0.15s linear;
+  border: $border-width-thin solid transparent;
+  box-shadow: $shadow-soft-secondary;
+  transition: border 0.15s linear, box-shadow 0.15s linear;
 
   &:hover,
   &:focus {
     color: currentColor;
-    box-shadow: $shadow-soft-secondary;
+    box-shadow: $shadow-soft-primary-hover;
+  }
+
+  &:active {
+    box-shadow: $shadow-soft-primary-active;
   }
 
   &[disabled] {
     color: $color-text-button-default-disabled;
+    box-shadow: none;
   }
 }
 

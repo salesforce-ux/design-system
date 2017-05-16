@@ -20,8 +20,12 @@ props:
     value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
   SHADOW_SOFT_SECONDARY:
     value: '{!BLACK_TRANSPARENT_10} 0 3px 4px'
+  SHADOW_RESET:
+    value: 'transparent 0 0 0'
   ## INTERACTIONS
   SHADOW_SOFT_PRIMARY_HOVER:
     value: '{!BLACK_TRANSPARENT_20} 0 3px 6px'
+  SHADOW_SOFT_SECONDARY_HOVER:
+    value: '{!BLACK_TRANSPARENT_10} 0 3px 6px'
   SHADOW_SOFT_PRIMARY_ACTIVE:
     value: '{!BLACK_TRANSPARENT_20} 0 1px 1px'

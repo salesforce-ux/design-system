@@ -249,10 +249,11 @@
  */
 .slds-button_icon-more,
 .slds-button--icon-more {
+  @include button-icon;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
-  vertical-align: middle;
-  border: $border-width-thick solid $color-border-button-default;
+  background-color: $button-color-background-default;
+  border-color: $button-color-border-default;
 
   &-filled {
     background-color: $color-background-button-default;
@@ -260,7 +261,7 @@
 
   &:hover,
   &:focus {
-    @include button-base;
+    // @include button-base;
 
     .slds-button__icon {
       fill: $color-text-icon-default-hover;

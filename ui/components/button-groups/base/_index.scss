@@ -11,14 +11,17 @@
  */
 .slds-button-group,
 .slds-button-group-list {
-  display: flex;
+  display: inline-flex;
+  box-shadow: $shadow-soft-secondary;
 
   .slds-button {
     border-radius: 0;
     border-width: $border-width-thin;
-    box-shadow: $shadow-soft-secondary;
+    box-shadow: $shadow-reset;
 
+    &:hover,
     &:focus {
+      box-shadow: $shadow-soft-secondary-hover;
       z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons
     }
   }

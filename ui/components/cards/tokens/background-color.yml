@@ -6,7 +6,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/theme-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
   CARD_COLOR_BACKGROUND:
     value: '{!WHITE_BACKGROUND_PRIMARY}'

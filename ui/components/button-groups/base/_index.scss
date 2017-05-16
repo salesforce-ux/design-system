@@ -16,7 +16,7 @@
   .slds-button {
     border-radius: 0;
     border-width: $border-width-thin;
-    box-shadow: $theme-shadow-soft-secondary;
+    box-shadow: $shadow-soft-secondary;
 
     &:focus {
       z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons

@@ -9,16 +9,16 @@
   text-align: center;
   vertical-align: middle;
   border: $border-width-thin solid transparent;
-  box-shadow: $theme-shadow-soft-secondary;
+  box-shadow: $shadow-soft-secondary;
   transition: box-shadow 0.15s linear;
 
   &:focus,
   &:hover {
-    box-shadow: $theme-shadow-soft-primary-hover;
+    box-shadow: $shadow-soft-primary-hover;
   }
 
   &:active {
-    box-shadow: $theme-shadow-soft-primary-active;
+    box-shadow: $shadow-soft-primary-active;
   }
 
   &[disabled] {
@@ -36,7 +36,7 @@
   &:hover,
   &:focus {
     color: currentColor;
-    box-shadow: $theme-shadow-soft-secondary;
+    box-shadow: $shadow-soft-secondary;
   }
 
   &[disabled] {
@@ -54,7 +54,7 @@
   }
 
   &:focus {
-    border-color: $theme-color-border-brand-primary;
+    border-color: $color-border-brand-primary;
   }
 
   &:active {
@@ -63,26 +63,26 @@
 }
 
 @mixin button-brand {
-  background-color: $theme-color-background-brand-primary;
+  background-color: $color-background-brand-primary;
   border-color: $button-color-border-primary;
-  color: $theme-color-text-brand-primary;
+  color: $color-text-brand-primary;
 
   &:link,
   &:visited,
   &:active {
-    color: $theme-color-text-brand-primary;
+    color: $color-text-brand-primary;
   }
 
   &:hover,
   &:focus {
-    background-color: $theme-color-background-brand-primary-hover;
-    border-color: $theme-color-border-brand-primary-hover;
-    color: $theme-color-text-brand-primary;
+    background-color: $color-background-brand-primary-hover;
+    border-color: $color-border-brand-primary-hover;
+    color: $color-text-brand-primary;
   }
 
   &:active {
-    background-color: $theme-color-background-brand-primary-active;
-    border-color: $theme-color-border-brand-primary-active;
+    background-color: $color-background-brand-primary-active;
+    border-color: $color-border-brand-primary-active;
   }
 }
 
@@ -90,7 +90,7 @@
   border-color: $button-color-border-default;
 
   &:focus {
-    border-color: $theme-color-border-brand-primary;
+    border-color: $color-border-brand-primary;
   }
 }
 

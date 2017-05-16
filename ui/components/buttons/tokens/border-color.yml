@@ -8,7 +8,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/theme-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
   BUTTON_COLOR_BORDER_DEFAULT:
     value: '{!GRAY_BORDER_PRIMARY}'

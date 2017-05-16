@@ -8,7 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../../../../design-tokens/theme-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
   TABLE_COLOR_TEXT_HEADER:
     value: '{!WHITE_TEXT_PRIMARY}'

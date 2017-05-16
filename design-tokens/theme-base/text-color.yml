@@ -12,7 +12,7 @@ imports:
 props:
   ## DEFAULT
   THEME_COLOR_TEXT_PRIMARY:
-    value: '{!BLACK_TRANSPARENT_80}'
+    value: '{!GRAY_TEXT_PRIMARY}'
     comment: Primary body text color
   THEME_COLOR_TEXT_SECONDARY:
     value: '{!GRAY_TEXT_SECONDARY}'

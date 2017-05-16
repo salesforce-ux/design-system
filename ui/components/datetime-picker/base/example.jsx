@@ -118,6 +118,7 @@ export default (
           </FormElement>
           <ComboboxContainer
             label="Time"
+            autocomplete={true}
             className="slds-combobox-picklist slds-timepicker"
             inputIcon="right"
             inputIconRightSymbol="clock"
@@ -158,6 +159,7 @@ export let states = [
               </FormElement>
               <ComboboxContainer
                 label="Time"
+                autocomplete={true}
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"
                 inputIconRightSymbol="clock"
@@ -196,6 +198,7 @@ export let states = [
               </FormElement>
               <ComboboxContainer
                 label="Time"
+                autocomplete={true}
                 isOpen={true}
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"

@@ -36,7 +36,10 @@
    */
   .slds-radio_faux,
   .slds-radio--faux {
-    @include button;
+    padding-left: $spacing-medium;
+    padding-right: $spacing-medium;
+    text-align: center;
+    vertical-align: middle;
   }
 
   // Apply left borders to anything radio button after the first button

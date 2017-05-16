@@ -109,6 +109,7 @@ export let states = [
     element:
       <ComboboxContainer
         selectedOptionsInline={true}
+        autocomplete={true}
         readonly={true}
         inputIcon="both"
         inputIconLeftSprite="standard"

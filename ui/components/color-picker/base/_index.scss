@@ -22,6 +22,13 @@
  * @restrict .slds-color-picker > div
  */
 .slds-color-picker__summary {
+  label {
+    display: block;
+  }
+
+  .slds-input {
+    width: 100px;
+  }
 }
 
 /**
@@ -95,7 +102,9 @@
  * @restrict .slds-color-picker__selector div
  */
 .slds-color-picker__custom {
-
+  &.slds-tabs--default__content {
+    padding-bottom: 0.5rem;
+  }
 }
 
 /**
@@ -107,9 +116,9 @@
 .slds-color-picker__custom-range {
   position: relative;
   margin-bottom: 5px;
-  height: 80px;
+  height: 5rem;
   border: 1px solid #ddd;
-  border-radius: $border-radius-small;
+  border-radius: $border-radius-medium;
   overflow: hidden;
 
   &::before {
@@ -133,8 +142,9 @@
 .slds-color-picker__range-selector {
   cursor: pointer;
   position: absolute;
-  height: 11px;
-  width: 11px;
+  margin: -6px 0 0 -6px;
+  height: 12px;
+  width: 12px;
   border: 2px solid #fff;
   border-radius: $border-radius-circle;
   box-shadow: 0 0 2px rgba(0,0,0,0.6),
@@ -142,28 +152,41 @@
 }
 
 /**
+ * @summary Container element for the hue slider and preview swatch
+ *
+ * @selector .slds-color-picker__hue-and-preview
+ * @restrict .slds-color-picker__custom
+ */
+.slds-color-picker__hue-and-preview {
+  display: flex;
+}
+
+/**
  * @summary The slide input that controls the hue
  *
  * @selector .slds-color-picker__hue-slider
- * @restrict .slds-color-picker__custom input
+ * @restrict .slds-color-picker__hue-and-preview input
  */
 .slds-color-picker__hue-slider {
+  $colorStops: ();
+  $colorStep: 5;
+  $hue: 0;
+
+  @while $hue < 360 {
+    $newStop: hsl($hue, 100%, 50%);
+    $colorStops: join($colorStops, $newStop, comma);
+    $hue: $hue + $colorStep;
+  }
+
   appearance: none;
+  flex: 1;
   height: 25px;
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: $border-radius-small;
+  border-radius: $border-radius-medium;
   background: linear-gradient(
     to right,
-    hsl(0, 100%, 50%),
-    hsl(45, 100%, 50%),
-    hsl(90, 100%, 50%),
-    hsl(135, 100%, 50%),
-    hsl(180, 100%, 50%),
-    hsl(225, 100%, 50%),
-    hsl(270, 100%, 50%),
-    hsl(315, 100%, 50%),
-    hsl(360, 100%, 50%)
+    $colorStops
   );
 
   &:focus {
@@ -179,10 +202,35 @@
     border-radius: $border-radius-small;
   }
 
-  &::range-track {
-    background: #3071a9;
-    width: 100%;
+}
+
+/**
+ * @summary The group of direct input elements
+ *
+ * @selector .slds-color-picker__custom-inputs
+ * @restrict .slds-color-picker__custom > div
+ */
+.slds-color-picker__custom-inputs {
+  display: flex;
+  padding-top: 0.6rem;
+
+  .slds-form-element {
+    flex: flex-grow;
   }
+
+  .slds-form-element:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  input {
+    padding: 0 4px;
+  }
+}
+
+.slds-color-picker__input-custom-hex {
+  flex: none;
+  width: 4.2rem;
+  font-size: 0.75rem;
 }
 
 /**

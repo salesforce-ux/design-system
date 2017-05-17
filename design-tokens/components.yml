@@ -17,10 +17,10 @@ imports:
 - ../ui/components/global-navigation/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/text-color.yml
 - ../ui/components/page-headers/tokens/background-color.yml
-- ../ui/components/path/tokens/background-color.yml
-- ../ui/components/path/tokens/border-color.yml
-- ../ui/components/path/tokens/line-height.yml
-- ../ui/components/path/tokens/sizing.yml
+- ../ui/components/path-simple/tokens/background-color.yml
+- ../ui/components/path-simple/tokens/border-color.yml
+- ../ui/components/path-simple/tokens/line-height.yml
+- ../ui/components/path-simple/tokens/sizing.yml
 - ../ui/components/progress-indicator/tokens/background-color.yml
 - ../ui/components/progress-indicator/tokens/border-color.yml
 - ../ui/components/progress-indicator/tokens/sizing.yml

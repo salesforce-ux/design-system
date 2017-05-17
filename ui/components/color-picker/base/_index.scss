@@ -74,7 +74,7 @@
  * @summary Footer for the Color Selector Picker
  *
  * @selector .slds-color-picker__selector-footer
- * @restrict .slds-color-picker__selector > footer
+ * @restrict .slds-color-picker__selector div
  */
 .slds-color-picker__selector-footer {
   background: $color-background;
@@ -155,7 +155,7 @@
  * @summary Container element for the hue slider and preview swatch
  *
  * @selector .slds-color-picker__hue-and-preview
- * @restrict .slds-color-picker__custom
+ * @restrict .slds-color-picker__custom div
  */
 .slds-color-picker__hue-and-preview {
   display: flex;
@@ -237,7 +237,7 @@
  * @summary A swatch
  *
  * @selector .slds-swatch
- * @restrict .slds-color-picker__swatches > div
+ * @restrict .slds-color-picker__swatches span, .slds-color-picker__summary span, .slds-color-picker__hue-and-preview span
  */
 .slds-swatch {
   display: inline-block;

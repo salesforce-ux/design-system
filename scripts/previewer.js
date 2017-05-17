@@ -34,18 +34,27 @@ const previewer = createPreviewer({
 previewer.listen(3003, ({ server, emit }) => {
   // Sass
   const sassWatcher = gulp.watch(
-    watchPaths.sass.concat(watchPaths.tokens),
-    ['styles:framework'] // This will trigger watchPaths.css
+    watchPaths.sass,
+    ['styles:sass'] // This will trigger watchPaths.css
   );
+
+  const tokenWatcher = gulp.watch(
+    watchPaths.tokens,
+    ['styles:framework']
+  );
+
   sassWatcher.on('change', () => {
     emit('comments');
   });
+
   gulp.start('styles:framework');
+
   // JS
   gulp.watch(watchPaths.js, event => {
     removeFromCache(require.resolve(event.path));
     emit('markup');
   });
+
   // CSS
   gulp.watch(watchPaths.css, event => {
     emit('styles');

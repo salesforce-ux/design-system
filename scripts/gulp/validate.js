@@ -12,10 +12,16 @@ const createParser = require('@salesforce-ux/design-system-parser');
 const { getComments } = require('../markup-style');
 
 const renderMessage = result =>
-  `${result.selector} did not satisfy ${result.restrict})`;
+  `${result.selector} not applied to ${result.restrict}`;
 
 const sumBy = (f, xs) =>
   xs.reduce((acc, x) => acc + f(x), 0);
+
+const shortReport = errors =>
+  _(errors)
+  .groupBy(x => x.file)
+  .mapValues(xs => xs.map(x => x.lines).join(','))
+  .value();
 
 const renderReport = (fullReport, fileCount) =>
 ({
@@ -24,10 +30,10 @@ const renderReport = (fullReport, fileCount) =>
          .keys(fullReport)
          .reduce((acc, k) => acc + sumBy(x => x.lines.length, fullReport[k]), 0),
   fileCount,
-  fullReport
+  report: _.mapValues(fullReport, shortReport)
 });
 
-const renderItem = (filepath, lines) =>
+const renderItem = (filepath, lines=[]) =>
 ({
   file: path.basename(filepath, '.html'),
   lines

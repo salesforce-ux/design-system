@@ -40,6 +40,6 @@ li {
   margin-left: 0; // TODO: To override core.css - enough?
 }
 
-@at-root html body.sfdcBody {
-  padding: 0 !important;
+@at-root body.sfdcBody {
+  padding: $spacing-none !important;
 }

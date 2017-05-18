@@ -1,7 +1,7 @@
 // Secondary Navigation
 .navigation {
   @include border($borders: left right bottom);
-  border-radius: $spacing-none $spacing-none $border-radius-medium $spacing-none;
+  border-radius: $spacing-none $spacing-none $border-radius-medium $border-radius-medium;
   min-height: ($size-frame-default - $size-3x-small);
   overflow: hidden;
   text-transform: capitalize;

@@ -1,0 +1,9 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base/aliases/color.yml
+- ./s1-base-large/background-color.yml
+- ./s1-base-large/sizing.yml
+- ./s1-base-large/font-size.yml
+- ./s1-base-large/line-height.yml

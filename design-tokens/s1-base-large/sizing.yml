@@ -1,0 +1,30 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  cssProperties:
+  - '*width'
+  - '*height'
+  - '*flex*'
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+  category: sizing
+props:
+  WIDTH_STAGE_LEFT_COLLAPSED:
+    value: 4rem
+    comment: Stage left for desktop when closed (showing icons only).
+  WIDTH_STAGE_LEFT_EXPANDED:
+    value: 15rem
+    comment: Stage left for desktop when open.
+  HEIGHT_HEADER:
+    value: 3.125rem
+    comment: Header for desktop.
+  SQUARE_ICON_MEDIUM:
+    value: 2rem
+    comment: Medium tap target size

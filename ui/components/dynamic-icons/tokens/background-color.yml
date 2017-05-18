@@ -1,0 +1,13 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_ICON_WAFFLE:
+    value: '{!KASHMIR_BLUE}'
+    comment: Default color for animated icon waffle for app switcher.

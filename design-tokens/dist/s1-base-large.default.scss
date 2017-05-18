@@ -1,0 +1,18 @@
+// Default Card component background color.
+$card-color-background: rgb(244, 246, 249) !default;
+// Stage left for desktop when closed (showing icons only).
+$width-stage-left-collapsed: 4rem !default;
+// Stage left for desktop when open.
+$width-stage-left-expanded: 15rem !default;
+// Header for desktop.
+$height-header: 3.125rem !default;
+// Medium tap target size
+$square-icon-medium: 2rem !default;
+$font-size-small: 0.75rem !default;
+$font-size-medium: 0.8125rem !default;
+$font-size-medium-a: 0.875rem !default;
+$font-size-large: 1rem !default;
+$font-size-x-large: 1.25rem !default;
+$font-size-xx-large: 1.75rem !default;
+// Unitless line-heights for reusability
+$line-height-text: 1.5 !default;

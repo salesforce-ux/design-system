@@ -1,0 +1,94 @@
+{
+  "properties": [
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2",
+      "name": "salesforceSansRegularWoff2"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff",
+      "name": "salesforceSansRegularWoff"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2",
+      "name": "salesforceSansLightWoff2"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff",
+      "name": "salesforceSansLightWoff"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2",
+      "name": "salesforceSansBoldWoff2"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff",
+      "name": "salesforceSansBoldWoff"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2",
+      "name": "salesforceSansBoldItalicWoff2"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff",
+      "name": "salesforceSansBoldItalicWoff"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2",
+      "name": "salesforceSansItalicWoff2"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff",
+      "name": "salesforceSansItalicWoff"
+    }
+  ]
+}

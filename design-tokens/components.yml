@@ -1,0 +1,29 @@
+# File generated automatically, do not edit manually
+imports:
+- ../ui/components/buttons/tokens/color.yml
+- ../ui/components/buttons/tokens/line-height.yml
+- ../ui/components/cards/tokens/background-color.yml
+- ../ui/components/cards/tokens/spacing.yml
+- ../ui/components/checkbox-toggle/tokens/line-height.yml
+- ../ui/components/checkbox-toggle/tokens/sizing.yml
+- ../ui/components/data-tables/tokens/spacing.yml
+- ../ui/components/docked-composer/tokens/color.yml
+- ../ui/components/docked-composer/tokens/sizing.yml
+- ../ui/components/docked-utility-bar/tokens/background-color.yml
+- ../ui/components/dynamic-icons/tokens/background-color.yml
+- ../ui/components/global-header/tokens/sizing.yml
+- ../ui/components/global-navigation/tokens/background-color.yml
+- ../ui/components/global-navigation/tokens/border-color.yml
+- ../ui/components/global-navigation/tokens/sizing.yml
+- ../ui/components/global-navigation/tokens/text-color.yml
+- ../ui/components/page-headers/tokens/background-color.yml
+- ../ui/components/path/tokens/background-color.yml
+- ../ui/components/path/tokens/border-color.yml
+- ../ui/components/path/tokens/line-height.yml
+- ../ui/components/path/tokens/sizing.yml
+- ../ui/components/progress-indicator/tokens/background-color.yml
+- ../ui/components/progress-indicator/tokens/border-color.yml
+- ../ui/components/progress-indicator/tokens/sizing.yml
+- ../ui/components/split-view/tokens/background-color.yml
+- ../ui/components/split-view/tokens/border-color.yml
+- ../ui/components/vertical-navigation/tokens/background-color.yml

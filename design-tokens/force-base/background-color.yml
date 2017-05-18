@@ -1,0 +1,258 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+props:
+  COLOR_BACKGROUND:
+    value: '{!LINK_WATER}'
+    comment: Default background color for the whole app.
+  COLOR_BACKGROUND_ALT:
+    value: '{!ROMANCE}'
+    comment: Second default background color for the app.
+  COLOR_BACKGROUND_ALT_2:
+    value: '{!WHITE_LILAC}'
+    comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+  COLOR_BACKGROUND_ALT_INVERSE:
+    value: '{!BISCAY}'
+    comment: Alternative background color for dark portions of the app.
+  COLOR_BACKGROUND_ROW_HOVER:
+    value: '{!LINK_WATER}'
+    comment: Used as the background color for the hover state on rows or items on list-like components.
+  COLOR_BACKGROUND_ROW_ACTIVE:
+    value: '{!WHITE_LILAC}'
+    comment: Used as the background color for the active state on rows or items on list-like components.
+  COLOR_BACKGROUND_ROW_SELECTED:
+    value: '{!FOAM}'
+    comment: Used as the background color for selected rows or items on list-like components.
+  COLOR_BACKGROUND_ROW_NEW:
+    value: '{!SNOWY_MINT}'
+    comment: Used as the background color for the new state on rows or items on list-like components.
+  COLOR_BACKGROUND_INVERSE:
+    value: '{!DEEP_COVE}'
+    comment: Default background color for dark portions of the app (like Stage Left or tooltips).
+  COLOR_BACKGROUND_BROWSER:
+    value: '{!KASHMIR_BLUE}'
+    comment: 'Secondary top bar background color (child browser, file preview, etc.)'
+  COLOR_BACKGROUND_CHROME_MOBILE:
+    value: '{!SCIENCE_BLUE}'
+    comment: Background color for default mobile chrome (ex. global header)
+  COLOR_BACKGROUND_CHROME_DESKTOP:
+    value: '{!WHITE}'
+    comment: Background color for default desktop chrome (ex. global header)
+  COLOR_BACKGROUND_CUSTOMER:
+    value: '{!TANGERINE}'
+    comment: Background color for UI elements related to the concept of an external user or customer.
+  COLOR_BACKGROUND_HIGHLIGHT:
+    value: '{!LEMON_CHIFFON}'
+    comment: Background color for highlighting UI elements.
+  COLOR_BACKGROUND_HIGHLIGHT_SEARCH:
+    value: '{!GORSE}'
+    comment: Background color for highlighting text in search results.
+  COLOR_BACKGROUND_SELECTION:
+    value: '{!PATTEN_BLUE}'
+    comment: Background color for text selected with a mouse.
+  COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
+    value: '{!KASHMIR_BLUE}'
+    comment: Background for utility icons that live in the action bar on mobile.
+  COLOR_BACKGROUND_INDICATOR_DOT:
+    value: '{!BISCAY}'
+    comment: Color of the indicator dot.
+  COLOR_BACKGROUND_SPINNER_DOT:
+    value: '{!CASPER}'
+    comment: Color of the spinner dot.
+  COLOR_BACKGROUND_MODAL:
+    value: '{!WHITE}'
+    comment: Standard modal header
+  COLOR_BACKGROUND_MODAL_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Brandable modal header
+  COLOR_BACKGROUND_NOTIFICATION_BADGE:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION:
+    value: '{!WHITE}'
+    comment: Background color for notification list item.
+  COLOR_BACKGROUND_NOTIFICATION_NEW:
+    value: '{!FOAM}'
+    comment: Background color for a new notification list item.
+  COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
+    value: '{!DEEP_COVE}'
+    comment: Stage left org switcher dropdown arrow background color.
+  COLOR_BACKGROUND_PAYLOAD:
+    value: '{!LINK_WATER}'
+    comment: Background color for payloads in the feed.
+  COLOR_BACKGROUND_POST:
+    value: '{!CATSKILL_WHITE}'
+    comment: Background color of comment posts in the feed.
+  COLOR_BACKGROUND_UTILITY_BAR_HOVER:
+    value: '{!STEAM}'
+    comment: Hover color for utility bar item.
+  COLOR_BACKGROUND_UTILITY_BAR_ACTIVE:
+    value: '{!AZURE}'
+    comment: Active color for utility bar item.
+  COLOR_BACKGROUND_SHADE:
+    value: '{!STEAM}'
+    specificity: builders
+    comment: Used as gray background when more contrast is desired.
+  COLOR_BACKGROUND_SHADE_DARK:
+    value: '{!GEYSER}'
+    specificity: builders
+    comment: Used as gray background in conjunction with Shade when more contrast is desired.
+  COLOR_BACKGROUND_STENCIL:
+    value: '{!WHITE_LILAC}'
+    comment: Used as background for loading stencils on white background.
+  COLOR_BACKGROUND_STENCIL_ALT:
+    value: '{!STEAM}'
+    comment: Used as an alternate background for loading stencils on gray backgrounds.
+  COLOR_BACKGROUND_TEMP_MODAL:
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
+  COLOR_BACKGROUND_TEMP_MODAL_TINT:
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+  COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+    deprecated: true
+  COLOR_BACKGROUND_BACKDROP:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+  COLOR_BACKGROUND_BACKDROP_TINT:
+    value: '{!FOAM_TRANSPARENT_75}'
+    comment: The color of the mask overlay that provides user feedback on interaction.
+  COLOR_BACKGROUND_SCROLLBAR:
+    value: '{!STEAM}'
+    comment: The background color of an internal scrollbar.
+  COLOR_BACKGROUND_SCROLLBAR_TRACK:
+    value: '{!CADET_BLUE}'
+    comment: The background color of an internal scrollbar track.
+  COLOR_BRAND:
+    value: '{!AZURE}'
+    comment: Our product brand blue.
+  COLOR_BRAND_DARK:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+  COLOR_BRAND_DARKER:
+    value: '{!ENDEAVOUR}'
+    comment: 'Our product brand blue, darkened even further.'
+  COLOR_BACKGROUND_TOGGLE:
+    value: '{!CASPER}'
+    comment: Toggle background color.
+  COLOR_BACKGROUND_TOGGLE_DISABLED:
+    value: '{!CASPER}'
+    comment: Disabled toggle background color.
+  COLOR_BACKGROUND_TOGGLE_HOVER:
+    value: '{!REGENT_GREY}'
+    comment: Hovered toggle background color.
+  COLOR_BACKGROUND_TOGGLE_ACTIVE:
+    value: '{!SCIENCE_BLUE}'
+    comment: Active toggle background color.
+  COLOR_BACKGROUND_TOGGLE_ACTIVE_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Hovered active toggle background color.
+  COLOR_BACKGROUND_MODAL_BUTTON:
+    value: '{!BLACK_TRANSPARENT_07}'
+    comment: Button backgrounds on modal headers
+  COLOR_BACKGROUND_MODAL_BUTTON_ACTIVE:
+    value: '{!BLACK_TRANSPARENT_16}'
+    comment: Active button backgrounds on modal headers
+  COLOR_BACKGROUND_INPUT:
+    value: '{!WHITE}'
+    comment: Default input field
+  COLOR_BACKGROUND_INPUT_ACTIVE:
+    value: '{!WHITE}'
+    comment: Selected input field (when user has clicked or tabbed into field)
+  COLOR_BACKGROUND_INPUT_CHECKBOX:
+    value: '{!WHITE}'
+    comment: Default checkboxes
+  COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
+    value: '{!GEYSER}'
+    comment: Disabled checkboxes
+  COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
+    value: '{!AZURE}'
+    comment: Selected checkboxes
+  COLOR_BACKGROUND_INPUT_DISABLED:
+    value: '{!STEAM}'
+    comment: Disabled input
+  COLOR_BACKGROUND_INPUT_ERROR:
+    value: '{!PIPPIN}'
+    comment: Background color for input field that has encountered an error.
+  COLOR_BACKGROUND_INPUT_SEARCH:
+    value: '{!BLACK_TRANSPARENT_16}'
+    comment: Background color for search input fields.
+    deprecated: true
+  COLOR_BACKGROUND_PILL:
+    value: '{!WHITE}'
+    comment: Background color for pills.
+  COLOR_BACKGROUND_IMAGE_OVERLAY:
+    value: '{!BLACK_TRANSPARENT_40}'
+    comment: Color of mask overlay that sits on top of an image when text is present.
+  COLOR_BACKGROUND_DESTRUCTIVE:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Color for UI elements related to destructive actions.
+  COLOR_BACKGROUND_DESTRUCTIVE_HOVER:
+    value: '{!TABASCO}'
+    comment: Hover color for UI elements related to destructive actions.
+  COLOR_BACKGROUND_DESTRUCTIVE_ACTIVE:
+    value: '{!MAROON}'
+    comment: Active color for UI elements related to destructive actions.
+  COLOR_BACKGROUND_INFO:
+    value: '{!KASHMIR_BLUE}'
+    comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BACKGROUND_ERROR:
+    value: '{!VALENCIA}'
+    comment: Color for UI elements related to errors.
+  COLOR_BACKGROUND_ERROR_DARK:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Dark color for UI elements related to errors. Accessible with white text.
+  COLOR_BACKGROUND_ERROR_ALT:
+    value: '{!DEEP_BLUSH}'
+    comment: Alternative color for UI elements related to errors.
+    deprecated: true
+  COLOR_BACKGROUND_OFFLINE:
+    value: '{!TUNDORA}'
+    comment: Color for UI elements related to the offline state.
+  COLOR_BACKGROUND_SUCCESS:
+    value: '{!EMERALD}'
+    comment: Color for UI elements that have to do with success.
+  COLOR_BACKGROUND_SUCCESS_DARK:
+    value: '{!SALEM}'
+    comment: Dark color for UI elements that have to do with success. Accessible with white text.
+  COLOR_BACKGROUND_TOAST:
+    value: '{!KASHMIR_BLUE_TRANSPARENT_95}'
+    comment: Background color for toast messaging.
+  COLOR_BACKGROUND_TOAST_SUCCESS:
+    value: '{!SALEM}'
+    comment: Background color for success toast messaging.
+  COLOR_BACKGROUND_TOAST_ERROR:
+    value: '{!FLUSH_MAHOGANY_TRANSPARENT_95}'
+    comment: Background color for error toast messaging.
+  COLOR_BACKGROUND_WARNING:
+    value: '{!KOROMIKO}'
+    comment: Color for UI elements that have to do with warning.
+  COLOR_BACKGROUND_BUTTON_SUCCESS:
+    value: '{!EMERALD}'
+    comment: Background color for success buttons
+  COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER:
+    value: '{!SALEM}'
+    comment: Hovered background color for success buttons
+  COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE:
+    value: '{!SALEM}'
+    comment: Active background color for success buttons

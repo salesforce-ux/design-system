@@ -1,0 +1,61 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - background*
+  - border*
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  COLOR_BACKGROUND_BUTTON_BRAND:
+    value: "{!SCIENCE_BLUE}"
+    comment: Brandable primary button
+  COLOR_BACKGROUND_BUTTON_BRAND_ACTIVE:
+    value: "{!MIDNIGHT_BLUE}"
+    comment: Brandable primary button - active state
+  COLOR_BACKGROUND_BUTTON_BRAND_HOVER:
+    value: "{!ENDEAVOUR}"
+    comment: Brandable primary button - hover state
+  COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
+    value: "{!STEAM}"
+    comment: Brandable primary button - disabled state
+  COLOR_BACKGROUND_BUTTON_DEFAULT:
+    value: "{!WHITE}"
+    comment: Default secondary button
+  COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
+    value: "{!LINK_WATER}"
+    comment: Default secondary button - hover state
+  COLOR_BACKGROUND_BUTTON_DEFAULT_FOCUS:
+    value: "{!LINK_WATER}"
+    comment: Default secondary button - focus state
+  COLOR_BACKGROUND_BUTTON_DEFAULT_ACTIVE:
+    value: "{!WHITE_LILAC}"
+    comment: Default secondary button - active state
+  COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
+    value: "{!WHITE}"
+    comment: Default secondary button - disabled state
+  COLOR_BACKGROUND_BUTTON_ICON:
+    value: "{!TRANSPARENT}"
+    comment: Background color for icon-only button
+  COLOR_BACKGROUND_BUTTON_ICON_HOVER:
+    value: "{!LINK_WATER}"
+    comment: Background color for icon-only button - hover state
+  COLOR_BACKGROUND_BUTTON_ICON_FOCUS:
+    value: "{!LINK_WATER}"
+    comment: Background color for icon-only button - focus state
+  COLOR_BACKGROUND_BUTTON_ICON_ACTIVE:
+    value: "{!WHITE_LILAC}"
+    comment: Background color for icon-only button - active state
+  COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
+    value: "{!WHITE}"
+    comment: Background color for icon-only button - disabled state
+  COLOR_BACKGROUND_BUTTON_INVERSE:
+    value: "{!TRANSPARENT}"
+    comment: Button backgrounds on inverse/dark backgrounds
+  COLOR_BACKGROUND_BUTTON_INVERSE_ACTIVE:
+    value: "{!BLACK_TRANSPARENT_24}"
+    comment: Active button backgrounds on inverse backgrounds on mobile
+  COLOR_BACKGROUND_BUTTON_INVERSE_DISABLED:
+    value: "{!TRANSPARENT}"
+    comment: Disabled button backgrounds on inverse/dark backgrounds

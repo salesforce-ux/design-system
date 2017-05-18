@@ -1,0 +1,63 @@
+// Lightning Design System 2.4.0-alpha.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @name base
+ * @selector .slds-notification
+ * @restrict div, section
+ * @variant
+ */
+.slds-notification {
+  position: fixed;
+  display: block;
+  width: $size-medium; // this is 320, not 300px
+  right: $spacing-xx-small;
+  top: $spacing-xx-small;
+  z-index: $z-index-reminder;
+  border-radius: $border-radius-medium;
+  box-shadow: $shadow-reminder;
+}
+
+/**
+ * @summary Main reminder component
+ *
+ * @selector .slds-notification__target
+ * @restrict .slds-notification__body a
+ */
+.slds-notification__target {
+  padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
+  border-radius: $border-radius-medium;
+  background-color: $color-background-alt;
+  color: $color-text-default;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background;
+    text-decoration: none;
+  }
+}
+
+/**
+ * @summary Optional notification footer
+ *
+ * @selector .slds-notification__footer
+ * @restrict .slds-notification div
+ */
+ .slds-notification__footer {
+  padding: $spacing-small $spacing-small $spacing-medium $spacing-small;
+ }
+
+/**
+ * @summary Notification close button
+ *
+ * @selector .slds-notification__close
+ * @restrict .slds-notification__body button
+ */
+.slds-notification__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

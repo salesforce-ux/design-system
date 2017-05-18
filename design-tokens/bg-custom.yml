@@ -1,0 +1,236 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: background-color
+  type: color
+  cssProperties:
+  - background
+  - background-color
+props:
+  CUSTOM_1:
+    value: '#ff7b84'
+  CUSTOM_2:
+    value: '#cfd05c'
+  CUSTOM_3:
+    value: '#ecb46c'
+  CUSTOM_4:
+    value: '#e1d951'
+  CUSTOM_5:
+    value: '#9fdb66'
+  CUSTOM_6:
+    value: '#54c473'
+  CUSTOM_7:
+    value: '#6a89e5'
+  CUSTOM_8:
+    value: '#50ceb9'
+  CUSTOM_9:
+    value: '#6b9ee2'
+  CUSTOM_10:
+    value: '#6488e3'
+  CUSTOM_11:
+    value: '#8784ea'
+  CUSTOM_12:
+    value: '#dc71d1'
+  CUSTOM_13:
+    value: '#df6184'
+  CUSTOM_14:
+    value: '#3cc2b3'
+  CUSTOM_15:
+    value: '#f77e75'
+  CUSTOM_16:
+    value: '#e9af67'
+  CUSTOM_17:
+    value: '#acd360'
+  CUSTOM_18:
+    value: '#4dca76'
+  CUSTOM_19:
+    value: '#3abeb1'
+  CUSTOM_20:
+    value: '#48c7c8'
+  CUSTOM_21:
+    value: '#8a7aed'
+  CUSTOM_22:
+    value: '#8b85f9'
+  CUSTOM_23:
+    value: '#b070e6'
+  CUSTOM_24:
+    value: '#e56798'
+  CUSTOM_25:
+    value: '#e46fbe'
+  CUSTOM_26:
+    value: '#7698f0'
+  CUSTOM_27:
+    value: '#5ab0d2'
+  CUSTOM_28:
+    value: '#89c059'
+  CUSTOM_29:
+    value: '#bdd25f'
+  CUSTOM_30:
+    value: '#f59f71'
+  CUSTOM_31:
+    value: '#eb687f'
+  CUSTOM_32:
+    value: '#38c393'
+  CUSTOM_33:
+    value: '#97cf5d'
+  CUSTOM_34:
+    value: '#d58a6a'
+  CUSTOM_35:
+    value: '#e9637e'
+  CUSTOM_36:
+    value: '#d472d4'
+  CUSTOM_37:
+    value: '#8c89f2'
+  CUSTOM_38:
+    value: '#53b6d7'
+  CUSTOM_39:
+    value: '#4fbe75'
+  CUSTOM_40:
+    value: '#83c75e'
+  CUSTOM_41:
+    value: '#43b5b5'
+  CUSTOM_42:
+    value: '#cfd05b'
+  CUSTOM_43:
+    value: '#7f93f9'
+  CUSTOM_44:
+    value: '#c8ca58'
+  CUSTOM_45:
+    value: '#d95879'
+  CUSTOM_46:
+    value: '#67a5e7'
+  CUSTOM_47:
+    value: '#5fcc64'
+  CUSTOM_48:
+    value: '#ef697f'
+  CUSTOM_49:
+    value: '#e25c80'
+  CUSTOM_50:
+    value: '#49bcd3'
+  CUSTOM_51:
+    value: '#d8c760'
+  CUSTOM_52:
+    value: '#ee8e6f'
+  CUSTOM_53:
+    value: '#f36e83'
+  CUSTOM_54:
+    value: '#ea70b1'
+  CUSTOM_55:
+    value: '#d66ee0'
+  CUSTOM_56:
+    value: '#718deb'
+  CUSTOM_57:
+    value: '#5a9cdd'
+  CUSTOM_58:
+    value: '#34b59d'
+  CUSTOM_59:
+    value: '#e3d067'
+  CUSTOM_60:
+    value: '#bf5a88'
+  CUSTOM_61:
+    value: '#f57376'
+  CUSTOM_62:
+    value: '#6b92dc'
+  CUSTOM_63:
+    value: '#7ccf60'
+  CUSTOM_64:
+    value: '#618fd8'
+  CUSTOM_65:
+    value: '#f279ab'
+  CUSTOM_66:
+    value: '#d8be5f'
+  CUSTOM_67:
+    value: '#f87d76'
+  CUSTOM_68:
+    value: '#f26979'
+  CUSTOM_69:
+    value: '#ed6387'
+  CUSTOM_70:
+    value: '#e769b4'
+  CUSTOM_71:
+    value: '#e36ee3'
+  CUSTOM_72:
+    value: '#8d9bfb'
+  CUSTOM_73:
+    value: '#679ef0'
+  CUSTOM_74:
+    value: '#41c8a0'
+  CUSTOM_75:
+    value: '#cd9f65'
+  CUSTOM_76:
+    value: '#db6d7a'
+  CUSTOM_77:
+    value: '#b55d5b'
+  CUSTOM_78:
+    value: '#5a95dd'
+  CUSTOM_79:
+    value: '#8ed363'
+  CUSTOM_80:
+    value: '#659ad5'
+  CUSTOM_81:
+    value: '#da627f'
+  CUSTOM_82:
+    value: '#d15b97'
+  CUSTOM_83:
+    value: '#e7806f'
+  CUSTOM_84:
+    value: '#f6707b'
+  CUSTOM_85:
+    value: '#f26891'
+  CUSTOM_86:
+    value: '#e260ab'
+  CUSTOM_87:
+    value: '#d876e5'
+  CUSTOM_88:
+    value: '#996fe6'
+  CUSTOM_89:
+    value: '#3e99be'
+  CUSTOM_90:
+    value: '#22a48a'
+  CUSTOM_91:
+    value: '#bf7b66'
+  CUSTOM_92:
+    value: '#517e82'
+  CUSTOM_93:
+    value: '#904d4c'
+  CUSTOM_94:
+    value: '#439cba'
+  CUSTOM_95:
+    value: '#8bcf6a'
+  CUSTOM_96:
+    value: '#6d9de3'
+  CUSTOM_97:
+    value: '#dd6085'
+  CUSTOM_98:
+    value: '#e1be5c'
+  CUSTOM_99:
+    value: '#f0856e'
+  CUSTOM_100:
+    value: '#e15d76'
+  CUSTOM_101:
+    value: '#f28b00'
+  CUSTOM_102:
+    value: '#f28b00'
+  CUSTOM_103:
+    value: '#f28b00'
+  CUSTOM_104:
+    value: '#f28b00'
+  CUSTOM_105:
+    value: '#f28b00'
+  CUSTOM_106:
+    value: '#f28b00'
+  CUSTOM_107:
+    value: '#f28b00'
+  CUSTOM_108:
+    value: '#f28b00'
+  CUSTOM_109:
+    value: '#f28b00'
+  CUSTOM_110:
+    value: '#f28b00'
+  CUSTOM_111:
+    value: '#f28b00'
+  CUSTOM_112:
+    value: '#f28b00'
+  CUSTOM_113:
+    value: '#f28b00'

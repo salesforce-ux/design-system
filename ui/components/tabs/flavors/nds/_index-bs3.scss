@@ -1,6 +1,6 @@
 // Secondary Navigation
 .navigation {
-  @include border($borders: right bottom);
+  @include border($borders: left right bottom);
   border-radius: $spacing-none $spacing-none $border-radius-medium $spacing-none;
   min-height: ($size-frame-default - $size-3x-small);
   overflow: hidden;

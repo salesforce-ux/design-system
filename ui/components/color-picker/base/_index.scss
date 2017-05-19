@@ -228,7 +228,7 @@
     outline: none;
   }
 
-  @mixin thumbStyles {
+  @mixin thumb-styles {
     appearance: none;
     cursor: pointer;
     height: $color-picker-slider-height - 0.125rem;
@@ -239,15 +239,15 @@
   }
 
   &::-webkit-slider-thumb {
-   @include thumbStyles;
+    @include thumb-styles;
   }
 
   &::-moz-range-thumb {
-   @include thumbStyles;
+    @include thumb-styles;
   }
 
   &::-ms-thumb {
-    @include thumbStyles;
+    @include thumb-styles;
   }
 
   &::-moz-range-track {

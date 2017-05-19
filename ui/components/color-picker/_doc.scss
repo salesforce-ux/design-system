@@ -5,66 +5,110 @@
  * The Unified Color Picker allows for a fully accessible and 
  * configurable color selector interface.
  *
- * ### Implementation Notes and Requirements
+ * ### Implementation Guidelines
  *
- * #### Required Dynamic Style Properties
+ * The Color Picker is a dynamic component with several 'live' areas. These
+ * areas need to update when certain user interactions occur.
  *
- * Since the Color Picker component is an interactive component used to set colors,
- * there are several places in the UI where dynamic style rules must be set by the
- * implementation code.
+ * ##### **A quick note on terms**
  *
- * - `.slds-color-picker__summary-button .slds-swatch`:
- *   A `background` property is needed on this element, which should be the current
- *   selected color value.
+ * Several terms are used in this document, each with particular meaning. Please take note
+ * of the following:
  *
- * - `.slds-color-picker__swatch .slds-swatch`:
- *   A `background` property is needed on these elements, which should be a selection
- *   of predefined colors.
+ * - _**Needs**_ This rule must be implemented for the component to appear or function as expected.
+ * - _**Current color**_ The current selected, submitted, and validated color.
+ * - _**Working color**_ The working, unsubmitted color, built with the custom-range tool.
  *
- * - `.slds-color-picker__custom-range`:
- *   A `background` property is needed on this element. As this element is meant 
- *   to represent the current selected hue's saturation and lightness matrix,
- *   hsl() syntax is the most appropriate here.
+ * When creating an implementation of this UI component, please take note to include
+ * the following functionality:
  *
- *   The hue should be set to the current selected hue (as indicated by the 
- *   `.slds-color-picker__hue-slider` range input), the saturation should always be 100%,
- *   and the lightness should be 50%.
+ * #### `.slds-color-picker__button`
  *
- *   _**Example:** hsl(220, 100%, 50%)_
+ * Aside from the 'swatches-only' variant, all Color Picker variants have a summary
+ * section with a clickable button. This button _needs_ to toggle the visibility of the
+ * `.slds-color-picker__selector` popover.
  *
- *   A gradient overlay will provide the effect of the saturation and lightness matrix
- *   automatically.
+ * #### `.slds-color-picker__button .slds-swatch`
  *
- * - `.slds-color-picker__range-indicator`:
- *   Declarations for `top` and `left` positioning are needed for this element, to properly
- *   place the Color Picker Range Indicator over the correct area of the custom range matrix.
+ * This swatch _needs_ an inline style of `background`, set to the current active
+ * color. It _needs_ to update whenever the _current color_ is updated.
  *
- *   For `left` positioning, the range is from 0-100%, and the axis represents color saturation.
- *   0% left is 0% saturation, and 100% left is 100% saturation.
+ * #### `.slds-color-picker__summary-input`
  *
- *   For `top` positioning, the range is also from 0-100%, and the axis represents color lightness.
- *   The positioning is inversed, however, so 0% top is 100% lightness, while 100% top is 0% lightness.
+ * This input _needs_ to display the hex value of the _current color_. It should update
+ * whenever _current color_ is updated. The user can enter a hex color manually. The
+ * implementation should check for the validity of the submitted value.
  *
- * - `.slds-color-picker__hue-and-preview .slds-swatch`:
- *   A `background` property is needed on this element, which should be the current
- *   selected color value.
+ * #### `.slds-color-picker__hue-slider`
  *
- * #### Expected Keyboard Interactions
+ * In the custom picker, the hue slider is a range input element that allows the user to 
+ * select a hue base for a _working color_. Its value ranges from 0 - 360, and represents the
+ * hue in an expected hsl color format.
  *
- * - **Swatches:**
- *   The element `slds-color-picker__swatches` has the role of `listbox`, and
- *   keyboard interactions when its &lt;a&gt; children are focused should behave
- *   in a grid like fashion, and focus should move to the correct element.
+ * When the user updates the _current color_, the value on this slider _needs_ to be adjusted
+ * to the _current color_'s hue.
  *
- * - **Color Picker Range Selector:**
- *   The Color Picker Range Selector (`.slds-color-picker__range-selector`) acts
- *   as an indicator for the current selected saturation and lightness values on the
- *   Color Picker Range. 
+ * #### `.slds-color-picker__custom-range`
  *
- *   When focused, hitting an arrow key should move the selector
- *   1% in the given direction, up until boundaries are hit. If possible, holding down
- *   shift and striking an arrow key should move the indicator 10% in the given direction.
+ * The custom range represents a matrix of all saturation and lightness combinations of 
+ * the _working color_'s hue. The x axis of the form represents saturation, and goes from 0%
+ * to 100%. On the y axis, lightness is represented, with 0% lightness at the bottom, and 
+ * 100% lightness at the top.
  *
+ * This element _needs_ an inline style, with the `background` property set to the current 
+ * hue, as defined by the hue range input element desctibed above. As this element is
+ * meant to represent the current _working color_'s hue's saturation and lightness matrix,
+ * hsl() syntax is the most appropriate format here, with the hue being the current working
+ * color's hue, the saturation set to 100% and the lightness set to 50%.
+ *
+ * A gradient overlay will produce the effect of the saturation and lightness matrix
+ * automatically.
+ *
+ * Any mouse clicks on the custom range _need_ to set the position of the
+ * `.slds-color-picker__range-indicator` to the clicked coordinates, and also _need_ to
+ * update the saturation and lightness values on the working color.
+ *
+ * #### `.slds-color-picker__range-indicator`
+ *
+ * This is the targeting element inside the custom range, and represents the current
+ * lightness and saturation values of the _working color_.
+ *
+ * It _needs_ declarations for `bottom` and `left` positioning, so it will be properly
+ * placed over the correct area of the `.slds-color-picker__custom-range`.
+ *
+ * Conveniently, the values are uniformly represented. The `left` declaration indicates
+ * the saturation value, from 0% to 100%, and the `bottom` declaration indicates
+ * the lightness value, from 0% to 100%.
+ *
+ * #### `.slds-color-picker__hue-and-preview .slds-swatch`
+ *
+ * This swatch is a preview element of the _working color_ value from the hue slider
+ * and range indicator above. It _needs_ an inline style for `background`, set to the
+ * completed color value.
+ *
+ * #### `.slds-color-picker__custom-inputs`
+ *
+ * The Hex, R(ed), G(reen), and B(lue) text inputs included in this section are
+ * representative of the current _working color_'s converted Hex or RGB values, and 
+ * _need_ to display those as their value.
+ *
+ * Users can, however, directly input into these elements. A valid entry _needs_ to
+ * update the working color and update related elements. The implementation should
+ * protect against invalid submissions.
+ *
+ * ### Expected Keyboard Interactions 
+ *
+ * #### `.slds-color-picker__swatches`
+ *
+ * This element has the role of `listbox`, and keyboard interactions when its &lt;a&gt;
+ * children are ocused _needs_ to behave in a grid-like fashion, and focus should move
+ * to the correct element in relation to the direction of arrow pressed, unless prohibited
+ * by a boundary.
+ *
+ * #### `.slds-color-picker__range-indicator`
+ *
+ * The range indicator, when focused, _needs_ to respond to arrow keypresses by moving
+ * 1% in the appropriate direction, unless prohibited by a boundary. 
  *
  * @summary A configurable interface for color selection
  *

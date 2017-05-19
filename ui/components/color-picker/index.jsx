@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import _ from 'lodash';
+import SvgIcon from '../../shared/svg-icon';
 
 // component imports
 import { Button } from '../buttons/base/example';
@@ -60,18 +61,23 @@ export const ColorPickerSummary = (props) => (
   <div className="slds-color-picker__summary">
     <label
       className="slds-color-picker__summary-label"
-      for="color-picker-summary-input"
+      htmlFor="color-picker-summary-input"
     >
       Choose Color
     </label>
 
-    <Button className="slds-button--neutral">
+    <Button className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more" aria-haspopup title="Choose Color">
       <Swatch color="hsl(220, 46%, 55%)" />
+      <SvgIcon
+        className="slds-button__icon slds-button__icon_small"
+        sprite="utility"
+        symbol="down"
+      />
     </Button>
 
     <input
       type="text"
-      className="color-picker__summary-input slds-input"
+      className="slds-color-picker__summary-input slds-input"
       id="slds-color-picker-summary-input"
       defaultValue="#5679C0"
     />
@@ -82,11 +88,15 @@ export const ColorPickerSummary = (props) => (
  * Swatches (list of Swatch elements) Subcomponent
  */
 export const ColorPickerSwatches = (props) => (
-  <div className="slds-color-picker__swatches">
+  <ul className="slds-color-picker__swatches" role="listbox">
     {swatchColors.map((swatch, index) =>
-      <Swatch color={swatch} index={index} />
+      <li key={_.uniqueId('color-picker-swatch-')} className="slds-color-picker__swatch" role="presentation">
+        <a role="option" href="#">
+          <Swatch color={swatch} index={index} />
+        </a>
+      </li>
     )}
-  </div>
+  </ul>
 );
 
 /**
@@ -161,7 +171,11 @@ class ColorPicker extends React.Component {
       <div className="slds-color-picker">
         <ColorPickerSummary />
 
-        <Popover className="slds-color-picker__selector" footer={<ColorPickerFooter />}>
+        <Popover
+          title="Choose a color"
+          className="slds-color-picker__selector"
+          footer={<ColorPickerFooter />}
+        >
           <Tabs selectedIndex={selectedTabIndex}>
             <Tabs.Item title="Default">
               <ColorPickerSwatches />

@@ -6,6 +6,10 @@ imports:
 - ../ui/components/cards/tokens/spacing.yml
 - ../ui/components/checkbox-toggle/tokens/line-height.yml
 - ../ui/components/checkbox-toggle/tokens/sizing.yml
+- ../ui/components/color-picker/tokens/background-color.yml
+- ../ui/components/color-picker/tokens/border-color.yml
+- ../ui/components/color-picker/tokens/font-size.yml
+- ../ui/components/color-picker/tokens/sizing.yml
 - ../ui/components/data-tables/tokens/spacing.yml
 - ../ui/components/docked-composer/tokens/color.yml
 - ../ui/components/docked-composer/tokens/sizing.yml

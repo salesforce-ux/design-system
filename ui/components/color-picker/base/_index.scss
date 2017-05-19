@@ -21,15 +21,7 @@
  * @selector .slds-color-picker__summary
  * @restrict .slds-color-picker > div
  */
-.slds-color-picker__summary {
-  label {
-    display: block;
-  }
 
-  .slds-input {
-    width: 100px;
-  }
-}
 
 /**
  * @summary Label for summary input
@@ -41,6 +33,17 @@
   display: block;
 }
 
+/**
+ * @summary Button that toggles the Color Picker Selector
+ *
+ * @selector .slds-color-picker__button
+ * @restrict .slds-color-picker__summary .slds-button
+ */
+.slds-color-picker__summary-button {
+  vertical-align: top;
+  line-height: 1;
+  padding: 0.3rem $spacing-x-small;
+}
 
 /**
  * @summary Input field for summary UI
@@ -48,8 +51,8 @@
  * @selector .slds-color-picker__summary-input
  * @restrict .slds-color-picker__summary > input
  */
-.slds-color-picker__summary-input  {
-  width: 100px;
+.slds-input.slds-color-picker__summary-input {
+  width: $size-xx-small;
 }
 
 /**
@@ -59,29 +62,23 @@
  * @restrict .slds-color-picker > .slds-popover
  */
 .slds-color-picker__selector {
-  margin-top: 10px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-  border-radius: 4px;
-  overflow: hidden;
-  background: #fff;
+  margin-top: $spacing-x-small;
 
   &.slds-popover {
-    width: 210px;
+    width: $color-picker-selector-width;
   }
-}
 
-/**
- * @summary Footer for the Color Selector Picker
- *
- * @selector .slds-color-picker__selector-footer
- * @restrict .slds-color-picker__selector div
- */
-.slds-color-picker__selector-footer {
-  background: $color-background;
-  display: flex;
+  .slds-popover__footer {
+    background: $color-background;
+  }
 
-  .slds-button {
-    flex: 1;
+  .slds-tabs--default__item {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+
+  .slds-tabs--default__content {
+    padding: $spacing-x-small 0;
   }
 }
 
@@ -89,10 +86,21 @@
  * @summary Swatch container
  *
  * @selector .slds-color-picker__swatches
- * @restrict .slds-color-picker__selector div
+ * @restrict .slds-color-picker__selector ul
  */
 .slds-color-picker__swatches {
   font-size: 0;
+}
+
+/**
+ * @summary Color Picker swatch
+ *
+ * @selector .slds-color-picker__swatch
+ * @restrict .slds-color-picker__swatches li
+ */
+.slds-color-picker__swatch {
+  display: inline-block;
+  margin: $spacing-xx-small;
 }
 
 /**
@@ -102,9 +110,7 @@
  * @restrict .slds-color-picker__selector div
  */
 .slds-color-picker__custom {
-  &.slds-tabs--default__content {
-    padding-bottom: 0.5rem;
-  }
+  padding: $spacing-xx-small 0;
 }
 
 /**
@@ -115,21 +121,21 @@
  */
 .slds-color-picker__custom-range {
   position: relative;
-  margin-bottom: 5px;
-  height: 5rem;
-  border: 1px solid #ddd;
+  margin-bottom: $spacing-xx-small;
+  height: $color-picker-range-height;
+  border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   overflow: hidden;
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.9) 1%, rgba(0,0,0,0) 99%),
-                linear-gradient(to right, rgba(255,255,255,1) 1%, rgba(255,255,255,0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0) 99%),
+      linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0));
   }
 }
 
@@ -140,15 +146,17 @@
  * @restrict .slds-color-picker__custom-range > div
  */
 .slds-color-picker__range-selector {
+  $half-spacing: -($spacing-small / 2);
+
   cursor: pointer;
   position: absolute;
-  margin: -6px 0 0 -6px;
-  height: 12px;
-  width: 12px;
-  border: 2px solid #fff;
+  margin: $half-spacing 0 0 $half-spacing;
+  height: $color-picker-range-selector-height;
+  width: $color-picker-range-selector-height;
+  border: $border-width-thick solid $color-background-alt;
   border-radius: $border-radius-circle;
-  box-shadow: 0 0 2px rgba(0,0,0,0.6),
-              inset 0 0 2px rgba(0,0,0,0.6);
+  box-shadow: $shadow-inline-edit,
+    inset $shadow-inline-edit;
 }
 
 /**
@@ -159,6 +167,14 @@
  */
 .slds-color-picker__hue-and-preview {
   display: flex;
+
+  .slds-swatch {
+    margin-left: $spacing-xx-small;
+    height: $spacing-large;
+    width: $spacing-large;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+  }
 }
 
 /**
@@ -168,21 +184,21 @@
  * @restrict .slds-color-picker__hue-and-preview input
  */
 .slds-color-picker__hue-slider {
-  $colorStops: ();
-  $colorStep: 5;
+  $color-stops: ();
+  $color-step: 5;
   $hue: 0;
 
   @while $hue < 360 {
-    $newStop: hsl($hue, 100%, 50%);
-    $colorStops: join($colorStops, $newStop, comma);
-    $hue: $hue + $colorStep;
+    $new-stop: hsl($hue, 100%, 50%);
+    $color-stops: join($color-stops, $new-stop, comma);
+    $hue: $hue + $color-step;
   }
 
   appearance: none;
   flex: 1;
-  height: 25px;
+  height: $color-picker-slider-height;
   width: 100%;
-  border: 1px solid #ddd;
+  border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   background: linear-gradient(
     to right,
@@ -194,14 +210,13 @@
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 25px;
-    width: 7px;
-    background: #e8eef9;
-    border: 1px solid rgba(0,0,0,0.3);
+    appearance: none;
+    height: $color-picker-slider-height - 0.125rem;
+    width: $color-picker-thumb-width - 0.125rem;
+    border: $border-width-thin solid $color-picker-slider-thumb-border;
     border-radius: $border-radius-small;
+    background: $color-picker-slider-thumb-color;
   }
-
 }
 
 /**
@@ -212,40 +227,52 @@
  */
 .slds-color-picker__custom-inputs {
   display: flex;
-  padding-top: 0.6rem;
+  padding-top: $spacing-x-small;
 
   .slds-form-element {
     flex: flex-grow;
   }
 
   .slds-form-element:not(:first-child) {
-    margin-left: 5px;
+    margin-left: $spacing-xx-small;
   }
 
   input {
-    padding: 0 4px;
+    padding: 0 $spacing-xx-small;
   }
 }
 
 .slds-color-picker__input-custom-hex {
   flex: none;
-  width: 4.2rem;
-  font-size: 0.75rem;
+  width: $color-picker-input-custom-hex-width;
+  font-size: $color-picker-input-custom-hex-font-size;
+}
+
+/**
+ * @summary Footer for the Color Selector Picker
+ *
+ * @selector .slds-color-picker__selector-footer
+ * @restrict .slds-color-picker__selector div
+ */
+.slds-color-picker__selector-footer {
+  display: flex;
+
+  .slds-button {
+    flex: 1;
+  }
 }
 
 /**
  * @summary A swatch
  *
  * @selector .slds-swatch
- * @restrict .slds-color-picker__swatches span, .slds-color-picker__summary span, .slds-color-picker__hue-and-preview span
+ * @restrict .slds-color-picker__swatch span, .slds-color-picker__summary-button span, .slds-color-picker__hue-and-preview span
  */
 .slds-swatch {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   cursor: pointer;
-  margin: 3px;
-  height: 20px;
-  width: 20px;
-  border-radius: 3px;
+  height: $color-picker-swatch-size;
+  width: $color-picker-swatch-size;
+  border-radius: $border-radius-small;
 }
-

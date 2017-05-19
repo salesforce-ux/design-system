@@ -3,6 +3,7 @@
   //position: fixed;
   background: $color-background;
   box-shadow: $elevation-shadow-1;
+  margin-bottom: $spacing-4x-small;
 
   @at-root .zen .zen-moreTabs ul {
     z-index: $z-index-dropdown + 1;

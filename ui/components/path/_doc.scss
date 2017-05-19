@@ -59,6 +59,9 @@
  * - For both with and without Stage Coaching variants, the following keyboard navigation applies
  * - `left` and `right` arrow keys move focus _and_ selection, with `aria-selected="true"`
  *
+ * **Responsive path**
+ * When the path needs to be placed in a more narrow column (more than 564px) the class `.slds-region_medium` should be placed on the container so it can adapt.
+ *
  * @summary A process component communicates to the user the progress of a particular process.
  *
  * @base

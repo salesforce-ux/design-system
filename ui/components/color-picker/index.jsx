@@ -57,7 +57,7 @@ const Swatch = (props) => (
 /**
  * Summary Subcomponent
  */
-export const ColorPickerSummary = (props) => (
+export const ColorPickerSummary = () => (
   <div className="slds-color-picker__summary">
     <label
       className="slds-color-picker__summary-label"
@@ -87,7 +87,7 @@ export const ColorPickerSummary = (props) => (
 /**
  * Swatches (list of Swatch elements) Subcomponent
  */
-export const ColorPickerSwatches = (props) => (
+export const ColorPickerSwatches = () => (
   <ul className="slds-color-picker__swatches" role="listbox">
     {swatchColors.map((swatch, index) =>
       <li key={_.uniqueId('color-picker-swatch-')} className="slds-color-picker__swatch" role="presentation">
@@ -102,7 +102,7 @@ export const ColorPickerSwatches = (props) => (
 /**
  * Custom Picker Subcomponent
  */
-export const ColorPickerCustom = (props) => (
+export const ColorPickerCustom = () => (
   <div className="slds-color-picker__custom">
     <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
     <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
@@ -206,5 +206,9 @@ class ColorPicker extends React.Component {
     );
   }
 }
+
+ColorPicker.defaultProps = {
+  selectedTabIndex: 0
+};
 
 export default ColorPicker;

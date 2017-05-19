@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The base variant is the fully featured color picker, with a text input
- * as well as a swatch dropdown button, which when clicked will reveal
- * a Color Picker popover with tabs for a choice of color swatches, or
- * a custom color selection tool.
+ * The base variant is the fully featured color picker, with a direct text
+ * input, and a button-triggered popover, which has tabs with both a list
+ * of predefined color options (swatches), as well as an interactive tool
+ * for custom color configuration.
  *
- * @summary Fully featured color picker
+ * @summary Fully featured color picker, with swatches and a custom color config
  *
  * @variant
  * @name base

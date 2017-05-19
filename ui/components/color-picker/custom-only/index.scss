@@ -2,6 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * The Custom-Only variant should only render the custom color selection tool
+ * in the Color Picker popover. It should not be inside a tabset.
+ *
  * @summary Swatches Only UI
  *
  * @name custom-only

@@ -2,7 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The base variant is the fully featured color picker
+ * The base variant is the fully featured color picker, with a text input
+ * as well as a swatch dropdown button, which when clicked will reveal
+ * a Color Picker popover with tabs for a choice of color swatches, or
+ * a custom color selection tool.
  *
  * @summary Fully featured color picker
  *
@@ -43,6 +46,7 @@
   vertical-align: top;
   line-height: 1;
   padding: 0.3rem $spacing-x-small;
+  background: $color-background-alt;
 }
 
 /**

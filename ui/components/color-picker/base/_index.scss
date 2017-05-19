@@ -101,6 +101,16 @@
 .slds-color-picker__swatch {
   display: inline-block;
   margin: $spacing-xx-small;
+
+  a {
+    display: inline-block;
+  }
+
+  a:focus {
+    outline: none;
+    box-shadow: $shadow-button-focus;
+    border-radius: $border-radius-medium;
+  }
 }
 
 /**
@@ -143,7 +153,7 @@
  * @summary
  *
  * @selector .slds-color-picker__range-selector
- * @restrict .slds-color-picker__custom-range > div
+ * @restrict .slds-color-picker__custom-range > a
  */
 .slds-color-picker__range-selector {
   $half-spacing: -($spacing-small / 2);
@@ -157,6 +167,11 @@
   border-radius: $border-radius-circle;
   box-shadow: $shadow-inline-edit,
     inset $shadow-inline-edit;
+
+  &:focus {
+    outline: none;
+    box-shadow: $shadow-button-focus;
+  }
 }
 
 /**
@@ -202,7 +217,7 @@
   border-radius: $border-radius-medium;
   background: linear-gradient(
     to right,
-    $colorStops
+    $color-stops
   );
 
   &:focus {
@@ -239,6 +254,11 @@
 
   input {
     padding: 0 $spacing-xx-small;
+  }
+
+  abbr {
+    cursor: text;
+    text-decoration: none;
   }
 }
 

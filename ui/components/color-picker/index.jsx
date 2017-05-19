@@ -104,8 +104,18 @@ export const ColorPickerSwatches = (props) => (
  */
 export const ColorPickerCustom = (props) => (
   <div className="slds-color-picker__custom">
+    <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
     <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
-      <div className="slds-color-picker__range-selector" style={{top: '55%', left: '46%'}} />
+      <a
+        className="slds-color-picker__range-selector"
+        style={{top: '55%', left: '46%'}}
+        href="#"
+        aria-live="assertive"
+        aria-atomic="true"
+        aria-describedBy="color-picker-instructions"
+      >
+        <span className="slds-assistive-text">Saturation: 46%. Lightness: 45%.</span>
+      </a>
     </div>
 
     <div className="slds-color-picker__hue-and-preview">
@@ -122,21 +132,27 @@ export const ColorPickerCustom = (props) => (
       </FormElement>
 
       <FormElement>
-        <FormElementLabel>R</FormElementLabel>
+        <FormElementLabel>
+          <abbr title="Red">R</abbr>
+        </FormElementLabel>
         <FormElementControl>
           <Input defaultValue="86" />
         </FormElementControl>
       </FormElement>
 
       <FormElement>
-        <FormElementLabel>G</FormElementLabel>
+        <FormElementLabel>
+          <abbr title="Green">G</abbr>
+        </FormElementLabel>
         <FormElementControl>
           <Input defaultValue="121" />
         </FormElementControl>
       </FormElement>
 
       <FormElement>
-        <FormElementLabel>B</FormElementLabel>
+        <FormElementLabel>
+          <abbr title="blue">B</abbr>
+        </FormElementLabel>
         <FormElementControl>
           <Input defaultValue="192" />
         </FormElementControl>

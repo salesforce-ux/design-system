@@ -228,16 +228,36 @@
     outline: none;
   }
 
-  &::-webkit-slider-thumb {
+  @mixin thumbStyles {
     appearance: none;
+    cursor: pointer;
     height: $color-picker-slider-height - 0.125rem;
-    width: $color-picker-thumb-width - 0.125rem;
+    width: $color-picker-thumb-width;
     border: $border-width-thin solid $color-picker-slider-thumb-border;
     border-radius: $border-radius-small;
     background: $color-picker-slider-thumb-color;
   }
-}
 
+  &::-webkit-slider-thumb {
+   @include thumbStyles;
+  }
+
+  &::-moz-range-thumb {
+   @include thumbStyles;
+  }
+
+  &::-ms-thumb {
+    @include thumbStyles;
+  }
+
+  &::-moz-range-track {
+    height: 0;
+  }
+
+  &::-ms-track {
+    height: 0;
+  }
+}
 /**
  * @summary The group of direct input elements
  *

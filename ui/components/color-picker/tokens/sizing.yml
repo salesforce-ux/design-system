@@ -15,7 +15,7 @@ props:
   COLOR_PICKER_SLIDER_HEIGHT:
     value: 1.5rem
   COLOR_PICKER_THUMB_WIDTH:
-    value: 0.5rem
+    value: 0.375rem
   COLOR_PICKER_RANGE_INDICATOR_SIZE:
     value: 0.75rem
   COLOR_PICKER_INPUT_CUSTOM_HEX_WIDTH:

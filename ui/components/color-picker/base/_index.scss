@@ -152,17 +152,17 @@
 /**
  * @summary
  *
- * @selector .slds-color-picker__range-selector
+ * @selector .slds-color-picker__range-indicator
  * @restrict .slds-color-picker__custom-range > a
  */
-.slds-color-picker__range-selector {
+.slds-color-picker__range-indicator {
   $half-spacing: -($spacing-small / 2);
 
   cursor: pointer;
   position: absolute;
   margin: $half-spacing 0 0 $half-spacing;
-  height: $color-picker-range-selector-height;
-  width: $color-picker-range-selector-height;
+  height: $color-picker-range-indicator-size;
+  width: $color-picker-range-indicator-size;
   border: $border-width-thick solid $color-background-alt;
   border-radius: $border-radius-circle;
   box-shadow: $shadow-inline-edit,

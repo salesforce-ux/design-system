@@ -107,7 +107,7 @@ export const ColorPickerCustom = (props) => (
     <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
     <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
       <a
-        className="slds-color-picker__range-selector"
+        className="slds-color-picker__range-indicator"
         style={{top: '55%', left: '46%'}}
         href="#"
         aria-live="assertive"

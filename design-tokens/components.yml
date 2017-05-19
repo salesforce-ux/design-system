@@ -21,6 +21,8 @@ imports:
 - ../ui/components/global-navigation/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/text-color.yml
 - ../ui/components/page-headers/tokens/background-color.yml
+- ../ui/components/page-headers/tokens/sizing.yml
+- ../ui/components/page-headers/tokens/text-color.yml
 - ../ui/components/path/tokens/background-color.yml
 - ../ui/components/path/tokens/border-color.yml
 - ../ui/components/path/tokens/line-height.yml

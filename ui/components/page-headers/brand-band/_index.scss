@@ -1,0 +1,60 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// $brand-band-image: "https://d2ppvlu71ri8gs.cloudfront.net/items/1Y342p0U390p3Y2S3w0o/page-header.png?v=d424b841";
+// $brand-band-color-background-primary: #69b9dc;
+// $brand-band-color-text-primary: #fff;
+// $brand-band-color-background-overlay: rgba(0, 0, 0, 0.2);
+// $brand-band-image-width: 1280px;
+// $brand-band-flaps-width: 100px;
+
+/**
+ * @name brand-band
+ * @selector .slds-brand-band
+ * @restrict .slds-page-header
+ * @variant
+ */
+
+.slds-brand-band {
+  background-image: url("/_slds/images/themes/one/mountains.png");
+  background-repeat: no-repeat;
+  background-size: $brand-band-image-width auto;
+  background-color: $brand-band-color-background-primary;
+  border-bottom: 0;
+  padding: $spacing-medium $spacing-large;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: calc(#{$brand-band-image-width} - #{$brand-band-flaps-width});
+    top: 0;
+    width: $brand-band-flaps-width;
+    height: 100%;
+    background: linear-gradient(to left, $brand-band-color-background-primary, transparent);
+  }
+}
+
+.slds-brand-band__overlay {
+  position: relative;
+  padding: $spacing-medium;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: ($spacing-medium * -1);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $brand-band-color-background-overlay;
+    border-bottom-left-radius: $border-radius-medium;
+    border-bottom-right-radius: $border-radius-medium;
+    mix-blend-mode: multiply;
+  }
+}
+
+.slds-brand-band__overlay-content {
+  position: relative;
+  color: $brand-band-color-text-primary;
+  z-index: 1;
+}

@@ -42,3 +42,10 @@
     }
   }
 }
+
+.slds-page-header__row {
+
+  + .slds-page-header__row {
+    margin-top: $spacing-small;
+  }
+}

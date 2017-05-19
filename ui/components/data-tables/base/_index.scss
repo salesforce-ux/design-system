@@ -38,10 +38,10 @@
     padding: $spacing-x-small $table-cell-spacing;
   }
 
-  tbody tr:nth-of-type(even) > td,
-  tbody tr:nth-of-type(even) > th {
-    background-color: $table-color-background-stripes;
-  }
+  // tbody tr:nth-of-type(even) > td,
+  // tbody tr:nth-of-type(even) > th {
+  //   background-color: $table-color-background-stripes;
+  // }
 
   /**
    * Default Table Row Hover

@@ -51,6 +51,8 @@
     margin: $spacing-small #{-$spacing-large} #{-$spacing-medium};
     padding: $spacing-small $spacing-large;
     background-color: $color-background-alt;
+    position: relative;
+    z-index: 1; // To sit above brand band
   }
 
   /**

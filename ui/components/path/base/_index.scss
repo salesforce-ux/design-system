@@ -5,7 +5,6 @@
  * @name base
  * @selector .slds-path
  * @restrict div
- * @required
  * @variant
  */
 .slds-path {
@@ -17,7 +16,7 @@
    *
    * @selector .slds-is-expanded
    * @restrict .slds-path
-   * @required
+
    */
 
   &.slds-is-expanded {
@@ -31,7 +30,6 @@
  *
  * @selector .slds-path__track
  * @restrict .slds-path div
- * @required
  */
 .slds-path__track {
   position: relative;
@@ -45,6 +43,35 @@
    */
   &.slds-has-overflow {
 
+    /**
+     *
+     * Allows the path to scroll when necessary
+     *
+     * @selector .slds-path__scroller_inner
+     * @restrict .slds-path__scroller div
+     */
+    .slds-path__scroller_inner {
+      overflow: hidden;
+    }
+
+    .slds-path__scroller-container {
+      position: relative;
+      min-width: 0%;
+      flex-grow: 1;
+      width: calc(100% - 4.75rem);
+      padding-right: 4.75rem;
+    }
+
+    .slds-path__scroll-controls {
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-right: $spacing-x-small;
+      padding-left: $spacing-x-small;
+      background-color: $color-background-alt;
+    }
   }
 }
 
@@ -53,22 +80,10 @@
  *
  * @selector .slds-path__scroller
  * @restrict .slds-path__track div
- * @required
  */
 .slds-path__scroller {
   width: 100%;
 }
-
-/**
- * Creates the inner scroll
- *
- * @selector .slds-path__scroller_inner
- * @restrict .slds-path__scroller div
- * @required
- */
- // .slds-path__scroller_inner {
- //    overflow-y: auto;
- // }
 
 /**
  * Container for the buttons that control the scrolling
@@ -93,44 +108,10 @@
   }
 
 /**
- * Creates the inner scroll container when there is overflow
- *
- * @selector .slds-path__scroller_inner
- * @restrict .slds-path__scroller div
- * @required
- */
-.slds-has-overflow {
-
-  .slds-path__scroller_inner {
-    overflow: hidden;
-  }
-
-  .slds-path__scroller-container {
-    position: relative;
-    min-width: 0%;
-    flex-grow: 1;
-    width: calc(100% - 4.75rem);
-    padding-right: 4.75rem;
-  }
-
-  .slds-path__scroll-controls {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin-right: $spacing-x-small;
-    padding-left: $spacing-x-small;
-    background-color: $color-background-alt;
-  }
-}
-
-/**
  * Creates the container for toggle button and path
  *
  * @selector .slds-path__scroller_container
  * @restrict .slds-path__scroller div
- * @required
  */
 .slds-path__scroller-container {
   width: 100%;
@@ -144,7 +125,6 @@
  *
  * @selector .slds-path__nav
  * @restrict .slds-path__scroller_inner ul
- * @required
  */
 .slds-path__nav {
   display: flex;
@@ -310,7 +290,6 @@
  *
  * @selector .slds-path__item
  * @restrict .slds-path__nav li
- * @required
  */
 .slds-path__item {
   overflow: hidden;
@@ -380,7 +359,6 @@
  *
  * @selector .slds-path__title
  * @restrict .slds-path__link span
- * @required
  */
 .slds-path__title {
   @include truncate;
@@ -391,7 +369,6 @@
  *
  * @selector .slds-path__stage
  * @restrict .slds-path__link span
- * @required
  */
 .slds-path__stage {
   position: absolute;
@@ -408,7 +385,6 @@
  *
  * @selector .slds-path__link
  * @restrict .slds-path__item a
- * @required
  */
 .slds-path__link {
   display: flex;
@@ -444,7 +420,6 @@
  *
  * @selector .slds-path__trigger
  * @restrict .slds-path button
- * @required
  */
 .slds-path__trigger {
   flex-shrink: 0; // added instead of flex-none
@@ -469,7 +444,6 @@
  *
  * @selector .slds-path__mark-complete
  * @restrict .slds-path button
- * @required
  */
 .slds-path__mark-complete {
   flex-shrink: 0;
@@ -482,7 +456,6 @@
  *
  * @selector .slds-path__mark-current
  * @restrict .slds-path button, .slds-path-coach button
- * @required
  */
 .slds-path__mark-current {
   border-color: $color-border-inverse;
@@ -499,7 +472,6 @@
  *
  * @selector .slds-path__content
  * @restrict .slds-path div
- * @required
  */
 .slds-path__content {
   position: relative;
@@ -515,7 +487,6 @@
  *
  * @selector .slds-path__keys
  * @restrict .slds-path__content div
- * @required
  */
 .slds-path__keys {
   padding-left: $spacing-small;
@@ -526,7 +497,6 @@
  *
  * @selector .slds-path__guidance
  * @restrict .slds-path__content div
- * @required
  */
 .slds-path__guidance {
   margin-right: $spacing-x-small;
@@ -556,7 +526,7 @@
   padding-bottom: $spacing-x-small;
   font-size: $font-size-heading-x-small;
   text-transform: uppercase;
-  letter-spacing: .0625rem;
+  letter-spacing: 0.0625rem;
   line-height: 1.125; // to align heading in Guidance (due to edit button)
 }
 

@@ -252,7 +252,8 @@
  */
 .slds-form-element__static {
   display: inline-block;
-  line-height: $line-height-button;
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
   min-height: calc(#{$line-height-button} + 2px); // For IE
 
   // If read only state is longform

@@ -54,7 +54,7 @@ gulp.task('stylestats', ['styles'], done => {
   });
 });
 
-gulp.task('styles:framework', ['generate:tokens:sass'], () =>
+gulp.task('styles:sass', [], () =>
   gulp
     .src('ui/index.scss')
     .pipe(plumber())
@@ -69,8 +69,10 @@ gulp.task('styles:framework', ['generate:tokens:sass'], () =>
     .pipe(autoprefixer({ remove: false }))
     .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('assets/styles'))
-);
+    .pipe(gulp.dest('assets/styles')));
+
+gulp.task('styles:framework', ['generate:tokens:sass'], () =>
+  gulp.start('styles:sass'));
 
 // Quick check that all variants compile correctly to CSS
 gulp.task('styles:test', () =>

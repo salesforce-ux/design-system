@@ -9,12 +9,8 @@ import SvgIcon from '../../shared/svg-icon';
 import { Button } from '../buttons/base/example';
 import Tabs from '../tabs/index.react';
 import { Popover } from '../popovers/base/example';
-import {
-  FormElement,
-  FormElementLabel,
-  FormElementControl,
-  Input
-} from '../input/base/example';
+import { FormElement } from '../form-element/base/example';
+import { Input } from '../input/base/example';
 
 const swatchColors = [
   '#e3abec',
@@ -51,7 +47,9 @@ const swatchColors = [
  * Swatch Subcomponent
  */
 const Swatch = (props) => (
-  <span key={_.uniqueId('swatch-')} className="slds-swatch" style={{background: props.color}} />
+  <span key={_.uniqueId('swatch-')} className="slds-swatch" style={{background: props.color}}>
+    <span className="slds-assistive-text">{props.color}</span>
+  </span>
 );
 
 /**
@@ -73,12 +71,13 @@ export const ColorPickerSummary = () => (
         sprite="utility"
         symbol="down"
       />
+      <span className="slds-assistive-text">Choose a color</span>
     </Button>
 
     <input
       type="text"
       className="slds-color-picker__summary-input slds-input"
-      id="slds-color-picker-summary-input"
+      id="color-picker-summary-input"
       defaultValue="#5679C0"
     />
   </div>
@@ -102,64 +101,59 @@ export const ColorPickerSwatches = () => (
 /**
  * Custom Picker Subcomponent
  */
-export const ColorPickerCustom = () => (
-  <div className="slds-color-picker__custom">
-    <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
-    <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
-      <a
-        className="slds-color-picker__range-indicator"
-        style={{top: '55%', left: '46%'}}
-        href="#"
-        aria-live="assertive"
-        aria-atomic="true"
-        aria-describedBy="color-picker-instructions"
-      >
-        <span className="slds-assistive-text">Saturation: 46%. Lightness: 45%.</span>
-      </a>
+export const ColorPickerCustom = () => {
+  const rangeInputId = _.uniqueId('color-picker-input-range-');
+  const hexInputId = _.uniqueId('color-picker-input-hex-');
+  const rInputId = _.uniqueId('color-picker-input-r-');
+  const gInputId = _.uniqueId('color-picker-input-g-');
+  const bInputId = _.uniqueId('color-picker-input-b-');
+
+  return (
+    <div className="slds-color-picker__custom">
+      <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
+      <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
+        <a
+          className="slds-color-picker__range-indicator"
+          style={{bottom: '45%', left: '46%'}}
+          href="#"
+          aria-live="assertive"
+          aria-atomic="true"
+          aria-describedby="color-picker-instructions"
+        >
+          <span className="slds-assistive-text">Saturation: 46%. Lightness: 45%.</span>
+        </a>
+      </div>
+
+      <div className="slds-color-picker__hue-and-preview">
+        <label className="slds-assistive-text" htmlFor={rangeInputId}>Select Hue</label>
+        <input type="range" className="slds-color-picker__hue-slider" min="0" max="360" defaultValue="208" id={rangeInputId} />
+        <Swatch color="#5679C0" />
+      </div>
+
+      <div className="slds-color-picker__custom-inputs">
+        <FormElement
+          label="Hex"
+          className="slds-color-picker__input-custom-hex"
+          inputId={hexInputId}
+        >
+          <Input id={hexInputId} defaultValue="#5679C0" />
+        </FormElement>
+
+        <FormElement label={<abbr title="Red">R</abbr>} inputId={rInputId}>
+          <Input defaultValue="86" id={rInputId} />
+        </FormElement>
+
+        <FormElement label={<abbr title="Green">G</abbr>} inputId={gInputId}>
+          <Input defaultValue="121" id={gInputId} />
+        </FormElement>
+
+        <FormElement label={<abbr title="blue">B</abbr>} inputId={bInputId}>
+          <Input defaultValue="192" id={bInputId} />
+        </FormElement>
+      </div>
     </div>
-
-    <div className="slds-color-picker__hue-and-preview">
-      <input type="range" className="slds-color-picker__hue-slider" min="0" max="360" defaultValue="208" />
-      <Swatch color="#5679C0" />
-    </div>
-
-    <div className="slds-color-picker__custom-inputs">
-      <FormElement className="slds-color-picker__input-custom-hex">
-        <FormElementLabel>Hex</FormElementLabel>
-        <FormElementControl>
-          <Input defaultValue="#5679C0" />
-        </FormElementControl>
-      </FormElement>
-
-      <FormElement>
-        <FormElementLabel>
-          <abbr title="Red">R</abbr>
-        </FormElementLabel>
-        <FormElementControl>
-          <Input defaultValue="86" />
-        </FormElementControl>
-      </FormElement>
-
-      <FormElement>
-        <FormElementLabel>
-          <abbr title="Green">G</abbr>
-        </FormElementLabel>
-        <FormElementControl>
-          <Input defaultValue="121" />
-        </FormElementControl>
-      </FormElement>
-
-      <FormElement>
-        <FormElementLabel>
-          <abbr title="blue">B</abbr>
-        </FormElementLabel>
-        <FormElementControl>
-          <Input defaultValue="192" />
-        </FormElementControl>
-      </FormElement>
-    </div>
-  </div>
-);
+  );
+}
 
 /**
  * Footer Subcomponent
@@ -193,11 +187,11 @@ class ColorPicker extends React.Component {
           footer={<ColorPickerFooter />}
         >
           <Tabs selectedIndex={selectedTabIndex}>
-            <Tabs.Item title="Default">
+            <Tabs.Item title="Default" id="color-picker-default">
               <ColorPickerSwatches />
             </Tabs.Item>
 
-            <Tabs.Item title="Custom">
+            <Tabs.Item title="Custom" id="color-picker-custom">
               <ColorPickerCustom />
             </Tabs.Item>
           </Tabs>

@@ -37,7 +37,8 @@
  *
  * This input _needs_ to display the hex value of the _current color_. It should update
  * whenever _current color_ is updated. The user can enter a hex color manually. The
- * implementation should check for the validity of the submitted value.
+ * implementation should check for the validity of the submitted value before setting 
+ * the color to be the _current color_.
  *
  * #### `.slds-color-picker__hue-slider`
  *
@@ -84,7 +85,7 @@
  *
  * This swatch is a preview element of the _working color_ value from the hue slider
  * and range indicator above. It _needs_ an inline style for `background`, set to the
- * completed color value.
+ * completed _working color_ value.
  *
  * #### `.slds-color-picker__custom-inputs`
  *

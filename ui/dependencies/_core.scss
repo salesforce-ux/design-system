@@ -50,6 +50,10 @@
     margin: 0;
   }
 
+  abbr[title] {
+    text-decoration: none;
+  }
+
   abbr[title],
   fieldset,
   hr {

@@ -8,8 +8,8 @@
   }
   text-align: center;
   vertical-align: middle;
-  border: $border-width-thin solid transparent;
-  box-shadow: $shadow-soft-secondary;
+  border: $border-width-thin solid $color-border-primary;
+  // box-shadow: $shadow-soft-secondary;
   transition: border 0.15s linear, box-shadow 0.15s linear;
 
   &:focus,
@@ -30,8 +30,8 @@
   line-height: $line-height-reset;
   vertical-align: middle;
   color: $color-text-icon-default;
-  border: $border-width-thin solid transparent;
-  box-shadow: $shadow-soft-secondary;
+  border: $border-width-thin solid $color-border-primary;
+  // box-shadow: $shadow-soft-secondary;
   transition: border 0.15s linear, box-shadow 0.15s linear;
 
   &:hover,

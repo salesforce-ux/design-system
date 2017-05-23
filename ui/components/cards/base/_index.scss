@@ -79,11 +79,13 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    margin-top: $spacing-small;
+    margin-top: ($spacing-large + $spacing-xx-small);
+    margin-left: $spacing-large;
+    margin-right: $spacing-large;
     padding-top: $spacing-small;
     padding-bottom: $spacing-small;
     text-align: center;
-    font-size: $font-size-text-medium;
+    font-size: $font-size-text-small;
     border-top: 1px solid $color-border;
   }
 

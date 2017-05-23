@@ -10,6 +10,9 @@ props:
   Z_INDEX_TOAST:
     value: '10000'
     comment: Toasts
+  Z_INDEX_SPINNER:
+    value: '9050'
+    comment: Spinner
   Z_INDEX_MODAL:
     value: '9000'
     comment: Modal

@@ -104,18 +104,6 @@
     &[aria-expanded="true"] > [role="group"] {
       display: block;
     }
-
-    // scss-lint:disable SelectorDepth
-    &[aria-expanded="false"] > .slds-tree__item .slds-button__icon {
-      transition: $duration-promptly transform ease-in-out;
-      transform: rotate(0deg);
-    }
-
-    &[aria-expanded="true"] > .slds-tree__item .slds-button__icon {
-      transition: $duration-promptly transform ease-in-out;
-      transform: rotate(90deg);
-    }
-    // scss-lint:enable SelectorDepth
   }
 
   /**
@@ -174,6 +162,18 @@
       transform: rotate(90deg);
     }
   }
+
+  // scss-lint:disable SelectorDepth
+  [aria-expanded="false"] > .slds-tree__item .slds-button__icon {
+    transition: $duration-promptly transform ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  [aria-expanded="true"] > .slds-tree__item .slds-button__icon {
+    transition: $duration-promptly transform ease-in-out;
+    transform: rotate(90deg);
+  }
+  // scss-lint:enable SelectorDepth
 
   .slds-button {
     align-self: center;

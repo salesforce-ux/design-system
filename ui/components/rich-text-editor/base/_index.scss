@@ -212,9 +212,8 @@
 
   abbr[title],
   acronym[title] {
-    border-bottom: 0;
-    text-decoration: underline;
-    text-decoration: underline dotted; //These three styles match Chrome's output now
+    border-bottom: 1px dotted;
+    text-decoration: none;
     cursor: help;
   }
 

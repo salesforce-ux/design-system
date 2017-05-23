@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary Use border utility classes to add borders to elements
+ * @summary Initializes a datetime picker
  *
- * @utility
- * @name borders
- * @selector [class*='slds-border_']
- * @support dev-ready
+ * @name base
+ * @selector .slds-datetime-picker
+ * @restrict div
+ * @variant
  */

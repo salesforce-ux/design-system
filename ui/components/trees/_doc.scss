@@ -2,15 +2,51 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
+  * A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
  *
- * A tree will need helper classes added and removed to help structure the layout. Each child node list needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.
+ * A tree will need helper classes added and removed to help structure the layout. Each child node list item needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.
  *
- * Whenever the tree has a nested group, the `li` element should receive the ARIA role `group`. This will add appropiate styling to decendent `.slds-tree__item` elements. A helper class of `.slds-is-expanded` and `.slds-is-collapsed` will need to be toggled on the appropriate child of list item node if the decendent groups are visible or not visible.
+ * Whenever the tree has a nested group, the nested `ul` element should receive the ARIA role `group`. The parent `li[role="treeitem"]` requires the `aria-expanded` attribute to be applied. Toggling `aria-expanded` to `true` or `false` will show or hide the child `group`. The parent `li[role="treeitem"]` also requires `aria-label` to be applied and set to the tree items text value, this ensures child groups are't announced to screen readers as you interact with that branch.
  *
- * A `.slds-tree__item` is any element of the tree that is a single node within a node with an ARIA attribute of `role="group"`. To achieve interactions demostrated in the demo, some helper classes are being added and removed based on actions to the list item node. To achieve the desired hover and focus states, applying the `.slds-is-hovered` and `.slds-is-focused` class helpers to the `li` on its respective interactions. If an item is selected and want to demostrate that state, applying the `.slds-is-selected` helper class will give you this outcome.
+ * When ever a `role="treeitem"` node is selected, `aria-selected="true"` needs to be applied to display the selected styles.
  *
- * In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-controls` to the button the icon is contained within. The value of the `aria-controls` attribute should be the ID of the group that clicking the button will affect.
+ * In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-expanded` to the `treeitem`. `aria-hidden="true"` and `tabindex="-1"` must be placed on the toggle button.
+ *
+ * Tree items can only contain text values, no actionable elements, apart from our toggle button, can be placed inside a Tree item.
+ *
+ * Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex="-1"` or removing `tabindex`, respectively.
+ *
+ * #### Accessibility
+ *
+ * **Interaction requirements**
+ *
+ * - Only a single action per tree item
+ * - Only 1 focusabled item per Tree
+ * - Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users
+ * - Focus is placed on the entire `li[role="treeitem"]`. If that item has child items, focus must include those as well.
+ *
+ * **Notable attributes**
+ *
+ * - `role="tree"` is placed on the `ul`
+ * - `role="tree"` element also has `aria-labelledby` applied which points to the trees heading element
+ * - `role="treeitem"` is placed on the tree `li` elements
+ * - `aria-level` is applied to `treeitem` elements to indicate their nesting depth
+ * - `aria-expanded` is applied to `treeitem` elements that have child tree nodes. It is set to `true` or `false`
+ * - `aria-label` is applied to `treeitem` elements that have child tree nodes
+ * - `aria-selected="true"` is applied to `treeitem` elements that are selected
+ * - `tabindex="0"` is applied to the `treeitem` that is in focus
+ * - `role="group"` is applied to child tree node containers, `ul`
+ *
+ * **Keyboard navigation**
+ *
+ * - Clicking on a tree item creates a selection
+ * - `Up` and `Down` arrow keys move `:focus` **and** `aria-selected`. Previous selections are cleared
+ * - `Right` arrow key to expand collapsed node.
+ * - `Left` arrow key to collapse expanded node.
+ * - `Left` arrow key on an end child node, collapses the group and moves `:focus` and `aria-selected` to the parent `treeitem`
+ * - `Enter` performs the default action on an end tree item (if there is one).
+ * - `Ctrl` + `Up` and `Ctrl` + `Down` moves focus. Current selection is maintained
+ * - `Ctrl` + `Space` will add or remove the currently focused tree item to the selection
  *
  * @summary A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
  *

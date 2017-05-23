@@ -88,7 +88,7 @@
    * Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
-   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   .slds-input__icon {
     @include square($square-icon-medium-content);
@@ -254,7 +254,8 @@
  */
 .slds-form-element__static {
   display: inline-block;
-  line-height: $line-height-button;
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
   min-height: calc(#{$line-height-button} + 2px); // For IE
   font-size: $font-size-text-small;
   font-weight: $font-weight-bold;

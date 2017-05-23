@@ -37,12 +37,13 @@ The most intriguing part is the `@selector/@restrict` pair. Each CSS selector sh
 
 For example:
 
-```
+```SCSS
 /**
  * @selector .slds-button
  * @restrict button, a, span
  */
 .slds-button {
+  ...
 }
 
 /**
@@ -50,6 +51,7 @@ For example:
  * @restrict .slds-button
  */
 .slds-button_brand {
+  ...
 }
 ```
 
@@ -72,7 +74,7 @@ The markup for a `@variant` will be required from the `/ui/:component/:variant/e
 
 For example:
 
-```
+```SCSS
 /**
  * @name advanced
  * @selector .slds-table_fixed-layout

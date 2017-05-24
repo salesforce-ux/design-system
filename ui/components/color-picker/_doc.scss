@@ -2,8 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The Unified Color Picker allows for a fully accessible and
- * configurable color selector interface.
+ * The Unified Color Picker component allows for a fully accessible and configurable
+ * color picker, allowing the user to pick from a set of predefined colors
+ * (swatches), or to pick a custom color using a HSB selection interface.
+ *
+ * It can be configured to show one or both of those color selection interfaces.
  *
  * ### Implementation Guidelines
  *
@@ -44,42 +47,46 @@
  *
  * In the custom picker, the hue slider is a range input element that allows the user to
  * select a hue base for a _working color_. Its value ranges from 0 - 360, and represents the
- * hue in an expected hsl color format.
+ * hue in an expected hsv color format.
  *
  * When the user updates the _current color_, the value on this slider _needs_ to be adjusted
  * to the _current color_'s hue.
  *
  * #### `.slds-color-picker__custom-range`
  *
- * The custom range represents a matrix of all saturation and lightness combinations of
- * the _working color_'s hue. The x axis of the form represents saturation, and goes from 0%
- * to 100%. On the y axis, lightness is represented, with 0% lightness at the bottom, and
- * 100% lightness at the top.
+ * The custom range represents a matrix of all saturation and brightness combinations of
+ * the _working color_'s hue. The x axis of the form represents saturation, and goes from
+ * 0% to 100%. On the y axis, brightness is represented, with 0% brightness at the bottom,
+ * and 100% brightness at the top.
+ *
+ * Keep in mind that when implementing color conversions, this custom range picker is utilizing
+ * the HSB/HSV color model, and not the HSL model.
  *
  * This element _needs_ an inline style, with the `background` property set to the
  * _working color_'s hue, as defined by the hue range input element desctibed above. As this
  * element is meant to represent the current _working color_'s hue's saturation and lightness
- * matrix, hsl() syntax is the most appropriate format here, with the hue being the current
- * _working color_'s hue, the saturation set to 100% and the lightness set to 50%.
+ * matrix, css's hsl() syntax is the most appropriate format here, with the hue being the
+ * current _working color_'s hue, the saturation set to 100% and the lightness set to 50%
+ * (the 50% lightness is to adjust this HSL range for the HSB color model).
  *
- * A gradient overlay will produce the effect of the saturation and lightness matrix
+ * A gradient overlay will produce the effect of the saturation and brightness matrix
  * automatically.
  *
  * Any mouse clicks on the custom range _need_ to set the position of the
  * `.slds-color-picker__range-indicator` to the clicked coordinates, and also _need_ to
- * update the saturation and lightness values on the working color.
+ * update the saturation and brightness values on the working color.
  *
  * #### `.slds-color-picker__range-indicator`
  *
  * This is the targeting element inside the custom range, and represents the current
- * lightness and saturation values of the _working color_.
+ * brightness and saturation values of the _working color_.
  *
  * It _needs_ declarations for `bottom` and `left` positioning, so it will be properly
  * placed over the correct area of the `.slds-color-picker__custom-range`.
  *
  * Conveniently, the values are uniformly represented. The `left` declaration indicates
  * the saturation value, from 0% to 100%, and the `bottom` declaration indicates
- * the lightness value, from 0% to 100%.
+ * the brightness value, from 0% to 100%.
  *
  * #### `.slds-color-picker__hue-and-preview .slds-swatch`
  *

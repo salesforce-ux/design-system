@@ -575,70 +575,70 @@ let PathStageWon = props =>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
           <Trigger />
-          <ListMain listRole="tablist">
-            <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} role="tab">
+          <ListMain listRole="listbox">
+            <ListItem className="slds-is-complete" id={path1Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Contacted</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path2Id} ariaControls={pathContent2Id} role="tab">
+            <ListItem className="slds-is-complete" id={path2Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Open</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path3Id} ariaControls={pathContent3Id} role="tab">
+            <ListItem className="slds-is-complete" id={path3Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Contacted</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path4Id} ariaControls={pathContent4Id} role="tab">
+            <ListItem className="slds-is-complete" id={path4Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Open</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path5Id} ariaControls={pathContent5Id} role="tab">
+            <ListItem className="slds-is-complete" id={path5Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Contacted</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path6Id} ariaControls={pathContent6Id} role="tab">
+            <ListItem className="slds-is-complete" id={path6Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Open</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path7Id} ariaControls={pathContent7Id} role="tab">
+            <ListItem className="slds-is-complete" id={path7Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Contacted</span>
             </ListItem>
-            <ListItem className="slds-is-current" id={path8Id} ariaControls={pathContent8Id} role="tab" tabIndex="0">
+            <ListItem className="slds-is-current" id={path8Id} role="option" tabIndex="0">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Current Stage:</span>
               </span>
               <span className="slds-path__title">Unqualified</span>
             </ListItem>
-            <ListItem className="slds-is-incomplete" id={path9Id} ariaControls={pathContent9Id} role="tab">
+            <ListItem className="slds-is-incomplete" id={path9Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
               </span>
               <span className="slds-path__title">Nurturing</span>
             </ListItem>
-            <ListItem className="slds-is-incomplete" id={path10Id} ariaControls={pathContent10Id} role="tab">
+            <ListItem className="slds-is-incomplete" id={path10Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
               </span>

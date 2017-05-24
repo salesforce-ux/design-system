@@ -1,0 +1,174 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin range-thumb {
+  appearance: none;
+  width: $slider-handle-size;
+  height: $slider-handle-size;
+  border-radius: 50%;
+  background: $slider-handle-color-background;
+  border: 0;
+  box-shadow: $slider-handle-shadow;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+
+  &:hover {
+    background-color: $slider-handle-color-background-hover;
+  }
+}
+
+@mixin range-track {
+  width: 100%;
+  height: $slider-track-height;
+  cursor: pointer;
+  background: $slider-track-color-background;
+  border-radius: $border-radius-small;
+}
+
+/**
+ * @summary Initializes slider component
+ *
+ * @name base
+ * @selector .slds-slider
+ * @restrict div
+ * @variant
+ */
+.slds-slider {
+  display: flex;
+}
+
+/**
+ * @summary Range track for slider
+ *
+ * @selector .slds-slider__range
+ * @restrict input
+ */
+.slds-slider__range {
+  appearance: none;
+  width: 100%;
+  margin: ($slider-handle-size / 2) 0;
+  background: transparent;
+  border-radius: $border-radius-small;
+
+  &:focus {
+    outline: 0;
+  }
+
+  // Webkit
+  &::-webkit-slider-thumb {
+    @include range-thumb;
+    margin-top: calc(((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1);
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+
+  // Firefox
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+
+  &::-moz-range-track {
+    @include range-track;
+  }
+
+  // IE/Edge
+  &::-ms-track {
+    @include range-track;
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+  }
+
+  &::-ms-thumb {
+    @include range-thumb;
+  }
+
+  &:focus::-webkit-slider-thumb {
+    background-color: $slider-handle-color-background-focus;
+    box-shadow: $shadow-button-focus;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-color: $slider-handle-color-background-active;
+  }
+
+  &:focus::-moz-range-thumb {
+    background-color: $slider-handle-color-background-focus;
+    box-shadow: $shadow-button-focus;
+  }
+
+  &:active::-moz-range-thumb {
+    background-color: $slider-handle-color-background-active;
+  }
+
+  &[disabled] {
+
+    &::-webkit-slider-thumb {
+      background-color: $slider-color-background-disabled;
+      cursor: default;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: $slider-color-background-disabled;
+      cursor: default;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $slider-color-background-disabled;
+      cursor: default;
+    }
+
+    &::-moz-range-track {
+      background-color: $slider-color-background-disabled;
+    }
+
+    &::-ms-thumb {
+      background-color: $slider-color-background-disabled;
+      cursor: default;
+    }
+
+    &::-ms-track {
+      background-color: $slider-color-background-disabled;
+      cursor: default;
+    }
+  }
+}
+
+/**
+ * @summary Element that contains value of input range
+ *
+ * @selector .slds-slider__value
+ * @restrict .slds-slider span
+ */
+.slds-slider__value {
+  padding: 0 $spacing-x-small;
+}
+
+/**
+ * @summary Modifier that makes the slider vertical
+ *
+ * @selector .slds-slider_vertical
+ * @restrict .slds-slider
+ * @modifier
+ */
+.slds-slider_vertical {
+  height: $size-x-small + $height-input;
+
+  .slds-slider__range {
+    width: $size-x-small;
+    height: $slider-handle-size;
+    transform: rotate(-90deg);
+    transform-origin: ($size-x-small / 2) ($size-x-small / 2);
+  }
+
+  .slds-slider__value {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+  }
+}

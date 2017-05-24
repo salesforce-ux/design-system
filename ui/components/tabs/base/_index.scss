@@ -29,6 +29,9 @@
 .slds-tabs_default,
 .slds-tabs--default {
   @include tabs;
+  background-color: $color-foreground-primary;
+  box-shadow: $shadow-soft-primary;
+  border-radius: $border-radius-small;
 
   /**
    * Creates the container for the default tabs
@@ -39,7 +42,7 @@
    */
   &__nav {
     @include tabs-nav;
-    border-bottom: $border-width-thin solid $color-border;
+    border-bottom: $border-width-thick solid $color-border-primary;
   }
 
   @include deprecate('4.0.0') {
@@ -91,6 +94,11 @@
   .slds-tabs__item--overflow {
     overflow: visible;
   }
+
+  .slds-card {
+    border: $border-width-thin solid $color-border-primary;
+    box-shadow: none;
+  }
 }
 
 /**
@@ -105,6 +113,9 @@
   color: $color-text-action-label;
   position: relative;
   padding: 0 $spacing-small;
+  margin-bottom: ($border-width-thick * -1);
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
 
   &:after {
     display: block;
@@ -128,12 +139,14 @@
   &.slds-is-active {
     color: $color-text-action-label-active;
 
+
     &:after {
       background-color: $color-brand-dark;
     }
 
     .slds-tabs_default__link,
     .slds-tabs--default__link {
+      font-weight: $font-weight-bold;
 
       &:hover {
         color: $color-text-action-label-active;
@@ -197,4 +210,5 @@
 .slds-tabs_default__content,
 .slds-tabs--default__content {
   @include tabs-content;
+  padding: $spacing-medium;
 }

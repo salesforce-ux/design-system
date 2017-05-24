@@ -126,7 +126,6 @@
   border-top: 0;
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
   padding: $spacing-medium;
-  box-shadow: $shadow-soft-primary;
 }
 
 /**
@@ -172,6 +171,7 @@
   background-color: $color-foreground-primary;
   color: $color-text-link;
   border-color: $color-border;
+  font-weight: $font-weight-bold;
 
   &:focus {
     text-decoration: underline;

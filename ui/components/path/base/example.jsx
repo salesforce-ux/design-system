@@ -661,7 +661,7 @@ let PathStageWon = props =>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
           <Triggerup />
-          <ListMain listRole="tablist" className="">
+          <ListMain listRole="tablist">
             <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} ariaExpanded="true" role="tab">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
@@ -777,7 +777,7 @@ let PathStageWon = props =>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
           <Triggerup />
-          <ListMain listRole="tablist" className="">
+          <ListMain listRole="tablist">
             <ListItem className="slds-is-complete" id={path1Id} ariaControls={pathContent1Id} ariaExpanded="true" role="tab">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />

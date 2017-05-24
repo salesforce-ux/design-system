@@ -170,7 +170,7 @@ export let examples = [
               title="task"
             />
             <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
+              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti66"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
               <p>Task due on Jan 8</p>
             </div>
           </Notification>
@@ -218,7 +218,7 @@ export let examples = [
               title="task"
             />
             <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
+              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti66"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
               <p>Task due on Jan 8</p>
             </div>
           </Notification>
@@ -231,7 +231,7 @@ export let examples = [
               title="task"
             />
             <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
+              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti48"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
               <p>Task due on Jan 8</p>
             </div>
           </Notification>
@@ -244,7 +244,7 @@ export let examples = [
               title="event"
             />
             <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti52"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
+              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti59"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
               <p>Event at 11:00am on Jan 8</p>
             </div>
           </Notification>
@@ -257,7 +257,7 @@ export let examples = [
               title="task"
             />
             <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
+              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti86"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
               <p>Task due on Jan 8</p>
             </div>
           </Notification>

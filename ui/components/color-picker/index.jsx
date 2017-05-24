@@ -3,9 +3,10 @@
 
 import React, { Component } from 'react';
 import _ from 'lodash';
-import SvgIcon from '../../shared/svg-icon';
+import classNames from 'classnames';
 
-// component imports
+// internal imports
+import SvgIcon from '../../shared/svg-icon';
 import { Button } from '../buttons/base/example';
 import Tabs from '../tabs/index.react';
 import { Popover } from '../popovers/base/example';
@@ -170,6 +171,18 @@ export const ColorPickerFooter = () => (
   </div>
 );
 
+const ColorPickerTabs = () => (
+  <Tabs selectedIndex={selectedTabIndex}>
+    <Tabs.Item title="Default" id="color-picker-default">
+      <ColorPickerSwatches />
+    </Tabs.Item>
+
+    <Tabs.Item title="Custom" id="color-picker-custom">
+      <ColorPickerCustom />
+    </Tabs.Item>
+  </Tabs>
+);
+
 class ColorPicker extends React.Component {
   constructor (props) {
     super();
@@ -179,27 +192,58 @@ class ColorPicker extends React.Component {
     };
   }
 
+  isFullFeatureMode() {
+    const { hasPredefined, hasCustom } = this.props;
+    return !!(hasPredefined && hasCustom);
+  }
+
+  isPredefinedMode() {
+    const { hasPredefined, hasCustom } = this.props;
+    return !!(hasPredefined && !hasCustom);
+  }
+
+  isCustomOnlyMode() {
+    const { hasPredefined, hasCustom } = this.props;
+    return !!(!hasPredefined && hasCustom);
+  }
+
+  isSwatchesOnlyMode() {
+    const { hasPredefined, hasCustom } = this.props;
+    return !!(!hasPredefined && !hasCustom);
+  }
+
   render () {
     const { selectedTabIndex } = this.state;
+    const { isOpen } = this.props;
+    const popoverState = isOpen ? 'slds-show' : 'slds-hide';
+    const colorPickerSummary = this.isSwatchesOnlyMode() ? null : <ColorPickerSummary />;
+    const footerContent = this.isSwatchesOnlyMode() ? null : <ColorPickerFooter />;
+    
+    let colorPickerContent = null;
+
+    if (this.isFullFeatureMode()) {
+      colorPickerContent = <ColorPickerTabs />
+    }
+    else if (this.isPredefinedMode()) {
+      colorPickerContent = <ColorPickerSwatches />
+    }
+    else if (this.isCustomOnlyMode()) {
+      colorPickerContent = <ColorPickerCustom />
+    }
+    else if (this.isSwatchesOnlyMode()) {
+      colorPickerContent = <ColorPickerSwatches />
+    }
 
     return (
       <div className="slds-color-picker">
-        <ColorPickerSummary />
+        {colorPickerSummary}
 
         <Popover
           title="Choose a color"
-          className="slds-color-picker__selector"
-          footer={<ColorPickerFooter />}
+          className={classNames('slds-color-picker__selector', popoverState)}
+          footer={footerContent}
         >
-          <Tabs selectedIndex={selectedTabIndex}>
-            <Tabs.Item title="Default" id="color-picker-default">
-              <ColorPickerSwatches />
-            </Tabs.Item>
-
-            <Tabs.Item title="Custom" id="color-picker-custom">
-              <ColorPickerCustom />
-            </Tabs.Item>
-          </Tabs>
+          {colorPickerContent}
         </Popover>
       </div>
     );
@@ -207,7 +251,10 @@ class ColorPicker extends React.Component {
 }
 
 ColorPicker.defaultProps = {
-  selectedTabIndex: 0
+  selectedTabIndex: 0,
+  isOpen: false,
+  hasPredefined: true,
+  hasCustom: true
 };
 
 export default ColorPicker;

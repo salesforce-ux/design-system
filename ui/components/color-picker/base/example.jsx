@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from 'react';
+import React from 'react';
 import ColorPicker from '../';
 
 export default (
@@ -10,8 +10,13 @@ export default (
 
 export const states = [
   {
+    id: 'color-picker-open',
+    label: 'Color Picker Open',
+    element: <ColorPicker isOpen />
+  },
+  {
     id: 'custom-tab-selected',
     label: 'Custom Tab Selected',
-    element: <ColorPicker selectedTabIndex={1} />
+    element: <ColorPicker selectedTabIndex={1} isOpen />
   }
 ];

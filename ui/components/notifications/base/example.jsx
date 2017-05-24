@@ -13,16 +13,16 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 let NotificationContainer = props =>
-  <ul className="slds-notification-container">
+  <div className="slds-notification-container">
     { props.children }
-  </ul>;
+  </div>;
 
 let Notification = props => {
   const headingUniqueId = _.uniqueId('dialog-heading-id-');
   const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
   return (
-    <li
+    <section
       className="slds-notification"
       role="dialog"
       aria-labelledby={props.headingID}
@@ -43,7 +43,7 @@ let Notification = props => {
           { props.footer }
         </footer>
       : null }
-    </li>
+    </section>
   );
 };
 
@@ -161,7 +161,7 @@ export let examples = [
               <p>Event at 11:00am on Jan 8</p>
             </div>
           </Notification>
-          <Notification headingID="noti77">
+          <Notification headingID="noti66">
             <StandardIcon
               containerClassName="slds-media__figure"
               className="slds-icon--small"
@@ -209,7 +209,7 @@ export let examples = [
               <p>Event at 11:00am on Jan 8</p>
             </div>
           </Notification>
-          <Notification headingID="noti77">
+          <Notification headingID="noti66">
             <StandardIcon
               containerClassName="slds-media__figure"
               className="slds-icon--small"
@@ -222,7 +222,7 @@ export let examples = [
               <p>Task due on Jan 8</p>
             </div>
           </Notification>
-          <Notification headingID="noti77">
+          <Notification headingID="noti48">
             <StandardIcon
               containerClassName="slds-media__figure"
               className="slds-icon--small"
@@ -235,7 +235,7 @@ export let examples = [
               <p>Task due on Jan 8</p>
             </div>
           </Notification>
-          <Notification headingID="noti52">
+          <Notification headingID="noti59">
             <StandardIcon
               containerClassName="slds-media__figure"
               className="slds-icon--small"
@@ -248,7 +248,7 @@ export let examples = [
               <p>Event at 11:00am on Jan 8</p>
             </div>
           </Notification>
-          <Notification headingID="noti77">
+          <Notification headingID="noti86">
             <StandardIcon
               containerClassName="slds-media__figure"
               className="slds-icon--small"

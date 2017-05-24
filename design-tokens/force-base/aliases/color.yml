@@ -123,3 +123,17 @@ aliases:
   MISCHKA: "#CED5E1"
   SOLITUDE: "#E8ECF3"
   ROMANCE: "#FDFDFD"
+
+  # Picsa brand
+
+  PICSA_BLUE: "#47c2cc"
+  PICSA_GREEN-1: "#21800a"
+  PICSA_GREEN-2: "#219331"
+  PICSA_GREEN-3: "#7ebf3d"
+  PICSA_GREEN-4: "#7da60c"
+  PICSA_YELLOW: "#ffce4b"
+  PICSA_CHARCOAL: "#3e4a55"
+
+  # Warm Greys (WG)
+
+  PICSA_BG-WG-1: "#e3e2e0"

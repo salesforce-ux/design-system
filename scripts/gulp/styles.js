@@ -70,6 +70,7 @@ gulp.task('styles:framework', ['generate:tokens:sass'], () =>
     .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'))
+    .pipe(gulp.dest('../picsa-os/web_internal/src/assets/css'))
 );
 
 // Quick check that all variants compile correctly to CSS

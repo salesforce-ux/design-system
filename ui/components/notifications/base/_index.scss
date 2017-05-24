@@ -4,7 +4,7 @@
 /**
  *
  * @selector .slds-notification-container
- * @restrict ul
+ * @restrict div
  */
 .slds-notification-container {
   position: fixed;
@@ -20,7 +20,7 @@
  *
  * @name base
  * @selector .slds-notification
- * @restrict .slds-notification-container li
+ * @restrict .slds-notification-container section, .slds-notification-container div
  * @variant
  */
 .slds-notification {

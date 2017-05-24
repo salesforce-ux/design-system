@@ -7,5 +7,5 @@ global:
   cssProperties:
   - 'background*'
 props:
-  COLOR_PICKER_SLIDER_THUMB_COLOR:
+  COLOR_PICKER_SLIDER_THUMB_COLOR_BACKGROUND:
     value: '#e8eef9'

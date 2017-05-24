@@ -37,7 +37,7 @@
  *
  * This input _needs_ to display the hex value of the _current color_. It should update
  * whenever _current color_ is updated. The user can enter a hex color manually. The
- * implementation should check for the validity of the submitted value before setting 
+ * implementation should check for the validity of the submitted value before setting
  * the color to be the _current color_.
  *
  * #### `.slds-color-picker__hue-slider`
@@ -102,9 +102,13 @@
  * #### `.slds-color-picker__swatches`
  *
  * This element has the role of `listbox`, and keyboard interactions when its &lt;a&gt;
- * children are ocused _needs_ to behave in a grid-like fashion, and focus should move
- * to the correct element in relation to the direction of arrow pressed, unless prohibited
- * by a boundary.
+ * children are focused _needs_ to behave in a menu-like fashion. Keypresses _need_
+ * to move the actively focused element in the appropriate direction (left/up will move
+ * to the previous item, down/right will move to the next item).
+ *
+ * Additionally, when focused on the first or last item, the appropriate key action
+ * _needs_ to move the focus to the last or first item, respectively. It is expected
+ * to behave in a cyclical fashion.
  *
  * #### `.slds-color-picker__range-indicator`
  *

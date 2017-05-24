@@ -44,8 +44,8 @@
  */
 .slds-color-picker__summary-button {
   vertical-align: top;
-  line-height: 1;
   padding: 0.3rem $spacing-x-small;
+  line-height: 1;
   background: $color-background-alt;
 }
 
@@ -94,6 +94,10 @@
  */
 .slds-color-picker__swatches {
   font-size: 0;
+
+  &.slds-swatch {
+    cursor: pointer;
+  }
 }
 
 /**
@@ -110,7 +114,8 @@
     display: inline-block;
   }
 
-  a:focus {
+  a:focus,
+  a:active {
     outline: none;
     box-shadow: $shadow-button-focus;
     border-radius: $border-radius-medium;
@@ -210,7 +215,7 @@
   @while $hue < 360 {
     $new-stop: hsl($hue, 100%, 50%);
     $color-stops: join($color-stops, $new-stop, comma);
-    $hue: $hue + $color-step;
+    $hue: ($hue + $color-step);
   }
 
   appearance: none;
@@ -231,11 +236,11 @@
   @mixin thumb-styles {
     appearance: none;
     cursor: pointer;
-    height: $color-picker-slider-height - 0.125rem;
+    height: calc(#{$color-picker-slider-height} - (#{$border-width-thin} * 2));
     width: $color-picker-thumb-width;
-    border: $border-width-thin solid $color-picker-slider-thumb-border;
+    border: $border-width-thin solid $color-picker-slider-thumb-border-color;
     border-radius: $border-radius-small;
-    background: $color-picker-slider-thumb-color;
+    background: $color-picker-slider-thumb-color-background;
   }
 
   &::-webkit-slider-thumb {
@@ -316,7 +321,6 @@
 .slds-swatch {
   display: inline-block;
   vertical-align: middle;
-  cursor: pointer;
   height: $color-picker-swatch-size;
   width: $color-picker-swatch-size;
   border-radius: $border-radius-small;

@@ -46,11 +46,16 @@ const swatchColors = [
 /**
  * Swatch Subcomponent
  */
-const Swatch = (props) => (
-  <span key={_.uniqueId('swatch-')} className="slds-swatch" style={{background: props.color}}>
-    <span className="slds-assistive-text">{props.color}</span>
-  </span>
-);
+const Swatch = (props) => {
+  const assistiveText = props.suppressAssistiveText ? null :
+    <span className="slds-assistive-text">{props.color}</span>;
+
+  return (
+    <span key={_.uniqueId('swatch-')} className="slds-swatch" style={{background: props.color}}>
+      {assistiveText}
+    </span>
+  );
+}
 
 /**
  * Summary Subcomponent
@@ -65,7 +70,7 @@ export const ColorPickerSummary = () => (
     </label>
 
     <Button className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more" aria-haspopup title="Choose Color">
-      <Swatch color="hsl(220, 46%, 55%)" />
+      <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
       <SvgIcon
         className="slds-button__icon slds-button__icon_small"
         sprite="utility"
@@ -127,7 +132,7 @@ export const ColorPickerCustom = () => {
       <div className="slds-color-picker__hue-and-preview">
         <label className="slds-assistive-text" htmlFor={rangeInputId}>Select Hue</label>
         <input type="range" className="slds-color-picker__hue-slider" min="0" max="360" defaultValue="208" id={rangeInputId} />
-        <Swatch color="#5679C0" />
+        <Swatch color="#5679C0" suppressAssistiveText />
       </div>
 
       <div className="slds-color-picker__custom-inputs">

@@ -7,5 +7,5 @@ global:
   cssProperties:
   - 'border*'
 props:
-  COLOR_PICKER_SLIDER_THUMB_BORDER:
+  COLOR_PICKER_SLIDER_THUMB_BORDER_COLOR:
     value: '#777'

@@ -15,7 +15,11 @@ export default (
   <div className="slds-color-picker">
     <ColorPickerSummary />
 
-    <Popover className="slds-color-picker__selector" footer={<ColorPickerFooter />}>
+    <Popover
+      title="Choose a color"
+      className="slds-color-picker__selector"
+      footer={<ColorPickerFooter />}
+    >
       <ColorPickerCustom />
     </Popover>
   </div>

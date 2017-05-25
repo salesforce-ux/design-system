@@ -483,7 +483,7 @@ let PathStageLost = props =>
         </ListMain>
       </div>
       <div className="slds-grid slds-path__action">
-        <span className="slds-path__stage-name">Stage: Unqualified</span>
+        <span className="slds-path__stage-name">Stage: Closed Lost</span>
         <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
           Change Closed State</Action>
       </div>
@@ -547,7 +547,7 @@ let PathStageWon = props =>
         </ListMain>
       </div>
       <div className="slds-grid slds-path__action">
-        <span className="slds-path__stage-name">Stage: Unqualified</span>
+        <span className="slds-path__stage-name">Stage: Closed Won</span>
         <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
           Change Closed State</Action>
       </div>
@@ -574,8 +574,21 @@ let PathStageWon = props =>
     <Coach>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
-          <Trigger />
           <ListMain listRole="listbox">
+            <ListItem className="slds-is-complete" id={path1Id} role="option">
+              <span className="slds-path__stage">
+                <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+                <span className="slds-assistive-text">Stage Complete</span>
+              </span>
+              <span className="slds-path__title">Contacted</span>
+            </ListItem>
+            <ListItem className="slds-is-complete" id={path2Id} role="option">
+              <span className="slds-path__stage">
+                <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+                <span className="slds-assistive-text">Stage Complete</span>
+              </span>
+              <span className="slds-path__title">Open</span>
+            </ListItem>
             <ListItem className="slds-is-complete" id={path1Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />

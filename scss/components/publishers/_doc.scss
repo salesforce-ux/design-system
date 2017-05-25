@@ -1,0 +1,23 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * To initialize the publisher, apply the `.slds-publisher` class to a containing
+ * `<div>`. The publisher consists of, but not limited to, a text input form
+ * element that is either a plain text or rich text editor. A row of actionable
+ * interactions, such as attaching additional content, adding followers and a submit button.
+ *
+ * The variants of the publishers have different use cases, so please pay attention
+ * to the markup structure of each.
+ *
+ * @summary A publisher is an advanced longform text input form element.
+ *
+ * @base
+ * @name publishers
+ * @selector .slds-publisher
+ * @support dev-ready
+ * @category feature
+ * @type data-entry
+ * @role textbox
+ */

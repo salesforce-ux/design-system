@@ -1,0 +1,25 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The HTML `<select>` element presents a menu of options. The options within
+ * the menu are represented by `<option>` elements that you can group with
+ * `<optgroup>` elements. You can pre-select options for the user.
+ *
+ * For a multiple options selections, adding the attribute `multiple` to
+ * the `<select>` will enable this functionality. Note, if you need multiple
+ * option selections, you will need to remove the
+ * `<div class="slds-select_container">` from the DOM, otherwise you'll get
+ * display issues.
+ *
+ * @summary Select element presents a menu of options.
+ *
+ * @base
+ * @name select
+ * @selector .slds-select
+ * @support dev-ready
+ * @category base
+ * @type data-entry
+ * @role listbox
+ */

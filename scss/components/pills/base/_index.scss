@@ -1,0 +1,227 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes pill
+ *
+ * @name base
+ * @selector .slds-pill
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+.slds-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; // Required to make the container shrink when truncated
+  padding: $spacing-xxx-small;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  background-color: $color-background-pill;
+  position: relative;
+  min-height: $height-pill;
+
+  + .slds-pill {
+    margin-left: $spacing-xxx-small;
+  }
+
+  &:hover {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:focus {
+    outline: 0;
+    border-radius: $border-radius-medium;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /**
+   * Modifier that removes border and background from a pill
+   *
+   * @selector .slds-pill_bare
+   * @restrict .slds-pill
+   * @modifier
+   */
+  &_bare,
+  &--bare {
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  /**
+   * Container to hold pill(s) with borders
+   *
+   * @selector .slds-pill_container
+   * @restrict div
+   */
+  &__container,
+  &-container,
+  &_container {
+    @include deprecate('4.0.0', 'Use .slds-pill_container');
+    display: flex;
+    padding: $spacing-xxx-small;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    min-height: calc(#{$height-input} + 2px);
+  }
+
+  /**
+   * Container to hold pill(s) with no borders
+   *
+   * @selector .slds-pill_container_bare
+   * @restrict .slds-pill_container
+   * @modifier
+   * @deprecated
+   */
+  &__container_bare,
+  &__container--bare,
+  &_container_bare,
+  &_container--bare {
+    @include deprecate('4.0.0');
+    display: flex;
+    padding: $spacing-xxx-small;
+    border: 0;
+    border-radius: 0;
+  }
+
+  /**
+   * Line of text inside a pill
+   *
+   * @selector .slds-pill__label
+   * @restrict .slds-pill a, .slds-pill span
+   */
+  &__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:focus {
+      outline: 0;
+      border-radius: $border-radius-medium;
+      box-shadow: $shadow-button-focus;
+    }
+  }
+
+  /**
+   * Initializes pill icon or avatar that sits to the left of the label
+   *
+   * @selector .slds-pill__icon_container
+   * @restrict .slds-pill span
+   */
+  &__icon,
+  &__icon_container {
+    @include square($square-icon-x-small-boundary);
+    margin-right: $spacing-xx-small;
+
+    .slds-icon,
+    .slds-avatar {
+      @include square($square-icon-x-small-boundary);
+      display: block;
+      font-size: $font-size-heading-xx-small;
+    }
+
+    ~ .slds-pill__action {
+      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
+    }
+  }
+
+  /**
+   * Initializes remove icon in pill that sits to the right of the label
+   *
+   * @selector .slds-pill__remove
+   * @restrict .slds-pill button, .slds-pill span
+   */
+  &__remove {
+    @include square ($square-icon-xx-small-boundary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: $spacing-xx-small;
+    border-radius: $border-radius-small;
+
+    svg {
+      @include square($square-icon-xx-small-content);
+    }
+  }
+}
+
+/**
+ * Creates a pill with a hyperlink
+ *
+ * @selector .slds-pill_link
+ * @restrict .slds-pill
+ */
+.slds-pill_link,
+.slds-pill--link {
+  border: 0;
+  padding: 0;
+
+  .slds-pill__icon_container {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: $spacing-xxx-small;
+    transform: translateY(-50%);
+  }
+
+  .slds-pill__remove {
+    position: absolute;
+    top: 50%;
+    right: $spacing-xxx-small;
+    transform: translateY(-50%);
+  }
+}
+
+/**
+ * Actionable element inside of pill with hyperlink
+ *
+ * @selector .slds-pill__action
+ * @restrict .slds-pill_link a
+ */
+.slds-pill__action {
+  padding: $spacing-xxx-small;
+  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-xx-small} + 2px);
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+
+  &:focus {
+    outline: 0;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
+}
+
+/**
+ * Pill error styles
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-pill
+ * @modifier
+ */
+.slds-has-error {
+  border-color: $color-border-error;
+
+  .slds-pill__label {
+    font-weight: $font-weight-bold;
+    color: $color-text-error;
+  }
+
+  .slds-pill__action {
+    border-color: $color-border-error;
+  }
+}

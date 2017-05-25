@@ -1,0 +1,28 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * Actionable element that toggles visibility of overflown list items
+ *
+ * @selector .slds-nav-vertical__action_overflow
+ * @restrict .slds-nav-vertical__action
+ */
+.slds-nav-vertical__action_overflow {
+  color: $color-text-icon-default;
+
+  &[aria-expanded="true"] .slds-button__icon {
+    transform: rotate(90deg);
+  }
+}
+
+/**
+ * Text inside of actionable element that toggles visibility of overflown list items
+ *
+ * @selector .slds-nav-vertical__action-text
+ * @restrict .slds-nav-vertical__action_overflow span
+ */
+.slds-nav-vertical__action-text {
+  color: $color-text-link;
+}

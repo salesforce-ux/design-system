@@ -1,0 +1,47 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Reset positioning back to normal behavior
+ *
+ * @name static
+ * @selector .slds-is-static
+ * @modifier
+ */
+.slds-is-static {
+  position: static;
+}
+
+/**
+ * @summary Used to contain children if children are absolutely positioned and out of flow. Also used to position element without changing layout.
+ *
+ * @name relative
+ * @selector .slds-is-relative
+ * @modifier
+ */
+.slds-is-relative {
+  position: relative;
+}
+
+/**
+ * @summary Used to position an element relative to the viewport.
+ *
+ * @name fixed
+ * @selector .slds-is-fixed
+ * @modifier
+ */
+.slds-is-fixed {
+  position: fixed;
+}
+
+/**
+ * @summary Used to position an element relative to its closest ancestor with relative positioning.
+ *
+ * @name absolute
+ * @selector .slds-is-absolute
+ * @modifier
+ */
+.slds-is-absolute {
+  position: absolute;
+}

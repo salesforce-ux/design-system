@@ -1,0 +1,19 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-tile_board,
+.slds-tile--board {
+  position: relative;
+
+  &__icon {
+    @include square($square-icon-medium-content);
+    position: absolute;
+    bottom: $spacing-xx-small;
+    right: $spacing-xx-small;
+  }
+
+  .slds-has-alert {
+    padding-right: $spacing-large;
+  }
+}

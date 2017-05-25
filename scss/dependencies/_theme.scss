@@ -1,0 +1,212 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// If you have a horizontal list and want a dot as a list item separator
+//
+// Use - apply to repeating list items
+@mixin gradient-horizontal($start, $end, $direction: right) {
+  @if alpha($start) == 1 and alpha($end) == 1 {
+    background-color: $start;
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
+  }
+
+  @else {
+    background-image: linear-gradient(to $direction, $start, $end);
+  }
+}
+
+
+
+@mixin gradient-vertical($start, $end, $direction: bottom) {
+  @if alpha($start) == 1 and alpha($end) == 1 {
+    background-color: $start;
+    background-image: linear-gradient(to $direction, rgba($start, 0), $end);
+  }
+
+  @else {
+    background-image: linear-gradient(to $direction, $start, $end);
+  }
+}
+
+
+// Inverse Links
+@mixin inverse-links {
+  color: $color-text-inverse;
+
+  a:not(.slds-button--neutral) {
+    color: $color-text-link-inverse;
+    text-decoration: underline;
+
+    &:link,
+    &:visited {
+      color: $color-text-link-inverse;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-link-inverse-hover;
+    }
+
+    &:active {
+      color: $color-text-link-inverse-active;
+    }
+
+    &[disabled] {
+      color: $color-text-link-inverse-disabled;
+    }
+  }
+}
+
+/// Inverse text mixin
+///
+/// The inverse-text mixin determines what selectors to change when on an inversed background
+///
+/// @param {List} $support (null) - Set to `true` to scope root styles in the mixin's wrapper class when `$globals` is `true`
+@mixin inverse-text($support: null) {
+  $link-selector: 'a';
+
+  @for $i from 1 through length($support) {
+    @if nth($support, $i) == 'text-utilities' {
+
+      .slds-text-title,
+      .slds-text-title_caps,
+      .slds-text-title--caps {
+        color: $color-text-inverse-weak;
+      }
+    }
+
+    @else if nth($support, $i) == 'buttons' {
+      $link-selector: 'a:not(.slds-button--neutral), button:not(.slds-button--neutral)';
+    }
+
+    @else if nth($support, $i) == 'borders' {
+      border-color: $color-border-inverse;
+    }
+
+    @else if nth($support, $i) == 'icons' {
+
+      .slds-icon {
+        fill: currentColor;
+      }
+    }
+  }
+
+  color: $color-text-inverse;
+
+  #{$link-selector} {
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-text-link-inverse-hover;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    &:active {
+      color: $color-text-link-inverse-active;
+    }
+
+    &[disabled] {
+      color: $color-text-link-inverse-disabled;
+    }
+  }
+}
+
+
+// Border Helper
+@mixin border($borders: null, $radius: null) {
+  @if $borders != null {
+    @if $borders == around {
+      border: $border-width-thin solid $color-border;
+    }
+
+    @else {
+      @each $positions in $borders {
+        @each $position in $positions {
+          border-#{$position}: $border-width-thin solid $color-border;
+        }
+      }
+    }
+  }
+
+  @if $radius != null {
+    border-radius: $radius;
+    background-clip: padding-box;
+  }
+}
+
+
+
+// Theme Helper
+@mixin theme($theme, $borders: null) {
+  @if $theme == shade {
+    background-color: $color-background;
+  }
+
+  @else if $theme == inverse {
+    @include inverse-links;
+    background-color: $color-background-inverse;
+  }
+
+  @else if $theme == alt-inverse {
+    @include inverse-links;
+    background-color: $color-background-alt-inverse;
+  }
+
+  @else if $theme == brand {
+    @include inverse-links;
+    background-color: $color-background-modal-brand;
+  }
+
+  @else {
+    background-color: $color-background-alt;
+    color: $color-text-default;
+  }
+
+  @include border($borders);
+}
+
+
+
+// Bounding Box for components
+@mixin box($theme: null, $padding: $spacing-medium, $border-radius: $border-radius-medium, $borders: null) {
+  padding: $padding;
+
+  @if $border-radius != null {
+    border-radius: $border-radius;
+  }
+
+  @if $theme != null and $borders == null {
+    @include theme($theme);
+  }
+
+  @else if $theme != null and $borders != null {
+    @include theme($theme, $borders);
+  }
+
+  @else if $theme == null and $borders != null {
+    @include border($borders);
+  }
+}
+
+
+// Striped Gradient
+@mixin gradient-striped($stripe-color: rgba(#000, 0.025), $angle: 45deg, $color: null) {
+  @if $color != null {
+    background-color: $color;
+  }
+
+  background-image: linear-gradient($angle, $stripe-color 25%, transparent 25%, transparent 50%, $stripe-color 50%, $stripe-color 75%, transparent 75%, transparent);
+  background-size: 64px 64px;
+}
+
+// Page header
+@mixin page-header {
+  @include deprecate('4.0.0') {
+    padding: $spacing-large $spacing-large $spacing-small;
+    border-bottom: $border-width-thin solid $color-border;
+    background: $color-background;
+  }
+}

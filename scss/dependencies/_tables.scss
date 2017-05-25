@@ -1,0 +1,81 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin table-stacked {
+  @include mq-medium-max {
+    border: 0;
+
+    thead {
+      // scss-lint:disable ImportantRule
+      /* stylelint-disable declaration-no-important */
+      position: absolute !important;
+      margin: -1px !important;
+      border: 0 !important;
+      padding: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      /* stylelint-enable declaration-no-important */
+    }
+
+    th {
+      border-top: 0;
+    }
+
+    tr {
+      display: block;
+      border-top: $border-width-thick solid $color-border;
+    }
+
+    th,
+    td {
+      display: block;
+      padding: $spacing-small;
+      max-width: 100%;
+      width: 100%;
+      clear: both;
+      white-space: normal;
+      overflow: hidden;
+      text-align: left;
+
+      // Remove max width from truncate definition
+      &.slds-truncate {
+        max-width: 100%;
+      }
+
+      &:before {
+        @include text-heading--label;
+        display: block;
+        padding-bottom: $spacing-xx-small;
+        content: attr(data-label);
+      }
+    }
+
+    tr > td:first-child,
+    tr > td:last-child {
+      padding: $spacing-small;
+    }
+
+    &:not(.slds-no-row-hover) tbody tr:hover {
+
+      // scss-lint:disable ImportantRule
+      /* stylelint-disable declaration-no-important */
+      td,
+      th {
+        background-color: inherit !important;
+        box-shadow: none !important;
+      }
+      /* stylelint-enable declaration-no-important */
+    }
+
+    .slds-is-interactive .slds-button {
+      visibility: visible;
+    }
+
+    .slds-cell-shrink {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiazes email composer inside of a docked composer
+ *
+ * @selector .slds-email-composer
+ * @restrict .slds-docked-composer__body div
+ */
+.slds-email-composer {
+  position: relative;
+  flex: 1 1 auto;
+
+  .slds-rich-text-editor {
+    border: 0;
+    border-top: $border-width-thin solid $color-border;
+    border-radius: 0;
+  }
+}
+
+/**
+ * @summary Modifier combobox when used inside of email composer
+ *
+ * @selector .slds-email-composer__combobox
+ * @restrict .slds-email-composer div
+ */
+.slds-email-composer__combobox {
+  padding-left: $spacing-xx-large;
+  border: 0;
+  border-bottom: $border-width-thin solid $color-border;
+  border-radius: 0;
+
+  .slds-form-element__label {
+    position: absolute;
+    left: $spacing-small;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slds-combobox_container {
+    border: 0;
+  }
+}
+
+/**
+ * @summary Provides styles for recipient labels inside of email composer
+ *
+ * @selector .slds-email-composer__recipient
+ * @restrict .slds-email-composer label
+ */
+.slds-email-composer__recipient {
+  position: absolute;
+  top: 0;
+  right: $spacing-small;
+}

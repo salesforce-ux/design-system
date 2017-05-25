@@ -1,0 +1,385 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+* @summary Creates a button that looks like a plain icon
+*
+* @name base
+* @selector .slds-button_icon
+* @restrict button
+* @variant
+*/
+.slds-button_icon,
+.slds-button--icon,
+.slds-button_icon-inverse,
+.slds-button--icon-inverse,
+.slds-button_icon-container,
+.slds-button--icon-container,
+.slds-button_icon-border,
+.slds-button--icon-border,
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse,
+.slds-button_icon-more,
+.slds-button--icon-more,
+.slds-button_icon-error,
+.slds-button--icon-error {
+  line-height: $line-height-reset;
+  vertical-align: middle;
+  color: $color-text-icon-default;
+}
+
+@include deprecate('4.0.0', 'Use .slds-button--icon instead') {
+
+  .slds-button_icon-bare,
+  .slds-button--icon-bare {
+    line-height: $line-height-reset;
+    vertical-align: middle;
+    color: $color-text-icon-default;
+  }
+}
+
+/**
+ * Default width + height for button icon with containers
+ *
+ * @selector .slds-button_icon-container
+ * @restrict .slds-button_icon
+ * @modifier
+ */
+
+// Append class to this list if it requires a default size of 2x2rem
+.slds-button_icon-container,
+.slds-button--icon-container,
+.slds-button_icon-border,
+.slds-button--icon-border,
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse {
+  @include square($square-icon-medium-boundary);
+}
+
+/**
+ * Creates an icon button with a border
+ *
+ * @selector .slds-button_icon-border
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group borders
+ */
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border,
+.slds-button--icon-border {
+  @include button-base;
+
+  // Disabled
+  &[disabled] {
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+/**
+ * Gives a white icon color on a dark background
+ *
+ * @selector .slds-button_icon-border-inverse
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group borders
+ */
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse {
+  @include button-base;
+  background-color: $color-background-button-inverse;
+  color: $color-text-link-inverse;
+
+  &[disabled] {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+  }
+}
+
+/**
+ * Button icon with background
+ *
+ * @selector .slds-button_icon-border-filled
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group borders
+ */
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled {
+  background-color: $color-background-button-default;
+
+  &[disabled] {
+    border: $border-width-thin solid $color-border-button-default;
+    background-color: $color-background-button-default-disabled;
+  }
+}
+
+/**
+ * Button icon on inversed background
+ *
+ * @selector .slds-button_icon-inverse
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group color
+ */
+.slds-button_icon-inverse,
+.slds-button--icon-inverse {
+  color: $color-text-link-inverse;
+
+  &:hover,
+  &:focus {
+    color: $color-text-link-inverse-hover;
+  }
+
+  &:focus {
+    @include focus-inverse;
+  }
+
+  &:active {
+    color: $color-text-link-inverse-active;
+  }
+
+  &[disabled] {
+    color: $color-text-link-inverse-disabled;
+  }
+}
+
+/**
+ * Button icon for errors
+ *
+ * @selector .slds-button_icon-error
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group color
+ */
+.slds-button_icon-error,
+.slds-button--icon-error {
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-error;
+  }
+}
+
+// Stateful Button Icon
+.slds-button_icon-container.slds-is-selected,
+.slds-button--icon-container.slds-is-selected,
+.slds-button_icon-border.slds-is-selected,
+.slds-button--icon-border.slds-is-selected {
+  @include button-brand;
+
+  .slds-button__icon {
+    fill: $color-text-button-brand;
+  }
+
+  // WHERE ARE MY ATTRIBUTE STYLES?
+}
+
+/**
+ * Button icon container - size small modifier
+ *
+ * @selector .slds-button_icon-small
+ * @restrict .slds-button_icon
+ * @modifier
+  * @group size
+ */
+.slds-button_icon-small,
+.slds-button--icon-small {
+  @include square($square-icon-small-boundary);
+  border-radius: $border-radius-small;
+}
+
+/**
+ * Button icon container - size x-small modifier
+ *
+ * @selector .slds-button_icon-x-small
+ * @restrict .slds-button_icon
+ * @modifier
+  * @group size
+ */
+.slds-button_icon-x-small,
+.slds-button--icon-x-small {
+  @include square($square-icon-x-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .slds-button__icon {
+    @include square($square-icon-small-content);
+  }
+}
+
+/**
+ * Button icon container - size xx-small modifier
+ *
+ * @selector .slds-button_icon-xx-small
+ * @restrict .slds-button_icon
+ * @modifier
+ * @group size
+ */
+.slds-button_icon-xx-small,
+.slds-button--icon-xx-small {
+  @include square($square-icon-xx-small-boundary);
+  border-radius: $border-radius-small;
+  line-height: $line-height-reset;
+
+  .slds-button__icon {
+    @include square($square-icon-x-small-content);
+  }
+}
+
+
+/**
+ * @summary Button icon with dropdown
+ *
+ * @name icon-with-dropdown
+ * @selector .slds-button_icon-more
+ * @restrict .slds-button_icon
+ * @variant
+ */
+.slds-button_icon-more,
+.slds-button--icon-more {
+  line-height: $line-height-button;
+  padding: 0 $spacing-x-small;
+  vertical-align: middle;
+  border: $border-width-thin solid $color-border-button-default;
+
+  &-filled {
+    background-color: $color-background-button-default;
+  }
+
+  &:hover,
+  &:focus {
+    @include button-base;
+
+    .slds-button__icon {
+      fill: $color-text-icon-default-hover;
+    }
+  }
+
+  &:active .slds-button__icon {
+    fill: $color-text-icon-default-active;
+  }
+
+  &[disabled] {
+    cursor: default;
+
+    .slds-button__icon {
+      fill: $color-text-icon-default-disabled;
+    }
+  }
+}
+// WTF is going on here?
+.slds-button_icon-container-more,
+.slds-button--icon-container-more {
+  line-height: $line-height-button;
+  padding: 0 $spacing-x-small;
+  vertical-align: middle;
+}
+
+/**
+ * The stateful button requires the `.slds-button--icon-border` class in addition to the `.slds-button` class.
+ *
+ * The stateful inverse button works just like the stateful button. It requires the `.slds-button--icon-border-inverse` class in addition to the `.slds-button` class.
+ *
+ * Stateful icons can be toggled on and off and retain their state. JavaScript is used to add the `.slds-is-selected` class to the button when activated.
+ *
+ * #### Accessibility
+ *
+ * For accessibility, implement the [ARIA Toggle Button](http://w3c.github.io/aria-practices/#button) concept.
+ * - Similar to a mute button, the button represents a pressed or unpressed state.
+ * - Button text doesn't change per state
+ * - `aria-pressed` is set to `true` or `false`, depending its state
+ *
+ * @summary Stateful Button Icon
+ *
+ * @name stateful
+ * @selector .slds-is-selected
+ * @restrict .slds-button_icon
+ * @variant
+ */
+.slds-button--icon-container.slds-is-selected,
+.slds-button--icon-border.slds-is-selected {
+  @include button-brand;
+
+  .slds-button__icon {
+    fill: $color-text-button-brand;
+  }
+
+  &:hover,
+  &:focus {
+
+    .slds-button__icon {
+      fill: $color-text-button-brand;
+    }
+  }
+}
+
+/**
+ * @summary A parent class must be put on anything that contains a .slds-button__icon--hint so that the child reacts when the parent is hovered.
+ *
+ * @name icon-with-hint-hover
+ * @selector .slds-button__icon_hint
+ * @restrict .slds-button_icon .slds-button__icon
+ * @variant
+ */
+.slds-button__icon_hint,
+.slds-button__icon--hint {
+  fill: $color-text-icon-default-hint;
+}
+
+/**
+ * A parent class must be put on anything that contains
+ * a .slds-button__icon--inverse-hint so that the child reacts
+ * when the parent is hovered. This is for a dark background.
+ *
+ * @selector .slds-button__icon_inverse-hint
+ * @restrict .slds-button_icon .slds-button__icon
+ */
+.slds-button__icon_inverse-hint,
+.slds-button__icon--inverse-hint {
+  fill: $color-text-icon-inverse-hint;
+}
+
+// Parent class for hint parent
+// How do we document this?
+.slds-hint-parent {
+
+  .slds-button_icon-border-inverse,
+  .slds-button--icon-border-inverse {
+    border-color: $color-border-icon-inverse-hint;
+
+    &:focus {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+  }
+
+  &:hover,
+  &:focus {
+
+    .slds-button_icon-border-inverse,
+    .slds-button--icon-border-inverse {
+      border-color: $color-border-icon-inverse-hint-hover;
+    }
+
+    .slds-button__icon_hint,
+    .slds-button__icon--hint {
+      fill: $color-text-icon-default;
+    }
+
+    .slds-button__icon_inverse-hint,
+    .slds-button__icon--inverse-hint {
+      fill: $color-text-icon-inverse-hint-hover;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Grid Wrapper
+ *
+ * To use the grid system, add the class <CodeClass className="grid" /> to an element, component, or page layout. Each grid is independent of other nested grids. You can limit attributes of each grid to specific regions in the app. A grid style is <em>not</em> an all or nothing solution.
+ *
+ * Adding the class <CodeClass className="wrap" /> causes the flow of your <CodeClass className="col" /> elements to wrap when they exceed 100% of their parent’s width.
+ *
+ * You can easily change the flow direction of your grid by adding a modifier class to the <CodeClass className="grid" /> element. To stack your columns vertically instead of their default row behavior, use <CodeClass className="grid--vertical" />. You can also reverse the left to right behavior by adding <CodeClass className="grid--reverse" /> or top to bottom by adding <CodeClass className="grid--vertical-reverse" />.
+ *
+ * If you want your application to fill 100% of the width and height of the viewport and nest other grids inside, use the top-level app helper class <CodeClass className="grid--frame" />. An assortment of <CodeClass className="container"/> classes are available to contain your grids.
+ *
+ * #### Grid Items (Regions/Colums)
+ *
+ * When you add the class <CodeClass className="col" /> to the grid items, no padding or gutters are added. They are simply divisions of their parent. If you want gutters, add one of the spacing utility classes such as <CodeClass className="p-horizontal--small" />, <CodeClass className="p-horizontal--medium" />, <CodeClass className="p-horizontal--large" />, <CodeClass className="p-around--small" />, <CodeClass className="p-around--medium" /> or <CodeClass className="p-around--large" />. These will add different sized gutters to the left and right side of your column.
+ *
+ * By default, the width of each column within a grid row is determined by the content within. Though this automatic sizing allows you to achieve most desired outcomes, you can add manual <a href="/components/utilities/sizing/">sizing classes</a> to the columns if you need specific column widths.
+ *
+ * Using the manual sizing class helpers, you can specify a column span across the following grids &ndash;2, 3, 4, 5, 6, 7, 8 and 12. The grid supports up to 12 columns.
+ *
+ * #### Visual Glossary of Terminology
+ *
+ * ![](/assets/images/grid/grid-flex-diagram.svg)
+ *
+ * @summary The SLDS grid, based on Flexbox, provides a flexible, mobile-first, device-agnostic scaffolding system. It includes helper classes that you can use to alter the look and behavior of your grid, such as alignment, order, flow, and padding helpers.
+ *
+ * @utility
+ * @name grid
+ * @selector [class*='slds-grid']
+ * @support dev-ready
+ * @layout responsive
+ */

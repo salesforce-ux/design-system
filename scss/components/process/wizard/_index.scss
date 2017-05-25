@@ -1,0 +1,99 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0', 'Use Progress Indicator instead') {
+
+  .slds-wizard {
+    position: relative;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin: auto;
+    }
+
+    &__item {
+      flex: 2 0 auto;
+      text-align: center;
+      width: 0%; // Needed for truncation due to different flex grow on items
+      user-select: none;
+
+      &:first-child {
+        text-align: left;
+        flex-grow: 1;
+      }
+
+      &:last-child {
+        text-align: right;
+        flex-grow: 1;
+      }
+
+      a:hover,
+      a:focus {
+        outline: 0;
+        text-decoration: none;
+
+        .slds-wizard__marker {
+          background: rgb(216, 221, 230); // @TODO - no matching token
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+    }
+
+    &__marker {
+      @include square($square-icon-small-boundary);
+      border-radius: $border-radius-circle;
+      background: $color-background-shade;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 1;
+      position: relative;
+    }
+
+    &__label {
+      display: block;
+      margin-top: $spacing-small;
+    }
+
+    &__progress {
+      position: absolute;
+      left: 0;
+      top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
+      height: ($square-icon-x-small-content / 2);
+      display: block;
+      width: 100%;
+      z-index: -1;
+      background: $color-background-shade;
+    }
+
+    &__progress-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: #0076de; // @TODO: Need a token for this
+      transition: width $duration-promptly ease;
+    }
+
+    .slds-is-active {
+
+      .slds-wizard__marker {
+        background: #0076de; // @TODO: Need a token for this
+      }
+
+      a:hover,
+      a:focus {
+        // scss-lint:disable NestingDepth SelectorDepth
+
+        .slds-wizard__marker {
+          background: rgb(0, 95, 178); // @TODO: Need a token for this
+        }
+      }
+    }
+  }
+}

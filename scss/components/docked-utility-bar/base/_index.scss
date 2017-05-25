@@ -1,0 +1,149 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Fixed bar at the bottom of viewport, contains items
+ *
+ * @name base
+ * @selector .slds-utility-bar_container
+ * @restrict footer
+ * @support dev-ready
+ * @variant
+ */
+.slds-utility-bar_container {
+  position: relative;
+}
+
+/**
+ * Fixed bar at the bottom of viewport, contains items
+ *
+ * @selector .slds-utility-bar
+ * @restrict .slds-utility-bar_container ul
+ */
+.slds-utility-bar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $height-docked-bar;
+  background: $color-background;
+  box-shadow: $shadow-docked;
+  z-index: $z-index-docked;
+
+  /**
+   * Notification indicator
+   *
+   * @selector .slds-indicator_unread
+   * @restrict .slds-utility-bar abbr
+   */
+  .slds-indicator_unread,
+  .slds-indicator--unread {
+    background: $utility-bar-color-background-notification-badge;
+    top: $spacing-x-small;
+  }
+}
+
+/**
+ * Items that invoke specific utility bar panel
+ *
+ * @selector .slds-utility-bar__item
+ * @restrict .slds-utility-bar li
+ */
+.slds-utility-bar__item {
+  display: flex;
+  margin-right: $border-width-thin;
+}
+
+/**
+ * Button that invokes utility panel
+ *
+ * @selector .slds-utility-bar__action
+ * @restrict .slds-utility-bar button
+ */
+.slds-utility-bar__action {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 $spacing-small;
+  border-radius: 0;
+  border: 0;
+  color: $color-text-default;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:focus:after {
+    height: ($border-width-thick + 1px);
+    background: $color-brand;
+  }
+
+  &:hover,
+  &:focus {
+    background: $color-background-utility-bar-hover;
+    color: inherit;
+  }
+
+  /**
+   * @selector .slds-is-active
+   * @restrict .slds-utility-bar__action
+   * @modifier
+   */
+  &.slds-is-active {
+    background: $color-background-utility-bar-hover;
+    color: inherit;
+
+    &:after {
+      background: $color-brand;
+    }
+  }
+}
+
+/**
+ * Container for utility bar item text, allows for multi-line text output
+ *
+ * @selector .slds-utility-bar__text
+ * @restrict .slds-utility-bar__action > span
+ */
+.slds-utility-bar__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+
+/**
+ * Creates styles for a utility bar item when it has a notification within its panel
+ *
+ * @selector .slds-has-notification
+ * @restrict .slds-utility-bar__item
+ */
+.slds-has-notification {
+
+  .slds-utility-bar__action {
+    background: $color-background-info;
+    color: $color-text-inverse;
+
+    &:hover,
+    &:focus {
+      background: $color-background-alt-inverse;
+    }
+
+    &:focus:after {
+      background: $utility-bar-color-background-notification-focus;
+    }
+  }
+}

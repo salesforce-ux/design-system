@@ -1,0 +1,137 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Create each activity timeline item in a list
+ *
+ * @name base
+ * @selector .slds-timeline__media
+ * @restrict .slds-media
+ * @support dev-ready
+ * @variant
+ */
+.slds-timeline__media,
+.slds-media_timeline,
+.slds-media--timeline {
+  @include deprecate('4.0.0', 'Use .slds-timeline__media instead of .slds-media--timeline');
+  @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
+  padding-bottom: $spacing-large;
+
+  &:before {
+    margin-left: $border-width-thin;
+  }
+}
+
+/**
+ * @selector .slds-timeline__title
+ * @restrict .slds-timeline__media h3
+ * @deprecated
+ */
+.slds-timeline__title {
+  @include deprecate('4.0.0', '.slds-timeline__title is no longer in use, please remove from DOM.') {
+    position: relative;
+
+    &-content {
+      position: relative;
+      top: -1px;
+      padding-right: $spacing-medium;
+      background: $color-background-alt;
+      z-index: 2;
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: $spacing-x-small;
+      left: 0;
+      border-bottom: $border-width-thin dashed $color-border;
+      content: ' ';
+      z-index: 1;
+    }
+  }
+}
+
+.slds-timeline {
+  /**
+   * Icon associated with timeline item
+   *
+   * @selector .slds-timeline__icon
+   * @restrict .slds-timeline__media .slds-media__figure
+   */
+  &__icon {
+    margin-top: ($spacing-small * -1);
+    border: $border-width-thick solid #fff;
+    border-top-width: $spacing-small;
+    border-bottom-width: $spacing-small;
+  }
+
+  /**
+   * Container for date and action overflow on the right of a timeline item
+   *
+   * @selector .slds-timeline__actions
+   * @restrict .slds-timeline__item div
+   * @notes This is directly inside the `.slds-media--reverse` > `.slds-media__figure`
+   */
+  &__actions {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+  }
+
+  /**
+   * Styles the date inside `.slds-timeline__actions`
+   *
+   * @selector .slds-timeline__date
+   * @restrict .slds-timeline__actions p
+   */
+  &__date {
+    margin-bottom: $spacing-xx-small;
+    font-size: $font-size-small;
+    color: $color-text-weak;
+  }
+
+  /**
+   * @name call
+   * @selector .slds-timeline__media_call
+   * @restrict .slds-timeline__media
+   * @variant
+   */
+  &__media_call:before,
+  &__media--call:before {
+    background: $log-a-call;
+  }
+
+  /**
+   * @name email
+   * @selector .slds-timeline__media_email
+   * @restrict .slds-timeline__media
+   * @variant
+   */
+  &__media_email:before,
+  &__media--email:before {
+    background: $email;
+  }
+
+  /**
+   * @name event
+   * @selector .slds-timeline__media_event
+   * @restrict .slds-timeline__media
+   * @variant
+   */
+  &__media_event:before,
+  &__media--event:before {
+    background: $event;
+  }
+
+  /**
+   * @name task
+   * @selector .slds-timeline__media_task
+   * @restrict .slds-timeline__media
+   * @variant
+   */
+  &__media_task:before,
+  &__media--task:before {
+    background: $task;
+  }
+}

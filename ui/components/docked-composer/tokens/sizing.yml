@@ -1,0 +1,20 @@
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  HEIGHT_DOCKED_BAR:
+    value: 2.5rem
+    comment: Height of the docked bar.

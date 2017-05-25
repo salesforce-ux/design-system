@@ -1,0 +1,102 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates button group container
+ *
+ * @name base
+ * @selector .slds-button-group
+ * @restrict div
+ * @variant
+ */
+.slds-button-group,
+.slds-button-group-list {
+  display: flex;
+
+  .slds-button {
+    border-radius: 0;
+
+    &:focus {
+      z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons
+    }
+  }
+}
+
+.slds-button-group .slds-button + .slds-button,
+.slds-button-group .slds-button + .slds-button_last .slds-button,
+.slds-button-group .slds-button + .slds-button--last .slds-button,
+.slds-button-group-list li + li .slds-button {
+  margin-left: (-1 * $border-width-thin);
+}
+
+// These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
+.slds-button-group-list li:first-child .slds-button,
+.slds-button-group .slds-button:first-child {
+  border-radius: $border-radius-medium 0 0 $border-radius-medium;
+}
+
+/**
+ * These selectors must remain in long hand in order to zero out borders that
+ * we don't want on last-child or :only-child wrapped buttons
+ *
+ * @selector .slds-button_last
+ * @restrict .slds-button-group div, .slds-button-group-list div
+ */
+.slds-button-group .slds-button:last-child,
+.slds-button-group-list li:last-child .slds-button,
+.slds-button-group .slds-button_last .slds-button,
+.slds-button-group .slds-button--last .slds-button,
+.slds-button-group .slds-button.slds-button_last,
+.slds-button-group .slds-button.slds-button--last,
+.slds-button-group .slds-button_last .slds-button:only-child,
+.slds-button-group .slds-button--last .slds-button:only-child,
+.slds-button-group .slds-button.slds-button_last,
+.slds-button-group .slds-button.slds-button--last {
+  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+}
+
+// The following rule must stay at the **bottom** due to the cascade
+.slds-button-group .slds-button:only-child,
+.slds-button-group-list li:only-child .slds-button {
+  border-radius: $border-radius-medium;
+}
+
+.slds-button-group + .slds-button-group,
+.slds-button-group + .slds-button-group-list,
+.slds-button-group + .slds-button,
+.slds-button-group-list + .slds-button-group-list,
+.slds-button-group-list + .slds-button-group,
+.slds-button-group-list + .slds-button {
+  margin-left: $spacing-xx-small;
+}
+
+// The .slds-button--last class should be placed on the wrapper
+// of a button that's the final one in a button-group
+//
+// A bit of history:
+//
+// Button-groups were originally built to have no wrappers in their midst.
+//
+// And all buttons happily coexisted perfectly in the land of :last-child...
+// but then along came the big bad, "Buttons in a group can come from all
+// different teams and some are wrapped to contain a dropdown, etc.
+// This code doesn't work now."
+//
+// There was much booing and hissing and stamping of feet.
+//
+// Then, Pragmatism reared its head and suggested, "Hey guys, maybe we have
+// to supply a way for people to indicate when a button is the last one."
+//
+// We had situations where various buttons were wrapped and everyone believed
+// it was the :last-child, or no one did. So the last button had to raise its
+// hand and shout loudly, "I am .button--last!".
+//
+// Then there were issues where the last button could be wearing a wrap, thus
+// the class actually needed to be placed on it's cute little sweater instead.
+//
+// And the poor little button became warm indeed. And it got a little smelly.
+//
+// Sometimes Pragmatism wins and sometimes she loses. This time she won.
+//
+// The end of the story of button-groups.

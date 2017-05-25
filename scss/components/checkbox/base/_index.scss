@@ -1,0 +1,176 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes checkbox
+ *
+ * @name base
+ * @selector .slds-checkbox
+ * @restrict span, label
+ * @required
+ * @variant
+ */
+.slds-checkbox {
+  display: inline-block;
+
+  /**
+   * Creates a custom styled checkbox
+   *
+   * @selector .slds-checkbox_faux
+   * @restrict [class*='slds-checkbox'] span, [class*='slds-checkbox'] label
+   * @required
+   */
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    @include square($square-icon-medium-content);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border: $border-width-thin solid $color-border-input;
+    border-radius: $border-radius-small;
+    background: $color-background-input;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+  }
+
+  .slds-form-element__label {
+    display: inline;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+  }
+
+  [type="checkbox"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:checked + .slds-checkbox_faux,
+    &:checked + .slds-checkbox--faux,
+    &:checked ~ .slds-checkbox_faux,
+    &:checked ~ .slds-checkbox--faux,
+    &:checked + .slds-checkbox__label .slds-checkbox_faux,
+    &:checked + .slds-checkbox__label .slds-checkbox--faux {
+
+      &:after {
+        display: block;
+        content: '';
+        height: ($square-icon-x-small-content / 2);
+        width: $square-icon-x-small-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+        border-bottom: $border-width-thick solid $color-brand;
+        border-left: $border-width-thick solid $color-brand;
+      }
+    }
+
+    &:focus {
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox__label .slds-checkbox_faux,
+      + .slds-checkbox__label .slds-checkbox--faux {
+        content: '';
+        border-color: $color-border-input-active;
+        box-shadow: $shadow-button-focus;
+      }
+
+      &:checked > .slds-checkbox_faux,
+      &:checked > .slds-checkbox--faux,
+      &:checked ~ .slds-checkbox_faux,
+      &:checked ~ .slds-checkbox--faux,
+      &:checked + .slds-checkbox__label .slds-checkbox_faux,
+      &:checked + .slds-checkbox__label .slds-checkbox--faux {
+        border-color: $color-border-input-active;
+        background-color: $color-background-input;
+      }
+    }
+
+    &:indeterminate + .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox--faux:after,
+    &:indeterminate ~ .slds-checkbox_faux:after,
+    &:indeterminate ~ .slds-checkbox--faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox--faux:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $square-icon-x-small-content;
+      height: 2px;
+      background: $color-brand;
+      border: 0;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    &[disabled] {
+      // scss-lint:disable NestingDepth
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox__label .slds-checkbox_faux,
+      + .slds-checkbox__label .slds-checkbox--faux {
+        background-color: $color-background-input-disabled;
+        border-color: $color-border-input-disabled;
+
+
+        &:after {
+          border-color: $color-background-input;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Error styles for checkbox or checkbox group
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error .slds-checkbox [type="checkbox"] {
+
+  + .slds-checkbox_faux,
+  + .slds-checkbox--faux,
+  ~ .slds-checkbox_faux,
+  ~ .slds-checkbox--faux,
+  + .slds-checkbox__label .slds-checkbox_faux,
+  + .slds-checkbox__label .slds-checkbox--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+
+  &:checked + .slds-checkbox_faux,
+  &:checked + .slds-checkbox--faux,
+  &:checked ~ .slds-checkbox_faux,
+  &:checked ~ .slds-checkbox--faux,
+  &:checked + .slds-checkbox__label .slds-checkbox_faux,
+  &:checked + .slds-checkbox__label .slds-checkbox--faux {
+    border-color: $color-border-error;
+    background-color: $color-background-input;
+
+    &:after {
+      border-color: $color-background-error;
+    }
+  }
+}
+
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox--faux,
+.slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox--faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox_faux,
+.slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
+  margin-right: $spacing-x-small;
+}

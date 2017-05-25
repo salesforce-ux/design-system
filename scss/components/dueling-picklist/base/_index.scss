@@ -1,0 +1,105 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Anything [class*='slds-picklist'] is deprecated and should not be used
+
+/**
+ * A dueling picklist inherits styles from the listbox component
+ * @summary Initializes a dueling picklist
+ *
+ * @name base
+ * @selector .slds-dueling-list
+ * @restrict div
+ * @variant
+ */
+.slds-dueling-list {
+  display: flex;
+}
+
+/**
+ * @summary Handles the layout of the dueling picklist
+ *
+ * @selector .slds-dueling-list__column
+ * @restrict .slds-dueling-list div
+ */
+.slds-dueling-list__column {
+  display: inline-flex;
+  flex-direction: column;
+
+  .slds-button {
+    margin: $spacing-xx-small;
+
+    &:first-of-type {
+      margin-top: $spacing-large;
+    }
+  }
+}
+
+/**
+ * @summary Bounding visual container for listbox of options
+ *
+ * @selector .slds-dueling-list__options
+ * @restrict .slds-dueling-list div
+ */
+.slds-dueling-list__options,
+.slds-picklist__options {
+  border: $border-width-thin solid $color-border-input;
+  border-radius: $border-radius-medium;
+  padding: $spacing-xx-small 0;
+  width: $size-small;
+  height: $size-small;
+  background-color: $color-background-input-active;
+  overflow: auto;
+
+  [aria-selected="true"] {
+    background-color: $color-background-button-brand;
+    color: $color-text-button-brand;
+
+    &:hover,
+    &:focus {
+      background: $color-background-button-brand-hover;
+      color: $color-text-button-brand-hover;
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Use slds-listbox__item instead of slds-picklist__item') {
+
+  .slds-picklist_draggable,
+  .slds-picklist--draggable {
+    display: flex;
+
+    .slds-button {
+      margin: $spacing-xx-small;
+
+      &:first-of-type {
+        margin-top: $spacing-large;
+      }
+    }
+  }
+
+  .slds-picklist__item {
+    position: relative;
+    line-height: $line-height-text;
+
+    > a,
+    > span {
+      display: block;
+      padding: $spacing-x-small $spacing-small;
+
+      &:hover {
+        background-color: $color-background-row-hover;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $color-background-row-active;
+      }
+    }
+
+    &[aria-selected="true"] {
+      background-color: $color-background-row-active;
+    }
+  }
+}

@@ -1,0 +1,318 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The base `.slds-button` looks like a plain text link. It removes all the
+ * styling of the native button. It’s typically used to trigger a modal or
+ * display a “like” link. All button variations are built by adding another
+ * class to `.slds-button`.
+ *
+ * Add the `.slds-button--neutral` class to create a neutral button, which
+ * has a white background and gray border.
+ *
+ * Use a neutral icon button is for buttons with an icon on the left or
+ * right (not for stateful buttons). Add the `.slds-button--neutral` class
+ * to `.slds-button`.
+ *
+ * The SVG inside receives the `.slds-button__icon` class. You can position
+ * the icon on the right or the left using `.slds-button__icon--right` or
+ * `.slds-button__icon--left` , which apply the correct amount of space
+ * between the icon and the text.
+ *
+ * To create the brand button, add the `.slds-button--brand` class to
+ * the `.slds-button` class.
+ *
+ * To create the destructive button, add the `.slds-button--destructive`
+ * class to the `.slds-button` class.
+ *
+ * Use the inverse button on dark backgrounds. Add the `.slds-button--inverse`
+ * class to the `.slds-button` class.
+ *
+ * @summary This neutralizes all the base styles making it look like a text link
+ *
+ * @name base
+ * @selector .slds-button
+ * @restrict button, a, span
+ * @variant
+ */
+
+.slds-button {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  background-clip: border-box;
+  border: $border-width-thin solid transparent;
+  border-radius: $border-radius-medium;
+  font-size: $font-size-small;
+  line-height: $line-height-button;
+  text-decoration: none;
+  color: $color-text-link;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none;
+  // stylelint-enable property-no-vendor-prefix
+  white-space: normal;
+  user-select: none;
+  transition:
+    color $duration-immediately linear,
+    background-color $duration-immediately linear;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-text-link-hover;
+  }
+
+  &:focus {
+    @include focus-button;
+  }
+
+  &:active {
+    color: $color-text-link-active;
+  }
+
+  &[disabled] {
+    color: $color-text-button-default-disabled;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &[disabled] {
+
+    .slds-button__icon {
+      fill: currentColor;
+    }
+  }
+  // Add spacing when button-group is adjacent to a button
+  + .slds-button-group,
+  + .slds-button-group-list {
+    margin-left: $spacing-xx-small;
+  }
+  // Add spacing when another button is adjacent to it
+  + .slds-button {
+    @include deprecate('4.0.0') {
+      margin-left: $spacing-xx-small;
+    }
+  }
+}
+
+// Polyfill for slds-button on links
+a.slds-button {
+  text-align: center;
+
+  &:focus {
+    @include focus-button;
+  }
+}
+
+a.slds-button--inverse:focus {
+  @include focus-inverse;
+}
+
+/**
+ * Resets attributes of .slds-button back to the browser default
+ *
+ * @selector .slds-button_reset
+ * @restrict button
+ * @modifier
+ */
+.slds-button_reset,
+.slds-button--reset {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  text-align: inherit;
+}
+
+
+/**
+ * Creates the gray border with white background default style
+ *
+ * @selector .slds-button_neutral
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_neutral,
+.slds-button--neutral {
+  @include button;
+  @include button-base;
+  background-color: $color-background-button-default;
+
+  &[disabled] {
+    background-color: $color-background-button-default-disabled;
+    cursor: default;
+  }
+}
+
+/**
+ * Creates the brand blue Salesforce style
+ *
+ * @selector .slds-button_brand
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_brand,
+.slds-button--brand {
+  @include button;
+  @include button-brand;
+
+  &[disabled] {
+    background: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
+ * Creates the inverse style for dark backgrounds
+ *
+ * @selector .slds-button_inverse
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_inverse,
+.slds-button--inverse {
+  @include button;
+  @include button-base;
+  background-color: $color-background-button-inverse;
+
+  &[disabled] {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+  }
+}
+
+.slds-button_inverse,
+.slds-button--inverse,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse {
+
+  &,
+  &:link,
+  &:visited {
+    color: $color-text-button-inverse;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+
+  &:focus {
+    @include focus-inverse;
+  }
+
+  &[disabled] {
+    // Make sure disabled buttons don't inherit hover states
+    color: $color-text-button-inverse-disabled;
+  }
+}
+
+/**
+ * Creates a red button style
+ *
+ * @selector .slds-button_destructive
+ * @restrict .slds-button
+ * @group theme
+ * @modifier
+ */
+.slds-button_destructive,
+.slds-button--destructive {
+  @include button;
+  @include button-destructive;
+
+  &[disabled] {
+    background: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
+ * Creates a green button style
+ *
+ * @selector .slds-button_success
+ * @restrict .slds-button
+ * @group theme
+ * @modifier
+ */
+.slds-button_success,
+.slds-button--success {
+  @include button;
+  @include button-success;
+}
+
+/**
+ * Creates a smaller button style
+ *
+ * @selector .slds-button_small
+ * @restrict .slds-button
+ * @deprecated
+ */
+.slds-button_small,
+.slds-button--small {
+  line-height: $line-height-button-small;
+  // Force icon-only buttons to be the same
+  // height as small buttons since they're SVG
+  // and line-height has no effect on them
+  min-height: $square-icon-medium-boundary;
+}
+
+/**
+ * @selector .slds-button-space-left
+ * @deprecated
+ */
+.slds-button-space-left {
+  @include deprecate('4.0.0', 'Use spacing utilities instead') {
+    margin-left: $spacing-xx-small;
+  }
+}
+
+// This isn't a pattern and isn't used anywhere and shouldn't be exposed,
+// rather it should probably be deleted....
+.slds-button_hint,
+.slds-button--hint {
+  color: $color-text-button-default-hint;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+}
+
+.slds-hint-parent {
+
+  &:hover,
+  &:focus {
+
+    .slds-button--hint {
+      color: $color-text-button-default;
+    }
+  }
+}
+
+.slds-button__icon_left,
+.slds-button__icon--left {
+  margin-right: $spacing-x-small;
+}
+
+.slds-button__icon_right,
+.slds-button__icon--right {
+  margin-left: $spacing-x-small;
+}

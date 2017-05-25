@@ -1,0 +1,58 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin focus-button {
+  outline: 0;
+  box-shadow: $shadow-button-focus;
+}
+
+@mixin focus-inverse {
+  outline: none;
+  box-shadow: $shadow-button-focus-inverse;
+}
+
+
+@mixin calendar-selection-fill {
+  content: '';
+  position: absolute;
+  background: $color-background-button-brand-hover;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: ($square-icon-medium-boundary + $spacing-x-small);
+  transform: translateX($spacing-x-small * -1);
+  z-index: -1;
+}
+
+
+@mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+
+    &:window-inactive {
+      opacity: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border-radius: $border-radius-large;
+    box-shadow: $track 0 0 0 $border-width-thin inset;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+}
+
+// Enable momentum scrolling in Mobile Safari (iOS)
+// Side effect: hides scrollbars for this browser
+//
+// Fixes a bug where some zones were not scrollable:
+// https://github.com/salesforce-ux/design-system/issues/81
+@mixin enable-ios-momentum-scrolling {
+  -webkit-overflow-scrolling: touch;
+}

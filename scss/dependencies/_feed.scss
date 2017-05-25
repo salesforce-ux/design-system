@@ -1,0 +1,20 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin feed-vertical-rule($rule-position: 0, $rule-width: $border-width-thin) {
+  position: relative;
+
+  &:before {
+    content: '';
+    background: $color-border;
+    height: 100%;
+    width: $rule-width;
+    position: absolute;
+    left: ($rule-position / 2);
+    top: 0;
+    bottom: 0;
+    margin-left: (($rule-width / 2) * -1);
+    z-index: -1;
+  }
+}

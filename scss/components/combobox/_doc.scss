@@ -1,0 +1,120 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A Combobox is a composite widget that lets a user select one or more optons, from a
+ * predefined or autocompleted searchable list. The result of that selection
+ * is then shown as the value of an input, inside the Combobox widget.
+ *
+ * The multi-select Combobox can have more than one selected option.
+ * When more than one option has been selected, the value of the input should
+ * be updated with the total number of selected items, such as "3 options selected".
+ * When a Combobox with multiple selected options is closed,
+ * a listbox of pills is also used to represent those selected options.
+ * The listbox of pills is positioned below the read-only input, each pill represents a selected option.
+ * This allows a user to easily see and remove selected items from the Combobox.
+ *
+ * The Combobox comes with 2 distinct variations of functionality. A "Read-Only and an "Autocomplete" Combobox.
+ * A read-only Combobox allows a user to select an option from a pre-defined list of options. It does not allow
+ * free form user input, nor does it allow the user to modify the selected value.
+ * An autocomplete Combobox also allows a user to select an option from a list
+ * but, that list can be affected by what the user types into the input of the Combobox. This can be
+ * useful when the list of options a user can choose from is very large, as user input can start
+ * to only display options that match the text the user has entered, effectively performing a search.
+ * If no option matches, the user can complete the value of the combobox by finishing their own text entry.
+ *
+ * The listbox of options can be displayed as just a simple single list, or that list can be grouped with
+ * headings, to better organise the options.
+ *
+ * The target HTML element, `slds-combobox` and dropdown need to be wrapped in the class
+ * `.slds-dropdown-trigger dropdown-trigger--click`.
+ *
+ * #### Accessibility
+ *
+ * We follow the ARIA Combobox widget pattern to implement this component. Comboboxes allows the user to have
+ * dual keyboard focus enabling them to select an option from the list with arrow keys, whilst leaving browser focus inside
+ * the `input`.
+ *
+ * Implementing a multi-select pattern with a Combobox is not standard, nor is it technically supported by the specification.
+ * Therefore great care should be paid to the extra steps we take to try and communicate multi-selection.
+ *
+ * We have decided to implement the Combobox based on the [ARIA 1.1 specification](http://w3c.github.io/aria/aria/aria.html#combobox).
+ * The Combobox from ARIA 1.1 is a composite widget, in that it is a widget that is composed of other widgets or concepts.
+ * In this implementation the `combobox` now owns (by means of parent / child relationships) a `textbox` and a `listbox` of `option`'s.
+ *
+ * **Expected markup:**
+ *
+ * ##### Combobox
+ *
+ * - A Combobox must come with an associated `label` element, with an appropriate `for` attribute
+ * - `slds-combobox` acts as the root node to the composite Combobox widget. It takes the `role="combobox"` attribute as a result
+ *   - `aria-haspopup="listbox"` attribute is then applied to indicate the Combobox will display a popup, of type `listbox`
+ *   - `aria-expanded="true|false"` attribute is applied to describe whether the popup of `listbox` is currently visible or not
+ *
+ * ##### Textbox
+ *
+ * - The Textbox is an `input` with a role of `textbox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
+ * - The Textbox has `autocomplete="off"` to remove the browsers suggestions from the `input`
+ * - The Textbox has `aria-controls=""` which points to the ID of the `listbox`. It informs Assistive Technology what DOM node the input controls, in display or content
+ * - The Textbox has the `type` attribute set to be `text` as it's not a search field
+ * - The Textbox has `aria-activedescendant` attribute applied only when an option is in "dual focus" via keyboard navigation, otherwise it should be removed
+ * - The Textbox gets a `value` set to reflect that that option has been selected by the user
+ *
+ * ##### Textbox - Read-only
+ *
+ * - The Textbox has `readonly` attribute applied
+ *
+ * ##### Textbox - Autocomplete
+ *
+ * - The Textbox has `aria-autocomplete="list"` attribute applied
+ *
+ * ##### Listbox
+ *
+ * - The `listbox` has `role="listbox"` applied
+ * - The `listbox` can have child `option`'s. We place `role="option"` on a `span` element, inside a list item. As such the list item `li` needs to be removed from the Accessibility Tree with `role="presentation"`
+ * - A `listbox` has the ability to group options together under a visual heading or label. This means the `role="listbox"` attribute is placed on a common parent element, which can wrap multiple lists (or groups) of options
+ *   - When a `listbox` has no option groups
+ *     - The `ul` element has `role="presentation"` to remove it from the Accessibility Tree
+ *   - When a `listbox` has option groups, each group gets a visual label. Exactly like `optgroup` in a `select` element
+ *     - The `ul` element in this case has `role="group"` with an `aria-label` that describes the group
+ *     - Display the group label visually, but due to the way a listbox works it can only be marked as `role="presentation"`, as a `listbox` can only have `option` children. This allows us to communicate the group label visually and programmatically to a screen reader
+ * - Every `option` has `aria-selected="false"` by default
+ * - Disabled `option`s should have `aria-disabled="true"` applied
+ *
+ * ##### Listbox - Multi-select
+ *
+ * - To represent multi-selection on a `listbox` to a screen reader, we must describe previously selected options with hidden assistive text, to represent the check mark
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Focus is placed into the `input` by the user
+ * - The `listbox` is show on `input` focus, and `aria-expanded` is set to `true` on the `combobox` element to reflect that
+ * - Up and Down arrow keys cycle through the available `option`s by setting and updating `aria-activedescendant="id_of_option"` on the `input`, each time you press the arrow key
+ *   - `aria-selected` on the current `option` is changed to `true`
+ *   - Disabled options should be skipped
+ * - Esc key closes the `listbox` and sets `aria-expanded` to `false` on the `combobox`
+ * - Enter key confirms selection, sets `value` if not already set, and closes the `listbox` and sets `aria-expanded` to `false` on the `combobox`
+ *
+ * ##### Read-only
+ *
+ * - Up and Down arrows also **must** update the `input` value as you navigate through the list, to reflect the currently selected option
+ * - Any character key updates `aria-activedescendant` to the next `option` that starts with that character, if applicable
+ *
+ * ##### Autocomplete (when not allowing free form text as a valid value)
+ *
+ * - Up and Down arrows also **should** update the `input` value as you navigate through the list, to reflect the currently selected option
+ * - Enter key, with an option selected should also set `readonly` on the `input`
+ * - Esc key with an option selected should remove `readonly` and clear the `value` of the `input`
+ *
+ * @summary A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied with a listbox of pre-defined options.
+ *
+ * @base
+ * @name combobox
+ * @selector .slds-combobox_container
+ * @support prototype
+ * @category experience
+ * @type user-input
+ * @layout adaptive
+ * @role combobox
+ */

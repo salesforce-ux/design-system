@@ -1,0 +1,24 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * The list component of the Split View consists of an ARIA Listbox, and as
+ * such must obied by the following rules:
+ *
+ * - Each option can only be a single actionable element. No child actions are allowed
+ * - **Must** implement the keyboard interaction as described by the [ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#Listbox)
+ * - For each open workspace tab, the corresponding option _should_ be set to `aria-selected="true"`
+ *
+ * @summary Split view is used to navigate between records in a list while staying on the same screen.
+ *
+ * @base
+ * @name split-view
+ * @selector .slds-split-view_container
+ * @support prototype
+ * @category feature
+ * @type navigation
+ * @role expandable-panel
+ */

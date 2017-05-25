@@ -1,0 +1,74 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The comment publisher is found at the bottom of a discussion feed comment
+ * thread. It contains basic publishing capibilities.
+ *
+ * The comment publisher is in a collapsed state by default. There are 4 states
+ * of the discussion feed that provide different feedback to the user. First,
+ * the collapsed state, this indicates the user has not interacted with the
+ * comment publisher. When the user initiates an interaction with the publisher,
+ * by either focusing of the textara or clicking the "Comment" button, through
+ * javascript the class of `slds-is-active` should be applied to the
+ * `slds-publisher` element. This class will expand the publisher box and
+ * display additional publisher actions.
+ *
+ * Due to the implementation of the comment publisher design, we used a faux
+ * textarea container and we'll need to apply the our focus state to that custom
+ * container. Using javascript, the class `slds-has-focus` should be applied to
+ * the `slds-publisher` element when the user interacts with `<textarea>`. When
+ * the user loses focus on the `<textarea>`, the class `slds-has-focus` should
+ * be toggled off from the `slds-publisher` element.
+ *
+ * During the active state, before the user has begun typing or attaching
+ * additional content, the "Comment" button should be disabled by applying the
+ * `disabled` attribute to the `<textarea>`. When the user begins typing, the
+ * `disabled` attribute should be toggled off.
+ *
+ * @summary Initiates publisher that is specific to commenting in threads
+ *
+ * @name comment
+ * @selector .slds-publisher_comment
+ * @restrict .slds-publisher
+ * @required
+ * @variant
+ */
+.slds-publisher_comment,
+.slds-publisher--comment {
+  @include form-input-container;
+  position: relative;
+  min-height: calc(#{$line-height-button} + 2px);
+  max-height: calc(#{$line-height-button} + 2px);
+
+  &.slds-is-active {
+    min-height: $size-xx-small;
+    max-height: $size-small;
+
+    .slds-publisher__actions {
+      display: flex;
+    }
+  }
+
+  /**
+   * Applies focus to comment publisher container when inside `textarea`
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-publisher_comment
+   * @notes Added through JavaScript
+   * @modifier
+   */
+  &.slds-has-focus {
+    @include form-input-focus;
+  }
+
+  .slds-publisher__actions {
+    display: none;
+    padding: 0 $spacing-small $spacing-small;
+  }
+
+  .slds-attachments {
+    padding: $spacing-x-small $spacing-small;
+  }
+}

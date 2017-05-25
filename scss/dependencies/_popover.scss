@@ -1,0 +1,354 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin nubbin($position: bottom, $location: "after", $color: $color-background-alt, $size: $square-tooltip-nubbin) {
+
+  &:#{$location} {
+    @include square($size);
+    position: absolute;
+    transform: rotate(45deg);
+    content: '';
+    background-color: $color;
+
+    @if $position == top {
+      left: 50%;
+      top: (($size / 2) * -1);
+      margin-left: (($size / 2) * -1);
+    }
+
+    @else if $position == bottom {
+      left: 50%;
+      bottom: (($size / 2) * -1);
+      margin-left: (($size / 2) * -1);
+    }
+
+    @else if $position == left {
+      top: 50%;
+      left: (($size / 2) * -1);
+      margin-top: (($size / 2) * -1);
+    }
+
+    @else if $position == right {
+      top: 50%;
+      right: (($size / 2) * -1);
+      margin-top: (($size / 2) * -1);
+    }
+  }
+}
+
+@mixin popover-nubbins($color: inherit, $shadow: true) {
+  /**
+   * @selector .slds-nubbin_top
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_top,
+  .slds-nubbin--top {
+    @include nubbin(top, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(top, $color: $color);
+
+      &:after {
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_top-left
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_top-left,
+  .slds-nubbin--top-left {
+    @include nubbin(top, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(top, $color: $color);
+
+      &:after {
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: $spacing-large;
+      top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_top-right
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_top-right,
+  .slds-nubbin--top-right {
+    @include nubbin(top, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(top, $color: $color);
+
+      &:after {
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $spacing-large;
+      top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_bottom
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_bottom,
+  .slds-nubbin--bottom {
+    @include nubbin(bottom, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(bottom, $color: $color);
+
+      &:after {
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_bottom-left
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_bottom-left,
+  .slds-nubbin--bottom-left {
+    @include nubbin(bottom, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(bottom, $color: $color);
+
+      &:after {
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: $spacing-large;
+      top: 100%;
+      margin-top: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_bottom-right
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_bottom-right,
+  .slds-nubbin--bottom-right {
+    @include nubbin(bottom, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(bottom, $color: $color);
+
+      &:after {
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $spacing-large;
+      top: 100%;
+      margin-top: (($square-tooltip-nubbin / 2) * -1);
+      margin-right: (($square-tooltip-nubbin / 2) * -1);
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_left
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_left,
+  .slds-nubbin--left {
+    @include nubbin(left, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(left, $color: $color);
+
+      &:after {
+        box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_left-top
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_left-top,
+  .slds-nubbin--left-top {
+    @include nubbin(left, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(left, $color: $color);
+
+      &:after {
+        box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: $spacing-large;
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_left-bottom
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_left-bottom,
+  .slds-nubbin--left-bottom {
+    @include nubbin(left, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(left, $color: $color);
+
+      &:before {
+        margin-bottom: -1px;
+      }
+
+      &:after {
+        box-shadow: -1px 2px 3px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: auto;
+      bottom: $spacing-medium;
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_right
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_right,
+  .slds-nubbin--right {
+    @include nubbin(right, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(right, $color: $color);
+
+      &:after {
+        box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_right-top
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_right-top,
+  .slds-nubbin--right-top {
+    @include nubbin(right, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(right, $color: $color);
+
+      &:after {
+        box-shadow: 1px -1px 2px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: $spacing-large;
+    }
+  }
+
+  /**
+   * @selector .slds-nubbin_right-bottom
+   * @restrict .slds-popover, .slds-dropdown
+   * @modifier
+   * @group nubbins
+   */
+  .slds-nubbin_right-bottom,
+  .slds-nubbin--right-bottom {
+    @include nubbin(right, 'before', $color);
+
+    @if $shadow != null {
+      @include nubbin(right, $color: $color);
+
+      &:before {
+        margin-bottom: -1px;
+      }
+
+      &:after {
+        box-shadow: 2px -1px 3px 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+    }
+
+    &:before,
+    &:after {
+      top: auto;
+      bottom: $spacing-medium;
+    }
+  }
+}
+
+@mixin popover($color: $color-background-alt, $shadow: null) {
+  position: relative;
+  border-radius: $border-radius-medium;
+  width: $size-medium;
+  min-height: ($square-tooltip-nubbin * 2);
+  z-index: $z-index-dialog;
+  background-color: $color;
+  display: inline-block;
+
+  @if $shadow != null {
+    box-shadow: $shadow;
+  }
+}

@@ -1,0 +1,72 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * This component importantly changes role depending on what state it is in. If a Sales Path comes with Stage Coaching information, this pattern lends itself perfectly to being a traditional Tab Set. As you navigate the Sales Stages, it&rsquo;s associated content changes with it.
+ *
+ * On the other hand, if a Sales Path doesn&rsquo;t have Stage Coaching information, we can no longer use the Tab Set role, as we would effectively be misleading our users because each Tab has no associated content. This may lead to users trying to find absent content. In this situation, this component is much more suited to being a Listbox component.
+ *
+ * The markup structure is identical, just some attributes change their values.
+ *
+ * <div class="slds-scrollable--x slds-p-bottom--large">
+ *   <table class="slds-table slds-table--bordered slds-max-medium-table--stacked slds-no-row-hover">
+ *     <thead>
+ *       <tr class="site-text-heading--label">
+ *         <th class="slds-theme--shade" scope="col">DOM Node</th>
+ *         <th class="slds-theme--shade" scope="col">Without Coaching</th>
+ *         <th class="slds-theme--shade" scope="col">With Coaching</th>
+ *       </tr>
+ *     </thead>
+ *     <tbody>
+ *       <tr>
+ *         <th class="slds-align-top" scope="row">
+ *           <code>.slds-tabs--path__nav</code>
+ *         </th>
+ *         <td class="slds-cell-wrap slds-align-top">
+ *           <code>role="listbox"</code>
+ *         </td>
+ *         <td class="slds-cell-wrap slds-align-top">
+ *           <code>role="tabset"</code>
+ *         </td>
+ *       </tr>
+ *       <tr>
+ *         <th class="slds-align-top" scope="row">
+ *           <code>.slds-tabs--path__link</code>
+ *         </th>
+ *         <td class="slds-cell-wrap slds-align-top">
+ *           <code>role="option"</code>
+ *         </td>
+ *         <td class="slds-cell-wrap slds-align-top">
+ *           <code>role="tab"</code>
+ *         </td>
+ *       </tr>
+ *     </tbody>
+ *   </table>
+ * </div>
+ *
+ * **Notable Attributes - Without Coaching**
+ * - `aria-orientation="horizontal"` should be applied to the `slds-tabs--path__nav` element to indicate to the user to use horizontal navigation
+ * - `aria-selected="true"` should be applied to the selected Sales Stage as you navigate through the Stages
+ *
+ * **Notable Attributes - With Coaching**
+ * - When the Stage Coaching is not visible, `aria-expanded="false"` should be set on each `slds-tabs--path__link` Tab
+ * - When the Stage Coaching is visible, `aria-expanded` should be set to `true`
+ * - `aria-selected="true"` is used to describe the currently active `slds-tabs--path__link` Tab, not the Stage the Sale is currently set to
+ *
+ * **Keyboard navigation**
+ * - For both with and without Stage Coaching variants, the following keyboard navigation applies
+ * - `left` and `right` arrow keys move focus _and_ selection, with `aria-selected="true"`
+ *
+ * @summary A process component communicates to the user the progress of a particular process.
+ *
+ * @base
+ * @name path
+ * @selector .slds-path-coach
+ * @support dev-ready
+ * @category feature
+ * @type process
+ * @role tablist
+ */

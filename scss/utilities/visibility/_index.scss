@@ -1,0 +1,216 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/* stylelint-disable declaration-no-important */
+
+/**
+ * @summary Hides an element yet enables a screen reader to read the element that is hidden
+ *
+ * @selector .slds-assistive-text
+ * @notes This should be used over other methods when you don't want to hide from screenreaders
+ * @modifier
+ */
+.slds-assistive-text {
+  // scss-lint:disable ImportantRule
+  position: absolute !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  text-transform: none !important;
+}
+
+/**
+ * @summary Enables `.slds-assistive-text` to become visible on focus
+ *
+ * @selector .slds-assistive-text_focus
+ * @restrict .slds-assistive-text
+ * @modifier
+ */
+.slds-assistive-text_focus,
+.slds-assistive-text--focus {
+  // scss-lint:disable ImportantRule
+  &:focus {
+    margin: inherit !important;
+    border: inherit !important;
+    padding: inherit !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+  }
+}
+
+/**
+ * @summary Hides elements inside a parent
+ *
+ * @selector .slds-is-collapsed
+ * @modifier
+ */
+.slds-is-collapsed {
+  height: 0;
+  overflow: hidden;
+}
+
+.slds-collapsed {
+  @include deprecate('4.0.0') {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+/**
+ * @summary Shows the elements inside the parent
+ *
+ * @selector .slds-is-collapsed
+ * @modifier
+ */
+.slds-is-expanded {
+  height: auto;
+  overflow: visible;
+}
+
+.slds-expanded {
+  @include deprecate('4.0.0') {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/**
+ * @summary Hides an element from the page by setting the visibility property to `hidden`
+ *
+ * @selector .slds-hidden
+ * @notes An element hidden with this class will reserve the normal space on the page and will not be announced by screenreaders.
+ * @modifier
+ */
+.slds-hidden {
+  visibility: hidden;
+}
+
+/**
+ * @summary Shows the element by setting the visibility property to `visible`
+ *
+ * @selector .slds-visible
+ * @notes This is toggled on the element. `.slds-hidden` class is removed and `.slds-visible` is added.
+ * @modifier
+ */
+.slds-visible {
+  visibility: visible; // @TODO - This may need !important;
+}
+
+/**
+ * @summary Hides an element from the page by setting display propery to `none`
+ *
+ * @selector .slds-hide
+ * @notes An element hidden with this class will take up no space on the page and will not be announced by screenreaders.
+ * @modifier
+ */
+.slds-hide {
+  display: none;
+}
+
+/**
+ * @summary Shows the element by setting display property to `block`
+ *
+ * @selector .slds-show
+ * @notes This is toggled on the element. `.slds-hide` class is removed and `.slds-show` is added.
+ * @modifier
+ */
+.slds-show {
+  display: block;
+}
+
+/**
+ * @summary Shows the element by setting display to `inline-block`
+ *
+ * @selector .slds-show_inline-block
+ * @notes This is toggled on the element. `.slds-hide` class is removed and `.slds-show--inline-block` is added.
+ * @modifier
+ */
+.slds-show_inline-block,
+.slds-show--inline-block {
+  display: inline-block;
+}
+
+/**
+ * @summary Shows the element by setting display to `inline`
+ *
+ * @selector .slds-show_inline
+ * @notes This is toggled on the element. `.slds-hide` class is removed and `.slds-show--inline` is added.
+ * @modifier
+ */
+.slds-show_inline,
+.slds-show--inline {
+  display: inline;
+}
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  opacity: 0;
+}
+
+/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+  opacity: 1;
+}
+
+@include visibility(x-small, $mq-x-small, $mq-small);
+@include visibility(small, $mq-small, $mq-medium);
+@include visibility(medium, $mq-medium, $mq-large);
+@include visibility(large, $mq-large);
+
+// Generates responsive visibility tags
+@each $key, $value in (
+  'x-small': $mq-x-small,
+  'small': $mq-small,
+  'medium': $mq-medium,
+  'large': $mq-large,
+  'x-large': $mq-x-large,
+) {
+  @media(min-width: $value) {
+    /**
+     * @summary Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large.
+     *
+     * @selector .slds-hide_*
+     * @notes Element will be displayed normally when the window is smaller
+     * @modifier
+     */
+    .slds-hide_#{$key},
+    .slds-hide--#{$key} {
+      // scss-lint:disable ImportantRule
+      display: none !important;
+    }
+  }
+
+  @media(max-width: $value - 1px) {
+    /**
+     * @summary Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large.
+     *
+     * @selector .slds-show_*
+     * @notes Element will be displayed normally when the window is bigger
+     * @modifier
+     */
+    .slds-show_#{$key},
+    .slds-show--#{$key} {
+      // scss-lint:disable ImportantRule
+      display: none !important;
+    }
+  }
+}

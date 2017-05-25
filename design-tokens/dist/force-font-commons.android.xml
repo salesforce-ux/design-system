@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="SALESFORCE_SANS_REGULAR_WOFF2" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2</property>
+  <property name="SALESFORCE_SANS_REGULAR_WOFF" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff</property>
+  <property name="SALESFORCE_SANS_LIGHT_WOFF2" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2</property>
+  <property name="SALESFORCE_SANS_LIGHT_WOFF" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Light.woff</property>
+  <property name="SALESFORCE_SANS_BOLD_WOFF2" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2</property>
+  <property name="SALESFORCE_SANS_BOLD_WOFF" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff</property>
+  <property name="SALESFORCE_SANS_BOLD_ITALIC_WOFF2" category="font">/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2</property>
+  <property name="SALESFORCE_SANS_BOLD_ITALIC_WOFF" category="font">/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff</property>
+  <property name="SALESFORCE_SANS_ITALIC_WOFF2" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2</property>
+  <property name="SALESFORCE_SANS_ITALIC_WOFF" category="font">/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff</property>
+</resources>

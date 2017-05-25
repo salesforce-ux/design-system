@@ -1,0 +1,109 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Makes links and buttons appear as regular text
+ *
+ * @selector .slds-text-link_reset
+ * @modifier
+ */
+.slds-text-link_reset,
+.slds-text-link--reset {
+  cursor: pointer;
+  line-height: inherit;
+  font-size: inherit;
+
+  &:active {
+    outline: none;
+  }
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+/**
+ * Used in combination with `.slds-text-link--reset`, you can apply the class `.slds-text-link` to a child element to reset its styles back to that of a link.
+ *
+ * @summary Makes text inside of .slds-text-link--reset to appear as a link.
+ *
+ * @selector .slds-text-link
+ * @modifier
+ */
+.slds-text-link {
+  color: $color-text-link;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $color-text-link-hover;
+  }
+
+  &:active {
+    color: $color-text-link-active;
+  }
+}
+
+/**
+ * Faux links are used on areas that can't be wrapped in an `a` element, but need to appear to be a link with an underline on hover. An example is in the page header for Object home. The `H1` and `button` that sit next to each other have the `.slds-text-link--faux` class on their parent element.
+ *
+ * @summary Creates a faux link with hover interactions
+ *
+ * @selector .slds-text-link_faux
+ * @notes This is used when an actual anchor element can not be used. For example &mdash; when a heading and button are next to each other and both need the text underline
+ * @modifier
+ */
+.slds-text-link--faux,
+.slds-type-focus {
+  border-bottom: $border-width-thin solid transparent;
+  border-radius: 0;
+  color: currentColor;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: currentColor;
+    border-bottom: $border-width-thin solid currentColor;
+  }
+}
+
+/**
+ * @summary Blur focus is an accessibility class that will add a blurred border to an element when it is focused.
+ *
+ * @selector .slds-has-blur-focus
+ * @modifier
+ */
+.slds-has-blur-focus {
+  color: currentColor;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include focus-button;
+  }
+}
+
+/**
+ * Input focus styles, this is applied via JavaScript when needing to apply focus styles to a containing element when the input gets focus
+ *
+ * @selector .slds-has-input-focus
+ * @modifier
+ */
+.slds-has-input-focus {
+  outline: 0;
+  border-color: $color-border-input-active;
+  background-color: $color-background-input-active;
+  box-shadow: $shadow-button-focus;
+}

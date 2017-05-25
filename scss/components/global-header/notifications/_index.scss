@@ -1,0 +1,28 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Handles styling for notification item interactions
+ *
+ * @name notifications
+ * @selector .slds-global-header__notification
+ * @restrict .slds-global-header_container li
+ * @variant
+ */
+.slds-global-header__notification {
+  border-bottom: 1px solid $color-border;
+
+  &_unread,
+  &--unread {
+    background-color: $color-background-row-selected;
+  }
+
+  &:hover {
+    background-color: $color-background-row-hover;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,339 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-has-block-links {
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .slds-is-nested {
+    margin-left: $spacing-medium;
+  }
+
+  &_space,
+  &--space {
+
+    .slds-list__item,
+    .slds-item {
+      padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: $spacing-small;
+
+      @include mq-medium-min {
+        padding: $spacing-x-small; // Re-apply that padding to the link
+      }
+    }
+  }
+}
+
+.slds-has-inline-block-links {
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &_space a,
+  &--space a {
+    display: inline-block;
+    text-decoration: none;
+    padding: $spacing-small;
+
+    @include mq-medium-min {
+      padding: $spacing-x-small;
+    }
+  }
+}
+
+/**
+ * @summary Marks a vertical list with .5rem spacing around
+ *
+ * @selector .slds-list_vertical-space
+ * @modifier
+ */
+.slds-list_vertical-space,
+.slds-list--vertical-space {
+
+  .slds-list__item + .slds-list__item,
+  .slds-item + .slds-item {
+    margin-top: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Marks a vertical list with 1rem spacing around
+ *
+ * @selector .slds-list_vertical-space-medium
+ * @modifier
+ */
+.slds-list_vertical-space-medium,
+.slds-list--vertical-space-medium {
+
+  .slds-list__item + .slds-list__item,
+  .slds-item + .slds-item {
+    margin-top: $spacing-medium;
+  }
+}
+
+/**
+ * @summary Provides styles for a nested lists
+ *
+ * @selector .slds-is-nested
+ * @modifier
+ */
+.slds-is-nested {
+  margin-left: $spacing-medium;
+}
+
+/**
+ * @summary Creates an unordered list with markers
+ *
+ * @selector .slds-list_dotted
+ * @modifier
+ */
+.slds-list_dotted,
+.slds-list--dotted {
+  @include list-has-bullets;
+}
+
+/**
+ * @summary Creates an ordered list with decimals
+ *
+ * @selector .slds-list_ordered
+ * @modifier
+ */
+.slds-list_ordered,
+.slds-list--ordered {
+  @include list-has-numbers;
+}
+
+
+/**
+ * @summary Adds 1px border divider above list items
+ *
+ * @selector .slds-has-dividers_top
+ * @modifier
+ */
+.slds-has-dividers_top,
+.slds-has-dividers--top {
+
+  > .slds-list__item,
+  > .slds-item {
+    @include border(top);
+  }
+
+  /**
+   * @summary Adds 1px border divider above list items and 0.5rem padding between items
+   *
+   * @selector .slds-has-dividers_top-space
+   * @modifier
+   */
+  &-space > .slds-list__item,
+  &-space > .slds-item {
+    @include border(top);
+    padding: $spacing-small;
+
+    @include mq-small-min {
+      padding: $spacing-x-small;
+    }
+  }
+}
+
+/**
+ * @summary Adds 1px border divider below list items
+ *
+ * @selector .slds-has-dividers_top
+ * @modifier
+ */
+.slds-has-dividers_bottom,
+.slds-has-dividers--bottom {
+
+  > .slds-list__item,
+  > .slds-item {
+    @include border(bottom);
+  }
+
+  /**
+   * @summary Adds 1px border divider below list items and 0.5rem padding between items
+   *
+   * @selector .slds-has-dividers_bottom-space
+   * @modifier
+   */
+  &-space > .slds-list__item,
+  &-space > .slds-item {
+    @include border(bottom);
+    padding: $spacing-small;
+
+    @include mq-small-min {
+      padding: $spacing-x-small;
+    }
+  }
+}
+
+/**
+ * @summary Adds 1px border divider around list items
+ *
+ * @selector .slds-has-dividers_around
+ * @modifier
+ */
+.slds-has-dividers_around,
+.slds-has-dividers--around {
+
+  > .slds-item {
+    @include border(around, $border-radius-medium);
+
+    + .slds-item {
+      margin-top: $spacing-x-small;
+    }
+  }
+
+  /**
+   * @summary Adds 1px border divider around list items and 0.5rem padding between items
+   *
+   * @selector .slds-has-dividers_around-space
+   * @modifier
+   */
+  &-space {
+
+    > .slds-item {
+      @include border(around, $border-radius-medium);
+      padding: $spacing-small;
+
+      @include mq-small-min {
+        padding: $spacing-x-small;
+      }
+
+      + .slds-item {
+        margin-top: $spacing-x-small;
+      }
+    }
+  }
+}
+
+// Interactions on items
+.slds-has-list-interactions {
+
+  > .slds-list__item,
+  > .slds-item {
+    @include list-has-hovers;
+    @include list-has-selections;
+  }
+}
+
+// Deprecate for directional dividers
+@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+
+  .slds-list_vertical.slds-has-dividers > .slds-list__item,
+  .slds-list--vertical.slds-has-dividers > .slds-list__item {
+    @include box($padding: $spacing-x-small, $border-radius: null, $borders: bottom);
+    @include list-has-hovers;
+    @include list-has-selections;
+  }
+}
+
+// Deprecate for has-dividers--around instead
+@include deprecate('4.0.0', 'Use has-dividers--around instead') {
+
+  .slds-has-cards {
+
+    > .slds-list__item {
+      @include border(around, $border-radius-medium);
+
+      + .slds-list__item {
+        margin-top: $spacing-x-small;
+      }
+    }
+
+    &_space,
+    &--space {
+
+      > .slds-list__item {
+        @include border(around, $border-radius-medium);
+        padding: $spacing-small;
+
+        @include mq-small-min {
+          padding: $spacing-x-small;
+        }
+
+        + .slds-list__item {
+          margin-top: $spacing-x-small;
+        }
+      }
+    }
+  }
+}
+
+.slds-has-divider {
+  @include deprecate('4.0.0') {
+    margin-top: $spacing-x-small;
+    padding-top: $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  /**
+   * @summary Adds 1px border divider above an HTML element
+   *
+   * @selector .slds-has-divider_top
+   * @restrict li
+   * @modifier
+   */
+  &_top,
+  &--top {
+    @include border(top);
+
+    &-space {
+      @include border(top);
+      margin-top: $spacing-x-small;
+      padding-top: $spacing-x-small;
+    }
+  }
+
+  /**
+   * @summary Adds dot separator to the right of an HTML element
+   *
+   * @selector .slds-has-divider_right
+   * @restrict li
+   * @modifier
+   */
+  &_right,
+  &--right {
+    @include dot-separator(right);
+  }
+
+  /**
+   * @summary Adds 1px border divider below an HTML element
+   *
+   * @selector .slds-has-divider_bottom
+   * @restrict li
+   * @modifier
+   */
+  &_bottom,
+  &--bottom {
+    @include border(bottom);
+
+    &-space {
+      @include border(bottom);
+      margin-bottom: $spacing-x-small;
+      padding-bottom: $spacing-x-small;
+    }
+  }
+
+  /**
+   * @summary Adds dot separator to the left of an HTML element
+   *
+   * @selector .slds-has-divider_left
+   * @restrict li
+   * @modifier
+   */
+  &_left,
+  &--left {
+    @include dot-separator(left);
+  }
+}

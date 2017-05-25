@@ -1,0 +1,459 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes data table
+ *
+ * @name base
+ * @selector .slds-table
+ * @restrict table
+ * @required
+ * @variant
+ */
+.slds-table {
+  // scss-lint:disable SelectorDepth
+  background-color: $color-background-alt;
+  font-size: inherit; // forces table to respect body font
+
+  // Cells
+  th,
+  td {
+    padding: $table-spacing-x-small;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  // Table Heading Cells
+  th {
+    font-weight: $font-weight-regular;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  /**
+   * Default Table Row Hover
+   *
+   * @selector .slds-no-row-hover
+   * @restrict .slds-table
+   * @modifier
+   */
+  &:not(.slds-no-row-hover) tbody tr:hover {
+
+    > td,
+    > th {
+      background-color: $color-background-row-hover;
+    }
+  }
+
+  /**
+   * Selected Table Row + Hover
+   *
+   * @selector .slds-is-selected
+   * @restrict .slds-table tr
+   * @modifier
+   */
+  tbody tr.slds-is-selected,
+  &:not(.slds-no-row-hover) tr.slds-is-selected:hover {
+
+    > td,
+    > th {
+      background-color: $color-background-row-selected;
+    }
+  }
+
+  /**
+   * By default, nowrap is applied
+   *
+   * @selector .slds-cell-wrap
+   * @restrict .slds-table th, .slds-table td
+   * @modifier
+   */
+  .slds-cell-wrap {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  // Reduce cell to the width of its content, if space is available
+  .slds-cell-shrink {
+    width: 1%;
+  }
+
+  /**
+   * Use to add a left padding buffer to cells
+   *
+   * @selector .slds-cell-buffer_left
+   * @restrict .slds-table th, .slds-table td
+   * @modifier
+   */
+  .slds-cell-buffer_left,
+  .slds-cell-buffer--left {
+    padding-left: $spacing-large;
+  }
+
+  /**
+   * Use to add a right padding buffer to cells
+   *
+   * @selector .slds-cell-buffer_right
+   * @restrict .slds-table th, .slds-table td
+   * @modifier
+   */
+  .slds-cell-buffer_right,
+  .slds-cell-buffer--right {
+    padding-right: $spacing-large;
+  }
+
+  tbody {
+    // Start the counter
+    tr {
+      counter-increment: row-number;
+    }
+  }
+
+  .slds-row-number {
+    // Add the counter number
+    &:after {
+      content: counter(row-number);
+    }
+  }
+
+  /**
+   * Focus state on a cell
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-table th, .slds-table td
+   * @modifier
+   */
+  [role="gridcell"]:focus {
+    outline: 0;
+  }
+
+  [role="gridcell"]:focus,
+  [role="gridcell"].slds-has-focus {
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+  }
+
+  [role="gridcell"]:active {
+    box-shadow: none;
+  }
+}
+
+/**
+ * Add left and right padding to the first and last cells of a table
+ *
+ * @selector .slds-table_cell-buffer
+ * @restrict .slds-table
+ * @required
+ * @modifier
+ */
+.slds-table_cell-buffer,
+.slds-table--cell-buffer {
+
+  // First cells in a row
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $spacing-large;
+  }
+
+  // Last cells in a row
+  tr > th:last-child,
+  tr > td:last-child {
+    padding-right: $spacing-large;
+  }
+}
+
+/**
+ * Add vertical borders to a table
+ *
+ * @selector .slds-table_bordered
+ * @restrict .slds-table
+ * @modifier
+ */
+.slds-table_bordered,
+.slds-table--bordered {
+  border-collapse: separate;
+  // scss-lint:disable SelectorDepth
+  border: {
+    top: $border-width-thin solid $color-border;
+    bottom: $border-width-thin solid $color-border;
+  }
+
+  // More than one row in thead
+  thead > tr + tr > th {
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Cells
+  tbody td,
+  tbody th {
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Default Table Row Hover
+  //
+  // Checks if .no-row-hover is applied to parent table
+  // Applies hovers to only <th> and <td> within <tbody>
+  // Also checks that the <th> and <td> do not have the class .is-selected
+  // This retains the selected state when a row is hovered
+  //
+  // Box shadow used to eliminate jumpiness on hover
+  &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+  &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
+    box-shadow:
+      $color-border 0 ($border-width-thin * -1) 0 inset,
+      $color-border 0 ($border-width-thin) 0 inset;
+  }
+}
+
+/**
+ * Add column borders
+ *
+ * @selector .slds-table_col-bordered
+ * @restrict .slds-table
+ * @modifier
+ */
+.slds-table_col-bordered,
+.slds-table--col-bordered {
+
+  td + td,
+  th + th,
+  th + td,
+  td + th {
+    border-left: $border-width-thin solid $color-border;
+  }
+}
+
+/**
+ * Add alternating strips to rows
+ *
+ * @selector .slds-table_striped
+ * @restrict .slds-table
+ * @modifier
+ */
+.slds-table_striped,
+.slds-table--striped {
+  // scss-lint:disable SelectorDepth
+  tbody tr:nth-of-type(even) > td,
+  tbody tr:nth-of-type(even) > th {
+    background-color: $color-background-row-hover;
+  }
+}
+
+/**
+ * @summary Set table to use fixed layout for width and truncation purposes
+ *
+ * @name advanced
+ * @selector .slds-table_fixed-layout
+ * @restrict .slds-table
+ * @variant
+ */
+.slds-table_fixed-layout,
+.slds-table--fixed-layout {
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+
+  thead {
+    background-color: $color-background-alt;
+  }
+
+  // Tap into hardware acceleration for performance of large amounts of rows
+  tbody {
+    transform: translateZ(0);
+  }
+
+  .slds-cell-shrink {
+    width: $square-icon-large-boundary;
+
+    &:nth-child(n) {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &:first-child {
+      text-align: right;
+      padding-right: $spacing-x-small;
+    }
+
+    &:last-child {
+      text-align: left;
+      padding-left: $spacing-x-small;
+    }
+  }
+}
+
+/**
+ * If the column is sortable than lets handle the actionable
+ * region of the `<th>` cell
+ *
+ * @selector .slds-is-sortable
+ * @restrict .slds-table_fixed-layout th
+ */
+.slds-is-sortable {
+
+  .slds-th__action:hover,
+  .slds-th__action:focus,
+  &.slds-has-focus .slds-th__action,
+  &.slds-has-focus .slds-th__action:hover,
+  &.slds-has-focus .slds-th__action:focus {
+    background-color: $color-background-row-hover;
+    color: $color-text-link;
+
+    .slds-icon {
+      display: inline-block;
+      fill: $color-text-link;
+    }
+  }
+}
+
+/**
+ * Actionable area inside th
+ *
+ * @selector .slds-th__action
+ * @restrict .slds-table_fixed-layout th div, .slds-table--fixed-layout th a
+ */
+.slds-th__action {
+  display: flex;
+  padding: $spacing-x-small $table-spacing-x-small;
+  height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    background-color: $color-background-row-hover;
+  }
+
+  /**
+   * Allows for alignment of form element, such as a checkbox
+   *
+   * @selector .slds-th__action_form
+   * @restrict .slds-th__action
+   */
+  &_form,
+  &--form {
+    display: inline-flex; // Allows for alignment of form element, such as a checkbox
+  }
+}
+
+/**
+ * Icon inside sortable th
+ *
+ * @selector .slds-is-sortable__icon
+ * @restrict .slds-is-sortable .slds-icon
+ */
+.slds-is-sortable__icon {
+  @include square($square-icon-small-content);
+  margin-left: $spacing-xx-small;
+  display: none;
+}
+
+/**
+ * Active state of sorted column
+ *
+ * @selector .slds-is-sorted
+ * @restrict .slds-table_fixed-layout th
+ */
+.slds-is-sorted {
+
+  .slds-is-sortable__icon {
+    display: inline-block;
+  }
+
+  /**
+   * Change direction of arrow
+   *
+   * @name sorted-ascending
+   * @selector .slds-is-sorted_asc
+   * @restrict .slds-is-sorted
+   * @modifier
+   */
+  &_asc .slds-is-sortable__icon,
+  &--asc .slds-is-sortable__icon {
+    transform: rotate(180deg);
+  }
+}
+
+/**
+ * Resizable data table columns
+ *
+ * @selector .slds-table_resizable-cols
+ * @restrict .slds-table_fixed-layout
+ */
+.slds-table_resizable-cols thead th,
+.slds-table--resizable-cols thead th {
+  padding: 0; // Reset padding so actionable link bleeds to edge
+}
+
+
+/**
+ * Provide an indicator that resizing is available
+ *
+ * @selector .slds-is-resizable
+ * @restrict .slds-table_resizable-cols th
+ */
+.slds-is-resizable {
+
+  .slds-th__action:hover,
+  .slds-th__action:focus {
+    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+  }
+}
+
+/**
+ * Resizable handle
+ *
+ * @selector .slds-resizable
+ * @restrict .slds-is-resizable div
+ */
+.slds-resizable {
+  max-width: 100%;
+
+  /**
+   * Grab handle to resize column
+   *
+   * @selector .slds-resizable__handle
+   * @restrict .slds-resizable span
+   */
+  &__handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $spacing-xx-small;
+    height: 100%;
+    background: $color-background-button-brand;
+    display: block;
+    cursor: col-resize;
+    opacity: 0;
+    z-index: $z-index-popup;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  /**
+   * Grab handle divider indicator when resizing column
+   *
+   * @selector .slds-resizable__divider
+   * @restrict .slds-resizable__handle span
+   */
+  &__divider {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 1px;
+    background: $color-background-button-brand;
+  }
+
+  // No idea what this does
+  &__input:focus ~ .slds-resizable__handle {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,144 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The stateful button requires the `.slds-button--neutral` class in addition to the `.slds-button` class.
+ *
+ * The stateful inverse button works just like the stateful button. It requires the `.slds-button--inverse` class in addition to the `.slds-button` class.
+ *
+ * It uses the class `.slds-not-selected` in its initial state. When the user activates the button, use JavaScript to toggle the class to `.slds-is-selected`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `.slds-button__icon--stateful` class as well as the `.slds-button__icon--left` class setting the icon on the left.
+ *
+ * Stateful icons can be toggled on and off and retain their state. Like stateful buttons, the initial state is `.slds-not-selected`, and JavaScript is used to toggle it to `.slds-is-selected` when activated.
+ *
+ * #### Accessibility
+ *
+ * For accessibility, include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+ *
+ * @summary Initiates a stateful button
+ *
+ * @name stateful
+ * @selector .slds-button_stateful
+ * @restrict .slds-button
+ * @variant
+ */
+
+.slds-button_neutral.slds-is-selected,
+.slds-button--neutral.slds-is-selected {
+  border-color: transparent;
+  background-color: transparent;
+
+  &:hover:not([disabled]),
+  &:focus:not([disabled]) {
+    border: $border-width-thin solid $color-border-button-default;
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active:not([disabled]) {
+    background-color: $color-background-button-default-active;
+  }
+}
+
+// Icon modifier for stateful buttons
+.slds-button__icon_stateful,
+.slds-button__icon--stateful {
+  @include square($square-icon-small-content);
+  fill: currentColor;
+}
+
+// Inverse Button
+.slds-button_inverse.slds-is-selected,
+.slds-button--inverse.slds-is-selected {
+  border-color: transparent;
+}
+
+/**
+ * Default state of a stateful button
+ *
+ * @selector .slds-not-selected
+ * @restrict .slds-button_stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-not-selected {
+
+  .slds-text-selected {
+    display: none;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  .slds-text-not-selected {
+    display: block;
+  }
+}
+
+/**
+ * When button is selected and still has focus from click
+ *
+ * @selector .slds-is-selected-clicked
+ * @restrict .slds-button_stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-is-selected-clicked,
+.slds-is-selected[disabled],
+.slds-is-selected[disabled]:hover,
+.slds-is-selected[disabled]:focus {
+
+  .slds-text-selected {
+    display: block;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  .slds-text-not-selected {
+    display: none;
+  }
+}
+
+/**
+ * When button is pressed and selected
+ *
+ * @selector .slds-is-selected
+ * @restrict .slds-button_stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-is-selected {
+
+  .slds-text-not-selected {
+    display: none;
+  }
+
+  .slds-text-selected {
+    display: block;
+  }
+
+  .slds-text-selected-focus {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+
+    .slds-text-not-selected {
+      display: none;
+    }
+
+    .slds-text-selected {
+      display: none;
+    }
+
+    .slds-text-selected-focus {
+      display: block;
+    }
+  }
+}

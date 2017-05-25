@@ -1,0 +1,444 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Navigation bar wrapper
+ *
+ * @name navigation-bar
+ * @selector .slds-context-bar
+ * @restrict div
+ * @variant
+ */
+.slds-context-bar {
+  display: flex;
+  height: $height-context-bar;
+  background-color: $color-background-context-bar;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: 3px solid $color-background-context-bar-brand-accent;
+  color: $color-text-default;
+  position: relative;
+  padding: 0 0 0 $spacing-large;
+
+  /**
+   * Primary zone
+   *
+   * @selector .slds-context-bar__primary
+   * @restrict .slds-context-bar div
+   */
+  &__primary,
+  &__secondary,
+  &__tertiary {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+
+  /**
+   * Secondary zone
+   *
+   * @selector .slds-context-bar__secondary
+   * @restrict .slds-context-bar nav, .slds-context-bar div
+   */
+  // Context nav items go in the secondary region
+  // and secondary region needs to respect the width
+  // of the context bar parent for JavaScript to work
+  // This is how to do that in CSS
+  &__secondary {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  /**
+   * Manually add a vertical divider between elements
+   *
+   * @selector .slds-context-bar__vertical-divider
+   * @restrict .slds-context-bar div
+   */
+  &__vertical-divider {
+    width: 0;
+    overflow: hidden;
+    border-left: $border-width-thin solid $color-border;
+  }
+
+  /** Any item on the horizontal axis of the context nav bar
+   *
+   * Interactions such as hovers + active are defaults, bottom of the
+   * file deals with light / dark theme thresholds
+   *
+   * @selector .slds-context-bar__item
+   * @restrict .slds-context-bar div, .slds-context-bar li
+   */
+  &__item {
+    display: flex;
+    align-content: center;
+    align-items: stretch;
+    white-space: nowrap;
+    position: relative;
+    max-width: $size-small;
+
+    /**
+     * Active state of an item
+     *
+     * @selector .slds-is-active
+     * @restrict .slds-context-bar__item:not(.slds-no-hover)
+     * @modifier
+     */
+    &:not(.slds-no-hover):hover,
+    &.slds-is-active {
+      outline: 0;
+      border-radius: 0;
+      background-color: $color-background-context-bar-item-hover;
+      border-bottom: 3px solid $color-background-context-bar-brand-accent;
+      margin-bottom: (3px * -1);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:not(.slds-no-hover):hover:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      display: block;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+
+      @supports (mix-blend-mode: soft-light) {
+        background: rgba(0, 0, 0, 0.75);
+        mix-blend-mode: soft-light;
+      }
+    }
+
+    &.slds-is-active {
+      border-left: $border-width-thin solid $color-border;
+      border-right: $border-width-thin solid $color-border;
+      border-bottom-color: $color-background-context-bar-item-hover;
+
+      &:before,
+      &:after {
+        content: '';
+        height: 3px;
+        display: block;
+        background: $color-background-context-bar-brand-accent;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        right: -1px;
+      }
+
+      &:after {
+        background: rgba(0, 0, 0, 0.25);
+
+        @supports (mix-blend-mode: soft-light) {
+          background: rgba(0, 0, 0, 0.75);
+          mix-blend-mode: soft-light;
+        }
+      }
+
+      &:hover {
+        border-bottom-color: $color-background-context-bar-item-hover;
+      }
+    }
+
+    // Remove border on active due to primary section always having a right border
+    &:first-child.slds-is-active {
+      border-left: 0;
+    }
+
+    /**
+     * Toggled focused class applied via JavaScript
+     *
+     * @selector .slds-has-focus
+     * @restrict .slds-context-bar__item
+     * @modifier
+     */
+    &.slds-has-focus,
+    &.slds-has-focus:hover {
+
+      &:before,
+      &:after {
+        height: 4px;
+      }
+    }
+
+    /**
+     * Add a left border to a context bar item
+     *
+     * @selector .slds-context-bar__item_divider-left
+     * @restrict .slds-context-bar div, .slds-context-bar li
+     * @modifier
+     */
+    &_divider-left,
+    &--divider-left {
+      border-left: $border-width-thin solid $color-border;
+    }
+
+    /**
+     * Add a right border to a context bar item
+     *
+     * @selector .slds-context-bar__item_divider-right
+     * @restrict .slds-context-bar div, .slds-context-bar li
+     * @modifier
+     */
+    &_divider-right,
+    &--divider-right {
+      border-right: $border-width-thin solid $color-border;
+    }
+  }
+
+  /**
+   * Actionable Text Links
+   *
+   * @selector .slds-context-bar__label-action
+   * @restrict .slds-context-bar__item a, .slds-context-bar__item span, .slds-context-bar__item button
+   */
+  &__label-action {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 $spacing-small;
+    border-radius: 0;
+    min-width: 0%;
+    color: inherit;
+    font-size: $font-size-medium;
+
+    &:focus,
+    &:focus:hover {
+      outline: 0;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+
+    &:active {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  /**
+   * Actionable Icons
+   *
+   * @selector .slds-context-bar__icon-action
+   * @restrict .slds-context-bar div
+   */
+  &__icon-action {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: ($spacing-xx-small * -1);
+    padding: 0 $spacing-x-small;
+    color: $color-text-context-bar;
+    border-radius: 0;
+
+    &:focus {
+      outline: 0;
+
+      .slds-context-bar__button {
+        @include focus-button;
+      }
+
+      ~ .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-context-bar;
+    }
+
+    &:active {
+      color: $color-text-context-bar;
+    }
+
+    .slds-icon-waffle_container {
+      @include square($square-icon-large-content);
+      margin: {
+        right: $spacing-xx-small;
+        left: ($spacing-x-small * -1);
+      }
+    }
+
+    .slds-icon-waffle {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
+  }
+
+  // Button inside of actionable container
+  .slds-context-bar__button {
+    color: inherit;
+  }
+
+  // Need to reset styles from default
+  .slds-context-bar__icon-action {
+    margin-left: auto;
+  }
+
+  /**
+   *
+   * #### Accessibility
+   *
+   * On the Split View Toggle button, `aria-expanded` is set to `false` by default.
+   * Set `aria-expanded` to `true` when  Split View is active. When Split View is active,
+   * set the value of `aria-controls` on the Split View Toggle button, to the `ID` of the
+   * wrapper element that contains the Split View List.
+   *
+   * @summary Tab modifier when using a tabset
+   *
+   * @name navigation-tab-bar
+   * @selector .slds-context-bar__item_tab
+   * @restrict .slds-context-bar__item
+   * @notes Only use on tabset version
+   * @required
+   * @variant
+   *
+   */
+  &__item_tab,
+  &__item--tab {
+    width: $size-x-small;
+    border-right: $border-width-thin solid $color-border;
+
+    .slds-context-bar__label-action {
+      padding: 0 $spacing-x-small;
+    }
+
+    // Handle active states
+    &.slds-is-active,
+    &:nth-child(n).slds-is-active {
+      border-left: 0;
+      border-bottom-color: $color-background-context-tab-bar-item;
+      background-color: $color-background-context-tab-bar-item;
+
+      &:hover {
+        background-color: $color-background-context-tab-bar-item;
+        border-bottom-color: transparent;
+      }
+    }
+
+    /**
+     * Pinned state
+     * Toggles visibility of elements inside of tab
+     *
+     * @selector .slds-is-pinned
+     * @restrict .slds-context-bar__item_tab
+     * @modifier
+     */
+    &.slds-is-pinned {
+      width: auto;
+      padding-right: $spacing-x-small;
+
+      .slds-context-bar__label-action {
+        padding: 0 $spacing-x-small;
+      }
+    }
+  }
+
+  // Dirty state of tabs
+  .slds-is-unsaved {
+
+    .slds-context-bar__label-action {
+      position: relative;
+      padding-left: $spacing-x-small;
+      font-style: italic;
+    }
+  }
+}
+
+/**
+ * Unsaved indicator - This can probably be used in other locations as well
+ *
+ * @selector .slds-indicator_unsaved
+ * @restrict .slds-context-bar__item span, abbr
+ */
+.slds-indicator_unsaved,
+.slds-indicator--unsaved {
+  color: $color-text-brand;
+  align-self: center;
+  font-size: $font-size-medium-a;
+}
+
+// Context Bar dropdown trigger specifics
+.slds-context-bar__dropdown-trigger {
+
+  .slds-dropdown {
+    margin-top: 3px;
+
+    // Add a hoverable zone below the action so that the dropdown doesn't
+    // disappear when the mouse is between the action and the dropdown
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+
+/**
+ * Styles for application name region
+ *
+ * @selector .slds-context-bar__app-name
+ * @restrict .slds-context-bar__label-action
+ */
+.slds-context-bar__app-name {
+  padding: 0 $spacing-large 0 0;
+  font-size: rem(18px); // @todo tokenize
+  font-weight: $font-weight-light;
+  line-height: $line-height-heading;
+}
+
+/**
+ * Styles for object switcher region
+ *
+ * @selector .slds-context-bar__object-switcher
+ * @restrict .slds-context-bar__item
+ * @required
+ */
+.slds-context-bar__object-switcher {
+  min-width: rem(144px); // @todo tokenize
+  max-width: $size-x-small;
+  border-left: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid $color-border;
+}
+
+
+// Themes - Pre-defined themes
+// Using mixin to determine text color and interactive states
+//
+// Marketing - temp
+.slds-context-bar_theme-marketing,
+.slds-context-bar--theme-marketing {
+  border-bottom-color: #f59331;
+
+  .slds-context-bar__item:not(.slds-no-hover):hover {
+    border-bottom-color: #f59331;
+  }
+
+  .slds-context-bar__item.slds-is-active {
+
+    &:before {
+      background: #f59331;
+    }
+
+    &:hover {
+      border-bottom-color: $color-background-context-bar-item-hover;
+    }
+  }
+}

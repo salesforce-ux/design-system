@@ -1,0 +1,47 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * **Note** — A lookup is a combobox component, please find implementation documentation under the
+ * combobox component
+ *
+ * The lookup can parse through single or multi scoped datasets. The parsed
+ * dataset can be filtered by single or multi option selects.
+ *
+ * You can find the lookup component throughout most data fields that allow
+ * inline inputs. Most commonly used on **record home** and **object home**.
+ *
+ * #### Accessibility
+ *
+ * Lookups allow the user to have dual keyboard focus: while focus in the input
+ * search field, the user can type text into the field and simultaneously use
+ * arrow keys to navigate up and down the results list. Use the appropriate **ARIA**
+ * attributes in your markup in order to effectively communicate the relationship
+ * between the input field and the results list to users of assistive technology.
+ *
+ * **Expected markup:**
+ *
+ * - Input field has attributes `role="combobox"`, `aria-autocomplete="list"`
+ * - Input field has an `aria-expanded` attribute whose value is `false` when the results list is hidden, `true` when the results list is visible
+ * - Input field has an `aria-activedescendant` attribute whose value is the id of the highlighted results list option, no value if nothing’s highlighted in the list
+ * - Results list is an `<ul role="presentation">`, where each item is containing an `<a href="javascript:void(0);" role="option">`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Character keys filter the list
+ * - Up and down arrow keys cycle through the available options in the list and
+ * update the input field’s `aria-activedescendant` value
+ * - Enter key selects highlighted option and collapses the results list
+ * - Escape key collapses the results list
+ *
+ * @summary Lookup is an autocomplete combobox that will search against a database object.
+ *
+ * @base
+ * @name lookups
+ * @selector .slds-combobox-lookup
+ * @support dev-ready
+ * @category experience
+ * @type user-input
+ * @role combobox, listbox
+ */

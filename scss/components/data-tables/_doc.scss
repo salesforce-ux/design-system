@@ -1,0 +1,27 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * To initialize a data table, apply the `slds-table` class to the
+ * `table` element. This class creates a `table`
+ * with formatted cells and allows you to use data table utilities.
+ *
+ * #### Accessibility
+ * To create an accessible table, the top row of column headers (`th`)
+ * are placed in a `thead`. Each one receives the `scope="col"`
+ * attribute. The first non-actionable (meaning that doesn't contain a checkbox
+ * or menu) column in each row should be marked as a `th` with a
+ * `scope="row"` attribute.
+ *
+ * @summary Data tables are an enhanced version of an HTML table and are used to display tabular data.
+ *
+ * @base
+ * @name data-tables
+ * @selector .slds-table
+ * @category structure
+ * @type data-display, data-entry, navigation
+ * @role grid
+ * @support dev-ready
+ * @layout adaptive
+ */

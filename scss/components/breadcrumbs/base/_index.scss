@@ -1,0 +1,53 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Create breadcrumbs component
+ *
+ * @name base
+ * @selector .slds-breadcrumb
+ * @restrict ol
+ * @support dev-ready
+ * @variant
+ */
+.slds-breadcrumb {
+
+  /**
+   * Item of the breadcrumb list
+   *
+   * @selector .slds-breadcrumb__item
+   * @restrict .slds-breadcrumb li
+   * @required
+   */
+  .slds-list__item,
+  &__item {
+    position: relative;
+
+    &:before {
+      content: '\003E';
+      position: absolute;
+      left: (($spacing-x-small / 2) * -1);
+    }
+
+    > a {
+      display: block;
+      padding: 0 $spacing-x-small;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:first-child {
+
+      > a {
+        padding-left: 0;
+      }
+
+      &:before {
+        content: '';
+      }
+    }
+  }
+}

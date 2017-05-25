@@ -1,0 +1,19 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Checkmark that is visibily toggled when input is checked
+ *
+ * @name non-coverable-content
+ * @selector .slds-visual-picker__text-check
+ * @restrict .slds-visual-picker span
+ * @variant
+ */
+.slds-visual-picker__text-check {
+  position: absolute;
+  top: rem(-1px);
+  right: rem(10px);
+  width: $square-icon-x-small-content;
+  height: $square-icon-x-small-content;
+}

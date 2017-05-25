@@ -1,0 +1,142 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes radio button
+ *
+ * @name base
+ * @selector .slds-radio_button-group
+ * @restrict .slds-form-element div
+ * @required
+ * @variant
+ */
+.slds-radio_button-group,
+.slds-radio--button-group {
+  display: inline-flex;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * @selector .slds-radio_button
+ * @restrict .slds-radio_button-group span
+ */
+.slds-radio_button,
+.slds-radio--button {
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+
+  /**
+   * Create styled button when adjacent to the input[radio] element
+   *
+   * @selector .slds-radio_faux
+   * @restrict .slds-radio_button span
+   */
+  .slds-radio_faux,
+  .slds-radio--faux {
+    @include button;
+  }
+
+  // Apply left borders to anything radio button after the first button
+  + .slds-radio_button,
+  + .slds-radio--button {
+    border-left: $border-width-thin solid $color-border;
+    margin: 0;
+  }
+
+  // Dealing with box shadows on specific n children
+  // of the button group
+  &:first-child > .slds-radio_faux,
+  &:first-child > .slds-radio--faux,
+  &:first-child > .slds-radio_button__label,
+  &:first-child > .slds-radio--button__label {
+    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  }
+
+  // The middle selector doesn't seem to be applied anywhere? I didn't find a .button--last anywhere?
+  &:last-child > .slds-radio_faux,
+  &:last-child > .slds-radio--faux,
+  .slds-button_last > .slds-radio_faux,
+  .slds-button--last > .slds-radio--faux,
+  &:last-child > .slds-radio_button__label,
+  &:last-child > .slds-radio--button__label {
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  }
+
+  // Hide input and style radio--faux
+  [type="radio"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    // Checked State with Interactions
+    // +/~ slds-radio--faux selector are for legacy support
+    &:checked + .slds-radio_faux,
+    &:checked + .slds-radio--faux,
+    &:checked ~ .slds-radio_faux,
+    &:checked ~ .slds-radio--faux,
+    &:checked + .slds-radio_button__label,
+    &:checked + .slds-radio--button__label {
+      background-color: $color-background-button-brand;
+      color: $color-text-button-brand;
+
+      // Need something stronger when the input is checked
+      &:hover,
+      &:focus {
+        background-color: $color-background-button-brand;
+      }
+    }
+
+    // Focus State
+    // +/~ slds-radio--faux selector are for legacy support
+    &:focus + .slds-radio_faux,
+    &:focus + .slds-radio--faux,
+    &:focus ~ .slds-radio_faux,
+    &:focus ~ .slds-radio--faux,
+    &:focus + .slds-radio_button__label,
+    &:focus + .slds-radio--button__label {
+      @include focus-button;
+      z-index: $z-index-default; // Raises box shadow above adjacent buttons
+    }
+
+    // Disabled State
+    // +/~ slds-radio--faux selector are for legacy support
+    &[disabled] + .slds-radio_faux,
+    &[disabled] + .slds-radio--faux,
+    &[disabled] ~ .slds-radio_faux,
+    &[disabled] ~ .slds-radio--faux,
+    &[disabled] + .slds-radio_button__label,
+    &[disabled] + .slds-radio--button__label {
+      background-color: $color-background-button-default-disabled;
+      color: $color-text-button-default-disabled;
+
+      &:hover,
+      &:focus {
+        cursor: default;
+      }
+    }
+  }
+}
+
+/**
+ * Label element inside of a radio button
+ *
+ * @selector .slds-radio_button__label
+ * @restrict .slds-radio_button label
+ */
+.slds-radio_button__label,
+.slds-radio--button__label {
+  background-color: $color-background-button-default;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}

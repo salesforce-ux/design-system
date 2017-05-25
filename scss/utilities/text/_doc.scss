@@ -1,0 +1,21 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * In our framework, all headings (`h1`&ndash;`h6`)
+ * are reset to the base (body text) size, with margins and padding reset
+ * to zero. When building an enterprise application, the heading level may vary
+ * depending on the context of the component or page. Using the correct
+ * heading level is important for&nbsp;accessibility.
+ *
+ * The text helper classes help maintain visual hierarchy separately from
+ * the structural markup hierarchy.
+ *
+ * @summary For consistent typography throughout the application, we created text helper classes for headings and body&nbsp;text.
+ *
+ * @utility
+ * @name text
+ * @selector [class*='slds-text-']
+ * @support dev-ready
+ */

@@ -1,0 +1,14 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// scss-lint:disable SpaceAfterComma
+
+@if ($slds-load-webfonts) {
+  @include font-face(Light,                 $font-weight-setting: $font-weight-light);
+  @include font-face(LightItalic,   italic, $font-weight-light);
+  @include font-face(Regular,               $font-weight-setting: $font-weight-regular);
+  @include font-face(Italic,        italic, $font-weight-regular);
+  @include font-face(Bold,                  $font-weight-setting: $font-weight-bold);
+  @include font-face(BoldItalic,    italic, $font-weight-bold);
+}

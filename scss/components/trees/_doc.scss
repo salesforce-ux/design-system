@@ -1,0 +1,22 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
+ *
+ * A tree will need helper classes added and removed to help structure the layout. Each child node list needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.
+ *
+ * Whenever the tree has a nested group, the `li` element should receive the ARIA role `group`. This will add appropiate styling to decendent `.slds-tree__item` elements. A helper class of `.slds-is-expanded` and `.slds-is-collapsed` will need to be toggled on the appropriate child of list item node if the decendent groups are visible or not visible.
+ *
+ * A `.slds-tree__item` is any element of the tree that is a single node within a node with an ARIA attribute of `role="group"`. To achieve interactions demostrated in the demo, some helper classes are being added and removed based on actions to the list item node. To achieve the desired hover and focus states, applying the `.slds-is-hovered` and `.slds-is-focused` class helpers to the `li` on its respective interactions. If an item is selected and want to demostrate that state, applying the `.slds-is-selected` helper class will give you this outcome.
+ *
+ * In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-controls` to the button the icon is contained within. The value of the `aria-controls` attribute should be the ID of the group that clicking the button will affect.
+ *
+ * @summary A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
+ *
+ * @base
+ * @name trees
+ * @selector .slds-tree_container
+ * @support dev-ready
+ */

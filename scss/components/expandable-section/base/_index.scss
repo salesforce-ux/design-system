@@ -1,0 +1,139 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container for a expandable section
+ *
+ * @name base
+ * @selector .slds-section
+ * @restrict article, div
+ * @variant
+ */
+.slds-section {
+  margin: {
+    top: $spacing-x-small;
+    bottom: $spacing-x-small;
+  }
+
+  /**
+   * @summary Element containing the title of a section
+   *
+   * @selector .slds-section__title
+   * @restrict .slds-section h3
+   */
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-large;
+    line-height: $line-height-button; // Same height as title-action
+    border: $border-width-thin solid transparent;
+    border-radius: $border-radius-medium;
+  }
+
+  /**
+   * @summary Element containing the action inside of an expandable section title
+   *
+   * @selector .slds-section__title-action
+   * @restrict .slds-section__title button
+   */
+  &__title-action {
+    display: flex;
+    align-items: center;
+    background: $color-background;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: currentColor;
+    font-size: inherit;
+    padding: 0 $spacing-x-small;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color-background-button-default-active;
+      color: inherit;
+    }
+  }
+
+  /**
+   * @summary Element containing the content of an expandable section
+   *
+   * @selector .slds-section__content
+   * @restrict .slds-section div
+   */
+  &__content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+
+  &__title-action-icon {
+    transform: rotate(-90deg);
+  }
+
+  /**
+   * @summary Toggle visibility of section content
+   *
+   * @selector .slds-is-open
+   * @restrict .slds-section
+   * @modifier
+   * @group visibility
+   */
+  &.slds-is-open {
+
+    .slds-section__title-action-icon {
+      transform: rotate(0deg);
+      transform-origin: 45%;
+    }
+
+    .slds-section__content {
+      padding-top: $spacing-small;
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Use .slds-section__title instead') {
+
+  .slds-section-title {
+    font-size: $font-size-large;
+
+    > a {
+      display: inline-block;
+      color: $color-text-default;
+
+      &:hover,
+      &:focus {
+        color: $color-text-link-hover;
+      }
+
+      &:focus {
+        box-shadow: $shadow-button-focus;
+      }
+
+      &:active {
+        color: $color-text-default;
+      }
+    }
+
+    .slds-icon {
+      @include square($square-icon-medium-content);
+      fill: currentColor;
+    }
+
+    .slds-section-group_is-closed .slds-icon,
+    .slds-section-group--is-closed .slds-icon {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.slds-section-title_divider,
+.slds-section-title--divider {
+  @include text-heading--label;
+  padding: $spacing-small $spacing-medium;
+  background: $color-background;
+}

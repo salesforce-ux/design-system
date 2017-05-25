@@ -1,0 +1,29 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initialize textarea
+ *
+ * @name base
+ * @selector .slds-textarea
+ * @restrict textarea
+ * @required
+ * @variant
+ */
+.slds-textarea {
+  @include form-states;
+  resize: vertical;
+  padding: $spacing-x-small $spacing-small;
+}
+
+/**
+ * Error Styles for textarea
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error {
+  @include form-input-error('.slds-textarea');
+}

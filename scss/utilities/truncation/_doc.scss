@@ -1,0 +1,16 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * If problems occur when using truncation with elements that use flexbox, you might need to add the `.slds-has-flexi-truncate` class on the flexbox child node ( `.slds-col` or `.slds-col--padded` elements) that contains the truncated text.
+ *
+ * **Note:** There is an iOS bug that is triggered when you add a component from Visualforce into S1 using an iFrame. The truncated element does not recognize its width.
+ *
+ * @summary When applying truncation, place the full text in a title attribute so that it’s accessible on&nbsp;hover.
+ *
+ * @utility
+ * @name truncation
+ * @selector [class*='truncate']
+ * @support dev-ready
+ */

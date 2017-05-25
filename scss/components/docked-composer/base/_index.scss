@@ -1,0 +1,235 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Intializes docked composer container window
+ *
+ * @selector .slds-docked_container
+ * @restrict div
+ */
+.slds-docked_container {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 $spacing-large;
+  height: $height-docked-bar;
+}
+
+/**
+ * @variant
+ * @name base
+ * @selector .slds-docked-composer
+ * @restrict section, div
+ * @support dev-ready
+ */
+.slds-docked-composer {
+  position: relative;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  width: 480px;
+  height: $height-docked-bar;
+  float: left;
+  box-shadow: $elevation-inverse-shadow-2;
+  border: $border-width-thin solid $color-border {
+    bottom: none;
+  }
+
+  /**
+   * @selector .slds-has-focus
+   * @restrict .slds-docked-composer
+   * @modifier
+   * @group interaction
+   */
+  &.slds-has-focus {
+    box-shadow: 0 0 4px 2px $color-border-brand;
+  }
+
+  /**
+   * @selector .slds-is-open
+   * @restrict .slds-docked-composer
+   * @modifier
+   * @group visibility
+   */
+  &.slds-is-open {
+    height: 480px;
+  }
+
+  /**
+   * @selector .slds-is-closed
+   * @restrict .slds-docked-composer
+   * @modifier
+   * @group visibility
+   */
+  &.slds-is-closed {
+    height: $height-docked-bar;
+
+    .slds-docked-composer__body,
+    .slds-docked-composer__footer {
+      display: none;
+    }
+  }
+
+  + .slds-docked-composer {
+    margin-left: $spacing-large;
+  }
+
+  /**
+   * Bar at the top of the composer that contains actionable items to invoke,
+   * such as minimizing, popping out the composer and removing the composer.
+   *
+   * @selector .slds-docked-composer__header
+   * @restrict .slds-docked-composer header
+   */
+  &__header {
+    background: $color-background-docked-panel-header;
+    border-bottom: $border-width-thick solid $color-border-brand;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  &__actions .slds-button {
+    margin-left: $spacing-small;
+  }
+
+  /**
+   * Primary area within docked composer that contains specific task
+   *
+   * @selector .slds-docked-composer__body
+   * @restrict .slds-docked-composer div
+   */
+  &__body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  /**
+   * @selector .slds-docked-composer__body_form
+   * @restrict .slds-docked-composer__body
+   */
+  &__body_form,
+  &__body--form {
+    justify-content: flex-start;
+    padding: $spacing-medium;
+  }
+
+  /**
+   * Within the docked composer body, the lead is the first region
+   *
+   * @selector .slds-docked-composer__lead
+   * @restrict .slds-docked-composer div
+   */
+  &__lead {
+    display: flex;
+    background: $color-background-alt;
+    padding: $spacing-medium $spacing-x-small;
+  }
+
+  /**
+   * @selector .slds-docked-composer__toolbar
+   * @restrict .slds-docked-composer div
+   */
+  &__toolbar {
+    background: $color-background;
+    padding: $spacing-xx-small $spacing-x-small;
+    max-height: 60px;
+    overflow-y: auto;
+    border: {
+      top: $border-width-thin solid $color-border;
+      bottom: $border-width-thin solid $color-border;
+    }
+  }
+
+  &__input {
+    background: $color-background-alt;
+    padding: $spacing-medium;
+    min-height: $size-xx-small;
+    resize: none;
+    line-height: $line-height-text;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  /**
+   * Bar at the bottom of the composer that contains actionable items to
+   * invoke, such as saving, associating relationships and adding content.
+   *
+   * @selector .slds-docked-composer__footer
+   * @restrict .slds-docked-composer footer
+   */
+  &__footer {
+    display: flex;
+    background: $color-background;
+    padding: $spacing-small $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  /**
+   * When the number of docked composer exceed the width of the viewport, this class modifies the docked composer styles
+   *
+   * @selector .slds-docked-composer_overflow
+   * @restrict .slds-docked-composer
+   * @required
+   */
+  &_overflow,
+  &--overflow {
+    width: auto;
+  }
+
+  &_overflow__button,
+  &--overflow__button {
+    display: flex;
+    background: $color-background-docked-panel-header;
+    padding: 0 $spacing-small;
+    height: inherit;
+    white-space: nowrap;
+    border: {
+      bottom: {
+        left-radius: 0;
+        right-radius: 0;
+      }
+    }
+  }
+
+  @include deprecate('4.0.0', 'Use docked-composer--overflow__button instead') {
+
+    &_overflow__pill,
+    &--overflow__pill {
+      display: flex;
+      padding: 0 $spacing-small;
+      height: inherit;
+      white-space: nowrap;
+      border-bottom-left-radius: $border-radius-medium;
+      border-bottom-right-radius: $border-radius-medium;
+
+      &:hover,
+      &:focus {
+        color: $color-text-inverse;
+        text-decoration: none;
+      }
+
+      .slds-text-body_small,
+      .slds-text-body--small {
+        color: $color-text-inverse;
+        margin-left: $spacing-x-small;
+      }
+    }
+  }
+}
+
+// Composer Modal
+.slds-docked-composer-modal {
+
+  .slds-modal__content {
+    border-radius: $border-radius-medium;
+  }
+
+  .slds-docked-composer {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

@@ -1,0 +1,21 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * Notifications should contain `role="alert"` on the container to signal to
+ * assistive technology that they require the user’s immediate attention. Use a
+ * span with `.slds-assistive-text` to let the user know what type of notification it is.
+ *
+ * @summary Alert banners communicates a state that affects the entire system, not just a feature or page. It persists over a session and appear without user initiating the action.
+ *
+ * @base
+ * @name alert
+ * @selector .slds-notify_alert
+ * @support dev-ready
+ * @category experience
+ * @type messaging
+ * @role alert
+ */

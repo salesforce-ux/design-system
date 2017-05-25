@@ -1,0 +1,40 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes alert notification
+ *
+ * @name base
+ * @selector .slds-notify_alert
+ * @restrict div
+ * @variant
+ */
+.slds-notify_alert,
+.slds-notify--alert {
+  @include inverse-text;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: $color-background-toast;
+  font-weight: $font-weight-light;
+  padding: $spacing-x-small $spacing-x-large $spacing-x-small $spacing-x-small;
+  text-align: center;
+  width: 100%;
+
+  /**
+   * Alert close button
+   *
+   * @selector .slds-notify__close
+   * @restrict .slds-notify button
+   */
+  .slds-notify__close {
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: $spacing-small;
+    margin-left: $spacing-xx-small;
+    transform: translateY(-50%);
+  }
+}

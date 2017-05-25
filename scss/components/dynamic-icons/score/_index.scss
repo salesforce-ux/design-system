@@ -1,0 +1,55 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes score icon
+ *
+ * @name score
+ * @selector .slds-icon-score
+ * @restrict span
+ * @variant
+ */
+.slds-icon-score {
+  display: inline-block;
+  width: rem(5px);
+  height: rem(5px);
+  position: relative;
+}
+
+// We are variying opacity (instead of stroke & fill)
+// because it is a more performant way of achieving this effect
+[class*="slds-icon-score__"] {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  will-change: opacity;
+  stroke-width: 1.125px;
+}
+
+/**
+ * @summary Positive score icon
+ *
+ * @selector .slds-icon-score__positive
+ * @restrict .slds-icon-score svg
+ */
+.slds-icon-score__positive {
+  fill: #30a664;
+  stroke: #30a664;
+}
+
+/**
+ * @summary Negative score icon
+ *
+ * @selector .slds-icon-score__negative
+ * @restrict .slds-icon-score svg
+ */
+.slds-icon-score__negative {
+  fill: transparent;
+  stroke: #d2504c;
+}
+
+[data-slds-state="positive"] .slds-icon-score__positive,
+[data-slds-state="negative"] .slds-icon-score__negative {
+  opacity: 1;
+}

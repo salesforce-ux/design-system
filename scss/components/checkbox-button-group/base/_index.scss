@@ -1,0 +1,146 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes checkbox button group
+ *
+ * @name base
+ * @selector .slds-checkbox_button-group
+ * @restrict div, span
+ * @required
+ * @variant
+ */
+.slds-checkbox_button-group,
+.slds-checkbox--button-group {
+  display: inline-flex;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * Initializes checkbox inside a button group
+ *
+ * @selector .slds-checkbox_button
+ * @restrict .slds-checkbox_button-group span
+ * @required
+ */
+.slds-checkbox_button,
+.slds-checkbox--button {
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+
+  /**
+   * Creates a custom styled checkbox
+   *
+   * @selector .slds-checkbox_faux
+   * @restrict .slds-checkbox_button__label span
+   * @required
+   */
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    @include button;
+    position: relative;
+    background-color: $color-background-button-default;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $color-background-button-default-hover;
+    }
+  }
+
+  /**
+   * Creates a custom styled checkbox
+   *
+   * @selector .slds-checkbox_button__label
+   * @restrict .slds-checkbox_button label
+   * @required
+   */
+  .slds-checkbox_button__label .slds-checkbox_faux,
+  .slds-checkbox--button__label .slds-checkbox--faux,
+  [type="checkbox"]:checked + .slds-checkbox--button__label .slds-checkbox--faux {
+    background-color: transparent;
+  }
+
+  // Apply left borders to anything checkbox button
+  // after the first button
+  + .slds-checkbox_button,
+  + .slds-checkbox--button {
+    border-left: $border-width-thin solid $color-border;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  // Dealing with box shadows on specific n children
+  // of the button group
+  &:first-child > .slds-checkbox_faux,
+  &:first-child > .slds-checkbox--faux,
+  &:first-child > .slds-checkbox_button__label,
+  &:first-child > .slds-checkbox--button__label {
+    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  }
+
+  &:last-child > .slds-checkbox_faux,
+  &:last-child > .slds-checkbox--faux,
+  .slds-button_last > .slds-checkbox_faux,
+  .slds-button--last > .slds-checkbox--faux,
+  &:last-child > .slds-checkbox_button__label,
+  &:last-child > .slds-checkbox--button__label {
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  }
+
+  // Hide input and style checkbox--faux
+  [type="checkbox"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    // Checked State with Interactions
+    &:checked + .slds-checkbox_faux,
+    &:checked + .slds-checkbox--faux,
+    &:checked ~ .slds-checkbox_faux,
+    &:checked ~ .slds-checkbox--faux,
+    &:checked + .slds-checkbox_button__label,
+    &:checked + .slds-checkbox--button__label {
+      background-color: $color-background-button-brand;
+      color: $color-text-button-brand;
+
+      // Need something stronger when the input is checked
+      &:hover,
+      &:focus {
+        background-color: $color-background-button-brand;
+      }
+    }
+
+    // Focus State
+    &:focus + .slds-checkbox_faux,
+    &:focus + .slds-checkbox--faux,
+    &:focus ~ .slds-checkbox_faux,
+    &:focus ~ .slds-checkbox--faux,
+    &:focus + .slds-checkbox_button__label,
+    &:focus + .slds-checkbox--button__label {
+      @include focus-button;
+      z-index: $z-index-default; // Raises box shadow above adjacent buttons
+    }
+
+    // Disabled State
+    &[disabled] +.slds-checkbox_faux,
+    &[disabled] +.slds-checkbox--faux,
+    &[disabled] ~ .slds-checkbox_faux,
+    &[disabled] ~ .slds-checkbox--faux,
+    &[disabled] + .slds-checkbox_button__label,
+    &[disabled] + .slds-checkbox--button__label {
+      background-color: $color-background-button-default-disabled;
+      color: $color-text-button-default-disabled;
+      cursor: default;
+    }
+  }
+}

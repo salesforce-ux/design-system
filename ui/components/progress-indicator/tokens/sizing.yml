@@ -1,0 +1,18 @@
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - '*width'
+  - '*height'
+  - '*flex*'
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  PROGRESS_BAR_HEIGHT:
+    value: 0.125rem
+    comment: Height of the Progress Bar

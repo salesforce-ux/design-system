@@ -1,0 +1,16 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The truncation class can be used on an element, or the truncation include can be added to an existing class.
+ *
+ * @summary Creates hyphenated text
+ *
+ * @selector .slds-hyphenate
+ * @notes Hyphenation will occur at the parent width if a width is not specified
+ * @modifier
+ */
+.slds-hyphenate {
+  @include hyphenate;
+}

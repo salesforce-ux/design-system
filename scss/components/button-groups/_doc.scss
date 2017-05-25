@@ -1,0 +1,24 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Buttons in a group are surrounded by a parent with the `.slds-button-group` class, unless they are in a list (in which case they use `.slds-button-group-list`. If the last button is an icon, like the down triangle, use the `.slds-button--icon-border-filled` class when accompanying a `.slds-button--neutral` group.
+ *
+ * If the last button in a group needs to be wrapped in another element (for example, a drop-down trigger), add the `.slds-button--last` class to the wrapper element to create proper spacing and borders.
+ *
+ * #### Accessibility
+ *
+ * Unless you are using the list version, include the Aria role `role="group"` so that assistive technologies are alerted to the grouping.
+ *
+ * @summary Button groups are used to bunch together buttons with similar actions
+ *
+ * @name button-groups
+ * @base
+ * @selector .slds-button-group
+ * @category base
+ * @type action
+ * @role button
+ * @support dev-ready
+ * @layout responsive
+ */

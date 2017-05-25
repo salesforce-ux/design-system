@@ -1,0 +1,28 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * To create a pill, apply the `.slds-pill` class on a `<span>`.
+ *
+ * Depending on your context, you will either need a linked pill or a pill option inside of a listbox.
+ *
+ * For linked pills, a modifier class of `slds-pill--link` needs to be added to the existing `<span>` with the classname of `slds-pill`. You need an `<a>` inside of the span with the `slds-pill--link` class. The `<a>` will get the classname of `slds-pill__action`. This will treat the interactions differently from an unlinked pill option inside of a listbox.
+ *
+ * For both linked pills and unlinked pill options, a `<span>` with the classname of `slds-pill__label` should contain the string of text describing the pill object.
+ *
+ * Note, that a linked pill should not be used as a pill option inside of a listbox.
+ *
+ * Additionally, a pill can have an icon or image that sits to the left-hand side of the `.slds-pill__label`. That icon or image should receive the class `.slds-pill__icon_container`.
+ *
+ * You may also want the functionality to remove the pill as a selection. An "X" icon is normally used and will sit to the right-hand side of the `.slds-pill__label`. That icon should receive the class `.slds-pill__remove`.
+ *
+ * A `.slds-pill_container` can be used as a visual container for multiple pill(s).
+ *
+ * @summary A pill represents an object that can be viewed with or without an icon
+ *
+ * @base
+ * @name pills
+ * @selector .slds-pill
+ * @support dev-ready
+ */

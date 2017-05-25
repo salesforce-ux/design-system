@@ -1,0 +1,38 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Visualforce Specific Styles Go Below
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td {
+  font-family: $font-family; // TODO: See if inherit works
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inherit; // TODO: why? what if's parent is display: inline?
+}
+
+li {
+  margin-left: 0; // TODO: To override core.css - enough?
+}
+
+fieldset legend {
+  font-weight: normal;
+}

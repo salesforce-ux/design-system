@@ -1,0 +1,232 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The default rich text editor contains a minimal amount of text formatting capabilities.
+ *
+ * @name base
+ * @selector .slds-rich-text-editor
+ * @restrict div
+ * @variant
+ */
+.slds-rich-text-editor {
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * Container for Rich Text Editor Toolbar
+ *
+ * @selector .slds-rich-text-editor__toolbar
+ * @restrict .slds-rich-text-editor div
+ */
+.slds-rich-text-editor__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  white-space: nowrap;
+  position: relative;
+  padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
+  border-bottom: $border-width-thin solid $color-border;
+  background-color: $color-background;
+}
+
+/**
+ * Container for Rich Text Editor Bottom Toolbar
+ *
+ * @selector .slds-rich-text-editor__toolbar-bottom
+ * @restrict .slds-rich-text-editor__toolbar
+ */
+.slds-rich-text-editor__toolbar_bottom {
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: 0;
+}
+
+// Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left
+.slds-rich-text-editor .slds-button-group-list {
+  margin-right: $spacing-xx-small;
+  margin-bottom: $spacing-xx-small;
+  margin-left: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/**
+ * Container for Rich Text Editor Combobox
+ *
+ * @selector .slds-rich-text-editor__select
+ * @restrict .slds-rich-text-editor__toolbar div
+ */
+.slds-rich-text-editor__select {
+  margin-right: $spacing-xx-small;
+}
+
+/**
+ * Focus state for rich text editor
+ *
+ * @selector .slds-has-focus
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-focus {
+  border-color: $color-border-input-active;
+  box-shadow: $shadow-button-focus;
+}
+
+/**
+ * Error state for rich text editor
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-rich-text-editor
+ * @modifier
+ */
+.slds-rich-text-editor.slds-has-error {
+  border: $border-width-thick solid $color-border-error;
+}
+
+/**
+ * Textarea for Rich Text Editor which is an editable div
+ *
+ * @selector .slds-textarea__content
+ * @restrict .slds-rich-text-editor__textarea div
+ */
+.slds-rich-text-area__content {
+  overflow-y: auto;
+  min-height: $size-xx-small;
+  max-height: $size-small;
+  padding: $spacing-medium;
+}
+
+.slds-picklist__label[disabled] .slds-icon {
+  fill: $color-text-button-default-disabled;
+}
+
+[contenteditable]:focus {
+  outline: none;
+}
+
+/**
+ * These are the overrides for both input and output from the RTE.
+ * We may need to add or adjust these later based on further input.
+ */
+.slds-rich-text-editor__textarea,
+.slds-rich-text-editor__output {
+  line-height: $line-height-text;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: manual;
+
+  a {
+    word-break: break-all;
+  }
+
+  h1 {
+    font-size: $font-size-heading-large;
+  }
+
+  h2 {
+    font-size: $font-size-heading-medium;
+    font-weight: $font-weight-bold;
+  }
+
+  h3 {
+    font-size: $font-size-heading-medium;
+  }
+
+  h4 {
+    font-size: $font-size-heading-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h5 {
+    font-size: $font-size-heading-small;
+  }
+
+  h6 {
+    font-size: $font-size-heading-x-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  img {
+    margin-bottom: $spacing-small;
+  }
+
+  blockquote {
+    margin: $spacing-x-large $spacing-large;
+  }
+
+  ul {
+    @include list-has-bullets;
+
+    ul {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: circle;
+
+      ul {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: square;
+      }
+    }
+
+    ol {
+      @include list-has-numbers;
+    }
+  }
+
+  ol {
+    @include list-has-numbers;
+
+    ol {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: lower-alpha;
+
+      ol {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: lower-roman;
+      }
+    }
+
+    ul {
+      @include list-has-bullets;
+    }
+  }
+
+  dd {
+    margin-left: 2.5rem;
+  }
+
+  abbr[title],
+  acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  table {
+    width: auto;
+
+    caption {
+      text-align: center;
+    }
+  }
+
+  th,
+  td {
+    padding: $spacing-x-small;
+  }
+}

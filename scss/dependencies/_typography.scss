@@ -1,0 +1,44 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Font-face rule for modern browsers
+///
+/// @param {String} $font-face-setting [Regular] - One of: Thin, ThinItalic, Light, LightItalic, Regular, Italic, Bold, BoldItalic
+/// @param {String} $font-style-setting [null] - italic or null
+/// @param {String | Number} $font-weight-setting [null] - A string (e.g. lighter, normal, bold) or a numerical value (e.g. 200, 400, 700)
+///
+/// @require $static-font-path - See _config.scss where this setting is defined
+@mixin font-face($font-face-setting: Regular, $font-style-setting: null, $font-weight-setting: null) {
+  $font-path: '#{$static-font-path}/SalesforceSans-#{$font-face-setting}';
+
+  @font-face {
+    font-family: 'Salesforce Sans';
+
+    src: url('#{$font-path}.woff2') format('woff2'),
+      url('#{$font-path}.woff') format('woff');
+
+    font-style: $font-style-setting;
+    font-weight: $font-weight-setting;
+  }
+}
+
+
+@mixin text-heading--label-normal {
+  font-size: $font-size-small;
+  line-height: $line-height-heading;
+  color: $color-text-weak;
+}
+
+@mixin text-heading--label-bold {
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  color: $color-text-weak;
+}
+
+@mixin text-heading--label {
+  @include text-heading--label-normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}

@@ -1,0 +1,86 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Adds .125rem margin to the side specified
+ *
+ * @selector .slds-m-*_xxx-small
+ * @modifier
+ */
+
+/**
+ * Adds .25rem margin to the side specified
+ *
+ * @selector .slds-m-*_xx-small
+ * @modifier
+ */
+
+/**
+ * Adds .5rem margin to the side specified
+ *
+ * @selector .slds-m-*_x-small
+ * @modifier
+ */
+
+/**
+ * Adds .75rem margin to the side specified
+ *
+ * @selector .slds-m-*_small
+ * @modifier
+ */
+
+/**
+ * Adds 1rem margin to the side specified
+ *
+ * @selector .slds-m-*_medium
+ * @modifier
+ */
+
+/**
+ * Adds 1.5rem margin to the side specified
+ *
+ * @selector .slds-m-*_large
+ * @modifier
+ */
+
+/**
+ * Adds 2rem margin to the side specified
+ *
+ * @selector .slds-m-*_x-large
+ * @modifier
+ */
+
+/**
+ * Adds 3rem margin to the side specified
+ *
+ * @selector .slds-m-*_xx-large
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin to both top and bottom
+ *
+ * @selector .slds-m-*-vertical_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin to both sides
+ *
+ * @selector .slds-m-*-horizontal_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified margin all the way around the element
+ *
+ * @selector .slds-m-*-around_*
+ * @modifier
+ */
+@include spacing(margin);
+
+.slds-m-bottom_none,
+.slds-m-bottom--none {
+  margin-bottom: 0;
+}

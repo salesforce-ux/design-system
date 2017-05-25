@@ -1,0 +1,52 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Walkthrough components are used to provide an interactive and educational prospect experience for setup.
+ *
+ * @summary Initializes a walkthrough non-modal dialog
+ *
+ * @name walkthrough
+ * @selector .slds-popover_walkthrough
+ * @restrict .slds-popover
+ * @variant
+ */
+.slds-popover_walkthrough,
+.slds-popover--walkthrough {
+  @include inverse-text($support: ('borders', 'text-utilities', 'icons'));
+  background: $color-background-inverse;
+
+  .slds-popover__header {
+    background: $color-background-alt-inverse;
+    border-color: inherit;
+    padding: $spacing-small $spacing-medium;
+  }
+
+  .slds-popover__body,
+  .slds-popover__footer {
+    padding: $spacing-medium;
+  }
+
+  .slds-popover__footer {
+    border: 0;
+  }
+
+  .slds-popover__close {
+    margin-top: $spacing-x-small;
+    margin-right: $spacing-x-small;
+  }
+}
+
+/**
+ * Alternate background for walkthrough non-modal dialog
+ *
+ * @selector .slds-popover_walkthrough-alt
+ * @restrict .slds-popover_walkthrough
+ * @modifier
+ */
+.slds-popover_walkthrough-alt {
+  border-color: $color-border-brand-dark;
+  background: $color-brand-dark;
+  color: $color-text-inverse;
+}

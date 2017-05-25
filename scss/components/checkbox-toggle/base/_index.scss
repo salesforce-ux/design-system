@@ -1,0 +1,197 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes checkbox toggle
+ *
+ * @name base
+ * @selector .slds-checkbox_toggle
+ * @restrict label
+ * @variant
+ */
+.slds-checkbox_toggle,
+.slds-checkbox--toggle {
+  width: 100%;
+
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    display: block;
+    position: relative;
+    width: $width-toggle;
+    height: $height-toggle;
+    border: $border-width-thin solid $color-background-toggle;
+    padding: $spacing-xxx-small;
+    background-color: $color-background-toggle;
+    border-radius: $border-radius-pill;
+    transition: background-color 0.2s cubic-bezier(0.75, 0, 0.08, 1);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $color-background-toggle-hover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: $square-toggle-slider;
+      height: $square-toggle-slider;
+      background-color: $color-background-alt;
+      border-radius: $border-radius-pill;
+    }
+  }
+
+  // Hide input
+  [type="checkbox"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    // scss-lint:disable NestingDepth SelectorDepth
+    + .slds-checkbox_faux_container,
+    + .slds-checkbox--faux_container {
+      font-size: $font-size-x-small;
+      color: $color-text-label;
+
+      .slds-checkbox_off,
+      .slds-checkbox--off {
+        display: block;
+      }
+
+      .slds-checkbox_on,
+      .slds-checkbox--on {
+        display: none;
+      }
+    }
+
+    &:focus {
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
+        background-color: $color-background-toggle-hover;
+        border-color: $color-border-input-active;
+        box-shadow: $shadow-button-focus;
+      }
+    }
+
+    // Checked State with Interactions
+    &:checked {
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      + .slds-checkbox_faux_container .slds-checkbox_off,
+      + .slds-checkbox--faux_container .slds-checkbox--off {
+        display: none;
+      }
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      + .slds-checkbox_faux_container .slds-checkbox_on,
+      + .slds-checkbox--faux_container .slds-checkbox--on {
+        display: block;
+      }
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
+        border-color: $color-background-toggle-active;
+        background-color: $color-background-toggle-active;
+
+        &:hover,
+        &:focus {
+          background-color: $color-background-toggle-active-hover;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 1px;
+          right: 1px;
+          width: $square-toggle-slider;
+          height: $square-toggle-slider;
+          background-color: $color-background-alt;
+          border-radius: $border-radius-pill;
+          transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
+        }
+
+        &:after {
+          content: ' ';
+          position: absolute;
+          top: 0.25rem; // These are arbitrary to create the checkbox
+          left: 0.6rem; // like the right positioning above
+          height: 0.7rem; // Seems silly to tokenize?
+          width: 0.45rem;
+          border-bottom: $border-width-thick solid $color-border-toggle-checked;
+          border-right: $border-width-thick solid $color-border-toggle-checked;
+          border-radius: 0;
+          background-color: transparent;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:focus {
+
+        + .slds-checkbox_faux,
+        + .slds-checkbox--faux,
+        ~ .slds-checkbox_faux,
+        ~ .slds-checkbox--faux,
+        + .slds-checkbox_faux_container .slds-checkbox_faux,
+        + .slds-checkbox--faux_container .slds-checkbox--faux {
+          background-color: $color-background-toggle-active-hover;
+        }
+      }
+    }
+
+
+    &[disabled] {
+      // scss-lint:disable NestingDepth
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox_faux_container .slds-checkbox_faux,
+      + .slds-checkbox--faux_container .slds-checkbox--faux {
+        // scss-lint:disable NestingDepth
+        background-color: $color-background-toggle-disabled;
+        pointer-events: none;
+
+        &:after {
+          background-color: $color-background-input-checkbox-disabled;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $color-background-toggle-disabled;
+          cursor: default;
+        }
+      }
+
+      &:checked {
+
+        + .slds-checkbox_faux_container .slds-checkbox_faux,
+        + .slds-checkbox--faux_container .slds-checkbox--faux {
+
+          &:before {
+            background-color: $color-background-input-checkbox-disabled;
+          }
+
+          &:after {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

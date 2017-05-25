@@ -1,0 +1,43 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A picklist is a widget that displays a list of selectable options.
+ * When an option is selected, it is shown as selected and the value of the
+ * read-only input is updated to match it.
+ *
+ * A multi-select picklist is widget that displays a list of selectable options, where
+ * more than one option can be chosen. When more than one option has been selected, the
+ * value of the read-only input should update with the total number of selected
+ * items, such as "3 options selected". When a picklist with multiple selected options is closed,
+ * a listbox of pills is also used to represent those selected options.
+ * The listbox of pills is positioned below the read-only input, each pill represents a selected option.
+ * This allows a user to easily see and remove selected items.
+ *
+ * The target HTML element, `slds-combobox` and dropdown need to be wrapped in the class
+ * `.slds-dropdown-trigger dropdown-trigger--click`.
+ *
+ * #### Accessibility
+ *
+ * A Picklist allows a user to select and set a value from a pre-defined list of options. As such
+ * we follow the ARIA Combobox widget pattern to implement it as it's the most appropriate concept to achieve this.
+ * The variant of Combobox we chose is the "Read-only" version, as a users keyboard input cannot directly affect
+ * the value set in the Combobox, but can only select a value from a pre-definied list. It also does not perform
+ * a search, or autocomplete function. It most closely resembles the HTML `select` element.
+ *
+ * Implementing a multi-select pattern with a Combobox is not standard, nor is it technically supported by the specification.
+ * Therefore great care should be paid to the extra steps we take to try and communicate multi-selection.
+ *
+ * Please refer to the [Combobox](/components/combobox) documentation relating to read-only implementation guidelines.
+ *
+ * @summary A Picklist provides a user with an read-only input field that is accompanied with a listbox of pre-defined options. A picklist has a single and multi-selection pattern.
+ *
+ * @base
+ * @name picklist
+ * @selector .slds-combobox-picklist
+ * @support dev-ready
+ * @category experience
+ * @type user-input
+ * @role combobox, listbox
+ */

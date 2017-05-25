@@ -1,0 +1,100 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin button {
+  padding: {
+    left: $spacing-medium;
+    right: $spacing-medium;
+  }
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin button-interactions {
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-default-active;
+  }
+}
+
+@mixin button-base {
+
+  @include button-interactions;
+  border: $border-width-thin solid $color-border-button-default;
+}
+
+@mixin button-brand {
+  background-color: $color-background-button-brand;
+  border: $border-width-thin solid $color-border-button-brand;
+  color: $color-text-button-brand;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-button-brand;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-brand-hover;
+    color: $color-text-button-brand-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-brand-active;
+  }
+}
+
+@mixin button-destructive {
+  // @TODO - update when new tokens hit the repo
+  background-color: $color-background-destructive;
+  border: $border-width-thin solid $color-background-destructive;
+  color: $color-text-inverse;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-inverse;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-destructive-hover;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: $color-background-destructive-active;
+    border-color: $color-border-destructive-active;
+  }
+}
+
+@mixin button-success {
+  background-color: $color-background-button-success;
+  border: $border-width-thin solid $color-border-success;
+  color: $color-text-default;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-default;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-success-hover;
+    border-color: $color-border-success-dark;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: $color-background-button-success-active;
+    border-color: $color-border-success-dark;
+  }
+}

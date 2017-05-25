@@ -1,0 +1,87 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes select
+ *
+ * @name base
+ * @selector .slds-select
+ * @restrict select
+ * @required
+ * @variant
+ */
+.slds-select {
+  @include form-states;
+  height: calc(#{$height-input} + (#{$border-width-thin} * 2));
+
+  &[size],
+  &[multiple] {
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2));
+    height: inherit;
+
+    option {
+      padding: $spacing-x-small;
+    }
+  }
+
+  /**
+   * Initializes select container for custom styling
+   *
+   * @selector .slds-select_container
+   * @restrict div
+   */
+  &_container {
+    position: relative;
+
+    // Normalize the <select> appearance in various browsers
+    // See https://github.com/salesforce-ux/design-system/issues/122
+    .slds-select {
+      // stylelint-disable property-no-vendor-prefix
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      // stylelint-enable property-no-vendor-prefix
+      padding: {
+        left: $spacing-x-small;
+        right: $spacing-large;
+      }
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      right: $spacing-x-small;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+    }
+
+    &:before {
+      border-bottom: 5px solid $color-background-inverse;
+      top: calc((#{$line-height-button-small} / 2) - 6px);
+    }
+
+    &:after {
+      border-top: 5px solid $color-background-inverse;
+      bottom: calc((#{$line-height-button-small} / 2) - 6px);
+    }
+  }
+}
+
+/**
+ * Error Styles for select
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error {
+  @include form-input-error('.slds-select');
+}

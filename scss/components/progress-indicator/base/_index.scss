@@ -1,0 +1,194 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-progress
+ * @restrict div
+ * @variant
+ */
+.slds-progress {
+  position: relative;
+  max-width: 70%;
+  flex: 1 1 auto;
+  margin: auto;
+
+  /**
+   * When on a shaded background such as the modal footer
+   *
+   * @selector .slds-progress_shade
+   * @restrict .slds-progress
+   * @modifier
+   */
+  &_shade,
+  &--shade {
+
+    .slds-progress__item {
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      &.slds-is-completed .slds-progress__marker,
+      &.slds-is-active .slds-progress__marker {
+        background: $progress-color-background-shade;
+      }
+
+      &.slds-is-completed .slds-progress__marker_icon,
+      &.slds-is-completed .slds-progress__marker--icon {
+        border-color: $progress-color-background-shade;
+      }
+
+      &.slds-is-active .slds-progress__marker {
+        box-shadow: $progress-color-background-shade 0 0 0 4px; // Adds whitespace around indicator
+
+        &:focus {
+          box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark; // Keeps white space and add blue focus ring
+        }
+      }
+
+      &.slds-has-error .slds-progress__marker {
+
+        &,
+        &:hover,
+        &:focus {
+          background: $progress-color-background-shade;
+        }
+      }
+
+      .slds-progress__marker {
+        border-color: $progress-color-border-shade;
+      }
+    }
+  }
+
+  .slds-progress-bar {
+    position: absolute;
+    top: 50%;
+    margin-top: (($progress-bar-height / 2) * -1);
+  }
+}
+
+/**
+ * An ordered list containing steps of a process
+ *
+ * @selector .slds-progress__list
+ * @restrict .slds-progress ol
+ * @required
+ */
+.slds-progress__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // height: 100%;
+  margin: auto;
+  position: relative;
+  z-index: $z-index-default;
+}
+
+/**
+ * A list item for each step of the process
+ *
+ * @selector .slds-progress__item
+ * @restrict .slds-progress ol li
+ * @required
+ */
+.slds-progress__item {
+  display: inline-flex;
+  align-self: center;
+
+  &.slds-is-completed .slds-progress__marker,
+  &.slds-is-active .slds-progress__marker {
+    background: $progress-color-background;
+    border-color: $progress-color-border-active;
+  }
+
+  /**
+   * Stateful class for a completed step, `.slds-progress__item` should receive a success icon at this point
+   *
+   * @selector .slds-is-completed
+   * @restrict .slds-progress__item
+   * @notes Class should be applied thought JavaScript
+   * @required
+   * @modifier
+   * @group state
+   */
+  &.slds-is-completed .slds-progress__marker_icon,
+  &.slds-is-completed .slds-progress__marker--icon {
+    border-color: $progress-color-background;
+    color: $progress-bar-color-background-fill;
+  }
+
+  /**
+   * Stateful class for the active step
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-progress__item
+   * @notes Class should be applied thought JavaScript
+   * @required
+   * @modifier
+   * @group state
+   */
+  &.slds-is-active .slds-progress__marker {
+    box-shadow: $progress-color-background 0 0 0 4px; // Adds whitespace around indicator
+
+    &:hover,
+    &:focus {
+      border-color: $progress-color-border-hover;
+    }
+
+    &:focus {
+      box-shadow: $progress-color-background 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark;
+    }
+  }
+
+  /**
+   * Indicates error state for a step in the progress
+   *
+   * @selector .slds-has-error
+   * @restrict .slds-progress__item
+   * @required
+   * @modifier
+   */
+  &.slds-has-error .slds-progress__marker {
+
+    &,
+    &:hover,
+    &:focus {
+      color: $color-text-error;
+      background: $progress-color-background;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 0 $color-border-error;
+    }
+  }
+}
+
+/**
+ * Dot indicator for each step
+ *
+ * @selector .slds-progress__marker
+ * @restrict .slds-progress ol li button
+ * @required
+ */
+.slds-progress__marker {
+  @include square($square-icon-utility-small);
+  position: relative;
+  border-radius: $border-radius-circle;
+  background: $progress-bar-color-background;
+  border: 4px solid $progress-color-border;
+  vertical-align: middle;
+
+  /**
+   * Modifier that notifies the marker indicator that the step has been completed and its getting an icon
+   *
+   * @selector .slds-progress__marker_icon
+   * @restrict .slds-progress__marker
+   * @required
+   */
+  &_icon,
+  &--icon {
+    @include square(auto);
+  }
+}

@@ -1,0 +1,73 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Causes description list to display horizontally with `dt` followed immediately by the `dd`.
+ *
+ * @selector .slds-dl_inline
+ * @modifier
+ */
+.slds-dl_inline,
+.slds-dl--inline {
+  @include clearfix;
+
+  @include mq-medium-min {
+    /**
+     * Marks a term
+     *
+     * @selector .slds-dl_inline__label
+     * @modifier
+     */
+    &__label {
+      float: left;
+      clear: left;
+    }
+
+    /**
+     * Marks a description
+     *
+     * @selector .slds-dl_inline__detail
+     * @modifier
+     */
+    &__detail {
+      float: left;
+      padding-left: $spacing-xx-small;
+    }
+  }
+}
+
+/**
+ * @summary Causes description list to display horizontally with `dt` consuming 33% of the space and the `dd` taking up the rest.
+ *
+ * @selector .slds-dl_horizontal
+ * @modifier
+ */
+.slds-dl_horizontal,
+.slds-dl--horizontal {
+  @include mq-medium-min {
+    @include flex-wrap(true);
+    display: flex;
+
+    /**
+     * Marks a term
+     *
+     * @selector .slds-dl_horizontal__label
+     * @modifier
+     */
+    &__label {
+      width: 30%;
+      padding-right: $spacing-small;
+    }
+
+    /**
+     * Marks a description
+     *
+     * @selector .slds-dl_horizontal__detail
+     * @modifier
+     */
+    &__detail {
+      width: 70%;
+    }
+  }
+}

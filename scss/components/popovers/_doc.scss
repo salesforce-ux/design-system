@@ -1,0 +1,41 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A popover is used to display contextual information to the user.
+ *
+ * A popover can accept the following nubbin position classes, `.slds-nubbin--left`, `.slds-nubbin--left-top`, `.slds-nubbin--left-bottom`, `.slds-nubbin--top-left`, `.slds-nubbin--top-right`, `.slds-nubbin--right-top`, `.slds-nubbin--right-bottom`, `.slds-nubbin--bottom-left`, `.slds-nubbin--bottom-right`.
+ *
+ * #### Accessibility
+
+ * ##### Notable features
+ *
+ * - Popovers **must** come with a triggering button
+ * - They **must** have at least one focusable element inside
+ * - They **should** be implemented as a keyboard focus trap
+ * - When triggered, user focus should be placed on the first focusable element that isn't the close button. If the close button is the only focusable element, focus should be placed there
+ * - Pressing the Escape the key as well as clicking the close button should close the Popover
+ * - User focus should be placed back on the triggering button when the popover is closed
+ *
+ * Panel Popovers can be shown on mouse hover but for keyboard or screen reader users, a button should be present **in addition** and next to the hover trigger.
+ * This is due to the focus moving and trapping nature of non-modal dialogs. You **should not** move a user's focus without their expressed intent.
+ *
+ * ##### Notable attributes
+ *
+ * - The Popover element should have `role="dialog"` applied
+ * - The `dialog` should be labelled, this can be achieved in two ways:
+ *   - Apply the `aria-labelledby` attribute to the `dialog` element and set the value to be the ID of the main Heading element in the Popover (if it provides a good and meaningful title to the `dialog`)
+ *   - If no Heading element is present, use the `aria-label` attribute and set the value to be a meaningful title of the `dialog`
+ * - The `dialog` should be described where possible. This can be achieved by applying the `aria-describedby` attribute to the `dialog` element and set the value to be the id of the Popover body
+ *
+ * @summary A popover is a non-modal dialog. The component should be paired with a clickable trigger element and contain at least one focusable element.
+ *
+ * @base
+ * @name popovers
+ * @selector .slds-popover
+ * @support dev-ready
+ * @category structure
+ * @type messaging
+ * @role non-modal-dialog
+ */

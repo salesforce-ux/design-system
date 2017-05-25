@@ -1,0 +1,117 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin list-has-bullets {
+  margin-left: $spacing-large;
+  list-style: disc;
+}
+
+@mixin list-has-numbers {
+  margin-left: $spacing-large;
+  list-style: decimal;
+}
+
+// Apply theme on hover for list items
+@mixin list-has-hovers {
+
+  &:hover {
+    background-color: $color-background-row-hover;
+    border-color: $color-border;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-background-row-active;
+    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
+  }
+}
+
+// Apply theme on selection for list items
+@mixin list-has-selections {
+
+  &.slds-is-selected {
+    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
+    background-color: $color-background-row-selected;
+
+    &:hover,
+    &:focus {
+      box-shadow: $color-border-selection-hover 0 ($border-width-thick * -1) 0 inset, $color-border-selection-hover 0 0 0 $border-width-thin inset;
+    }
+  }
+}
+
+
+
+
+// Output dot separators based on direction parameter
+//
+// @require $size, $direction, $color, $mq
+// @param $direction {String} Position of dot, accepts 'left' or 'right'
+// @param $size {String} Defines the width and height of the dot
+// @param $color {String} Defines the color of the dot
+// @param $mq {Boolean} If you want a dots on touch device or not
+
+@mixin dot-separator($direction: right, $size: 2px, $color: $color-background-indicator-dot, $mq: null) {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @if $direction == right {
+
+    &:after {
+      @include square($size);
+      content: '';
+      margin: {
+        left: $spacing-x-small;
+        right: $spacing-x-small;
+      }
+      border-radius: $border-radius-circle;
+      background-color: $color;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  @else if $direction == left {
+
+    &:before {
+      @include square($size);
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin: {
+        left: $spacing-x-small;
+        right: $spacing-x-small;
+      }
+      border-radius: $border-radius-circle;
+      background-color: $color;
+    }
+
+    &:first-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  @if $mq != null {
+    @include mq-medium-max {
+
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

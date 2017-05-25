@@ -1,0 +1,70 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Default modals are used in the vast majority of cases. They are as wide as
+ * 50% of the viewport, but include a minimum and maximum width to avoid going
+ * too narrow or too wide.
+ *
+ * Modals always have an equal amount of space at the top and bottom to account
+ * for the height of the close button.
+ *
+ * Modals grow according to how much content is within, but once the modal
+ * reaches full height (including the previously mentioned space on top and
+ * bottom), the content area will begin to scroll. (This scrolling is currently
+ * not available in Salesforce1 Mobile.)
+ *
+ * Modals can have a tagline in the header, simply by adding a paragraph after
+ * the heading.
+ *
+ * By default, the content area of the modal does not have spacing. This allows
+ * for content such as Tables to be full-width to the modal. To get spacing
+ * when you need it, apply a padding utility (`.slds-p-around--medium`).
+ *
+ * Modal headers can also have taglines, if you need to provide additional
+ * context. This tagline can also contain links, or the whole thing could be a
+ * link in and of itself.
+ *
+ * Large modals call for large amounts of content. The height follows the same
+ * behavior and styles of other modals. The width changes to 90% of the viewport,
+ * and uses a wider minimum width and no maximum width.
+ *
+ * These are modals that require a linearly directional paradigm of navigation
+ * (“Next” and “Back”, etc.) — the actionable buttons in the modal footer live
+ * on the left and right, rather than all on the right. These can either be
+ * within a large or default modal, depending on the use case.
+ *
+ * #### Accessibility
+ *
+ * Modals, by definition, trap focus. This means that if a user presses Tab or
+ * Shift+Tab while their keyboard focus is in the modal, their focus should
+ * stay in and cycle through the modal’s content. Focus shouldn’t return to
+ * the underlying page until the user presses the Esc key, presses an explicit
+ * “Cancel” or “Close” button in the modal, or performs another action that
+ * closes the modal.
+ *
+ * **Expected markup:**
+ *
+ * - Modal has `role="dialog"`
+ * - When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
+ * - Modal contains an HTML heading
+ * - Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Esc key closes the modal and moves focus to whatever triggered the modal to open
+ * - Tab key at bottom of modal cycles focus back to first focusable element at top of modal
+ * - Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
+ * - Enter key submits modal’s form data, if applicable
+ *
+ * @summary Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+ *
+ * @base
+ * @name modals
+ * @selector .slds-modal
+ * @support dev-ready
+ * @category structure
+ * @type layout
+ * @role modal-dialog
+ */

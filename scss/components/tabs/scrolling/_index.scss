@@ -1,0 +1,82 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-tabs__nav-scroller.slds-has-overflow {
+  position: relative;
+  padding-right: 4.7rem; // Allow for controls
+}
+
+.slds-tab__scroll-controls {
+  display: none;
+}
+
+.slds-has-overflow {
+
+  .slds-tabs__nav-scroller_inner,
+  .slds-tabs__nav-scroller--inner {
+    overflow: hidden;
+  }
+
+  .slds-tabs_scoped__nav,
+  .slds-tabs--scoped__nav,
+  .slds-tabs_default__nav,
+  .slds-tabs--default__nav {
+    border: 0;
+  }
+
+  .slds-tab__scroll-controls {
+    display: flex; // This works to remove the whitespace between buttons
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $color-background-alt;
+  }
+}
+
+.slds-tabs_default,
+.slds-tabs--default {
+
+  .slds-has-overflow .slds-tabs__nav-scroller_inner,
+  .slds-has-overflow .slds-tabs__nav-scroller--inner {
+    border-bottom: $border-width-thin solid $color-border;
+  }
+
+  .slds-tab__scroll-controls {
+    padding: calc(#{$spacing-xx-small} - #{$border-width-thin}) $border-width-thin calc(#{$spacing-xx-small} - #{$border-width-thin}) $spacing-x-small;
+    border-bottom: $border-width-thin solid $color-border;
+  }
+}
+
+.slds-tabs_scoped,
+.slds-tabs--scoped {
+
+  .slds-has-overflow {
+
+    .slds-tabs__nav-scroller_inner,
+    .slds-tabs__nav-scroller--inner {
+      border: $border-width-thin solid $color-border;
+      border-bottom: 0;
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+      background-color: $color-background;
+    }
+
+    .slds-tabs_scoped__item,
+    .slds-tabs--scoped__item {
+      margin-bottom: 0;
+      border-bottom: $border-width-thin solid $color-border;
+
+      // scss-lint:disable NestingDepth SelectorDepth
+      &.slds-active {
+        border-bottom-color: $color-border-tab-active;
+      }
+    }
+  }
+
+  .slds-tab__scroll-controls {
+    padding: calc(#{$spacing-xx-small} - #{$border-width-thin}) $spacing-xx-small;
+    border: $border-width-thin solid $color-border;
+    border-radius: 0 $border-radius-medium 0 0;
+  }
+}

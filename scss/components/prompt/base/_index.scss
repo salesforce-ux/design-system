@@ -1,0 +1,36 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes Prompt style notification
+ *
+ * @name base
+ * @selector .slds-modal_prompt
+ * @restrict .slds-modal
+ * @required
+ * @variant
+ */
+.slds-modal_prompt,
+.slds-modal--prompt {
+
+  .slds-modal__header {
+    border-bottom: 0;
+  }
+
+  .slds-modal__content {
+    padding-left: $spacing-x-large;
+    padding-right: $spacing-x-large;
+  }
+
+  .slds-modal__footer {
+    border-top: 0;
+    text-align: center;
+  }
+
+  @include deprecate('4.0.0', 'Close button should be removed from the markup') {
+    slds-modal__close {
+      display: none; // @TODO - Amy, can you make this optional?
+    }
+  }
+}

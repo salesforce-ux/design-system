@@ -1,0 +1,51 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Because tab sets can be nested, pay close attention to the markup. They are
+ * constructed to prevent styles from leaking from parent tab sets into child tab sets.
+ *
+ * # JavaScript Needs
+ *
+ * The active tab has two markup requirements:
+ *
+ * - The `.slds-active` class should be placed on the `li` with `.slds-tabs--{variant}__item`.
+ * - The corresponding `.slds-tabs--{variant}__content` container receives `.slds-show`.
+ *
+ * Inactive `.slds-tabs--{variant}__content` containers receive `.slds-hide`.
+ * When the user clicks a different tab, move the `.slds-active` class and
+ * toggle the `.slds-hide`/`.slds-show` classes.
+ *
+ * #### Accessibility
+ *
+ * Tabbed UIs have three parts with specific **ARIA** role requirements:
+ *
+ * - The tab list, which should have `role="tablist"`
+ * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+ * - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+ *
+ * **Expected markup:**
+ *
+ * - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+ * - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+ * - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+ * - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+ * - Tab key, when focus is before the tab list, moves focus to the selected tab
+ * - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
+ * - Shift+Tab keys, when focus is on first element in a tab panel, move focus to the selected tab
+ *
+ * @summary A tab keeps related content in a single container that is shown and hidden through navigation.
+ *
+ * @base
+ * @name scoped-tabs
+ * @selector .slds-tabs_scoped
+ * @support dev-ready
+ * @category base
+ * @type navigation
+ * @role tablist
+ */

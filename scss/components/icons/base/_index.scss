@@ -1,0 +1,189 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container for icons
+ *
+ * @name base
+ * @selector .slds-icon_container
+ * @restrict span, div
+ * @notes Used when an icon with a background color is accompanied by `.slds-assistive-text` and also receives a `background-color` class
+ * @variant
+ */
+.slds-icon_container,
+.slds-icon__container {
+  @include deprecate('4.0.0', 'slds-icon__container is deprecated. Use slds-icon_container instead.');
+  display: inline-block;
+  border-radius: $border-radius-medium;
+
+  /**
+   * @summary Circle container for icons
+   *
+   * @selector .slds-icon_container_circle
+   * @restrict .slds-icon_container
+   */
+  &_circle,
+  &--circle {
+    padding: $spacing-x-small;
+    border-radius: $border-radius-circle;
+  }
+}
+
+[class*='slds-icon-action-'] {
+  padding: $spacing-x-small;
+  border-radius: $border-radius-circle;
+}
+// action-{icon-name} comes from the map
+@each $name, $color in $bg-actions-map {
+
+  .slds-icon-#{$name} {
+    background-color: $color;
+  }
+}
+
+
+// TODO: Depend on a correct map to generate icons named slds-icon-custom-customXX
+@each $name, $color in $bg-custom-map {
+  $prefix-length: str-length('custom-');
+  // In Sass, str-slice's first character is 1 (instead of 0 in other languages)
+  // so we need to add +1 when slicing
+  $id: str-slice($name, $prefix-length + 1);
+
+  // We generate both icons named:
+  // 1. slds-icon-custom-customXX (new: consistent with icon names)
+  // 2. slds-icon-custom-XX (legacy: depends on a map that is inconsistent with icon names)
+  @include deprecate('4.0.0', 'slds-icon-custom-XX classes are deprecated, use slds-icon-custom-customXX instead');
+
+  .slds-icon-custom-custom#{$id},
+  .slds-icon-#{$name} {
+    background-color: $color;
+    color: $color-text-inverse; // This is for text based icon created with just the first letters of the words
+  }
+}
+
+@include deprecate('3.0.0', 'This should be fixed at Theo’s level');
+$task2-monkey-patch: (
+  // The icon name is task2 but we had it as task-2
+  // (with an extra hyphen) so we're monkey patching the CSS to include the
+  // legacy token name in the CSS
+  'task-2': map-get($bg-standard-map, 'task2')
+);
+
+$bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
+
+@each $name, $color in $bg-standard-map {
+
+  .slds-icon-standard-#{$name} {
+    background-color: $color;
+  }
+}
+
+/**
+ * @selector .slds-icon
+ * @restrict .slds-icon_container svg, svg
+ * @required
+ */
+.slds-icon {
+  @include square($square-icon-medium-boundary);
+  fill: $color-text-icon-inverse;
+}
+
+// Crispy
+[class*='slds-icon-standard-'],
+[class*='slds-icon-action-'],
+[class*='slds-icon-custom-'] {
+
+  .slds-icon,
+  &.slds-icon {
+    border-radius: $border-radius-medium;
+  }
+}
+
+/**
+ * @selector .slds-icon_xx-small
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ * depreacted
+ */
+.slds-icon_xx-small,
+.slds-icon--xx-small {
+  @include square($square-icon-xx-small-content);
+  line-height: $line-height-reset;
+}
+
+/**
+ * @selector .slds-icon_x-small
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ */
+.slds-icon_x-small,
+.slds-icon--x-small {
+  @include square($square-icon-utility-small);
+  line-height: $line-height-reset;
+}
+
+/**
+ * @selector .slds-icon_small
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ */
+.slds-icon_small,
+.slds-icon--small {
+  @include square($square-icon-small-boundary);
+  line-height: $line-height-reset;
+}
+
+/**
+ * @selector .slds-icon_large
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ */
+.slds-icon_large,
+.slds-icon--large {
+  @include square($square-icon-large-boundary);
+}
+
+/**
+ * @selector .slds-icon-text-default
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-default {
+  fill: $color-text-icon-default;
+}
+
+/**
+ * @selector .slds-icon-text-warning
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-warning {
+  fill: $color-text-warning;
+}
+
+/**
+ * @selector .slds-icon-text-error
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-error {
+  fill: $color-text-error;
+}
+
+/**
+ * @selector .slds-icon-text-light
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-light {
+  fill: $color-text-input-icon;
+}

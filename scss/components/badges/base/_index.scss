@@ -1,0 +1,32 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Create badge component
+ *
+ * @name base
+ * @selector .slds-badge
+ * @restrict span
+ * @variant
+ */
+.slds-badge {
+  background-color: $color-background-shade;
+  padding: $spacing-xx-small $spacing-x-small;
+  border-radius: $border-radius-pill;
+  font-size: $font-size-x-small;
+  line-height: $line-height-heading;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  color: $color-text-default;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  + .slds-badge {
+    margin-left: $spacing-x-small;
+  }
+
+  &:empty {
+    padding: 0;
+  }
+}

@@ -1,0 +1,115 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Improve readability of steps and animations
+// scss-lint:disable SpaceBetweenParens SingleLinePerProperty
+
+// Setup
+$_ellie-frames: 20;
+$_ellie-icon-width: 14;
+$_ellie-sprite-width: $_ellie-frames * $_ellie-icon-width / 16 * 1rem;
+
+// Widths of circles, allows full control over easing
+$_ellie-frameset: (
+  1:  ( outer: 4px,    inner: 1px    ),
+  2:  ( outer: 3.95px, inner: 1.2px  ),
+  3:  ( outer: 3.85px, inner: 1.4px  ),
+  4:  ( outer: 3.6px,  inner: 1.7px  ),
+  5:  ( outer: 3.3px,  inner: 2px    ),
+  6:  ( outer: 3.2px,  inner: 2.4px  ),
+  7:  ( outer: 3.15px, inner: 2.8px  ),
+  8:  ( outer: 3.1px,  inner: 3.25px ),
+  9:  ( outer: 3.05px, inner: 3.7px  ),
+  10: ( outer: 3px,    inner: 4px    )
+  // frames 11 to 20 are frames 1 to 10 in reverse order
+);
+
+/**
+ * @name ellie
+ * @selector .slds-icon-ellie
+ * @restrict span
+ * @variant
+ */
+.slds-icon-ellie {
+  width: fix-ie-rounding($_ellie-icon-width);
+  height: fix-ie-rounding($_ellie-icon-width);
+  display: inline-block;
+  overflow: hidden;
+
+  /**
+   * @summary Add .slds-is-animated to the SVG to enhance the icon with an animation.
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-ellie
+   */
+  &.slds-is-animated {
+    will-change: transform;
+    animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
+
+    svg {
+      will-change: transform;
+      animation: slds-icon-ellie 1.2s steps($_ellie-frames) 2.3s 2 alternate;
+    }
+  }
+
+  /**
+   * @summary Add .slds-is-paused to the SVG to pause the icon with an animation.
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-ellie
+   */
+  &.slds-is-paused {
+
+    &,
+    svg {
+      animation-play-state: paused;
+    }
+  }
+
+  svg {
+    width: $_ellie-sprite-width;
+    vertical-align: top;
+    color: #00a0e3;
+  }
+
+  circle:nth-child(2n + 1) {
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 4px;
+  }
+
+  circle:nth-child(2n) {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+}
+
+// Generate styles for each frame, based on steps defined in $_ellie-frameset
+@each $frame in map-keys($_ellie-frameset) {
+  $nth-child: $frame * 2 - 1;
+
+  .slds-icon-ellie circle:nth-child(#{$nth-child}),
+  .slds-icon-ellie circle:nth-last-child(#{$nth-child + 1}) {
+    stroke-width: map-get(map-get($_ellie-frameset, $frame), outer);
+  }
+
+  .slds-icon-ellie circle:nth-child(#{$nth-child + 1}),
+  .slds-icon-ellie circle:nth-last-child(#{$nth-child}) {
+    stroke-width: map-get(map-get($_ellie-frameset, $frame), inner);
+  }
+}
+
+// Animations
+// stylelint-disable
+@keyframes slds-icon-ellie-pop {
+  0%   { transform: scale(0.2); }
+  70%  { transform: scale(1.1); }
+  90%  { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slds-icon-ellie {
+  to { transform: translateX($_ellie-sprite-width * -1); }
+}

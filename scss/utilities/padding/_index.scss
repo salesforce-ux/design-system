@@ -1,0 +1,81 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Adds .125rem padding to the side specified
+ *
+ * @selector .slds-p-*_xxx-small
+ * @modifier
+ */
+
+/**
+ * Adds .25rem padding to the side specified
+ *
+ * @selector .slds-p-*_xx-small
+ * @modifier
+ */
+
+/**
+ * Adds .5rem padding to the side specified
+ *
+ * @selector .slds-p-*_x-small
+ * @modifier
+ */
+
+/**
+ * Adds .75rem padding to the side specified
+ *
+ * @selector .slds-p-*_small
+ * @modifier
+ */
+
+/**
+ * Adds 1rem padding to the side specified
+ *
+ * @selector .slds-p-*_medium
+ * @modifier
+ */
+
+/**
+ * Adds 1.5rem padding to the side specified
+ *
+ * @selector .slds-p-*_large
+ * @modifier
+ */
+
+/**
+ * Adds 2rem padding to the side specified
+ *
+ * @selector .slds-p-*_x-large
+ * @modifier
+ */
+
+/**
+ * Adds 3rem padding to the side specified
+ *
+ * @selector .slds-p-*_xx-large
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding to both top and bottom
+ *
+ * @selector .slds-p-*-vertical_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding to both sides
+ *
+ * @selector .slds-p-*-horizontal_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding all the way around the element
+ *
+ * @selector .slds-p-*-around_*
+ * @modifier
+ */
+@include spacing(padding);

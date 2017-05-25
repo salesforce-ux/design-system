@@ -1,0 +1,40 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Stacked row with stacked cells
+.slds-max-medium-table_stacked,
+.slds-max-medium-table--stacked {
+  @include table-stacked;
+
+  @include mq-medium-max {
+
+    td:before,
+    th:before {
+      padding-bottom: $spacing-xx-small;
+    }
+  }
+}
+
+// Stacked rows with horizontal cells
+.slds-max-medium-table_stacked-horizontal,
+.slds-max-medium-table--stacked-horizontal {
+  @include table-stacked;
+
+  @include mq-medium-max {
+
+    td {
+      text-align: right;
+
+      &:before {
+        float: left;
+        margin-top: $spacing-xxx-small;
+      }
+    }
+
+    // Revert max-width: $size-small;
+    .slds-truncate {
+      max-width: 100%;
+    }
+  }
+}

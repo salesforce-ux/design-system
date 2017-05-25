@@ -1,0 +1,236 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
+ * @name base
+ * @selector .slds-combobox-lookup
+ * @restrict div
+ * @variant
+ */
+
+.slds-lookup {
+  position: relative;
+  width: 100%; // Fill up parent container
+
+  /**
+   * Initializes lookup results list
+   *
+   * @selector .slds-lookup__list
+   * @restrict .slds-lookup ul
+   */
+  &__list {
+    // crazy calc - line height of primary text + line height of meta text - the offset to bring the meta up a bit + the top/bottom padding multipied by how many items I want to show
+    max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 8);
+    overflow-y: auto;
+  }
+
+  /**
+   * Initializes lookup results list container
+   *
+   * @selector .slds-lookup__menu
+   * @restrict .slds-lookup div
+   * @notes Applies positioning and container styles
+   * @required
+   */
+  &__menu {
+    background: $color-background-alt;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    z-index: $z-index-dropdown;
+    position: absolute;
+    width: 100%;
+    padding: $spacing-x-small 0;
+    display: none;
+  }
+
+  @include deprecate('4.0.0', 'Use .slds-lookup__item-action instead') {
+
+    &__item {
+
+      > a,
+      > span,
+      > button {
+        display: block;
+        padding: $spacing-x-small;
+        color: $color-text-default;
+        text-align: left;
+        width: 100%;
+        line-height: $line-height-text;
+        border-radius: 0;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          background-color: $color-background-row-hover;
+          color: $color-text-default;
+          text-decoration: none;
+        }
+
+        .slds-icon {
+          margin-right: $spacing-x-small;
+        }
+      }
+    }
+  }
+
+  /**
+   * Non-actionable label inside of a lookup item
+   *
+   * @selector .slds-lookup__item_label
+   * @restrict .slds-lookup h3
+   */
+  &__item_label,
+  &__item--label {
+    display: flex;
+    align-items: center;
+    padding: $spacing-x-small $spacing-medium;
+  }
+
+  /**
+   * Actionable element inside of a lookup item
+   *
+   * @selector .slds-lookup__item-action
+   * @restrict .slds-lookup a, .slds-lookup button, .slds-lookup span
+   */
+  &__item-action {
+    font-size: $font-size-medium;
+    display: flex;
+    align-items: center;
+    padding: $spacing-xx-small $spacing-medium;
+    color: $color-text-default;
+    text-align: left;
+    width: 100%;
+    line-height: $line-height-text;
+    border-radius: 0;
+
+    /**
+     * Hover/focus state for actionable lookup item
+     *
+     * @selector .slds-has-focus
+     * @restrict .slds-lookup__item-action
+     * @modifier
+     */
+    &:hover,
+    &:focus,
+    &.slds-has-focus {
+      outline: 0;
+      cursor: pointer;
+      background-color: $color-background-row-hover;
+      color: $color-text-default;
+      text-decoration: none;
+    }
+
+    // Icon in results, here so it doesn't need to be repeated in DOM
+    .slds-media__figure {
+      margin-right: $spacing-x-small;
+      margin-top: $spacing-xx-small;
+    }
+  }
+
+  /**
+   * Actionable element inside of a lookup item that's output is single line text
+   *
+   * @selector .slds-lookup__item-action_label
+   * @restrict .slds-lookup__item-action
+   */
+  &__item-action_label,
+  &__item-action--label {
+    padding: $spacing-x-small $spacing-medium;
+
+    .slds-icon {
+      margin-left: $spacing-xx-small;
+      margin-right: $spacing-small;
+    }
+  }
+
+  /**
+   * Search input inside of lookup
+   *
+   * @selector .slds-lookup__search-input
+   * @restrict .slds-lookup input
+   */
+  &__search-input {
+    width: 100%;
+  }
+
+  /**
+   * Primary entity name within lookup item
+   *
+   * @selector .slds-lookup__result-text
+   * @restrict .slds-lookup__item-action span
+   */
+  &__result-text {
+    @include truncate; // truncate mixin used so class wouldn't need to be repeated in DOM
+    display: block;
+    margin-bottom: $spacing-xxx-small;
+  }
+
+  /**
+   * Secondary info of primary entity name within lookup item
+   *
+   * @selector .slds-lookup__result-meta
+   * @restrict .slds-lookup__item-action span
+   */
+  &__result-meta {
+    display: block;
+    margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+    color: $color-text-label;
+  }
+
+  @include deprecate('4.0.0', 'slds-lookup__pill-container not needed anymore, use slds-pill_container instead') {
+
+    &__pill-container {
+      padding: 0 $spacing-x-small $spacing-xx-small; // center aligns pills within selection area due to top padding on menu
+    }
+  }
+
+  // Typeahead bizness
+  mark {
+    font-weight: $font-weight-bold;
+    background-color: transparent;
+  }
+
+  /**
+   * Deal with Lookup when user activates the lookup
+   *
+   * @selector .slds-is-open
+   * @restrict .slds-lookup
+   * @modifier
+   */
+  &.slds-is-open {
+
+    // Show and remove border and border radius
+    .slds-lookup__menu {
+      display: block;
+    }
+  }
+
+  /**
+   * Deal with lookup if selection has been made
+   *
+   * @selector .slds-has-selection
+   * @restrict .slds-lookup
+   */
+  &.slds-has-selection {
+
+    // If developer needs to keep the input in the DOM and not able to remove it
+    .slds-input,
+    .slds-input__icon,
+    .slds-lookup__search-input {
+      display: none;
+    }
+
+    // Stretch pill 100% of container
+    .slds-pill {
+      display: flex;
+    }
+
+    // Send close button to the end of the pill
+    .slds-pill__remove {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// This code creates the fixed header (faux header) used in the inline-edit data-table. I don't think we'll surface this for customers as it's very complex when scrolling horizontally and requires some other code for containers, etc
+.slds-table_header-fixed_container,
+.slds-table--header-fixed_container {
+  position: relative;
+  padding-top: 2rem; // This matches the height of the hover state w/border
+  border-top: $border-width-thin solid $color-border;
+  background-color: $color-background-alt;
+  overflow: hidden;
+
+  &:before {
+    border-bottom: $border-width-thin solid $color-border;
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.slds-cell-fixed {
+  position: absolute;
+  top: 0;
+  min-height: 2rem;
+}
+
+.slds-table_header-fixed,
+.slds-table--header-fixed {
+  border-top: 0;
+
+  thead th {
+    position: static;
+    padding: 0;
+    border-top: 0;
+  }
+
+  tbody tr:first-child { // Remove first border row due to faux th border
+    // scss-lint:disable SelectorDepth
+    td,
+    th {
+      border: 0;
+    }
+  }
+}

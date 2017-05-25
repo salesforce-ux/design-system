@@ -1,0 +1,27 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The popover should be positioned with JavaScript.
+ *
+ * When errors are found within a form, the user will be notified with a popover
+ * with the page-level errors listed out. Please provide a contextually specific
+ * title for the dialog with the aria-label attribute. e.g. "Acme Global edit
+ * form errors"
+ *
+ * @summary Creates a docked form footer
+ *
+ * @name base
+ * @selector .slds-docked-form-footer
+ * @restrict div
+ * @required
+ * @variant
+ */
+
+.slds-docked-form-footer {
+  @include docked-bar;
+  display: flex;
+  justify-content: center;
+  padding: $spacing-x-small 0;
+}

@@ -1,0 +1,748 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid
+ * @modifier
+ */
+.slds-grid {
+  display: flex;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid_frame
+ * @modifier
+ */
+.slds-grid_frame,
+.slds-grid--frame {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid_vertical
+ * @modifier
+ */
+.slds-grid_vertical,
+.slds-grid--vertical {
+  flex-direction: column;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid_vertical-reverse
+ * @modifier
+ */
+.slds-grid_vertical-reverse,
+.slds-grid--vertical-reverse {
+  flex-direction: column-reverse;
+}
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid_reverse
+ * @modifier
+ */
+.slds-grid_reverse,
+.slds-grid--reverse {
+  flex-direction: row-reverse;
+}
+
+/**
+ * @summary Allows columns to wrap when they exceed 100% of their parent’s width
+ *
+ * @selector .slds-wrap
+ * @modifier
+ */
+.slds-wrap {
+  @include flex-wrap(true);
+}
+
+/**
+ * @summary Keeps columns on one line. Allows columns to stretch and fill 100% of the parent&rsquo;s width and height.
+ *
+ * @selector .slds-nowrap
+ * @modifier
+ */
+.slds-nowrap {
+  @include flex-item(expand);
+  @include flex-wrap(false);
+}
+
+@include deprecate('4.0.0', 'Use .slds-{size}-nowrap instead') {
+
+  .slds-nowrap_small,
+  .slds-nowrap--small {
+    @include mq-small-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_medium,
+  .slds-nowrap--medium {
+    @include mq-medium-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_large,
+  .slds-nowrap--large {
+    @include mq-large-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+}
+
+/**
+ * @summary .slds-{size}-nowrap used for responsive design
+ *
+ * @selector [class*='-nowrap']
+ * @modifier
+ */
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
+
+  @each $key in $size {
+    @media (min-width: #{pem($breakpoint)}) {
+
+      .slds-#{$size}-nowrap {
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+/**
+ * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
+ *
+ * @selector .slds-grid_pull-padded
+ * @modifier
+ */
+.slds-grid_pull-padded,
+.slds-grid--pull-padded {
+  margin: {
+    right: ($spacing-small * -1);
+    left: ($spacing-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.125rem of padding when nesting a grid in a region with `.slds-p-horizontal--xxx-small`
+ *
+ * @selector .slds-grid_pull-padded-xxx-small
+ * @modifier
+ */
+.slds-grid_pull-padded-xxx-small,
+.slds-grid--pull-padded-xxx-small {
+  margin: {
+    right: ($spacing-xxx-small * -1);
+    left: ($spacing-xxx-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.25rem of padding when nesting a grid in a region with `.slds-p-horizontal--xx-small`
+ *
+ * @selector .slds-grid_pull-padded-xx-small
+ * @modifier
+ */
+.slds-grid_pull-padded-xx-small,
+.slds-grid--pull-padded-xx-small {
+  margin: {
+    right: ($spacing-xx-small * -1);
+    left: ($spacing-xx-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--x-small`
+ *
+ * @selector .slds-grid_pull-padded-x-small
+ * @modifier
+ */
+.slds-grid_pull-padded-x-small,
+.slds-grid--pull-padded-x-small {
+  margin: {
+    right: ($spacing-x-small * -1);
+    left: ($spacing-x-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal--small`
+ *
+ * @selector .slds-grid_pull-padded-small
+ * @modifier
+ */
+.slds-grid_pull-padded-small,
+.slds-grid--pull-padded-small {
+  margin: {
+    right: ($spacing-small * -1);
+    left: ($spacing-small * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 1rem of padding when nesting a grid in a region with `.slds-p-horizontal--medium`
+ *
+ * @selector .slds-grid_pull-padded-medium
+ * @modifier
+ */
+.slds-grid_pull-padded-medium,
+.slds-grid--pull-padded-medium {
+  margin: {
+    right: ($spacing-medium * -1);
+    left: ($spacing-medium * -1);
+  }
+}
+
+/**
+ * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal--large`
+ *
+ * @selector .slds-grid_pull-padded-large
+ * @modifier
+ */
+.slds-grid_pull-padded-large,
+.slds-grid--pull-padded-large {
+  margin: {
+    right: ($spacing-large * -1);
+    left: ($spacing-large * -1);
+  }
+}
+
+
+/**
+ * @summary Initializes a grid column
+ *
+ * @selector .slds-col
+ * @modifier
+ */
+.slds-col,
+[class*="slds-col_padded"],
+[class*="slds-col--padded"] {
+  @include flex-item(expand);
+}
+
+/**
+ * @summary Adds border to top side of column
+ *
+ * @selector .slds-col_rule-top
+ * @restrict .slds-col
+ * @modifier
+ */
+.slds-col_rule-top,
+.slds-col--rule-top {
+  @include mq-large-min {
+    border-top: 1px solid $color-border-separator;
+  }
+}
+
+/**
+ * @summary Adds border to right side of column
+ *
+ * @selector .slds-col_rule-right
+ * @restrict .slds-col
+ * @modifier
+ */
+.slds-col_rule-right,
+.slds-col--rule-right {
+  @include mq-large-min {
+    border-right: 1px solid $color-border-separator;
+  }
+}
+
+/**
+ * @summary Adds border to bottom side of column
+ *
+ * @selector .slds-col_rule-bottom
+ * @restrict .slds-col
+ * @modifier
+ */
+.slds-col_rule-bottom,
+.slds-col--rule-bottom {
+  @include mq-large-min {
+    border-bottom: 1px solid $color-border-separator;
+  }
+}
+
+/**
+ * @summary Adds border to left side of column
+ *
+ * @selector .slds-col_rule-left
+ * @restrict .slds-col
+ * @modifier
+ */
+.slds-col_rule-left,
+.slds-col--rule-left {
+  @include mq-large-min {
+    border-left: 1px solid $color-border-separator;
+  }
+}
+
+/**
+ * @summary Needed when truncation is nested in a flexible container in a grid
+ *
+ * @selector .slds-has-flexi-truncate
+ * @modifier
+ */
+.slds-has-flexi-truncate {
+  flex: 1 1 0%;
+  min-width: 0; // For FFOX and newer browsers
+}
+
+/**
+ * @summary Removes flexbox from grid column
+ *
+ * @selector .slds-no-flex
+ * @modifier
+ */
+.slds-no-flex {
+  flex: none;
+}
+
+/**
+ * @summary Sets the column to a min-width of 0
+ *
+ * @selector .slds-no-space
+ * @modifier
+ */
+.slds-no-space {
+  min-width: 0;
+}
+
+/**
+ * @summary Allows column to grow to children&rsquo;s content
+ *
+ * @selector .slds-grow
+ * @modifier
+ */
+.slds-grow {
+  flex-grow: 1;
+}
+
+/**
+ * @summary Prevents column from growing to children&rsquo;s content
+ *
+ * @selector .slds-grow-none
+ * @modifier
+ */
+.slds-grow-none {
+  flex-grow: 0;
+}
+
+/**
+ * @summary Allows column to shrink to children's content
+ *
+ * @selector .slds-shrink
+ * @modifier
+ */
+.slds-shrink {
+  flex-shrink: 1;
+}
+
+/**
+ * @summary Prevents column from shrinking to children's content
+ *
+ * @selector .slds-shrink-none
+ * @modifier
+ */
+.slds-shrink-none {
+  flex-shrink: 0;
+}
+
+// Resets spacing/bullets for when grids are used on unordered lists
+.slds-text-longform ul.slds-grid {
+  margin-left: 0;
+  list-style: none;
+}
+
+
+@include deprecate('4.0.0', 'Use spacing utilities instead instead of .slds-col--padded-*') {
+
+  .slds-col_padded,
+  .slds-col--padded {
+    padding: {
+      right: $spacing-small;
+      left: $spacing-small;
+    }
+  }
+
+  .slds-col_padded-medium,
+  .slds-col--padded-medium {
+    padding: {
+      right: $spacing-medium;
+      left: $spacing-medium;
+    }
+  }
+
+  .slds-col_padded-large,
+  .slds-col--padded-large {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
+  }
+
+  .slds-col_padded-around,
+  .slds-col--padded-around {
+    padding: $spacing-small;
+  }
+
+  .slds-col_padded-around-medium,
+  .slds-col--padded-around-medium {
+    padding: $spacing-medium;
+  }
+
+  .slds-col_padded-around-large,
+  .slds-col--padded-around-large {
+    padding: $spacing-large;
+  }
+}
+
+@include deprecate('4.0.0', 'Use .slds-col--rule-<position> instead of .slds-col-rule--*') {
+
+  .slds-col-rule {
+    @include mq-large-min {
+
+      &_top,
+      &--top {
+        border-top: 1px solid $color-border-separator;
+      }
+
+      &_right,
+      &--right {
+        border-right: 1px solid $color-border-separator;
+      }
+
+      &_bottom,
+      &--bottom {
+        border-bottom: 1px solid $color-border-separator;
+      }
+
+      &_left,
+      &--left {
+        border-left: 1px solid $color-border-separator;
+      }
+    }
+  }
+}
+
+/**
+ * @summary Columns align in the center to the main axis and expand in each direction
+ *
+ * @selector .slds-grid_align-center
+ * @modifier
+ */
+.slds-grid_align-center,
+.slds-grid--align-center {
+  justify-content: center;
+
+  .slds-col,
+  [class*="slds-col_padded"],
+  [class*="slds-col--padded"] {
+    flex-grow: 0;
+  }
+}
+
+/**
+ * @summary Columns are evenly distributed with equal space around them all
+ *
+ * @selector .slds-grid_align-space
+ * @modifier
+ */
+.slds-grid_align-space,
+.slds-grid--align-space {
+  justify-content: space-around;
+
+  .slds-col,
+  [class*="slds-col_padded"],
+  [class*="slds-col--padded"] {
+    flex-grow: 0;
+  }
+}
+
+/**
+ * @summary Columns align to the left and right followed by center. Space is equal between them
+ *
+ * @selector .slds-grid_align-spread
+ * @notes With only two columns &mdash; you can get a similar effect by setting one of the columns to `.slds-no-flex`
+ * @modifier
+ */
+.slds-grid_align-spread,
+.slds-grid--align-spread {
+  justify-content: space-between;
+
+  .slds-col,
+  [class*="slds-col_padded"],
+  [class*="slds-col--padded"] {
+    flex-grow: 0;
+  }
+}
+
+/**
+ * @summary Columns start on the opposite end of the grid's main axis
+ *
+ * @selector .slds-grid_align-end
+ * @modifier
+ */
+.slds-grid_align-end,
+.slds-grid--align-end {
+  justify-content: flex-end;
+
+  .slds-col,
+  [class*="slds-col_padded"],
+  [class*="slds-col--padded"] {
+    flex-grow: 0;
+  }
+}
+
+/**
+ * @summary Columns start at the beginning of the grid's cross axis
+ *
+ * @selector .slds-grid_vertical-align-start
+ * @modifier
+ */
+.slds-grid_vertical-align-start,
+.slds-grid--vertical-align-start {
+  align-items: flex-start; // Single Row Alignment
+  align-content: flex-start; // Multi Row Alignment
+}
+
+/**
+ * @summary Columns align in the center to the cross axis and expand it each direction
+ *
+ * @selector .slds-grid_vertical-align-center
+ * @modifier
+ */
+.slds-grid_vertical-align-center,
+.slds-grid--vertical-align-center {
+  align-items: center; // Single Row Alignment
+  align-content: center; // Multi Row Alignment
+}
+
+/**
+ * @summary Columns start on the opposite end of the grid's cross axis
+ *
+ * @selector .slds-grid_vertical-align-end
+ * @modifier
+ */
+.slds-grid_vertical-align-end,
+.slds-grid--vertical-align-end {
+  align-items: flex-end; // Single Row Alignment
+  align-content: flex-end; // Multi Row Alignment
+}
+
+/**
+ * @summary Vertically aligns element to top of `.slds-grid`
+ *
+ * @selector .slds-align-top
+ * @modifier
+ */
+.slds-align-top {
+  vertical-align: top;
+  align-self: flex-start;
+}
+
+/**
+ * @summary Vertically aligns element to middle of `.slds-grid`
+ *
+ * @selector .slds-align-middle
+ * @modifier
+ */
+.slds-align-middle {
+  vertical-align: middle;
+  align-self: center;
+}
+
+/**
+ * @summary Vertically aligns element to bottom of `.slds-grid`
+ *
+ * @selector .slds-align-bottom
+ * @modifier
+ */
+.slds-align-bottom {
+  vertical-align: bottom;
+  align-self: flex-end;
+}
+
+.slds-align-content-center {
+  @include deprecate('4.0.0') {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+  }
+}
+
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit at the top, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col_bump-top
+ * @modifier
+ */
+.slds-col_bump-top,
+.slds-col--bump-top {
+  margin-top: auto;
+}
+
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit to the right, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col_bump-right
+ * @modifier
+ */
+.slds-col_bump-right,
+.slds-col--bump-right {
+  margin-right: auto;
+}
+
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit at the bottom, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col_bump-bottom
+ * @modifier
+ */
+.slds-col_bump-bottom,
+.slds-col--bump-bottom {
+  margin-right: auto;
+}
+
+/**
+ * @summary Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container
+ *
+ * @selector .slds-col_bump-left
+ * @modifier
+ */
+.slds-col_bump-left,
+.slds-col--bump-left {
+  margin-left: auto;
+}
+
+
+/**
+ * @summary Stretch the grid items for both single row and multi-line rows to fill the height of the parent grid container
+ *
+ * @selector .slds-grid_vertical-stretch
+ * @notes Grid items will stretch the height of the parent grid container by default, unless `&lt;wrap&gt;` is used
+ * @modifier
+ */
+.slds-grid_vertical-stretch,
+.slds-grid--vertical-stretch {
+  align-items: stretch; // Single Row Alignment
+  align-content: stretch; // Multi Row Alignment
+}
+
+/**
+ * @summary Restrict width of containers to a maximum of 480px
+ *
+ * @selector .slds-container_small
+ * @modifier
+ */
+.slds-container_small,
+.slds-container--small {
+  max-width: rem($mq-small);
+}
+
+/**
+ * @summary Restrict width of containers to a maximum of 768px
+ *
+ * @selector .slds-container_medium
+ * @modifier
+ */
+.slds-container_medium,
+.slds-container--medium {
+  max-width: rem($mq-medium);
+}
+
+/**
+ * @summary Restrict width of containers to a maximum of 1024px
+ *
+ * @selector .slds-container_large
+ * @modifier
+ */
+.slds-container_large,
+.slds-container--large {
+  max-width: rem($mq-large);
+}
+
+/**
+ * @summary Restrict width of containers to a maximum of 1280px
+ *
+ * @selector .slds-container_large
+ * @modifier
+ */
+.slds-container_x-large,
+.slds-container--x-large {
+  max-width: rem($mq-x-large);
+}
+
+/**
+ * @summary Width of container takes up 100% of viewport
+ *
+ * @selector .slds-container_fluid
+ * @modifier
+ */
+.slds-container_fluid,
+.slds-container--fluid {
+  width: 100%;
+}
+
+/**
+ * @summary Horizontally positions containers in the center of the viewport
+ *
+ * @selector .slds-container_center
+ * @modifier
+ */
+.slds-container_center,
+.slds-container--center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+/**
+ * @summary Horizontally positions containers to the left of the viewport
+ *
+ * @selector .slds-container_left
+ * @modifier
+ */
+.slds-container_left,
+.slds-container--left {
+  margin-right: auto;
+}
+
+/**
+ * @summary Horizontally positions containers to the right of the viewport
+ *
+ * @selector .slds-container_right
+ * @modifier
+ */
+.slds-container_right,
+.slds-container--right {
+  margin-left: auto;
+}
+
+.slds-grid_overflow,
+.slds-grid--overflow {
+  flex-flow: row nowrap;
+
+  .slds-col {
+    min-width: 11.25em; // equals 180px
+    max-width: 22.5em;
+  }
+}

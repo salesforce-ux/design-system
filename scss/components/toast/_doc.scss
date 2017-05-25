@@ -1,0 +1,21 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * Notifications should contain `role="alert"` on the container to signal to
+ * assistive technology that they require the user’s immediate attention. Use a
+ * span with `.slds-assistive-text` to let the user know what type of notification it is.
+ *
+ * @summary Toast serves as a feedback & confirmation mechanism after the user takes an action.
+ *
+ * @base
+ * @name toast
+ * @selector .slds-notify_container
+ * @support dev-ready
+ * @category experience
+ * @type messaging
+ * @role alert
+ */

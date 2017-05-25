@@ -1,0 +1,53 @@
+// Lightning Design System 2.3.1
+
+/**
+ * Sizing for icon that sits inside button--icon
+ *
+ * @name with-icon
+ * @selector .slds-button__icon
+ * @restrict .slds-button svg
+ * @variant
+ */
+.slds-button__icon { // This is the icon inside the button--icon button
+  @include square($square-icon-medium-content-alt);
+  fill: currentColor;
+
+  /**
+   * Large size button icon svg
+   *
+   * @selector .slds-button__icon_large
+   * @restrict .slds-button__icon
+   * @modifier
+   * @group icon-size
+   */
+  &_large,
+  &--large { // Usually used for the large close button
+    @include square($square-icon-utility-large);
+  }
+
+  /**
+   * Small size button icon svg
+   *
+   * @selector .slds-button__icon_small
+   * @restrict .slds-button__icon
+   * @modifier
+   * @group icon-size
+   */
+  &_small,
+  &--small {
+    @include square($square-icon-small-content);
+  }
+
+  /**
+   * x-small size button icon svg
+   *
+   * @selector .slds-button__icon_x-small
+   * @restrict .slds-button__icon
+   * @modifier
+   * @group icon-size
+   */
+  &_x-small,
+  &--x-small {
+    @include square($square-icon-x-small-content);
+  }
+}

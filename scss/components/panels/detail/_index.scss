@@ -1,0 +1,42 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiates a panel
+ *
+ * @name detail
+ * @selector .slds-panel
+ * @restrict div
+ * @variant
+ */
+.slds-panel {
+  background: $color-background-alt;
+  border-radius: $border-radius-medium;
+
+  /**
+   * Contains sub sections of a panel
+   *
+   * @selector .slds-panel__section
+   * @restrict .slds-panel div
+   * @required
+   */
+  &__section {
+    padding: $spacing-medium;
+  }
+
+  /**
+   * Contains form actions at the bottom of a panel
+   *
+   * @selector .slds-panel__actions
+   * @restrict .slds-panel div
+   * @required
+   */
+  &__actions {
+    padding: $spacing-small;
+  }
+
+  &.slds-is-editing {
+    box-shadow: $shadow-drop-down;
+  }
+}

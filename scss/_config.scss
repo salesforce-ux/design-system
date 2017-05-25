@@ -1,0 +1,63 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Version number
+/// Helps deprecating pieces of the codebase
+/// Note: update at each release
+///
+/// For internal use only
+///
+/// @type String
+/// @access private
+$app-version: '2.3.1';
+
+/// Debug mode (uncomment to activate)
+/// Turn on to output deprecation warnings during development
+/// Note: remove when/if gulp-sass starts supporting the --quiet flag
+///
+/// @type Boolean
+// $app-debug: true;
+
+/// Image Path
+///
+/// @type String
+$static-image-path: '../images' !default;
+
+/// Font Path
+///
+/// @type String
+$static-font-path: '../fonts/webfonts' !default;
+
+/// Load webfonts
+///
+/// The Design System loads Salesforce webfonts using @font-face rules.
+/// Apps that already load webfonts or load webfonts using JavaScript
+/// should switch this setting off.
+///
+/// @type Boolean
+$slds-load-webfonts: true !default;
+
+/// Breakpoints
+///
+/// @type map
+$breakpoints: (
+  'x-small': $mq-x-small,
+  'small': $mq-small,
+  'medium': $mq-medium,
+  'large': $mq-large
+) !default;
+
+/// Grid Column Support
+///
+/// @type list
+$grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
+
+/// Reset wrapping class
+/// Wraps a version of normalize
+///
+/// @example scss
+///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
+///
+/// @type String
+$reset-wrapping-class: '.slds' !default;

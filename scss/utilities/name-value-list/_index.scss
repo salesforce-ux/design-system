@@ -1,0 +1,63 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-list_horizontal,
+.slds-list--horizontal {
+  /**
+   * @summary Label of the name-value pair variant. Layout is modified by its parent class.
+   *
+   * @selector .slds-item_label
+   * @modifier
+   */
+  .slds-item_label,
+  .slds-item--label {
+    width: 30%;
+    padding-right: $spacing-small;
+  }
+
+  /**
+   * @summary Label of the name-value pair variant. Layout is modified by its parent class.
+   *
+   * @selector .slds-item_detail
+   * @modifier
+   */
+  .slds-item_detail,
+  .slds-item--detail {
+    width: 70%;
+  }
+}
+
+.slds-list_vertical,
+.slds-list--vertical {
+
+  .slds-item_label,
+  .slds-item--label,
+  .slds-item_detail,
+  .slds-item--detail {
+    display: block;
+  }
+}
+
+.slds-list_inline,
+.slds-list--inline {
+  display: inline-flex;
+  max-width: 100%;
+
+  .slds-item_label,
+  .slds-item--label {
+    max-width: 180px;
+    padding-right: $spacing-small;
+    flex-shrink: 0;
+
+    ~ .slds-item_label,
+    ~ .slds-item--label {
+      padding-left: $spacing-medium;
+    }
+  }
+
+  .slds-item_detail,
+  .slds-item--detail {
+    min-width: 0; // Respect width
+  }
+}

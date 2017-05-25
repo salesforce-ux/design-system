@@ -1,0 +1,109 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-combobox-picklist
+ * @restrict div
+ * @variant
+ */
+
+@include deprecate('4.0.0', 'A picklist should use the readonly version of a combobox') {
+
+  .slds-picklist {
+    position: relative;
+
+    // Force width on picklist
+    .slds-dropdown {
+      width: $size-small;
+    }
+
+    li {
+      /**
+       * Set default state of icon for when a listbox option is selected
+       *
+       * @selector .slds-icon_selected
+       * @restrict .slds-picklist li svg
+       * @required
+       */
+      .slds-icon_selected,
+      .slds-icon--selected {
+        opacity: 0;
+        transition: opacity $duration-immediately ease;
+      }
+
+      /**
+       * Toggles state of icon for when a listbox option is selected
+       *
+       * @selector .slds-is-selected
+       * @restrict .slds-picklist li
+       * @modifier
+       * @required
+       */
+      &.slds-is-selected .slds-icon_selected,
+      &.slds-is-selected .slds-icon--selected {
+        fill: $color-text-icon-default-hover;
+        opacity: 1;
+      }
+    }
+
+    /**
+     * Resets explicit width on picklist to be fluid to its parent element
+     *
+     * @selector .slds-picklist_fluid
+     * @restrict .slds-picklist
+     * @modifier
+     */
+    &_fluid,
+    &--fluid {
+
+      .slds-picklist__input,
+      .slds-picklist__label,
+      .slds-dropdown,
+      .slds-lookup {
+        width: auto;
+        min-width: 0;
+        max-width: $size-small;
+      }
+    }
+  }
+
+  /**
+   * Read-only input element for picklist
+   *
+   * @selector .slds-picklist__input
+   * @restrict .slds-picklist .slds-form-element__control
+   * @required
+   */
+  .slds-picklist__input {
+    width: $size-small;
+
+    .slds-button {
+      line-height: 0;
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Use lookup classes instead') {
+
+  .slds-picklist__label {
+    padding-right: $spacing-x-large;
+    width: $size-small;
+    color: $color-text-default;
+    text-align: left;
+
+    .slds-icon {
+      @include square($square-icon-small-content);
+      position: absolute;
+      right: $spacing-medium;
+      top: 50%;
+      margin-top: (($square-icon-small-content / 2) * -1);
+      fill: $color-text-icon-default;
+    }
+
+    .slds-truncate {
+      display: block;
+    }
+  }
+}

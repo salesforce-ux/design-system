@@ -1,0 +1,25 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Each Activity timeline item receives its width from the parent list. It can
+ * consume the full width of the main page area or be placed in the smaller right
+ * sidebar.
+ *
+ * ##### Accessibility
+ *
+ * Text describing the type of timeline item is placed in a `span`. It is the
+ * first element in the timeline item and should be hidden with the
+ * `.slds-assistive-text` class. The `SVG` image does not need the
+ * `.slds-assistive-text` class.
+ *
+ * @summary The activity timeline displays each of the user’s upcoming, current, and past activities.
+ *
+ * @base
+ * @name activity-timeline
+ * @selector .slds-timeline__media
+ * @support dev-ready
+ * @category feature
+ * @type data-display
+ */

@@ -1,0 +1,91 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Five separate SVG sprites are used to create icons — [action](/icons/#action),
+ * [custom](/icons/#custom), [doctype](/icons/#doctype), [standard](/icons/#standard)
+ * and [utility](/icons/#utility). Link to the icon SVG sprite by targeting the
+ * icon’s hash/ID value in the use href attribute. (You can find the values on
+ * the [icon page](/icons/).)
+ *
+ * When placing the icon code into your page, customize the path in the `use`
+ * attribute of the `svg` to the proper path and icon name for your specific
+ * icon. For example, the _case_ icon in the _standard_ sprite would have a
+ * path like this:
+ *
+ * ```
+ * <svg aria-hidden="true" class="slds-icon" title="when needed">
+ *   <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+ * </svg>
+ * ```
+ *
+ * - *Note:** If an icon has more than one word in the name, it should be
+ * included in the `use` attribute with the underscore separator as shown on
+ * the icon page. For example: log_a_call.
+ *
+ * <h3 class="site-text-heading--label">Changing the background of an icon</h3>
+ *
+ * Change a background color using composed class names:
+ *
+ * ```css
+ * .slds-icon-[sprite name]-[icon name] {}
+ * ```
+ *
+ * Place the class on the `.slds-icon_container`.
+ *
+ * ```html
+ * <!-- "account" icon in the "standard" icon set -->
+ * <div class="slds-icon_container slds-icon-standard-account">
+ *   ...
+ * </div>
+ * ```
+ *
+ * Some icon names have more than one word, separated by `_` underscores.
+ * Replace underscores with dashes when composing the class name. So `log_a_call`
+ * in the standard icon set becomes `.slds-icon-action-log-a-call`.
+ *
+ * #### Accessibility
+ *
+ * Icons require a `span` with the `.slds-icon_container` class. This contains
+ * both the `svg` with the base `.slds-icon` class and, if needed, the
+ * description for assistive screen readers inside a `span` with the
+ * `.slds-assistive-text` class. A `title` attribute is necessary if the icon
+ * sits alone and a sighted user might need to hover for a description. If an
+ * icon has visible descriptive text, no `title` or extra `.slds-assistive-text`
+ * is required.
+ *
+ * - **Note:** You must require SLDS in your application for SVG sprites to work.
+ * If you’re using Visualforce, see [the Visualforce tutorial](/platforms/visualforce).
+ * If you’re using [Lightning components, see this documentation](/platforms/lightning).
+ *
+ * You can access the SVG sprites by downloading the entire [CSS Framework or
+ * just the icons](/downloads). To include a sprite in your application, the
+ * recommended method is to place it into the page as the first element inside
+ * the `body` element. Alternatively, you can leave the sprite in the
+ * assets/icons directory and link to it from your page. To render a sprited
+ * icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody)
+ * script for Internet Explorer.
+ *
+ * When placed into the `body`, the SVG sprite takes up space in the page. Use
+ * either `display:none` or `position:absolute` and set both the width and
+ * height to zero.
+ *
+ * ```
+ * <body>
+ *   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+ *     <symbol id="announcement" viewBox="0 0 24 24">
+ *       <path d="M10.5 21l-.6-.5c-.7-.5-.7-1.4-.7-1.9v-1.3c0-.4-.3-.7-.7-.7H5.8c-.4 0-.7.3-.7.7v3.6c0 1.2.7 2.2 1.9 2.2h2.2c1.4 0 1.5-.9 1.5-.9s.2-.9-.2-1.2zM20.8 8.3V2c0-1.1-1.4-1.4-2.2-.7l-4.1 3.9c-.6.5-1.4.8-2.3.8h-7C2.8 6 .9 8.1.9 10.5v.1c0 2.4 1.9 4.2 4.3 4.2h7c.9 0 1.7.3 2.4.9l4 4c.8.7 2.2.4 2.2-.7v-6.3c1.4 0 2.2-.9 2.2-2.2 0-1.2-.8-2.2-2.2-2.2z" />
+ *     </symbol>
+ *     <!-- follow with the sprited list of svgs -->
+ *   </svg>
+ *   ...
+ * ```
+ *
+ * @summary Icons provide visual context and enhance usability. Looking for the icons? Go to [Resources › Icons](/icons/).
+ *
+ * @base
+ * @name icons
+ * @selector .slds-icon_container
+ * @support dev-ready
+ */

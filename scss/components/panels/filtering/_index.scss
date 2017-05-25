@@ -1,0 +1,114 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name filtering
+ * @selector .slds-panel_filters
+ * @restrict .slds-panel
+ * @variant
+ */
+.slds-panel_filters,
+.slds-panel--filters {
+  margin-left: $spacing-medium;
+  box-shadow: $shadow-drop-down;
+  border-radius: 0;
+}
+
+/**
+ * @selector .slds-filters
+ * @restrict .slds-panel_filters div
+ * @required
+ */
+.slds-filters {
+  position: relative;
+}
+
+/**
+ * Filters Header
+ *
+ * @selector .slds-filters__header
+ * @restrict .slds-panel_filters div
+ * @required
+ */
+.slds-filters__header {
+  padding: $spacing-x-small $spacing-small;
+}
+
+/**
+ * Filters Body
+ *
+ * @selector .slds-filters__body
+ * @restrict .slds-panel_filters div
+ * @required
+ */
+.slds-filters__body {
+  padding: $spacing-x-small $spacing-small;
+}
+
+/**
+ * Filters Footer
+ *
+ * @selector .slds-filters__footer
+ * @restrict .slds-panel_filters div
+ * @required
+ */
+.slds-filters__footer {
+  padding: $spacing-x-small $spacing-medium;
+}
+
+/**
+ * Filterable Item
+ *
+ * @selector .slds-filters__item
+ * @restrict .slds-panel_filters li div
+ * @required
+ */
+.slds-filters__item {
+  padding: $spacing-small;
+  background: $color-background-button-default;
+  border: $border-width-thin solid $color-border-button-default;
+  border-radius: $border-radius-medium;
+
+  /**
+   * Indicates that a filter is new and hasn't been saved
+   *
+   * @selector .slds-is-new
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-is-new {
+    background: $color-background-highlight;
+    color: $color-text-default;
+  }
+
+  /**
+   * Indicates that a filter has an error
+   *
+   * @selector .slds-has-error
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-has-error {
+    border-color: $color-border-error;
+  }
+
+  /**
+   * Indicates that a filter is locked
+   *
+   * @selector .slds-is-locked
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-is-locked {
+    background: $color-background;
+  }
+
+  + .slds-filters__item {
+    margin-top: $spacing-x-small;
+  }
+
+  &:hover {
+    background: $color-background-button-default-hover;
+  }
+}

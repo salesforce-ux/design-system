@@ -1,0 +1,168 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// I need to associate slds-icon-animated with something since there isn't a base variant
+
+
+/**
+ * @summary Containing actionable element that holds the waffle icon
+ *
+ * @name waffle
+ * @selector .slds-icon-waffle_container
+ * @restrict button
+ * @variant
+ */
+.slds-icon-waffle_container {
+  border: 0;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+
+    [class*="slds-r"] {
+      animation: slds-icon-waffle-throb 2 200ms alternate;
+    }
+
+    .slds-r1,
+    .slds-r2,
+    .slds-r3 {
+      background-color: #418fde;
+    }
+
+    .slds-r4,
+    .slds-r5,
+    .slds-r7 {
+      background-color: #ed8b00;
+    }
+
+    .slds-r6,
+    .slds-r8,
+    .slds-r9 {
+      background-color: #ffb60f;
+    }
+
+    .slds-r2,
+    .slds-r4 {
+      transition-delay: 50ms;
+      animation-delay: 50ms;
+    }
+
+    .slds-r3,
+    .slds-r5,
+    .slds-r7 {
+      transition-delay: 100ms;
+      animation-delay: 100ms;
+    }
+
+    .slds-r6,
+    .slds-r8 {
+      transition-delay: 150ms;
+      animation-delay: 150ms;
+    }
+
+    .slds-r9 {
+      transition-delay: 200ms;
+      animation-delay: 200ms;
+    }
+  }
+}
+
+/**
+ * @summary Element container circles for the waffle icon
+ *
+ * @selector .slds-icon-waffle
+ * @restrict .slds-icon-waffle_container
+ */
+.slds-icon-waffle {
+  @include square(rem(21px));
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  [class*="slds-r"] {
+    @include square(rem(5px));
+    background-color: $color-background-icon-waffle;
+    display: inline-block;
+    position: absolute;
+    border-radius: $border-radius-circle;
+    transition: background-color 100ms;
+    transform-origin: 50% 50%;
+    will-change: scale, background-color;
+  }
+
+  // Positioning
+  .slds-r1 {
+    top: 0;
+    left: 0;
+  }
+
+  .slds-r2 {
+    top: 0;
+    left: rem(8px);
+  }
+
+  .slds-r3 {
+    top: 0;
+    right: 0;
+  }
+
+  .slds-r4 {
+    top: rem(8px);
+    left: 0;
+  }
+
+  .slds-r5 {
+    top: rem(8px);
+    left: rem(8px);
+  }
+
+  .slds-r6 {
+    top: rem(8px);
+    right: 0;
+  }
+
+  .slds-r7 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .slds-r8 {
+    bottom: 0;
+    left: rem(8px);
+  }
+
+  .slds-r9 {
+    bottom: 0;
+    right: 0;
+  }
+
+  // Default delays
+  // scss-lint:disable MergeableSelector
+  .slds-r1 {
+    transition-delay: 200ms;
+  }
+
+  .slds-r2,
+  .slds-r4 {
+    transition-delay: 150ms;
+  }
+
+  .slds-r3,
+  .slds-r5,
+  .slds-r7 {
+    transition-delay: 100ms;
+  }
+
+  .slds-r6,
+  .slds-r8 {
+    transition-delay: 50ms;
+  }
+}
+
+@keyframes slds-icon-waffle-throb {
+
+  to {
+    transform: scale(1.5);
+  }
+}

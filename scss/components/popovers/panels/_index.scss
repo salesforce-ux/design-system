@@ -1,0 +1,58 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name panels
+ * @selector .slds-popover_panel
+ * @restrict .slds-popover
+ * @variant
+ */
+.slds-popover_panel,
+.slds-popover--panel {
+
+  .slds-popover__header {
+    background: $color-background;
+    padding: $spacing-large $spacing-large $spacing-small;
+    border-top-left-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
+    border-top-right-radius: calc(#{$border-radius-medium} - #{$border-width-thin});
+    border-bottom: 0;
+  }
+
+  .slds-popover__body {
+    padding: 0;
+  }
+
+  .slds-popover__body-list {
+    padding: $spacing-medium $spacing-large;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  // Deal with Nubbin Color
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top,
+  &.slds-nubbin_top-left,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
+  &.slds-nubbin--top-right {
+
+    &:before,
+    &:after {
+      background: $color-background;
+    }
+  }
+
+  // Align nubbin to the icon
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top {
+
+    &:before,
+    &:after {
+      top: ($spacing-large + $spacing-small);
+    }
+  }
+}

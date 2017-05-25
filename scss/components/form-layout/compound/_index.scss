@@ -1,0 +1,43 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates a form that consists of multiple form groups
+ *
+ * @name compound
+ * @selector .slds-form_compound
+ * @restrict .slds-form
+ * @variant
+ */
+
+.slds-form_compound,
+.slds-form--compound {
+
+  .slds-form-element__row {
+    display: flex;
+    margin-bottom: $spacing-x-small;
+
+    + .slds-form-element__row {
+      clear: both;
+    }
+
+    .slds-form-element + .slds-form-element {
+      padding-left: $spacing-x-small;
+    }
+  }
+
+  .slds-form-element {
+    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
+  }
+
+  @include deprecate('4.0.0') {
+    .slds-form-element__control {
+      position: relative;
+
+      + .slds-form-element__control {
+        padding-left: $spacing-x-small;
+      }
+    }
+  }
+}

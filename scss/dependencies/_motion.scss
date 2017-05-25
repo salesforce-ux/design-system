@@ -1,0 +1,77 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin elevation-sunken {
+  box-shadow: $elevation-shadow-3-below;
+}
+
+@mixin elevation-grounded {
+  box-shadow: $elevation-shadow-0;
+}
+
+@mixin elevation-raised {
+  box-shadow: $elevation-shadow-2;
+}
+
+@mixin elevation-floating {
+  box-shadow: $elevation-shadow-4;
+}
+
+@mixin elevation-flying {
+  box-shadow: $elevation-shadow-16;
+}
+
+@mixin elevation-sunken-inverse {
+  box-shadow: $elevation-inverse-shadow-3-below;
+}
+
+@mixin elevation-grounded-inverse {
+  box-shadow: $elevation-inverse-shadow-0;
+}
+
+@mixin elevation-raised-inverse {
+  box-shadow: $elevation-inverse-shadow-2;
+}
+
+@mixin elevation-floating-inverse {
+  box-shadow: $elevation-inverse-shadow-4;
+}
+
+@mixin elevation-flying-inverse {
+  box-shadow: $elevation-inverse-shadow-16;
+}
+
+@mixin duration-instantly {
+  transition-duration: $duration-instantly;
+}
+
+@mixin duration-immediately {
+  transition-duration: $duration-immediately;
+}
+
+@mixin duration-quickly {
+  transition-duration: $duration-quickly;
+}
+
+@mixin duration-promptly {
+  transition-duration: $duration-promptly;
+}
+
+@mixin duration-slowly {
+  transition-duration: $duration-slowly;
+}
+
+@mixin duration-paused {
+  transition-duration: $duration-paused;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($param) {
+  animation: $param;
+}

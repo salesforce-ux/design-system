@@ -1,0 +1,361 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
+ * @name base
+ * @selector .slds-combobox_container
+ * @restrict div
+ * @variant
+ */
+.slds-combobox_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  /**
+   * Opens listbox dropdown
+   *
+   * @selector .slds-is-open
+   * @restrict .slds-combobox
+   * @modifier
+   */
+  &.slds-is-open .slds-dropdown {
+    display: block;
+  }
+}
+
+/**
+ * Container around form element with combobox input
+ *
+ * @selector .slds-combobox
+ * @restrict .slds-combobox_container > div
+ */
+.slds-combobox {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+/**
+ * Form element with combobox input
+ *
+ * @selector .slds-combobox__form-element
+ * @restrict .slds-combobox > div
+ */
+.slds-combobox__form-element {
+  flex: 1 1 auto;
+}
+
+/**
+ * Listbox container
+ *
+ * @selector .slds-listbox
+ * @restrict ul
+ */
+.slds-listbox {
+  font-size: $font-size-medium;
+}
+
+/**
+ * Inline listbox
+ *
+ * @selector .slds-listbox_inline
+ * @restrict .slds-listbox
+ * @modifier
+ */
+.slds-listbox_inline,
+.slds-listbox--inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  margin-left: $spacing-xxx-small;
+  margin-right: $spacing-xxx-small;
+
+  li {
+    display: flex;
+  }
+
+  li + li {
+    padding-left: $spacing-xxx-small;
+  }
+}
+
+/**
+ * Horizontal listbox
+ *
+ * @selector .slds-listbox_horizontal
+ * @restrict .slds-listbox
+ * @modifier
+ */
+.slds-listbox_horizontal,
+.slds-listbox--horizontal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li + li {
+    padding-left: $spacing-xxx-small;
+  }
+}
+
+/**
+ * Choosable option within listbox
+ *
+ * @selector .slds-listbox__option
+ * @restrict .slds-listbox__item > span
+ */
+.slds-listbox__option {
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .slds-truncate {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/**
+ * Creates a vertical listbox
+ *
+ * @selector .slds-listbox_vertical
+ * @restrict .slds-listbox
+ * @modifier
+ */
+.slds-listbox_vertical,
+.slds-listbox--vertical {
+  /**
+   * Focus state of a vertical listbox option
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-listbox__option
+   * @modifier
+   */
+  .slds-listbox__option:focus,
+  .slds-listbox__option:hover,
+  .slds-listbox__option.slds-has-focus {
+    background-color: $color-background-row-hover;
+    text-decoration: none;
+  }
+
+  .slds-listbox__option[role="presentation"]:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+
+  /**
+   * Modifies the listbox option if it contains an plain object or string
+   *
+   * @selector .slds-listbox__option_plain
+   * @restrict .slds-listbox__option
+   */
+  .slds-listbox__option_plain,
+  .slds-listbox__option--plain {
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  /**
+   * Modifies the listbox option if it contains an entity object
+   *
+   * @selector .slds-listbox__option_entity
+   * @restrict .slds-listbox__option
+   */
+  .slds-listbox__option_entity,
+  .slds-listbox__option--entity {
+    padding: $spacing-xx-small $spacing-small;
+
+    .slds-media__figure {
+      margin-right: $spacing-x-small;
+    }
+  }
+
+  /**
+   * If the listbox option has metadata or secondary information that sits below its primary text
+   *
+   * @selector .slds-listbox__option_has-meta
+   * @restrict .slds-listbox__option
+   */
+  .slds-listbox__option_has-meta,
+  .slds-listbox__option--has-meta {
+
+    .slds-media__figure {
+      margin-top: $spacing-xx-small;
+    }
+  }
+}
+
+[class*="slds-input-has-icon_left"] .slds-combobox__input[value],
+[class*="slds-input-has-icon--left"] .slds-combobox__input[value] {
+  padding-left: ($square-icon-small-boundary + $spacing-small);
+}
+
+/**
+ * If readonly selection is an entity, use this class
+ *
+ * @selector .slds-combobox__input-entity-icon
+ * @restrict .slds-combobox__form-element span
+ */
+.slds-combobox__input-entity-icon {
+  @include square($square-icon-x-small-boundary);
+  position: absolute;
+  top: 50%;
+  left: calc(#{$spacing-xx-small} + 1px);
+  transform: translateY(-50%);
+
+  .slds-icon {
+    @include square($square-icon-x-small-boundary);
+  }
+}
+
+/**
+ * Icon that is a direct sibling of a combobox container. This is not the same as an input icon.
+ *
+ * @selector .slds-combobox_container__icon
+ * @restrict .slds-combobox_container svg
+ */
+.slds-combobox_container__icon {
+  color: $color-text-input-icon;
+}
+
+/**
+ * The icon within a plain listbox that indicates if an option has been selected or not.
+ *
+ * @selector .slds-listbox__icon-selected
+ * @restrict .slds-listbox__item svg
+ */
+.slds-listbox__icon-selected {
+  opacity: 0;
+  fill: $color-text-icon-default-hover;
+}
+
+/**
+ * Modifier that makes selected icon visible
+ *
+ * @selector .slds-is-selected
+ * @restrict .slds-listbox__option
+ * @modifier
+ */
+.slds-listbox__option.slds-is-selected {
+
+  .slds-listbox__icon-selected {
+    opacity: 1;
+  }
+}
+
+/**
+ * The main text of an entity listbox
+ *
+ * @selector .slds-listbox__option-text_entity
+ * @restrict .slds-listbox__option span
+ */
+.slds-listbox__option-text_entity,
+.slds-listbox__option-text--entity {
+  @include truncate; // truncate mixin used so class wouldn't need to be repeated in DOM
+  display: block;
+  margin-bottom: $spacing-xxx-small;
+}
+
+/**
+ * The metadata or secondary text of an entity listbox
+ *
+ * @selector .slds-listbox__option-meta_entity
+ * @restrict .slds-listbox__option span
+ */
+.slds-listbox__option-meta_entity,
+.slds-listbox__option-meta--entity {
+  display: block;
+  margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+  color: $color-text-label;
+}
+
+.slds-listbox_object-switcher,
+.slds-listbox--object-switcher {
+  flex-shrink: 0;
+  padding: $spacing-xxx-small;
+}
+
+/**
+ * If combo has a selection model that requires a listbox of pills to be displayed
+ * inside of a combobox
+ *
+ * @selector .slds-has-inline-listbox
+ * @restrict .slds-combobox_container
+ */
+.slds-has-inline-listbox,
+.slds-has-object-switcher {
+  flex-direction: row;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+
+  /**
+   * Input field within a combobox
+   *
+   * @selector .slds-combobox__input
+   * @restrict .slds-combobox input
+   */
+  .slds-combobox__input {
+    min-height: $height-pill;
+    line-height: $height-pill;
+    border: 0;
+    padding-top: $spacing-xxx-small;
+    padding-bottom: $spacing-xxx-small;
+
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  .slds-listbox_object-switcher ~ .slds-listbox_inline,
+  .slds-listbox--object-switcher ~ .slds-listbox--inline,
+  .slds-combobox_container__icon ~ .slds-listbox_inline,
+  .slds-combobox_container__icon ~ .slds-listbox--inline {
+    margin-left: $spacing-x-small;
+  }
+
+  /**
+   * Modifier to the combobox when an SVG icon sits adjacent to the combobox form element
+   *
+   * @selector .slds-has-icon_left
+   * @restrict .slds-combobox
+   */
+  &.slds-has-icon_left {
+    padding-left: ($spacing-x-large + $spacing-xx-small);
+
+    /**
+     * SVG icon that sits adjacent to the combobox form element
+     *
+     * @selector .slds-combobox_container__icon
+     * @restrict .slds-combobox_container svg
+     */
+    .slds-combobox_container__icon {
+      @include square($square-icon-utility-small);
+      position: absolute;
+      left: ($spacing-medium + $spacing-xxx-small);
+      top: 50%;
+      margin-top: ($spacing-x-small * -1);
+    }
+  }
+}
+
+.slds-has-inline-listbox {
+
+  [role="listbox"] {
+    display: inline-flex;
+  }
+
+  .slds-combobox__input[value] {
+    box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+  }
+}

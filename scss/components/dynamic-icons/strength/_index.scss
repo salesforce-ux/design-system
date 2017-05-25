@@ -1,0 +1,136 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Base icon size and appearance
+//
+// 1. Each dot is an SVG <circle> element
+// 2. Adds transitions when the strength changes.
+//    Modifying the data-slds-strength attribute in JavaScript should
+//    animate the dots nicely.
+// 3. Let the browser know which properties are going to change,
+//    enabling it to optimize rendering speed as best it can
+
+/**
+ * @summary Initializes strength icon
+ *
+ * @name strength
+ * @selector .slds-icon-strength
+ * @restrict span
+ * @variant
+ */
+.slds-icon-strength {
+  width: 1.6875rem;
+  height: 0.4375rem;
+  display: inline-block;
+
+  circle { // 1
+    stroke-width: 0.95px;
+    fill: transparent;
+    stroke: #ccc;
+    transition: // 2
+      fill 0.4s ease-in-out,
+      stroke 0.4s ease-in-out;
+    will-change: fill, stroke; // 3
+  }
+
+  // Strength States
+  //
+  // The strength is controlled via the data-slds-strength attribute.
+  //
+  // These styles adapt the stroke and fill depending on the strength level.
+  //
+  // <svg data-slds-strength="[Number]">
+  // 0. no active dots
+  // (-)1. one active dot
+  // (-)2. two active dots
+  // (-)3. all dots active
+  &[data-slds-strength="1"] circle:nth-child(1),
+  &[data-slds-strength="2"] circle:nth-child(1),
+  &[data-slds-strength="2"] circle:nth-child(2),
+  &[data-slds-strength="3"] circle:nth-child(1),
+  &[data-slds-strength="3"] circle:nth-child(2),
+  &[data-slds-strength="3"] circle:nth-child(3) {
+    fill: #04844b;
+    stroke: #04844b;
+  }
+
+  &[data-slds-strength="-1"] circle:nth-child(1),
+  &[data-slds-strength="-2"] circle:nth-child(1),
+  &[data-slds-strength="-2"] circle:nth-child(2),
+  &[data-slds-strength="-3"] circle:nth-child(1),
+  &[data-slds-strength="-3"] circle:nth-child(2),
+  &[data-slds-strength="-3"] circle:nth-child(3) {
+    fill: #ffdde1;
+    stroke: #c23934;
+  }
+
+  /**
+   * @summary Add .slds-is-animated to the SVG to enhance the icon with an animation.
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-strength
+   */
+  &.slds-is-animated {
+
+    circle {
+      // Adjust this value to add a delay to the whole animation
+      $_strength-offset-delay: 1s;
+
+      animation: slds-icon-strength-positive-load 0.4s $_strength-offset-delay ease-in-out alternate both paused;
+
+      &:nth-child(2) {
+        animation-delay: ($_strength-offset-delay + 0.4s);
+      }
+
+      &:nth-child(3) {
+        animation-delay: ($_strength-offset-delay + 0.8s);
+      }
+    }
+
+    &[data-slds-strength^="-"] circle {
+      animation-name: slds-icon-strength-negative-load;
+    }
+
+    &[data-slds-strength="-1"] circle:nth-child(1),
+    &[data-slds-strength="-2"] circle:nth-child(1),
+    &[data-slds-strength="-2"] circle:nth-child(2),
+    &[data-slds-strength="-3"] circle:nth-child(1),
+    &[data-slds-strength="-3"] circle:nth-child(2),
+    &[data-slds-strength="-3"] circle:nth-child(3),
+    &[data-slds-strength="1"] circle:nth-child(1),
+    &[data-slds-strength="2"] circle:nth-child(1),
+    &[data-slds-strength="2"] circle:nth-child(2),
+    &[data-slds-strength="3"] circle:nth-child(1),
+    &[data-slds-strength="3"] circle:nth-child(2),
+    &[data-slds-strength="3"] circle:nth-child(3) {
+      animation-play-state: running;
+    }
+  }
+
+  /**
+   * @summary Add .slds-is-paused to the SVG to pause the icon with an animation.
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-strength
+   */
+  &.slds-is-paused circle {
+    // scss-lint:disable ImportantRule
+    /* stylelint-disable declaration-no-important */
+    animation-play-state: paused !important;
+    /* stylelint-enable declaration-no-important */
+  }
+}
+
+// scss-lint:disable SingleLinePerProperty
+// Improve readability of animations
+// stylelint-disable
+@keyframes slds-icon-strength-positive-load {
+  0%   { fill: transparent; stroke: #ccc; }
+  100% { fill: #04844b; stroke: #04844b; }
+}
+
+@keyframes slds-icon-strength-negative-load {
+  0%   { fill: transparent; stroke: #ccc; }
+  100% { fill: #ffdde1; stroke: #c23934; }
+}

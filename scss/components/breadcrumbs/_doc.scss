@@ -1,0 +1,26 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Breadcrumbs are typically constructed with an `ol` because their order
+ * matters. You mark up breadcrumbs with classes from the horizontal list
+ * utility. When you add the `.slds-breadcrumb` class, the separators are
+ * automatically generated.
+ *
+ * #### Accessibility
+ *
+ * Place the breadcrumb in a `nav` element with `role="navigation"`.
+ * The `nav` element is also marked-up with `aria-label="Breadcrumbs"` to
+ * describe the type of navigation.
+ *
+ * @summary Use breadcrumbs to note the path of a record and help the user to navigate back to the parent.
+ *
+ * @base
+ * @name breadcrumbs
+ * @selector .slds-breadcrumb
+ * @support dev-ready
+ * @category base
+ * @type navigation
+ * @role navigation
+ */

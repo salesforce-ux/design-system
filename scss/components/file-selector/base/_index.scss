@@ -1,0 +1,256 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-file-selector
+ * @restrict div
+ * @variant
+ */
+.slds-file-selector {
+  display: inline-flex;
+}
+
+/**
+ * Region that a file can be dropped within
+ *
+ * @selector .slds-file-selector__dropzone
+ * @restrict .slds-file-selector div
+ * @required
+ */
+.slds-file-selector__dropzone {
+  padding: $spacing-xxx-small;
+  border: $border-width-thin dashed $color-border;
+  border-radius: $border-radius-medium;
+
+  /**
+   * @selector .slds-has-drag-over
+   * @restrict .slds-file-selector__dropzone
+   * @modifier
+   */
+  &.slds-has-drag-over {
+    outline: 0;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+    border-style: solid;
+  }
+}
+
+/**
+ * Hidden input element
+ *
+ * @selector .slds-file-selector__input
+ * @restrict .slds-file-selector input
+ * @required
+ */
+.slds-file-selector__input {
+
+  &:focus ~ .slds-file-selector__body > .slds-file-selector__button {
+    box-shadow: $shadow-button-focus;
+  }
+
+  &[disabled] ~ .slds-file-selector__body {
+    color: $color-text-button-default-disabled;
+
+    > .slds-file-selector__button {
+      background: $color-background-button-brand-disabled;
+      border-color: $color-border-button-brand-disabled;
+      color: $color-text-button-brand-disabled;
+    }
+
+    > .slds-file-selector__body-icon {
+      fill: currentColor;
+    }
+  }
+}
+
+/**
+ * Faux button
+ *
+ * @selector .slds-file-selector__button
+ * @restrict .slds-file-selector button, .slds-file-selector span
+ * @required
+ */
+.slds-file-selector__button {
+  display: inline-flex;
+  align-items: center;
+}
+
+/**
+ * Modifications based on context
+ *
+ * Single Line
+ * Dedicated dropzone when there are multiple dropzones in the form or when
+ * the input is positioned among other form inputs.
+ *
+ * @selector .slds-file-selector_files
+ * @restrict .slds-file-selector
+ * @required
+ */
+.slds-file-selector_files,
+.slds-file-selector--files {
+  /**
+   * Container for file selector content, specifically within the dropzone
+   *
+   * @selector .slds-file-selector__body
+   * @restrict .slds-file-selector label
+   * @required
+   */
+  .slds-file-selector__body {
+    display: flex;
+    align-items: center;
+  }
+
+  .slds-file-selector__button {
+    max-height: $height-pill;
+    line-height: $height-pill;
+  }
+
+  /**
+   * Descriptive call back text
+   *
+   * @selector .slds-file-selector__text
+   * @restrict .slds-file-selector span
+   * @required
+   */
+  .slds-file-selector__text {
+    margin-left: $spacing-x-small;
+    margin-right: $spacing-small;
+  }
+}
+
+/**
+ * Multi Line / Image
+ *
+ * Use as a dedicated dropzone for image files only. May require a
+ * cropping control.
+ *
+ * @name image
+ * @selector .slds-file-selector_images
+ * @restrict .slds-file-selector
+ * @required
+ * @variant
+ */
+.slds-file-selector_images,
+.slds-file-selector--images {
+  display: block;
+
+  .slds-file-selector__dropzone {
+    @include absolute-center;
+
+    // Maintains a 1:1 ratio based on the width
+    &:after {
+      content: '';
+      padding-top: 100%;
+      display: table; // FF issue
+    }
+  }
+
+  .slds-file-selector__body {
+    text-align: center;
+  }
+
+  .slds-file-selector__text {
+    margin-top: $spacing-small;
+  }
+}
+
+/**
+ * Invisible Dropzone (Container)
+ *
+ * Use when an entire container should be droppable.
+ * The container should have a visible boundary, like a modal, composer, or page.
+ *
+ * @name integrated
+ * @selector .slds-file-selector_integrated
+ * @restrict .slds-file-selector
+ * @required
+ * @variant
+ */
+.slds-file-selector_integrated,
+.slds-file-selector--integrated {
+  @include square(100%);
+  position: relative;
+  display: block;
+}
+
+/**
+ * Specific to integrated file selector — region that a file can be dropped within
+ *
+ * @selector .slds-file-selector__dropzone_integrated
+ * @restrict .slds-file-selector_integrated div
+ * @required
+ */
+.slds-file-selector__dropzone_integrated,
+.slds-file-selector__dropzone--integrated {
+  @include absolute-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  opacity: 0;
+  z-index: -1;
+
+  /**
+   * Informs dropzone that file has been dragged into the viewport
+   *
+   * @selector .slds-has-drag
+   * @restrict .slds-file-selector__dropzone_integrated
+   * @notes To be added with JavaScript
+   * @required
+   * @modifier
+   */
+  &.slds-has-drag {
+    background: $color-background-backdrop;
+    opacity: 1;
+    z-index: $z-index-overlay;
+  }
+
+  /**
+   * Informs dropzone that file has been dragged into its region
+   *
+   * @selector .slds-has-drag-over
+   * @restrict .slds-file-selector__dropzone_integrated
+   * @notes To be added with JavaScript
+   * @required
+   * @modifier
+   */
+  &.slds-has-drag-over {
+    background: $color-background-backdrop-tint;
+    box-shadow: 0 0 0 4px $color-border-brand inset;
+  }
+}
+
+/**
+ * Specific to integrated file selector — container for file selector
+ * content, specifically within the dropzone
+ *
+ * @selector .slds-file-selector__body_integrated
+ * @restrict .slds-file-selector_integrated label
+ * @required
+ */
+.slds-file-selector__body_integrated,
+.slds-file-selector__body--integrated {
+  @include square($size-x-small);
+  @include absolute-center;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  flex-direction: column;
+}
+
+/**
+ * Specific to integrated file selector — Descriptive call back text
+ *
+ * @selector .slds-file-selector__text_integrated
+ * @restrict .slds-file-selector_integrated span
+ * @required
+ */
+.slds-file-selector__text_integrated,
+.slds-file-selector__text--integrated {
+  margin-top: $spacing-small;
+}

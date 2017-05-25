@@ -1,0 +1,71 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-comment {
+
+  &__content {
+    padding: $spacing-xx-small 0;
+  }
+}
+
+@include deprecate('4.0.0', 'Feeds have been redesigned') {
+  // Comment with replies
+  .slds-comment__replies {
+    padding-top: $spacing-medium;
+    margin-left: ($square-icon-large-boundary + $spacing-small);
+
+    > :last-child,
+    > :last-child .slds-comment {
+      padding-bottom: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .slds-comment {
+      @include feed-vertical-rule($square-icon-medium-boundary-alt);
+      margin-bottom: 0;
+      padding-bottom: $spacing-medium;
+    }
+
+    .slds-avatar {
+      border: $border-width-thick solid $color-background-alt;
+    }
+  }
+
+  // Comment entity tags
+  .slds-tags {
+    display: flex;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin-left: $spacing-xx-small;
+
+      &:after {
+        content: ', ';
+      }
+
+      &:last-child:after {
+        content: none;
+      }
+    }
+  }
+
+  // Comment + Publisher Attachments
+  .slds-attachments {
+    padding-bottom: $spacing-x-small;
+
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  .slds-attachments__item + .slds-attachments__item {
+    margin-top: $spacing-medium;
+  }
+}

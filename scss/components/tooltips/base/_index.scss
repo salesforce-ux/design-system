@@ -1,0 +1,96 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The tooltip should be positioned with JavaScript.
+ *
+ * You can include inline help tooltips for form elements and any focusable items, such as anchor links, buttons, etc. If your tooltips are available on hover, also make sure that they’re available on keyboard focus. To allow screen readers to access the tooltip, the HTML form field element must  have an `aria-describedby` attribute that points to the tooltip `ID` of the tooltip.
+ *
+ * @summary Initializes a tooltip
+ *
+ * @variant
+ * @name base
+ * @selector .slds-popover_tooltip
+ * @restrict div
+ * @support dev-ready
+ */
+.slds-popover_tooltip,
+.slds-popover--tooltip {
+  width: auto;
+  max-width: $size-medium;
+  background: $color-background-alt-inverse;
+  border: 0;
+
+  .slds-popover__body {
+    font-size: $font-size-small;
+    color: $color-text-inverse;
+  }
+}
+
+/**
+ * @selector .slds-rise-from-ground
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group toggle
+ */
+.slds-rise-from-ground {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0%, 0%);
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
+  will-change: transform;
+}
+
+/**
+ * @selector .slds-fall-into-ground
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group toggle
+ */
+.slds-fall-into-ground {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0%, 0%);
+  transition:
+    opacity $duration-quickly linear,
+    visibility $duration-quickly linear,
+    transform $duration-quickly linear;
+  will-change: transform;
+}
+
+.slds-slide-from-bottom-to-top {
+  transform: translateY(10%);
+  will-change: transform;
+}
+
+.slds-slide-from-top-to-bottom {
+  transform: translateY(-10%);
+  will-change: transform;
+}
+
+.slds-slide-from-right-to-left {
+  transform: translateX(5%);
+  will-change: transform;
+}
+
+.slds-slide-from-left-to-right {
+  transform: translateX(-5%);
+  will-change: transform;
+}
+
+// Done-zo -- DON'T USE
+.slds-tooltip {
+  @include deprecate('4.0.0') {
+    @include popover($color: $color-background-inverse);
+
+    &__body {
+      padding: $spacing-x-small $spacing-small;
+      font-size: $font-size-small;
+      color: $color-text-inverse;
+    }
+  }
+}

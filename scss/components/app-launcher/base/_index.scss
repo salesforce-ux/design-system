@@ -1,0 +1,177 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates styles for app-launcher
+ *
+ * @name base
+ * @selector .slds-app-launcher
+ * @restrict section
+ * @support prototype
+ * @variant
+ */
+.slds-app-launcher {
+  /**
+   * Defines the header region of the app launcher modal
+   *
+   * @selector .slds-app-launcher__header
+   * @restrict .slds-app-launcher header
+   * @required
+   */
+  &__header,
+  &__content {
+    background: $color-background;
+  }
+
+  /**
+   * Sets styles to search box, things like width and such
+   *
+   * @selector .slds-app-launcher__header-search
+   * @restrict .slds-app-launcher__header div
+   * @required
+   */
+  &__header-search {
+    flex: 0 1 $size-large;
+    padding: 0 $spacing-medium;
+  }
+
+  /**
+   * Defines the body region of the app launcher modal
+   *
+   * @selector .slds-app-launcher__content
+   * @restrict .slds-app-launcher div
+   * @required
+   */
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  /**
+   * Tile cards that contains the app information, the icon and description
+   *
+   * @selector .slds-app-launcher__tile
+   * @restrict a
+   * @required
+   */
+  &__tile {
+    display: flex;
+    align-items: stretch;
+    margin: $spacing-x-small 0;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    cursor: move;
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      border-color: $color-border-selection-hover;
+    }
+
+    /**
+     * Add styles associated with drag and drop of a tile
+     *
+     * @selector .slds-is-draggable
+     * @restrict .slds-app-launcher__tile
+     * @modifier
+     */
+    &.slds-is-draggable {
+
+      // Remove bottom padding because the draggable icon is there
+      .slds-app-launcher__tile-figure {
+        padding-bottom: $spacing-xx-small;
+      }
+    }
+  }
+
+
+  /**
+   * App image or icon
+   *
+   * @selector .slds-app-launcher__tile-figure
+   * @restrict .slds-app-launcher__tile div
+   * @required
+   */
+  &__tile-figure {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: $spacing-small;
+    color: $color-text-inverse;
+    background: $color-background-alt;
+    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    text-align: center;
+  }
+
+
+  /**
+   * App title and description
+   *
+   * @selector .slds-app-launcher__tile-body
+   * @restrict .slds-app-launcher__tile div
+   * @required
+   */
+  &__tile-body {
+    flex: 1 1 auto;
+    background: $color-background-alt-2;
+    padding: $spacing-x-small $spacing-small;
+    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  }
+
+  /**
+   * Tile card that containes the just app icon and title
+   *
+   * @selector .slds-app-launcher__tile_small
+   * @restrict .slds-app-launcher__tile
+   * @required
+   * @modifier
+   */
+  &__tile_small,
+  &__tile--small {
+    flex-direction: column;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+
+      .slds-app-launcher__tile-figure_small,
+      .slds-app-launcher__tile-figure--small {
+        border-color: $color-border-selection-hover;
+      }
+    }
+  }
+
+
+  /**
+   * App image or icon of a small tile
+   *
+   * @selector .slds-app-launcher__tile-figure_small
+   * @restrict .slds-app-launcher__tile-figure
+   * @required
+   * @modifier
+   */
+  &__tile-figure_small,
+  &__tile-figure--small {
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+  }
+
+  /**
+   * App title, no description
+   *
+   * @selector .slds-app-launcher__tile-body_small
+   * @restrict .slds-app-launcher__tile-body
+   * @required
+   * @modifier
+   */
+  &__tile-body_small,
+  &__tile-body--small {
+    background: transparent;
+    padding: $spacing-x-small 0;
+    border: 0;
+    border-radius: 0;
+  }
+}

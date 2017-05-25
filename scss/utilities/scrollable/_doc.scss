@@ -1,0 +1,14 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Use the scrollable utility when you need to provide scrolling within a section of a page. For example, when the content within an element exceeds either the width or height of the element, applying `.slds-scrollable--y` provides a vertical scrollbar, while `.slds-scrollable--x` adds a horizontal scrollbar.
+ *
+ * @summary Make a containing box scrollable when scrolling is available.
+ *
+ * @utility
+ * @name scrollable
+ * @selector [class*='slds-scrollable']
+ * @support dev-ready
+ */

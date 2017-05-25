@@ -1,0 +1,111 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Sizes in rems
+/// @type map
+/// @private
+$_sizes: (
+  'xx-small': $size-xx-small,
+  'x-small': $size-x-small,
+  'small': $size-small,
+  'medium': $size-medium,
+  'large': $size-large,
+  'x-large': $size-x-large,
+  'xx-large': $size-xx-large
+);
+
+/**
+ * @selector .slds-size_small
+ * @modifier
+ */
+
+// Absolute sizes (rem)
+@each $name, $width in $_sizes {
+  /*
+   * @selector .slds-size_#{$name}
+   * @modifier
+   */
+  .slds-size_#{$name},
+  .slds-size--#{$name} {
+    width: $width;
+  }
+}
+
+// Relative sizes (%)
+@include width();
+
+// Ordering helpers
+@for $i from 1 through 12 {
+
+  .slds-order_#{$i},
+  .slds-order--#{$i} {
+    order: $i;
+  }
+}
+
+// Generate responsive Sizing Helpers
+//
+// Loop through grid map checking for width name
+// Map is stored in layout dependencies
+//
+// This loop generates around 500 selectors,
+// make sure to test thoroughly when editing it.
+@each $size in map-keys($breakpoints) {
+  // Store nested value from map
+  $breakpoint: map-get($breakpoints, $size);
+
+  @media (min-width: #{pem($breakpoint)}) {
+
+    // Generate responsive absolute (rem) width names,
+    // e.g. <div class="slds-medium-size--x-small">
+    @each $name, $width in $_sizes {
+
+      .slds-#{$size}-size_#{$name},
+      .slds-#{$size}-size--#{$name} {
+        width: $width;
+      }
+    }
+
+    // Generate responsive relative (%) width names,
+    // e.g. <div class="slds-medium-size--3-of-6">
+    @include width($breakpoint: #{$size});
+
+    // Loop through column spread and generate
+    // ordering helpers, e.g. <div class="slds-medium-order--2">
+    @for $i from 1 through 12 {
+
+      .slds-#{$size}-order_#{$i},
+      .slds-#{$size}-order--#{$i} {
+        order: $i;
+      }
+    }
+  }
+
+  @media (max-width: #{pem($breakpoint)}) {
+
+    // Generate responsive absolute (rem) width names (up to size),
+    // e.g. <div class="slds-max-medium-size--x-small">
+    @each $name, $width in $_sizes {
+
+      .slds-max-#{$size}-size_#{$name},
+      .slds-max-#{$size}-size--#{$name} {
+        width: $width;
+      }
+    }
+
+    // Generate responsive relative (%) width names (up to size),
+    // e.g. <div class="slds-max-medium-size--3-of-6">
+    @include width($breakpoint: #{$size}, $max: true);
+
+    // Loop through column spread and generate
+    // ordering helpers, e.g. <div class="slds-max-medium-order--2">
+    @for $i from 1 through 12 {
+
+      .slds-max-#{$size}-order_#{$i},
+      .slds-max-#{$size}-order--#{$i} {
+        order: $i;
+      }
+    }
+  }
+}

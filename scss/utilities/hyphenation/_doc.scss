@@ -1,0 +1,14 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * This will allow the text to break, or hyphenate, depending on the browser's capabilities. Chrome currently doesn't show the hyphenation, but the bug is currently marked fixed, so it should soon.
+ *
+ * @summary The hyphenation class should be placed on text that might be served in narrow width containers and is not truncated.
+ *
+ * @utility
+ * @name hyphenation
+ * @selector .slds-hyphenate
+ * @support dev-ready
+ */

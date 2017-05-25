@@ -1,0 +1,50 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes tile
+ *
+ * @name base
+ * @selector .slds-tile
+ * @restrict article
+ * @variant
+ */
+.slds-tile {
+
+  + .slds-tile {
+    margin-top: $spacing-x-small;
+  }
+
+  /**
+   * @selector .slds-tile__detail
+   * @restrict .slds-tile div
+   */
+  &__detail {
+    position: relative;
+  }
+
+  /**
+   * @selector .slds-tile__meta
+   * @restrict .slds-tile div
+   */
+  &__meta {
+    color: $color-text-default;
+  }
+}
+
+.slds-tile_board,
+.slds-tile--board {
+  position: relative;
+
+  &__icon {
+    @include square($square-icon-medium-content);
+    position: absolute;
+    bottom: $spacing-xx-small;
+    right: $spacing-xx-small;
+  }
+
+  .slds-has-alert {
+    padding-right: $spacing-large;
+  }
+}

@@ -1,0 +1,100 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-progress-bar
+ * @restrict div
+ * @variant
+ */
+.slds-progress-bar {
+  display: block;
+  width: 100%;
+  height: ($progress-bar-height * 4);
+  background: $progress-bar-color-background;
+  border: 0;
+  appearance: none;
+  position: relative;
+
+  /**
+   * Creates a progress bar height at the smaller .125rem (2px) size
+   *
+   * @selector .slds-progress-bar_x-small
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_x-small,
+  &--x-small {
+    height: $progress-bar-height;
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .25rem (4px) size
+   *
+   * @selector .slds-progress-bar_small
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_small,
+  &--small {
+    height: ($progress-bar-height * 2);
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .5rem (8px) size
+   *
+   * @selector .slds-progress-bar_medium
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_medium,
+  &--medium {
+    height: ($progress-bar-height * 4);
+  }
+
+  /**
+   * Creates a progress bar height at the smaller .75rem (12px) size
+   *
+   * @selector .slds-progress-bar_large
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group height
+   */
+  &_large,
+  &--large {
+    height: ($progress-bar-height * 6);
+  }
+
+  /**
+   * Adds a border radius to the progress bar to give it a circular look
+   *
+   * @selector .slds-progress-bar_circular
+   * @restrict .slds-progress-bar
+   * @modifier
+   * @group radius
+   */
+  &_circular,
+  &--circular {
+    border-radius: $border-radius-large;
+
+    .slds-progress-bar__value {
+      border-radius: $border-radius-large;
+    }
+  }
+}
+
+/**
+ * Fill up blue bar inside of the progress bar
+ *
+ * @selector .slds-progress-bar__value
+ * @restrict .slds-progress-bar span
+ */
+.slds-progress-bar__value {
+  display: block;
+  background: $progress-bar-color-background-fill;
+  height: 100%;
+}

@@ -1,0 +1,82 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### 1.0\. Building the Navigation Bar
+ *
+ * The navigation bar is composed of a wrapper and 2 required regions:
+ *
+ * - **Primary,** which contains the App Launcher and App Name
+ * - **Secondary,** which contains the App Items, for navigating within the current app
+ *
+ * The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
+ *
+ * #### 1.1\. Items on the Navigation Bar
+ *
+ * Every item that sits on the horizontal axis of the navigation bar should receive the class `.slds-context-bar__item`.
+ *
+ * This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items `.slds-context-bar__label-action` and `.slds-context-bar__icon-action` to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.
+ *
+ * Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as `.slds-order--[#]`.
+ *
+ * #### 1.2\. Building the Navigation Bar Item
+ *
+ * The navigation bar item is built to accommodate 2 specific layout needs.
+ *
+ * 1.  Individual text hyperlink to invokes link destination
+ * 2.  Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available
+ *
+ * These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class `.slds-context-bar__label-action` and the icon based action area would get the class `.slds-context-bar__icon-action`.
+ *
+ * The `.slds-context-bar__icon-action` class handles the alignment and coloring of the icons based on interactions such as `:hover`, `:focus` and `:active`. This is a required if you have an actionable icon area adjacent to an actionable text area.
+ *
+ * The markup structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as `.slds-order--[#]`.
+ *
+ * #### 1.3\. Building the Icons in the Navigation Bar
+ *
+ * The icons in the navigation bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.
+ *
+ * The class used to indicate a button icon will sit adjacent to another actionable item is `.slds-context-bar__icon-action`. If you two icons in an item, each icon should be contained in it’s own `.slds-context-bar__icon-action` element.
+ *
+ * The look and feel of the button icon is dependant on the modifiers used from [Button Icon Variant Component](/components/buttons/#icon) page.
+ *
+ * The `.slds-context-bar__icon-action` styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class `.slds-p-left--none`.
+ *
+ * If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class `.slds-hint-parent` to the hover region, most cases would be `.slds-context-bar__icon-action` element.
+ *
+ * #### 1.4\. Menu trigger area on Navigation Bar Items
+ *
+ * When a navigation bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:
+ *
+ * 1.  `.slds-context-bar__dropdown-trigger` — Add a hoverable zone below the action so that the dropdown doesn’t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar
+ * 2.  `.slds-dropdown-trigger` — Globally used utility that notifies the element there is a dropdown menu
+ * 3.  `.slds-dropdown-trigger--[interaction]` — Specify which type of interaction the menu should appear with “hover” or “click”. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.
+ *
+ * If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the `.slds-context-bar__label-action` and `.slds-context-bar__icon-action`. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the `.slds-context-bar__icon-action`.
+ *
+ * #### 1.5\. Specifics of the Navigation Bar - App Launcher
+ *
+ * The app launcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app launcher dropdown. Please use JavaScript to accommodate this requirement.
+ *
+ * #### 1.6\. Specifics of the Navigation Bar - App Name
+ *
+ * The application name needs to receive the `.slds-context-bar__app-name` class. This class will handle such things as its unique font sizing and truncation widths.
+ *
+ * #### 1.7\. Specifics of the Navigation Bar - Divider
+ *
+ * Due to the platform-esc nature of the navigation bar, there is an available element utility to apply a divider between sections where needed. The `.slds-context-bar__vertical-divider` class should be applied to an empty `<div>` and placed within the markup of your navigation bar for a visual divider.
+ *
+ * Alternatively, two classes are available to add border using css. Adding the class `.slds-context-bar__item--divider-left` will add a left border to a navigation bar item while `.slds-context-bar__item--divider-right` will add a right border.
+ *
+ * @summary Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
+ *
+ * @base
+ * @name global-navigation
+ * @selector .slds-context-bar
+ * @support dev-ready
+ * @category feature
+ * @type navigation
+ * @role navigation
+ *
+ */

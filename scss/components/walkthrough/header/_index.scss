@@ -1,0 +1,22 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Sets styles for trial header bar
+ * @name header
+ * @selector .slds-trial-header
+ * @restrict div
+ * @variant
+ */
+.slds-trial-header {
+  @include inverse-text($support: ('buttons', 'icons'));
+  height: $height-header;
+  background: $color-background-inverse;
+  padding: 0 $spacing-medium;
+
+  .slds-icon_selected,
+  .slds-icon--selected {
+    fill: $color-text-success-inverse;
+  }
+}

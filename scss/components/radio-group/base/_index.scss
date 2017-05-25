@@ -1,0 +1,135 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes radio button
+ *
+ * @name base
+ * @selector .slds-radio
+ * @restrict span
+ * @variant
+ */
+.slds-radio {
+  display: inline-block;
+
+  /**
+   * Creates a custom styled radio button
+   *
+   * @selector .slds-radio_faux
+   * @restrict [class*='slds-radio'] span
+   */
+  .slds-radio_faux,
+  .slds-radio--faux {
+    @include square($square-icon-medium-content);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border: $border-width-thin solid $color-border-input;
+    border-radius: $border-radius-circle;
+    background: $color-background-input;
+    transition: border $duration-quickly linear, background-color $duration-quickly linear;
+  }
+
+  .slds-form-element__label {
+    display: inline;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+  }
+
+  [type="radio"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:checked + .slds-radio_faux,
+    &:checked + .slds-radio--faux,
+    &:checked ~ .slds-radio_faux,
+    &:checked ~ .slds-radio--faux,
+    &:checked + .slds-radio__label .slds-radio_faux,
+    &:checked + .slds-radio__label .slds-radio--faux {
+      background: $color-background-input;
+
+      &:after {
+        @include square(0.5rem);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: $border-radius-circle;
+        background: $color-brand;
+      }
+    }
+
+    &:focus + .slds-radio_faux,
+    &:focus + .slds-radio--faux,
+    &:focus ~ .slds-radio_faux,
+    &:focus ~ .slds-radio--faux,
+    &:focus + .slds-radio__label .slds-radio_faux,
+    &:focus + .slds-radio__label .slds-radio--faux {
+      border-color: $color-border-input-active;
+      box-shadow: $shadow-button-focus;
+    }
+
+    &[disabled] {
+      // scss-lint:disable NestingDepth
+      cursor: not-allowed;
+      user-select: none;
+
+      ~ .slds-radio_faux,
+      ~ .slds-radio--faux,
+      + .slds-radio__label .slds-radio_faux,
+      + .slds-radio__label .slds-radio--faux {
+        background-color: $color-background-input-disabled;
+        border-color: $color-border-input-disabled;
+      }
+    }
+  }
+}
+
+/**
+ * Error state for radio group
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error .slds-radio [type='radio'] {
+
+  + .slds-radio_faux,
+  + .slds-radio--faux,
+  ~ .slds-radio_faux,
+  ~ .slds-radio--faux,
+  + .slds-radio__label .slds-radio_faux,
+  + .slds-radio__label .slds-radio--faux {
+    border-color: $color-border-error;
+    border-width: $border-width-thick;
+  }
+
+  &:checked + .slds-radio_faux,
+  &:checked + .slds-radio--faux,
+  &:checked ~ .slds-radio_faux,
+  &:checked ~ .slds-radio--faux,
+  &:checked + .slds-radio__label .slds-radio_faux,
+  &:checked + .slds-radio__label .slds-radio--faux {
+    background: $color-background-input;
+
+    &:after {
+      background: $color-background-error;
+    }
+  }
+}
+
+.slds-form-element .slds-radio [type='radio'] + .slds-radio_faux,
+.slds-form-element .slds-radio [type='radio'] + .slds-radio--faux,
+.slds-form-element .slds-radio [type='radio'] ~ .slds-radio_faux,
+.slds-form-element .slds-radio [type='radio'] ~ .slds-radio--faux,
+.slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux,
+.slds-radio [type='radio'] + .slds-radio__label .slds-radio--faux {
+  margin-right: $spacing-x-small;
+}

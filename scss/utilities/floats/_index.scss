@@ -1,0 +1,54 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Contains floats and stops wrapping of elements following it.
+ *
+ * @name clearfix
+ * @selector .slds-clearfix
+ * @modifier
+ */
+.slds-clearfix {
+  @include clearfix;
+}
+
+.slds-clear {
+  clear: both;
+}
+
+/**
+ * @summary Pulls element from document flow and floats left. Text and other elements wrap around it.
+ *
+ * @name float-left
+ * @selector .slds-float_left
+ * @modifier
+ */
+.slds-float_left,
+.slds-float--left {
+  float: left;
+}
+
+/**
+ * @summary Removes float from an element that has attribute already
+ *
+ * @name float-none
+ * @selector .slds-float_none
+ * @modifier
+ */
+.slds-float_none,
+.slds-float--none {
+  float: none;
+}
+
+/**
+ * @summary Pulls element from document flow and floats right. Text and other elements wrap around it.
+ *
+ * @name float-right
+ * @selector .slds-float_right
+ * @modifier
+ */
+.slds-float_right,
+.slds-float--right {
+  float: right;
+}

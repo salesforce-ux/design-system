@@ -1,0 +1,147 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * An image is the preferred format for an avatar
+ *
+ * @summary Creates an avatar component
+ * @name base
+ * @selector .slds-avatar
+ * @restrict div, span, a
+ * @variant
+ */
+.slds-avatar {
+  @include square($square-icon-medium-boundary);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius-medium;
+  line-height: $line-height-reset;
+  color: $color-text-inverse;
+
+  &:hover,
+  &:focus:hover {
+    color: currentColor;
+  }
+}
+
+/**
+ * Size modifier for avatars - x-small
+ *
+ * @selector .slds-avatar_x-small
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_x-small,
+.slds-avatar--x-small {
+  @include square($square-icon-x-small-boundary);
+  font-size: $font-size-heading-xx-small;
+
+  .slds-icon {
+    @include square($square-icon-x-small-boundary);
+  }
+}
+
+/**
+ * Size modifier for avatars - small
+ *
+ * @selector .slds-avatar_small
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_small,
+.slds-avatar--small {
+  @include square($square-icon-small-boundary);
+  font-size: $font-size-heading-xx-small;
+
+  .slds-icon {
+    @include square($square-icon-small-boundary);
+  }
+}
+
+/**
+ * Size modifier for avatars - medium
+ *
+ * @selector .slds-avatar_medium
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_medium,
+.slds-avatar--medium {
+  @include square($square-icon-medium-boundary);
+  font-size: $font-size-heading-small;
+
+  .slds-icon {
+    @include square($square-icon-medium-boundary);
+  }
+}
+
+/**
+ * Size modifier for avatars - large
+ *
+ * @selector .slds-avatar_large
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_large,
+.slds-avatar--large {
+  @include square($square-icon-large-boundary);
+  font-size: $font-size-heading-medium;
+  font-weight: $font-weight-light;
+  line-height: $line-height-heading;
+
+  .slds-icon {
+    @include square($square-icon-large-boundary);
+  }
+}
+
+/**
+ * Make avatar a circle
+ *
+ * @selector .slds-avatar_circle
+ * @restrict .slds-avatar
+ * @modifier
+ */
+.slds-avatar_circle,
+.slds-avatar--circle {
+  border-radius: $border-radius-circle;
+}
+
+// This isn't a thing so lets not document it
+.slds-avatar_empty,
+.slds-avatar--empty {
+  border: $border-width-thin dashed $color-border;
+}
+
+/**
+ * If an image is unavailable, up to two letters can be used instead.
+ * If the record name contains two words, like first and last name, use
+ * the first capitalized letter of each. For records that only have a
+ * single word name, use the first two letters of that word using one
+ * capital and one lower case letter. The background color should match
+ * the entity or object icon. If no image or initials are available,
+ * the fallback should be the icon for the entity or object.
+ *
+ * @summary Used for initials inside an avatar
+ * @selector .slds-avatar__initials
+ * @restrict .slds-avatar abbr
+ */
+.slds-avatar__initials {
+  @include absolute-center;
+  height: 100%;
+
+  &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .slds-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
+    cursor: default;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color-text-inverse;
+    cursor: default;
+  }
+}

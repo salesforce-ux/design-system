@@ -1,0 +1,72 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-notify_container
+ * @restrict div
+ * @variant
+ */
+.slds-notify-container,
+.slds-notify_container {
+  @include deprecate('4.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: $z-index-toast;
+  text-align: center;
+}
+
+/**
+ * Initializes toast notification
+ *
+ * @selector .slds-notify_toast
+ * @restrict .slds-notify_container div
+ * @required
+ */
+.slds-notify_toast,
+.slds-notify--toast {
+  @include inverse-text;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  background: $color-background-toast;
+  font-weight: $font-weight-light;
+  border-radius: $border-radius-medium;
+  margin: $spacing-x-small;
+  padding: $spacing-small $spacing-xx-large $spacing-small $spacing-large;
+  min-width: rem(480px);
+  text-align: left;
+  justify-content: flex-start;
+
+  /**
+   * Alert close button
+   *
+   * @selector .slds-notify__close
+   * @restrict .slds-notify_toast button
+   * @required
+   */
+  .slds-notify__close {
+    float: right;
+    position: absolute;
+    top: $spacing-small;
+    right: $spacing-small;
+    margin-left: $spacing-xx-small;
+    transform: translateY($spacing-xxx-small * -1);
+  }
+}
+
+// Modify toasts when in a narrow column
+.slds-region_narrow {
+
+  // Modifying .slds-notify--toast when inside a region with the
+  // class .slds-region--narrow
+  .slds-notify_toast,
+  .slds-notify--toast {
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+}

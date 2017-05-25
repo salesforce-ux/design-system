@@ -1,0 +1,317 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: background-color
+  type: color
+  cssProperties:
+  - background
+  - background-color
+props:
+  LOG_A_CALL:
+    value: '#48C3CC'
+  DOCUMENT:
+    value: '#BAAC93'
+  ENVIRONMENT_HUB:
+    value: '#54698d'
+  FLOW:
+    value: '#54698d'
+  SOSSESSION:
+    value: '#54698d'
+  PROCESS:
+    value: '#54698d'
+  NEWS:
+    value: '#7F8DE1'
+  HOME:
+    value: '#EF7EAD'
+  ACCOUNT:
+    value: '#7F8DE1'
+  APPS_ADMIN:
+    value: '#9895EE'
+  ANNOUNCEMENT:
+    value: '#62B7ED'
+  PERSON_ACCOUNT:
+    value: '#7F8DE1'
+  SOCIAL:
+    value: '#EA74A2'
+  CAMPAIGN_MEMBERS:
+    value: '#F49756'
+  ARTICLE:
+    value: '#F2CF5B'
+  ANSWER_PUBLIC:
+    value: '#F2CF5B'
+  ANSWER_PRIVATE:
+    value: '#F2CF5B'
+  ANSWER_BEST:
+    value: '#F2CF5B'
+  AVATAR_LOADING:
+    value: '#B8C3CE'
+  CAMPAIGN:
+    value: '#F49756'
+  CALIBRATION:
+    value: '#47CFD2'
+  AVATAR:
+    value: '#62B7ED'
+  APPROVAL:
+    value: '#50CC7A'
+  APPS:
+    value: '#3C97DD'
+  USER:
+    value: '#34BECD'
+  EVERNOTE:
+    value: '#86C86F'
+  COACHING:
+    value: '#F67594'
+  CONNECTED_APPS:
+    value: '#9895EE'
+  DRAFTS:
+    value: '#6CA1E9'
+  EMAIL:
+    value: '#95AEC5'
+  EMAIL_IQ:
+    value: '#a094ed'
+    deprecated: true
+  ENDORSEMENT:
+    value: '#8B9AE3'
+  EVENT:
+    value: '#EB7092'
+  DROPBOX:
+    value: '#52AEF9'
+  CONCUR:
+    value: '#4CC3C7'
+  EMAIL_CHATTER:
+    value: '#F2CF5B'
+  CASE_TRANSCRIPT:
+    value: '#F2CF5B'
+  CASE_EMAIL:
+    value: '#F2CF5B'
+  CASE_LOG_A_CALL:
+    value: '#F2CF5B'
+  CASE_COMMENT:
+    value: '#F2CF5B'
+  CASE_CHANGE_STATUS:
+    value: '#F2CF5B'
+  WORK_ORDER:
+    value: '#50E3C2'
+  WORK_ORDER_ITEM:
+    value: '#33A8DC'
+  CLIENT:
+    value: '#00D2BE'
+  CONTRACT:
+    value: '#6EC06E'
+  DASHBOARD:
+    value: '#EF6E64'
+  CASE:
+    value: '#F2CF5B'
+  EMPTY:
+    value: '#8199AF'
+  DEFAULT:
+    value: '#8199AF'
+  CUSTOM:
+    value: '#8199AF'
+  CANVAS:
+    value: '#8199AF'
+  CONTACT:
+    value: '#A094ED'
+  PORTAL:
+    value: '#AEC770'
+  PRODUCT:
+    value: '#B781D3'
+  PRICEBOOK:
+    value: '#B781D3'
+  FEED:
+    value: '#62B7ED'
+  FEEDBACK:
+    value: '#6DA1EA'
+  FILE:
+    value: '#BAAC93'
+  GOALS:
+    value: '#56AADF'
+  GROUPS:
+    value: '#779EF2'
+  HOUSEHOLD:
+    value: '#00AFA0'
+  HIERARCHY:
+    value: '#34becd'
+  INSIGHTS:
+    value: '#EC94ED'
+  INVESTMENT_ACCOUNT:
+    value: '#4BC076'
+  PERFORMANCE:
+    value: '#F8B156'
+  LINK:
+    value: '#7A9AE6'
+  METRICS:
+    value: '#56AADF'
+  NOTE:
+    value: '#E6D478'
+  LEAD:
+    value: '#F88962'
+  OPPORTUNITY:
+    value: '#FCB95B'
+  CALL:
+    value: '#F2CF5B'
+  CALL_HISTORY:
+    value: '#F2CF5B'
+  ORDERS:
+    value: '#769ED9'
+  POST:
+    value: '#65CAE4'
+  POLL:
+    value: '#699BE1'
+  PHOTO:
+    value: '#D7D1D1'
+  PEOPLE:
+    value: '#34BECD'
+  GENERIC_LOADING:
+    value: '#B8C3CE'
+  GROUP_LOADING:
+    value: '#B8C3CE'
+  RECENT:
+    value: '#6CA1E9'
+  SOLUTION:
+    value: '#8FC972'
+  RECORD:
+    value: '#7DC37D'
+  QUESTION_BEST:
+    value: '#F2CF5B'
+  QUESTION_FEED:
+    value: '#F2CF5B'
+  RELATED_LIST:
+    value: '#59BCAB'
+  SKILL_ENTITY:
+    value: '#8B9AE3'
+  SCAN_CARD:
+    value: '#F39E58'
+  REPORT:
+    value: '#2ECBBE'
+  QUOTES:
+    value: '#88C651'
+  TASK:
+    value: '#4BC076'
+  TASK2:
+    value: '#4BC076'
+  TEAM_MEMBER:
+    value: '#F2CF5B'
+  THANKS:
+    value: '#E9696E'
+  REWARD:
+    value: '#E9696E'
+  THANKS_LOADING:
+    value: '#B8C3CE'
+  TODAY:
+    value: '#EF7EAD'
+  TOPIC:
+    value: '#56AADF'
+  UNMATCHED:
+    value: '#62B7ED'
+  MARKETING_ACTIONS:
+    value: '#6bbd6e'
+  RELATIONSHIP:
+    value: '#3c97dd'
+  FOLDER:
+    value: '#8B9AE3'
+  SERVICE_CONTRACT:
+    value: '#8A76F0'
+  MERGE:
+    value: '#F2CF5B'
+  FORECASTS:
+    value: '#6BBD6E'
+  ENTITLEMENTS:
+    value: '#B781D3'
+  SALES_PATH:
+    value: '#2A739E'
+  CUSTOM_NOTIFICATION:
+    value: '#6BB7E4'
+  DATADOTCOM:
+    value: '#1589EE'
+  RTC_PRESENCE:
+    value: '#47CFD2'
+  PRODUCT_CONSUMED:
+    value: '#55BC9C'
+  PRODUCT_TRANSFER:
+    value: '#F88962'
+  PRODUCT_ITEM:
+    value: '#769ED9'
+  PRODUCT_ITEM_TRANSACTION:
+    value: '#F88962'
+  LOCATION:
+    value: '#4BC076'
+  ADDRESS:
+    value: '#4BC076'
+  CAROUSEL:
+    value: '#6bbd6e'
+  ASSIGNED_RESOURCE:
+    value: '#45C173'
+  OPERATING_HOURS:
+    value: '#6B9EE2'
+  PRODUCT_REQUIRED:
+    value: '#EF6E64'
+  RESOURCE_ABSENCE:
+    value: '#45C173'
+  RESOURCE_CAPACITY:
+    value: '#45C173'
+  RESOURCE_PREFERENCE:
+    value: '#45C173'
+  RESOURCE_SKILL:
+    value: '#45C173'
+  SERVICE_TERRITORY_MEMBER:
+    value: '#7E8BE4'
+  SERVICE_APPOINTMENT:
+    value: '#7E8BE4'
+  SERVICE_REPORT:
+    value: '#7E8BE4'
+  SERVICE_RESOURCE:
+    value: '#7E8BE4'
+  SERVICE_TERRITORY:
+    value: '#7E8BE4'
+  SKILL:
+    value: '#FA975C'
+  SKILL_REQUIREMENT:
+    value: '#FA975C'
+  TIMESLOT:
+    value: '#FAB24C'
+  WORK_TYPE:
+    value: '#54698D'
+  ENTITLEMENT:
+    value: '#7E8BE4'
+  LIVE_CHAT:
+    value: '#F88960'
+  SHIPMENT:
+    value: '#7E8BE4'
+  MAINTENANCE_PLAN:
+    value: '#2A739E'
+  MAINTENANCE_ASSET:
+    value: '#2A739E'
+  SERVICE_TERRITORY_LOCATION:
+    value: '#7E8BE4'
+  PRODUCT_REQUEST:
+    value: '#88C651'
+  PRODUCT_REQUEST_LINE_ITEM:
+    value: '#88C651'
+  ENTITY_MILESTONE:
+    value: '#F49756'
+  CASE_MILESTONE:
+    value: '#F2CF5B'
+  ENTITLEMENT_PROCESS:
+    value: '#7E8BE4'
+  ENTITLEMENT_TEMPLATE:
+    value: '#7E8BE4'
+  BUSINESS_HOURS:
+    value: '#7DC37D'
+  TIMESHEET:
+    value: '#7E8BE4'
+  TIMESHEET_ENTRY:
+    value: '#7DC37D'
+  ASSET_RELATIONSHIP:
+    value: '#FA975C'
+  CMS:
+    value: '#88C651'
+  LEAD_INSIGHTS:
+    value: '#22B0E6'
+  QUIP:
+    value: '#25B4E9'
+  TOPIC2:
+    value: '#56AAD0'
+  MACROS:
+    value: '#47CFD2'

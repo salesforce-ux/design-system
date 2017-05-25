@@ -1,0 +1,37 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ----------------------------------------------------------------------------
+// Imports
+// ----------------------------------------------------------------------------
+
+@import
+  '../design-tokens/dist/s1-base-large.default',
+  '../design-tokens/dist/s1-base.default',
+  '../design-tokens/dist/force-base.default',
+  '../design-tokens/dist/force-base.map',
+  '../design-tokens/dist/bg-actions.default',
+  '../design-tokens/dist/bg-custom.default',
+  '../design-tokens/dist/bg-standard.default',
+  '../design-tokens/dist/bg-actions.map',
+  '../design-tokens/dist/bg-custom.map',
+  '../design-tokens/dist/bg-standard.map';
+
+// ----------------------------------------------------------------------------
+// Media Queries
+// ----------------------------------------------------------------------------
+
+$mq-x-small: 320px !default;
+$mq-small: 480px !default;
+$mq-medium: 768px !default;
+$mq-large: 1024px !default;
+$mq-x-large: 1280px !default;
+
+// Global header icon
+// ---------
+$square-icon-global-identity-icon: 1.25rem;
+
+// Utility Icon - Size X Small
+// ---------
+$square-icon-utility-x-small: 0.75rem !default;

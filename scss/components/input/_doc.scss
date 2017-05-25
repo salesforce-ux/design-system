@@ -1,0 +1,36 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * You can style the HTML `<input>` element to align with the Salesforce brand
+ * by using the `.slds-input` class on the `<input>` element.
+ *
+ * The `<input>` element includes support for all HTML5 types: `text`,
+ * `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`,
+ * `number`, `email`, `url`, `search`, `tel`, and `color`.
+ *
+ * #### Accessibility
+ *
+ * Inputs with errors should have `aria-describedby` to insure that the
+ * associated field level error message is read by assistive technology.
+ * If the error message has an `id="my-error-message"`, then the input should
+ * have `aria-describedby="my-error-message"`.
+ *
+ * If you're needing some type of field level help and if your tooltips are
+ * available on hover, make sure they’re also available on keyboard focus. The
+ * help icon needs to be associated to the tooltip so that when the user focuses
+ * on the icon, assistive technology reads out the content of the tooltip. If
+ * the tooltip has an `id="help"`, then the `<button>` containing the icon should
+ * have `aria-describedby="help"`.
+ *
+ * @summary Text inputs are used for freeform data entry
+ *
+ * @base
+ * @name input
+ * @selector .slds-input
+ * @support dev-ready
+ * @category base
+ * @type data-entry
+ * @layout responsive
+ */

@@ -1,0 +1,45 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-action-overflow_touch,
+.slds-action-overflow--touch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: ($z-index-modal + 1);
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__content {
+    padding-top: 33.33333333333333%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  &__body {
+    // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
+    position: relative;
+    top: $spacing-x-large;
+    // box-styling
+    background: $color-background-alt;
+    box-shadow: $shadow-overlay;
+  }
+
+  &__footer {
+    position: relative;
+    flex-shrink: 0;
+    border-top: $border-width-thin solid $color-border;
+    padding: $spacing-small $spacing-medium;
+    background-color: $color-background;
+    box-shadow: $shadow-action-overflow-footer;
+  }
+}

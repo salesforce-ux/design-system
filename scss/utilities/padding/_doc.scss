@@ -1,0 +1,21 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Spacing indicates `margin` and `padding`. The base unit of all our spacing metrics is **4**.
+ *
+ * - Most components already come with spacing included. These utility classes are for added convenience in laying out components.
+ * - Classes prefixed by `.slds-m-` are used for adding **margins**. Classes prefixed in `.slds-p-` are used for adding **padding**
+ * - The directions available for the spacing classes are `top`, `right`, `bottom`, and `left`.
+ * - You can use the `vertical` shortcut for both `top` and `bottom`, `horizontal` for both `right` and `left`, and `around` for all sides.
+ * - Use the `--xxx-small` through `--xx-large` scale to choose the size needed.
+ * - Where **vertical centering** is required, check out our [/components/utilities/media-objects/#center](centered media object) instead of applying extra `margin` or `padding`.
+ *
+ * @summary Adjust whitespace with horizontal and vertical spacing helpers
+ *
+ * @utility
+ * @name padding
+ * @selector [class*='slds-p-']
+ * @support dev-ready
+ */

@@ -1,0 +1,268 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates the 13px regular body copy
+ *
+ * @selector .slds-text-body_regular
+ * @modifier
+ */
+.slds-text-body_regular,
+.slds-text-body--regular {
+  font-size: $font-size-medium;
+}
+
+/**
+ * @summary Creates a more pale-colored 12px copy
+ *
+ * @selector .slds-text-body_small
+ * @modifier
+ */
+.slds-text-body_small,
+.slds-text-body--small {
+  font-size: $font-size-small;
+}
+
+
+/**
+ * @summary Very large 28px heading
+ *
+ * @selector .slds-text-heading_large
+ * @modifier
+ */
+.slds-text-heading_large,
+.slds-text-heading--large {
+  font-weight: $font-weight-light;
+  font-size: $font-size-xx-large;
+  line-height: $line-height-heading;
+}
+
+/**
+ * @summary Large 20px heading
+ *
+ * @selector .slds-text-heading_medium
+ * @modifier
+ */
+.slds-text-heading_medium,
+.slds-text-heading--medium {
+  font-weight: $font-weight-light;
+  font-size: $font-size-x-large;
+  line-height: $line-height-heading;
+}
+
+/**
+ * @summary Smaller 16px heading
+ *
+ * @selector .slds-text-heading_small
+ * @modifier
+ */
+.slds-text-heading_small,
+.slds-text-heading--small {
+  font-size: $font-size-large;
+  line-height: $line-height-heading;
+}
+
+@include  deprecate('4.0.0', 'Use slds text-title instead') {
+
+  .slds-text-heading_label,
+  .slds-text-heading--label {
+    @include text-heading--label;
+  }
+
+  .slds-text-heading_label-normal,
+  .slds-text-heading--label-normal {
+    @include text-heading--label-normal;
+  }
+}
+
+/**
+ * @summary 12px heading that is not all caps
+ *
+ * @selector .slds-text-title
+ * @notes Usually labels small content areas like list sections.
+ * @modifier
+ */
+.slds-text-title {
+  @include text-heading--label-normal;
+}
+
+/**
+ * @summary All caps 12px heading
+ *
+ * @selector .slds-text-title_caps
+ * @notes Usually labels small content areas like tabs and page header titles.
+ * @modifier
+ */
+.slds-text-title_caps,
+.slds-text-title--caps {
+  @include text-heading--label-normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+
+/**
+ * @summary Resets line-height to browser default
+ *
+ * @selector .slds-line-height_reset
+ * @modifier
+ */
+.slds-line-height_reset,
+.slds-line-height--reset {
+  line-height: $line-height-reset;
+}
+
+
+/**
+ * @summary Default color of text
+ *
+ * @selector .slds-text-color_default
+ * @modifier
+ */
+.slds-text-color_default,
+.slds-text-color--default {
+  color: $color-text-default;
+}
+
+/**
+ * @summary Weak color of text
+ *
+ * @selector .slds-text-color_weak
+ * @modifier
+ */
+.slds-text-color_weak,
+.slds-text-color--weak {
+  color: $color-text-weak;
+}
+
+/**
+ * @summary Error color of text
+ *
+ * @selector .slds-text-color_error
+ * @modifier
+ */
+.slds-text-color_error,
+.slds-text-color--error {
+  color: $color-text-error;
+}
+
+/**
+ * @summary Default color of text on inversed background
+ *
+ * @selector .slds-text-color_inverse
+ * @modifier
+ */
+.slds-text-color_inverse,
+.slds-text-color--inverse {
+  color: $color-text-inverse;
+}
+
+/**
+ * @summary Weak color of text on inversed background
+ *
+ * @selector .slds-text-color_inverse-weak
+ * @modifier
+ */
+.slds-text-color_inverse-weak,
+.slds-text-color--inverse-weak {
+  color: $color-text-inverse-weak;
+}
+
+/**
+ * @summary Aligns text left
+ *
+ * @selector .slds-text-align_left
+ * @modifier
+ */
+.slds-text-align_left,
+.slds-text-align--left {
+  text-align: left;
+}
+
+/**
+ * @summary Aligns text center
+ *
+ * @selector .slds-text-align_center
+ * @modifier
+ */
+.slds-text-align_center,
+.slds-text-align--center {
+  text-align: center;
+}
+
+/**
+ * @summary Aligns text right
+ *
+ * @selector .slds-text-align_right
+ * @modifier
+ */
+.slds-text-align_right,
+.slds-text-align--right {
+  text-align: right;
+}
+
+
+/**
+ * @summary Adds default spacing and list styling within a wrapper
+ *
+ * @selector .slds-text-longform
+ * @notes Our application framework removes default text styling. This adds in margins to large areas
+ * @modifier
+ */
+.slds-text-longform {
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol,
+  dl,
+  img {
+    margin-bottom: $spacing-small;
+  }
+
+  ul {
+    @include list-has-bullets;
+
+    ul {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: circle;
+
+      ul {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: square;
+      }
+    }
+  }
+
+  ol {
+    @include list-has-numbers;
+
+    ol {
+      // scss-lint:disable NestingDepth SelectorDepth
+      list-style: lower-alpha;
+
+      ol {
+        // scss-lint:disable NestingDepth SelectorDepth
+        list-style: lower-roman;
+      }
+    }
+  }
+
+  .slds-video {
+    display: block;
+    max-width: 100%;
+
+    &.slds-video_center,
+    &.slds-video--center {
+      margin: 0 auto;
+    }
+
+    &.slds-video_right,
+    &.slds-video--right {
+      margin: 0 0 0 auto;
+    }
+  }
+}

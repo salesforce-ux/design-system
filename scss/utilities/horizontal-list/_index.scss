@@ -1,0 +1,57 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Causes items of a list to display horizontally
+ *
+ * @selector .slds-list_horizontal
+ * @modifier
+ */
+.slds-list_horizontal,
+.slds-list--horizontal {
+  @include align-horizontal('.slds-list__item', true);
+}
+
+.slds-list_horizontal-large,
+.slds-list--horizontal-large {
+
+  > .slds-list__item > a {
+    padding: $spacing-small $spacing-medium;
+  }
+}
+
+/**
+ * @summary Adds dot separators to the left of horizontal list items
+ *
+ * @selector .slds-has-dividers_left
+ * @modifier
+ */
+.slds-has-dividers_left > .slds-list__item,
+.slds-has-dividers--left > .slds-list__item,
+.slds-has-dividers_left > .slds-item,
+.slds-has-dividers--left > .slds-item {
+  @include dot-separator(left);
+}
+
+/**
+ * @summary Adds dot separators to the right of horizontal list items
+ *
+ * @selector .slds-has-dividers_right
+ * @modifier
+ */
+.slds-has-dividers_right > .slds-list__item,
+.slds-has-dividers--right > .slds-list__item,
+.slds-has-dividers_right > .slds-item,
+.slds-has-dividers--right > .slds-item {
+  @include dot-separator(right);
+}
+
+// Deprecate in 0.15.0
+@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+
+  .slds-list_horizontal.slds-has-dividers > .slds-list__item,
+  .slds-list--horizontal.slds-has-dividers > .slds-list__item {
+    @include dot-separator;
+  }
+}

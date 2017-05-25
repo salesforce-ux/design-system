@@ -1,0 +1,45 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The unordered menu list with `[role="menu"]` should be contained in a `<div>`
+ * with the class `.slds-dropdown`. The exception to this is the **Action
+ * Overflow for Touch**, which not a dropdown menu.
+ *
+ * The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger--click`.
+ *
+ * By default, dropdown menus do not display a nubbin (the little cute triangle
+ * pointing at your target). If you want to apply one, you can add the class
+ * that defines the nubbin position and `.slds-nubbin--top` to the `.slds-dropdown`
+ * HTML element.
+ *
+ * <div class="site-text-heading--label">Accessibility</div>
+ *
+ * The main thing that distinguishes menus from other popover blocks is keyboard
+ * navigation: elsewhere, users press the Tab key to navigate through actionable
+ * items, but in a menu, users press the arrow keys to navigate.
+ *
+ * **Expected markup:**
+ *
+ * - Menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
+ * - Menu has `role="menu"` and an `aria-labelledby` attribute whose value is the id of the menu trigger
+ * - Menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)
+ * - Tab key closes menu and moves focus to the next focusable element on the page
+ * - Esc key closes menu and moves focus back to the menu trigger
+ * - Any character key moves focus to the next menu item that starts with that character, if applicable
+ *
+ * @summary A Menu offers a list of actions or functions that a user can access.
+ *
+ * @base
+ * @name menus
+ * @selector .slds-dropdown-trigger
+ * @support dev-ready
+ * @category experience
+ * @type navigation
+ * @role menu
+ */

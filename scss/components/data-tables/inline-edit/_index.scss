@@ -1,0 +1,381 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-table_edit_container,
+.slds-table--edit_container {
+
+  &:focus {
+    outline: none;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: $z-index-default;
+      background-color: $color-background-backdrop-tint;
+      box-shadow: 0 0 0 4px $color-border-brand inset;
+    }
+
+    .slds-table_edit_container-message,
+    .slds-table--edit_container-message {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $size-medium;
+      margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
+      margin-left: (($size-medium / 2) * -1);
+      background-color: $color-background-alt;
+      text-align: center;
+      z-index: $z-index-default;
+    }
+  }
+}
+
+.slds-table_edit_container-message,
+.slds-table--edit_container-message {
+  display: none;
+}
+
+/**
+ * Inline edit plugin for advanced tables
+ *
+ * #### Accessibility
+ * The Advanced Data Table and Inline Edit Data Table are based on the semantics,
+ * roles and interaction model of the [ARIA Grid](http://w3c.github.io/aria/practices/aria-practices.html#grid).
+ * In SLDS we overlay the ARIA Grid on top of native HTML table semantics.
+ *
+ * The role of Grid comes with 2 distinct modes, Navigation mode and Actionable
+ * mode. Both come with very specific keyboard interaction modals. Navigation
+ * mode is the default mode of the Grid.
+ *
+ * **Navigation Mode**
+ * - Tabbing into the grid focuses the first data cell in the table.
+ * - The second tab key press takes the user focus out of the grid onto the next focusable element on the page.
+ * - Once the user has tabbed out of the grid, tabbing back into the grid will return focus to the last cell the user was focused on.
+ * - Navigation in the grid is accomplished via the arrow keys.
+ * - No actionable items in cell contents are focusable.
+ * - Pressing the Enter key on a chosen grid cell, places the entire Grid into Actionable mode.
+ *
+ * **Actionable Mode**
+ * - Once in Actionable mode, all focusable items in the entire grid can be tabbed to.
+ * - Arrow navigation still takes the user cell to cell in any direction, but focuses on the first actionable item in the cell, if there is one.
+ * - Pressing the Escape key exits Actionable mode, placing the user back into Navigation mode, keeping the users cursor on the same cell they were focused in.
+ * - When interacting with a component in a cell, such as a Menu, that also uses the Escape key as an exit action, pressing Escape will take the user back to the triggering element in the current cell. A subsequent press of Escape will return the user to Navigation mode.
+ *
+ * For the purposes of these docs, the Default state of Inline Edit is
+ * representative of Navigation mode, all other states are assumed to be in Actionable Mode.
+ *
+ * @summary Initiates inline-edit mode for data-tables
+ *
+ * @name inline-edit
+ * @selector .slds-table_edit
+ * @restrict .slds-table_fixed-layout
+ * @required
+ * @variant
+ */
+.slds-table_edit,
+.slds-table--edit {
+
+  thead th {
+    padding: 0;
+  }
+
+  /**
+   * Cell that has error icon appear within
+   *
+   * @selector .slds-cell-error
+   * @restrict .slds-table_edit td
+   * @required
+   */
+  .slds-cell-error {
+    padding-left: 0;
+  }
+
+  // Check if slds-no-cell-focus is on the table element, if not then find
+  // our editable cell and make sure the focus style persists on row hover
+  // scss-lint:disable SelectorDepth
+  &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
+
+    &.slds-has-focus { // This is the focused state
+      background-color: $color-background-alt;
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+  }
+
+  // scss-lint:disable SelectorDepth
+  &.slds-table tbody tr:hover > .slds-cell-edit {
+
+    &:hover {
+      background-color: $color-background-alt;
+    }
+
+    &.slds-is-edited {
+      background-color: $color-background-highlight;
+    }
+
+    &.slds-has-error {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+
+  .slds-button__icon_edit:focus,
+  .slds-button__icon--edit:focus {
+    fill: $color-text-brand;
+  }
+}
+
+// Table Heading cell focus styles
+//
+// Requires .slds-th__action inside the <th>
+.slds-has-focus .slds-th__action {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset;
+}
+
+// Handles focus for resizable columns
+.slds-has-focus.slds-is-resizable .slds-th__action,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus,
+.slds-has-focus.slds-is-resizable .slds-th__action:hover,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
+.slds-is-resizable .slds-th__action:focus,
+.slds-is-resizable .slds-th__action:focus:hover {
+  background-color: $color-background-alt;
+  box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
+}
+
+
+
+/**
+ * Informs a table cell that it has editing capabilities
+ *
+ * @selector .slds-cell-edit
+ * @restrict .slds-table_edit th, .slds-table--edit td
+ */
+.slds-cell-edit {
+  outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
+
+  &.slds-has-focus { // This is the focused state
+    background-color: $color-background-alt;
+    box-shadow: $color-border-selection 0 0 0 1px inset;
+
+    .slds-button__icon_edit,
+    .slds-button__icon--edit,
+    .slds-button__icon_lock,
+    .slds-button__icon--lock {
+      opacity: 1;
+    }
+
+    &:hover {
+      box-shadow: $color-border-selection 0 0 0 1px inset;
+    }
+
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  /**
+   * Informs a cell that it has been edited but not saved
+   *
+   * @selector .slds-is-edited
+   * @restrict .slds-cell-edit
+   * @modifier
+   */
+  &.slds-is-edited {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+
+  /**
+   * Informs a cell that it has an error inside of it
+   *
+   * @selector .slds-has-error
+   * @restrict .slds-cell-edit
+   * @modifier
+   */
+  &.slds-has-error {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+}
+
+/**
+ * @selector .slds-cell-edit__button
+ * @restrict .slds-cell-edit button
+ */
+.slds-cell-edit__button {
+  @include square($square-icon-utility-medium);
+  flex-shrink: 0;
+
+  &:focus .slds-button__icon_edit,
+  &:focus .slds-button__icon--edit {
+    opacity: 1;
+  }
+}
+
+/**
+ * Handles children of the table where we don't want any focusable cells
+ *
+ * @selector .slds-no-cell-focus
+ * @restrict .slds-table_edit
+ * @modifier
+ */
+.slds-no-cell-focus {
+
+  // If no cell focus is applied but were dynamically adding slds-has-focus, handle
+  // it here
+  .slds-has-focus {
+    background: $color-background-row-hover;
+    box-shadow: none;
+
+    .slds-th__action,
+    .slds-th__action:hover,
+    .slds-th__action:focus,
+    .slds-th__action:focus:hover {
+      color: inherit;
+      background-color: $color-background;
+      box-shadow: none;
+    }
+
+    .slds-button__icon_edit,
+    .slds-button__icon--edit {
+      opacity: 1;
+    }
+
+    // Handle the difference on resizeable columns
+    &.slds-is-resizable:hover .slds-th__action {
+      background-color: $color-background;
+      box-shadow: $color-border -0.25rem 0 0 inset;
+    }
+  }
+
+  // Lets make sure icon doesnt appear on sortable cells
+  .slds-is-sortable.slds-has-focus {
+
+    .slds-is-sortable__icon {
+      display: none;
+    }
+  }
+
+  // Lets make sure were not altering the color of the icon when a column has been
+  // sorted already, since thats what we do by default
+  .slds-is-sorted.slds-has-focus {
+
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-icon-default;
+    }
+  }
+
+  // Lets make sure our cell keeps its edited style
+  .slds-is-edited {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+
+  // Lets make sure our cell keeps its error style
+  .slds-has-error {
+
+    &,
+    &:hover {
+      background-color: $color-background-highlight;
+      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+    }
+  }
+
+  // Lets make sure hover behavior acts as the default when in a no focus state
+  // scss-lint:disable SelectorDepth
+  thead .slds-has-focus:hover {
+    color: $color-text-link;
+
+    .slds-is-sortable__icon {
+      display: inline-block;
+      fill: $color-text-link;
+    }
+  }
+}
+
+.slds-hint-parent .slds-cell-edit {
+
+  .slds-button__icon_edit,
+  .slds-button__icon--edit,
+  .slds-button__icon_lock,
+  .slds-button__icon--lock {
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+
+    .slds-button__icon_edit,
+    .slds-button__icon--edit {
+      opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        fill: $color-text-brand;
+        opacity: 1;
+      }
+    }
+
+    .slds-button__icon_lock,
+    .slds-button__icon--lock {
+      opacity: 0.5;
+    }
+  }
+
+  &.slds-has-focus .slds-button__icon_edit,
+  &.slds-has-focus .slds-button__icon--edit {
+    fill: $color-text-icon-default;
+    opacity: 1;
+  }
+}
+
+/**
+ * @selector .slds-form-element__label_edit
+ * @restrict .slds-popover_edit label
+ */
+.slds-form-element__label_edit,
+.slds-form-element__label--edit {
+  margin: 0 $spacing-xxx-small 0;
+}
+
+/**
+ * Dialog specific for inline-edit popover
+ *
+ * @selector .slds-popover_edit
+ * @restrict .slds-popover
+ * @required
+ */
+.slds-popover_edit,
+.slds-popover--edit {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  .slds-popover__body {
+    padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small 0;
+  }
+
+  .slds-form-element__help {
+    width: 100%;
+    padding-left: $spacing-small;
+  }
+}

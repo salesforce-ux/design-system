@@ -1,0 +1,114 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-popover
+ * @restrict section
+ * @variant
+ */
+.slds-popover {
+  @include popover($shadow: $shadow-drop-down);
+  border: $border-width-thin solid $color-border;
+
+  /**
+   * Applies syles for primary content area of popover
+   *
+   * @selector .slds-popover__body
+   * @restrict .slds-popover div
+   * @required
+   */
+  &__body,
+  &__header,
+  &__footer {
+    @include hyphenate;
+    position: relative;
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  /**
+   * Applies styles for top area of popover
+   *
+   * @selector .slds-popover__header
+   * @restrict .slds-popover header, .slds-popover div
+   * @required
+   */
+  &__header {
+    border-bottom: $border-width-thin solid $color-border;
+  }
+
+  /**
+   * Applies styles for footer area of popover
+   *
+   * @selector .slds-popover__footer
+   * @restrict .slds-popover footer
+   * @required
+   */
+  &__footer {
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  /**
+   * Close button within a popover
+   *
+   * @selector .slds-popover__close
+   * @restrict .slds-popover button
+   * @required
+   */
+  &__close {
+    position: relative;
+    margin: $spacing-xx-small;
+    z-index: ($z-index-dialog + 1);
+  }
+
+  /**
+   * Width modifier for popover - small
+   *
+   * @selector .slds-popover_small
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
+  &_small,
+  &--small {
+    min-width: $size-small;
+  }
+
+  /**
+   * Width modifier for popover - medium
+   *
+   * @selector .slds-popover_medium
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
+  &_medium,
+  &--medium {
+    min-width: $size-medium;
+  }
+
+  /**
+   * Width modifier for popover - large
+   *
+   * @selector .slds-popover_large
+   * @restrict .slds-popover
+   * @modifier
+   * @group width
+   */
+  &_large,
+  &--large {
+    min-width: $size-large;
+    max-width: $max-width-action-overflow-menu;
+  }
+
+  // Remove border if theme modifier is applied
+  &[class*="theme_"],
+  &[class*="theme--"] {
+    border: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

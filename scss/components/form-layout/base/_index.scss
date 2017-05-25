@@ -1,0 +1,118 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-form
+ * @restrict form, div, fieldset
+ * @variant
+ */
+
+/**
+ * Vertically aligns form label and control, provides spacing between form elements
+ *
+ * @selector .slds-form_stacked
+ * @restrict .slds-form:not(.slds-form_compound)
+ * @modifier
+ * @group layout
+ */
+.slds-form_stacked .slds-form-element,
+.slds-form--stacked .slds-form-element {
+  display: block;
+
+  + .slds-form-element {
+    @include form-element-vertical-spacing;
+  }
+
+  .slds-checkbox,
+  .slds-radio {
+    display: block;
+  }
+}
+
+/**
+ * Horizontally aligns a single form label and control on the same line
+ *
+ * @selector .slds-form_horizontal
+ * @restrict .slds-form:not(.slds-form_compound)
+ * @modifier
+ * @group layout
+ */
+.slds-form_horizontal,
+.slds-form--horizontal {
+  @include mq-medium-min {
+    text-align: right;
+  }
+
+  .slds-form-element {
+
+    > .slds-form-element__legend,
+    > .slds-form-element__label {
+      @include mq-medium-min {
+        float: left;
+        text-align: right;
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        position: relative;
+        top: (($line-height-button / 2) - ($line-height-text / 2));
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    + .slds-form-element {
+      @include form-element-vertical-spacing;
+    }
+  }
+
+  .slds-form-element__control {
+    width: 100%;
+
+    @include mq-medium-min {
+      width: 66%;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
+
+/**
+ * Horizontally align multiple form elements on the same axis
+ *
+ * @selector .slds-form_inline
+ * @restrict .slds-form
+ */
+.slds-form_inline,
+.slds-form--inline {
+
+  .slds-form-element,
+  .slds-form-element__label,
+  .slds-form-element__control {
+    display: block;
+  }
+
+  .slds-form-element + .slds-form-element {
+    margin-top: $spacing-small;
+  }
+
+  @include mq-small-min {
+
+    .slds-form-element {
+      margin-right: $spacing-x-small;
+
+      + .slds-form-element {
+        margin-top: 0;
+      }
+    }
+
+    .slds-form-element,
+    .slds-form-element__label,
+    .slds-form-element__control {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+  }
+}

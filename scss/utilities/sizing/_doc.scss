@@ -1,0 +1,58 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Our sizing class names are set up in a human-readable format, e.g. `.slds-size--1-of-2`. This equates to a width of 50%.
+ *
+ * By default, a group of sizing helpers are created based on standard grid column spans of &ndash; 2, 3, 4, 5, 6, 7, 8 and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class `.slds-size--1-of-3` on each element. This will make each card take up 33.333% of containing section.
+ *
+ * Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. `.slds-medium-size--1-of-3` you will output a width at the specified breakpoint name.
+ *
+ * Absolute sizing helpers are also available (where widths are declared in `rem` units): `xx-small`, `x-small`, `medium`, `large`, `x-large` and `xx-large` as defined in the <a href="/design-tokens/#category-sizing">sizing category of the Design Tokens</a>. e.g. `.slds-size--large`.
+ *
+ * In some uncommon cases, you may need a sizing helper that is up to a certain breakpoint. For these, use the classes prefixed with `max-` to achieve this result.
+ *
+ * Here is an overview of our available breakpoint names:
+ *
+ * | Breakpoint Name | Breakpoint Width         |
+ * | --------------- | ------------------------ |
+ * | `small-`        | 30em / 480px and higher  |
+ * | `medium-`       | 48em / 768px and higher  |
+ * | `large-`        | 64em / 1024px and higher |
+ * | `max-small-`    | up to 29.9375em / 479px  |
+ * | `max-medium-`   | up to 47.9375em / 767px  |
+ * | `max-large-`    | up to 63.9375em / 1023px |
+ *
+ * Our responsive sizing helpers are built upon a mobile first approach. To achieve the desired outcome of this approach, you will need to append responsive sizing helpers to an element that overrides the previous breakpoint. A default sizing helper is **required** and responsive sizing helpers are additive. The following example demonstrates the class name position for each breakpoint:
+ *
+ * `&lt;div class="[default] [small size override] [medium size override] [large size override]"&gt;`
+ *
+ * A real world example would look like this:
+ *
+ * `&lt;div class="slds-size--1-of-2 slds-small-size--1-of-3 slds-medium-size--1-of-4 slds-large-size--1-of-3"&gt;`
+ *
+ * This will equate to the following width output for your element:
+ *
+ * ```SCSS
+ *.foo {
+ * width: 50%;
+ * @media only screen and (min-width: 30em) {
+ *   width: 33.3333%;
+ * }
+ * @media only screen and (min-width: 48em) {
+ *   width: 25%;
+ * }
+ * @media only screen and (min-width: 64em) {
+ *   width: 33.3333%;
+ * }
+ *}
+ *```
+ *
+ * @summary Sizing utilities allow for easy width sizing on an element.
+ *
+ * @utility
+ * @name sizing
+ * @selector [class*='slds-size_']
+ * @support dev-ready
+ */

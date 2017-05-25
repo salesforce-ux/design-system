@@ -1,0 +1,284 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes text input
+ *
+ * @name base
+ * @selector .slds-input
+ * @restrict input
+ * @required
+ * @variant
+ */
+.slds-input {
+  @include form-states;
+  display: inline-block;
+  padding: 0 $spacing-medium 0 $spacing-small;
+  line-height: $height-input;
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+
+  &:read-only {
+    @include button-interactions;
+  }
+
+  &[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /**
+   * Removes aesthetic nature from an input
+   *
+   * @selector .slds-input_bare
+   * @restrict .slds-input, input, textarea
+   * @modifier
+   */
+  &_bare,
+  &--bare {
+    background-color: transparent;
+    border: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+      left: $spacing-small;
+    }
+    color: $color-text-default;
+    line-height: $height-input;
+
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  /**
+   * Used to apply an input size to another element thats a non input
+   * Because sometimes I need elements the same height as inputs
+   *
+   * @selector .slds-input_height
+   * @restrict .slds-input
+   */
+  &_height,
+  &--height {
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+  }
+}
+
+/**
+ * @summary Modifier if text input has svg icon adjacent to input
+ *
+ * @selector .slds-input-has-icon
+ * @restrict .slds-form-element div
+ */
+.slds-input-has-icon {
+  position: relative;
+
+  /**
+   * Hook for .slds-input-has-icon
+   *
+   * @selector .slds-input__icon
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
+   */
+  .slds-input__icon {
+    @include square($square-icon-medium-content);
+    position: absolute;
+    top: 50%;
+    margin-top: (($square-icon-medium-content / 2) * -1);
+    line-height: 1;
+
+    /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+      fill: $color-text-input-icon;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon to the left of the text input
+   *
+   * @selector .slds-input-has-icon_left
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_left,
+  &--left {
+
+    .slds-input__icon {
+      left: $spacing-small;
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-left: $spacing-x-large;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon to the right of the text input
+   *
+   * @selector .slds-input-has-icon_right
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_right,
+  &--right {
+
+    .slds-input__icon {
+      right: $spacing-small;
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-right: $spacing-x-large;
+    }
+  }
+
+  /**
+   * Positions .slds-input__icon--left to the left of the text input and .slds-input__icon--right to the right of the text input
+   *
+   * @selector .slds-input-has-icon_left-right
+   * @restrict .slds-input-has-icon
+   * @modifier
+   * @group position
+   */
+  &_left-right,
+  &--left-right {
+    /**
+     * Hook for .slds-input-has-icon--left-right
+     *
+     * @selector .slds-input__icon_left
+     * @restrict .slds-input__icon
+     */
+    .slds-input__icon_left,
+    .slds-input__icon--left {
+      left: $spacing-small;
+    }
+
+    /**
+     * Hook for .slds-input-has-icon--left-right
+     *
+     * @selector .slds-input__icon_right
+     * @restrict .slds-input__icon
+     */
+    .slds-input__icon_right,
+    .slds-input__icon--right {
+      right: $spacing-small;
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding: 0 $spacing-x-large;
+    }
+  }
+}
+
+/**
+ * Positions two items (icons and/or spinners) on one side or the other of the input
+ *
+ * @selector .slds-input__icon-group
+ * @restrict .slds-input-has-icon div
+ */
+.slds-input__icon-group {
+  position: absolute;
+  height: $square-icon-medium-content;
+  margin-top: (($square-icon-medium-content / 2) * -1);
+}
+
+/**
+ * Positions the close icon and spinner on the right side of the input while searching
+ *
+ * @selector .slds-input__icon-group_right
+ * @restrict .slds-input__icon-group
+ * @modifier
+ * @group position
+ */
+.slds-input__icon-group_right {
+  right: 0;
+  top: 50%;
+
+  .slds-input__icon_right,
+  .slds-input__icon--right {
+    right: $spacing-x-small;
+  }
+
+  .slds-input__spinner {
+    right: $spacing-large;
+    left: auto;
+  }
+}
+
+/**
+ * @summary Use on input container to let it know there is fixed text to the left or right of the input
+ *
+ * @selector .slds-input-has-fixed-addon
+ * @restrict .slds-form-element .slds-form-element__control
+ */
+.slds-input-has-fixed-addon {
+  display: flex;
+}
+
+/**
+ * Fixed text that sits to the left or right of an input
+ *
+ * @selector .slds-form-element__addon
+ * @restrict .slds-form-element span
+ */
+.slds-form-element__addon {
+  display: inline-block;
+  margin: 0 $spacing-x-small;
+  align-self: center;
+}
+
+/**
+ * Read-only components are used to display immutable data within a form
+ *
+ * @summary Initializes read-only form element
+ *
+ * @selector .slds-form-element__static
+ * @restrict .slds-form-element span, .slds-form-element div
+ */
+.slds-form-element__static {
+  display: inline-block;
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
+  min-height: calc(#{$line-height-button} + 2px); // For IE
+
+  // If read only state is longform
+  // Apply text line height
+  &.slds-text-longform {
+    line-height: $line-height-text;
+  }
+
+  /**
+   * Inline Edit on static form element
+   *
+   * @selector .slds-form-element__static_edit
+   * @restrict .slds-form-element__static
+   */
+  &--edit {
+    width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
+  }
+}
+
+/**
+ *  Error Styles for input field
+ *
+ * @selector .slds-has-error
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-has-error {
+  @include form-input-error('.slds-input');
+
+  .slds-input__icon {
+    fill: $color-text-error;
+    color: $color-text-error;
+  }
+}

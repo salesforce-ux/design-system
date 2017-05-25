@@ -1,0 +1,94 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The discussion feed publisher is found at the top of a feed stream. It contains
+ * basic and advanced publishing capibilities.
+ *
+ * The discussion feed is in a collapsed state by default. There are 3 states
+ * of the discussion feed that provide different feedback to the user. First,
+ * the collapsed state, this indicates the user has not interacted with the
+ * discussion feed publisher. When the user initiates an interaction with the
+ * publisher, by either focusing of the textara or clicking the "Share" button,
+ * through javascript the class of `slds-is-active` should be applied to the
+ * `slds-publisher` div. This class will expand the publisher box and display
+ * additional publisher actions.
+ *
+ * During the active state, before the user has begun typing or attaching
+ * additional content, the "Share" button should be disabled by applying the
+ * `disabled` attribute to the `<textarea>`. When the user begins typing, the
+ * `disabled` attribute should be toggled off.
+ *
+ * @summary Initializes a publisher
+ *
+ * @name base
+ * @selector .slds-publisher
+ * @restrict div
+ * @variant
+ */
+.slds-publisher {
+  display: flex;
+
+  /**
+   * @selector .slds-is-active
+   * @restrict .slds-publisher
+   * @modifier
+   */
+  &.slds-is-active {
+    display: block;
+
+    .slds-publisher__toggle-visibility {
+      display: inherit;
+    }
+
+    .slds-publisher__input {
+      line-height: $line-height-text;
+      height: auto;
+      max-height: 10rem;
+      resize: vertical;
+      padding: {
+        top: $spacing-small;
+        bottom: $spacing-small;
+      }
+    }
+  }
+
+  /**
+   * Abstraction of the text input styles
+   *
+   * @selector .slds-publisher__input
+   * @restrict .slds-publisher textarea
+   * @required
+   */
+  &__input {
+    line-height: $line-height-button;
+    padding: 0 $spacing-medium;
+    resize: none;
+    min-height: calc(#{$line-height-button} + 2px);
+    max-height: calc(#{$line-height-button} + 2px);
+    width: 100%;
+  }
+
+  /**
+   * Bottom row of actionable items
+   *
+   * @selector .slds-publisher__actions
+   * @restrict .slds-publisher div
+   * @required
+   */
+  &__actions > .slds-button {
+    margin-left: $spacing-small;
+  }
+
+  /**
+   *
+   *
+   * @selector .slds-publisher__toggle-visibility
+   * @restrict .slds-publisher label, .slds-publisher ul
+   * @required
+   */
+  .slds-publisher__toggle-visibility {
+    display: none;
+  }
+}

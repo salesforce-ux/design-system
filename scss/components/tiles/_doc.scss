@@ -1,0 +1,23 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Tiles are setup to be displayed with or without an image/icon. The default
+ * pattern for tiles has an image/icon, a detail body which contains a list of
+ * information and action overflow menu dropdown. The detail body list, by
+ * default, comes as a name/value pairing but can be swapped out with a string
+ * of text or an inline horizontal list.
+ *
+ * Tiles can have different groupings of information based on its context.
+ * Pay close attention to the markup, as each tile layout is constructed differently.
+ *
+ * @summary A tile is a grouping of related information associated with a record.
+ *
+ * @base
+ * @name tiles
+ * @selector .slds-tile
+ * @support dev-ready
+ * @category structure
+ * @type data-display
+ */

@@ -1,0 +1,214 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Container for feed item comments
+ *
+ * @selector .slds-feed__item-comments
+ * @restrict .slds-feed__item div
+ * @notes Contains comment replies and publisher
+ * @required
+ */
+.slds-feed__item-comments {
+  background: $color-background-post;
+  border-top: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid $color-border;
+
+  .slds-comment {
+    padding: $spacing-x-small $spacing-medium;
+  }
+}
+
+/**
+ * @name post
+ * @selector .slds-post
+ * @restrict .slds-feed article
+ * @variant
+ */
+.slds-post {
+  background: $color-background-alt;
+  padding: $spacing-small $spacing-medium;
+
+  @include mq-medium-max {
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  @include mq-large-min {
+    padding: 0 $spacing-medium $spacing-x-small;
+  }
+
+  /**
+   * Header region of a feed post
+   *
+   * @selector .slds-post__header
+   * @restrict .slds-post header
+   */
+  &__header {
+    margin-bottom: $spacing-small;
+  }
+
+  /**
+   * Content region of a feed post
+   *
+   * @selector .slds-post__content
+   * @restrict .slds-post div
+   */
+  &__content {
+    margin-bottom: $spacing-small;
+
+    @include mq-medium-min {
+      margin-bottom: $spacing-large;
+    }
+  }
+
+  /**
+   * Footer region of a feed post
+   *
+   * @selector .slds-post__footer
+   * @restrict .slds-post footer
+   */
+  &__footer {
+    display: flex;
+    font-size: $font-size-small;
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
+  }
+}
+
+/**
+ * Footer region that contains quick action items for post
+ *
+ * @selector .slds-post__footer-actions-list
+ * @restrict .slds-post__footer ul
+ */
+.slds-post__footer-actions-list {
+  justify-content: space-between;
+  text-align: center;
+  order: 1;
+
+  @include mq-small-max {
+    border-top: $border-width-thin solid $color-border;
+    margin: 0 ($spacing-small * -1) ($spacing-small * -1);
+    padding: 0 $spacing-medium;
+  }
+
+  @include mq-medium-min {
+    order: 0;
+  }
+}
+
+/**
+ * Action items within the feed post footer
+ *
+ * @selector .slds-post__footer-action
+ * @restrict .slds-post__footer-actions-list button
+ */
+.slds-post__footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-default;
+  padding: $spacing-small 0;
+  line-height: 1;
+
+  @include mq-medium-min {
+    margin-right: $spacing-medium;
+    padding: 0;
+  }
+
+  .slds-icon {
+    margin-right: $spacing-xx-small;
+  }
+
+  /**
+   * Active state for like button
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-post__footer-action
+   * @modifier
+   */
+  &:hover,
+  &:focus,
+  &.slds-is-active {
+    color: $color-text-link-hover;
+    text-decoration: none;
+
+    .slds-icon {
+      fill: currentColor;
+    }
+  }
+}
+
+/**
+ * Footer region that contains read only items for post
+ *
+ * @selector .slds-post__footer-meta-list
+ * @restrict .slds-post__footer ul
+ */
+.slds-post__footer-meta-list {
+  margin-bottom: $spacing-medium;
+
+  @include mq-medium-min {
+    margin: {
+      left: auto;
+      bottom: 0;
+    }
+  }
+}
+
+// A feed post is altered when inside a narrow region of the application
+// We take the existing media-queries properties that are being used on
+// slds-post and applying them to slds-post when it finds a parent class
+// named .slds-region--narrow.
+//
+// If styles are being updated via media-queries, please make sure you update
+// the .slds-region--narrow references as the goal is for slds-post to
+// inherit the styles from mobile.
+.slds-region_narrow,
+.slds-region--narrow {
+
+  // Modifying .slds-post when inside a region with the
+  // class .slds-region--narrow
+  .slds-post {
+    border: 0;
+    padding: $spacing-small $spacing-medium;
+  }
+
+  // Modifying .slds-post__content when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__content {
+    margin-bottom: $spacing-small;
+  }
+
+  // Modifying .slds-post__footer when inside a region with the class
+  // .slds-region--narrow
+  .slds-post__footer {
+    flex-direction: column;
+  }
+
+  .slds-post__footer-action {
+    padding: $spacing-small 0;
+  }
+
+  // Modifying .slds-post__footer-actions-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-actions-list {
+    order: 1;
+    border-top: $border-width-thin solid $color-border;
+    margin: 0 ($spacing-small * -1) ($spacing-small * -1);
+    padding: 0 $spacing-medium;
+  }
+
+  // Modifying .slds-post__footer-meta-list when inside a region with the
+  // class .slds-region--narrow
+  .slds-post__footer-meta-list {
+    margin: {
+      left: 0;
+      bottom: $spacing-medium;
+    }
+  }
+}

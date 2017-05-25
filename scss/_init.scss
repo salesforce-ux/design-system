@@ -1,0 +1,16 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Imports necessary to initialize the CSS framework,
+// common to all versions of the design system (scoped and non-scoped)
+
+// Important:
+// Reserved for mixins, functions, variables
+// Importing this file MUST NOT output any CSS
+
+@import 'design-tokens';
+@import 'config';
+@import 'vendor/deprecate';
+@import 'dependencies/index';
+@import 'core/font';

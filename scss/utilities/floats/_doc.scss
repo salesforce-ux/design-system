@@ -1,0 +1,18 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * To float an element on the left, add the `.slds-float--left` class to the element. To float it on the right, add the `.slds-float--right` class.
+ *
+ * Note: The floated element must be first in the document flow, even if it renders on the right.
+ *
+ * If you want the parent of the floated element to contain the floats, add the `.slds-clearfix` class to the parent.
+ *
+ * @summary Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.
+ *
+ * @utility
+ * @name floats
+ * @selector [class*='slds-float_']
+ * @support dev-ready
+ */

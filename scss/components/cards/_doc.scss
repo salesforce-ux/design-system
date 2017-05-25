@@ -1,0 +1,22 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * To initialize a card, apply the `.slds-card` class to a containing `<article>`.
+ * A card is made up of three sections, a header, a body, and a footer.
+ * The card header will get the `.slds-card__header` class.
+ * The card body will get the `.slds-card__body` class. The card footer will
+ * get the `.slds-card__footer` class.
+ *
+ * @summary Cards are used to apply a container around a related grouping of information.
+ *
+ * @base
+ * @name cards
+ * @selector .slds-card
+ * @category structure
+ * @type data-display, layout
+ * @role presentation
+ * @support dev-ready
+ * @layout responsive
+ */

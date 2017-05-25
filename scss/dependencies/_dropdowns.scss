@@ -1,0 +1,31 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Calculate max-height of dropdown length for list overflow
+///
+/// @require $length, $font-size, $line-height, $padding
+/// @param $length {Integer} Number of items to show before overlow
+/// @param $font-size {String} Font-size of list items
+/// @param $line-height {String} Line-height of list items
+/// @param $padding {String} Vertical padding of list items
+/// @param $icon {String} Size of icon in list items
+@mixin dropdown-overflow-length(
+  $length,
+  $font-size: $font-size-medium,
+  $line-height: $line-height-text,
+  $padding: $spacing-medium,
+  $icon-size: null
+) {
+  @include enable-ios-momentum-scrolling;
+
+  // Calculate icon and padding since icon will always be taller than line height of text
+  @if $icon-size != null {
+    max-height: calc((#{$icon-size} + #{$padding}) * #{$length});
+  }
+  // Calculate text height and padding
+  @else {
+    max-height: calc(((#{$font-size} * #{$line-height}) + #{$padding}) * #{$length});
+  }
+  overflow-y: auto;
+}

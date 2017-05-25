@@ -1,0 +1,470 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-path-coach
+ * @restrict div
+ * @required
+ * @variant
+ */
+.slds-path-coach {
+  border: transparent $border-width-thin solid;
+  border-top: 0;
+
+  &.slds-is-expanded {
+    border-color: $color-border;
+    padding-bottom: $spacing-medium;
+  }
+}
+
+/**
+ * Creates the container for tabs in a path
+ *
+ * @selector .slds-tabs_path
+ * @restrict .slds-path-coach div
+ * @required
+ */
+.slds-tabs_path,
+.slds-tabs--path {
+  @include tabs;
+
+  /**
+   * Horizontal list of stages in path component
+   *
+   * @selector .slds-tabs_path__nav
+   * @restrict .slds-tabs_path ul
+   * @required
+   */
+  &__nav {
+    @include tabs-nav;
+  }
+
+  /**
+   * Creates the completed stage of the path
+   *
+   * @selector .slds-is-complete
+   * @restrict .slds-tabs_path__item
+   * @modifier
+   */
+  .slds-is-complete {
+    background-color: $color-background-path-complete;
+
+    .slds-tabs_path__stage,
+    .slds-tabs--path__stage {
+      transform: rotateX(0deg);
+    }
+
+    .slds-tabs_path__title,
+    .slds-tabs--path__title {
+      transform: rotateX(180deg);
+    }
+
+    .slds-tabs_path__link,
+    .slds-tabs--path__link {
+      color: $color-text-action-label-active;
+    }
+
+    &:hover {
+      background-color: $color-background-path-complete-hover;
+
+      .slds-tabs_path__stage,
+      .slds-tabs--path__stage {
+        transform: rotateX(-180deg);
+      }
+
+      .slds-tabs_path__title,
+      .slds-tabs--path__title {
+        transform: rotateX(0deg);
+      }
+
+      .slds-tabs_path__link,
+      .slds-tabs--path__link {
+        color: $color-text-inverse;
+      }
+    }
+  }
+
+  /**
+   * Creates the current stage of the path
+   *
+   * @selector .slds-is-current
+   * @restrict .slds-tabs_path__item
+   * @modifier
+   */
+  .slds-is-current {
+    background-color: $color-background-path-current;
+
+    &:hover {
+      background-color: $color-background-path-current-hover;
+    }
+
+    + .slds-is-incomplete:before {
+      background-color: $color-background-path-current;
+    }
+
+    &:hover + .slds-is-incomplete:before {
+      background-color: $color-background-path-current-hover;
+    }
+  }
+
+
+  /**
+   * Creates the incomplete stage of the path
+   *
+   * @selector .slds-is-incomplete
+   * @restrict .slds-tabs_path__item
+   * @modifier
+   */
+  .slds-is-incomplete {
+    background-color: $color-background-path-incomplete;
+
+    &:hover {
+      background-color: $color-background-path-incomplete-hover;
+    }
+
+    .slds-tabs_path__link,
+    .slds-tabs--path__link {
+      color: $color-text-default;
+    }
+  }
+
+  /**
+   * Creates lost stage of the path
+   *
+   * @selector .slds-is-lost
+   * @restrict .slds-tabs_path__item
+   * @notes This class must be added to the "closed" stage with JS when the Sales Path is over by losing the opportunity
+   * @modifier
+   */
+  .slds-is-lost,
+  .slds-is-lost:hover {
+    background-color: $color-background-path-lost;
+  }
+
+  // Lets make sure we have the right color when these steps are activated
+  .slds-is-current,
+  .slds-is-lost {
+
+    .slds-tabs_path__link,
+    .slds-tabs--path__link {
+      color: $color-text-inverse;
+    }
+  }
+
+  /**
+   * Creates the active stage of the sales path
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-tabs_path__item
+   * @notes This class must be placed on the item programatically when the guidance section is used
+   * @modifier
+   */
+  .slds-is-active {
+    background-color: $color-background-inverse;
+
+    .slds-tabs_path__link,
+    .slds-tabs--path__link {
+      color: $color-text-inverse;
+    }
+
+    &:hover {
+      background-color: $color-background-alt-inverse;
+
+      + .slds-tabs_path__item:before,
+      + .slds-tabs--path__item:before {
+        background-color: $color-background-alt-inverse;
+      }
+    }
+
+    + .slds-tabs_path__item:before,
+    + .slds-tabs--path__item:before {
+      background-color: $color-background-inverse;
+    }
+  }
+
+  /**
+   * Creates success stage of the path
+   *
+   * @selector .slds-is-won
+   * @restrict .slds-tabs_path__item
+   * @modifier
+   */
+  .slds-is-active,
+  .slds-is-won {
+
+    .slds-tabs_path__title,
+    .slds-tabs--path__title {
+      transform: rotateX(0deg);
+    }
+
+    .slds-tabs_path__stage,
+    .slds-tabs--path__stage {
+      transform: rotateX(-180deg);
+    }
+  }
+}
+
+/**
+ * Individual stages of a path
+ *
+ * @selector .slds-tabs_path__item
+ * @restrict .slds-tabs_path__nav li
+ * @required
+ */
+.slds-tabs_path__item,
+.slds-tabs--path__item {
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 5rem;
+  text-align: center;
+  perspective: 500px;
+  transition:
+    transform 0.1s ease-in-out,
+    background-color 0.1s linear;
+
+  &:first-child {
+    border-radius: $border-radius-pill 0 0 $border-radius-pill;
+  }
+
+  &:last-child {
+    border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    border-right: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $border-width-thick;
+    left: (($height-sales-path / 2) * -1);
+    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    border: $border-width-thick solid $color-border-path-divider;
+    border-left: 0;
+    border-bottom: 0;
+    background-clip: padding-box;
+    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
+    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
+  + .slds-is-complete:before,
+  + .slds-is-current:before {
+    background-color: $color-background-path-complete;
+  }
+
+  &:hover + .slds-is-complete:before,
+  &:hover + .slds-is-current:before {
+    background-color: $color-background-path-complete-hover;
+  }
+
+  + .slds-is-incomplete:before,
+  + .slds-is-lost:before {
+    background-color: $color-background-path-incomplete;
+  }
+
+  &:hover + .slds-is-incomplete:before,
+  &:hover + .slds-is-lost:before {
+    background-color: $color-background-path-incomplete-hover;
+  }
+}
+
+
+/**
+ * Contains the name of the stage
+ *
+ * @selector .slds-tabs_path__title
+ * @restrict .slds-tabs_path__link span
+ * @required
+ */
+.slds-tabs_path__title,
+.slds-tabs--path__title {
+  @include truncate;
+}
+
+/**
+ * Contains the check mark when the stage is completed
+ *
+ * @selector .slds-tabs_path__stage
+ * @restrict .slds-tabs_path__link span
+ * @required
+ */
+.slds-tabs_path__stage,
+.slds-tabs--path__stage {
+  position: absolute;
+  top: 50%;
+  left: ($square-icon-medium-content / 2);
+  width: 100%;
+  margin-top: (($square-icon-medium-content - $spacing-xx-small) * -1);
+  transform: rotateX(-180deg);
+}
+
+
+/**
+ * Creates actionable element inside of each path tab
+ *
+ * @selector .slds-tabs_path__link
+ * @restrict .slds-tabs_path__item a
+ * @required
+ */
+.slds-tabs_path__link,
+.slds-tabs--path__link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
+  line-height: $line-height-salespath;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.slds-tabs_path__title,
+.slds-tabs--path__title,
+.slds-tabs_path__stage,
+.slds-tabs--path__stage {
+  display: block;
+  transition: transform 0.2s linear;
+  // we should be able to get rid of this prefix once this issue is fixed
+  // https://github.com/postcss/autoprefixer/issues/653
+  // scss-lint:disable VendorPrefix
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/**
+ * Button that toggles visibility of stage's tabpanel
+ *
+ * @selector .slds-path__trigger
+ * @restrict .slds-path-coach button
+ * @required
+ */
+.slds-path__trigger {
+  border-radius: $border-radius-circle;
+  transition: $duration-quickly transform ease-in-out;
+}
+
+// @TODO: Move to global utility?
+.slds-flip_vertical,
+.slds-flip--vertical {
+  transform: rotateX(180deg);
+}
+
+.slds-flip_horizontal,
+.slds-flip--horizontal {
+  transform: rotateY(180deg);
+}
+
+/**
+ * Actionable button that invokes a completion of the path
+ *
+ * @selector .slds-path__mark-complete
+ * @restrict .slds-path-coach button
+ * @required
+ */
+.slds-path__mark-complete {
+  border-radius: $border-radius-pill;
+}
+
+/**
+ * Actionable button that invokes a current stage of the path
+ *
+ * @selector .slds-path__mark-current
+ * @restrict .slds-path-coach button
+ * @required
+ */
+.slds-path__mark-current {
+  border-color: $color-border-inverse;
+  background-color: $color-background-inverse;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-alt-inverse;
+  }
+}
+
+/**
+ * Tabpanel of each stage of the path
+ *
+ * @selector .slds-tabs_path__content
+ * @restrict .slds-path-coach div
+ * @required
+ */
+.slds-tabs_path__content,
+.slds-tabs--path__content {
+  position: relative;
+  padding-left: $spacing-large;
+  padding-right: $spacing-medium;
+}
+
+/**
+ * Key field section of expanded tabpanel
+ *
+ * @selector .slds-coach__keys
+ * @restrict .slds-tabs_path__content div
+ * @required
+ */
+.slds-coach__keys {
+  padding-left: $spacing-small;
+}
+
+/**
+ * Guidance section of expanded tabpanel
+ *
+ * @selector .slds-coach__guidance
+ * @restrict .slds-tabs_path__content div
+ * @required
+ */
+.slds-coach__guidance {
+  padding-left: $spacing-large;
+  padding-bottom: $spacing-xx-small;
+  background-color: $color-background-guidance;
+}
+
+// Layout adjustments for sub section sof expanded tabpanel
+.slds-coach__keys,
+.slds-coach__guidance {
+  margin-top: $spacing-medium;
+  padding-top: $spacing-medium;
+  padding-right: $spacing-large;
+}
+
+/**
+ * Name or label of name/value pair inside of key fields section
+ *
+ * @selector .slds-coach__item
+ * @restrict .slds-coach__keys dt
+ * @required
+ */
+.slds-coach__item {
+  border-top: $color-border $border-width-thin solid;
+  padding: $spacing-medium 0;
+  color: $color-text-weak;
+}
+
+/**
+ * Value of name/value pair inside of key fields section
+ *
+ * @selector .slds-coach__value
+ * @restrict .slds-coach__keys dd
+ * @required
+ */
+.slds-coach__value {
+  border-top: $color-border $border-width-thin solid;
+  padding-top: $spacing-medium;
+  color: $color-text-default;
+}

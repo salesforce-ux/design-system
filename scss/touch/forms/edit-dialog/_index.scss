@@ -1,0 +1,44 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-modal_form,
+.slds-modal--form {
+
+  .slds-modal__header,
+  .slds-modal__content:last-child {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .slds-modal__container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slds-modal__header .slds-text-heading_medium,
+  .slds-modal__header .slds-text-heading--medium {
+    // Unfortunately necessary to line up text with buttons
+    line-height: $line-height-text;
+  }
+
+
+
+  .slds-modal__header .slds-button {
+    display: inline-block;
+    width: auto;
+
+    &:first-child {
+      float: left;
+      margin-right: $spacing-x-small;
+
+      + .slds-button {
+        float: right;
+        margin: {
+          top: 0;
+          left: $spacing-x-small;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,794 @@
+@border-width-thin: 1px;
+@border-width-thick: 2px;
+@border-stroke-width-thin: 1px;
+@border-stroke-width-thick: 2px;
+@spacing-none: 0;
+@spacing-xxx-small: 0.125rem;
+@spacing-xx-small: 0.25rem;
+@spacing-x-small: 0.5rem;
+@spacing-small: 0.75rem;
+@spacing-medium: 1rem;
+@spacing-large: 1.5rem;
+@spacing-x-large: 2rem;
+@spacing-xx-large: 3rem;
+// Generic sizing token scale for UI components.
+@size-xx-small: 6rem;
+// Generic sizing token scale for UI components.
+@size-x-small: 12rem;
+// Generic sizing token scale for UI components.
+@size-small: 15rem;
+// Generic sizing token scale for UI components.
+@size-medium: 20rem;
+// Generic sizing token scale for UI components.
+@size-large: 25rem;
+// Generic sizing token scale for UI components.
+@size-x-large: 40rem;
+// Generic sizing token scale for UI components.
+@size-xx-large: 60rem;
+// Small utility icon without border.
+@square-icon-utility-small: 1rem;
+// Medium utility icon without border.
+@square-icon-utility-medium: 1.25rem;
+// Large utility icon without border.
+@square-icon-utility-large: 1.5rem;
+// Anchor: Outer colored tile
+@square-icon-large-boundary: 3rem;
+// Anchor: avatar
+@square-icon-large-boundary-alt: 5rem;
+// Anchor: Icon content (white shape)
+@square-icon-large-content: 2rem;
+// Use squareIconMediumBoundary
+@square-icon-medium: 2.375rem;
+// Stage left & actions: Outer colored tile
+@square-icon-medium-boundary: 2rem;
+// Icon button boundary.
+@square-icon-medium-boundary-alt: 2.25rem;
+// Stage left & actions: Icon content (white shape)
+@square-icon-medium-content: 1rem;
+// Alternate medium tap target size
+@square-icon-medium-content-alt: 0.875rem;
+// Small tap target size
+@square-icon-small: 1rem;
+// Search Results: Outer colored tile
+@square-icon-small-boundary: 1.5rem;
+// Search Results: Icon content (white shape)
+@square-icon-small-content: .75rem;
+// Very small icon button boundary.
+@square-icon-x-small-boundary: 1.25rem;
+// Very small icons in icon buttons.
+@square-icon-x-small-content: .5rem;
+// Very very small icon button boundary.
+@square-icon-xx-small-boundary: 1rem;
+// Very small icons to replace force font with temporary override.
+@square-icon-xx-small-content: .875rem;
+// Large tap target size.
+@square-icon-large: 3.125rem;
+// Minimum height of a pill.
+@height-pill: 1.625rem;
+// Brand fill color
+@fill-brand: rgb(0, 112, 210);
+// Brand hover fill color
+@fill-brand-hover: rgb(0, 95, 178);
+// Brand active fill color
+@fill-brand-active: rgb(22, 50, 92);
+// Header button icon color
+@fill-header-button: rgb(159, 170, 181);
+// Hovered header button icon color
+@fill-header-button-hover: rgb(0, 95, 178);
+// Use for large headings only.
+@font-weight-light: 300;
+// Most all body copy.
+@font-weight-regular: 400;
+// Used sparingly for emphasized text within regular body copy.
+@font-weight-bold: 700;
+@font-size-x-small: 0.625rem;
+@font-size-small: 0.875rem;
+@font-size-medium: 1rem;
+@font-size-medium-a: 1.125rem;
+@font-size-large: 1.25rem;
+@font-size-x-large: 1.5rem;
+@font-size-x-large-a: 1.57rem;
+@font-size-xx-large: 2rem;
+// Extra extra small text.
+@font-size-text-xx-small: .625rem;
+// Extra small body text.
+@font-size-text-x-small: .75rem;
+// Small body text.
+@font-size-text-small: .8125rem;
+// Medium body text.
+@font-size-text-medium: 1rem;
+// Large body text.
+@font-size-text-large: 1.125rem;
+// Extra large body text.
+@font-size-text-x-large: 1.25rem;
+// Extra Extra small headings.
+@font-size-heading-xx-small: .625rem;
+// Extra small headings.
+@font-size-heading-x-small: .75rem;
+// Small headings.
+@font-size-heading-small: .875rem;
+// Medium headings.
+@font-size-heading-medium: 1.125rem;
+// Large headings.
+@font-size-heading-large: 1.5rem;
+// Extra large headings.
+@font-size-heading-x-large: 2rem;
+// Unitless line-heights for reusability
+@line-height-heading: 1.25;
+// Unitless line-heights for reusability
+@line-height-text: 1.375;
+// Remove extra leading. Unitless line-heights for reusability
+@line-height-reset: 1;
+// Line heights for tabs
+@line-height-tab: 2.5rem;
+// Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.
+@font-family: 'Salesforce Sans', Arial, sans-serif;
+@font-family-text: 'Salesforce Sans', Arial, sans-serif;
+@font-family-heading: 'Salesforce Sans', Arial, sans-serif;
+@border-radius-small: .125rem;
+// Icons in lists, record home icon, unbound input elements
+@border-radius-medium: .25rem;
+@border-radius-large: .5rem;
+@border-radius-pill: 15rem;
+// Circle for global use, action icon bgd shape
+@border-radius-circle: 50%;
+// Default border color for UI elements.
+@color-border: rgb(216, 221, 230);
+// Our product brand blue.
+@color-border-brand: rgb(21, 137, 238);
+// Our product brand blue, darkened to meet accessibility color contrast ratios with white text.
+@color-border-brand-dark: rgb(0, 112, 210);
+// Border color for UI elements related to the concept of an external user or customer.
+@color-border-customer: rgb(255, 154, 60);
+// Border color for UI elements that have to do with destructive actions.
+@color-border-destructive: rgb(194, 57, 52);
+// Hover border color for UI elements that have to do with destructive actions.
+@color-border-destructive-hover: rgb(166, 26, 20);
+// Active border color for UI elements that have to do with destructive actions.
+@color-border-destructive-active: rgb(135, 5, 0);
+// Border color for UI elements related to providing neutral information (not error, success, or warning).
+@color-border-info: rgb(84, 105, 141);
+// Border color for UI elements that have to do with errors.
+@color-border-error: rgb(194, 57, 52);
+// Alternative border color for UI elements related to errors.
+@color-border-error-alt: rgb(234, 130, 136);
+// Dark alternative border color for UI elements related to errors.
+@color-border-error-dark: rgb(234, 130, 136);
+// Border color for UI elements related to the offline state.
+@color-border-offline: rgb(68, 68, 68);
+// Border color for UI elements that have to do with success.
+@color-border-success: rgb(75, 202, 129);
+// Dark alternative border color for UI elements that have to do with success.
+@color-border-success-dark: rgb(4, 132, 75);
+// Border color for UI elements that have to do with warnings.
+@color-border-warning: rgb(255, 183, 93);
+// Border color to match UI elements using color-background-inverse.
+@color-border-inverse: rgb(6, 28, 63);
+// Border color for a selected tab in a tab group.
+@color-border-tab-selected: rgb(0, 112, 210);
+// Border color for an active tab.
+@color-border-tab-active: rgb(255, 255, 255);
+// Lightest separator color - used as default separator on white backgrounds.
+@color-border-separator: rgb(244, 246, 249);
+// Medium separator color - used as default separator on light gray backgrounds.
+@color-border-separator-alt: rgb(216, 221, 230);
+// Darkest separator color - used as an alternate separator color when more differentiation is desired.
+@color-border-separator-alt-2: rgb(168, 183, 199);
+// Used as a separator on dark backgrounds, such as stage left navigation.
+@color-border-separator-inverse: rgb(42, 66, 108);
+// Used as the border color for selected rows or items on list-like components.
+@color-border-row-selected: rgb(0, 112, 210);
+// Used as the border color for the hover state on selected rows or items on list-like components.
+@color-border-row-selected-hover: rgb(21, 137, 238);
+// Used to delineate the boundary of a specific region. Specific to builders.
+@color-border-hint: rgb(42, 66, 108);
+// Used to delineate the boundary of a selected component. Specific to builders.
+@color-border-selection: rgb(0, 112, 210);
+// Used to delineate the boundary of a component that is being hovered over. Specific to builders.
+@color-border-selection-hover: rgb(21, 137, 238);
+// Used to delineate the boundary of a component that is being clicked. Specific to builders.
+@color-border-selection-active: rgb(244, 246, 249);
+// Used to delineate the boundary of a selected canvas element. Specific to builders.
+@color-border-canvas-element-selection: rgb(94, 180, 255);
+// Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
+@color-border-canvas-element-selection-hover: rgb(0, 95, 178);
+// Border color for a button with an icon that has a parent element that has a hover state
+@color-border-icon-inverse-hint: rgba(255, 255, 255, 0.5);
+// Hovered border color for a button with an icon that has a parent element that has a hover state
+@color-border-icon-inverse-hint-hover: rgba(255, 255, 255, 0.75);
+// Border color for brandable primary button
+@color-border-button-brand: rgb(0, 112, 210);
+// Border color for brandable primary button - disabled state
+@color-border-button-brand-disabled: rgba(0, 0, 0, 0);
+// Border color for default secondary button
+@color-border-button-default: rgb(216, 221, 230);
+// Border color for disabled inverse button.
+@color-border-button-inverse-disabled: rgba(255, 255, 255, 0.15);
+// Border color on form elements.
+@color-border-input: rgb(216, 221, 230);
+// Border color on active form elements.
+@color-border-input-active: rgb(21, 137, 238);
+// Border color on disabled form elements.
+@color-border-input-disabled: rgb(168, 183, 199);
+// The borders to create the checkmark
+@color-border-input-checkbox-selected-checkmark: rgb(255, 255, 255);
+// These borders create the faux checkmark when the checkbox toggle is in the checked state.
+@color-border-toggle-checked: rgb(255, 255, 255);
+// Our product brand blue.
+@color-stroke-brand: rgb(0, 112, 210);
+// Hover stroke color for our product brand blue.
+@color-stroke-brand-hover: rgb(0, 112, 210);
+// Active stroke color for our product brand blue.
+@color-stroke-brand-active: rgb(22, 50, 92);
+// Disabled stroke color.
+@color-stroke-disabled: rgb(224, 229, 238);
+// Stroke color for our global header buttons.
+@color-stroke-header-button: rgb(159, 170, 181);
+// Default background color for the whole app.
+@color-background: rgb(244, 246, 249);
+// Second default background color for the app.
+@color-background-alt: rgb(253, 253, 253);
+// Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+@color-background-alt-2: rgb(238, 241, 246);
+// Alternative background color for dark portions of the app.
+@color-background-alt-inverse: rgb(22, 50, 92);
+// Used as the background color for the hover state on rows or items on list-like components.
+@color-background-row-hover: rgb(244, 246, 249);
+// Used as the background color for the active state on rows or items on list-like components.
+@color-background-row-active: rgb(238, 241, 246);
+// Used as the background color for selected rows or items on list-like components.
+@color-background-row-selected: rgb(240, 248, 252);
+// Used as the background color for the new state on rows or items on list-like components.
+@color-background-row-new: rgb(217, 255, 223);
+// Default background color for dark portions of the app (like Stage Left or tooltips).
+@color-background-inverse: rgb(6, 28, 63);
+// Secondary top bar background color (child browser, file preview, etc.)
+@color-background-browser: rgb(84, 105, 141);
+// Background color for default mobile chrome (ex. global header)
+@color-background-chrome-mobile: rgb(0, 112, 210);
+// Background color for default desktop chrome (ex. global header)
+@color-background-chrome-desktop: rgb(255, 255, 255);
+// Background color for UI elements related to the concept of an external user or customer.
+@color-background-customer: rgb(255, 154, 60);
+// Background color for highlighting UI elements.
+@color-background-highlight: rgb(250, 255, 189);
+// Background color for highlighting text in search results.
+@color-background-highlight-search: rgb(255, 240, 63);
+// Background color for text selected with a mouse.
+@color-background-selection: rgb(216, 237, 255);
+// Background for utility icons that live in the action bar on mobile.
+@color-background-actionbar-icon-utility: rgb(84, 105, 141);
+// Color of the indicator dot.
+@color-background-indicator-dot: rgb(22, 50, 92);
+// Color of the spinner dot.
+@color-background-spinner-dot: rgb(159, 170, 181);
+// Standard modal header
+@color-background-modal: rgb(255, 255, 255);
+// Brandable modal header
+@color-background-modal-brand: rgb(0, 112, 210);
+// Notifications badge background color.
+@color-background-notification-badge: rgb(194, 57, 52);
+// Notifications badge background color.
+@color-background-notification-badge-hover: rgb(0, 95, 178);
+// Notifications badge background color.
+@color-background-notification-badge-focus: rgb(0, 95, 178);
+// Notifications badge background color.
+@color-background-notification-badge-active: rgb(0, 57, 107);
+// Background color for notification list item.
+@color-background-notification: rgb(255, 255, 255);
+// Background color for a new notification list item.
+@color-background-notification-new: rgb(240, 248, 252);
+// Stage left org switcher dropdown arrow background color.
+@color-background-org-switcher-arrow: rgb(6, 28, 63);
+// Background color for payloads in the feed.
+@color-background-payload: rgb(244, 246, 249);
+// Background color of comment posts in the feed.
+@color-background-post: rgb(247, 249, 251);
+// Hover color for utility bar item.
+@color-background-utility-bar-hover: rgb(224, 229, 238);
+// Active color for utility bar item.
+@color-background-utility-bar-active: rgb(21, 137, 238);
+// Used as gray background when more contrast is desired.
+@color-background-shade: rgb(224, 229, 238);
+// Used as gray background in conjunction with Shade when more contrast is desired.
+@color-background-shade-dark: rgb(216, 221, 230);
+// Used as background for loading stencils on white background.
+@color-background-stencil: rgb(238, 241, 246);
+// Used as an alternate background for loading stencils on gray backgrounds.
+@color-background-stencil-alt: rgb(224, 229, 238);
+// Used as the default background color for temporary dialog elements, such as the progress spinner background.
+@color-background-temp-modal: rgba(126, 140, 153, 0.8);
+// The color of the mask overlay that appears when you enter a modal state.
+@color-background-temp-modal-tint: rgba(126, 140, 153, 0.8);
+// The color of the mask overlay that appears when you enter a modal state.
+@color-background-temp-modal-tint-alt: rgba(255, 255, 255, 0.75);
+// The color of the mask overlay that appears when you enter a modal state.
+@color-background-backdrop: rgba(255, 255, 255, 0.75);
+// The color of the mask overlay that provides user feedback on interaction.
+@color-background-backdrop-tint: rgba(240, 248, 252, 0.75);
+// The background color of an internal scrollbar.
+@color-background-scrollbar: rgb(224, 229, 238);
+// The background color of an internal scrollbar track.
+@color-background-scrollbar-track: rgb(168, 183, 199);
+// Our product brand blue.
+@color-brand: rgb(21, 137, 238);
+// Our product brand blue, darkened to meet accessibility color contrast ratios with white text.
+@color-brand-dark: rgb(0, 112, 210);
+// Our product brand blue, darkened even further.
+@color-brand-darker: rgb(0, 95, 178);
+// Toggle background color.
+@color-background-toggle: rgb(159, 170, 181);
+// Disabled toggle background color.
+@color-background-toggle-disabled: rgb(159, 170, 181);
+// Hovered toggle background color.
+@color-background-toggle-hover: rgb(126, 140, 153);
+// Active toggle background color.
+@color-background-toggle-active: rgb(0, 112, 210);
+// Hovered active toggle background color.
+@color-background-toggle-active-hover: rgb(0, 95, 178);
+// Button backgrounds on modal headers
+@color-background-modal-button: rgba(0, 0, 0, 0.07);
+// Active button backgrounds on modal headers
+@color-background-modal-button-active: rgba(0, 0, 0, 0.16);
+// Default input field
+@color-background-input: rgb(255, 255, 255);
+// Selected input field (when user has clicked or tabbed into field)
+@color-background-input-active: rgb(255, 255, 255);
+// Default checkboxes
+@color-background-input-checkbox: rgb(255, 255, 255);
+// Disabled checkboxes
+@color-background-input-checkbox-disabled: rgb(216, 221, 230);
+// Selected checkboxes
+@color-background-input-checkbox-selected: rgb(21, 137, 238);
+// Disabled input
+@color-background-input-disabled: rgb(224, 229, 238);
+// Background color for input field that has encountered an error.
+@color-background-input-error: rgb(255, 221, 225);
+// Background color for search input fields.
+@color-background-input-search: rgba(0, 0, 0, 0.16);
+// Background color for pills.
+@color-background-pill: rgb(255, 255, 255);
+// Color of mask overlay that sits on top of an image when text is present.
+@color-background-image-overlay: rgba(0, 0, 0, 0.4);
+// Color for UI elements related to destructive actions.
+@color-background-destructive: rgb(194, 57, 52);
+// Hover color for UI elements related to destructive actions.
+@color-background-destructive-hover: rgb(166, 26, 20);
+// Active color for UI elements related to destructive actions.
+@color-background-destructive-active: rgb(135, 5, 0);
+// Background color for UI elements related to providing neutral information (not error, success, or warning).
+@color-background-info: rgb(84, 105, 141);
+// Color for UI elements related to errors.
+@color-background-error: rgb(212, 80, 76);
+// Dark color for UI elements related to errors. Accessible with white text.
+@color-background-error-dark: rgb(194, 57, 52);
+// Alternative color for UI elements related to errors.
+@color-background-error-alt: rgb(234, 130, 136);
+// Color for UI elements related to the offline state.
+@color-background-offline: rgb(68, 68, 68);
+// Color for UI elements that have to do with success.
+@color-background-success: rgb(75, 202, 129);
+// Dark color for UI elements that have to do with success. Accessible with white text.
+@color-background-success-dark: rgb(4, 132, 75);
+// Background color for toast messaging.
+@color-background-toast: rgba(84, 105, 141, 0.95);
+// Background color for success toast messaging.
+@color-background-toast-success: rgb(4, 132, 75);
+// Background color for error toast messaging.
+@color-background-toast-error: rgba(194, 57, 52, 0.95);
+// Color for UI elements that have to do with warning.
+@color-background-warning: rgb(255, 183, 93);
+// Background color for success buttons
+@color-background-button-success: rgb(75, 202, 129);
+// Hovered background color for success buttons
+@color-background-button-success-hover: rgb(4, 132, 75);
+// Active background color for success buttons
+@color-background-button-success-active: rgb(4, 132, 75);
+// Shadow above overflow menu close bar.
+@shadow-action-overflow-footer: 0 -2px 4px #F4F6F9;
+// Shadow for overlays.
+@shadow-overlay: 0 -2px 4px rgba(0, 0, 0, 0.07);
+// Shadow for drag-n-drop.
+@shadow-drag: 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+// Shadow for drop down.
+@shadow-drop-down: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+// Shadow for header.
+@shadow-header: 0 2px 4px rgba(0, 0, 0, 0.07);
+// Shadow for buttons.
+@shadow-button: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+// Custom glow for focus states on UI elements with explicit containers.
+@shadow-button-focus: 0 0 3px #0070D2;
+// Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.
+@shadow-button-focus-inverse: 0 0 3px #E0E5EE;
+// Shadow to make inline edit card pop out.
+@shadow-inline-edit: 0 2px 4px 4px rgba(0, 0, 0, 0.16);
+// Inset shadow for editable grid
+@shadow-focus-inset: 0 0 2px 2px #1589EE inset;
+// Shadow on elements that are docked to the bottom of the viewport.
+@shadow-docked: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+// Shadow on images.
+@shadow-image: 0 1px 1px rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-3-inset: -3;
+// Deprecated
+@elevation-0: 0;
+// Deprecated
+@elevation-2: 2;
+// Deprecated
+@elevation-4: 4;
+// Deprecated
+@elevation-8: 8;
+// Deprecated
+@elevation-16: 16;
+// Deprecated
+@elevation-32: 32;
+// Deprecated
+@elevation-shadow-3-below: 0 3px 3px 0 rgba(0, 0, 0, 0.16) inset;
+// Deprecated
+@elevation-shadow-0: none;
+// Deprecated
+@elevation-shadow-2: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-shadow-4: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-shadow-8: 0 8px 8px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-shadow-16: 0 16px 16px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-shadow-32: 0 32px 32px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-inverse-shadow-3-below: 0 -3px 3px 0 rgba(0, 0, 0, 0.16) inset;
+// Deprecated
+@elevation-inverse-shadow-0: none;
+// Deprecated: Use SHADOW_DOCKED
+@elevation-inverse-shadow-2: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-inverse-shadow-4: 0 -4px 4px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-inverse-shadow-8: 0 -8px 8px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-inverse-shadow-16: 0 -16px 16px 0 rgba(0, 0, 0, 0.16);
+// Deprecated
+@elevation-inverse-shadow-32: 0 -32px 32px 0 rgba(0, 0, 0, 0.16);
+// Action label text color
+@color-text-action-label: rgb(84, 105, 141);
+// Action label active text color
+@color-text-action-label-active: rgb(22, 50, 92);
+// Our product brand blue.
+@color-text-brand: rgb(21, 137, 238);
+// Top bar icon color
+@color-text-browser: rgb(255, 255, 255);
+// Top bar active icon color
+@color-text-browser-active: rgba(0, 0, 0, 0.4);
+// Customer text used in anchor subtitle
+@color-text-customer: rgb(255, 154, 60);
+// Body text color
+@color-text-default: rgb(22, 50, 92);
+// Error text for inputs and error misc
+@color-text-error: rgb(194, 57, 52);
+// Input disabled text
+@color-text-input-disabled: rgb(84, 105, 141);
+// Typed input text
+@color-text-input-focus-inverse: rgb(22, 50, 92);
+// Input icon
+@color-text-input-icon: rgb(159, 170, 181);
+// Inverse text color for dark backgrounds
+@color-text-inverse: rgb(255, 255, 255);
+// Weak inverse text color for dark backgrounds
+@color-text-inverse-weak: rgb(159, 170, 181);
+// Active state on a standalone link on a dark background.
+@color-text-inverse-active: rgb(94, 180, 255);
+// Hover state on a standalone link on a dark background.
+@color-text-inverse-hover: rgb(159, 170, 181);
+// Link text (508)
+@color-text-link: rgb(0, 112, 210);
+// Active link text
+@color-text-link-active: rgb(0, 57, 107);
+// Disabled link text
+@color-text-link-disabled: rgb(22, 50, 92);
+// Focus link text
+@color-text-link-focus: rgb(0, 95, 178);
+// Hover link text
+@color-text-link-hover: rgb(0, 95, 178);
+// Link color on dark background
+@color-text-link-inverse: rgb(255, 255, 255);
+// Link color on dark background - hover state
+@color-text-link-inverse-hover: rgba(255, 255, 255, 0.75);
+// Link color on dark background - active state
+@color-text-link-inverse-active: rgba(255, 255, 255, 0.5);
+// Link color on dark background - disabled state
+@color-text-link-inverse-disabled: rgba(255, 255, 255, 0.15);
+// Modal header title
+@color-text-modal: rgb(255, 255, 255);
+// Modal header button text color
+@color-text-modal-button: rgb(84, 105, 141);
+// Text in stage left navigation.
+@color-text-stage-left: rgb(224, 229, 238);
+// Color for default text in a tab group.
+@color-text-tab-label: rgb(22, 50, 92);
+// Color for text on a selected tab in a tab group.
+@color-text-tab-label-selected: rgb(0, 112, 210);
+// Color for text in hover state in a tab group.
+@color-text-tab-label-hover: rgb(0, 95, 178);
+// Color for text in focus state in a tab group.
+@color-text-tab-label-focus: rgb(0, 95, 178);
+// Color for text in active state in a tab group.
+@color-text-tab-label-active: rgb(0, 57, 107);
+// Color for disabled text in a tab group.
+@color-text-tab-label-disabled: rgb(224, 229, 238);
+// Color for text on toast messages.
+@color-text-toast: rgb(224, 229, 238);
+// Color for texts or icons that are related to warnings on a dark background.
+@color-text-warning: rgb(255, 183, 93);
+// Color for texts that are related to warnings on a light background.
+@color-text-warning-alt: rgb(132, 72, 0);
+// Color for text that is purposefully de-emphasized to create visual hierarchy.
+@color-text-weak: rgb(84, 105, 141);
+// Color for non-interactive icons that represent a selected item in a list
+@color-text-icon-brand: rgb(0, 112, 210);
+// Color for interactive utility icons
+@color-text-icon-utility: rgb(159, 170, 181);
+// Color for disabled toggles
+@color-text-toggle-disabled: rgb(216, 221, 230);
+// Text color for brandable primary button
+@color-text-button-brand: rgb(255, 255, 255);
+// Text color for brandable primary button - hover state
+@color-text-button-brand-hover: rgb(255, 255, 255);
+// Text color for brandable primary button - active state
+@color-text-button-brand-active: rgb(255, 255, 255);
+// Text color for brandable primary button - disabled state
+@color-text-button-brand-disabled: rgb(255, 255, 255);
+// Text color for default secondary button
+@color-text-button-default: rgb(0, 112, 210);
+// Text color for default secondary button - hover state
+@color-text-button-default-hover: rgb(0, 112, 210);
+// Text color for default secondary button - active state
+@color-text-button-default-active: rgb(0, 112, 210);
+// Text color for default secondary button - disabled state
+@color-text-button-default-disabled: rgb(216, 221, 230);
+// Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-button-default-hint: rgb(159, 170, 181);
+// Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-button-inverse: rgb(224, 229, 238);
+// Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-button-inverse-disabled: rgba(255, 255, 255, 0.15);
+// Default icon color.
+@color-text-icon-default: rgb(84, 105, 141);
+// Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-icon-default-hint: rgb(159, 170, 181);
+// Icon color for a button that has a parent element that has a hover state on a dark background. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-icon-inverse-hint: rgba(255, 255, 255, 0.5);
+// Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+@color-text-icon-default-hint-borderless: rgb(224, 229, 238);
+// Default icon color - hover state.
+@color-text-icon-default-hover: rgb(0, 112, 210);
+// Default icon color - active state.
+@color-text-icon-default-active: rgb(0, 57, 107);
+// Default icon color - disabled state
+@color-text-icon-default-disabled: rgb(216, 221, 230);
+// Icon color on dark background
+@color-text-icon-inverse: rgb(255, 255, 255);
+// Icon color on dark background - hover state
+@color-text-icon-inverse-hover: rgb(255, 255, 255);
+// Icon color on dark background - active state
+@color-text-icon-inverse-active: rgb(255, 255, 255);
+// Icon color on dark background - disabled state
+@color-text-icon-inverse-disabled: rgba(255, 255, 255, 0.15);
+// Hovered icon color for a button that has a parent element that has a hover state
+@color-text-icon-inverse-hint-hover: rgba(255, 255, 255, 0.75);
+// Text color for field labels.
+@color-text-label: rgb(84, 105, 141);
+// Input placeholder text.
+@color-text-placeholder: rgb(84, 105, 141);
+// Input placeholder text on dark backgrounds.
+@color-text-placeholder-inverse: rgb(224, 229, 238);
+// Color of required field marker.
+@color-text-required: rgb(194, 57, 52);
+// Text color for pills.
+@color-text-pill: rgb(0, 112, 210);
+// Text color for success text.
+@color-text-success: rgb(2, 128, 72);
+// Text color for success text on dark backgrounds.
+@color-text-success-inverse: rgb(75, 202, 129);
+// Default value for text-transform
+@text-transform: none;
+// 50% transparency of an element
+@opacity-5: 0.5;
+// 80% transparency of an element
+@opacity-8: 0.8;
+// 0 seconds, 0 frames
+@duration-instantly: 0s;
+// 0.05 seconds, 3 frames
+@duration-immediately: 0.05s;
+// 0.1 seconds, 6 frames
+@duration-quickly: 0.1s;
+// 0.2 seconds, 12 frames
+@duration-promptly: 0.2s;
+// 0.4 seconds, 24 frames
+@duration-slowly: 0.4s;
+// 3.2 seconds, 192 frames
+@duration-paused: 3.2s;
+// 4.8 seconds
+@duration-toast-short: 4.8s;
+// 9.6 seconds
+@duration-toast-medium: 9.6s;
+// Toasts
+@z-index-toast: 10000;
+// Spinner
+@z-index-spinner: 9050;
+// Modal
+@z-index-modal: 9000;
+// Overlay
+@z-index-overlay: 8000;
+// Dropdown
+@z-index-dropdown: 7000;
+// Dialog
+@z-index-dialog: 6000;
+// Popup
+@z-index-popup: 5000;
+// Stickied element
+@z-index-sticky: 100;
+// Default
+@z-index-default: 1;
+// Docked element
+@z-index-docked: 4;
+// Deep dive
+@z-index-deepdive: -99999;
+// Brandable primary button
+@color-background-button-brand: rgb(0, 112, 210);
+// Brandable primary button - active state
+@color-background-button-brand-active: rgb(0, 57, 107);
+// Brandable primary button - hover state
+@color-background-button-brand-hover: rgb(0, 95, 178);
+// Brandable primary button - disabled state
+@color-background-button-brand-disabled: rgb(224, 229, 238);
+// Default secondary button
+@color-background-button-default: rgb(255, 255, 255);
+// Default secondary button - hover state
+@color-background-button-default-hover: rgb(244, 246, 249);
+// Default secondary button - focus state
+@color-background-button-default-focus: rgb(244, 246, 249);
+// Default secondary button - active state
+@color-background-button-default-active: rgb(238, 241, 246);
+// Default secondary button - disabled state
+@color-background-button-default-disabled: rgb(255, 255, 255);
+// Background color for icon-only button
+@color-background-button-icon: rgba(0, 0, 0, 0);
+// Background color for icon-only button - hover state
+@color-background-button-icon-hover: rgb(244, 246, 249);
+// Background color for icon-only button - focus state
+@color-background-button-icon-focus: rgb(244, 246, 249);
+// Background color for icon-only button - active state
+@color-background-button-icon-active: rgb(238, 241, 246);
+// Background color for icon-only button - disabled state
+@color-background-button-icon-disabled: rgb(255, 255, 255);
+// Button backgrounds on inverse/dark backgrounds
+@color-background-button-inverse: rgba(0, 0, 0, 0);
+// Active button backgrounds on inverse backgrounds on mobile
+@color-background-button-inverse-active: rgba(0, 0, 0, 0.24);
+// Disabled button backgrounds on inverse/dark backgrounds
+@color-background-button-inverse-disabled: rgba(0, 0, 0, 0);
+// Line heights for regular buttons
+@line-height-button: 1.875rem;
+// Line heights for small buttons
+@line-height-button-small: 1.75rem;
+// Default Card component background color.
+@card-color-background: rgb(255, 255, 255);
+@card-spacing-small: 0.75rem;
+@card-spacing-medium: 1rem;
+@card-spacing-large: 1.5rem;
+// Line heights for toggle buttons
+@line-height-toggle: 1.3rem;
+// Slider size for toggle.
+@square-toggle-slider: 1.25rem;
+// Slider width.
+@width-toggle: 3rem;
+// Slider height.
+@height-toggle: 1.5rem;
+@table-spacing-x-small: 0.5rem;
+// Docked panel header’s background color.
+@color-background-docked-panel-header: rgb(247, 249, 251);
+// Height of the docked bar.
+@height-docked-bar: 2.5rem;
+// Utility bar notifications badge background color.
+@utility-bar-color-background-notification-badge: rgb(212, 80, 76);
+// Utility bar notifications focus background color.
+@utility-bar-color-background-notification-focus: rgb(168, 183, 199);
+// Default color for animated icon waffle for app switcher.
+@color-background-icon-waffle: rgb(84, 105, 141);
+// Global identity icon size.
+@square-icon-global-identity-icon: 1.25rem;
+// Default context bar background color.
+@color-background-context-bar: rgb(255, 255, 255);
+// Brand color in context bar for default theme
+@color-background-context-bar-brand-accent: rgb(0, 161, 223);
+// Hovered context bar item background color.
+@color-background-context-bar-item-hover: rgb(247, 249, 251);
+// Active context bar item background color.
+@color-background-context-bar-item-active: rgb(247, 249, 251);
+// Context TAB bar item background color.
+@color-background-context-tab-bar-item: rgb(255, 255, 255);
+// Hovered context bar item background color.
+@color-background-context-bar-inverse-item-hover: rgba(255, 255, 255, 0.2);
+// Active context bar item background color.
+@color-background-context-bar-inverse-item-active: rgba(255, 255, 255, 0.4);
+// A Gradient used for putting shadows on the bottom when box-shadow is not possible.
+@color-background-context-bar-shadow: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%);
+// Highlight for context bar action (hover and focus states).
+@color-background-context-bar-action-highlight: rgba(255, 255, 255, 0.2);
+// Divider in context bar
+@color-border-context-bar-divider: rgba(255, 255, 255, 0.2);
+// Border color in context bar
+@color-border-context-bar-item: rgba(0, 0, 0, 0.2);
+// Border color in context bar on dark background
+@color-border-context-bar-inverse-item: rgba(255, 255, 255, 0.2);
+// Border color in context bar for default theme
+@color-border-context-bar-theme-default: rgb(0, 161, 223);
+// Alternate border color in context bar for default theme
+@color-border-context-bar-theme-default-alt: rgb(228, 233, 243);
+// Hovered border color in context bar for default theme
+@color-border-context-bar-theme-default-hover: rgb(11, 35, 153);
+// Active border color in context bar for default theme
+@color-border-context-bar-theme-default-active: rgb(228, 233, 243);
+// Context bar height.
+@height-context-bar: 2.5rem;
+// Context bar text color
+@color-text-context-bar: rgb(84, 105, 141);
+// Context bar text color on a dark background
+@color-text-context-bar-inverse: rgb(255, 255, 255);
+// Context bar action trigger text color
+@color-text-context-bar-action-trigger: rgba(255, 255, 255, 0.4);
+// Use COLOR_BACKGROUND_PAGE_HEADER instead.
+@color-background-anchor: rgb(244, 246, 249);
+// Page Header background color
+@color-background-page-header: rgb(247, 249, 251);
+// The background color for Salespath stages that are complete.
+@color-background-path-complete: rgb(75, 202, 129);
+// The hover background color for Salespath stages that are complete.
+@color-background-path-complete-hover: rgb(4, 132, 75);
+// The background color for Salespath stages that are the current stage.
+@color-background-path-current: rgb(0, 112, 210);
+// The hover background color for Salespath stages that are the current stage.
+@color-background-path-current-hover: rgb(0, 95, 178);
+// The background color for Salespath stages that have not been completed.
+@color-background-path-incomplete: rgb(224, 229, 238);
+// The hover background color for Salespath stages that have not been completed.
+@color-background-path-incomplete-hover: rgb(216, 221, 230);
+// The background color for the final stage of a Salespath when it has been lost.
+@color-background-path-lost: rgb(194, 57, 52);
+// The background color for Salespath guidance coaching section.
+@color-background-guidance: rgb(250, 250, 251);
+// Used as a separator between dark colors like the stages of salespath.
+@color-border-path-divider: rgb(255, 255, 255);
+// Line heights for salespath
+@line-height-salespath: 1.5rem;
+// Height of Salespath
+@height-sales-path: 2rem;
+// The default background color for Progress Indicator
+@progress-color-background: rgb(255, 255, 255);
+// The shaded background color for Progress Indicator
+@progress-color-background-shade: rgb(244, 246, 249);
+// The background color for the Progress Bar
+@progress-bar-color-background: rgb(216, 221, 230);
+// The background color of the fill for the Progess Bar
+@progress-bar-color-background-fill: rgb(94, 180, 255);
+// Borders of each indicator item within the Progress Indicator
+@progress-color-border: rgb(255, 255, 255);
+// Shaded borders of each indicator item within the Progress Indicator
+@progress-color-border-shade: rgb(244, 246, 249);
+// Hovered border color of each indicator item within the Progress Indicator
+@progress-color-border-hover: rgb(0, 112, 210);
+// Active border color of each indicator item within the Progress Indicator
+@progress-color-border-active: rgb(21, 137, 238);
+// Height of the Progress Bar
+@progress-bar-height: 0.125rem;
+// Split View background color.
+@split-view-color-background: rgb(228, 233, 243);
+// Split View background color on row hover.
+@split-view-color-background-row-hover: rgb(238, 241, 246);
+// Row dividers in Split View list
+@split-view-color-border: rgb(206, 213, 225);
+// Vertical navigation shaded background color on row hover.
+@vertical-navigation-color-background-shade-row-hover: rgb(238, 241, 246);
+// Vertical navigation shaded background color on row active.
+@vertical-navigation-color-background-shade-row-active: rgb(232, 236, 243);

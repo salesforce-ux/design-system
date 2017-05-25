@@ -1,0 +1,125 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+* The base card is used primarily on desktop within a &ldquo;wide&rdquo; column
+* or &ldquo;main content area&rdquo;, which uses two-thirds of the viewport.
+* In addition, the `.slds-card` class is used for layout purposes
+* when a card has an adjacent card, those proceeding the initial will provide margin
+* to give the cards spacing between each other.
+*
+* @summary Initializes card
+*
+* @name base
+* @selector .slds-card
+* @restrict article, div
+* @variant
+*/
+.slds-card {
+  padding: 0;
+  background: $card-color-background;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+
+  // Adds spacing between cards
+  + .slds-card {
+    margin-top: $spacing-medium;
+  }
+
+  &__header,
+  &__footer,
+  &__body_inner,
+  &__body--inner {
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+
+    @include mq-large-min {
+      padding-left: $card-spacing-large;
+      padding-right: $card-spacing-large;
+    }
+  }
+
+  /**
+   * Initializes card header
+   *
+   * @selector .slds-card__header
+   * @restrict .slds-card div
+   */
+  &__header {
+    padding-top: $spacing-small;
+    margin-bottom: $spacing-small;
+  }
+
+  &__header-link {
+    color: inherit;
+  }
+
+  /**
+   * Initializes card body
+   *
+   * @selector .slds-card__body
+   * @restrict .slds-card div
+   */
+  &__body {
+    margin-bottom: $spacing-small;
+  }
+
+  &__body:empty,
+  &__footer:empty {
+    display: none;
+  }
+
+  /**
+   * Initializes card footer
+   *
+   * @selector .slds-card__footer
+   * @restrict .slds-card footer
+   */
+  &__footer {
+    margin-top: $spacing-small;
+    padding-bottom: $spacing-small;
+    text-align: right;
+  }
+
+  &_narrow,
+  &--narrow {
+
+    .slds-card__header {
+      padding-top: $spacing-small;
+      margin-bottom: $spacing-small;
+
+      @include mq-large-min {
+        padding-top: $card-spacing-large;
+        margin-bottom: $card-spacing-large;
+      }
+    }
+
+    .slds-card__footer {
+      padding-bottom: $spacing-small;
+
+      @include mq-large-min {
+        padding-bottom: $card-spacing-medium;
+      }
+    }
+  }
+
+  @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
+
+    .slds-card_empty .slds-card__body,
+    .slds-card--empty .slds-card__body {
+      text-align: center;
+    }
+  }
+}
+
+/**
+ * Use class if card consumes any form of a tile
+ *
+ * @selector .slds-card__tile
+ * @restrict .slds-tile
+ */
+.slds-card__tile {
+  margin-top: $spacing-x-small;
+}

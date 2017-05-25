@@ -1,0 +1,46 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Calculate PX into EM
+// Use - width: pem(600px);
+// Output - width: 37.5em;
+@function pem($pixels) {
+  @return ($pixels / 16px * 1em);
+}
+
+// Calculate PX into REM
+// Use - width: rem(600px);
+// Output - width: 37.5rem;
+@function rem($pixels) {
+  @return ($pixels / 16px * 1rem);
+}
+
+// Replace `$search` with `$replace` in `$string`
+// @author Hugo Giraudel
+// Use - str-replace($string, ' ', '-')
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/// Fix IE Rounding
+///
+/// IE computes 0.875rem into 13.92px instead of 14px
+/// but is better at rounding values using calc()
+/// so we use calc as a hack to get the correct width
+///
+/// This is required for closely positioning elements on a pixel grid
+/// e.g. in an icon where pixel perfection is important
+///
+/// @param {Number} $width - unitless width
+/// @param {Number} $base-font-size [16]
+/// @return {Expression} same as $width, but in rem using calc - e.g. calc(2rem / 16)
+@function fix-ie-rounding($width, $base-font-size: 16) {
+  @return calc(#{$width * 1rem} / #{$base-font-size});
+}

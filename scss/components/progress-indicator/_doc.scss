@@ -1,0 +1,26 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The progress indicator communicates to the user which step of a process they
+ * may be on. The length of the progress bar can be changed by modifying the
+ * value on `<progress class="slds-progress-bar" />` with JavaScript. The
+ * `.slds-progress-bar` accepts a range from 0% to 100%.
+ *
+ * When a step becomes active, the `.slds-progress__item` should get the class
+ * `.slds-is-active`. This class should be applied through JavaScript. When the
+ * step is completed, the `.slds-is-active` class should be replaced with the
+ * class `.slds-is-completed` on `.slds-progress__item`. At that point, the
+ * `.slds-progress__item` element should receive a "success" icon, providing
+ * feedback that the step has been completed.
+ *
+ * @summary A progress indicator component communicates to the user the progress of a particular process.
+ *
+ * @base
+ * @name progress-indicator
+ * @selector .slds-progress
+ * @support dev-ready
+ * @category experience
+ * @type process
+ */

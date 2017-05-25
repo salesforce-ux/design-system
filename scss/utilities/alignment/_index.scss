@@ -1,0 +1,15 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Class will absolutely center children content
+ *
+ * @name absolute-center
+ * @selector .slds-align_absolute-center
+ * @modifier
+ */
+.slds-align_absolute-center,
+.slds-align--absolute-center {
+  @include absolute-center;
+}

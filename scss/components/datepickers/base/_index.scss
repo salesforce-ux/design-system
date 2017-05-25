@@ -1,0 +1,171 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * If you desire a multi-select date range, the selected cell will need to have
+ * `.slds-is-selected-multi` applied. Another scenario would be a multi range
+ * selection spanning over two or more weeks. If this scenario is true, each
+ * `<tr>` will need the class `.slds-has-multi-row-selections` added.
+ *
+ * @summary Initiates a datepicker component
+ *
+ * @name base
+ * @selector .slds-datepicker
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-datepicker {
+  padding: 0;
+  font-size: $font-size-small;
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  th {
+    padding: $spacing-x-small;
+    font-weight: $font-weight-regular;
+    color: $color-text-label;
+  }
+
+  td {
+    padding: $spacing-xx-small;
+    text-align: center;
+    font-size: $font-size-small;
+
+    /**
+     * Style for calendar days
+     *
+     * @selector .slds-day
+     * @restrict .slds-datepicker td span
+     * @required
+     */
+    > .slds-day {
+      @include square($square-icon-medium-boundary);
+      display: block;
+      position: relative;
+      min-width: $square-icon-medium-boundary;
+      line-height: $square-icon-medium-boundary;
+      border-radius: $border-radius-circle;
+      margin: auto;
+    }
+
+    /**
+     * Indicates today
+     *
+     * @selector .slds-is-today
+     * @restrict .slds-datepicker td
+     * @required
+     */
+    &:hover:not(.slds-disabled-text) > .slds-day,
+    &:focus:not(.slds-disabled-text) > .slds-day,
+    &.slds-is-today > .slds-day {
+      background: $color-background-row-hover;
+      cursor: pointer;
+    }
+
+    /**
+     * Indicates selected days
+     *
+     * @selector .slds-is-selected
+     * @restrict .slds-datepicker td
+     * @modifier
+     */
+    &.slds-is-selected:not(.slds-disabled-text) > .slds-day {
+      background: $color-background-button-brand-hover;
+      color: $color-text-button-brand-hover;
+    }
+
+    /**
+     * Indicates if selected days are apart of a date range
+     *
+     * @selector .slds-is-selected-multi
+     * @restrict .slds-datepicker td
+     * @modifier
+     */
+    &.slds-is-selected-multi {
+      // scss-lint:disable NestingDepth SelectorDepth
+
+      > .slds-day {
+        overflow: visible;
+      }
+
+      + .slds-is-selected-multi > .slds-day:before {
+        @include calendar-selection-fill;
+      }
+    }
+  }
+
+  /**
+   * Helper class that styles date range appropriately
+   *
+   * @selector .slds-has-multi-row-selection
+   * @restrict .slds-datepicker tr
+   */
+  .slds-has-multi-row-selection {
+    // scss-lint:disable SelectorDepth
+    .slds-is-selected-multi:first-child > .slds-day:before,
+    .slds-is-selected-multi:last-child > .slds-day:after {
+      @include calendar-selection-fill;
+    }
+    // re-calculate for first child
+    .slds-is-selected-multi:first-child > .slds-day:before {
+      left: 0;
+      transform: translateX($spacing-xx-small * -1);
+    }
+    // re-calculate for last child
+    .slds-is-selected-multi:last-child > .slds-day:after {
+      left: auto;
+      right: 0;
+      transform: translateX($spacing-xx-small);
+    }
+  }
+
+  /**
+   * Aligns filter items horizontally
+   *
+   * @selector .slds-datepicker__filter
+   * @restrict .slds-datepicker div
+   * @required
+   */
+  &__filter {
+    padding: $spacing-xx-small;
+  }
+
+  /**
+   * Spaces out month filter
+   *
+   * @selector .slds-datepicker__month_filter
+   * @restrict .slds-datepicker div
+   * @required
+   */
+  &__filter_month,
+  &__filter--month {
+    padding: 0 $spacing-xx-small 0 0;
+  }
+
+  /**
+   * Container of the month table
+   *
+   * @selector .slds-datepicker__month
+   * @restrict .slds-datepicker table
+   * @required
+   */
+  &__month {
+    font-size: $font-size-small;
+  }
+}
+
+/**
+ * Indicates days that are in previous/next months
+ *
+ * @selector .slds-disabled-text
+ * @restrict .slds-datepicker td
+ * @modifier
+ */
+.slds-disabled-text {
+  color: $color-text-button-default-disabled;
+}

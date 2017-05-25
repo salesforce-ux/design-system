@@ -1,0 +1,57 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Container of the utility panel
+ *
+ * @selector .slds-utility-panel
+ * @restrict .slds-utility-bar_container section
+ */
+.slds-utility-panel {
+  position: fixed;
+  bottom: $line-height-button;
+  width: rem(340px);
+  height: rem(480px);
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  border: $border-width-thin solid $color-border {
+    bottom: none;
+  }
+  transform: translateY(100%);
+
+  /**
+   * @selector .slds-is-open
+   * @restrict .slds-utility-panel
+   * @modifier
+   */
+  &.slds-is-open {
+    box-shadow: $shadow-docked;
+    transform: translateY(0);
+  }
+
+  /**
+   * Header that contains an icon, title and panel actions such as minimizing the panel
+   *
+   * @selector .slds-utility-panel__header
+   * @restrict header
+   */
+  &__header {
+    background: $color-background-docked-panel-header;
+    border-bottom: $border-width-thick solid $color-border-brand;
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  /**
+   * Area that contains the utility panel feature
+   *
+   * @selector .slds-utility-panel__body
+   * @restrict div
+   */
+  &__body {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    overflow: auto;
+  }
+}

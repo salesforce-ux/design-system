@@ -1,0 +1,202 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes a visual picker component
+ *
+ * @name coverable-content
+ * @selector .slds-visual-picker
+ * @restrict div
+ * @variant
+ */
+.slds-visual-picker {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  cursor: pointer;
+
+  &:active .slds-visual-picker__figure {
+    border: $border-width-thin solid $color-border-selection-hover;
+    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+  }
+
+  &:hover .slds-visual-picker__figure {
+    cursor: pointer;
+  }
+
+  input:not(:disabled) ~ label:hover .slds-visual-picker__figure {
+    cursor: pointer;
+    outline: 0;
+    border: $border-width-thin solid $color-border-selection-hover;
+    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+  }
+
+  // Hide input
+  input {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:focus ~ label .slds-visual-picker__figure {
+      border: $border-width-thin solid $color-border-selection-hover;
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+    }
+
+    &:checked ~ label .slds-visual-picker__figure {
+      box-shadow: $elevation-shadow-4;
+    }
+
+    &:checked ~ label .slds-is-not-selected {
+      display: none;
+    }
+
+    &:checked ~ label .slds-is-selected {
+      display: block;
+    }
+
+    &:checked ~ label .slds-visual-picker__icon {
+      background-color: $color-brand;
+      border: $border-width-thin solid $color-border-selection-hover;
+    }
+
+    // scss-lint:disable NestingDepth
+    /* stylelint-disable max-nesting-depth */
+    &:checked ~ label .slds-visual-picker__text {
+      border: $border-width-thin solid $color-border-selection-hover;
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-radius: 0.5rem;
+        border-width: 1rem;
+        border-right-color: $color-brand;
+        border-top-color: $color-brand;
+      }
+    }
+
+    // scss-lint:disable NestingDepth
+    // scss-lint:disable SelectorDepth
+    &[disabled] {
+      cursor: not-allowed;
+      user-select: none;
+
+      ~ label .slds-icon {
+        opacity: 0.5;
+      }
+
+      ~ label .slds-visual-picker__body,
+      ~ label .slds-visual-picker__text {
+        color: $color-text-input-disabled;
+      }
+
+      ~ label .slds-visual-picker__figure {
+        border: $border-width-thin solid $color-border;
+        box-shadow: none;
+
+        &:hover {
+          cursor: not-allowed;
+          user-select: none;
+          border: $border-width-thin solid $color-border;
+          box-shadow: none;
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+  }
+}
+
+/**
+ * Visual container for icon and text
+ *
+ * @selector .slds-visual-picker__figure
+ * @restrict .slds-visual-picker div, .slds-visual-picker span
+ */
+.slds-visual-picker__figure {
+  display: block;
+  background: $color-background-alt;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  text-align: center;
+
+  .slds-icon-action-check {
+    background-color: $color-brand;
+  }
+
+  span {
+    display: block;
+  }
+
+  .slds-is-selected {
+    display: none;
+  }
+}
+
+/**
+ * Size modifier to adjust to the default size of medium
+ *
+ * @selector .slds-visual-picker_medium
+ * @restrict .slds-visual-picker
+ * @modifier
+ * @group size
+ */
+.slds-visual-picker_medium {
+
+  .slds-visual-picker__figure,
+  .slds-visual-picker__body {
+    width: $size-x-small;
+  }
+
+  .slds-visual-picker__figure {
+    height: $size-x-small;
+  }
+}
+
+/**
+ * Size modifier to adjust to the size of large
+ *
+ * @selector .slds-visual-picker_large
+ * @restrict .slds-visual-picker
+ * @modifier
+ * @group size
+ */
+.slds-visual-picker_large {
+
+  .slds-visual-picker__figure,
+  .slds-visual-picker__body {
+    width: $size-small;
+  }
+
+  .slds-visual-picker__figure {
+    height: $size-small;
+  }
+}
+
+
+/**
+ * Text area that sits outside the visual picker
+ *
+ * @selector .slds-visual-picker__body
+ * @restrict .slds-visual-picker span
+ */
+.slds-visual-picker__body {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: $spacing-medium $spacing-x-small;
+  border: 0;
+  border-radius: 0;
+}

@@ -1,0 +1,149 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates media object
+ *
+ * @selector .slds-media
+ * @modifier
+ */
+.slds-media {
+  display: flex;
+  align-items: flex-start;
+
+  /**
+   * Defines the figure area
+   *
+   * @selector .slds-media__figure
+   */
+  &__figure {
+    flex-shrink: 0;
+    margin-right: $spacing-small;
+
+    &_fixed-width {
+      min-width: $square-icon-large-boundary; // accommodate largest icon size
+    }
+  }
+
+  /**
+   * Defines the body area
+   *
+   * @selector .slds-media__body
+   * @modifier
+   */
+  &__body {
+    flex: 1;
+    min-width: 0; // This fixes an issue with truncation inside flexbox due to the changes in flex basis (already in FFOX, coming to Chrome)
+  }
+
+  &__body,
+  &__body > :last-child { // @TODO: Watch this - overreaching?
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Adjusts whitespace on smaller media objects
+ *
+ * @selector .slds-media_small
+ * @modifier
+ */
+.slds-media_small .slds-media__figure,
+.slds-media--small .slds-media__figure {
+  margin-right: $spacing-xx-small;
+}
+
+.slds-media_small .slds-media__figure_reverse,
+.slds-media--small .slds-media__figure--reverse {
+  margin-left: $spacing-xx-small;
+}
+
+/**
+ * Adjusts whitespace on larger media objects
+ *
+ * @selector .slds-media_large
+ * @modifier
+ */
+.slds-media_large .slds-media__figure,
+.slds-media--large .slds-media__figure {
+  margin-right: $spacing-large;
+}
+
+.slds-media_large .slds-media__figure_reverse,
+.slds-media--large .slds-media__figure--reverse {
+  margin-left: $spacing-large;
+}
+
+/**
+ * Aligns the content in the .slds-media__body to the middle of the .slds-media__figure
+ *
+ * @selector .slds-media_center
+ * @modifier
+ */
+.slds-media_center,
+.slds-media--center {
+  align-items: center;
+}
+
+/**
+ * Defines the figure area on the other side
+ *
+ * @selector .slds-media__figure_reverse
+ * @modifier
+ */
+.slds-media__figure_reverse,
+.slds-media__figure--reverse {
+  margin: 0 0 0 $spacing-small;
+}
+
+@include deprecate('4.0.0') {
+
+  .slds-media_reverse,
+  .slds-media--reverse {
+
+    > .slds-media__figure {
+      order: 1;
+    }
+
+    &.slds-media_small .slds-media__figure,
+    &.slds-media--small .slds-media__figure {
+      margin-left: $spacing-xx-small;
+    }
+  }
+
+  .slds-media_double,
+  .slds-media--double {
+
+    > .slds-media__figure {
+      order: 1;
+    }
+
+    .slds-media__figure_reverse,
+    .slds-media__figure--reverse {
+      order: 3;
+      margin: 0 0 0 $spacing-medium;
+    }
+
+    .slds-media__body {
+      order: 2;
+    }
+  }
+}
+
+@include mq-medium-max {
+  /**
+   * @summary .slds-media__figure and .slds-media__body stack on smaller screens
+   *
+   * @selector .slds-media_responsive
+   * @modifer
+   */
+  .slds-media_responsive,
+  .slds-media--responsive {
+    display: block;
+
+    .slds-media__figure {
+      margin: 0 0 $spacing-small;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Placing text next to an image, icon, figure, or video is common for many applications. The figure can be either on the right, left, or both. The text can start at the top of the image or be centered next to it. The width of the media object is controlled either by the parent container or a secondary module class.
+ *
+ * The `.slds-media` object can be used as a container on any element. Inside are the two required elements. The figure (typically an image or an icon) should be placed inside an element with the `.slds-media__figure` class. Next to it is typically some text that should be placed in an element with the `.slds-media__body` class.
+ *
+ * By default, the text starts at the top of the figure. Center the body and the figure by applying the `.slds-media--center` class to `.slds-media`.
+ *
+ * To position the figure on the other side of the body, apply the `.slds-media__figure--reverse` to the figure.
+ *
+ * You may also position figures on both sides of the body at the same time using `.slds-media__figure` and `.slds-media__figure--reverse`.
+ *
+ * @summary When you need text and a figure next to each other, use a media object.
+ *
+ * @utility
+ * @name media-objects
+ * @selector [class*='slds-media_']
+ * @support dev-ready
+ */

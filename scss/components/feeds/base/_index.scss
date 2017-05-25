@@ -1,0 +1,41 @@
+// Lightning Design System 2.3.1
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A discussion feed consists of a list of posts. A `.slds-feed__item` contains a post and comments related to that post.
+ *
+ * @name base
+ * @selector .slds-feed
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-feed {
+  position: relative;
+  max-width: rem(784px);
+  margin: auto;
+
+  /**
+   * @selector .slds-feed__list
+   * @restrict .slds-feed ul
+   * @required
+   */
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  /**
+   * @selector .slds-feed__item
+   * @restrict .slds-feed__list li
+   * @required
+   */
+  &__item {
+    padding: $spacing-x-small 0;
+
+    @include mq-medium-min {
+      padding: $spacing-small 0;
+    }
+  }
+}

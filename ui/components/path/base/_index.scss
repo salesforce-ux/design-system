@@ -12,13 +12,11 @@
   border: transparent $border-width-thin solid;
 
   /**
-   * Indicates the coaching section is expanded
+   * @summary Indicates the coaching section is expanded
    *
    * @selector .slds-is-expanded
    * @restrict .slds-path
-
    */
-
   &.slds-is-expanded {
     border-color: $color-border;
     padding-bottom: $spacing-medium;
@@ -26,7 +24,7 @@
 }
 
 /**
- * Allows the path itself to be responsive
+ * @summary Allows the path itself to be responsive
  *
  * @selector .slds-path__track
  * @restrict .slds-path div
@@ -45,7 +43,7 @@
 
     /**
      *
-     * Allows the path to scroll when necessary
+     * @summary Allows the path to scroll when necessary
      *
      * @selector .slds-path__scroller_inner
      * @restrict .slds-path__scroller div
@@ -76,7 +74,7 @@
 }
 
 /**
- * Creates the scrolling container for tab overflow
+ * @summary Creates the scrolling container for tab overflow
  *
  * @selector .slds-path__scroller
  * @restrict .slds-path__track div
@@ -86,7 +84,7 @@
 }
 
 /**
- * Container for the buttons that control the scrolling
+ * @summary Container for the buttons that control the scrolling
  *
  * @selector .slds-path__scroll-controls
  * @restrict .slds-path__track div
@@ -97,7 +95,7 @@
  }
 
 /**
- * Shows the stage name when in the smaller state
+ * @summary Shows the stage name when in the smaller state
  *
  * @selector .slds-path__stage-name
  * @restrict .slds-path__track span
@@ -108,7 +106,7 @@
   }
 
 /**
- * Creates the container for toggle button and path
+ * @summary Creates the container for toggle button and path
  *
  * @selector .slds-path__scroller_container
  * @restrict .slds-path__scroller div
@@ -121,7 +119,7 @@
   flex-shrink: 0;
 }
 /**
- * Horizontal list of stages in path component
+ * @summary Horizontal list of stages in path component
  *
  * @selector .slds-path__nav
  * @restrict .slds-path__scroller_inner ul
@@ -132,7 +130,7 @@
   margin-right: $spacing-small;
 
   /**
-   * Creates the completed stage of the path
+   * @summary Creates the completed stage of the path
    *
    * @selector .slds-is-complete
    * @restrict .slds-path__item
@@ -172,7 +170,7 @@
 
 
   /**
-   * Creates the current stage of the path
+   * @summary Creates the current stage of the path
    *
    * @selector .slds-is-current
    * @restrict .slds-path__item
@@ -196,7 +194,7 @@
 
 
 /**
- * Creates the incomplete stage of the path
+ * @summary Creates the incomplete stage of the path
  *
  * @selector .slds-is-incomplete
  * @restrict .slds-path__item
@@ -215,7 +213,7 @@
 }
 
 /**
- * Creates lost stage of the path
+ * @summary Creates lost stage of the path
  *
  * @selector .slds-is-lost
  * @restrict .slds-path__item
@@ -237,7 +235,7 @@
 }
 
 /**
- * Creates the active stage of the sales path
+ * @summary Creates the active stage of the sales path
  *
  * @selector .slds-is-active
  * @restrict .slds-path__item
@@ -265,7 +263,7 @@
 }
 
   /**
-   * Creates success stage of the path
+   * @summary Creates success stage of the path
    *
    * @selector .slds-is-won
    * @restrict .slds-path__item
@@ -286,7 +284,7 @@
 
 // Note: Order matters. Keep the path__item below the above selectors
 /**
- * Individual stages of a path
+ * @summary Individual stages of a path
  *
  * @selector .slds-path__item
  * @restrict .slds-path__nav li
@@ -355,7 +353,7 @@
 
 
 /**
- * Contains the name of the stage
+ * @summary Contains the name of the stage
  *
  * @selector .slds-path__title
  * @restrict .slds-path__link span
@@ -365,7 +363,7 @@
 }
 
 /**
- * Contains the check mark when the stage is completed
+ * @summary Contains the check mark when the stage is completed
  *
  * @selector .slds-path__stage
  * @restrict .slds-path__link span
@@ -381,7 +379,7 @@
 
 
 /**
- * Creates actionable element inside of each path item
+ * @summary Creates actionable element inside of each path item
  *
  * @selector .slds-path__link
  * @restrict .slds-path__item a
@@ -416,7 +414,7 @@
 }
 
 /**
- * Button that toggles visibility of stage's tabpanel
+ * @summary Button that toggles visibility of stage's tabpanel
  *
  * @selector .slds-path__trigger
  * @restrict .slds-path button
@@ -440,7 +438,7 @@
 }
 
 /**
- * Actionable button that invokes a completion of the path
+ * @summary Actionable button that invokes a completion of the path
  *
  * @selector .slds-path__mark-complete
  * @restrict .slds-path button
@@ -452,7 +450,7 @@
 }
 
 /**
- * Actionable button that invokes a current stage of the path
+ * @summary Actionable button that invokes a current stage of the path
  *
  * @selector .slds-path__mark-current
  * @restrict .slds-path button, .slds-path-coach button
@@ -468,7 +466,7 @@
 }
 
 /**
- * Tabpanel of each stage of the path
+ * @summary Tabpanel of each stage of the path
  *
  * @selector .slds-path__content
  * @restrict .slds-path div
@@ -483,7 +481,7 @@
 // Remove align-spread
 
 /**
- * Key field section of expanded tabpanel
+ * @summary Key field section of expanded tabpanel
  *
  * @selector .slds-path__keys
  * @restrict .slds-path__content div
@@ -493,7 +491,7 @@
 }
 
 /**
- * Guidance section of expanded tabpanel
+ * @summary Guidance section of expanded tabpanel
  *
  * @selector .slds-path__guidance
  * @restrict .slds-path__content div
@@ -515,7 +513,7 @@
 }
 
 /**
- * This creates the space at the top of the guidance area
+ * @summary This creates the underlined titles in the coaching area
  *
  * @selector .slds-path__coach-title
  * @restrict .slds-path__keys div, .slds-path__guidance h2
@@ -531,7 +529,7 @@
 }
 
 /**
- * This creates the space at the top of the guidance area
+ * @summary This creates the space at the top of the guidance area
  *
  * @selector .slds-path__guidance-content
  * @restrict .slds-path__guidance div
@@ -541,7 +539,7 @@
 }
 
 /**
- * This class should be placed on a containing div when the Path container is between 565px and 1280px
+ * @summary This class should be placed on a containing div when the Path container is between 565px and 1280px
  *
  * @selector .slds-region_medium
  * @restrict div
@@ -551,7 +549,7 @@
 }
 
 /**
- * This class should be placed on a containing div when the Path container is between 360px and 564px
+ * @summary This class should be placed on a containing div when the Path container is between 360px and 564px
  *
  * @selector .slds-region_medium
  * @restrict div

@@ -121,7 +121,7 @@ const ColorPickerCustom = () => {
 
   return (
     <div className="slds-color-picker__custom">
-      <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and lightness, on an x and y axis.</p>
+      <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and brightness, on an x and y axis.</p>
       <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
         <a
           className="slds-color-picker__range-indicator"
@@ -131,7 +131,7 @@ const ColorPickerCustom = () => {
           aria-atomic="true"
           aria-describedby="color-picker-instructions"
         >
-          <span className="slds-assistive-text">Saturation: 46%. Lightness: 45%.</span>
+          <span className="slds-assistive-text">Saturation: 46%. Brightness: 45%.</span>
         </a>
       </div>
 

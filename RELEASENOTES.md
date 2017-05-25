@@ -3,7 +3,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
-## **Release [2.3.1] - Wednesday 31, 2017**
+## **Release [2.3.1] - May 25, 2017**
 
 ## Big Impact
 

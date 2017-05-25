@@ -3,376 +3,325 @@
 
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Expanded = props =>
-<tr className="slds-hint-parent" id="tree0-node1-0" role="row" aria-level="2">
-  <th data-label="Account Name" scope="row" className="slds-tree__item">
-    <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-    <div className="slds-truncate" title="Acme Corporation (Oakland)"><a href="javascript:void(0);">Acme Corporation (Oakland)</a></div>
-  </th>
-  <td data-label="Employees"><div className="slds-truncate" title="745">745</div></td>
-  <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-  <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-  <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-  <td className="slds-cell-shrink">
-    <ButtonIcon
-      className="slds-button_icon-border-filled slds-button_icon-x-small"
-      iconClassName="slds-button__icon_hint slds-button__icon_small"
-      symbol="down"
-      assistiveText="Show More" />
-  </td>
-</tr>;
+const TreeGrid = props =>
+  <table className="slds-table slds-table_bordered slds-tree slds-table_tree" role="treegrid" aria-readonly="true">
+    <thead>
+      <tr className="slds-text-title_caps">
+        <th className="slds-cell-buffer_left" scope="col">
+          <div className="slds-grid slds-grid_vertical-align-center">
+            <ButtonIcon
+              assistiveText="Expand all rows"
+              className="slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+              iconClassName="slds-button__icon_small"
+              symbol="chevrondown"
+              tabIndex="-1"
+              title="Expand all rows"
+            />
+            <div className="slds-truncate" title="Account Name">Account Name</div>
+          </div>
+        </th>
+        <th scope="col"><div className="slds-truncate" title="Employees">Employees</div></th>
+        <th scope="col"><div className="slds-truncate" title="Phone Number">Phone Number</div></th>
+        <th scope="col"><div className="slds-truncate" title="Account Owner">Account Owner</div></th>
+        <th scope="col"><div className="slds-truncate" title="Billing City">Billing City</div></th>
+        <th className="slds-cell-shrink" scope="col">
+          <ButtonIcon
+            aria-haspopup="true"
+            assistiveText="Show More"
+            className="slds-button_icon-border-filled slds-button_icon-x-small"
+            iconClassName="slds-button__icon_hint slds-button__icon_small"
+            symbol="down"
+            tabIndex="-1"
+            title="Show More"
+          />
+        </th>
+      </tr>
+    </thead>
+    {props.children}
+  </table>;
 
-let Default = props =>
-<tbody>
-  <tr className="slds-hint-parent" id="tree0-node0" role="row" aria-level="1">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Rewis Inc"><a href="javascript:void(0);">Rewis Inc</a></div>
+const Row = props =>
+  <tr
+    aria-expanded={props['aria-expanded']}
+    aria-level={props['aria-level']}
+    aria-posinset={props['aria-posinset']}
+    aria-setsize={props['aria-setsize']}
+    className="slds-hint-parent"
+    tabIndex={props.focusable ? '0' : null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+    >
+      <ButtonIcon
+        aria-hidden="true"
+        assistiveText={props['aria-expanded'] ? `Expand ${props.name}` : `Collapse ${props.name}`}
+        className={classNames('slds-button_icon slds-button_icon-x-small slds-m-right_x-small', (props['aria-expanded']) ? null : 'slds-is-disabled')}
+        iconClassName="slds-button__icon_small"
+        symbol="chevronright"
+        tabIndex="-1"
+        title={props['aria-expanded'] ? `Collapse ${props.name}` : `Expand ${props.name}`}
+      />
+      <div className="slds-truncate" title={props.name}>
+          <a href="javascript:void(0);" tabIndex="-1">
+            {props.name}
+          </a>
+      </div>
     </th>
-    <td data-label="Employees"><div className="slds-truncate" title="3,100">3,100</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div></td>
+    <td data-label="Employees">
+      <div className="slds-truncate" title={props.employees}>
+        {props.employees}
+      </div>
+    </td>
+    <td data-label="Phone Number">
+      <div className="slds-truncate" title={props.phone}>
+        {props.phone}
+      </div>
+    </td>
+    <td data-label="Account Owner">
+      <div className="slds-truncate" title={props.owner}>
+        <a href="javascript:void(0);" tabIndex="-1">
+          {props.owner}
+        </a>
+      </div>
+    </td>
+    <td data-label="Billing City">
+      <div className="slds-truncate" title={props.city}>
+        {props.city}
+      </div>
+    </td>
     <td className="slds-cell-shrink">
       <ButtonIcon
+        aria-haspopup="true"
+        assistiveText={`More actions for ${props.name}`}
         className="slds-button_icon-border-filled slds-button_icon-x-small"
         iconClassName="slds-button__icon_hint slds-button__icon_small"
         symbol="down"
-        assistiveText="Show More" />
+        tabIndex="-1"
+        title={`More actions for ${props.name}`}
+      />
     </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1" role="row" aria-level="1" aria-owns={props.isExpanded ? 'tree0-node1-0' : null} aria-expanded={!!props.isExpanded}>
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="10,000">10,000</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="San Francisco, CA">San Francisco, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  {props.additionalItem}
-  <tr className="slds-hint-parent" id="tree0-node2" role="row" aria-level="1" aria-expanded="false">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node2" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Rohde Enterprises"><a href="javascript:void(0);">Rohde Enterprises</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="6,000">6,000</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node3" role="row" aria-level="1">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Cheese Corp"><a href="javascript:void(0);">Cheese Corp</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="1,234">1,234</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Paris, France">Paris, France</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-</tbody>;
+  </tr>;
 
-let DeepNesting = props =>
-<tbody>
-  <tr className="slds-hint-parent" id="tree0-node0" role="row" aria-level="1">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Rewis Inc"><a href="javascript:void(0);">Rewis Inc</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="3,100">3,100</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1" role="row" aria-level="1" aria-owns="tree0-node1-0 tree0-node1-1" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="10,000">10,000</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="San Francisco, CA">San Francisco, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-0" role="row" aria-level="2" aria-owns="tree0-node1-0-0 tree0-node1-0-1" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1-0" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Acme Corporation (Bay Area)"><a href="javascript:void(0);">Acme Corporation (Bay Area)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="3,000">3,000</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-0-0" role="row" aria-level="3">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Acme Corporation (Oakland)"><a href="javascript:void(0);">Acme Corporation (Oakland)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="745">745</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-0-1" role="row" aria-level="3">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      {/* <ButtonIcon className="slds-m-right_x-small slds-is-disabled" flavor="icon-bare" iconFlavor="small" sprite="utility" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled /> */}
-      <div className="slds-truncate" title="Acme Corporation (San Francisco)"><a href="javascript:void(0);">Acme Corporation (San Francisco)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="578">578</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Los Angeles, CA">Los Angeles, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-1" role="row" aria-level="2" aria-owns="tree0-node1-1-0 tree0-node1-1-1" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1-1" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Acme Corporation (East)"><a href="javascript:void(0);">Acme Corporation (East)</a></div>
-  </th>
-    <td data-label="Employees"><div className="slds-truncate" title="430">430</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="San Francisco, CA">San Francisco, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-1-0" role="row" aria-level="3">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Acme Corporation (NY)"><a href="javascript:void(0);">Acme Corporation (NY)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="1,210">1,210</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-1-1" role="row" aria-level="3" aria-owns="tree0-node1-0-1-0" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1-1-1" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Acme Corporation (VA)"><a href="javascript:void(0);">Acme Corporation (VA)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="410">410</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-0-1-0" role="row" aria-level="4" aria-owns="tree0-node1-0-1-0-0" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node1-0-1-0" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Allied Technologies"><a href="javascript:void(0);">Allied Technologies</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="390">390</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Los Angeles, CA">Los Angeles, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node1-0-1-0-0" role="row" aria-level="5">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Allied Technologies (UV)"><a href="javascript:void(0);">Allied Technologies (UV)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="270">270</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="San Francisco, CA">San Francisco, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node2" role="row" aria-level="1" aria-owns="tree0-node2-0" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node2" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <div className="slds-truncate" title="Rohde Enterprises"><a href="javascript:void(0);">Rohde Enterprises</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="6,000">6,000</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node2-0" role="row" aria-level="2">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Rohde Enterprises (UCA)"><a href="javascript:void(0);">Rohde Enterprises (UCA)</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="2,540">2,540</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node3" role="row" aria-level="1" aria-owns="tree0-node3-0" aria-expanded="true">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon aria-controls="tree0-node3" className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small" iconClassName="slds-button__icon_small" symbol="chevronright" assistiveText="Toggle" title="Toggle" />
-      <a href="javascript:void(0);">Tech Labs</a>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="1,856">1,856</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="New York, NY">New York, NY</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-  <tr className="slds-hint-parent" id="tree0-node3-0" role="row" aria-level="2">
-    <th data-label="Account Name" scope="row" className="slds-tree__item">
-      <ButtonIcon className="slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled" iconClassName="slds-button__icon_small" symbol="chevrondown" assistiveText="Toggle" title="Toggle" disabled />
-      <div className="slds-truncate" title="Opportunity Resources Inc"><a href="javascript:void(0);">Opportunity Resources Inc</a></div>
-    </th>
-    <td data-label="Employees"><div className="slds-truncate" title="1,934">1,934</div></td>
-    <td data-label="Phone Number"><div className="slds-truncate" title="837-555-1212">837-555-1212</div></td>
-    <td data-label="Account Owner"><div className="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div></td>
-    <td data-label="Billing City"><div className="slds-truncate" title="Los Angeles, CA">Los Angeles, CA</div></td>
-    <td className="slds-cell-shrink">
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="down"
-        assistiveText="Show More" />
-    </td>
-  </tr>
-</tbody>;
+const Default = props =>
+  <tbody>
+    <Row
+      aria-level="1"
+      aria-posinset="1"
+      aria-setsize="4"
+      name="Rewis Inc"
+      employees="3,100"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="Phoenix, AZ"
+      focusable
+    />
+    <Row
+      aria-expanded={props.isExpanded ? 'true' : 'false'}
+      aria-level="1"
+      aria-posinset="2"
+      aria-setsize="4"
+      name="Acme Corporation"
+      employees="10,000"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="San Francisco, CA"
+    />
+    {props.additionalItem}
+    <Row
+      aria-expanded="false"
+      aria-level="1"
+      aria-posinset="3"
+      aria-setsize="4"
+      name="Rohde Enterprises"
+      employees="6,000"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-level="1"
+      aria-posinset="4"
+      aria-setsize="4"
+      name="Cheese Corp"
+      employees="1,234"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="Paris, France"
+    />
+  </tbody>;
 
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
+const Expanded = props =>
+  <Row
+    aria-level="2"
+    aria-posinset="1"
+    aria-setsize="1"
+    name="Acme Corporation (Oakland)"
+    employees="745"
+    phone="837-555-1212"
+    owner="John Doe"
+    city="New York, NY"
+  />;
 
-let TreeGrid = props =>
-<table className="slds-table slds-table_bordered slds-tree slds-table_tree" role="treegrid" aria-owns="tree0-node0 tree0-node1 tree0-node2 tree0-node3" aria-readonly="true">
-  <thead>
-    <tr className="slds-text-title_caps">
-      <th className="slds-cell-buffer_left" scope="col">
-        <div className="slds-grid slds-grid_vertical-align-center">
-          <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle" iconClassName="slds-button__icon_small" symbol="chevrondown" assistiveText="Toggle" title="Toggle" />
-          <div className="slds-truncate" title="Account Name">Account Name</div>
-        </div>
-      </th>
-      <th scope="col"><div className="slds-truncate" title="Employees">Employees</div></th>
-      <th scope="col"><div className="slds-truncate" title="Phone Number">Phone Number</div></th>
-      <th scope="col"><div className="slds-truncate" title="Account Owner">Account Owner</div></th>
-      <th scope="col"><div className="slds-truncate" title="Billing City">Billing City</div></th>
-      <th className="slds-cell-shrink" scope="col">
-        <ButtonIcon
-          className="slds-button_icon-border-filled slds-button_icon-x-small"
-          iconClassName="slds-button__icon_hint slds-button__icon_small"
-          symbol="down"
-          assistiveText="Show More" />
-      </th>
-    </tr>
-  </thead>
-  {props.children}
-</table>;
+const DeepNesting = props =>
+  <tbody>
+    <Row
+      aria-level="1"
+      aria-posinset="1"
+      aria-setsize="4"
+      name="Rewis Inc"
+      employees="3,100"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="Phoenix, AZ"
+      focusable
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="2"
+      aria-setsize="4"
+      name="Acme Corporation"
+      employees="10,000"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="San Francisco, CA"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="2"
+      name="Acme Corporation (Bay Area)"
+      employees="3,000"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-level="3"
+      aria-posinset="1"
+      aria-setsize="2"
+      name="Acme Corporation (Oakland)"
+      employees="745"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-level="3"
+      aria-posinset="2"
+      aria-setsize="2"
+      name="Acme Corporation (San Francisco)"
+      employees="578"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="Los Angeles, CA"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="2"
+      aria-posinset="2"
+      aria-setsize="2"
+      name="Acme Corporation (East)"
+      employees="430"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="San Francisco, CA"
+    />
+    <Row
+      aria-level="3"
+      aria-posinset="1"
+      aria-setsize="2"
+      name="Acme Corporation (NY)"
+      employees="1,210"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="3"
+      aria-posinset="2"
+      aria-setsize="2"
+      name="Acme Corporation (VA)"
+      employees="410"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="4"
+      aria-posinset="1"
+      aria-setsize="1"
+      name="Allied Technologies"
+      employees="390"
+      phone="837-555-1212"
+      owner="Jane Doe"
+      city="Los Angeles, CA"
+    />
+    <Row
+      aria-level="5"
+      aria-posinset="1"
+      aria-setsize="1"
+      name="Allied Technologies (UV)"
+      employees="270"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="San Francisco, CA"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="3"
+      aria-setsize="4"
+      name="Rohde Enterprises"
+      employees="6,000"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="1"
+      name="Rohde Enterprises (UCA)"
+      employees="2,540"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="4"
+      aria-setsize="4"
+      name="Tech Labs"
+      employees="1,856"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="New York, NY"
+    />
+    <Row
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="1"
+      name="Opportunity Resources Inc"
+      employees="1,934"
+      phone="837-555-1212"
+      owner="John Doe"
+      city="Los Angeles, CA"
+    />
+  </tbody>;
 
 /// ///////////////////////////////////////////
 // Export
@@ -388,7 +337,7 @@ export let states = [
     label: 'Expanded',
     element:
     <TreeGrid>
-      <Default isExpanded="tree0-node1" additionalItem={<Expanded />} />
+      <Default isExpanded additionalItem={<Expanded />} />
     </TreeGrid>
   },
   {

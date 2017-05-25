@@ -3,21 +3,54 @@
 
 /**
  *
+ * @selector .slds-notification-container
+ * @restrict div
+ */
+.slds-notification-container {
+  position: fixed;
+  display: block;
+  width: ($size-medium + $spacing-x-small); // this is 320, not 300px
+  right: $spacing-xx-small;
+  top: $spacing-xx-small;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-x-small;
+  z-index: $z-index-reminder;
+}
+
+/**
+ *
  * @name base
  * @selector .slds-notification
- * @restrict div, section
+ * @restrict .slds-notification-container section, .slds-notification-container div
  * @variant
  */
 .slds-notification {
-  position: fixed;
-  display: block;
+  position: relative;
   width: $size-medium; // this is 320, not 300px
-  right: $spacing-xx-small;
-  top: $spacing-xx-small;
-  z-index: $z-index-reminder;
   border-radius: $border-radius-medium;
   box-shadow: $shadow-reminder;
+
+  + .slds-notification {
+    margin-top: $spacing-small;
+  }
+
+  &:nth-of-type(4) {
+    position: relative;
+    top: -4.5rem;
+    transform: scaleX(0.95);
+    z-index: -1;
+  }
+
+  &:nth-of-type(n+5) {
+    display: none;
+  }
 }
+
+/**
+ * @summary The body of the notification
+ *
+ * @selector .slds-notification__body
+ * @restrict .slds-notification div
+ */
 
 /**
  * @summary Main reminder component

@@ -4,6 +4,10 @@
 /**
  * Notifications serve as a feedback & confirmation mechanism that comes in at the top right. The body of the notification is a clickable region that will prompt an additional browser tab with that record loaded and dismiss the notification. It is also dismissable by clicking the X icon.
  *
+ * ### Implementation Notes
+ *
+ * The first three notifications that appear on the page should stack on one another. The fourth notification will show slightly beneath the third notification. Any subsequent notifications won't show until earlier notifications are dismissed.
+ *
  * @summary Notifications serve as a feedback & confirmation mechanism that comes into the page at the top right.
  *
  * #### Accessibility

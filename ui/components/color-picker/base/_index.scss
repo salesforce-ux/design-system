@@ -220,6 +220,7 @@
 
   appearance: none;
   flex: 1;
+  padding: 0;
   height: $color-picker-slider-height;
   width: 100%;
   border: $border-width-thin solid $color-border;
@@ -253,6 +254,7 @@
 
   &::-ms-thumb {
     @include thumb-styles;
+    height: $color-picker-slider-height;
   }
 
   &::-moz-range-track {
@@ -261,6 +263,9 @@
 
   &::-ms-track {
     height: 0;
+    border: 0;
+    background: transparent;
+    color: transparent;
   }
 }
 

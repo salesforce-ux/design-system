@@ -111,7 +111,8 @@
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
     "uuid": "3.0.1",
-    "vnu-jar": "17.2.1"
+    "vnu-jar": "17.2.1",
+    "yargs": "8.0.1"
   },
   "optionalDependencies": {
     "fsevents": "*"

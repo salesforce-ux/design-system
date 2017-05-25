@@ -2,8 +2,19 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const gulp = require('gulp');
+const args = require('yargs').argv;
 const axe = require('gulp-axe-webdriver');
 
+const parseComponentArgs = (components) =>
+  components.map((comp) => `.html/${comp}*.html`);
+
+const urlsToTest = (args.components)
+  ? parseComponentArgs(args.components.split(','))
+  : ['.html/*.html'];
+
+// gulp a11y
+// gulp a11y --components path
+// gulp a11y --components path,tabs,data-tables
 gulp.task('a11y', ['generate:wrappedexamples'], (done) => {
   const options = {
     folderOutputReport: '.reports',
@@ -14,7 +25,7 @@ gulp.task('a11y', ['generate:wrappedexamples'], (done) => {
         'bypass': { enabled: false }
       }
     },
-    urls: ['.html/*.html'],
+    urls: urlsToTest,
     showOnlyViolations: true
   };
   return axe(options, done);

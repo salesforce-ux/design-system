@@ -3,6 +3,22 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.3.1] - May 25, 2017**
+
+## Big Impact
+
+**BEM naming change**
+
+Initially we used the double dash style for BEM notation (`--`). Due to the fact that double dashes are problematic in an XML environment (which doesn't allow double dashes within comments), we have upgraded our syntax to use the single underscore style (`_`). This change is backward compatible for 18 months. But all components going forward are built with the single underscore BEM style.
+
+## Fixes
+
+The following issues have now been resolved:
+
+* Removed dotted underline for `abbr` that Chrome introduced in version 58
+* Fix issue on Spinner component where Firefox and IE11 wouldn't respect its z-index token
+* Fix line-height issue on `slds-form-element__static` when the output was multi-line
+* Fix BEM naming convention on visibility classes - [#452](https://github.com/salesforce-ux/design-system/issues/452)
 
 ## **Release [2.3.0] - May 15, 2017**
 
@@ -1467,7 +1483,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.3.0...winter-18
+[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.3.1...winter-18
+[2.3.1]: https://github.com/salesforce-ux/design-system/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/salesforce-ux/design-system/compare/v2.2.2...v2.3.0
 [2.2.2]: https://github.com/salesforce-ux/design-system/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/salesforce-ux/design-system/compare/v2.2.0...v2.2.1

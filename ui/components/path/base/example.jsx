@@ -419,7 +419,7 @@ let PathStageSelected = props =>
         </div>
         <div className="slds-grid slds-path__action">
           <span className="slds-path__stage-name">Stage: Unqualified</span>
-          <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
+          <Action className="slds-path__mark-current">
             Mark as Current Stage</Action>
         </div>
       </Path>
@@ -484,7 +484,7 @@ let PathStageLost = props =>
       </div>
       <div className="slds-grid slds-path__action">
         <span className="slds-path__stage-name">Stage: Closed Lost</span>
-        <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
+        <Action>
           Change Closed State</Action>
       </div>
     </Path>
@@ -548,7 +548,7 @@ let PathStageWon = props =>
       </div>
       <div className="slds-grid slds-path__action">
         <span className="slds-path__stage-name">Stage: Closed Won</span>
-        <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
+        <Action>
           Change Closed State</Action>
       </div>
     </Path>

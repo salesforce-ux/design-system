@@ -1,0 +1,14 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Custom-Only variant should only render the custom color selection tool
+ * in the Color Picker popover. It should not be inside a tabset.
+ *
+ * @summary Swatches Only UI
+ *
+ * @name custom-only
+ * @selector .slds-color-picker_custom-only
+ * @restrict .slds-color-picker
+ * @variant
+ */

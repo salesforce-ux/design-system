@@ -1,0 +1,14 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Predefined Only variant should only render the predefined colors
+ * selection in the Color Picker popover. It should not be inside a tabset.
+ *
+ * @summary Swatches Only UI
+ *
+ * @name predefined-only
+ * @selector .slds-color-picker_predefined-only
+ * @restrict .slds-color-picker
+ * @variant
+ */

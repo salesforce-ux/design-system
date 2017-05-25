@@ -22,6 +22,8 @@ const path7Id = 'path-7';
 const path8Id = 'path-8';
 const path9Id = 'path-9';
 const path10Id = 'path-10';
+const path11Id = 'path-11';
+const path12Id = 'path-12';
 
 const pathContent1Id = 'path-content-1';
 const pathContent2Id = 'path-content-2';
@@ -33,6 +35,8 @@ const pathContent7Id = 'path-content-7';
 const pathContent8Id = 'path-content-8';
 const pathContent9Id = 'path-content-9';
 const pathContent10Id = 'path-content-10';
+const pathContent11Id = 'path-content-11';
+const pathContent12Id = 'path-content-12';
 
 let Demo = props =>
   <div className={classNames('demo-only', props.className)} {...props}>

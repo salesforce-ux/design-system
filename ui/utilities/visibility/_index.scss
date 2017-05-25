@@ -192,6 +192,7 @@
      * @notes Element will be displayed normally when the window is smaller
      * @modifier
      */
+    .slds-hide_#{$key},
     .slds-hide--#{$key} {
       // scss-lint:disable ImportantRule
       display: none !important;
@@ -206,6 +207,7 @@
      * @notes Element will be displayed normally when the window is bigger
      * @modifier
      */
+    .slds-show_#{$key},
     .slds-show--#{$key} {
       // scss-lint:disable ImportantRule
       display: none !important;

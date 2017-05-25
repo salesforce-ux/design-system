@@ -575,14 +575,14 @@ let PathStageWon = props =>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
           <ListMain listRole="listbox">
-            <ListItem className="slds-is-complete" id={path1Id} role="option">
+            <ListItem className="slds-is-complete" id={path11Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>
               </span>
               <span className="slds-path__title">Contacted</span>
             </ListItem>
-            <ListItem className="slds-is-complete" id={path2Id} role="option">
+            <ListItem className="slds-is-complete" id={path12Id} role="option">
               <span className="slds-path__stage">
                 <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
                 <span className="slds-assistive-text">Stage Complete</span>

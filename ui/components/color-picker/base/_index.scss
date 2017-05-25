@@ -109,13 +109,13 @@
 .slds-color-picker__swatch {
   display: inline-block;
   margin: $spacing-xx-small;
+}
 
-  a {
-    display: inline-block;
-  }
+.slds-color-picker__swatch-trigger {
+  display: inline-block;
 
-  a:focus,
-  a:active {
+  &:focus,
+  &:active {
     outline: none;
     box-shadow: $shadow-button-focus;
     border-radius: $border-radius-medium;

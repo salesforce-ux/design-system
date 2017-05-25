@@ -47,6 +47,7 @@
   padding: 0.3rem $spacing-x-small;
   line-height: 1;
   background: $color-background-alt;
+  margin-right: $spacing-xx-small;
 }
 
 /**
@@ -300,7 +301,10 @@
 .slds-color-picker__input-custom-hex {
   flex: none;
   width: $color-picker-input-custom-hex-width;
-  font-size: $color-picker-input-custom-hex-font-size;
+
+  input {
+    font-size: $color-picker-input-custom-hex-font-size;
+  }
 }
 
 /**

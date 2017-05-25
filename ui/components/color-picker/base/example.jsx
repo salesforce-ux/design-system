@@ -11,12 +11,12 @@ export default (
 export const states = [
   {
     id: 'color-picker-open',
-    label: 'Color Picker Open',
+    label: 'Open, default tab selected',
     element: <ColorPicker isOpen />
   },
   {
     id: 'custom-tab-selected',
-    label: 'Custom Tab Selected',
+    label: 'Open, custom tab selected',
     element: <ColorPicker selectedTabIndex={1} isOpen />
   }
 ];

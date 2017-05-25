@@ -20,7 +20,7 @@ export default (
 export const states = [
   {
     id: 'open-swatches-only-color-picker',
-    label: 'Open Swatches Only Color Picker',
+    label: 'Open',
     element: (
       <div style={{height: '12rem'}}>
         <Trigger className="slds-is-open">

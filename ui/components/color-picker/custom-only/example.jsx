@@ -11,7 +11,7 @@ export default (
 export const states = [
   {
     id: 'custom-color-picker-open',
-    label: 'Custom Only Color Picker Open',
+    label: 'Open',
     element: <ColorPicker isOpen hasPredefined={false} />
   }
 ];

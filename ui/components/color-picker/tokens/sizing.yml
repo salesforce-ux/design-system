@@ -10,6 +10,8 @@ global:
 props:
   COLOR_PICKER_SELECTOR_WIDTH:
     value: 14rem
+  COLOR_PICKER_SWATCHES_WIDTH:
+    value: 13.3rem
   COLOR_PICKER_RANGE_HEIGHT:
     value: 5rem
   COLOR_PICKER_SLIDER_HEIGHT:

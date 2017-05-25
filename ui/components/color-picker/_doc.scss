@@ -146,8 +146,11 @@
  *
  * #### `.slds-color-picker__swatch`
  *
- * This element _needs_ a `role` of `presentation`. It's child &lt;a&gt; tag needs a
- * `role` of `option`.
+ * This element _needs_ a `role` of `presentation`.
+ *
+ * #### `.slds-color-picker__swatch-trigger`
+ *
+ * This element _needs_ a `role` of `option`.
  *
  * #### `.slds-color-picker__range-indicator`
  *

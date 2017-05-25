@@ -63,7 +63,7 @@
  * @summary The selector subcomponent. Extends upon a .slds-popover
  *
  * @selector .slds-color-picker__selector
- * @restrict .slds-color-picker > .slds-popover
+ * @restrict .slds-color-picker div, .slds-color-picker section
  */
 .slds-color-picker__selector {
   margin-top: $spacing-x-small;
@@ -165,11 +165,11 @@
  * @restrict .slds-color-picker__custom-range > a
  */
 .slds-color-picker__range-indicator {
-  $half-spacing: -($spacing-small / 2);
+  $half-spacing: ($color-picker-range-indicator-size / 2);
 
+  transform: translate3d((-$half-spacing), $half-spacing, 0);
   cursor: pointer;
   position: absolute;
-  margin: $half-spacing 0 0 $half-spacing;
   height: $color-picker-range-indicator-size;
   width: $color-picker-range-indicator-size;
   border: $border-width-thick solid $color-background-alt;

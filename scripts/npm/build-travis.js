@@ -32,7 +32,7 @@ const shouldPushToBuildServer = () =>
   isMerge() || isPR()
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
-  if (shouldPushToBuildServer()) {
+  if (true) {
     runScript();
     runExtraScripts();
     publishBuild();

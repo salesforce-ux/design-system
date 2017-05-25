@@ -313,3 +313,5 @@ props:
     value: '#25B4E9'
   TOPIC2:
     value: '#56AAD0'
+  MACROS:
+    value: '#47CFD2'

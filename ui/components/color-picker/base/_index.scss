@@ -1,0 +1,336 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The base variant is the fully featured color picker, with a direct text
+ * input, and a button-triggered popover, which has tabs with both a list
+ * of predefined color options (swatches), as well as an interactive tool
+ * for custom color configuration.
+ *
+ * @summary Fully featured color picker, with swatches and a custom color config
+ *
+ * @variant
+ * @name base
+ * @selector .slds-color-picker
+ * @restrict div
+ */
+.slds-color-picker {
+  position: relative;
+}
+
+/**
+ * @summary 'Summary' element for color selection.
+ *
+ * @selector .slds-color-picker__summary
+ * @restrict .slds-color-picker > div
+ */
+
+
+/**
+ * @summary Label for summary input
+ *
+ * @selector .slds-color-picker__summary-label
+ * @restrict .slds-color-picker__summary > label
+ */
+.slds-color-picker__summary-label {
+  display: block;
+}
+
+/**
+ * @summary Button that toggles the Color Picker Selector
+ *
+ * @selector .slds-color-picker__button
+ * @restrict .slds-color-picker__summary .slds-button
+ */
+.slds-color-picker__summary-button {
+  vertical-align: top;
+  padding: 0.3rem $spacing-x-small;
+  line-height: 1;
+  background: $color-background-alt;
+  margin-right: $spacing-xx-small;
+}
+
+/**
+ * @summary Input field for summary UI
+ *
+ * @selector .slds-color-picker__summary-input
+ * @restrict .slds-color-picker__summary > input
+ */
+.slds-input.slds-color-picker__summary-input {
+  width: $size-xx-small;
+}
+
+/**
+ * @summary The selector subcomponent. Extends upon a .slds-popover
+ *
+ * @selector .slds-color-picker__selector
+ * @restrict .slds-color-picker div, .slds-color-picker section
+ */
+.slds-color-picker__selector {
+  margin-top: $spacing-x-small;
+
+  &.slds-popover {
+    width: $color-picker-selector-width;
+  }
+
+  .slds-popover__footer {
+    background: $color-background;
+  }
+
+  .slds-tabs--default__item {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+
+  .slds-tabs--default__content {
+    padding: $spacing-x-small 0;
+  }
+}
+
+/**
+ * @summary Swatch container
+ *
+ * @selector .slds-color-picker__swatches
+ * @restrict .slds-color-picker__selector ul
+ */
+.slds-color-picker__swatches {
+  font-size: 0;
+
+  &.slds-swatch {
+    cursor: pointer;
+  }
+}
+
+/**
+ * @summary Color Picker swatch
+ *
+ * @selector .slds-color-picker__swatch
+ * @restrict .slds-color-picker__swatches li
+ */
+.slds-color-picker__swatch {
+  display: inline-block;
+  margin: $spacing-xx-small;
+}
+
+.slds-color-picker__swatch-trigger {
+  display: inline-block;
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: $shadow-button-focus;
+    border-radius: $border-radius-medium;
+  }
+}
+
+/**
+ * @summary Custom picker selection container
+ *
+ * @selector .slds-color-picker__custom
+ * @restrict .slds-color-picker__selector div
+ */
+.slds-color-picker__custom {
+  padding: $spacing-xx-small 0;
+}
+
+/**
+ * @summary Custom picker range element
+ *
+ * @selector .slds-color-picker__custom-range
+ * @restrict .slds-color-picker__custom div
+ */
+.slds-color-picker__custom-range {
+  position: relative;
+  margin-bottom: $spacing-xx-small;
+  height: $color-picker-range-height;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0) 99%),
+      linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0));
+  }
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-color-picker__range-indicator
+ * @restrict .slds-color-picker__custom-range > a
+ */
+.slds-color-picker__range-indicator {
+  $half-spacing: ($color-picker-range-indicator-size / 2);
+
+  transform: translate3d((-$half-spacing), $half-spacing, 0);
+  cursor: pointer;
+  position: absolute;
+  height: $color-picker-range-indicator-size;
+  width: $color-picker-range-indicator-size;
+  border: $border-width-thick solid $color-background-alt;
+  border-radius: $border-radius-circle;
+  box-shadow: $shadow-inline-edit,
+    inset $shadow-inline-edit;
+
+  &:focus {
+    outline: none;
+    box-shadow: $shadow-button-focus;
+  }
+}
+
+/**
+ * @summary Container element for the hue slider and preview swatch
+ *
+ * @selector .slds-color-picker__hue-and-preview
+ * @restrict .slds-color-picker__custom div
+ */
+.slds-color-picker__hue-and-preview {
+  display: flex;
+
+  .slds-swatch {
+    margin-left: $spacing-xx-small;
+    height: $spacing-large;
+    width: $spacing-large;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+  }
+}
+
+/**
+ * @summary The slide input that controls the hue
+ *
+ * @selector .slds-color-picker__hue-slider
+ * @restrict .slds-color-picker__hue-and-preview input
+ */
+.slds-color-picker__hue-slider {
+  $color-stops: ();
+  $color-step: 5;
+  $hue: 0;
+
+  @while $hue < 360 {
+    $new-stop: hsl($hue, 100%, 50%);
+    $color-stops: join($color-stops, $new-stop, comma);
+    $hue: ($hue + $color-step);
+  }
+
+  appearance: none;
+  flex: 1;
+  padding: 0;
+  height: $color-picker-slider-height;
+  width: 100%;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  background: linear-gradient(
+    to right,
+    $color-stops
+  );
+
+  &:focus {
+    outline: none;
+  }
+
+  @mixin thumb-styles {
+    appearance: none;
+    cursor: pointer;
+    height: calc(#{$color-picker-slider-height} - (#{$border-width-thin} * 2));
+    width: $color-picker-thumb-width;
+    border: $border-width-thin solid $color-picker-slider-thumb-border-color;
+    border-radius: $border-radius-small;
+    background: $color-picker-slider-thumb-color-background;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb-styles;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb-styles;
+  }
+
+  &::-ms-thumb {
+    @include thumb-styles;
+    height: $color-picker-slider-height;
+  }
+
+  &::-moz-range-track {
+    height: 0;
+  }
+
+  &::-ms-track {
+    height: 0;
+    border: 0;
+    background: transparent;
+    color: transparent;
+  }
+}
+
+/**
+ * @summary The group of direct input elements
+ *
+ * @selector .slds-color-picker__custom-inputs
+ * @restrict .slds-color-picker__custom > div
+ */
+.slds-color-picker__custom-inputs {
+  display: flex;
+  padding-top: $spacing-x-small;
+
+  .slds-form-element {
+    flex: flex-grow;
+  }
+
+  .slds-form-element:not(:first-child) {
+    margin-left: $spacing-xx-small;
+  }
+
+  input {
+    padding: 0 $spacing-xx-small;
+  }
+
+  abbr {
+    cursor: text;
+    text-decoration: none;
+  }
+}
+
+.slds-color-picker__input-custom-hex {
+  flex: none;
+  width: $color-picker-input-custom-hex-width;
+
+  input {
+    font-size: $color-picker-input-custom-hex-font-size;
+  }
+}
+
+/**
+ * @summary Footer for the Color Selector Picker
+ *
+ * @selector .slds-color-picker__selector-footer
+ * @restrict .slds-color-picker__selector div
+ */
+.slds-color-picker__selector-footer {
+  display: flex;
+
+  .slds-button {
+    flex: 1;
+  }
+}
+
+/**
+ * @summary A swatch
+ *
+ * @selector .slds-swatch
+ * @restrict .slds-color-picker__swatch span, .slds-color-picker__summary-button span, .slds-color-picker__hue-and-preview span
+ */
+.slds-swatch {
+  display: inline-block;
+  vertical-align: middle;
+  height: $color-picker-swatch-size;
+  width: $color-picker-swatch-size;
+  border-radius: $border-radius-small;
+}

@@ -23,6 +23,12 @@
   // Button Icon
   'button-icons/base/index',
 
+  // Color Picker
+  'color-picker/base/index',
+  'color-picker/custom-only/index',
+  'color-picker/predefined-only/index',
+  'color-picker/swatches-only/index',
+
   // Icons
   'icons/base/index',
 
@@ -138,6 +144,7 @@
 
   // Process
   'process/wizard/index',
+  'path-simple/base/index', // keep till deprecation
   'path/base/index',
 
   // Progress Indicator
@@ -170,7 +177,7 @@
   'prompt/base/index',
   'toast/base/index',
   'notifications/base/index',
-  'toast/modal-toast/index',
+  'toast/modal-toast/index', // keep until deprecation
   'walkthrough/header/index',
 
   // Lookup

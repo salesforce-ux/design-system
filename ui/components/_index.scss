@@ -137,6 +137,7 @@
 
   // Process
   'process/wizard/index',
+  'path-simple/base/index', // keep till deprecation
   'path/base/index',
 
   // Progress Indicator
@@ -169,7 +170,7 @@
   'prompt/base/index',
   'toast/base/index',
   'notifications/base/index',
-  'toast/modal-toast/index',
+  'toast/modal-toast/index', // keep until deprecation
   'walkthrough/header/index',
 
   // Lookup

@@ -61,7 +61,7 @@ let PanelHeader = props =>
     </div>
   </div>;
 
-let FormElementStatic = props =>
+export let FormElementStatic = props =>
   <li className={classNames('slds-form-element slds-hint-parent slds-border_bottom', props.inlineEdit ? 'slds-form-element_edit' : null)}>
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">

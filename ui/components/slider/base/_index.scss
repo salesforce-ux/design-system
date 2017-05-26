@@ -156,7 +156,7 @@
  * @modifier
  */
 .slds-slider_vertical {
-  height: $size-x-small + $height-input;
+  height: ($size-x-small + $height-input);
 
   .slds-slider__range {
     width: $size-x-small;

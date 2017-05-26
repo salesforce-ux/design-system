@@ -6,6 +6,7 @@
  * @selector .slds-combobox-picklist
  * @restrict div
  * @variant
+ * @s1 false
  */
 
 @include deprecate('4.0.0', 'A picklist should use the readonly version of a combobox') {

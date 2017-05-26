@@ -88,6 +88,15 @@
   justify-content: space-between;
   text-align: center;
   order: 1;
+  
+  .slds-item {
+    display: flex;
+    justify-content: center;
+    
+    @include mq-medium-min {
+      margin-right: 0;
+    }
+  }
 
   @include mq-small-max {
     border-top: $border-width-thin solid $color-border;

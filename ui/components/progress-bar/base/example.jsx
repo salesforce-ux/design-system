@@ -68,13 +68,5 @@ export let states = [
       <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
         <ProgressValue value="100" />
       </ProgressBar>
-  },
-  {
-    id: 'success',
-    label: 'Success',
-    element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
-        <ProgressValue className="slds-progress-bar__value_success" value="50" />
-      </ProgressBar>
   }
 ];

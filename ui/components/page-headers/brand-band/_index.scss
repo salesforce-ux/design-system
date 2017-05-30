@@ -25,7 +25,7 @@ $brand-band-height-large: 18.75rem;
 .slds-brand-band_solo {
   position: relative;
 
-  &:after {
+  &:before {
     content: '';
     display: block;
     position: absolute;
@@ -39,15 +39,15 @@ $brand-band-height-large: 18.75rem;
     background-size: cover;
   }
 
-  &.slds-brand-band_small:after {
+  &.slds-brand-band_small:before {
     height: $brand-band-height-small;
   }
 
-  &.slds-brand-band_medium:after {
+  &.slds-brand-band_medium:before {
     height: $brand-band-height-medium;
   }
 
-  &.slds-brand-band_large:after {
+  &.slds-brand-band_large:before {
     height: $brand-band-height-large;
   }
 }

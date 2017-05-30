@@ -117,21 +117,6 @@ export default (
 
 export let examples = [
   {
-    id: 'standalone',
-    label: 'Standalone - Size small',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_small" />
-  },
-  {
-    id: 'standalone',
-    label: 'Standalone - Size medium',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_medium" />
-  },
-  {
-    id: 'standalone',
-    label: 'Standalone - Size large',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_large" />
-  },
-  {
     id: 'object-home',
     label: 'Object home',
     element:
@@ -303,13 +288,61 @@ export let examples = [
     </div>
   },
   {
-    id: 'card',
-    label: 'Card',
+    id: 'standalone',
+    label: 'Standalone - Size small',
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_small" />
+  },
+  {
+    id: 'standalone',
+    label: 'Standalone - Size medium',
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_medium" />
+  },
+  {
+    id: 'standalone',
+    label: 'Standalone - Size large',
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_large" />
+  },
+  {
+    id: 'template',
+    label: 'Page layout template',
     element:
-      <Card className="slds-brand-band">
-        <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
-        <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
-        <CardFooter>Card Footer</CardFooter>
-      </Card>
+    <div style={{ backgroundColor: '#e0e5ee' }}>
+      <div className="slds-grid">
+        <div className="slds-size_8-of-12 slds-p-around_medium slds-brand-band_solo slds-brand-band_large">
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+        </div>
+        <div className="slds-size_4-of-12 slds-p-around_medium">
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card>
+            <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+        </div>
+      </div>
+    </div>
   }
 ];

@@ -10,17 +10,22 @@ import classNames from 'classnames';
 
 export let ProgressBar = props =>
   <div className={classNames('slds-progress-bar', props.className)} aria-valuemin="0" aria-valuemax="100" aria-valuenow={props.value} role="progressbar">
-    <span className="slds-progress-bar__value" style={{ width: props.value + '%' }}>
-      <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
-    </span>
+    {props.children}
   </div>;
+
+let ProgressValue = props =>
+  <span className={classNames('slds-progress-bar__value', props.className)} style={{ width: props.value + '%' }}>
+    <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
+  </span>;
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <ProgressBar value="25" />
+  <ProgressBar>
+    <ProgressValue value="25" />
+  </ProgressBar>
 );
 
 export let states = [
@@ -28,30 +33,48 @@ export let states = [
     id: 'zero',
     label: '0% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="0" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue value="0" />
+      </ProgressBar>
   },
   {
     id: '25',
     label: '25% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="25" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue value="25" />
+      </ProgressBar>
   },
   {
     id: '50',
     label: '50% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="50" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue value="50" />
+      </ProgressBar>
   },
   {
     id: '75',
     label: '75% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="75" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue value="75" />
+      </ProgressBar>
   },
   {
     id: '100',
     label: '100% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="100" />
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue value="100" />
+      </ProgressBar>
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element:
+      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular">
+        <ProgressValue className="slds-progress-bar__value_success" value="50" />
+      </ProgressBar>
   }
 ];

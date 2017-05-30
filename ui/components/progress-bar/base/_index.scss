@@ -97,3 +97,13 @@
   background: $progress-bar-color-background-fill;
   height: 100%;
 }
+
+/**
+ * @summary Create a green progress bar
+ *
+ * @selector .slds-progress-bar__value_success
+ * @restrict .slds-progress-bar__value
+ */
+ .slds-progress-bar__value_success {
+  background: $progress-bar-color-background-fill-success;
+ }

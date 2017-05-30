@@ -9,6 +9,6 @@ global:
   - '*height'
 props:
   BRAND_BAND_IMAGE_WIDTH:
-    value: '1280px'
+    value: '1024px'
   BRAND_BAND_FLAPS_WIDTH:
-    value: '100px'
+    value: '200px'

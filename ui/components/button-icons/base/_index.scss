@@ -80,7 +80,7 @@
 
     &:hover,
     &:focus {
-      background-color: transparent;
+      // background-color: transparent;
     }
   }
 }
@@ -176,7 +176,8 @@
 .slds-button_icon-container.slds-is-selected,
 .slds-button--icon-container.slds-is-selected,
 .slds-button_icon-border.slds-is-selected,
-.slds-button--icon-border.slds-is-selected {
+.slds-button--icon-border.slds-is-selected,
+.slds-button_icon-border-filled.slds-is-selected {
   @include button-brand;
 
   .slds-button__icon {
@@ -310,7 +311,8 @@
  * @variant
  */
 .slds-button--icon-container.slds-is-selected,
-.slds-button--icon-border.slds-is-selected {
+.slds-button--icon-border.slds-is-selected,
+.slds-button--icon-border-filled.slds-is-selected {
   @include button-brand;
 
   .slds-button__icon {

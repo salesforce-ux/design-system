@@ -8,12 +8,12 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { StatefulButton } from '../../buttons/stateful/example';
 
 export default (
-  <div className="slds-page-header slds-brand-band">
+  <div className="slds-page-header slds-brand-band slds-brand-band_flaps slds-brand-band_overlay">
     <div className="slds-grid slds-page-header__row">
       <div className="slds-brand-band__overlay">
         <div className="slds-media slds-brand-band__overlay-content">
           <div className="slds-media__figure">
-            <StandardIcon symbol="opportunity" assistiveText={false} />
+            <StandardIcon className="slds-icon_large" symbol="opportunity" assistiveText={false} />
           </div>
           <div className="slds-media__body">
             <nav>
@@ -35,6 +35,7 @@ export default (
                 </span>
               </button>
             </h1>
+            <p className="slds-text-body_small">10 items &bull; Updated 13 minutes ago</p>
           </div>
         </div>
       </div>
@@ -53,9 +54,6 @@ export default (
       </div>
     </div>
     <div className="slds-grid slds-page-header__row">
-      <div className="slds-align-bottom">
-        <p className="slds-text-body_small">10 items &bull; Updated 13 minutes ago</p>
-      </div>
       <div className="slds-col--bump-left">
         <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
           <ButtonIcon
@@ -108,15 +106,30 @@ export default (
 
 export let examples = [
   {
+    id: 'standalone',
+    label: 'Standalone - Size small',
+    element: <div className="slds-brand-band slds-brand-band_small" />
+  },
+  {
+    id: 'standalone',
+    label: 'Standalone - Size medium',
+    element: <div className="slds-brand-band slds-brand-band_medium" />
+  },
+  {
+    id: 'standalone',
+    label: 'Standalone - Size large',
+    element: <div className="slds-brand-band slds-brand-band_large" />
+  },
+  {
     id: 'object-home',
     label: 'Object home',
     element:
-    <div className="slds-page-header slds-brand-band">
+    <div className="slds-page-header slds-brand-band slds-brand-band_flaps slds-brand-band_overlay">
       <div className="slds-grid slds-page-header__row">
         <div className="slds-brand-band__overlay">
           <div className="slds-media slds-brand-band__overlay-content">
             <div className="slds-media__figure">
-              <StandardIcon symbol="opportunity" assistiveText={false} />
+              <StandardIcon className="slds-icon_large" symbol="opportunity" assistiveText={false} />
             </div>
             <div className="slds-media__body">
               <nav>
@@ -138,6 +151,7 @@ export let examples = [
                   </span>
                 </button>
               </h1>
+              <p className="slds-text-body_small">10 items &bull; Updated 13 minutes ago</p>
             </div>
           </div>
         </div>
@@ -156,9 +170,6 @@ export let examples = [
         </div>
       </div>
       <div className="slds-grid slds-page-header__row">
-        <div className="slds-align-bottom">
-          <p className="slds-text-body_small">10 items &bull; Updated 13 minutes ago</p>
-        </div>
         <div className="slds-col--bump-left">
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
             <ButtonIcon
@@ -212,12 +223,12 @@ export let examples = [
     id: 'record-home',
     label: 'Record home',
     element:
-    <div className="slds-page-header slds-brand-band">
+    <div className="slds-page-header slds-brand-band slds-brand-band_flaps slds-brand-band_overlay">
       <div className="slds-grid slds-page-header__row">
         <div className="slds-brand-band__overlay">
           <div className="slds-media slds-brand-band__overlay-content">
             <div className="slds-media__figure">
-              <StandardIcon symbol="opportunity" assistiveText={false} />
+              <StandardIcon className="slds-icon_large" symbol="opportunity" assistiveText={false} />
             </div>
             <div className="slds-media__body">
               <nav>

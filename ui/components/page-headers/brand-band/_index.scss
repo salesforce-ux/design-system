@@ -10,6 +10,7 @@
 
 .slds-brand-band:not(.slds-brand-band_solo) {
   background-image: $brand-band-image; // Update path in tokens/background-color.yml
+  // background-image: url("/_slds/images/themes/one/mountains.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $brand-band-color-background-primary;

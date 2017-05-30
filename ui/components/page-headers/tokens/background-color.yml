@@ -21,5 +21,5 @@ props:
   BRAND_BAND_COLOR_BACKGROUND_OVERLAY:
     value: 'rgba(0, 0, 0, 0.2)'
   BRAND_BAND_IMAGE:
-    value: 'url("https://d2ppvlu71ri8gs.cloudfront.net/items/1Y342p0U390p3Y2S3w0o/page-header.png?v=d424b841")'
+    value: 'url("/_slds/images/themes/one/mountains.png")'
     type: raw

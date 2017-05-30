@@ -8,6 +8,12 @@ global:
   - '*width'
   - '*height'
 props:
+  BRAND_BAND_IMAGE_HEIGHT_SMALL:
+    value: '6.25rem'
+  BRAND_BAND_IMAGE_HEIGHT_MEDIUM:
+    value: '12.5rem'
+  BRAND_BAND_IMAGE_HEIGHT_LARGE:
+    value: '18.75rem'
   BRAND_BAND_IMAGE_WIDTH:
     value: '1024px'
   BRAND_BAND_FLAPS_WIDTH:

@@ -12,18 +12,47 @@ $brand-band-height-large: 18.75rem;
  * @variant
  */
 
-.slds-brand-band {
+.slds-brand-band:not(.slds-brand-band_solo) {
   // background-image: url("/_slds/images/themes/one/mountains.png");
   background-image: $brand-band-image;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $brand-band-color-background-primary;
-  border-bottom: 0;
-  padding: $spacing-medium $spacing-large;
   position: relative;
+  overflow-x: hidden;
 }
 
-.slds-brand-band_flaps {
+.slds-brand-band_solo {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-band-color-background-primary;
+    background-image: $brand-band-image;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.slds-brand-band_small:after {
+    height: $brand-band-height-small;
+  }
+
+  &.slds-brand-band_medium:after {
+    height: $brand-band-height-medium;
+  }
+
+  &.slds-brand-band_large:after {
+    height: $brand-band-height-large;
+  }
+}
+
+.slds-brand-band_flaps:not(.slds-brand-band_solo) {
 
   &:before {
     content: '';
@@ -71,19 +100,6 @@ $brand-band-height-large: 18.75rem;
     color: $brand-band-color-text-primary;
     z-index: 1;
   }
-}
-
-// Height Modifiers
-.slds-brand-band_small {
-  height: $brand-band-height-small;
-}
-
-.slds-brand-band_medium {
-  height: $brand-band-height-medium;
-}
-
-.slds-brand-band_large {
-  height: $brand-band-height-large;
 }
 
 // Component modifiers

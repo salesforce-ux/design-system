@@ -6,6 +6,17 @@ import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { StatefulButton } from '../../buttons/stateful/example';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter
+} from '../../cards/base/example';
+
+export const Context = props =>
+  <div style={{ minHeight: '20rem' }}>
+    {props.children}
+  </div>;
 
 export default (
   <div className="slds-page-header slds-brand-band slds-brand-band_flaps slds-brand-band_overlay">
@@ -108,17 +119,17 @@ export let examples = [
   {
     id: 'standalone',
     label: 'Standalone - Size small',
-    element: <div className="slds-brand-band slds-brand-band_small" />
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_small" />
   },
   {
     id: 'standalone',
     label: 'Standalone - Size medium',
-    element: <div className="slds-brand-band slds-brand-band_medium" />
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_medium" />
   },
   {
     id: 'standalone',
     label: 'Standalone - Size large',
-    element: <div className="slds-brand-band slds-brand-band_large" />
+    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_large" />
   },
   {
     id: 'object-home',
@@ -290,5 +301,15 @@ export let examples = [
         </li>
       </ul>
     </div>
+  },
+  {
+    id: 'card',
+    label: 'Card',
+    element:
+      <Card className="slds-brand-band">
+        <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
+        <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
   }
 ];

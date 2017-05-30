@@ -41,7 +41,7 @@ export let CardHeader = props =>
   <div className={classNames('slds-card__header slds-grid', props.className)}>
     <header className={classNames('slds-media slds-media_center slds-has-flexi-truncate', props.search ? 'slds-size_1-of-3' : null)}>
       { props.symbol
-        ? <div className="slds-media__figure slds-hide">
+        ? <div className="slds-media__figure">
           <span className={'slds-icon_container slds-icon-standard-' + props.symbol} title="description of icon when needed">
             <SvgIcon className="slds-icon slds-icon_small" sprite="standard" symbol={props.symbol} />
             </span>
@@ -109,7 +109,7 @@ export let examples = [
     <Card>
       <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Contacts (1)</span></CardHeader>
       <CardBody>
-        <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+        <table className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
           <thead>
             <tr className="slds-text-title_caps">
               <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>

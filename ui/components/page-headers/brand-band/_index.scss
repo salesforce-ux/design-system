@@ -15,7 +15,6 @@
   background-size: cover;
   background-color: $brand-band-color-background-primary;
   position: relative;
-  overflow: hidden;
 }
 
 // If the brand band is standalone, use this modifier. If the brand band is being extended
@@ -102,6 +101,10 @@
     position: relative;
     color: $brand-band-color-text-primary;
     z-index: 1;
+
+    a {
+      color: currentColor;
+    }
   }
 }
 

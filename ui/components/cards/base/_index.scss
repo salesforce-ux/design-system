@@ -19,6 +19,7 @@
   position: relative;
   padding: 0;
   background: $color-foreground-primary;
+  border: $border-width-thin solid $color-foreground-primary;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
   box-shadow: $shadow-soft-primary;
@@ -91,7 +92,7 @@
     border-top: 1px solid $color-border-primary;
 
     @include mq-large-min {
-      margin-top: ($spacing-large + $spacing-x-small);
+      margin-top: $spacing-large;
       margin-left: $spacing-large;
       margin-right: $spacing-large;
     }

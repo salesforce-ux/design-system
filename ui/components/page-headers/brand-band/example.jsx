@@ -288,17 +288,17 @@ export let examples = [
     </div>
   },
   {
-    id: 'standalone',
+    id: 'standalone-small',
     label: 'Standalone - Size small',
     element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_small" />
   },
   {
-    id: 'standalone',
+    id: 'standalone-medium',
     label: 'Standalone - Size medium',
     element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_medium" />
   },
   {
-    id: 'standalone',
+    id: 'standalone-large',
     label: 'Standalone - Size large',
     element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_large" />
   },

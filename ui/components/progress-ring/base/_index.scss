@@ -1,0 +1,105 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+$progress-ring-size: 6rem;
+$progress-background-color: #4bca81;
+$warning-background-color: rgb(255,155,62);
+$expired-background-color: #d4504c;
+$progress-content-background-color: #fff;
+
+/**
+ * Progress Ring component
+ *
+ * @summary Progress Ring component
+ *
+ * @variant
+ * @name base
+ * @selector .slds-progress-ring
+ * @restrict div
+ */
+.slds-progress-ring {
+    position: relative;
+    height: $progress-ring-size;
+    width: $progress-ring-size;
+    border-radius: $progress-ring-size;
+    background: #f0f0f0;
+}
+
+/**
+ * @summary Progress ring content area
+ *
+ * @selector .slds-progress-ring__content
+ * @restrict .slds-progress-ring > div
+ */
+.slds-progress-ring__content {
+  $offset: 10px;
+
+  position: absolute;
+  top: $offset;
+  right: $offset;
+  bottom: $offset;
+  left: $offset;
+  z-index: 100;
+  border-radius: $progress-ring-size;
+  background: $progress-content-background-color;
+}
+
+/**
+ * @summary Progress SVG indicator
+ *
+ * @selector .slds-progress-ring__progress
+ * @restrict .slds-progress-ring > svg
+ */
+.slds-progress-ring__progress {
+  width: 100%;
+}
+
+/**
+ *
+ * @selector .slds-progress-ring__path
+ * @restrict .slds-progress-ring__progress > path
+ */
+.slds-progress-ring__path {
+  fill: $progress-background-color;
+}
+
+/**
+ * @summary Warning state
+ *
+ * @selector .slds-progress-ring_warning
+ * @restrict .slds-progress-ring
+ * @modifier
+ */
+.slds-progress-ring_warning {
+  .slds-progress-ring__path {
+    fill: $warning-background-color;
+  }
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-progress-ring_expired
+ * @restrict .slds-progress-ring
+ * @modifier
+ */
+.slds-progress-ring_expired {
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-progress-ring_complete
+ * @restrict .slds-progress-ring
+ * @modifier
+ */
+.slds-progress-ring_complete {
+  .slds-progress-ring__path {
+    fill: $progress-background-color;
+  }
+
+  .slds-progress-ring__content {
+    background: $progress-background-color;
+    color: $progress-content-background-color;
+  }
+}

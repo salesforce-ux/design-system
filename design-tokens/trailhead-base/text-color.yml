@@ -8,8 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../one-base/aliases/color.yml"
 props:
-  ## Defaults for when brand band is turned OFF!
   PAGE_HEADER_COLOR_TEXT_PRIMARY:
-    value: '{!BLACK_TEXT_PRIMARY}'
+    value: '{!WHITE_TEXT_PRIMARY}'

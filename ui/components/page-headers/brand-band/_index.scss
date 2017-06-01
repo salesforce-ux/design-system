@@ -8,15 +8,6 @@
  * @variant
  */
 
-.slds-brand-band:not(.slds-brand-band_solo) {
-  // background-image: $brand-band-image; // Update path in tokens/background-color.yml
-  background-image: url("/_slds/images/themes/one/mountains.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $brand-band-color-background-primary;
-  position: relative;
-}
-
 // If the brand band is standalone, use this modifier. If the brand band is being extended
 // into another component use slds-brand-band without this modifier
 .slds-brand-band_solo {
@@ -31,7 +22,7 @@
     bottom: 0;
     left: 0;
     background-color: $brand-band-color-background-primary;
-    background-image: $brand-band-image;
+    background-image: url($brand-band-image);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -50,6 +41,21 @@
   &.slds-brand-band_large:before {
     height: $brand-band-image-height-large;
   }
+
+  // Full Height Modifier
+  &.slds-brand-band_full:before {
+    height: 100%;
+  }
+}
+
+
+// OLD BUT KEEPING FOR NOW
+.slds-brand-band:not(.slds-brand-band_solo) {
+  background-image: url($brand-band-image); // Update path in tokens/background-color.yml
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $brand-band-color-background-primary;
+  position: relative;
 }
 
 // If you want to cap the image width and applied a gradient bleed into a solid color
@@ -73,58 +79,5 @@
     &:before {
       opacity: 1;
     }
-  }
-}
-
-// If you have want an overlay, apply this modifier
-.slds-brand-band_overlay {
-
-  .slds-brand-band__overlay {
-    position: relative;
-    padding: 0 $spacing-medium $spacing-small;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: ($spacing-medium * -1);
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: $brand-band-color-background-overlay;
-      border-bottom-left-radius: $border-radius-medium;
-      border-bottom-right-radius: $border-radius-medium;
-      mix-blend-mode: multiply;
-    }
-  }
-
-  .slds-brand-band__overlay-content {
-    position: relative;
-    color: $brand-band-color-text-primary;
-    z-index: 1;
-
-    a {
-      color: currentColor;
-    }
-  }
-}
-
-// Component modifiers
-.slds-brand-band {
-
-  // Add box shadow to buttons
-  .slds-button,
-  .slds-button_icon,
-  .slds-button-group {
-    box-shadow: $shadow-soft-secondary;
-
-    .slds-button {
-      box-shadow: none;
-    }
-  }
-
-  // Remove the newly added box shadow from above from page header titles
-  .slds-page-header__title .slds-button,
-  .slds-page-header__detail-block .slds-button {
-    box-shadow: none;
   }
 }

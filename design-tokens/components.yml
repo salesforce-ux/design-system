@@ -25,7 +25,10 @@ imports:
 - ../ui/components/global-navigation/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/text-color.yml
 - ../ui/components/page-headers/tokens/background-color.yml
+- ../ui/components/page-headers/tokens/box-shadow.yml
+- ../ui/components/page-headers/tokens/font-size.yml
 - ../ui/components/page-headers/tokens/sizing.yml
+- ../ui/components/page-headers/tokens/spacing.yml
 - ../ui/components/page-headers/tokens/text-color.yml
 - ../ui/components/path/tokens/background-color.yml
 - ../ui/components/path/tokens/border-color.yml
@@ -39,4 +42,5 @@ imports:
 - ../ui/components/slider/tokens/sizing.yml
 - ../ui/components/split-view/tokens/background-color.yml
 - ../ui/components/split-view/tokens/border-color.yml
+- ../ui/components/split-view/tokens/sizing.yml
 - ../ui/components/vertical-navigation/tokens/background-color.yml

@@ -8,8 +8,9 @@ global:
   - '*width'
   - '*height'
 props:
+  ## Default sizes, these dont change =)
   BRAND_BAND_IMAGE_HEIGHT_SMALL:
-    value: '6.25rem'
+    value: '6rem'
   BRAND_BAND_IMAGE_HEIGHT_MEDIUM:
     value: '12.5rem'
   BRAND_BAND_IMAGE_HEIGHT_LARGE:

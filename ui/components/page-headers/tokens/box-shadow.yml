@@ -2,14 +2,12 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  type: color
-  category: text-color
+  type: box-shadow
+  category: shadow
   cssProperties:
-  - color
-  - fill
+  - box-shadow
 imports:
 - "../../../../design-tokens/one-base/aliases/color.yml"
 props:
-  ## Defaults for when brand band is turned OFF!
-  PAGE_HEADER_COLOR_TEXT_PRIMARY:
-    value: '{!BLACK_TEXT_PRIMARY}'
+  PAGE_HEADER_BUTTON_SHADOW:
+    value: 'none'

@@ -22,7 +22,7 @@ props:
     type: raw
   ## BRAND BAND
   BRAND_BAND_IMAGE:
-    value: '/_slds/images/themes/one/banner-mountains.png'
+    value: ''
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#69b9dc'

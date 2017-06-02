@@ -18,6 +18,8 @@ imports:
 - ./force-base/opacity.yml
 - ./force-base/duration.yml
 - ./force-base/z-index.yml
+- ./one-base.yml
+## ONE-BASE IMPORT GOES HERE IF IT TEAM WANTS NEW-UI TO BE APART OF THE DEFAULT UI
 - ./components.yml
 auraImports:
 - 'force:mqCommons'

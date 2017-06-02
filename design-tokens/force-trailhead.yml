@@ -2,7 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ./one-base.yml
+## ONE-BASE IMPORT GOES HERE IF IT TEAM WANTS NEW-UI TO BE IN THE ESCAPE HATCH
 - ./trailhead-base/background-color.yml
 - ./trailhead-base/border-radius.yml
 - ./trailhead-base/box-shadow.yml

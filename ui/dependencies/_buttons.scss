@@ -48,8 +48,8 @@
 }
 
 @mixin button-base {
-  border-color: $button-color-border-default;
-  background-color: $button-color-background-default;
+  border-color: $button-color-border-primary;
+  background-color: $button-color-background-primary;
 
   &:hover,
   &:focus {
@@ -67,7 +67,7 @@
 
 @mixin button-brand {
   background-color: $color-background-brand-primary;
-  border-color: $button-color-border-primary;
+  border-color: $button-color-border-brand-primary;
   color: $color-text-brand-primary;
 
   &:link,
@@ -90,7 +90,7 @@
 }
 
 @mixin button-transparent {
-  border-color: $button-color-border-default;
+  border-color: $button-color-border-primary;
 
   &:focus {
     border-color: $color-border-brand-primary;

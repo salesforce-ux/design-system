@@ -10,9 +10,9 @@ global:
 imports:
 - "../../../../design-tokens/one-base/aliases/color.yml"
 props:
-  BUTTON_COLOR_BORDER_DEFAULT:
-    value: '{!GRAY_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_PRIMARY:
+    value: '{!GRAY_BORDER_PRIMARY}'
+  BUTTON_COLOR_BORDER_BRAND_PRIMARY:
     value: '{!BLUE_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_SECONDARY:
     value: '{!WHITE_TRANSPARENT_80}'

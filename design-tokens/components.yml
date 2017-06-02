@@ -1,6 +1,7 @@
 # File generated automatically, do not edit manually
 imports:
 - ../ui/components/buttons/tokens/border-color.yml
+- ../ui/components/buttons/tokens/border-radius.yml
 - ../ui/components/buttons/tokens/color.yml
 - ../ui/components/buttons/tokens/line-height.yml
 - ../ui/components/buttons/tokens/text-color.yml
@@ -24,6 +25,8 @@ imports:
 - ../ui/components/global-navigation/tokens/border-color.yml
 - ../ui/components/global-navigation/tokens/sizing.yml
 - ../ui/components/global-navigation/tokens/text-color.yml
+- ../ui/components/input/tokens/font-size.yml
+- ../ui/components/input/tokens/font-weight.yml
 - ../ui/components/page-headers/tokens/background-color.yml
 - ../ui/components/page-headers/tokens/box-shadow.yml
 - ../ui/components/page-headers/tokens/font-size.yml

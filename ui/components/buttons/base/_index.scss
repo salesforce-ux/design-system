@@ -43,7 +43,7 @@
   background: transparent;
   background-clip: border-box;
   border: $border-width-thin solid transparent;
-  border-radius: $border-radius-small;
+  border-radius: $button-border-radius;
   line-height: $line-height-button;
   text-decoration: none;
   color: $color-text-link;
@@ -183,7 +183,7 @@ a.slds-button--inverse:focus {
 .slds-button--inverse {
   @include button;
   background-color: $color-background-button-inverse;
-  border-color: $button-color-border-default;
+  border-color: $button-color-border-primary;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;

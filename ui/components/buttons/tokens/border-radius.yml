@@ -2,11 +2,10 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  category: font
-  type: font-weight
+  type: size
+  category: radius
   cssProperties:
-  - font
-  - font-weight
+  - 'border*radius'
 props:
-  INPUT_STATIC_FONT_WEIGHT:
-    value: '600'
+  BUTTON_BORDER_RADIUS:
+    value: .25rem

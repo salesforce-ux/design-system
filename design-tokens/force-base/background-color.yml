@@ -11,6 +11,30 @@ global:
 imports:
 - ./aliases/color.yml
 props:
+  ## DEFAULTS FROM ONE-BASE
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!ROMANCE}'
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!LINK_WATER}'
+  COLOR_FOREGROUND_PRIMARY:
+    value: '{!ROMANCE}'
+  COLOR_CONTRAST_PRIMARY:
+    value: '{!LINK_WATER}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!ROMANCE}'
+  ## BRANDING DEFAULTS FROM ONE-BASE
+  COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_HOVER:
+    value: '{!ENDEAVOUR}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_FOCUS:
+    value: '{!ENDEAVOUR}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+  ## PAGE DEFAULTS FROM ONE-BASE
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!ROMANCE}'
+  ###################
   COLOR_BACKGROUND:
     value: '{!LINK_WATER}'
     comment: Default background color for the whole app.

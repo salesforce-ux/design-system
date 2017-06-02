@@ -9,9 +9,9 @@ imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/one-base/aliases/color.yml"
 props:
-  BUTTON_COLOR_BACKGROUND_DEFAULT:
-    value: "{!WHITE_BACKGROUND_PRIMARY}"
   BUTTON_COLOR_BACKGROUND_PRIMARY:
+    value: "{!WHITE_BACKGROUND_PRIMARY}"
+  BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
     value: "{!BLUE_BACKGROUND_PRIMARY}"
   BUTTON_COLOR_BACKGROUND_SECONDARY:
     value: "{!WHITE_TRANSPARENT_80}"

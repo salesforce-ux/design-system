@@ -73,16 +73,7 @@
 .slds-button_icon-border,
 .slds-button--icon-border {
   @include button-icon;
-  border-color: $button-color-border-default;
-
-  // Disabled
-  &[disabled] {
-
-    &:hover,
-    &:focus {
-      // background-color: transparent;
-    }
-  }
+  border-color: $button-color-border-primary;
 }
 
 /**
@@ -115,10 +106,10 @@
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
-  background-color: $button-color-background-default;
+  background-color: $button-color-background-primary;
 
   &[disabled] {
-    border-color: $button-color-border-default;
+    border-color: $button-color-border-primary;
     background-color: $color-background-button-default-disabled;
   }
 }
@@ -253,8 +244,8 @@
   @include button-icon;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
-  background-color: $button-color-background-default;
-  border-color: $button-color-border-default;
+  background-color: $button-color-background-primary;
+  border-color: $button-color-border-primary;
 
   &-filled {
     background-color: $color-background-button-default;
@@ -262,7 +253,6 @@
 
   &:hover,
   &:focus {
-    // @include button-base;
 
     .slds-button__icon {
       fill: $color-text-icon-default-hover;

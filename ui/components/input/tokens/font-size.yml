@@ -2,11 +2,13 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  category: font
-  type: font-weight
+  category: font-size
+  type: font-size
   cssProperties:
   - font
-  - font-weight
+  - font-size
+imports:
+- "../../../../design-tokens/force-base/aliases/font-size.yml"
 props:
-  INPUT_STATIC_FONT_WEIGHT:
-    value: '600'
+  INPUT_STATIC_FONT_SIZE:
+    value: '{!FONT_SIZE_3}'

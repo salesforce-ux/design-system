@@ -39,6 +39,10 @@
   @include square(2.25rem);
 }
 
+.slds-page-header__row {
+  margin: #{-$spacing-medium};
+}
+
 .slds-page-header__overlay {
   position: relative;
   padding: $page-header-spacing-overlay;
@@ -88,15 +92,15 @@
 }
 
 // If themes are on, manipulate these components
-.slds-page-header__utility-group {
-
-  .slds-button,
-  .slds-button_icon,
-  .slds-button-group {
-    box-shadow: $page-header-button-shadow;
-
-    .slds-button {
-      box-shadow: none;
-    }
-  }
-}
+// .slds-page-header__utility-group {
+//
+//   .slds-button,
+//   .slds-button_icon,
+//   .slds-button-group {
+//     box-shadow: $page-header-button-shadow;
+//
+//     .slds-button {
+//       box-shadow: none;
+//     }
+//   }
+// }

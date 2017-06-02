@@ -9,7 +9,7 @@ import MediaObject from '../../../utilities/media-objects/index.react';
 import SvgIcon from '../../../shared/svg-icon';
 import { StandardIcon } from '../../icons/standard/example';
 
-export default (
+export let RecordHome = props =>
   <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
@@ -78,5 +78,8 @@ export default (
         </p>
       </li>
     </ul>
-  </div>
+  </div>;
+
+export default (
+  <RecordHome />
 );

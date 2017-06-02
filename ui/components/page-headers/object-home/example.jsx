@@ -18,7 +18,7 @@ const image = (
   </span>
 );
 
-export default (
+export let ObjectHome = props =>
   <div className="slds-page-header slds-page-header_object-home">
     <div className="slds-grid">
       {/* Open Left Aligned Heading + Icon Grouping */}
@@ -104,5 +104,8 @@ export default (
         </div>
       </div>
     </div>
-  </div>
+  </div>;
+
+export default (
+  <ObjectHome />
 );

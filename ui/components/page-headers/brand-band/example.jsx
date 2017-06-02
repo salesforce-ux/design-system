@@ -12,6 +12,8 @@ import {
   CardBody,
   CardFooter
 } from '../../cards/base/example';
+import { ObjectHome } from '../object-home/example';
+import { RecordHome } from '../record-home/example';
 
 export const Context = props =>
   <div style={{ minHeight: '20rem', backgroundColor: '#E0E5EE' }}>
@@ -118,6 +120,12 @@ export default (
 );
 
 export let examples = [
+  {
+    id: 'object-home-old',
+    label: 'Object home - Old',
+    element:
+      <ObjectHome />
+  },
   {
     id: 'object-home',
     label: 'Object home',
@@ -319,6 +327,12 @@ export let examples = [
         </div>
       </div>
     </div>
+  },
+  {
+    id: 'record-home-old',
+    label: 'Record home - Old',
+    element:
+     <RecordHome />
   },
   {
     id: 'record-home',

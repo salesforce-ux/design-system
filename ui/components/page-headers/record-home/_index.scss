@@ -46,8 +46,11 @@
    * @notes Only the record home page header contains this detail area
    */
   &-row {
+    margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
     padding: $page-header-spacing-row;
     background-color: $color-background-alt;
+    position: relative;
+    z-index: 2;
   }
 
   /**

@@ -7,8 +7,6 @@ global:
   cssProperties:
   - 'border*radius'
 props:
-  BORDER_RADIUS_X_SMALL:
-    value: .1rem
   BORDER_RADIUS_SMALL:
     value: .125rem
   BORDER_RADIUS_MEDIUM:
@@ -16,8 +14,6 @@ props:
     comment: 'Icons in lists, record home icon, unbound input elements'
   BORDER_RADIUS_LARGE:
     value: .5rem
-  BORDER_RADIUS_X_LARGE:
-    value: .75rem
   BORDER_RADIUS_PILL:
     value: 15rem
   BORDER_RADIUS_CIRCLE:

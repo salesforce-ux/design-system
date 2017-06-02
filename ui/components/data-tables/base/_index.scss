@@ -35,13 +35,8 @@
   thead th {
     background-color: $table-color-background-header;
     color: $table-color-text-header;
-    padding: $spacing-x-small $table-cell-spacing;
+    padding: $table-cell-spacing;
   }
-
-  // tbody tr:nth-of-type(even) > td,
-  // tbody tr:nth-of-type(even) > th {
-  //   background-color: $table-color-background-stripes;
-  // }
 
   /**
    * Default Table Row Hover
@@ -334,7 +329,7 @@
  */
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small $table-cell-spacing;
+  padding: $table-cell-spacing;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,

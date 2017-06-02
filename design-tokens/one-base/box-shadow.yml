@@ -12,20 +12,12 @@ props:
   ## STATIC SHADOWS
   SHADOW_HARD_PRIMARY:
     value: '{!BLACK_TRANSPARENT_10} 0 2px 0'
-  SHADOW_HARD_SECONDARY:
-    value: '{!BLACK_TRANSPARENT_10} 0 3px 0'
-  SHADOW_HARD_TERTIARY:
-    value: '{!BLACK_TRANSPARENT_10} 0 2px 1px'
+    comment: Hard dropshadow found on general UI elements such as containers
   SHADOW_SOFT_PRIMARY:
     value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
-  SHADOW_SOFT_SECONDARY:
-    value: '{!BLACK_TRANSPARENT_10} 0 3px 4px'
-  SHADOW_RESET:
-    value: 'transparent 0 0 0'
+    comment: Soft dropshadow found on general UI elements such as containers
   ## INTERACTIONS
   SHADOW_SOFT_PRIMARY_HOVER:
     value: '{!BLACK_TRANSPARENT_20} 0 3px 6px'
-  SHADOW_SOFT_SECONDARY_HOVER:
-    value: '{!BLACK_TRANSPARENT_10} 0 3px 6px'
   SHADOW_SOFT_PRIMARY_ACTIVE:
     value: '{!BLACK_TRANSPARENT_20} 0 1px 1px'

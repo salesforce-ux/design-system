@@ -1,7 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$progress-ring-size: 6rem;
+$progress-ring-size: 2rem;
+$progress-ring-width: 0.25rem;
+$empty-backgound-color: rgb(216,221,230);
 $progress-background-color: #4bca81;
 $warning-background-color: rgb(255,155,62);
 $expired-background-color: #d4504c;
@@ -22,7 +24,7 @@ $progress-content-background-color: #fff;
     height: $progress-ring-size;
     width: $progress-ring-size;
     border-radius: $progress-ring-size;
-    background: #f0f0f0;
+    background: $empty-backgound-color;
 }
 
 /**
@@ -32,13 +34,15 @@ $progress-content-background-color: #fff;
  * @restrict .slds-progress-ring > div
  */
 .slds-progress-ring__content {
-  $offset: 10px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: $offset;
-  right: $offset;
-  bottom: $offset;
-  left: $offset;
+  top: $progress-ring-width;
+  right: $progress-ring-width;
+  bottom: $progress-ring-width;
+  left: $progress-ring-width;
   z-index: 100;
   border-radius: $progress-ring-size;
   background: $progress-content-background-color;
@@ -52,6 +56,7 @@ $progress-content-background-color: #fff;
  */
 .slds-progress-ring__progress {
   width: 100%;
+  transform: scale(-1, 1) rotate(-90deg);
 }
 
 /**
@@ -71,6 +76,13 @@ $progress-content-background-color: #fff;
  * @modifier
  */
 .slds-progress-ring_warning {
+
+  .slds-icon {
+    position: relative;
+    top: -1px;
+    fill: $warning-background-color;
+  }
+
   .slds-progress-ring__path {
     fill: $warning-background-color;
   }
@@ -84,6 +96,10 @@ $progress-content-background-color: #fff;
  * @modifier
  */
 .slds-progress-ring_expired {
+
+  .slds-icon {
+    fill: $expired-background-color;
+  }
 }
 
 /**
@@ -94,6 +110,7 @@ $progress-content-background-color: #fff;
  * @modifier
  */
 .slds-progress-ring_complete {
+
   .slds-progress-ring__path {
     fill: $progress-background-color;
   }

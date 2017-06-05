@@ -32,7 +32,7 @@
  */
 .slds-text-heading_large,
 .slds-text-heading--large {
-  font-weight: $font-weight-light;
+  //font-weight: $font-weight-light;
   font-size: $font-size-xx-large;
   line-height: $line-height-heading;
 }
@@ -45,9 +45,10 @@
  */
 .slds-text-heading_medium,
 .slds-text-heading--medium {
-  font-weight: $font-weight-light;
+  //font-weight: $font-weight-light;
   font-size: $font-size-x-large;
   line-height: $line-height-heading;
+  margin-bottom: 1.5rem;
 }
 
 /**
@@ -58,7 +59,7 @@
  */
 .slds-text-heading_small,
 .slds-text-heading--small {
-  font-size: $font-size-large;
+  //font-size: $font-size-large;
   line-height: $line-height-heading;
 }
 

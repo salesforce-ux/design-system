@@ -41,8 +41,10 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
     color: $color-text-link-hover;
+    border-bottom: 2px solid $color-text-link-hover;
+    padding-bottom: 1px;
   }
 
   &:active {

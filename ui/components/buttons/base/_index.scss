@@ -42,11 +42,13 @@
   padding: 0;
   background: transparent;
   background-clip: border-box;
-  border: $border-width-thin solid transparent;
+  // border: $border-width-thin solid transparent;
+  border: 0;
   border-radius: $border-radius-medium;
-  font-size: $font-size-small;
+  font-size: $font-size-medium;
   line-height: $line-height-button;
   text-decoration: none;
+  letter-spacing: 0.03rem;
   color: $color-text-link;
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none;
@@ -62,6 +64,7 @@
   &:active,
   &:visited {
     text-decoration: none;
+    border-color: transparent;
   }
 
   &:hover,
@@ -167,6 +170,7 @@ a.slds-button--inverse:focus {
 .slds-button--brand {
   @include button;
   @include button-brand;
+  border-color: $color-background-button-brand;
 
   &[disabled] {
     background: $color-background-button-brand-disabled;

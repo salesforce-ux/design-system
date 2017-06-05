@@ -12,17 +12,17 @@ imports:
 - ./aliases/color.yml
 props:
   FILL_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: 'Brand fill color'
   FILL_BRAND_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     comment: 'Brand hover fill color'
   FILL_BRAND_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PICSA_CHARCOAL}'
     comment: 'Brand active fill color'
   FILL_HEADER_BUTTON:
     value: '{!CASPER}'
     comment: 'Header button icon color'
   FILL_HEADER_BUTTON_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     comment: 'Hovered header button icon color'

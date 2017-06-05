@@ -29,10 +29,10 @@
 }
 
 @mixin form-element-vertical-spacing {
-  margin-top: $spacing-small;
+  margin-top: $spacing-large;
 
   @include mq-small-min {
-    margin-top: $spacing-x-small;
+    margin-top: $spacing-large;
   }
 }
 
@@ -54,12 +54,13 @@
     #{$element} {
       background-color: $color-background-input;
       border-color: $color-border-error;
-      box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+      border-width: 2px;
+      //box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
       background-clip: padding-box;
 
       &:focus,
       &:active {
-        box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+        box-shadow: none;
       }
     }
   }

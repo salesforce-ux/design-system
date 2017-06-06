@@ -24,10 +24,10 @@ props:
     - box-shadow
     - outline
     - outline-color
-    comment: Our product brand blue.
+    comment: Our product brand green.
   COLOR_BORDER_BRAND_DARK:
     value: '{!PICSA_GREEN-1}'
-    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+    comment: 'Our product brand green, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BORDER_CUSTOMER:
     value: '{!TANGERINE}'
     comment: Border color for UI elements related to the concept of an external user or customer.
@@ -153,17 +153,17 @@ props:
     value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Our product brand blue.
+    comment: Our product brand green.
   COLOR_STROKE_BRAND_HOVER:
     value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Hover stroke color for our product brand blue.
+    comment: Hover stroke color for our product brand green.
   COLOR_STROKE_BRAND_ACTIVE:
-    value: '{!PICSA_CHARCOAL}'
+    value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Active stroke color for our product brand blue.
+    comment: Active stroke color for our product brand green.
   COLOR_STROKE_DISABLED:
     value: '{!STEAM}'
     cssProperties:

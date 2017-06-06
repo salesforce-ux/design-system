@@ -148,10 +148,10 @@ props:
     comment: Our product brand green.
   COLOR_BRAND_DARK:
     value: '{!PICSA_GREEN-1}'
-    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+    comment: 'Our product brand green, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BRAND_DARKER:
     value: '{!PICSA_GREEN-1}'
-    comment: 'Our product brand blue, darkened even further.'
+    comment: 'Our product brand green, darkened even further.'
   COLOR_BACKGROUND_TOGGLE:
     value: '{!CASPER}'
     comment: Toggle background color.

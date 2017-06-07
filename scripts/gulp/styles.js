@@ -69,16 +69,12 @@ gulp.task('styles:sass', [], () =>
     .pipe(autoprefixer({ remove: false }))
     .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
     .pipe(sourcemaps.write('.'))
-<<<<<<< HEAD
     .pipe(gulp.dest('assets/styles'))
-    .pipe(gulp.dest('../picsa-os/web_internal/src/assets/css'))
-);
-=======
-    .pipe(gulp.dest('assets/styles')));
+        .pipe(gulp.dest('../picsa-os/web_internal/src/assets/css'))
+    );
 
-gulp.task('styles:framework', ['generate:tokens:sass'], () =>
-  gulp.start('styles:sass'));
->>>>>>> master
+    gulp.task('styles:framework', ['generate:tokens:sass'], () =>
+      gulp.start('styles:sass'));
 
 // Quick check that all variants compile correctly to CSS
 gulp.task('styles:test', () =>

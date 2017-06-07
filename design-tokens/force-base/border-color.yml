@@ -11,28 +11,28 @@ imports:
 - ./aliases/color.yml
 props:
   COLOR_BORDER:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     cssProperties:
     - 'border*'
     - box-shadow
     - 'background*'
     comment: Default border color for UI elements.
   COLOR_BORDER_BRAND:
-    value: '{!AZURE}'
+    value: '{!PICSA_GREEN-1}'
     cssProperties:
     - 'border*'
     - box-shadow
     - outline
     - outline-color
-    comment: Our product brand blue.
+    comment: Our product brand green.
   COLOR_BORDER_BRAND_DARK:
-    value: '{!SCIENCE_BLUE}'
-    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+    value: '{!PICSA_GREEN-1}'
+    comment: 'Our product brand green, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BORDER_CUSTOMER:
     value: '{!TANGERINE}'
     comment: Border color for UI elements related to the concept of an external user or customer.
   COLOR_BORDER_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!POS_RED}'
     comment: Border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_DESTRUCTIVE_HOVER:
     value: '{!TABASCO}'
@@ -44,7 +44,7 @@ props:
     value: '{!KASHMIR_BLUE}'
     comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BORDER_ERROR:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!POS_RED}'
     comment: Border color for UI elements that have to do with errors.
   COLOR_BORDER_ERROR_ALT:
     value: '{!DEEP_BLUSH}'
@@ -68,7 +68,7 @@ props:
     value: '{!DEEP_COVE}'
     comment: Border color to match UI elements using color-background-inverse.
   COLOR_BORDER_TAB_SELECTED:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: Border color for a selected tab in a tab group.
   COLOR_BORDER_TAB_ACTIVE:
     value: "{!WHITE}"
@@ -77,7 +77,7 @@ props:
     value: '{!LINK_WATER}'
     comment: Lightest separator color - used as default separator on white backgrounds.
   COLOR_BORDER_SEPARATOR_ALT:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     comment: Medium separator color - used as default separator on light gray backgrounds.
   COLOR_BORDER_SEPARATOR_ALT_2:
     value: '{!CADET_BLUE}'
@@ -86,7 +86,7 @@ props:
     value: '{!SAN_JUAN}'
     comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
   COLOR_BORDER_ROW_SELECTED:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: Used as the border color for selected rows or items on list-like components.
   COLOR_BORDER_ROW_SELECTED_HOVER:
     value: '{!AZURE}'
@@ -97,7 +97,7 @@ props:
     comment: Used to delineate the boundary of a specific region. Specific to builders.
     deprecated: true
   COLOR_BORDER_SELECTION:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     specificity: builders
     comment: Used to delineate the boundary of a selected component. Specific to builders.
   COLOR_BORDER_SELECTION_HOVER:
@@ -113,7 +113,7 @@ props:
     specificity: builders
     comment: Used to delineate the boundary of a selected canvas element. Specific to builders.
   COLOR_BORDER_CANVAS_ELEMENT_SELECTION_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     specificity: builders
     comment: Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
   COLOR_BORDER_ICON_INVERSE_HINT:
@@ -123,22 +123,22 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: Hovered border color for a button with an icon that has a parent element that has a hover state
   COLOR_BORDER_BUTTON_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!TRANSPARENT}'
     comment: Border color for brandable primary button
   COLOR_BORDER_BUTTON_BRAND_DISABLED:
     value: '{!TRANSPARENT}'
     comment: Border color for brandable primary button - disabled state
   COLOR_BORDER_BUTTON_DEFAULT:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     comment: Border color for default secondary button
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Border color for disabled inverse button.
   COLOR_BORDER_INPUT:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     comment: Border color on form elements.
   COLOR_BORDER_INPUT_ACTIVE:
-    value: '{!AZURE}'
+    value: '{!PICSA_CHARCOAL}'
     comment: Border color on active form elements.
   COLOR_BORDER_INPUT_DISABLED:
     value: '{!CADET_BLUE}'
@@ -150,20 +150,20 @@ props:
     value: '{!WHITE}'
     comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
   COLOR_STROKE_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Our product brand blue.
+    comment: Our product brand green.
   COLOR_STROKE_BRAND_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Hover stroke color for our product brand blue.
+    comment: Hover stroke color for our product brand green.
   COLOR_STROKE_BRAND_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PICSA_GREEN-1}'
     cssProperties:
     - stroke
-    comment: Active stroke color for our product brand blue.
+    comment: Active stroke color for our product brand green.
   COLOR_STROKE_DISABLED:
     value: '{!STEAM}'
     cssProperties:

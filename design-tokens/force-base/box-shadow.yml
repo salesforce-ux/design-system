@@ -31,7 +31,7 @@ props:
     comment: Shadow for buttons.
     deprecated: true
   SHADOW_BUTTON_FOCUS:
-    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!SCIENCE_BLUE}'
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PICSA_GREEN-1}'
     comment: Custom glow for focus states on UI elements with explicit containers.
   SHADOW_BUTTON_FOCUS_INVERSE:
     value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!STEAM}'

@@ -9,13 +9,13 @@ imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 props:
   COLOR_BACKGROUND_BUTTON_BRAND:
-    value: "{!SCIENCE_BLUE}"
+    value: "{!PICSA_GREEN-2}"
     comment: Brandable primary button
   COLOR_BACKGROUND_BUTTON_BRAND_ACTIVE:
-    value: "{!MIDNIGHT_BLUE}"
+    value: "{!PICSA_GREEN-1}"
     comment: Brandable primary button - active state
   COLOR_BACKGROUND_BUTTON_BRAND_HOVER:
-    value: "{!ENDEAVOUR}"
+    value: "{!PICSA_GREEN-3}"
     comment: Brandable primary button - hover state
   COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
     value: "{!STEAM}"

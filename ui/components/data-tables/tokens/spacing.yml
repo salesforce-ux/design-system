@@ -18,3 +18,5 @@ imports:
 props:
   TABLE_SPACING_X_SMALL:
     value: '{!SPACING_X_SMALL}'
+  TABLE_SPACING_SMALL:
+    value: '{!SPACING_SMALL}'

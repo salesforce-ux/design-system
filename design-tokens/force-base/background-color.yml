@@ -21,7 +21,7 @@ props:
     value: '{!WHITE_LILAC}'
     comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
   COLOR_BACKGROUND_ALT_INVERSE:
-    value: '{!BISCAY}'
+    value: '{!PICSA_CHARCOAL}'
     comment: Alternative background color for dark portions of the app.
   COLOR_BACKGROUND_ROW_HOVER:
     value: '{!LINK_WATER}'
@@ -42,7 +42,7 @@ props:
     value: '{!KASHMIR_BLUE}'
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
   COLOR_BACKGROUND_CHROME_MOBILE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: Background color for default mobile chrome (ex. global header)
   COLOR_BACKGROUND_CHROME_DESKTOP:
     value: '{!WHITE}'
@@ -63,7 +63,7 @@ props:
     value: '{!KASHMIR_BLUE}'
     comment: Background for utility icons that live in the action bar on mobile.
   COLOR_BACKGROUND_INDICATOR_DOT:
-    value: '{!BISCAY}'
+    value: '{!PICSA_CHARCOAL}'
     comment: Color of the indicator dot.
   COLOR_BACKGROUND_SPINNER_DOT:
     value: '{!CASPER}'
@@ -72,16 +72,16 @@ props:
     value: '{!WHITE}'
     comment: Standard modal header
   COLOR_BACKGROUND_MODAL_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: Brandable modal header
   COLOR_BACKGROUND_NOTIFICATION_BADGE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!POS_RED}'
     comment: Notifications badge background color.
   COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     comment: Notifications badge background color.
   COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     comment: Notifications badge background color.
   COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE:
     value: '{!MIDNIGHT_BLUE}'
@@ -112,7 +112,7 @@ props:
     specificity: builders
     comment: Used as gray background when more contrast is desired.
   COLOR_BACKGROUND_SHADE_DARK:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     specificity: builders
     comment: Used as gray background in conjunction with Shade when more contrast is desired.
   COLOR_BACKGROUND_STENCIL:
@@ -144,14 +144,14 @@ props:
     value: '{!CADET_BLUE}'
     comment: The background color of an internal scrollbar track.
   COLOR_BRAND:
-    value: '{!AZURE}'
-    comment: Our product brand blue.
+    value: '{!PICSA_GREEN-1}'
+    comment: Our product brand green.
   COLOR_BRAND_DARK:
-    value: '{!SCIENCE_BLUE}'
-    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+    value: '{!PICSA_GREEN-1}'
+    comment: 'Our product brand green, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BRAND_DARKER:
-    value: '{!ENDEAVOUR}'
-    comment: 'Our product brand blue, darkened even further.'
+    value: '{!PICSA_GREEN-1}'
+    comment: 'Our product brand green, darkened even further.'
   COLOR_BACKGROUND_TOGGLE:
     value: '{!CASPER}'
     comment: Toggle background color.
@@ -162,10 +162,10 @@ props:
     value: '{!REGENT_GREY}'
     comment: Hovered toggle background color.
   COLOR_BACKGROUND_TOGGLE_ACTIVE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PICSA_GREEN-1}'
     comment: Active toggle background color.
   COLOR_BACKGROUND_TOGGLE_ACTIVE_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PICSA_GREEN-1}'
     comment: Hovered active toggle background color.
   COLOR_BACKGROUND_MODAL_BUTTON:
     value: '{!BLACK_TRANSPARENT_07}'
@@ -183,7 +183,7 @@ props:
     value: '{!WHITE}'
     comment: Default checkboxes
   COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
-    value: '{!GEYSER}'
+    value: '{!WARM-GREY-2}'
     comment: Disabled checkboxes
   COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
     value: '{!AZURE}'
@@ -205,7 +205,7 @@ props:
     value: '{!BLACK_TRANSPARENT_40}'
     comment: Color of mask overlay that sits on top of an image when text is present.
   COLOR_BACKGROUND_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!POS_RED}'
     comment: Color for UI elements related to destructive actions.
   COLOR_BACKGROUND_DESTRUCTIVE_HOVER:
     value: '{!TABASCO}'
@@ -220,7 +220,7 @@ props:
     value: '{!VALENCIA}'
     comment: Color for UI elements related to errors.
   COLOR_BACKGROUND_ERROR_DARK:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!POS_RED}'
     comment: Dark color for UI elements related to errors. Accessible with white text.
   COLOR_BACKGROUND_ERROR_ALT:
     value: '{!DEEP_BLUSH}'
@@ -242,7 +242,7 @@ props:
     value: '{!SALEM}'
     comment: Background color for success toast messaging.
   COLOR_BACKGROUND_TOAST_ERROR:
-    value: '{!FLUSH_MAHOGANY_TRANSPARENT_95}'
+    value: '{!POS_RED_TRANSPARENT_95}'
     comment: Background color for error toast messaging.
   COLOR_BACKGROUND_WARNING:
     value: '{!KOROMIKO}'

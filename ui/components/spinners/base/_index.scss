@@ -7,7 +7,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: calc(#{$z-index-modal} + 2);
+  z-index: $z-index-spinner;
   background-color: $color-background-temp-modal-tint-alt;
   visibility: visible;
   opacity: 1;

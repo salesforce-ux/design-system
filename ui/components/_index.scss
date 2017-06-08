@@ -171,10 +171,11 @@
   'vertical-navigation/base/index',
   'vertical-navigation/expandable-section/index',
 
-  // Notifications -- Toasts, Notifications, & Alerts, Prompts
+  // Notifications -- Toasts, Notifications, Alerts, Prompts, & Scoped
   'alert/base/index',
   'prompt/base/index',
   'toast/base/index',
+  'scoped-notifications/base/index',
   'notifications/base/index',
   'toast/modal-toast/index', // keep until deprecation
   'walkthrough/header/index',

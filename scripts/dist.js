@@ -15,7 +15,8 @@ const sass = require('gulp-sass');
 const minifycss = require('gulp-minify-css');
 const Task = require('data.task');
 const { ui, examples } = require('./ui');
-const {createLibrary} = require('./compile/bundle');
+const webpack = require('webpack');
+const {createLibrary} = require('./compile/bundle')(webpack);
 
 const packageJSON = require('../package.json');
 const paths = require('./helpers/paths');

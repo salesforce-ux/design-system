@@ -28,8 +28,11 @@ const isMerge = () =>
 const isPR = () =>
   process.env.TRAVIS_PULL_REQUEST == 'true'; // env var is string
 
+const isTag = () =>
+  !!process.env.TRAVIS_TAG;
+
 const shouldPushToBuildServer = () =>
-  isMerge() || isPR()
+  isMerge() || isPR() || isTag()
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
   if (shouldPushToBuildServer()) {

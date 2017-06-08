@@ -7,7 +7,7 @@
  * @restrict .slds-button svg
  * @variant
  */
-.slds-button__icon { // This is the icon inside the button__icon button
+.slds-button__icon { // This is the icon inside the button_icon button
   @include square($square-icon-medium-content-alt);
   fill: currentColor;
 

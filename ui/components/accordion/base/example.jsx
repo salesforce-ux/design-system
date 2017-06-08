@@ -22,6 +22,7 @@ let AccordionSection = props =>
       <div className={classNames('slds-accordion__summary', props.className)}>
         <h3 className={classNames('slds-text-heading_small slds-accordion__summary-heading', props.className)}>
           <button
+            onClick={() => alert('sup good foommml')}
             aria-controls={props.referenceId}
             aria-expanded={props.isOpen}
             className="slds-button slds-button_reset slds-accordion__summary-action"
@@ -62,7 +63,7 @@ export default (
       isOpen
       referenceId={referenceId01}
     >
-      Accordion details - A
+      Accordion details - POO
     </AccordionSection>
     <AccordionSection
       summary="Accordion summary"

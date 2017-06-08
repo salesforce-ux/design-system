@@ -3,9 +3,10 @@
 
 const createParser = require('@salesforce-ux/design-system-parser');
 const {mapTree, toList, reduceTree} = require('@salesforce-ux/design-system-previewer/lib/tree');
-const I = require('immutable');
+const I = require('immutable-ext');
 const { fromNullable } = require('data.either');
 const { NOT_FOUND_ERROR, getMarkup, getComments } = require('./markup-style');
+const Task = require('data.task');
 
 const isVariant = x =>
   x.getIn(['annotations', 'variant']);
@@ -70,23 +71,24 @@ const addMarkup = components =>
   components.map((value, name) =>
     mapTree(value, requireIfVariant(name)));
 
-const ui = () =>
-  getComments()
-  .map(createParser)
-  .map(createUI)
-  .map(ui => ui.update('components', addMarkup));
-
 const mappings = {
   components: comp => markupMap(comp, variants(comp)).map(removeDefaultSection),
   utilities: u => getMark(u.get('id'), 'IGNORE_VARIANT')
 };
 
-const examples = () =>
+const uiFromComments = () =>
   getComments()
   .map(createParser)
-  .map(createUI)
+  .map(createUI);
+
+const ui = () =>
+  uiFromComments()
+  .map(ui => ui.update('components', addMarkup));
+
+const examples = () =>
+  uiFromComments()
   .map(u =>
     u.map((group, id) =>
       group.map(comp => mappings[id](comp))));
 
-module.exports = { examples, ui, isVariant };
+module.exports = { examples, ui, isVariant, variants };

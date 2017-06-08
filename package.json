@@ -22,15 +22,22 @@
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "1.0.0",
     "@salesforce-ux/design-system-parser": "1.0.0",
+<<<<<<< HEAD
     "@salesforce-ux/design-system-previewer": "1.0.3",
     "@salesforce-ux/icons": "7.19.0",
+=======
+    "@salesforce-ux/design-system-previewer": "1.1.3",
+    "@salesforce-ux/icons": "7.18.0",
+>>>>>>> aafc444b2... feature(examples): add ability to use react comps
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",
     "babel-core": "6.24.0",
     "babel-eslint": "7.2.1",
+    "babel-loader": "6.2.8",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.23.0",
     "babel-register": "6.24.0",
     "chai": "3.5.0",
@@ -107,7 +114,10 @@
     "tinycolor2": "1.4.1",
     "uuid": "3.0.1",
     "vnu-jar": "17.2.1",
-    "yargs": "8.0.1"
+    "yargs": "8.0.1",
+    "webpack": "2.5.0",
+    "webpack-node-externals": "1.5.4",
+    "webpack-runtime-compiler": "0.0.1"
   },
   "optionalDependencies": {
     "fsevents": "*"

@@ -1,10 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+const Task = require('data.task');
 const paths = require('./helpers/paths');
 const path = require('path');
 const gulp = require('gulp');
-const createPreviewer = require('@salesforce-ux/design-system-previewer');
+const {bundle, LIB_FILENAME} = require('./bundle');
+
+const createPreviewer = require('../../design-system-previewer');
+//const createPreviewer = require('@salesforce-ux/design-system-previewer');
 
 const { getComments, getMarkup } = require('./markup-style');
 const { watchPaths, removeFromCache } = require('./watch');
@@ -14,8 +18,36 @@ require('./gulp/styles');
 const getComments_ = done =>
   getComments().fork(done, x => done(null, x));
 
-const getMarkup_ = (component, variant, done) =>
-  getMarkup(component, variant).fold(done, markup => done(null, markup));
+// TODO: rethink the whole markup == prevState.markup in Previewer
+const addCacheBustToExamples = (hash, section) =>
+  section.update('items', items =>
+    items.map(item =>
+      item.update('markup', markup =>
+        markup.concat(hash)
+      )
+    )
+  )
+
+const BUNDLE_URL = 'assets/scripts';
+
+// TODO: could just get sections - no markup necessary
+const getMarkup_ = (component, variant, isUtility, done) =>
+  bundle({component, variant, isUtility, outputUrl: BUNDLE_URL})
+  .chain(stats =>
+    getMarkup(component, variant, isUtility)
+    .map(result =>
+      result.update('sections', sections =>
+        sections.map(section =>
+          addCacheBustToExamples(stats.hash, section))
+      )
+    )
+    .fold(
+      Task.rejected,
+      Task.of
+    )
+  )
+  .fork(e => done(e),
+        markup => done(null, markup));
 
 const previewer = createPreviewer({
   // where are your static assets
@@ -24,7 +56,9 @@ const previewer = createPreviewer({
     '/assets/icons': [ paths.icons ]
   },
   // where is your css?
-  cssUrl: '/assets/styles/index.css',
+  cssUrl: '/assets/styles/index.css', // ignored by git
+  // get me the js bundle
+  scriptUrl: `/${BUNDLE_URL}/${LIB_FILENAME}`,
   // get me some comments as a string
   getComments: getComments_,
   // get me some markup for a component/variant

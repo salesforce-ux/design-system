@@ -18,7 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 0.0625em;
   color: $color-text-default;
-  vertical-align: middle;
+  vertical-align: top;
   white-space: nowrap;
 
   + .slds-badge {
@@ -39,19 +39,22 @@
  * @variant
  */
 .slds-badge_inverse {
-  background-color: $color-background-info;
+  background-color: $badge-color-background-inverse;
   color: $color-text-inverse;
  }
 
  /**
- * @summary Icon badge component
+ * @summary Light badge with icon
  *
  * @name inverse
- * @selector .slds-badge_inverse
+ * @selector .slds-badge_lightest
  * @restrict .slds-badge
  * @variant
  */
-.slds-badge_pure {
-  background-color: #FFFFFF;
-  border: $color-border;
+.slds-badge_lightest {
+  border: $border-width-thin solid $color-border;
+  background-color: $badge-color-background-lightest;
+  font-size: $font-size-text-x-small;
+  text-transform: none;
+  letter-spacing: normal;
  }

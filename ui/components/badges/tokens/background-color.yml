@@ -1,0 +1,16 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  BADGE_COLOR_BACKGROUND_LIGHTEST:
+    value: '{!WHITE}'
+    comment: White badge background color.
+  BADGE_COLOR_BACKGROUND_INVERSE:
+    value: '{!KASHMIR_BLUE}'
+    comment: Dark blue badge background color.

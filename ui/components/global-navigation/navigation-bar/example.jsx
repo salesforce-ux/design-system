@@ -7,7 +7,7 @@ import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ///////////////////////////////////////////
 // Partial(s)

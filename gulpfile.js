@@ -10,7 +10,6 @@ const runSequence = require('run-sequence');
 
 const paths = require('./scripts/helpers/paths');
 
-require('./scripts/helpers/lodash-overwrite');
 require('./scripts/gulp/accessibility');
 require('./scripts/gulp/generate-examples');
 require('./scripts/gulp/generate-tokens-components');

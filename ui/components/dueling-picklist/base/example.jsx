@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)

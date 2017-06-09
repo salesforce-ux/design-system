@@ -5,7 +5,7 @@ import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)

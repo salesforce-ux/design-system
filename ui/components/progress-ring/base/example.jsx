@@ -4,45 +4,45 @@
 import React from 'react';
 import ProgressRing from '../';
 import SvgIcon from '../../../shared/svg-icon';
+import { UtilityIcon } from '../../icons/base/example';
 
-export default (<ProgressRing percent={88} />);
+export default (
+  <ProgressRing percent={88} />
+);
 
-export const states = [
+export const examples = [
   {
     id: 'progress-ring-warning',
-    label: 'Warning State',
+    label: 'With Warning Icon',
     element: (
-      <ProgressRing percent={22}>
-        <SvgIcon
-          className="slds-icon slds-icon_xx-small"
-          sprite="utility"
+      <ProgressRing percent={20}>
+        <UtilityIcon
           symbol="warning"
+          title="Warning"
         />
       </ProgressRing>
     )
   },
   {
     id: 'progress-ring-expired',
-    label: 'Expired State',
+    label: 'With Expired Icon',
     element: (
       <ProgressRing percent={0}>
-        <SvgIcon
-          className="slds-icon slds-icon_xx-small"
-          sprite="utility"
+        <UtilityIcon
           symbol="error"
+          title="Expired"
         />
       </ProgressRing>
     )
   },
   {
     id: 'progress-ring-complete',
-    label: 'Complete State',
+    label: 'Complete',
     element: (
       <ProgressRing percent={100}>
-        <SvgIcon
-          className="slds-icon slds-icon_xx-small"
-          sprite="utility"
+        <UtilityIcon
           symbol="check"
+          title="Complete"
         />
       </ProgressRing>
     )

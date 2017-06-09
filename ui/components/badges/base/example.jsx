@@ -42,7 +42,8 @@ export let examples = [
          className="slds-icon_xx-small slds-icon-text-default"
          assistiveText={false}
          symbol="moneybag"
-        />423 Credits Available
+        />
+        423 Credits Available
       </Badge>
   }
 ];

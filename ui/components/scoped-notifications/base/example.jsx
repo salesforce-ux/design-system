@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 let ScopedNoti = props => (
-    <div className={classNames('slds-scoped-notification slds-media slds-media_center', props.className)}>
+    <div className={classNames('slds-scoped-notification slds-media slds-media_center', props.className)} role="status">
       <div className="slds-media__figure">
         <UtilityIcon
           className={classNames('slds-icon_small', props.iconClassName)}

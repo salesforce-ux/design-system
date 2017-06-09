@@ -18,22 +18,20 @@
  * @selector .slds-scoped-notification_light
  * @restrict .slds-scoped-notification
  * @modifier
- * @group themes
  */
 .slds-scoped-notification_light {
   background-color: $color-background;
 }
 
 /**
- * @summary
+ * @summary This renders the dark notification
  *
  * @selector .slds-scoped-notification_dark
  * @restrict .slds-scoped-notification
  * @modifier
- * @group themes
  */
 .slds-scoped-notification_dark {
-  background-color: $color-background-toast;
+  background-color: $notification-color-background-inverse;
   color: $color-text-inverse;
 
   a {

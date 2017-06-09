@@ -29,3 +29,29 @@
     padding: 0;
   }
 }
+
+/**
+ * @summary Inverse badge component
+ *
+ * @name inverse
+ * @selector .slds-badge_inverse
+ * @restrict .slds-badge
+ * @variant
+ */
+.slds-badge_inverse {
+  background-color: $color-background-info;
+  color: $color-text-inverse;
+ }
+
+ /**
+ * @summary Icon badge component
+ *
+ * @name inverse
+ * @selector .slds-badge_inverse
+ * @restrict .slds-badge
+ * @variant
+ */
+.slds-badge_pure {
+  background-color: #FFFFFF;
+  border: $color-border;
+ }

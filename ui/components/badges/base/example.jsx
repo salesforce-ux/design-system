@@ -2,6 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { UtilityIcon } from '../../icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -18,3 +20,12 @@ export let Badge = props =>
 export default (
   <Badge />
 );
+
+export let examples = [
+  {
+    id: 'inverse',
+    label: 'Inverse',
+    element:
+      <Badge className="slds-badge_inverse" />
+  }
+];

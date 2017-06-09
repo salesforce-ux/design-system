@@ -24,7 +24,7 @@
 /assets/styles
 
 # Ignore generated scripts
-/assets/scripts/*
+/assets/scripts
 
 # Ignore modules
 /node_modules

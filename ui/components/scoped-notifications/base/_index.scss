@@ -1,0 +1,46 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @name base
+ * @selector .slds-scoped-notification
+ * @restrict div
+ * @variant
+ */
+.slds-scoped-notification {
+  padding: $spacing-small;
+}
+
+/**
+ * @summary This renders a light notification
+ *
+ * @selector .slds-scoped-notification_light
+ * @restrict .slds-scoped-notification
+ * @modifier
+ */
+.slds-scoped-notification_light {
+  background-color: $color-background;
+}
+
+/**
+ * @summary This renders the dark notification
+ *
+ * @selector .slds-scoped-notification_dark
+ * @restrict .slds-scoped-notification
+ * @modifier
+ */
+.slds-scoped-notification_dark {
+  background-color: $notification-color-background-inverse;
+  color: $color-text-inverse;
+
+  a {
+    color: $color-text-link-inverse;
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 import classNames from 'classnames';
 
 /* -----------------------------------------------------------------------------

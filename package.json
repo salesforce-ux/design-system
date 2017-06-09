@@ -88,6 +88,14 @@
     "js-beautify": "1.6.12",
     "js-yaml": "3.8.3",
     "lodash": "4.17.4",
+    "lodash.omit": "4.5.0",
+    "lodash.range": "3.2.0",
+    "lodash.reverse": "4.0.1",
+    "lodash.startcase": "4.4.0",
+    "lodash.times": "4.3.2",
+    "lodash.truncate": "4.4.2",
+    "lodash.uniqueid": "4.0.1",
+    "lodash.upperfirst": "4.3.1",
     "markdown-it": "8.3.1",
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
@@ -116,10 +124,10 @@
     "uglify-es": "3.0.15",
     "uuid": "3.0.1",
     "vnu-jar": "17.2.1",
-    "yargs": "8.0.1",
     "webpack": "2.5.0",
     "webpack-node-externals": "1.5.4",
-    "webpack-runtime-compiler": "0.0.1"
+    "webpack-runtime-compiler": "0.0.1",
+    "yargs": "8.0.1"
   },
   "optionalDependencies": {
     "fsevents": "*"

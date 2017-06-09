@@ -7,11 +7,10 @@ const path = require('path');
 const gulp = require('gulp');
 const webpack = require('webpack');
 const Bundle = require('./compile/bundle')(webpack);
-const bundleConfig = Bundle.configs.umd
-const bundlePath = path.resolve(__dirname, '../assets/scripts')
+const bundleConfig = Bundle.configs.umd;
+const bundlePath = path.resolve(__dirname, '../assets/scripts');
 
-const createPreviewer = require('../../design-system-previewer');
-//const createPreviewer = require('@salesforce-ux/design-system-previewer');
+const createPreviewer = require('@salesforce-ux/design-system-previewer');
 
 const { getComments, getMarkup } = require('./markup-style');
 const { watchPaths, removeFromCache } = require('./watch');

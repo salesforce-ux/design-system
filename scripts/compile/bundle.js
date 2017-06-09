@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const path = require('path')
+const path = require('path');
 const webpackConfig = require('./webpack.config');
 const Task = require('data.task');
 const I = require('immutable-ext');
@@ -41,8 +41,7 @@ const chunkedEntry = () =>
 
 const externals = {
   'react': 'React',
-  'react-dom': 'ReactDOM',
-  'lodash': 'lodash'
+  'react-dom': 'ReactDOM'
 };
 
 module.exports = webpack => {
@@ -53,6 +52,7 @@ module.exports = webpack => {
     .set('externals', externals)
     .setIn(['output', 'library'], 'SLDS')
     .setIn(['output', 'filename'], '[name].js')
+    .setIn(['output', 'jsonpFunction'], 'webpackJsonpSLDS')
     .set('plugins', [
       new Minify(),
       new webpack.optimize.CommonsChunkPlugin({
@@ -102,6 +102,23 @@ module.exports = webpack => {
       )
       .run((err, stats) => {
         if (err) return reject(err);
+        if (stats.hasErrors()) {
+          const errors = stats.toJson().errors.map(e => {
+            if (/'lodash'/.test(e) && /module not found/i.test(e)) {
+              return `
+                The module "lodash" should not be imported directly.
+                Instead, install the method you need from: https://www.npmjs.com/browse/keyword/lodash-modularized
+                  1. npm install lodash.truncate --save-dev
+                  2. add it to "ui/components/helpers/index.js"
+                  3. import _ from '../../../shared/helpers';
+              `;
+            }
+            return e;
+          });
+          return reject(new Error(
+            errors.join(`\n\n-----------------------------------\n\n`)
+          ));
+        }
         resolve(stats);
       })
     );
@@ -121,4 +138,4 @@ module.exports = webpack => {
     );
 
   return {configs, compile, watch, createLibrary, chunkedEntry};
-}
+};

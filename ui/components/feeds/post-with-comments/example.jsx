@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { Publisher } from '../../publishers/comment/example';
 import { Post, PostHeader, PostContent, PostFooter, PostFooterActions, PostFooterMeta, Comments } from '../post/example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)

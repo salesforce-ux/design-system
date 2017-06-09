@@ -9,7 +9,7 @@ import { Publisher } from '../../publishers/comment/example';
 import { Comment, CommentHeader, CommentContent, CommentFooter } from '../comment/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 export let PostFooterActions = props =>
   <ul className="slds-post__footer-actions-list slds-list_horizontal">

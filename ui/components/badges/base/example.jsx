@@ -3,7 +3,6 @@
 
 import React from 'react';
 import { UtilityIcon } from '../../icons/base/example';
-import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////

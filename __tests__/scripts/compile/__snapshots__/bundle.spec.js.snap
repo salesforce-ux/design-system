@@ -185,7 +185,6 @@ exports[`scripts/compile/bundle creates the right config for commonJS 1`] = `
 Object {
   "entry": "./scripts/compile/entry.js",
   "externals": Object {
-    "lodash": "lodash",
     "react": "React",
     "react-dom": "ReactDOM",
   },
@@ -197,7 +196,6 @@ Object {
         "options": Object {
           "babelrc": false,
           "plugins": Array [
-            "styled-jsx/babel",
             "transform-object-rest-spread",
           ],
           "presets": Array [
@@ -212,9 +210,12 @@ Object {
   "output": Object {
     "filename": "slds.common.js",
     "libraryTarget": "commonjs2",
-    "publicPath": "assets/scripts/bundle/",
+    "publicPath": "/assets/scripts/bundle/",
   },
   "resolve": Object {
+    "alias": Object {
+      "lodash": "",
+    },
     "extensions": Array [
       ".js",
       ".jsx",
@@ -234,7 +235,6 @@ Object {
         "options": Object {
           "babelrc": false,
           "plugins": Array [
-            "styled-jsx/babel",
             "transform-object-rest-spread",
           ],
           "presets": Array [
@@ -250,9 +250,12 @@ Object {
     "filename": "slds.umd.js",
     "library": "SLDS",
     "libraryTarget": "umd",
-    "publicPath": "assets/scripts/bundle/",
+    "publicPath": "/assets/scripts/bundle/",
   },
   "resolve": Object {
+    "alias": Object {
+      "lodash": "",
+    },
     "extensions": Array [
       ".js",
       ".jsx",

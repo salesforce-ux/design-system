@@ -37,7 +37,8 @@ let run = (script, done) => {
 };
 
 const tests = [
-  { test: 'test-unit' }
+  { test: 'test-mocha' },
+  { test: 'test-jest' }
 ];
 
 // HACK: The order of these tests is directly related

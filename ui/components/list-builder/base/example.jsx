@@ -14,7 +14,7 @@ import { Th } from '../../data-tables/advanced/example';
 import { PillContainer } from '../../pills/base/example';
 import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects

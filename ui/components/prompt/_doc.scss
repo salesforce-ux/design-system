@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * A prompt uses the base modal component and then adds the class `.slds-modal--prompt` to the overall `.slds-modal`. The utilities > themes > colors class is placed on the `.slds-modal__head` to create the color of the header. In the example, we illustrate using `.slds-theme--error`. The class `.slds-theme--alert-texture` should be applied to create the striped gradient. The `.slds-modal__footer` receives the class `.slds-theme--default`.
+ * A prompt uses the base modal component and then adds the class `.slds-modal_prompt` to the overall `.slds-modal`. The utilities > themes > colors class is placed on the `.slds-modal__head` to create the color of the header. In the example, we illustrate using `.slds-theme_error`. The class `.slds-theme_alert-texture` should be applied to create the striped gradient. The `.slds-modal__footer` receives the class `.slds-theme_default`.
  *
  * #### Accessibility
  *

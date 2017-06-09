@@ -23,6 +23,9 @@
 # Ignore generated styles
 /assets/styles
 
+# Ignore generated scripts
+/assets/scripts
+
 # Ignore modules
 /node_modules
 

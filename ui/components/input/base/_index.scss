@@ -146,7 +146,7 @@
   }
 
   /**
-   * Positions .slds-input__icon--left to the left of the text input and .slds-input__icon--right to the right of the text input
+   * Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
    *
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
@@ -167,7 +167,7 @@
     }
 
     /**
-     * Hook for .slds-input-has-icon--left-right
+     * Hook for .slds-input-has-icon_left-right
      *
      * @selector .slds-input__icon_right
      * @restrict .slds-input__icon

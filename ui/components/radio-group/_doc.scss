@@ -23,7 +23,7 @@
  * `<label>` element. To remain accessible to all user agents, place an
  * `<input>` with `type="radio"` inside the `<label>` element. The `<input>`
  * is then visually hidden, and the styling is placed on a span with the
- * `.slds-radio--faux` class. The styling of the span changes based on whether
+ * `.slds-radio_faux` class. The styling of the span changes based on whether
  * the radio button is selected or focused by using a pseudo-element. A second
  * span with `.slds-form-element__label` contains the label text.
  *

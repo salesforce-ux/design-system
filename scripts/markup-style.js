@@ -81,8 +81,9 @@ const getMarkup = (() => {
         React.isValidElement(c) ? Right(c) : Left('Invalid Component'))
       .chain(Either.try(ReactDOM.renderToStaticMarkup))
       .chain(Either.try(prettyHTML));
-  const render = (component, variant) => {
-    const variantModule = requireVariant(component, variant);
+
+  const render = (component, variant, utility) => {
+    const variantModule = requireVariant(component, variant, utility);
     // If the variant module exports a "Context" React Component, convert it to markup
     // This can be used by consumers of the example markup (such as the site)
     // to wrap the example markup in some presentation context that is not actually
@@ -122,7 +123,8 @@ const getMarkup = (() => {
           section.update('items', items =>
             items.map(item =>
               item
-                .set('markup', renderMarkup(item.get('element'))
+                .set('markup',
+                  renderMarkup(item.get('element'))
                   .fold(e => `<div>Error: ${e}</div>`, x => x)
                 )
                 .delete('element')

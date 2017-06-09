@@ -5,7 +5,7 @@ const I = require('immutable');
 
 module.exports = I.fromJS({
   output: {
-    publicPath: 'assets/scripts/bundle/',
+    publicPath: '/assets/scripts/bundle/'
   },
   module: {
     rules: [{
@@ -20,7 +20,7 @@ module.exports = I.fromJS({
         ],
         plugins: [
           'styled-jsx/babel',
-          'transform-object-rest-spread',
+          'transform-object-rest-spread'
         ]
       }
     }]
@@ -28,4 +28,4 @@ module.exports = I.fromJS({
   resolve: {
     extensions: ['.js', '.jsx']
   }
-})
+});

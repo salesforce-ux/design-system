@@ -53,6 +53,7 @@ module.exports = webpack => {
     .set('externals', externals)
     .setIn(['output', 'library'], 'SLDS')
     .setIn(['output', 'filename'], '[name].js')
+    .setIn(['output', 'jsonpFunction'], 'webpackJsonpSLDS')
     .set('plugins', [
       new Minify(),
       new webpack.optimize.CommonsChunkPlugin({

@@ -27,15 +27,17 @@
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "1.0.0",
     "@salesforce-ux/design-system-parser": "1.0.0",
-    "@salesforce-ux/design-system-previewer": "1.0.3",
+    "@salesforce-ux/design-system-previewer": "1.9.0",
     "@salesforce-ux/icons": "7.19.0",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",
     "babel-core": "6.24.0",
     "babel-eslint": "7.2.1",
+    "babel-loader": "6.2.8",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.23.0",
     "babel-register": "6.24.0",
     "chai": "3.5.0",
@@ -82,6 +84,7 @@
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "4.0.0",
     "invariant": "2.2.2",
+    "jest": "19.0.2",
     "js-beautify": "1.6.12",
     "js-yaml": "3.8.3",
     "lodash": "4.17.4",
@@ -110,9 +113,13 @@
     "theo": "5.0.0",
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
+    "uglify-es": "3.0.15",
     "uuid": "3.0.1",
     "vnu-jar": "17.2.1",
-    "yargs": "8.0.1"
+    "yargs": "8.0.1",
+    "webpack": "2.5.0",
+    "webpack-node-externals": "1.5.4",
+    "webpack-runtime-compiler": "0.0.1"
   },
   "optionalDependencies": {
     "fsevents": "*"
@@ -142,9 +149,14 @@
     "lint": "gulp lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
+    "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "report": "gulp lint:vnu lint:validate a11y",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
-    "test-unit": "mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'"
+    "test-mocha": "mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
+    "test-jest": "jest"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$"
   }
 }

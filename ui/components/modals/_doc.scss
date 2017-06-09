@@ -19,7 +19,7 @@
  *
  * By default, the content area of the modal does not have spacing. This allows
  * for content such as Tables to be full-width to the modal. To get spacing
- * when you need it, apply a padding utility (`.slds-p-around--medium`).
+ * when you need it, apply a padding utility (`.slds-p-around_medium`).
  *
  * Modal headers can also have taglines, if you need to provide additional
  * context. This tagline can also contain links, or the whole thing could be a
@@ -66,4 +66,5 @@
  * @category structure
  * @type layout
  * @role modal-dialog
+ * @s1 false
  */

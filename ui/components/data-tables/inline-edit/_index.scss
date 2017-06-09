@@ -154,7 +154,7 @@
  * Informs a table cell that it has editing capabilities
  *
  * @selector .slds-cell-edit
- * @restrict .slds-table_edit th, .slds-table--edit td
+ * @restrict .slds-table_edit th, .slds-table_edit td
  */
 .slds-cell-edit {
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)

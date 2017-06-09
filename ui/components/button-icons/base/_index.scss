@@ -325,7 +325,7 @@
 }
 
 /**
- * @summary A parent class must be put on anything that contains a .slds-button__icon--hint so that the child reacts when the parent is hovered.
+ * @summary A parent class must be put on anything that contains a .slds-button__icon_hint so that the child reacts when the parent is hovered.
  *
  * @name icon-with-hint-hover
  * @selector .slds-button__icon_hint
@@ -339,7 +339,7 @@
 
 /**
  * A parent class must be put on anything that contains
- * a .slds-button__icon--inverse-hint so that the child reacts
+ * a .slds-button__icon_inverse-hint so that the child reacts
  * when the parent is hovered. This is for a dark background.
  *
  * @selector .slds-button__icon_inverse-hint

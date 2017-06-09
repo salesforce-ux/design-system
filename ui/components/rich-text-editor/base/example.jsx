@@ -8,7 +8,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
 import { ComboboxContainer, Listbox, ListboxItem, Option } from '../../combobox/base/example';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';

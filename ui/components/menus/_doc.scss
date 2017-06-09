@@ -6,11 +6,11 @@
  * with the class `.slds-dropdown`. The exception to this is the **Action
  * Overflow for Touch**, which not a dropdown menu.
  *
- * The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger--click`.
+ * The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger_click`.
  *
  * By default, dropdown menus do not display a nubbin (the little cute triangle
  * pointing at your target). If you want to apply one, you can add the class
- * that defines the nubbin position and `.slds-nubbin--top` to the `.slds-dropdown`
+ * that defines the nubbin position and `.slds-nubbin_top` to the `.slds-dropdown`
  * HTML element.
  *
  * <div class="site-text-heading--label">Accessibility</div>

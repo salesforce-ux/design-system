@@ -8,7 +8,7 @@ import {
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Popover } from '../../popovers/base/example';
 import SvgIcon from '../../../shared/svg-icon';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /* -----------------------------------------------------------------------------
     Data
@@ -16,7 +16,7 @@ import _ from 'lodash';
 const accounts = ['Acme', 'Edge SLA', 'Express Logistics SLA', 'GenePoint Lab Generators', 'GenePoint SLA', 'Pyramid Emergency Generators', 'United Oil Installations', 'United Oil Plant Standby Generators', 'University of AZ Installations', 'University of AZ Portable Generators'];
 
 
-const ListboxList = (props) =>
+const ListboxList = (props) => (
   <Listbox className="slds-dropdown_length-10" vertical aria-label="My Favorites">
     <ListboxItem>
       <span
@@ -36,10 +36,11 @@ const ListboxList = (props) =>
         />
       </ListboxItem>
     )}
-  </Listbox>;
+  </Listbox>
+);
 
 
-const Footer = props =>
+const Footer = (props) => (
   <ul>
     <li>
       <button className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1">
@@ -53,9 +54,10 @@ const Footer = props =>
         Edit Favorites
       </button>
     </li>
-  </ul>;
+  </ul>
+);
 
-const DynamicMenu = props =>
+const DynamicMenu = (props) => (
   <Popover
     className="slds-nubbin_top-left slds-dynamic-menu"
     bodyClassName="slds-p-horizontal_none"
@@ -64,7 +66,8 @@ const DynamicMenu = props =>
     style={{ position: 'absolute', left: '0', top: '55px' }}
   >
     { props.children }
-  </Popover>;
+  </Popover>
+);
 
 // Default
 export default (
@@ -86,7 +89,7 @@ export let states = [
   {
     id: 'dynamic-menu-0-items',
     label: 'Dynamic Menu — 0 Items',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '12rem' }}>
         <ButtonIcon className="slds-button_icon-border-filled" symbol="favorite" assistiveText="Show Favorites" title="Show Favorites" />
         <DynamicMenu>
@@ -98,33 +101,36 @@ export let states = [
           </div>
         </DynamicMenu>
       </div>
+    )
   },
   {
     id: 'dynamic-menu-1-item',
     label: 'Dynamic Menu — 1 Item',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '13rem' }}>
         <ButtonIcon className="slds-button_icon-border-filled" symbol="favorite" assistiveText="Show Favorites" title="Show Favorites" />
         <DynamicMenu>
           <ListboxList length="1" />
         </DynamicMenu>
       </div>
+    )
   },
   {
     id: 'dynamic-menu-sub-10-item',
     label: 'Dynamic Menu — <10 Items',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '27rem' }}>
         <ButtonIcon className="slds-button_icon-border-filled" symbol="favorite" assistiveText="Show Favorites" title="Show Favorites" />
         <DynamicMenu>
           <ListboxList length="6" />
         </DynamicMenu>
       </div>
+    )
   },
   {
     id: 'dynamic-menu-over-10-item',
     label: 'Dynamic Menu — >10 Items',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '34rem' }}>
         <ButtonIcon className="slds-button_icon-border-filled" symbol="favorite" assistiveText="Show Favorites" title="Show Favorites" />
         <DynamicMenu>
@@ -141,5 +147,6 @@ export let states = [
           />
         </DynamicMenu>
       </div>
+    )
   }
 ];

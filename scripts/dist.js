@@ -15,6 +15,8 @@ const sass = require('gulp-sass');
 const minifycss = require('gulp-minify-css');
 const Task = require('data.task');
 const { ui, examples } = require('./ui');
+const webpack = require('webpack');
+const {createLibrary} = require('./compile/bundle')(webpack);
 
 const packageJSON = require('../package.json');
 const paths = require('./helpers/paths');
@@ -29,7 +31,7 @@ const MODULE_NAME = 'salesforce-lightning-design-system';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
-const writeFile = (name, getContents, done) =>
+const writeJSONFile = (name, getContents, done) =>
   getContents()
   .map(x => JSON.stringify(x, null, 2))
   .chain(json =>
@@ -349,9 +351,15 @@ async.series([
   /**
    * Add ui.json and ui.examples.json
    */
-  (done) => writeFile('ui.json', ui, done),
+  (done) => writeJSONFile('ui.json', ui, done),
 
-  (done) => writeFile('ui.examples.json', examples, done)
+  (done) => writeJSONFile('ui.examples.json', examples, done),
+
+  (done) =>
+    createLibrary(distPath())
+    .fork(e => done(e),
+          x => done(null, x)
+    ),
 
 ], err => {
   if (err) throw err;

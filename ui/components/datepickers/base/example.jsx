@@ -2,20 +2,27 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
 import classNames from 'classnames';
+import { UtilityIcon } from '../../icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 import { Select } from '../../select/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
 
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Variables
+----------------------------------------------------------------------------- */
 
-let Demo = props =>
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>;
+const dateInputId = 'date-input-id';
+const dateRangeInputId01 = 'date-input-id-01';
+const dateRangeInputId02 = 'date-input-id-02';
+const timeInputId = 'time-input-id';
 
-let Datepicker = props =>
+/* -----------------------------------------------------------------------------
+    Private
+----------------------------------------------------------------------------- */
+
+let DatepickerContainer = props =>
   <div
     aria-hidden="false"
     aria-label="Date picker: June"
@@ -85,17 +92,12 @@ let Day = props =>
     <span className="slds-day">{props.children}</span>
   </td>;
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Public
+----------------------------------------------------------------------------- */
 
-export const Context = props =>
-  <div style={{height: '330px'}}>
-    {props.children}
-  </div>;
-
-export default (
-  <Datepicker className="slds-dropdown slds-dropdown_left">
+export let DatePicker = props =>
+  <DatepickerContainer className="slds-dropdown slds-dropdown_left">
     <DatepickerHeader />
     <table aria-labelledby="month" aria-multiselectable="true" className="slds-datepicker__month" role="grid">
       <thead>
@@ -125,22 +127,74 @@ export default (
           <Day aria-selected="false">15</Day>
           <Day aria-selected="false">16</Day>
           <Day aria-selected="false">17</Day>
-          <Day aria-selected="false">18</Day>
+          <Day aria-selected="false" className={props.todayActive ? 'slds-is-today' : null}>
+            { props.todayActive
+              ? <span className="slds-assistive-text">Today: </span>
+              : null
+            }
+            18
+          </Day>
           <Day aria-selected="false">19</Day>
           <Day aria-selected="false">20</Day>
         </Week>
-        <Week>
+        <Week className={classNames(
+            {
+              'slds-has-multi-selection': props.dateRange == 'week',
+              'slds-has-multi-row-selection': props.dateRange == 'weeks'
+            }
+          )}
+        >
           <Day aria-selected="false">21</Day>
           <Day aria-selected="false">22</Day>
           <Day aria-selected="false">23</Day>
-          <Day aria-selected="false">24</Day>
-          <Day aria-selected="false">25</Day>
-          <Day aria-selected="false">26</Day>
-          <Day aria-selected="false">27</Day>
+          <Day
+            aria-selected={props.dateSelected ? 'true' : 'false'}
+            className={classNames(
+              {
+                'slds-is-selected': props.dateSelected,
+                'slds-is-selected-multi': props.dateSelected && props.dateRange,
+              }
+            )}
+          >
+            24
+          </Day>
+          <Day
+            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
+            className={classNames(
+              {
+                'slds-is-selected slds-is-selected-multi': props.dateSelected && props.dateRange,
+                'slds-is-today': props.todayActiveInRange
+              }
+            )}
+          >
+            25
+          </Day>
+          <Day
+            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
+            className={props.dateSelected && props.dateRange ? 'slds-is-selected slds-is-selected-multi' : null}
+          >
+            26
+          </Day>
+          <Day
+            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
+            className={props.dateSelected && props.dateRange ? 'slds-is-selected slds-is-selected-multi' : null}
+          >
+            27
+          </Day>
         </Week>
-        <Week>
-          <Day aria-selected="false">28</Day>
-          <Day aria-selected="false">29</Day>
+        <Week className={props.dateRange == 'weeks' ? 'slds-has-multi-row-selection' : null}>
+          <Day
+            aria-selected={props.dateSelected && props.dateRange == 'weeks' ? 'true' : 'false'}
+            className={props.dateSelected && props.dateRange == 'weeks' ? 'slds-is-selected slds-is-selected-multi' : null}
+          >
+            28
+          </Day>
+          <Day
+            aria-selected={props.dateSelected && props.dateRange == 'weeks' ? 'true' : 'false'}
+            className={props.dateSelected && props.dateRange == 'weeks' ? 'slds-is-selected slds-is-selected-multi' : null}
+          >
+            29
+          </Day>
           <Day aria-selected="false">30</Day>
           <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
           <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
@@ -156,7 +210,33 @@ export default (
         </tr>
       </tbody>
     </table>
-  </Datepicker>
+  </DatepickerContainer>;
+
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+export const Context = props =>
+  <div style={{height: '25rem'}}>
+    {props.children}
+  </div>;
+
+export default (
+  <FormElement
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    label="Date"
+    inputId={dateInputId}
+    inputIcon="right"
+    dropdown={<DatePicker todayActive={true} />}
+  >
+    <Input id={dateInputId} placeholder=" " />
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="event"
+      assistiveText="Select a date"
+      title="Select a date"
+    />
+  </FormElement>
 );
 
 export let states = [
@@ -164,140 +244,20 @@ export let states = [
     id: 'datepicker-day-selected',
     label: 'Date selected',
     element:
-      <Datepicker className="slds-dropdown slds-dropdown_left">
-        <DatepickerHeader />
-        <table className="slds-datepicker__month" aria-labelledby="month" role="grid">
-          <thead>
-            <Weekdays />
-          </thead>
-          <tbody>
-            <Week>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">31</Day>
-              <Day aria-selected="false" tabIndex="0">1</Day>
-              <Day aria-selected="false">2</Day>
-              <Day aria-selected="false">3</Day>
-              <Day aria-selected="false">4</Day>
-              <Day aria-selected="false">5</Day>
-              <Day aria-selected="false">6</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">7</Day>
-              <Day aria-selected="false">8</Day>
-              <Day aria-selected="false">9</Day>
-              <Day aria-selected="false">10</Day>
-              <Day aria-selected="false">11</Day>
-              <Day aria-selected="false">12</Day>
-              <Day aria-selected="false">13</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">14</Day>
-              <Day aria-selected="false">15</Day>
-              <Day aria-selected="false">16</Day>
-              <Day aria-selected="false">17</Day>
-              <Day aria-selected="false" className="slds-is-today">
-                <span className="slds-assistive-text">Today: </span>
-                18
-              </Day>
-              <Day aria-selected="false">19</Day>
-              <Day aria-selected="false">20</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">21</Day>
-              <Day aria-selected="false">22</Day>
-              <Day aria-selected="true" className="slds-is-selected">23</Day>
-              <Day aria-selected="false">24</Day>
-              <Day aria-selected="false">25</Day>
-              <Day aria-selected="false">26</Day>
-              <Day aria-selected="false">27</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">28</Day>
-              <Day aria-selected="false">29</Day>
-              <Day aria-selected="false">30</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
-            </Week>
-            <tr>
-              <td colSpan="7" role="gridcell">
-                <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
-                  Today
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </Datepicker>
-  },
-  {
-    id: 'datepicker-multi-day-selected',
-    label: 'Multiple Date Range Selected',
-    element:
-      <Datepicker className="slds-dropdown slds-dropdown_left">
-        <DatepickerHeader />
-        <table className="slds-datepicker__month" role="grid" aria-labelledby="month">
-          <thead>
-            <Weekdays />
-          </thead>
-          <tbody>
-            <Week>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">31</Day>
-              <Day aria-selected="false" tabIndex="0">1</Day>
-              <Day aria-selected="false">2</Day>
-              <Day aria-selected="false">3</Day>
-              <Day aria-selected="false">4</Day>
-              <Day aria-selected="false">5</Day>
-              <Day aria-selected="false">6</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">7</Day>
-              <Day aria-selected="false">8</Day>
-              <Day aria-selected="false">9</Day>
-              <Day aria-selected="false">10</Day>
-              <Day aria-selected="false">11</Day>
-              <Day aria-selected="false">12</Day>
-              <Day aria-selected="false">13</Day>
-            </Week>
-            <Week>
-              <Day aria-selected="false">14</Day>
-              <Day aria-selected="false">15</Day>
-              <Day aria-selected="false">16</Day>
-              <Day aria-selected="false">17</Day>
-              <Day aria-selected="false" className="slds-is-today">
-                <span className="slds-assistive-text">Today: </span>
-                18
-              </Day>
-              <Day aria-selected="false">19</Day>
-              <Day aria-selected="false">20</Day>
-            </Week>
-            <Week className="slds-has-multi-row-selection">
-              <Day aria-selected="false">21</Day>
-              <Day aria-selected="false">22</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">23</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">24</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">25</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">26</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">27</Day>
-            </Week>
-            <Week className="slds-has-multi-row-selection">
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">28</Day>
-              <Day aria-selected="true" className="slds-is-selected slds-is-selected-multi">29</Day>
-              <Day aria-selected="false">30</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
-              <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
-            </Week>
-            <tr>
-              <td colSpan="7" role="gridcell">
-                <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
-                  Today
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </Datepicker>
+      <FormElement
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        label="Date"
+        inputId={dateInputId}
+        inputIcon="right"
+        dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+      >
+        <Input id={dateInputId} placeholder=" " value="06/23/2014" />
+        <ButtonIcon
+          className="slds-input__icon slds-input__icon_right"
+          symbol="event"
+          assistiveText="Select a date"
+          title="Select a date"
+        />
+      </FormElement>
   }
 ];

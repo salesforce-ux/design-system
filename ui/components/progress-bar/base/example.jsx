@@ -8,12 +8,13 @@ import classNames from 'classnames';
 // Partial(s)
 /// ///////////////////////////////////////////
 
-export let ProgressBar = props =>
+export let ProgressBar = props => (
   <div className={classNames('slds-progress-bar', props.className)} aria-valuemin="0" aria-valuemax="100" aria-valuenow={props.value} role="progressbar">
-    <span className="slds-progress-bar__value" style={{ width: props.value + '%' }}>
-      <span className="slds-assistive-text">Progress: { props.value + '%' }</span>
+    <span className="slds-progress-bar__value" style={{ width: `${props.value}%` }}>
+      <span className="slds-assistive-text">Progress: { `${props.value}%` }</span>
     </span>
-  </div>;
+  </div>
+);
 
 /// ///////////////////////////////////////////
 // Export
@@ -28,30 +29,30 @@ export let states = [
     id: 'zero',
     label: '0% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="0" />
+      <ProgressBar value="0" />
   },
   {
     id: '25',
     label: '25% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="25" />
+      <ProgressBar value="25" />
   },
   {
     id: '50',
     label: '50% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="50" />
+      <ProgressBar value="50" />
   },
   {
     id: '75',
     label: '75% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="75" />
+      <ProgressBar value="75" />
   },
   {
     id: '100',
     label: '100% complete',
     element:
-      <ProgressBar className="slds-progress-bar_medium slds-progress-bar_circular" value="100" />
+      <ProgressBar value="100" />
   }
 ];

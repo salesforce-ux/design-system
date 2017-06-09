@@ -1,0 +1,32 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Implementation Notes and Requirements
+ *
+ * The datetime picker has the following markup requirements:
+ *
+ * **Desktop**
+ * - Add `.slds-is-open` to the element with `.slds-dropdown-trigger` to invoke the dropdown that contains the datepicker and the list of time options.
+ * - On the timepicker, the `.slds-has-focus` modifier class is required on the `.slds-listbox__option` element that has focus.
+ * - On the timpicker, the `.slds-is-selected` modifier class is required on the `.slds-listbox__option` element that has been selected.
+ * - On the datepicker, the `.slds-is-selected` modifier class is required on the `td` element that has the selected day.
+ * - On the datepicker, the `.slds-is-today` modifier class is required on the `td` element that is the current day.
+ *
+ * **Mobile**
+ * - When on mobile, we want to leverage the native datetime picker by changing the `input` type from `text` to `datetime-local`
+ * - The `input type="datetime-local"` will create an input field allowing a date and time to be easily entered — this includes year, month, day, hours, and minutes.
+ * - When switching `input type="text"` to `input type="datetime-local"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
+ *   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup.
+ *   - On the `input` that we just added `type="datetime-local"` to, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
+ *
+ * @summary A datetime picker is used to select a day and a time.
+ *
+ * @base
+ * @name datetime-picker
+ * @selector .slds-datetime-picker
+ * @support dev-ready
+ * @category experience
+ * @type data-entry
+ * @role grid, combobox
+ */

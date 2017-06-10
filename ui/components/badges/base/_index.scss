@@ -18,7 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 0.0625em;
   color: $color-text-default;
-  vertical-align: middle;
+  vertical-align: top;
   white-space: nowrap;
 
   + .slds-badge {
@@ -29,3 +29,30 @@
     padding: 0;
   }
 }
+
+/**
+ * @summary Inverse badge component
+ *
+ * @name inverse
+ * @selector .slds-badge_inverse
+ * @restrict .slds-badge
+ */
+.slds-badge_inverse {
+  background-color: $badge-color-background-inverse;
+  color: $color-text-inverse;
+ }
+
+ /**
+ * @summary Light badge with icon
+ *
+ * @name lightest
+ * @selector .slds-badge_lightest
+ * @restrict .slds-badge
+ */
+.slds-badge_lightest {
+  border: $border-width-thin solid $color-border;
+  background-color: $badge-color-background-lightest;
+  font-size: $font-size-text-x-small;
+  text-transform: none;
+  letter-spacing: normal;
+ }

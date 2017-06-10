@@ -29,6 +29,8 @@ imports:
 - ../ui/components/progress-indicator/tokens/background-color.yml
 - ../ui/components/progress-indicator/tokens/border-color.yml
 - ../ui/components/progress-indicator/tokens/sizing.yml
+- ../ui/components/progress-ring/tokens/background-color.yml
+- ../ui/components/progress-ring/tokens/sizing.yml
 - ../ui/components/scoped-notifications/tokens/background-color.yml
 - ../ui/components/slider/tokens/background-color.yml
 - ../ui/components/slider/tokens/box-shadow.yml

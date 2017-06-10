@@ -2,10 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const I = require('immutable');
+const path = require('path');
 
 module.exports = I.fromJS({
   output: {
-    publicPath: 'assets/scripts/bundle/',
+    publicPath: '/assets/scripts/bundle/'
   },
   module: {
     rules: [{
@@ -19,13 +20,16 @@ module.exports = I.fromJS({
           'react'
         ],
         plugins: [
-          'styled-jsx/babel',
-          'transform-object-rest-spread',
+          'transform-object-rest-spread'
         ]
       }
     }]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      // This is intentional. A detailed error will be thrown (see bundle.js)
+      'lodash': ''
+    }
   }
-})
+});

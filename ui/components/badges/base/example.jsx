@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { UtilityIcon } from '../../icons/base/example';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -9,12 +10,39 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 export let Badge = props =>
-  <span className={classNames('slds-badge', props.className)}>Badge Label</span>;
+  <span className={classNames('slds-badge', props.className)}>
+    {props.children}
+  </span>;
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <Badge />
+  <Badge>Badge Label</Badge>
 );
+
+export let examples = [
+  {
+    id: 'inverse',
+    label: 'Inverse',
+    element:
+      <Badge className="slds-badge_inverse">
+        Badge Label
+      </Badge>
+  },
+  {
+    id: 'light-with-icon',
+    label: 'Light with Icon',
+    element:
+      <Badge className="slds-badge_lightest">
+        <UtilityIcon
+         containerClassName="slds-m-right_xx-small"
+         className="slds-icon_xx-small slds-icon-text-default"
+         assistiveText={false}
+         symbol="moneybag"
+        />
+        423 Credits Available
+      </Badge>
+  }
+];

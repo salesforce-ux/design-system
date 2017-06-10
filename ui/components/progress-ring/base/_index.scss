@@ -1,0 +1,131 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Progress Ring component
+ *
+ * @summary Progress Ring component
+ *
+ * @variant
+ * @name base
+ * @selector .slds-progress-ring
+ * @restrict div
+ */
+.slds-progress-ring {
+  position: relative;
+  display: inline-block;
+  height: $square-icon-utility-large;
+  width: $square-icon-utility-large;
+  border-radius: $square-icon-utility-large;
+  background: $color-border;
+
+  .slds-icon_container {
+    line-height: 0;
+  }
+}
+
+/**
+ * @summary Progress indicator
+ *
+ * @selector .slds-progress-ring__progress
+ * @restrict .slds-progress-ring div
+ */
+.slds-progress-ring__progress {
+  transform: scale(-1, 1) rotate(-90deg);
+
+  svg {
+    width: 100%;
+  }
+}
+
+/**
+ *
+ * @selector .slds-progress-ring__path
+ * @restrict .slds-progress-ring__progress path
+ */
+.slds-progress-ring__path {
+  fill: $color-background-success;
+}
+
+/**
+ * @summary Progress ring content area
+ *
+ * @selector .slds-progress-ring__content
+ * @restrict .slds-progress-ring > div
+ */
+.slds-progress-ring__content {
+  position: absolute;
+  top: $progress-ring-width;
+  right: $progress-ring-width;
+  bottom: $progress-ring-width;
+  left: $progress-ring-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $square-icon-utility-large;
+  background: $color-background-progress-ring-content;
+
+  .slds-icon {
+    width: $square-icon-small-content;
+  }
+}
+
+/**
+ * @summary Warning colors
+ *
+ * @selector .slds-progress-ring_warning
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group theme
+ */
+.slds-progress-ring_warning {
+  .slds-progress-ring__content {
+    background: $color-background-progress-ring-content;
+  }
+
+  .slds-icon,
+  .slds-progress-ring__path {
+    fill: $color-background-warning;
+  }
+}
+
+/**
+ * @summary Expired colors
+ *
+ * @selector .slds-progress-ring_expired
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group theme
+ */
+.slds-progress-ring_expired {
+  .slds-progress-ring__content {
+    background: $color-background-progress-ring-content;
+  }
+
+  .slds-icon,
+  .slds-progress-ring__path {
+    fill: $color-background-error;
+  }
+}
+
+/**
+ * @summary Complete colors
+ *
+ * @selector .slds-progress-ring_complete
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group theme
+ */
+.slds-progress-ring_complete {
+  .slds-icon {
+    fill: $color-background-progress-ring-content;
+  }
+
+  .slds-progress-ring__path {
+    fill: $color-background-success;
+  }
+
+  .slds-progress-ring__content {
+    background: $color-background-success;
+  }
+}

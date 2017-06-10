@@ -23,6 +23,12 @@
   // Button Icon
   'button-icons/base/index',
 
+  // Color Picker
+  'color-picker/base/index',
+  'color-picker/custom-only/index',
+  'color-picker/predefined-only/index',
+  'color-picker/swatches-only/index',
+
   // Icons
   'icons/base/index',
 
@@ -54,6 +60,7 @@
   'form-layout/base/index',
   'form-layout/compound/index',
   'docked-form-footer/base/index',
+  'slider/base/index',
 
   // File selector
   'file-selector/base/index',
@@ -93,7 +100,8 @@
 
   // Datepicker
   'datepickers/base/index',
-  'datepickers/time/index',
+  'datepickers/range/index',
+  'timepicker/base/index',
 
   // Docked Composer
   'docked-composer/base/index',
@@ -135,11 +143,13 @@
 
   // Process
   'process/wizard/index',
+  'path-simple/base/index', // keep till deprecation
   'path/base/index',
 
   // Progress Indicator
   'progress-bar/base/index',
   'progress-indicator/base/index',
+  'progress-ring/base/index',
 
   // Rich Text Editor
   'rich-text-editor/base/index',
@@ -162,11 +172,13 @@
   'vertical-navigation/base/index',
   'vertical-navigation/expandable-section/index',
 
-  // Notifications -- Toasts & Alerts
+  // Notifications -- Toasts, Notifications, Alerts, Prompts, & Scoped
   'alert/base/index',
   'prompt/base/index',
   'toast/base/index',
-  'notifications/modal-toast/index',
+  'scoped-notifications/base/index',
+  'notifications/base/index',
+  'toast/modal-toast/index', // keep until deprecation
   'walkthrough/header/index',
 
   // Lookup
@@ -187,4 +199,7 @@
   'trees/grid/index',
 
   // Expandable
-  'expandable-section/base/index';
+  'expandable-section/base/index',
+
+  // Vertical Tabs
+  'vertical-tabs/base/index';

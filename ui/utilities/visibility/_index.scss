@@ -21,6 +21,7 @@
   overflow: hidden !important;
   clip: rect(0 0 0 0) !important;
   text-transform: none !important;
+  white-space: nowrap !important; // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 }
 
 /**

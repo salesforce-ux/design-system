@@ -359,7 +359,7 @@ async.series([
     createLibrary(distPath())
     .fork(e => done(e),
           x => done(null, x)
-    ),
+    )
 
 ], err => {
   if (err) throw err;

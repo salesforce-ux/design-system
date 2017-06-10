@@ -8,7 +8,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
 import { ComboboxContainer, Listbox, ListboxItem, Option } from '../../combobox/base/example';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
@@ -76,7 +76,8 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Font"
         label="Choose a Font"
-        hideLabel
+        hideLabel={true}
+        readonly={true}
         aria-controls="family-listbox"
         listbox={<FontFamilyDropdown />}
       />
@@ -90,7 +91,8 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Size"
         label="Choose a Font Size"
-        hideLabel
+        hideLabel={true}
+        readonly={true}
         aria-controls="size-listbox"
         tabIndex="-1"
         listbox={<FontSizeDropdown />}

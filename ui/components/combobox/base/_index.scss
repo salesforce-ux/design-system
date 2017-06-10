@@ -49,6 +49,12 @@
   flex: 1 1 auto;
 }
 
+[role="combobox"] input[readonly] {
+  padding-left: $spacing-small;
+  border-color: $color-border-input;
+  background-color: $color-background-input;
+}
+
 /**
  * Listbox container
  *

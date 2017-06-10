@@ -11,3 +11,4 @@ imports:
 props:
   COLOR_BACKGROUND_PROGRESS_RING_CONTENT:
     value: '{!WHITE}'
+    comment: 'Inner color for progress ring component'

@@ -12,16 +12,16 @@
  * @restrict div
  */
 .slds-progress-ring {
-    position: relative;
-    display: inline-block;
-    height: $square-icon-utility-large;
-    width: $square-icon-utility-large;
-    border-radius: $square-icon-utility-large;
-    background: $color-border;
+  position: relative;
+  display: inline-block;
+  height: $square-icon-utility-large;
+  width: $square-icon-utility-large;
+  border-radius: $square-icon-utility-large;
+  background: $color-border;
 
-    .slds-icon_container {
-      line-height: 0;
-    }
+  .slds-icon_container {
+    line-height: 0;
+  }
 }
 
 /**

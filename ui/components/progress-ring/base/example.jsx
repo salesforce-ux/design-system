@@ -3,22 +3,27 @@
 
 import React from 'react';
 import ProgressRing from '../';
-import SvgIcon from '../../../shared/svg-icon';
 import { UtilityIcon } from '../../icons/base/example';
 
 export default (
-  <ProgressRing percent={88} />
+  <ProgressRing percent={100} />
 );
 
 export const examples = [
   {
+    id: 'progress-ring-partially-drained',
+    label: 'Progress Ring Partially Drained',
+    element: <ProgressRing percent={88} />
+  },
+  {
     id: 'progress-ring-warning',
     label: 'With Warning Icon',
     element: (
-      <ProgressRing percent={20}>
+      <ProgressRing percent={20} isWarning>
         <UtilityIcon
           symbol="warning"
           title="Warning"
+          assistiveText="Warning"
         />
       </ProgressRing>
     )
@@ -27,10 +32,11 @@ export const examples = [
     id: 'progress-ring-expired',
     label: 'With Expired Icon',
     element: (
-      <ProgressRing percent={0}>
+      <ProgressRing percent={0} isExpired>
         <UtilityIcon
           symbol="error"
           title="Expired"
+          assistiveText="Expired"
         />
       </ProgressRing>
     )
@@ -39,10 +45,11 @@ export const examples = [
     id: 'progress-ring-complete',
     label: 'Complete',
     element: (
-      <ProgressRing percent={100}>
+      <ProgressRing percent={100} isComplete>
         <UtilityIcon
           symbol="check"
           title="Complete"
+          assistiveText="Complete"
         />
       </ProgressRing>
     )

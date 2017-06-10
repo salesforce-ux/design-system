@@ -14,3 +14,4 @@ global:
 props:
   PROGRESS_RING_WIDTH:
     value: 0.1875rem
+    comment: Thickness of the Progress Ring's ring

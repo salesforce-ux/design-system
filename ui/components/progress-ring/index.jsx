@@ -14,13 +14,14 @@ class ProgressRing extends Component {
   }
 
   render () {
-    const { percent } = this.props;
+    const { percent, isWarning, isComplete, isExpired } = this.props;
     const { x, y } = this.getCoordinatesForPercent(percent);
     const isLong = (percent > 50) ? 1 : 0;
+    let stateClass;
 
-    let stateClass = percent < 50 ? 'slds-progress-ring_warning' : null;
-    if (percent === 0) stateClass = 'slds-progress-ring_expired';
-    if (percent === 100) stateClass = 'slds-progress-ring_complete';
+    if (isWarning) stateClass = 'slds-progress-ring_warning';
+    if (isExpired) stateClass = 'slds-progress-ring_expired';
+    if (isComplete) stateClass = 'slds-progress-ring_complete';
 
     return (
       <div className={classNames('slds-progress-ring', stateClass)}>

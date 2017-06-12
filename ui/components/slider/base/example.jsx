@@ -15,26 +15,33 @@ const sliderId = 'slider-id-01';
     Private
 ----------------------------------------------------------------------------- */
 
-const SliderLabel = props =>
-  <span>
-    Slider Label<br />
-    {props.min || '0'} - {props.max || '100'}
-  </span>;
+const SliderLabel = props => (
+  <span className="slds-slider-label">
+    <span className="slds-slider-label__label">
+      Slider Label
+    </span>
+    <span className="slds-slider-label__range">
+      {props.min || '0'} - {props.max || '100'}
+    </span>
+  </span>
+);
 
-const Slider = props =>
+
+const Slider = props => (
   <div className={classNames('slds-slider', props.className)}>
     <input
       id={props.id || sliderId}
       className="slds-slider__range"
       type="range"
-      value={props.value}
+      defaultValue={props.value}
       min={props.min}
       max={props.max}
       step={props.step}
       disabled={props.disabled}
     />
     <span className="slds-slider__value" aria-hidden="true">{props.value}</span>
-  </div>;
+  </div>
+);
 
 /* -----------------------------------------------------------------------------
     Exports

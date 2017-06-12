@@ -149,21 +149,23 @@
 }
 
 /**
-* @summary Contains the label and range for the slider label
+* @summary Contains the label and range for the slider label - not required
 *
 * @selector .slds-slider-label
 * @restrict span
 */
-.slds-slider-label { }
+.slds-slider-label {
+  // Hook for adding a11y class if needed to hide
+}
 
 /**
-* @summary Contains the label for the slider
+* @summary Contains the label for the slider and adds a hook for adding `.slds-assistive-text` class to visually hide the label, but not the range
 *
 * @selector .slds-slider-label__label
 * @restrict .slds-slider-label span
 */
 .slds-slider-label__label {
-  display: inline-block;
+  display: block;
 }
 
  /**
@@ -172,7 +174,9 @@
 * @selector .slds-slider-label__range
 * @restrict .slds-slider-label span
 */
-.slds-slider-label__range { }
+.slds-slider-label__range {
+  // Hook for adding a11y class to hide
+}
 
 
 /**

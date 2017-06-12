@@ -149,6 +149,33 @@
 }
 
 /**
+* @summary Contains the label and range for the slider label
+*
+* @selector .slds-slider-label
+* @restrict span
+*/
+.slds-slider-label { }
+
+/**
+* @summary Contains the label for the slider
+*
+* @selector .slds-slider-label__label
+* @restrict .slds-slider-label span
+*/
+.slds-slider-label__label {
+  display: inline-block;
+}
+
+ /**
+* @summary Contains the range for the slider
+*
+* @selector .slds-slider-label__range
+* @restrict .slds-slider-label span
+*/
+.slds-slider-label__range { }
+
+
+/**
  * @summary Modifier that makes the slider vertical
  *
  * @selector .slds-slider_vertical

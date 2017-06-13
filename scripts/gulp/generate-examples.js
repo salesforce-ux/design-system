@@ -34,7 +34,7 @@ gulp.task('generate:examples', () => {
       .filter(isVariant)
       .forEach(variant => {
         examples.get(component.get('id')).get(variant.get('id')).get('sections')
-        .unshift(defaultItem(component.get('markup')))
+        .unshift(defaultItem(variant.get('markup')))
         .forEach(section => {
           section.get('items')
           .forEach(item => {

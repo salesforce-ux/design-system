@@ -15,10 +15,13 @@
 .slds-media--timeline {
   @include deprecate('4.0.0', 'Use .slds-timeline__media instead of .slds-media--timeline');
   @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
-  padding-bottom: $spacing-large;
+  //padding-bottom: $spacing-large;
 
   &:before {
     margin-left: $border-width-thin;
+    z-index: 1; // POS Todo: Find out where the z-index: -1 comes from during render, then remove this.
+    top: 2.25rem; // POS Height of the slds "spacing border hack" + icon
+    bottom: 2.25rem;
   }
 }
 
@@ -52,6 +55,12 @@
 }
 
 .slds-timeline {
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  margin-bottom: 2.75rem;
   /**
    * Icon associated with timeline item
    *

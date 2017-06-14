@@ -4,8 +4,8 @@
 @mixin root($root: html, $body: body) {
   #{$root} {
     font-family: $font-family;
-    //font-size: 100%; //POS note: Removing this to set base to 16px for better control.
-    font-size: 16px; // POS note: Added this to replace above.
+    //font-size: 100%; // Set base to 16px for better control.
+    font-size: 16px;
     line-height: $line-height-text;
     background: $color-background-alt;
     color: $color-text-default;

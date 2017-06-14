@@ -19,8 +19,8 @@
 
   &:before {
     margin-left: $border-width-thin;
-    z-index: 1; // POS Todo: Find out where the z-index: -1 comes from during render, then remove this.
-    top: 2.25rem; // POS Height of the slds "spacing border hack" + icon
+    z-index: 1; // TODO: Find out where the z-index: -1 comes from during render, then remove this.
+    top: 2.25rem; // Height of the slds "spacing border hack" + icon
     bottom: 2.25rem;
   }
 }
@@ -69,7 +69,6 @@
    */
   &__icon {
     margin-top: ($spacing-small * -1);
-    //border: $border-width-thick solid transaparent; // POS: Made transparent to be adaptable
     border-width: $border-width-thick;
     border-style: solid;
     border-color: transparent;

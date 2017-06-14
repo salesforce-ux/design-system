@@ -67,7 +67,7 @@ export let ObjectHome = props =>
           </div>
         </div>
         <div className="slds-page-header__button-bar">
-          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small">
             <ButtonIcon
               className="slds-button_icon-more"
               symbol="settings"
@@ -76,7 +76,7 @@ export let ObjectHome = props =>
               title="List View Controls"
             />
           </div>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small" aria-expanded="false">
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small">
             <ButtonIcon
               className="slds-button_icon-more"
               symbol="table"

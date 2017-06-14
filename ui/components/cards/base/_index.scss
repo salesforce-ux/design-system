@@ -34,10 +34,10 @@
     padding-left: $spacing-small;
     padding-right: $spacing-small;
 
-    @include mq-large-min {
+    /* @include mq-large-min {
       padding-left: $card-spacing-large;
       padding-right: $card-spacing-large;
-    }
+    } */
   }
 
   /**
@@ -48,7 +48,8 @@
    */
   &__header {
     padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
+    padding-bottom: $spacing-small; // Picsa: Added
+    // margin-bottom: $spacing-small; // Picsa: Illogical use of margin removed
   }
 
   &__header-link {
@@ -87,11 +88,13 @@
 
     .slds-card__header {
       padding-top: $spacing-small;
-      margin-bottom: $spacing-small;
+      padding-bottom: $spacing-small;
+      /* margin-bottom: $spacing-small; */
 
       @include mq-large-min {
         padding-top: $card-spacing-large;
-        margin-bottom: $card-spacing-large;
+        padding-bottom: $card-spacing-large;
+        // margin-bottom: $card-spacing-large;
       }
     }
 

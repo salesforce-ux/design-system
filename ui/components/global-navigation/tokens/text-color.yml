@@ -8,7 +8,7 @@ imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 props:
   COLOR_TEXT_CONTEXT_BAR:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PLACEHOLDER_GREY}'
     comment: Context bar text color
   COLOR_TEXT_CONTEXT_BAR_INVERSE:
     value: '{!WHITE}'

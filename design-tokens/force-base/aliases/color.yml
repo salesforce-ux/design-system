@@ -62,7 +62,7 @@ aliases:
   SCIENCE_BLUE: "#0070D2"
   ENDEAVOUR: "#005FB2"
   ATHENS_GRAY: "#FAFAFB"
-  LINK_WATER: "#F4F6F9"
+  LINK_WATER: "#f5f5f5"
   STEAM: "#E0E5EE"
   GEYSER: "#D8DDE6"
   CADET_BLUE: "#A8B7C7"
@@ -123,3 +123,33 @@ aliases:
   MISCHKA: "#CED5E1"
   SOLITUDE: "#E8ECF3"
   ROMANCE: "#FDFDFD"
+
+  INHERIT: "inherit"
+  INITIAL: "initial"
+
+  # PicsaOS
+
+  # Base
+  TEXT_DEFAULT: "#212121"
+
+  # Brand colours
+  PICSA_BLUE: "#47c2cc"
+  PICSA_GREEN-1: "#1d9652"
+  PICSA_GREEN-2: "#219331"
+  PICSA_GREEN-3: "#7ebf3d"
+  PICSA_GREEN-4: "#7da60c"
+  PICSA_YELLOW: "#ffce4b"
+
+  PICSA_CHARCOAL: "#3e4a55"
+  CHARCOAL_DARK: "#16222b"
+  CHARCOAL_LIGHT: "#687480"
+
+  # Red
+  POS_RED: "#fd5952"
+  POS_RED_TRANSPARENT_95: "rgba(253, 89, 82, 0.95)"
+
+  # Greys
+  PLACEHOLDER_GREY: "#bbbbbb"
+
+  WARM-GREY-1: "#f3f3f3"
+  WARM-GREY-2: "#e3e2e0"

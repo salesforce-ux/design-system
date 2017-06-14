@@ -9,13 +9,13 @@
 ///
 /// @require $static-font-path - See _config.scss where this setting is defined
 @mixin font-face($font-face-setting: Regular, $font-style-setting: null, $font-weight-setting: null) {
-  $font-path: '#{$static-font-path}/SalesforceSans-#{$font-face-setting}';
+  $font-path: '#{$static-font-path}/Roboto';
 
   @font-face {
-    font-family: 'Salesforce Sans';
+    font-family: 'Roboto';
 
-    src: url('#{$font-path}.woff2') format('woff2'),
-      url('#{$font-path}.woff') format('woff');
+    src: url('#{$font-path}/Roboto-Regular.ttf') format('ttf'),
+      url('#{$font-path}/Roboto-Regular.ttf') format('ttf');
 
     font-style: $font-style-setting;
     font-weight: $font-weight-setting;
@@ -41,3 +41,8 @@
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
 }
+
+// Added for Picsa OS for better display of Proxima Nova
+//body, html{
+//-webkit-font-smoothing: antialiased;
+//}

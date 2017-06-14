@@ -18,9 +18,11 @@
   // Cells
   th,
   td {
-    padding: $table-spacing-x-small;
+    padding: $table-spacing-small $table-spacing-medium;
     white-space: nowrap;
     position: relative;
+    border-width: 3px;
+    border-color: inherit;
   }
 
   // Table Heading Cells
@@ -132,7 +134,7 @@
 
   [role="gridcell"]:focus,
   [role="gridcell"].slds-has-focus {
-    box-shadow: $color-border-selection 0 0 0 1px inset;
+    box-shadow: none;
   }
 
   [role="gridcell"]:active {
@@ -201,9 +203,7 @@
   // Box shadow used to eliminate jumpiness on hover
   &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
   &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
-    box-shadow:
-      $color-border 0 ($border-width-thin * -1) 0 inset,
-      $color-border 0 ($border-width-thin) 0 inset;
+    box-shadow: none
   }
 }
 
@@ -318,7 +318,7 @@
  */
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small $table-spacing-x-small;
+  padding: $spacing-x-small 0;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
@@ -399,7 +399,7 @@
 
   .slds-th__action:hover,
   .slds-th__action:focus {
-    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
+    box-shadow: none;
   }
 }
 

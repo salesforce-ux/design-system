@@ -27,6 +27,16 @@
     height: 0;
   }
 
+  &[type="password"]{
+    font-size: 1.5rem;
+  }
+
+  &:focus,
+  &:active {
+    //outline: 0;
+    box-shadow: none;
+  }
+
   /**
    * Removes aesthetic nature from an input
    *

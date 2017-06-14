@@ -131,6 +131,12 @@ props:
   COLOR_BORDER_BUTTON_DEFAULT:
     value: '{!WARM-GREY-2}'
     comment: Border color for default secondary button
+  COLOR_BORDER_BUTTON_DEFAULT_HOVER:
+    value: '{!PICSA_GREEN-1}'
+    comment: Border color for default secondary button hover state
+  COLOR_BORDER_BUTTON_DEFAULT_DISABLED:
+    value: '{!WARM-GREY-2}'
+    comment: Border color for default button - disabled state
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Border color for disabled inverse button.

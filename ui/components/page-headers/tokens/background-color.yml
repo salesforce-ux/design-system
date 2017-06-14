@@ -13,5 +13,5 @@ props:
     deprecated: true
     comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
   COLOR_BACKGROUND_PAGE_HEADER:
-    value: '{!CATSKILL_WHITE}'
+    value: '{!LINK_WATER}'
     comment: Page Header background color

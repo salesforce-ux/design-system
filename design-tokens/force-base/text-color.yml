@@ -29,8 +29,8 @@ props:
     value: '{!TANGERINE}'
     comment: Customer text used in anchor subtitle
   COLOR_TEXT_DEFAULT:
-    value: '{!PICSA_CHARCOAL}'
-    comment: Body text color
+    value: '{!TEXT_DEFAULT}'
+    comment: Body text color. Used instead of pure black for optimal legibility.
   COLOR_TEXT_ERROR:
     value: '{!POS_RED}'
     comment: Error text for inputs and error misc
@@ -122,7 +122,7 @@ props:
     value: '{!CINNAMON}'
     comment: Color for texts that are related to warnings on a light background.
   COLOR_TEXT_WEAK:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!CHARCOAL_LIGHT}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
   COLOR_TEXT_ICON_BRAND:
     value: '{!PICSA_GREEN-1}'

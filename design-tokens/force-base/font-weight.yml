@@ -1,6 +1,12 @@
 # Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+# For Roboto:
+# font-weight: 300; //light
+# font-weight: 400; //normal
+# font-weight: 500; //medium
+# font-weight: 700; //bold
+
 global:
   category: font
   type: font-weight
@@ -14,6 +20,9 @@ props:
   FONT_WEIGHT_REGULAR:
     value: '400'
     comment: Most all body copy.
+  FONT_WEIGHT_MEDIUM:
+    value: '500'
+    comment: Most for titles and headings.
   FONT_WEIGHT_BOLD:
     value: '700'
     comment: Used sparingly for emphasized text within regular body copy.

@@ -60,7 +60,10 @@
    */
   &__icon {
     margin-top: ($spacing-small * -1);
-    border: $border-width-thick solid #fff;
+    //border: $border-width-thick solid transaparent; // POS: Made transparent to be adaptable
+    border-width: $border-width-thick;
+    border-style: solid;
+    border-color: transparent;
     border-top-width: $spacing-small;
     border-bottom-width: $spacing-small;
   }

@@ -20,3 +20,7 @@ props:
     value: '{!SPACING_X_SMALL}'
   TABLE_SPACING_SMALL:
     value: '{!SPACING_SMALL}'
+  TABLE_SPACING_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+  TABLE_SPACING_LARGE:
+    value: '{!SPACING_LARGE}'

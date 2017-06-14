@@ -18,9 +18,11 @@
   // Cells
   th,
   td {
-    padding: $table-spacing-small;
+    padding: $table-spacing-small $table-spacing-medium;
     white-space: nowrap;
     position: relative;
+    border-width: 3px;
+    border-color: inherit;
   }
 
   // Table Heading Cells

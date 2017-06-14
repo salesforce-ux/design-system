@@ -152,9 +152,22 @@ a.slds-button--inverse:focus {
   @include button-base;
   background-color: $color-background-button-default;
 
+  &:hover,
+  &:focus, {
+    border: 1px solid $color-border-button-default-hover;
+    background-color: $color-background-button-default-hover;
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
   &[disabled] {
     background-color: $color-background-button-default-disabled;
     cursor: default;
+    border: 1px solid $color-border-button-default-disabled;
+    color: $color-text-button-default-disabled;
   }
 }
 

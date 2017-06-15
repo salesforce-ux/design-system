@@ -7,7 +7,18 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
+  BUTTON_COLOR_BACKGROUND_PRIMARY:
+    value: "{!WHITE_BACKGROUND_PRIMARY}"
+  BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: "{!BLUE_BACKGROUND_PRIMARY}"
+  BUTTON_COLOR_BACKGROUND_SECONDARY:
+    value: "{!WHITE_TRANSPARENT_80}"
+
+
+
+
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"
     comment: Brandable primary button

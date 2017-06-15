@@ -85,10 +85,11 @@
   &_container {
     @include deprecate('4.0.0', 'Use .slds-pill_container');
     display: flex;
+    min-height: calc(#{$height-input} + 2px);
     padding: $spacing-xxx-small;
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
-    min-height: calc(#{$height-input} + 2px);
+    background-color: $color-background-input;
   }
 
   /**

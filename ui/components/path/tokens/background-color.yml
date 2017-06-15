@@ -32,3 +32,6 @@ props:
   COLOR_BACKGROUND_GUIDANCE:
     value: '{!ATHENS_GRAY}'
     comment: The background color for Salespath guidance coaching section.
+  COLOR_BACKGROUND_PATH_EXPANDED:
+    value: '{!WHITE}'
+    comment: The background color for the overall Salespath coaching section.

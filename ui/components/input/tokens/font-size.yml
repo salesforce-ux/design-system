@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font-size
+  type: font-size
+  cssProperties:
+  - font
+  - font-size
+imports:
+- "../../../../design-tokens/force-base/aliases/font-size.yml"
+props:
+  INPUT_STATIC_FONT_SIZE:
+    value: '{!FONT_SIZE_3}'

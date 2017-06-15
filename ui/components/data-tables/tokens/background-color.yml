@@ -1,0 +1,18 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/one-base/aliases/color.yml"
+props:
+  TABLE_COLOR_BACKGROUND_STRIPES:
+    value: '{!GRAY_CONTRAST_PRIMARY}'
+  TABLE_COLOR_BACKGROUND_HEADER:
+    value: '{!GRAY_FOREGROUND_PRIMARY}'
+  TABLE_COLOR_BACKGROUND_HEADER_HOVER:
+    value: '#fff'
+  TABLE_COLOR_BACKGROUND_HEADER_FOCUS:
+    value: '#fff'

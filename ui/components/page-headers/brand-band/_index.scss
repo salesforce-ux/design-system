@@ -1,0 +1,83 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name brand-band
+ * @selector .slds-brand-band
+ * @restrict .slds-page-header
+ * @variant
+ */
+
+// If the brand band is standalone, use this modifier. If the brand band is being extended
+// into another component use slds-brand-band without this modifier
+.slds-brand-band_solo {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-band-color-background-primary;
+    background-image: url($brand-band-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // Small Height Modifier
+  &.slds-brand-band_small:before {
+    height: $brand-band-image-height-small;
+  }
+
+  // Medium Height Modifier
+  &.slds-brand-band_medium:before {
+    height: $brand-band-image-height-medium;
+  }
+
+  // Large Height Modifier
+  &.slds-brand-band_large:before {
+    height: $brand-band-image-height-large;
+  }
+
+  // Full Height Modifier
+  &.slds-brand-band_full:before {
+    height: 100%;
+  }
+}
+
+
+// OLD BUT KEEPING FOR NOW
+.slds-brand-band:not(.slds-brand-band_solo) {
+  background-image: url($brand-band-image); // Update path in tokens/background-color.yml
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $brand-band-color-background-primary;
+  position: relative;
+}
+
+// If you want to cap the image width and applied a gradient bleed into a solid color
+.slds-brand-band_flaps:not(.slds-brand-band_solo) {
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: calc(#{$brand-band-image-width} - #{$brand-band-flaps-width});
+    top: 0;
+    width: $brand-band-flaps-width;
+    height: 100%;
+    background: linear-gradient(to left, $brand-band-color-background-primary 20%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  @include mq-large-min {
+    background-size: $brand-band-image-width auto;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}

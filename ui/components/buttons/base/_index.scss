@@ -43,8 +43,7 @@
   background: transparent;
   background-clip: border-box;
   border: $border-width-thin solid transparent;
-  border-radius: $border-radius-medium;
-  font-size: $font-size-small;
+  border-radius: $button-border-radius;
   line-height: $line-height-button;
   text-decoration: none;
   color: $color-text-link;
@@ -53,9 +52,6 @@
   // stylelint-enable property-no-vendor-prefix
   white-space: normal;
   user-select: none;
-  transition:
-    color $duration-immediately linear,
-    background-color $duration-immediately linear;
 
   &:hover,
   &:focus,
@@ -79,6 +75,7 @@
 
   &[disabled] {
     color: $color-text-button-default-disabled;
+    box-shadow: none;
   }
 
   &:hover,
@@ -147,7 +144,6 @@ a.slds-button--inverse:focus {
 .slds-button--neutral {
   @include button;
   @include button-base;
-  background-color: $color-background-button-default;
 
   &[disabled] {
     background-color: $color-background-button-default-disabled;
@@ -186,8 +182,8 @@ a.slds-button--inverse:focus {
 .slds-button_inverse,
 .slds-button--inverse {
   @include button;
-  @include button-base;
   background-color: $color-background-button-inverse;
+  border-color: $button-color-border-primary;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;

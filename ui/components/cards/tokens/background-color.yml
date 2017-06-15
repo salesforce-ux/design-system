@@ -6,8 +6,8 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
   CARD_COLOR_BACKGROUND:
-    value: '{!WHITE}'
+    value: '{!WHITE_BACKGROUND_PRIMARY}'
     comment: Default Card component background color.

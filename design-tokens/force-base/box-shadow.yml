@@ -10,6 +10,19 @@ imports:
 - ./aliases/color.yml
 - ./aliases/offset.yml
 props:
+  ## STATIC SHADOWS DEFAULTS FROM ONE-BASE
+  SHADOW_HARD_PRIMARY:
+    value: 'none'
+    comment: Hard dropshadow found on general UI elements such as containers
+  SHADOW_SOFT_PRIMARY:
+    value: 'none'
+    comment: Soft dropshadow found on general UI elements such as containers
+  ## INTERACTIONS DEFAULTS FROM ONE-BASE
+  SHADOW_SOFT_PRIMARY_HOVER:
+    value: 'none'
+  SHADOW_SOFT_PRIMARY_ACTIVE:
+    value: 'none'
+  ##########
   SHADOW_ACTION_OVERFLOW_FOOTER:
     value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!LINK_WATER}'
     comment: Shadow above overflow menu close bar.

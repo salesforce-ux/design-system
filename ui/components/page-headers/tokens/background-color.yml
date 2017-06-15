@@ -7,11 +7,29 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/one-base/aliases/color.yml"
 props:
+  ## Defaults for when brand band is turned OFF!
+  ## Overridden in force-trailhead
+  PAGE_HEADER_COLOR_BACKGROUND:
+    value: '{!CATSKILL_WHITE}'
+    comment: Default Page Header background color
+  PAGE_HEADER_COLOR_BACKGROUND_OVERLAY:
+    value: '{!CATSKILL_WHITE}'
+  PAGE_HEADER_COLOR_BACKGROUND_OVERLAY_BLENDMODE:
+    value: 'unset'
+    type: raw
+  BRAND_BAND_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: '{!GRAY_BACKGROUND_PRIMARY}'
+  ## Deprecated
   COLOR_BACKGROUND_ANCHOR:
     value: '{!LINK_WATER}'
     deprecated: true
     comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
   COLOR_BACKGROUND_PAGE_HEADER:
     value: '{!CATSKILL_WHITE}'
+    deprecated: true
     comment: Page Header background color

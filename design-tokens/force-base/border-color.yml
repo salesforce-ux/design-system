@@ -10,6 +10,19 @@ global:
 imports:
 - ./aliases/color.yml
 props:
+  ## DEFAULTS FROM ONE-BASE
+  COLOR_BORDER_PRIMARY:
+    value: '{!GEYSER}'
+  ## BRANDING DEFAULTS FROM ONE-BASE
+  COLOR_BORDER_BRAND_PRIMARY:
+    value: '{!AZURE}'
+  COLOR_BORDER_BRAND_PRIMARY_HOVER:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BORDER_BRAND_PRIMARY_FOCUS:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+  ###########
   COLOR_BORDER:
     value: '{!GEYSER}'
     cssProperties:

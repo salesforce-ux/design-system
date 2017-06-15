@@ -19,8 +19,9 @@
    * @restrict .slds-path
    */
   &.slds-is-expanded {
-    border-color: $color-border;
     padding-bottom: $spacing-medium;
+    border-color: $color-border;
+    background-color: $color-background-path-expanded;
   }
 }
 

@@ -3,7 +3,6 @@
 
 @mixin form-input-container {
   background-color: $color-background-input;
-  color: $color-text-default;
   border: $border-width-thin solid $color-border-input;
   border-radius: $border-radius-medium;
   width: 100%;

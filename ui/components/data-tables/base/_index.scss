@@ -18,7 +18,7 @@
   // Cells
   th,
   td {
-    padding: $table-spacing-x-small;
+    padding: $table-cell-spacing;
     white-space: nowrap;
     position: relative;
   }
@@ -30,6 +30,12 @@
     &:focus {
       outline: 0;
     }
+  }
+
+  thead th {
+    background-color: $table-color-background-header;
+    color: $table-color-text-header;
+    padding: $table-cell-spacing;
   }
 
   /**
@@ -305,8 +311,8 @@
   &.slds-has-focus .slds-th__action,
   &.slds-has-focus .slds-th__action:hover,
   &.slds-has-focus .slds-th__action:focus {
-    background-color: $color-background-row-hover;
-    color: $color-text-link;
+    background-color: $table-color-background-header-hover;
+    color: currentColor;
 
     .slds-icon {
       display: inline-block;
@@ -323,13 +329,13 @@
  */
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small $table-spacing-x-small;
+  padding: $table-cell-spacing;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
   &:hover {
     outline: 0;
-    background-color: $color-background-row-hover;
+    background-color: $table-color-background-header-hover;
   }
 
   /**

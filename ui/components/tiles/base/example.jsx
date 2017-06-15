@@ -15,18 +15,18 @@ export let Tile = props =>
   <article className={classNames('slds-tile', props.className, props.actions ? 'slds-hint-parent' : null)}>
     { props.actions
       ? <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
-        <h3 className="slds-truncate" title={props.title || 'Title'}>
+        <h3 className="slds-tile__title slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
         <div className="slds-shrink-none">
           <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" iconClassName="slds-button__icon_hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
         </div>
       </div>
-    : <h3 className="slds-truncate" title={props.title || 'Title'}>
+    : <h3 className="slds-tile__title slds-truncate" title={props.title || 'Title'}>
         <a href="javascript:void(0);">{ props.title || 'Title' }</a>
       </h3>
     }
-    <div className="slds-tile__detail slds-text-body_small">
+    <div className="slds-tile__detail">
       { props.children ? props.children : <Detail /> }
     </div>
   </article>;
@@ -41,18 +41,18 @@ export let TileMedia = props =>
     <div className="slds-media__body">
       { props.actions
         ? <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
-          <h3 className="slds-truncate" title={props.title || 'Title'}>
+          <h3 className="slds-tile__title slds-truncate" title={props.title || 'Title'}>
             <a href="javascript:void(0);">{ props.title || 'Title' }</a>
           </h3>
           <div className="slds-shrink-none">
             <ButtonIcon className="slds-button_icon-border-filled slds-button_icon-x-small" iconClassName="slds-button__icon_hint" symbol="down" aria-haspopup="true" assistiveText="More options" title="More options" />
           </div>
         </div>
-      : <h3 className="slds-truncate" title={props.title || 'Title'}>
+      : <h3 className="slds-tile__title slds-truncate" title={props.title || 'Title'}>
           <a href="javascript:void(0);">{ props.title || 'Title' }</a>
         </h3>
       }
-      <div className="slds-tile__detail slds-text-body_small">
+      <div className="slds-tile__detail">
         { props.children ? props.children : <Detail /> }
       </div>
     </div>

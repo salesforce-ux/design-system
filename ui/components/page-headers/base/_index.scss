@@ -14,31 +14,93 @@
  */
 
 .slds-page-header {
-  padding: $spacing-medium $spacing-small;
+  padding: $page-header-spacing;
   border-bottom: $border-width-thin solid $color-border;
-  background: $color-background-page-header;
+  background: $page-header-color-background;
+  position: relative;
+}
 
-  /**
-   * Page title (header text).
-   *
-   * @selector .slds-page-header__title
-   * @restrict .slds-page-header h1
-   * @required
-   */
+/**
+ * Page title (header text).
+ *
+ * @selector .slds-page-header__title
+ * @restrict .slds-page-header h1
+ */
+.slds-page-header__title {
+  font-size: $page-header-font-size-title;
+  line-height: $line-height-heading;
 
-  &__title {
-    font: {
-      weight: $font-weight-regular;
-      size: $font-size-large;
-    }
-    line-height: $line-height-heading;
-  }
-
-  @include mq-medium-min {
-    padding: $spacing-medium $spacing-large;
-
-    &__title {
-      font-size: $font-size-x-large;
-    }
+  .slds-icon {
+    fill: currentColor;
   }
 }
+
+.slds-page-header__icon {
+  @include square(2.25rem);
+}
+
+.slds-page-header__row {
+  margin: #{-$spacing-medium};
+}
+
+.slds-page-header__overlay {
+  position: relative;
+  padding: $page-header-spacing-overlay;
+}
+
+.slds-page-header__utility-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: $spacing-medium;
+}
+
+.slds-page-header__action-bar {
+  display: flex;
+  align-self: flex-end;
+}
+
+.slds-page-header__button-bar {
+  display: flex;
+  align-self: flex-end;
+  margin-top: $spacing-x-small;
+}
+
+.slds-page-header__overlay {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $page-header-color-background-overlay;
+    mix-blend-mode: $page-header-color-background-overlay-blendmode;
+  }
+}
+
+.slds-page-header__overlay-content {
+  position: relative;
+  color: $page-header-color-text-primary;
+  z-index: 1;
+
+  a {
+    color: currentColor;
+  }
+}
+
+// If themes are on, manipulate these components
+// .slds-page-header__utility-group {
+//
+//   .slds-button,
+//   .slds-button_icon,
+//   .slds-button-group {
+//     box-shadow: $page-header-button-shadow;
+//
+//     .slds-button {
+//       box-shadow: none;
+//     }
+//   }
+// }

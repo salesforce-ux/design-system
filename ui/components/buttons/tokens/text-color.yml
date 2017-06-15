@@ -8,7 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   BUTTON_COLOR_TEXT_PRIMARY:
     value: '{!WHITE_TEXT_PRIMARY}'

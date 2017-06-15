@@ -1,0 +1,10 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+## SALESFORCE-SKIN IMPORT GOES HERE IF TEAM WANTS NEW-UI TO BE IN THE ESCAPE HATCH
+- ./brand/background-color.yml
+- ./brand/border-radius.yml
+- ./brand/box-shadow.yml
+- ./brand/font-weight.yml
+- ./brand/text-color.yml

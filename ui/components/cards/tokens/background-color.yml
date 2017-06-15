@@ -6,7 +6,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   CARD_COLOR_BACKGROUND:
     value: '{!WHITE_BACKGROUND_PRIMARY}'

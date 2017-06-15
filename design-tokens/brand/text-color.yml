@@ -8,7 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../one-base/aliases/color.yml"
+- "../salesforce-skin/aliases/color.yml"
 props:
   PAGE_HEADER_COLOR_TEXT_PRIMARY:
     value: '{!WHITE_TEXT_PRIMARY}'

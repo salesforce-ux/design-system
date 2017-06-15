@@ -6,7 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { Table, RowData } from '../inline-edit/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
 

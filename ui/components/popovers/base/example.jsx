@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
@@ -22,7 +22,9 @@ export let Popover = props => {
       role="dialog"
       aria-labelledby={!props.header && props.headerTitle ? headingUniqueId : props.headingId}
       aria-label={!props.header && !props.headerTitle ? props.title : null}
-      aria-describedby={bodyUniqueId}>
+      aria-describedby={bodyUniqueId}
+      style={props.style}
+    >
       { props.closeButton
         ? <ButtonIcon
           className={classNames('slds-button_icon-small slds-float_right slds-popover__close', props.inverse ? 'slds-button_icon-inverse' : 'slds-button_icon')}

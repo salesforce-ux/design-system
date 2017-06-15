@@ -30,7 +30,7 @@ import {
 import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 const dialogHeadingId = 'modal-heading-id-1';
 const dialogBodyId = 'modal-content-id-1';

@@ -17,6 +17,7 @@
  *   - **step**: Indicates the granularity that is expected by limiting the allowed values
  * - The `slds-slider__value` span should be updated with the current value of the `<input>`
  * - The `slds-slider__value` element must have `aria-hidden=true` to hide from screen readers as they understand that value already from the `<input>`
+ * - The class `slds-assistive-text` can be placed on the `<label>`, or either `<span>` within the `<label>`, to visually hide the either value (or both).
  *
  * @summary An input range slider lets the user specify a numeric value which must be between two specified values.
  *

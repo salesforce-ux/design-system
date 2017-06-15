@@ -6,7 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { FormElementStatic } from '../../panels/detail/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)

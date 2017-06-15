@@ -23,6 +23,12 @@
 # Ignore generated styles
 /assets/styles
 
+# Ignore generated scripts
+/assets/scripts
+
+# Ignore generated tokens
+design-tokens/components.yml
+
 # Ignore modules
 /node_modules
 

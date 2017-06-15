@@ -88,14 +88,14 @@ let ListMain = props => {
           <div className="slds-path__scroll-controls">
             <ButtonIcon
             assistiveText="Scroll left"
-            className="slds-button_icon-border"
+            className="slds-button_icon-border-filled"
             symbol="left"
             title="Scroll left"
             tabIndex="-1"
             />
             <ButtonIcon
             assistiveText="Scroll right"
-            className="slds-button_icon-border"
+            className="slds-button_icon-border-filled"
             symbol="right"
             title="Scroll right"
             tabIndex="-1"

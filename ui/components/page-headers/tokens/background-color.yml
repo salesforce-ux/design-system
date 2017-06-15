@@ -7,7 +7,7 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in force-trailhead

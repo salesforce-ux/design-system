@@ -2,8 +2,8 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ./one-base/background-color.yml
-- ./one-base/border-color.yml
-- ./one-base/box-shadow.yml
-- ./one-base/text-color.yml
+- ./salesforce-skin/background-color.yml
+- ./salesforce-skin/border-color.yml
+- ./salesforce-skin/box-shadow.yml
+- ./salesforce-skin/text-color.yml
 - ./components.yml

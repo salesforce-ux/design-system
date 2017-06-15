@@ -10,6 +10,19 @@ imports:
 - ./aliases/color.yml
 - ./aliases/offset.yml
 props:
+  ## STATIC SHADOWS DEFAULTS FROM SALESFORCE-SKIN
+  SHADOW_HARD_PRIMARY:
+    value: 'none'
+    comment: Hard dropshadow found on general UI elements such as containers
+  SHADOW_SOFT_PRIMARY:
+    value: 'none'
+    comment: Soft dropshadow found on general UI elements such as containers
+  ## INTERACTIONS DEFAULTS FROM SALESFORCE-SKIN
+  SHADOW_SOFT_PRIMARY_HOVER:
+    value: 'none'
+  SHADOW_SOFT_PRIMARY_ACTIVE:
+    value: 'none'
+  ##########
   SHADOW_ACTION_OVERFLOW_FOOTER:
     value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!LINK_WATER}'
     comment: Shadow above overflow menu close bar.
@@ -23,6 +36,9 @@ props:
   SHADOW_DROP_DOWN:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
     comment: Shadow for drop down.
+  SHADOW_REMINDER:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!BLACK_TRANSPARENT_16}'
+    comment: Shadow for notifications that should be elevated above other components but under modals.
   SHADOW_HEADER:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
     comment: Shadow for header.

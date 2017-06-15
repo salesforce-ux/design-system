@@ -34,6 +34,7 @@
   border: $border-width-thin solid $color-border {
     bottom: none;
   }
+  background-color: $color-background-docked-panel;
 
   /**
    * @selector .slds-has-focus

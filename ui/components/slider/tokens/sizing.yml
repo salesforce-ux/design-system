@@ -1,0 +1,14 @@
+global:
+  category: sizing
+  type: size
+  comment: ''
+  cssProperties:
+  - '*width'
+  - '*height'
+props:
+  SLIDER_HANDLE_SIZE:
+    value: '1rem'
+  SLIDER_TRACK_HEIGHT:
+    value: '4px'
+  SLIDER_TRACK_WIDTH:
+    value: '100%'

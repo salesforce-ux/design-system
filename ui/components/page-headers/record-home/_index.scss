@@ -44,13 +44,13 @@
    * @selector .slds-page-header__detail-row
    * @restrict .slds-page-header ul
    * @notes Only the record home page header contains this detail area
-   * @required
    */
   &-row {
-    // Note: This takes the width of the icon into account for alignment
-    margin: $spacing-small #{-$spacing-large} #{-$spacing-medium};
-    padding: $spacing-small $spacing-large;
+    margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
+    padding: $page-header-spacing-row;
     background-color: $color-background-alt;
+    position: relative;
+    z-index: 2;
   }
 
   /**
@@ -59,7 +59,6 @@
    * @selector .slds-page-header__detail-block
    * @restrict .slds-page-header__detail-row li
    * @notes Only the record home page header contains this detail area
-   * @required
    */
   &-block {
     padding: {

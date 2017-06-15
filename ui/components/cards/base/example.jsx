@@ -109,7 +109,7 @@ export let examples = [
     <Card>
       <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Contacts (1)</span></CardHeader>
       <CardBody>
-        <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+        <table className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
           <thead>
             <tr className="slds-text-title_caps">
               <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>

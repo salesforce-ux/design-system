@@ -22,3 +22,12 @@ props:
     value: '{!SPACING_MEDIUM}'
   CARD_SPACING_LARGE:
     value: '{!SPACING_LARGE}'
+  ## Card defaults
+  CARD_HEADER_SPACING:
+    value: '{!SPACING_SMALL} {!SPACING_SMALL} 0'
+  CARD_HEADER_GUTTER:
+    value: '0 0 {!SPACING_SMALL}'
+  CARD_FOOTER_GUTTER:
+    value: '{!SPACING_SMALL} 0 0 0'
+  CARD_FOOTER_SPACING:
+    value: '{!SPACING_SMALL} 0'

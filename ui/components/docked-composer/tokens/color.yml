@@ -11,3 +11,6 @@ props:
   COLOR_BACKGROUND_DOCKED_PANEL_HEADER:
     value: '{!CATSKILL_WHITE}'
     comment: Docked panel header’s background color.
+  COLOR_BACKGROUND_DOCKED_PANEL:
+    value: '{!WHITE}'
+    comment: Docked panel’s background color when open.

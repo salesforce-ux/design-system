@@ -1,0 +1,36 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+props:
+  ## DEFAULT
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!GRAY_BACKGROUND_PRIMARY}'
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!GRAY_BACKGROUND_SECONDARY}'
+  COLOR_FOREGROUND_PRIMARY:
+    value: '{!WHITE_FOREGROUND_PRIMARY}'
+  COLOR_CONTRAST_PRIMARY:
+    value: '{!GRAY_CONTRAST_PRIMARY}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!GRAY_CONTRAST_SECONDARY}'
+  ## BRANDING
+  COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: '{!BLUE_BACKGROUND_PRIMARY}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_HOVER:
+    value: '{!BLUE_BACKGROUND_SECONDARY}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_FOCUS:
+    value: '{!BLUE_BACKGROUND_SECONDARY}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
+    value: '{!BLUE_BACKGROUND_SECONDARY}'
+  ## PAGE
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!GRAY_BACKGROUND_PRIMARY}'

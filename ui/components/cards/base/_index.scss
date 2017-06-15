@@ -16,11 +16,13 @@
 * @variant
 */
 .slds-card {
+  position: relative;
   padding: 0;
-  background: $card-color-background;
-  border: $border-width-thin solid $color-border;
+  background: $color-foreground-primary;
+  border: $border-width-thin solid $color-foreground-primary;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
+  box-shadow: $shadow-soft-primary;
 
   // Adds spacing between cards
   + .slds-card {
@@ -31,8 +33,8 @@
   &__footer,
   &__body_inner,
   &__body--inner {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-left: $card-spacing-small;
+    padding-right: $card-spacing-small;
 
     @include mq-large-min {
       padding-left: $card-spacing-large;
@@ -47,12 +49,18 @@
    * @restrict .slds-card div
    */
   &__header {
-    padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
+    padding: $card-header-spacing;
+    margin: $card-header-gutter;
+
+    @include mq-large-min {
+      padding-left: $card-spacing-large;
+      padding-right: $card-spacing-large;
+    }
   }
 
   &__header-link {
     color: inherit;
+    font-weight: $font-weight-bold;
   }
 
   /**
@@ -62,7 +70,7 @@
    * @restrict .slds-card div
    */
   &__body {
-    margin-bottom: $spacing-small;
+    margin-bottom: $card-spacing-small;
   }
 
   &__body:empty,
@@ -77,9 +85,17 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    margin-top: $spacing-small;
-    padding-bottom: $spacing-small;
-    text-align: right;
+    padding: $card-footer-spacing;
+    margin: $card-footer-gutter;
+    text-align: center;
+    font-size: $font-size-text-small;
+    border-top: 1px solid $color-border-primary;
+
+    @include mq-large-min {
+      margin-top: $spacing-large;
+      margin-left: $spacing-large;
+      margin-right: $spacing-large;
+    }
   }
 
   &_narrow,

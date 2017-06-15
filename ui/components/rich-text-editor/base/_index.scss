@@ -100,7 +100,7 @@
   min-height: $size-xx-small;
   max-height: $size-small;
   padding: $spacing-medium;
-  border-radius: $border-radius-medium;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
   background-color: $color-background-input;
 }
 

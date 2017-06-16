@@ -9,7 +9,7 @@ const path = require('path');
 const { createValidator } = require('@salesforce-ux/design-system-markup/server');
 const createParser = require('@salesforce-ux/design-system-parser');
 
-const { getComments } = require('../markup-style');
+const getComments = require('../ui/comments');
 
 const renderMessage = result =>
   `${result.selector} not applied to ${result.restrict}`;

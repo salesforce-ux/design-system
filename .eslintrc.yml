@@ -9,5 +9,6 @@ rules:
   no-useless-escape: ['off']
   no-unused-vars: ['off']
   react/jsx-indent: ['off']
+  quotes: ['off']
   eqeqeq: ['off']
   import/no-duplicates: ['off']

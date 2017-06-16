@@ -11,15 +11,6 @@ global:
 imports:
 - ../force-base/aliases/color.yml
 props:
-  ## PAGE HEADER
-  PAGE_HEADER_COLOR_BACKGROUND:
-    value: '{!TRANSPARENT}'
-    comment: Turn off background color so brand band comes through
-  PAGE_HEADER_COLOR_BACKGROUND_OVERLAY:
-    value: '#47abd4'
-  PAGE_HEADER_COLOR_BACKGROUND_OVERLAY_BLENDMODE:
-    value: 'multiply'
-    type: raw
   ## BRAND BAND
   BRAND_BAND_IMAGE:
     value: ''

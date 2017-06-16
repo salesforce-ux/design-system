@@ -11,6 +11,7 @@ global:
 imports:
 - ./aliases/color.yml
 props:
+  ## These seem to be button-related
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
     value: '{!GRAY_BACKGROUND_PRIMARY}'

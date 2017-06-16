@@ -85,6 +85,7 @@
 
     .slds-button__icon {
       fill: currentColor;
+      pointer-events: none;
     }
   }
   // Add spacing when button-group is adjacent to a button

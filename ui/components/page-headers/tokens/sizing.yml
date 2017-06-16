@@ -15,7 +15,3 @@ props:
     value: '12.5rem'
   BRAND_BAND_IMAGE_HEIGHT_LARGE:
     value: '18.75rem'
-  BRAND_BAND_IMAGE_WIDTH:
-    value: '1024px'
-  BRAND_BAND_FLAPS_WIDTH:
-    value: '200px'

@@ -43,7 +43,7 @@ export let ObjectHome = props =>
               >
                 <span className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
                   <span className="slds-truncate" title="Recently Viewed">Recently Viewed</span>
-                  <UtilityIcon className="slds-icon--x-small slds-m-left_x-small" symbol="down" />
+                  <UtilityIcon className="slds-icon--x-small slds-m-left_xx-small" symbol="down" />
                 </span>
               </button>
             </h1>

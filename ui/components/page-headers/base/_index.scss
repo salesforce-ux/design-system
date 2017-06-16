@@ -28,6 +28,10 @@
 .slds-page-header__title {
   font-size: $page-header-font-size-title;
   line-height: $line-height-heading;
+
+  .slds-icon {
+    fill: currentColor;
+  }
 }
 
 // .slds-page-header__icon {

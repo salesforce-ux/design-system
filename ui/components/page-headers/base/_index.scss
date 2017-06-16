@@ -17,7 +17,6 @@
   padding: $page-header-spacing;
   border-bottom: $border-width-thin solid $color-border;
   background: $page-header-color-background;
-  position: relative;
 }
 
 /**
@@ -35,61 +34,9 @@
   }
 }
 
-.slds-page-header__icon {
-  @include square(2.25rem);
-}
-
-.slds-page-header__row {
-  margin: #{-$spacing-medium};
-}
-
-.slds-page-header__overlay {
-  position: relative;
-  padding: $page-header-spacing-overlay;
-}
-
-.slds-page-header__utility-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: $spacing-medium;
-}
-
-.slds-page-header__action-bar {
-  display: flex;
-  align-self: flex-end;
-}
-
-.slds-page-header__button-bar {
-  display: flex;
-  align-self: flex-end;
-  margin-top: $spacing-x-small;
-}
-
-.slds-page-header__overlay {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: $page-header-color-background-overlay;
-    mix-blend-mode: $page-header-color-background-overlay-blendmode;
-  }
-}
-
-.slds-page-header__overlay-content {
-  position: relative;
-  color: $page-header-color-text-primary;
-  z-index: 1;
-
-  a {
-    color: currentColor;
-  }
-}
+// .slds-page-header__icon {
+//   @include square(2.25rem);
+// }
 
 // If themes are on, manipulate these components
 // .slds-page-header__utility-group {

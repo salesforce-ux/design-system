@@ -6,7 +6,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   TABLE_COLOR_BACKGROUND_STRIPES:
     value: '{!GRAY_CONTRAST_PRIMARY}'

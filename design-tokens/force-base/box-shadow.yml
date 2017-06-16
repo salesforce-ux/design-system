@@ -10,14 +10,14 @@ imports:
 - ./aliases/color.yml
 - ./aliases/offset.yml
 props:
-  ## STATIC SHADOWS DEFAULTS FROM ONE-BASE
+  ## STATIC SHADOWS DEFAULTS FROM SALESFORCE-SKIN
   SHADOW_HARD_PRIMARY:
     value: 'none'
     comment: Hard dropshadow found on general UI elements such as containers
   SHADOW_SOFT_PRIMARY:
     value: 'none'
     comment: Soft dropshadow found on general UI elements such as containers
-  ## INTERACTIONS DEFAULTS FROM ONE-BASE
+  ## INTERACTIONS DEFAULTS FROM SALESFORCE-SKIN
   SHADOW_SOFT_PRIMARY_HOVER:
     value: 'none'
   SHADOW_SOFT_PRIMARY_ACTIVE:

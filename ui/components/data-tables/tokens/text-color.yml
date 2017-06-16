@@ -8,7 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../../../../design-tokens/one-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   TABLE_COLOR_TEXT_HEADER:
     value: '{!GRAY_TEXT_PRIMARY}'

@@ -16,6 +16,7 @@
   border: $border-width-thin solid $color-border {
     bottom: none;
   }
+  background: $color-background-docked-panel;
   transform: translateY(100%);
 
   /**

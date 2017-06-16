@@ -135,15 +135,19 @@
    * @restrict .slds-table th, .slds-table td
    * @modifier
    */
+  th:focus,
   [role="gridcell"]:focus {
     outline: 0;
   }
 
+  th:focus,
+  th.slds-has-focus,
   [role="gridcell"]:focus,
   [role="gridcell"].slds-has-focus {
     box-shadow: $color-border-selection 0 0 0 1px inset;
   }
 
+  th:active,
   [role="gridcell"]:active {
     box-shadow: none;
   }

@@ -8,14 +8,10 @@ global:
   - '*width'
   - '*height'
 props:
-  ## Default sizes, these dont change =)
+  ## Default sizes and since there's no brand-band in default, they're zero'd
   BRAND_BAND_IMAGE_HEIGHT_SMALL:
-    value: '6rem'
+    value: '0'
   BRAND_BAND_IMAGE_HEIGHT_MEDIUM:
-    value: '12.5rem'
+    value: '0'
   BRAND_BAND_IMAGE_HEIGHT_LARGE:
-    value: '18.75rem'
-  BRAND_BAND_IMAGE_WIDTH:
-    value: '1024px'
-  BRAND_BAND_FLAPS_WIDTH:
-    value: '200px'
+    value: '0'

@@ -13,7 +13,7 @@ imports:
 props:
   ## BRAND BAND
   BRAND_BAND_IMAGE:
-    value: ''
+    value: '/_slds/images/themes/one/banner-mountains.png'
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#69b9dc'

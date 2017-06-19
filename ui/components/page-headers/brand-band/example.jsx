@@ -21,7 +21,7 @@ export const Context = props =>
   </div>;
 
 export default (
-  <div className="slds-brand-band_solo slds-brand-band_small">
+  <div className="slds-brand-band slds-brand-band_small">
     <div className="slds-page-header">
       <div className="slds-grid slds-page-header__row">
         <div className="slds-page-header__overlay">
@@ -124,7 +124,7 @@ export let examples = [
     id: 'object-home',
     label: 'Object home',
     element:
-    <div className="slds-brand-band_solo slds-brand-band_small">
+    <div className="slds-brand-band slds-brand-band_small">
       <ObjectHome />
     </div>
   },
@@ -132,29 +132,29 @@ export let examples = [
     id: 'record-home',
     label: 'Record home',
     element:
-    <div className="slds-brand-band_solo slds-brand-band_small">
+    <div className="slds-brand-band slds-brand-band_small">
       <RecordHome />
     </div>
   },
   {
     id: 'standalone-small',
     label: 'Standalone - Size small',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_small" />
+    element: <div className="slds-brand-band slds-brand-band slds-brand-band_small" />
   },
   {
     id: 'standalone-medium',
     label: 'Standalone - Size medium',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_medium" />
+    element: <div className="slds-brand-band slds-brand-band slds-brand-band_medium" />
   },
   {
     id: 'standalone-large',
     label: 'Standalone - Size large',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_large" />
+    element: <div className="slds-brand-band slds-brand-band slds-brand-band_large" />
   },
   {
     id: 'standalone-full',
     label: 'Standalone - Size Full',
-    element: <div className="slds-brand-band slds-brand-band_solo slds-brand-band_full" />
+    element: <div className="slds-brand-band slds-brand-band slds-brand-band_full" />
   },
   {
     id: 'template',
@@ -162,7 +162,7 @@ export let examples = [
     element:
     <div style={{ backgroundColor: '#e0e5ee' }}>
       <div className="slds-grid">
-        <div className="slds-size_8-of-12 slds-p-around_medium slds-brand-band_solo slds-brand-band_large">
+        <div className="slds-size_8-of-12 slds-p-around_medium slds-brand-band slds-brand-band_large">
           <Card>
             <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Card Header</span></CardHeader>
             <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>

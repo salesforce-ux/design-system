@@ -4,5 +4,7 @@
 imports:
 - ./salesforce-skin/background-color.yml
 - ./salesforce-skin/border-color.yml
+- ./salesforce-skin/border-radius.yml
 - ./salesforce-skin/box-shadow.yml
+- ./salesforce-skin/spacing.yml
 - ./salesforce-skin/text-color.yml

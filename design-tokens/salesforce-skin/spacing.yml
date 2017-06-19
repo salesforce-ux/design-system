@@ -17,11 +17,7 @@ global:
   - '*height'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/spacing.yml"
+- "../force-base/aliases/spacing.yml"
 props:
   PAGE_HEADER_SPACING_MARGIN:
-    value: '0'
-  PAGE_HEADER_SPACING_PADDING:
     value: '{!SPACING_MEDIUM}'
-  PAGE_HEADER_SPACING_ROW:
-    value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'

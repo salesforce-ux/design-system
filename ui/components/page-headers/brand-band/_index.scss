@@ -4,13 +4,13 @@
 
 // If the brand band is standalone, use this modifier. If the brand band is being extended
 // into another component use slds-brand-band without this modifier
-.slds-brand-band_solo {
+.slds-brand-band {
   position: relative;
 
   &:before {
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

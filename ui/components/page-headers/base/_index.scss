@@ -14,9 +14,13 @@
  */
 
 .slds-page-header {
-  padding: $page-header-spacing;
-  border-bottom: $border-width-thin solid $color-border;
+  margin: $page-header-spacing-margin;
+  padding: $page-header-spacing-padding;
+  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-radius: $page-header-border-radius;
   background: $page-header-color-background;
+  background-clip: padding-box;
+  box-shadow: $page-header-shadow;
 }
 
 /**

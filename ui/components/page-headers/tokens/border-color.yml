@@ -2,14 +2,13 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  type: box-shadow
-  category: shadow
+  type: color
+  category: border-color
   cssProperties:
+  - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/force-base/aliases/color.yml"
 props:
-  PAGE_HEADER_BUTTON_SHADOW:
-    value: 'none'
-  PAGE_HEADER_SHADOW:
-    value: 'none'
+  PAGE_HEADER_COLOR_BORDER:
+    value: '{!GEYSER}'

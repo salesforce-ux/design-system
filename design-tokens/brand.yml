@@ -7,4 +7,6 @@ imports:
 - ./brand/border-radius.yml
 - ./brand/box-shadow.yml
 - ./brand/font-weight.yml
+- ./brand/sizing.yml
+- ./brand/spacing.yml
 - ./brand/text-color.yml

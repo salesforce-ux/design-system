@@ -143,8 +143,7 @@ export let states = [
     id: 'data-table-responsive-stacked',
     label: 'Stacked',
     element: <Stacked />
-  }
-  ,
+  },
   {
     id: 'data-table-responsive-overflow',
     label: 'Overflow',

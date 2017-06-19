@@ -12,8 +12,10 @@
  *
  * @summary Creates stacked row with stacked cells
  *
+ * @name responsive
  * @selector .slds-max-medium-table_stacked
  * @restrict .slds-table
+ * @variant
  */
 .slds-max-medium-table_stacked,
 .slds-max-medium-table--stacked {
@@ -33,6 +35,7 @@
  *
  * @selector .slds-max-medium-table_stacked-horizontal
  * @restrict .slds-table
+ * @variant
  */
 .slds-max-medium-table_stacked-horizontal,
 .slds-max-medium-table--stacked-horizontal {

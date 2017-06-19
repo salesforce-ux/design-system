@@ -21,3 +21,6 @@ props:
     value: '{!BLACK_TRANSPARENT_20} 0 3px 6px'
   SHADOW_SOFT_PRIMARY_ACTIVE:
     value: '{!BLACK_TRANSPARENT_20} 0 1px 1px'
+  PAGE_HEADER_SHADOW:
+    value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
+    comment: Soft ddropshadow on page header

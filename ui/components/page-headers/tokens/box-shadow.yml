@@ -11,3 +11,5 @@ imports:
 props:
   PAGE_HEADER_BUTTON_SHADOW:
     value: 'none'
+  PAGE_HEADER_SHADOW:
+    value: 'none'

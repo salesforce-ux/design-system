@@ -144,10 +144,10 @@ export let states = [
     label: 'Stacked',
     element: <Stacked />
   }
-  // , @TODO: Hidden until scrolling on S1 works
-  // {
-  //   id: 'data-table-responsive-overflow',
-  //   label: 'Overflow',
-  //   element: <Overflow />
-  // }
+  ,
+  {
+    id: 'data-table-responsive-overflow',
+    label: 'Overflow',
+    element: <Overflow />
+  }
 ];

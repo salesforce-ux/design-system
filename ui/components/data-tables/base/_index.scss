@@ -463,6 +463,7 @@
   }
 
   // No idea what this does
+  // It looks like it would make the resizable handle show up when the input in the header has focus?
   &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
   }

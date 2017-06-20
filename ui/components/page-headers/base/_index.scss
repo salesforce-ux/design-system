@@ -38,6 +38,17 @@
   }
 }
 
+/**
+ * @summary This class makes the page header appear attached to the component below it
+ *
+ * @selector .slds-page-header_joined
+ * @restrict .slds-page-header
+ */
+ .slds-page-header_joined {
+  margin: $page-header-joined-spacing-margin;
+  border-radius: $page-header-joined-border-radius;
+ }
+
 // .slds-page-header__icon {
 //   @include square(2.25rem);
 // }

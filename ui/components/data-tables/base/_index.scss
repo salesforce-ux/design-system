@@ -13,6 +13,7 @@
 .slds-table {
   // scss-lint:disable SelectorDepth
   margin: $table-spacing;
+  border-radius: $table-border-radius;
   background-color: $color-background-alt;
   font-size: inherit; // forces table to respect body font
 

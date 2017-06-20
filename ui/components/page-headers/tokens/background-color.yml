@@ -14,8 +14,6 @@ props:
   PAGE_HEADER_COLOR_BACKGROUND:
     value: '{!CATSKILL_WHITE}'
     comment: Default Page Header background color
-  PAGE_HEADER_COLOR_BACKGROUND_OVERLAY:
-    value: '{!CATSKILL_WHITE}'
   BRAND_BAND_IMAGE:
     value: ''
     type: raw

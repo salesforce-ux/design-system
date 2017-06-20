@@ -29,6 +29,7 @@
 .slds-tabs_default,
 .slds-tabs--default {
   @include tabs;
+  background-color: $color-foreground-primary;
 
   /**
    * Creates the container for the default tabs
@@ -216,7 +217,7 @@
  * @modifier
  */
  .slds-tabs_card {
-  background-color: $color-foreground-primary;
+  padding: $spacing-medium;
   box-shadow: $shadow-soft-primary;
   border-radius: $border-radius-small;
  }

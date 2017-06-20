@@ -9,4 +9,5 @@ global:
   - font-weight
 props:
   INPUT_STATIC_FONT_WEIGHT:
-    value: '600'
+    value: '400'
+    comment: Overrides bold in platform

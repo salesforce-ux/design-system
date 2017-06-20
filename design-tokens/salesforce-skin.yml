@@ -6,5 +6,6 @@ imports:
 - ./salesforce-skin/border-color.yml
 - ./salesforce-skin/border-radius.yml
 - ./salesforce-skin/box-shadow.yml
+- ./salesforce-skin/font-weight.yml
 - ./salesforce-skin/spacing.yml
 - ./salesforce-skin/text-color.yml

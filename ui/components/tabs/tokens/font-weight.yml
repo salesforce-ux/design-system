@@ -8,6 +8,6 @@ global:
   - font
   - font-weight
 props:
-  TABS_SCOPED_FONT_WEIGHT:
+  TABS_FONT_WEIGHT:
     value: '400'
     comment: Use for active tab.

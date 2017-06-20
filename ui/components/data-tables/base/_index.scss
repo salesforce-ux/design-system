@@ -467,3 +467,14 @@
     opacity: 1;
   }
 }
+
+/**
+ * @summary Use this class to join a table to a page-header
+ *
+ * @selector .slds-table_joined
+ * @restrict .slds-table
+ */
+.slds-table_joined {
+  margin: $table-spacing;
+  border-radius: $table-border-radius;
+}

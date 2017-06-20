@@ -30,8 +30,6 @@
 .slds-tabs--default {
   @include tabs;
   background-color: $color-foreground-primary;
-  box-shadow: $shadow-soft-primary;
-  border-radius: $border-radius-small;
 
   /**
    * Creates the container for the default tabs
@@ -42,7 +40,7 @@
    */
   &__nav {
     @include tabs-nav;
-    border-bottom: $border-width-thick solid $color-border-primary;
+    border-bottom: $border-width-thick solid $color-border;
   }
 
   @include deprecate('4.0.0') {
@@ -139,14 +137,13 @@
   &.slds-is-active {
     color: $color-text-action-label-active;
 
-
     &:after {
       background-color: $color-brand-dark;
     }
 
     .slds-tabs_default__link,
     .slds-tabs--default__link {
-      font-weight: $font-weight-bold;
+      font-weight: $tabs-font-weight;
 
       &:hover {
         color: $color-text-action-label-active;
@@ -210,5 +207,37 @@
 .slds-tabs_default__content,
 .slds-tabs--default__content {
   @include tabs-content;
+}
+
+/**
+ * @summary Needed when tabs need to look like they're in a card
+ *
+ * @selector .slds-tabs_card
+ * @restrict .slds-tabs_default
+ * @modifier
+ */
+ .slds-tabs_card {
+  padding: $spacing-medium;
+  box-shadow: $shadow-soft-primary;
+  border-radius: $border-radius-small;
+ }
+
+/**
+ * @summary Updates the container for the card tabs
+ *
+ * @selector .slds-tabs_card__nav
+ * @restrict .slds-tabs_card ul
+ */
+ .slds-tabs_card .slds-tabs_default__nav {
+  border-bottom: $border-width-thick solid $color-border-primary;
+ }
+
+/**
+ * @summary Adds padding for the tab_card content wrapper
+ *
+ * @selector .slds-tabs_card__content
+ * @restrict .slds-tabs_card div
+ */
+.slds-tabs_card .slds-tabs_default__content {
   padding: $spacing-medium;
 }

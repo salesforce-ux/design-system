@@ -7,7 +7,6 @@
   position: relative;
   padding-top: 2rem; // This matches the height of the hover state w/border
   border-top: $border-width-thin solid $color-border;
-  background-color: $page-color-background-primary;
   overflow: hidden;
 
   &:before {
@@ -16,6 +15,7 @@
     display: block;
     position: relative;
     width: 100%;
+    margin: $table-spacing; // This must mirror the table spacing
   }
 }
 

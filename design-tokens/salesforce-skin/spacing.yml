@@ -21,3 +21,5 @@ imports:
 props:
   PAGE_HEADER_SPACING_MARGIN:
     value: '{!SPACING_MEDIUM}'
+  TABLE_SPACING:
+    value: '0 {!SPACING_MEDIUM}'

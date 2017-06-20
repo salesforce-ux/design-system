@@ -12,8 +12,6 @@
  */
 .slds-table {
   // scss-lint:disable SelectorDepth
-  margin: $table-spacing;
-  border-radius: $table-border-radius;
   background-color: $color-background-alt;
   font-size: inherit; // forces table to respect body font
 
@@ -468,4 +466,15 @@
   &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
   }
+}
+
+/**
+ * @summary Use this class to join a table to a page-header
+ *
+ * @selector .slds-table_joined
+ * @restrict .slds-table
+ */
+.slds-table_joined {
+  margin: $table-spacing;
+  border-radius: $table-border-radius;
 }

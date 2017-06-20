@@ -15,16 +15,17 @@
     right: 0;
     bottom: 0;
     left: 0;
+    height: $brand-band-image-height-small;
     background-color: $brand-band-color-background-primary;
     background-image: url($brand-band-image);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  // Small Height Modifier
-  &.slds-brand-band_small:before {
-    height: $brand-band-image-height-small;
-  }
+  // Small Height Modifier (Made the default as a test)
+  // &.slds-brand-band_small:before {
+  //   height: $brand-band-image-height-small;
+  // }
 
   // Medium Height Modifier
   &.slds-brand-band_medium:before {
@@ -39,5 +40,10 @@
   // Full Height Modifier
   &.slds-brand-band_full:before {
     height: 100%;
+  }
+
+  &.slds-brand-band_bottom:before {
+    background-position: bottom;
+    top: initial;
   }
 }

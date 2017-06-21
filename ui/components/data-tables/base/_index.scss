@@ -476,5 +476,8 @@
  */
 .slds-table_joined {
   margin: $table-spacing;
-  border-radius: $table-border-radius;
+
+  .slds-table {
+    border-radius: $table-border-radius;
+  }
 }

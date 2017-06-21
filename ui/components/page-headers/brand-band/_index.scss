@@ -11,7 +11,7 @@
     content: '';
     display: block;
     position: fixed;
-    top: 0;
+    top: ($height-context-bar + $height-header); // to stay out from behind the global nav
     right: 0;
     bottom: 0;
     left: 0;

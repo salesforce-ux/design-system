@@ -8,6 +8,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
+- ../force-base/aliases/color.yml
 - ./aliases/color.yml
 props:
   ## DEFAULT
@@ -23,4 +24,4 @@ props:
   COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BORDER_SECONDARY}'
   PAGE_HEADER_COLOR_BORDER:
-    value: '{!WHITE_PRIMARY}'
+    value: '{!CATSKILL_WHITE}'

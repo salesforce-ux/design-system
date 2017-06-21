@@ -19,4 +19,4 @@ props:
   TABLE_SPACING:
     value: '0'
   TABLE_CELL_SPACING:
-    value: '{!SPACING_X_SMALL} {!SPACING_XX_SMALL}'
+    value: '{!SPACING_X_SMALL}'

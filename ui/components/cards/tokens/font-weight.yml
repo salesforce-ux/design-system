@@ -8,11 +8,6 @@ global:
   - font
   - font-weight
 props:
-  INPUT_STATIC_FONT_WEIGHT:
-    value: '600'
-  TABS_FONT_WEIGHT:
-    value: '700'
-    comment: Use for active tab.
   CARD_FONT_WEIGHT:
-    value: '700'
+    value: '400'
     comment: Use for active tab.

@@ -24,3 +24,6 @@ props:
   PAGE_HEADER_SHADOW:
     value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
     comment: Soft ddropshadow on page header
+  CARD_SHADOW:
+    value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
+    comment: Soft dropshadow found on outer cards

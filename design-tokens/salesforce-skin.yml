@@ -8,4 +8,5 @@ imports:
 - ./salesforce-skin/box-shadow.yml
 - ./salesforce-skin/font-weight.yml
 - ./salesforce-skin/spacing.yml
+- ./salesforce-skin/text-align.yml
 - ./salesforce-skin/text-color.yml

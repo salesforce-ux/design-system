@@ -161,7 +161,7 @@
   .slds-card {
     background: $card-color-background;
     border: none;
-    border-radius: none;
+    border-radius: initial;
     box-shadow: none;
   }
 }

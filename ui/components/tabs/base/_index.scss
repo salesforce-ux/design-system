@@ -94,7 +94,9 @@
   }
 
   .slds-card {
-    border: $border-width-thin solid $color-border-primary;
+    background: $card-color-background;
+    border: none;
+    border-radius: none;
     box-shadow: none;
   }
 }

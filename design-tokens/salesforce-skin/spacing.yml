@@ -27,3 +27,5 @@ props:
     value: '0 {!SPACING_MEDIUM}'
   TABLE_CELL_SPACING:
     value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'
+  CARD_FOOTER_SPACING:
+    value: '{!SPACING_SMALL} 0'

@@ -28,6 +28,6 @@ props:
   CARD_HEADER_GUTTER:
     value: '0 0 {!SPACING_SMALL}'
   CARD_FOOTER_GUTTER:
-    value: '{!SPACING_SMALL} 0 0 0'
+    value: '{!SPACING_SMALL}'
   CARD_FOOTER_SPACING:
-    value: '{!SPACING_SMALL} 0'
+    value: '0 0 {!SPACING_SMALL} 0'

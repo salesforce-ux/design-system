@@ -33,3 +33,5 @@ props:
     value: '0'
   CARD_FOOTER_SPACING_BOTTOM:
     value: '{!SPACING_SMALL}'
+  CARD_WRAPPER_SPACING:
+    value: '{!SPACING_MEDIUM}'

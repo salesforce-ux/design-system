@@ -50,7 +50,7 @@
    */
   &__header {
     padding: $card-header-spacing;
-    margin: $card-header-gutter;
+    margin: $card-header-margin;
 
     @include mq-large-min {
       padding-left: $card-spacing-large;
@@ -85,8 +85,9 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    padding: $card-footer-spacing;
-    margin-top: $card-footer-gutter;
+    padding-top: $card-footer-spacing-top;
+    padding-bottom: $card-footer-spacing-bottom;
+    margin-top: $card-footer-margin;
     text-align: $card-footer-text-align;
     font-size: $font-size-text-small;
     border-top: $border-width-thin solid $card-footer-color-border;

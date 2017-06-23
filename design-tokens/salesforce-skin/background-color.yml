@@ -39,6 +39,6 @@ props:
   CARDS_COLOR_BACKGROUND:
     value: '{!WHITE_BACKGROUND_PRIMARY}'
     comment: Default Card component background color
-  CARDS_WRAPPER_COLOR_BACKGROUND:
+  CARD_WRAPPER_COLOR_BACKGROUND:
     value: '{!WHITE_BACKGROUND_PRIMARY}'
 

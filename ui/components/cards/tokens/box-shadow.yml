@@ -7,5 +7,7 @@ global:
   cssProperties:
   - box-shadow
 props:
-  CARD_SHADOW:
+  CARDS_SHADOW:
+    value: 'none'
+  CARDS_WRAPPER_SHADOW:
     value: 'none'

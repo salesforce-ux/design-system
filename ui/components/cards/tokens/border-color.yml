@@ -11,7 +11,7 @@ imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
-  CARD_COLOR_BORDER:
+  CARDS_COLOR_BORDER:
     value: '{!GEYSER}'
-  CARD_FOOTER_COLOR_BORDER:
+  CARDS_FOOTER_COLOR_BORDER:
     value: 'transparent'

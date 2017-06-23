@@ -36,6 +36,9 @@ props:
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '{!GRAY_BACKGROUND_PRIMARY}'
   ## CARDS
-  CARD_COLOR_BACKGROUND:
+  CARDS_COLOR_BACKGROUND:
     value: '{!WHITE_BACKGROUND_PRIMARY}'
     comment: Default Card component background color
+  CARDS_WRAPPER_COLOR_BACKGROUND:
+    value: '{!WHITE_BACKGROUND_PRIMARY}'
+

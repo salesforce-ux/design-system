@@ -13,5 +13,5 @@ rules:
   "selector-class-pattern":
     - "^(slds|site|demo)(-[a-z0-9_-]+|)$"
     -
-      severity: error
+      severity: warning
       resolveNestedSelectors: true

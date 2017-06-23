@@ -93,8 +93,8 @@
     overflow: visible;
   }
 
-  .slds-card {
-    background: $card-color-background;
+  .slds-card { // This makes cards look plain when inside a tabset
+    background: $cards-wrapper-color-background;;
     border: none;
     border-radius: none;
     box-shadow: none;
@@ -211,35 +211,47 @@
   @include tabs-content;
 }
 
+// Removed the taxonomy comments below due to the Platform classes included
 /**
- * @summary Needed when tabs need to look like they're in a card
+ * Needed when tabs need to look like they're in a card
  *
- * @selector .slds-tabs_card
- * @restrict .slds-tabs_default
- * @modifier
+ * .slds-tabs_card
+ * .slds-tabs_default
  */
- .slds-tabs_card {
-  padding: $spacing-medium;
-  box-shadow: $shadow-soft-primary;
-  border-radius: $border-radius-small;
+ .slds-tabs_card,
+ .slds-tabs_card.uiTabset--default { //@TODO: Remove - this is currently needed for specificity since uiTabs is not SLDS-ized
+  padding: $cards-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
+  box-shadow: $cards-wrapper-shadow;
+  border-radius: $border-radius-medium;
+
+  .slds-card { // This makes cards look plain when inside a tabset
+    background: $cards-wrapper-color-background;;
+    border: none;
+    border-radius: initial;
+    box-shadow: none;
+  }
  }
 
 /**
- * @summary Updates the container for the card tabs
+ * Updates the container for the card tabs
  *
- * @selector .slds-tabs_card__nav
- * @restrict .slds-tabs_card ul
+ * .slds-tabs_card__nav
+ * .slds-tabs_card ul
  */
- .slds-tabs_card .slds-tabs_default__nav {
+ .slds-tabs_card .slds-tabs_default__nav { // This selector doesn't seem to need an override for core - watch
   border-bottom: $border-width-thick solid $color-border-primary;
  }
 
-/**
- * @summary Adds padding for the tab_card content wrapper
- *
- * @selector .slds-tabs_card__content
- * @restrict .slds-tabs_card div
- */
-.slds-tabs_card .slds-tabs_default__content {
-  padding: $spacing-medium;
+.slds-tabs_card {
+
+  /**
+   * Adds padding for the tab_card content wrapper
+   *
+   * .slds-tabs_card__content
+   * .slds-tabs_card div
+   */
+  .slds-tabs_default__content,
+  .tabs__content.uiTab { // @TODO: Remove - This second selector overrides the product overrides till tabs are slds-ized - GROSS
+    padding: $spacing-medium;
+  }
 }

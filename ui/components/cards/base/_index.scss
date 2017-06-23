@@ -18,11 +18,11 @@
 .slds-card {
   position: relative;
   padding: 0;
-  background: $card-color-background;
-  border: $border-width-thin solid $card-color-border;
+  background: $cards-color-background;
+  border: $border-width-thin solid $cards-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
-  box-shadow: $card-shadow;
+  box-shadow: $cards-shadow;
 
   // Adds spacing between cards
   + .slds-card {
@@ -33,12 +33,12 @@
   &__footer,
   &__body_inner,
   &__body--inner {
-    padding-left: $card-spacing-small;
-    padding-right: $card-spacing-small;
+    padding-left: $cards-spacing-small;
+    padding-right: $cards-spacing-small;
 
     @include mq-large-min {
-      padding-left: $card-spacing-large;
-      padding-right: $card-spacing-large;
+      padding-left: $cards-spacing-large;
+      padding-right: $cards-spacing-large;
     }
   }
 
@@ -49,18 +49,18 @@
    * @restrict .slds-card div
    */
   &__header {
-    padding: $card-header-spacing;
-    margin: $card-header-margin;
+    padding: $cards-header-spacing;
+    margin: $cards-header-margin;
 
     @include mq-large-min {
-      padding-left: $card-spacing-large;
-      padding-right: $card-spacing-large;
+      padding-left: $cards-spacing-large;
+      padding-right: $cards-spacing-large;
     }
   }
 
   &__header-link {
     color: inherit;
-    font-weight: $card-font-weight;
+    font-weight: $cards-font-weight;
   }
 
   /**
@@ -70,7 +70,7 @@
    * @restrict .slds-card div
    */
   &__body {
-    margin-bottom: $card-spacing-small;
+    margin-bottom: $cards-spacing-small;
   }
 
   &__body:empty,
@@ -85,12 +85,12 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    padding-top: $card-footer-spacing-top;
-    padding-bottom: $card-footer-spacing-bottom;
-    margin-top: $card-footer-margin;
-    text-align: $card-footer-text-align;
+    padding-top: $cards-footer-spacing-top;
+    padding-bottom: $cards-footer-spacing-bottom;
+    margin-top: $cards-footer-margin;
+    text-align: $cards-footer-text-align;
     font-size: $font-size-text-small;
-    border-top: $border-width-thin solid $card-footer-color-border;
+    border-top: $border-width-thin solid $cards-footer-color-border;
 
     @include mq-large-min {
       margin-top: $spacing-large;
@@ -107,8 +107,8 @@
       margin-bottom: $spacing-small;
 
       @include mq-large-min {
-        padding-top: $card-spacing-large;
-        margin-bottom: $card-spacing-large;
+        padding-top: $cards-spacing-large;
+        margin-bottom: $cards-spacing-large;
       }
     }
 
@@ -116,16 +116,9 @@
       padding-bottom: $spacing-small;
 
       @include mq-large-min {
-        padding-bottom: $card-spacing-medium;
+        padding-bottom: $cards-spacing-medium;
       }
     }
-  }
-
-  .slds-card {
-    background: $card-color-background;
-    border: none;
-    border-radius: none;
-    box-shadow: none;
   }
 
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
@@ -145,4 +138,30 @@
  */
 .slds-card__tile {
   margin-top: $spacing-x-small;
+}
+
+//
+.slds-card-wrapper {
+  padding: $cards-wrapper-spacing;
+  background: $cards-wrapper-color-background;
+  //border: $border-width-thin solid $cards-color-border;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+  box-shadow: $cards-wrapper-shadow;
+
+  .slds-card__header {
+    padding-left: 0;
+  }
+}
+
+.slds-card,
+.slds-card-wrapper {
+
+  // Make cards inside cards or card wrappers invisible.
+  .slds-card {
+    background: $cards-wrapper-color-background;
+    border: none;
+    border-radius: initial;
+    box-shadow: none;
+  }
 }

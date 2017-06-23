@@ -171,5 +171,32 @@ export let examples = [
         <a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a>
       </CardFooter>
     </Card>
+  },
+  {
+    id: 'card-wrapper',
+    label: 'Wrapped cards',
+    element:
+    <div className="slds-card-wrapper">
+      <Card>
+        <CardHeader actions symbol="contact">
+          <span className="slds-text-heading_small">Contacts (3)</span>
+        </CardHeader>
+        <CardBody>
+          <Card>
+            <CardBody>
+              <p>This is a card inside a card wrapper to show the lack of styling when nested.</p>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardBody>
+              <p>This is a card inside a card wrapper to show the lack of styling when nested.</p>
+            </CardBody>
+          </Card>
+        </CardBody>
+        <CardFooter>
+          <a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a>
+        </CardFooter>
+      </Card>
+    </div>
   }
 ];

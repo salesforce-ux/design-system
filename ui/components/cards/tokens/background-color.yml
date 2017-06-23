@@ -8,6 +8,8 @@ global:
 imports:
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
-  CARD_COLOR_BACKGROUND:
+  CARDS_COLOR_BACKGROUND:
     value: '{!GRAY_CONTRAST_PRIMARY}'
     comment: Default Card component background color.
+  CARDS_WRAPPER_COLOR_BACKGROUND:
+    value: 'transparent'

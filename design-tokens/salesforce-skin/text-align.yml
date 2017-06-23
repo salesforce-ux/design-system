@@ -7,5 +7,5 @@ global:
   cssProperties:
   - text-align
 props:
-  CARD_FOOTER_TEXT_ALIGN:
+  CARDS_FOOTER_TEXT_ALIGN:
     value: 'center'

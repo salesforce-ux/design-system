@@ -13,6 +13,6 @@ props:
   TABS_FONT_WEIGHT:
     value: '700'
     comment: Use for active tab.
-  CARD_FONT_WEIGHT:
+  CARDS_FONT_WEIGHT:
     value: '700'
     comment: Use for active tab.

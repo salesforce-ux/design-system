@@ -44,7 +44,7 @@ describe("scripts/lib.js", () => {
     expect(variant.get('restrictees').count()).toBeGreaterThan(0)
   });
 
-  it.only("gets every example in the system", () => {
+  it("gets every example in the system", () => {
     const allMarkup =
     uiJson.flatMap((group, name) =>
       group.map(item =>

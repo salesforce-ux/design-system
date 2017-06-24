@@ -30,16 +30,16 @@ const tryRequire = p =>
         })
       );
 
-const toShowcaseItem = (id, element) =>
+const toShowcaseItem = (id, element, Context) =>
   Array.isArray(element) // states vs default
-    ? I.List(element).map(I.Map)
-    : I.List.of(I.Map({ id, element }));
+    ? I.List(element).map(I.Map).map(i => i.update('Context', c => c || Context))
+    : I.List.of(I.Map({ id, element, Context }));
 
 const normalizeExports = exports =>
   I.List(Object.keys(exports))
     .filter(title => VALID_MARKUP_EXPORTS.has(title))
     .map(title =>
-      I.Map({ title, items: toShowcaseItem(title, exports[title]) })
+      I.Map({ title, items: toShowcaseItem(title, exports[title], exports.Context) })
     );
 
 const requireVariant = (component, variant, isUtil) =>

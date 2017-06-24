@@ -15,6 +15,16 @@ const { ui } = require('../ui');
 const createInstance = require('../lib');
 const {toList} = require('@salesforce-ux/design-system-previewer/lib/tree');
 const paths = require('../helpers/paths');
+const beautify = require('js-beautify');
+
+const prettyHTML = html => beautify.html(html, {
+  'brace_style': 'end-expand',
+  'indent_size': 2,
+  'indent_char': ' ',
+  'unformatted': [],
+  'wrap_line_length ': 78,
+  'indent_inner_html': true
+});
 
 gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
@@ -29,9 +39,14 @@ const getFileName = (component, variant, item) =>
     item.get('id')
   ).join('_');
 
+const getWrappedElement = item =>
+  item.get('Context')
+  ? React.createElement(item.get('Context'), null, item.get('element'))
+  : item.get('element')
+
 const render = item =>
   React.isValidElement(item.get('element'))
-  ? ReactDOM.renderToStaticMarkup(item.get('element'))
+  ? prettyHTML(ReactDOM.renderToStaticMarkup(getWrappedElement(item)))
   : `FAILED: ${item.get('id')}`
 
 gulp.task('generate:examples', () => {

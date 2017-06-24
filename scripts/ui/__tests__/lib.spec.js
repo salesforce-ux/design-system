@@ -4,10 +4,14 @@
 /* eslint-env jest */
 
 const {ui} = require("../");
+const I = require("immutable");
 const createInstance = require("../../lib.js");
+const showcase = require("../../ui/showcase.js");
+const React = require("react");
+const ReactDOM = require("react-dom/server");
 
 describe("scripts/lib.js", () => {
-  let SLDS;
+  let uiJson, SLDS;
 
   beforeAll(() => {
     ui().fork(
@@ -15,7 +19,8 @@ describe("scripts/lib.js", () => {
         throw e;
       },
       r => {
-        SLDS = createInstance(r)
+        uiJson = r
+        SLDS = createInstance(uiJson)
       }
     );
   });
@@ -38,4 +43,26 @@ describe("scripts/lib.js", () => {
     expect(variant.get('id')).toEqual('stateful')
     expect(variant.get('restrictees').count()).toBeGreaterThan(0)
   });
+
+  it.only("gets every example in the system", () => {
+    const allMarkup =
+    uiJson.flatMap((group, name) =>
+      group.map(item =>
+        SLDS.variants(item)
+        .flatMap(variant =>
+          showcase(item.get('id'), variant.get('id'), name === 'utilities', true)
+          .getOrElse(I.List())
+          .flatMap(section =>
+            section.get('items')
+            .map(i =>
+              React.isValidElement(i.get('element'))
+              ? ReactDOM.renderToStaticMarkup(i.get('element'))
+              : `FAILED: ${item.get('id')}/${variant.get('id')}/${i.get('id')}`
+            )
+          )
+        )
+      )
+    )
+    expect(allMarkup).toMatchSnapshot();
+  })
 });

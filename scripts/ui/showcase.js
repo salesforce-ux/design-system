@@ -42,30 +42,21 @@ const normalizeExports = exports =>
       I.Map({ title, items: toShowcaseItem(title, exports[title]) })
     );
 
-// Needs change of type signature to know if
-// util or not. Multiple places use this so check
-// everything for now, but could lead to name conflicts
-const requireChain = (component, variant) =>
-  I.List.of(
-
-    components(component, "flavors", variant, "index.react.example.jsx"),
-    utilities(component, "example.jsx")
-  );
-
 const requireVariant = (component, variant, isUtil) =>
   (isUtil
   ? tryRequire(utilities(component, "example.jsx"))
   : tryRequire(components(component, variant, "example.jsx")))
   .orElse(Right(I.List()));
 
-module.exports = (component, variant, isUtil) => {
+const removeExamples = sections =>
+  sections.map(section =>
+    section.update("items", items =>
+      items.map(item => item.delete("element").delete("Context"))
+    )
+  )
+
+module.exports = (component, variant, isUtil, keepExamples=false) => {
   return requireVariant(component, variant, isUtil)
     .map(normalizeExports)
-    .map(sections =>
-      sections.map(section =>
-        section.update("items", items =>
-          items.map(item => item.delete("element").delete("Context"))
-        )
-      )
-    );
+    .map(sections => keepExamples ? sections : removeExamples(sections))
 };

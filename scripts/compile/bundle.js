@@ -54,13 +54,12 @@ const chunked = chunkedEntry().map(entry =>
     .setIn(["output", "library"], "SLDS")
     .setIn(["output", "filename"], "[name].js")
     .setIn(["output", "jsonpFunction"], "webpackJsonpSLDS")
-    .set("plugins", [
-      new Minify(),
+    .set("plugins", I.List.of(
       new webpack.optimize.CommonsChunkPlugin({
         name: "common",
         minChunks: 2
       })
-    ])
+    ))
 );
 
 // commonJS :: I.Map
@@ -133,6 +132,11 @@ const createLibrary = (outputDir, compileFn = compile) =>
         config.setIn(
           ["output", "path"],
           path.resolve(outputDir, "__internal", extraFolder)
+        )
+      )
+      .map(config =>
+        config.update('plugins', plugins =>
+          plugins ? plugins.push(new Minify()) : plugins
         )
       )
       .chain(compileFn)

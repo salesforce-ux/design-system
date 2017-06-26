@@ -84,6 +84,7 @@ Object {
     "libraryTarget": "commonjs2",
     "publicPath": "/assets/scripts/bundle/",
   },
+  "plugins": Array [],
   "resolve": Object {
     "alias": Object {
       "lodash": "",
@@ -124,6 +125,7 @@ Object {
     "libraryTarget": "umd",
     "publicPath": "/assets/scripts/bundle/",
   },
+  "plugins": Array [],
   "resolve": Object {
     "alias": Object {
       "lodash": "",

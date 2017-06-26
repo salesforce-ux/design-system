@@ -224,7 +224,8 @@
   box-shadow: $card-wrapper-shadow;
   border-radius: $border-radius-medium;
 
-  .slds-card { // This makes cards look plain when inside a tabset
+  .slds-card,
+  .slds-card-wrapper { // This makes cards look plain when inside a tabset
     background: $cards-color-background;
     border: none;
     border-radius: initial;

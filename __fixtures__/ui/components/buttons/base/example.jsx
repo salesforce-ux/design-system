@@ -20,26 +20,6 @@ export default (
 
 export let states = [
   {
-    id: 'neutral',
-    label: 'Neutral',
-    element: <Button className="slds-button_neutral">Button</Button>
-  },
-  {
-    id: 'brand',
-    label: 'Brand',
-    element: <Button className="slds-button_brand">Button</Button>
-  },
-  {
-    id: 'destructive',
-    label: 'Desctructive',
-    element: <Button className="slds-button_destructive">Button</Button>
-  },
-  {
-    id: 'success',
-    label: 'Success',
-    element: <Button className="slds-button_success">Button</Button>
-  },
-  {
     id: 'disabled',
     label: 'Disabled',
     element: <Button disabled>Button</Button>

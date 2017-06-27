@@ -15,7 +15,7 @@ module.exports = {
   node_modules,
 
   assets: path.resolve(root, 'assets'),
-  ui: path.resolve(root, 'ui'),
+  ui: process.env.NODE_ENV === 'test' ? path.resolve(root, "__fixtures__/ui") : path.resolve(root, 'ui'),
   designTokens: path.resolve(root, 'design-tokens'),
 
   icons: path.resolve(node_modules, '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'),

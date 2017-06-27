@@ -35,12 +35,6 @@ export let states = [
     element: <Button className="slds-button_destructive">Button</Button>
   },
   {
-    id: 'inverse',
-    label: 'Inverse',
-    element: <Button className="slds-button_inverse">Button</Button>,
-    Context: props => <div style={{padding: '0.5rem', background: '#16325c'}} />
-  },
-  {
     id: 'success',
     label: 'Success',
     element: <Button className="slds-button_success">Button</Button>

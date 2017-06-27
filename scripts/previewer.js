@@ -8,7 +8,7 @@ const gulp = require("gulp");
 const bundlePath = path.resolve(__dirname, "../assets/scripts");
 const { writeToDist } = require("./ui");
 
-const createPreviewer = require("@salesforce-ux/design-system-previewer");
+const createPreviewer = require("../../design-system-previewer");
 const { watchPaths } = require("./watch");
 
 const Bundle = require("./compile/bundle");

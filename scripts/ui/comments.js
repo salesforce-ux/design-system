@@ -5,17 +5,13 @@ const Task = require("data.task");
 const glob = require("glob");
 const fs = require("fs");
 const path = require("path");
-
-
-const designSystemPath = process.env.NODE_ENV === 'test'
-? path.resolve.bind(path, __dirname, "../../__fixtures__/ui")
-: path.resolve.bind(path, __dirname, "../../ui");
+const paths = require("../helpers/paths");
 
 module.exports = () =>
   new Task((rej, res) =>
     res(
       glob
-        .sync(designSystemPath("**/*.scss"))
+        .sync(path.resolve(paths.ui, "**/*.scss"))
         .map(scssPath => fs.readFileSync(scssPath, "utf-8"))
         .join("\n")
     )

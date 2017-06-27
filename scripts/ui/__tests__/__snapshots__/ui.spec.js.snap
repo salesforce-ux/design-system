@@ -179,16 +179,7 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                   "restrictees": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
+              "showcase": Array [],
             },
             Object {
               "annotations": Object {
@@ -234,46 +225,10 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                   "restrictees": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "icon-right",
-                      "label": "Neutral with right icon",
-                    },
-                  ],
-                  "title": "examples",
-                },
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
+              "showcase": Array [],
             },
           ],
-          "showcase": Array [
-            Object {
-              "items": Array [
-                Object {
-                  "id": "disabled",
-                  "label": "Disabled",
-                },
-              ],
-              "title": "states",
-            },
-            Object {
-              "items": Array [
-                Object {
-                  "id": "default",
-                },
-              ],
-              "title": "default",
-            },
-          ],
+          "showcase": Array [],
         },
       ],
     },
@@ -633,129 +588,10 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                       "restrictees": Array [],
                     },
                   ],
-                  "showcase": Array [
-                    Object {
-                      "items": Array [
-                        Object {
-                          "id": "with-link",
-                          "label": "Cell focused - Link",
-                          "script": "
-      document.getElementById('link-01').focus()
-    ",
-                        },
-                        Object {
-                          "id": "checkbox",
-                          "label": "Cell focused - Checkbox",
-                          "script": "
-      document.getElementById('checkbox-01').focus()
-    ",
-                        },
-                        Object {
-                          "id": "focused",
-                          "label": "Cell focused",
-                          "script": "
-      document.getElementById('button-01').focus()
-    ",
-                        },
-                        Object {
-                          "id": "edit",
-                          "label": "Cell edit",
-                          "script": "
-      document.getElementById('company-01').focus()
-      document.getElementById('company-01').select()
-    ",
-                        },
-                        Object {
-                          "id": "required",
-                          "label": "Cell edit — Required",
-                          "script": "
-      document.getElementById('company-01').focus()
-      document.getElementById('company-01').select()
-    ",
-                        },
-                        Object {
-                          "id": "error",
-                          "label": "Cell edit — Error",
-                          "script": "
-      document.getElementById('company-01').focus()
-      document.getElementById('company-01').select()
-    ",
-                        },
-                        Object {
-                          "id": "edited",
-                          "label": "Cell edited",
-                        },
-                        Object {
-                          "id": "row-error",
-                          "label": "Error - Row level on save",
-                          "script": "
-      document.getElementById('button-01').focus()
-    ",
-                        },
-                        Object {
-                          "id": "row-error-focused",
-                          "label": "Error indicator - Focused",
-                          "script": "
-      document.getElementById('error-01').focus()
-    ",
-                        },
-                        Object {
-                          "id": "header-cell-focused",
-                          "label": "Header cell focused",
-                        },
-                        Object {
-                          "id": "header-cell-marked",
-                          "label": "Header cell marked",
-                        },
-                      ],
-                      "title": "states",
-                    },
-                    Object {
-                      "items": Array [
-                        Object {
-                          "id": "default",
-                        },
-                      ],
-                      "title": "default",
-                    },
-                  ],
+                  "showcase": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "row-selected",
-                      "label": "Row Selected",
-                    },
-                    Object {
-                      "id": "all-row-selected",
-                      "label": "All Rows Selected",
-                    },
-                    Object {
-                      "id": "sorted-column-asc",
-                      "label": "Sorted Ascending",
-                    },
-                    Object {
-                      "id": "sorted-column-desc",
-                      "label": "Sorted Descending",
-                    },
-                    Object {
-                      "id": "resized-column",
-                      "label": "Column resized",
-                    },
-                  ],
-                  "title": "states",
-                },
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
+              "showcase": Array [],
             },
           ],
           "showcase": Array [
@@ -914,27 +750,7 @@ If you want the parent of the floated element to contain the floats, add the \`.
 }
 `;
 
-exports[`scripts/ui.js ui includes the examples skeleton for components 1`] = `
-Array [
-  Object {
-    "items": Array [
-      Object {
-        "id": "disabled",
-        "label": "Disabled",
-      },
-    ],
-    "title": "states",
-  },
-  Object {
-    "items": Array [
-      Object {
-        "id": "default",
-      },
-    ],
-    "title": "default",
-  },
-]
-`;
+exports[`scripts/ui.js ui includes the examples skeleton for components 1`] = `Array []`;
 
 exports[`scripts/ui.js ui includes the examples skeleton for utilities 1`] = `
 Array [

@@ -6,8 +6,9 @@ const { Left, Right } = Either;
 const I = require("immutable-ext");
 const fs = require("fs");
 const path = require("path");
+const paths = require("../helpers/paths");
 
-const designSystemPath = path.resolve.bind(path, __dirname, "../../ui");
+const designSystemPath = path.resolve.bind(path, paths.ui);
 
 const VALID_MARKUP_EXPORTS = new Set([
   "preview",
@@ -46,7 +47,7 @@ const requireVariant = (component, variant, isUtil) =>
   (isUtil
   ? tryRequire(utilities(component, "example.jsx"))
   : tryRequire(components(component, variant, "example.jsx")))
-  .orElse(Right(I.List()));
+  .orElse(() => Right(I.List()));
 
 const removeExamples = sections =>
   sections.map(section =>

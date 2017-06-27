@@ -27,7 +27,9 @@ module.exports = ui => {
     Either.of(id).chain(i => find(toList(comp), x => x.get("id") === i));
 
   const getShowcase = (comp, variant) =>
-    component(comp)
+    utilities().find(u => u === comp)
+    ? utility(comp).map(u => u.get('showcase'))
+    : component(comp)
       .chain(c => findVariant(c, variant))
       .map(v => v.get("showcase"));
 

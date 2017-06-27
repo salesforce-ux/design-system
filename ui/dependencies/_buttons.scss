@@ -8,13 +8,56 @@
   }
   text-align: center;
   vertical-align: middle;
+  border: $border-width-thin solid $color-border-primary;
+  transition: border 0.15s linear, box-shadow 0.15s linear;
+
+  &:focus,
+  &:hover {
+    box-shadow: $shadow-soft-primary-hover;
+  }
+
+  &:active {
+    box-shadow: $shadow-soft-primary-active;
+  }
+
+  &[disabled] {
+    box-shadow: none;
+  }
 }
 
-@mixin button-interactions {
+@mixin button-icon {
+  line-height: $line-height-reset;
+  vertical-align: middle;
+  color: $color-text-icon-default;
+  border: $border-width-thin solid $color-border-primary;
+  transition: border 0.15s linear, box-shadow 0.15s linear;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-soft-primary-hover;
+  }
+
+  &:active {
+    box-shadow: $shadow-soft-primary-active;
+  }
+
+  &[disabled] {
+    color: $color-text-button-default-disabled;
+    box-shadow: none;
+  }
+}
+
+@mixin button-base {
+  border-color: $button-color-border-primary;
+  background-color: $button-color-background-primary;
 
   &:hover,
   &:focus {
     background-color: $color-background-button-default-hover;
+  }
+
+  &:focus {
+    border-color: $color-border-brand-primary;
   }
 
   &:active {
@@ -22,38 +65,41 @@
   }
 }
 
-@mixin button-base {
-
-  @include button-interactions;
-  border: $border-width-thin solid $color-border-button-default;
-}
-
 @mixin button-brand {
-  background-color: $color-background-button-brand;
-  border: $border-width-thin solid $color-border-button-brand;
-  color: $color-text-button-brand;
+  background-color: $color-background-brand-primary;
+  border-color: $button-color-border-brand-primary;
+  color: $color-text-brand-primary;
 
   &:link,
   &:visited,
   &:active {
-    color: $color-text-button-brand;
+    color: $color-text-brand-primary;
   }
 
   &:hover,
   &:focus {
-    background-color: $color-background-button-brand-hover;
-    color: $color-text-button-brand-hover;
+    background-color: $color-background-brand-primary-hover;
+    border-color: $color-border-brand-primary-hover;
+    color: $color-text-brand-primary;
   }
 
   &:active {
-    background-color: $color-background-button-brand-active;
+    background-color: $color-background-brand-primary-active;
+    border-color: $color-border-brand-primary-active;
+  }
+}
+
+@mixin button-transparent {
+  border-color: $button-color-border-primary;
+
+  &:focus {
+    border-color: $color-border-brand-primary;
   }
 }
 
 @mixin button-destructive {
-  // @TODO - update when new tokens hit the repo
   background-color: $color-background-destructive;
-  border: $border-width-thin solid $color-background-destructive;
+  border-color: $color-background-destructive;
   color: $color-text-inverse;
 
   &:link,
@@ -76,7 +122,7 @@
 
 @mixin button-success {
   background-color: $color-background-button-success;
-  border: $border-width-thin solid $color-border-success;
+  border-color: $color-border-success;
   color: $color-text-default;
 
   &:link,
@@ -95,5 +141,17 @@
   &:active {
     background-color: $color-background-button-success-active;
     border-color: $color-border-success-dark;
+  }
+}
+
+@mixin button-interactions {
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-default-active;
   }
 }

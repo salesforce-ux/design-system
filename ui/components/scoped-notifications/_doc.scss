@@ -1,0 +1,18 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * Scoped notifications contain `role="status"` on the container to signal to the browser to send an accessible status event to assistive technology. The assistive technology then notifies the user.
+ *
+ * @summary Scoped notifications serve advisory information for the user that is not important enough to justify an alert. It is often presented as a status bar scoped to the container. They are not dismissable.
+ *
+ * @base
+ * @name scoped-notifications
+ * @selector .slds-scoped-notification
+ * @support dev-ready
+ * @category experience
+ * @type messaging
+ * @role status
+ */

@@ -28,10 +28,10 @@
   &__label {
     display: inline-block;
     color: $color-text-label;
-    font-size: $font-size-small;
+    font-size: $font-size-text-x-small;
     line-height: $line-height-text;
     margin-right: $spacing-small;
-    margin-bottom: $spacing-xx-small;
+    margin-bottom: $spacing-xxx-small;
 
     &:empty {
       margin: 0;

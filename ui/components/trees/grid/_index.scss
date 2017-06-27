@@ -2,6 +2,42 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * A tree grid is additional semantics that are laid on top of a grid based component via ARIA attributes, to enable hierarchically structured tabular data.
+ * The tree grid comes with a very specific keyboard interaction model which **must** be implemented for the component to be screen reader accessible.
+ *
+ * #### Accessibility
+ *
+ * **Notable attributes**
+ *
+ * - `role="treegrid"` should be applied to the `table` element
+ * - `aria-readonly="true"` should be applied to the `table` element
+ * - `aria-level="n"` where `n` represents the nesting level of a particular grid row, should be applied to the `tr` element
+ * - `aria-setsize="n"` where `n` is the number of items for that specific `aria-level` should be applied to the `tr` element
+ * - `aria-posinset="n"` where `n` represents the position in the `aria-level` set the row is placed at, should be applied to the `tr` element
+ * - `aria-expanded="false"` should be placed on rows that are collapsed and have child rows
+ * - `aria-expanded="true"` should be placed on rows that are expanded and have child rows
+ * - `tabindex="0"` should be placed on the first `tr` in the grid on load, to make the row focusable
+ * - Every actionable element in the grid should have `tabindex="-1" applied to make them not focusable in the grids navigation mode
+ *
+ * **Keyboard interaction**
+ *
+ * - Overall keyboard interaction should follow the same keyboard modal as the [Advanced and Inline Edit Data Table](/components/data-tables) with some additions
+ *   - Navigation mode is the default mode. The grid only has a single focusable element at any time and it is either the `tr` or the `td`
+ *   - Actionable mode is enabled when the user presses the `Enter` key, where actionable elements become focusable in the cell
+ *   - Actionable mode is exited when the user presses the `Escape` key, and the user is placed back into Navigation Mode on the last cell they were in
+ * - User focus is initially placed on the first row in the tree grid
+ * - `Down` arrow key moves the user down one row and moves `tabindex="0"` with it
+ * - `Up` arrow key moves the user up one row and moves `tabindex="0"` with it
+ * - `Right` arrow key on a collapsed row, will expand it and update `aria-expanded`
+ * - `Right` arrow key on an expanded or end row will move the user to the first cell in the row and move `tabindex="0"` with it
+ * - `Right` arrow key on a cell will move the user to the next cell in the row and move `tabindex="0"` with it
+ * - `Left` arrow key on a collapsed or end row will move the user to it's parent row and collapse it, if it has one
+ * - `Left` arrow key on an expanded row will collapse it and update `aria-expanded`
+ * - `Left` arrow key on a cell will move the user to the previous cell in the row and moves `tabindex="0"` with it
+ * - `Left` arrow key on the first cell of a row will move the user back to the row  and moves `tabindex="0"` with it
+ *
+ * @summary A tree grid is a way to structure tabular data that has a hierarchical structure. A tree grid row can be expanded or collapsed.
+ *
  * @name grid
  * @selector .slds-table_tree
  * @restrict .slds-tree

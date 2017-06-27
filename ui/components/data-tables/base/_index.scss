@@ -18,7 +18,7 @@
   // Cells
   th,
   td {
-    padding: $table-spacing-x-small;
+    padding: $table-cell-spacing;
     white-space: nowrap;
     position: relative;
   }
@@ -32,6 +32,12 @@
     }
   }
 
+  thead th {
+    background-color: $table-color-background-header;
+    color: $table-color-text-header;
+    padding: $table-cell-spacing;
+  }
+
   /**
    * Default Table Row Hover
    *
@@ -39,7 +45,10 @@
    * @restrict .slds-table
    * @modifier
    */
-  &:not(.slds-no-row-hover) tbody tr:hover {
+  &:not(.slds-no-row-hover) tbody tr:hover,
+  &:not(.slds-no-row-hover) tbody tr:focus {
+
+    outline: 0;
 
     > td,
     > th {
@@ -200,7 +209,9 @@
   //
   // Box shadow used to eliminate jumpiness on hover
   &:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
-  &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected) {
+  &:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+  &:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+  &:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected) {
     box-shadow:
       $color-border 0 ($border-width-thin * -1) 0 inset,
       $color-border 0 ($border-width-thin) 0 inset;
@@ -300,8 +311,8 @@
   &.slds-has-focus .slds-th__action,
   &.slds-has-focus .slds-th__action:hover,
   &.slds-has-focus .slds-th__action:focus {
-    background-color: $color-background-row-hover;
-    color: $color-text-link;
+    background-color: $table-color-background-header-hover;
+    color: currentColor;
 
     .slds-icon {
       display: inline-block;
@@ -318,13 +329,13 @@
  */
 .slds-th__action {
   display: flex;
-  padding: $spacing-x-small $table-spacing-x-small;
+  padding: $table-cell-spacing;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
 
   &:focus,
   &:hover {
     outline: 0;
-    background-color: $color-background-row-hover;
+    background-color: $table-color-background-header-hover;
   }
 
   /**
@@ -452,7 +463,22 @@
   }
 
   // No idea what this does
+  // It looks like it would make the resizable handle show up when the input in the header has focus?
   &__input:focus ~ .slds-resizable__handle {
     opacity: 1;
+  }
+}
+
+/**
+ * @summary Use this class to join a table to a page-header
+ *
+ * @selector .slds-table_joined
+ * @restrict .slds-table
+ */
+.slds-table_joined {
+  margin: $table-spacing;
+
+  table {
+    border-radius: $table-border-radius;
   }
 }

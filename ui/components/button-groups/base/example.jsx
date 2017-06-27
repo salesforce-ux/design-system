@@ -184,14 +184,14 @@ export let examples = [
     element:
       <ButtonGroup>
         <ButtonIcon
-          className="slds-button_icon-border"
+          className="slds-button_icon-border-filled"
           symbol="chart"
           assistiveText="Charts"
           title="Charts"
           aria-pressed="false"
         />
         <ButtonIcon
-          className="slds-button_icon-border"
+          className="slds-button_icon-border-filled"
           symbol="filterList"
           assistiveText="Filter List"
           title="Filter List"
@@ -211,14 +211,14 @@ export let examples = [
     element:
       <ButtonGroup>
         <ButtonIcon
-          className="slds-button_icon-border slds-is-selected"
+          className="slds-button_icon-border-filled slds-is-selected"
           symbol="chart"
           assistiveText="Charts"
           title="Charts"
           aria-pressed="true"
         />
         <ButtonIcon
-          className="slds-button_icon-border"
+          className="slds-button_icon-border-filled"
           symbol="filterList"
           assistiveText="Filter List"
           title="Filter List"

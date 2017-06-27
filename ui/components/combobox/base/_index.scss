@@ -49,6 +49,18 @@
   flex: 1 1 auto;
 }
 
+[role="combobox"] input[readonly] {
+  padding-left: $spacing-small;
+  border-color: $color-border-input;
+  background-color: $color-background-input;
+  font-size: inherit;
+  font-weight: $font-weight-regular;
+
+  &:focus {
+    border-color: $color-border-brand-primary;
+  }
+}
+
 /**
  * Listbox container
  *
@@ -293,6 +305,7 @@
 .slds-has-inline-listbox,
 .slds-has-object-switcher {
   flex-direction: row;
+  background: $color-background-input;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 

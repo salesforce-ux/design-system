@@ -1,0 +1,38 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Swatches Only variant should only render a group of individual swatches.
+ * It should not render any of the main chrome of the color picker UI (no Summary
+ * section, no Popover, no Tabset), it should only render the Color Picker swatches
+ * selector. This component should be rendered inside a menu.
+ *
+ * ### Accessibility Notes
+ *
+ * The accessibility requirements for this Variant are slightly different from
+ * the others:
+ *
+ * #### `.slds-color-picker__swatches`
+ *
+ * This element _needs_ a `role` of `menu`.
+ *
+ * #### `.slds-color-picker__swatch-trigger`
+ *
+ * This element _needs_ a `role` of `option`
+ *
+ * @summary Swatches Only UI
+ *
+ * @name swatches-only
+ * @selector .slds-color-picker_swatches-only
+ * @restrict .slds-color-picker
+ * @variant
+ */
+
+.slds-color-picker.slds-color-picker_swatches-only {
+  width: $color-picker-swatches-width;
+  padding: $spacing-x-small;
+
+  .slds-color-picker__selector {
+    margin: 0;
+  }
+}

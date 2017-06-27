@@ -11,12 +11,16 @@
  */
 .slds-button-group,
 .slds-button-group-list {
-  display: flex;
+  display: inline-flex;
 
   .slds-button {
     border-radius: 0;
+    border-width: $border-width-thin;
+    box-shadow: none;
 
+    &:hover,
     &:focus {
+      box-shadow: $shadow-soft-primary-hover;
       z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons
     }
   }
@@ -32,7 +36,7 @@
 // These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
 .slds-button-group-list li:first-child .slds-button,
 .slds-button-group .slds-button:first-child {
-  border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  border-radius: $button-border-radius 0 0 $button-border-radius;
 }
 
 /**
@@ -52,13 +56,13 @@
 .slds-button-group .slds-button--last .slds-button:only-child,
 .slds-button-group .slds-button.slds-button_last,
 .slds-button-group .slds-button.slds-button--last {
-  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  border-radius: 0 $button-border-radius $button-border-radius 0;
 }
 
 // The following rule must stay at the **bottom** due to the cascade
 .slds-button-group .slds-button:only-child,
 .slds-button-group-list li:only-child .slds-button {
-  border-radius: $border-radius-medium;
+  border-radius: $button-border-radius;
 }
 
 .slds-button-group + .slds-button-group,

@@ -1,0 +1,52 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+// If the brand band is standalone, use this modifier. If the brand band is being extended
+// into another component use slds-brand-band without this modifier
+.slds-brand-band {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: ($height-context-bar + $height-header); // to stay out from behind the global nav
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-band-color-background-primary;
+    background-image: url($brand-band-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // Small Height Modifier (Made the default as a test)
+  &.slds-brand-band_small:before {
+    height: $brand-band-image-height-small;
+  }
+
+  // Medium Height Modifier
+  &.slds-brand-band_medium:before {
+    height: $brand-band-image-height-medium;
+  }
+
+  // Large Height Modifier
+  &.slds-brand-band_large:before {
+    height: $brand-band-image-height-large;
+  }
+
+  // Full Height Modifier
+  &.slds-brand-band_full:before {
+    height: 100%;
+  }
+
+  &.slds-brand-band_bottom:before {
+    background-position: bottom;
+    top: initial;
+  }
+
+  &.slds-brand-band_none:before {
+    height: 0;
+  }
+}

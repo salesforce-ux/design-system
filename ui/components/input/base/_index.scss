@@ -17,8 +17,17 @@
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
-  &:read-only {
-    @include button-interactions;
+  /**
+   *
+   * @selector [readonly]
+   * @restrict .slds-input
+   */
+  &[readonly] {
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: $input-static-font-size;
+    font-weight: $input-static-font-weight;
   }
 
   &[type="search"]::-ms-clear {
@@ -79,7 +88,7 @@
    * Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
-   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   .slds-input__icon {
     @include square($square-icon-medium-content);
@@ -248,6 +257,8 @@
   padding-top: $spacing-xx-small;
   padding-bottom: $spacing-xx-small;
   min-height: calc(#{$line-height-button} + 2px); // For IE
+  font-size: $input-static-font-size;
+  font-weight: $input-static-font-weight;
 
   // If read only state is longform
   // Apply text line height

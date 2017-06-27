@@ -10,6 +10,30 @@ global:
 imports:
 - ./aliases/color.yml
 props:
+  ## DEFAULT
+  COLOR_TEXT_PRIMARY:
+    value: '{!BISCAY}'
+    comment: Primary body text color
+  COLOR_TEXT_SECONDARY:
+    value: '{!KASHMIR_BLUE}'
+    comment: Secondary body text color
+  COLOR_TEXT_TERTIARY:
+    value: '{!KASHMIR_BLUE}'
+    comment: Tertiary body text color
+  ## BRANDING
+  COLOR_TEXT_BRAND_PRIMARY:
+    value: '{!WHITE}'
+    comment: Text color found on any primary brand color
+  ## INTERACTIONS
+  COLOR_TEXT_LINK_PRIMARY:
+    value: "{!SCIENCE_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_HOVER:
+    value: "{!SCIENCE_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_ACTIVE:
+    value: "{!MIDNIGHT_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_FOCUS:
+    value: "{!SCIENCE_BLUE}"
+  #########
   COLOR_TEXT_ACTION_LABEL:
     value: '{!KASHMIR_BLUE}'
     comment: Action label text color

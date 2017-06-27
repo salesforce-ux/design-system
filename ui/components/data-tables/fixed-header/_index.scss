@@ -6,8 +6,7 @@
 .slds-table--header-fixed_container {
   position: relative;
   padding-top: 2rem; // This matches the height of the hover state w/border
-  border-top: $border-width-thin solid $color-border;
-  background-color: $color-background-alt;
+  background-color: $table-color-background-header; // This has to exist due to pixel paint diffs between the headers
   overflow: hidden;
 
   &:before {
@@ -20,6 +19,7 @@
 }
 
 .slds-cell-fixed {
+  background-color: $table-color-background-header;
   position: absolute;
   top: 0;
   min-height: 2rem;

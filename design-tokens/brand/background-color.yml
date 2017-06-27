@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ../force-base/aliases/color.yml
+props:
+  ## BRAND BAND
+  BRAND_BAND_IMAGE:
+    value: '/_slds/images/themes/one/banner-mountains.png'
+    type: raw
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: '#69b9dc'

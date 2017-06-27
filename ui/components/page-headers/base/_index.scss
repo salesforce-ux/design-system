@@ -14,31 +14,57 @@
  */
 
 .slds-page-header {
-  padding: $spacing-medium $spacing-small;
-  border-bottom: $border-width-thin solid $color-border;
-  background: $color-background-page-header;
+  margin: $page-header-spacing-margin;
+  padding: $page-header-spacing-padding;
+  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-radius: $page-header-border-radius;
+  background: $page-header-color-background;
+  background-clip: padding-box;
+  box-shadow: $page-header-shadow;
+}
 
-  /**
-   * Page title (header text).
-   *
-   * @selector .slds-page-header__title
-   * @restrict .slds-page-header h1
-   * @required
-   */
+/**
+ * Page title (header text).
+ *
+ * @selector .slds-page-header__title
+ * @restrict .slds-page-header h1
+ */
+.slds-page-header__title {
+  font-size: $page-header-font-size-title;
+  line-height: $line-height-heading;
 
-  &__title {
-    font: {
-      weight: $font-weight-regular;
-      size: $font-size-large;
-    }
-    line-height: $line-height-heading;
-  }
-
-  @include mq-medium-min {
-    padding: $spacing-medium $spacing-large;
-
-    &__title {
-      font-size: $font-size-x-large;
-    }
+  .slds-icon {
+    fill: currentColor;
   }
 }
+
+/**
+ * @summary This class makes the page header appear attached to the component below it
+ *
+ * @selector .slds-page-header_joined
+ * @restrict .slds-page-header
+ */
+ .slds-page-header_joined {
+  margin: $page-header-joined-spacing-margin;
+  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-radius: $page-header-joined-border-radius;
+  box-shadow: none;
+ }
+
+// .slds-page-header__icon {
+//   @include square(2.25rem);
+// }
+
+// If themes are on, manipulate these components
+// .slds-page-header__utility-group {
+//
+//   .slds-button,
+//   .slds-button_icon,
+//   .slds-button-group {
+//     box-shadow: $page-header-button-shadow;
+//
+//     .slds-button {
+//       box-shadow: none;
+//     }
+//   }
+// }

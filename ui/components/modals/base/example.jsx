@@ -119,7 +119,7 @@ let Directional = props =>
 let Headless = props =>
   <Demo style={{height: '640px'}}>
     <Modal aria-label="Meaningful description of the modal content">
-      <ModalHeader className="slds-modal__header slds-modal__header_empty" />
+      <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
         <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
           quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>

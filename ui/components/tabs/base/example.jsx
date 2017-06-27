@@ -101,5 +101,10 @@ export let examples = [
     id: 'nested',
     label: 'With Nested Scoped Tabs',
     element: <Default itemOneContent={<ScopedTabs />} />
+  },
+  {
+    id: 'card-look',
+    label: 'Tab Card-look',
+    element: <Default className="slds-tabs_card" />
   }
 ];

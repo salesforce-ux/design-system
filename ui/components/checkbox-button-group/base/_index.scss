@@ -13,6 +13,7 @@
 .slds-checkbox_button-group,
 .slds-checkbox--button-group {
   display: inline-flex;
+  background-color: $button-color-background-primary;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 }
@@ -40,7 +41,10 @@
    */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
-    @include button;
+    padding-left: $spacing-medium;
+    padding-right: $spacing-medium;
+    text-align: center;
+    vertical-align: middle;
     position: relative;
     background-color: $color-background-button-default;
     transition: border $duration-quickly linear, background-color $duration-quickly linear;

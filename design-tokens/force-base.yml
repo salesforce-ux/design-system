@@ -18,8 +18,6 @@ imports:
 - ./force-base/opacity.yml
 - ./force-base/duration.yml
 - ./force-base/z-index.yml
-- ./salesforce-skin.yml
-## SALESFORCE-SKIN IMPORT GOES HERE IF IT TEAM WANTS NEW-UI TO BE A PART OF THE DEFAULT UI
 - ./components.yml
 auraImports:
 - 'force:mqCommons'

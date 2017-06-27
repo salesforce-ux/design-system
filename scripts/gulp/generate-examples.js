@@ -7,10 +7,24 @@ const I = require('immutable');
 const Task = require('data.task');
 const insert = require('gulp-insert');
 const through = require('through2');
+const React = require('react');
+const ReactDOM = require('react-dom/server');
+const showcase = require('../ui/showcase');
 
-const { ui, examples, isVariant } = require('../ui');
+const { ui } = require('../ui');
+const createInstance = require('../lib');
 const {toList} = require('@salesforce-ux/design-system-previewer/lib/tree');
 const paths = require('../helpers/paths');
+const beautify = require('js-beautify');
+
+const prettyHTML = html => beautify.html(html, {
+  'brace_style': 'end-expand',
+  'indent_size': 2,
+  'indent_char': ' ',
+  'unformatted': [],
+  'wrap_line_length ': 78,
+  'indent_inner_html': true
+});
 
 gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
@@ -18,47 +32,52 @@ gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
     .pipe(insert.wrap('<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../.assets/styles/index.css" /></head><body>', '</body></html>'))
     .pipe(gulp.dest(paths.html)));
 
-const defaultItem = markup =>
-  I.fromJS({title: 'default', items: [{id: 'default', markup}]});
+const getFileName = (component, variant, item) =>
+  I.List.of(
+    component.get('id'),
+    variant.get('id'),
+    item.get('id')
+  ).join('_');
+
+const getWrappedElement = item =>
+  item.get('Context')
+  ? React.createElement(item.get('Context'), null, item.get('element'))
+  : item.get('element')
+
+const render = item =>
+  React.isValidElement(item.get('element'))
+  ? prettyHTML(ReactDOM.renderToStaticMarkup(getWrappedElement(item)))
+  : `FAILED: ${item.get('id')}`
 
 gulp.task('generate:examples', () => {
   const stream = through.obj();
-  Task.of(ui => examples => [ui, examples])
-  .ap(ui())
-  .ap(examples().map(es => es.get('components')))
-  .fork(() => {}, ([ui, examples]) => {
-    ui
-    .get('components')
-    .forEach(component => {
-      toList(component)
-      .filter(isVariant)
-      .forEach(variant => {
-        examples.get(component.get('id')).get(variant.get('id')).get('sections')
-        .unshift(defaultItem(variant.get('markup')))
-        .forEach(section => {
-          section.get('items')
-          .forEach(item => {
-            const name = I.List.of(
-              component.get('id'),
-              variant.get('id'),
-              item.get('id')
-            ).join('_');
-            const markupContext = variant.get('markupContext');
-            const markup = I.List.of(
-              markupContext.get(0, ''),
-              item.get('markup'),
-              markupContext.get(1, '')
-            ).join('');
-            stream.write(new gutil.File({
-              path: `${name}.html`,
-              contents: Buffer.from(markup)
-            }));
-          });
-        });
-      });
-    });
-    stream.end();
-  });
+  ui()
+  .chain(uiJSON =>
+    Task.of(createInstance(uiJSON))
+    .map(SLDS =>
+      uiJSON.forEach((group, name) =>
+        group.forEach(item =>
+          SLDS.variants(item)
+          .forEach(variant =>
+            showcase(item.get('id'), variant.get('id'), name === 'utilities', true)
+            .getOrElse(I.List())
+            .forEach(section =>
+              section.get('items')
+              .forEach(i =>
+                stream.write(new gutil.File({
+                  path: `${getFileName(item, variant, i)}.html`,
+                  contents: Buffer.from(render(i))
+                }))
+              )
+            )
+          )
+        )
+      )
+    )
+  ).fork(
+    e => { throw e; },
+    () => stream.end()
+  )
   return stream
     .pipe(gulp.dest(`${paths.generated}/examples`));
 });

@@ -315,3 +315,9 @@ props:
     value: '#56AAD0'
   MACROS:
     value: '#47CFD2'
+  SERVICE_CREW_MEMBER:
+    value: '#7E8BE4'
+  SERVICE_CREW:
+    value: '#FA975C'
+  CONTRACT_LINE_ITEM:
+    value: '#6EC06E'

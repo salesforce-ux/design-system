@@ -12,3 +12,5 @@ imports:
 props:
   PAGE_HEADER_COLOR_BORDER:
     value: '{!GEYSER}'
+  PAGE_HEADER_JOINED_COLOR_BORDER:
+    value: '{!GEYSER}'

@@ -479,6 +479,7 @@
   margin: $table-spacing;
 
   table {
-    border-radius: $table-border-radius;
+    border-radius: $table-border-radius; // @TODO: This should probably use the card-wrapper token as well
+    box-shadow: $card-wrapper-shadow; // This should always mirror the card's box shadow
   }
 }

@@ -3,7 +3,6 @@
 
 imports:
 - ./brand/background-color.yml
-- ./brand/border-radius.yml
 - ./brand/box-shadow.yml
 - ./brand/sizing.yml
 - ./brand/spacing.yml

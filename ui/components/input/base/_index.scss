@@ -27,7 +27,7 @@
     border-color: transparent;
     background-color: transparent;
     font-size: $input-static-font-size;
-    font-weight: $input-static-font-weight;
+    font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
   }
 
   &[type="search"]::-ms-clear {
@@ -74,6 +74,16 @@
     min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   }
 }
+
+/**
+ * @summary Modifier to allow a [readonly] input to have borders
+ *
+ * @selector .slds-input_borders
+ * @restrict .slds-input
+ */
+ .slds-input_borders {
+    border-color: $color-border-input;
+ }
 
 /**
  * @summary Modifier if text input has svg icon adjacent to input

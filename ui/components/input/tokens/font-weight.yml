@@ -10,3 +10,5 @@ global:
 props:
   INPUT_STATIC_FONT_WEIGHT:
     value: '400'
+  INPUT_READONLY_FONT_WEIGHT:
+    value: '400'

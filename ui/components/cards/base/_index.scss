@@ -155,8 +155,10 @@
   }
 }
 
-.slds-card-wrapper__bottom_joined {
-  box-shadow: 0 0 $card-wrapper-shadow $card-wrapper-shadow;
+.slds-card-wrapper__bottom_joined { // used to connect to page-headers like the table_joined does (kanban, etc)
+  margin: 0 1rem;
+  padding-top: 0;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
 }
 
 .slds-card,

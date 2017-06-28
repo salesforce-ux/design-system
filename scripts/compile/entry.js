@@ -14,6 +14,6 @@ const examplePath = (component, variant, isUtility) =>
   : `./components/${component}/${variant}/example.jsx`;
 
 module.exports = Object.assign(SLDS, {
-  getExample: (component, variant, isUtility = false) =>
-    r(examplePath(component, variant, isUtility))
+  getExample: (component, variant) =>
+    r(examplePath(component, variant, SLDS.utilities().find(u => u === component)))
 });

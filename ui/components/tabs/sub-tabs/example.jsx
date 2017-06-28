@@ -22,7 +22,7 @@ let Subtab = props =>
       tabIndex={props.active ? '0' : '-1'}
       id={props.tabItemId}
       aria-controls={props.tabPanelId}>
-      { props.itemUnsaved ? <abbr className="slds-indicator_unsaved" title="Tab Not Saved">*</abbr> : null }
+      { props.itemUnsaved ? <abbr className="slds-indicator_unsaved" title="Tab Not Saved" aria-label="Tab Not Saved">*</abbr> : null }
       <div className="slds-icon_container" title={_.startCase(props.symbol) || 'Case'}>
         <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
@@ -56,28 +56,26 @@ let Subtab = props =>
 // Export
 /// ///////////////////////////////////////////
 
+export default (
+  <div className="slds-tabs_default">
+    <ul className="slds-tabs_default__nav" role="tablist">
+      <Subtab active title="00071938" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
+      <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
+    </ul>
+    <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
+    <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>
+  </div>
+);
+
 export let states = [
-  {
-    id: 'default',
-    label: 'Default',
-    element:
-      <div className="slds-tabs_default">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab active title="Tab Item 1" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
-          <Subtab title="Tab Item 2" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" />
-        </ul>
-        <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
-        <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>
-      </div>
-  },
   {
     id: 'subtabs-has-focus',
     label: 'Tab - Focus',
     element:
       <div className="slds-tabs_default">
         <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab title="Tab Item 1" id="subtab-01" active hasFocus tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
-          <Subtab title="Tab Item 2" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" />
+          <Subtab title="00071938" id="subtab-01" active hasFocus tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
+          <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
         </ul>
         <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
         <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>
@@ -92,8 +90,8 @@ export let states = [
     element:
       <div className="slds-tabs_default">
         <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab title="Tab Item 1" active itemUnsaved tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
-          <Subtab title="Tab Item 2" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" />
+          <Subtab title="00071938" active itemUnsaved tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
+          <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
         </ul>
         <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
         <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>
@@ -105,8 +103,8 @@ export let states = [
     element:
       <div className="slds-tabs_default">
         <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab title="Tab Item 1" active className="slds-border_right slds-border_left" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
-          <Subtab title="Tab Item 2" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" className="slds-border_right" />
+          <Subtab title="00071938" active className="slds-border_right slds-border_left" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
+          <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" className="slds-border_right" />
         </ul>
         <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
         <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>
@@ -118,8 +116,8 @@ export let states = [
     element:
       <div className="slds-tabs_default">
         <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab title="Tab Item 1" active menuIcon tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
-          <Subtab title="Tab Item 2" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" menuIcon />
+          <Subtab title="00071938" active menuIcon tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
+          <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" menuIcon />
         </ul>
         <div className="slds-tabs_default__content slds-show" id="subtab-tabpanel-01" role="tabpanel" aria-labelledby="subtab-tabitem-01">Item One Content</div>
         <div className="slds-tabs_default__content slds-hide" id="subtab-tabpanel-02" role="tabpanel" aria-labelledby="subtab-tabitem-02">Item Two Content</div>

@@ -23,6 +23,8 @@ props:
   CARD_SPACING_LARGE:
     value: '{!SPACING_LARGE}'
   ## Card defaults
+  CARD_SPACING_MARGIN:
+    value: '{!SPACING_MEDIUM}'
   CARD_HEADER_SPACING:
     value: '{!SPACING_SMALL} {!SPACING_SMALL} 0'
   CARD_HEADER_MARGIN:

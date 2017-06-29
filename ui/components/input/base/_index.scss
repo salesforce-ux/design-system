@@ -82,7 +82,8 @@
  * @restrict .slds-input
  */
  .slds-input_borders {
-    border-color: $color-border-input;
+  padding-left: $spacing-small;
+  border-color: $color-border-input;
  }
 
 /**

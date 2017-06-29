@@ -24,6 +24,16 @@
 }
 
 /**
+ * @summary
+ *
+ * @selector .slds-page-header_bleed
+ * @restrict .slds-page-header
+ */
+ .slds-page-header_bleed {
+  margin: 0;
+ }
+
+/**
  * Page title (header text).
  *
  * @selector .slds-page-header__title

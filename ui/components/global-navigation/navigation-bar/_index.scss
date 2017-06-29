@@ -357,6 +357,27 @@
       font-style: italic;
     }
   }
+
+  /**
+  * Notifications style - Styling a tab or overflow item to indicate the tab has unread activity
+  *
+  * @selector .slds-has-notification
+  * @restrict .slds-context-bar__item, slds-context-bar__item slds-dropdown__item
+  */
+  .slds-has-notification {
+    background: $color-background-notification-new;
+    color: $color-text-default;
+
+    .slds-indicator_unread {
+      display: inline-block;
+      height: 6px;
+      width: 6px;
+      left: auto;
+      position: relative;
+      top: auto;
+    }
+  }
+
 }
 
 /**

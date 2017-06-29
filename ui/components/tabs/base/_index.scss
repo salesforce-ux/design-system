@@ -177,6 +177,28 @@
       background-color: $color-brand-dark;
     }
   }
+
+  /**
+  * Creates styles for a Tab Item when its tab has new activity in
+  *
+  * @selector .slds-has-notification
+  * @restrict .slds-tabs_default__item
+  */
+  &.slds-has-notification {
+    background: $color-background-notification-new;
+    color: $color-text-default;
+
+    &:after {
+      background-color: $color-border;
+    }
+
+    &:hover {
+
+      &:after {
+        background-color: $color-brand-dark;
+      }
+    }
+  }
 }
 
 /**
@@ -197,6 +219,7 @@
   &:focus {
     text-decoration: none;
   }
+
 }
 
 /**

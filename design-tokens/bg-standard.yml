@@ -321,3 +321,5 @@ props:
     value: '#FA975C'
   CONTRACT_LINE_ITEM:
     value: '#6EC06E'
+  QUIP_SHEET:
+    value: '#78DB94'

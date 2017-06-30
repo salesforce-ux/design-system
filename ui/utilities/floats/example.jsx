@@ -5,7 +5,7 @@ import React from 'react';
 
 export const Context = props =>
   <div className="slds-clearfix">
-    {props.chilren}
+    {props.children}
   </div>;
 
 export default (

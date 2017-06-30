@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+props:
+  CARD_SHADOW:
+    value: 'none'
+  CARD_WRAPPER_SHADOW:
+    value: 'none'
+    comment: Hard dropshadow found on outer card wrappers

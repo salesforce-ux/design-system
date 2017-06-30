@@ -1,7 +1,11 @@
 # Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-imports:
-  - ./s1-base-small/box-shadow.yml
-  - ./s1-base-small/font-size.yml
-  - ./s1-base-small/font-weight.yml
+global:
+  category: font
+  type: font-size
+  cssProperties:
+  - font-size
+props:
+  FORM_LABEL_FONT_SIZE:
+    value: '.75rem'

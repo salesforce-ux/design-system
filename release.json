@@ -4,9 +4,10 @@
   "repo-owner": "loanlifecycle",
   "repo": "design-system",
   "tag": "0.12.3-Test1",
-  "pre-build-script": "gem install bundler && npm install",
-  "build-script": "npm run dist",
-  "post-build-script": "",
+  "build-script": [
+    "npm install",
+    "npm run dist"
+  ],
   "artifacts": [
     {
       "name": "design-system",

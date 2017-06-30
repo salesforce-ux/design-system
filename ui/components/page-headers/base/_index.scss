@@ -29,9 +29,9 @@
  * @selector .slds-page-header_bleed
  * @restrict .slds-page-header
  */
- .slds-page-header_bleed {
+.slds-page-header_bleed {
   margin: 0;
- }
+}
 
 /**
  * Page title (header text).
@@ -54,27 +54,10 @@
  * @selector .slds-page-header_joined
  * @restrict .slds-page-header
  */
- .slds-page-header_joined {
+.slds-page-header_joined,
+.slds-page-header.slds-has-bottom-magnet {
   margin: $page-header-joined-spacing-margin;
   border-bottom: $border-width-thin solid $page-header-joined-color-border;
   border-radius: $page-header-joined-border-radius;
   box-shadow: none;
- }
-
-// .slds-page-header__icon {
-//   @include square(2.25rem);
-// }
-
-// If themes are on, manipulate these components
-// .slds-page-header__utility-group {
-//
-//   .slds-button,
-//   .slds-button_icon,
-//   .slds-button-group {
-//     box-shadow: $page-header-button-shadow;
-//
-//     .slds-button {
-//       box-shadow: none;
-//     }
-//   }
-// }
+}

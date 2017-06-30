@@ -475,7 +475,8 @@
  * @selector .slds-table_joined
  * @restrict .slds-table
  */
-.slds-table_joined {
+.slds-table_joined,
+.slds-table.slds-has-top-magnet {
   margin: $table-spacing;
 
   table {

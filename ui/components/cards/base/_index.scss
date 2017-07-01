@@ -170,6 +170,10 @@
   margin: $table-spacing; // This should use the same margin as the tables and page-headers - sharing a token
 }
 
+.slds-card-wrapper_plain {
+  background: $card-wrapper-color-background;
+}
+
 .slds-card,
 .slds-card-wrapper {
 

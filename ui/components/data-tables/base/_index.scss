@@ -483,3 +483,15 @@
     box-shadow: $card-wrapper-shadow; // This should always mirror the card's box shadow
   }
 }
+
+// For wrapping header/listView for Object home lists which goes all the way to the bottom of the page
+.slds-table_joined-wrapper {
+  padding: $card-wrapper-spacing $card-wrapper-spacing 0 $card-wrapper-spacing;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+
+  .slds-table {
+    border-radius: $table-border-radius; // @TODO: This should probably use the card-wrapper token as well
+    box-shadow: $card-wrapper-shadow; // This should always mirror the card's box shadow
+  }
+}

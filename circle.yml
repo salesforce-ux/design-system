@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+  environment:
+    toolset_branch: master
+    server_type: circle
+    ros_release_name: kinetic
+    ubuntu_version_name: xenial
+    used_modules: check_cache,check_build,code_style_check,unit tests
+    remote_shell_script: 'https://raw.githubusercontent.com/shadow-robot/sr-build-tools/$toolset_branch/bin/sr-run-ci-build.sh'
+
+test:
+  override:
+    - curl -s "$( echo "$remote_shell_script" | sed 's/#/%23/g' )" | bash /dev/stdin "$toolset_branch" $server_type $used_modules

@@ -5,7 +5,7 @@ machine:
     DEPENDENCY_LOG:  $CIRCLE_ARTIFACTS/dependency.log
     TESTING_LOG:  $CIRCLE_ARTIFACTS/testing.log
     LOG_LEVEL: DEBUG
-    DEPLOY_TOOLKIT_BRANCH: <DEPLOY_TOOLKIT_BRANCH>
+    DEPLOY_TOOLKIT_BRANCH: PP-1659
   node:
     version: 4.5.0
   ruby:
@@ -31,3 +31,8 @@ test:
     - npm run dist || ( touch $FAILURE_FILE && exit 1 )
   post:
     - $DEPLOY_TOOLKIT/scripts/build_notifications.py
+
+deployment:
+  release_test: PP-1659
+  commands:
+    - build-release

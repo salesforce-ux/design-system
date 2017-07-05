@@ -78,3 +78,13 @@
  * @modifier
  */
 @include spacing(padding);
+
+/**
+ * @summary Global padding that can be applied to any element
+ *
+ * @selector .slds-has-cushion
+ * @modifier
+ */
+.slds-has-cushion {
+  padding: 1rem;
+}

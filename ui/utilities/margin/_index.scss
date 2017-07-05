@@ -83,3 +83,38 @@
 .slds-m-bottom--none {
   margin-bottom: 0;
 }
+
+/**
+ * @summary Global margin that can be applied to any element
+ *
+ * @selector .slds-has-buffer
+ * @modifier
+ */
+.slds-has-buffer {
+  margin: 1rem;
+}
+
+/**
+ * @summary Global margin reset that can be applied to any element
+ *
+ * @selector .slds-has-full-bleed
+ * @modifier
+ */
+.slds-has-full-bleed {
+  margin: 0;
+}
+
+
+// Assumes element below is connected
+.slds-has-bottom-magnet {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+// Assumes element above is connected
+.slds-has-top-magnet {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

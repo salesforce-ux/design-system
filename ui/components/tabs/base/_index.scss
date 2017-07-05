@@ -249,8 +249,9 @@
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
 
+  // This makes cards look plain when inside a tabset
   .slds-card,
-  .slds-card-wrapper { // This makes cards look plain when inside a tabset
+  .slds-card-wrapper {
     background: $cards-color-background;
     border: 0;
     border-radius: initial;
@@ -269,12 +270,7 @@
 }
 
 .slds-tabs_card {
-  /**
-   * Adds padding for the tab_card content wrapper
-   *
-   * .slds-tabs_card__content
-   * .slds-tabs_card div
-   */
+
   .slds-tabs_default__content,
   .tabs__content.uiTab { // @TODO: Remove - This second selector overrides the product overrides till tabs are slds-ized - GROSS
     padding: $spacing-medium;

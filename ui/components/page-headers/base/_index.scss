@@ -24,16 +24,6 @@
 }
 
 /**
- * @summary
- *
- * @selector .slds-page-header_bleed
- * @restrict .slds-page-header
- */
-.slds-page-header_bleed {
-  margin: 0;
-}
-
-/**
  * Page title (header text).
  *
  * @selector .slds-page-header__title
@@ -51,7 +41,7 @@
 /**
  * @summary This class makes the page header appear attached to the component below it
  *
- * @selector .slds-page-header_joined
+ * @selector .slds-has-bottom-magnet
  * @restrict .slds-page-header
  */
 .slds-page-header_joined,
@@ -60,4 +50,15 @@
   border-bottom: $border-width-thin solid $page-header-joined-color-border;
   border-radius: $page-header-joined-border-radius;
   box-shadow: none;
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-full-bleed
+ * @restrict .slds-page-header
+ */
+.slds-page-header_bleed,
+.slds-page-header.slds-has-full-bleed {
+  margin: 0;
 }

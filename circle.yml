@@ -5,7 +5,7 @@ machine:
     DEPENDENCY_LOG:  $CIRCLE_ARTIFACTS/dependency.log
     TESTING_LOG:  $CIRCLE_ARTIFACTS/testing.log
     LOG_LEVEL: DEBUG
-    DEPLOY_TOOLKIT_BRANCH: PP-1659
+    DEPLOY_TOOLKIT_BRANCH: <DEPLOY_TOOLKIT_BRANCH>
   node:
     version: 4.5.0
   ruby:

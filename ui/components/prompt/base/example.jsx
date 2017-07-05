@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../../modals/base/example';
 
 export default (

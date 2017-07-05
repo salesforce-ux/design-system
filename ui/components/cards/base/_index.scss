@@ -166,12 +166,11 @@
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
 }
 
-.slds-card-wrapper_margin {
+// Once slds-card-wrapper_margin is found and replaced, remove slds-card-wrapper_margin
+// and keep the class slds-card.slds-has-buffer
+.slds-card-wrapper_margin,
+.slds-card.slds-has-buffer {
   margin: $table-spacing; // This should use the same margin as the tables and page-headers - sharing a token
-}
-
-.slds-card-wrapper_plain {
-  background: $card-wrapper-color-background;
 }
 
 .slds-card,

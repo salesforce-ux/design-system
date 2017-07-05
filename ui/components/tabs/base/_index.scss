@@ -219,7 +219,6 @@
   &:focus {
     text-decoration: none;
   }
-
 }
 
 /**
@@ -241,6 +240,8 @@
  * .slds-tabs_card
  * .slds-tabs_default
  */
+
+// ADD THIS TO PRODUCT
 .slds-tabs_card,
 .slds-tabs_card.uiTabset--default { //@TODO: Remove - this is currently needed for specificity since uiTabs is not SLDS-ized
   padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
@@ -248,8 +249,9 @@
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
 
+  // This makes cards look plain when inside a tabset
   .slds-card,
-  .slds-card-wrapper { // This makes cards look plain when inside a tabset
+  .slds-card-wrapper {
     background: $cards-color-background;
     border: 0;
     border-radius: initial;
@@ -268,12 +270,7 @@
 }
 
 .slds-tabs_card {
-  /**
-   * Adds padding for the tab_card content wrapper
-   *
-   * .slds-tabs_card__content
-   * .slds-tabs_card div
-   */
+
   .slds-tabs_default__content,
   .tabs__content.uiTab { // @TODO: Remove - This second selector overrides the product overrides till tabs are slds-ized - GROSS
     padding: $spacing-medium;

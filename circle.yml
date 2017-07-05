@@ -33,6 +33,6 @@ test:
     - $DEPLOY_TOOLKIT/scripts/build_notifications.py
 
 deployment:
-  release_test: PP-1659
+  release: master
   commands:
     - build-release

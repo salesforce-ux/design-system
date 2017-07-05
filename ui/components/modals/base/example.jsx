@@ -20,6 +20,7 @@ export let Modal = props =>
     role="dialog"
     tabIndex="-1"
     {...props}
+    aria-modal="true"
     aria-describedby={props['aria-describedby'] || 'modal-content-id-1'}
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >

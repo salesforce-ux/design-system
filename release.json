@@ -3,9 +3,9 @@
   "description": "nCino design system. An adaptation of Salesforce Lighting Design System.",
   "repo-owner": "loanlifecycle",
   "repo": "design-system",
-  "is-prerelease": true,
+  "is-prerelease": false,
   "is-draft": false,
-  "tag": "0.12.3-beta0",
+  "tag": "0.12.3",
   "build-scripts": [
     "npm install",
     "npm run dist"

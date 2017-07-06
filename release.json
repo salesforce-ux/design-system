@@ -15,7 +15,7 @@
       "label": "design-system",
       "build-scripts": [],
       "file-system-name": ".dist/salesforce-lightning-design-system.zip",
-      "target-asset-name": "design_system-{tag}.resource"
+      "target-asset-name": "design_system.resource"
     }
   ]
 }

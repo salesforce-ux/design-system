@@ -1,0 +1,21 @@
+{
+  "name": "design-system",
+  "description": "nCino design system. An adaptation of Salesforce Lighting Design System.",
+  "repo-owner": "loanlifecycle",
+  "repo": "design-system",
+  "is-prerelease": false,
+  "is-draft": false,
+  "tag": "v0.12.3",
+  "build-scripts": [
+    "npm install",
+    "npm run dist"
+  ],
+  "artifacts": [
+    {
+      "label": "design-system",
+      "build-scripts": [],
+      "file-system-name": ".dist/salesforce-lightning-design-system.zip",
+      "target-asset-name": "design_system.resource"
+    }
+  ]
+}

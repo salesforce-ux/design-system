@@ -31,3 +31,8 @@ test:
     - npm run dist || ( touch $FAILURE_FILE && exit 1 )
   post:
     - $DEPLOY_TOOLKIT/scripts/build_notifications.py
+
+deployment:
+  release: master
+  commands:
+    - build-release

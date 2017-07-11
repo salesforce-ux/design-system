@@ -91,7 +91,7 @@
  * @modifier
  */
 .slds-has-buffer {
-  margin: 1rem;
+  margin: $component-spacing-margin;
 }
 
 /**
@@ -117,4 +117,11 @@
   margin-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+
+  &.slds-has-buffer {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-top: 0;
+    box-shadow: none;
+  }
 }

@@ -9,7 +9,5 @@ global:
 props:
   PAGE_HEADER_BORDER_RADIUS:
     value: '0.25rem'
-  PAGE_HEADER_JOINED_BORDER_RADIUS:
-    value: '0.25rem 0.25rem 0 0'
   TABLE_BORDER_RADIUS:
     value: '0 0 0.25rem 0.25rem'

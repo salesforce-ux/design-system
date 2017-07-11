@@ -16,3 +16,5 @@ props:
   CARD_FONT_WEIGHT:
     value: '700'
     comment: Use for active tab.
+  PAGE_HEADER_TITLE_FONT_WEIGHT:
+    value: '700'

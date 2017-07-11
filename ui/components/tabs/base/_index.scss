@@ -233,46 +233,4 @@
   @include tabs-content;
 }
 
-// Removed the taxonomy comments below due to the Platform classes included
-/**
- * Needed when tabs need to look like they're in a card
- *
- * .slds-tabs_card
- * .slds-tabs_default
- */
-
-// ADD THIS TO PRODUCT
-.slds-tabs_card,
-.slds-tabs_card.uiTabset--default { //@TODO: Remove - this is currently needed for specificity since uiTabs is not SLDS-ized
-  padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
-  box-shadow: $card-wrapper-shadow;
-  border: $border-width-thin solid $card-color-border;
-  border-radius: $border-radius-medium;
-
-  // This makes cards look plain when inside a tabset
-  .slds-card,
-  .slds-card-wrapper {
-    background: $cards-color-background;
-    border: 0;
-    border-radius: initial;
-    box-shadow: none;
-  }
-}
-
-/**
- * Updates the container for the card tabs
- *
- * .slds-tabs_card__nav
- * .slds-tabs_card ul
- */
-.slds-tabs_card .slds-tabs_default__nav { // This selector doesn't seem to need an override for core - watch
-  border-bottom: $border-width-thick solid $color-border-primary;
-}
-
-.slds-tabs_card {
-
-  .slds-tabs_default__content,
-  .tabs__content.uiTab { // @TODO: Remove - This second selector overrides the product overrides till tabs are slds-ized - GROSS
-    padding: $spacing-medium;
-  }
-}
+@import 'blame';

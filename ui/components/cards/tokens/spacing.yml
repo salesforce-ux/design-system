@@ -35,5 +35,6 @@ props:
     value: '0'
   CARD_FOOTER_SPACING_BOTTOM:
     value: '{!SPACING_SMALL}'
+  ## Replace with global token
   CARD_WRAPPER_SPACING:
     value: '{!SPACING_MEDIUM}'

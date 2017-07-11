@@ -13,7 +13,7 @@ import _ from '../../../shared/helpers';
 
 let Subtab = props =>
   <li className={
-      classNames('slds-tabs_default__item slds-grid slds-grid_vertical-align-center', {
+      classNames('slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center', {
         'slds-has-notification': props.hasNotification,
         'slds-has-focus': props.hasFocus,
         'slds-active': props.active
@@ -78,7 +78,7 @@ let Subtab = props =>
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="slds-tabs_default">
+  <div className="slds-tabs_default slds-sub-tabs">
     <ul className="slds-tabs_default__nav" role="tablist">
       <Subtab active title="00071938" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
       <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
@@ -93,7 +93,7 @@ export let states = [
     id: 'subtabs-has-focus',
     label: 'Tab - Focus',
     element:
-      <div className="slds-tabs_default">
+      <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab title="00071938" id="subtab-01" active hasFocus tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
           <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
@@ -109,7 +109,7 @@ export let states = [
     id: 'subtabs-unsaved',
     label: 'Unsaved Tab',
     element:
-      <div className="slds-tabs_default">
+      <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab title="00071938" active itemUnsaved tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
           <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />
@@ -122,7 +122,7 @@ export let states = [
     id: 'subtabs-borders',
     label: 'With Borders',
     element:
-      <div className="slds-tabs_default">
+      <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab title="00071938" active className="slds-border_right slds-border_left" tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
           <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" className="slds-border_right" />
@@ -135,7 +135,7 @@ export let states = [
     id: 'subtabs-menu',
     label: 'Tab - Action Overflow',
     element:
-      <div className="slds-tabs_default">
+      <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab title="00071938" active menuIcon tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
           <Subtab title="Chat - Customer" tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" menuIcon />
@@ -148,7 +148,7 @@ export let states = [
     id: 'subtabs-notification',
     label: 'Tab Notification',
     element:
-      <div className="slds-tabs_default">
+      <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab title="00071938" active tabItemId="subtab-tabitem-01" tabPanelId="subtab-tabpanel-01" />
           <Subtab title="Chat - Customer" hasNotification tabItemId="subtab-tabitem-02" tabPanelId="subtab-tabpanel-02" symbol="live_chat" />

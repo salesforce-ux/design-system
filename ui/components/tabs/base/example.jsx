@@ -6,14 +6,20 @@ import Tabs from '../index.react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter
+} from '../../cards/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
 let Default = props =>
-<div className="demo-only">
-  <Tabs selectedIndex={props.selectedIndex || 0}>
+  <Tabs className={props.className} selectedIndex={props.selectedIndex || 0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       {props.itemOneContent || 'Item One Content'}
     </Tabs.Item>
@@ -23,8 +29,7 @@ let Default = props =>
     <Tabs.Item title="Item Three" id="tab-default-3">
       Item Three Content
     </Tabs.Item>
-  </Tabs>
-</div>;
+  </Tabs>;
 
 let Overflowing = props =>
 <div className="demo-only" style={{height: '10rem'}}>
@@ -105,6 +110,30 @@ export let examples = [
   {
     id: 'card-look',
     label: 'Tab Card-look',
-    element: <Default className="slds-tabs_card" />
+    element:
+      <Tabs className="slds-tabs_card" selectedIndex={0}>
+        <Tabs.Item title="Item One" id="tab-default-1">
+          <Card>
+            <CardHeader symbol="contact" actions>
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card>
+            <CardHeader symbol="contact" actions>
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">Card Body (custom goes in here)</CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+        </Tabs.Item>
+        <Tabs.Item title="Item Two" id="tab-default-2">
+          Item Two Content
+        </Tabs.Item>
+        <Tabs.Item title="Item Three" id="tab-default-3">
+          Item Three Content
+        </Tabs.Item>
+      </Tabs>
   }
 ];

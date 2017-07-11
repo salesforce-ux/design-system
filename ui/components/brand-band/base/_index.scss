@@ -1,6 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+/**
+ * @variant
+ * @name base
+ * @selector .slds-brand-band
+ * @restrict div
+ * @support dev-ready
+ */
 
 // If the brand band is standalone, use this modifier. If the brand band is being extended
 // into another component use slds-brand-band without this modifier
@@ -16,7 +23,7 @@
     bottom: 0;
     left: 0;
     background-color: $brand-band-color-background-primary;
-    background-image: url($brand-band-image);
+    background-image: url($brand-band-default-image);
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -9,16 +9,17 @@ global:
   - fill
 imports:
 - ./aliases/color.yml
+- ../color-palettes.yml
 props:
   ## DEFAULT
   COLOR_TEXT_PRIMARY:
     value: '{!BISCAY}'
     comment: Primary body text color
   COLOR_TEXT_SECONDARY:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Secondary body text color
   COLOR_TEXT_TERTIARY:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Tertiary body text color
   ## BRANDING
   COLOR_TEXT_BRAND_PRIMARY:
@@ -35,7 +36,7 @@ props:
     value: "{!SCIENCE_BLUE}"
   #########
   COLOR_TEXT_ACTION_LABEL:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Action label text color
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
     value: '{!BISCAY}'
@@ -59,25 +60,25 @@ props:
     value: '{!FLUSH_MAHOGANY}'
     comment: Error text for inputs and error misc
   COLOR_TEXT_INPUT_DISABLED:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Input disabled text
   COLOR_TEXT_INPUT_FOCUS_INVERSE:
     value: '{!BISCAY}'
     comment: Typed input text
   COLOR_TEXT_INPUT_ICON:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Input icon
   COLOR_TEXT_INVERSE:
     value: '{!WHITE}'
     comment: Inverse text color for dark backgrounds
   COLOR_TEXT_INVERSE_WEAK:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Weak inverse text color for dark backgrounds
   COLOR_TEXT_INVERSE_ACTIVE:
     value: '{!MALIBU}'
     comment: Active state on a standalone link on a dark background.
   COLOR_TEXT_INVERSE_HOVER:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Hover state on a standalone link on a dark background.
   COLOR_TEXT_LINK:
     value: '{!SCIENCE_BLUE}'
@@ -113,10 +114,10 @@ props:
     value: '{!WHITE}'
     comment: Modal header title
   COLOR_TEXT_MODAL_BUTTON:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Modal header button text color
   COLOR_TEXT_STAGE_LEFT:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Text in stage left navigation.
   COLOR_TEXT_TAB_LABEL:
     value: '{!BISCAY}'
@@ -134,10 +135,10 @@ props:
     value: '{!MIDNIGHT_BLUE}'
     comment: Color for text in active state in a tab group.
   COLOR_TEXT_TAB_LABEL_DISABLED:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Color for disabled text in a tab group.
   COLOR_TEXT_TOAST:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Color for text on toast messages.
   COLOR_TEXT_WARNING:
     value: '{!KOROMIKO}'
@@ -146,16 +147,16 @@ props:
     value: '{!CINNAMON}'
     comment: Color for texts that are related to warnings on a light background.
   COLOR_TEXT_WEAK:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
   COLOR_TEXT_ICON_BRAND:
     value: '{!SCIENCE_BLUE}'
     comment: Color for non-interactive icons that represent a selected item in a list
   COLOR_TEXT_ICON_UTILITY:
-    value: '{!HIT_GREY}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Color for interactive utility icons
   COLOR_TEXT_TOGGLE_DISABLED:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Color for disabled toggles
   COLOR_TEXT_BUTTON_BRAND:
     value: '{!WHITE}'
@@ -179,28 +180,28 @@ props:
     value: '{!SCIENCE_BLUE}'
     comment: Text color for default secondary button - active state
   COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Text color for default secondary button - disabled state
   COLOR_TEXT_BUTTON_DEFAULT_HINT:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_BUTTON_INVERSE:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Default icon color.
   COLOR_TEXT_ICON_DEFAULT_HINT:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_INVERSE_HINT:
     value: '{!WHITE_TRANSPARENT_50}'
     comment: Icon color for a button that has a parent element that has a hover state on a dark background. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_DEFAULT_HOVER:
     value: '{!SCIENCE_BLUE}'
@@ -209,7 +210,7 @@ props:
     value: '{!MIDNIGHT_BLUE}'
     comment: Default icon color - active state.
   COLOR_TEXT_ICON_DEFAULT_DISABLED:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Default icon color - disabled state
   COLOR_TEXT_ICON_INVERSE:
     value: '{!WHITE}'
@@ -227,13 +228,13 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: Hovered icon color for a button that has a parent element that has a hover state
   COLOR_TEXT_LABEL:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Text color for field labels.
   COLOR_TEXT_PLACEHOLDER:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Input placeholder text.
   COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Input placeholder text on dark backgrounds.
   COLOR_TEXT_REQUIRED:
     value: '{!FLUSH_MAHOGANY}'

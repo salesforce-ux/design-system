@@ -6,10 +6,10 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   CARDS_COLOR_BACKGROUND:
-    value: '{!GRAY_CONTRAST_PRIMARY}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Default Card component background color.
   CARD_WRAPPER_COLOR_BACKGROUND:
     value: 'transparent'

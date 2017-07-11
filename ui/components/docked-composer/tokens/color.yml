@@ -6,11 +6,11 @@ global:
   - border*
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_BACKGROUND_DOCKED_PANEL_HEADER:
-    value: '{!CATSKILL_WHITE}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Docked panel header’s background color.
   COLOR_BACKGROUND_DOCKED_PANEL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Docked panel’s background color when open.

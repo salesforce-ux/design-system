@@ -8,11 +8,12 @@ global:
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in force-trailhead
   PAGE_HEADER_COLOR_BACKGROUND:
-    value: '{!CATSKILL_WHITE}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Default Page Header background color
   BRAND_BAND_IMAGE:
     value: ''
@@ -22,10 +23,10 @@ props:
     comment: Base color is transparent and is overridden in brand
   ## Deprecated
   COLOR_BACKGROUND_ANCHOR:
-    value: '{!LINK_WATER}'
+    value: '{!PALETTE_GRAY_3}'
     deprecated: true
     comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
   COLOR_BACKGROUND_PAGE_HEADER:
-    value: '{!CATSKILL_WHITE}'
+    value: '{!PALETTE_GRAY_2}'
     deprecated: true
     comment: Page Header background color

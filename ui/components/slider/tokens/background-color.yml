@@ -10,6 +10,7 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   SLIDER_HANDLE_COLOR_BACKGROUND:
     value: '{!AZURE}'
@@ -20,8 +21,8 @@ props:
   SLIDER_HANDLE_COLOR_BACKGROUND_ACTIVE:
     value: '{!SCIENCE_BLUE}'
   SLIDER_TRACK_COLOR_BACKGROUND:
-    value: '#cfd7e6'
+    value: '{!PALETTE_GRAY_5}'
   SLIDER_TRACK_COLOR_BACKGROUND_FILL:
     value: '{!AZURE}'
   SLIDER_COLOR_BACKGROUND_DISABLED:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'

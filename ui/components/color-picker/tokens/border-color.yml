@@ -6,6 +6,8 @@ global:
   category: border-color
   cssProperties:
   - 'border*'
+imports:
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_PICKER_SLIDER_THUMB_BORDER_COLOR:
-    value: '#777'
+    value: "{!PALETTE_GRAY_11}"

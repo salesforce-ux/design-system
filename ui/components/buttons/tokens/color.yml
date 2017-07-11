@@ -8,17 +8,14 @@ global:
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   BUTTON_COLOR_BACKGROUND_PRIMARY:
-    value: "{!WHITE_BACKGROUND_PRIMARY}"
+    value: "{!PALETTE_GRAY_1}"
   BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
     value: "{!BLUE_BACKGROUND_PRIMARY}"
   BUTTON_COLOR_BACKGROUND_SECONDARY:
     value: "{!WHITE_TRANSPARENT_80}"
-
-
-
-
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"
     comment: Brandable primary button
@@ -29,19 +26,19 @@ props:
     value: "{!ENDEAVOUR}"
     comment: Brandable primary button - hover state
   COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
-    value: "{!STEAM}"
+    value: "{!PALETTE_GRAY_5}"
     comment: Brandable primary button - disabled state
   COLOR_BACKGROUND_BUTTON_DEFAULT:
     value: "{!WHITE}"
     comment: Default secondary button
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
-    value: "{!LINK_WATER}"
+    value: "{!PALETTE_GRAY_3}"
     comment: Default secondary button - hover state
   COLOR_BACKGROUND_BUTTON_DEFAULT_FOCUS:
-    value: "{!LINK_WATER}"
+    value: "{!PALETTE_GRAY_3}"
     comment: Default secondary button - focus state
   COLOR_BACKGROUND_BUTTON_DEFAULT_ACTIVE:
-    value: "{!WHITE_LILAC}"
+    value: "{!PALETTE_GRAY_4}"
     comment: Default secondary button - active state
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
     value: "{!WHITE}"
@@ -50,13 +47,13 @@ props:
     value: "{!TRANSPARENT}"
     comment: Background color for icon-only button
   COLOR_BACKGROUND_BUTTON_ICON_HOVER:
-    value: "{!LINK_WATER}"
+    value: "{!PALETTE_GRAY_3}"
     comment: Background color for icon-only button - hover state
   COLOR_BACKGROUND_BUTTON_ICON_FOCUS:
-    value: "{!LINK_WATER}"
+    value: "{!PALETTE_GRAY_3}"
     comment: Background color for icon-only button - focus state
   COLOR_BACKGROUND_BUTTON_ICON_ACTIVE:
-    value: "{!WHITE_LILAC}"
+    value: "{!PALETTE_GRAY_4}"
     comment: Background color for icon-only button - active state
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
     value: "{!WHITE}"

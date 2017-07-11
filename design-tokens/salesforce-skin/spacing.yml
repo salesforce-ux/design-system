@@ -19,6 +19,12 @@ global:
 imports:
 - "../force-base/aliases/spacing.yml"
 props:
+  ## Globals
+  COMPONENT_SPACING_MARGIN:
+    value: '{!SPACING_MEDIUM}'
+  COMPONENT_SPACING_PADDING:
+    value: '{!SPACING_MEDIUM}'
+  ## Components
   PAGE_HEADER_SPACING_MARGIN:
     value: '{!SPACING_MEDIUM}'
   PAGE_HEADER_JOINED_SPACING_MARGIN:

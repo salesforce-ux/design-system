@@ -1,0 +1,14 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+props:
+  ## Defaults for when brand band is turned OFF!
+  ## Overridden in force-trailhead
+  BRAND_BAND_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: 'transparent'
+    comment: Base color is transparent and is overridden in brand

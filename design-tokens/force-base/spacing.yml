@@ -47,3 +47,7 @@ props:
     value: '{!SPACING_X_LARGE}'
   SPACING_XX_LARGE:
     value: '{!SPACING_XX_LARGE}'
+  COMPONENT_SPACING_MARGIN:
+    value: '0'
+  COMPONENT_SPACING_PADDING:
+    value: '0'

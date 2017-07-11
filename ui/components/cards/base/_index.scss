@@ -140,48 +140,4 @@
   margin-top: $spacing-x-small;
 }
 
-// These classes all give us the ability to add a class that doesn't exist in Communities and add the card look in different circumstances
-.slds-card-wrapper,
-.slds-card-wrapper_margin {
-  border: $border-width-thin solid $card-color-border;
-}
-
-.slds-card-wrapper,
-.slds-card-wrapper_margin,
-.slds-card-wrapper__bottom_joined {
-  padding: $card-wrapper-spacing;
-  background: $card-wrapper-color-background;
-  border-radius: $border-radius-medium;
-  background-clip: padding-box;
-  box-shadow: $card-wrapper-shadow;
-
-  .slds-card__header {
-    padding-left: 0;
-  }
-}
-
-.slds-card-wrapper__bottom_joined { // used to connect to page-headers like the table_joined does (kanban, etc)
-  margin: $table-spacing; // This should use the same margin as the tables that are joined - sharing a token
-  padding-top: 0;
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
-}
-
-// Once slds-card-wrapper_margin is found and replaced, remove slds-card-wrapper_margin
-// and keep the class slds-card.slds-has-buffer
-.slds-card-wrapper_margin,
-.slds-card.slds-has-buffer {
-  margin: $table-spacing; // This should use the same margin as the tables and page-headers - sharing a token
-}
-
-.slds-card,
-.slds-card-wrapper {
-
-  // Make cards inside cards or card wrappers invisible.
-  .slds-card,
-  .slds-card-wrapper {
-    background: $card-wrapper-color-background;
-    border: 0;
-    border-radius: initial;
-    box-shadow: none;
-  }
-}
+@import 'blame';

@@ -7,19 +7,12 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in force-trailhead
   PAGE_HEADER_COLOR_BACKGROUND:
     value: '{!CATSKILL_WHITE}'
     comment: Default Page Header background color
-  BRAND_BAND_IMAGE:
-    value: ''
-    type: raw
-  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: 'transparent'
-    comment: Base color is transparent and is overridden in brand
   ## Deprecated
   COLOR_BACKGROUND_ANCHOR:
     value: '{!LINK_WATER}'

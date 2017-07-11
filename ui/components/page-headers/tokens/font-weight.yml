@@ -2,10 +2,10 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  type: size
-  category: radius
+  category: font-weight
+  type: font-weight
   cssProperties:
-  - 'border*radius'
+  - font-weight
 props:
-  PAGE_HEADER_BORDER_RADIUS:
-    value: '0'
+  PAGE_HEADER_TITLE_FONT_WEIGHT:
+    value: '400'

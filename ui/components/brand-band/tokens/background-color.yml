@@ -5,8 +5,17 @@ global:
   - 'background*'
 props:
   ## Defaults for when brand band is turned OFF!
-  ## Overridden in force-trailhead
-  BRAND_BAND_IMAGE:
+  ## Overridden in salesforce-skin
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
     value: ''
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:

@@ -35,11 +35,10 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '#E0E5EE'
+    value: '{!PALETTE_GRAY_5}'
   ## CARDS
   CARDS_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
     comment: Default Card component background color
   CARD_WRAPPER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
-

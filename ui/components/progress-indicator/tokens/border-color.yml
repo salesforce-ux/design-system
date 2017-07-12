@@ -6,12 +6,13 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   PROGRESS_COLOR_BORDER:
     value: '{!WHITE}'
     comment: Borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_SHADE:
-    value: '{!LINK_WATER}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Shaded borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_HOVER:
     value: '{!SCIENCE_BLUE}'

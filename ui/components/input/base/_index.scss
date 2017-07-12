@@ -17,8 +17,17 @@
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
-  &:read-only {
-    @include button-interactions;
+  /**
+   *
+   * @selector [readonly]
+   * @restrict .slds-input
+   */
+  &[readonly] {
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: $input-static-font-size;
+    font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
   }
 
   &[type="search"]::-ms-clear {
@@ -67,6 +76,17 @@
 }
 
 /**
+ * @summary Modifier to allow a [readonly] input to have borders
+ *
+ * @selector .slds-input_borders
+ * @restrict .slds-input
+ */
+ .slds-input_borders {
+  padding-left: $spacing-small;
+  border-color: $color-border-input;
+ }
+
+/**
  * @summary Modifier if text input has svg icon adjacent to input
  *
  * @selector .slds-input-has-icon
@@ -79,7 +99,7 @@
    * Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
-   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button
+   * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   .slds-input__icon {
     @include square($square-icon-medium-content);
@@ -248,6 +268,8 @@
   padding-top: $spacing-xx-small;
   padding-bottom: $spacing-xx-small;
   min-height: calc(#{$line-height-button} + 2px); // For IE
+  font-size: $input-static-font-size;
+  font-weight: $input-static-font-weight;
 
   // If read only state is longform
   // Apply text line height

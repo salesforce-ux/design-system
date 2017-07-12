@@ -6,8 +6,8 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_BACKGROUND_ICON_WAFFLE:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Default color for animated icon waffle for app switcher.

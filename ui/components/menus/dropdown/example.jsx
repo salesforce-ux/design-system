@@ -51,6 +51,7 @@ export let MenuItem = props => {
     children,
     iconRight,
     tabIndex,
+    title,
     ...rest
   } = props;
   let ariaChecked;
@@ -66,7 +67,7 @@ export let MenuItem = props => {
         role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
         aria-checked={ariaChecked}
         tabIndex={tabIndex || '-1'}>
-        <span className="slds-truncate" title={children}>
+        <span className="slds-truncate" title={title || children}>
           { isSelectable ? <SvgIcon
             className="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
             sprite="utility"

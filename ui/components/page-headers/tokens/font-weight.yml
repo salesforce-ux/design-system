@@ -1,0 +1,11 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font-weight
+  type: font-weight
+  cssProperties:
+  - font-weight
+props:
+  PAGE_HEADER_TITLE_FONT_WEIGHT:
+    value: '400'

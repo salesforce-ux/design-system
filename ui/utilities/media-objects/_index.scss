@@ -42,6 +42,11 @@
   }
 }
 
+.slds-media-body-iefix {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
 /**
  * Adjusts whitespace on smaller media objects
  *

@@ -16,23 +16,25 @@
 * @variant
 */
 .slds-card {
+  position: relative;
   padding: 0;
-  background: $card-color-background;
-  border: $border-width-thin solid $color-border;
+  background: $cards-color-background;
+  border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
+  box-shadow: $card-shadow;
 
   // Adds spacing between cards
   + .slds-card {
-    margin-top: $spacing-medium;
+    margin-top: $card-spacing-margin;
   }
 
   &__header,
   &__footer,
   &__body_inner,
   &__body--inner {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-left: $card-spacing-small;
+    padding-right: $card-spacing-small;
 
     @include mq-large-min {
       padding-left: $card-spacing-large;
@@ -47,12 +49,18 @@
    * @restrict .slds-card div
    */
   &__header {
-    padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
+    padding: $card-header-spacing;
+    margin: $card-header-margin;
+
+    @include mq-large-min {
+      padding-left: $card-spacing-large;
+      padding-right: $card-spacing-large;
+    }
   }
 
   &__header-link {
     color: inherit;
+    font-weight: $card-font-weight;
   }
 
   /**
@@ -62,7 +70,7 @@
    * @restrict .slds-card div
    */
   &__body {
-    margin-bottom: $spacing-small;
+    margin-bottom: $card-spacing-small;
   }
 
   &__body:empty,
@@ -77,9 +85,18 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    margin-top: $spacing-small;
-    padding-bottom: $spacing-small;
-    text-align: right;
+    padding-top: $card-footer-spacing-top;
+    padding-bottom: $card-footer-spacing-bottom;
+    margin-top: $card-footer-margin;
+    text-align: $card-footer-text-align;
+    font-size: $font-size-text-small;
+    border-top: $border-width-thin solid $card-footer-color-border;
+
+    @include mq-large-min {
+      margin-top: $spacing-large;
+      margin-left: $spacing-large;
+      margin-right: $spacing-large;
+    }
   }
 
   &_narrow,
@@ -122,3 +139,5 @@
 .slds-card__tile {
   margin-top: $spacing-x-small;
 }
+
+@import 'blame';

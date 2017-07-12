@@ -22,15 +22,12 @@
     }
 
     .slds-form-element + .slds-form-element {
-      padding-left: $spacing-x-small;
+      margin-left: $spacing-x-small;
     }
   }
 
-  .slds-form-element {
-    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
-  }
-
   @include deprecate('4.0.0') {
+
     .slds-form-element__control {
       position: relative;
 

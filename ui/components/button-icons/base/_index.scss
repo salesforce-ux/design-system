@@ -72,16 +72,8 @@
 .slds-button--icon-border-filled,
 .slds-button_icon-border,
 .slds-button--icon-border {
-  @include button-base;
-
-  // Disabled
-  &[disabled] {
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
-  }
+  @include button-icon;
+  border-color: $button-color-border-primary;
 }
 
 /**
@@ -94,7 +86,7 @@
  */
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
-  @include button-base;
+  @include button-icon;
   background-color: $color-background-button-inverse;
   color: $color-text-link-inverse;
 
@@ -114,10 +106,10 @@
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
-  background-color: $color-background-button-default;
+  background-color: $button-color-background-primary;
 
   &[disabled] {
-    border: $border-width-thin solid $color-border-button-default;
+    border-color: $button-color-border-primary;
     background-color: $color-background-button-default-disabled;
   }
 }
@@ -175,7 +167,8 @@
 .slds-button_icon-container.slds-is-selected,
 .slds-button--icon-container.slds-is-selected,
 .slds-button_icon-border.slds-is-selected,
-.slds-button--icon-border.slds-is-selected {
+.slds-button--icon-border.slds-is-selected,
+.slds-button_icon-border-filled.slds-is-selected {
   @include button-brand;
 
   .slds-button__icon {
@@ -248,10 +241,11 @@
  */
 .slds-button_icon-more,
 .slds-button--icon-more {
+  @include button-icon;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
-  vertical-align: middle;
-  border: $border-width-thin solid $color-border-button-default;
+  background-color: $button-color-background-primary;
+  border-color: $button-color-border-primary;
 
   &-filled {
     background-color: $color-background-button-default;
@@ -259,7 +253,6 @@
 
   &:hover,
   &:focus {
-    @include button-base;
 
     .slds-button__icon {
       fill: $color-text-icon-default-hover;
@@ -308,7 +301,8 @@
  * @variant
  */
 .slds-button--icon-container.slds-is-selected,
-.slds-button--icon-border.slds-is-selected {
+.slds-button--icon-border.slds-is-selected,
+.slds-button--icon-border-filled.slds-is-selected {
   @include button-brand;
 
   .slds-button__icon {

@@ -22,21 +22,25 @@
  * @variant
  */
 
-.slds-button_neutral.slds-is-selected,
-.slds-button--neutral.slds-is-selected {
-  border-color: transparent;
-  background-color: transparent;
-
-  &:hover:not([disabled]),
-  &:focus:not([disabled]) {
-    border: $border-width-thin solid $color-border-button-default;
-    background-color: $color-background-button-default-hover;
-  }
-
-  &:active:not([disabled]) {
-    background-color: $color-background-button-default-active;
-  }
-}
+// .slds-button_neutral.slds-is-selected,
+// .slds-button--neutral.slds-is-selected {
+//   border-color: transparent;
+//   background-color: transparent;
+//   box-shadow: none;
+//   transition: box-shadow 0.15s linear, border 0.15s linear;
+//
+//   &:hover:not([disabled]),
+//   &:focus:not([disabled]) {
+//     border-color: $button-color-border-primary;
+//     background-color: $color-background-button-default-hover;
+//     box-shadow: $shadow-soft-primary-hover;
+//   }
+//
+//   &:active:not([disabled]) {
+//     background-color: $color-background-button-default-active;
+//     box-shadow: $shadow-soft-primary-active;
+//   }
+// }
 
 // Icon modifier for stateful buttons
 .slds-button__icon_stateful,

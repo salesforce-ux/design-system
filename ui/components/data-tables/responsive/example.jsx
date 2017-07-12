@@ -144,7 +144,7 @@ export let states = [
     label: 'Stacked',
     element: <Stacked />
   }
-  // , @TODO: Hidden until scrolling on S1 works
+  // , @TODO - wait for S1 to fix scrolling
   // {
   //   id: 'data-table-responsive-overflow',
   //   label: 'Overflow',

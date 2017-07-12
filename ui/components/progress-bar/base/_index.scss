@@ -17,7 +17,7 @@
   position: relative;
 
   /**
-   * Creates a progress bar height at the smaller .125rem (2px) size
+   * @summary Creates a progress bar height at the smaller .125rem (2px) size
    *
    * @selector .slds-progress-bar_x-small
    * @restrict .slds-progress-bar
@@ -30,7 +30,7 @@
   }
 
   /**
-   * Creates a progress bar height at the smaller .25rem (4px) size
+   * @summary Creates a progress bar height at the smaller .25rem (4px) size
    *
    * @selector .slds-progress-bar_small
    * @restrict .slds-progress-bar
@@ -43,7 +43,7 @@
   }
 
   /**
-   * Creates a progress bar height at the smaller .5rem (8px) size
+   * @summary Creates a progress bar height at the smaller .5rem (8px) size
    *
    * @selector .slds-progress-bar_medium
    * @restrict .slds-progress-bar
@@ -56,7 +56,7 @@
   }
 
   /**
-   * Creates a progress bar height at the smaller .75rem (12px) size
+   * @summary Creates a progress bar height at the smaller .75rem (12px) size
    *
    * @selector .slds-progress-bar_large
    * @restrict .slds-progress-bar
@@ -69,7 +69,7 @@
   }
 
   /**
-   * Adds a border radius to the progress bar to give it a circular look
+   * @summary Adds a border radius to the progress bar to give it a circular look
    *
    * @selector .slds-progress-bar_circular
    * @restrict .slds-progress-bar
@@ -87,7 +87,7 @@
 }
 
 /**
- * Fill up blue bar inside of the progress bar
+ * @summary Fill up blue bar inside of the progress bar
  *
  * @selector .slds-progress-bar__value
  * @restrict .slds-progress-bar span
@@ -97,3 +97,15 @@
   background: $progress-bar-color-background-fill;
   height: 100%;
 }
+
+/**
+ * @summary Create a green progress bar
+ *
+ * @selector .slds-progress-bar__value_success
+ * @restrict .slds-progress-bar__value
+ * @modifier
+ * @group color
+ */
+ .slds-progress-bar__value_success {
+  background: $progress-bar-color-background-fill-success;
+ }

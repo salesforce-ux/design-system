@@ -105,7 +105,7 @@ export let DockedComposerPanel = props =>
     aria-describedby={!props.nestedDialog ? dialogBodyId : null}
   >
     <header className="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
-      <div className="slds-media slds-media_center slds-size_1-of-1 slds-no-space">
+      <div className="slds-media slds-media_center slds-no-space">
         <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
             <SvgIcon
@@ -297,7 +297,7 @@ export let examples = [
           <legend className="slds-assistive-text">Log new task</legend>
           <div className="form-element__group">
             <div className="slds-form-element__row">
-              <div className="slds-form-element">
+              <div className="slds-form-element slds-size_1-of-1">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
                 <div className="slds-form-element__control">
                   <input className="slds-input" type="text" id="text-input-01" />
@@ -703,7 +703,7 @@ export let examples = [
           <legend className="slds-assistive-text">Log a call</legend>
           <div className="form-element__group">
             <div className="slds-form-element__row">
-              <div className="slds-form-element">
+              <div className="slds-form-element slds-size_1-of-1">
                 <label className="slds-form-element__label" htmlFor="text-input-01">Subject</label>
                 <div className="slds-form-element__control">
                   <input className="slds-input" type="text" id="text-input-01" />
@@ -711,7 +711,7 @@ export let examples = [
               </div>
             </div>
             <div className="slds-form-element__row">
-              <div className="slds-form-element">
+              <div className="slds-form-element slds-size_1-of-1">
                 <label className="slds-form-element__label" htmlFor="textarea-input-01">Comments</label>
                 <div className="slds-form-element__control">
                   <textarea className="slds-textarea" id="textarea-input-01" />

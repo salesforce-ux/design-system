@@ -28,9 +28,33 @@ let ShortCutKey = props =>
 
 // Context Tab
 let ContextTab = props =>
-  <li className={classNames('slds-context-bar__item slds-context-bar__item_tab', props.className, props.itemActive ? 'slds-is-active' : null, props.itemUnsaved ? 'slds-is-unsaved' : null, props.pinned ? 'slds-is-pinned' : null)} role="presentation">
+  <li className={
+    classNames(
+      'slds-context-bar__item slds-context-bar__item_tab',
+      props.className,
+      {
+        'slds-is-active': props.itemActive,
+        'slds-is-unsaved': props.itemUnsaved,
+        'slds-is-pinned': props.pinned,
+        'slds-has-notification': props.itemUnread
+      }
+    )}
+    role="presentation"
+  >
     <a href="javascript:void(0);" className="slds-context-bar__label-action" role="tab" title={props.title || 'tab name'} aria-selected={props.itemActive ? 'true' : 'false'} tabIndex={props.itemActive ? '0' : '-1'} aria-controls={props.tabPanelId} id={props.id}>
       { props.itemUnsaved ? <abbr className="slds-indicator_unsaved" title="Tab Not Saved">*</abbr> : null }
+      { props.itemUnread &&
+        <span
+          aria-label="New Activity"
+          className="slds-indicator_unread"
+          role="alert"
+          title="New Activity"
+        >
+          <span className="slds-assistive-text">
+            New activity in Tab: { props.title || 'Subtab Name'}
+          </span>
+        </span>
+      }
       <div className="slds-icon_container" title={_.startCase(props.symbol) || 'Case'}>
         <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol={props.symbol || 'case'} />
         <span className="slds-assistive-text">{ _.startCase(props.symbol) || 'Case' }</span>
@@ -411,6 +435,99 @@ export let states = [
       </div>
   },
   {
+    id: 'unsaved-tab',
+    label: 'Unsaved Tab',
+    element:
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+            itemUnsaved
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+  },
+  {
+    id: 'unread-tab',
+    label: 'Unread Tab',
+    element:
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Chat - Customer"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+            symbol="live_chat"
+            itemUnread
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+  },
+  {
     id: 'pinned-tab',
     label: 'Pinned Tab',
     element:
@@ -597,38 +714,39 @@ export let states = [
       </div>
   },
   {
-    id: 'unsaved-tab',
-    label: 'Unsaved Tab',
+    id: 'unread-pinned-tab',
+    label: 'Unread Pinned Tab',
     element:
       <div className="demo-only">
         <ContextTabBar>
           <ContextTab
-            title="Home"
-            symbol="home"
+            title="Chat - Customer"
+            symbol="live_chat"
             tabPanelId={tabPanelId01}
             id={tabId01}
-            itemActive
+            pinned
+            itemUnread
           />
           <ContextTab
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
+            itemActive
           />
           <ContextTab
             title="Tab Item 2"
             tabPanelId={tabPanelId03}
             id={tabId03}
-            itemUnsaved
           />
         </ContextTabBar>
         <ContextTabPanel
-          show
           id={tabPanelId01}
           tabId={tabId01}
         >
           Tab Home Content
         </ContextTabPanel>
         <ContextTabPanel
+          show
           id={tabPanelId02}
           tabId={tabId02}
         >
@@ -839,12 +957,154 @@ export let states = [
             </button>
             <Menu className="slds-dropdown_right">
               <MenuList>
-                <MenuItem className="slds-is-unsaved">
+                <MenuItem className="slds-is-unsaved" title="Overflow Tab Item">
                   <abbr className="slds-unsaved-indicator" title="Tab(s) within menu not saved">*</abbr>
                   <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem title="Overflow Tab Item">
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
+                  <span>Overflow Tab Item</span>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </li>
+        </ContextTabBar>
+        <ContextTabPanel
+          show
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+  },
+  {
+    id: 'unread-overflow-tabs',
+    label: 'Unread Overflow Tabs',
+    element:
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-has-notification">
+            <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+              <span
+                aria-label="New Activity"
+                className="slds-indicator_unread"
+                role="alert"
+                title="New Activity"
+              >
+                <span className="slds-assistive-text">
+                  New Tab activity with in More Tabs menu
+                </span>
+              </span>
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
+            </button>
+          </li>
+        </ContextTabBar>
+        <ContextTabPanel
+          show
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+  },
+  {
+    id: 'unread-overflow-tabs-open',
+    label: 'Unread Overflow Tabs - Open',
+    element:
+      <div className="demo-only" style={{height: '8rem'}}>
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-notification">
+            <button className="slds-button slds-context-bar__label-action" title="More Tab Items" aria-haspopup="true">
+              <span
+                aria-label="New Activity"
+                className="slds-indicator_unread"
+                role="alert"
+                title="New Activity"
+              >
+                <span className="slds-assistive-text">
+                  New Tab activity with in More Tabs menu
+                </span>
+              </span>
+              <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">More <span className="slds-assistive-text">Tabs</span></span>
+              <SvgIcon className="slds-button__icon slds-button__icon_small slds-button__icon_right" sprite="utility" symbol="chevrondown" />
+            </button>
+            <Menu className="slds-dropdown_right">
+              <MenuList>
+                <MenuItem className="slds-has-notification" title="Chat - Customer">
+                  <span
+                    className="slds-indicator_unread"
+                    title="New Activity"
+                  >
+                    <span className="slds-assistive-text">
+                      New Activity
+                    </span>
+                  </span>
+                  <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="live_chat" />
+                  <span>Chat - Customer</span>
+                </MenuItem>
+                <MenuItem title="Overflow Tab Item">
                   <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="case" />
                   <span>Overflow Tab Item</span>
                 </MenuItem>

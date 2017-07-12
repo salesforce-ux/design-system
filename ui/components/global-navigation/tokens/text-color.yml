@@ -6,9 +6,10 @@ global:
   - fill
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_TEXT_CONTEXT_BAR:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Context bar text color
   COLOR_TEXT_CONTEXT_BAR_INVERSE:
     value: '{!WHITE}'

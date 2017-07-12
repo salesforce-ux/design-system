@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: $color-background-toast;
+  background: rgba($color-background-toast, 0.95);
   font-weight: $font-weight-light;
   padding: $spacing-x-small $spacing-x-large $spacing-x-small $spacing-x-small;
   text-align: center;

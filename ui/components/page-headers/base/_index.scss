@@ -14,31 +14,29 @@
  */
 
 .slds-page-header {
-  padding: $spacing-medium $spacing-small;
-  border-bottom: $border-width-thin solid $color-border;
-  background: $color-background-page-header;
+  margin: $page-header-spacing-margin;
+  padding: $page-header-spacing-padding;
+  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-radius: $page-header-border-radius;
+  background: $page-header-color-background;
+  background-clip: padding-box;
+  box-shadow: $page-header-shadow;
+}
 
-  /**
-   * Page title (header text).
-   *
-   * @selector .slds-page-header__title
-   * @restrict .slds-page-header h1
-   * @required
-   */
+/**
+ * Page title (header text).
+ *
+ * @selector .slds-page-header__title
+ * @restrict .slds-page-header h1
+ */
+.slds-page-header__title {
+  font-size: $page-header-title-font-size;
+  font-weight: $page-header-title-font-weight;
+  line-height: $line-height-heading;
 
-  &__title {
-    font: {
-      weight: $font-weight-regular;
-      size: $font-size-large;
-    }
-    line-height: $line-height-heading;
-  }
-
-  @include mq-medium-min {
-    padding: $spacing-medium $spacing-large;
-
-    &__title {
-      font-size: $font-size-x-large;
-    }
+  .slds-icon {
+    fill: currentColor;
   }
 }
+
+@import 'blame';

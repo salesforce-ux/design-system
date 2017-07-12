@@ -5,8 +5,8 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   SPLIT_VIEW_COLOR_BORDER:
-    value: '{!MISCHKA}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Row dividers in Split View list

@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- ../force-base/aliases/color.yml
+props:
+  PAGE_HEADER_BUTTON_SHADOW:
+    value: '{!BLACK_TRANSPARENT_10} 0 3px 4px'

@@ -109,7 +109,7 @@ export let examples = [
     <Card>
       <CardHeader symbol="contact" actions><span className="slds-text-heading_small">Contacts (1)</span></CardHeader>
       <CardBody>
-        <table className="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+        <table className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
           <thead>
             <tr className="slds-text-title_caps">
               <th scope="col"><div className="slds-truncate" title="Name">Name</div></th>
@@ -171,5 +171,32 @@ export let examples = [
         <a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a>
       </CardFooter>
     </Card>
+  },
+  {
+    id: 'card-wrapper',
+    label: 'Wrapped cards',
+    element:
+    <div className="slds-card-wrapper">
+      <Card>
+        <CardHeader actions symbol="contact">
+          <span className="slds-text-heading_small">Contacts (3)</span>
+        </CardHeader>
+        <CardBody>
+          <Card>
+            <CardBody>
+              <p>This is a card inside a card wrapper to show the lack of styling when nested.</p>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardBody>
+              <p>This is a card inside a card wrapper to show the lack of styling when nested.</p>
+            </CardBody>
+          </Card>
+        </CardBody>
+        <CardFooter>
+          <a href="javascript:void(0);">View All <span className="slds-assistive-text">entity type</span></a>
+        </CardFooter>
+      </Card>
+    </div>
   }
 ];

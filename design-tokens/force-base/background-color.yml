@@ -147,10 +147,10 @@ props:
     value: '{!PALETTE_GRAY_5}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
   COLOR_BACKGROUND_TEMP_MODAL:
-    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
-    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    value: '{!PALETTE_GRAY_9}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
     value: '{!WHITE_TRANSPARENT_75}'
@@ -160,7 +160,7 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_BACKDROP_TINT:
-    value: '{!FOAM_TRANSPARENT_75}'
+    value: '{!PALETTE_GRAY_3}'
     comment: The color of the mask overlay that provides user feedback on interaction.
   COLOR_BACKGROUND_SCROLLBAR:
     value: '{!PALETTE_GRAY_5}'
@@ -261,13 +261,13 @@ props:
     value: '{!SALEM}'
     comment: Dark color for UI elements that have to do with success. Accessible with white text.
   COLOR_BACKGROUND_TOAST:
-    value: '{!KASHMIR_BLUE_TRANSPARENT_95}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Background color for toast messaging.
   COLOR_BACKGROUND_TOAST_SUCCESS:
     value: '{!SALEM}'
     comment: Background color for success toast messaging.
   COLOR_BACKGROUND_TOAST_ERROR:
-    value: '{!FLUSH_MAHOGANY_TRANSPARENT_95}'
+    value: '{!FLUSH_MAHOGANY}'
     comment: Background color for error toast messaging.
   COLOR_BACKGROUND_WARNING:
     value: '{!KOROMIKO}'

@@ -10,6 +10,7 @@ global:
   - 'fill'
 imports:
 - ./aliases/color.yml
+- ../color-palettes.yml
 props:
   FILL_BRAND:
     value: '{!SCIENCE_BLUE}'
@@ -21,7 +22,7 @@ props:
     value: '{!BISCAY}'
     comment: 'Brand active fill color'
   FILL_HEADER_BUTTON:
-    value: '{!CASPER}'
+    value: '{!PALETTE_GRAY_8}'
     comment: 'Header button icon color'
   FILL_HEADER_BUTTON_HOVER:
     value: '{!ENDEAVOUR}'

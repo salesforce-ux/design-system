@@ -9,8 +9,9 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   PAGE_HEADER_COLOR_BORDER:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'
   PAGE_HEADER_JOINED_COLOR_BORDER:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'

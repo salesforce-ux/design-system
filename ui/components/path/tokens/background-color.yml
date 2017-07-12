@@ -7,6 +7,7 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_BACKGROUND_PATH_COMPLETE:
     value: '{!EMERALD}'
@@ -21,16 +22,16 @@ props:
     value: '{!ENDEAVOUR}'
     comment: The hover background color for Salespath stages that are the current stage.
   COLOR_BACKGROUND_PATH_INCOMPLETE:
-    value: '{!STEAM}'
+    value: '{!PALETTE_GRAY_5}'
     comment: The background color for Salespath stages that have not been completed.
   COLOR_BACKGROUND_PATH_INCOMPLETE_HOVER:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_6}'
     comment: The hover background color for Salespath stages that have not been completed.
   COLOR_BACKGROUND_PATH_LOST:
     value: '{!FLUSH_MAHOGANY}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_GUIDANCE:
-    value: '{!ATHENS_GRAY}'
+    value: '{!PALETTE_GRAY_2}'
     comment: The background color for Salespath guidance coaching section.
   COLOR_BACKGROUND_PATH_EXPANDED:
     value: '{!WHITE}'

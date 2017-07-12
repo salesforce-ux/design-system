@@ -8,12 +8,12 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- ../force-base/aliases/color.yml
 - ./aliases/color.yml
+- ../color-palettes.yml
 props:
   ## DEFAULT
   COLOR_BORDER_PRIMARY:
-    value: '{!GRAY_BORDER_PRIMARY}'
+    value: '{!PALETTE_GRAY_6}'
   ## BRANDING
   COLOR_BORDER_BRAND_PRIMARY:
     value: '{!BLUE_BORDER_PRIMARY}'
@@ -24,10 +24,10 @@ props:
   COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BORDER_SECONDARY}'
   PAGE_HEADER_COLOR_BORDER:
-    value: '{!CATSKILL_WHITE}'
+    value: '{!PALETTE_GRAY_2}'
   CARD_COLOR_BORDER:
-    value: '{!GRAY_BORDER_PRIMARY}'
+    value: '{!PALETTE_GRAY_6}'
   CARD_FOOTER_COLOR_BORDER:
-    value: '{!GRAY_BORDER_PRIMARY}'
+    value: '{!PALETTE_GRAY_6}'
   PAGE_HEADER_JOINED_COLOR_BORDER:
-    value: '{!GRAY_BORDER_PRIMARY}'
+    value: '{!PALETTE_GRAY_6}'

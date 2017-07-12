@@ -10,19 +10,20 @@ global:
   - box-shadow
 imports:
 - ./aliases/color.yml
+- ../color-palettes.yml
 props:
   ## These seem to be button-related
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
-    value: '{!GRAY_BACKGROUND_PRIMARY}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_BACKGROUND_SECONDARY:
-    value: '{!GRAY_BACKGROUND_SECONDARY}'
+    value: '{!PALETTE_GRAY_2}'
   COLOR_FOREGROUND_PRIMARY:
-    value: '{!WHITE_FOREGROUND_PRIMARY}'
+    value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!GRAY_CONTRAST_PRIMARY}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_CONTRAST_SECONDARY:
-    value: '{!GRAY_CONTRAST_SECONDARY}'
+    value: '{!PALETTE_GRAY_4}'
   ## BRANDING
   COLOR_BACKGROUND_BRAND_PRIMARY:
     value: '{!BLUE_BACKGROUND_PRIMARY}'
@@ -34,11 +35,11 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!GRAY_BACKGROUND_PRIMARY}'
+    value: '#E0E5EE'
   ## CARDS
   CARDS_COLOR_BACKGROUND:
-    value: '{!WHITE_BACKGROUND_PRIMARY}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Default Card component background color
   CARD_WRAPPER_COLOR_BACKGROUND:
-    value: '{!WHITE_BACKGROUND_PRIMARY}'
+    value: '{!PALETTE_GRAY_1}'
 

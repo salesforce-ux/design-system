@@ -18,7 +18,7 @@ props:
   COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_GRAY_3}'
   COLOR_FOREGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
     value: '{!PALETTE_GRAY_3}'
   COLOR_CONTRAST_SECONDARY:
@@ -40,7 +40,7 @@ props:
     value: '{!PALETTE_GRAY_3}'
     comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Second default background color for the app.
   COLOR_BACKGROUND_ALT_2:
     value: '{!PALETTE_GRAY_4}'

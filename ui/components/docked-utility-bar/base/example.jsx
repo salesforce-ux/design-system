@@ -13,7 +13,7 @@ import classNames from 'classnames';
 export let UtilityPanel = props =>
   <section className={classNames('slds-utility-panel slds-grid slds-grid_vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
     <header className="slds-utility-panel__header slds-grid slds-shrink-none">
-      <div className="slds-media slds-media_center slds-size_1-of-1">
+      <div className="slds-media slds-media_center">
         <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
             <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="call" />

@@ -30,6 +30,7 @@ const SliderLabel = props => (
 const Slider = props => (
   <div className={classNames('slds-slider', props.className)}>
     <input
+      aria-describedby={props['aria-describedby']}
       id={props.id || sliderId}
       className="slds-slider__range"
       type="range"
@@ -154,6 +155,15 @@ export let examples = [
     element:
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider className="slds-size_large" value="50" />
+      </FormElement>
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element:
+      <FormElement className="slds-has-error" label={<SliderLabel />} inputId={sliderId}>
+        <Slider aria-describedby="error-message" className="slds-size_large" value="50" />
+        <div id="error-message" className="slds-form-element__help">There is a problem with this field</div>
       </FormElement>
   }
 ];

@@ -30,6 +30,7 @@ let DatepickerContainer = props =>
     role="dialog"
   >
     {props.children}
+    <button className="slds-button slds-align_absolute-center slds-text-link">Today</button>
   </div>;
 
 let DatepickerHeader = props =>
@@ -85,6 +86,7 @@ let Day = props =>
   <td
     aria-disabled={props['aria-disabled']}
     aria-selected={props['aria-selected']}
+    aria-current={props['aria-current']}
     className={props.className}
     role="gridcell"
     tabIndex={props.tabIndex}
@@ -127,13 +129,7 @@ export let DatePicker = props =>
           <Day aria-selected="false">15</Day>
           <Day aria-selected="false">16</Day>
           <Day aria-selected="false">17</Day>
-          <Day aria-selected="false" className={props.todayActive ? 'slds-is-today' : null}>
-            { props.todayActive
-              ? <span className="slds-assistive-text">Today: </span>
-              : null
-            }
-            18
-          </Day>
+          <Day aria-selected="false" aria-current={props.todayActive ? 'date': null} className={props.todayActive ? 'slds-is-today' : null}>18</Day>
           <Day aria-selected="false">19</Day>
           <Day aria-selected="false">20</Day>
         </Week>
@@ -201,13 +197,6 @@ export let DatePicker = props =>
           <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
           <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
         </Week>
-        <tr>
-          <td colSpan="7" role="gridcell">
-            <span className="slds-show_inline-block slds-text-link slds-p-bottom_x-small">
-              Today
-            </span>
-          </td>
-        </tr>
       </tbody>
     </table>
   </DatepickerContainer>;

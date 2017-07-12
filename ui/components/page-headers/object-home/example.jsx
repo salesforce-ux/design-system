@@ -6,8 +6,15 @@ import Truncate from '../../../shared/truncate/index.react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter
+} from '../../cards/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
+import classNames from 'classnames';
 
 const icon = (
   <SvgIcon className="slds-button__icon slds-button__icon_right slds-no-flex" sprite="utility" symbol="down" />
@@ -20,7 +27,7 @@ const image = (
 );
 
 export let ObjectHome = props =>
-  <div className="slds-page-header">
+  <div className={classNames('slds-page-header', props.className)}>
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <div className="slds-media slds-no-space slds-grow">

@@ -1,0 +1,11 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  GLOBAL_HEADER_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Global Header background color

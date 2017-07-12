@@ -6,6 +6,8 @@ global:
   category: background-color
   cssProperties:
   - 'background*'
+imports:
+- "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_PICKER_SLIDER_THUMB_COLOR_BACKGROUND:
-    value: '#e8eef9'
+    value: '{!PALETTE_GRAY_3}'

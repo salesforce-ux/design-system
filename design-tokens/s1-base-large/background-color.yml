@@ -10,8 +10,9 @@ global:
   - box-shadow
 imports:
 - "../force-base/aliases/color.yml"
+- "../color-palettes.yml"
 props:
 ## This token pre-existed the component-specific tokens built for the card component
   CARD_COLOR_BACKGROUND:
-    value: '{!LINK_WATER}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Default Card component background color.

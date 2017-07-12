@@ -48,7 +48,8 @@
   &-row {
     margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
     padding: $page-header-spacing-row;
-    background-color: $color-background-alt;
+    border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
+    background-color: $page-header-color-background-alt;
     position: relative;
     z-index: 2;
   }

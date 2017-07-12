@@ -12,8 +12,17 @@ imports:
 - ../force-base/aliases/color.yml
 props:
   ## BRAND BAND
-  BRAND_BAND_IMAGE:
-    value: '/_slds/images/themes/one/banner-mountains.png'
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/one/banner-brand-default.png'
+    type: raw
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/one/banner-user-default.png'
+    type: raw
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/one/banner-group-private-default.png'
+    type: raw
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/one/banner-group-public-default.png'
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '#69b9dc'
+    value: '#CAD3E0'

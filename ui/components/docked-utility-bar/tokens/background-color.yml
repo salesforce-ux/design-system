@@ -7,10 +7,11 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_BADGE:
     value: '{!VALENCIA}'
     comment: Utility bar notifications badge background color.
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS:
-    value: '{!CADET_BLUE}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Utility bar notifications focus background color.

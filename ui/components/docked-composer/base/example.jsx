@@ -105,7 +105,7 @@ export let DockedComposerPanel = props =>
     aria-describedby={!props.nestedDialog ? dialogBodyId : null}
   >
     <header className="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
-      <div className="slds-media slds-media_center slds-size_1-of-1 slds-no-space">
+      <div className="slds-media slds-media_center slds-no-space">
         <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
             <SvgIcon

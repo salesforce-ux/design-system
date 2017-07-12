@@ -31,5 +31,6 @@ module.exports = I.fromJS({
       // This is intentional. A detailed error will be thrown (see bundle.js)
       'lodash': ''
     }
-  }
+  },
+  plugins: []
 });

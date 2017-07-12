@@ -7,10 +7,11 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   SPLIT_VIEW_COLOR_BACKGROUND:
-    value: '{!MYSTIC}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Split View background color.
   SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!WHITE_LILAC}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Split View background color on row hover.

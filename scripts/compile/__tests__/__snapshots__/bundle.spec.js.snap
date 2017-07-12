@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scripts/compile/bundle configs chunked 1`] = `
+Object {
+  "entry": Object {
+    "components/buttons/base": "./ui/components/buttons/base/example.jsx",
+    "components/buttons/stateful": "./ui/components/buttons/stateful/example.jsx",
+    "components/buttons/with-icon": "./ui/components/buttons/with-icon/example.jsx",
+    "components/data-tables/advanced": "./ui/components/data-tables/advanced/example.jsx",
+    "components/data-tables/base": "./ui/components/data-tables/base/example.jsx",
+    "components/data-tables/inline-edit": "./ui/components/data-tables/inline-edit/example.jsx",
+    "utilities/alignment": "./ui/utilities/alignment/example.jsx",
+    "utilities/floats": "./ui/utilities/floats/example.jsx",
+  },
+  "externals": Object {
+    "react": "React",
+    "react-dom": "ReactDOM",
+  },
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "options": Object {
+          "babelrc": false,
+          "plugins": Array [
+            "transform-object-rest-spread",
+          ],
+          "presets": Array [
+            "es2015",
+            "react",
+          ],
+        },
+        "test": /\\\\\\.jsx\\?\\$/,
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "[name].js",
+    "jsonpFunction": "webpackJsonpSLDS",
+    "library": "SLDS",
+    "publicPath": "/assets/scripts/bundle/",
+  },
+  "resolve": Object {
+    "alias": Object {
+      "lodash": "",
+    },
+    "extensions": Array [
+      ".js",
+      ".jsx",
+    ],
+  },
+}
+`;
+
+exports[`scripts/compile/bundle configs commonJS 1`] = `
+Object {
+  "entry": "./scripts/compile/entry.js",
+  "externals": Object {
+    "react": "React",
+    "react-dom": "ReactDOM",
+  },
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "options": Object {
+          "babelrc": false,
+          "plugins": Array [
+            "transform-object-rest-spread",
+          ],
+          "presets": Array [
+            "es2015",
+            "react",
+          ],
+        },
+        "test": /\\\\\\.jsx\\?\\$/,
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "slds.common.js",
+    "libraryTarget": "commonjs2",
+    "publicPath": "/assets/scripts/bundle/",
+  },
+  "plugins": Array [],
+  "resolve": Object {
+    "alias": Object {
+      "lodash": "",
+    },
+    "extensions": Array [
+      ".js",
+      ".jsx",
+    ],
+  },
+}
+`;
+
+exports[`scripts/compile/bundle configs umd 1`] = `
+Object {
+  "entry": "./scripts/compile/entry.js",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "options": Object {
+          "babelrc": false,
+          "plugins": Array [
+            "transform-object-rest-spread",
+          ],
+          "presets": Array [
+            "es2015",
+            "react",
+          ],
+        },
+        "test": /\\\\\\.jsx\\?\\$/,
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "slds.umd.js",
+    "library": "SLDS",
+    "libraryTarget": "umd",
+    "publicPath": "/assets/scripts/bundle/",
+  },
+  "plugins": Array [],
+  "resolve": Object {
+    "alias": Object {
+      "lodash": "",
+    },
+    "extensions": Array [
+      ".js",
+      ".jsx",
+    ],
+  },
+}
+`;
+
+exports[`scripts/compile/bundle createLibrary calls the compile function with the correct config 1`] = `
+Array [
+  Object {
+    "entry": "./scripts/compile/entry.js",
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "loader": "babel-loader",
+          "options": Object {
+            "babelrc": false,
+            "plugins": Array [
+              "transform-object-rest-spread",
+            ],
+            "presets": Array [
+              "es2015",
+              "react",
+            ],
+          },
+          "test": /\\\\\\.jsx\\?\\$/,
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "slds.umd.js",
+      "library": "SLDS",
+      "libraryTarget": "umd",
+      "path": "/testPath/__internal",
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+  Object {
+    "entry": "./scripts/compile/entry.js",
+    "externals": Object {
+      "react": "React",
+      "react-dom": "ReactDOM",
+    },
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "loader": "babel-loader",
+          "options": Object {
+            "babelrc": false,
+            "plugins": Array [
+              "transform-object-rest-spread",
+            ],
+            "presets": Array [
+              "es2015",
+              "react",
+            ],
+          },
+          "test": /\\\\\\.jsx\\?\\$/,
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "slds.common.js",
+      "libraryTarget": "commonjs2",
+      "path": "/testPath/__internal",
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+  Object {
+    "entry": Object {
+      "components/buttons/base": "./ui/components/buttons/base/example.jsx",
+      "components/buttons/stateful": "./ui/components/buttons/stateful/example.jsx",
+      "components/buttons/with-icon": "./ui/components/buttons/with-icon/example.jsx",
+      "components/data-tables/advanced": "./ui/components/data-tables/advanced/example.jsx",
+      "components/data-tables/base": "./ui/components/data-tables/base/example.jsx",
+      "components/data-tables/inline-edit": "./ui/components/data-tables/inline-edit/example.jsx",
+      "utilities/alignment": "./ui/utilities/alignment/example.jsx",
+      "utilities/floats": "./ui/utilities/floats/example.jsx",
+    },
+    "externals": Object {
+      "react": "React",
+      "react-dom": "ReactDOM",
+    },
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "loader": "babel-loader",
+          "options": Object {
+            "babelrc": false,
+            "plugins": Array [
+              "transform-object-rest-spread",
+            ],
+            "presets": Array [
+              "es2015",
+              "react",
+            ],
+          },
+          "test": /\\\\\\.jsx\\?\\$/,
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "jsonpFunction": "webpackJsonpSLDS",
+      "library": "SLDS",
+      "path": "/testPath/__internal/chunked",
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+]
+`;

@@ -6,8 +6,8 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
   NOTIFICATION_COLOR_BACKGROUND_INVERSE:
-    value: '{!KASHMIR_BLUE}'
+    value: '{!PALETTE_GRAY_10}'
     comment: Dark notification component background color.

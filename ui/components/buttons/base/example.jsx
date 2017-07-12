@@ -31,7 +31,7 @@ export let states = [
   },
   {
     id: 'destructive',
-    label: 'Desctructive',
+    label: 'Destructive',
     element: <Button className="slds-button_destructive">Button</Button>
   },
   {

@@ -55,7 +55,7 @@ props:
     value: '{!PALETTE_GRAY_4}'
     comment: Used as the background color for the active state on rows or items on list-like components.
   COLOR_BACKGROUND_ROW_SELECTED:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Used as the background color for selected rows or items on list-like components.
   COLOR_BACKGROUND_ROW_NEW:
     value: '{!SNOWY_MINT}'

@@ -5,5 +5,3 @@ imports:
 - ./brand/background-color.yml
 - ./brand/box-shadow.yml
 - ./brand/sizing.yml
-- ./brand/spacing.yml
-- ./brand/text-color.yml

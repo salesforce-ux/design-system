@@ -1,0 +1,23 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+props:
+  ## Defaults for when brand band is turned OFF!
+  ## Overridden in salesforce-skin
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+    value: ''
+    type: raw
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: 'transparent'
+    comment: Base color is transparent and is overridden in brand

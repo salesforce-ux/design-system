@@ -7,7 +7,6 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 - "../../../../design-tokens/color-palettes.yml"
 props:
   ## Defaults for when brand band is turned OFF!
@@ -15,6 +14,7 @@ props:
   PAGE_HEADER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_3}'
     comment: Default Page Header background color
+
   PAGE_HEADER_COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_GRAY_1}'
     comment: Secondary Page Header background color
@@ -24,6 +24,7 @@ props:
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'
     comment: Base color is transparent and is overridden in brand
+
   ## Deprecated
   COLOR_BACKGROUND_ANCHOR:
     value: '{!PALETTE_GRAY_3}'

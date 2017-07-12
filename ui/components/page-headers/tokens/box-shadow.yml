@@ -6,8 +6,6 @@ global:
   category: shadow
   cssProperties:
   - box-shadow
-imports:
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   PAGE_HEADER_BUTTON_SHADOW:
     value: 'none'

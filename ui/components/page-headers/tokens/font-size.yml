@@ -11,5 +11,5 @@ imports:
 - "../../../../design-tokens/force-base/aliases/font-size.yml"
 props:
   ## Default font sizes, these dont change =)
-  PAGE_HEADER_FONT_SIZE_TITLE:
+  PAGE_HEADER_TITLE_FONT_SIZE:
     value: '{!FONT_SIZE_6}'

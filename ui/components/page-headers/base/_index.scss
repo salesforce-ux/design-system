@@ -30,7 +30,8 @@
  * @restrict .slds-page-header h1
  */
 .slds-page-header__title {
-  font-size: $page-header-font-size-title;
+  font-size: $page-header-title-font-size;
+  font-weight: $page-header-title-font-weight;
   line-height: $line-height-heading;
 
   .slds-icon {
@@ -38,27 +39,4 @@
   }
 }
 
-/**
- * @summary This class makes the page header appear attached to the component below it
- *
- * @selector .slds-has-bottom-magnet
- * @restrict .slds-page-header
- */
-.slds-page-header_joined,
-.slds-page-header.slds-has-bottom-magnet {
-  margin: $page-header-joined-spacing-margin;
-  border-bottom: $border-width-thin solid $page-header-joined-color-border;
-  border-radius: $page-header-joined-border-radius;
-  box-shadow: none;
-}
-
-/**
- * @summary
- *
- * @selector .slds-full-bleed
- * @restrict .slds-page-header
- */
-.slds-page-header_bleed,
-.slds-page-header.slds-has-full-bleed {
-  margin: 0;
-}
+@import 'blame';

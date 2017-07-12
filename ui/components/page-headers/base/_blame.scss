@@ -1,0 +1,29 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary This class makes the page header appear attached to the component below it
+ *
+ * @selector .slds-has-bottom-magnet
+ * @restrict .slds-page-header
+ * @modifier
+ */
+.slds-page-header_joined,
+.slds-page-header.slds-has-bottom-magnet {
+  margin: $page-header-joined-spacing-margin;
+  border-bottom: $border-width-thin solid $page-header-joined-color-border;
+  border-radius: $page-header-border-radius $page-header-border-radius 0 0;
+  box-shadow: none;
+}
+
+/**
+ * @summary
+ *
+ * @selector .slds-has-full-bleed
+ * @restrict .slds-page-header
+ * @modifier
+ */
+.slds-page-header_bleed,
+.slds-page-header.slds-has-full-bleed {
+  margin: 0;
+}

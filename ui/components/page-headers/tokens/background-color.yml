@@ -6,7 +6,6 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/color-palettes.yml"
 props:
   ## Defaults for when brand band is turned OFF!

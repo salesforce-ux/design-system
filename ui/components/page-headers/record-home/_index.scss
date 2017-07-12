@@ -49,7 +49,7 @@
     margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
     padding: $page-header-spacing-row;
     border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
-    background-color: $color-background-alt;
+    background-color: $page-header-color-background-alt;
     position: relative;
     z-index: 2;
   }

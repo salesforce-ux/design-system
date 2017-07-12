@@ -20,7 +20,7 @@
   // Position for when assistive text becomes into focus
   .slds-assistive-text_focus,
   .slds-assistive-text--focus {
-    background: $color-background-alt;
+    background: $global-header-color-background;
     top: 0;
   }
 }
@@ -30,7 +30,7 @@
  * @restrict .slds-global-header_container div
  */
 .slds-global-header {
-  background: $color-background-alt;
+  background: $global-header-color-background;
   box-shadow: $shadow-header;
   padding: $spacing-x-small 0;
   height: $height-header;

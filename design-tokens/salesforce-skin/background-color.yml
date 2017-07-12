@@ -35,7 +35,7 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_7}'
+    value: '#83BAF9'
   ## CARDS
   CARDS_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'

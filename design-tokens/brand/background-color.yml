@@ -9,7 +9,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- ../force-base/aliases/color.yml
+- ../color-palettes.yml
 props:
   ## BRAND BAND
   BRAND_BAND_DEFAULT_IMAGE:
@@ -24,5 +24,10 @@ props:
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
     value: '/_slds/images/themes/one/banner-group-public-default.png'
     type: raw
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/one/banner-group-unlisted-default.png'
+    type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '#CAD3E0'
+    value: '{!PALETTE_GRAY_7}'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_7}'

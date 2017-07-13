@@ -4,7 +4,7 @@
 import React from 'react';
 
 export const Context = props =>
-  <div style={{ minHeight: '20rem', backgroundColor: '#E0E5EE' }}>
+  <div style={{ minHeight: '20rem', backgroundColor: '#C4C1BE' }}>
     {props.children}
   </div>;
 

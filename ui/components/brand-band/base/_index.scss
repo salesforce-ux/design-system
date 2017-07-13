@@ -22,10 +22,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url($brand-band-default-image);
+    background-image:
+      url($brand-band-default-image),
+      linear-gradient(to top, transparent 0, $brand-band-color-background-secondary);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+  }
+
+  &.slds-brand-band_cover {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
   }
 
   // Small Height Modifier (Made the default as a test)

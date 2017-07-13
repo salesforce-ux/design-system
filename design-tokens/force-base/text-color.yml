@@ -248,3 +248,4 @@ props:
   COLOR_TEXT_SUCCESS_INVERSE:
     value: '{!EMERALD}'
     comment: Text color for success text on dark backgrounds.
+

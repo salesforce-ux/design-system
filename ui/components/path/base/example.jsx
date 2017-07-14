@@ -113,7 +113,9 @@ let ListItem = props => {
   }
 
   return (
-    <li className={classNames('slds-path__item', props.className)} role="presentation">
+    <li className={classNames('slds-path__item', props.className, {
+      'slds-is-active': props.tabIndex
+    })} role="presentation">
       <a
         aria-controls={props.ariaControls}
         aria-expanded={ariaExpanded}
@@ -202,6 +204,54 @@ let CoachExample2 = props =>
 /// ///////////////////////////////////////////
 
 let Default = props =>
+  <Coach>
+    <Path>
+      <div className="slds-grid slds-path__scroller-container">
+        <ListMain listRole="listbox">
+          <ListItem className="slds-is-current" id={path1Id} role="option" tabIndex="0">
+            <span className="slds-path__stage">
+              <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
+            </span>
+            <span className="slds-path__title">Contacted</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path2Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Stage Complete</span>
+            </span>
+            <span className="slds-path__title">Open</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path3Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+              <span className="slds-assistive-text">Current Stage:</span>
+            </span>
+            <span className="slds-path__title">Unqualified</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path4Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+            </span>
+            <span className="slds-path__title">Nurturing</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path5Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon className="slds-icon slds-icon_x-small" sprite="utility" symbol="check" />
+            </span>
+            <span className="slds-path__title">Closed</span>
+          </ListItem>
+        </ListMain>
+      </div>
+      <div className="slds-grid slds-path__action">
+        <span className="slds-path__stage-name">Stage: Unqualified</span>
+        <Action><SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="check" />
+          Mark Status as Complete</Action>
+      </div>
+    </Path>
+  </Coach>;
+
+let PathNoCoachStageSelected = props =>
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -914,6 +964,11 @@ export default (
 
 export let states = [
   {
+    id: 'later-stage',
+    label: 'With Different Stage Selected - without coaching',
+    element: <PathNoCoachStageSelected />
+  },
+  {
     id: 'with-coaching',
     label: 'With Coaching Available',
     element: <PathCoach />
@@ -925,7 +980,7 @@ export let states = [
   },
   {
     id: 'different-coaching',
-    label: 'With Different Stage Selected',
+    label: 'With Different Stage Selected - with coaching',
     element: <PathStageSelected />
   },
   {

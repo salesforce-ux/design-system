@@ -71,7 +71,7 @@
  * @summary Element container circles for the waffle icon
  *
  * @selector .slds-icon-waffle
- * @restrict .slds-icon-waffle_container
+ * @restrict .slds-icon-waffle_container > span
  */
 .slds-icon-waffle {
   @include square(rem(21px));

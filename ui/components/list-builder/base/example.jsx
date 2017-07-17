@@ -10,7 +10,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { Th } from '../../data-tables/advanced/example';
+import { Th } from '../../data-tables/';
 import { PillContainer } from '../../pills/base/example';
 import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import classNames from 'classnames';

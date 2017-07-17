@@ -17,6 +17,7 @@ export let ButtonIcon = props =>
     aria-hidden={props['aria-hidden']}
     aria-pressed={props['aria-pressed']}
     aria-live={props.assertive ? 'assertive' : props['aria-live']}
+    id={props.id}
     tabIndex={props.tabIndex}
     title={props.title || 'Provide description of action'} >
     <SvgIcon

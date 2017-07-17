@@ -10,7 +10,7 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ```bash
 npm install
 npm start
-# visit http://localhost:3003/preview
+# visit http://localhost:3003/local/preview
 ```
 
 Having trouble getting these steps to work on your machine? Follow the [troubleshooting](#troubleshooting) guide below.

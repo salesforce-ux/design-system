@@ -127,3 +127,22 @@ export let ObjectHome = props =>
 export default (
   <ObjectHome />
 );
+
+export let examples = [
+  {
+    id: 'card',
+    label: 'Inside a card',
+    element:
+    <div className="slds-card">
+      <ObjectHome />
+    </div>
+  },
+  {
+    id: 'tab-card',
+    label: 'Inside a tabs card',
+    element:
+    <div className="slds-tabs_card">
+      <ObjectHome />
+    </div>
+  }
+];

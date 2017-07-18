@@ -13,21 +13,21 @@ imports:
 props:
   ## BRAND BAND
   BRAND_BAND_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/one/banner-brand-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png'
     type: raw
   BRAND_BAND_USER_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/one/banner-user-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png'
     type: raw
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/one/banner-group-private-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png'
     type: raw
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/one/banner-group-public-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png'
     type: raw
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/one/banner-group-unlisted-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png'
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_7}'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_9}'

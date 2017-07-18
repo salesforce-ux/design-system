@@ -27,3 +27,9 @@
 .slds-page-header.slds-has-full-bleed {
   margin: 0;
 }
+
+// Overrides when inside a card
+.slds-tabs_card .slds-page-header,
+.slds-card .slds-page-header {
+  box-shadow: none;
+}

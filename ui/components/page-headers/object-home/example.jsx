@@ -85,7 +85,7 @@ export let ObjectHome = props =>
                 title="List View Controls"
               />
             </div>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small" aria-expanded="false">
+            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small">
               <ButtonIcon
                 className="slds-button_icon-more"
                 symbol="table"
@@ -127,3 +127,22 @@ export let ObjectHome = props =>
 export default (
   <ObjectHome />
 );
+
+export let examples = [
+  {
+    id: 'card',
+    label: 'Inside a card',
+    element:
+    <div className="slds-card">
+      <ObjectHome />
+    </div>
+  },
+  {
+    id: 'tab-card',
+    label: 'Inside a tabs card',
+    element:
+    <div className="slds-tabs_card">
+      <ObjectHome />
+    </div>
+  }
+];

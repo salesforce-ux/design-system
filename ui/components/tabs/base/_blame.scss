@@ -21,7 +21,18 @@
   .slds-card,
   .slds-card-wrapper {
     background: $cards-color-background;
-    border: $border-width-thin solid $card-color-border;
+    border: 0;
+    border-radius: initial;
     box-shadow: none;
+  }
+
+  // Pull cards to edge of already padding tab content area
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

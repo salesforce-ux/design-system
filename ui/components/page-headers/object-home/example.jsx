@@ -85,7 +85,7 @@ export let ObjectHome = props =>
                 title="List View Controls"
               />
             </div>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small" aria-expanded="false">
+            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small">
               <ButtonIcon
                 className="slds-button_icon-more"
                 symbol="table"

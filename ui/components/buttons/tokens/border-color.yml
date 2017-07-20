@@ -12,7 +12,7 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   BUTTON_COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!GRAY_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_BRAND_PRIMARY:
     value: '{!BLUE_BORDER_PRIMARY}'
   BUTTON_COLOR_BORDER_SECONDARY:

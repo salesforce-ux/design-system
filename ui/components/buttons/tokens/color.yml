@@ -11,7 +11,7 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   BUTTON_COLOR_BACKGROUND_PRIMARY:
-    value: "{!PALETTE_GRAY_1}"
+    value: "{!WHITE_PRIMARY}"
   BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
     value: "{!BLUE_BACKGROUND_PRIMARY}"
   BUTTON_COLOR_BACKGROUND_SECONDARY:
@@ -26,37 +26,37 @@ props:
     value: "{!ENDEAVOUR}"
     comment: Brandable primary button - hover state
   COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
-    value: "{!PALETTE_GRAY_5}"
+    value: "{!STEAM}"
     comment: Brandable primary button - disabled state
   COLOR_BACKGROUND_BUTTON_DEFAULT:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Default secondary button
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
-    value: "{!PALETTE_GRAY_3}"
+    value: "{!LINK_WATER}"
     comment: Default secondary button - hover state
   COLOR_BACKGROUND_BUTTON_DEFAULT_FOCUS:
-    value: "{!PALETTE_GRAY_3}"
+    value: "{!LINK_WATER}"
     comment: Default secondary button - focus state
   COLOR_BACKGROUND_BUTTON_DEFAULT_ACTIVE:
-    value: "{!PALETTE_GRAY_4}"
+    value: "{!WHITE_LILAC}"
     comment: Default secondary button - active state
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Default secondary button - disabled state
   COLOR_BACKGROUND_BUTTON_ICON:
     value: "{!TRANSPARENT}"
     comment: Background color for icon-only button
   COLOR_BACKGROUND_BUTTON_ICON_HOVER:
-    value: "{!PALETTE_GRAY_3}"
+    value: "{!LINK_WATER}"
     comment: Background color for icon-only button - hover state
   COLOR_BACKGROUND_BUTTON_ICON_FOCUS:
-    value: "{!PALETTE_GRAY_3}"
+    value: "{!LINK_WATER}"
     comment: Background color for icon-only button - focus state
   COLOR_BACKGROUND_BUTTON_ICON_ACTIVE:
-    value: "{!PALETTE_GRAY_4}"
+    value: "{!WHITE_LILAC}"
     comment: Background color for icon-only button - active state
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Background color for icon-only button - disabled state
   COLOR_BACKGROUND_BUTTON_INVERSE:
     value: "{!TRANSPARENT}"

@@ -27,10 +27,14 @@ props:
     comment: Text color found on any primary brand color
   ## INTERACTIONS
   COLOR_TEXT_LINK_PRIMARY:
-    value: "{!BLUE_TEXT_PRIMARY}"
+    value: '{!BLUE_TEXT_PRIMARY}'
   COLOR_TEXT_LINK_PRIMARY_HOVER:
-    value: "{!BLUE_TEXT_SECONDARY}"
+    value: '{!BLUE_TEXT_SECONDARY}'
   COLOR_TEXT_LINK_PRIMARY_ACTIVE:
-    value: "{!BLUE_TEXT_SECONDARY}"
+    value: '{!BLUE_TEXT_SECONDARY}'
   COLOR_TEXT_LINK_PRIMARY_FOCUS:
-    value: "{!BLUE_TEXT_SECONDARY}"
+    value: '{!BLUE_TEXT_SECONDARY}'
+
+  ## BUTTONS
+  BUTTON_COLOR_TEXT_PRIMARY:
+    value: '{!PALETTE_GRAY_1}'

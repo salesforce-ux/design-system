@@ -12,7 +12,10 @@
 // If the brand band is standalone, use this modifier. If the brand band is being extended
 // into another component use slds-brand-band without this modifier
 .slds-brand-band {
+  display: flex;
   position: relative;
+  height: 100%;
+  width: 100%;
 
   &:before {
     content: '';
@@ -26,7 +29,7 @@
       url($brand-band-default-image),
       linear-gradient(to top, transparent 0, $brand-band-color-background-secondary);
     background-repeat: repeat-x;
-    background-position: bottom left;
+    background-position: top left;
   }
 
   &.slds-brand-band_cover {
@@ -62,4 +65,16 @@
   &.slds-brand-band_none:before {
     height: 0;
   }
+}
+
+.slds-template_default {
+  padding: $template-gutters;
+}
+
+.slds-template_bottom-magnet {
+  padding: $template-gutters $template-gutters 0 $template-gutters;
+}
+
+.slds-template_profile {
+  padding: $template-profile-gutters;
 }

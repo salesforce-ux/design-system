@@ -10,10 +10,8 @@ const stylelint = require('gulp-stylelint');
 const htmlhint = require('gulp-htmlhint');
 const tokenlint = require('./plugins/lint-tokens');
 const yamlValidate = require('gulp-yaml-validate');
-const vnu = require('./vnu-lint');
 const {validate} = require('./validate');
-const minimist = require('minimist');
-const through = require('through2');
+const vnu = require('./vnu');
 
 gulp.task('lint:sass', () =>
   gulp.src([
@@ -135,27 +133,7 @@ gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:components', 'lint:to
 
 gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tokens']);
 
-const parseComponentArgument = argv =>
-  minimist(argv.slice(2)).component || '*';
-
-const createVnuReport = stream =>
-  // eslint-disable-next-line handle-callback-err
-  vnu.lint(`.html/${parseComponentArgument(process.argv)}`, {}, (err, stdout, stderr) => {
-    const contents = JSON.stringify(vnu.report(stderr), null, 2);
-    stream.write(
-      new gutil.File({
-        path: 'vnu_report.json',
-        contents: Buffer.from(contents)
-      }));
-  });
-
-// gulp lint:vnu
-// gulp lint:vnu --component data-tabl*
-gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
-  const stream = through.obj();
-  createVnuReport(stream);
-  return stream.pipe(gulp.dest('.reports/'));
-});
+gulp.task('lint:examples', ['lint:vnu', 'lint:validate', 'a11y']);
 
 gulp.task('lint:validate', ['generate:wrappedexamples'], () =>
   validate().fork(console.error, x => x));

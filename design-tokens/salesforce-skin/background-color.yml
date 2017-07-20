@@ -42,3 +42,6 @@ props:
     comment: Default Card component background color
   CARD_WRAPPER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
+  ## BUTTONS
+  BUTTON_COLOR_BACKGROUND_PRIMARY:
+    value: "{!PALETTE_GRAY_1}"

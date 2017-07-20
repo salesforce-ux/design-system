@@ -24,6 +24,10 @@ props:
     value: '{!SPACING_MEDIUM}'
   COMPONENT_SPACING_PADDING:
     value: '{!SPACING_MEDIUM}'
+  TEMPLATE_GUTTERS:
+    value: '{!SPACING_MEDIUM}'
+  TEMPLATE_PROFILE_GUTTERS:
+    value: '4rem {!SPACING_MEDIUM} {!SPACING_MEDIUM}'
   ## Components
   PAGE_HEADER_SPACING_MARGIN:
     value: '0'

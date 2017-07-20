@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  cssProperties:
+  - 'margin*'
+  - 'padding*'
+props:
+  TEMPLATE_GUTTERS:
+    value: '0'
+  TEMPLATE_PROFILE_GUTTERS:
+    value: '0'

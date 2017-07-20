@@ -78,3 +78,8 @@
 .slds-template_profile {
   padding: $template-profile-gutters;
 }
+
+// This template is used on the oneAloha wrapper surrounding an iFramed page
+.slds-template_iframe {
+  padding: $template-gutters;
+}

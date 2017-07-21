@@ -78,7 +78,6 @@ const ListBox = props =>
       aria-multiselectable="true"
       className="slds-listbox slds-listbox_vertical"
       role="listbox"
-      tabIndex="0"
     >
       { props.options.map(option =>
         <Option key={_.uniqueId('cell-resize-handle-')} option={option} />

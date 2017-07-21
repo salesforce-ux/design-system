@@ -16,20 +16,9 @@
   box-shadow: none;
 }
 
-/**
- * @summary
- *
- * @selector .slds-has-full-bleed
- * @restrict .slds-page-header
- * @modifier
- */
-.slds-page-header_bleed,
-.slds-page-header.slds-has-full-bleed {
-  margin: 0;
-}
-
 // Overrides when inside a card
 .slds-tabs_card .slds-page-header,
 .slds-card .slds-page-header {
+  border: 0;
   box-shadow: none;
 }

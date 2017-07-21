@@ -107,6 +107,7 @@
       .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
         width: ($i / $denominator) * 100%;
         flex: 0 0 ($i / $denominator) * 100%;
+        max-width: ($i / $denominator) * 100%; // IE fix
       }
     }
   }

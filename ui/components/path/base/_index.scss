@@ -42,7 +42,6 @@
    * @restrict .slds-path__track
    */
   &.slds-has-overflow {
-
     /**
      *
      * @summary Allows the path to scroll when necessary
@@ -92,9 +91,9 @@
  * @restrict .slds-path__track div
  *
  */
- .slds-path__scroll-controls {
-    display: none;
- }
+.slds-path__scroll-controls {
+  display: none;
+}
 
 /**
  * @summary Shows the stage name when in the smaller state
@@ -103,9 +102,9 @@
  * @restrict .slds-path__track span
  *
  */
- .slds-path__stage-name {
-    display: none;
-  }
+.slds-path__stage-name {
+  display: none;
+}
 
 /**
  * @summary Creates the container for toggle button and path
@@ -120,6 +119,7 @@
 .slds-path__action {
   flex-shrink: 0;
 }
+
 /**
  * @summary Horizontal list of stages in path component
  *
@@ -130,6 +130,73 @@
   display: flex;
   align-items: flex-start;
   margin-right: $spacing-small;
+
+  /**
+  * @summary Creates the incomplete stage of the path
+  *
+  * @selector .slds-is-incomplete
+  * @restrict .slds-path__item
+  * @modifier
+  */
+  .slds-is-incomplete {
+    background-color: $color-background-path-incomplete;
+
+    &:hover {
+      background-color: $color-background-path-incomplete-hover;
+    }
+
+    .slds-path__link {
+      color: $color-text-default;
+    }
+  }
+
+  /**
+  * @summary Creates the active stage of the sales path
+  *
+  * @selector .slds-is-active
+  * @restrict .slds-path__item
+  * @notes This class must be placed on the item programatically when the guidance section is activated
+  * @modifier
+  */
+  .slds-is-active {
+    background-color: $color-background-inverse;
+
+    .slds-path__link {
+      color: $color-text-inverse;
+    }
+
+    &:hover {
+      background-color: $color-background-alt-inverse;
+
+      + .slds-path__item:before {
+        background-color: $color-background-alt-inverse;
+      }
+    }
+
+    + .slds-path__item:before {
+      background-color: $color-background-inverse;
+    }
+  }
+
+  /**
+   * @summary Creates success stage of the path
+   *
+   * @selector .slds-is-won
+   * @restrict .slds-path__item
+   * @modifier
+   */
+  .slds-is-active,
+  .slds-is-active.slds-is-won {
+
+    .slds-path__title {
+      transform: rotateX(0deg);
+    }
+
+    .slds-path__stage {
+      transform: rotateX(-180deg);
+    }
+  }
+
 
   /**
    * @summary Creates the completed stage of the path
@@ -170,7 +237,6 @@
     }
   }
 
-
   /**
    * @summary Creates the current stage of the path
    *
@@ -194,92 +260,25 @@
     }
   }
 
-
-/**
- * @summary Creates the incomplete stage of the path
- *
- * @selector .slds-is-incomplete
- * @restrict .slds-path__item
- * @modifier
- */
-.slds-is-incomplete {
-  background-color: $color-background-path-incomplete;
-
-  &:hover {
-    background-color: $color-background-path-incomplete-hover;
-  }
-
-  .slds-path__link {
-    color: $color-text-default;
-  }
-}
-
-/**
- * @summary Creates lost stage of the path
- *
- * @selector .slds-is-lost
- * @restrict .slds-path__item
- * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and  the opportunity is lost
- * @modifier
- */
-.slds-is-lost,
-.slds-is-lost:hover {
-  background-color: $color-background-path-lost;
-}
-
-// Lets make sure we have the right color when these steps are activated
-.slds-is-current,
-.slds-is-lost {
-
-  .slds-path__link {
-    color: $color-text-inverse;
-  }
-}
-
-/**
- * @summary Creates the active stage of the sales path
- *
- * @selector .slds-is-active
- * @restrict .slds-path__item
- * @notes This class must be placed on the item programatically when the guidance section is activated
- * @modifier
- */
-.slds-is-active {
-  background-color: $color-background-inverse;
-
-  .slds-path__link {
-    color: $color-text-inverse;
-  }
-
-  &:hover {
-    background-color: $color-background-alt-inverse;
-
-    + .slds-path__item:before {
-      background-color: $color-background-alt-inverse;
-    }
-  }
-
-  + .slds-path__item:before {
-    background-color: $color-background-inverse;
-  }
-}
-
   /**
-   * @summary Creates success stage of the path
-   *
-   * @selector .slds-is-won
-   * @restrict .slds-path__item
-   * @modifier
-   */
-  .slds-is-active,
-  .slds-is-won {
+  * @summary Creates lost stage of the path
+  *
+  * @selector .slds-is-lost
+  * @restrict .slds-path__item
+  * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and  the opportunity is lost
+  * @modifier
+  */
+  .slds-is-lost,
+  .slds-is-lost:hover {
+    background-color: $color-background-path-lost;
+  }
 
-    .slds-path__title {
-      transform: rotateX(0deg);
-    }
+  // Lets make sure we have the right color when these steps are activated
+  .slds-is-current,
+  .slds-is-lost {
 
-    .slds-path__stage {
-      transform: rotateX(-180deg);
+    .slds-path__link {
+      color: $color-text-inverse;
     }
   }
 }

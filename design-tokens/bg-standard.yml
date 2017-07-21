@@ -323,3 +323,17 @@ props:
     value: '#6EC06E'
   QUIP_SHEET:
     value: '#30C85A'
+  OMNI_SUPERVISOR:
+    value: '#8A76F0'
+  QUICK_TEXT:
+    value: '#62B7E5'
+  TEMPLATE:
+    value: '#3C97DD'
+  LEAD_LIST:
+    value: '#F88962'
+  CONTACT_LIST:
+    value: '#A094ED'
+  LIST_EMAIL:
+    value: '#8BAEB5'
+  OPPORTUNITY_SPLITS:
+    value: '#FCB95B'

@@ -400,3 +400,5 @@ props:
     value: '#7e8be4'
   ACTION_ADD_PHOTO_VIDEO:
     value: '#00cdc0'
+  ACTION_RECALL:
+    value: '#4A698D'

@@ -18,9 +18,11 @@ props:
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_HOVER:
     value: '{!PALETTE_GRAY_2}'
     comment: Hovered context bar item background color.
+    deprecated: true
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_ACTIVE:
     value: '{!PALETTE_GRAY_2}'
     comment: Active context bar item background color.
+    deprecated: true
   COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
     value: '{!WHITE}'
     comment: Context TAB bar item background color.

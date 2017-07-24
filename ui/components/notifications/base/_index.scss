@@ -26,6 +26,7 @@
 .slds-notification {
   position: relative;
   width: $size-medium; // this is 320, not 300px
+  border: 1px solid $color-border-reminder;
   border-radius: $border-radius-medium;
   box-shadow: $shadow-reminder;
 
@@ -92,4 +93,3 @@
   top: 0;
   right: 0;
 }
-

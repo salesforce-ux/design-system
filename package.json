@@ -29,6 +29,7 @@
     "@salesforce-ux/design-system-parser": "1.0.0",
     "@salesforce-ux/design-system-previewer": "2.0.3",
     "@salesforce-ux/icons": "7.26.0",
+    "@salesforce-ux/instant-vrt": "0.0.2",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",
@@ -159,11 +160,11 @@
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
     "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
-    "report": "gulp lint:vnu lint:validate a11y",
     "stats": "gulp stylestats",
     "test": "babel-node scripts/npm/test.js",
     "test-mocha": "mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
-    "test-jest": "jest"
+    "test-jest": "jest",
+    "travis": "node scripts/npm/build-travis.js"
   },
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$"

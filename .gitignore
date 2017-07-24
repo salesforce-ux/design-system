@@ -20,6 +20,8 @@
 # directory to check it in the repository
 !.gitkeep
 
+*snap.json
+
 # Ignore generated styles
 /assets/styles
 

@@ -38,7 +38,7 @@ props:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
     comment: Shadow for drop down.
   SHADOW_REMINDER:
-    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!BLACK_TRANSPARENT_16}'
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!OFFSET_NONE} {!BLACK_TRANSPARENT_10}'
     comment: Shadow for notifications that should be elevated above other components but under modals.
   SHADOW_HEADER:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'

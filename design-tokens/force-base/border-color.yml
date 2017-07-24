@@ -163,6 +163,9 @@ props:
   COLOR_BORDER_TOGGLE_CHECKED:
     value: '{!WHITE}'
     comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
+  COLOR_BORDER_REMINDER:
+    value: '{!CADET_BLUE}'
+    comment: Border color on notification reminders.
   COLOR_STROKE_BRAND:
     value: '{!SCIENCE_BLUE}'
     cssProperties:

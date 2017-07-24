@@ -21,20 +21,20 @@ imports:
 props:
   ## Globals
   COMPONENT_SPACING_MARGIN:
-    value: '{!SPACING_MEDIUM}'
+    value: '{!SPACING_SMALL}'
   COMPONENT_SPACING_PADDING:
     value: '{!SPACING_MEDIUM}'
   TEMPLATE_GUTTERS:
-    value: '{!SPACING_MEDIUM}'
+    value: '{!SPACING_SMALL}'
   TEMPLATE_PROFILE_GUTTERS:
-    value: '4rem {!SPACING_MEDIUM} {!SPACING_MEDIUM}'
+    value: '4rem {!SPACING_SMALL} {!SPACING_SMALL}'
   ## Components
   PAGE_HEADER_SPACING_MARGIN:
     value: '0'
   PAGE_HEADER_JOINED_SPACING_MARGIN:
     value: '0'
   TABLE_SPACING:
-    value: '0 {!SPACING_MEDIUM}'
+    value: '0'
   TABLE_CELL_SPACING:
     value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'
   CARD_FOOTER_SPACING_TOP:

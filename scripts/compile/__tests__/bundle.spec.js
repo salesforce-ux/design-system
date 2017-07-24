@@ -11,9 +11,6 @@ describe("scripts/compile/bundle", () => {
     it("umd", () => {
       expect(Bundle.configs.umd).toMatchSnapshot();
     });
-    it("commonJS", () => {
-      expect(Bundle.configs.commonJS).toMatchSnapshot();
-    });
     it("chunked", () => {
       expect.assertions(1);
       Bundle.configs.chunked.fork(
@@ -48,7 +45,7 @@ describe("scripts/compile/bundle", () => {
         },
         configs => {
           configs = configs.map(c => c.delete("plugins"));
-          expect(compile).toHaveBeenCalledTimes(3);
+          expect(compile).toHaveBeenCalledTimes(2);
           expect(configs).toMatchSnapshot();
         }
       );

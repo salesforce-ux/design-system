@@ -13,5 +13,5 @@ props:
     value: '{!VALENCIA}'
     comment: Utility bar notifications badge background color.
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Utility bar notifications focus background color.

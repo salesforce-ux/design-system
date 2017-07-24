@@ -13,13 +13,13 @@ imports:
 props:
   ## DEFAULT
   COLOR_TEXT_PRIMARY:
-    value: '{!PALETTE_GRAY_12}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Primary body text color
   COLOR_TEXT_SECONDARY:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Secondary body text color
   COLOR_TEXT_TERTIARY:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Tertiary body text color
   ## BRANDING
   COLOR_TEXT_BRAND_PRIMARY:

@@ -115,11 +115,11 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
       @keyframes bkAnim {
         50% {
-          background-color: #edf1f4;
+          background-color: $color-background-context-bar;
         }
 
         100% {
-          background-color: #F7F9FB;
+          background-color: $color-background-context-bar-brand-light;
         }
       }
 
@@ -318,7 +318,8 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
    * @restrict .slds-context-bar
    * @variant
    */
-  &_tabs {
+  &_tabs,
+  &--tabs {
     border-top: $border-width-thin solid $color-border;
   }
 
@@ -350,6 +351,9 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
     &.slds-is-active,
     &:nth-child(n).slds-is-active {
       background-color: $color-background-context-tab-bar-item;
+      margin-bottom: (3px * -1);
+      border-bottom: 3px solid $color-background-context-tab-bar-item;
+      animation: none;
 
       &:hover {
         background-color: $color-background-context-tab-bar-item;
@@ -403,7 +407,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       top: auto;
     }
   }
-
 }
 
 /**

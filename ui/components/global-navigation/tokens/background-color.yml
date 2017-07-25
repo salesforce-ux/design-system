@@ -15,6 +15,10 @@ props:
   COLOR_BACKGROUND_CONTEXT_BAR_BRAND_ACCENT:
     value: '{!CERULEAN}'
     comment: Brand color in context bar for default theme
+  COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
+    value: '{!WHITE}'
+    comment: Context TAB bar item background color.
+  ## Deprecated
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_HOVER:
     value: '{!PALETTE_GRAY_1}'
     comment: Hovered context bar item background color.
@@ -23,9 +27,6 @@ props:
     value: '{!PALETTE_GRAY_1}'
     comment: Active context bar item background color.
     deprecated: true
-  COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
-    value: '{!WHITE}'
-    comment: Context TAB bar item background color.
   COLOR_BACKGROUND_CONTEXT_BAR_INVERSE_ITEM_HOVER:
     value: '{!WHITE_TRANSPARENT_20}'
     comment: Hovered context bar item background color.

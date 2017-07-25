@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$color-background-context-bar-brand-light: rgba(desaturate($color-background-context-bar-brand-accent, 30%), 0.05);
+$color-background-context-bar-brand-light: rgba(desaturate($color-background-context-bar-brand-accent, 30%), 0.1);
 
 /**
  * @summary Navigation bar wrapper
@@ -76,6 +76,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
     white-space: nowrap;
     position: relative;
     max-width: $size-small;
+    transition: background-color 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 
     /**
      * Active state of an item
@@ -123,8 +124,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
         }
       }
 
-      &:before,
-      &:after {
+      &:before {
         content: '';
         height: 3px;
         display: block;
@@ -152,15 +152,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
         100% {
           transform: translate3d(0, 0, 0);
-        }
-      }
-
-      &:after {
-        background: rgba(0, 0, 0, 0.25);
-
-        @supports (mix-blend-mode: soft-light) {
-          background: rgba(0, 0, 0, 0.75);
-          mix-blend-mode: soft-light;
         }
       }
 

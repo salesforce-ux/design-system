@@ -15,15 +15,15 @@ props:
   ## These seem to be button-related
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
-  COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_GRAY_2}'
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_1}'
   COLOR_FOREGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
   COLOR_CONTRAST_SECONDARY:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_GRAY_3}'
   ## BRANDING
   COLOR_BACKGROUND_BRAND_PRIMARY:
     value: '{!BLUE_BACKGROUND_PRIMARY}'
@@ -35,7 +35,7 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_6}'
   ## CARDS
   CARDS_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'

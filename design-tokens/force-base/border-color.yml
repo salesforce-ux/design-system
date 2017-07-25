@@ -13,7 +13,7 @@ imports:
 props:
   ## DEFAULTS FROM SALESFORCE-SKIN
   COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
   ## BRANDING DEFAULTS FROM SALESFORCE-SKIN
   COLOR_BORDER_BRAND_PRIMARY:
     value: '{!AZURE}'
@@ -25,7 +25,7 @@ props:
     value: '{!MIDNIGHT_BLUE}'
   ###########
   COLOR_BORDER:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     cssProperties:
     - 'border*'
     - box-shadow
@@ -55,7 +55,7 @@ props:
     value: '{!MAROON}'
     comment: Active border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_INFO:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BORDER_ERROR:
     value: '{!FLUSH_MAHOGANY}'
@@ -67,7 +67,7 @@ props:
     value: '{!DEEP_BLUSH}'
     comment: Dark alternative border color for UI elements related to errors.
   COLOR_BORDER_OFFLINE:
-    value: '{!PALETTE_GRAY_12}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Border color for UI elements related to the offline state.
   COLOR_BORDER_SUCCESS:
     value: '{!EMERALD}'
@@ -88,13 +88,13 @@ props:
     value: "{!WHITE}"
     comment: Border color for an active tab.
   COLOR_BORDER_SEPARATOR:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Lightest separator color - used as default separator on white backgrounds.
   COLOR_BORDER_SEPARATOR_ALT:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Medium separator color - used as default separator on light gray backgrounds.
   COLOR_BORDER_SEPARATOR_ALT_2:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
   COLOR_BORDER_SEPARATOR_INVERSE:
     value: '{!SAN_JUAN}'
@@ -119,7 +119,7 @@ props:
     specificity: builders
     comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
   COLOR_BORDER_SELECTION_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     specificity: builders
     comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.
   COLOR_BORDER_CANVAS_ELEMENT_SELECTION:
@@ -143,19 +143,19 @@ props:
     value: '{!TRANSPARENT}'
     comment: Border color for brandable primary button - disabled state
   COLOR_BORDER_BUTTON_DEFAULT:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Border color for default secondary button
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Border color for disabled inverse button.
   COLOR_BORDER_INPUT:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Border color on form elements.
   COLOR_BORDER_INPUT_ACTIVE:
     value: '{!AZURE}'
     comment: Border color on active form elements.
   COLOR_BORDER_INPUT_DISABLED:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Border color on disabled form elements.
   COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
     value: '{!WHITE}'
@@ -182,12 +182,12 @@ props:
     - stroke
     comment: Active stroke color for our product brand blue.
   COLOR_STROKE_DISABLED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     cssProperties:
     - stroke
     comment: Disabled stroke color.
   COLOR_STROKE_HEADER_BUTTON:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_GRAY_7}'
     cssProperties:
     - stroke
     comment: Stroke color for our global header buttons.

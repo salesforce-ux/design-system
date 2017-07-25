@@ -12,7 +12,7 @@ props:
     value: '{!WHITE}'
     comment: Borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_SHADE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Shaded borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_HOVER:
     value: '{!SCIENCE_BLUE}'

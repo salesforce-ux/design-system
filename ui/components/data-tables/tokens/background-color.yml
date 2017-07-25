@@ -10,9 +10,9 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   TABLE_COLOR_BACKGROUND_STRIPES:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
   TABLE_COLOR_BACKGROUND_HEADER:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
   TABLE_COLOR_BACKGROUND_HEADER_HOVER:
     value: '#fff'
   TABLE_COLOR_BACKGROUND_HEADER_FOCUS:

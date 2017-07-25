@@ -12,5 +12,5 @@ props:
     value: '{!PALETTE_GRAY_1}'
     comment: White badge background color.
   BADGE_COLOR_BACKGROUND_INVERSE:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Dark gray badge background color.

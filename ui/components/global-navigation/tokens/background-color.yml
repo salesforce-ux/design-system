@@ -16,11 +16,11 @@ props:
     value: '{!CERULEAN}'
     comment: Brand color in context bar for default theme
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_HOVER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Hovered context bar item background color.
     deprecated: true
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_ACTIVE:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Active context bar item background color.
     deprecated: true
   COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:

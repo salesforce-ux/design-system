@@ -10,8 +10,8 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   SPLIT_VIEW_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Split View background color.
   SPLIT_VIEW_COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Split View background color on row hover.

@@ -10,4 +10,4 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_PICKER_SLIDER_THUMB_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'

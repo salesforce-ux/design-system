@@ -22,7 +22,7 @@ props:
     value: '{!BISCAY}'
     comment: 'Brand active fill color'
   FILL_HEADER_BUTTON:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_GRAY_7}'
     comment: 'Header button icon color'
   FILL_HEADER_BUTTON_HOVER:
     value: '{!ENDEAVOUR}'

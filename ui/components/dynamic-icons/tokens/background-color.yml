@@ -9,5 +9,5 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   COLOR_BACKGROUND_ICON_WAFFLE:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Default color for animated icon waffle for app switcher.

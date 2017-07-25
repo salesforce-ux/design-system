@@ -13,10 +13,10 @@ props:
     value: '{!WHITE}'
     comment: The default background color for Progress Indicator
   PROGRESS_COLOR_BACKGROUND_SHADE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: The shaded background color for Progress Indicator
   PROGRESS_BAR_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     comment: The background color for the Progress Bar
   PROGRESS_BAR_COLOR_BACKGROUND_FILL:
     value: '{!MALIBU}'

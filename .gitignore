@@ -20,7 +20,11 @@
 # directory to check it in the repository
 !.gitkeep
 
+# for vrt
 *snap.json
+
+# nvm 5
+package-lock.json
 
 # Ignore generated styles
 /assets/styles

@@ -28,6 +28,6 @@ props:
     value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png'
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_6}'
+    value: '#AFC5DE'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_8}'
+    value: '#205C9F'

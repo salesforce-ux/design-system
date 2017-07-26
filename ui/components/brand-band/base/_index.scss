@@ -21,6 +21,7 @@
     content: '';
     display: block;
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -79,7 +80,17 @@
   padding: $template-profile-gutters;
 }
 
-// This template is used on the oneAloha wrapper surrounding an iFramed page
+// This template is typically used on a content area where there's a left sticky nav especially when it will scroll and needs no right or bottom gutter
+.slds-template__content {
+  padding: $template-gutters $template-gutters 0 $template-gutters;
+}
+
+// This template is used on an iframe with an app inside that will scroll and needs no right or bottom gutter
+.slds-template_app {
+  padding: $template-gutters 0 0 $template-gutters;
+}
+
+// This template is used on the oneAloha wrapper surrounding an iframed page
 .slds-template_iframe {
   padding: $template-gutters;
 }

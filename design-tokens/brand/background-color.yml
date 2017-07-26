@@ -13,21 +13,21 @@ imports:
 props:
   ## BRAND BAND
   BRAND_BAND_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210'
     type: raw
   BRAND_BAND_USER_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210'
     type: raw
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210'
     type: raw
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210'
     type: raw
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210'
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_6}'
+    value: '#AFC5DE'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_8}'
+    value: '#205C9F'

@@ -33,29 +33,68 @@
     background-position: top left;
   }
 
+  &:after {
+    content: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom, transparent 60%, $page-color-background-primary);
+  }
+
   &.slds-brand-band_cover {
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   // Small Height Modifier (Made the default as a test)
-  &.slds-brand-band_small:before {
-    height: $brand-band-image-height-small;
+  &.slds-brand-band_small {
+
+    &:before {
+      height: $brand-band-image-height-small;
+    }
+
+    &:after {
+      content: '';
+      top: calc(#{$brand-band-image-height-small} - 50px);
+    }
   }
 
   // Medium Height Modifier
-  &.slds-brand-band_medium:before {
-    height: $brand-band-image-height-medium;
+  &.slds-brand-band_medium {
+
+    &:before {
+      height: $brand-band-image-height-medium;
+    }
+
+    &:after {
+      content: '';
+      top: calc(#{$brand-band-image-height-medium} - 50px);
+    }
   }
 
   // Large Height Modifier
-  &.slds-brand-band_large:before {
-    height: $brand-band-image-height-large;
+  &.slds-brand-band_large {
+
+    &:before {
+      height: $brand-band-image-height-large;
+    }
+
+    &:after {
+      content: '';
+      top: calc(#{$brand-band-image-height-large} - 50px);
+    }
   }
 
   // Full Height Modifier
-  &.slds-brand-band_full:before {
-    height: 100%;
+  &.slds-brand-band_full {
+
+    &:before {
+      height: 100%;
+    }
   }
 
   &.slds-brand-band_bottom:before {

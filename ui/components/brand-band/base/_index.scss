@@ -12,12 +12,16 @@
 // If the brand band is standalone, use this modifier. If the brand band is being extended
 // into another component use slds-brand-band without this modifier
 .slds-brand-band {
+  display: flex;
   position: relative;
+  height: 100%;
+  width: 100%;
 
   &:before {
     content: '';
     display: block;
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -26,7 +30,7 @@
       url($brand-band-default-image),
       linear-gradient(to top, transparent 0, $brand-band-color-background-secondary);
     background-repeat: repeat-x;
-    background-position: bottom left;
+    background-position: top left;
   }
 
   &.slds-brand-band_cover {
@@ -62,4 +66,38 @@
   &.slds-brand-band_none:before {
     height: 0;
   }
+}
+
+.slds-template__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slds-template_default {
+  padding: $template-gutters;
+}
+
+.slds-template_bottom-magnet {
+  padding: $template-gutters $template-gutters 0 $template-gutters;
+}
+
+.slds-template_profile {
+  padding: $template-profile-gutters;
+}
+
+// This template is typically used on a content area where there's a left sticky nav especially when it will scroll and needs no right or bottom gutter
+.slds-template__content {
+  padding: $template-gutters $template-gutters 0 $template-gutters;
+}
+
+// This template is used on an iframe with an app inside that will scroll and needs no right or bottom gutter
+.slds-template_app {
+  padding: $template-gutters 0 0 $template-gutters;
+}
+
+// This template is used on the oneAloha wrapper surrounding an iframed page
+.slds-template_iframe {
+  width: 100%; // added for console - watch this
+  padding: $template-gutters;
 }

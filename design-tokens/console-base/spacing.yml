@@ -19,11 +19,10 @@ global:
 imports:
 - ../force-base/aliases/spacing.yml
 props:
+  ## Old
   CARD_SPACING_MEDIUM:
     value: '{!SPACING_SMALL}'
   CARD_SPACING_LARGE:
     value: '{!SPACING_SMALL}'
-  TABLE_SPACING_X_SMALL:
-    value: '{!SPACING_XX_SMALL}'
   CARD_SPACING_MARGIN:
     value: '{!SPACING_SMALL}'

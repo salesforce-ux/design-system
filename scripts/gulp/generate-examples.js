@@ -55,20 +55,18 @@ gulp.task('generate:examples', () => {
   .chain(uiJSON =>
     Task.of(createInstance(uiJSON))
     .map(SLDS =>
-      uiJSON.forEach((group, name) =>
-        group.forEach(item =>
-          SLDS.variants(item)
-          .forEach(variant =>
-            showcase(item.get('id'), variant.get('id'), name === 'utilities', true)
-            .getOrElse(I.List())
-            .forEach(section =>
-              section.get('items')
-              .forEach(i =>
-                stream.write(new gutil.File({
-                  path: `${getFileName(item, variant, i)}.html`,
-                  contents: Buffer.from(render(i))
-                }))
-              )
+      uiJSON.get('components').map(comp =>
+        SLDS.variants(comp)
+        .map(variant =>
+          showcase(comp.get('id'), variant.get('id'), false, true)
+          .getOrElse(I.List())
+          .map(section =>
+            section.get('items')
+            .map(i =>
+              stream.write(new gutil.File({
+                path: `${getFileName(comp, variant, i)}.html`,
+                contents: Buffer.from(render(i))
+              }))
             )
           )
         )

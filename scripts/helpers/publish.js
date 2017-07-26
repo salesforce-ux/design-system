@@ -88,8 +88,8 @@ const prepare = (done) => {
     ], done),
     // examples
     async.apply(execute, `cp -a ${paths.generated}/examples/. ${paths.build}/examples`),
-    // snaps
-    async.apply(execute, `create-snap ${paths.generated}/examples/ ${paths.build} ${paths.build}/dist/assets/styles/salesforce-lightning-design-system.css`),
+    // snap which is created during the test/lint phase
+    async.apply(execute, `mv ${paths.generated}/snapshot.json ${paths.build}`),
     // tokens
     async.apply(execute, `cp -a ${paths.designTokens}/. ${paths.build}/design-tokens`),
     // git info

@@ -8,7 +8,7 @@ global:
   - color
   - fill
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 props:
   BUTTON_COLOR_TEXT_PRIMARY:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!WHITE_PRIMARY}'

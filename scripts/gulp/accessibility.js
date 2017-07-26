@@ -9,7 +9,7 @@ const parseComponentArgs = (components) =>
   components.map((comp) => `.html/${comp}*.html`);
 
 const urlsToTest = (args.components)
-  ? parseComponentArgs(args.components.split(','))
+  ? parseComponentArgs(String(args.components).split(','))
   : ['.html/*.html'];
 
 // gulp a11y

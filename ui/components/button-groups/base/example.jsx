@@ -106,7 +106,7 @@ export let examples = [
           <ButtonIcon
             aria-haspopup="true"
             assistiveText="More Actions"
-            className="slds-button_icon-border"
+            className="slds-button_icon-border-filled"
             disabled
             symbol="down"
             title="More Actions"

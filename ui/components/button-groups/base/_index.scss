@@ -16,13 +16,6 @@
   .slds-button {
     border-radius: 0;
     border-width: $border-width-thin;
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
-      box-shadow: $shadow-soft-primary-hover;
-      z-index: $z-index-default; // Forces box shadow to sit above adjacent buttons
-    }
   }
 }
 

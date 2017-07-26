@@ -8,11 +8,9 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 - "../../../../design-tokens/color-palettes.yml"
 props:
   CARD_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
   CARD_FOOTER_COLOR_BORDER:
     value: 'transparent'

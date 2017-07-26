@@ -20,6 +20,8 @@
 # directory to check it in the repository
 !.gitkeep
 
+*snap.json
+
 # Ignore generated styles
 /assets/styles
 
@@ -31,6 +33,9 @@ design-tokens/components.yml
 
 # Ignore modules
 /node_modules
+
+# Ignore assets
+/_slds/images/themes/oneSalesforce
 
 # Ignore logs
 *.log

@@ -62,13 +62,6 @@ const chunked = chunkedEntry().map(entry =>
     ))
 );
 
-// commonJS :: I.Map
-const commonJS = webpackConfig
-  .set("entry", "./scripts/compile/entry.js")
-  .set("externals", externals)
-  .setIn(["output", "libraryTarget"], "commonjs2")
-  .setIn(["output", "filename"], "slds.common.js");
-
 // umd :: I.Map
 const umd = webpackConfig
   .set("entry", "./scripts/compile/entry.js")
@@ -76,7 +69,7 @@ const umd = webpackConfig
   .setIn(["output", "libraryTarget"], "umd")
   .setIn(["output", "filename"], "slds.umd.js");
 
-const configs = { umd, commonJS, chunked };
+const configs = { umd, chunked };
 
 // watch :: (I.Map, Path, WatchOptions) -> Task Error Stats
 const watch = (config, options = {}) =>
@@ -97,7 +90,7 @@ const compile = config =>
     if (!config.hasIn(["output", "path"])) {
       return reject(new Error("output.path must be set before compile"));
     }
-    webpack(config.toJS()).run((err, stats) => {
+    return webpack(config.toJS()).run((err, stats) => {
       if (err) return reject(err);
       if (stats.hasErrors()) {
         const errors = stats.toJson().errors.map(e => {
@@ -124,7 +117,6 @@ const compile = config =>
 const createLibrary = (outputDir, compileFn = compile) =>
   I.List([
     { getConfig: Task.of(umd), extraFolder: "" },
-    { getConfig: Task.of(commonJS), extraFolder: "" },
     { getConfig: chunked, extraFolder: "chunked" }
   ]).traverse(Task.of, ({ getConfig, extraFolder }) =>
     getConfig

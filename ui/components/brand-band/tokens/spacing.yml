@@ -2,12 +2,13 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  type: box-shadow
-  category: shadow
+  category: spacing
+  type: size
   cssProperties:
-  - box-shadow
-imports:
-- ../force-base/aliases/color.yml
+  - 'margin*'
+  - 'padding*'
 props:
-  PAGE_HEADER_BUTTON_SHADOW:
-    value: '{!BLACK_TRANSPARENT_10} 0 3px 4px'
+  TEMPLATE_GUTTERS:
+    value: '0'
+  TEMPLATE_PROFILE_GUTTERS:
+    value: '0'

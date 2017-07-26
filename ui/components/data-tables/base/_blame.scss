@@ -13,7 +13,7 @@
 
   table {
     border-radius: $table-border-radius; // @TODO: This should probably use the card-wrapper token as well
-    box-shadow: $card-wrapper-shadow; // This should always mirror the card's box shadow
+    box-shadow: $card-shadow; // This should always mirror the card's box shadow
   }
 }
 
@@ -25,6 +25,6 @@
 
   .slds-table {
     border-radius: $table-border-radius; // @TODO: This should probably use the card-wrapper token as well
-    box-shadow: $card-wrapper-shadow; // This should always mirror the card's box shadow
+    box-shadow: $card-shadow; // This should always mirror the card's box shadow
   }
 }

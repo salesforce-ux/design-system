@@ -2,27 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @mixin button {
-  padding: {
-    left: $spacing-medium;
-    right: $spacing-medium;
-  }
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
   text-align: center;
   vertical-align: middle;
   border: $border-width-thin solid $color-border-primary;
-  transition: border 0.15s linear, box-shadow 0.15s linear;
-
-  &:focus,
-  &:hover {
-    box-shadow: $shadow-soft-primary-hover;
-  }
-
-  &:active {
-    box-shadow: $shadow-soft-primary-active;
-  }
-
-  &[disabled] {
-    box-shadow: none;
-  }
+  transition: border 0.15s linear;
 }
 
 @mixin button-icon {
@@ -30,20 +15,10 @@
   vertical-align: middle;
   color: $color-text-icon-default;
   border: $border-width-thin solid $color-border-primary;
-  transition: border 0.15s linear, box-shadow 0.15s linear;
-
-  &:hover,
-  &:focus {
-    box-shadow: $shadow-soft-primary-hover;
-  }
-
-  &:active {
-    box-shadow: $shadow-soft-primary-active;
-  }
+  transition: border 0.15s linear;
 
   &[disabled] {
     color: $color-text-button-default-disabled;
-    box-shadow: none;
   }
 }
 

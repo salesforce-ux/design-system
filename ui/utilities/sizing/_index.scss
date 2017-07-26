@@ -63,6 +63,8 @@ $_sizes: (
       .slds-#{$size}-size_#{$name},
       .slds-#{$size}-size--#{$name} {
         width: $width;
+        flex: 0 0 $width;
+        max-width: $width; // IE fix
       }
     }
 
@@ -90,6 +92,8 @@ $_sizes: (
       .slds-max-#{$size}-size_#{$name},
       .slds-max-#{$size}-size--#{$name} {
         width: $width;
+        flex: 0 0 $width;
+        max-width: $width; // IE fix
       }
     }
 

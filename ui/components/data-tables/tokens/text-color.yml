@@ -11,4 +11,4 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   TABLE_COLOR_TEXT_HEADER:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_GRAY_10}'

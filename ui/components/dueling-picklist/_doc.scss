@@ -10,21 +10,32 @@
  * - `aria-selected` should be placed on each `role="option`, and only set to `true` when selected
  * - `aria-labelledby` is used to identify the list to the user and should point to the list label
  * - `aria-describedby` is used to provide operation instructions for the Drag and Drop interaction
+ * - `tabindex` should be set to "0" when an item is selected and "-1" otherwise
  *
- * - *Keyboard navigation**
+ * **Focus management**
+ * - Initially, nothing should be selected and the first item in each list should have `tabindex="0"`
+ * - When an item is focused, it becomes selected
+ * - When focus leaves the list, the last selected item remains selected and focusable. When focus returns to the list focus is placed on the last selected item.
+ * - When moving items:
+ *   - With the move button: the items are unselected and added to the target list. The focus should remain on the move button.
+ *   - With a keyboard shortcut: focus remains on the item, but in the target list. Since the item is focused, it is also selected.
+ *   - If there are already selected items in the target list, they stay selected and the new items are added below them.
+ *
+ * **Keyboard navigation**
  * - Each list is a tab stop. This provides identification and operation instruction as provided by `aria-describedby` and `aria-labelledby`. State of the overall list is also provided, including total number and number of selected options in the list when focused.
  * - Because we support drag and drop re-ordering, we implement the second multi-select keyboard model.
- *   - Up and Down arrows move focus _and_ selection, with `aria-selected="true"`
- *   - `shift + up` and `shift + down` moved focus and creates addition selections
+ *   - `up` and `down` arrows move focus _and_ selection, with `aria-selected="true"`. Any previously selected items are deselected.
+ *   - `shift + up` and `shift + down` move focus and creates addition selections
  *   - `ctrl + down` or `ctrl + up` moves focus but selection remains where it is
  *   - `ctrl + space` toggles selection on the focused option, in addition to previous selections
  *   - `ctrl + a` selects all options in the list
  *   - `cmd/ctrl + right` and `cmd/ctrl + left` Moves selected items between lists
  *   - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
- *     - Up and Down arrows move the selected items _within_ the current list
+ *     - `up` and `down` arrows move the selected items _within_ the current list
  *
- * **Updating Operation and State**
- * - As a user interacts with the component, pay close attention to the content of the `aria-live` region and the `option-drag-label` assistive text. This is to provide clear instruction to the user on how to proceed, and what has happened in each State the component will be in
+ * **Updating operation and state**
+ * - The content in the `option-drag-label` assistive text should provide clear instructions on how to drag and drop with a keyboard
+ * - The `aria-live` region should update as items are moved to provide context about the state and location of the items
  *
  * @summary Dueling picklist are used to move options between two lists. The list options can be re-ordered.
  *

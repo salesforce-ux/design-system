@@ -37,6 +37,7 @@
     content: none;
     display: block;
     position: absolute;
+    z-index: -1;
     left: 0;
     right: 0;
     top: 0;
@@ -59,7 +60,7 @@
 
     &:after {
       content: '';
-      top: calc(#{$brand-band-image-height-small} - 50px);
+      top: ($brand-band-image-height-small - $brand-band-scrim-height);
     }
   }
 
@@ -72,7 +73,7 @@
 
     &:after {
       content: '';
-      top: calc(#{$brand-band-image-height-medium} - 50px);
+      top: ($brand-band-image-height-medium - $brand-band-scrim-height);
     }
   }
 
@@ -85,7 +86,7 @@
 
     &:after {
       content: '';
-      top: calc(#{$brand-band-image-height-large} - 50px);
+      top: ($brand-band-image-height-large - $brand-band-scrim-height);
     }
   }
 

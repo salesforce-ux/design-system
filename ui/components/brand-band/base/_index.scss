@@ -68,6 +68,12 @@
   }
 }
 
+.slds-template__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .slds-template_default {
   padding: $template-gutters;
 }
@@ -92,6 +98,6 @@
 
 // This template is used on the oneAloha wrapper surrounding an iframed page
 .slds-template_iframe {
-  width: 100%; //added for console - watch this
+  width: 100%; // added for console - watch this
   padding: $template-gutters;
 }

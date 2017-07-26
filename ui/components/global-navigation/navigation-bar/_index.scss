@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+$color-background-context-bar-brand-light: rgba(desaturate($color-background-context-bar-brand-accent, 30%), 0.1);
+
 /**
  * @summary Navigation bar wrapper
  *
@@ -13,7 +15,6 @@
   display: flex;
   height: $height-context-bar;
   background-color: $color-background-context-bar;
-  border-top: $border-width-thin solid $color-border;
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
@@ -75,6 +76,7 @@
     white-space: nowrap;
     position: relative;
     max-width: $size-small;
+    transition: background-color 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 
     /**
      * Active state of an item
@@ -87,9 +89,7 @@
     &.slds-is-active {
       outline: 0;
       border-radius: 0;
-      background-color: $color-background-context-bar-item-hover;
-      border-bottom: 3px solid $color-background-context-bar-brand-accent;
-      margin-bottom: (3px * -1);
+      background-color: $color-background-context-bar-brand-light;
       text-decoration: none;
       cursor: pointer;
     }
@@ -112,12 +112,19 @@
     }
 
     &.slds-is-active {
-      border-left: $border-width-thin solid $color-border;
-      border-right: $border-width-thin solid $color-border;
-      border-bottom-color: $color-background-context-bar-item-hover;
+      animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
-      &:before,
-      &:after {
+      @keyframes bkAnim {
+        50% {
+          background-color: $color-background-context-bar;
+        }
+
+        100% {
+          background-color: $color-background-context-bar-brand-light;
+        }
+      }
+
+      &:before {
         content: '';
         height: 3px;
         display: block;
@@ -126,25 +133,31 @@
         top: 0;
         left: -1px;
         right: -1px;
+        animation: navBounceIn 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
 
-      &:after {
-        background: rgba(0, 0, 0, 0.25);
+      @keyframes navBounceIn {
+        0% {
+          transform: translate3d(0, 20px, 0);
+          opacity: 0;
+        }
 
-        @supports (mix-blend-mode: soft-light) {
-          background: rgba(0, 0, 0, 0.75);
-          mix-blend-mode: soft-light;
+        20% {
+          opacity: 0;
+        }
+
+        90% {
+          transform: translate3d(0, 1px, 0);
+        }
+
+        100% {
+          transform: translate3d(0, 0, 0);
         }
       }
 
       &:hover {
-        border-bottom-color: $color-background-context-bar-item-hover;
+        border-bottom-color: $color-background-context-bar-brand-light;
       }
-    }
-
-    // Remove border on active due to primary section always having a right border
-    &:first-child.slds-is-active {
-      border-left: 0;
     }
 
     /**
@@ -168,7 +181,6 @@
      *
      * @selector .slds-context-bar__item_divider-left
      * @restrict .slds-context-bar div, .slds-context-bar li
-     * @modifier
      */
     &_divider-left,
     &--divider-left {
@@ -180,7 +192,6 @@
      *
      * @selector .slds-context-bar__item_divider-right
      * @restrict .slds-context-bar div, .slds-context-bar li
-     * @modifier
      */
     &_divider-right,
     &--divider-right {
@@ -289,6 +300,20 @@
     margin-left: auto;
   }
 
+
+  /**
+   * @summary Tab modifier when using a tabset
+   *
+   * @name navigation-tab-bar
+   * @selector .slds-context-bar_tabs
+   * @restrict .slds-context-bar
+   * @variant
+   */
+  &_tabs,
+  &--tabs {
+    border-top: $border-width-thin solid $color-border;
+  }
+
   /**
    *
    * #### Accessibility
@@ -298,14 +323,10 @@
    * set the value of `aria-controls` on the Split View Toggle button, to the `ID` of the
    * wrapper element that contains the Split View List.
    *
-   * @summary Tab modifier when using a tabset
-   *
-   * @name navigation-tab-bar
    * @selector .slds-context-bar__item_tab
    * @restrict .slds-context-bar__item
    * @notes Only use on tabset version
    * @required
-   * @variant
    *
    */
   &__item_tab,
@@ -320,13 +341,13 @@
     // Handle active states
     &.slds-is-active,
     &:nth-child(n).slds-is-active {
-      border-left: 0;
-      border-bottom-color: $color-background-context-tab-bar-item;
       background-color: $color-background-context-tab-bar-item;
+      margin-bottom: (3px * -1);
+      border-bottom: 3px solid $color-background-context-tab-bar-item;
+      animation: none;
 
       &:hover {
         background-color: $color-background-context-tab-bar-item;
-        border-bottom-color: transparent;
       }
     }
 
@@ -377,7 +398,6 @@
       top: auto;
     }
   }
-
 }
 
 /**
@@ -438,7 +458,6 @@
   border-right: $border-width-thin solid $color-border;
 }
 
-
 // Themes - Pre-defined themes
 // Using mixin to determine text color and interactive states
 //
@@ -455,10 +474,6 @@
 
     &:before {
       background: #f59331;
-    }
-
-    &:hover {
-      border-bottom-color: $color-background-context-bar-item-hover;
     }
   }
 }

@@ -39,7 +39,7 @@ export let ContextBar = props =>
   <div className={classNames('slds-context-bar', props.className)}>
 
     {/* Primary Section */}
-    <div className="slds-context-bar__primary slds-context-bar__item_divider-right">
+    <div className="slds-context-bar__primary">
 
       {/* App Switcher */}
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
@@ -81,8 +81,8 @@ export let ContextBar = props =>
         { !props.children
           ? _.times(3, i =>
             <li className="slds-context-bar__item" key={i}>
-              <a href="javascript:void(0);" className="slds-context-bar__label-action" title={'Menu Item ' + i}>
-                <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item ' + i }</span>
+              <a href="javascript:void(0);" className="slds-context-bar__label-action" title="Menu Item">
+                <span className="slds-truncate" title="Menu Item">{ props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item'}</span>
               </a>
             </li>
           ) : props.children }

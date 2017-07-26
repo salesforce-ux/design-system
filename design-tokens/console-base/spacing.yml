@@ -19,21 +19,10 @@ global:
 imports:
 - ../force-base/aliases/spacing.yml
 props:
-  ## Globals
-  COMPONENT_SPACING_MARGIN:
-    value: '{!SPACING_SMALL}'
-  COMPONENT_SPACING_PADDING:
-    value: '{!SPACING_SMALL}'
-  TEMPLATE_GUTTERS:
-    value: '{!SPACING_SMALL}'
-  TEMPLATE_PROFILE_GUTTERS:
-    value: '4rem {!SPACING_SMALL} {!SPACING_SMALL}'
   ## Old
   CARD_SPACING_MEDIUM:
     value: '{!SPACING_SMALL}'
   CARD_SPACING_LARGE:
     value: '{!SPACING_SMALL}'
-  TABLE_SPACING_X_SMALL:
-    value: '{!SPACING_XX_SMALL}'
   CARD_SPACING_MARGIN:
     value: '{!SPACING_SMALL}'

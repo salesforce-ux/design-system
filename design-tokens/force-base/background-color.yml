@@ -14,15 +14,15 @@ imports:
 props:
   ## DEFAULTS FROM SALESFORCE-SKIN
   COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
   COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
   COLOR_FOREGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
-  COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_GRAY_2}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!PALETTE_GRAY_1}'
   ## BRANDING DEFAULTS FROM SALESFORCE-SKIN
   COLOR_BACKGROUND_BRAND_PRIMARY:
     value: '{!SCIENCE_BLUE}'
@@ -34,28 +34,28 @@ props:
     value: '{!MIDNIGHT_BLUE}'
   ## PAGE DEFAULTS FROM SALESFORCE-SKIN
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
   ###################
   COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_GRAY_1}'
     comment: Second default background color for the app.
   COLOR_BACKGROUND_ALT_2:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
   COLOR_BACKGROUND_ALT_INVERSE:
     value: '{!BISCAY}'
     comment: Alternative background color for dark portions of the app.
   COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Used as the background color for the hover state on rows or items on list-like components.
   COLOR_BACKGROUND_ROW_ACTIVE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used as the background color for the active state on rows or items on list-like components.
   COLOR_BACKGROUND_ROW_SELECTED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as the background color for selected rows or items on list-like components.
   COLOR_BACKGROUND_ROW_NEW:
     value: '{!SNOWY_MINT}'
@@ -64,7 +64,7 @@ props:
     value: '{!DEEP_COVE}'
     comment: Default background color for dark portions of the app (like Stage Left or tooltips).
   COLOR_BACKGROUND_BROWSER:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
   COLOR_BACKGROUND_CHROME_MOBILE:
     value: '{!SCIENCE_BLUE}'
@@ -85,13 +85,13 @@ props:
     value: '{!PATTEN_BLUE}'
     comment: Background color for text selected with a mouse.
   COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Background for utility icons that live in the action bar on mobile.
   COLOR_BACKGROUND_INDICATOR_DOT:
     value: '{!BISCAY}'
     comment: Color of the indicator dot.
   COLOR_BACKGROUND_SPINNER_DOT:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Color of the spinner dot.
   COLOR_BACKGROUND_MODAL:
     value: '{!WHITE}'
@@ -115,42 +115,42 @@ props:
     value: '{!WHITE}'
     comment: Background color for notification list item.
   COLOR_BACKGROUND_NOTIFICATION_NEW:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Background color for a new notification list item.
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
     value: '{!DEEP_COVE}'
     comment: Stage left org switcher dropdown arrow background color.
   COLOR_BACKGROUND_PAYLOAD:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Background color for payloads in the feed.
   COLOR_BACKGROUND_POST:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Background color of comment posts in the feed.
   COLOR_BACKGROUND_UTILITY_BAR_HOVER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Hover color for utility bar item.
   COLOR_BACKGROUND_UTILITY_BAR_ACTIVE:
     value: '{!AZURE}'
     comment: Active color for utility bar item.
   COLOR_BACKGROUND_SHADE:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     specificity: builders
     comment: Used as gray background when more contrast is desired.
   COLOR_BACKGROUND_SHADE_DARK:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     specificity: builders
     comment: Used as gray background in conjunction with Shade when more contrast is desired.
   COLOR_BACKGROUND_STENCIL:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used as background for loading stencils on white background.
   COLOR_BACKGROUND_STENCIL_ALT:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
   COLOR_BACKGROUND_TEMP_MODAL:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_GRAY_8}'
     comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_GRAY_8}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
     value: '{!WHITE_TRANSPARENT_75}'
@@ -160,13 +160,13 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_BACKDROP_TINT:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_2}'
     comment: The color of the mask overlay that provides user feedback on interaction.
   COLOR_BACKGROUND_SCROLLBAR:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: The background color of an internal scrollbar.
   COLOR_BACKGROUND_SCROLLBAR_TRACK:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_6}'
     comment: The background color of an internal scrollbar track.
   COLOR_BRAND:
     value: '{!AZURE}'
@@ -178,13 +178,13 @@ props:
     value: '{!ENDEAVOUR}'
     comment: 'Our product brand blue, darkened even further.'
   COLOR_BACKGROUND_TOGGLE:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Toggle background color.
   COLOR_BACKGROUND_TOGGLE_DISABLED:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Disabled toggle background color.
   COLOR_BACKGROUND_TOGGLE_HOVER:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_GRAY_8}'
     comment: Hovered toggle background color.
   COLOR_BACKGROUND_TOGGLE_ACTIVE:
     value: '{!SCIENCE_BLUE}'
@@ -208,13 +208,13 @@ props:
     value: '{!WHITE}'
     comment: Default checkboxes
   COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Disabled checkboxes
   COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
     value: '{!AZURE}'
     comment: Selected checkboxes
   COLOR_BACKGROUND_INPUT_DISABLED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Disabled input
   COLOR_BACKGROUND_INPUT_ERROR:
     value: '{!PIPPIN}'
@@ -239,7 +239,7 @@ props:
     value: '{!MAROON}'
     comment: Active color for UI elements related to destructive actions.
   COLOR_BACKGROUND_INFO:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BACKGROUND_ERROR:
     value: '{!VALENCIA}'
@@ -252,7 +252,7 @@ props:
     comment: Alternative color for UI elements related to errors.
     deprecated: true
   COLOR_BACKGROUND_OFFLINE:
-    value: '{!PALETTE_GRAY_12}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Color for UI elements related to the offline state.
   COLOR_BACKGROUND_SUCCESS:
     value: '{!EMERALD}'
@@ -261,7 +261,7 @@ props:
     value: '{!SALEM}'
     comment: Dark color for UI elements that have to do with success. Accessible with white text.
   COLOR_BACKGROUND_TOAST:
-    value: '{!PALETTE_GRAY_10}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Background color for toast messaging.
   COLOR_BACKGROUND_TOAST_SUCCESS:
     value: '{!SALEM}'

@@ -77,8 +77,9 @@ const SelectionGroup = (props) => {
 
 const ListBox = props =>
   <div
-    className={classNames('slds-dueling-list__options', { 'slds-dueling-list__disabled': props.disabled })}
-    role="application">
+    className="slds-dueling-list__options"
+    role="application"
+    aria-disabled={props.disabled}>
     <ul
       aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}

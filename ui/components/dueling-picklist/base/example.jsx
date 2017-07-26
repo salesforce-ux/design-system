@@ -19,7 +19,7 @@ const MultiSelect = (props) => {
       <div className="slds-assistive-text" id="option-drag-label">
         { props.dataSet.optionDragLabel }
       </div>
-      <SelectionGroup group={props.dataSet.selectionGroups[0]} />
+      <SelectionGroup required={props.required} disabled={props.disabled} group={props.dataSet.selectionGroups[0]} />
       <MoveButtons
         direction="horizontal"
         targetA={props.dataSet.selectionGroups[0].label}
@@ -64,14 +64,21 @@ const SelectionGroup = (props) => {
   const groupLabelID = _.uniqueId('label-');
   return (
     <div className="slds-dueling-list__column">
-      <span className="slds-form-element__label" id={groupLabelID}>{ props.group.label }</span>
-      <ListBox options={props.group.options} ariaLabelledby={groupLabelID} />
+      <span className="slds-form-element__label" id={groupLabelID}>
+        { props.required
+          ? <abbr className="slds-required" title="required">*</abbr>
+        : null }
+        { props.group.label }
+      </span>
+      <ListBox disabled={props.disabled} options={props.group.options} ariaLabelledby={groupLabelID} />
     </div>
   );
 };
 
 const ListBox = props =>
-  <div className="slds-dueling-list__options" role="application">
+  <div
+    className={classNames('slds-dueling-list__options', { 'slds-dueling-list__disabled': props.disabled })}
+    role="application">
     <ul
       aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}
@@ -477,6 +484,18 @@ export default (
 );
 
 export let states = [
+  {
+    id: 'required-dueling-picklist',
+    label: 'Required',
+    element:
+      <MultiSelect dataSet={DefaultSnapShot} required />
+  },
+  {
+    id: 'disabled-dueling-picklist',
+    label: 'Disabled',
+    element:
+      <MultiSelect dataSet={DefaultSnapShot} disabled />
+  },
   {
     id: 'multi-select-selected-item',
     label: 'Selected Item',

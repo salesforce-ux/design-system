@@ -27,6 +27,3 @@ props:
   CARD_SHADOW:
     value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
     comment: Hard dropshadow found on outer cards
-  CARD_WRAPPER_SHADOW:
-    value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
-    comment: Hard dropshadow found on outer card wrappers

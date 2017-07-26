@@ -8,7 +8,7 @@ global:
 imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
-  CARDS_COLOR_BACKGROUND:
+  CARD_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_2}'
     comment: Default Card component background color.
   CARD_WRAPPER_COLOR_BACKGROUND:

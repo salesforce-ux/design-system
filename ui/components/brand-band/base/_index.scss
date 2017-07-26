@@ -92,5 +92,6 @@
 
 // This template is used on the oneAloha wrapper surrounding an iframed page
 .slds-template_iframe {
+  width: 100%; //added for console - watch this
   padding: $template-gutters;
 }

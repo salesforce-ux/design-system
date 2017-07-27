@@ -335,6 +335,7 @@
   display: flex;
   padding: $table-cell-spacing;
   height: 2rem; // Keep in sync with the padding of .slds-table--header-fixed_container
+  align-items: center;
 
   &:focus,
   &:hover {

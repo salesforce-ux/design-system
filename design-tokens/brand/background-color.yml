@@ -11,6 +11,8 @@ global:
 imports:
 - ../color-palettes.yml
 props:
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '#AFC5DE'
   ## BRAND BAND
   BRAND_BAND_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210'

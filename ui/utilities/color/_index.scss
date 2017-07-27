@@ -142,7 +142,6 @@
  */
 .slds-color__background_gray-1 {
   background-color: $color-gray-1 !important;
-  fill: $color-gray-1 !important;
 }
 
 /**
@@ -154,7 +153,6 @@
  */
 .slds-color__background_gray-2 {
   background-color: $color-gray-2 !important;
-  fill: $color-gray-2 !important;
 }
 
 /**
@@ -166,7 +164,6 @@
  */
 .slds-color__background_gray-3 {
   background-color: $color-gray-3 !important;
-  fill: $color-gray-3 !important;
 }
 
 /**
@@ -178,7 +175,6 @@
  */
 .slds-color__background_gray-4 {
   background-color: $color-gray-4 !important;
-  fill: $color-gray-4 !important;
 }
 
 /**
@@ -190,7 +186,6 @@
  */
 .slds-color__background_gray-5 {
   background-color: $color-gray-5 !important;
-  fill: $color-gray-5 !important;
 }
 
 /**
@@ -202,7 +197,6 @@
  */
 .slds-color__background_gray-6 {
   background-color: $color-gray-6 !important;
-  fill: $color-gray-6 !important;
 }
 
 /**
@@ -214,7 +208,6 @@
  */
 .slds-color__background_gray-7 {
   background-color: $color-gray-7 !important;
-  fill: $color-gray-7 !important;
 }
 
 /**
@@ -226,7 +219,6 @@
  */
 .slds-color__background_gray-8 {
   background-color: $color-gray-8 !important;
-  fill: $color-gray-8 !important;
 }
 
 /**
@@ -238,7 +230,6 @@
  */
 .slds-color__background_gray-9 {
   background-color: $color-gray-9 !important;
-  fill: $color-gray-9 !important;
 }
 
 /**
@@ -250,7 +241,6 @@
  */
 .slds-color__background_gray-10 {
   background-color: $color-gray-10 !important;
-  fill: $color-gray-10 !important;
 }
 
 /**
@@ -262,7 +252,6 @@
  */
 .slds-color__background_gray-11 {
   background-color: $color-gray-11 !important;
-  fill: $color-gray-11 !important;
 }
 
 /**
@@ -274,7 +263,6 @@
  */
 .slds-color__background_gray-12 {
   background-color: $color-gray-12 !important;
-  fill: $color-gray-12 !important;
 }
 
 /**
@@ -407,4 +395,136 @@
  */
 .slds-color__border_gray-12 {
   border-color: $color-gray-12 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #1
+ *
+ * @selector .slds-color__fill_gray-1
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-1 {
+  fill: $color-gray-1 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #2
+ *
+ * @selector .slds-color__fill_gray-2
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-2 {
+  fill: $color-gray-2 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #3
+ *
+ * @selector .slds-color__fill_gray-3
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-3 {
+  fill: $color-gray-3 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #4
+ *
+ * @selector .slds-color__fill_gray-4
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-4 {
+  fill: $color-gray-4 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #5
+ *
+ * @selector .slds-color__fill_gray-5
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-5 {
+  fill: $color-gray-5 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #6
+ *
+ * @selector .slds-color__fill_gray-6
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-6 {
+  fill: $color-gray-6 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #7
+ *
+ * @selector .slds-color__fill_gray-7
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-7 {
+  fill: $color-gray-7 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #8
+ *
+ * @selector .slds-color__fill_gray-8
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-8 {
+  fill: $color-gray-8 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #9
+ *
+ * @selector .slds-color__fill_gray-9
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-9 {
+  fill: $color-gray-9 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #10
+ *
+ * @selector .slds-color__fill_gray-10
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-10 {
+  fill: $color-gray-10 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #11
+ *
+ * @selector .slds-color__fill_gray-11
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-11 {
+  fill: $color-gray-11 !important;
+}
+
+/**
+ * @summary SVG Fill color utility class for Palette Gray #12
+ *
+ * @selector .slds-color__fill_gray-12
+ * @modifier
+ * @group fill-grays
+ */
+.slds-color__fill_gray-12 {
+  fill: $color-gray-12 !important;
 }

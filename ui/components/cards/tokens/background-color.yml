@@ -11,5 +11,3 @@ props:
   CARD_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_2}'
     comment: Default Card component background color.
-  CARD_WRAPPER_COLOR_BACKGROUND:
-    value: 'transparent'

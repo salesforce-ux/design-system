@@ -9,7 +9,6 @@
  */
 .slds-table_joined,
 .slds-table.slds-has-top-magnet {
-  margin: $table-spacing;
 
   table {
     border-radius: $table-border-radius; // @TODO: This should probably use the card-wrapper token as well

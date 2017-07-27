@@ -23,7 +23,5 @@ props:
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'
-    comment: Base color is transparent and is overridden in brand
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
     value: 'transparent'
-    comment: Secondary color is transparent and is overridden in brand

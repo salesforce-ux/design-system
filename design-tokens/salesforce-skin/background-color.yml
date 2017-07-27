@@ -12,7 +12,13 @@ imports:
 - ./aliases/color.yml
 - ../color-palettes.yml
 props:
-  ## These seem to be button-related
+  ## PAGE
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_7}'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_7}'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_7}'
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_2}'
@@ -33,9 +39,6 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
-  ## PAGE
-  PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '#AFC5DE'
   ## CARDS
   CARD_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
@@ -45,3 +48,8 @@ props:
   ## BUTTONS
   BUTTON_COLOR_BACKGROUND_PRIMARY:
     value: "{!PALETTE_GRAY_1}"
+  ## TABLE
+  TABLE_COLOR_BACKGROUND_HEADER:
+    value: '{!PALETTE_GRAY_2}'
+  TABLE_COLOR_BACKGROUND_HEADER_HOVER:
+    value: '{!PALETTE_GRAY_1}'

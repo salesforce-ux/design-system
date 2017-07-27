@@ -6,14 +6,13 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
 - "../../../../design-tokens/color-palettes.yml"
 props:
   TABLE_COLOR_BACKGROUND_STRIPES:
     value: '{!PALETTE_GRAY_2}'
   TABLE_COLOR_BACKGROUND_HEADER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_1}'
   TABLE_COLOR_BACKGROUND_HEADER_HOVER:
-    value: '#fff'
+    value: '{!PALETTE_GRAY_2}'
   TABLE_COLOR_BACKGROUND_HEADER_FOCUS:
-    value: '#fff'
+    value: '{!PALETTE_GRAY_1}'

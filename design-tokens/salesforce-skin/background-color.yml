@@ -12,7 +12,29 @@ imports:
 - ./aliases/color.yml
 - ../color-palettes.yml
 props:
-  ## These seem to be button-related
+  ## PAGE
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_7}'
+  ## IMAGES
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/classic/banner-brand-default.png?cache=210.1'
+    type: raw
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/classic/banner-user-default.png?cache=210.1'
+    type: raw
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/classic/banner-group-private-default.png?cache=210.1'
+    type: raw
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/classic/banner-group-public-default.png?cache=210.1'
+    type: raw
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/classic/banner-group-unlisted-default.png?cache=210.1'
+    type: raw
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_7}'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_7}'
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_2}'
@@ -33,9 +55,6 @@ props:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
-  ## PAGE
-  PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_7}'
   ## CARDS
   CARD_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'

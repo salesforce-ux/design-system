@@ -33,3 +33,8 @@ props:
   ## Replace with global token
   CARD_WRAPPER_SPACING:
     value: '{!SPACING_MEDIUM}'
+  ## Need to remove from product before removing these
+  CARD_SPACING_SMALL:
+    value: {!SPACING_SMALL}
+  CARD_SPACING_LARGE:
+    value: {!SPACING_LARGE}

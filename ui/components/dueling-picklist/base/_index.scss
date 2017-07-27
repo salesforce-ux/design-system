@@ -33,6 +33,26 @@
       margin-top: $spacing-large;
     }
   }
+
+  [aria-disabled="true"] {
+    background-color: $color-background-input-disabled;
+    border: 1px solid $color-border-input-disabled;
+    color: $color-text-input-disabled;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    .slds-listbox__option {
+      &:hover {
+        cursor: not-allowed;
+        background-color: transparent;
+      }
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 /**

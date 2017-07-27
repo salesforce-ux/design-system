@@ -22,6 +22,6 @@ props:
     value: ''
     type: raw
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '#AFC5DE'
+    value: 'transparent'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
-    value: '#205C9F'
+    value: 'transparent'

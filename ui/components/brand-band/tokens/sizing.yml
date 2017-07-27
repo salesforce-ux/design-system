@@ -15,3 +15,5 @@ props:
     value: '0'
   BRAND_BAND_IMAGE_HEIGHT_LARGE:
     value: '0'
+  BRAND_BAND_SCRIM_HEIGHT:
+    value: '0'

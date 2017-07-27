@@ -6,23 +6,21 @@
 //
 
 @import
-  // Alignment
-  'alignment/index',
-
-  // Borders
-  'borders/index',
-
-  // Color
-  'color/index',
-
-  // Floats
-  'floats/index',
-
   // Grid
   'grid/index',
 
-  // Hyphenation
-  'hyphenation/index',
+  // Alignment
+  'alignment/index',
+
+  // Objects
+  'media-objects/index',
+
+  // Spacing
+  'margin/index',
+  'padding/index',
+
+  // Floats
+  'floats/index',
 
   // Interactions
   'interactions/index',
@@ -33,31 +31,30 @@
   'description-list/index',
   'name-value-list/index',
 
-  // Objects
-  'media-objects/index',
+  // Borders
+  'borders/index',
 
-  // Position
-  'position/index',
+  // Truncation
+  'truncation/index',
 
-  // Scrollable
-  'scrollable/index',
-
-  // Sizing
-  'sizing/index',
-
-  // Spacing
-  'margin/index',
-  'padding/index',
-
-  // Text
-  'text/index',
+  // Hyphenation
+  'hyphenation/index',
 
   // Theme
   'box/index',
   'themes/index',
 
-  // Truncation
-  'truncation/index',
+  // Text
+  'text/index',
+
+  // Interactions
+  'scrollable/index',
+
+  // Sizing
+  'sizing/index',
+
+  // Position
+  'position/index',
 
   // Visibility
   'visibility/index';

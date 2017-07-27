@@ -10,10 +10,10 @@ global:
 props:
   ## Default sizes and since there's no brand-band in default, they're zero'd
   BRAND_BAND_IMAGE_HEIGHT_SMALL:
-    value: '0'
+    value: '6rem'
   BRAND_BAND_IMAGE_HEIGHT_MEDIUM:
-    value: '0'
+    value: '12.5rem'
   BRAND_BAND_IMAGE_HEIGHT_LARGE:
-    value: '0'
+    value: '18.75rem'
   BRAND_BAND_SCRIM_HEIGHT:
-    value: '0'
+    value: '3.125rem'

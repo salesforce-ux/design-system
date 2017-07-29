@@ -18,6 +18,7 @@ imports:
 - ./force-base/opacity.yml
 - ./force-base/duration.yml
 - ./force-base/z-index.yml
+- ./palette-colors.yml
 - ./components.yml
 auraImports:
 - 'force:mqCommons'

@@ -13,17 +13,9 @@ props:
   PAGE_HEADER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_2}'
     comment: Default Page Header background color
-
   PAGE_HEADER_COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_GRAY_1}'
     comment: Secondary Page Header background color
-  BRAND_BAND_IMAGE:
-    value: ''
-    type: raw
-  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: 'transparent'
-    comment: Base color is transparent and is overridden in brand
-
   ## Deprecated
   COLOR_BACKGROUND_ANCHOR:
     value: '{!PALETTE_GRAY_2}'

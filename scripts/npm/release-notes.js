@@ -8,7 +8,7 @@ const replaceRepo = isInternal => (chunk, enc, callback) =>
   callback(null, isInternal ? replaceInternal(String(chunk)) : chunk);
 
 module.exports = ({isInternal, outStream, callback}) =>
-  conventionalChangelog({ preset: 'angular' })
+  conventionalChangelog({ preset: 'angular', releaseCount: 0 })
   .pipe(through(replaceRepo(isInternal)))
   .pipe(outStream)
   .on('finish', callback);

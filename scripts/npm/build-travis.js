@@ -51,6 +51,4 @@ if (process.env.BUILD_SERVER_HOST_NEW) {
     runExtraScripts();
     publishBuild();
   }
-} else {
-  runScript();
 };

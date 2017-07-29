@@ -9,5 +9,3 @@ global:
 props:
   CARD_SHADOW:
     value: 'none'
-  CARD_WRAPPER_SHADOW:
-    value: 'none'

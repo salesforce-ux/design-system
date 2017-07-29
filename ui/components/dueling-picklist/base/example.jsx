@@ -19,14 +19,15 @@ const MultiSelect = (props) => {
       <div className="slds-assistive-text" id="option-drag-label">
         { props.dataSet.optionDragLabel }
       </div>
-      <SelectionGroup group={props.dataSet.selectionGroups[0]} />
+      <SelectionGroup disabled={props.disabled} group={props.dataSet.selectionGroups[0]} />
       <MoveButtons
         direction="horizontal"
         targetA={props.dataSet.selectionGroups[0].label}
         targetB={props.dataSet.selectionGroups[1].label}
+        disabled={props.disabled}
       />
-      <SelectionGroup group={props.dataSet.selectionGroups[1]} />
-      <MoveButtons direction="vertical" />
+      <SelectionGroup disabled={props.disabled} group={props.dataSet.selectionGroups[1]} />
+      <MoveButtons disabled={props.disabled} direction="vertical" />
     </div>
   );
 };
@@ -36,6 +37,7 @@ const MoveButtons = props =>
     <button
       className="slds-button slds-button_icon slds-button_icon-container"
       title={'Move Selection ' + (props.direction === 'vertical') ? 'Up' : 'to ' + props.targetB}
+      disabled={props.disabled}
     >
       <SvgIcon
         className="slds-button__icon"
@@ -49,6 +51,7 @@ const MoveButtons = props =>
     <button
       className="slds-button slds-button_icon slds-button_icon-container"
       title={'Move Selection ' + (props.direction === 'vertical') ? 'Down' : 'to ' + props.targetA}
+      disabled={props.disabled}
     >
       <SvgIcon
         className="slds-button__icon"
@@ -65,13 +68,16 @@ const SelectionGroup = (props) => {
   return (
     <div className="slds-dueling-list__column">
       <span className="slds-form-element__label" id={groupLabelID}>{ props.group.label }</span>
-      <ListBox options={props.group.options} ariaLabelledby={groupLabelID} />
+      <ListBox disabled={props.disabled} options={props.group.options} ariaLabelledby={groupLabelID} />
     </div>
   );
 };
 
 const ListBox = props =>
-  <div className="slds-dueling-list__options" role="application">
+  <div
+    className="slds-dueling-list__options"
+    role="application"
+    aria-disabled={props.disabled}>
     <ul
       aria-describedby="option-drag-label"
       aria-labelledby={props.ariaLabelledby}
@@ -100,7 +106,12 @@ const Option = props =>
       role="option"
       tabIndex={props.option.tabIndex}
     >
-      <span className="slds-truncate" title={props.option.text}>{ props.option.text }</span>
+      <span className="slds-truncate" title={props.option.text}>
+        { props.option.text }
+        { props.option.required
+          ? <abbr className="slds-required" title="required">*</abbr>
+        : null }
+      </span>
     </span>
   </li>;
 
@@ -148,6 +159,59 @@ const DefaultSnapShot = {
           'tabIndex': 0,
           'isSelected': false,
           'isGrabbed': false
+        },
+        {
+          'text': 'Option 5',
+          'tabIndex': -1,
+          'isSelected': false,
+          'isGrabbed': false
+        }
+      ]
+    }
+  ]
+};
+
+const RequiredSnapShot = {
+  'liveRegionText': '',
+  'optionDragLabel': 'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists. Required items must remain in the second category.',
+  'selectionGroups': [
+    {
+      'label': 'First Category',
+      'options': [
+        {
+          'text': 'Option 1',
+          'tabIndex': 0,
+          'isSelected': false,
+          'isGrabbed': false
+        },
+        {
+          'text': 'Option 2',
+          'tabIndex': -1,
+          'isSelected': false,
+          'isGrabbed': false
+        },
+        {
+          'text': 'Option 3',
+          'tabIndex': -1,
+          'isSelected': false,
+          'isGrabbed': false
+        },
+        {
+          'text': 'Option 6',
+          'tabIndex': -1,
+          'isSelected': false,
+          'isGrabbed': false
+        }
+      ]
+    }, {
+      'label': 'Second Category',
+      'options': [
+        {
+          'text': 'Option 4',
+          'tabIndex': 0,
+          'isSelected': false,
+          'isGrabbed': false,
+          'required': true
         },
         {
           'text': 'Option 5',
@@ -477,6 +541,18 @@ export default (
 );
 
 export let states = [
+  {
+    id: 'required-dueling-picklist',
+    label: 'Required',
+    element:
+      <MultiSelect dataSet={RequiredSnapShot} />
+  },
+  {
+    id: 'disabled-dueling-picklist',
+    label: 'Disabled',
+    element:
+      <MultiSelect dataSet={DefaultSnapShot} disabled />
+  },
   {
     id: 'multi-select-selected-item',
     label: 'Selected Item',

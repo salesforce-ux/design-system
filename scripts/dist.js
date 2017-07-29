@@ -42,23 +42,12 @@ async.series([
   (done) => rimraf(distPath(), done),
 
   /**
-   * Make release notes
-   */
-  (done) =>
-    releaseNotes({
-      isInternal: packageJSON.config.slds.internal,
-      outStream: fs.createWriteStream('./RELEASENOTES.md'),
-      callback: done
-    }),
-
-  /**
    * Copy necessary root files to be included in the final module
    */
   (done) => {
     gulp.src([
       './package.json',
-      './README-dist.md',
-      './RELEASENOTES.md'
+      './README-dist.md'
     ], {
       base: paths.root
     })
@@ -66,6 +55,16 @@ async.series([
     .on('error', done)
     .on('finish', done);
   },
+
+  /**
+   * Make release notes
+   */
+  (done) =>
+    releaseNotes({
+      isInternal: packageJSON.config.slds.internal,
+      outStream: fs.createWriteStream(distPath('RELEASENOTES.md')),
+      callback: done
+    }),
 
   /**
    * Cleanup the package.json

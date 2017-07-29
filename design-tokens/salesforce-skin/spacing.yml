@@ -28,16 +28,9 @@ props:
     value: '{!SPACING_SMALL}'
   TEMPLATE_PROFILE_GUTTERS:
     value: '4rem {!SPACING_SMALL} {!SPACING_SMALL}'
-  ## Components
-  PAGE_HEADER_SPACING_MARGIN:
-    value: '0'
-  PAGE_HEADER_JOINED_SPACING_MARGIN:
-    value: '0'
-  TABLE_SPACING:
-    value: '0'
+  ## Tables
   TABLE_CELL_SPACING:
     value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'
-  CARD_FOOTER_SPACING_TOP:
-    value: '{!SPACING_SMALL}'
-  CARD_FOOTER_SPACING_BOTTOM:
-    value: '{!SPACING_SMALL}'
+  ## Card
+  CARD_FOOTER_PADDING:
+    value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'

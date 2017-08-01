@@ -5,7 +5,7 @@ const async = require('async');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const path = require('path');
-const theo = require('theo');
+const theo = require('gulp-theo');
 const through = require('through2');
 const _ = require('lodash');
 
@@ -34,8 +34,10 @@ let formatTransforms = _({
 gulp.task('generate:tokens:all', ['generate:tokens:components:imports'], (done) => {
   const convert = ({name, transform}, done) =>
     gulp.src(path.resolve(paths.designTokens, '*.yml'))
-      .pipe(theo.plugins.transform(transform))
-      .pipe(theo.plugins.format(name))
+      .pipe(theo.plugin({
+        transform: { type: transform },
+        format: { type: name }
+      }))
       .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
       .on('finish', done);
   async.each(formatTransforms, convert, done);
@@ -43,14 +45,18 @@ gulp.task('generate:tokens:all', ['generate:tokens:components:imports'], (done) 
 
 gulp.task('generate:tokens:sass:default', () =>
   gulp.src(path.resolve(paths.designTokens, '*.yml'))
-    .pipe(theo.plugins.transform('web'))
-    .pipe(theo.plugins.format('default.scss'))
+    .pipe(theo.plugin({
+      transform: { type: 'web' },
+      format: { type: 'default.scss' }
+    }))
     .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:sass:map', () =>
   gulp.src(path.resolve(paths.designTokens, '*.yml'))
-    .pipe(theo.plugins.transform('web'))
-    .pipe(theo.plugins.format('map.scss'))
+  .pipe(theo.plugin({
+    transform: { type: 'web' },
+    format: { type: 'map.scss' }
+  }))
     .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist'))));
 
 gulp.task('generate:tokens:sass', ['generate:tokens:sass:default', 'generate:tokens:sass:map']);

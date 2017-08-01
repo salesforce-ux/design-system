@@ -16,19 +16,19 @@ props:
   ## BRAND BAND
   BRAND_BAND_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.1'
-    type: raw
+    type: string
   BRAND_BAND_USER_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.1'
-    type: raw
+    type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.1'
-    type: raw
+    type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.1'
-    type: raw
+    type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
     value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.1'
-    type: raw
+    type: string
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:

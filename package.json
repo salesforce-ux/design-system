@@ -45,6 +45,7 @@
     "cheerio": "0.22.0",
     "classnames": "2.2.5",
     "colors": "1.1.2",
+    "conventional-changelog": "1.1.4",
     "cssstats": "3.0.0",
     "data.either": "1.5.0",
     "del": "2.2.2",

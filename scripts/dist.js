@@ -18,6 +18,7 @@ const {createLibrary} = require('./compile/bundle');
 
 const packageJSON = require('../package.json');
 const paths = require('./helpers/paths');
+const releaseNotes = require('./npm/release-notes');
 
 const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
@@ -46,8 +47,7 @@ async.series([
   (done) => {
     gulp.src([
       './package.json',
-      './README-dist.md',
-      './RELEASENOTES*'
+      './README-dist.md'
     ], {
       base: paths.root
     })
@@ -55,6 +55,16 @@ async.series([
     .on('error', done)
     .on('finish', done);
   },
+
+  /**
+   * Make release notes
+   */
+  (done) =>
+    releaseNotes({
+      isInternal: packageJSON.config.slds.internal,
+      outStream: fs.createWriteStream(distPath('RELEASENOTES.md')),
+      callback: done
+    }),
 
   /**
    * Cleanup the package.json

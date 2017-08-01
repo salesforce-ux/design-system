@@ -19,6 +19,12 @@ props:
     value: '{!PALETTE_GRAY_7}'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_GRAY_7}'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: 'rgba(176,173,171,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
+    value: 'rgba(176,173,171,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_2}'

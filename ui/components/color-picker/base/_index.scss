@@ -231,10 +231,6 @@
     $color-stops
   );
 
-  &:focus {
-    outline: none;
-  }
-
   @mixin thumb-styles {
     appearance: none;
     cursor: pointer;
@@ -244,6 +240,11 @@
     border-radius: $border-radius-small;
     background: $color-picker-slider-thumb-color-background;
   }
+
+  @mixin thumb-styles-focus {
+      border-color: $color-border-input-active;
+      box-shadow: $shadow-button-focus;
+    }
 
   &::-webkit-slider-thumb {
     @include thumb-styles;
@@ -256,6 +257,22 @@
   &::-ms-thumb {
     @include thumb-styles;
     height: $color-picker-slider-height;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      @include thumb-styles-focus;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb-styles-focus;
+    }
+
+    &::-ms-thumb {
+      @include thumb-styles-focus;
+    }
   }
 
   &::-moz-range-track {

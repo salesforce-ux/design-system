@@ -7,19 +7,19 @@ props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in salesforce-skin
   BRAND_BAND_DEFAULT_IMAGE:
-    value: 'none'
+    value: ''
     type: string
   BRAND_BAND_USER_DEFAULT_IMAGE:
-    value: 'none'
+    value: ''
     type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
-    value: 'none'
+    value: ''
     type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
-    value: 'none'
+    value: ''
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: 'none'
+    value: ''
     type: string
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'

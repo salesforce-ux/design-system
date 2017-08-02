@@ -31,5 +31,11 @@ props:
     type: string
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: 'rgba(175,197,222,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
     value: '#205C9F'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
+    value: 'rgba(32,92,159,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'

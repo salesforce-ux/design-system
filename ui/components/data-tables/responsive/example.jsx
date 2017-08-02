@@ -133,6 +133,8 @@ let Horizontal = props =>
 // Export
 /// ///////////////////////////////////////////
 
+export default <Horizontal />;
+
 export let states = [
   {
     id: 'data-table-responsive-horizontal',

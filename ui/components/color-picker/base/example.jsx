@@ -10,6 +10,11 @@ export default (
 
 export const states = [
   {
+    id: 'summary-error',
+    label: 'Summary Error',
+    element: <ColorPicker hasSummaryError />
+  },
+  {
     id: 'color-picker-open',
     label: 'Open, default tab selected',
     element: <ColorPicker isOpen />
@@ -17,6 +22,11 @@ export const states = [
   {
     id: 'custom-tab-selected',
     label: 'Open, custom tab selected',
-    element: <ColorPicker selectedTabIndex={1} isOpen />
+    element: <ColorPicker isOpen selectedTabIndex={1} />
+  },
+  {
+    id: 'custom-tab-selected-error',
+    label: 'Open, custom tab selected, error state',
+    element: <ColorPicker isOpen hasCustomError selectedTabIndex={1} />
   }
 ];

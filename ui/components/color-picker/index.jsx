@@ -57,7 +57,7 @@ const Swatch = (props) => {
       </span>
     </span>
   );
-}
+};
 
 /**
  * Summary Subcomponent
@@ -93,7 +93,7 @@ export const ColorPickerSummary = (props) => {
         <Input
           id="color-picker-summary-input"
           defaultValue="#5679C0"
-          aria-describedby={ hasSummaryError ? errorId : null }
+          aria-describedby={hasSummaryError ? errorId : null}
         />
       </FormElement>
 
@@ -103,14 +103,14 @@ export const ColorPickerSummary = (props) => {
         </p>
       ) : null}
     </div>
-  )
+  );
 };
 
 /**
  * Swatches (list of Swatch elements) Subcomponent
  */
 export const ColorPickerSwatches = (props) => {
-  const { isMenuRole } = props
+  const { isMenuRole } = props;
   const swatchesRole = isMenuRole ? 'menu' : 'listbox';
   const linkRole = isMenuRole ? 'menuitem' : 'option';
 
@@ -125,7 +125,7 @@ export const ColorPickerSwatches = (props) => {
       )}
     </ul>
   );
-}
+};
 
 /**
  * Custom Picker Subcomponent
@@ -172,7 +172,7 @@ const ColorPickerCustom = (props) => {
           <Input
             id={hexInputId}
             defaultValue="#5679C0"
-            aria-describedby={ hasCustomError ? customErrorId : null }
+            aria-describedby={hasCustomError ? customErrorId : null}
           />
         </FormElement>
 
@@ -196,7 +196,7 @@ const ColorPickerCustom = (props) => {
       ) : null }
     </div>
   );
-}
+};
 
 /**
  * Footer Subcomponent
@@ -231,28 +231,28 @@ class ColorPicker extends React.Component {
       selectedTabIndex: props.selectedTabIndex || 0
     };
 
-    this.isFullFeatureMode = this.isFullFeatureMode.bind(this)
-    this.isPredefinedMode = this.isPredefinedMode.bind(this)
-    this.isCustomOnlyMode = this.isCustomOnlyMode.bind(this)
-    this.isSwatchesOnlyMode = this.isSwatchesOnlyMode.bind(this)
+    this.isFullFeatureMode = this.isFullFeatureMode.bind(this);
+    this.isPredefinedMode = this.isPredefinedMode.bind(this);
+    this.isCustomOnlyMode = this.isCustomOnlyMode.bind(this);
+    this.isSwatchesOnlyMode = this.isSwatchesOnlyMode.bind(this);
   }
 
-  isFullFeatureMode() {
+  isFullFeatureMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && hasCustom);
   }
 
-  isPredefinedMode() {
+  isPredefinedMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && !hasCustom);
   }
 
-  isCustomOnlyMode() {
+  isCustomOnlyMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && hasCustom);
   }
 
-  isSwatchesOnlyMode() {
+  isSwatchesOnlyMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && !hasCustom);
   }
@@ -273,16 +273,13 @@ class ColorPicker extends React.Component {
           hasCustomError={hasCustomError}
           selectedTabIndex={selectedTabIndex}
         />
-      )
-    }
-    else if (this.isPredefinedMode()) {
-      colorPickerContent = <ColorPickerSwatches />
-    }
-    else if (this.isCustomOnlyMode()) {
-      colorPickerContent = <ColorPickerCustom hasCustomError={hasCustomError} />
-    }
-    else if (this.isSwatchesOnlyMode()) {
-      colorPickerContent = <ColorPickerSwatches />
+      );
+    } else if (this.isPredefinedMode()) {
+      colorPickerContent = <ColorPickerSwatches />;
+    } else if (this.isCustomOnlyMode()) {
+      colorPickerContent = <ColorPickerCustom hasCustomError={hasCustomError} />;
+    } else if (this.isSwatchesOnlyMode()) {
+      colorPickerContent = <ColorPickerTabs selectedTabIndex={selectedTabIndex} />;
     }
 
     return (
@@ -299,7 +296,7 @@ class ColorPicker extends React.Component {
       </div>
     );
   }
-}
+};
 
 ColorPicker.defaultProps = {
   selectedTabIndex: 0,

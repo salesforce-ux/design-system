@@ -6,6 +6,8 @@ global:
 props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in salesforce-skin
+  #
+  ## Desktop
   BRAND_BAND_DEFAULT_IMAGE:
     value: ''
     type: string
@@ -21,6 +23,33 @@ props:
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
     value: ''
     type: string
+  ## Tablet
+  BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
+    value: ''
+    type: string
+  ## Mobile
+  BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
+    value: ''
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
+    value: ''
+    type: string
+  ## Colors
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:

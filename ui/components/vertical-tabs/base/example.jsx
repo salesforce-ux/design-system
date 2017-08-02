@@ -7,7 +7,7 @@ import classNames from 'classnames';
 class VerticalTabs extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       currentTabIndex: 0
     };
@@ -27,20 +27,20 @@ class VerticalTabs extends React.Component {
             const tabNavId = `slds-vertical-tabs-${index}__nav`;
 
             return (
-              <li 
-                className={classNames('slds-vertical-tabs__nav-item', isActive)} 
-                title={tab.label} 
-                role='presentation' 
-                key={tabNavId} 
+              <li
+                className={classNames('slds-vertical-tabs__nav-item', isActive)}
+                title={tab.label}
+                role='presentation'
+                key={tabNavId}
               >
-                <a 
-                  className='slds-vertical-tabs__link' 
+                <a
+                  className='slds-vertical-tabs__link'
                   href='javascript:void(0)'
-                  role='tab' 
-                  tabIndex={tabIndex} 
+                  role='tab'
+                  tabIndex={tabIndex}
                   aria-selected={isAriaSelected}
                   aria-controls={ariaControlId}
-                  id={tabNavId} 
+                  id={tabNavId}
                   onClick={this.handleTabClick}
                 >
                   {tab.label}
@@ -56,7 +56,7 @@ class VerticalTabs extends React.Component {
           const ariaLabelledBy = `slds-vertical-tabs-${index}__nav`;
 
           return (
-            <div 
+            <div
               className={classNames('slds-vertical-tabs__content', showHideClass)}
               id={tabContentId}
               role='tabpanel'

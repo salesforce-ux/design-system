@@ -27,8 +27,8 @@ const renderReport = (fullReport, fileCount) =>
 ({
   uniqueErrors: Object.keys(fullReport).length,
   total: Object
-         .keys(fullReport)
-         .reduce((acc, k) => acc + sumBy(x => x.lines.length, fullReport[k]), 0),
+        .keys(fullReport)
+        .reduce((acc, k) => acc + sumBy(x => x.lines.length, fullReport[k]), 0),
   fileCount,
   report: _.mapValues(fullReport, shortReport)
 });

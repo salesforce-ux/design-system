@@ -8,19 +8,19 @@ props:
   ## Overridden in salesforce-skin
   BRAND_BAND_DEFAULT_IMAGE:
     value: ''
-    type: raw
+    type: string
   BRAND_BAND_USER_DEFAULT_IMAGE:
     value: ''
-    type: raw
+    type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
     value: ''
-    type: raw
+    type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
     value: ''
-    type: raw
+    type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
     value: ''
-    type: raw
+    type: string
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:

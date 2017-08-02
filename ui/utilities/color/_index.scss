@@ -9,7 +9,7 @@
  * @group text-grays
  */
 .slds-color__text_gray-1 {
-  color: $color-gray-1 !important;
+  color: $color-gray-1 !important; // stylelint-disable declaration-no-important
 }
 
 /**

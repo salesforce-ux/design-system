@@ -44,6 +44,7 @@
       &:hover {
         background-color: $color-background-path-complete-hover;
 
+        // stylelint-disable max-nesting-depth
         .slds-tabs_path__stage,
         .slds-tabs--path__stage {
           transform: rotateX(-180deg);
@@ -257,7 +258,7 @@
   transition: transform 0.2s linear;
   // we should be able to get rid of this prefix once this issue is fixed
   // https://github.com/postcss/autoprefixer/issues/653
-  // scss-lint:disable VendorPrefix
+  // stylelint-disable property-no-vendor-prefix
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }

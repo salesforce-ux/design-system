@@ -375,6 +375,7 @@
         color: $color-text-link-inverse-disabled;
         cursor: default;
 
+        // stylelint-disable max-nesting-depth
         &:hover {
           background-color: transparent;
         }

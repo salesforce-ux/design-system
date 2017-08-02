@@ -57,13 +57,13 @@
 .slds-vertical-tabs__link {
   display: block;
   padding: $spacing-small;
-  color: currentcolor;
+  color: currentColor;
 
   &:hover {
     background: $color-background-path-incomplete-hover;
     color: $color-text-action-label-active;
     text-decoration: none;
-	}
+  }
 }
 
 /**
@@ -94,7 +94,7 @@
 
   .slds-vertical-tabs__link:hover {
     background: $color-background-alt;
-    color: currentcolor;
+    color: currentColor;
   }
 }
 

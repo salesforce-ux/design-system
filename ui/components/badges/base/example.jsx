@@ -37,10 +37,10 @@ export let examples = [
     element:
       <Badge className="slds-badge_lightest">
         <UtilityIcon
-         containerClassName="slds-m-right_xx-small"
-         className="slds-icon_xx-small slds-icon-text-default"
-         assistiveText={false}
-         symbol="moneybag"
+          containerClassName="slds-m-right_xx-small"
+          className="slds-icon_xx-small slds-icon-text-default"
+          assistiveText={false}
+          symbol="moneybag"
         />
         423 Credits Available
       </Badge>

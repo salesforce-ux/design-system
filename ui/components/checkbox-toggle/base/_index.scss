@@ -87,13 +87,11 @@
     // Checked State with Interactions
     &:checked {
 
-      // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_off,
       + .slds-checkbox--faux_container .slds-checkbox--off {
         display: none;
       }
 
-      // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_on,
       + .slds-checkbox--faux_container .slds-checkbox--on {
         display: block;
@@ -108,6 +106,7 @@
         border-color: $color-background-toggle-active;
         background-color: $color-background-toggle-active;
 
+        // stylelint-disable max-nesting-depth
         &:hover,
         &:focus {
           background-color: $color-background-toggle-active-hover;

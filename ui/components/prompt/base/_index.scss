@@ -28,8 +28,9 @@
   }
 
   @include deprecate('4.0.0', 'Close button should be removed from the markup') {
-    slds-modal__close {
-      display: none; // @TODO - Amy, can you make this optional?
+
+    .slds-modal__close {
+      display: none;
     }
   }
 }

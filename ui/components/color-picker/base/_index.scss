@@ -16,6 +16,12 @@
  */
 .slds-color-picker {
   position: relative;
+
+  .slds-form-error {
+    padding-top: $spacing-x-small;
+    color: $color-text-error;
+    font-size: $font-size-text-x-small;
+  }
 }
 
 /**
@@ -56,8 +62,12 @@
  * @selector .slds-color-picker__summary-input
  * @restrict .slds-color-picker__summary > input
  */
-.slds-input.slds-color-picker__summary-input {
-  width: $size-xx-small;
+.slds-color-picker__summary-input {
+  display: inline-block;
+
+  .slds-input {
+    width: $size-xx-small;
+  }
 }
 
 /**
@@ -77,13 +87,13 @@
     background: $color-background;
   }
 
-  .slds-tabs--default__item {
+  .slds-tabs_default__item {
     text-transform: uppercase;
     letter-spacing: 0.05rem;
   }
 
-  .slds-tabs--default__content {
-    padding: $spacing-x-small 0;
+  .slds-tabs_default__content {
+    padding: $spacing-x-small 0 $spacing-xx-small;
   }
 }
 
@@ -242,9 +252,9 @@
   }
 
   @mixin thumb-styles-focus {
-      border-color: $color-border-input-active;
-      box-shadow: $shadow-button-focus;
-    }
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
 
   &::-webkit-slider-thumb {
     @include thumb-styles;

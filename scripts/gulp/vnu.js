@@ -31,8 +31,8 @@ const lint = function (dir, opt, cb) {
     if (key === 'format' && val !== 'gnu') vnu += '--format ' + val + ' ';
     if (val === true) vnu += '--' + key + ' ';
   });
-
-  exec(`${vnu} ${dir}`, {maxBuffer: Infinity}, (err, stdout, stderr) => cb(err, stdout, stderr));
+  console.log(vnu, dir)
+  exec(`${vnu} ${dir}`, {maxBuffer: Infinity}, cb);
 };
 
 const parseLine = file => {
@@ -46,10 +46,14 @@ const parseLine = file => {
 const report = output =>
   _(output.split('\n'))
   .flatMap(parseLine)
+  .filter(x => x.name)
   .groupBy('name')
   .mapValues(groups =>
-    groups.map(({line, type, val}) =>
-      ({[line]: {[type]: val}}))).value();
+    groups
+    .map(({line, type, val}) =>
+      ({[line]: {[type]: val}})
+    )
+  ).value();
 
 const parseComponentArgument = argv =>
   minimist(argv.slice(2)).components || '*';
@@ -57,12 +61,13 @@ const parseComponentArgument = argv =>
 const getComponentsToTest = argv =>
   String(parseComponentArgument(argv))
   .split(',')
-  .map(x => `./html/${x}*.html`)
-  .join(',')
+  .map(x => `.html/${x}*.html`)
+  .join(' ')
 
-const createVnuReport = (stream, argv) =>
+const createVnuReport = (stream, argv) => {
   // eslint-disable-next-line handle-callback-err
   lint(getComponentsToTest(argv), {}, (err, stdout, stderr) => {
+    console.log(stderr)
     const contents = JSON.stringify(report(stderr), null, 2);
     stream.write(
       new gutil.File({
@@ -70,7 +75,7 @@ const createVnuReport = (stream, argv) =>
         contents: Buffer.from(contents)
       }));
   });
-
+}
 // gulp lint:vnu
 // gulp lint:vnu --components path
 // gulp lint:vnu --components path,tabs,data-tables

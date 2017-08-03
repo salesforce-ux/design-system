@@ -178,12 +178,7 @@ async.series([
    * Copy select images directories
    */
   (done) => {
-    gulp.src([
-      'images/spinners/*',
-      'images/avatar*',
-      // Used in the Global Header
-      'images/logo-noname.svg'
-    ], {
+    gulp.src('images/**/*', {
       base: 'assets/images',
       cwd: paths.assets
     })

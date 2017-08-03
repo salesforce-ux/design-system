@@ -8,6 +8,7 @@ const autoprefixer = require('autoprefixer');
 const gulp = require('gulp');
 const gulpinsert = require('gulp-insert');
 const gulprename = require('gulp-rename');
+const Immutable = require('immutable');
 const postcss = require('gulp-postcss');
 const rimraf = require('rimraf');
 const sass = require('gulp-sass');
@@ -70,8 +71,14 @@ async.series([
    * Cleanup the package.json
    */
   (done) => {
-    let packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
+    const packageJSON = JSON.parse(fs.readFileSync(distPath('package.json')).toString());
     packageJSON.name = '@salesforce-ux/design-system';
+    _.set(packageJSON, ['slds', 'dependencies'],
+      Immutable
+        .fromJS(packageJSON.devDependencies)
+        .filter((v, k) => /^@salesforce-ux/.test(k))
+        .toJS()
+    );
     delete packageJSON.scripts;
     delete packageJSON.dependencies;
     delete packageJSON.devDependencies;

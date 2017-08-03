@@ -40,7 +40,7 @@ const listboxOptionId12 = 'listbox-option-unique-id-12';
 const ListboxDropdown = props =>
   <Listbox
     className="slds-dropdown slds-dropdown--fluid slds-dropdown--length-5"
-    vertical={true}
+    vertical
   >
     <ListboxItem>
       <Option id={listboxOptionId01} title="6:00am" />
@@ -106,7 +106,7 @@ export default (
             label="Date"
             inputId={dateInputId}
             inputIcon="right"
-            dropdown={<DatePicker todayActive={true} />}
+            dropdown={<DatePicker todayActive />}
           >
             <Input id={dateInputId} placeholder=" " />
             <ButtonIcon
@@ -118,7 +118,7 @@ export default (
           </FormElement>
           <ComboboxContainer
             label="Time"
-            autocomplete={true}
+            autocomplete
             className="slds-combobox-picklist slds-timepicker"
             inputIcon="right"
             inputIconRightSymbol="clock"
@@ -147,7 +147,7 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateInputId} placeholder=" " value="06/24/2014" />
                 <ButtonIcon
@@ -159,7 +159,7 @@ export let states = [
               </FormElement>
               <ComboboxContainer
                 label="Time"
-                autocomplete={true}
+                autocomplete
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"
                 inputIconRightSymbol="clock"
@@ -186,7 +186,7 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateInputId} placeholder=" " value="06/24/2014" />
                 <ButtonIcon
@@ -198,15 +198,15 @@ export let states = [
               </FormElement>
               <ComboboxContainer
                 label="Time"
-                autocomplete={true}
-                isOpen={true}
+                autocomplete
+                isOpen
                 className="slds-combobox-picklist slds-timepicker"
                 inputIcon="right"
                 inputIconRightSymbol="clock"
                 inputIconRightAssistiveText="Select a time"
                 placeholder=" "
                 value="8:00am"
-                listbox={<ListboxDropdown optionSelected={true} />}
+                listbox={<ListboxDropdown optionSelected />}
               />
             </div>
           </div>

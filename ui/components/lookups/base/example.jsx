@@ -65,10 +65,10 @@ export const Context = props =>
 export default (
   <ComboboxContainer
     className="slds-combobox-lookup"
-    selectedOptionsInline={true}
+    selectedOptionsInline
     inputIcon="right"
     inputIconRightSymbol="search"
-    autocomplete={true}
+    autocomplete
     listbox={<ListboxDropdown />}
   />
 );
@@ -80,10 +80,10 @@ export let states = [
     label: 'Focused',
     element:
       <ComboboxContainer
-        selectedOptionsInline={true}
+        selectedOptionsInline
         containerClassName="slds-has-input-focus"
-        isOpen={true}
-        autocomplete={true}
+        isOpen
+        autocomplete
         inputIcon="right"
         inputIconRightSymbol="search"
         listbox={<ListboxDropdown />}
@@ -94,12 +94,12 @@ export let states = [
     label: 'Open - Item Focused',
     element:
       <ComboboxContainer
-        selectedOptionsInline={true}
-        isOpen={true}
-        autocomplete={true}
+        selectedOptionsInline
+        isOpen
+        autocomplete
         inputIcon="right"
         inputIconRightSymbol="search"
-        listbox={<ListboxDropdown focused={true} />}
+        listbox={<ListboxDropdown focused />}
         aria-activedescendant={listboxOptionId01}
       />
   },
@@ -108,13 +108,13 @@ export let states = [
     label: 'Option Selected',
     element:
       <ComboboxContainer
-        selectedOptionsInline={true}
-        autocomplete={true}
-        readonly={true}
+        selectedOptionsInline
+        autocomplete
+        readonly
         inputIcon="both"
         inputIconLeftSprite="standard"
         inputIconLeftSymbol="account"
-        inputButtonIcon={true}
+        inputButtonIcon
         inputIconRightSymbol="close"
         value="Salesforce.com, Inc."
         listbox={<ListboxDropdown />}

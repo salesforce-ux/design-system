@@ -61,9 +61,9 @@ export default (
     inputIcon="right"
     inputIconRightSymbol="search"
     objectSwitcherInline
-    autocomplete={true}
+    autocomplete
     listbox={<ListboxDropdown />}
-    objectSwitcher={true}
+    objectSwitcher
   />
 );
 
@@ -78,8 +78,8 @@ export let states = [
         inputIcon="right"
         inputIconRightSymbol="search"
         objectSwitcherInline
-        autocomplete={true}
-        isOpen={true}
+        autocomplete
+        isOpen
         listbox={<ListboxDropdown />}
         objectSwitcher
       />,
@@ -94,11 +94,11 @@ export let states = [
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
-        objectSwitcherInline={true}
-        autocomplete={true}
-        isOpen={true}
+        objectSwitcherInline
+        autocomplete
+        isOpen
         listbox={<ListboxDropdown focused />}
-        objectSwitcher={true}
+        objectSwitcher
         aria-activedescendant={listboxOptionId01}
       />
   },
@@ -109,9 +109,9 @@ export let states = [
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
-        objectSwitcherInline={true}
-        autocomplete={true}
-        objectSwitcher={true}
+        objectSwitcherInline
+        autocomplete
+        objectSwitcher
       >
         <Listbox
           id={listboxSelectionsId}
@@ -141,14 +141,14 @@ export let states = [
     label: 'Focused - Option(s) Selected',
     element:
       <ComboboxContainer
-        isOpen={true}
+        isOpen
         containerClassName="slds-has-input-focus"
         inputIcon="right"
         inputIconRightSymbol="search"
-        objectSwitcherInline={true}
-        autocomplete={true}
+        objectSwitcherInline
+        autocomplete
         listbox={<ListboxDropdown />}
-        objectSwitcher={true}
+        objectSwitcher
       >
         <Listbox
           id={listboxSelectionsId}

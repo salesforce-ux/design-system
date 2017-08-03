@@ -54,8 +54,8 @@ export default (
     <ComboboxContainer
       inputIcon="right"
       inputIconRightSymbol="search"
-      selectedOptionsInline={true}
-      autocomplete={true}
+      selectedOptionsInline
+      autocomplete
       listbox={<ListboxDropdown />}
     />
   </div>
@@ -72,9 +72,9 @@ export let states = [
           containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={true}
-          autocomplete={true}
-          isOpen={true}
+          selectedOptionsInline
+          autocomplete
+          isOpen
           listbox={<ListboxDropdown />}
         />
       </div>,
@@ -90,10 +90,10 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={true}
-          autocomplete={true}
-          isOpen={true}
-          listbox={<ListboxDropdown focused={true} />}
+          selectedOptionsInline
+          autocomplete
+          isOpen
+          listbox={<ListboxDropdown focused />}
           aria-activedescendant={listboxOptionId01}
         />
       </div>
@@ -104,13 +104,13 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          selectedOptionsInline={true}
-          autocomplete={true}
-          readonly={true}
+          selectedOptionsInline
+          autocomplete
+          readonly
           inputIcon="both"
           inputIconLeftSprite="standard"
           inputIconLeftSymbol="account"
-          inputButtonIcon={true}
+          inputButtonIcon
           inputIconRightSymbol="close"
           value="Salesforce.com, Inc."
           listbox={<ListboxDropdown />}
@@ -125,8 +125,8 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          selectedOptionsInline={true}
-          autocomplete={true}
+          selectedOptionsInline
+          autocomplete
           listbox={<ListboxDropdown />}
         >
           <Listbox aria-label="Selected Options:" inline>
@@ -154,12 +154,12 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={true}
+          isOpen
           inputIcon="right"
           inputIconRightSymbol="search"
           containerClassName="slds-has-input-focus"
-          selectedOptionsInline={true}
-          autocomplete={true}
+          selectedOptionsInline
+          autocomplete
           listbox={<ListboxDropdown />}
         >
           <Listbox

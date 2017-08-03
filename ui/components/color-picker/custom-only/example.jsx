@@ -13,5 +13,10 @@ export const states = [
     id: 'custom-color-picker-open',
     label: 'Open',
     element: <ColorPicker isOpen hasPredefined={false} />
+  },
+  {
+    id: 'custom-color-picker-open-error',
+    label: 'Open with Error',
+    element: <ColorPicker isOpen hasCustomError hasPredefined={false} />
   }
 ];

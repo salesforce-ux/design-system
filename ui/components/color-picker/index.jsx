@@ -44,6 +44,8 @@ const swatchColors = [
   '#b85d0d'
 ];
 
+const errorMessage = 'Please ensure value is correct';
+
 /**
  * Swatch Subcomponent
  */
@@ -55,44 +57,60 @@ const Swatch = (props) => {
       </span>
     </span>
   );
-}
+};
 
 /**
  * Summary Subcomponent
  */
-export const ColorPickerSummary = () => (
-  <div className="slds-color-picker__summary">
-    <label
-      className="slds-color-picker__summary-label"
-      htmlFor="color-picker-summary-input"
-    >
-      Choose Color
-    </label>
+export const ColorPickerSummary = (props) => {
+  const { hasSummaryError } = props;
+  const errorId = 'color-picker-summary-error';
 
-    <Button className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more" aria-haspopup title="Choose Color">
-      <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
-      <SvgIcon
-        className="slds-button__icon slds-button__icon_small"
-        sprite="utility"
-        symbol="down"
-      />
-      <span className="slds-assistive-text">Choose a color</span>
-    </Button>
+  return (
+    <div className="slds-color-picker__summary">
+      <label
+        className="slds-color-picker__summary-label"
+        htmlFor="color-picker-summary-input"
+      >
+        Choose Color
+      </label>
 
-    <input
-      type="text"
-      className="slds-color-picker__summary-input slds-input"
-      id="color-picker-summary-input"
-      defaultValue="#5679C0"
-    />
-  </div>
-);
+      <Button className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more" aria-haspopup title="Choose Color">
+        <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_small"
+          sprite="utility"
+          symbol="down"
+        />
+        <span className="slds-assistive-text">Choose a color</span>
+      </Button>
+
+      <FormElement
+        className={classNames('slds-color-picker__summary-input', {
+          'slds-has-error': hasSummaryError
+        })}
+      >
+        <Input
+          id="color-picker-summary-input"
+          defaultValue="#5679C0"
+          aria-describedby={hasSummaryError ? errorId : null}
+        />
+      </FormElement>
+
+      {hasSummaryError ? (
+        <p className="slds-form-error" id={errorId}>
+          {errorMessage}
+        </p>
+      ) : null}
+    </div>
+  );
+};
 
 /**
  * Swatches (list of Swatch elements) Subcomponent
  */
 export const ColorPickerSwatches = (props) => {
-  const { isMenuRole } = props
+  const { isMenuRole } = props;
   const swatchesRole = isMenuRole ? 'menu' : 'listbox';
   const linkRole = isMenuRole ? 'menuitem' : 'option';
 
@@ -107,17 +125,19 @@ export const ColorPickerSwatches = (props) => {
       )}
     </ul>
   );
-}
+};
 
 /**
  * Custom Picker Subcomponent
  */
-const ColorPickerCustom = () => {
+const ColorPickerCustom = (props) => {
   const rangeInputId = _.uniqueId('color-picker-input-range-');
   const hexInputId = _.uniqueId('color-picker-input-hex-');
   const rInputId = _.uniqueId('color-picker-input-r-');
   const gInputId = _.uniqueId('color-picker-input-g-');
   const bInputId = _.uniqueId('color-picker-input-b-');
+  const { hasCustomError } = props;
+  const customErrorId = 'color-picker-custom-error';
 
   return (
     <div className="slds-color-picker__custom">
@@ -144,10 +164,16 @@ const ColorPickerCustom = () => {
       <div className="slds-color-picker__custom-inputs">
         <FormElement
           label="Hex"
-          className="slds-color-picker__input-custom-hex"
+          className={classNames('slds-color-picker__input-custom-hex', {
+            'slds-has-error': hasCustomError
+          })}
           inputId={hexInputId}
         >
-          <Input id={hexInputId} defaultValue="#5679C0" />
+          <Input
+            id={hexInputId}
+            defaultValue="#5679C0"
+            aria-describedby={hasCustomError ? customErrorId : null}
+          />
         </FormElement>
 
         <FormElement label={<abbr title="Red">R</abbr>} inputId={rInputId}>
@@ -162,17 +188,23 @@ const ColorPickerCustom = () => {
           <Input defaultValue="192" id={bInputId} />
         </FormElement>
       </div>
+
+      { hasCustomError ? (
+        <p className="slds-form-error" id={customErrorId}>
+          {errorMessage}
+        </p>
+      ) : null }
     </div>
   );
-}
+};
 
 /**
  * Footer Subcomponent
  */
 const ColorPickerFooter = () => (
   <div className="slds-color-picker__selector-footer">
-    <Button className="slds-button--neutral">Cancel</Button>
-    <Button className="slds-button--brand">Done</Button>
+    <Button className="slds-button_neutral">Cancel</Button>
+    <Button className="slds-button_brand">Done</Button>
   </div>
 );
 
@@ -186,7 +218,7 @@ const ColorPickerTabs = (props) => (
     </Tabs.Item>
 
     <Tabs.Item title="Custom" id="color-picker-custom">
-      <ColorPickerCustom />
+      <ColorPickerCustom hasCustomError={props.hasCustomError} />
     </Tabs.Item>
   </Tabs>
 );
@@ -198,48 +230,56 @@ class ColorPicker extends React.Component {
     this.state = {
       selectedTabIndex: props.selectedTabIndex || 0
     };
+
+    this.isFullFeatureMode = this.isFullFeatureMode.bind(this);
+    this.isPredefinedMode = this.isPredefinedMode.bind(this);
+    this.isCustomOnlyMode = this.isCustomOnlyMode.bind(this);
+    this.isSwatchesOnlyMode = this.isSwatchesOnlyMode.bind(this);
   }
 
-  isFullFeatureMode() {
+  isFullFeatureMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && hasCustom);
   }
 
-  isPredefinedMode() {
+  isPredefinedMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && !hasCustom);
   }
 
-  isCustomOnlyMode() {
+  isCustomOnlyMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && hasCustom);
   }
 
-  isSwatchesOnlyMode() {
+  isSwatchesOnlyMode () {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && !hasCustom);
   }
 
   render () {
     const { selectedTabIndex } = this.state;
-    const { isOpen } = this.props;
+    const { isOpen, hasSummaryError, hasCustomError } = this.props;
     const popoverState = isOpen ? 'slds-show' : 'slds-hide';
-    const colorPickerSummary = this.isSwatchesOnlyMode() ? null : <ColorPickerSummary />;
+    const colorPickerSummary = this.isSwatchesOnlyMode() ? null : (
+      <ColorPickerSummary hasSummaryError={hasSummaryError} />
+    );
     const footerContent = this.isSwatchesOnlyMode() ? null : <ColorPickerFooter />;
-
     let colorPickerContent = null;
 
     if (this.isFullFeatureMode()) {
-      colorPickerContent = <ColorPickerTabs selectedTabIndex={selectedTabIndex} />
-    }
-    else if (this.isPredefinedMode()) {
-      colorPickerContent = <ColorPickerSwatches />
-    }
-    else if (this.isCustomOnlyMode()) {
-      colorPickerContent = <ColorPickerCustom />
-    }
-    else if (this.isSwatchesOnlyMode()) {
-      colorPickerContent = <ColorPickerSwatches />
+      colorPickerContent = (
+        <ColorPickerTabs
+          hasCustomError={hasCustomError}
+          selectedTabIndex={selectedTabIndex}
+        />
+      );
+    } else if (this.isPredefinedMode()) {
+      colorPickerContent = <ColorPickerSwatches />;
+    } else if (this.isCustomOnlyMode()) {
+      colorPickerContent = <ColorPickerCustom hasCustomError={hasCustomError} />;
+    } else if (this.isSwatchesOnlyMode()) {
+      colorPickerContent = <ColorPickerTabs selectedTabIndex={selectedTabIndex} />;
     }
 
     return (
@@ -256,7 +296,7 @@ class ColorPicker extends React.Component {
       </div>
     );
   }
-}
+};
 
 ColorPicker.defaultProps = {
   selectedTabIndex: 0,

@@ -115,6 +115,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
       @keyframes bkAnim {
+
         50% {
           background-color: $color-background-context-bar;
         }
@@ -137,6 +138,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       }
 
       @keyframes navBounceIn {
+
         0% {
           transform: translate3d(0, 20px, 0);
           opacity: 0;

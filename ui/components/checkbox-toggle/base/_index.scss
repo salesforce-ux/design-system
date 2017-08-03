@@ -53,7 +53,6 @@
     padding: 0;
     position: absolute;
 
-    // scss-lint:disable NestingDepth SelectorDepth
     + .slds-checkbox_faux_container,
     + .slds-checkbox--faux_container {
       font-size: $font-size-x-small;
@@ -87,13 +86,11 @@
     // Checked State with Interactions
     &:checked {
 
-      // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_off,
       + .slds-checkbox--faux_container .slds-checkbox--off {
         display: none;
       }
 
-      // scss-lint:disable NestingDepth SelectorDepth
       + .slds-checkbox_faux_container .slds-checkbox_on,
       + .slds-checkbox--faux_container .slds-checkbox--on {
         display: block;
@@ -155,14 +152,14 @@
 
 
     &[disabled] {
-      // scss-lint:disable NestingDepth
+
       + .slds-checkbox_faux,
       + .slds-checkbox--faux,
       ~ .slds-checkbox_faux,
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux_container .slds-checkbox_faux,
       + .slds-checkbox--faux_container .slds-checkbox--faux {
-        // scss-lint:disable NestingDepth
+
         background-color: $color-background-toggle-disabled;
         pointer-events: none;
 

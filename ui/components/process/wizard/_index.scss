@@ -87,7 +87,6 @@
 
       a:hover,
       a:focus {
-        // scss-lint:disable NestingDepth SelectorDepth
 
         .slds-wizard__marker {
           background: rgb(0, 95, 178); // @TODO: Need a token for this

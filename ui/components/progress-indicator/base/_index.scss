@@ -25,7 +25,6 @@
 
     .slds-progress__item {
 
-      // scss-lint:disable NestingDepth SelectorDepth
       &.slds-is-completed .slds-progress__marker,
       &.slds-is-active .slds-progress__marker {
         background: $progress-color-background-shade;

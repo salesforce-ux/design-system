@@ -96,7 +96,7 @@
   .slds-card { // This makes cards look plain when inside a tabset
     background: $card-color-background;
     border: 0;
-    border-radius: none;
+    border-radius: 0;
     box-shadow: none;
   }
 }

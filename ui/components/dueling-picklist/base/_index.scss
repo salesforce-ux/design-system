@@ -44,10 +44,12 @@
     }
 
     .slds-listbox__option {
+
       &:hover {
         cursor: not-allowed;
         background-color: transparent;
       }
+
       &:focus {
         background-color: transparent;
       }

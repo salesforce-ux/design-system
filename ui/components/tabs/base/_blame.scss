@@ -9,9 +9,8 @@
  * .slds-tabs_default
  */
 
-// ADD THIS TO PRODUCT
 .slds-tabs_card,
-.slds-tabs_card.uiTabset--default { //@TODO: Remove - this is currently needed for specificity since uiTabs is not SLDS-ized
+.slds-tabs_card.slds-tabs_card {
   padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
   box-shadow: $card-shadow;
   border: $border-width-thin solid $card-color-border;

@@ -175,11 +175,9 @@
     @include list-has-bullets;
 
     ul {
-      // scss-lint:disable NestingDepth SelectorDepth
       list-style: circle;
 
       ul {
-        // scss-lint:disable NestingDepth SelectorDepth
         list-style: square;
       }
     }
@@ -193,11 +191,9 @@
     @include list-has-numbers;
 
     ol {
-      // scss-lint:disable NestingDepth SelectorDepth
       list-style: lower-alpha;
 
       ol {
-        // scss-lint:disable NestingDepth SelectorDepth
         list-style: lower-roman;
       }
     }

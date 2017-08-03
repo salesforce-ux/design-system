@@ -55,10 +55,8 @@
         padding: 0 $spacing-large;
         color: $color-text-weak;
         background-clip: padding-box;
-        border: {
-          left: $border-width-thin solid transparent;
-          right: $border-width-thin solid transparent;
-        }
+        border-left: $border-width-thin solid transparent;
+        border-right: $border-width-thin solid transparent;
 
         &:hover,
         &:focus {
@@ -88,6 +86,7 @@
     }
   }
 }
+
 /**
  * Styles each list item as a single tab
  *

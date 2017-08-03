@@ -79,6 +79,7 @@
  * @group theme
  */
 .slds-progress-ring_warning {
+
   .slds-progress-ring__content {
     background: $color-background-progress-ring-content;
   }
@@ -98,6 +99,7 @@
  * @group theme
  */
 .slds-progress-ring_expired {
+
   .slds-progress-ring__content {
     background: $color-background-progress-ring-content;
   }
@@ -117,6 +119,7 @@
  * @group theme
  */
 .slds-progress-ring_complete {
+
   .slds-icon {
     fill: $color-background-progress-ring-content;
   }

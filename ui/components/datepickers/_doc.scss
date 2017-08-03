@@ -38,14 +38,14 @@
  * ##### Gridcell
  *
  * - All dates should have `role="gridcell"` and `aria-selected="false"` on the `gridcell` by default
- *   - If a date is selected, `aria-selected` should be set to `true` on the corresponding `gridcell`
+ * - If a date is selected, `aria-selected` should be set to `true` on the corresponding `gridcell`
  * - `aria-current` is used to indicate which day is today and should be set to `aria-current="date"`
  *
  * **Opening the Datepicker**
  *
- * - Mouse user: open the datepicker when a mouse user clicks on the input 
+ * - Mouse user: open the datepicker when a mouse user clicks on the input
  * - Keyboard user: only open the datepicker when a keyboard user presses `enter` or `space` on the datepicker button
- *   - Do not open the datepicker when user focus is on the input 
+ *   - Do not open the datepicker when user focus is on the input
  *
  * **Expected Keyboard Interactions**
  *
@@ -57,7 +57,7 @@
  * - `alt + pagedown` and `alt + pageup` to navigate between years
  * - `enter` to select date and close datepicker
  * - `esc` to close datepicker without choosing a date
- * 
+ *
  * @summary A datepicker is a text input to capture a date. You can select a single date, date range or date and time.
  *
  * @base

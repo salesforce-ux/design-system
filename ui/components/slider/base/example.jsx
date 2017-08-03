@@ -26,7 +26,6 @@ const SliderLabel = props => (
   </span>
 );
 
-
 const Slider = props => (
   <div className={classNames('slds-slider', props.className)}>
     <input
@@ -104,7 +103,7 @@ export let states = [
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="100" />
       </FormElement>
-  },
+  }
 ];
 
 // Examples

@@ -79,7 +79,7 @@ const createVnuReport = (stream, argv) => {
 // gulp lint:vnu
 // gulp lint:vnu --components path
 // gulp lint:vnu --components path,tabs,data-tables
-gulp.task('lint:vnu', ['generate:wrappedexamples'], () =>{
+gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
   const stream = through.obj();
   createVnuReport(stream, process.argv);
   return stream.pipe(gulp.dest(FILEPATH));

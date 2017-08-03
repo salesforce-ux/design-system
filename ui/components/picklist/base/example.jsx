@@ -30,13 +30,13 @@ const ListboxDropdown = props =>
     className="slds-dropdown slds-dropdown_fluid"
     vertical={true}
   >
-    {props.heading ?
+    {props.heading ? (
       <li role="presentation" className="slds-listbox__item">
         <span className="slds-media slds-listbox__option slds-listbox__option_plain" role="presentation" id={listboxOptionId00}>
           <h3 className="slds-text-title_caps" role="presentation">{props.heading}</h3>
         </span>
       </li>
-    : null}
+    ) : null}
     <ListboxItem>
       <Option
         id={listboxOptionId01}

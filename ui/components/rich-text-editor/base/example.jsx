@@ -390,7 +390,7 @@ export let states = [
             <RteFormatBody />
             <RteClearFormatting />
           </RteToolbar>
-          <RteTextarea text={ <TextInputExample /> } />
+          <RteTextarea text={<TextInputExample />} />
         </RichTextEditor>
       </Demo>
   },

@@ -33,7 +33,7 @@ const renderReport = (fullReport, fileCount) =>
   report: _.mapValues(fullReport, shortReport)
 });
 
-const renderItem = (filepath, lines=[]) =>
+const renderItem = (filepath, lines = []) =>
 ({
   file: path.basename(filepath, '.html'),
   lines

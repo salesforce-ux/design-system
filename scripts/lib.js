@@ -18,7 +18,7 @@ module.exports = ui => {
   const variants = comp =>
     isUtil(comp)
     ? comp.get('restrictees')
-    :  toList(comp).filter(item => item.getIn(['annotations', 'variant']))
+    : toList(comp).filter(item => item.getIn(['annotations', 'variant']))
 
   const utility = name =>
     Either.of(ui.get("utilities")).chain(u => Either.fromNullable(u.get(name)));

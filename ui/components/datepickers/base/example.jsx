@@ -129,7 +129,7 @@ export let DatePicker = props =>
           <Day aria-selected="false">15</Day>
           <Day aria-selected="false">16</Day>
           <Day aria-selected="false">17</Day>
-          <Day aria-selected="false" aria-current={props.todayActive ? 'date': null} className={props.todayActive ? 'slds-is-today' : null}>18</Day>
+          <Day aria-selected="false" aria-current={props.todayActive ? 'date' : null} className={props.todayActive ? 'slds-is-today' : null}>18</Day>
           <Day aria-selected="false">19</Day>
           <Day aria-selected="false">20</Day>
         </Week>
@@ -148,7 +148,7 @@ export let DatePicker = props =>
             className={classNames(
               {
                 'slds-is-selected': props.dateSelected,
-                'slds-is-selected-multi': props.dateSelected && props.dateRange,
+                'slds-is-selected-multi': props.dateSelected && props.dateRange
               }
             )}
           >

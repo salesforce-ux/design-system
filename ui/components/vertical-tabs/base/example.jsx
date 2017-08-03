@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 class VerticalTabs extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.state = {
@@ -13,7 +13,7 @@ class VerticalTabs extends React.Component {
     };
   }
 
-  render() {
+  render () {
     const { currentTabIndex } = this.state;
 
     return (

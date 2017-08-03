@@ -15,7 +15,6 @@ import _ from '../../../shared/helpers';
 ----------------------------------------------------------------------------- */
 const accounts = ['Acme', 'Edge SLA', 'Express Logistics SLA', 'GenePoint Lab Generators', 'GenePoint SLA', 'Pyramid Emergency Generators', 'United Oil Installations', 'United Oil Plant Standby Generators', 'University of AZ Installations', 'University of AZ Portable Generators'];
 
-
 const ListboxList = (props) => (
   <Listbox className="slds-dropdown_length-10" vertical aria-label="My Favorites">
     <ListboxItem>
@@ -38,7 +37,6 @@ const ListboxList = (props) => (
     )}
   </Listbox>
 );
-
 
 const Footer = (props) => (
   <ul>

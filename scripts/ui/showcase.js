@@ -56,7 +56,7 @@ const removeExamples = sections =>
     )
   )
 
-module.exports = (component, variant, isUtil, keepExamples=false) => {
+module.exports = (component, variant, isUtil, keepExamples = false) => {
   return requireVariant(component, variant, isUtil)
     .map(normalizeExports)
     .map(sections => keepExamples ? sections : removeExamples(sections))

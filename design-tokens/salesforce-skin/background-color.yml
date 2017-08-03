@@ -15,6 +15,47 @@ props:
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_7}'
+  ## BRAND BAND
+  ## Desktop
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: '/assets/images/themes/classic/banner-user-default.png'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: '/assets/images/themes/classic/banner-group-private-default.png'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+    value: '/assets/images/themes/classic/banner-group-public-default.png'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
+    value: '/assets/images/themes/classic/banner-group-unlisted-default.png'
+    type: string
+  ## Tablet
+  BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
+    value: '/assets/images/themes/classic/banner-user-default-medium.png'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
+    value: '/assets/images/themes/classic/banner-group-private-default-medium.png'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
+    value: '/assets/images/themes/classic/banner-group-public-default-medium.png'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
+    value: '/assets/images/themes/classic/banner-group-unlisted-default-medium.png'
+    type: string
+  ## Mobile
+  BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
+    value: '/assets/images/themes/classic/banner-user-default-small.png'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
+    value: '/assets/images/themes/classic/banner-group-private-default-small.png'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
+    value: '/assets/images/themes/classic/banner-group-public-default-small.png'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
+    value: '/assets/images/themes/classic/banner-group-unlisted-default-small.png'
+    type: string
+  ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_7}'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:

@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: utility
+  type: string
+props:
+  CUSTOM_SPRITE:
+    value: '/assets/icons/custom-sprite/svg/symbols.svg'
+  DOCTYPE_SPRITE:
+    value: '/assets/icons/doctype-sprite/svg/symbols.svg'
+  STANDARD_SPRITE:
+    value: '/assets/icons/standard-sprite/svg/symbols.svg'
+  ACTION_SPRITE:
+    value: '/assets/icons/action-sprite/svg/symbols.svg'
+  UTILITY_SPRITE:
+    value: '/assets/icons/utility-sprite/svg/symbols.svg'

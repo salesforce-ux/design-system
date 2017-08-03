@@ -121,7 +121,6 @@
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
 
-        // stylelint-disable max-nesting-depth
         &:after {
           border-color: $color-background-input;
         }

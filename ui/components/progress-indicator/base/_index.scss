@@ -25,7 +25,6 @@
 
     .slds-progress__item {
 
-      // scss-lint:disable NestingDepth SelectorDepth
       &.slds-is-completed .slds-progress__marker,
       &.slds-is-active .slds-progress__marker {
         background: $progress-color-background-shade;
@@ -39,7 +38,6 @@
       &.slds-is-active .slds-progress__marker {
         box-shadow: $progress-color-background-shade 0 0 0 4px; // Adds whitespace around indicator
 
-        // stylelint-disable max-nesting-depth
         &:focus {
           box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark; // Keeps white space and add blue focus ring
         }

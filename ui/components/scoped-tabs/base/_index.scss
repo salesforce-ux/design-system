@@ -58,7 +58,6 @@
         border-left: $border-width-thin solid transparent;
         border-right: $border-width-thin solid transparent;
 
-        // stylelint-disable max-nesting-depth
         &:hover,
         &:focus {
           text-decoration: none;

@@ -47,7 +47,6 @@
 
     .slds-tabs__item {
 
-      // stylelint-disable max-nesting-depth
       + .slds-tabs__item {
         @include mq-medium-min {
           margin-left: $spacing-large;

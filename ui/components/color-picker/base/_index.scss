@@ -242,9 +242,9 @@
   }
 
   @mixin thumb-styles-focus {
-      border-color: $color-border-input-active;
-      box-shadow: $shadow-button-focus;
-    }
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
 
   &::-webkit-slider-thumb {
     @include thumb-styles;

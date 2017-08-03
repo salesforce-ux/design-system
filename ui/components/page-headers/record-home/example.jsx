@@ -41,7 +41,8 @@ export let RecordHome = props =>
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions"
-                title="More Actions" />
+              title="More Actions"
+            />
           </div>
         </div>
       </div>

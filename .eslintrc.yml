@@ -5,6 +5,7 @@ extends:
 rules:
   semi: [2, 'always']
   jsx-quotes: ['error', 'prefer-double']
+  react/jsx-key: ['error']
   # These all need to be fixed
   no-useless-escape: ['off']
   no-unused-vars: ['off']

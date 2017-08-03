@@ -28,7 +28,7 @@ export let examples = [
         <h2 className="slds-text-heading_large slds-m-bottom_medium">Text Colors</h2>
         <div className="slds-m-bottom_large">
           {paletteKeys.map((key, index) => (
-            <div className="slds-grid slds-grid_vertical-align-center">
+            <div key={index} className="slds-grid slds-grid_vertical-align-center">
               <div className={`slds-color__background_gray-${key}`} style={{
                 height: '3rem',
                 width: '3rem',
@@ -55,7 +55,7 @@ export let examples = [
         <h2 className="slds-text-heading_large slds-m-bottom_medium">SVG Fill Colors</h2>
         <div className="slds-m-bottom_large">
           {paletteKeys.map((key, index) => (
-            <div className="slds-p-around_small">
+            <div key={index} className="slds-p-around_small">
               <SvgIcon
                 className={`slds-color__fill_gray-${key} slds-icon_small`}
                 sprite="action"

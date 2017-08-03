@@ -129,17 +129,16 @@ export let DatePicker = props =>
           <Day aria-selected="false">15</Day>
           <Day aria-selected="false">16</Day>
           <Day aria-selected="false">17</Day>
-          <Day aria-selected="false" aria-current={props.todayActive ? 'date': null} className={props.todayActive ? 'slds-is-today' : null}>18</Day>
+          <Day aria-selected="false" aria-current={props.todayActive ? 'date' : null} className={props.todayActive ? 'slds-is-today' : null}>18</Day>
           <Day aria-selected="false">19</Day>
           <Day aria-selected="false">20</Day>
         </Week>
         <Week className={classNames(
-            {
-              'slds-has-multi-selection': props.dateRange == 'week',
-              'slds-has-multi-row-selection': props.dateRange == 'weeks'
-            }
-          )}
-        >
+          {
+            'slds-has-multi-selection': props.dateRange == 'week',
+            'slds-has-multi-row-selection': props.dateRange == 'weeks'
+          }
+        )}>
           <Day aria-selected="false">21</Day>
           <Day aria-selected="false">22</Day>
           <Day aria-selected="false">23</Day>
@@ -148,7 +147,7 @@ export let DatePicker = props =>
             className={classNames(
               {
                 'slds-is-selected': props.dateSelected,
-                'slds-is-selected-multi': props.dateSelected && props.dateRange,
+                'slds-is-selected-multi': props.dateSelected && props.dateRange
               }
             )}
           >
@@ -216,7 +215,7 @@ export default (
     label="Date"
     inputId={dateInputId}
     inputIcon="right"
-    dropdown={<DatePicker todayActive={true} />}
+    dropdown={<DatePicker todayActive />}
   >
     <Input id={dateInputId} placeholder=" " />
     <ButtonIcon
@@ -238,7 +237,7 @@ export let states = [
         label="Date"
         inputId={dateInputId}
         inputIcon="right"
-        dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+        dropdown={<DatePicker todayActive dateSelected />}
       >
         <Input id={dateInputId} placeholder=" " value="06/23/2014" />
         <ButtonIcon

@@ -87,18 +87,18 @@ let ListMain = props => {
           </ul>
           <div className="slds-path__scroll-controls">
             <ButtonIcon
-            assistiveText="Scroll left"
-            className="slds-button_icon-border-filled"
-            symbol="left"
-            title="Scroll left"
-            tabIndex="-1"
+              assistiveText="Scroll left"
+              className="slds-button_icon-border-filled"
+              symbol="left"
+              title="Scroll left"
+              tabIndex="-1"
             />
             <ButtonIcon
-            assistiveText="Scroll right"
-            className="slds-button_icon-border-filled"
-            symbol="right"
-            title="Scroll right"
-            tabIndex="-1"
+              assistiveText="Scroll right"
+              className="slds-button_icon-border-filled"
+              symbol="right"
+              title="Scroll right"
+              tabIndex="-1"
             />
           </div>
         </div>
@@ -623,7 +623,7 @@ let PathStageWon = props =>
     </CoachContent>
   </Coach>;
 
-  let PathOverflow = props =>
+let PathOverflow = props =>
   <Demo>
     <Coach>
       <Path className="slds-has-overflow">
@@ -722,7 +722,7 @@ let PathStageWon = props =>
     </Coach>
   </Demo>;
 
-  let PathMediumCoaching = props =>
+let PathMediumCoaching = props =>
   <Demo className="slds-region_medium" style={{ width: '700px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
@@ -838,7 +838,7 @@ let PathStageWon = props =>
     </Coach>
   </Demo>;
 
-  let PathSmallCoaching = props =>
+let PathSmallCoaching = props =>
   <Demo className="slds-region_small" style={{ width: '360px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">

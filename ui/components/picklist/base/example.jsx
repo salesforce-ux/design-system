@@ -28,15 +28,15 @@ const ListboxDropdown = props =>
   <Listbox
     aria-label={props.heading ? props.heading : null}
     className="slds-dropdown slds-dropdown_fluid"
-    vertical={true}
+    vertical
   >
-    {props.heading ?
+    {props.heading ? (
       <li role="presentation" className="slds-listbox__item">
         <span className="slds-media slds-listbox__option slds-listbox__option_plain" role="presentation" id={listboxOptionId00}>
           <h3 className="slds-text-title_caps" role="presentation">{props.heading}</h3>
         </span>
       </li>
-    : null}
+    ) : null}
     <ListboxItem>
       <Option
         id={listboxOptionId01}
@@ -91,7 +91,7 @@ export let states = [
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
-        isOpen={true}
+        isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
         listbox={<ListboxDropdown />}
@@ -107,10 +107,10 @@ export let states = [
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
-        isOpen={true}
+        isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
-        listbox={<ListboxDropdown focused={true} />}
+        listbox={<ListboxDropdown focused />}
         aria-activedescendant={listboxOptionId01}
         readonly
       />
@@ -121,11 +121,11 @@ export let states = [
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
-        isOpen={true}
+        isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
         value="Option A"
-        listbox={<ListboxDropdown optionOneSelected={true} />}
+        listbox={<ListboxDropdown optionOneSelected />}
         readonly
       />
   },
@@ -135,12 +135,12 @@ export let states = [
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
-        isOpen={true}
+        isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
         value="2 Options Selected"
         listbox={
-          <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
+          <ListboxDropdown optionOneSelected optionTwoSelected />
         }
         readonly
       />
@@ -154,7 +154,7 @@ export let states = [
         inputIcon="right"
         inputIconRightSymbol="down"
         value="Option A"
-        listbox={<ListboxDropdown focused={true} optionOneSelected={true} />}
+        listbox={<ListboxDropdown focused optionOneSelected />}
         readonly
       />
   },
@@ -168,7 +168,7 @@ export let states = [
         inputIconRightSymbol="down"
         value="2 Options Selected"
         listbox={
-          <ListboxDropdown optionOneSelected={true} optionTwoSelected={true} />
+          <ListboxDropdown optionOneSelected optionTwoSelected />
         }
         readonly
       >
@@ -193,12 +193,12 @@ export let states = [
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
-        isOpen={true}
+        isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
         value="Option A"
         listbox={
-          <ListboxDropdown optionOneSelected={true} heading="Recently Viewed" />
+          <ListboxDropdown optionOneSelected heading="Recently Viewed" />
         }
         readonly
       />

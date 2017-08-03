@@ -38,7 +38,7 @@ export default (
             label="Start Date"
             inputId={dateRangeInputId01}
             inputIcon="right"
-            dropdown={<DatePicker todayActive={true} />}
+            dropdown={<DatePicker todayActive />}
           >
             <Input id={dateRangeInputId01} placeholder=" " />
             <ButtonIcon
@@ -53,7 +53,7 @@ export default (
             label="End Date"
             inputId={dateRangeInputId02}
             inputIcon="right"
-            dropdown={<DatePicker todayActive={true} />}
+            dropdown={<DatePicker todayActive />}
           >
             <Input id={dateRangeInputId02} placeholder=" " />
             <ButtonIcon
@@ -84,7 +84,7 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
                 <ButtonIcon
@@ -99,7 +99,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " />
                 <ButtonIcon
@@ -128,7 +128,7 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
                 <ButtonIcon
@@ -143,7 +143,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} dateRange="week" />}
+                dropdown={<DatePicker todayActive dateSelected dateRange="week" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/27/2014" />
                 <ButtonIcon
@@ -172,7 +172,7 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActive dateSelected />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
                 <ButtonIcon
@@ -187,7 +187,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive={true} dateSelected={true} dateRange="weeks" />}
+                dropdown={<DatePicker todayActive dateSelected dateRange="weeks" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
                 <ButtonIcon
@@ -216,7 +216,7 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} />}
+                dropdown={<DatePicker todayActiveInRange dateSelected />}
               >
                 <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
                 <ButtonIcon
@@ -231,7 +231,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange={true} dateSelected={true} dateRange="weeks" />}
+                dropdown={<DatePicker todayActiveInRange dateSelected dateRange="weeks" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
                 <ButtonIcon

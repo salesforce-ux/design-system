@@ -11,8 +11,8 @@ const jar = require('vnu-jar/vnu-jar');
 
 // where to write. Normally we'd move control to the caller, but this
 // the pattern for all other gulp scripts
-const FILEPATH = '.reports/'
-const FILENAME = 'vnu_report.json'
+const FILEPATH = '.reports/';
+const FILENAME = 'vnu_report.json';
 
 const lint = function (dir, opt, cb) {
   let vnu = 'java -jar ' + jar;
@@ -31,7 +31,7 @@ const lint = function (dir, opt, cb) {
     if (key === 'format' && val !== 'gnu') vnu += '--format ' + val + ' ';
     if (val === true) vnu += '--' + key + ' ';
   });
-  console.log(vnu, dir)
+  console.log(vnu, dir);
   exec(`${vnu} ${dir}`, {maxBuffer: Infinity}, cb);
 };
 
@@ -62,12 +62,12 @@ const getComponentsToTest = argv =>
   String(parseComponentArgument(argv))
   .split(',')
   .map(x => `.html/${x}*.html`)
-  .join(' ')
+  .join(' ');
 
 const createVnuReport = (stream, argv) => {
   // eslint-disable-next-line handle-callback-err
   lint(getComponentsToTest(argv), {}, (err, stdout, stderr) => {
-    console.log(stderr)
+    console.log(stderr);
     const contents = JSON.stringify(report(stderr), null, 2);
     stream.write(
       new gutil.File({
@@ -75,11 +75,12 @@ const createVnuReport = (stream, argv) => {
         contents: Buffer.from(contents)
       }));
   });
-}
+};
+
 // gulp lint:vnu
 // gulp lint:vnu --components path
 // gulp lint:vnu --components path,tabs,data-tables
-gulp.task('lint:vnu', ['generate:wrappedexamples'], () =>{
+gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
   const stream = through.obj();
   createVnuReport(stream, process.argv);
   return stream.pipe(gulp.dest(FILEPATH));

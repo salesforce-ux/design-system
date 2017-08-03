@@ -92,8 +92,8 @@ const ListboxDropdown = props =>
 let ProductListHeader = props =>
   <div className="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
     <ComboboxContainer
-      autocomplete={true}
-      hideLabel={true}
+      autocomplete
+      hideLabel
       inputIcon="right"
       inputIconRightSymbol="search"
       listbox={<ListboxDropdown />}
@@ -148,7 +148,7 @@ let RowData = props => {
 
 let FilteredItem = props =>
   <PillContainer className="slds-pill_container_bare">
-    <Listbox horizonta={true}>
+    <Listbox horizonta>
       <ListboxItem>
         <ListboxPill label="Analytics" tabIndex="0" />
       </ListboxItem>
@@ -157,7 +157,7 @@ let FilteredItem = props =>
 
 let FilteredItems = props =>
   <PillContainer className="slds-pill_container_bare">
-    <Listbox horizontal={true}>
+    <Listbox horizontal>
       <ListboxItem>
         <ListboxPill label="Option A" tabIndex="0" />
       </ListboxItem>

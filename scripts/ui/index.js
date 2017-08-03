@@ -44,11 +44,11 @@ const addShowcaseIfVariantOrUtil = componentId => item =>
 const addShowcases = ui =>
   ui.map(group =>
     group.map((value, name) =>
-      mapTree(value, addShowcaseIfVariantOrUtil(name))))
+      mapTree(value, addShowcaseIfVariantOrUtil(name))));
 
 const uiFromComments = () => getComments().map(createParser).map(createUI);
 
-const ui = () => uiFromComments().map(addShowcases)
+const ui = () => uiFromComments().map(addShowcases);
 
 const writeToDist = () =>
   ui()

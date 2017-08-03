@@ -54,10 +54,10 @@ const removeExamples = sections =>
     section.update("items", items =>
       items.map(item => item.delete("element").delete("Context"))
     )
-  )
+  );
 
-module.exports = (component, variant, isUtil, keepExamples=false) => {
+module.exports = (component, variant, isUtil, keepExamples = false) => {
   return requireVariant(component, variant, isUtil)
     .map(normalizeExports)
-    .map(sections => keepExamples ? sections : removeExamples(sections))
+    .map(sections => keepExamples ? sections : removeExamples(sections));
 };

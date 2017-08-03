@@ -76,8 +76,8 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Font"
         label="Choose a Font"
-        hideLabel={true}
-        readonly={true}
+        hideLabel
+        readonly
         aria-controls="family-listbox"
         listbox={<FontFamilyDropdown />}
       />
@@ -91,8 +91,8 @@ export let RteFormatFont = props =>
         inputIconRightSymbol="down"
         value="Size"
         label="Choose a Font Size"
-        hideLabel={true}
-        readonly={true}
+        hideLabel
+        readonly
         aria-controls="size-listbox"
         tabIndex="-1"
         listbox={<FontSizeDropdown />}
@@ -390,7 +390,7 @@ export let states = [
             <RteFormatBody />
             <RteClearFormatting />
           </RteToolbar>
-          <RteTextarea text={ <TextInputExample /> } />
+          <RteTextarea text={<TextInputExample />} />
         </RichTextEditor>
       </Demo>
   },

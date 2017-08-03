@@ -321,23 +321,23 @@ export let examples = [
             <div className="slds-form-element__row">
               <ComboboxContainer
                 formClassName="slds-size_1-of-2"
-                autocomplete={true}
+                autocomplete
                 label="Name"
                 placeholder="Search Leads"
                 inputIcon="right"
                 inputIconRightSymbol="search"
-                objectSwitcher={true}
-                objectSwitcherInline={true}
+                objectSwitcher
+                objectSwitcherInline
               />
               <ComboboxContainer
                 formClassName="slds-size_1-of-2"
-                autocomplete={true}
+                autocomplete
                 label="Name"
                 placeholder="Search Accounts"
                 inputIcon="right"
                 inputIconRightSymbol="search"
-                objectSwitcher={true}
-                objectSwitcherInline={true}
+                objectSwitcher
+                objectSwitcherInline
               />
             </div>
           </div>
@@ -721,23 +721,23 @@ export let examples = [
             <div className="slds-form-element__row">
               <ComboboxContainer
                 formClassName="slds-size_1-of-2"
-                autocomplete={true}
+                autocomplete
                 label="Name"
                 placeholder="Search Leads"
                 inputIcon="right"
                 inputIconRightSymbol="search"
-                objectSwitcher={true}
-                objectSwitcherInline={true}
+                objectSwitcher
+                objectSwitcherInline
               />
               <ComboboxContainer
                 formClassName="slds-size_1-of-2"
-                autocomplete={true}
+                autocomplete
                 label="Name"
                 placeholder="Search Accounts"
                 inputIcon="right"
                 inputIconRightSymbol="search"
-                objectSwitcher={true}
-                objectSwitcherInline={true}
+                objectSwitcher
+                objectSwitcherInline
               />
             </div>
           </div>

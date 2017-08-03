@@ -671,7 +671,6 @@ export const EditableCellContent = props => (
   </span>
 );
 
-
 /**
  * @name EditPopover - Popover used to edit a cell in inline edit grids
  * @param {*} props

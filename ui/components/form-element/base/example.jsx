@@ -82,7 +82,7 @@ export let FormElement = props => {
           { message }
         </div>
       : null }
-      { dropdown ? dropdown : null }
+      { dropdown || null }
     </div>
   );
 };

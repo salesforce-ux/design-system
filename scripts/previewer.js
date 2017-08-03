@@ -63,7 +63,6 @@ const listen = () =>
         emitReady();
       }
     );
-
   });
 
 console.log("Start compiling JS library for Previewer...");

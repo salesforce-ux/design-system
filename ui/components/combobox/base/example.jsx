@@ -228,8 +228,7 @@ export let ComboboxContainer = props =>
               />
             : null }
             {/* If loading, show buttonIcon and spinner here */}
-            { props.loading
-              ?
+            { props.loading ? (
               <div className="slds-input__icon-group slds-input__icon-group_right">
                 <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
                 <ButtonIcon
@@ -239,7 +238,7 @@ export let ComboboxContainer = props =>
                   assistiveText="Remove selected option"
                 />
               </div>
-            : null }
+            ) : null }
             {/* If close button, show buttonIcon here */}
             { props.inputButtonIcon && props.inputIconRightSymbol === 'close'
               ? <ButtonIcon
@@ -395,7 +394,6 @@ const ListboxDropdown = props =>
     </ListboxItem>
   </Listbox>;
 
-
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
@@ -404,7 +402,7 @@ const ListboxDropdown = props =>
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
     <ComboboxContainer
-      autocomplete={true}
+      autocomplete
       inputIcon="right"
       inputIconRightSymbol="search"
       listbox={<ListboxDropdown />}
@@ -420,8 +418,8 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={true}
-          autocomplete={true}
+          isOpen
+          autocomplete
           inputIcon="right"
           inputIconRightSymbol="search"
           listbox={<ListboxDropdown />}
@@ -437,11 +435,11 @@ export let states = [
     element:
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
-          isOpen={true}
-          autocomplete={true}
+          isOpen
+          autocomplete
           inputIcon="right"
           inputIconRightSymbol="search"
-          listbox={<ListboxDropdown focused={true} />}
+          listbox={<ListboxDropdown focused />}
           aria-activedescendant={listboxOptionId01}
         />
       </div>
@@ -454,14 +452,14 @@ export let states = [
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
-          autocomplete={true}
+          autocomplete
           listbox={<ListboxDropdown />}
         >
           <Listbox
             id={listboxSelectionsId}
             aria-label="Selected Options:"
             className="slds-p-top_xxx-small"
-            horizontal={true}
+            horizontal
           >
             <ListboxItem>
               <ListboxPill label="Acme" tabIndex="0">

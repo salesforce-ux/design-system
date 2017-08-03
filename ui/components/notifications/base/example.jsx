@@ -128,7 +128,7 @@ export let examples = [
           </Notification>
         </NotificationContainer>
       </div>
-    },
+  },
   {
     id: 'stacked-3',
     label: 'Three Stacked Notifications',
@@ -176,7 +176,7 @@ export let examples = [
           </Notification>
         </NotificationContainer>
       </div>
-    },
+  },
   {
     id: 'overflow-six',
     label: 'Six Stacked Notifications',
@@ -263,5 +263,5 @@ export let examples = [
           </Notification>
         </NotificationContainer>
       </div>
-    }
+  }
 ];

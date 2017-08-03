@@ -46,7 +46,7 @@ class VerticalTabs extends React.Component {
                   {tab.label}
                 </a>
               </li>
-            )
+            );
           })}
         </ul>
 
@@ -65,7 +65,7 @@ class VerticalTabs extends React.Component {
             >
               {this.props.tabs[currentTabIndex].content}
             </div>
-          )
+          );
         })}
       </div>
     );

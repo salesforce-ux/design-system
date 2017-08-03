@@ -42,12 +42,12 @@ const getFileName = (component, variant, item) =>
 const getWrappedElement = item =>
   item.get('Context')
   ? React.createElement(item.get('Context'), null, item.get('element'))
-  : item.get('element')
+  : item.get('element');
 
 const render = item =>
   React.isValidElement(item.get('element'))
   ? prettyHTML(ReactDOM.renderToStaticMarkup(getWrappedElement(item)))
-  : `FAILED: ${item.get('id')}`
+  : `FAILED: ${item.get('id')}`;
 
 gulp.task('generate:examples', () => {
   const stream = through.obj();
@@ -75,7 +75,8 @@ gulp.task('generate:examples', () => {
   ).fork(
     e => { throw e; },
     () => stream.end()
-  )
+  );
+
   return stream
     .pipe(gulp.dest(`${paths.generated}/examples`));
 });

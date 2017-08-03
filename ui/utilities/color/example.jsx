@@ -15,13 +15,13 @@ export let examples = [
         <h2 className="slds-text-heading_large slds-m-bottom_medium">Background Colors</h2>
         <div className="slds-m-bottom_large">
           {paletteKeys.map((key, index) => {
-            const textClass = key > 8 ? 'slds-color__text_gray-1' : null
+            const textClass = key > 8 ? 'slds-color__text_gray-1' : null;
 
             return (
               <div key={index} className={`slds-color__background_gray-${key} slds-p-around_medium`}>
                 <p className={textClass}>.slds-color__background_gray-{key}</p>
               </div>
-            )
+            );
           })}
         </div>
 

@@ -28,7 +28,7 @@ const runExtraScripts = () => {
     echo $R
     gulp lint:examples --components $(echo $R)
   `);
-}
+};
 
 const publishBuild = () =>
   exec('NODE_ENV=production npm run build-server');
@@ -43,7 +43,7 @@ const isTag = () =>
   !!process.env.TRAVIS_TAG;
 
 const shouldPushToBuildServer = () =>
-  isMerge() || isPR() || isTag()
+  isMerge() || isPR() || isTag();
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
   if (shouldPushToBuildServer()) {

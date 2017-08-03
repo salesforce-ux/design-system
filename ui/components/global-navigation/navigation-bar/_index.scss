@@ -340,19 +340,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       padding: 0 $spacing-x-small;
     }
 
-    // Handle active states
-    &.slds-is-active,
-    &:nth-child(n).slds-is-active {
-      background-color: $color-background-context-tab-bar-item;
-      margin-bottom: (3px * -1);
-      border-bottom: 3px solid $color-background-context-tab-bar-item;
-      animation: none;
-
-      &:hover {
-        background-color: $color-background-context-tab-bar-item;
-      }
-    }
-
     /**
      * Pinned state
      * Toggles visibility of elements inside of tab

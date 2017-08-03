@@ -13,6 +13,7 @@
 // into another component use slds-brand-band without this modifier
 .slds-brand-band {
   display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   width: 100%;

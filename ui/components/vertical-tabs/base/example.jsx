@@ -83,14 +83,16 @@ let exampleTabs = [
         <p>Lorem ipsum dolor...</p>
       </div>
     )
-  },{
+  },
+  {
     label: 'Tab 2',
     content: (
       <div className='slds-text-longform'>
         <p>Content for Tab 2</p>
       </div>
     )
-  },{
+  },
+  {
     label: 'Tab 3 has a really long label and can wrap or truncate',
     content: (
       <div className='slds-text-longform'>

@@ -134,12 +134,11 @@ export let DatePicker = props =>
           <Day aria-selected="false">20</Day>
         </Week>
         <Week className={classNames(
-            {
-              'slds-has-multi-selection': props.dateRange == 'week',
-              'slds-has-multi-row-selection': props.dateRange == 'weeks'
-            }
-          )}
-        >
+          {
+            'slds-has-multi-selection': props.dateRange == 'week',
+            'slds-has-multi-row-selection': props.dateRange == 'weeks'
+          }
+        )}>
           <Day aria-selected="false">21</Day>
           <Day aria-selected="false">22</Day>
           <Day aria-selected="false">23</Day>

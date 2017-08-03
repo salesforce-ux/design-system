@@ -623,7 +623,7 @@ let PathStageWon = props =>
     </CoachContent>
   </Coach>;
 
-  let PathOverflow = props =>
+let PathOverflow = props =>
   <Demo>
     <Coach>
       <Path className="slds-has-overflow">
@@ -722,7 +722,7 @@ let PathStageWon = props =>
     </Coach>
   </Demo>;
 
-  let PathMediumCoaching = props =>
+let PathMediumCoaching = props =>
   <Demo className="slds-region_medium" style={{ width: '700px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
@@ -838,7 +838,7 @@ let PathStageWon = props =>
     </Coach>
   </Demo>;
 
-  let PathSmallCoaching = props =>
+let PathSmallCoaching = props =>
   <Demo className="slds-region_small" style={{ width: '360px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">

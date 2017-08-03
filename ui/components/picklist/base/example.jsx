@@ -131,7 +131,7 @@ export let states = [
   },
   {
     id: 'open-options-selected',
-    label: 'Open - Option(s) Selected',
+    label: 'Open - Options Selected',
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
@@ -147,7 +147,7 @@ export let states = [
   },
   {
     id: 'closed-option-selected',
-    label: 'Option Selected',
+    label: 'Closed - Option Selected',
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"
@@ -160,7 +160,7 @@ export let states = [
   },
   {
     id: 'closed-options-selected',
-    label: 'Option(s) Selected',
+    label: 'Closed - Options Selected',
     element:
       <ComboboxContainer
         containerClassName="slds-size_small"

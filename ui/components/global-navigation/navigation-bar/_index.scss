@@ -380,6 +380,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
     .slds-indicator_unread {
       display: inline-block;
+      flex-shrink: 0;
       height: 6px;
       width: 6px;
       left: auto;

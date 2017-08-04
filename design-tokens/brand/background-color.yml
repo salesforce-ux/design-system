@@ -25,7 +25,7 @@ props:
     value: '/assets/images/themes/oneSalesforce/banner-group-public-default.png'
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: 'assets/images/themes/oneSalesforce/banner-group-unlisted-default.png'
+    value: '/assets/images/themes/oneSalesforce/banner-group-unlisted-default.png'
     type: string
   ## Tablet
   BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
@@ -51,7 +51,7 @@ props:
     value: '/assets/images/themes/oneSalesforce/banner-group-public-default-small.png'
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
-    value: 'assets/images/themes/oneSalesforce/banner-group-unlisted-default-small.png'
+    value: '/assets/images/themes/oneSalesforce/banner-group-unlisted-default-small.png'
     type: string
   ## Colors
   PAGE_COLOR_BACKGROUND_PRIMARY:

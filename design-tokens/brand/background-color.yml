@@ -13,45 +13,45 @@ imports:
 props:
   ## Desktop
   BRAND_BAND_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2'
     type: string
   BRAND_BAND_USER_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2'
     type: string
   ## Tablet
   BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
-    value: '/_slds/images/themes/oneSalesforce/banner-user-default-medium.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2'
     type: string
   ## Mobile
   BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
-    value: '/_slds/images/themes/oneSalesforce/banner-user-default-small.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2'
     type: string
   BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
-    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png'
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2'
     type: string
   ## Colors
   PAGE_COLOR_BACKGROUND_PRIMARY:

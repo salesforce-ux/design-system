@@ -40,7 +40,7 @@ export let Input = props => {
       type={props.type || 'text'}
       placeholder={props.placeholder || 'Placeholder Text'}
       readOnly={props['readOnly']}
-      value={props.value}
+      defaultValue={props.defaultValue}
     />
   );
 };
@@ -96,7 +96,7 @@ let Readonly = props =>
   <FormElement>
     <FormElementLabel>Input Label</FormElementLabel>
     <FormElementControl>
-      <Input readOnly value="Read Only" placeholder="" />
+      <Input readOnly defaultValue="Read Only" placeholder="" />
     </FormElementControl>
   </FormElement>;
 

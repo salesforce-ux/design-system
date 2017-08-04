@@ -149,7 +149,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected />}
               >
-                <Input id={dateInputId} placeholder=" " value="06/24/2014" />
+                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -188,7 +188,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected />}
               >
-                <Input id={dateInputId} placeholder=" " value="06/24/2014" />
+                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"

@@ -337,3 +337,7 @@ props:
     value: '#8BAEB5'
   OPPORTUNITY_SPLITS:
     value: '#FCB95B'
+  ENTITY:
+    value: '#F88962'
+  BOT:
+    value: '#54698F'

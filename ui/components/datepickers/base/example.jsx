@@ -278,7 +278,7 @@ export let states = [
         inputIcon="right"
         dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
       >
-        <Input id={dateInputId} placeholder=" " value="06/24/2014" />
+        <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
         <ButtonIcon
           className="slds-input__icon slds-input__icon_right"
           symbol="event"

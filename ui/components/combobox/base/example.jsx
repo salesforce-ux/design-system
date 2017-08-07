@@ -215,7 +215,7 @@ export let ComboboxContainer = props =>
               type="text"
               placeholder={!props.placeholder ? (props.autocomplete ? 'Search Salesforce' : 'Select an Option') : props.placeholder}
               readOnly={props['readonly']}
-              value={props.value}
+              defaultValue={props.value}
               tabIndex={props.tabIndex}
             />
             {/* If inputIcon is right, show icon here  */}

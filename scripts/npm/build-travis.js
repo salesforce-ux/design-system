@@ -33,17 +33,15 @@ const runExtraScripts = () => {
 const publishBuild = () =>
   exec('NODE_ENV=production npm run build-server');
 
+// PR's have this message as well as the "after merge button" commit
 const isMerge = () =>
   process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge/g);
-
-const isPR = () =>
-  process.env.TRAVIS_PULL_REQUEST == 'true'; // env var is string
 
 const isTag = () =>
   !!process.env.TRAVIS_TAG;
 
 const shouldPushToBuildServer = () =>
-  isMerge() || isPR() || isTag();
+  isMerge() || isTag()
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
   if (shouldPushToBuildServer()) {

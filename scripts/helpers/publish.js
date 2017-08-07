@@ -121,19 +121,19 @@ const prepare = (done) => {
       if (err) return done(err);
       done(null, _.assign({}, counts, tests, html, a11y, validations));
     }),
-    // SHA
-    async.apply(execute, 'git rev-parse HEAD'),
     // zip
     async.apply(zip, 'dist'),
     async.apply(zip, 'examples'),
     async.apply(zip, 'design-tokens')
-  ], (err, [_prepare, _dist, _examples, _snaps, _tokens, info, stats, sha, _zip]) => {
+  ], (err, [_prepare, _dist, _examples, _snaps, _tokens, info, stats, _zip]) => {
     if (err) return done(err);
-    let result = _.assign({}, { sha, info, stats }, {
+    let result = _.assign({}, { info, stats }, {
+      sha: process.env.TRAVIS_COMMIT,
       tag: process.env.TRAVIS_TAG || '',
       pullRequest: process.env.TRAVIS_PULL_REQUEST || '',
       branch: process.env.TRAVIS_BRANCH || '',
       commitRange: process.env.TRAVIS_COMMIT_RANGE || '',
+      headCommit: process.env.TRAVIS_PULL_REQUEST_SHA,
       commit: process.env.TRAVIS_COMMIT || '',
       eventType: process.env.TRAVIS_EVENT_TYPE || '',
       version: packageJSON.version,

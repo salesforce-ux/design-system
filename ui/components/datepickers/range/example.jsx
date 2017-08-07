@@ -86,7 +86,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -130,7 +130,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -145,7 +145,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected dateRange="week" />}
               >
-                <Input id={dateRangeInputId02} placeholder=" " value="06/27/2014" />
+                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/27/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -174,7 +174,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -189,7 +189,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActive dateSelected dateRange="weeks" />}
               >
-                <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
+                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/29/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -218,7 +218,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActiveInRange dateSelected />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " value="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -233,7 +233,7 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker todayActiveInRange dateSelected dateRange="weeks" />}
               >
-                <Input id={dateRangeInputId02} placeholder=" " value="06/29/2014" />
+                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/29/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"

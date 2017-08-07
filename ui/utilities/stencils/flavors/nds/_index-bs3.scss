@@ -1,0 +1,65 @@
+.nds-single-stencil--small:before{
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='124px' height='34px' viewBox='0 0 124 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ECombined Shape Copy 3%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M0,0 L124,0 L124,34 L0,34 L0,0 Z M22.5,9 L89.5,9 L89.5,9 C90.3284271,9 91,9.67157288 91,10.5 L91,10.5 L91,10.5 C91,11.3284271 90.3284271,12 89.5,12 L22.5,12 L22.5,12 C21.6715729,12 21,11.3284271 21,10.5 L21,10.5 L21,10.5 C21,9.67157288 21.6715729,9 22.5,9 Z' id='Combined-Shape-Copy-3' fill='%23f4f6f9'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.nds-single-stencil--large:before{
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='194px' height='37px' viewBox='0 0 194 37' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ECombined Shape Copy 2%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M0,0 L194,0 L194,37 L0,37 L0,0 Z M22.5,17 C21.6715729,17 21,17.6715729 21,18.5 L21,18.5 L21,18.5 C21,19.3284271 21.6715729,20 22.5,20 L129.5,20 C130.328427,20 131,19.3284271 131,18.5 L131,18.5 C131,17.6715729 130.328427,17 129.5,17 L129.5,17 L22.5,17 Z' id='Combined-Shape-Copy-2' fill='%23FFFFFF'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.nds-double-stencil:before{
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='112px' height='37px' viewBox='0 0 112 37' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ECombined Shape Copy 5%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M0,0 L112,0 L112,37 L0,37 L0,0 Z M22.5,5 C21.6715729,5 21,5.67157288 21,6.5 C21,7.32842712 21.6715729,8 22.5,8 L47.5,8 C48.3284271,8 49,7.32842712 49,6.5 C49,5.67157288 48.3284271,5 47.5,5 L22.5,5 Z M22.5,16 C21.6715729,16 21,16.6715729 21,17.5 C21,18.3284271 21.6715729,19 22.5,19 L89.5,19 C90.3284271,19 91,18.3284271 91,17.5 C91,16.6715729 90.3284271,16 89.5,16 L22.5,16 Z' id='Combined-Shape-Copy-5' fill='%23f4f6f9'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.nds-single-stencil--small:before,
+.nds-single-stencil--large:before,
+.nds-double-stencil:before{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+  content: " ";
+}
+
+.nds-single-stencil--small,
+.nds-single-stencil--large,
+.nds-double-stencil{
+  padding: $spacing-none !important;
+  border: $spacing-none !important;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8 !important;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%) !important;
+  background-size: 800px 104px !important;
+  position: relative;
+  cursor: default !important;
+}
+
+.secondary-navigation-stencil-container{
+  margin: 0 -2px !important;
+}
+
+.secondary-navigation-item-stencil{
+  width: 100%;
+}
+
+.tertiary-navigation-item-stencil{
+  display: inline-block;
+  height: $line-height-button-small;
+  width: 155px;
+}
+
+.topbar-navigation-item-stencil{
+  display: inline-block;
+  height: inherit;
+  width: 155px;
+  float: left;
+}
+
+@keyframes stencilShimmer {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}

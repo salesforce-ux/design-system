@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system-markup": "1.0.0",
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "2.0.3",
-    "@salesforce-ux/icons": "7.29.0",
+    "@salesforce-ux/icons": "7.30.0",
     "@salesforce-ux/instant-vrt": "0.0.2",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",

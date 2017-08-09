@@ -7,6 +7,6 @@ global:
 imports:
 - ../../../../design-tokens/color-palettes.yml
 props:
-  COLOR_INPUT_STATIC: 
+  INPUT_STATIC_COLOR:
     value: "{!PALETTE_GRAY_12}"
 

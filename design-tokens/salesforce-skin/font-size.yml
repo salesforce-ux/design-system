@@ -9,3 +9,5 @@ global:
 props:
   FORM_LABEL_FONT_SIZE:
     value: '.75rem'
+  INPUT_STATIC_FONT_SIZE:
+    value: '0.875rem'

@@ -1,0 +1,12 @@
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ../../../../design-tokens/color-palettes.yml
+props:
+  COLOR_INPUT_STATIC: 
+    value: "{!PALETTE_GRAY_12}"
+

@@ -14,7 +14,7 @@ imports:
 props:
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_GRAY_2}'
   ## BRAND BAND
   ## Desktop
   BRAND_BAND_USER_DEFAULT_IMAGE:

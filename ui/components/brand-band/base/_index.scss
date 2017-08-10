@@ -118,16 +118,6 @@
 
 .slds-template_default {
   padding: $template-gutters;
-
-  &.slds-brand-band:before {
-    position: fixed;
-    top: 5.625rem; // Height of global nav + header
-  }
-
-  &.slds-brand-band.slds-brand-band_medium:after {
-    position: fixed;
-    top: 15rem;
-  }
 }
 
 .slds-template_bottom-magnet {

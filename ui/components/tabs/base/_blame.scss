@@ -21,8 +21,9 @@
   .slds-card-wrapper {
     background: $card-color-background;
     border: 0;
-    border-radius: initial;
     box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   // Pull cards to edge of already padding tab content area

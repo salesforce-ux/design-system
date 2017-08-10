@@ -26,16 +26,30 @@ let Notification = props => {
       className="slds-notification"
       role="dialog"
       aria-labelledby={props.headingID}
-      aria-describedby={bodyUniqueId}>
+      aria-describedby={bodyUniqueId}
+    >
       <div className="slds-notification__body" id={bodyUniqueId}>
         <a className="slds-notification__target slds-media" href="javascript:void(0);">
-          { props.children }
+          <StandardIcon
+            containerClassName="slds-media__figure"
+            className="slds-icon--small"
+            assistiveText={false}
+            symbol={props.type}
+            title={props.type}
+          />
+          <div className="slds-media__body">
+            <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id={props.headingID}>
+              <span className="slds-assistive-text">{props.type + " notification:"}</span>
+              {props.title}
+            </h2>
+            <p>{props.description}</p>
+          </div>
         </a>
         <ButtonIcon
           className="slds-button--icon-container slds-notification__close"
           symbol="close"
-          assistiveText="Dismiss notification"
-          title="Dismiss notification"
+          assistiveText={"Dismiss " + props.title + " notification"}
+          title={"Dismiss " + props.title + " notification"}
         />
       </div>
         { props.footer
@@ -54,19 +68,19 @@ let Notification = props => {
 export default (
   <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
     <NotificationContainer>
-      <Notification headingID="noti52">
-        <StandardIcon
-          containerClassName="slds-media__figure"
-          className="slds-icon--small"
-          assistiveText={false}
-          symbol="event"
-          title="event"
-        />
-        <div className="slds-media__body">
-          <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti52"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
-          <p>Event at 11:00am on Jan 8</p>
-        </div>
-      </Notification>
+      <div
+        aria-live="assertive"
+        aria-atomic="true"
+        className="slds-assistive-text"
+      >
+        event notification: Tesla - Renewal meeting
+      </div>
+      <Notification 
+        headingID="noti52"
+        type="event"
+        title="Tesla - Renewal meeting"
+        description="Event at 11:00am on Jan 8"
+      />
     </NotificationContainer>
   </div>
 );
@@ -78,19 +92,19 @@ export let examples = [
     element:
       <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
         <NotificationContainer>
-          <Notification headingID="noti77">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
+          <div
+            aria-live="assertive"
+            aria-atomic="true"
+            className="slds-assistive-text"
+          >
+            task notification: Call Two: Jane Johnson
+          </div>
+          <Notification
+            headingID="noti77"
+            type="task"
+            title="Call Two: Jane Johnson"
+            description="Task due on Jan 8"
+          />
         </NotificationContainer>
       </div>
   },
@@ -100,32 +114,25 @@ export let examples = [
     element:
       <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
         <NotificationContainer>
-          <Notification headingID="noti77">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti52">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="event"
-              title="event"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti52"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
-              <p>Event at 11:00am on Jan 8</p>
-            </div>
-          </Notification>
+          <div
+            aria-live="assertive"
+            aria-atomic="true"
+            className="slds-assistive-text"
+          >
+            task notification: Call Two: Jane Johnson
+          </div>
+          <Notification
+            headingID="noti77"
+            type="task"
+            title="Call Two: Jane Johnson"
+            description="Task due on Jan 8"
+          />
+          <Notification
+            headingID="noti52"
+            type="event"
+            title="Tesla - Renewal meeting"
+            description="Event at 11:00am on Jan 8"
+          />
         </NotificationContainer>
       </div>
   },
@@ -135,45 +142,31 @@ export let examples = [
     element:
       <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
         <NotificationContainer>
-          <Notification headingID="noti77">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti52">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="event"
-              title="event"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti52"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
-              <p>Event at 11:00am on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti66">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti66"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
+          <div
+            aria-live="assertive"
+            aria-atomic="true"
+            className="slds-assistive-text"
+          >
+            task notification: Call Two: Jane Johnson
+          </div>
+          <Notification
+            headingID="noti77"
+            type="task"
+            title="Call Two: Jane Johnson"
+            description="Task due on Jan 8"
+          />
+          <Notification
+            headingID="noti52"
+            type="event"
+            title="Tesla - Renewal meeting"
+            description="Event at 11:00am on Jan 8"
+          />
+          <Notification
+            headingID="noti66"
+            type="task"
+            title="Call Three: Jim Jameson"
+            description="Task due on Jan 8"
+          />
         </NotificationContainer>
       </div>
   },
@@ -183,85 +176,51 @@ export let examples = [
     element:
       <div className="demo-only slds-is-relative" style={{ height: '17rem' }}>
         <NotificationContainer>
-          <Notification headingID="noti77">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti77"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti52">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="event"
-              title="event"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti52"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
-              <p>Event at 11:00am on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti66">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti66"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti48">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti48"><span className="slds-assistive-text">Notification:</span>Call Two: Jane Johnson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti59">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="event"
-              title="event"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti59"><span className="slds-assistive-text">Notification:</span>Tesla - Renewal meeting</h2>
-              <p>Event at 11:00am on Jan 8</p>
-            </div>
-          </Notification>
-          <Notification headingID="noti86">
-            <StandardIcon
-              containerClassName="slds-media__figure"
-              className="slds-icon--small"
-              assistiveText={false}
-              symbol="task"
-              title="task"
-            />
-            <div className="slds-media__body">
-              <h2 className="slds-text-heading--small slds-m-bottom--xx-small" id="noti86"><span className="slds-assistive-text">Notification:</span>Call Three: Jim Jameson</h2>
-              <p>Task due on Jan 8</p>
-            </div>
-          </Notification>
+          <div
+            aria-live="assertive"
+            aria-atomic="true"
+            className="slds-assistive-text"
+          >
+            task notification: Call Two: Jane Johnson
+          </div>
+          <Notification
+            headingID="noti77"
+            type="task"
+            title="Call Two: Jane Johnson"
+            description="Task due on Jan 8"
+          />
+          <Notification
+            headingID="noti52"
+            type="event"
+            title="Tesla - Renewal meeting"
+            description="Event at 11:00am on Jan 8"
+          />
+          <Notification
+            headingID="noti66"
+            type="task"
+            title="Call Three: Jim Jameson"
+            description="Task due on Jan 8"
+          />
+          <Notification
+            headingID="noti48"
+            type="task"
+            title="Call Two: Jane Johnson"
+            description="Task due on Jan 8"
+          />
+          <Notification
+            headingID="noti59"
+            type="event"
+            title="Tesla - Renewal meeting"
+            description="Event at 11:00am on Jan 8"
+          />
+          <Notification
+            headingID="noti86"
+            type="task"
+            title="Call Three: Jim Jameson"
+            description="Task due on Jan 8"
+          />
         </NotificationContainer>
       </div>
   }
 ];
+

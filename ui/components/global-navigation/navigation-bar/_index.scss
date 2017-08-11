@@ -365,6 +365,11 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       position: relative;
       padding-left: $spacing-x-small;
       font-style: italic;
+      line-height: normal;
+    }
+
+    .slds-indicator_unread {
+      margin-left: -0.35rem; // Random but matches spec
     }
   }
 
@@ -375,7 +380,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   * @restrict .slds-context-bar__item, slds-context-bar__item slds-dropdown__item
   */
   .slds-has-notification {
-    background: $color-background-notification-new;
+    background: $color-background-context-bar-brand-light;
     color: $color-text-default;
 
     .slds-indicator_unread {
@@ -399,8 +404,9 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 .slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
-  align-self: center;
+  align-self: flex-start;
   font-size: $font-size-medium-a;
+  margin-top: 0.2rem; // Random but matches spec
 }
 
 // Context Bar dropdown trigger specifics

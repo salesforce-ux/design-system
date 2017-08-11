@@ -58,7 +58,7 @@
       cursor: pointer;
     }
 
-    &:focus:not(.slds-disabled-text) {
+    &:focus {
       outline: 0;
 
       > .slds-day {
@@ -72,13 +72,15 @@
      * @selector .slds-is-selected
      * @restrict .slds-datepicker td
      */
-    &.slds-is-selected:not(.slds-disabled-text):not(.slds-is-today) > .slds-day {
+    &.slds-is-selected:not(.slds-is-today) > .slds-day {
       background: $color-background-button-brand-hover;
       color: $color-text-button-brand-hover;
     }
 
-    &.slds-is-selected:not(.slds-disabled-text):focus > .slds-day {
+    &.slds-is-selected:focus > .slds-day {
+      background: $color-background-row-hover;
       box-shadow: $color-border-brand-dark 0 0 3px;
+      color: currentColor;
     }
   }
 

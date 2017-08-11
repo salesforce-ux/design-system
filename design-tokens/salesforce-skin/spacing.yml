@@ -27,7 +27,7 @@ props:
   TEMPLATE_GUTTERS:
     value: '{!SPACING_SMALL}'
   TEMPLATE_PROFILE_GUTTERS:
-    value: '4rem {!SPACING_SMALL} {!SPACING_SMALL}'
+    value: '8rem {!SPACING_SMALL} {!SPACING_SMALL}'
   ## Tables
   TABLE_CELL_SPACING:
     value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'

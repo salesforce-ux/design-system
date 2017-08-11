@@ -147,7 +147,7 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
               >
                 <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
@@ -186,7 +186,7 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
               >
                 <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon

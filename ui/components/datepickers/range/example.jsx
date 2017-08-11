@@ -84,9 +84,9 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -99,7 +99,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " />
                 <ButtonIcon
@@ -128,9 +128,9 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected dateRange="week-4" />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -143,7 +143,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected dateRange="week" />}
+                dropdown={<DatePicker todayActive dateSelected dateRange="week-4" />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/27/2014" />
                 <ButtonIcon
@@ -168,13 +168,13 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger--click"
+                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected />}
+                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" dateRangeMulti />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -187,7 +187,7 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected dateRange="weeks" />}
+                dropdown={<DatePicker todayActive dateSelected dateRange="week-4-5" dateRangeMulti />}
               >
                 <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/29/2014" />
                 <ButtonIcon
@@ -216,9 +216,9 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange dateSelected />}
+                dropdown={<DatePicker todayActiveInRange dateSelected="single" dateRange="week-4" dateRangeMulti />}
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/23/2014" />
+                <Input id={dateRangeInputId01} placeholder=" " value="06/24/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -231,9 +231,53 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange dateSelected dateRange="weeks" />}
+                dropdown={<DatePicker todayActiveInRange dateSelected dateRange="week-4-5" dateRangeMulti />}
               >
-                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/29/2014" />
+                <Input id={dateRangeInputId02} placeholder=" " value="06/30/2014" />
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
+                  symbol="event"
+                  assistiveText="Select a date"
+                  title="Select a date"
+                />
+              </FormElement>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  },
+  {
+    id: 'span-across-month-in-range',
+    label: 'Current and adjacent month in selected range',
+    element:
+      <div className="slds-form slds-form--compound">
+        <fieldset className="slds-form-element">
+          <legend className="slds-form-element__label">Start and End Date</legend>
+          <div className="slds-form-element__group">
+            <div className="slds-form-element__row">
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                label="Start Date"
+                inputId={dateRangeInputId01}
+                inputIcon="right"
+                dropdown={<DatePicker dateSelected="single" dateRange="week-5" />}
+              >
+                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon--right"
+                  symbol="event"
+                  assistiveText="Select a date"
+                  title="Select a date"
+                />
+              </FormElement>
+              <FormElement
+                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                label="End Date"
+                inputId={dateRangeInputId02}
+                inputIcon="right"
+                dropdown={<DatePicker dateSelected dateRange="week-5" />}
+              >
+                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/30/2014" />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"

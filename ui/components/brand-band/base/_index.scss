@@ -13,6 +13,7 @@
 // into another component use slds-brand-band without this modifier
 .slds-brand-band {
   display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   width: 100%;
@@ -117,6 +118,16 @@
 
 .slds-template_default {
   padding: $template-gutters;
+
+  &.slds-brand-band:before {
+    position: fixed;
+    top: 5.625rem; // Height of global nav + header
+  }
+
+  &.slds-brand-band.slds-brand-band_medium:after {
+    position: fixed;
+    top: 15rem;
+  }
 }
 
 .slds-template_bottom-magnet {

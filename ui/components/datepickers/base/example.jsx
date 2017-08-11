@@ -135,29 +135,29 @@ export let DatePicker = props =>
         </Week>
         <Week className={classNames(
           {
-            'slds-has-multi-selection': props.dateRange == 'week',
-            'slds-has-multi-row-selection': props.dateRange == 'weeks'
+            'slds-has-multi-selection': props.dateRange == 'week-4',
+            'slds-has-multi-row-selection': props.dateRangeMulti
           }
         )}>
           <Day aria-selected="false">21</Day>
           <Day aria-selected="false">22</Day>
           <Day aria-selected="false">23</Day>
           <Day
-            aria-selected={props.dateSelected ? 'true' : 'false'}
+            aria-selected={props.dateSelected && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
             className={classNames(
               {
-                'slds-is-selected': props.dateSelected,
-                'slds-is-selected-multi': props.dateSelected && props.dateRange
+                'slds-is-selected': props.dateSelected === 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5'),
+                'slds-is-selected slds-is-selected-multi': props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5')
               }
             )}
           >
             24
           </Day>
           <Day
-            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
+            aria-selected={props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
             className={classNames(
               {
-                'slds-is-selected slds-is-selected-multi': props.dateSelected && props.dateRange,
+                'slds-is-selected slds-is-selected-multi': props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5'),
                 'slds-is-today': props.todayActiveInRange
               }
             )}
@@ -165,36 +165,75 @@ export let DatePicker = props =>
             25
           </Day>
           <Day
-            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
-            className={props.dateSelected && props.dateRange ? 'slds-is-selected slds-is-selected-multi' : null}
+            aria-selected={props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
+            className={props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'slds-is-selected slds-is-selected-multi' : null}
           >
             26
           </Day>
           <Day
-            aria-selected={props.dateSelected && props.dateRange ? 'true' : 'false'}
-            className={props.dateSelected && props.dateRange ? 'slds-is-selected slds-is-selected-multi' : null}
+            aria-selected={props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
+            className={props.dateSelected != 'single' && (props.dateRange === 'week-4' || props.dateRange === 'week-4-5') ? 'slds-is-selected slds-is-selected-multi' : null}
           >
             27
           </Day>
         </Week>
-        <Week className={props.dateRange == 'weeks' ? 'slds-has-multi-row-selection' : null}>
+        <Week className={classNames(
+          {
+            'slds-has-multi-selection': props.dateRange == 'week-5',
+            'slds-has-multi-row-selection': props.dateRangeMulti
+          }
+        )}>
           <Day
-            aria-selected={props.dateSelected && props.dateRange == 'weeks' ? 'true' : 'false'}
-            className={props.dateSelected && props.dateRange == 'weeks' ? 'slds-is-selected slds-is-selected-multi' : null}
+            aria-selected={props.dateSelected && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
+            className={classNames(
+              {
+                'slds-is-selected': props.dateSelected === 'single' && props.dateRange === 'week-5',
+                'slds-is-selected slds-is-selected-multi': props.dateSelected != 'single' && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5')
+              }
+            )}
           >
             28
           </Day>
           <Day
-            aria-selected={props.dateSelected && props.dateRange == 'weeks' ? 'true' : 'false'}
-            className={props.dateSelected && props.dateRange == 'weeks' ? 'slds-is-selected slds-is-selected-multi' : null}
+            aria-selected={props.dateSelected != 'single' && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
+            className={props.dateSelected != 'single' && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5') ? 'slds-is-selected slds-is-selected-multi' : null}
           >
             29
           </Day>
-          <Day aria-selected="false">30</Day>
-          <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">1</Day>
-          <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">2</Day>
-          <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">3</Day>
-          <Day aria-disabled="true" aria-selected="false" className="slds-disabled-text">4</Day>
+          <Day
+            aria-selected={props.dateSelected != 'single' && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5') ? 'true' : 'false'}
+            className={props.dateSelected != 'single' && (props.dateRange === 'week-5' || props.dateRange === 'week-4-5') ? 'slds-is-selected slds-is-selected-multi' : null}
+          >
+            30
+          </Day>
+          <Day
+            aria-disabled="true"
+            aria-selected={props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'true' : 'false'}
+            className={classNames('slds-disabled-text', props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'slds-is-selected slds-is-selected-multi' : null)}
+          >
+            1
+          </Day>
+          <Day
+            aria-disabled="true"
+            aria-selected={props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'true' : 'false'}
+            className={classNames('slds-disabled-text', props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'slds-is-selected slds-is-selected-multi' : null)}
+          >
+            2
+          </Day>
+          <Day
+            aria-disabled="true"
+            aria-selected={props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'true' : 'false'}
+            className={classNames('slds-disabled-text', props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'slds-is-selected slds-is-selected-multi' : null)}
+          >
+            3
+          </Day>
+          <Day
+            aria-disabled="true"
+            aria-selected={props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'true' : 'false'}
+            className={classNames('slds-disabled-text', props.dateSelected != 'single' && props.dateRange === 'week-5' ? 'slds-is-selected slds-is-selected-multi' : null)}
+          >
+            4
+          </Day>
         </Week>
       </tbody>
     </table>
@@ -237,9 +276,9 @@ export let states = [
         label="Date"
         inputId={dateInputId}
         inputIcon="right"
-        dropdown={<DatePicker todayActive dateSelected />}
+        dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
       >
-        <Input id={dateInputId} placeholder=" " defaultValue="06/23/2014" />
+        <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
         <ButtonIcon
           className="slds-input__icon slds-input__icon_right"
           symbol="event"

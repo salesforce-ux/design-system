@@ -17,7 +17,7 @@ export let ActionIcon = props => {
         sprite="action"
         symbol={symbol}
       />
-      <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
+      <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon when needed' }</span>
     </span>
   );
 };

@@ -18,7 +18,7 @@ export let StandardIcon = props => {
         symbol={symbol}
       />
       {props.assistiveText != false
-        ? <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon' }</span>
+        ? <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon when needed' }</span>
       : null}
     </span>
   );

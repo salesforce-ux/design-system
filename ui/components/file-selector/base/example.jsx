@@ -7,12 +7,20 @@ import classNames from 'classnames';
 
 export let FileSelector = props =>
 <div className={classNames('slds-form-element', props.error ? 'slds-has-error' : null)}>
-  <span className="slds-form-element__label" id="file-selector-id">Attachment</span>
+  <span className="slds-form-element__label" id="file-selector-primary-label">Attachment</span>
   <div className="slds-form-element__control">
     <div className={classNames('slds-file-selector', props.className)}>
       <div className={classNames('slds-file-selector__dropzone', props.draggover ? 'slds-has-drag-over' : null)}>
-        <input className="slds-file-selector__input slds-assistive-text" accept="image/png" type="file" id="file-upload-input-01" disabled={props.draggoverError} aria-describedby={props.error ? 'file-selector-id error-01' : 'file-selector-id'} />
-        <label className="slds-file-selector__body" htmlFor="file-upload-input-01">
+        <input
+          className="slds-file-selector__input slds-assistive-text"
+          accept="image/png"
+          type="file"
+          id="file-upload-input-01"
+          disabled={props.draggoverError}
+          aria-describedby={props.error ? 'error-01' : null}
+          aria-labelledby="file-selector-primary-label file-selector-secondary-label"
+        />
+        <label className="slds-file-selector__body" htmlFor="file-upload-input-01" id="file-selector-secondary-label">
           <span className="slds-file-selector__button slds-button slds-button_neutral">
             <SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="upload" />Upload {props.files ? 'Files' : 'Image'}
           </span>

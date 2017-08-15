@@ -225,11 +225,11 @@ export let ComboboxContainer = props =>
             {/* If inputIcon is right, show icon here  */}
             { props.inputIcon === 'right' && props.inputButtonIcon != true
               ? <UtilityIcon
-                title={false}
+                title={props.inputIconRightSymbol === 'search' ? false : true}
                 containerClassName="slds-input__icon slds-input__icon_right"
                 className="slds-icon slds-icon_x-small slds-icon-text-default"
                 symbol={props.inputIconRightSymbol || 'search'}
-                assistiveText={false}
+                assistiveText={props.inputIconRightSymbol === 'search' ? false : true}
               />
             : null }
             {/* If loading, show buttonIcon and spinner here */}

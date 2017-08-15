@@ -42,52 +42,42 @@ const MultiSelect = props => {
   );
 };
 
-const MoveButtons = props => (
-  <div className="slds-dueling-list__column">
-    <button
-      className="slds-button slds-button_icon slds-button_icon-container"
-      title={
-        'Move Selection ' + (props.direction === 'vertical') ? (
-          'Up'
-        ) : (
-          'to ' + props.targetB
-        )
-      }
-      disabled={props.disabled}
-    >
-      <SvgIcon
-        className="slds-button__icon"
-        sprite="utility"
-        symbol={props.direction === 'vertical' ? 'up' : 'right'}
-      />
-      <span className="slds-assistive-text">
-        Move Selection{' '}
-        {props.direction === 'vertical' ? 'Up' : 'to ' + props.targetB}
-      </span>
-    </button>
-    <button
-      className="slds-button slds-button_icon slds-button_icon-container"
-      title={
-        'Move Selection ' + (props.direction === 'vertical') ? (
-          'Down'
-        ) : (
-          'to ' + props.targetA
-        )
-      }
-      disabled={props.disabled}
-    >
-      <SvgIcon
-        className="slds-button__icon"
-        sprite="utility"
-        symbol={props.direction === 'vertical' ? 'down' : 'left'}
-      />
-      <span className="slds-assistive-text">
-        Move Selection{' '}
-        {props.direction === 'vertical' ? 'Down' : 'to ' + props.targetA}
-      </span>
-    </button>
-  </div>
-);
+const MoveButtons = props => {
+  const firstButtonText =
+    'Move Selection ' +
+    (props.direction === 'vertical' ? 'Up' : 'to ' + props.targetB);
+  const secondButtonText =
+    'Move Selection ' +
+    (props.direction === 'vertical' ? 'Down' : 'to ' + props.targetA);
+  return (
+    <div className="slds-dueling-list__column">
+      <button
+        className="slds-button slds-button_icon slds-button_icon-container"
+        title={firstButtonText}
+        disabled={props.disabled}
+      >
+        <SvgIcon
+          className="slds-button__icon"
+          sprite="utility"
+          symbol={props.direction === 'vertical' ? 'up' : 'right'}
+        />
+        <span className="slds-assistive-text">{firstButtonText}</span>
+      </button>
+      <button
+        className="slds-button slds-button_icon slds-button_icon-container"
+        title={secondButtonText}
+        disabled={props.disabled}
+      >
+        <SvgIcon
+          className="slds-button__icon"
+          sprite="utility"
+          symbol={props.direction === 'vertical' ? 'down' : 'left'}
+        />
+        <span className="slds-assistive-text">{secondButtonText}</span>
+      </button>
+    </div>
+  );
+};
 
 const SelectionGroup = props => {
   const groupLabelID = _.uniqueId('label-');
@@ -107,12 +97,15 @@ const SelectionGroup = props => {
 
 const ListBox = props => (
   <div
-    className="slds-dueling-list__options"
+    className={classNames('slds-dueling-list__options', {
+      'slds-is-disabled': props.disabled
+    })}
     role="application"
     aria-disabled={props.disabled}
   >
     <ul
       aria-describedby="option-drag-label"
+      aria-disabled={props.disabled}
       aria-labelledby={props.ariaLabelledby}
       aria-multiselectable="true"
       className="slds-listbox slds-listbox_vertical"
@@ -196,6 +189,60 @@ const DefaultSnapShot = {
         {
           text: 'Option 4',
           tabIndex: 0,
+          isSelected: false,
+          isGrabbed: false
+        },
+        {
+          text: 'Option 5',
+          tabIndex: -1,
+          isSelected: false,
+          isGrabbed: false
+        }
+      ]
+    }
+  ]
+};
+
+const DisabledSnapShot = {
+  liveRegionText: '',
+  optionDragLabel:
+    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  selectionGroups: [
+    {
+      label: 'First Category',
+      options: [
+        {
+          text: 'Option 1',
+          tabIndex: -1,
+          isSelected: false,
+          isGrabbed: false
+        },
+        {
+          text: 'Option 2',
+          tabIndex: -1,
+          isSelected: false,
+          isGrabbed: false
+        },
+        {
+          text: 'Option 3',
+          tabIndex: -1,
+          isSelected: false,
+          isGrabbed: false
+        },
+        {
+          text: 'Option 6',
+          tabIndex: -1,
+          isSelected: false,
+          isGrabbed: false
+        }
+      ]
+    },
+    {
+      label: 'Second Category',
+      options: [
+        {
+          text: 'Option 4',
+          tabIndex: -1,
           isSelected: false,
           isGrabbed: false
         },
@@ -599,7 +646,7 @@ export let states = [
   {
     id: 'disabled-dueling-picklist',
     label: 'Disabled',
-    element: <MultiSelect dataSet={DefaultSnapShot} disabled />
+    element: <MultiSelect dataSet={DisabledSnapShot} disabled />
   },
   {
     id: 'multi-select-selected-item',

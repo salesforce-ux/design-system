@@ -87,9 +87,6 @@ props:
   COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## CARDS
-  CARD_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_1}'
-    comment: Default Card component background color
   CARD_WRAPPER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
   ## BUTTONS

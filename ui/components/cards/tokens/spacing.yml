@@ -1,0 +1,24 @@
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/spacing.yml"
+props:
+  CARD_SPACING_SMALL:
+    value: '{!SPACING_SMALL}'
+  CARD_SPACING_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+  CARD_SPACING_LARGE:
+    value: '{!SPACING_LARGE}'

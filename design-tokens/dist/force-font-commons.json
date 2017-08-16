@@ -1,0 +1,12 @@
+{
+  "SALESFORCE_SANS_REGULAR_WOFF2": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2",
+  "SALESFORCE_SANS_REGULAR_WOFF": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff",
+  "SALESFORCE_SANS_LIGHT_WOFF2": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2",
+  "SALESFORCE_SANS_LIGHT_WOFF": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff",
+  "SALESFORCE_SANS_BOLD_WOFF2": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2",
+  "SALESFORCE_SANS_BOLD_WOFF": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff",
+  "SALESFORCE_SANS_BOLD_ITALIC_WOFF2": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2",
+  "SALESFORCE_SANS_BOLD_ITALIC_WOFF": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff",
+  "SALESFORCE_SANS_ITALIC_WOFF2": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2",
+  "SALESFORCE_SANS_ITALIC_WOFF": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff"
+}

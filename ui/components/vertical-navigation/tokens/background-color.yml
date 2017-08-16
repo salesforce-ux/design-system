@@ -1,0 +1,16 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER:
+    value: '{!WHITE_LILAC}'
+    comment: Vertical navigation shaded background color on row hover.
+  VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE:
+    value: '{!SOLITUDE}'
+    comment: Vertical navigation shaded background color on row active.

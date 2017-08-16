@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font-weight
+  cssProperties:
+  - font
+  - font-weight
+props:
+  FONT_WEIGHT_LIGHT:
+    value: '300'
+    comment: Use for large headings only.
+  FONT_WEIGHT_REGULAR:
+    value: '400'
+    comment: Most all body copy.
+  FONT_WEIGHT_BOLD:
+    value: '700'
+    comment: Used sparingly for emphasized text within regular body copy.

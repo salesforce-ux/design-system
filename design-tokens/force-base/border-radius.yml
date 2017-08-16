@@ -1,0 +1,27 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: radius
+  cssProperties:
+  - 'border*radius'
+props:
+  BORDER_RADIUS_SMALL:
+    value: .125rem
+    cssProperties:
+    - 'border*radius'
+  BORDER_RADIUS_MEDIUM:
+    value: .25rem
+    comment: 'Icons in lists, record home icon, unbound input elements'
+  BORDER_RADIUS_LARGE:
+    value: .5rem
+    cssProperties:
+    - 'border*radius'
+  BORDER_RADIUS_PILL:
+    value: 15rem
+    cssProperties:
+    - 'border*radius'
+  BORDER_RADIUS_CIRCLE:
+    value: '50%'
+    comment: 'Circle for global use, action icon bgd shape'

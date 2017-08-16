@@ -1,0 +1,402 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: background-color
+  type: color
+  cssProperties:
+  - background
+  - background-color
+props:
+  ACTION_CHANGE_OWNER:
+    value: '#54698d'
+  ACTION_SHARE:
+    value: '#54698d'
+  ACTION_INFO:
+    value: '#54698d'
+  ACTION_UPLOAD:
+    value: '#54698d'
+  ACTION_CHANGE_RECORD_TYPE:
+    value: '#54698d'
+  ACTION_CHECK:
+    value: '#54698d'
+  ACTION_DOWNLOAD:
+    value: '#54698d'
+  ACTION_EDIT_RELATIONSHIP:
+    value: '#1dccbf'
+  ACTION_FREEZE_USER:
+    value: '#54698d'
+  ACTION_MANAGE_PERM_SETS:
+    value: '#54698d'
+  ACTION_PASSWORD_UNLOCK:
+    value: '#54698d'
+  ACTION_REFRESH:
+    value: '#54698d'
+  ACTION_REMOVE:
+    value: '#54698d'
+  ACTION_RESET_PASSWORD:
+    value: '#54698d'
+  ACTION_USER_ACTIVATION:
+    value: '#54698d'
+  ACTION_ADD_CONTACT:
+    value: '#A094ED'
+  ACTION_APPROVAL:
+    value: '#00C6B7'
+  ACTION_CANVAS:
+    value: '#8199AF'
+  ACTION_GOAL:
+    value: '#56AADF'
+  ACTION_OPPORTUNITY_COMPETITOR:
+    value: '#FCB95B'
+  ACTION_OPPORTUNITY_LINE_ITEM:
+    value: '#FCB95B'
+  ACTION_OPPORTUNITY_TEAM_MEMBER:
+    value: '#FCB95B'
+  ACTION_QUESTION_POST_ACTION:
+    value: '#32AF5C'
+  ACTION_QUOTE:
+    value: '#88C651'
+  ACTION_REJECT:
+    value: '#00C6B7'
+  ACTION_SOCIAL_POST:
+    value: '#EA74A2'
+  ACTION_FALLBACK:
+    value: '#9895EE'
+  ACTION_EDIT:
+    value: '#1DCCBF'
+  ACTION_DELETE:
+    value: '#E6717C'
+  ACTION_CLONE:
+    value: '#6CA1E9'
+  ACTION_FOLLOW:
+    value: '#31B9F8'
+  ACTION_FOLLOWING:
+    value: '#7DCF64'
+  ACTION_JOIN_GROUP:
+    value: '#779EF2'
+  ACTION_LEAVE_GROUP:
+    value: '#F39E58'
+  ACTION_EDIT_GROUPS:
+    value: '#34BECD'
+  ACTION_SHARE_POST:
+    value: '#65CAE4'
+  ACTION_USER:
+    value: '#65CAE4'
+  ACTION_SHARE_FILE:
+    value: '#BAAC93'
+  ACTION_NEW_TASK:
+    value: '#4BC076'
+  ACTION_NEW_CONTACT:
+    value: '#A094ED'
+  ACTION_NEW_OPPORTUNITY:
+    value: '#FCB95B'
+  ACTION_NEW_CASE:
+    value: '#F2CF5B'
+  ACTION_NEW_LEAD:
+    value: '#F88962'
+  ACTION_SHARE_THANKS:
+    value: '#E9696E'
+  ACTION_SHARE_LINK:
+    value: '#7A9AE6'
+  ACTION_SHARE_POLL:
+    value: '#699BE1'
+  ACTION_NEW_EVENT:
+    value: '#EB7092'
+  ACTION_NEW_CHILD_CASE:
+    value: '#FA975C'
+  ACTION_LOG_A_CALL:
+    value: '#48C3CC'
+  ACTION_NEW_NOTE:
+    value: '#E6D478'
+  ACTION_NEW:
+    value: '#33BCE7'
+  ACTION_FILTER:
+    value: '#FD90B5'
+  ACTION_SORT:
+    value: '#FAB9A5'
+  ACTION_DESCRIPTION:
+    value: '#7DC37D'
+  ACTION_DEFER:
+    value: '#EF7EAD'
+  ACTION_UPDATE:
+    value: '#81B4D6'
+  ACTION_LOG_THIS_EVENT:
+    value: '#EB7092'
+  ACTION_EMAIL:
+    value: '#95AEC5'
+  ACTION_DIAL_IN:
+    value: '#8B9AE3'
+  ACTION_MAP:
+    value: '#76C6EE'
+  ACTION_CALL:
+    value: '#1FCAA0'
+  ACTION_GOOGLE_NEWS:
+    value: '#F5675B'
+  ACTION_WEB_LINK:
+    value: '#56AADF'
+  ACTION_SUBMIT_FOR_APPROVAL:
+    value: '#50CC7A'
+  ACTION_SEARCH:
+    value: '#48ADEB'
+  ACTION_CLOSE:
+    value: '#EF6E64'
+  ACTION_BACK:
+    value: '#0DC2D9'
+  ACTION_OFFICE_365:
+    value: '#FF8041'
+  ACTION_CONCUR:
+    value: '#4CC3C7'
+  ACTION_DROPBOX:
+    value: '#52AEF9'
+  ACTION_EVERNOTE:
+    value: '#86C86F'
+  ACTION_DOCUSIGN:
+    value: '#5080DB'
+  ACTION_MORE:
+    value: '#62B7ED'
+  ACTION_NOTEBOOK:
+    value: '#E6D478'
+    deprecated: true
+    comment: Use ACTION_NEW_NOTEBOOK instead.
+  ACTION_NEW_NOTEBOOK:
+    value: '#E6D478'
+  ACTION_PREVIEW:
+    value: '#7F8DE1'
+  ACTION_PRIORITY:
+    value: '#FBB439'
+  ACTION_DEFAULT_CUSTOM_OBJECT:
+    value: '#8199af'
+  ACTION_NEW_CUSTOM_OBJECT:
+    value: '#a7d44d'
+  ACTION_LEAD_CONVERT:
+    value: '#f88962'
+  ACTION_NEW_ACCOUNT:
+    value: '#7f8de1'
+  ACTION_NEW_PERSON_ACCOUNT:
+    value: '#7f8de1'
+  ACTION_NEW_CAMPAIGN:
+    value: '#f49756'
+  ACTION_NEW_GROUP:
+    value: '#83b6ff'
+  ACTION_UPDATE_STATUS:
+    value: '#1ec7be'
+  ACTION_NEW_CUSTOM1:
+    value: '#ff7b84'
+  ACTION_NEW_CUSTOM2:
+    value: '#cfd05c'
+  ACTION_NEW_CUSTOM3:
+    value: '#ecb46c'
+  ACTION_NEW_CUSTOM4:
+    value: '#e1d951'
+  ACTION_NEW_CUSTOM5:
+    value: '#9fdb66'
+  ACTION_NEW_CUSTOM6:
+    value: '#54c473'
+  ACTION_NEW_CUSTOM7:
+    value: '#6a89e5'
+  ACTION_NEW_CUSTOM8:
+    value: '#50ceb9'
+  ACTION_NEW_CUSTOM9:
+    value: '#6b9ee2'
+  ACTION_NEW_CUSTOM10:
+    value: '#6488e3'
+  ACTION_NEW_CUSTOM11:
+    value: '#8784ea'
+  ACTION_NEW_CUSTOM12:
+    value: '#dc71d1'
+  ACTION_NEW_CUSTOM13:
+    value: '#df6184'
+  ACTION_NEW_CUSTOM14:
+    value: '#3cc2b3'
+  ACTION_NEW_CUSTOM15:
+    value: '#f77e75'
+  ACTION_NEW_CUSTOM16:
+    value: '#e9af67'
+  ACTION_NEW_CUSTOM17:
+    value: '#acd360'
+  ACTION_NEW_CUSTOM18:
+    value: '#4dca76'
+  ACTION_NEW_CUSTOM19:
+    value: '#3abeb1'
+  ACTION_NEW_CUSTOM20:
+    value: '#48c7c8'
+  ACTION_NEW_CUSTOM21:
+    value: '#8a7aed'
+  ACTION_NEW_CUSTOM22:
+    value: '#8b85f9'
+  ACTION_NEW_CUSTOM23:
+    value: '#b070e6'
+  ACTION_NEW_CUSTOM24:
+    value: '#e56798'
+  ACTION_NEW_CUSTOM25:
+    value: '#e46fbe'
+  ACTION_NEW_CUSTOM26:
+    value: '#7698f0'
+  ACTION_NEW_CUSTOM27:
+    value: '#5ab0d2'
+  ACTION_NEW_CUSTOM28:
+    value: '#89c059'
+  ACTION_NEW_CUSTOM29:
+    value: '#bdd25f'
+  ACTION_NEW_CUSTOM30:
+    value: '#f59f71'
+  ACTION_NEW_CUSTOM31:
+    value: '#eb687f'
+  ACTION_NEW_CUSTOM32:
+    value: '#38c393'
+  ACTION_NEW_CUSTOM33:
+    value: '#97cf5d'
+  ACTION_NEW_CUSTOM34:
+    value: '#d58a6a'
+  ACTION_NEW_CUSTOM35:
+    value: '#e9637e'
+  ACTION_NEW_CUSTOM36:
+    value: '#d472d4'
+  ACTION_NEW_CUSTOM37:
+    value: '#8c89f2'
+  ACTION_NEW_CUSTOM38:
+    value: '#53b6d7'
+  ACTION_NEW_CUSTOM39:
+    value: '#4fbe75'
+  ACTION_NEW_CUSTOM40:
+    value: '#83c75e'
+  ACTION_NEW_CUSTOM41:
+    value: '#43b5b5'
+  ACTION_NEW_CUSTOM42:
+    value: '#cfd05b'
+  ACTION_NEW_CUSTOM43:
+    value: '#7f93f9'
+  ACTION_NEW_CUSTOM44:
+    value: '#c8ca58'
+  ACTION_NEW_CUSTOM45:
+    value: '#d95879'
+  ACTION_NEW_CUSTOM46:
+    value: '#67a5e7'
+  ACTION_NEW_CUSTOM47:
+    value: '#5fcc64'
+  ACTION_NEW_CUSTOM48:
+    value: '#ef697f'
+  ACTION_NEW_CUSTOM49:
+    value: '#e25c80'
+  ACTION_NEW_CUSTOM50:
+    value: '#49bcd3'
+  ACTION_NEW_CUSTOM51:
+    value: '#d8c760'
+  ACTION_NEW_CUSTOM52:
+    value: '#ee8e6f'
+  ACTION_NEW_CUSTOM53:
+    value: '#f36e83'
+  ACTION_NEW_CUSTOM54:
+    value: '#ea70b1'
+  ACTION_NEW_CUSTOM55:
+    value: '#d66ee0'
+  ACTION_NEW_CUSTOM56:
+    value: '#718deb'
+  ACTION_NEW_CUSTOM57:
+    value: '#5a9cdd'
+  ACTION_NEW_CUSTOM58:
+    value: '#34b59d'
+  ACTION_NEW_CUSTOM59:
+    value: '#e3d067'
+  ACTION_NEW_CUSTOM60:
+    value: '#bf5a88'
+  ACTION_NEW_CUSTOM61:
+    value: '#f57376'
+  ACTION_NEW_CUSTOM62:
+    value: '#6b92dc'
+  ACTION_NEW_CUSTOM63:
+    value: '#7ccf60'
+  ACTION_NEW_CUSTOM64:
+    value: '#618fd8'
+  ACTION_NEW_CUSTOM65:
+    value: '#f279ab'
+  ACTION_NEW_CUSTOM66:
+    value: '#d8be5f'
+  ACTION_NEW_CUSTOM67:
+    value: '#f87d76'
+  ACTION_NEW_CUSTOM68:
+    value: '#f26979'
+  ACTION_NEW_CUSTOM69:
+    value: '#ed6387'
+  ACTION_NEW_CUSTOM70:
+    value: '#e769b4'
+  ACTION_NEW_CUSTOM71:
+    value: '#e36ee3'
+  ACTION_NEW_CUSTOM72:
+    value: '#8d9bfb'
+  ACTION_NEW_CUSTOM73:
+    value: '#679ef0'
+  ACTION_NEW_CUSTOM74:
+    value: '#41c8a0'
+  ACTION_NEW_CUSTOM75:
+    value: '#cd9f65'
+  ACTION_NEW_CUSTOM76:
+    value: '#db6d7a'
+  ACTION_NEW_CUSTOM77:
+    value: '#b55d5b'
+  ACTION_NEW_CUSTOM78:
+    value: '#5a95dd'
+  ACTION_NEW_CUSTOM79:
+    value: '#8ed363'
+  ACTION_NEW_CUSTOM80:
+    value: '#659ad5'
+  ACTION_NEW_CUSTOM81:
+    value: '#da627f'
+  ACTION_NEW_CUSTOM82:
+    value: '#d15b97'
+  ACTION_NEW_CUSTOM83:
+    value: '#e7806f'
+  ACTION_NEW_CUSTOM84:
+    value: '#f6707b'
+  ACTION_NEW_CUSTOM85:
+    value: '#f26891'
+  ACTION_NEW_CUSTOM86:
+    value: '#e260ab'
+  ACTION_NEW_CUSTOM87:
+    value: '#d876e5'
+  ACTION_NEW_CUSTOM88:
+    value: '#996fe6'
+  ACTION_NEW_CUSTOM89:
+    value: '#3e99be'
+  ACTION_NEW_CUSTOM90:
+    value: '#22a48a'
+  ACTION_NEW_CUSTOM91:
+    value: '#bf7b66'
+  ACTION_NEW_CUSTOM92:
+    value: '#517e82'
+  ACTION_NEW_CUSTOM93:
+    value: '#904d4c'
+  ACTION_NEW_CUSTOM94:
+    value: '#439cba'
+  ACTION_NEW_CUSTOM95:
+    value: '#8bcf6a'
+  ACTION_NEW_CUSTOM96:
+    value: '#6d9de3'
+  ACTION_NEW_CUSTOM97:
+    value: '#dd6085'
+  ACTION_NEW_CUSTOM98:
+    value: '#e1be5c'
+  ACTION_NEW_CUSTOM99:
+    value: '#f0856e'
+  ACTION_NEW_CUSTOM100:
+    value: '#e15d76'
+  ACTION_APEX:
+    value: '#696E71'
+  ACTION_FLOW:
+    value: '#0079BC'
+  ACTION_ANNOUNCEMENT:
+    value: '#fe8f60'
+  ACTION_RECORD:
+    value: '#7dc37d'
+  ACTION_LOG_EVENT:
+    value: '#6ca1e9'
+  ACTION_ADD_RELATIONSHIP:
+    value: '#62b7ed'
+  ACTION_REMOVE_RELATIONSHIP:
+    value: '#ef6e64'
+  ACTION_VIEW_RELATIONSHIP:
+    value: '#3c97dd'
+  ACTION_ADD_FILE:
+    value: '#7e8be4'
+  ACTION_ADD_PHOTO_VIDEO:
+    value: '#00cdc0'

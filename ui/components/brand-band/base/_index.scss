@@ -104,8 +104,19 @@
     top: initial;
   }
 
+  // No image
   &.slds-brand-band_none:before {
     height: 0;
+  }
+
+  // White page for iframes
+  .slds-brand-band_blank {
+    background: $color-background-alt;
+
+    &:before,
+    &:after {
+      background: none;
+    }
   }
 }
 

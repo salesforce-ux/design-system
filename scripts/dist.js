@@ -62,11 +62,9 @@ async.series([
    * Make release notes
    */
   (done) =>
-    releaseNotes({
-      isInternal: packageJSON.config.slds.internal,
-      outStream: fs.createWriteStream(distPath('RELEASENOTES.md')),
-      callback: done
-    }),
+    releaseNotes({ isInternal: packageJSON.config.slds.internal })
+    .pipe(fs.createWriteStream(distPath('RELEASENOTES.md')))
+    .on('finish', () => done()),
 
   /**
    * Cleanup the package.json

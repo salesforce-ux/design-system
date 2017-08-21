@@ -82,7 +82,7 @@ export const ColorPickerSummary = (props) => {
           sprite="utility"
           symbol="down"
         />
-        <span className="slds-assistive-text">Choose a color</span>
+        <span className="slds-assistive-text">Choose a color. Current color: #5679C0</span>
       </Button>
 
       <FormElement
@@ -118,7 +118,12 @@ export const ColorPickerSwatches = (props) => {
     <ul className="slds-color-picker__swatches" role={swatchesRole}>
       {swatchColors.map((swatch, index) =>
         <li key={_.uniqueId('color-picker-swatch-')} className="slds-color-picker__swatch" role="presentation">
-          <a className="slds-color-picker__swatch-trigger" role={linkRole} href="#">
+          <a
+            className="slds-color-picker__swatch-trigger"
+            href="#"
+            role={linkRole}
+            tabIndex={index === 0 ? 0 : -1}
+          >
             <Swatch color={swatch} index={index} />
           </a>
         </li>

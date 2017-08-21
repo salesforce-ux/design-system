@@ -1,0 +1,20 @@
+{
+  "BRAND_BAND_DEFAULT_IMAGE": "/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2",
+  "BRAND_BAND_USER_DEFAULT_IMAGE": "/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2",
+  "BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE": "/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2",
+  "BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE": "/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2",
+  "BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2",
+  "BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM": "/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2",
+  "BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM": "/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2",
+  "BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM": "/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2",
+  "BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2",
+  "BRAND_BAND_USER_DEFAULT_IMAGE_SMALL": "/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2",
+  "BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL": "/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2",
+  "BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL": "/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2",
+  "BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2",
+  "PAGE_COLOR_BACKGROUND_PRIMARY": "rgb(175, 197, 222)",
+  "BRAND_BAND_COLOR_BACKGROUND_PRIMARY": "rgb(175, 197, 222)",
+  "BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT": "rgba(175, 197, 222, 0)",
+  "BRAND_BAND_COLOR_BACKGROUND_SECONDARY": "rgb(32, 92, 159)",
+  "BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT": "rgba(32, 92, 159, 0)"
+}

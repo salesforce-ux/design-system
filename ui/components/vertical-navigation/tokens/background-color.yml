@@ -1,0 +1,16 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Vertical navigation shaded background color on row hover.
+  VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Vertical navigation shaded background color on row active.

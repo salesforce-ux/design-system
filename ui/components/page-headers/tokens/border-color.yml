@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  PAGE_HEADER_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  PAGE_HEADER_JOINED_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'

@@ -1,0 +1,160 @@
+{
+  "properties": [
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(255, 255, 255)",
+      "comment": "Gray Color 1",
+      ".alias": {
+        "value": "#FFFFFF",
+        ".alias": {
+          "value": "#FFFFFF"
+        }
+      },
+      "name": "colorGray1"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(250, 250, 249)",
+      "comment": "Gray Color 2",
+      ".alias": {
+        "value": "#fafaf9",
+        ".alias": {
+          "value": "#fafaf9"
+        }
+      },
+      "name": "colorGray2"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(243, 242, 242)",
+      "comment": "Gray Color 3",
+      ".alias": {
+        "value": "#f3f2f2",
+        ".alias": {
+          "value": "#f3f2f2"
+        }
+      },
+      "name": "colorGray3"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(236, 235, 234)",
+      "comment": "Gray Color 4",
+      ".alias": {
+        "value": "#ecebea",
+        ".alias": {
+          "value": "#ecebea"
+        }
+      },
+      "name": "colorGray4"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(221, 219, 218)",
+      "comment": "Gray Color 5",
+      ".alias": {
+        "value": "#dddbda",
+        ".alias": {
+          "value": "#dddbda"
+        }
+      },
+      "name": "colorGray5"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(201, 199, 197)",
+      "comment": "Gray Color 6",
+      ".alias": {
+        "value": "#c9c7c5",
+        ".alias": {
+          "value": "#c9c7c5"
+        }
+      },
+      "name": "colorGray6"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(176, 173, 171)",
+      "comment": "Gray Color 7",
+      ".alias": {
+        "value": "#b0adab",
+        ".alias": {
+          "value": "#b0adab"
+        }
+      },
+      "name": "colorGray7"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(150, 148, 146)",
+      "comment": "Gray Color 8",
+      ".alias": {
+        "value": "#969492",
+        ".alias": {
+          "value": "#969492"
+        }
+      },
+      "name": "colorGray8"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(112, 110, 107)",
+      "comment": "Gray Color 9",
+      ".alias": {
+        "value": "#706e6b",
+        ".alias": {
+          "value": "#706e6b"
+        }
+      },
+      "name": "colorGray9"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(81, 79, 77)",
+      "comment": "Gray Color 10",
+      ".alias": {
+        "value": "#514f4d",
+        ".alias": {
+          "value": "#514f4d"
+        }
+      },
+      "name": "colorGray10"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(62, 62, 60)",
+      "comment": "Gray Color 11",
+      ".alias": {
+        "value": "#3e3e3c",
+        ".alias": {
+          "value": "#3e3e3c"
+        }
+      },
+      "name": "colorGray11"
+    },
+    {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(43, 40, 38)",
+      "comment": "Gray Color 12",
+      ".alias": {
+        "value": "#2B2826",
+        ".alias": {
+          "value": "#2B2826"
+        }
+      },
+      "name": "colorGray12"
+    }
+  ]
+}

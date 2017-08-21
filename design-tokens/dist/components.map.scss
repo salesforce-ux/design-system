@@ -1,0 +1,272 @@
+$components-map: (
+  // White badge background color.
+  "badge-color-background-lightest": (rgb(255, 255, 255)),
+  // Dark gray badge background color.
+  "badge-color-background-inverse": (rgb(112, 110, 107)),
+  "brand-band-default-image": (),
+  "brand-band-user-default-image": (),
+  "brand-band-group-private-default-image": (),
+  "brand-band-group-public-default-image": (),
+  "brand-band-group-unlisted-default-image": (),
+  "brand-band-user-default-image-medium": (),
+  "brand-band-group-private-default-image-medium": (),
+  "brand-band-group-public-default-image-medium": (),
+  "brand-band-group-unlisted-default-image-medium": (),
+  "brand-band-user-default-image-small": (),
+  "brand-band-group-private-default-image-small": (),
+  "brand-band-group-public-default-image-small": (),
+  "brand-band-group-unlisted-default-image-small": (),
+  "brand-band-color-background-primary": (rgba(0, 0, 0, 0)),
+  "brand-band-color-background-primary-transparent": (rgba(0, 0, 0, 0)),
+  "brand-band-color-background-secondary": (rgba(0, 0, 0, 0)),
+  "brand-band-color-background-secondary-transparent": (rgba(0, 0, 0, 0)),
+  "brand-band-image-height-small": (6rem),
+  "brand-band-image-height-medium": (12.5rem),
+  "brand-band-image-height-large": (18.75rem),
+  "brand-band-scrim-height": (3.125rem),
+  "template-gutters": (0),
+  "template-profile-gutters": (0),
+  "button-color-border-primary": (rgb(216, 221, 230)),
+  "button-color-border-brand-primary": (rgb(0, 112, 210)),
+  "button-color-border-secondary": (rgba(255, 255, 255, 0.8)),
+  "button-border-radius": (.25rem),
+  "button-color-background-primary": (rgb(255, 255, 255)),
+  "button-color-background-brand-primary": (rgb(0, 112, 210)),
+  "button-color-background-secondary": (rgba(255, 255, 255, 0.8)),
+  // Brandable primary button
+  "color-background-button-brand": (rgb(0, 112, 210)),
+  // Brandable primary button - active state
+  "color-background-button-brand-active": (rgb(0, 57, 107)),
+  // Brandable primary button - hover state
+  "color-background-button-brand-hover": (rgb(0, 95, 178)),
+  // Brandable primary button - disabled state
+  "color-background-button-brand-disabled": (rgb(224, 229, 238)),
+  // Default secondary button
+  "color-background-button-default": (rgb(255, 255, 255)),
+  // Default secondary button - hover state
+  "color-background-button-default-hover": (rgb(244, 246, 249)),
+  // Default secondary button - focus state
+  "color-background-button-default-focus": (rgb(244, 246, 249)),
+  // Default secondary button - active state
+  "color-background-button-default-active": (rgb(238, 241, 246)),
+  // Default secondary button - disabled state
+  "color-background-button-default-disabled": (rgb(255, 255, 255)),
+  // Background color for icon-only button
+  "color-background-button-icon": (rgba(0, 0, 0, 0)),
+  // Background color for icon-only button - hover state
+  "color-background-button-icon-hover": (rgb(244, 246, 249)),
+  // Background color for icon-only button - focus state
+  "color-background-button-icon-focus": (rgb(244, 246, 249)),
+  // Background color for icon-only button - active state
+  "color-background-button-icon-active": (rgb(238, 241, 246)),
+  // Background color for icon-only button - disabled state
+  "color-background-button-icon-disabled": (rgb(255, 255, 255)),
+  // Button backgrounds on inverse/dark backgrounds
+  "color-background-button-inverse": (rgba(0, 0, 0, 0)),
+  // Active button backgrounds on inverse backgrounds on mobile
+  "color-background-button-inverse-active": (rgba(0, 0, 0, 0.24)),
+  // Disabled button backgrounds on inverse/dark backgrounds
+  "color-background-button-inverse-disabled": (rgba(0, 0, 0, 0)),
+  // Line heights for regular buttons
+  "line-height-button": (1.875rem),
+  // Line heights for small buttons
+  "line-height-button-small": (1.75rem),
+  "button-color-text-primary": (rgb(255, 255, 255)),
+  // Default Card component background color.
+  "card-color-background": (rgb(255, 255, 255)),
+  "card-color-border": (rgb(221, 219, 218)),
+  "card-footer-color-border": (rgba(0, 0, 0, 0)),
+  "card-shadow": (none),
+  // Use for active tab.
+  "card-font-weight": (400),
+  // Use for vertical spacing between cards
+  "card-spacing-margin": (1rem),
+  "card-header-padding": (0.75rem 1rem 0),
+  "card-header-margin": (0 0 0.75rem),
+  "card-body-padding": (0 1rem),
+  "card-footer-margin": (0.75rem),
+  "card-footer-padding": (0 1rem 0.75rem),
+  "card-wrapper-spacing": (1rem),
+  "card-spacing-small": (0.75rem),
+  "card-spacing-large": (1.5rem),
+  "card-footer-text-align": (right),
+  // Line heights for toggle buttons
+  "line-height-toggle": (1.3rem),
+  // Slider size for toggle.
+  "square-toggle-slider": (1.25rem),
+  // Slider width.
+  "width-toggle": (3rem),
+  // Slider height.
+  "height-toggle": (1.5rem),
+  "color-picker-slider-thumb-color-background": (rgb(250, 250, 249)),
+  "color-picker-slider-thumb-border-color": (rgb(81, 79, 77)),
+  "color-picker-input-custom-hex-font-size": (0.75rem),
+  "color-picker-selector-width": (14rem),
+  "color-picker-swatches-width": (13.3rem),
+  "color-picker-range-height": (5rem),
+  "color-picker-slider-height": (1.5rem),
+  "color-picker-thumb-width": (0.375rem),
+  "color-picker-range-indicator-size": (0.75rem),
+  "color-picker-input-custom-hex-width": (4.2rem),
+  "color-picker-swatch-size": (1.25rem),
+  "table-color-background-stripes": (rgb(250, 250, 249)),
+  "table-color-background-header": (rgb(255, 255, 255)),
+  "table-color-background-header-hover": (rgb(250, 250, 249)),
+  "table-color-background-header-focus": (rgb(255, 255, 255)),
+  "table-border-radius": (0),
+  "table-cell-spacing": (0.5rem),
+  "table-color-text-header": (rgb(81, 79, 77)),
+  // Docked panel header’s background color.
+  "color-background-docked-panel-header": (rgb(255, 255, 255)),
+  // Docked panel’s background color when open.
+  "color-background-docked-panel": (rgb(255, 255, 255)),
+  // Height of the docked bar.
+  "height-docked-bar": (2.5rem),
+  // Utility bar notifications badge background color.
+  "utility-bar-color-background-notification-badge": (rgb(212, 80, 76)),
+  // Utility bar notifications focus background color.
+  "utility-bar-color-background-notification-focus": (rgb(201, 199, 197)),
+  // Default color for animated icon waffle for app switcher.
+  "color-background-icon-waffle": (rgb(112, 110, 107)),
+  "form-label-font-size": (0.75rem),
+  // Global Header background color
+  "global-header-color-background": (rgb(255, 255, 255)),
+  // Global identity icon size.
+  "square-icon-global-identity-icon": (1.25rem),
+  // Default context bar background color.
+  "color-background-context-bar": (rgb(255, 255, 255)),
+  // Brand color in context bar for default theme
+  "color-background-context-bar-brand-accent": (rgb(0, 161, 223)),
+  // Context TAB bar item background color.
+  "color-background-context-tab-bar-item": (rgb(255, 255, 255)),
+  // Hovered context bar item background color.
+  "color-background-context-bar-item-hover": (rgb(255, 255, 255)),
+  // Active context bar item background color.
+  "color-background-context-bar-item-active": (rgb(255, 255, 255)),
+  // Hovered context bar item background color.
+  "color-background-context-bar-inverse-item-hover": (rgba(255, 255, 255, 0.2)),
+  // Active context bar item background color.
+  "color-background-context-bar-inverse-item-active": (rgba(255, 255, 255, 0.4)),
+  // A Gradient used for putting shadows on the bottom when box-shadow is not possible.
+  "color-background-context-bar-shadow": (linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%)),
+  // Highlight for context bar action (hover and focus states).
+  "color-background-context-bar-action-highlight": (rgba(255, 255, 255, 0.2)),
+  // Divider in context bar
+  "color-border-context-bar-divider": (rgba(255, 255, 255, 0.2)),
+  // Border color in context bar
+  "color-border-context-bar-item": (rgba(0, 0, 0, 0.2)),
+  // Border color in context bar on dark background
+  "color-border-context-bar-inverse-item": (rgba(255, 255, 255, 0.2)),
+  // Border color in context bar for default theme
+  "color-border-context-bar-theme-default": (rgb(0, 161, 223)),
+  // Alternate border color in context bar for default theme
+  "color-border-context-bar-theme-default-alt": (rgb(243, 242, 242)),
+  // Hovered border color in context bar for default theme
+  "color-border-context-bar-theme-default-hover": (rgb(11, 35, 153)),
+  // Active border color in context bar for default theme
+  "color-border-context-bar-theme-default-active": (rgb(243, 242, 242)),
+  // Context bar height.
+  "height-context-bar": (2.5rem),
+  // Context bar text color
+  "color-text-context-bar": (rgb(112, 110, 107)),
+  // Context bar text color on a dark background
+  "color-text-context-bar-inverse": (rgb(255, 255, 255)),
+  // Context bar action trigger text color
+  "color-text-context-bar-action-trigger": (rgba(255, 255, 255, 0.4)),
+  "input-static-font-size": (.8125rem),
+  "input-static-font-weight": (400),
+  "input-readonly-font-weight": (400),
+  "input-static-color": (rgb(43, 40, 38)),
+  // Default Page Header background color
+  "page-header-color-background": (rgb(250, 250, 249)),
+  // Secondary Page Header background color
+  "page-header-color-background-alt": (rgb(255, 255, 255)),
+  // Use COLOR_BACKGROUND_PAGE_HEADER instead.
+  "color-background-anchor": (rgb(250, 250, 249)),
+  // Page Header background color
+  "color-background-page-header": (rgb(255, 255, 255)),
+  "page-header-color-border": (rgb(221, 219, 218)),
+  "page-header-joined-color-border": (rgb(221, 219, 218)),
+  "page-header-border-radius": (0),
+  "page-header-shadow": (none),
+  "page-header-title-font-size": (1.125rem),
+  "page-header-title-font-weight": (400),
+  "page-header-spacing-margin": (0),
+  "page-header-spacing-padding": (1rem),
+  "page-header-spacing-row": (0.75rem 1rem),
+  // The background color for Salespath stages that are complete.
+  "color-background-path-complete": (rgb(75, 202, 129)),
+  // The hover background color for Salespath stages that are complete.
+  "color-background-path-complete-hover": (rgb(4, 132, 75)),
+  // The background color for Salespath stages that are the current stage.
+  "color-background-path-current": (rgb(0, 112, 210)),
+  // The hover background color for Salespath stages that are the current stage.
+  "color-background-path-current-hover": (rgb(0, 95, 178)),
+  // The background color for Salespath stages that have not been completed.
+  "color-background-path-incomplete": (rgb(236, 235, 234)),
+  // The hover background color for Salespath stages that have not been completed.
+  "color-background-path-incomplete-hover": (rgb(221, 219, 218)),
+  // The background color for the final stage of a Salespath when it has been lost.
+  "color-background-path-lost": (rgb(194, 57, 52)),
+  // The background color for Salespath guidance coaching section.
+  "color-background-guidance": (rgb(255, 255, 255)),
+  // The background color for the overall Salespath coaching section.
+  "color-background-path-expanded": (rgb(255, 255, 255)),
+  // Used as a separator between dark colors like the stages of salespath.
+  "color-border-path-divider": (rgb(255, 255, 255)),
+  // Line heights for salespath
+  "line-height-salespath": (1.5rem),
+  // Height of Salespath
+  "height-sales-path": (2rem),
+  // The default background color for Progress Indicator
+  "progress-color-background": (rgb(255, 255, 255)),
+  // The shaded background color for Progress Indicator
+  "progress-color-background-shade": (rgb(250, 250, 249)),
+  // The background color for the Progress Bar
+  "progress-bar-color-background": (rgb(221, 219, 218)),
+  // The background color of the fill for the Progress Bar
+  "progress-bar-color-background-fill": (rgb(94, 180, 255)),
+  // The success background color of the fill for the Progress Bar
+  "progress-bar-color-background-fill-success": (rgb(75, 202, 129)),
+  // Borders of each indicator item within the Progress Indicator
+  "progress-color-border": (rgb(255, 255, 255)),
+  // Shaded borders of each indicator item within the Progress Indicator
+  "progress-color-border-shade": (rgb(250, 250, 249)),
+  // Hovered border color of each indicator item within the Progress Indicator
+  "progress-color-border-hover": (rgb(0, 112, 210)),
+  // Active border color of each indicator item within the Progress Indicator
+  "progress-color-border-active": (rgb(21, 137, 238)),
+  // Height of the Progress Bar
+  "progress-bar-height": (0.125rem),
+  // Inner color for progress ring component
+  "color-background-progress-ring-content": (rgb(255, 255, 255)),
+  // Thickness of the Progress Ring's ring
+  "progress-ring-width": (0.1875rem),
+  // Dark notification component background color.
+  "notification-color-background-inverse": (rgb(112, 110, 107)),
+  "slider-handle-color-background": (rgb(21, 137, 238)),
+  "slider-handle-color-background-hover": (rgb(0, 112, 210)),
+  "slider-handle-color-background-focus": (rgb(0, 112, 210)),
+  "slider-handle-color-background-active": (rgb(0, 112, 210)),
+  "slider-track-color-background": (rgb(236, 235, 234)),
+  "slider-track-color-background-fill": (rgb(21, 137, 238)),
+  "slider-color-background-disabled": (rgb(236, 235, 234)),
+  "slider-handle-shadow": (rgba(0, 0, 0, 0.16) 0 2px 3px),
+  "slider-handle-size": (1rem),
+  "slider-track-height": (4px),
+  "slider-track-width": (100%),
+  // Split View background color.
+  "split-view-color-background": (rgb(250, 250, 249)),
+  // Split View background color on row hover.
+  "split-view-color-background-row-hover": (rgb(255, 255, 255)),
+  // Row dividers in Split View list
+  "split-view-color-border": (rgb(221, 219, 218)),
+  // Default width for split view container
+  "split-view-width": (25rem),
+  // Use for active tab.
+  "tabs-font-weight": (400),
+  // Vertical navigation shaded background color on row hover.
+  "vertical-navigation-color-background-shade-row-hover": (rgb(243, 242, 242)),
+  // Vertical navigation shaded background color on row active.
+  "vertical-navigation-color-background-shade-row-active": (rgb(236, 235, 234))
+);

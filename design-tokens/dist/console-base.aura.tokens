@@ -1,0 +1,7 @@
+<aura:tokens>
+  <aura:token name="inputStaticFontWeight" value="400" property="font,font-weight" />
+  <aura:token name="cardSpacingMargin" value="0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardHeaderPadding" value="0.75rem 0.75rem 0" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardBodyPadding" value="0 0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+  <aura:token name="cardFooterPadding" value="0.5rem 0.75rem" property="top,right,bottom,left,margin*,padding*,border*,*width,*height,box-shadow" />
+</aura:tokens>

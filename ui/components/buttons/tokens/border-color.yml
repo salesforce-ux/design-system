@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  BUTTON_COLOR_BORDER_PRIMARY:
+    value: '{!GRAY_BORDER_PRIMARY}'
+  BUTTON_COLOR_BORDER_BRAND_PRIMARY:
+    value: '{!BLUE_BORDER_PRIMARY}'
+  BUTTON_COLOR_BORDER_SECONDARY:
+    value: '{!WHITE_TRANSPARENT_80}'

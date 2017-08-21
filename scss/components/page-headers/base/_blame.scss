@@ -1,0 +1,17 @@
+// Lightning Design System 2.4.0-rc.3
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-page-header_joined,
+.slds-page-header.slds-has-bottom-magnet {
+  border-bottom: $border-width-thin solid $page-header-joined-color-border;
+  border-radius: $page-header-border-radius $page-header-border-radius 0 0;
+  box-shadow: none;
+}
+
+// Overrides when inside a card
+.slds-tabs_card .slds-page-header,
+.slds-card .slds-page-header {
+  border: 0;
+  box-shadow: none;
+}

@@ -1,0 +1,22 @@
+// Lightning Design System 2.4.0-rc.3
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin root($root: html, $body: body) {
+
+  #{$root} {
+    font-family: $font-family;
+    font-size: 100%;
+    line-height: $line-height-text;
+    background: $page-color-background-primary;
+    color: $color-text-primary;
+    -webkit: {
+      tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  #{$body} {
+    font-size: $font-size-medium;
+    background: transparent;
+  }
+}

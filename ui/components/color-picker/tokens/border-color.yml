@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  COLOR_PICKER_SLIDER_THUMB_BORDER_COLOR:
+    value: "{!PALETTE_GRAY_10}"

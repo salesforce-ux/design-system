@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/custom-sprite/svg/symbols.svg",
+      "name": "customSprite"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/doctype-sprite/svg/symbols.svg",
+      "name": "doctypeSprite"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/standard-sprite/svg/symbols.svg",
+      "name": "standardSprite"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/action-sprite/svg/symbols.svg",
+      "name": "actionSprite"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/utility-sprite/svg/symbols.svg",
+      "name": "utilitySprite"
+    }
+  ]
+}

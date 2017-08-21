@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="INPUT_STATIC_FONT_WEIGHT" category="font">400</property>
+  <property name="CARD_SPACING_MARGIN" category="spacing">12</property>
+  <property name="CARD_HEADER_PADDING" category="spacing">0.75rem 0.75rem 0</property>
+  <property name="CARD_BODY_PADDING" category="spacing">0</property>
+  <property name="CARD_FOOTER_PADDING" category="spacing">8</property>
+</resources>

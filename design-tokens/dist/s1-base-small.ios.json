@@ -1,0 +1,71 @@
+{
+  "properties": [
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "name": "pageHeaderBorderRadius"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "cardShadow"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "pageHeaderShadow"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "14",
+      "name": "formLabelFontSize"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "16",
+      "name": "inputStaticFontSize"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "inputStaticFontWeight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "cardFontWeight"
+    }
+  ]
+}

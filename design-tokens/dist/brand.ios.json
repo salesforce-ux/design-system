@@ -1,0 +1,204 @@
+{
+  "properties": [
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2",
+      "name": "brandBandDefaultImage"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2",
+      "name": "brandBandUserDefaultImage"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2",
+      "name": "brandBandGroupPrivateDefaultImage"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2",
+      "name": "brandBandGroupPublicDefaultImage"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2",
+      "name": "brandBandGroupUnlistedDefaultImage"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2",
+      "name": "brandBandUserDefaultImageMedium"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2",
+      "name": "brandBandGroupPrivateDefaultImageMedium"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2",
+      "name": "brandBandGroupPublicDefaultImageMedium"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2",
+      "name": "brandBandGroupUnlistedDefaultImageMedium"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2",
+      "name": "brandBandUserDefaultImageSmall"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2",
+      "name": "brandBandGroupPrivateDefaultImageSmall"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2",
+      "name": "brandBandGroupPublicDefaultImageSmall"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2",
+      "name": "brandBandGroupUnlistedDefaultImageSmall"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(175, 197, 222)",
+      "name": "pageColorBackgroundPrimary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(175, 197, 222)",
+      "name": "brandBandColorBackgroundPrimary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(175, 197, 222, 0)",
+      "comment": "These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug",
+      "name": "brandBandColorBackgroundPrimaryTransparent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(32, 92, 159)",
+      "name": "brandBandColorBackgroundSecondary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(32, 92, 159, 0)",
+      "comment": "These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug",
+      "name": "brandBandColorBackgroundSecondaryTransparent"
+    }
+  ]
+}

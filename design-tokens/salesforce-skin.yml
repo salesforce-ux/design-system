@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base-skin.yml
+- ./salesforce-skin/background-color.yml
+- ./salesforce-skin/border-color.yml
+- ./salesforce-skin/border-radius.yml
+- ./salesforce-skin/box-shadow.yml
+- ./salesforce-skin/font-size.yml
+- ./salesforce-skin/font-weight.yml
+- ./salesforce-skin/spacing.yml
+- ./salesforce-skin/text-align.yml
+- ./salesforce-skin/text-color.yml

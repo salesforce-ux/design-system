@@ -1,0 +1,20 @@
+$brand-band-default-image: /_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2 !default;
+$brand-band-user-default-image: /_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2 !default;
+$brand-band-group-private-default-image: /_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2 !default;
+$brand-band-group-public-default-image: /_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2 !default;
+$brand-band-group-unlisted-default-image: /_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2 !default;
+$brand-band-user-default-image-medium: /_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2 !default;
+$brand-band-group-private-default-image-medium: /_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2 !default;
+$brand-band-group-public-default-image-medium: /_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2 !default;
+$brand-band-group-unlisted-default-image-medium: /_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2 !default;
+$brand-band-user-default-image-small: /_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2 !default;
+$brand-band-group-private-default-image-small: /_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2 !default;
+$brand-band-group-public-default-image-small: /_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2 !default;
+$brand-band-group-unlisted-default-image-small: /_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2 !default;
+$page-color-background-primary: rgb(175, 197, 222) !default;
+$brand-band-color-background-primary: rgb(175, 197, 222) !default;
+// These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug
+$brand-band-color-background-primary-transparent: rgba(175, 197, 222, 0) !default;
+$brand-band-color-background-secondary: rgb(32, 92, 159) !default;
+// These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug
+$brand-band-color-background-secondary-transparent: rgba(32, 92, 159, 0) !default;

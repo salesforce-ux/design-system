@@ -1,0 +1,8 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base/font-weight.yml
+- ./force-base/font-size.yml
+- ./force-base/line-height.yml
+- ./force-base/font-family.yml

@@ -1,0 +1,29 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- ./aliases/color.yml
+props:
+  ## STATIC SHADOWS
+  SHADOW_HARD_PRIMARY:
+    value: '{!BLACK_TRANSPARENT_10} 0 2px 0'
+    comment: Hard dropshadow found on general UI elements such as containers
+  SHADOW_SOFT_PRIMARY:
+    value: '{!BLACK_TRANSPARENT_10} 0 2px 2px'
+    comment: Soft dropshadow found on general UI elements such as containers
+  ## INTERACTIONS
+  SHADOW_SOFT_PRIMARY_HOVER:
+    value: '{!BLACK_TRANSPARENT_20} 0 3px 6px'
+  SHADOW_SOFT_PRIMARY_ACTIVE:
+    value: '{!BLACK_TRANSPARENT_20} 0 1px 1px'
+  PAGE_HEADER_SHADOW:
+    value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
+    comment: Hard dropshadow on page header
+  CARD_SHADOW:
+    value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
+    comment: Hard dropshadow found on outer cards

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="CUSTOM_SPRITE" category="utility">/assets/icons/custom-sprite/svg/symbols.svg</property>
+  <property name="DOCTYPE_SPRITE" category="utility">/assets/icons/doctype-sprite/svg/symbols.svg</property>
+  <property name="STANDARD_SPRITE" category="utility">/assets/icons/standard-sprite/svg/symbols.svg</property>
+  <property name="ACTION_SPRITE" category="utility">/assets/icons/action-sprite/svg/symbols.svg</property>
+  <property name="UTILITY_SPRITE" category="utility">/assets/icons/utility-sprite/svg/symbols.svg</property>
+</resources>

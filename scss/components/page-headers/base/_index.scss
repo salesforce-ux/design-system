@@ -1,0 +1,42 @@
+// Lightning Design System 2.4.0-rc.3
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The page header is a masthead that contains the Title of the page, and supporting details. For large form factors, it may include actions.
+ *
+ * @summary Initializes page header
+ *
+ * @variant
+ * @name base
+ * @selector .slds-page-header
+ * @restrict div
+ * @support dev-ready
+ */
+
+.slds-page-header {
+  padding: $page-header-spacing-padding;
+  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-radius: $page-header-border-radius;
+  background: $page-header-color-background;
+  background-clip: padding-box;
+  box-shadow: $page-header-shadow;
+}
+
+/**
+ * Page title (header text).
+ *
+ * @selector .slds-page-header__title
+ * @restrict .slds-page-header h1
+ */
+.slds-page-header__title {
+  font-size: $page-header-title-font-size;
+  font-weight: $page-header-title-font-weight;
+  line-height: $line-height-heading;
+
+  .slds-icon {
+    fill: currentColor;
+  }
+}
+
+@import 'blame';

@@ -1,0 +1,26 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  PROGRESS_COLOR_BACKGROUND:
+    value: '{!WHITE}'
+    comment: The default background color for Progress Indicator
+  PROGRESS_COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_GRAY_2}'
+    comment: The shaded background color for Progress Indicator
+  PROGRESS_BAR_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_5}'
+    comment: The background color for the Progress Bar
+  PROGRESS_BAR_COLOR_BACKGROUND_FILL:
+    value: '{!MALIBU}'
+    comment: The background color of the fill for the Progress Bar
+  PROGRESS_BAR_COLOR_BACKGROUND_FILL_SUCCESS:
+    value: '{!EMERALD}'
+    comment: The success background color of the fill for the Progress Bar

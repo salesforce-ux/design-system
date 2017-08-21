@@ -1,0 +1,16 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  BADGE_COLOR_BACKGROUND_LIGHTEST:
+    value: '{!PALETTE_GRAY_1}'
+    comment: White badge background color.
+  BADGE_COLOR_BACKGROUND_INVERSE:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Dark gray badge background color.

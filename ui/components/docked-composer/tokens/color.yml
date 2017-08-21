@@ -1,0 +1,16 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - background*
+  - border*
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  COLOR_BACKGROUND_DOCKED_PANEL_HEADER:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Docked panel header’s background color.
+  COLOR_BACKGROUND_DOCKED_PANEL:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Docked panel’s background color when open.

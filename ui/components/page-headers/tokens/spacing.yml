@@ -1,0 +1,27 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/spacing.yml"
+props:
+  PAGE_HEADER_SPACING_MARGIN:
+    value: '0'
+  PAGE_HEADER_SPACING_PADDING:
+    value: '{!SPACING_MEDIUM}'
+  PAGE_HEADER_SPACING_ROW:
+    value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'

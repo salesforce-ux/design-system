@@ -1,0 +1,14 @@
+<aura:tokens>
+  <aura:token name="colorGray1" value="rgb(255, 255, 255)"  />
+  <aura:token name="colorGray2" value="rgb(250, 250, 249)"  />
+  <aura:token name="colorGray3" value="rgb(243, 242, 242)"  />
+  <aura:token name="colorGray4" value="rgb(236, 235, 234)"  />
+  <aura:token name="colorGray5" value="rgb(221, 219, 218)"  />
+  <aura:token name="colorGray6" value="rgb(201, 199, 197)"  />
+  <aura:token name="colorGray7" value="rgb(176, 173, 171)"  />
+  <aura:token name="colorGray8" value="rgb(150, 148, 146)"  />
+  <aura:token name="colorGray9" value="rgb(112, 110, 107)"  />
+  <aura:token name="colorGray10" value="rgb(81, 79, 77)"  />
+  <aura:token name="colorGray11" value="rgb(62, 62, 60)"  />
+  <aura:token name="colorGray12" value="rgb(43, 40, 38)"  />
+</aura:tokens>

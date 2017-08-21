@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="PAGE_HEADER_BORDER_RADIUS" category="radius">0</property>
+  <property name="CARD_SHADOW" category="shadow">none</property>
+  <property name="PAGE_HEADER_SHADOW" category="shadow">none</property>
+  <property name="FORM_LABEL_FONT_SIZE" category="font-size">14</property>
+  <property name="INPUT_STATIC_FONT_SIZE" category="font-size">16</property>
+  <property name="INPUT_STATIC_FONT_WEIGHT" category="font">400</property>
+  <property name="CARD_FONT_WEIGHT" category="font">400</property>
+</resources>

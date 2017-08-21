@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="COLOR_GRAY_1" category="color">#ffffffff</color>
+  <color name="COLOR_GRAY_2" category="color">#fffafaf9</color>
+  <color name="COLOR_GRAY_3" category="color">#fff3f2f2</color>
+  <color name="COLOR_GRAY_4" category="color">#ffecebea</color>
+  <color name="COLOR_GRAY_5" category="color">#ffdddbda</color>
+  <color name="COLOR_GRAY_6" category="color">#ffc9c7c5</color>
+  <color name="COLOR_GRAY_7" category="color">#ffb0adab</color>
+  <color name="COLOR_GRAY_8" category="color">#ff969492</color>
+  <color name="COLOR_GRAY_9" category="color">#ff706e6b</color>
+  <color name="COLOR_GRAY_10" category="color">#ff514f4d</color>
+  <color name="COLOR_GRAY_11" category="color">#ff3e3e3c</color>
+  <color name="COLOR_GRAY_12" category="color">#ff2b2826</color>
+</resources>

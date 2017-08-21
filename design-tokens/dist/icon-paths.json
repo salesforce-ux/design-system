@@ -1,0 +1,7 @@
+{
+  "CUSTOM_SPRITE": "/assets/icons/custom-sprite/svg/symbols.svg",
+  "DOCTYPE_SPRITE": "/assets/icons/doctype-sprite/svg/symbols.svg",
+  "STANDARD_SPRITE": "/assets/icons/standard-sprite/svg/symbols.svg",
+  "ACTION_SPRITE": "/assets/icons/action-sprite/svg/symbols.svg",
+  "UTILITY_SPRITE": "/assets/icons/utility-sprite/svg/symbols.svg"
+}

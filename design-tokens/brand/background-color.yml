@@ -1,0 +1,68 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ../color-palettes.yml
+props:
+  ## Desktop
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2'
+    type: string
+  BRAND_BAND_USER_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2'
+    type: string
+  ## Tablet
+  BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2'
+    type: string
+  ## Mobile
+  BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
+    value: '/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2'
+    type: string
+  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
+    value: '/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2'
+    type: string
+  ## Colors
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '#AFC5DE'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: '#AFC5DE'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: 'rgba(175,197,222,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: '#205C9F'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
+    value: 'rgba(32,92,159,0)'
+    comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'

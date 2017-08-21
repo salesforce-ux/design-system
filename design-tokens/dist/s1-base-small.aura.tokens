@@ -1,0 +1,9 @@
+<aura:tokens>
+  <aura:token name="pageHeaderBorderRadius" value="0" property="border*radius" />
+  <aura:token name="cardShadow" value="none" property="box-shadow" />
+  <aura:token name="pageHeaderShadow" value="none" property="box-shadow" />
+  <aura:token name="formLabelFontSize" value="0.875rem" property="font,font-size" />
+  <aura:token name="inputStaticFontSize" value="1rem" property="font,font-size" />
+  <aura:token name="inputStaticFontWeight" value="400" property="font,font-weight" />
+  <aura:token name="cardFontWeight" value="400" property="font,font-weight" />
+</aura:tokens>

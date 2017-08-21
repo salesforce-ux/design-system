@@ -1,0 +1,35 @@
+// Lightning Design System 2.4.0-rc.3
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+// These classes all give us the ability to add a class that doesn't exist in Communities and add the card look in different circumstances
+.slds-card-wrapper {
+  border: $border-width-thin solid $card-color-border;
+}
+
+.slds-card-wrapper {
+  padding: $card-wrapper-spacing;
+  background: $card-color-background;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+  box-shadow: $card-shadow;
+
+  .slds-card__header {
+    padding-left: 0;
+  }
+}
+
+.slds-card,
+.slds-card-wrapper,
+.slds-modal {
+
+  // Make cards inside cards or card wrappers invisible.
+  .slds-card,
+  .slds-card-wrapper {
+    background: $card-color-background;
+    border: 0;
+    border-radius: initial;
+    box-shadow: none;
+  }
+}

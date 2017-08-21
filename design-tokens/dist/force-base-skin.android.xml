@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="FILL_BRAND" category="fill">#ff0070d2</color>
+  <color name="FILL_BRAND_HOVER" category="fill">#ff005fb2</color>
+  <color name="FILL_BRAND_ACTIVE" category="fill">#ff16325c</color>
+  <color name="FILL_HEADER_BUTTON" category="fill">#ffb0adab</color>
+  <color name="FILL_HEADER_BUTTON_HOVER" category="fill">#ff005fb2</color>
+  <color name="COLOR_BORDER_PRIMARY" category="border-color">#ffdddbda</color>
+  <color name="COLOR_BORDER_BRAND_PRIMARY" category="border-color">#ff1589ee</color>
+  <color name="COLOR_BORDER_BRAND_PRIMARY_HOVER" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_BRAND_PRIMARY_FOCUS" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_BRAND_PRIMARY_ACTIVE" category="border-color">#ff00396b</color>
+  <color name="COLOR_BORDER" category="border-color">#ffdddbda</color>
+  <color name="COLOR_BORDER_BRAND" category="border-color">#ff1589ee</color>
+  <color name="COLOR_BORDER_BRAND_DARK" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_CUSTOMER" category="border-color">#ffff9a3c</color>
+  <color name="COLOR_BORDER_DESTRUCTIVE" category="border-color">#ffc23934</color>
+  <color name="COLOR_BORDER_DESTRUCTIVE_HOVER" category="border-color">#ffa61a14</color>
+  <color name="COLOR_BORDER_DESTRUCTIVE_ACTIVE" category="border-color">#ff870500</color>
+  <color name="COLOR_BORDER_INFO" category="border-color">#ff706e6b</color>
+  <color name="COLOR_BORDER_ERROR" category="border-color">#ffc23934</color>
+  <color name="COLOR_BORDER_ERROR_ALT" category="border-color">#ffea8288</color>
+  <color name="COLOR_BORDER_ERROR_DARK" category="border-color">#ffea8288</color>
+  <color name="COLOR_BORDER_OFFLINE" category="border-color">#ff3e3e3c</color>
+  <color name="COLOR_BORDER_SUCCESS" category="border-color">#ff4bca81</color>
+  <color name="COLOR_BORDER_SUCCESS_DARK" category="border-color">#ff04844b</color>
+  <color name="COLOR_BORDER_WARNING" category="border-color">#ffffb75d</color>
+  <color name="COLOR_BORDER_INVERSE" category="border-color">#ff061c3f</color>
+  <color name="COLOR_BORDER_TAB_SELECTED" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_TAB_ACTIVE" category="border-color">#ffffffff</color>
+  <color name="COLOR_BORDER_SEPARATOR" category="border-color">#fffafaf9</color>
+  <color name="COLOR_BORDER_SEPARATOR_ALT" category="border-color">#ffdddbda</color>
+  <color name="COLOR_BORDER_SEPARATOR_ALT_2" category="border-color">#ffc9c7c5</color>
+  <color name="COLOR_BORDER_SEPARATOR_INVERSE" category="border-color">#ff2a426c</color>
+  <color name="COLOR_BORDER_ROW_SELECTED" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_ROW_SELECTED_HOVER" category="border-color">#ff1589ee</color>
+  <color name="COLOR_BORDER_HINT" category="border-color">#ff2a426c</color>
+  <color name="COLOR_BORDER_SELECTION" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_SELECTION_HOVER" category="border-color">#ff1589ee</color>
+  <color name="COLOR_BORDER_SELECTION_ACTIVE" category="border-color">#fffafaf9</color>
+  <color name="COLOR_BORDER_CANVAS_ELEMENT_SELECTION" category="border-color">#ff5eb4ff</color>
+  <color name="COLOR_BORDER_CANVAS_ELEMENT_SELECTION_HOVER" category="border-color">#ff005fb2</color>
+  <color name="COLOR_BORDER_ICON_INVERSE_HINT" category="border-color">#80ffffff</color>
+  <color name="COLOR_BORDER_ICON_INVERSE_HINT_HOVER" category="border-color">#bfffffff</color>
+  <color name="COLOR_BORDER_BUTTON_BRAND" category="border-color">#ff0070d2</color>
+  <color name="COLOR_BORDER_BUTTON_BRAND_DISABLED" category="border-color">#00000000</color>
+  <color name="COLOR_BORDER_BUTTON_DEFAULT" category="border-color">#ffdddbda</color>
+  <color name="COLOR_BORDER_BUTTON_INVERSE_DISABLED" category="border-color">#26ffffff</color>
+  <color name="COLOR_BORDER_INPUT" category="border-color">#ffdddbda</color>
+  <color name="COLOR_BORDER_INPUT_ACTIVE" category="border-color">#ff1589ee</color>
+  <color name="COLOR_BORDER_INPUT_DISABLED" category="border-color">#ffc9c7c5</color>
+  <color name="COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK" category="border-color">#ffffffff</color>
+  <color name="COLOR_BORDER_TOGGLE_CHECKED" category="border-color">#ffffffff</color>
+  <color name="COLOR_BORDER_REMINDER" category="border-color">#ffa8b7c7</color>
+  <color name="COLOR_STROKE_BRAND" category="border-color">#ff0070d2</color>
+  <color name="COLOR_STROKE_BRAND_HOVER" category="border-color">#ff0070d2</color>
+  <color name="COLOR_STROKE_BRAND_ACTIVE" category="border-color">#ff16325c</color>
+  <color name="COLOR_STROKE_DISABLED" category="border-color">#ffecebea</color>
+  <color name="COLOR_STROKE_HEADER_BUTTON" category="border-color">#ffb0adab</color>
+  <color name="COLOR_BACKGROUND_PRIMARY" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_SECONDARY" category="background-color">#fffafaf9</color>
+  <color name="COLOR_FOREGROUND_PRIMARY" category="background-color">#ffffffff</color>
+  <color name="COLOR_CONTRAST_PRIMARY" category="background-color">#fffafaf9</color>
+  <color name="COLOR_CONTRAST_SECONDARY" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_BRAND_PRIMARY" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BACKGROUND_BRAND_PRIMARY_HOVER" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_BRAND_PRIMARY_FOCUS" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE" category="background-color">#ff00396b</color>
+  <color name="PAGE_COLOR_BACKGROUND_PRIMARY" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_ALT" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_ALT_2" category="background-color">#fff3f2f2</color>
+  <color name="COLOR_BACKGROUND_ALT_INVERSE" category="background-color">#ff16325c</color>
+  <color name="COLOR_BACKGROUND_ROW_HOVER" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_ROW_ACTIVE" category="background-color">#fff3f2f2</color>
+  <color name="COLOR_BACKGROUND_ROW_SELECTED" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_ROW_NEW" category="background-color">#ffd9ffdf</color>
+  <color name="COLOR_BACKGROUND_INVERSE" category="background-color">#ff061c3f</color>
+  <color name="COLOR_BACKGROUND_BROWSER" category="background-color">#ff706e6b</color>
+  <color name="COLOR_BACKGROUND_CHROME_MOBILE" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BACKGROUND_CHROME_DESKTOP" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_CUSTOMER" category="background-color">#ffff9a3c</color>
+  <color name="COLOR_BACKGROUND_HIGHLIGHT" category="background-color">#fffaffbd</color>
+  <color name="COLOR_BACKGROUND_HIGHLIGHT_SEARCH" category="background-color">#fffff03f</color>
+  <color name="COLOR_BACKGROUND_SELECTION" category="background-color">#ffd8edff</color>
+  <color name="COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY" category="background-color">#ff706e6b</color>
+  <color name="COLOR_BACKGROUND_INDICATOR_DOT" category="background-color">#ff16325c</color>
+  <color name="COLOR_BACKGROUND_SPINNER_DOT" category="background-color">#ffb0adab</color>
+  <color name="COLOR_BACKGROUND_MODAL" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_MODAL_BRAND" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION_BADGE" category="background-color">#ffc23934</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE" category="background-color">#ff00396b</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_NOTIFICATION_NEW" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_ORG_SWITCHER_ARROW" category="background-color">#ff061c3f</color>
+  <color name="COLOR_BACKGROUND_PAYLOAD" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_POST" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_UTILITY_BAR_HOVER" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_UTILITY_BAR_ACTIVE" category="background-color">#ff1589ee</color>
+  <color name="COLOR_BACKGROUND_SHADE" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_SHADE_DARK" category="background-color">#ffdddbda</color>
+  <color name="COLOR_BACKGROUND_STENCIL" category="background-color">#fff3f2f2</color>
+  <color name="COLOR_BACKGROUND_STENCIL_ALT" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_TEMP_MODAL" category="background-color">#ff969492</color>
+  <color name="COLOR_BACKGROUND_TEMP_MODAL_TINT" category="background-color">#ff969492</color>
+  <color name="COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT" category="background-color">#bfffffff</color>
+  <color name="COLOR_BACKGROUND_BACKDROP" category="background-color">#bfffffff</color>
+  <color name="COLOR_BACKGROUND_BACKDROP_TINT" category="background-color">#fffafaf9</color>
+  <color name="COLOR_BACKGROUND_SCROLLBAR" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_SCROLLBAR_TRACK" category="background-color">#ffc9c7c5</color>
+  <color name="COLOR_BRAND" category="background-color">#ff1589ee</color>
+  <color name="COLOR_BRAND_DARK" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BRAND_DARKER" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_TOGGLE" category="background-color">#ffb0adab</color>
+  <color name="COLOR_BACKGROUND_TOGGLE_DISABLED" category="background-color">#ffb0adab</color>
+  <color name="COLOR_BACKGROUND_TOGGLE_HOVER" category="background-color">#ff969492</color>
+  <color name="COLOR_BACKGROUND_TOGGLE_ACTIVE" category="background-color">#ff0070d2</color>
+  <color name="COLOR_BACKGROUND_TOGGLE_ACTIVE_HOVER" category="background-color">#ff005fb2</color>
+  <color name="COLOR_BACKGROUND_MODAL_BUTTON" category="background-color">#12000000</color>
+  <color name="COLOR_BACKGROUND_MODAL_BUTTON_ACTIVE" category="background-color">#29000000</color>
+  <color name="COLOR_BACKGROUND_INPUT" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_INPUT_ACTIVE" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_INPUT_CHECKBOX" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED" category="background-color">#ffdddbda</color>
+  <color name="COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED" category="background-color">#ff1589ee</color>
+  <color name="COLOR_BACKGROUND_INPUT_DISABLED" category="background-color">#ffecebea</color>
+  <color name="COLOR_BACKGROUND_INPUT_ERROR" category="background-color">#ffffdde1</color>
+  <color name="COLOR_BACKGROUND_INPUT_SEARCH" category="background-color">#29000000</color>
+  <color name="COLOR_BACKGROUND_PILL" category="background-color">#ffffffff</color>
+  <color name="COLOR_BACKGROUND_IMAGE_OVERLAY" category="background-color">#66000000</color>
+  <color name="COLOR_BACKGROUND_DESTRUCTIVE" category="background-color">#ffc23934</color>
+  <color name="COLOR_BACKGROUND_DESTRUCTIVE_HOVER" category="background-color">#ffa61a14</color>
+  <color name="COLOR_BACKGROUND_DESTRUCTIVE_ACTIVE" category="background-color">#ff870500</color>
+  <color name="COLOR_BACKGROUND_INFO" category="background-color">#ff706e6b</color>
+  <color name="COLOR_BACKGROUND_ERROR" category="background-color">#ffd4504c</color>
+  <color name="COLOR_BACKGROUND_ERROR_DARK" category="background-color">#ffc23934</color>
+  <color name="COLOR_BACKGROUND_ERROR_ALT" category="background-color">#ffea8288</color>
+  <color name="COLOR_BACKGROUND_OFFLINE" category="background-color">#ff3e3e3c</color>
+  <color name="COLOR_BACKGROUND_SUCCESS" category="background-color">#ff4bca81</color>
+  <color name="COLOR_BACKGROUND_SUCCESS_DARK" category="background-color">#ff04844b</color>
+  <color name="COLOR_BACKGROUND_TOAST" category="background-color">#ff706e6b</color>
+  <color name="COLOR_BACKGROUND_TOAST_SUCCESS" category="background-color">#ff04844b</color>
+  <color name="COLOR_BACKGROUND_TOAST_ERROR" category="background-color">#ffc23934</color>
+  <color name="COLOR_BACKGROUND_WARNING" category="background-color">#ffffb75d</color>
+  <color name="COLOR_BACKGROUND_BUTTON_SUCCESS" category="background-color">#ff4bca81</color>
+  <color name="COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER" category="background-color">#ff04844b</color>
+  <color name="COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE" category="background-color">#ff04844b</color>
+  <property name="SHADOW_HARD_PRIMARY" category="shadow">none</property>
+  <property name="SHADOW_SOFT_PRIMARY" category="shadow">none</property>
+  <property name="SHADOW_SOFT_PRIMARY_HOVER" category="shadow">none</property>
+  <property name="SHADOW_SOFT_PRIMARY_ACTIVE" category="shadow">none</property>
+  <property name="SHADOW_ACTION_OVERFLOW_FOOTER" category="shadow">0 -2px 4px #fafaf9</property>
+  <property name="SHADOW_OVERLAY" category="shadow">0 -2px 4px rgba(0, 0, 0, 0.07)</property>
+  <property name="SHADOW_DRAG" category="shadow">0 2px 4px 0 rgba(0, 0, 0, 0.40)</property>
+  <property name="SHADOW_DROP_DOWN" category="shadow">0 2px 3px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="SHADOW_REMINDER" category="shadow">0 2px 0 0 rgba(0, 0, 0, 0.1)</property>
+  <property name="SHADOW_HEADER" category="shadow">0 2px 4px rgba(0, 0, 0, 0.07)</property>
+  <property name="SHADOW_BUTTON" category="shadow">0 1px 1px 0 rgba(0, 0, 0, 0.05)</property>
+  <property name="SHADOW_BUTTON_FOCUS" category="shadow">0 0 3px #0070D2</property>
+  <property name="SHADOW_BUTTON_FOCUS_INVERSE" category="shadow">0 0 3px #ecebea</property>
+  <property name="SHADOW_INLINE_EDIT" category="shadow">0 2px 4px 4px rgba(0, 0, 0, 0.16)</property>
+  <property name="SHADOW_FOCUS_INSET" category="shadow">0 0 2px 2px #1589EE inset</property>
+  <property name="SHADOW_DOCKED" category="shadow">0 -2px 2px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="SHADOW_IMAGE" category="shadow">0 1px 1px rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_3_INSET" category="shadow">-3</property>
+  <property name="ELEVATION_0" category="shadow">0</property>
+  <property name="ELEVATION_2" category="shadow">2</property>
+  <property name="ELEVATION_4" category="shadow">4</property>
+  <property name="ELEVATION_8" category="shadow">8</property>
+  <property name="ELEVATION_16" category="shadow">16</property>
+  <property name="ELEVATION_32" category="shadow">32</property>
+  <property name="ELEVATION_SHADOW_3_BELOW" category="shadow">0 3px 3px 0 rgba(0, 0, 0, 0.16) inset</property>
+  <property name="ELEVATION_SHADOW_0" category="shadow">none</property>
+  <property name="ELEVATION_SHADOW_2" category="shadow">0 2px 2px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_SHADOW_4" category="shadow">0 4px 4px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_SHADOW_8" category="shadow">0 8px 8px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_SHADOW_16" category="shadow">0 16px 16px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_SHADOW_32" category="shadow">0 32px 32px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_INVERSE_SHADOW_3_BELOW" category="shadow">0 -3px 3px 0 rgba(0, 0, 0, 0.16) inset</property>
+  <property name="ELEVATION_INVERSE_SHADOW_0" category="shadow">none</property>
+  <property name="ELEVATION_INVERSE_SHADOW_2" category="shadow">0 -2px 2px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_INVERSE_SHADOW_4" category="shadow">0 -4px 4px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_INVERSE_SHADOW_8" category="shadow">0 -8px 8px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_INVERSE_SHADOW_16" category="shadow">0 -16px 16px 0 rgba(0, 0, 0, 0.16)</property>
+  <property name="ELEVATION_INVERSE_SHADOW_32" category="shadow">0 -32px 32px 0 rgba(0, 0, 0, 0.16)</property>
+  <color name="COLOR_TEXT_PRIMARY" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_SECONDARY" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_TERTIARY" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_BRAND_PRIMARY" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_LINK_PRIMARY" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_LINK_PRIMARY_HOVER" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_LINK_PRIMARY_ACTIVE" category="text-color">#ff00396b</color>
+  <color name="COLOR_TEXT_LINK_PRIMARY_FOCUS" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_ACTION_LABEL" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_ACTION_LABEL_ACTIVE" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_BRAND" category="text-color">#ff1589ee</color>
+  <color name="COLOR_TEXT_BROWSER" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_BROWSER_ACTIVE" category="text-color">#66000000</color>
+  <color name="COLOR_TEXT_CUSTOMER" category="text-color">#ffff9a3c</color>
+  <color name="COLOR_TEXT_DEFAULT" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_ERROR" category="text-color">#ffc23934</color>
+  <color name="COLOR_TEXT_INPUT_DISABLED" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_INPUT_FOCUS_INVERSE" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_INPUT_ICON" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_INVERSE" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_INVERSE_WEAK" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_INVERSE_ACTIVE" category="text-color">#ff5eb4ff</color>
+  <color name="COLOR_TEXT_INVERSE_HOVER" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_LINK" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_LINK_ACTIVE" category="text-color">#ff00396b</color>
+  <color name="COLOR_TEXT_LINK_DISABLED" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_LINK_FOCUS" category="text-color">#ff005fb2</color>
+  <color name="COLOR_TEXT_LINK_HOVER" category="text-color">#ff005fb2</color>
+  <color name="COLOR_TEXT_LINK_INVERSE" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_LINK_INVERSE_HOVER" category="text-color">#bfffffff</color>
+  <color name="COLOR_TEXT_LINK_INVERSE_ACTIVE" category="text-color">#80ffffff</color>
+  <color name="COLOR_TEXT_LINK_INVERSE_DISABLED" category="text-color">#26ffffff</color>
+  <color name="COLOR_TEXT_MODAL" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_MODAL_BUTTON" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_STAGE_LEFT" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_TAB_LABEL" category="text-color">#ff16325c</color>
+  <color name="COLOR_TEXT_TAB_LABEL_SELECTED" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_TAB_LABEL_HOVER" category="text-color">#ff005fb2</color>
+  <color name="COLOR_TEXT_TAB_LABEL_FOCUS" category="text-color">#ff005fb2</color>
+  <color name="COLOR_TEXT_TAB_LABEL_ACTIVE" category="text-color">#ff00396b</color>
+  <color name="COLOR_TEXT_TAB_LABEL_DISABLED" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_TOAST" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_WARNING" category="text-color">#ffffb75d</color>
+  <color name="COLOR_TEXT_WARNING_ALT" category="text-color">#ff844800</color>
+  <color name="COLOR_TEXT_WEAK" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_ICON_BRAND" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_ICON_UTILITY" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_TOGGLE_DISABLED" category="text-color">#ffdddbda</color>
+  <color name="COLOR_TEXT_BUTTON_BRAND" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_BUTTON_BRAND_HOVER" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_BUTTON_BRAND_ACTIVE" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_BUTTON_BRAND_DISABLED" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_BUTTON_DEFAULT" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_BUTTON_DEFAULT_HOVER" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_BUTTON_DEFAULT_ACTIVE" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_BUTTON_DEFAULT_DISABLED" category="text-color">#ffdddbda</color>
+  <color name="COLOR_TEXT_BUTTON_DEFAULT_HINT" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_BUTTON_INVERSE" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_BUTTON_INVERSE_DISABLED" category="text-color">#26ffffff</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT_HINT" category="text-color">#ffb0adab</color>
+  <color name="COLOR_TEXT_ICON_INVERSE_HINT" category="text-color">#80ffffff</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT_HOVER" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT_ACTIVE" category="text-color">#ff00396b</color>
+  <color name="COLOR_TEXT_ICON_DEFAULT_DISABLED" category="text-color">#ffdddbda</color>
+  <color name="COLOR_TEXT_ICON_INVERSE" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_ICON_INVERSE_HOVER" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_ICON_INVERSE_ACTIVE" category="text-color">#ffffffff</color>
+  <color name="COLOR_TEXT_ICON_INVERSE_DISABLED" category="text-color">#26ffffff</color>
+  <color name="COLOR_TEXT_ICON_INVERSE_HINT_HOVER" category="text-color">#bfffffff</color>
+  <color name="COLOR_TEXT_LABEL" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_PLACEHOLDER" category="text-color">#ff706e6b</color>
+  <color name="COLOR_TEXT_PLACEHOLDER_INVERSE" category="text-color">#ffecebea</color>
+  <color name="COLOR_TEXT_REQUIRED" category="text-color">#ffc23934</color>
+  <color name="COLOR_TEXT_PILL" category="text-color">#ff0070d2</color>
+  <color name="COLOR_TEXT_SUCCESS" category="text-color">#ff028048</color>
+  <color name="COLOR_TEXT_SUCCESS_INVERSE" category="text-color">#ff4bca81</color>
+</resources>

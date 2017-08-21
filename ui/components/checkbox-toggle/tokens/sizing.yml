@@ -1,0 +1,26 @@
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  SQUARE_TOGGLE_SLIDER:
+    value: 1.25rem
+    comment: Slider size for toggle.
+  WIDTH_TOGGLE:
+    value: 3rem
+    comment: Slider width.
+  HEIGHT_TOGGLE:
+    value: 1.5rem
+    comment: Slider height.

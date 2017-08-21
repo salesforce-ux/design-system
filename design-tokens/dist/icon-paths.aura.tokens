@@ -1,0 +1,7 @@
+<aura:tokens>
+  <aura:token name="customSprite" value="/assets/icons/custom-sprite/svg/symbols.svg"  />
+  <aura:token name="doctypeSprite" value="/assets/icons/doctype-sprite/svg/symbols.svg"  />
+  <aura:token name="standardSprite" value="/assets/icons/standard-sprite/svg/symbols.svg"  />
+  <aura:token name="actionSprite" value="/assets/icons/action-sprite/svg/symbols.svg"  />
+  <aura:token name="utilitySprite" value="/assets/icons/utility-sprite/svg/symbols.svg"  />
+</aura:tokens>

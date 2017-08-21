@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <property name="BRAND_BAND_DEFAULT_IMAGE" category="background-color">/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2</property>
+  <property name="BRAND_BAND_USER_DEFAULT_IMAGE" category="background-color">/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2</property>
+  <property name="BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM" category="background-color">/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2</property>
+  <property name="BRAND_BAND_USER_DEFAULT_IMAGE_SMALL" category="background-color">/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2</property>
+  <property name="BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL" category="background-color">/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2</property>
+  <color name="PAGE_COLOR_BACKGROUND_PRIMARY" category="background-color">#ffafc5de</color>
+  <color name="BRAND_BAND_COLOR_BACKGROUND_PRIMARY" category="background-color">#ffafc5de</color>
+  <color name="BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT" category="background-color">#00afc5de</color>
+  <color name="BRAND_BAND_COLOR_BACKGROUND_SECONDARY" category="background-color">#ff205c9f</color>
+  <color name="BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT" category="background-color">#00205c9f</color>
+</resources>

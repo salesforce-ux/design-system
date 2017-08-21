@@ -1,0 +1,29 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- ../force-base/aliases/spacing.yml
+props:
+  CARD_SPACING_MARGIN:
+    value: '{!SPACING_SMALL}'
+  CARD_HEADER_PADDING:
+    value: '{!SPACING_SMALL} {!SPACING_SMALL} 0'
+  CARD_BODY_PADDING:
+    value: '0 {!SPACING_SMALL}'
+  CARD_FOOTER_PADDING:
+    value: '{!SPACING_X_SMALL} {!SPACING_SMALL}'

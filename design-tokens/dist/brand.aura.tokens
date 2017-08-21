@@ -1,0 +1,20 @@
+<aura:tokens>
+  <aura:token name="brandBandDefaultImage" value="/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandUserDefaultImage" value="/_slds/images/themes/oneSalesforce/banner-user-default.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPrivateDefaultImage" value="/_slds/images/themes/oneSalesforce/banner-group-private-default.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPublicDefaultImage" value="/_slds/images/themes/oneSalesforce/banner-group-public-default.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupUnlistedDefaultImage" value="/_slds/images/themes/oneSalesforce/banner-group-unlisted-default.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandUserDefaultImageMedium" value="/_slds/images/themes/oneSalesforce/banner-user-default-medium.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPrivateDefaultImageMedium" value="/_slds/images/themes/oneSalesforce/banner-group-private-default-medium.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPublicDefaultImageMedium" value="/_slds/images/themes/oneSalesforce/banner-group-public-default-medium.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupUnlistedDefaultImageMedium" value="/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-medium.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandUserDefaultImageSmall" value="/_slds/images/themes/oneSalesforce/banner-user-default-small.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPrivateDefaultImageSmall" value="/_slds/images/themes/oneSalesforce/banner-group-private-default-small.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupPublicDefaultImageSmall" value="/_slds/images/themes/oneSalesforce/banner-group-public-default-small.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandGroupUnlistedDefaultImageSmall" value="/_slds/images/themes/oneSalesforce/banner-group-unlisted-default-small.png?cache=210.2" property="background*,border*,box-shadow" />
+  <aura:token name="pageColorBackgroundPrimary" value="rgb(175, 197, 222)" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandColorBackgroundPrimary" value="rgb(175, 197, 222)" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandColorBackgroundPrimaryTransparent" value="rgba(175, 197, 222, 0)" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandColorBackgroundSecondary" value="rgb(32, 92, 159)" property="background*,border*,box-shadow" />
+  <aura:token name="brandBandColorBackgroundSecondaryTransparent" value="rgba(32, 92, 159, 0)" property="background*,border*,box-shadow" />
+</aura:tokens>

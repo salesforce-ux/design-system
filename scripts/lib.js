@@ -34,6 +34,7 @@ module.exports = ui => {
       .map(v => v.get("showcase"));
 
   return {
+    ui,
     component,
     components,
     utility,

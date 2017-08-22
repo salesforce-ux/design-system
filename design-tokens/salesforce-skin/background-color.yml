@@ -14,7 +14,7 @@ imports:
 props:
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: 'rgb(253,253,253)'
   ## BRAND BAND
   ## Desktop
   BRAND_BAND_USER_DEFAULT_IMAGE:
@@ -57,14 +57,14 @@ props:
     type: string
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: 'rgb(253,253,253)'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: 'rgb(253,253,253)'
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: 'rgba(250,250,249,0)'
+    value: 'rgba(253,253,253,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
-    value: 'rgba(250,250,249,0)'
+    value: 'rgba(253,253,253,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'
   ## DEFAULT
   COLOR_BACKGROUND_PRIMARY:
@@ -87,9 +87,6 @@ props:
   COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
     value: '{!BLUE_BACKGROUND_SECONDARY}'
   ## CARDS
-  CARD_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_1}'
-    comment: Default Card component background color
   CARD_WRAPPER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
   ## BUTTONS

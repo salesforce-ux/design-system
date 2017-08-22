@@ -528,6 +528,54 @@ export let states = [
       </div>
   },
   {
+    id: 'unread-unsaved-tab',
+    label: 'Unread/Unsaved Tab',
+    element:
+      <div className="demo-only">
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Chat - Customer"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+            symbol="live_chat"
+            itemUnread
+            itemUnsaved
+          />
+        </ContextTabBar>
+        <ContextTabPanel
+          show
+          id={tabPanelId01}
+          tabId={tabId01}
+        >
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId02}
+          tabId={tabId02}
+        >
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel
+          id={tabPanelId03}
+          tabId={tabId03}
+        >
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+  },
+  {
     id: 'pinned-tab',
     label: 'Pinned Tab',
     element:

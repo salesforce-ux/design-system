@@ -85,6 +85,6 @@
  *
  * @base
  * @name icons
- * @selector .slds-icon_container
+ * @selector .slds-icon_container, [class*='slds-icon-action-'], [class*='slds-icon-custom-'], [class*='slds-icon-doctype-'], [class*='slds-icon-standard-']
  * @support dev-ready
  */

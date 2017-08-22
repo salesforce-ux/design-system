@@ -10,7 +10,6 @@
  * - a selected item reveals its icon when `aria-checked="true"` is applied to its `menuitemcheckbox` or `menuitemradio` child (e.g. `<a role="menuitemcheckbox" aria-checked="true" ...>`).
  *
  * @summary Initializes a trigger element around the dropdown
- *
  * @name dropdown
  * @selector .slds-dropdown-trigger
  * @restrict div, span, li
@@ -50,8 +49,7 @@
   }
 
   /**
-   * If someone is using javascript for click to toggle - this modifier will help
-   *
+   * @summary If someone is using javascript for click to toggle - this modifier will help
    * @selector .slds-dropdown-trigger_hover
    * @restrict .slds-dropdown-trigger
    */
@@ -77,8 +75,7 @@
   }
 
   /**
-   * If someone is using javascript for click to toggle - this modifier will help
-   *
+   * @summary If someone is using javascript for click to toggle - this modifier will help
    * @selector .slds-dropdown-trigger_click
    * @restrict .slds-dropdown-trigger
    */
@@ -90,11 +87,11 @@
     }
 
     /**
-     * Opens dropdown menu when invoked on click
-     *
+     * @summary Opens dropdown menu when invoked on click
      * @selector .slds-is-open
      * @restrict .slds-dropdown-trigger_click
      * @modifier
+     * @group visibility
      */
     &.slds-is-open .slds-dropdown {
       display: block;
@@ -120,8 +117,7 @@
 }
 
 /**
- * Initializes dropdown
- *
+ * @summary Initializes dropdown
  * @selector .slds-dropdown
  * @restrict .slds-dropdown-trigger div, .slds-dropdown-trigger ul
  * @notes Applies positioning and container styles, by default, dropdown appears below and center of target
@@ -144,8 +140,7 @@
   transform: translateX(-50%);
 
   /**
-   * Positions dropdown to left side of target
-   *
+   * @summary Positions dropdown to left side of target
    * @selector .slds-dropdown_left
    * @restrict .slds-dropdown
    * @modifier
@@ -158,8 +153,7 @@
   }
 
   /**
-   * Positions dropdown to right side of target
-   *
+   * @summary Positions dropdown to right side of target
    * @selector .slds-dropdown_right
    * @restrict .slds-dropdown
    * @modifier
@@ -173,8 +167,7 @@
   }
 
   /**
-   * Positions dropdown to above target
-   *
+   * @summary Positions dropdown to above target
    * @selector .slds-dropdown_bottom
    * @restrict .slds-dropdown
    * @modifier
@@ -186,8 +179,7 @@
   }
 
   /**
-   * Sets min-width of 6rem/96px
-   *
+   * @summary Sets min-width of 6rem/96px
    * @selector .slds-dropdown_xx-small
    * @restrict .slds-dropdown
    * @modifier
@@ -199,8 +191,7 @@
   }
 
   /**
-   * Sets min-width of 12rem/192px
-   *
+   * @summary Sets min-width of 12rem/192px
    * @selector .slds-dropdown_x-small
    * @restrict .slds-dropdown
    * @modifier
@@ -212,8 +203,7 @@
   }
 
   /**
-   * Sets min-width of 15rem/240px
-   *
+   * @summary Sets min-width of 15rem/240px
    * @selector .slds-dropdown_small
    * @restrict .slds-dropdown
    * @modifier
@@ -225,8 +215,7 @@
   }
 
   /**
-   * Sets min-width of 20rem/320px
-   *
+   * @summary Sets min-width of 20rem/320px
    * @selector .slds-dropdown_medium
    * @restrict .slds-dropdown
    * @modifier
@@ -238,8 +227,7 @@
   }
 
   /**
-   * Sets min-width of 25rem/400px
-   *
+   * @summary Sets min-width of 25rem/400px
    * @selector .slds-dropdown_large
    * @restrict .slds-dropdown
    * @modifier
@@ -252,8 +240,7 @@
   }
 
   /**
-   * Sets min-width of 25rem/400px
-   *
+   * @summary Sets min-width of 25rem/400px
    * @selector .slds-dropdown_large
    * @restrict .slds-dropdown
    * @modifier
@@ -267,10 +254,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 5 list items
-   *
+   * @summary Forces overflow scrolling after 5 list items
    * @selector .slds-dropdown_length-5
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -280,10 +266,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 7 list items
-   *
+   * @summary Forces overflow scrolling after 7 list items
    * @selector .slds-dropdown_length-7
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -293,10 +278,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 10 list items
-   *
+   * @summary Forces overflow scrolling after 10 list items
    * @selector .slds-dropdown_length-10
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -306,10 +290,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 5 list items with an icon
-   *
+   * @summary Forces overflow scrolling after 5 list items with an icon
    * @selector .slds-dropdown_length-with-icon-5
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -319,10 +302,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 7 list items with an icon
-   *
+   * @summary Forces overflow scrolling after 7 list items with an icon
    * @selector .slds-dropdown_length-with-icon-7
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -332,10 +314,9 @@
   }
 
   /**
-   * Forces overflow scrolling after 10 list items with an icon
-   *
+   * @summary Forces overflow scrolling after 10 list items with an icon
    * @selector .slds-dropdown_length-with-icon-10
-   * @restrict .slds-dropdown, .slds-dropdown__list
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
    * @modifier
    * @group height
    */
@@ -345,8 +326,7 @@
   }
 
   /**
-   * Theme
-   *
+   * @summary Theme
    * @selector .slds-dropdown_inverse
    * @restrict .slds-dropdown
    * @modifier
@@ -444,8 +424,7 @@
   }
 
   /**
-   * Adds padding to area above dropdown menu list
-   *
+   * @summary Adds padding to area above dropdown menu list
    * @selector .slds-dropdown__header
    * @restrict .slds-dropdown li
    */
@@ -454,8 +433,7 @@
   }
 
   /**
-   * Initializes dropdown item
-   *
+   * @summary Initializes dropdown item
    * @selector .slds-dropdown__item
    * @restrict .slds-dropdown li
    * @required
@@ -495,8 +473,7 @@
     }
 
     /**
-     * If menu contains menuitemcheckbox then this toggles the selected icon when it is selected
-     *
+     * @summary If menu contains menuitemcheckbox then this toggles the selected icon when it is selected
      * @selector .slds-icon_selected
      * @restrict .slds-dropdown__item svg
      */
@@ -507,8 +484,7 @@
     }
 
     /**
-     * If menu contains menuitemcheckbox then this handles the selected states
-     *
+     * @summary If menu contains menuitemcheckbox then this handles the selected states
      * @selector .slds-is-selected
      * @restrict .slds-dropdown__item
      * @modifier

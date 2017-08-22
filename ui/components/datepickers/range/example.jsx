@@ -168,7 +168,7 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                className="slds-dropdown-trigger slds-dropdown-trigger--click"
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
@@ -256,7 +256,7 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                className="slds-dropdown-trigger slds-dropdown-trigger--click"
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"

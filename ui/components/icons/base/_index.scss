@@ -80,7 +80,6 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 /**
  * @selector .slds-icon
  * @restrict .slds-icon_container svg, svg
- * @required
  */
 .slds-icon {
   @include square($square-icon-medium-boundary);

@@ -326,7 +326,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
    * wrapper element that contains the Split View List.
    *
    * @selector .slds-context-bar__item_tab
-   * @restrict .slds-context-bar__item
+   * @restrict .slds-context-bar_tabs .slds-context-bar__item
    * @notes Only use on tabset version
    * @required
    *

@@ -185,6 +185,7 @@ export let ComboboxContainer = props =>
               },
               props.inputContainerClassName
             )}
+            role="none"
           >
             {/*
               If inputIcon is on both sides of input AND a standard sprite,

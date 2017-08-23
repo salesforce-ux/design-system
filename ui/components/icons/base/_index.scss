@@ -170,7 +170,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 
 /**
  * @selector .slds-icon-text-light
- * @restrict .slds-icon, .slds-button__icon
+ * @restrict .slds-icon, svg
  * @modifier
  * @group color
  */

@@ -1,19 +1,21 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const Task = require('data.task');
-const gulp = require('gulp');
-const gulpfile = require('gulp-file');
-const paths = require('../helpers/paths');
+const Task = require("data.task");
+const gulp = require("gulp");
+const gulpfile = require("gulp-file");
+const path = require("path");
+const paths = require("../helpers/paths");
+const fs = require("fs");
+const I = require("immutable-ext");
+const Either = require("data.either");
+const { Right, Left } = Either;
 
 const createParser = require("@salesforce-ux/design-system-parser");
 const {
   mapTree,
   toList
 } = require("@salesforce-ux/design-system-previewer/lib/tree");
-
-const I = require("immutable-ext");
-const Either = require("data.either");
 
 const getComments = require("./comments");
 const getShowcase = require("./showcase");
@@ -25,41 +27,76 @@ const variants = c => toList(c).filter(isVariant);
 
 const toMap = f => (ac, c) => ac.set(c.get("id"), f(c.get("id")).get());
 
+const exists = p => (fs.existsSync(p) ? Right(p) : Left(null));
+
+const pathIfExists = filepath =>
+  exists(path.resolve(paths.root, filepath))
+    .map(() => filepath)
+    .getOrElse(null);
+
+const utilityExamplePath = utilId =>
+  pathIfExists(`./ui/utilities/${utilId}/example.jsx`);
+
+const componentExamplePath = (componentId, variantId) =>
+  pathIfExists(`./ui/components/${componentId}/${variantId}/example.jsx`);
+
+const docPath = (type, componentId) =>
+  pathIfExists(`./ui/${type}/${componentId}/docs.mdx`);
+
 const createUI = parser =>
   I.Map({
     components: parser.components().reduce(toMap(parser.component), I.Map()),
     utilities: parser.utilities().reduce(toMap(parser.utility), I.Map())
   });
 
-const addShowcaseIfVariantOrUtil = componentId => item =>
+const showcasePath = (componentId, item) =>
   isVariant(item) || isUtil(item)
-    ? getShowcase(componentId, item.get("id"), isUtil(item)).fold(
-        e => {
-          throw e;
-        },
-        s => item.set("showcase", s)
-      )
-    : item;
+    ? isUtil(item) // skips util's children since they aren't utils...
+      ? utilityExamplePath(componentId)
+      : componentExamplePath(componentId, item.get("id"))
+    : null;
 
-const addShowcases = ui =>
-  ui.map(group =>
-    group.map((value, name) =>
-      mapTree(value, addShowcaseIfVariantOrUtil(name))));
+const addShowcaseAndDocPaths = (type, componentId, item) =>
+  Either.fromNullable(docPath(type, item.get("id")))
+    .map(pth => item.set("docPath", pth))
+    .orElse(() =>
+      Either.fromNullable(showcasePath(componentId, item)).map(showcasePath =>
+        item
+          .set("showcasePath", showcasePath)
+          .set("showcase", getShowcase(showcasePath))
+      )
+    )
+    .getOrElse(item);
 
 const uiFromComments = () => getComments().map(createParser).map(createUI);
 
-const ui = () => uiFromComments().map(addShowcases);
-
-const writeToDist = () =>
-  ui()
-  .map(x => JSON.stringify(x, null, 2))
-  .chain(json =>
-    new Task((rej, res) =>
-      gulpfile('ui.json', json, { src: true })
-      .pipe(gulp.dest(paths.dist))
-      .on('finish', res)
-      .on('error', rej)
+const ui = () =>
+  uiFromComments().map(u =>
+    u.map((group, type) =>
+      group.map((item, componentId) =>
+        mapTree(item, itm => addShowcaseAndDocPaths(type, componentId, itm))
+      )
     )
   );
 
-module.exports = { ui, isVariant, variants, writeToDist };
+const writeToDist = () =>
+  ui()
+    .map(x => JSON.stringify(x, null, 2))
+    .chain(
+      json =>
+        new Task((rej, res) =>
+          gulpfile("ui.json", json, { src: true })
+            .pipe(gulp.dest(paths.dist))
+            .on("finish", res)
+            .on("error", rej)
+        )
+    );
+
+module.exports = {
+  ui,
+  isVariant,
+  variants,
+  writeToDist,
+  componentExamplePath,
+  utilityExamplePath
+};

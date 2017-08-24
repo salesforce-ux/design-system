@@ -326,7 +326,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
    * wrapper element that contains the Split View List.
    *
    * @selector .slds-context-bar__item_tab
-   * @restrict .slds-context-bar__item
+   * @restrict .slds-context-bar_tabs .slds-context-bar__item
    * @notes Only use on tabset version
    * @required
    *
@@ -374,15 +374,19 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   }
 
   /**
-  * Notifications style - Styling a tab or overflow item to indicate the tab has unread activity
-  *
-  * @selector .slds-has-notification
-  * @restrict .slds-context-bar__item, slds-context-bar__item slds-dropdown__item
-  */
+   * @summary Notifications style - Styling a tab or overflow item to indicate the tab has unread activity
+   * @selector .slds-has-notification
+   * @restrict .slds-context-bar__item, .slds-context-bar__item .slds-dropdown__item
+   */
   .slds-has-notification {
     background: $color-background-context-bar-brand-light;
     color: $color-text-default;
 
+    /**
+     * @summary Unread notification icon
+     * @selector .slds-indicator_unread
+     * @restrict .slds-has-notification span
+     */
     .slds-indicator_unread {
       display: inline-block;
       flex-shrink: 0;

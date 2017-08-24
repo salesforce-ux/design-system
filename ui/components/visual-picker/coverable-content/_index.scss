@@ -53,10 +53,20 @@
       box-shadow: $elevation-shadow-4;
     }
 
+    /**
+     * @summary Non-selected state
+     * @selector .slds-is-not-selected
+     * @restrict .slds-visual-picker__figure > span
+     */
     &:checked ~ label .slds-is-not-selected {
       display: none;
     }
 
+    /**
+     * @summary Selected state
+     * @selector .slds-is-selected
+     * @restrict .slds-visual-picker__figure > span
+     */
     &:checked ~ label .slds-is-selected {
       display: block;
     }
@@ -66,7 +76,6 @@
       border: $border-width-thin solid $color-border-selection-hover;
     }
 
-    // scss-lint:disable NestingDepth
     /* stylelint-disable max-nesting-depth */
     &:checked ~ label .slds-visual-picker__text {
       border: $border-width-thin solid $color-border-selection-hover;
@@ -86,8 +95,6 @@
       }
     }
 
-    // scss-lint:disable NestingDepth
-    // scss-lint:disable SelectorDepth
     &[disabled] {
       cursor: not-allowed;
       user-select: none;
@@ -111,15 +118,13 @@
           border: $border-width-thin solid $color-border;
           box-shadow: none;
         }
-        /* stylelint-enable max-nesting-depth */
       }
     }
   }
 }
 
 /**
- * Visual container for icon and text
- *
+ * @summary Visual container for icon and text
  * @selector .slds-visual-picker__figure
  * @restrict .slds-visual-picker div, .slds-visual-picker span
  */
@@ -145,8 +150,7 @@
 }
 
 /**
- * Size modifier to adjust to the default size of medium
- *
+ * @summary Size modifier to adjust to the default size of medium
  * @selector .slds-visual-picker_medium
  * @restrict .slds-visual-picker
  * @modifier
@@ -165,8 +169,7 @@
 }
 
 /**
- * Size modifier to adjust to the size of large
- *
+ * @summary Size modifier to adjust to the size of large
  * @selector .slds-visual-picker_large
  * @restrict .slds-visual-picker
  * @modifier
@@ -186,8 +189,7 @@
 
 
 /**
- * Text area that sits outside the visual picker
- *
+ * @summary Text area that sits outside the visual picker
  * @selector .slds-visual-picker__body
  * @restrict .slds-visual-picker span
  */

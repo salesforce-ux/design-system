@@ -7,7 +7,6 @@
  * @name base
  * @selector .slds-split-view_container
  * @restrict div
- * @required
  * @variant
  */
 .slds-split-view_container {
@@ -17,8 +16,7 @@
   min-width: 0;
 
   /**
-   * Modifier to rotate the left arrow icon on close
-   *
+   * @summary Modifier to rotate the left arrow icon on close
    * @selector .slds-is-closed
    * @restrict .slds-split-view_container, .slds-split-view__toggle-button
    * @modifier
@@ -36,8 +34,7 @@
   }
 
   /**
-   * Toggles open/close state of split view container
-   *
+   * @summary Toggles open/close state of split view container
    * @selector .slds-is-open
    * @restrict .slds-split-view_container, .slds-split-view__toggle-button
    * @modifier
@@ -57,11 +54,8 @@
 }
 
 /**
- *
- *
  * @selector .slds-split-view
  * @restrict .slds-split-view_container article
- * @required
  */
 .slds-split-view {
   background: $split-view-color-background;
@@ -69,24 +63,19 @@
 }
 
 /**
- * Header of split view
- *
- * Contains elements such as the list filter, view switcher and refresh button
- *
+ * @summary Header of split view
  * @selector .slds-split-view__header
  * @restrict .slds-split-view header
- * @required
+ * @notes Contains elements such as the list filter, view switcher and refresh button
  */
 .slds-split-view__header {
   padding: $spacing-medium $spacing-medium $spacing-x-small $spacing-large;
 }
 
 /**
- * Column headers
- *
+ * @summary Column headers
  * @selector .slds-split-view__list-header
  * @restrict .slds-split-view div
- * @required
  */
 .slds-split-view__list-header {
   border: {
@@ -97,11 +86,9 @@
 }
 
 /**
- * Each row of the list of split view
- *
+ * @summary Each row of the list of split view
  * @selector .slds-split-view__list-item
  * @restrict .slds-split-view li
- * @required
  */
 .slds-split-view__list-item {
   display: flex;
@@ -114,15 +101,6 @@
     background: $split-view-color-background-row-hover;
   }
 
-  /**
-   * Unread states
-   *
-   * Positions the dot indicator to the left of the content
-   *
-   * @selector .slds-indicator_unread
-   * @restrict .slds-split-view__list-item abbr
-   * @required
-   */
   .slds-indicator_unread,
   .slds-indicator--unread {
     background: $color-brand;
@@ -130,13 +108,9 @@
 }
 
 /**
- * Unread states
- *
- * Positions the dot indicator to the left of the content
- *
+ * @summary Unread states
  * @selector .slds-indicator_unread
  * @restrict .slds-split-view__list-item abbr
- * @required
  */
 .slds-indicator_unread,
 .slds-indicator--unread {
@@ -150,11 +124,9 @@
 }
 
 /**
- * Actionable row of split view
- *
+ * @summary Actionable row of split view
  * @selector .slds-split-view__list-item-action
  * @restrict .slds-split-view__list-item a
- * @required
  */
 .slds-split-view__list-item-action {
   color: currentColor;
@@ -182,11 +154,9 @@
 }
 
 /**
- * Expand/Collapse button to toggle open/close state of split view
- *
+ * @summary Expand/Collapse button to toggle open/close state of split view
  * @selector .slds-split-view__toggle-button
  * @restrict .slds-split-view_container button
- * @required
  */
 .slds-split-view__toggle-button {
   position: absolute;

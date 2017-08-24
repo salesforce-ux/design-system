@@ -23,7 +23,6 @@
  * @name base
  * @selector .slds-tabs_default
  * @restrict div
- * @required
  * @variant
  */
 .slds-tabs_default,
@@ -32,11 +31,9 @@
   background-color: $color-foreground-primary;
 
   /**
-   * Creates the container for the default tabs
-   *
+   * @summary Creates the container for the default tabs
    * @selector .slds-tabs_default__nav
    * @restrict .slds-tabs_default ul
-   * @required
    */
   &__nav {
     @include tabs-nav;
@@ -88,12 +85,19 @@
     }
   }
 
+  /**
+   * @summary A tab item that has an overflow menu
+   * @selector .slds-tabs__item_overflow
+   * @restrict .slds-tabs_default__item
+   */
   .slds-tabs__item_overflow,
   .slds-tabs__item--overflow {
     overflow: visible;
   }
 
-  .slds-card { // This makes cards look plain when inside a tabset
+  // This should move to cards css
+  // This makes cards look plain when inside a tabset
+  .slds-card {
     background: $card-color-background;
     border: 0;
     border-radius: 0;
@@ -102,11 +106,9 @@
 }
 
 /**
- * Styles each list item as a single tab
- *
+ * @summary Styles each list item as a single tab
  * @selector .slds-tabs_default__item
  * @restrict .slds-tabs_default ul li
- * @required
  */
 .slds-tabs_default__item,
 .slds-tabs--default__item {
@@ -128,8 +130,7 @@
   }
 
   /**
-   * Active state for a tab item
-   *
+   * @summary Active state for a tab item
    * @selector .slds-is-active
    * @restrict .slds-tabs_default__item
    * @notes Required on the `<li>` element that is associated with the active tab panel
@@ -161,8 +162,7 @@
   }
 
   /**
-   * Focus state for a tab item
-   *
+   * @summary Focus state for a tab item
    * @selector .slds-has-focus
    * @restrict .slds-tabs_default__item
    * @modifier
@@ -178,9 +178,14 @@
     }
   }
 
+  // Remove box-shadow when slds-button is used in conjunction with class
+  .slds-tabs_default__link:focus,
+  .slds-tabs--default__link:focus {
+    box-shadow: none;
+  }
+
   /**
-  * Creates styles for a Tab Item when its tab has new activity in
-  *
+  * @summary Creates styles for a Tab Item when its tab has new activity in
   * @selector .slds-has-notification
   * @restrict .slds-tabs_default__item
   */
@@ -202,11 +207,9 @@
 }
 
 /**
- * Styles each actionable element inside each tab item
- *
+ * @summary Styles each actionable element inside each tab item
  * @selector .slds-tabs_default__link
  * @restrict .slds-tabs_default__item a
- * @required
  */
 .slds-tabs_default__link,
 .slds-tabs--default__link {
@@ -214,19 +217,19 @@
   height: $line-height-tab;
   line-height: $line-height-tab;
   color: currentColor;
+  border: 0;
 
   &:hover,
   &:focus {
     text-decoration: none;
+    box-shadow: none;
   }
 }
 
 /**
- * Styles each tab content wrapper
- *
+ * @summary Styles each tab content wrapper
  * @selector .slds-tabs_default__content
  * @restrict .slds-tabs_default div
- * @required
  */
 .slds-tabs_default__content,
 .slds-tabs--default__content {

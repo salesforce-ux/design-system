@@ -13,12 +13,12 @@ module.exports = ui => {
 
   const utilities = () => ui.get("utilities").keySeq().sort();
 
-  const isUtil = item => item.getIn(['annotations', 'utility'])
+  const isUtil = item => item.getIn(['annotations', 'utility']);
 
   const variants = comp =>
     isUtil(comp)
     ? comp.get('restrictees')
-    :  toList(comp).filter(item => item.getIn(['annotations', 'variant']))
+    : toList(comp).filter(item => item.getIn(['annotations', 'variant']));
 
   const utility = name =>
     Either.of(ui.get("utilities")).chain(u => Either.fromNullable(u.get(name)));
@@ -33,7 +33,6 @@ module.exports = ui => {
       .chain(c => findVariant(c, variant))
       .map(v => v.get("showcase"));
 
-  // check compile/entry.js for the rest...
   return {
     ui,
     component,

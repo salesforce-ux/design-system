@@ -6,18 +6,49 @@
 const Task = require("data.task");
 const Bundle = require("../bundle");
 
-it("doesn't change configs", () => {
-  expect.assertions(1);
-  Bundle.configs
-    .map(cfgs =>
-      cfgs.map(c => c.set("plugins", null).deleteIn(["output", "path"]))
-    )
-    .fork(
-      e => {
-        throw e;
-      },
-      cfgs => {
-        expect(cfgs.toJS()).toMatchSnapshot();
-      }
-    );
+describe("scripts/compile/bundle", () => {
+  describe("configs", () => {
+    it("umd", () => {
+      expect(Bundle.configs.umd).toMatchSnapshot();
+    });
+    it("chunked", () => {
+      expect.assertions(1);
+      Bundle.configs.chunked.fork(
+        e => {
+          throw e;
+        },
+        config => {
+          config = config.delete("plugins");
+          expect(config).toMatchSnapshot();
+        }
+      );
+    });
+  });
+  describe("compile", () => {
+    it("rejects the task if the config contains no output.path", () => {
+      expect.assertions(1);
+      Bundle.compile(Bundle.configs.umd).fork(
+        e => {
+          expect(e.message).toContain("output.path");
+        },
+        r => {}
+      );
+    });
+  });
+  describe("createLibrary", () => {
+    it("calls the compile function with the correct config", () => {
+      expect.assertions(2);
+      const compile = jest.fn(config => Task.of(config));
+      Bundle.createLibrary("/testPath", compile).fork(
+        e => {
+          throw e;
+        },
+        configs => {
+          configs = configs.map(c => c.delete("plugins"));
+          expect(compile).toHaveBeenCalledTimes(2);
+          expect(configs).toMatchSnapshot();
+        }
+      );
+    });
+  });
 });

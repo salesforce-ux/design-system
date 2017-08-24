@@ -1,67 +1,35 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const I = require("immutable");
-const path = require("path");
-const paths = require("../helpers/paths");
+const I = require('immutable');
+const path = require('path');
 
 module.exports = I.fromJS({
   output: {
-    path: paths.dist,
-    publicPath: "/assets/scripts/bundle/"
+    publicPath: '/assets/scripts/bundle/'
   },
   module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              babelrc: false,
-              presets: ["es2015", "react"],
-              plugins: ["transform-object-rest-spread"]
-            }
-          }
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader/useable",
-            options: { insertInto: "iframe[data-slds-doc]" }
-          },
-          { loader: "raw-loader" },
-          { loader: "sass-loader" }
-        ]
-      },
-      {
-        test: /\.mdx$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader"
-          },
-          {
-            loader: "./scripts/compile/mdx-post-loader"
-          },
-          {
-            loader: "mdx-loader",
-            options: {
-              unwrapped: false
-            }
-          }
+    rules: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      options: {
+        babelrc: false,
+        presets: [
+          'es2015',
+          'react'
+        ],
+        plugins: [
+          'transform-object-rest-spread'
         ]
       }
-    ]
+    }]
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
       // This is intentional. A detailed error will be thrown (see bundle.js)
-      lodash: ""
+      'lodash': ''
     }
   },
   plugins: []

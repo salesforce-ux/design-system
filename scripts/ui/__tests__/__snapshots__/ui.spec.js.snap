@@ -19,7 +19,6 @@ Object {
 function.
 
 Use a disabled attribute when a button can’t be clicked.",
-      "docPath": "./ui/components/buttons/docs.mdx",
       "id": "buttons",
       "restrictees": Array [
         Object {
@@ -180,17 +179,7 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                   "restrictees": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
-              "showcasePath": "./ui/components/buttons/stateful/example.jsx",
+              "showcase": Array [],
             },
             Object {
               "annotations": Object {
@@ -236,48 +225,10 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                   "restrictees": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "icon-right",
-                      "label": "Neutral with right icon",
-                    },
-                  ],
-                  "title": "examples",
-                },
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
-              "showcasePath": "./ui/components/buttons/with-icon/example.jsx",
+              "showcase": Array [],
             },
           ],
-          "showcase": Array [
-            Object {
-              "items": Array [
-                Object {
-                  "id": "disabled",
-                  "label": "Disabled",
-                },
-              ],
-              "title": "states",
-            },
-            Object {
-              "items": Array [
-                Object {
-                  "id": "default",
-                },
-              ],
-              "title": "default",
-            },
-          ],
-          "showcasePath": "./ui/components/buttons/base/example.jsx",
+          "showcase": Array [],
         },
       ],
     },
@@ -637,33 +588,30 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                       "restrictees": Array [],
                     },
                   ],
-                  "showcase": Array [
-                    Object {
-                      "items": Array [
-                        Object {
-                          "id": "default",
-                        },
-                      ],
-                      "title": "default",
-                    },
-                  ],
-                  "showcasePath": "./ui/components/data-tables/inline-edit/example.jsx",
+                  "showcase": Array [],
                 },
               ],
-              "showcase": Array [
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
-                },
-              ],
-              "showcasePath": "./ui/components/data-tables/advanced/example.jsx",
+              "showcase": Array [],
             },
           ],
           "showcase": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "id": "data-table-striped-rows",
+                  "label": "With striped rows",
+                },
+                Object {
+                  "id": "data-table-no-hover",
+                  "label": "With no row hovers",
+                },
+                Object {
+                  "id": "data-table-vertical-borders",
+                  "label": "With vertical borders",
+                },
+              ],
+              "title": "states",
+            },
             Object {
               "items": Array [
                 Object {
@@ -673,7 +621,6 @@ representative of Navigation mode, all other states are assumed to be in Actiona
               "title": "default",
             },
           ],
-          "showcasePath": "./ui/components/data-tables/base/example.jsx",
         },
       ],
     },
@@ -714,7 +661,6 @@ representative of Navigation mode, all other states are assumed to be in Actiona
           "title": "examples",
         },
       ],
-      "showcasePath": "./ui/utilities/alignment/example.jsx",
     },
     "floats": Object {
       "annotations": Object {
@@ -799,33 +745,12 @@ If you want the parent of the floated element to contain the floats, add the \`.
           "title": "default",
         },
       ],
-      "showcasePath": "./ui/utilities/floats/example.jsx",
     },
   },
 }
 `;
 
-exports[`scripts/ui.js ui includes the examples skeleton for components 1`] = `
-Array [
-  Object {
-    "items": Array [
-      Object {
-        "id": "disabled",
-        "label": "Disabled",
-      },
-    ],
-    "title": "states",
-  },
-  Object {
-    "items": Array [
-      Object {
-        "id": "default",
-      },
-    ],
-    "title": "default",
-  },
-]
-`;
+exports[`scripts/ui.js ui includes the examples skeleton for components 1`] = `Array []`;
 
 exports[`scripts/ui.js ui includes the examples skeleton for utilities 1`] = `
 Array [

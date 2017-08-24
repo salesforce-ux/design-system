@@ -5,8 +5,7 @@ const _ = require("lodash");
 const paths = require("./helpers/paths");
 const path = require("path");
 const gulp = require("gulp");
-const Task = require("data.task");
-const I = require("immutable");
+const bundlePath = path.resolve(__dirname, "../assets/scripts");
 const { writeToDist } = require("./ui");
 
 const createPreviewer = process.env.SLDS_PREVIEWER === "development"
@@ -16,6 +15,7 @@ const createPreviewer = process.env.SLDS_PREVIEWER === "development"
 const { watchPaths } = require("./watch");
 
 const Bundle = require("./compile/bundle");
+const bundleConfig = Bundle.configs.umd.setIn(["output", "path"], bundlePath);
 
 require("./gulp/styles");
 
@@ -23,13 +23,12 @@ const previewer = createPreviewer({
   // where are your static assets
   publicPath: {
     "/assets": [path.resolve(__dirname, "../assets")],
-    "/dist": [path.resolve(__dirname, "../.dist/")],
     "/assets/icons": [paths.icons]
   },
   // where is your css?
   cssUrl: "/assets/styles/index.css", // ignored by git
   // get me the js bundle
-  scriptUrl: `/dist/__internal/slds.umd.js`
+  scriptUrl: `/assets/scripts/${bundleConfig.getIn(["output", "filename"])}`
 });
 
 const listen = () =>
@@ -55,7 +54,7 @@ const listen = () =>
     });
 
     // JS
-    Bundle.watch().fork(
+    Bundle.watch(bundleConfig).fork(
       e => {
         throw e;
       },
@@ -68,4 +67,6 @@ const listen = () =>
 
 console.log("Start compiling JS library for Previewer...");
 
-listen();
+writeToDist().fork(console.error, () => {
+  listen();
+});

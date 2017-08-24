@@ -1,19 +1,45 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+const path = require("path");
 const Task = require("data.task");
 const I = require("immutable-ext");
 const webpack = require("webpack");
-const fs = require("fs");
-const path = require("path");
-const paths = require("../helpers/paths");
 
-const toTask = require("futurize").futurize(Task);
-const writeFile = toTask(fs.writeFile);
-
-const { FOLDERNAME, entry, manifest } = require("./entry");
 const Minify = require("./minify");
+const { ui, variants } = require("../ui");
 const webpackConfig = require("./webpack.config");
+
+const utilityPath = component => `./ui/utilities/${component}/example.jsx`;
+
+const componentPath = (component, variant) =>
+  `./ui/components/${component}/${variant}/example.jsx`;
+
+const mappings = {
+  components: (entry, comp, name) =>
+    variants(comp).reduce(
+      (acc, v) =>
+        acc.set(
+          `components/${name}/${v.get("id")}`,
+          componentPath(name, v.get("id"))
+        ),
+      entry
+    ),
+  utilities: (entry, comp, name) =>
+    entry.set(`utilities/${name}`, utilityPath(name))
+};
+
+const chunkedEntry = () =>
+  ui().map(ui =>
+    ui.reduce(
+      (entry, group, groupName) =>
+        group.reduce(
+          (entry, comp, name) => mappings[groupName](entry, comp, name),
+          entry
+        ),
+      I.Map()
+    )
+  );
 
 const externals = {
   react: "React",
@@ -21,67 +47,50 @@ const externals = {
 };
 
 // chunked :: Task Error I.Map
-const chunked = prefix =>
+const chunked = chunkedEntry().map(entry =>
   webpackConfig
+    .set("entry", entry)
     .set("externals", externals)
-    .setIn(["output", "library"], ["SLDS", "[name]"])
-    .setIn(["output", "filename"], "[name]") // [name] will already have ".js" appended
-    .setIn(
-      ["output", "jsonpFunction"],
-      `webpackJsonpSLDS_${prefix.replace(new RegExp(path.sep, "g"), "_")}`
-    )
-    .set(
-      "plugins",
-      I.List.of(
-        new webpack.optimize.CommonsChunkPlugin({
-          name: `${prefix}/common.js`,
-          minChunks: 2
-        })
-      )
-    );
-
-// chunkedConfigs :: Task Error (I.List WebpackCfg)
-const chunkedConfigs = entry.map(entryMap =>
-  entryMap.map((entry, prefix) => chunked(prefix).set("entry", entry)).toList()
+    .setIn(["output", "library"], "SLDS")
+    .setIn(["output", "filename"], "[name].js")
+    .setIn(["output", "jsonpFunction"], "webpackJsonpSLDS")
+    .set("plugins", I.List.of(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "common",
+        minChunks: 2
+      })
+    ))
 );
 
-// umd :: WebpackCfg
+// umd :: I.Map
 const umd = webpackConfig
-  .set("entry", "./scripts/compile/slds.js")
+  .set("entry", "./scripts/compile/entry.js")
   .setIn(["output", "library"], "SLDS")
   .setIn(["output", "libraryTarget"], "umd")
-  .setIn(["output", "filename"], `${FOLDERNAME}/slds.umd.js`);
+  .setIn(["output", "filename"], "slds.umd.js");
 
-// Task Error (List WebpackCfg)
-const configs = chunkedConfigs.map(cfgs =>
-  cfgs
-    .unshift(umd)
-    .filter(
-      c =>
-        I.Map.isMap(c.get("entry")) ? c.get("entry").count() : c.has("entry")
-    )
-);
+const configs = { umd, chunked };
 
 // watch :: (I.Map, Path, WatchOptions) -> Task Error Stats
-const watch = (options = {}) =>
-  configs.chain(
-    cfgs =>
-      new Task((reject, resolve) =>
-        webpack(cfgs.toJS()).watch(options, (err, stats) => {
-          if (err) return reject(err);
-          if (stats.hasErrors()) {
-            const errors = stats.toJson().errors.join("\n\n");
-            console.log(errors);
-          }
-          resolve(stats);
-        })
-      )
+const watch = (config, options = {}) =>
+  new Task((reject, resolve) =>
+    webpack(config.toJS()).watch(options, (err, stats) => {
+      if (err) return reject(err);
+      if (stats.hasErrors()) {
+        const errors = stats.toJson().errors.join('\n\n');
+        console.log(errors);
+      }
+      resolve(stats);
+    })
   );
 
 // compile :: (I.Map, Path) -> Task Error Stats
-const compile = configs =>
+const compile = config =>
   new Task((reject, resolve) => {
-    return webpack(configs.toJS()).run((err, stats) => {
+    if (!config.hasIn(["output", "path"])) {
+      return reject(new Error("output.path must be set before compile"));
+    }
+    return webpack(config.toJS()).run((err, stats) => {
       if (err) return reject(err);
       if (stats.hasErrors()) {
         const errors = stats.toJson().errors.map(e => {
@@ -104,30 +113,31 @@ const compile = configs =>
     });
   });
 
-const compileLibs = () =>
-  configs
-    .map(cfgs =>
-      cfgs.map(cfg =>
-        cfg.update("plugins", plugins =>
-          (plugins || I.List()).push(new Minify())
+// createLibrary :: Path -> Task Error (List Stats)
+const createLibrary = (outputDir, compileFn = compile) =>
+  I.List([
+    { getConfig: Task.of(umd), extraFolder: "" },
+    { getConfig: chunked, extraFolder: "chunked" }
+  ]).traverse(Task.of, ({ getConfig, extraFolder }) =>
+    getConfig
+      .map(config =>
+        config.setIn(
+          ["output", "path"],
+          path.resolve(outputDir, "__internal", extraFolder)
         )
       )
-    )
-    .chain(compile);
-
-const writeManifest = () =>
-  manifest
-    .map(m => JSON.stringify(m, null, 2))
-    .chain(contents =>
-      writeFile(path.join(paths.dist, "manifest.json"), contents)
-    );
-
-// createLibrary :: Path -> Task Error (List Stats)
-const createLibrary = () => compileLibs().chain(writeManifest);
+      .map(config =>
+        config.update('plugins', plugins =>
+          plugins ? plugins.push(new Minify()) : plugins
+        )
+      )
+      .chain(compileFn)
+  );
 
 module.exports = {
   configs,
   compile,
   watch,
-  createLibrary
+  createLibrary,
+  chunkedEntry
 };

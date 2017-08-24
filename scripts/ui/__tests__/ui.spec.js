@@ -9,20 +9,19 @@ describe("scripts/ui.js", () => {
   describe("ui", () => {
     let result;
 
-    beforeAll((done) => {
+    beforeAll(() => {
       ui().fork(
         e => {
           throw e;
         },
         r => {
           result = r;
-          done();
         }
       );
     });
 
     it("has not changed", () => {
-      expect(result.toJS()).toMatchSnapshot();
+      expect(result).toMatchSnapshot();
     });
 
     it("has all the components", () => {
@@ -37,13 +36,13 @@ describe("scripts/ui.js", () => {
 
     it("includes the examples skeleton for components", () => {
       const showcase = result.getIn(["components", "buttons", "restrictees", 0, "showcase"]);
-      expect(showcase.toJS()).toMatchSnapshot();
+      expect(showcase).toMatchSnapshot();
     });
 
     it("includes the examples skeleton for utilities", () => {
       const showcase = result.getIn(["utilities", "floats", "showcase"]);
       expect(showcase.count()).toBeGreaterThan(1);
-      expect(showcase.toJS()).toMatchSnapshot();
+      expect(showcase).toMatchSnapshot();
     });
   });
 });

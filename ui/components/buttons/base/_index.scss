@@ -302,11 +302,61 @@ a.slds-button--inverse:focus {
   }
 }
 
+/**
+ * @summary Sizing for icon that sits inside button__icon
+ * @selector .slds-button__icon
+ * @restrict .slds-button svg
+ */
+.slds-button__icon {
+  @include square($square-icon-medium-content-alt);
+  fill: currentColor;
+
+  /**
+   * @summary Large size button icon svg
+   * @selector .slds-button__icon_large
+   * @restrict .slds-button__icon
+   */
+  &_large,
+  &--large { // Usually used for the large close button
+    @include square($square-icon-utility-large);
+  }
+
+  /**
+   * @summary Small size button icon svg
+   * @selector .slds-button__icon_small
+   * @restrict .slds-button__icon
+   */
+  &_small,
+  &--small {
+    @include square($square-icon-small-content);
+  }
+
+  /**
+   * @summary x-small size button icon svg
+   * @selector .slds-button__icon_x-small
+   * @restrict .slds-button__icon
+   */
+  &_x-small,
+  &--x-small {
+    @include square($square-icon-x-small-content);
+  }
+}
+
+/**
+ * @summary Position of icon when sitting to the left side of the text when inside a button
+ * @selector .slds-button__icon_left
+ * @restrict .slds-button__icon, .slds-button__icon_stateful
+ */
 .slds-button__icon_left,
 .slds-button__icon--left {
   margin-right: $spacing-x-small;
 }
 
+/**
+ * @summary Position of icon when sitting to the right side of the text when inside a button
+ * @selector .slds-button__icon_right
+ * @restrict .slds-button__icon, .slds-button__icon_stateful
+ */
 .slds-button__icon_right,
 .slds-button__icon--right {
   margin-left: $spacing-x-small;

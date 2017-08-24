@@ -20,28 +20,37 @@ export default (
 
 export let states = [
   {
-    id: 'neutral',
-    label: 'Neutral',
-    element: <Button className="slds-button_neutral">Button</Button>
-  },
-  {
-    id: 'brand',
-    label: 'Brand',
-    element: <Button className="slds-button_brand">Button</Button>
-  },
-  {
-    id: 'destructive',
-    label: 'Destructive',
-    element: <Button className="slds-button_destructive">Button</Button>
-  },
-  {
-    id: 'success',
-    label: 'Success',
-    element: <Button className="slds-button_success">Button</Button>
-  },
-  {
     id: 'disabled',
     label: 'Disabled',
     element: <Button disabled>Button</Button>
+  }
+];
+
+export let examples = [
+  {
+    id: 'with-icon-left',
+    label: 'With left icon',
+    element:
+      <Button className="slds-button_neutral">
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_left"
+          sprite="utility"
+          symbol="download"
+        />
+        Button Neutral
+      </Button>
+  },
+  {
+    id: 'with-icon-right',
+    label: 'With right icon',
+    element:
+      <Button className="slds-button_neutral">
+        Button Neutral
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_right"
+          sprite="utility"
+          symbol="download"
+        />
+      </Button>
   }
 ];

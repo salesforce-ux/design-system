@@ -102,7 +102,7 @@ export default (
       <div className="slds-form-element__group">
         <div className="slds-form-element__row">
           <FormElement
-            className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+            className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
             label="Date"
             inputId={dateInputId}
             inputIcon="right"
@@ -143,7 +143,7 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open"
+                className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
@@ -182,7 +182,7 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger--click"
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"

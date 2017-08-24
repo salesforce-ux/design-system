@@ -56,7 +56,7 @@ let Overflowing = props =>
       <h2>Item Seven Content</h2>
     </Tabs.Item>
     <Tabs.ItemOverflow title="More tabs" className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-tabs_default__item">
-      <a className="slds-tabs_default__link" href="javascript:void(0);" aria-haspopup="true">
+      <a className="slds-button slds-tabs_default__link" href="javascript:void(0);" aria-haspopup="true">
         <span className="slds-truncate" title="More tabs">More <span className="slds-assistive-text">tabs</span></span>
         <SvgIcon className="slds-button__icon slds-button__icon_x-small" sprite="utility" symbol="down" />
       </a>

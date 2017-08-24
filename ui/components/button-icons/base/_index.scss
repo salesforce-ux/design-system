@@ -41,11 +41,12 @@
 }
 
 /**
- * Default width + height for button icon with containers
- *
+ * @summary Default width + height for button icon with containers
+ * @name Default
  * @selector .slds-button_icon-container
  * @restrict .slds-button_icon
  * @modifier
+ * @group container-size
  */
 
 // Append class to this list if it requires a default size of 2x2rem
@@ -61,8 +62,8 @@
 }
 
 /**
- * Creates an icon button with a border
- *
+ * @summary Creates an icon button with a border
+ * @name Transparent background
  * @selector .slds-button_icon-border
  * @restrict .slds-button_icon
  * @modifier
@@ -77,11 +78,9 @@
 }
 
 /**
- * Gives a white icon color on a dark background
- *
+ * @summary Gives a white icon color on a dark background
  * @selector .slds-button_icon-border-inverse
  * @restrict .slds-button_icon
- * @modifier
  * @group borders
  */
 .slds-button_icon-border-inverse,
@@ -97,8 +96,8 @@
 }
 
 /**
- * Button icon with background
- *
+ * @summary Button icon with background
+ * @name Filled background
  * @selector .slds-button_icon-border-filled
  * @restrict .slds-button_icon
  * @modifier
@@ -115,11 +114,9 @@
 }
 
 /**
- * Button icon on inversed background
- *
+ * @summary Button icon on inversed background
  * @selector .slds-button_icon-inverse
  * @restrict .slds-button_icon
- * @modifier
  * @group color
  */
 .slds-button_icon-inverse,
@@ -145,12 +142,9 @@
 }
 
 /**
- * Button icon for errors
- *
+ * @summary Button icon for errors
  * @selector .slds-button_icon-error
  * @restrict .slds-button_icon
- * @modifier
- * @group color
  */
 .slds-button_icon-error,
 .slds-button--icon-error {
@@ -174,17 +168,15 @@
   .slds-button__icon {
     fill: $color-text-button-brand;
   }
-
-  // WHERE ARE MY ATTRIBUTE STYLES?
 }
 
 /**
- * Button icon container - size small modifier
- *
+ * @summary Button icon container - size small modifier
+ * @name small
  * @selector .slds-button_icon-small
  * @restrict .slds-button_icon
  * @modifier
-  * @group size
+ * @group container-size
  */
 .slds-button_icon-small,
 .slds-button--icon-small {
@@ -193,12 +185,12 @@
 }
 
 /**
- * Button icon container - size x-small modifier
- *
+ * @summary Button icon container - size x-small modifier
+ * @name x-small
  * @selector .slds-button_icon-x-small
  * @restrict .slds-button_icon
  * @modifier
-  * @group size
+ * @group container-size
  */
 .slds-button_icon-x-small,
 .slds-button--icon-x-small {
@@ -212,12 +204,12 @@
 }
 
 /**
- * Button icon container - size xx-small modifier
- *
+ * @summary Button icon container - size xx-small modifier
+ * @name xx-small
  * @selector .slds-button_icon-xx-small
  * @restrict .slds-button_icon
  * @modifier
- * @group size
+ * @group container-size
  */
 .slds-button_icon-xx-small,
 .slds-button--icon-xx-small {
@@ -236,7 +228,7 @@
  *
  * @name icon-with-dropdown
  * @selector .slds-button_icon-more
- * @restrict .slds-button_icon
+ * @restrict button
  * @variant
  */
 .slds-button_icon-more,
@@ -294,7 +286,6 @@
  * - `aria-pressed` is set to `true` or `false`, depending its state
  *
  * @summary Stateful Button Icon
- *
  * @name stateful
  * @selector .slds-is-selected
  * @restrict .slds-button_icon
@@ -320,11 +311,8 @@
 
 /**
  * @summary A parent class must be put on anything that contains a .slds-button__icon_hint so that the child reacts when the parent is hovered.
- *
- * @name icon-with-hint-hover
  * @selector .slds-button__icon_hint
  * @restrict .slds-button_icon .slds-button__icon
- * @variant
  */
 .slds-button__icon_hint,
 .slds-button__icon--hint {

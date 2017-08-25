@@ -50,4 +50,4 @@ props:
   COMPONENT_SPACING_MARGIN:
     value: '0'
   COMPONENT_SPACING_PADDING:
-    value: '0'
+    value: '{!SPACING_MEDIUM}'

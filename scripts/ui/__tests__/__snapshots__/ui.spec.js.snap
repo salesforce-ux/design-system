@@ -55,6 +55,7 @@ class to the \`.slds-button\` class.
 
 Use the inverse button on dark backgrounds. Add the \`.slds-button_inverse\`
 class to the \`.slds-button\` class.",
+          "docPath": null,
           "id": "base",
           "restrictees": Array [
             Object {
@@ -65,8 +66,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_neutral",
               },
               "description": "Creates the gray border with white background default style",
+              "docPath": null,
               "id": ".slds-button_neutral",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -76,8 +80,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_brand",
               },
               "description": "Creates the brand blue Salesforce style",
+              "docPath": null,
               "id": ".slds-button_brand",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -87,8 +94,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_inverse",
               },
               "description": "Creates the inverse style for dark backgrounds",
+              "docPath": null,
               "id": ".slds-button_inverse",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -98,8 +108,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_destructive",
               },
               "description": "Creates a red button style",
+              "docPath": null,
               "id": ".slds-button_destructive",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -109,8 +122,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_success",
               },
               "description": "Creates a green button style",
+              "docPath": null,
               "id": ".slds-button_success",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -119,8 +135,11 @@ class to the \`.slds-button\` class.",
                 "selector": ".slds-button_small",
               },
               "description": "Creates a smaller button style",
+              "docPath": null,
               "id": ".slds-button_small",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -141,6 +160,7 @@ Stateful icons can be toggled on and off and retain their state. Like stateful b
 #### Accessibility
 
 For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the button. The \`aria-live=\\"assertive\\"\` attribute means the value of the \`<span>\` inside the button will be spoken whenever it changes.",
+              "docPath": null,
               "id": "stateful",
               "restrictees": Array [
                 Object {
@@ -152,8 +172,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-not-selected",
                   },
                   "description": "Default state of a stateful button",
+                  "docPath": null,
                   "id": ".slds-not-selected",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -164,8 +187,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-is-selected-clicked",
                   },
                   "description": "When button is selected and still has focus from click",
+                  "docPath": null,
                   "id": ".slds-is-selected-clicked",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -176,8 +202,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-is-selected",
                   },
                   "description": "When button is pressed and selected",
+                  "docPath": null,
                   "id": ".slds-is-selected",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
               ],
               "showcase": Array [
@@ -200,6 +229,7 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                 "variant": true,
               },
               "description": "Sizing for icon that sits inside button__icon",
+              "docPath": null,
               "id": "with-icon",
               "restrictees": Array [
                 Object {
@@ -210,8 +240,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-button__icon_large",
                   },
                   "description": "Large size button icon svg",
+                  "docPath": null,
                   "id": ".slds-button__icon_large",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -221,8 +254,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-button__icon_small",
                   },
                   "description": "Small size button icon svg",
+                  "docPath": null,
                   "id": ".slds-button__icon_small",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -232,8 +268,11 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                     "selector": ".slds-button__icon_x-small",
                   },
                   "description": "x-small size button icon svg",
+                  "docPath": null,
                   "id": ".slds-button__icon_x-small",
                   "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
               ],
               "showcase": Array [
@@ -280,6 +319,8 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
           "showcasePath": "./ui/components/buttons/base/example.jsx",
         },
       ],
+      "showcase": Array [],
+      "showcasePath": null,
     },
     "data-tables": Object {
       "annotations": Object {
@@ -304,6 +345,7 @@ are placed in a \`thead\`. Each one receives the \`scope=\\"col\\"\`
 attribute. The first non-actionable (meaning that doesn't contain a checkbox
 or menu) column in each row should be marked as a \`th\` with a
 \`scope=\\"row\\"\` attribute.",
+      "docPath": null,
       "id": "data-tables",
       "restrictees": Array [
         Object {
@@ -316,6 +358,7 @@ or menu) column in each row should be marked as a \`th\` with a
             "variant": true,
           },
           "description": "",
+          "docPath": null,
           "id": "base",
           "restrictees": Array [
             Object {
@@ -325,8 +368,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-no-row-hover",
               },
               "description": "Default Table Row Hover",
+              "docPath": null,
               "id": ".slds-no-row-hover",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -335,8 +381,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-is-selected",
               },
               "description": "Selected Table Row + Hover",
+              "docPath": null,
               "id": ".slds-is-selected",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -345,8 +394,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-cell-wrap",
               },
               "description": "By default, nowrap is applied",
+              "docPath": null,
               "id": ".slds-cell-wrap",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -355,8 +407,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-cell-buffer_left",
               },
               "description": "Use to add a left padding buffer to cells",
+              "docPath": null,
               "id": ".slds-cell-buffer_left",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -365,8 +420,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-cell-buffer_right",
               },
               "description": "Use to add a right padding buffer to cells",
+              "docPath": null,
               "id": ".slds-cell-buffer_right",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -375,8 +433,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-has-focus",
               },
               "description": "Focus state on a cell",
+              "docPath": null,
               "id": ".slds-has-focus",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -386,8 +447,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-table_cell-buffer",
               },
               "description": "Add left and right padding to the first and last cells of a table",
+              "docPath": null,
               "id": ".slds-table_cell-buffer",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -396,8 +460,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-table_bordered",
               },
               "description": "Add vertical borders to a table",
+              "docPath": null,
               "id": ".slds-table_bordered",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -406,8 +473,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-table_col-bordered",
               },
               "description": "Add column borders",
+              "docPath": null,
               "id": ".slds-table_col-bordered",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -416,8 +486,11 @@ or menu) column in each row should be marked as a \`th\` with a
                 "selector": ".slds-table_striped",
               },
               "description": "Add alternating strips to rows",
+              "docPath": null,
               "id": ".slds-table_striped",
               "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
             },
             Object {
               "annotations": Object {
@@ -428,6 +501,7 @@ or menu) column in each row should be marked as a \`th\` with a
                 "variant": true,
               },
               "description": "",
+              "docPath": null,
               "id": "advanced",
               "restrictees": Array [
                 Object {
@@ -437,6 +511,7 @@ or menu) column in each row should be marked as a \`th\` with a
                   },
                   "description": "If the column is sortable than lets handle the actionable
 region of the \`<th>\` cell",
+                  "docPath": null,
                   "id": ".slds-is-sortable",
                   "restrictees": Array [
                     Object {
@@ -445,10 +520,15 @@ region of the \`<th>\` cell",
                         "selector": ".slds-is-sortable__icon",
                       },
                       "description": "Icon inside sortable th",
+                      "docPath": null,
                       "id": ".slds-is-sortable__icon",
                       "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                   ],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -456,6 +536,7 @@ region of the \`<th>\` cell",
                     "selector": ".slds-th__action",
                   },
                   "description": "Actionable area inside th",
+                  "docPath": null,
                   "id": ".slds-th__action",
                   "restrictees": Array [
                     Object {
@@ -464,10 +545,15 @@ region of the \`<th>\` cell",
                         "selector": ".slds-th__action_form",
                       },
                       "description": "Allows for alignment of form element, such as a checkbox",
+                      "docPath": null,
                       "id": ".slds-th__action_form",
                       "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                   ],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -475,6 +561,7 @@ region of the \`<th>\` cell",
                     "selector": ".slds-is-sorted",
                   },
                   "description": "Active state of sorted column",
+                  "docPath": null,
                   "id": ".slds-is-sorted",
                   "restrictees": Array [
                     Object {
@@ -485,10 +572,15 @@ region of the \`<th>\` cell",
                         "selector": ".slds-is-sorted_asc",
                       },
                       "description": "Change direction of arrow",
+                      "docPath": null,
                       "id": "sorted-ascending",
                       "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                   ],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -496,6 +588,7 @@ region of the \`<th>\` cell",
                     "selector": ".slds-table_resizable-cols",
                   },
                   "description": "Resizable data table columns",
+                  "docPath": null,
                   "id": ".slds-table_resizable-cols",
                   "restrictees": Array [
                     Object {
@@ -504,6 +597,7 @@ region of the \`<th>\` cell",
                         "selector": ".slds-is-resizable",
                       },
                       "description": "Provide an indicator that resizing is available",
+                      "docPath": null,
                       "id": ".slds-is-resizable",
                       "restrictees": Array [
                         Object {
@@ -512,6 +606,7 @@ region of the \`<th>\` cell",
                             "selector": ".slds-resizable",
                           },
                           "description": "Resizable handle",
+                          "docPath": null,
                           "id": ".slds-resizable",
                           "restrictees": Array [
                             Object {
@@ -520,6 +615,7 @@ region of the \`<th>\` cell",
                                 "selector": ".slds-resizable__handle",
                               },
                               "description": "Grab handle to resize column",
+                              "docPath": null,
                               "id": ".slds-resizable__handle",
                               "restrictees": Array [
                                 Object {
@@ -528,16 +624,27 @@ region of the \`<th>\` cell",
                                     "selector": ".slds-resizable__divider",
                                   },
                                   "description": "Grab handle divider indicator when resizing column",
+                                  "docPath": null,
                                   "id": ".slds-resizable__divider",
                                   "restrictees": Array [],
+                                  "showcase": Array [],
+                                  "showcasePath": null,
                                 },
                               ],
+                              "showcase": Array [],
+                              "showcasePath": null,
                             },
                           ],
+                          "showcase": Array [],
+                          "showcasePath": null,
                         },
                       ],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                   ],
+                  "showcase": Array [],
+                  "showcasePath": null,
                 },
                 Object {
                   "annotations": Object {
@@ -575,6 +682,7 @@ mode is the default mode of the Grid.
 
 For the purposes of these docs, the Default state of Inline Edit is
 representative of Navigation mode, all other states are assumed to be in Actionable Mode.",
+                  "docPath": null,
                   "id": "inline-edit",
                   "restrictees": Array [
                     Object {
@@ -584,8 +692,11 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                         "selector": ".slds-cell-error",
                       },
                       "description": "Cell that has error icon appear within",
+                      "docPath": null,
                       "id": ".slds-cell-error",
                       "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                     Object {
                       "annotations": Object {
@@ -593,6 +704,7 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                         "selector": ".slds-cell-edit",
                       },
                       "description": "Informs a table cell that it has editing capabilities",
+                      "docPath": null,
                       "id": ".slds-cell-edit",
                       "restrictees": Array [
                         Object {
@@ -602,8 +714,11 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                             "selector": ".slds-is-edited",
                           },
                           "description": "Informs a cell that it has been edited but not saved",
+                          "docPath": null,
                           "id": ".slds-is-edited",
                           "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
                         },
                         Object {
                           "annotations": Object {
@@ -612,8 +727,11 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                             "selector": ".slds-has-error",
                           },
                           "description": "Informs a cell that it has an error inside of it",
+                          "docPath": null,
                           "id": ".slds-has-error",
                           "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
                         },
                         Object {
                           "annotations": Object {
@@ -621,10 +739,15 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                             "selector": ".slds-cell-edit__button",
                           },
                           "description": "",
+                          "docPath": null,
                           "id": ".slds-cell-edit__button",
                           "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
                         },
                       ],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                     Object {
                       "annotations": Object {
@@ -633,8 +756,11 @@ representative of Navigation mode, all other states are assumed to be in Actiona
                         "selector": ".slds-no-cell-focus",
                       },
                       "description": "Handles children of the table where we don't want any focusable cells",
+                      "docPath": null,
                       "id": ".slds-no-cell-focus",
                       "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
                     },
                   ],
                   "showcase": Array [
@@ -676,6 +802,8 @@ representative of Navigation mode, all other states are assumed to be in Actiona
           "showcasePath": "./ui/components/data-tables/base/example.jsx",
         },
       ],
+      "showcase": Array [],
+      "showcasePath": null,
     },
   },
   "utilities": Object {
@@ -688,6 +816,7 @@ representative of Navigation mode, all other states are assumed to be in Actiona
         "utility": true,
       },
       "description": "",
+      "docPath": null,
       "id": "alignment",
       "restrictees": Array [
         Object {
@@ -699,8 +828,11 @@ representative of Navigation mode, all other states are assumed to be in Actiona
             "summary": "Class will absolutely center children content",
           },
           "description": "",
+          "docPath": null,
           "id": "absolute-center",
           "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
         },
       ],
       "showcase": Array [
@@ -729,6 +861,7 @@ representative of Navigation mode, all other states are assumed to be in Actiona
 Note: The floated element must be first in the document flow, even if it renders on the right.
 
 If you want the parent of the floated element to contain the floats, add the \`.slds-clearfix\` class to the parent.",
+      "docPath": null,
       "id": "floats",
       "restrictees": Array [
         Object {
@@ -740,8 +873,11 @@ If you want the parent of the floated element to contain the floats, add the \`.
             "summary": "Pulls element from document flow and floats left. Text and other elements wrap around it.",
           },
           "description": "",
+          "docPath": null,
           "id": "float-left",
           "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
         },
         Object {
           "annotations": Object {
@@ -752,8 +888,11 @@ If you want the parent of the floated element to contain the floats, add the \`.
             "summary": "Removes float from an element that has attribute already",
           },
           "description": "",
+          "docPath": null,
           "id": "float-none",
           "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
         },
         Object {
           "annotations": Object {
@@ -764,8 +903,11 @@ If you want the parent of the floated element to contain the floats, add the \`.
             "summary": "Pulls element from document flow and floats right. Text and other elements wrap around it.",
           },
           "description": "",
+          "docPath": null,
           "id": "float-right",
           "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
         },
       ],
       "showcase": Array [

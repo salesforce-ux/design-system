@@ -27,7 +27,7 @@
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
-    "@salesforce-ux/design-system-previewer": "2.0.9",
+    "@salesforce-ux/design-system-previewer": "2.1.0",
     "@salesforce-ux/icons": "7.31.0",
     "@salesforce-ux/instant-vrt": "0.0.2",
     "async": "2.3.0",

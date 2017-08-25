@@ -74,13 +74,6 @@
   }
 }
 
-/**
- * Error Styles for select
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error {
   @include form-input-error('.slds-select');
 }

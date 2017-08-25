@@ -16,13 +16,6 @@
   padding: $spacing-x-small $spacing-small;
 }
 
-/**
- * Error Styles for textarea
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error {
   @include form-input-error('.slds-textarea');
 }

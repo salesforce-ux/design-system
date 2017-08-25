@@ -68,4 +68,4 @@ const listen = () =>
 
 console.log("Start compiling JS library for Previewer...");
 
-listen();
+writeToDist().fork(console.error, listen);

@@ -56,17 +56,14 @@ const showcasePath = (componentId, item) =>
       : componentExamplePath(componentId, item.get("id"))
     : null;
 
-const addShowcaseAndDocPaths = (type, componentId, item) =>
-  Either.fromNullable(docPath(type, item.get("id")))
-    .map(pth => item.set("docPath", pth))
-    .orElse(() =>
-      Either.fromNullable(showcasePath(componentId, item)).map(showcasePath =>
-        item
-          .set("showcasePath", showcasePath)
-          .set("showcase", getShowcase(showcasePath))
-      )
-    )
-    .getOrElse(item);
+const addShowcaseAndDocPaths = (type, componentId, item) => {
+  const docs = docPath(type, item.get("id"));
+  const showcase = showcasePath(componentId, item);
+  return item
+    .set("docPath", docs)
+    .set("showcasePath", showcase)
+    .set("showcase", getShowcase(showcase));
+};
 
 const uiFromComments = () => getComments().map(createParser).map(createUI);
 

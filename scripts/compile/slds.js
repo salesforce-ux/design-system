@@ -25,10 +25,7 @@ const docPath = (component, isUtility) =>
 const isUtil = component => SLDS.utilities().find(u => u === component);
 
 module.exports = Object.assign(SLDS, {
-  getDocs: component => {
-    console.log("C", docPath(component));
-    return Either.try(r)(docPath(component));
-  },
+  getDocs: component => Either.try(r)(docPath(component, isUtil(component))),
   getExample: (component, variant) =>
     r(examplePath(component, variant, isUtil(component)))
 });

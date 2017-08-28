@@ -95,6 +95,40 @@ export default (
 
 export let states = [
   {
+    id: 'required',
+    label: 'Required',
+    element:
+      <FormElement
+        label={inputLabel}
+        inputId={inputId}
+        required
+      >
+        <Input id={inputId} required />
+      </FormElement>
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element:
+      <FormElement
+        className="slds-has-error"
+        label={inputLabel}
+        inputId={inputId}
+        errorId={errorId}
+        required
+        message="This field is required"
+      >
+        <Input
+          id={inputId}
+          required
+          aria-describedby={errorId}
+        />
+      </FormElement>
+  }
+];
+
+export let examples = [
+  {
     id: 'input',
     label: 'Input',
     element:
@@ -144,37 +178,6 @@ export let states = [
     element:
       <FormElement label={inputLabel} inputId={inputId} tooltip>
         <Input id={inputId} />
-      </FormElement>
-  },
-  {
-    id: 'required',
-    label: 'Required',
-    element:
-      <FormElement
-        label={inputLabel}
-        inputId={inputId}
-        required
-      >
-        <Input id={inputId} required />
-      </FormElement>
-  },
-  {
-    id: 'error',
-    label: 'Error',
-    element:
-      <FormElement
-        className="slds-has-error"
-        label={inputLabel}
-        inputId={inputId}
-        errorId={errorId}
-        required
-        message="This field is required"
-      >
-        <Input
-          id={inputId}
-          required
-          aria-describedby={errorId}
-        />
       </FormElement>
   }
 ];

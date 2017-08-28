@@ -129,13 +129,6 @@
   }
 }
 
-/**
- * Error styles for checkbox or checkbox group
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error .slds-checkbox [type="checkbox"] {
 
   + .slds-checkbox_faux,

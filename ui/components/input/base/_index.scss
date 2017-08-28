@@ -18,7 +18,6 @@
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
   /**
-   *
    * @selector [readonly]
    * @restrict .slds-input
    */
@@ -119,8 +118,6 @@
    *
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
-   * @modifier
-   * @group position
    */
   &_left,
   &--left {
@@ -141,8 +138,6 @@
    *
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
-   * @modifier
-   * @group position
    */
   &_right,
   &--right {
@@ -163,8 +158,6 @@
    *
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
-   * @modifier
-   * @group position
    */
   &_left-right,
   &--left-right {
@@ -215,8 +208,6 @@
  *
  * @selector .slds-input__icon-group_right
  * @restrict .slds-input__icon-group
- * @modifier
- * @group position
  */
 .slds-input__icon-group_right {
   right: 0;
@@ -289,13 +280,6 @@
   }
 }
 
-/**
- *  Error Styles for input field
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error {
   @include form-input-error('.slds-input');
 

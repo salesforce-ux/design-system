@@ -91,13 +91,6 @@
   }
 }
 
-/**
- * Error state for radio group
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error .slds-radio [type='radio'] {
 
   + .slds-radio_faux,

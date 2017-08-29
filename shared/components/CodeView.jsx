@@ -1,12 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import stripIndent from 'strip-indent';
-import Prism from '../vendor/prism';
-import prism from '../vendor/prism/_prism.scss';
-import prismO from '../vendor/prism/_prism-overrides.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import stripIndent from "strip-indent";
+import { html as beautify } from "js-beautify";
+
+import Prism from "../vendor/prism";
+import prism from "../vendor/prism/_prism.scss";
+import prismO from "../vendor/prism/_prism-overrides.scss";
 
 const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
@@ -22,8 +24,8 @@ class CodeBlock extends React.Component {
   }
   getCode() {
     const { language, children } = this.props;
-    const code = children ? children.toString() : '';
-    return highlight(stripIndent(code).trim(), language);
+    const code = children ? children.toString() : "";
+    return highlight(beautify(stripIndent(code).trim()), language);
   }
   render() {
     const { language } = this.props;
@@ -43,7 +45,7 @@ class CodeBlock extends React.Component {
 class CodeView extends React.Component {
   constructor() {
     super();
-    this.state = { code: '' };
+    this.state = { code: "" };
   }
   componentDidMount() {
     this.setState({ code: this.code() });
@@ -66,22 +68,22 @@ class CodeView extends React.Component {
     const { position } = this.props;
     return (
       <div>
-        {position === 'bottom' ? this.kids() : null}
+        {position === "bottom" ? this.kids() : null}
         <div>
           <CodeBlock language="html">{this.state.code}</CodeBlock>
         </div>
-        {position === 'top' ? this.kids() : null}
+        {position === "top" ? this.kids() : null}
       </div>
     );
   }
 }
 
 CodeView.propTypes = {
-  position: PropTypes.oneOf(['top', 'bottom'])
+  position: PropTypes.oneOf(["top", "bottom"])
 };
 
 CodeView.defaultProps = {
-  position: 'bottom'
+  position: "bottom"
 };
 
 export default CodeView;

@@ -1,3 +1,121 @@
+.docs-codeblock {
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h4,
+h5,
+p,
+.lead {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 2rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
 p {
-   color: red;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+blockquote {
+  background-color: #f7f7f7;
+  color: #5876a3;
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 1rem;
+  border-left: 2px solid #5876a3;
+  border: 1px solid #f2f2f2;
+  border-left: 2px solid #5876a3;
+  margin: 1.5rem;
+}
+
+blockquote p:only-child,
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 3rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+table {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 1.5rem;
+}
+
+td,
+th {
+  padding: 0.5rem;
+}
+
+thead th,
+thead td {
+  padding: 0.5rem 0.5rem;
+}
+
+tr td,
+tr th {
+  border-top: 1px solid #f2f2f2;
+}
+
+tr td:not(:first-child),
+tr th:not(:first-child) {
+  border-left: 1px solid #f2f2f2;
+}
+
+code {
+  background: #F6F9FB;
+  color: #1990B8;
+  padding: 0 2px;
+  border-radius: 0.125rem;
 }

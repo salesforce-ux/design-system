@@ -91,6 +91,7 @@ Array [
       "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js": "./ui/utilities/floats/example.jsx",
     },
     "externals": Object {
+      "js-beautify": "JSBeautify",
       "react": "React",
       "react-dom": "ReactDOM",
     },
@@ -177,6 +178,7 @@ Array [
       "__internal/chunked/docs/ui/components/buttons/docs.mdx.js": "./ui/components/buttons/docs.mdx",
     },
     "externals": Object {
+      "js-beautify": "JSBeautify",
       "react": "React",
       "react-dom": "ReactDOM",
     },

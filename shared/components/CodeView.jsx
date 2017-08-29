@@ -67,7 +67,7 @@ class CodeView extends React.Component {
   render() {
     const { position } = this.props;
     return (
-      <div>
+      <div className="docs-codeblock">
         {position === 'bottom' ? this.kids() : null}
         <div>
           <CodeBlock language="html">{this.state.code}</CodeBlock>

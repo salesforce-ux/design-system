@@ -10,8 +10,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { ListboxPill }
-  from '../../pills/listbox-of-pill-options/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 import SvgIcon from '../../../shared/svg-icon';
 
 /* -----------------------------------------------------------------------------
@@ -26,7 +25,7 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
@@ -43,17 +42,17 @@ const ListboxDropdown = props =>
         entityMeta
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{ height: '10rem' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: '10rem' }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -72,7 +71,7 @@ export let states = [
   {
     id: 'focused',
     label: 'Focused',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-has-input-focus"
         inputIcon="right"
@@ -82,7 +81,8 @@ export let states = [
         isOpen
         listbox={<ListboxDropdown />}
         objectSwitcher
-      />,
+      />
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `
@@ -90,7 +90,7 @@ export let states = [
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
-    element:
+    element: (
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
@@ -101,11 +101,12 @@ export let states = [
         objectSwitcher
         aria-activedescendant={listboxOptionId01}
       />
+    )
   },
   {
     id: 'options-selected',
     label: 'Option(s) Selected',
-    element:
+    element: (
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
@@ -135,11 +136,12 @@ export let states = [
           </ListboxItem>
         </Listbox>
       </ComboboxContainer>
+    )
   },
   {
     id: 'focused-options-selected',
     label: 'Focused - Option(s) Selected',
-    element:
+    element: (
       <ComboboxContainer
         isOpen
         containerClassName="slds-has-input-focus"
@@ -171,7 +173,8 @@ export let states = [
             </ListboxPill>
           </ListboxItem>
         </Listbox>
-      </ComboboxContainer>,
+      </ComboboxContainer>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `

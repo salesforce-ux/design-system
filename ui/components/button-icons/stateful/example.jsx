@@ -22,7 +22,7 @@ export let states = [
   {
     id: 'button-icon-stateful-selected',
     label: 'Selected',
-    element:
+    element: (
       <ButtonIcon
         className="slds-button_icon-border-filled"
         aria-pressed="true"
@@ -31,5 +31,6 @@ export let states = [
         assistiveText="Like"
         title="Like"
       />
+    )
   }
 ];

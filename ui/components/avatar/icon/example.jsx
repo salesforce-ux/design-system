@@ -21,49 +21,55 @@ export let states = [
   {
     id: 'avatar-square-icon',
     label: 'Square Icon Fallback',
-    element:
+    element: (
       <Avatar className="slds-avatar_medium">
         <StandardIcon />
       </Avatar>
+    )
   },
   {
     id: 'avatar-circle-icon',
     label: 'Circle Icon Fallback',
-    element:
+    element: (
       <Avatar className="slds-avatar_circle slds-avatar_medium">
         <StandardIcon symbol="user" />
       </Avatar>
+    )
   },
   {
     id: 'size-x-small',
     label: 'Size - X Small',
-    element:
+    element: (
       <Avatar className="slds-avatar_x-small">
         <StandardIcon />
       </Avatar>
+    )
   },
   {
     id: 'size-small',
     label: 'Size - Small',
-    element:
+    element: (
       <Avatar className="slds-avatar_small">
         <StandardIcon />
       </Avatar>
+    )
   },
   {
     id: 'size-medium',
     label: 'Size - Medium',
-    element:
+    element: (
       <Avatar className="slds-avatar_medium">
         <StandardIcon />
       </Avatar>
+    )
   },
   {
     id: 'size-large',
     label: 'Size - Large',
-    element:
+    element: (
       <Avatar className="slds-avatar_large">
         <StandardIcon />
       </Avatar>
+    )
   }
 ];

@@ -15,10 +15,11 @@ export let states = [
   {
     id: 'global-header-search-active',
     label: 'Active',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '290px' }}>
         <GlobalHeader expanded />
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('global-search-01').focus()
     `
@@ -26,10 +27,11 @@ export let states = [
   {
     id: 'global-header-search-typeahead',
     label: 'Typeahead',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '340px' }}>
-      <GlobalHeader expanded searchingFor="ibm" />
-      </div>,
+        <GlobalHeader expanded searchingFor="ibm" />
+      </div>
+    ),
     script: `
       document.getElementById('global-search-01').focus()
     `

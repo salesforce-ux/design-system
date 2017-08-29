@@ -3,22 +3,32 @@
 
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
-import { Menu, MenuList, MenuItem, Trigger } from '../../menus/dropdown/example';
+import {
+  Menu,
+  MenuList,
+  MenuItem,
+  Trigger
+} from '../../menus/dropdown/example';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let ButtonGroup = props =>
-  <div className={classNames('slds-button-group', props.className)} role="group">
+export let ButtonGroup = props => (
+  <div
+    className={classNames('slds-button-group', props.className)}
+    role="group"
+  >
     {props.children}
-  </div>;
+  </div>
+);
 
-export let ButtonGroupList = props =>
+export let ButtonGroupList = props => (
   <ul className={classNames('slds-button-group-list', props.className)}>
     {props.children}
-  </ul>;
+  </ul>
+);
 
 /// ////////////////////////////////////////
 // Export
@@ -36,12 +46,15 @@ export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
-    element:
+    element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
         <button className="slds-button slds-button_neutral">Edit</button>
-        <button className="slds-button slds-button_neutral" disabled>Save</button>
+        <button className="slds-button slds-button_neutral" disabled>
+          Save
+        </button>
       </ButtonGroup>
+    )
   }
 ];
 
@@ -49,7 +62,7 @@ export let examples = [
   {
     id: 'list',
     label: 'List',
-    element:
+    element: (
       <ButtonGroupList>
         <li>
           <button className="slds-button slds-button_neutral">Refresh</button>
@@ -61,22 +74,24 @@ export let examples = [
           <button className="slds-button slds-button_neutral">Save</button>
         </li>
       </ButtonGroupList>
+    )
   },
   {
     id: 'overflow',
     label: 'Overflow menu icon',
-    element:
+    element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
         <button className="slds-button slds-button_neutral">Edit</button>
         <button className="slds-button slds-button_neutral">Save</button>
         <Trigger className="slds-button_last" ariaExpanded="false" />
       </ButtonGroup>
+    )
   },
   {
     id: 'button-group-more-open',
     label: 'Overflow menu icon - Open',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
           <button className="slds-button slds-button_neutral">Refresh</button>
@@ -93,11 +108,12 @@ export let examples = [
           </Trigger>
         </ButtonGroup>
       </div>
+    )
   },
   {
     id: 'button-group-icon-disabled',
     label: 'Overflow menu icon - Disabled',
-    element:
+    element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
         <button className="slds-button slds-button_neutral">Edit</button>
@@ -113,12 +129,16 @@ export let examples = [
           />
         </div>
       </ButtonGroup>
+    )
   },
   {
     id: 'button-group-inverse',
     label: 'Inverse',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
           <button className="slds-button slds-button_inverse">Edit</button>
@@ -134,16 +154,22 @@ export let examples = [
           </div>
         </ButtonGroup>
       </div>
+    )
   },
   {
     id: 'button-group-inverse-disabled',
     label: 'Inverse Disabled',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse" disabled>Edit</button>
-          <button className="slds-button slds-button_inverse" >Save</button>
+          <button className="slds-button slds-button_inverse" disabled>
+            Edit
+          </button>
+          <button className="slds-button slds-button_inverse">Save</button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               className="slds-button_icon-border-inverse"
@@ -155,12 +181,16 @@ export let examples = [
           </div>
         </ButtonGroup>
       </div>
+    )
   },
   {
     id: 'button-group-icon-inverse-disabled',
     label: 'Inverse More Icon Disabled',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
           <button className="slds-button slds-button_inverse">Edit</button>
@@ -177,11 +207,12 @@ export let examples = [
           </div>
         </ButtonGroup>
       </div>
+    )
   },
   {
     id: 'button-group-icon',
     label: 'Icon group',
-    element:
+    element: (
       <ButtonGroup>
         <ButtonIcon
           className="slds-button_icon-border-filled"
@@ -204,11 +235,12 @@ export let examples = [
           title="More Actions"
         />
       </ButtonGroup>
+    )
   },
   {
     id: 'button-group-icon-selected',
     label: 'Icon group - Selected',
-    element:
+    element: (
       <ButtonGroup>
         <ButtonIcon
           className="slds-button_icon-border-filled slds-is-selected"
@@ -231,5 +263,6 @@ export let examples = [
           title="More Actions"
         />
       </ButtonGroup>
+    )
   }
 ];

@@ -11,36 +11,68 @@ import classNames from 'classnames';
 // Partial(s)
 /// ///////////////////////////////////////////
 
-let Header = props =>
+let Header = props => (
   <div className="slds-trial-header slds-grid">
     <div className="slds-grid">
-      <button className="slds-button slds-m-right_small">Take the salesforce tour</button>
-      <div className={classNames('slds-grid slds-dropdown-trigger slds-dropdown-trigger_click', props.tourMenuOpen ? 'slds-is-open' : null)}>
+      <button className="slds-button slds-m-right_small">
+        Take the salesforce tour
+      </button>
+      <div
+        className={classNames(
+          'slds-grid slds-dropdown-trigger slds-dropdown-trigger_click',
+          props.tourMenuOpen ? 'slds-is-open' : null
+        )}
+      >
         <button className="slds-button" aria-haspopup="true">
-          <SvgIcon className="slds-button__icon slds-button__icon_left" sprite="utility" symbol="right" />
+          <SvgIcon
+            className="slds-button__icon slds-button__icon_left"
+            sprite="utility"
+            symbol="right"
+          />
           Choose your tour
         </button>
         <Menu className="slds-dropdown_inverse slds-dropdown_left">
           <MenuList>
             <MenuItem tabIndex="0" className="slds-is-selected">
-              <SvgIcon className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small" sprite="utility" symbol="check" />
-              <span className="slds-assistive-text">Completed:</span> Conquer Your Cases
+              <SvgIcon
+                className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+              <span className="slds-assistive-text">Completed:</span> Conquer
+              Your Cases
             </MenuItem>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small" sprite="utility" symbol="check" />
+              <SvgIcon
+                className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
+                sprite="utility"
+                symbol="check"
+              />
               Automate For Speed
             </MenuItem>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small" sprite="utility" symbol="check" />
+              <SvgIcon
+                className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
+                sprite="utility"
+                symbol="check"
+              />
               Share Your Knowledge
             </MenuItem>
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small" sprite="utility" symbol="check" />
+              <SvgIcon
+                className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
+                sprite="utility"
+                symbol="check"
+              />
               Finish it up in a Flash
             </MenuItem>
             <li className="slds-has-divider_top-space" role="separator" />
             <MenuItem>
-              <SvgIcon className="slds-icon slds-icon_x-small slds-m-right_x-small" sprite="utility" symbol="upload" />
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-m-right_x-small"
+                sprite="utility"
+                symbol="upload"
+              />
               Import Contacts and Accounts
             </MenuItem>
           </MenuList>
@@ -50,25 +82,27 @@ let Header = props =>
     <div className="slds-grid slds-grid_vertical-align-center slds-col_bump-left">
       <span className="slds-box slds-box_xx-small slds-theme_default">30</span>
       <span className="slds-m-horizontal_x-small">Days left in trial</span>
-      <a href="javascript:void(0);" className="slds-button slds-button_success">Subscribe Now</a>
+      <a href="javascript:void(0);" className="slds-button slds-button_success">
+        Subscribe Now
+      </a>
     </div>
-  </div>;
+  </div>
+);
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Header />
-);
+export default <Header />;
 
 export let states = [
   {
     id: 'menu-open',
     label: 'Tour Menu Open',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '240px' }}>
         <Header tourMenuOpen />
       </div>
+    )
   }
 ];

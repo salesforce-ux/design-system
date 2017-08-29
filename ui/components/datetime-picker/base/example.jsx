@@ -37,7 +37,7 @@ const listboxOptionId12 = 'listbox-option-unique-id-12';
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox
     className="slds-dropdown slds-dropdown--fluid slds-dropdown--length-5"
     vertical
@@ -82,17 +82,17 @@ const ListboxDropdown = props =>
     <ListboxItem>
       <Option id={listboxOptionId12} title="5:00pm" />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{ height: '25rem' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: '25rem' }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -136,7 +136,7 @@ export let states = [
   {
     id: 'date-selection',
     label: 'Date selected',
-    element:
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
           <legend className="slds-form-element__label">Date and Time</legend>
@@ -147,9 +147,19 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
-                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateInputId}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -171,11 +181,12 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
     id: 'time-selection',
     label: 'Time selected',
-    element:
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
           <legend className="slds-form-element__label">Date and Time</legend>
@@ -186,9 +197,19 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
-                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateInputId}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -212,5 +233,6 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   }
 ];

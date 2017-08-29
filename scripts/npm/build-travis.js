@@ -19,7 +19,9 @@ const runScript = () =>
 
 const runExtraScripts = () => {
   // build snapshot
-  exec(`create-snap ${paths.generated}/examples/ ${paths.generated} ${paths.root}/assets/styles/index.css`);
+  exec(
+    `create-snap ${paths.generated}/examples/ ${paths.generated} ${paths.root}/assets/styles/index.css`
+  );
   // pass snapshot path to vrt and the output of that as components to lint
   exec(`
     echo Running VRT.... &&
@@ -30,18 +32,14 @@ const runExtraScripts = () => {
   `);
 };
 
-const publishBuild = () =>
-  exec('NODE_ENV=production npm run build-server');
+const publishBuild = () => exec('NODE_ENV=production npm run build-server');
 
 // PR's have this message as well as the "after merge button" commit
-const isMerge = () =>
-  process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge/g);
+const isMerge = () => process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge/g);
 
-const isTag = () =>
-  !!process.env.TRAVIS_TAG;
+const isTag = () => !!process.env.TRAVIS_TAG;
 
-const shouldPushToBuildServer = () =>
-  isMerge() || isTag()
+const shouldPushToBuildServer = () => isMerge() || isTag();
 
 if (process.env.BUILD_SERVER_HOST_NEW) {
   if (shouldPushToBuildServer()) {
@@ -49,4 +47,4 @@ if (process.env.BUILD_SERVER_HOST_NEW) {
     runExtraScripts();
     publishBuild();
   }
-};
+}

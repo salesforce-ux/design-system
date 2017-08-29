@@ -41,24 +41,32 @@ export let FormElement = props => {
   }
 
   return (
-    <div {...rest} className={classNames('slds-form-element', className)} role={role}>
-      { label
-        ? <label
-          className={classNames(
-            'slds-form-element__label',
-            { 'slds-assistive-text': hideLabel }
-          )}
+    <div
+      {...rest}
+      className={classNames('slds-form-element', className)}
+      role={role}
+    >
+      {label ? (
+        <label
+          className={classNames('slds-form-element__label', {
+            'slds-assistive-text': hideLabel
+          })}
           htmlFor={inputId}
         >
-          { required
-            ? <abbr className="slds-required" title="required">*</abbr>
-          : null }
-          { label }
+          {required ? (
+            <abbr className="slds-required" title="required">
+              *
+            </abbr>
+          ) : null}
+          {label}
         </label>
-      : null }
-      { tooltip
-        ? <div className="slds-form-element__icon">
-          <button aria-describedby="help" className="slds-button slds-button_icon">
+      ) : null}
+      {tooltip ? (
+        <div className="slds-form-element__icon">
+          <button
+            aria-describedby="help"
+            className="slds-button slds-button_icon"
+          >
             <SvgIcon
               className="slds-icon slds-icon_x-small slds-icon-text-default"
               sprite="utility"
@@ -67,7 +75,7 @@ export let FormElement = props => {
             <span className="slds-assistive-text">Help</span>
           </button>
         </div>
-      : null }
+      ) : null}
       <div
         className={classNames(
           'slds-form-element__control',
@@ -75,14 +83,14 @@ export let FormElement = props => {
           formControlClassName
         )}
       >
-        { children }
+        {children}
       </div>
-      { message
-        ? <div className="slds-form-element__help" id={errorId}>
-          { message }
+      {message ? (
+        <div className="slds-form-element__help" id={errorId}>
+          {message}
         </div>
-      : null }
-      { dropdown || null }
+      ) : null}
+      {dropdown || null}
     </div>
   );
 };
@@ -97,19 +105,16 @@ export let states = [
   {
     id: 'required',
     label: 'Required',
-    element:
-      <FormElement
-        label={inputLabel}
-        inputId={inputId}
-        required
-      >
+    element: (
+      <FormElement label={inputLabel} inputId={inputId} required>
         <Input id={inputId} required />
       </FormElement>
+    )
   },
   {
     id: 'error',
     label: 'Error',
-    element:
+    element: (
       <FormElement
         className="slds-has-error"
         label={inputLabel}
@@ -118,12 +123,9 @@ export let states = [
         required
         message="This field is required"
       >
-        <Input
-          id={inputId}
-          required
-          aria-describedby={errorId}
-        />
+        <Input id={inputId} required aria-describedby={errorId} />
       </FormElement>
+    )
   }
 ];
 
@@ -131,53 +133,65 @@ export let examples = [
   {
     id: 'input',
     label: 'Input',
-    element:
+    element: (
       <FormElement label={inputLabel} inputId={inputId}>
         <Input id={inputId} />
       </FormElement>
+    )
   },
   {
     id: 'textarea',
     label: 'Textarea',
-    element:
+    element: (
       <FormElement label={inputLabel} inputId={inputId}>
         <Textarea id={inputId} />
       </FormElement>
+    )
   },
   {
     id: 'checkbox',
     label: 'Checkbox',
-    element:
+    element: (
       <FormElement>
         <Checkbox label="Checkbox Label" />
       </FormElement>
+    )
   },
   {
     id: 'radio-group',
     label: 'Radio Group',
-    element:
+    element: (
       <fieldset className="slds-form-element">
-        <legend className="slds-form-element__legend slds-form-element__label">Form Element Label</legend>
+        <legend className="slds-form-element__legend slds-form-element__label">
+          Form Element Label
+        </legend>
         <div className="slds-form-element__control">
           <Radio checked label="Radio Label One" />
           <Radio label="Radio Label Two" />
         </div>
       </fieldset>
+    )
   },
   {
     id: 'inline-help',
     label: 'Inline Help',
-    element:
-      <FormElement label={inputLabel} inputId={inputId} message="ex: (415)111-2222">
+    element: (
+      <FormElement
+        label={inputLabel}
+        inputId={inputId}
+        message="ex: (415)111-2222"
+      >
         <Input id={inputId} />
       </FormElement>
+    )
   },
   {
     id: 'tooltip-help',
     label: 'Tooltip Help',
-    element:
+    element: (
       <FormElement label={inputLabel} inputId={inputId} tooltip>
         <Input id={inputId} />
       </FormElement>
+    )
   }
 ];

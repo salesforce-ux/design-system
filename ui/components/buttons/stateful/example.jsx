@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-export let StatefulButton = props =>
+export let StatefulButton = props => (
   <button
     className={classNames('slds-button slds-button_stateful', props.className)}
     disabled={props.disabled}
@@ -35,7 +35,8 @@ export let StatefulButton = props =>
       />
       Unfollow
     </span>
-  </button>;
+  </button>
+);
 
 /// ////////////////////////////////////////
 // Export

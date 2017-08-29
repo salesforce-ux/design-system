@@ -12,7 +12,12 @@ import classNames from 'classnames';
 
 export default (
   <Avatar>
-    <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+    <abbr
+      className="slds-avatar__initials slds-icon-standard-account"
+      title="company name"
+    >
+      Ac
+    </abbr>
   </Avatar>
 );
 
@@ -20,49 +25,85 @@ export let states = [
   {
     id: 'avatar-square-initials',
     label: 'Square Initials',
-    element:
+    element: (
       <Avatar className="slds-avatar_medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
       </Avatar>
+    )
   },
   {
     id: 'avatar-circle-initials',
     label: 'Circle Initials',
-    element:
+    element: (
       <Avatar className="slds-avatar_circle slds-avatar_medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-user" title="person name">AB</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-user"
+          title="person name"
+        >
+          AB
+        </abbr>
       </Avatar>
+    )
   },
   {
     id: 'size-x-small',
     label: 'Size - X Small',
-    element:
+    element: (
       <Avatar className="slds-avatar_x-small">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
       </Avatar>
+    )
   },
   {
     id: 'size-small',
     label: 'Size - Small',
-    element:
+    element: (
       <Avatar className="slds-avatar_small">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
       </Avatar>
+    )
   },
   {
     id: 'size-medium',
     label: 'Size - Medium',
-    element:
+    element: (
       <Avatar className="slds-avatar_medium">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
       </Avatar>
+    )
   },
   {
     id: 'size-large',
     label: 'Size - Large',
-    element:
+    element: (
       <Avatar className="slds-avatar_large">
-        <abbr className="slds-avatar__initials slds-icon-standard-account" title="company name">Ac</abbr>
+        <abbr
+          className="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
       </Avatar>
+    )
   }
 ];

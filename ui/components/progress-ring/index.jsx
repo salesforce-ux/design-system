@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 class ProgressRing extends Component {
-  getCoordinatesForPercent (percent) {
+  getCoordinatesForPercent(percent) {
     const pct = percent / 100;
     const x = Math.cos(2 * Math.PI * pct);
     const y = Math.sin(2 * Math.PI * pct);
@@ -13,10 +13,10 @@ class ProgressRing extends Component {
     return { x, y };
   }
 
-  render () {
+  render() {
     const { percent, isWarning, isComplete, isExpired } = this.props;
     const { x, y } = this.getCoordinatesForPercent(percent);
-    const isLong = (percent > 50) ? 1 : 0;
+    const isLong = percent > 50 ? 1 : 0;
     let stateClass;
 
     if (isWarning) stateClass = 'slds-progress-ring_warning';
@@ -41,13 +41,11 @@ class ProgressRing extends Component {
           </svg>
         </div>
 
-        <div className="slds-progress-ring__content">
-          {this.props.children}
-        </div>
+        <div className="slds-progress-ring__content">{this.props.children}</div>
       </div>
     );
   }
-};
+}
 
 ProgressRing.propTypes = {
   percent: React.PropTypes.number

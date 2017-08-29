@@ -4,23 +4,38 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import { Section, SectionContent, SectionTitle, SectionTitleAction }
-  from '../../expandable-section/base/example';
+import {
+  Section,
+  SectionContent,
+  SectionTitle,
+  SectionTitleAction
+} from '../../expandable-section/base/example';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';
 const referenceId03 = 'accordion-details-03';
 
-let Accordion = props =>
+let Accordion = props => (
   <ul className={classNames('slds-accordion', props.className)}>
-    { props.children }
-  </ul>;
+    {props.children}
+  </ul>
+);
 
-let AccordionSection = props =>
+let AccordionSection = props => (
   <li className="slds-accordion__list-item">
-    <section className={classNames('slds-accordion__section', props.isOpen ? 'slds-is-open' : null)}>
+    <section
+      className={classNames(
+        'slds-accordion__section',
+        props.isOpen ? 'slds-is-open' : null
+      )}
+    >
       <div className={classNames('slds-accordion__summary', props.className)}>
-        <h3 className={classNames('slds-text-heading_small slds-accordion__summary-heading', props.className)}>
+        <h3
+          className={classNames(
+            'slds-text-heading_small slds-accordion__summary-heading',
+            props.className
+          )}
+        >
           <button
             aria-controls={props.referenceId}
             aria-expanded={props.isOpen}
@@ -31,11 +46,14 @@ let AccordionSection = props =>
               sprite="utility"
               symbol="switch"
             />
-            <span className="slds-truncate" title={props.summary}>{ props.summary }</span>
+            <span className="slds-truncate" title={props.summary}>
+              {props.summary}
+            </span>
           </button>
         </h3>
         <button
-          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none" aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+          aria-haspopup="true"
         >
           <SvgIcon
             className="slds-button__icon"
@@ -50,10 +68,11 @@ let AccordionSection = props =>
         className={classNames('slds-accordion__content', props.className)}
         id={props.referenceId}
       >
-        { props.children }
+        {props.children}
       </div>
     </section>
-  </li>;
+  </li>
+);
 
 export default (
   <Accordion>
@@ -85,7 +104,7 @@ export let states = [
   {
     id: 'section-one-open',
     label: 'Section one open',
-    element:
+    element: (
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
@@ -109,11 +128,12 @@ export let states = [
           Accordion details - C
         </AccordionSection>
       </Accordion>
+    )
   },
   {
     id: 'section-two-open',
     label: 'Section two open',
-    element:
+    element: (
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
@@ -137,11 +157,12 @@ export let states = [
           Accordion details - C
         </AccordionSection>
       </Accordion>
+    )
   },
   {
     id: 'section-three-open',
     label: 'Section three open',
-    element:
+    element: (
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
@@ -165,11 +186,12 @@ export let states = [
           Accordion details - C
         </AccordionSection>
       </Accordion>
+    )
   },
   {
     id: 'styled',
     label: 'Styled',
-    element:
+    element: (
       <div className="slds-card">
         <Accordion>
           <AccordionSection
@@ -195,5 +217,6 @@ export let states = [
           </AccordionSection>
         </Accordion>
       </div>
+    )
   }
 ];

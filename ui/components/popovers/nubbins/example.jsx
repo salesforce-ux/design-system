@@ -8,27 +8,33 @@ import { ButtonIcon } from '../../button-icons/base/example';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Popover = props =>
-<section
-  aria-label="Dialog title"
-  aria-describedby="popover-body-id"
-  className={`slds-popover slds-nubbin_${props.nubbinPosition}`}
-  role="dialog">
-  <ButtonIcon
-    className="slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    symbol="close"
-    assistiveText="Close dialog"
-    title="Close dialog"
-  />
-  <div id="popover-body-id" className="slds-popover__body">
-    <code>
-      slds-popover
-      <br />
-      {`slds-nubbin_${props.nubbinPosition}`}
-    </code>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
-  </div>
-</section>;
+let Popover = props => (
+  <section
+    aria-label="Dialog title"
+    aria-describedby="popover-body-id"
+    className={`slds-popover slds-nubbin_${props.nubbinPosition}`}
+    role="dialog"
+  >
+    <ButtonIcon
+      className="slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+      symbol="close"
+      assistiveText="Close dialog"
+      title="Close dialog"
+    />
+    <div id="popover-body-id" className="slds-popover__body">
+      <code>
+        slds-popover
+        <br />
+        {`slds-nubbin_${props.nubbinPosition}`}
+      </code>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat?
+        Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse
+        quasi!
+      </p>
+    </div>
+  </section>
+);
 
 /// ///////////////////////////////////////////
 // Export

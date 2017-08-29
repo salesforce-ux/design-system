@@ -17,7 +17,9 @@ export let CustomIcon = props => {
         sprite="custom"
         symbol={symbol}
       />
-      <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon when needed' }</span>
+      <span className="slds-assistive-text">
+        {props.assistiveText || 'Description of icon when needed'}
+      </span>
     </span>
   );
 };
@@ -26,6 +28,4 @@ export let CustomIcon = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <CustomIcon />
-);
+export default <CustomIcon />;

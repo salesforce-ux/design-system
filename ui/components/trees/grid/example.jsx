@@ -10,8 +10,12 @@ import SvgIcon from '../../../shared/svg-icon';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-const TreeGrid = props =>
-  <table className="slds-table slds-table_bordered slds-tree slds-table_tree" role="treegrid" aria-readonly="true">
+const TreeGrid = props => (
+  <table
+    className="slds-table slds-table_bordered slds-tree slds-table_tree"
+    role="treegrid"
+    aria-readonly="true"
+  >
     <thead>
       <tr className="slds-text-title_caps">
         <th className="slds-cell-buffer_left" scope="col">
@@ -24,13 +28,31 @@ const TreeGrid = props =>
               tabIndex="-1"
               title="Expand all rows"
             />
-            <div className="slds-truncate" title="Account Name">Account Name</div>
+            <div className="slds-truncate" title="Account Name">
+              Account Name
+            </div>
           </div>
         </th>
-        <th scope="col"><div className="slds-truncate" title="Employees">Employees</div></th>
-        <th scope="col"><div className="slds-truncate" title="Phone Number">Phone Number</div></th>
-        <th scope="col"><div className="slds-truncate" title="Account Owner">Account Owner</div></th>
-        <th scope="col"><div className="slds-truncate" title="Billing City">Billing City</div></th>
+        <th scope="col">
+          <div className="slds-truncate" title="Employees">
+            Employees
+          </div>
+        </th>
+        <th scope="col">
+          <div className="slds-truncate" title="Phone Number">
+            Phone Number
+          </div>
+        </th>
+        <th scope="col">
+          <div className="slds-truncate" title="Account Owner">
+            Account Owner
+          </div>
+        </th>
+        <th scope="col">
+          <div className="slds-truncate" title="Billing City">
+            Billing City
+          </div>
+        </th>
         <th className="slds-cell-shrink" scope="col">
           <ButtonIcon
             aria-haspopup="true"
@@ -45,9 +67,10 @@ const TreeGrid = props =>
       </tr>
     </thead>
     {props.children}
-  </table>;
+  </table>
+);
 
-const Row = props =>
+const Row = props => (
   <tr
     aria-expanded={props['aria-expanded']}
     aria-level={props['aria-level']}
@@ -56,24 +79,35 @@ const Row = props =>
     className="slds-hint-parent"
     tabIndex={props.focusable ? '0' : null}
   >
-    <th
-      className="slds-tree__item"
-      data-label="Account Name"
-      scope="row"
-    >
+    <th className="slds-tree__item" data-label="Account Name" scope="row">
       <ButtonIcon
         aria-hidden="true"
-        assistiveText={props['aria-expanded'] ? `Expand ${props.name}` : `Collapse ${props.name}`}
-        className={classNames('slds-button_icon slds-button_icon-x-small slds-m-right_x-small', (props['aria-expanded']) ? null : 'slds-is-disabled')}
+        assistiveText={
+          props['aria-expanded'] ? (
+            `Expand ${props.name}`
+          ) : (
+            `Collapse ${props.name}`
+          )
+        }
+        className={classNames(
+          'slds-button_icon slds-button_icon-x-small slds-m-right_x-small',
+          props['aria-expanded'] ? null : 'slds-is-disabled'
+        )}
         iconClassName="slds-button__icon_small"
         symbol="chevronright"
         tabIndex="-1"
-        title={props['aria-expanded'] ? `Collapse ${props.name}` : `Expand ${props.name}`}
+        title={
+          props['aria-expanded'] ? (
+            `Collapse ${props.name}`
+          ) : (
+            `Expand ${props.name}`
+          )
+        }
       />
       <div className="slds-truncate" title={props.name}>
-          <a href="javascript:void(0);" tabIndex="-1">
-            {props.name}
-          </a>
+        <a href="javascript:void(0);" tabIndex="-1">
+          {props.name}
+        </a>
       </div>
     </th>
     <td data-label="Employees">
@@ -109,9 +143,10 @@ const Row = props =>
         title={`More actions for ${props.name}`}
       />
     </td>
-  </tr>;
+  </tr>
+);
 
-const Default = props =>
+const Default = props => (
   <tbody>
     <Row
       aria-level="1"
@@ -157,9 +192,10 @@ const Default = props =>
       owner="Jane Doe"
       city="Paris, France"
     />
-  </tbody>;
+  </tbody>
+);
 
-const Expanded = props =>
+const Expanded = props => (
   <Row
     aria-level="2"
     aria-posinset="1"
@@ -169,9 +205,10 @@ const Expanded = props =>
     phone="837-555-1212"
     owner="John Doe"
     city="New York, NY"
-  />;
+  />
+);
 
-const DeepNesting = props =>
+const DeepNesting = props => (
   <tbody>
     <Row
       aria-level="1"
@@ -321,31 +358,36 @@ const DeepNesting = props =>
       owner="John Doe"
       city="Los Angeles, CA"
     />
-  </tbody>;
+  </tbody>
+);
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <TreeGrid><Default /></TreeGrid>
+  <TreeGrid>
+    <Default />
+  </TreeGrid>
 );
 
 export let states = [
   {
     id: 'expanded',
     label: 'Expanded',
-    element:
-    <TreeGrid>
-      <Default isExpanded additionalItem={<Expanded />} />
-    </TreeGrid>
+    element: (
+      <TreeGrid>
+        <Default isExpanded additionalItem={<Expanded />} />
+      </TreeGrid>
+    )
   },
   {
     id: 'deep-nesting',
     label: 'Deeply nested branches',
-    element:
-    <TreeGrid>
-      <DeepNesting />
-    </TreeGrid>
+    element: (
+      <TreeGrid>
+        <DeepNesting />
+      </TreeGrid>
+    )
   }
 ];

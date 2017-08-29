@@ -17,7 +17,11 @@ import Heading from '../../heading/index.react';
 import classNames from 'classnames';
 
 const icon = (
-  <SvgIcon className="slds-button__icon slds-button__icon_right slds-no-flex" sprite="utility" symbol="down" />
+  <SvgIcon
+    className="slds-button__icon slds-button__icon_right slds-no-flex"
+    sprite="utility"
+    symbol="down"
+  />
 );
 
 const image = (
@@ -26,7 +30,7 @@ const image = (
   </span>
 );
 
-export let ObjectHome = props =>
+export let ObjectHome = props => (
   <div className={classNames('slds-page-header', props.className)}>
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
@@ -49,8 +53,13 @@ export let ObjectHome = props =>
                 title=""
               >
                 <span className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
-                  <span className="slds-truncate" title="Recently Viewed">Recently Viewed</span>
-                  <UtilityIcon className="slds-icon--x-small slds-m-left_xx-small" symbol="down" />
+                  <span className="slds-truncate" title="Recently Viewed">
+                    Recently Viewed
+                  </span>
+                  <UtilityIcon
+                    className="slds-icon--x-small slds-m-left_xx-small"
+                    symbol="down"
+                  />
                 </span>
               </button>
             </h1>
@@ -58,91 +67,98 @@ export let ObjectHome = props =>
         </div>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
-          <div className="slds-button-group" role="group">
-            <button className="slds-button slds-button_neutral">New</button>
-            <div className="slds-button_last">
-              <ButtonIcon
-                className="slds-button_icon-border-filled"
-                symbol="down"
-                aria-haspopup="true"
-                assistiveText="More Actions"
-                title="More Actions" />
-            </div>
-          </div>
-        </div>
-        </div>
-        <div className="slds-grid">
-          <div className="slds-col slds-align-middle">
-            <p className="slds-text-body_small">10 items &bull; Updated 13 minutes ago</p>
-          </div>
-          <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
-            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
-              <ButtonIcon
-                className="slds-button_icon-more"
-                symbol="settings"
-                hasDropdown
-                assistiveText="List View Controls"
-                title="List View Controls"
-              />
-            </div>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small">
-              <ButtonIcon
-                className="slds-button_icon-more"
-                symbol="table"
-                hasDropdown
-                assistiveText="Change view"
-                title="Change view"
-              />
-            </div>
+        <div className="slds-button-group" role="group">
+          <button className="slds-button slds-button_neutral">New</button>
+          <div className="slds-button_last">
             <ButtonIcon
-              className="slds-m-left_xx-small slds-button_icon-border-filled"
-              symbol="edit"
-              assistiveText="Edit List"
-              title="Edit List"
+              className="slds-button_icon-border-filled"
+              symbol="down"
+              aria-haspopup="true"
+              assistiveText="More Actions"
+              title="More Actions"
             />
-            <ButtonIcon
-              className="slds-m-left_xx-small slds-button_icon-border-filled"
-              symbol="refresh"
-              assistiveText="Refresh"
-              title="Refresh"
-            />
-            <div className="slds-button-group" role="group">
-              <ButtonIcon
-                className="slds-button_icon-border-filled"
-                symbol="chart"
-                assistiveText="Charts"
-                title="Charts"
-              />
-              <ButtonIcon
-                className="slds-button_icon-border-filled"
-                symbol="filterList"
-                assistiveText="Filters"
-                title="Filters"
-              />
           </div>
         </div>
       </div>
-    </div>;
-
-export default (
-  <ObjectHome />
+    </div>
+    <div className="slds-grid">
+      <div className="slds-col slds-align-middle">
+        <p className="slds-text-body_small">
+          10 items &bull; Updated 13 minutes ago
+        </p>
+      </div>
+      <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+          aria-expanded="false"
+        >
+          <ButtonIcon
+            className="slds-button_icon-more"
+            symbol="settings"
+            hasDropdown
+            assistiveText="List View Controls"
+            title="List View Controls"
+          />
+        </div>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small">
+          <ButtonIcon
+            className="slds-button_icon-more"
+            symbol="table"
+            hasDropdown
+            assistiveText="Change view"
+            title="Change view"
+          />
+        </div>
+        <ButtonIcon
+          className="slds-m-left_xx-small slds-button_icon-border-filled"
+          symbol="edit"
+          assistiveText="Edit List"
+          title="Edit List"
+        />
+        <ButtonIcon
+          className="slds-m-left_xx-small slds-button_icon-border-filled"
+          symbol="refresh"
+          assistiveText="Refresh"
+          title="Refresh"
+        />
+        <div className="slds-button-group" role="group">
+          <ButtonIcon
+            className="slds-button_icon-border-filled"
+            symbol="chart"
+            assistiveText="Charts"
+            title="Charts"
+          />
+          <ButtonIcon
+            className="slds-button_icon-border-filled"
+            symbol="filterList"
+            assistiveText="Filters"
+            title="Filters"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 );
+
+export default <ObjectHome />;
 
 export let examples = [
   {
     id: 'card',
     label: 'Inside a card',
-    element:
-    <div className="slds-card">
-      <ObjectHome />
-    </div>
+    element: (
+      <div className="slds-card">
+        <ObjectHome />
+      </div>
+    )
   },
   {
     id: 'tab-card',
     label: 'Inside a tabs card',
-    element:
-    <div className="slds-tabs_card">
-      <ObjectHome />
-    </div>
+    element: (
+      <div className="slds-tabs_card">
+        <ObjectHome />
+      </div>
+    )
   }
 ];

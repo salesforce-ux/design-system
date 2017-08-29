@@ -49,9 +49,13 @@ const errorMessage = 'Please ensure value is correct';
 /**
  * Swatch Subcomponent
  */
-const Swatch = (props) => {
+const Swatch = props => {
   return (
-    <span key={_.uniqueId('swatch-')} className="slds-swatch" style={{background: props.color}}>
+    <span
+      key={_.uniqueId('swatch-')}
+      className="slds-swatch"
+      style={{ background: props.color }}
+    >
       <span className="slds-assistive-text" aria-hidden={props.ariaHidden}>
         {props.color}
       </span>
@@ -62,7 +66,7 @@ const Swatch = (props) => {
 /**
  * Summary Subcomponent
  */
-export const ColorPickerSummary = (props) => {
+export const ColorPickerSummary = props => {
   const { hasSummaryError } = props;
   const errorId = 'color-picker-summary-error';
 
@@ -75,14 +79,20 @@ export const ColorPickerSummary = (props) => {
         Choose Color
       </label>
 
-      <Button className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more" aria-haspopup title="Choose Color">
+      <Button
+        className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        aria-haspopup
+        title="Choose Color"
+      >
         <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
         <SvgIcon
           className="slds-button__icon slds-button__icon_small"
           sprite="utility"
           symbol="down"
         />
-        <span className="slds-assistive-text">Choose a color. Current color: #5679C0</span>
+        <span className="slds-assistive-text">
+          Choose a color. Current color: #5679C0
+        </span>
       </Button>
 
       <FormElement
@@ -109,15 +119,19 @@ export const ColorPickerSummary = (props) => {
 /**
  * Swatches (list of Swatch elements) Subcomponent
  */
-export const ColorPickerSwatches = (props) => {
+export const ColorPickerSwatches = props => {
   const { isMenuRole } = props;
   const swatchesRole = isMenuRole ? 'menu' : 'listbox';
   const linkRole = isMenuRole ? 'menuitem' : 'option';
 
   return (
     <ul className="slds-color-picker__swatches" role={swatchesRole}>
-      {swatchColors.map((swatch, index) =>
-        <li key={_.uniqueId('color-picker-swatch-')} className="slds-color-picker__swatch" role="presentation">
+      {swatchColors.map((swatch, index) => (
+        <li
+          key={_.uniqueId('color-picker-swatch-')}
+          className="slds-color-picker__swatch"
+          role="presentation"
+        >
           <a
             className="slds-color-picker__swatch-trigger"
             href="#"
@@ -127,7 +141,7 @@ export const ColorPickerSwatches = (props) => {
             <Swatch color={swatch} index={index} />
           </a>
         </li>
-      )}
+      ))}
     </ul>
   );
 };
@@ -135,7 +149,7 @@ export const ColorPickerSwatches = (props) => {
 /**
  * Custom Picker Subcomponent
  */
-const ColorPickerCustom = (props) => {
+const ColorPickerCustom = props => {
   const rangeInputId = _.uniqueId('color-picker-input-range-');
   const hexInputId = _.uniqueId('color-picker-input-hex-');
   const rInputId = _.uniqueId('color-picker-input-r-');
@@ -146,23 +160,40 @@ const ColorPickerCustom = (props) => {
 
   return (
     <div className="slds-color-picker__custom">
-      <p id="color-picker-instructions" className="slds-assistive-text">Use arrow keys to select a saturation and brightness, on an x and y axis.</p>
-      <div className="slds-color-picker__custom-range" style={{background: 'hsl(220, 100%, 50%)'}}>
+      <p id="color-picker-instructions" className="slds-assistive-text">
+        Use arrow keys to select a saturation and brightness, on an x and y
+        axis.
+      </p>
+      <div
+        className="slds-color-picker__custom-range"
+        style={{ background: 'hsl(220, 100%, 50%)' }}
+      >
         <a
           className="slds-color-picker__range-indicator"
-          style={{bottom: '45%', left: '46%'}}
+          style={{ bottom: '45%', left: '46%' }}
           href="#"
           aria-live="assertive"
           aria-atomic="true"
           aria-describedby="color-picker-instructions"
         >
-          <span className="slds-assistive-text">Saturation: 46%. Brightness: 45%.</span>
+          <span className="slds-assistive-text">
+            Saturation: 46%. Brightness: 45%.
+          </span>
         </a>
       </div>
 
       <div className="slds-color-picker__hue-and-preview">
-        <label className="slds-assistive-text" htmlFor={rangeInputId}>Select Hue</label>
-        <input type="range" className="slds-color-picker__hue-slider" min="0" max="360" defaultValue="208" id={rangeInputId} />
+        <label className="slds-assistive-text" htmlFor={rangeInputId}>
+          Select Hue
+        </label>
+        <input
+          type="range"
+          className="slds-color-picker__hue-slider"
+          min="0"
+          max="360"
+          defaultValue="208"
+          id={rangeInputId}
+        />
         <Swatch color="#5679C0" ariaHidden />
       </div>
 
@@ -194,11 +225,11 @@ const ColorPickerCustom = (props) => {
         </FormElement>
       </div>
 
-      { hasCustomError ? (
+      {hasCustomError ? (
         <p className="slds-form-error" id={customErrorId}>
           {errorMessage}
         </p>
-      ) : null }
+      ) : null}
     </div>
   );
 };
@@ -216,7 +247,7 @@ const ColorPickerFooter = () => (
 /**
  * Tabs Subcomponent
  */
-const ColorPickerTabs = (props) => (
+const ColorPickerTabs = props => (
   <Tabs selectedIndex={props.selectedTabIndex}>
     <Tabs.Item title="Default" id="color-picker-default">
       <ColorPickerSwatches />
@@ -229,7 +260,7 @@ const ColorPickerTabs = (props) => (
 );
 
 class ColorPicker extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super();
 
     this.state = {
@@ -242,34 +273,36 @@ class ColorPicker extends React.Component {
     this.isSwatchesOnlyMode = this.isSwatchesOnlyMode.bind(this);
   }
 
-  isFullFeatureMode () {
+  isFullFeatureMode() {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && hasCustom);
   }
 
-  isPredefinedMode () {
+  isPredefinedMode() {
     const { hasPredefined, hasCustom } = this.props;
     return !!(hasPredefined && !hasCustom);
   }
 
-  isCustomOnlyMode () {
+  isCustomOnlyMode() {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && hasCustom);
   }
 
-  isSwatchesOnlyMode () {
+  isSwatchesOnlyMode() {
     const { hasPredefined, hasCustom } = this.props;
     return !!(!hasPredefined && !hasCustom);
   }
 
-  render () {
+  render() {
     const { selectedTabIndex } = this.state;
     const { isOpen, hasSummaryError, hasCustomError } = this.props;
     const popoverState = isOpen ? 'slds-show' : 'slds-hide';
     const colorPickerSummary = this.isSwatchesOnlyMode() ? null : (
       <ColorPickerSummary hasSummaryError={hasSummaryError} />
     );
-    const footerContent = this.isSwatchesOnlyMode() ? null : <ColorPickerFooter />;
+    const footerContent = this.isSwatchesOnlyMode() ? null : (
+      <ColorPickerFooter />
+    );
     let colorPickerContent = null;
 
     if (this.isFullFeatureMode()) {
@@ -282,9 +315,13 @@ class ColorPicker extends React.Component {
     } else if (this.isPredefinedMode()) {
       colorPickerContent = <ColorPickerSwatches />;
     } else if (this.isCustomOnlyMode()) {
-      colorPickerContent = <ColorPickerCustom hasCustomError={hasCustomError} />;
+      colorPickerContent = (
+        <ColorPickerCustom hasCustomError={hasCustomError} />
+      );
     } else if (this.isSwatchesOnlyMode()) {
-      colorPickerContent = <ColorPickerTabs selectedTabIndex={selectedTabIndex} />;
+      colorPickerContent = (
+        <ColorPickerTabs selectedTabIndex={selectedTabIndex} />
+      );
     }
 
     return (
@@ -301,7 +338,7 @@ class ColorPicker extends React.Component {
       </div>
     );
   }
-};
+}
 
 ColorPicker.defaultProps = {
   selectedTabIndex: 0,

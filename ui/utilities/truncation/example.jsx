@@ -4,7 +4,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-let ListItem = props =>
+let ListItem = props => (
   <li
     className={classNames(
       'slds-list__item slds-m-right_large slds-grid',
@@ -13,13 +13,18 @@ let ListItem = props =>
   >
     <span>To:</span>
     <span className="slds-m-left_xx-small slds-truncate" title={props.title}>
-      {props.children}</span>
+      {props.children}
+    </span>
     <span className="slds-m-left_xx-small slds-no-flex"> + 44 more</span>
-  </li>;
+  </li>
+);
 
-let List = props =>
+let List = props => (
   <ul>
-    <ListItem title="Lei Chan" className={'slds-truncate_container_' + props.width}>
+    <ListItem
+      title="Lei Chan"
+      className={'slds-truncate_container_' + props.width}
+    >
       <a href="javascript:void(0);">Lei Chan</a>
     </ListItem>
     <ListItem
@@ -32,23 +37,29 @@ let List = props =>
       title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
       className={'slds-truncate_container_' + props.width}
     >
-      <a href="javascript:void(0);">Lei Chan with Long Name that might go on for quite some distance futher than you might expect</a>
+      <a href="javascript:void(0);">
+        Lei Chan with Long Name that might go on for quite some distance futher
+        than you might expect
+      </a>
     </ListItem>
-  </ul>;
+  </ul>
+);
 
 export let examples = [
   {
     id: 'fluid',
     label: 'Fluid',
-    element:
+    element: (
       <div className="slds-size_1-of-2">
         <p
           className="slds-truncate"
           title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages."
         >
-          Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.
+          Long text field with many lines and truncation will look like this.
+          Even though the text might go on for ages and ages.
         </p>
       </div>
+    )
   },
   {
     id: '25%',

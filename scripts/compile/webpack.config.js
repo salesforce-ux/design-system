@@ -1,14 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const I = require("immutable");
-const path = require("path");
-const paths = require("../helpers/paths");
+const I = require('immutable');
+const path = require('path');
+const paths = require('../helpers/paths');
 
 module.exports = I.fromJS({
   output: {
     path: paths.dist,
-    publicPath: "/assets/scripts/bundle/"
+    publicPath: '/assets/scripts/bundle/'
   },
   module: {
     rules: [
@@ -17,11 +17,11 @@ module.exports = I.fromJS({
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
               babelrc: false,
-              presets: ["es2015", "react"],
-              plugins: ["transform-object-rest-spread"]
+              presets: ['es2015', 'react'],
+              plugins: ['transform-object-rest-spread']
             }
           }
         ]
@@ -30,11 +30,11 @@ module.exports = I.fromJS({
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader/useable",
-            options: { insertInto: "iframe[data-slds-doc]" }
+            loader: 'style-loader/useable',
+            options: { insertInto: 'iframe[data-slds-doc]' }
           },
-          { loader: "raw-loader" },
-          { loader: "sass-loader" }
+          { loader: 'raw-loader' },
+          { loader: 'sass-loader' }
         ]
       },
       {
@@ -42,13 +42,13 @@ module.exports = I.fromJS({
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader"
+            loader: 'babel-loader'
           },
           {
-            loader: "./scripts/compile/mdx-post-loader"
+            loader: './scripts/compile/mdx-post-loader'
           },
           {
-            loader: "mdx-loader",
+            loader: 'mdx-loader',
             options: {
               unwrapped: false
             }
@@ -58,10 +58,10 @@ module.exports = I.fromJS({
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
       // This is intentional. A detailed error will be thrown (see bundle.js)
-      lodash: ""
+      lodash: ''
     }
   },
   plugins: []

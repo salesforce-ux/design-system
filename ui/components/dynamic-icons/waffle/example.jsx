@@ -8,11 +8,15 @@ import classNames from 'classnames';
     Public
 ----------------------------------------------------------------------------- */
 
-export let WaffleIcon = props =>
+export let WaffleIcon = props => (
   <button
     {...props}
-    className={classNames('slds-button slds-icon-waffle_container', props.className)}
-    title="Description of the icon when needed">
+    className={classNames(
+      'slds-button slds-icon-waffle_container',
+      props.className
+    )}
+    title="Description of the icon when needed"
+  >
     <span className="slds-icon-waffle">
       <span className="slds-r1" />
       <span className="slds-r2" />
@@ -25,13 +29,12 @@ export let WaffleIcon = props =>
       <span className="slds-r9" />
     </span>
     <span className="slds-assistive-text">Open App Launcher</span>
-  </button>;
+  </button>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <WaffleIcon />
-);
+export default <WaffleIcon />;

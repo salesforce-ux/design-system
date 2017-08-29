@@ -14,16 +14,19 @@ const jar = require('vnu-jar/vnu-jar');
 const FILEPATH = '.reports/';
 const FILENAME = 'vnu_report.json';
 
-const lint = function (dir, opt, cb) {
+const lint = function(dir, opt, cb) {
   let vnu = 'java -jar ' + jar;
 
-  const options = _.assign({
-    'errors-only': false,
-    'format': 'gnu',
-    'html': false,
-    'no-stream': false,
-    'verbose': false
-  }, opt);
+  const options = _.assign(
+    {
+      'errors-only': false,
+      format: 'gnu',
+      html: false,
+      'no-stream': false,
+      verbose: false
+    },
+    opt
+  );
 
   // Set options
   Object.keys(options).forEach(key => {
@@ -32,7 +35,7 @@ const lint = function (dir, opt, cb) {
     if (val === true) vnu += '--' + key + ' ';
   });
   console.log(vnu, dir);
-  exec(`${vnu} ${dir}`, {maxBuffer: Infinity}, cb);
+  exec(`${vnu} ${dir}`, { maxBuffer: Infinity }, cb);
 };
 
 const parseLine = file => {
@@ -40,29 +43,27 @@ const parseLine = file => {
   const name = rest.split('.html')[0];
   // eslint-disable-next-line no-unused-vars
   const [_name, line, type, val] = rest.split(':');
-  return {name, line, val, type: String(type).trim()};
+  return { name, line, val, type: String(type).trim() };
 };
 
 const report = output =>
   _(output.split('\n'))
-  .flatMap(parseLine)
-  .filter(x => x.name)
-  .groupBy('name')
-  .mapValues(groups =>
-    groups
-    .map(({line, type, val}) =>
-      ({[line]: {[type]: val}})
+    .flatMap(parseLine)
+    .filter(x => x.name)
+    .groupBy('name')
+    .mapValues(groups =>
+      groups.map(({ line, type, val }) => ({ [line]: { [type]: val } }))
     )
-  ).value();
+    .value();
 
 const parseComponentArgument = argv =>
   minimist(argv.slice(2)).components || '*';
 
 const getComponentsToTest = argv =>
   String(parseComponentArgument(argv))
-  .split(',')
-  .map(x => `.html/${x}*.html`)
-  .join(' ');
+    .split(',')
+    .map(x => `.html/${x}*.html`)
+    .join(' ');
 
 const createVnuReport = (stream, argv) => {
   // eslint-disable-next-line handle-callback-err
@@ -73,7 +74,8 @@ const createVnuReport = (stream, argv) => {
       new gutil.File({
         path: FILENAME,
         contents: Buffer.from(contents)
-      }));
+      })
+    );
   });
 };
 

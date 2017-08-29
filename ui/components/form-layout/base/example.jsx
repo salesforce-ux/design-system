@@ -13,7 +13,7 @@ const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';
 const inputId03 = 'input-id-03';
 
-let Form = props =>
+let Form = props => (
   <div className={classNames('slds-form', props.className)}>
     <FormElement label="Text Input" inputId={inputId01}>
       <Input id={inputId01} />
@@ -22,12 +22,11 @@ let Form = props =>
       <Textarea id={inputId02} />
     </FormElement>
     <fieldset className="slds-form-element">
-      <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
+      <legend className="slds-form-element__legend slds-form-element__label">
+        Checkbox Group label
+      </legend>
       <div className="slds-form-element__control">
-        <Checkbox
-          label="All opportunities owned by you"
-          name="default"
-        />
+        <Checkbox label="All opportunities owned by you" name="default" />
         <Checkbox
           label="All contacts in the account owned by you"
           name="default"
@@ -35,23 +34,18 @@ let Form = props =>
       </div>
     </fieldset>
     <fieldset className="slds-form-element">
-      <legend className="slds-form-element__legend slds-form-element__label">Checkbox Group label</legend>
+      <legend className="slds-form-element__legend slds-form-element__label">
+        Checkbox Group label
+      </legend>
       <div className="slds-form-element__control">
-        <Radio
-          label="Lead Generation"
-          name="options"
-        />
-        <Radio
-          label="Education Leads"
-          name="options"
-        />
+        <Radio label="Lead Generation" name="options" />
+        <Radio label="Education Leads" name="options" />
       </div>
     </fieldset>
-  </div>;
-
-export default (
-  <Form className="slds-form_stacked" />
+  </div>
 );
+
+export default <Form className="slds-form_stacked" />;
 
 export let states = [
   {

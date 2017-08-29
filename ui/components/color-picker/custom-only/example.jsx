@@ -4,9 +4,7 @@
 import React from 'react';
 import ColorPicker from '../';
 
-export default (
-  <ColorPicker hasPredefined={false} />
-);
+export default <ColorPicker hasPredefined={false} />;
 
 export const states = [
   {

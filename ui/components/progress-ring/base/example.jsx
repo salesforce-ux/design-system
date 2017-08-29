@@ -5,9 +5,7 @@ import React from 'react';
 import ProgressRing from '../';
 import { UtilityIcon } from '../../icons/base/example';
 
-export default (
-  <ProgressRing percent={100} />
-);
+export default <ProgressRing percent={100} />;
 
 export const examples = [
   {
@@ -20,11 +18,7 @@ export const examples = [
     label: 'With Warning Icon',
     element: (
       <ProgressRing percent={20} isWarning>
-        <UtilityIcon
-          symbol="warning"
-          title="Warning"
-          assistiveText="Warning"
-        />
+        <UtilityIcon symbol="warning" title="Warning" assistiveText="Warning" />
       </ProgressRing>
     )
   },
@@ -33,11 +27,7 @@ export const examples = [
     label: 'With Expired Icon',
     element: (
       <ProgressRing percent={0} isExpired>
-        <UtilityIcon
-          symbol="error"
-          title="Expired"
-          assistiveText="Expired"
-        />
+        <UtilityIcon symbol="error" title="Expired" assistiveText="Expired" />
       </ProgressRing>
     )
   },
@@ -46,11 +36,7 @@ export const examples = [
     label: 'Complete',
     element: (
       <ProgressRing percent={100} isComplete>
-        <UtilityIcon
-          symbol="check"
-          title="Complete"
-          assistiveText="Complete"
-        />
+        <UtilityIcon symbol="check" title="Complete" assistiveText="Complete" />
       </ProgressRing>
     )
   }

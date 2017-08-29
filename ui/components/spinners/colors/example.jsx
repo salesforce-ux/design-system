@@ -10,10 +10,14 @@ import { Spinner } from '../base/example';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Demo = props =>
-  <div className={classNames('demo-only', props.className)} style={{height: '5rem'}}>
+let Demo = props => (
+  <div
+    className={classNames('demo-only', props.className)}
+    style={{ height: '5rem' }}
+  >
     {props.children}
-  </div>;
+  </div>
+);
 
 /// ///////////////////////////////////////////
 // Export
@@ -23,31 +27,34 @@ export let states = [
   {
     id: 'default',
     label: 'Default',
-    element:
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
       </Demo>
+    )
   },
   {
     id: 'brand',
     label: 'Brand',
-    element:
-    <Demo>
-      <SpinnerContainer>
-        <Spinner className="slds-spinner_medium slds-spinner_brand" />
-      </SpinnerContainer>
-    </Demo>
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_brand" />
+        </SpinnerContainer>
+      </Demo>
+    )
   },
   {
     id: 'inverse',
     label: 'Inverse',
-    element:
-    <Demo className="demo--inverse">
-      <SpinnerContainer>
-        <Spinner className="slds-spinner_medium slds-spinner_inverse" />
-      </SpinnerContainer>
-    </Demo>
+    element: (
+      <Demo className="demo--inverse">
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_inverse" />
+        </SpinnerContainer>
+      </Demo>
+    )
   }
 ];

@@ -3,14 +3,14 @@
 
 /* eslint-env jest */
 
-const Task = require("data.task");
-const Bundle = require("../bundle");
+const Task = require('data.task');
+const Bundle = require('../bundle');
 
 it("doesn't change configs", () => {
   expect.assertions(1);
   Bundle.configs
     .map(cfgs =>
-      cfgs.map(c => c.set("plugins", null).deleteIn(["output", "path"]))
+      cfgs.map(c => c.set('plugins', null).deleteIn(['output', 'path']))
     )
     .fork(
       e => {

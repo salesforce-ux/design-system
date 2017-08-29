@@ -4,14 +4,19 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const Spinner = props =>
+const Spinner = props => (
   <div className="slds-spinner_container">
-    <div {...props} className={classNames('slds-spinner', props.className)} role="status">
+    <div
+      {...props}
+      className={classNames('slds-spinner', props.className)}
+      role="status"
+    >
       <span className="slds-assistive-text">Loading</span>
       <div className="slds-spinner__dot-a" />
       <div className="slds-spinner__dot-b" />
     </div>
     {props.children}
-  </div>;
+  </div>
+);
 
 export default Spinner;

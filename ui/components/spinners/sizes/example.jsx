@@ -9,10 +9,11 @@ import { SpinnerContainer, Spinner } from '../base/example';
 // Partials
 /// ///////////////////////////////////////////
 
-let Demo = props =>
-  <div className="demo-only" style={{height: '6.25rem'}}>
+let Demo = props => (
+  <div className="demo-only" style={{ height: '6.25rem' }}>
     {props.children}
-  </div>;
+  </div>
+);
 
 /// ///////////////////////////////////////////
 // Export
@@ -22,53 +23,60 @@ export let states = [
   {
     id: 'xx-small',
     label: 'Xx-small',
-    description: 'The extra extra small spinner can be applied to tabs in global navigation to indicate loading.',
-    element:
+    description:
+      'The extra extra small spinner can be applied to tabs in global navigation to indicate loading.',
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_xx-small" />
         </SpinnerContainer>
       </Demo>
+    )
   },
   {
     id: 'x-small',
     label: 'X-small',
-    description: 'The extra small spinner can be positioned over the end of an input to indicate loading.',
-    element:
+    description:
+      'The extra small spinner can be positioned over the end of an input to indicate loading.',
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_x-small" />
         </SpinnerContainer>
       </Demo>
+    )
   },
   {
     id: 'small',
     label: 'Small',
-    element:
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_small" />
         </SpinnerContainer>
       </Demo>
+    )
   },
   {
     id: 'medium',
     label: 'Medium',
-    element:
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
       </Demo>
+    )
   },
   {
     id: 'large',
     label: 'Large',
-    element:
+    element: (
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_large" />
         </SpinnerContainer>
       </Demo>
+    )
   }
 ];

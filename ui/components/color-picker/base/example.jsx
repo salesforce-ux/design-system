@@ -4,9 +4,7 @@
 import React from 'react';
 import ColorPicker from '../';
 
-export default (
-  <ColorPicker />
-);
+export default <ColorPicker />;
 
 export const states = [
   {

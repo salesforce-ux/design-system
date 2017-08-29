@@ -2,16 +2,19 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ComboboxContainer, Listbox, ListboxItem, Option }
-  from '../base/example';
-import { ListboxPill }
-  from '../../pills/listbox-of-pill-options/example';
+import {
+  ComboboxContainer,
+  Listbox,
+  ListboxItem,
+  Option
+} from '../base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
 
 const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <Option
@@ -28,7 +31,8 @@ const ListboxDropdown = props =>
         selected={props.optionTwoSelected}
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
@@ -45,7 +49,7 @@ export let states = [
   {
     id: 'focused',
     label: 'Focused',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           isOpen
@@ -54,7 +58,8 @@ export let states = [
           listbox={<ListboxDropdown />}
           readonly
         />
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `
@@ -62,7 +67,7 @@ export let states = [
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           isOpen
@@ -73,11 +78,12 @@ export let states = [
           readonly
         />
       </div>
+    )
   },
   {
     id: 'open-option-selected',
     label: 'Open - Option Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           isOpen
@@ -88,11 +94,12 @@ export let states = [
           readonly
         />
       </div>
+    )
   },
   {
     id: 'open-options-selected',
     label: 'Open - Option(s) Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           isOpen
@@ -103,11 +110,12 @@ export let states = [
           readonly
         />
       </div>
+    )
   },
   {
     id: 'closed-option-selected',
     label: 'Option Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           inputIcon="right"
@@ -117,11 +125,12 @@ export let states = [
           readonly
         />
       </div>
+    )
   },
   {
     id: 'closed-options-selected',
     label: 'Option(s) Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           inputIcon="right"
@@ -130,20 +139,21 @@ export let states = [
           listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
           readonly
         >
-        <Listbox
-          id={listboxSelectionsId}
-          aria-label="Selected Options:"
-          className="slds-p-top_xxx-small"
-          horizontal
-        >
-          <ListboxItem>
-            <ListboxPill label="Option A" tabIndex="0" />
-          </ListboxItem>
-          <ListboxItem>
-            <ListboxPill label="Option B" />
-          </ListboxItem>
-        </Listbox>
-      </ComboboxContainer>
-    </div>
+          <Listbox
+            id={listboxSelectionsId}
+            aria-label="Selected Options:"
+            className="slds-p-top_xxx-small"
+            horizontal
+          >
+            <ListboxItem>
+              <ListboxPill label="Option A" tabIndex="0" />
+            </ListboxItem>
+            <ListboxItem>
+              <ListboxPill label="Option B" />
+            </ListboxItem>
+          </Listbox>
+        </ComboboxContainer>
+      </div>
+    )
   }
 ];

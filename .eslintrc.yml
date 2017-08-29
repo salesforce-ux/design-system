@@ -2,14 +2,11 @@ parser: 'babel-eslint'
 extends:
   - standard
   - standard-jsx
+  - prettier
+  - prettier/react
 rules:
-  semi: [2, 'always']
-  jsx-quotes: ['error', 'prefer-double']
   react/jsx-key: ['error']
-  # These all need to be fixed
   no-useless-escape: ['off']
   no-unused-vars: ['off']
-  react/jsx-indent: ['off']
-  quotes: ['off']
   eqeqeq: ['off']
   import/no-duplicates: ['off']

@@ -10,10 +10,18 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let Comment = props =>
-  <article className={classNames('slds-comment slds-media slds-hint-parent', props.className)}>
+export let Comment = props => (
+  <article
+    className={classNames(
+      'slds-comment slds-media slds-hint-parent',
+      props.className
+    )}
+  >
     <div className="slds-media__figure">
-      <a href="javascript:void(0);" className="slds-avatar slds-avatar_circle slds-avatar_medium">
+      <a
+        href="javascript:void(0);"
+        className="slds-avatar slds-avatar_circle slds-avatar_medium"
+      >
         <img
           alt="Jenna Davis"
           src="/assets/images/avatar2.jpg"
@@ -21,12 +29,11 @@ export let Comment = props =>
         />
       </a>
     </div>
-    <div className="slds-media__body">
-      { props.children }
-    </div>
-  </article>;
+    <div className="slds-media__body">{props.children}</div>
+  </article>
+);
 
-export let CommentHeader = props =>
+export let CommentHeader = props => (
   <header className="slds-media slds-media_center">
     <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
       <p className="slds-truncate" title="Jenna Davis">
@@ -40,14 +47,21 @@ export let CommentHeader = props =>
         title="More Options"
       />
     </div>
-  </header>;
+  </header>
+);
 
-export let CommentContent = props =>
-  <div className={classNames('slds-comment__content slds-text-longform', props.className)}>
-    { props.children }
-  </div>;
+export let CommentContent = props => (
+  <div
+    className={classNames(
+      'slds-comment__content slds-text-longform',
+      props.className
+    )}
+  >
+    {props.children}
+  </div>
+);
 
-export let CommentFooter = props =>
+export let CommentFooter = props => (
   <footer>
     <ul className="slds-list_horizontal slds-has-dividers_right slds-text-body_small">
       <li className="slds-item">
@@ -56,13 +70,14 @@ export let CommentFooter = props =>
           title="Like this item"
           aria-pressed={!!props.liked}
         >
-          { props.liked ? 'Liked' : 'Like' }
+          {props.liked ? 'Liked' : 'Like'}
         </button>
       </li>
-      { props.liked ? <li className="slds-item">1 Like</li> : null }
+      {props.liked ? <li className="slds-item">1 Like</li> : null}
       <li className="slds-item">16hr Ago</li>
     </ul>
-  </footer>;
+  </footer>
+);
 
 /// ////////////////////////////////////////
 // Export
@@ -72,7 +87,8 @@ export default (
   <Comment>
     <CommentHeader />
     <CommentContent>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
     </CommentContent>
     <CommentFooter />
   </Comment>
@@ -82,13 +98,15 @@ export let states = [
   {
     id: 'comment-liked',
     label: 'Like',
-    element:
+    element: (
       <Comment>
         <CommentHeader />
         <CommentContent>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </CommentContent>
         <CommentFooter liked />
       </Comment>
+    )
   }
 ];

@@ -5,18 +5,20 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-export let Button = props =>
-  <button className={classNames('slds-button', props.className)} disabled={props.disabled}>
+export let Button = props => (
+  <button
+    className={classNames('slds-button', props.className)}
+    disabled={props.disabled}
+  >
     {props.children}
-  </button>;
+  </button>
+);
 
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Button>Button</Button>
-);
+export default <Button>Button</Button>;
 
 export let states = [
   {
@@ -30,7 +32,7 @@ export let examples = [
   {
     id: 'with-icon-left',
     label: 'With left icon',
-    element:
+    element: (
       <Button className="slds-button_neutral">
         <SvgIcon
           className="slds-button__icon slds-button__icon_left"
@@ -39,11 +41,12 @@ export let examples = [
         />
         Button Neutral
       </Button>
+    )
   },
   {
     id: 'with-icon-right',
     label: 'With right icon',
-    element:
+    element: (
       <Button className="slds-button_neutral">
         Button Neutral
         <SvgIcon
@@ -52,5 +55,6 @@ export let examples = [
           symbol="download"
         />
       </Button>
+    )
   }
 ];

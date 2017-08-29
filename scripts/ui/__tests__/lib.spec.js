@@ -3,14 +3,14 @@
 
 /* eslint-env jest */
 
-const { ui } = require("../");
-const I = require("immutable");
-const createInstance = require("../../lib.js");
-const showcase = require("../../ui/showcase.js");
-const React = require("react");
-const ReactDOM = require("react-dom/server");
+const { ui } = require('../');
+const I = require('immutable');
+const createInstance = require('../../lib.js');
+const showcase = require('../../ui/showcase.js');
+const React = require('react');
+const ReactDOM = require('react-dom/server');
 
-describe("scripts/lib.js", () => {
+describe('scripts/lib.js', () => {
   let uiJson, SLDS;
 
   beforeAll(() => {
@@ -25,38 +25,38 @@ describe("scripts/lib.js", () => {
     );
   });
 
-  it("returns a list of components", () => {
+  it('returns a list of components', () => {
     const comps = SLDS.components();
     expect(comps.count()).toBeGreaterThan(1);
-    expect(comps.first()).toEqual("buttons");
+    expect(comps.first()).toEqual('buttons');
   });
 
-  it("returns a component", () => {
-    const comp = SLDS.component("buttons").getOrElse(null);
-    expect(comp.get("id")).toEqual("buttons");
-    expect(comp.get("restrictees").count()).toBeGreaterThan(0);
+  it('returns a component', () => {
+    const comp = SLDS.component('buttons').getOrElse(null);
+    expect(comp.get('id')).toEqual('buttons');
+    expect(comp.get('restrictees').count()).toBeGreaterThan(0);
   });
 
-  it("finds a variant", () => {
-    const comp = SLDS.component("buttons").getOrElse(null);
-    const variant = SLDS.findVariant(comp, "stateful").getOrElse(null);
-    expect(variant.get("id")).toEqual("stateful");
-    expect(variant.get("restrictees").count()).toBeGreaterThan(0);
+  it('finds a variant', () => {
+    const comp = SLDS.component('buttons').getOrElse(null);
+    const variant = SLDS.findVariant(comp, 'stateful').getOrElse(null);
+    expect(variant.get('id')).toEqual('stateful');
+    expect(variant.get('restrictees').count()).toBeGreaterThan(0);
   });
 
-  it("gets every example in the system", () => {
+  it('gets every example in the system', () => {
     const allMarkup = uiJson.flatMap((group, name) =>
       group.map(item =>
         SLDS.variants(item).flatMap(variant =>
-          showcase(item.get("showcasePath"), true).flatMap(section =>
+          showcase(item.get('showcasePath'), true).flatMap(section =>
             section
-              .get("items")
+              .get('items')
               .map(
                 i =>
-                  React.isValidElement(i.get("element"))
-                    ? ReactDOM.renderToStaticMarkup(i.get("element"))
-                    : `FAILED: ${item.get("id")}/${variant.get("id")}/${i.get(
-                        "id"
+                  React.isValidElement(i.get('element'))
+                    ? ReactDOM.renderToStaticMarkup(i.get('element'))
+                    : `FAILED: ${item.get('id')}/${variant.get('id')}/${i.get(
+                        'id'
                       )}`
               )
           )

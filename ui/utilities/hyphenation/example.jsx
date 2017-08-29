@@ -3,15 +3,18 @@
 
 import React from 'react';
 
-export const Context = props =>
-  <div style={{width: '200px'}}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ width: '200px' }}>{props.children}</div>
+);
 
 export let examples = [
   {
     id: 'default',
     label: 'Hyphenate',
-    element: <p className="slds-hyphenate">A long heading might be supercalifragilisticexpiallidocious.</p>
+    element: (
+      <p className="slds-hyphenate">
+        A long heading might be supercalifragilisticexpiallidocious.
+      </p>
+    )
   }
 ];

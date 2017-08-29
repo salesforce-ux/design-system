@@ -3,10 +3,9 @@
 
 import React from 'react';
 
-export const Context = props =>
-  <div className="slds-clearfix">
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div className="slds-clearfix">{props.children}</div>
+);
 
 export default (
   <div>
@@ -18,35 +17,38 @@ export let examples = [
   {
     id: 'left',
     label: 'Left',
-    element:
-    <div className="slds-clearfix">
-      <div className="slds-float_left">
-        <p>I’m floooaaaating</p>
+    element: (
+      <div className="slds-clearfix">
+        <div className="slds-float_left">
+          <p>I’m floooaaaating</p>
+        </div>
       </div>
-    </div>
+    )
   },
   {
     id: 'right',
     label: 'Right',
-    element:
-    <div className="slds-clearfix">
-      <div className="slds-float_right">
-        <p>I’m floooaaaating</p>
+    element: (
+      <div className="slds-clearfix">
+        <div className="slds-float_right">
+          <p>I’m floooaaaating</p>
+        </div>
       </div>
-    </div>
+    )
   },
   {
     id: 'none',
     label: 'None',
-    element:
+    element: (
       <div className="slds-float_none">
         <p>I’m not floooaaaating</p>
       </div>
+    )
   },
   {
     id: 'clearfix',
     label: 'Clearfix',
-    element:
+    element: (
       <div className="slds-clearfix">
         <div className="slds-float_left">
           <p>I’m floooaaaating</p>
@@ -55,5 +57,6 @@ export let examples = [
           <p>I’m floooaaaating</p>
         </div>
       </div>
+    )
   }
 ];

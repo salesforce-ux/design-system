@@ -9,18 +9,28 @@ import _ from '../../../shared/helpers';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let Fieldset = props =>
+export let Fieldset = props => (
   <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}
-  </fieldset>;
+  </fieldset>
+);
 
-export let Legend = props =>
-  <legend className={classNames('slds-form-element__legend slds-form-element__label', props.className)}>{props.children}</legend>;
+export let Legend = props => (
+  <legend
+    className={classNames(
+      'slds-form-element__legend slds-form-element__label',
+      props.className
+    )}
+  >
+    {props.children}
+  </legend>
+);
 
-export let FormElementControl = props =>
+export let FormElementControl = props => (
   <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
-  </div>;
+  </div>
+);
 
 export let Radio = props => {
   const uniqueId = _.uniqueId('radio-');
@@ -61,7 +71,7 @@ export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
-    element:
+    element: (
       <Fieldset>
         <Legend>Radio Group Label</Legend>
         <FormElementControl>
@@ -69,30 +79,45 @@ export let states = [
           <Radio disable label="Radio Label Two" />
         </FormElementControl>
       </Fieldset>
+    )
   },
   {
     id: 'required',
     label: 'Required',
-    element:
+    element: (
       <Fieldset>
-        <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
         <FormElementControl>
           <Radio checked label="Radio Label One" />
           <Radio label="Radio Label Two" />
         </FormElementControl>
       </Fieldset>
+    )
   },
   {
     id: 'error',
     label: 'Error',
-    element:
+    element: (
       <Fieldset className="slds-has-error">
-        <Legend><abbr className="slds-required" title="required">*</abbr> Radio Group Label</Legend>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
         <FormElementControl>
           <Radio errorId="error_01" checked label="Radio Label One" />
           <Radio errorId="error_01" label="Radio Label Two" />
         </FormElementControl>
-        <div id="error_01" className="slds-form-element__help">This field is required</div>
+        <div id="error_01" className="slds-form-element__help">
+          This field is required
+        </div>
       </Fieldset>
+    )
   }
 ];

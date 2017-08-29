@@ -10,130 +10,148 @@ const stylelint = require('gulp-stylelint');
 const htmlhint = require('gulp-htmlhint');
 const tokenlint = require('./plugins/lint-tokens');
 const yamlValidate = require('gulp-yaml-validate');
-const {validate} = require('./validate');
+const { validate } = require('./validate');
 const vnu = require('./vnu');
 
 gulp.task('lint:sass', () =>
-  gulp.src([
-    'site/assets/styles/**/*.scss',
-    'ui/**/*.scss'
-  ])
-  .pipe(cache('stylelint'))
-  .pipe(stylelint({
-    reporters: [
-      {
-        formatter: 'string',
-        console: true
-      }
-    ]
-  }))
+  gulp
+    .src(['site/assets/styles/**/*.scss', 'ui/**/*.scss'])
+    .pipe(cache('stylelint'))
+    .pipe(
+      stylelint({
+        reporters: [
+          {
+            formatter: 'string',
+            console: true
+          }
+        ]
+      })
+    )
 );
 
 gulp.task('lint:spaces', () =>
-  gulp.src([
-    '*.{js,json,md,yml,txt}',
-    '.*',
-    '!.DS_Store',
-    '!LICENSE-icons-images.txt',
-    '!CONTRIBUTING.md',
-    'ui/**/*.*',
-    'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
-    'scripts/**/*.{js,sh,jsx}'
-  ])
-  .pipe(cache('lintspaces'))
-  .pipe(lintspaces({
-    editorconfig: '.editorconfig',
-    ignores: [
-      /\/\*[\s\S]*?\*\//g // Ignore comments
-    ]
-  }))
-  .pipe(lintspaces.reporter())
+  gulp
+    .src([
+      '*.{js,json,md,yml,txt}',
+      '.*',
+      '!.DS_Store',
+      '!LICENSE-icons-images.txt',
+      '!CONTRIBUTING.md',
+      'ui/**/*.*',
+      'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
+      'scripts/**/*.{js,sh,jsx}'
+    ])
+    .pipe(cache('lintspaces'))
+    .pipe(
+      lintspaces({
+        editorconfig: '.editorconfig',
+        ignores: [
+          /\/\*[\s\S]*?\*\//g // Ignore comments
+        ]
+      })
+    )
+    .pipe(lintspaces.reporter())
 );
 
-function lintjs (files, options) {
+function lintjs(files, options) {
   return () => {
-    return gulp.src(files)
+    return gulp
+      .src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
       .pipe(eslint.format('codeframe'));
   };
 }
 
-gulp.task('lint:js', lintjs([
-  '*.js',
-  'app_modules/**/*.{js,jsx}',
-  'scripts/**/*.{js,jsx}',
-  'site/**/*.{js,jsx}',
-  'ui/**/*.{js,jsx}',
-  '!**/*.spec.{js,jsx}'
-]));
+gulp.task(
+  'lint:js',
+  lintjs([
+    '*.js',
+    'app_modules/**/*.{js,jsx}',
+    'scripts/**/*.{js,jsx}',
+    'site/**/*.{js,jsx}',
+    'ui/**/*.{js,jsx}',
+    '!**/*.spec.{js,jsx}'
+  ])
+);
 
-gulp.task('lint:js:test', lintjs([
-  'test/**/*.{js,jsx}',
-  '**/*.spec.{js,jsx}'],
-  {env: {mocha: true}}
-));
+gulp.task(
+  'lint:js:test',
+  lintjs(['test/**/*.{js,jsx}', '**/*.spec.{js,jsx}'], { env: { mocha: true } })
+);
 
 // This task lints pre-built assets (not the JSX templates),
 // So you typically have to run `npm run build` before linting HTML files.
 gulp.task('lint:html', ['generate:wrappedexamples'], () => {
-  return gulp.src('.html/*.html')
-    .pipe(htmlhint({
-      // Rules documentation:
-      // https://github.com/yaniswang/HTMLHint/wiki/Rules
-      'alt-require': true,
-      'attr-lowercase': ['viewBox', 'preserveAspectRatio'],
-      'attr-no-duplication': true,
-      'attr-unsafe-chars': true,
-      'attr-value-double-quotes': true,
-      'attr-value-not-empty': true,
-      'doctype-html5': true,
-      'id-class-ad-disabled': true,
-      'id-unique': true,
-      'inline-script-disabled': false,
-      'src-not-empty': true,
-      'tag-pair': true,
-      'tag-self-close': true,
-      'tagname-lowercase': true,
-      'title-require': true,
-      // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed
-      // as <div>&lt;div></div> raises errors at the moment
-      'spec-char-escape': false
-    }))
+  return gulp
+    .src('.html/*.html')
+    .pipe(
+      htmlhint({
+        // Rules documentation:
+        // https://github.com/yaniswang/HTMLHint/wiki/Rules
+        'alt-require': true,
+        'attr-lowercase': ['viewBox', 'preserveAspectRatio'],
+        'attr-no-duplication': true,
+        'attr-unsafe-chars': true,
+        'attr-value-double-quotes': true,
+        'attr-value-not-empty': true,
+        'doctype-html5': true,
+        'id-class-ad-disabled': true,
+        'id-unique': true,
+        'inline-script-disabled': false,
+        'src-not-empty': true,
+        'tag-pair': true,
+        'tag-self-close': true,
+        'tagname-lowercase': true,
+        'title-require': true,
+        // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed
+        // as <div>&lt;div></div> raises errors at the moment
+        'spec-char-escape': false
+      })
+    )
     .pipe(htmlhint.reporter());
 });
 
 gulp.task('lint:tokens:yaml', () =>
-  gulp.src([
-    './ui/components/**/tokens/*.yml',
-    './design-tokens/aliases/*.yml'
-  ])
+  gulp
+    .src(['./ui/components/**/tokens/*.yml', './design-tokens/aliases/*.yml'])
     .pipe(yamlValidate())
 );
 
 gulp.task('lint:tokens:components', () =>
-  gulp.src([
-    './ui/components/**/tokens/*.yml',
-    '!./ui/components/**/tokens/bg-*.yml', // icons
-    '!./ui/components/**/tokens/force-font-commons.yml' // fonts
-  ])
+  gulp
+    .src([
+      './ui/components/**/tokens/*.yml',
+      '!./ui/components/**/tokens/bg-*.yml', // icons
+      '!./ui/components/**/tokens/force-font-commons.yml' // fonts
+    ])
     .pipe(tokenlint())
     .pipe(tokenlint.report('verbose'))
 );
 
 gulp.task('lint:tokens:aliases', () =>
-  gulp.src([
-    './design-tokens/aliases/*.yml'
-  ])
+  gulp
+    .src(['./design-tokens/aliases/*.yml'])
     .pipe(tokenlint({ prefix: false }))
     .pipe(tokenlint.report('verbose'))
 );
 
-gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:components', 'lint:tokens:aliases']);
+gulp.task('lint:tokens', [
+  'lint:tokens:yaml',
+  'lint:tokens:components',
+  'lint:tokens:aliases'
+]);
 
-gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tokens']);
+gulp.task('lint', [
+  'lint:sass',
+  'lint:spaces',
+  'lint:js',
+  'lint:html',
+  'lint:tokens'
+]);
 
 gulp.task('lint:examples', ['lint:vnu', 'lint:validate', 'a11y']);
 
 gulp.task('lint:validate', ['generate:wrappedexamples'], () =>
-  validate().fork(console.error, x => x));
+  validate().fork(console.error, x => x)
+);

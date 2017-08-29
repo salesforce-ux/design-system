@@ -38,7 +38,7 @@ export let states = [
   {
     id: 'button-group-icon-selected',
     label: 'Selected',
-    element:
+    element: (
       <ButtonGroup>
         <ButtonIcon
           className="slds-button_icon-border slds-is-selected"
@@ -61,5 +61,6 @@ export let states = [
           title="More Actions"
         />
       </ButtonGroup>
+    )
   }
 ];

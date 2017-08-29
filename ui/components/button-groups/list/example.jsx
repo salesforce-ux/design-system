@@ -3,13 +3,22 @@
 
 import React from 'react';
 import { ButtonIcon } from '../../button-icons/base/example';
-import { Menu, MenuList, MenuItem, Trigger } from '../../menus/dropdown/example';
+import {
+  Menu,
+  MenuList,
+  MenuItem,
+  Trigger
+} from '../../menus/dropdown/example';
 import classNames from 'classnames';
 
-export let ButtonGroupList = props =>
-  <ul {...props} className={classNames('slds-button-group-list', props.className)}>
+export let ButtonGroupList = props => (
+  <ul
+    {...props}
+    className={classNames('slds-button-group-list', props.className)}
+  >
     {props.children}
-  </ul>;
+  </ul>
+);
 
 /// ////////////////////////////////////////
 // Export
@@ -35,7 +44,7 @@ export let states = [
   {
     id: 'button-group-disabled',
     label: 'Default Disabled',
-    element:
+    element: (
       <ButtonGroupList>
         <li>
           <button className="slds-button slds-button_neutral">Refresh</button>
@@ -46,14 +55,17 @@ export let states = [
         </li>
 
         <li>
-          <button className="slds-button slds-button_neutral" disabled>Save</button>
+          <button className="slds-button slds-button_neutral" disabled>
+            Save
+          </button>
         </li>
       </ButtonGroupList>
+    )
   },
   {
     id: 'button-group-more',
     label: 'More Icon',
-    element:
+    element: (
       <ButtonGroupList>
         <li>
           <button className="slds-button slds-button_neutral">Refresh</button>
@@ -71,11 +83,12 @@ export let states = [
           <Trigger className="slds-button_last" ariaExpanded="false" />
         </li>
       </ButtonGroupList>
+    )
   },
   {
     id: 'button-group-more-open',
     label: 'More Icon Open',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroupList>
           <li>
@@ -103,11 +116,12 @@ export let states = [
           </li>
         </ButtonGroupList>
       </div>
+    )
   },
   {
     id: 'button-group-icon-disabled',
     label: 'More Icon Disabled',
-    element:
+    element: (
       <ButtonGroupList>
         <li>
           <button className="slds-button slds-button_neutral">Refresh</button>
@@ -134,12 +148,16 @@ export let states = [
           </div>
         </li>
       </ButtonGroupList>
+    )
   },
   {
     id: 'button-group-inverse',
     label: 'Inverse',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroupList>
           <li>
             <button className="slds-button slds-button_inverse">Refresh</button>
@@ -166,23 +184,29 @@ export let states = [
           </li>
         </ButtonGroupList>
       </div>
+    )
   },
   {
     id: 'button-group-inverse-disabled',
     label: 'Inverse Disabled',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroupList>
           <li>
             <button className="slds-button slds-button_inverse">Refresh</button>
           </li>
 
           <li>
-            <button className="slds-button slds-button_inverse" disabled>Edit</button>
+            <button className="slds-button slds-button_inverse" disabled>
+              Edit
+            </button>
           </li>
 
           <li>
-            <button className="slds-button slds-button_inverse" >Save</button>
+            <button className="slds-button slds-button_inverse">Save</button>
           </li>
 
           <li>
@@ -198,12 +222,16 @@ export let states = [
           </li>
         </ButtonGroupList>
       </div>
+    )
   },
   {
     id: 'button-group-icon-inverse-disabled',
     label: 'Inverse More Icon Disabled',
-    element:
-      <div className="demo-only" style={{ padding: '0.5rem', background: '#16325c' }}>
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
         <ButtonGroupList>
           <li>
             <button className="slds-button slds-button_inverse">Refresh</button>
@@ -231,5 +259,6 @@ export let states = [
           </li>
         </ButtonGroupList>
       </div>
+    )
   }
 ];

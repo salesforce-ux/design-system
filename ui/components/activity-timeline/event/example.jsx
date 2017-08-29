@@ -5,7 +5,7 @@ import React from 'react';
 import MediaObject from '../../../utilities/media-objects/index.react';
 import { TimelineIcon, TimelineActions } from '../base/example';
 
-export let ActivityTimelineItem = props =>
+export let ActivityTimelineItem = props => (
   <div className="slds-timeline__item">
     <span className="slds-assistive-text">Event</span>
     <MediaObject
@@ -24,12 +24,21 @@ export let ActivityTimelineItem = props =>
         <h3 className="slds-truncate" title="Company One — EBC Meeting">
           <a href="javascript:void(0);">Company One — EBC Meeting</a>
         </h3>
-        <p className="slds-truncate" title="Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.">Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width.</p>
+        <p
+          className="slds-truncate"
+          title="Let&rsquo;s get together to review the theater&rsquo;s layout and facilities. We&rsquo;ll also discuss potential things that truncate at a certain width."
+        >
+          Let&rsquo;s get together to review the theater&rsquo;s layout and
+          facilities. We&rsquo;ll also discuss potential things that truncate at
+          a certain width.
+        </p>
         <ul className="slds-list_horizontal slds-wrap">
           <li className="slds-m-right_large">
             <span className="slds-text-title">Time:</span>
             <span className="slds-text-body_small">
-              <a href="javascript:void(0);">Feb 23, 2015 11:00am&ndash;12:00pm</a>
+              <a href="javascript:void(0);">
+                Feb 23, 2015 11:00am&ndash;12:00pm
+              </a>
             </span>
           </li>
           <li className="slds-m-right_large">
@@ -43,14 +52,14 @@ export let ActivityTimelineItem = props =>
             <span className="slds-text-body_small">
               <a href="javascript:void(0);">Lei Chan</a>,
               <a href="javascript:void(0);">Jason Dewar</a>,
-              <a href="javascript:void(0);">Gwen Jones</a> and <a href="javascript:void(0);">Pete Schaffer</a>
+              <a href="javascript:void(0);">Gwen Jones</a> and{' '}
+              <a href="javascript:void(0);">Pete Schaffer</a>
             </span>
           </li>
         </ul>
       </MediaObject>
     </MediaObject>
-  </div>;
-
-export default (
-  <ActivityTimelineItem />
+  </div>
 );
+
+export default <ActivityTimelineItem />;

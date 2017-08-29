@@ -25,7 +25,7 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
@@ -42,7 +42,8 @@ const ListboxDropdown = props =>
         entityMeta
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -66,7 +67,7 @@ export let states = [
   {
     id: 'focused',
     label: 'Focused',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           containerClassName="slds-has-input-focus"
@@ -77,7 +78,8 @@ export let states = [
           isOpen
           listbox={<ListboxDropdown />}
         />
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `
@@ -85,7 +87,7 @@ export let states = [
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           inputIcon="right"
@@ -97,11 +99,12 @@ export let states = [
           aria-activedescendant={listboxOptionId01}
         />
       </div>
+    )
   },
   {
     id: 'closed-option-selected',
     label: 'Option Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           selectedOptionsInline
@@ -116,11 +119,12 @@ export let states = [
           listbox={<ListboxDropdown />}
         />
       </div>
+    )
   },
   {
     id: 'options-selected',
     label: 'Option(s) Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           inputIcon="right"
@@ -147,11 +151,12 @@ export let states = [
           </Listbox>
         </ComboboxContainer>
       </div>
+    )
   },
   {
     id: 'focused-options-selected',
     label: 'Focused - Option(s) Selected',
-    element:
+    element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <ComboboxContainer
           isOpen
@@ -183,7 +188,8 @@ export let states = [
             </ListboxItem>
           </Listbox>
         </ComboboxContainer>
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `

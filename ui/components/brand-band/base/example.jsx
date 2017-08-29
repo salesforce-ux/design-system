@@ -3,14 +3,13 @@
 
 import React from 'react';
 
-export const Context = props =>
+export const Context = props => (
   <div style={{ minHeight: '20rem', backgroundColor: '#AFC5DE' }}>
     {props.children}
-  </div>;
-
-export default (
-  <div className="slds-brand-band" />
+  </div>
 );
+
+export default <div className="slds-brand-band" />;
 
 export let examples = [
   {

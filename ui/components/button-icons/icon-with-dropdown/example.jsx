@@ -21,49 +21,53 @@ export let states = [
   {
     id: 'button-icon-container-with-dropdown',
     label: 'Default - Container Only',
-    element:
+    element: (
       <ButtonIcon
         hasDropdown
         className="slds-button_icon slds-button_icon-container-more"
         assistiveText="More options"
         title="More Options"
       />
+    )
   },
   {
     id: 'button-icon-with-dropdown-filled',
     label: 'Filled',
-    element:
+    element: (
       <ButtonIcon
         hasDropdown
         className="slds-button_icon-more slds-button_icon-more-filled"
         assistiveText="More options"
         title="More Options"
       />
+    )
   },
   {
     id: 'button-icon-with-dropdown-inverse',
     label: 'Inverse',
-    element:
-    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
-      <ButtonIcon
-        hasDropdown
-        className="slds-button_icon-inverse slds-button_icon-more"
-        assistiveText="More options"
-        title="More Options"
-      />
-    </div>
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+        <ButtonIcon
+          hasDropdown
+          className="slds-button_icon-inverse slds-button_icon-more"
+          assistiveText="More options"
+          title="More Options"
+        />
+      </div>
+    )
   },
   {
     id: 'button-icon-container-with-dropdown-inverse',
     label: 'Inverse - Container Only',
-    element:
-    <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
-      <ButtonIcon
-        hasDropdown
-        className="slds-button_icon-inverse slds-button_icon-container-more"
-        assistiveText="More options"
-        title="More Options"
-      />
-    </div>
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+        <ButtonIcon
+          hasDropdown
+          className="slds-button_icon-inverse slds-button_icon-container-more"
+          assistiveText="More options"
+          title="More Options"
+        />
+      </div>
+    )
   }
 ];

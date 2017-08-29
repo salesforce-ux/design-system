@@ -9,32 +9,28 @@ import classNames from 'classnames';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-export let Badge = props =>
+export let Badge = props => (
   <span className={classNames('slds-badge', props.className)}>
     {props.children}
-  </span>;
+  </span>
+);
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Badge>Badge Label</Badge>
-);
+export default <Badge>Badge Label</Badge>;
 
 export let examples = [
   {
     id: 'inverse',
     label: 'Inverse',
-    element:
-      <Badge className="slds-badge_inverse">
-        Badge Label
-      </Badge>
+    element: <Badge className="slds-badge_inverse">Badge Label</Badge>
   },
   {
     id: 'light-with-icon',
     label: 'Light with Icon',
-    element:
+    element: (
       <Badge className="slds-badge_lightest">
         <UtilityIcon
           containerClassName="slds-m-right_xx-small"
@@ -44,5 +40,6 @@ export let examples = [
         />
         423 Credits Available
       </Badge>
+    )
   }
 ];

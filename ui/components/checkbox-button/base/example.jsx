@@ -24,7 +24,9 @@ export let CheckboxAddButton = props => {
         tabIndex={props.tabIndex}
       />
       <label htmlFor={uniqueId} className="slds-checkbox_faux">
-        <span className="slds-assistive-text">{ props.label || 'Add product' }</span>
+        <span className="slds-assistive-text">
+          {props.label || 'Add product'}
+        </span>
       </label>
     </div>
   );
@@ -34,9 +36,7 @@ export let CheckboxAddButton = props => {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <CheckboxAddButton />
-);
+export default <CheckboxAddButton />;
 
 export let states = [
   {

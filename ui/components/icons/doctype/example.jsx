@@ -17,7 +17,9 @@ export let DoctypeIcon = props => {
         sprite="doctype"
         symbol={symbol}
       />
-      <span className="slds-assistive-text">{ props.assistiveText || 'Description of icon when needed' }</span>
+      <span className="slds-assistive-text">
+        {props.assistiveText || 'Description of icon when needed'}
+      </span>
     </span>
   );
 };
@@ -26,6 +28,4 @@ export let DoctypeIcon = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <DoctypeIcon />
-);
+export default <DoctypeIcon />;

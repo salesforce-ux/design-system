@@ -10,13 +10,15 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let Pill = props =>
+export let Pill = props => (
   <span className={classNames('slds-pill slds-pill_link', props.className)}>
-    { props.children }
-    <a href="javascript:void(0);" className="slds-pill__action" title={props.label || 'Full pill label verbiage mirrored here'}>
-      <span className="slds-pill__label">
-        { props.label || 'Pill Label' }
-      </span>
+    {props.children}
+    <a
+      href="javascript:void(0);"
+      className="slds-pill__action"
+      title={props.label || 'Full pill label verbiage mirrored here'}
+    >
+      <span className="slds-pill__label">{props.label || 'Pill Label'}</span>
     </a>
     <ButtonIcon
       className="slds-button_icon slds-pill__remove"
@@ -24,39 +26,43 @@ export let Pill = props =>
       assistiveText="Remove"
       title="Remove"
     />
-  </span>;
+  </span>
+);
 
-export let PillContainer = props =>
+export let PillContainer = props => (
   <div className={classNames('slds-pill_container', props.className)}>
     {props.children}
-  </div>;
+  </div>
+);
 
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Pill />
-);
+export default <Pill />;
 
 export let examples = [
   {
     id: 'icon',
     label: 'With icon',
-    element:
+    element: (
       <Pill>
         <span className="slds-pill__icon_container">
-          <span className="slds-icon_container slds-icon-standard-account" title="Account">
+          <span
+            className="slds-icon_container slds-icon-standard-account"
+            title="Account"
+          >
             <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
             <span className="slds-assistive-text">Account</span>
           </span>
         </span>
       </Pill>
+    )
   },
   {
     id: 'avatar',
     label: 'With avatar',
-    element:
+    element: (
       <Pill>
         <span className="slds-pill__icon_container">
           <span className="slds-avatar slds-avatar_circle" title="User avatar">
@@ -68,38 +74,46 @@ export let examples = [
           </span>
         </span>
       </Pill>
+    )
   },
   {
     id: 'truncated',
     label: 'Truncated',
-    element:
+    element: (
       <div className="demo-only" style={{ width: '220px' }}>
         <PillContainer>
           <Pill label="Pill label that is longer than the area that contains it" />
         </PillContainer>
       </div>
+    )
   },
   {
     id: 'container',
     label: 'Pill with Container',
-    element:
+    element: (
       <PillContainer>
         <Pill />
         <Pill />
         <Pill />
       </PillContainer>
+    )
   },
   {
     id: 'error',
     label: 'Error',
-    element:
+    element: (
       <Pill className="slds-has-error">
         <span className="slds-pill__icon_container">
           <span className="slds-icon_container" title="Error">
-            <SvgIcon className="slds-icon slds-icon-text-error" sprite="utility" symbol="warning" />
+            <SvgIcon
+              className="slds-icon slds-icon-text-error"
+              sprite="utility"
+              symbol="warning"
+            />
             <span className="slds-assistive-text">Warning</span>
           </span>
         </span>
       </Pill>
+    )
   }
 ];

@@ -20,61 +20,83 @@ export let Popover = props => {
     <section
       className={classNames('slds-popover', props.className)}
       role="dialog"
-      aria-labelledby={!props.header && props.headerTitle ? headingUniqueId : props.headingId}
+      aria-labelledby={
+        !props.header && props.headerTitle ? headingUniqueId : props.headingId
+      }
       aria-label={!props.header && !props.headerTitle ? props.title : null}
       aria-describedby={bodyUniqueId}
       style={props.style}
     >
-      { props.closeButton
-        ? <ButtonIcon
-          className={classNames('slds-button_icon-small slds-float_right slds-popover__close', props.inverse ? 'slds-button_icon-inverse' : 'slds-button_icon')}
+      {props.closeButton ? (
+        <ButtonIcon
+          className={classNames(
+            'slds-button_icon-small slds-float_right slds-popover__close',
+            props.inverse ? 'slds-button_icon-inverse' : 'slds-button_icon'
+          )}
           symbol="close"
           assistiveText="Close dialog"
           title="Close dialog"
         />
-      : null }
-      { !props.header && props.headerTitle
-        ? <Header
+      ) : null}
+      {!props.header && props.headerTitle ? (
+        <Header
           id={headingUniqueId}
           className={props.headerClassName}
           title={props.headerTitle || 'Heading Title'}
           symbol={props.headerIconName}
           assistiveText={props.headerAssistiveText}
         />
-      : props.header }
-      <div className={classNames('slds-popover__body', props.bodyClassName)} id={bodyUniqueId}>
+      ) : (
+        props.header
+      )}
+      <div
+        className={classNames('slds-popover__body', props.bodyClassName)}
+        id={bodyUniqueId}
+      >
         {props.children}
       </div>
-      { props.footer
-        ? <footer className={classNames('slds-popover__footer', props.footerClassName)}>
-          { props.footer }
+      {props.footer ? (
+        <footer
+          className={classNames('slds-popover__footer', props.footerClassName)}
+        >
+          {props.footer}
         </footer>
-      : null }
+      ) : null}
     </section>
   );
 };
 
-let Header = props =>
+let Header = props => (
   <header className={classNames('slds-popover__header', props.className)}>
-    { props.symbol
-      ? <span className="slds-icon_container slds-m-right_small" title={props.assistiveText}>
-        <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="utility" symbol={props.symbol} />
-        <span className="slds-assistive-text">{ props.assistiveText }</span>
+    {props.symbol ? (
+      <span
+        className="slds-icon_container slds-m-right_small"
+        title={props.assistiveText}
+      >
+        <SvgIcon
+          className="slds-icon slds-icon_small slds-icon-text-default"
+          sprite="utility"
+          symbol={props.symbol}
+        />
+        <span className="slds-assistive-text">{props.assistiveText}</span>
       </span>
-    : null }
-    <h2 id={props.id} className="slds-text-heading_small">{ props.title }</h2>
-  </header>;
+    ) : null}
+    <h2 id={props.id} className="slds-text-heading_small">
+      {props.title}
+    </h2>
+  </header>
+);
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <Popover
-    className="slds-nubbin_left"
-    closeButton
-    title="Dialog Title">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </Popover>
 );
 
@@ -82,24 +104,34 @@ export let examples = [
   {
     id: 'header',
     label: 'With Header',
-    element:
+    element: (
       <Popover
         className="slds-nubbin_left"
         headerTitle="Header Title"
-        closeButton>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        closeButton
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </Popover>
+    )
   },
   {
     id: 'footer',
     label: 'With Footer',
-    element:
+    element: (
       <Popover
         className="slds-nubbin_left"
         footer={<p>Footer Item</p>}
         closeButton
-        title="Dialog Title">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        title="Dialog Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </Popover>
+    )
   }
 ];

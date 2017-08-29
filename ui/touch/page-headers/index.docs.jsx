@@ -5,6 +5,7 @@ import React from 'react';
 
 export const intro = (
   <p className="site-text-introduction">
-    The page header is a masthead that contains the Title of the page, and supporting details.
+    The page header is a masthead that contains the Title of the page, and
+    supporting details.
   </p>
 );

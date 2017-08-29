@@ -22,15 +22,12 @@ const uniqueId = (() => {
     return PREFIXES[prefix];
   };
   const initCounterForPrefix = prefix =>
-    PREFIXES[prefix] != null
-    ? PREFIXES[prefix]
-    : newCounter(prefix);
+    PREFIXES[prefix] != null ? PREFIXES[prefix] : newCounter(prefix);
   const addToPrefix = prefix => {
     initCounterForPrefix(prefix);
     return prefix + incCounter(prefix);
   };
-  return prefix =>
-    prefix ? addToPrefix(prefix) : idCounter++;
+  return prefix => (prefix ? addToPrefix(prefix) : idCounter++);
 })();
 
 export default {

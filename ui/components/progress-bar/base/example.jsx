@@ -9,9 +9,18 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 export let ProgressBar = props => (
-  <div className={classNames('slds-progress-bar', props.className)} aria-valuemin="0" aria-valuemax="100" aria-valuenow={props.value} role="progressbar">
-    <span className="slds-progress-bar__value" style={{ width: `${props.value}%` }}>
-      <span className="slds-assistive-text">Progress: { `${props.value}%` }</span>
+  <div
+    className={classNames('slds-progress-bar', props.className)}
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow={props.value}
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={{ width: `${props.value}%` }}
+    >
+      <span className="slds-assistive-text">Progress: {`${props.value}%`}</span>
     </span>
   </div>
 );
@@ -20,39 +29,32 @@ export let ProgressBar = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <ProgressBar value="25" />
-);
+export default <ProgressBar value="25" />;
 
 export let states = [
   {
     id: 'zero',
     label: '0% complete',
-    element:
-      <ProgressBar value="0" />
+    element: <ProgressBar value="0" />
   },
   {
     id: '25',
     label: '25% complete',
-    element:
-      <ProgressBar value="25" />
+    element: <ProgressBar value="25" />
   },
   {
     id: '50',
     label: '50% complete',
-    element:
-      <ProgressBar value="50" />
+    element: <ProgressBar value="50" />
   },
   {
     id: '75',
     label: '75% complete',
-    element:
-      <ProgressBar value="75" />
+    element: <ProgressBar value="75" />
   },
   {
     id: '100',
     label: '100% complete',
-    element:
-      <ProgressBar value="100" />
+    element: <ProgressBar value="100" />
   }
 ];

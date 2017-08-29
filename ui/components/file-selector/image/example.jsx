@@ -16,25 +16,32 @@ export let states = [
   {
     id: 'file-selector-images-error',
     label: 'Error',
-    element:
+    element: (
       <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileSelector className="slds-file-selector_images" error />
       </div>
+    )
   },
   {
     id: 'file-selector-images-draggover',
     label: 'Dragover',
-    element:
+    element: (
       <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileSelector className="slds-file-selector_images" draggover />
       </div>
+    )
   },
   {
     id: 'file-selector-images-draggover-error',
     label: 'Dragover with error',
-    element:
+    element: (
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector_images" draggoverError error />
+        <FileSelector
+          className="slds-file-selector_images"
+          draggoverError
+          error
+        />
       </div>
+    )
   }
 ];

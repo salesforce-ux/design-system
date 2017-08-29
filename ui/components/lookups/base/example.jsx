@@ -32,7 +32,7 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
@@ -49,17 +49,17 @@ const ListboxDropdown = props =>
         entityMeta
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{ height: '10rem' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: '10rem' }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -78,7 +78,7 @@ export let states = [
   {
     id: 'focused',
     label: 'Focused',
-    element:
+    element: (
       <ComboboxContainer
         selectedOptionsInline
         containerClassName="slds-has-input-focus"
@@ -88,11 +88,12 @@ export let states = [
         inputIconRightSymbol="search"
         listbox={<ListboxDropdown />}
       />
+    )
   },
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
-    element:
+    element: (
       <ComboboxContainer
         selectedOptionsInline
         isOpen
@@ -102,11 +103,12 @@ export let states = [
         listbox={<ListboxDropdown focused />}
         aria-activedescendant={listboxOptionId01}
       />
+    )
   },
   {
     id: 'closed-option-selected',
     label: 'Option Selected',
-    element:
+    element: (
       <ComboboxContainer
         selectedOptionsInline
         autocomplete
@@ -119,5 +121,6 @@ export let states = [
         value="Salesforce.com, Inc."
         listbox={<ListboxDropdown />}
       />
+    )
   }
 ];

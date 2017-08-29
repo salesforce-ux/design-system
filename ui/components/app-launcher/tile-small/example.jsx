@@ -12,9 +12,18 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}>
-    <AppLauncherTile flavor="small" objectInitials="SC" figureClass="slds-icon-custom-27">
-      <span className="slds-truncate slds-text-link" title="Sales Cloud">Sales Cloud</span>
+  <div
+    className="demo-only"
+    style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}
+  >
+    <AppLauncherTile
+      flavor="small"
+      objectInitials="SC"
+      figureClass="slds-icon-custom-27"
+    >
+      <span className="slds-truncate slds-text-link" title="Sales Cloud">
+        Sales Cloud
+      </span>
     </AppLauncherTile>
   </div>
 );

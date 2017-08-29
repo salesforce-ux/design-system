@@ -24,17 +24,19 @@ export let states = [
   {
     id: 'tile-avatar',
     label: 'Default',
-    element:
+    element: (
       <div className="demo-only" style={{ width: '30rem' }}>
         <TileMedia title="Lexee L. Jackson" media={avatar} />
       </div>
+    )
   },
   {
     id: 'tile-avatar-with-action',
     label: 'With actions',
-    element:
+    element: (
       <div className="demo-only" style={{ width: '30rem' }}>
         <TileMedia title="Lexee L. Jackson" media={avatar} actions />
       </div>
+    )
   }
 ];

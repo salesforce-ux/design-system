@@ -8,27 +8,27 @@ import classNames from 'classnames';
     Private
 ----------------------------------------------------------------------------- */
 
-let Strength = props =>
+let Strength = props => (
   <span
     {...props}
     title="Description of the icon when needed"
-    className={classNames('slds-icon-strength', props.className)}>
+    className={classNames('slds-icon-strength', props.className)}
+  >
     <svg viewBox="0 0 27 7" aria-hidden="true">
       <circle r="3.025" cx="3.5" cy="3.5" />
       <circle r="3.025" cx="13.5" cy="3.5" />
       <circle r="3.025" cx="23.5" cy="3.5" />
     </svg>
     <span className="slds-assistive-text">Text alternative when needed</span>
-  </span>;
+  </span>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <Strength data-slds-strength="0" />
-);
+export default <Strength data-slds-strength="0" />;
 
 // States
 export let states = [
@@ -75,6 +75,11 @@ export let states = [
   {
     id: 'paused',
     label: 'Paused',
-    element: <Strength className="slds-is-animated slds-is-paused" data-slds-strength="3" />
+    element: (
+      <Strength
+        className="slds-is-animated slds-is-paused"
+        data-slds-strength="3"
+      />
+    )
   }
 ];

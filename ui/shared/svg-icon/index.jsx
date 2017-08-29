@@ -12,18 +12,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 import React from 'react';
 
 class SvgIcon extends React.Component {
-  render () {
+  render() {
     const { sprite, symbol, ...rest } = this.props;
 
     return (
-      <svg
-        {...rest}
-        aria-hidden>
+      <svg {...rest} aria-hidden>
         <use xlinkHref={this.getHref()} />
       </svg>
     );
   }
-  getHref () {
+  getHref() {
     if (!(this.props.sprite && this.props.symbol)) {
       return;
     }

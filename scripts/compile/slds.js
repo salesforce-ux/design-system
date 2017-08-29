@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 const r = require.context(
-  "../../ui",
+  '../../ui',
   true,
   /(components|utilities).*?(example\.jsx|docs\.mdx)$/
 );
-const I = require("immutable");
-const Either = require("data.either");
+const I = require('immutable');
+const Either = require('data.either');
 
-const createInstance = require("../lib");
-const ui = require("../../.dist/ui.json");
+const createInstance = require('../lib');
+const ui = require('../../.dist/ui.json');
 let SLDS = createInstance(I.fromJS(ui));
 
 const examplePath = (component, variant, isUtility) =>

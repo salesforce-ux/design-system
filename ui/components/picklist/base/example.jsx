@@ -24,7 +24,7 @@ const listboxOptionId03 = 'listbox-option-unique-id-03';
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox
     aria-label={props.heading ? props.heading : null}
     className="slds-dropdown slds-dropdown_fluid"
@@ -32,8 +32,14 @@ const ListboxDropdown = props =>
   >
     {props.heading ? (
       <li role="presentation" className="slds-listbox__item">
-        <span className="slds-media slds-listbox__option slds-listbox__option_plain" role="presentation" id={listboxOptionId00}>
-          <h3 className="slds-text-title_caps" role="presentation">{props.heading}</h3>
+        <span
+          className="slds-media slds-listbox__option slds-listbox__option_plain"
+          role="presentation"
+          id={listboxOptionId00}
+        >
+          <h3 className="slds-text-title_caps" role="presentation">
+            {props.heading}
+          </h3>
         </span>
       </li>
     ) : null}
@@ -59,17 +65,17 @@ const ListboxDropdown = props =>
         selected={props.optionThreeSelected}
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{ height: '14rem' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: '14rem' }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -88,7 +94,7 @@ export let states = [
   {
     id: 'focused',
     label: 'Focused',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         isOpen
@@ -96,7 +102,8 @@ export let states = [
         inputIconRightSymbol="down"
         listbox={<ListboxDropdown />}
         readonly
-      />,
+      />
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `
@@ -104,7 +111,7 @@ export let states = [
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         isOpen
@@ -114,11 +121,12 @@ export let states = [
         aria-activedescendant={listboxOptionId01}
         readonly
       />
+    )
   },
   {
     id: 'open-option-selected',
     label: 'Open - Option Selected',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         isOpen
@@ -128,27 +136,27 @@ export let states = [
         listbox={<ListboxDropdown optionOneSelected />}
         readonly
       />
+    )
   },
   {
     id: 'open-options-selected',
     label: 'Open - Options Selected',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         isOpen
         inputIcon="right"
         inputIconRightSymbol="down"
         value="2 Options Selected"
-        listbox={
-          <ListboxDropdown optionOneSelected optionTwoSelected />
-        }
+        listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
         readonly
       />
+    )
   },
   {
     id: 'closed-option-selected',
     label: 'Closed - Option Selected',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         inputIcon="right"
@@ -157,40 +165,40 @@ export let states = [
         listbox={<ListboxDropdown focused optionOneSelected />}
         readonly
       />
+    )
   },
   {
     id: 'closed-options-selected',
     label: 'Closed - Options Selected',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         inputIcon="right"
         inputIconRightSymbol="down"
         value="2 Options Selected"
-        listbox={
-          <ListboxDropdown optionOneSelected optionTwoSelected />
-        }
+        listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
         readonly
       >
-      <Listbox
-        id={listboxSelectionsId}
-        aria-label="Selected Options:"
-        className="slds-p-top_xxx-small"
-        horizontal
-      >
-        <ListboxItem>
-          <ListboxPill label="Option A" tabIndex="0" />
-        </ListboxItem>
-        <ListboxItem>
-          <ListboxPill label="Option B" />
-        </ListboxItem>
-      </Listbox>
-    </ComboboxContainer>
+        <Listbox
+          id={listboxSelectionsId}
+          aria-label="Selected Options:"
+          className="slds-p-top_xxx-small"
+          horizontal
+        >
+          <ListboxItem>
+            <ListboxPill label="Option A" tabIndex="0" />
+          </ListboxItem>
+          <ListboxItem>
+            <ListboxPill label="Option B" />
+          </ListboxItem>
+        </Listbox>
+      </ComboboxContainer>
+    )
   },
   {
     id: 'group-heading',
     label: 'Group heading label',
-    element:
+    element: (
       <ComboboxContainer
         containerClassName="slds-size_small"
         isOpen
@@ -202,5 +210,6 @@ export let states = [
         }
         readonly
       />
+    )
   }
 ];

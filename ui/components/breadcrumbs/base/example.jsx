@@ -3,11 +3,11 @@
 
 import React from 'react';
 import BreadCrumbs from '../index.react';
-const {Crumb} = BreadCrumbs;
+const { Crumb } = BreadCrumbs;
 
 export default (
-    <BreadCrumbs>
-      <Crumb href="javascript:void(0);">Parent Entity</Crumb>
-      <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
-    </BreadCrumbs>
+  <BreadCrumbs>
+    <Crumb href="javascript:void(0);">Parent Entity</Crumb>
+    <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
+  </BreadCrumbs>
 );

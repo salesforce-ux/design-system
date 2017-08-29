@@ -10,8 +10,9 @@ const path = require('path');
  * @param {string} id
  */
 export const removeFromCache = (() => {
-  const patterns = ['app_modules', 'site'].map(k =>
-    new RegExp(_.escapeRegExp(path.resolve(__dirname, k))));
+  const patterns = ['app_modules', 'site'].map(
+    k => new RegExp(_.escapeRegExp(path.resolve(__dirname, k)))
+  );
   const shouldRemove = id =>
     patterns.reduce((allow, pattern) => allow || pattern.test(id), false);
   return id => {
@@ -28,18 +29,9 @@ export const removeFromCache = (() => {
 })();
 
 export const watchPaths = {
-  css: [
-    'assets/**/*.css'
-  ],
-  sass: [
-    'ui/**/*.scss',
-    'design-tokens/*.yml'
-  ],
-  js: [
-    'app_modules/**/*.{js,jsx}',
-    'ui/**/*.{js,jsx}',
-    'site/**/*.{js,jsx}'
-  ],
+  css: ['assets/**/*.css'],
+  sass: ['ui/**/*.scss', 'design-tokens/*.yml'],
+  js: ['app_modules/**/*.{js,jsx}', 'ui/**/*.{js,jsx}', 'site/**/*.{js,jsx}'],
   tokens: [
     'ui/**/tokens/*.yml',
     'design-tokens/**/*.yml',

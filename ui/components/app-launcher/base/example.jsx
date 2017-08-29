@@ -5,22 +5,46 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
 import { AppLauncherTile } from '../tile/example';
-import { Section, SectionContent, SectionTitle, SectionTitleAction } from '../../expandable-section/base/example';
+import {
+  Section,
+  SectionContent,
+  SectionTitle,
+  SectionTitleAction
+} from '../../expandable-section/base/example';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
 /// ///////////////////////////////////////////
-let AppLauncherModal = props =>
-  <Modal className="slds-modal_large slds-app-launcher" aria-labelledby="header43">
+let AppLauncherModal = props => (
+  <Modal
+    className="slds-modal_large slds-app-launcher"
+    aria-labelledby="header43"
+  >
     <ModalHeader className="slds-app-launcher__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
-      <h2 id="header43" className="slds-text-heading_medium">App Launcher</h2>
+      <h2 id="header43" className="slds-text-heading_medium">
+        App Launcher
+      </h2>
       <div className="slds-app-launcher__header-search">
         <div className="slds-form-element">
-          <label htmlFor="app-launcher-search" className="slds-form-element__label slds-assistive-text">Find an app</label>
+          <label
+            htmlFor="app-launcher-search"
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Find an app
+          </label>
           <div className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
-            <SvgIcon className="slds-input__icon" sprite="utility" symbol="search" />
-            <input type="search" className="slds-input" id="app-launcher-search" placeholder="Find an app" />
+            <SvgIcon
+              className="slds-input__icon"
+              sprite="utility"
+              symbol="search"
+            />
+            <input
+              type="search"
+              className="slds-input"
+              id="app-launcher-search"
+              placeholder="Find an app"
+            />
           </div>
         </div>
       </div>
@@ -34,7 +58,11 @@ let AppLauncherModal = props =>
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent isOpen referenceId="appsContent">
-          <div className="slds-assistive-text" id="drag-live-region" aria-live="assertive">
+          <div
+            className="slds-assistive-text"
+            id="drag-live-region"
+            aria-live="assertive"
+          >
             {props.dragDropLiveRegion}
           </div>
           <div className="slds-assistive-text" id={props.dragDropId}>
@@ -43,10 +71,22 @@ let AppLauncherModal = props =>
           <ul className="slds-grid slds-grid_pull-padded slds-wrap">
             {props.appTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3" key={i}>
-                  <AppLauncherTile draggable figureClass={tile.figureClass} grabbed={tile.grabbed} objectInitials={tile.initials} referenceId={tile.dragDropId}>
+                <li
+                  className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+                  key={i}
+                >
+                  <AppLauncherTile
+                    draggable
+                    figureClass={tile.figureClass}
+                    grabbed={tile.grabbed}
+                    objectInitials={tile.initials}
+                    referenceId={tile.dragDropId}
+                  >
                     <span className="slds-text-link">{tile.label}</span>
-                    <p>{tile.description}<span className="slds-text-link">More</span></p>
+                    <p>
+                      {tile.description}
+                      <span className="slds-text-link">More</span>
+                    </p>
                   </AppLauncherTile>
                 </li>
               );
@@ -65,9 +105,17 @@ let AppLauncherModal = props =>
           <ul className="slds-grid slds-grid_pull-padded slds-wrap">
             {props.itemTiles.map((tile, i) => {
               return (
-                <li className="slds-p-horizontal_small slds-size_xx-small" key={i}>
+                <li
+                  className="slds-p-horizontal_small slds-size_xx-small"
+                  key={i}
+                >
                   <AppLauncherTile flavor="small" symbol={tile.symbol}>
-                    <p className="slds-truncate slds-text-link" title={tile.label}>{tile.label}</p>
+                    <p
+                      className="slds-truncate slds-text-link"
+                      title={tile.label}
+                    >
+                      {tile.label}
+                    </p>
                   </AppLauncherTile>
                 </li>
               );
@@ -76,7 +124,8 @@ let AppLauncherModal = props =>
         </SectionContent>
       </Section>
     </ModalContent>
-  </Modal>;
+  </Modal>
+);
 
 /// ///////////////////////////////////////////
 // Export
@@ -135,7 +184,8 @@ const appTiles = [
     label: 'My Money'
   },
   {
-    description: 'The key to call center and contact center management is more...',
+    description:
+      'The key to call center and contact center management is more...',
     dragDropId: dragDropId,
     figureClass: 'slds-icon-custom-91',
     grabbed: false,
@@ -143,7 +193,8 @@ const appTiles = [
     label: 'Call Center'
   },
   {
-    description: 'Areas of Focus are used to track customer support for your...',
+    description:
+      'Areas of Focus are used to track customer support for your...',
     dragDropId: dragDropId,
     figureClass: 'slds-icon-custom-50',
     grabbed: false,
@@ -155,16 +206,16 @@ const appTiles = [
 /*
  * Helpers to position the App Tile for each state (ie. moved, dropped, etc.)
  */
-const moveItemPosition = function (arr, from, to) {
+const moveItemPosition = function(arr, from, to) {
   let copyArr = arr.slice(0);
   copyArr.splice(to, 0, copyArr.splice(from, 1)[0]);
   return copyArr;
 };
 
 const appTilesGrabbed = appTiles.slice(0);
-appTilesGrabbed[0] = Object.assign({}, appTilesGrabbed[0], {grabbed: true});
+appTilesGrabbed[0] = Object.assign({}, appTilesGrabbed[0], { grabbed: true });
 const appTilesMoved = moveItemPosition(appTiles, 0, 2);
-appTilesMoved[2] = Object.assign({}, appTilesMoved[2], {grabbed: true});
+appTilesMoved[2] = Object.assign({}, appTilesMoved[2], { grabbed: true });
 const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
 export default (
@@ -184,47 +235,50 @@ export let states = [
   {
     id: 'grabbed',
     label: 'Tile grabbed',
-    element:
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesGrabbed}
-        dragDropId={dragDropId}
-        dragDropInstructions=""
-        dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
-        grabbed
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
+    element: (
+      <div className="demo-only" style={{ height: '800px' }}>
+        <AppLauncherModal
+          appTiles={appTilesGrabbed}
+          dragDropId={dragDropId}
+          dragDropInstructions=""
+          dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
+          grabbed
+          itemTiles={itemTiles}
+        />
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
   },
   {
     id: 'moved',
     label: 'Tile moved in list',
-    element:
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesMoved}
-        dragDropId={dragDropId}
-        dragDropInstructions=""
-        dragDropLiveRegion="Sales Cloud: new position 3 of 6."
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
+    element: (
+      <div className="demo-only" style={{ height: '800px' }}>
+        <AppLauncherModal
+          appTiles={appTilesMoved}
+          dragDropId={dragDropId}
+          dragDropInstructions=""
+          dragDropLiveRegion="Sales Cloud: new position 3 of 6."
+          itemTiles={itemTiles}
+        />
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
   },
   {
     id: 'dropped',
     label: 'Tile dropped',
-    element:
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesDropped}
-        dragDropId={dragDropId}
-        dragDropInstructions="Press space bar to move this app within the list."
-        dragDropLiveRegion="Sales Cloud: final position 4 of 6."
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
+    element: (
+      <div className="demo-only" style={{ height: '800px' }}>
+        <AppLauncherModal
+          appTiles={appTilesDropped}
+          dragDropId={dragDropId}
+          dragDropInstructions="Press space bar to move this app within the list."
+          dragDropLiveRegion="Sales Cloud: final position 4 of 6."
+          itemTiles={itemTiles}
+        />
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
   }
 ];

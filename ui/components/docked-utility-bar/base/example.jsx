@@ -10,17 +10,28 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let UtilityPanel = props =>
-  <section className={classNames('slds-utility-panel slds-grid slds-grid_vertical', props.className)} role="dialog" aria-labelledby="panel-heading-01">
+export let UtilityPanel = props => (
+  <section
+    className={classNames(
+      'slds-utility-panel slds-grid slds-grid_vertical',
+      props.className
+    )}
+    role="dialog"
+    aria-labelledby="panel-heading-01"
+  >
     <header className="slds-utility-panel__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media_center">
         <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
-            <SvgIcon className="slds-icon slds-icon_small slds-icon-text-default" sprite="standard" symbol="call" />
+            <SvgIcon
+              className="slds-icon slds-icon_small slds-icon-text-default"
+              sprite="standard"
+              symbol="call"
+            />
           </span>
         </div>
         <div className="slds-media__body">
-          <h2 id="panel-heading-01">{ props.header || 'Header' }</h2>
+          <h2 id="panel-heading-01">{props.header || 'Header'}</h2>
         </div>
       </div>
       <div className="slds-col_bump-left slds-shrink-none">
@@ -32,48 +43,50 @@ export let UtilityPanel = props =>
         />
       </div>
     </header>
-    <div className="slds-utility-panel__body">
-      { props.children }
-    </div>
-  </section>;
+    <div className="slds-utility-panel__body">{props.children}</div>
+  </section>
+);
 
-export let UtilityBarItem = props =>
-  <li className={classNames(
-    'slds-utility-bar__item',
-    { 'slds-has-notification': props.notification },
-    props.className
-  )}>
+export let UtilityBarItem = props => (
+  <li
+    className={classNames(
+      'slds-utility-bar__item',
+      { 'slds-has-notification': props.notification },
+      props.className
+    )}
+  >
     <button
-      className={classNames(
-        'slds-button slds-utility-bar__action',
-        { 'slds-is-active': props.active }
-      )}
+      className={classNames('slds-button slds-utility-bar__action', {
+        'slds-is-active': props.active
+      })}
       aria-pressed={!!props.active}
     >
-      { props.notification
-        ? <abbr className="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+      {props.notification ? (
+        <abbr
+          className="slds-indicator_unread"
+          title="Unread Item"
+          aria-label="Unread Item"
+        >
           <span className="slds-assistive-text">●</span>
         </abbr>
-      : null }
+      ) : null}
       <SvgIcon
         className="slds-button__icon slds-button__icon_left"
         sprite="utility"
         symbol={props.symbol}
       />
-      <span className="slds-utility-bar__text">
-        { props.children }
-      </span>
+      <span className="slds-utility-bar__text">{props.children}</span>
     </button>
-  </li>;
+  </li>
+);
 
-export let UtilityBar = props =>
+export let UtilityBar = props => (
   <footer className="slds-utility-bar_container" aria-label="Utility Bar">
     <h2 className="slds-assistive-text">Utility Bar</h2>
-    <ul className="slds-utility-bar">
-      { props.children }
-    </ul>
-    { props.panel }
-  </footer>;
+    <ul className="slds-utility-bar">{props.children}</ul>
+    {props.panel}
+  </footer>
+);
 
 const PanelOpen = (
   <UtilityPanel className="slds-is-open" header="Call">
@@ -85,10 +98,9 @@ const PanelOpen = (
 // Export
 /// ////////////////////////////////////////
 
-export const Context = props =>
-  <div style={{ height: '540px' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: '540px' }}>{props.children}</div>
+);
 
 export default (
   <UtilityBar
@@ -112,9 +124,11 @@ export let states = [
   {
     id: 'open',
     label: 'Panel Open',
-    element:
+    element: (
       <UtilityBar panel={PanelOpen}>
-        <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
+        <UtilityBarItem symbol="call" active>
+          Call
+        </UtilityBarItem>
         <UtilityBarItem symbol="clock">History</UtilityBarItem>
         <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         <UtilityBarItem symbol="omni_channel">
@@ -122,11 +136,12 @@ export let states = [
           <span>Omni-Channel</span>
         </UtilityBarItem>
       </UtilityBar>
+    )
   },
   {
     id: 'notification',
     label: 'Item has notification',
-    element:
+    element: (
       <UtilityBar>
         <UtilityBarItem symbol="call">Call</UtilityBarItem>
         <UtilityBarItem symbol="clock">History</UtilityBarItem>
@@ -136,5 +151,6 @@ export let states = [
           <span>Omni-Channel</span>
         </UtilityBarItem>
       </UtilityBar>
+    )
   }
 ];

@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import BreadCrumbs, { Crumb} from '../../breadcrumbs/index.react';
+import BreadCrumbs, { Crumb } from '../../breadcrumbs/index.react';
 import { ButtonIcon } from '../../button-icons/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
@@ -15,7 +15,11 @@ export default (
           <Crumb href="javascript:void(0);">Accounts</Crumb>
           <Crumb href="javascript:void(0);">Company One</Crumb>
         </BreadCrumbs>
-        <h1 className="slds-page-header__title slds-truncate" title="Contacts (will truncate)">Contacts (will truncate)
+        <h1
+          className="slds-page-header__title slds-truncate"
+          title="Contacts (will truncate)"
+        >
+          Contacts (will truncate)
         </h1>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
@@ -29,7 +33,8 @@ export default (
               symbol="down"
               aria-haspopup="true"
               assistiveText="More Actions"
-              title="More Actions" />
+              title="More Actions"
+            />
           </div>
         </div>
       </div>
@@ -45,14 +50,16 @@ export default (
             symbol="table"
             hasDropdown
             assistiveText="Change view"
-            title="Change view" />
+            title="Change view"
+          />
         </div>
         <div className="slds-button-group slds-m-left_xx-small" role="group">
           <ButtonIcon
             className="slds-button_icon-border"
             symbol="chart"
             assistiveText="Chart"
-            title="Chart" />
+            title="Chart"
+          />
           <ButtonIcon
             className="slds-button_icon-border"
             symbol="filterList"
@@ -65,7 +72,8 @@ export default (
               symbol="sort"
               hasDropdown
               assistiveText="Sort"
-              title="Sort" />
+              title="Sort"
+            />
           </div>
         </div>
       </div>

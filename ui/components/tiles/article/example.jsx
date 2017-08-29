@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Tile, TileMedia } from "../base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Tile, TileMedia } from '../base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Export
@@ -12,10 +12,10 @@ import classNames from "classnames";
 
 export let states = [
   {
-    id: "tile-article",
-    label: "Default",
+    id: 'tile-article',
+    label: 'Default',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
           <ul className="slds-list_horizontal slds-has-dividers_right">
@@ -27,10 +27,10 @@ export let states = [
     )
   },
   {
-    id: "tile-article-liker-bar",
-    label: "With like bar",
+    id: 'tile-article-liker-bar',
+    label: 'With like bar',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>
             ...an introduction for beginners about climbing ropes and how they

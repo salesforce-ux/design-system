@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import { FormElementControl } from "../../radio-group/base/example";
-import { Fieldset, Legend } from "../../radio-group/base/example";
+import React from 'react';
+import classNames from 'classnames';
+import { FormElementControl } from '../../radio-group/base/example';
+import { Fieldset, Legend } from '../../radio-group/base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -16,7 +16,7 @@ let RadioButtonGroup = props => (
 
 let RadioButton = props => (
   <span
-    className={classNames("slds-button slds-radio_button", props.className)}
+    className={classNames('slds-button slds-radio_button', props.className)}
   >
     <input
       name="radio"
@@ -52,8 +52,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <Fieldset>
         <Legend>Radio Group Label</Legend>
@@ -80,8 +80,8 @@ export let states = [
     )
   },
   {
-    id: "required",
-    label: "Required",
+    id: 'required',
+    label: 'Required',
     element: (
       <Fieldset>
         <Legend>
@@ -102,8 +102,8 @@ export let states = [
     )
   },
   {
-    id: "error",
-    label: "Has error",
+    id: 'error',
+    label: 'Has error',
     element: (
       <Fieldset className="slds-has-error">
         <Legend>

@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { Progress, Step } from "../base/example";
+import React from 'react';
+import { Progress, Step } from '../base/example';
 
 /// ///////////////////////////////////////////
 // Export
@@ -10,10 +10,10 @@ import { Progress, Step } from "../base/example";
 
 export let states = [
   {
-    id: "default",
-    label: "Default",
+    id: 'default',
+    label: 'Default',
     element: (
-      <div className="demo-only" style={{ padding: "1rem" }}>
+      <div className="demo-only" style={{ padding: '1rem' }}>
         <Progress value="25">
           <Step done>Step 1</Step>
           <Step active>Step 2</Step>
@@ -25,12 +25,12 @@ export let states = [
     )
   },
   {
-    id: "shade",
-    label: "Shade",
+    id: 'shade',
+    label: 'Shade',
     element: (
       <div
         className="demo-only"
-        style={{ background: "#f4f6f9", padding: "1rem" }}
+        style={{ background: '#f4f6f9', padding: '1rem' }}
       >
         <Progress className="slds-progress_shade" value="25">
           <Step done>Step 1</Step>

@@ -1,18 +1,18 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   Modal,
   ModalHeader,
   ModalContent,
   ModalFooter
-} from "../../modals/base/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
+} from '../../modals/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 
 export default (
-  <div className="demo-only" style={{ height: "24rem" }}>
+  <div className="demo-only" style={{ height: '24rem' }}>
     <Modal className="slds-modal_large">
       <ModalHeader>
         <div className="slds-notify_container">

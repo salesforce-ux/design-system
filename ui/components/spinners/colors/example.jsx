@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import { SpinnerContainer } from "../base/example";
-import { Spinner } from "../base/example";
+import React from 'react';
+import classNames from 'classnames';
+import { SpinnerContainer } from '../base/example';
+import { Spinner } from '../base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -12,8 +12,8 @@ import { Spinner } from "../base/example";
 
 let Demo = props => (
   <div
-    className={classNames("demo-only", props.className)}
-    style={{ height: "5rem" }}
+    className={classNames('demo-only', props.className)}
+    style={{ height: '5rem' }}
   >
     {props.children}
   </div>
@@ -25,8 +25,8 @@ let Demo = props => (
 
 export let states = [
   {
-    id: "default",
-    label: "Default",
+    id: 'default',
+    label: 'Default',
     element: (
       <Demo>
         <SpinnerContainer>
@@ -36,8 +36,8 @@ export let states = [
     )
   },
   {
-    id: "brand",
-    label: "Brand",
+    id: 'brand',
+    label: 'Brand',
     element: (
       <Demo>
         <SpinnerContainer>
@@ -47,8 +47,8 @@ export let states = [
     )
   },
   {
-    id: "inverse",
-    label: "Inverse",
+    id: 'inverse',
+    label: 'Inverse',
     element: (
       <Demo className="demo--inverse">
         <SpinnerContainer>

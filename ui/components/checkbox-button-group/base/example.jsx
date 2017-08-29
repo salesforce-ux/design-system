@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 let Fieldset = props => (
-  <fieldset className={classNames("slds-form-element", props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">
       Scheduled Day(s)
     </legend>
@@ -23,7 +23,7 @@ let CheckboxGroup = props => (
 
 let Checkbox = props => (
   <span
-    className={classNames("slds-button slds-checkbox_button", props.className)}
+    className={classNames('slds-button slds-checkbox_button', props.className)}
   >
     <input
       aria-describedby={props.errorId}
@@ -56,8 +56,8 @@ export default (
 
 export let states = [
   {
-    id: "has-error",
-    label: "Error",
+    id: 'has-error',
+    label: 'Error',
     element: (
       <Fieldset className="slds-has-error">
         <CheckboxGroup>
@@ -84,8 +84,8 @@ export let states = [
     )
   },
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <Fieldset>
         <CheckboxGroup>

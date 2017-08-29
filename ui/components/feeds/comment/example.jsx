@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -13,7 +13,7 @@ import classNames from "classnames";
 export let Comment = props => (
   <article
     className={classNames(
-      "slds-comment slds-media slds-hint-parent",
+      'slds-comment slds-media slds-hint-parent',
       props.className
     )}
   >
@@ -53,7 +53,7 @@ export let CommentHeader = props => (
 export let CommentContent = props => (
   <div
     className={classNames(
-      "slds-comment__content slds-text-longform",
+      'slds-comment__content slds-text-longform',
       props.className
     )}
   >
@@ -70,7 +70,7 @@ export let CommentFooter = props => (
           title="Like this item"
           aria-pressed={!!props.liked}
         >
-          {props.liked ? "Liked" : "Like"}
+          {props.liked ? 'Liked' : 'Like'}
         </button>
       </li>
       {props.liked ? <li className="slds-item">1 Like</li> : null}
@@ -96,8 +96,8 @@ export default (
 
 export let states = [
   {
-    id: "comment-liked",
-    label: "Like",
+    id: 'comment-liked',
+    label: 'Like',
     element: (
       <Comment>
         <CommentHeader />

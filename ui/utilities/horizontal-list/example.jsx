@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "horizontal-list",
-    label: "Default",
+    id: 'horizontal-list',
+    label: 'Default',
     element: (
       <ul className="slds-list_horizontal">
         <li>Horizontal List</li>
@@ -16,8 +16,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-links",
-    label: "Links",
+    id: 'horizontal-list-links',
+    label: 'Links',
     element: (
       <ul className="slds-list_horizontal">
         <li>
@@ -35,8 +35,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-block-links",
-    label: "Block links",
+    id: 'horizontal-list-block-links',
+    label: 'Block links',
     element: (
       <ul className="slds-list_horizontal slds-has-block-links">
         <li>
@@ -54,8 +54,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-block-links-space",
-    label: "Block links with space",
+    id: 'horizontal-list-block-links-space',
+    label: 'Block links with space',
     element: (
       <ul className="slds-list_horizontal slds-has-block-links_space">
         <li>
@@ -73,8 +73,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-inline-block-links",
-    label: "Inline block links",
+    id: 'horizontal-list-inline-block-links',
+    label: 'Inline block links',
     element: (
       <ul className="slds-list_horizontal slds-has-inline-block-links">
         <li>
@@ -92,8 +92,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-inline-block-links-space",
-    label: "Inline block links with space",
+    id: 'horizontal-list-inline-block-links-space',
+    label: 'Inline block links with space',
     element: (
       <ul className="slds-list_horizontal slds-has-inline-block-links_space">
         <li>
@@ -111,8 +111,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-left",
-    label: "Left",
+    id: 'horizontal-list-left',
+    label: 'Left',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left">
         <li className="slds-item">
@@ -124,8 +124,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-link-left",
-    label: "Left with link",
+    id: 'horizontal-list-link-left',
+    label: 'Left with link',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links">
         <li className="slds-item">
@@ -143,8 +143,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-link-space-left",
-    label: "Left with link space",
+    id: 'horizontal-list-link-space-left',
+    label: 'Left with link space',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links_space">
         <li className="slds-item">
@@ -162,8 +162,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-right",
-    label: "Right",
+    id: 'horizontal-list-right',
+    label: 'Right',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right">
         <li className="slds-item">
@@ -175,8 +175,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-link-right",
-    label: "Right with link",
+    id: 'horizontal-list-link-right',
+    label: 'Right with link',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links">
         <li className="slds-item">
@@ -194,8 +194,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal-list-link-space-right",
-    label: "Right with link space",
+    id: 'horizontal-list-link-space-right',
+    label: 'Right with link space',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links_space">
         <li className="slds-item">

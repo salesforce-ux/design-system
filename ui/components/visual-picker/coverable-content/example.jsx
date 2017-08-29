@@ -1,30 +1,30 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 import {
   Fieldset,
   Legend,
   FormElementControl
-} from "../../radio-group/base/example";
-import { UtilityIcon } from "../../icons/base/example";
+} from '../../radio-group/base/example';
+import { UtilityIcon } from '../../icons/base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let VisualPicker = props => {
-  const uniqueId = _.uniqueId("visual-picker-");
+  const uniqueId = _.uniqueId('visual-picker-');
 
   return (
     <div
-      className={classNames("slds-visual-picker", {
-        "slds-visual-picker_large": props.size === "large",
-        "slds-visual-picker_medium": props.size == "medium"
+      className={classNames('slds-visual-picker', {
+        'slds-visual-picker_large': props.size === 'large',
+        'slds-visual-picker_medium': props.size == 'medium'
       })}
     >
       <input
@@ -38,7 +38,7 @@ export let VisualPicker = props => {
         {props.icon ? (
           <span
             className={classNames(
-              "slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center",
+              'slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center',
               props.className
             )}
           >
@@ -64,14 +64,14 @@ export let VisualPicker = props => {
               >
                 <SvgIcon
                   className={classNames(
-                    "slds-icon slds-icon-" +
+                    'slds-icon slds-icon-' +
                       props.sprite +
-                      "-" +
+                      '-' +
                       props.symbol +
-                      " slds-icon_large",
-                    { "slds-icon-text-default": props.sprite === "utility" }
+                      ' slds-icon_large',
+                    { 'slds-icon-text-default': props.sprite === 'utility' }
                   )}
-                  sprite={props.sprite || "action"}
+                  sprite={props.sprite || 'action'}
                   symbol={props.symbol}
                 />
                 <span className="slds-assistive-text">
@@ -83,7 +83,7 @@ export let VisualPicker = props => {
         ) : (
           <span
             className={classNames(
-              "slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center",
+              'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center',
               props.className
             )}
           >
@@ -111,7 +111,7 @@ export let VisualPickerMediaObject = props => (
   <a
     href="javascript:void(0);"
     className={classNames(
-      "slds-box slds-box_link slds-box_x-small slds-media",
+      'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
   >
@@ -154,8 +154,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled option",
+    id: 'disabled',
+    label: 'Disabled option',
     element: (
       <Fieldset>
         <Legend>Select an app</Legend>
@@ -185,8 +185,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "checkbox-group",
-    label: "Checkbox group",
+    id: 'checkbox-group',
+    label: 'Checkbox group',
     element: (
       <Fieldset>
         <Legend>Add the following object(s)</Legend>

@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -19,8 +19,8 @@ let Header = props => (
       </button>
       <div
         className={classNames(
-          "slds-grid slds-dropdown-trigger slds-dropdown-trigger_click",
-          props.tourMenuOpen ? "slds-is-open" : null
+          'slds-grid slds-dropdown-trigger slds-dropdown-trigger_click',
+          props.tourMenuOpen ? 'slds-is-open' : null
         )}
       >
         <button className="slds-button" aria-haspopup="true">
@@ -97,10 +97,10 @@ export default <Header />;
 
 export let states = [
   {
-    id: "menu-open",
-    label: "Tour Menu Open",
+    id: 'menu-open',
+    label: 'Tour Menu Open',
     element: (
-      <div className="demo-only" style={{ height: "240px" }}>
+      <div className="demo-only" style={{ height: '240px' }}>
         <Header tourMenuOpen />
       </div>
     )

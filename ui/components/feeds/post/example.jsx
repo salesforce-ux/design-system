@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { File } from "../../files/base/example";
-import { AttachmentLink } from "../../files/base/example";
-import { Publisher } from "../../publishers/comment/example";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { File } from '../../files/base/example';
+import { AttachmentLink } from '../../files/base/example';
+import { Publisher } from '../../publishers/comment/example';
 import {
   Comment,
   CommentHeader,
   CommentContent,
   CommentFooter
-} from "../comment/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+} from '../comment/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 export let PostFooterActions = props => (
   <ul className="slds-post__footer-actions-list slds-list_horizontal">
@@ -22,8 +22,8 @@ export let PostFooterActions = props => (
       <button
         title="Like this item"
         className={classNames(
-          "slds-button_reset slds-post__footer-action",
-          props.liked ? "slds-is-active" : null
+          'slds-button_reset slds-post__footer-action',
+          props.liked ? 'slds-is-active' : null
         )}
         aria-pressed={!!props.liked}
       >
@@ -32,7 +32,7 @@ export let PostFooterActions = props => (
           sprite="utility"
           symbol="like"
         />
-        {props.liked ? "Liked" : "Like"}
+        {props.liked ? 'Liked' : 'Like'}
       </button>
     </li>
     <li className="slds-col slds-item slds-m-right_medium">
@@ -44,7 +44,7 @@ export let PostFooterActions = props => (
           className="slds-icon slds-icon-text-default slds-icon_x-small slds-align-middle"
           sprite="utility"
           symbol="share_post"
-        />{" "}
+        />{' '}
         Comment
       </button>
     </li>
@@ -57,7 +57,7 @@ export let PostFooterActions = props => (
           className="slds-icon slds-icon-text-default slds-icon_x-small slds-align-middle"
           sprite="utility"
           symbol="share"
-        />{" "}
+        />{' '}
         Share
       </button>
     </li>
@@ -67,7 +67,7 @@ export let PostFooterActions = props => (
 export let PostFooterMeta = props => (
   <ul className="slds-post__footer-meta-list slds-list_horizontal slds-has-dividers_right slds-text-title">
     {props.comments ? (
-      <li className="slds-item">{props.comments || "0"} comments</li>
+      <li className="slds-item">{props.comments || '0'} comments</li>
     ) : null}
     <li className="slds-item">20 shares</li>
     <li className="slds-item">259 views</li>
@@ -93,8 +93,8 @@ export let PostHeader = props => (
         <p>
           <a href="javascript:void(0);" title="Jason Rodgers">
             Jason Rogers
-          </a>{" "}
-          —{" "}
+          </a>{' '}
+          —{' '}
           <a href="javascript:void(0);" title="Design Systems">
             Design Systems
           </a>
@@ -123,7 +123,7 @@ export let PostHeader = props => (
 export let PostContent = props => (
   <div
     className={classNames(
-      "slds-post__content slds-text-longform",
+      'slds-post__content slds-text-longform',
       props.className
     )}
   >
@@ -132,13 +132,13 @@ export let PostContent = props => (
 );
 
 export let PostFooter = props => (
-  <footer className={classNames("slds-post__footer", props.className)}>
+  <footer className={classNames('slds-post__footer', props.className)}>
     {props.children}
   </footer>
 );
 
 export let Post = props => (
-  <article className={classNames("slds-post", props.className)}>
+  <article className={classNames('slds-post', props.className)}>
     {props.children}
   </article>
 );
@@ -176,7 +176,7 @@ export default (
           <PostHeader />
           <PostContent>
             <p>
-              Hey there! Here's the latest demo presentation{" "}
+              Hey there! Here's the latest demo presentation{' '}
               <a href="javascript:void(0);" title="Jenna Davis">
                 @Jenna Davis
               </a>, let me know if there are any changes. I've updated slides
@@ -195,8 +195,8 @@ export default (
 
 export let states = [
   {
-    id: "post-with-liker-bar",
-    label: "Like",
+    id: 'post-with-liker-bar',
+    label: 'Like',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -205,7 +205,7 @@ export let states = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -231,8 +231,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "post-attachment-link",
-    label: "Link attachment",
+    id: 'post-attachment-link',
+    label: 'Link attachment',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -241,7 +241,7 @@ export let examples = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -265,8 +265,8 @@ export let examples = [
     )
   },
   {
-    id: "post-attachment-files",
-    label: "Files(s) attachment",
+    id: 'post-attachment-files',
+    label: 'Files(s) attachment',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -275,7 +275,7 @@ export let examples = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -324,8 +324,8 @@ export let examples = [
     )
   },
   {
-    id: "post-with-comments",
-    label: "With replies",
+    id: 'post-with-comments',
+    label: 'With replies',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -334,7 +334,7 @@ export let examples = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -356,8 +356,8 @@ export let examples = [
     )
   },
   {
-    id: "post-with-overflow",
-    label: "Replies - Overflow Bar",
+    id: 'post-with-overflow',
+    label: 'Replies - Overflow Bar',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -366,7 +366,7 @@ export let examples = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Here's the latest demo presentation{" "}
+                  Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -396,8 +396,8 @@ export let examples = [
     )
   },
   {
-    id: "post-with-publisher-active",
-    label: "Replies - Publisher active",
+    id: 'post-with-publisher-active',
+    label: 'Replies - Publisher active',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -406,7 +406,7 @@ export let examples = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Here's the latest demo presentation{" "}
+                  Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -436,8 +436,8 @@ export let examples = [
     )
   },
   {
-    id: "questions",
-    label: "Question",
+    id: 'questions',
+    label: 'Question',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -449,7 +449,7 @@ export let examples = [
                   Barbecue Party Tips For A Truly Amazing Event?
                 </h3>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated

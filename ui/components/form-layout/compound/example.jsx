@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export default (
-  <div className="demo-only" style={{ width: "440px" }}>
+  <div className="demo-only" style={{ width: '440px' }}>
     <div className="slds-form slds-form_compound">
       <fieldset className="slds-form-element">
         <legend className="slds-form-element__label slds-text-title_caps">

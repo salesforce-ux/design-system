@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import Truncate from "../../../shared/truncate/index.react";
-import Heading from "../../heading/index.react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import { StandardIcon } from "../../icons/standard/example";
-import { StatefulButton } from "../../buttons/stateful/example";
+import React from 'react';
+import Truncate from '../../../shared/truncate/index.react';
+import Heading from '../../heading/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
+import { StatefulButton } from '../../buttons/stateful/example';
 
 export let RecordHome = props => (
   <div className="slds-page-header">

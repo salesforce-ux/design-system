@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export const Context = props => (
   <div className="demo-only-spacing demo-only-margin">{props.children}</div>
@@ -9,8 +9,8 @@ export const Context = props => (
 
 export let examples = [
   {
-    id: "top",
-    label: "Top",
+    id: 'top',
+    label: 'Top',
     element: (
       <div>
         <div className="slds-m-top_none" />
@@ -26,8 +26,8 @@ export let examples = [
     )
   },
   {
-    id: "right",
-    label: "Right",
+    id: 'right',
+    label: 'Right',
     element: (
       <div>
         <div className="slds-m-right_none" />
@@ -43,8 +43,8 @@ export let examples = [
     )
   },
   {
-    id: "bottom",
-    label: "Bottom",
+    id: 'bottom',
+    label: 'Bottom',
     element: (
       <div>
         <div className="slds-m-bottom_none" />
@@ -60,8 +60,8 @@ export let examples = [
     )
   },
   {
-    id: "left",
-    label: "Left",
+    id: 'left',
+    label: 'Left',
     element: (
       <div>
         <div className="slds-m-left_none" />
@@ -77,8 +77,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical",
-    label: "Vertical",
+    id: 'vertical',
+    label: 'Vertical',
     element: (
       <div>
         <div className="slds-m-vertical_none" />
@@ -94,8 +94,8 @@ export let examples = [
     )
   },
   {
-    id: "horizontal",
-    label: "Horizontal",
+    id: 'horizontal',
+    label: 'Horizontal',
     element: (
       <div>
         <div className="slds-m-horizontal_none" />
@@ -111,8 +111,8 @@ export let examples = [
     )
   },
   {
-    id: "around",
-    label: "Around",
+    id: 'around',
+    label: 'Around',
     element: (
       <div>
         <div className="slds-m-around_none" />

@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
 import {
   Menu,
   MenuList,
   MenuItem,
   Trigger
-} from "../../menus/dropdown/example";
-import classNames from "classnames";
+} from '../../menus/dropdown/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -17,7 +17,7 @@ import classNames from "classnames";
 
 export let ButtonGroup = props => (
   <div
-    className={classNames("slds-button-group", props.className)}
+    className={classNames('slds-button-group', props.className)}
     role="group"
   >
     {props.children}
@@ -25,7 +25,7 @@ export let ButtonGroup = props => (
 );
 
 export let ButtonGroupList = props => (
-  <ul className={classNames("slds-button-group-list", props.className)}>
+  <ul className={classNames('slds-button-group-list', props.className)}>
     {props.children}
   </ul>
 );
@@ -44,8 +44,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
@@ -60,8 +60,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "list",
-    label: "List",
+    id: 'list',
+    label: 'List',
     element: (
       <ButtonGroupList>
         <li>
@@ -77,8 +77,8 @@ export let examples = [
     )
   },
   {
-    id: "overflow",
-    label: "Overflow menu icon",
+    id: 'overflow',
+    label: 'Overflow menu icon',
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
@@ -89,10 +89,10 @@ export let examples = [
     )
   },
   {
-    id: "button-group-more-open",
-    label: "Overflow menu icon - Open",
+    id: 'button-group-more-open',
+    label: 'Overflow menu icon - Open',
     element: (
-      <div className="demo-only" style={{ height: "8.75rem" }}>
+      <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
           <button className="slds-button slds-button_neutral">Refresh</button>
           <button className="slds-button slds-button_neutral">Edit</button>
@@ -111,8 +111,8 @@ export let examples = [
     )
   },
   {
-    id: "button-group-icon-disabled",
-    label: "Overflow menu icon - Disabled",
+    id: 'button-group-icon-disabled',
+    label: 'Overflow menu icon - Disabled',
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
@@ -132,12 +132,12 @@ export let examples = [
     )
   },
   {
-    id: "button-group-inverse",
-    label: "Inverse",
+    id: 'button-group-inverse',
+    label: 'Inverse',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
@@ -157,12 +157,12 @@ export let examples = [
     )
   },
   {
-    id: "button-group-inverse-disabled",
-    label: "Inverse Disabled",
+    id: 'button-group-inverse-disabled',
+    label: 'Inverse Disabled',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
@@ -184,12 +184,12 @@ export let examples = [
     )
   },
   {
-    id: "button-group-icon-inverse-disabled",
-    label: "Inverse More Icon Disabled",
+    id: 'button-group-icon-inverse-disabled',
+    label: 'Inverse More Icon Disabled',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
           <button className="slds-button slds-button_inverse">Refresh</button>
@@ -210,8 +210,8 @@ export let examples = [
     )
   },
   {
-    id: "button-group-icon",
-    label: "Icon group",
+    id: 'button-group-icon',
+    label: 'Icon group',
     element: (
       <ButtonGroup>
         <ButtonIcon
@@ -238,8 +238,8 @@ export let examples = [
     )
   },
   {
-    id: "button-group-icon-selected",
-    label: "Icon group - Selected",
+    id: 'button-group-icon-selected',
+    label: 'Icon group - Selected',
     element: (
       <ButtonGroup>
         <ButtonIcon

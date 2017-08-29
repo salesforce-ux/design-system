@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import { UtilityIcon } from "../../icons/base/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import { UtilityIcon } from '../../icons/base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -14,7 +14,7 @@ export let VisualPickerMediaObject = props => (
   <a
     href="javascript:void(0);"
     className={classNames(
-      "slds-box slds-box_link slds-box_x-small slds-media",
+      'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
   >
@@ -32,7 +32,7 @@ export let VisualPickerMediaObject = props => (
 /// ////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: "24rem" }}>
+  <div className="demo-only" style={{ width: '24rem' }}>
     <VisualPickerMediaObject symbol="user">
       <h2
         className="slds-truncate slds-text-heading_small"

@@ -1,16 +1,16 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let Fieldset = props => (
-  <fieldset className={classNames("slds-form-element", props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}
   </fieldset>
 );
@@ -18,7 +18,7 @@ export let Fieldset = props => (
 export let Legend = props => (
   <legend
     className={classNames(
-      "slds-form-element__legend slds-form-element__label",
+      'slds-form-element__legend slds-form-element__label',
       props.className
     )}
   >
@@ -27,20 +27,20 @@ export let Legend = props => (
 );
 
 export let FormElementControl = props => (
-  <div className={classNames("slds-form-element__control", props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
 );
 
 export let Radio = props => {
-  const uniqueId = _.uniqueId("radio-");
+  const uniqueId = _.uniqueId('radio-');
 
   return (
-    <span className={classNames("slds-radio", props.className)}>
+    <span className={classNames('slds-radio', props.className)}>
       <input
         type="radio"
         id={uniqueId}
-        name={props.name || "options"}
+        name={props.name || 'options'}
         disabled={props.disabled}
         defaultChecked={props.checked}
         aria-describedby={props.errorId}
@@ -69,8 +69,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <Fieldset>
         <Legend>Radio Group Label</Legend>
@@ -82,14 +82,14 @@ export let states = [
     )
   },
   {
-    id: "required",
-    label: "Required",
+    id: 'required',
+    label: 'Required',
     element: (
       <Fieldset>
         <Legend>
           <abbr className="slds-required" title="required">
             *
-          </abbr>{" "}
+          </abbr>{' '}
           Radio Group Label
         </Legend>
         <FormElementControl>
@@ -100,14 +100,14 @@ export let states = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <Fieldset className="slds-has-error">
         <Legend>
           <abbr className="slds-required" title="required">
             *
-          </abbr>{" "}
+          </abbr>{' '}
           Radio Group Label
         </Legend>
         <FormElementControl>

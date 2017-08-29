@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { Avatar } from "../../avatar/base/example";
-import { Pill } from "../../pills/base/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import { Modal, ModalContent } from "../../modals/base/example";
+import React from 'react';
+import { Avatar } from '../../avatar/base/example';
+import { Pill } from '../../pills/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { Modal, ModalContent } from '../../modals/base/example';
 import {
   RichTextEditor,
   RteToolbar,
@@ -18,35 +18,35 @@ import {
   RteInsertContent,
   RteTextarea,
   RteClearFormatting
-} from "../../rich-text-editor/base/example";
-import { FormElement } from "../../form-element/base/example";
-import { Input } from "../../input/base/example";
+} from '../../rich-text-editor/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   EntityOption
-} from "../../combobox/base/example";
-import { ListboxPill } from "../../pills/listbox-of-pill-options/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+} from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-const dialogHeadingId = "modal-heading-id-1";
-const dialogBodyId = "modal-content-id-1";
+const dialogHeadingId = 'modal-heading-id-1';
+const dialogBodyId = 'modal-content-id-1';
 
 const composers = [
   {
-    entity: "email",
-    title: "Agenda for next week"
+    entity: 'email',
+    title: 'Agenda for next week'
   },
   {
-    entity: "call",
-    title: "Lei Chan"
+    entity: 'call',
+    title: 'Lei Chan'
   },
   {
-    entity: "task",
-    title: "August 14 Meeting Notes"
+    entity: 'task',
+    title: 'August 14 Meeting Notes'
   }
 ];
 
@@ -106,11 +106,11 @@ const EmailFooter = props => (
 export let DockedComposerPanel = props => (
   <section
     className={classNames(
-      "slds-docked-composer slds-grid slds-grid_vertical",
+      'slds-docked-composer slds-grid slds-grid_vertical',
       props.className,
-      props.dialogClosed ? "slds-is-closed" : null
+      props.dialogClosed ? 'slds-is-closed' : null
     )}
-    role={!props.nestedDialog ? "dialog" : null}
+    role={!props.nestedDialog ? 'dialog' : null}
     aria-labelledby={!props.nestedDialog ? dialogHeadingId : null}
     aria-describedby={!props.nestedDialog ? dialogBodyId : null}
   >
@@ -124,7 +124,7 @@ export let DockedComposerPanel = props => (
             <SvgIcon
               className="slds-icon slds-icon_small slds-icon-text-default"
               sprite="standard"
-              symbol={props.headerSymbol || "call"}
+              symbol={props.headerSymbol || 'call'}
             />
           </span>
         </div>
@@ -135,9 +135,9 @@ export let DockedComposerPanel = props => (
           <h2
             className="slds-truncate"
             id={dialogHeadingId}
-            title={props.header || "Header"}
+            title={props.header || 'Header'}
           >
-            {props.header || "Header"}
+            {props.header || 'Header'}
           </h2>
         </div>
       </div>
@@ -163,7 +163,7 @@ export let DockedComposerPanel = props => (
       </div>
     </header>
     <div
-      className={classNames("slds-docked-composer__body", props.bodyClassName)}
+      className={classNames('slds-docked-composer__body', props.bodyClassName)}
       id={dialogBodyId}
     >
       {props.children}
@@ -171,7 +171,7 @@ export let DockedComposerPanel = props => (
     {props.footer ? (
       <footer
         className={classNames(
-          "slds-docked-composer__footer slds-shrink-none",
+          'slds-docked-composer__footer slds-shrink-none',
           props.footerClassName
         )}
       >
@@ -193,7 +193,7 @@ let ComposerOverflowMenu = props => (
         symbol="standard_objects"
       />
       <span className="slds-text-body_small slds-m-left_xx-small">
-        3{" "}
+        3{' '}
         <span className="slds-assistive-text">
           other docked composer panels
         </span>
@@ -206,9 +206,9 @@ let ComposerOverflowMenu = props => (
           <MenuItem key={i}>
             <span
               className={
-                "slds-icon_container slds-icon-standard-" +
+                'slds-icon_container slds-icon-standard-' +
                 composers[i].entity +
-                " slds-m-right_x-small"
+                ' slds-m-right_x-small'
               }
             >
               <SvgIcon
@@ -231,7 +231,7 @@ let ComposerOverflowMenu = props => (
 /// ////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: "500px", minWidth: "615px", overflowX: "auto" }}>
+  <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
     {props.children}
   </div>
 );
@@ -248,8 +248,8 @@ export default (
 
 export let states = [
   {
-    id: "single-composer-open",
-    label: "Open",
+    id: 'single-composer-open',
+    label: 'Open',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel className="slds-is-open" footer={<Footer />}>
@@ -261,8 +261,8 @@ export let states = [
     )
   },
   {
-    id: "single-composer-focused",
-    label: "Focused",
+    id: 'single-composer-focused',
+    label: 'Focused',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -277,8 +277,8 @@ export let states = [
     )
   },
   {
-    id: "single-composer-closed",
-    label: "Closed",
+    id: 'single-composer-closed',
+    label: 'Closed',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel dialogClosed footer={<Footer />}>
@@ -290,8 +290,8 @@ export let states = [
     )
   },
   {
-    id: "single-composer-closed-focused",
-    label: "Closed Focused",
+    id: 'single-composer-closed-focused',
+    label: 'Closed Focused',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -307,8 +307,8 @@ export let states = [
     )
   },
   {
-    id: "single-composer-popout",
-    label: "Popout",
+    id: 'single-composer-popout',
+    label: 'Popout',
     element: (
       <div>
         <Modal
@@ -329,8 +329,8 @@ export let states = [
     )
   },
   {
-    id: "multiple-composer-overflow",
-    label: "With Overflow Menu",
+    id: 'multiple-composer-overflow',
+    label: 'With Overflow Menu',
     element: (
       <div className="slds-docked_container">
         <ComposerOverflowMenu />
@@ -346,8 +346,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "task",
-    label: "Log a Task",
+    id: 'task',
+    label: 'Log a Task',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -442,8 +442,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-queued",
-    label: "Voice - Queued",
+    id: 'voice-composer-queued',
+    label: 'Voice - Queued',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -478,8 +478,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-ringing",
-    label: "Voice - Ringing",
+    id: 'voice-composer-ringing',
+    label: 'Voice - Ringing',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -514,8 +514,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-connected",
-    label: "Voice - Connected",
+    id: 'voice-composer-connected',
+    label: 'Voice - Connected',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -573,8 +573,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-cancelled",
-    label: "Voice - Cancelled",
+    id: 'voice-composer-cancelled',
+    label: 'Voice - Cancelled',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -604,8 +604,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-busy",
-    label: "Voice - Busy",
+    id: 'voice-composer-busy',
+    label: 'Voice - Busy',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -615,13 +615,13 @@ export let examples = [
           footer={[
             <button
               className="slds-button slds-button_neutral slds-size_1-of-2"
-              key={_.uniqueId("follow-up-")}
+              key={_.uniqueId('follow-up-')}
             >
               Follow-Up Later
             </button>,
             <button
               className="slds-button slds-button_brand slds-size_1-of-2"
-              key={_.uniqueId("call-again-")}
+              key={_.uniqueId('call-again-')}
             >
               Call Again
             </button>
@@ -647,8 +647,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-failed",
-    label: "Voice - Call Failed",
+    id: 'voice-composer-failed',
+    label: 'Voice - Call Failed',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -658,13 +658,13 @@ export let examples = [
           footer={[
             <button
               className="slds-button slds-button_neutral slds-size_1-of-2"
-              key={_.uniqueId("follow-up-")}
+              key={_.uniqueId('follow-up-')}
             >
               Edit Phone Number
             </button>,
             <button
               className="slds-button slds-button_brand slds-size_1-of-2"
-              key={_.uniqueId("call-again-")}
+              key={_.uniqueId('call-again-')}
             >
               Call Again
             </button>
@@ -692,8 +692,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-no-answer",
-    label: "Voice - No Answer",
+    id: 'voice-composer-no-answer',
+    label: 'Voice - No Answer',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -703,13 +703,13 @@ export let examples = [
           footer={[
             <button
               className="slds-button slds-button_neutral slds-size_1-of-2"
-              key={_.uniqueId("follow-up-")}
+              key={_.uniqueId('follow-up-')}
             >
               Follow-Up Later
             </button>,
             <button
               className="slds-button slds-button_brand slds-size_1-of-2"
-              key={_.uniqueId("call-again-")}
+              key={_.uniqueId('call-again-')}
             >
               Call Again
             </button>
@@ -737,8 +737,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-call-finished",
-    label: "Voice - Call Finished",
+    id: 'voice-composer-call-finished',
+    label: 'Voice - Call Finished',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -795,8 +795,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-call-incoming",
-    label: "Voice - Call Incoming",
+    id: 'voice-composer-call-incoming',
+    label: 'Voice - Call Incoming',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -872,8 +872,8 @@ export let examples = [
     )
   },
   {
-    id: "voice-composer-call-logged",
-    label: "Voice - Log a Call",
+    id: 'voice-composer-call-logged',
+    label: 'Voice - Log a Call',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel
@@ -951,8 +951,8 @@ export let examples = [
     )
   },
   {
-    id: "email",
-    label: "Email Composer",
+    id: 'email',
+    label: 'Email Composer',
     element: (
       <div className="slds-docked_container">
         <DockedComposerPanel

@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { StandardIcon } from "../../icons/standard/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let Avatar = props => (
-  <span className={classNames("slds-avatar", props.className)}>
+  <span className={classNames('slds-avatar', props.className)}>
     {props.children}
   </span>
 );
@@ -32,8 +32,8 @@ export default (
 
 export let examples = [
   {
-    id: "fallback-user-initials",
-    label: "Fallback - User initials",
+    id: 'fallback-user-initials',
+    label: 'Fallback - User initials',
     element: (
       <Avatar className="slds-avatar_circle">
         <abbr
@@ -46,8 +46,8 @@ export let examples = [
     )
   },
   {
-    id: "fallback-user-icon",
-    label: "Fallback - User icon",
+    id: 'fallback-user-icon',
+    label: 'Fallback - User icon',
     element: (
       <Avatar className="slds-avatar_circle">
         <StandardIcon symbol="user" />
@@ -55,8 +55,8 @@ export let examples = [
     )
   },
   {
-    id: "fallback-entity-initials",
-    label: "Fallback - Entity Initials",
+    id: 'fallback-entity-initials',
+    label: 'Fallback - Entity Initials',
     element: (
       <Avatar>
         <abbr
@@ -69,8 +69,8 @@ export let examples = [
     )
   },
   {
-    id: "fallback-entity-icon",
-    label: "Fallback - Entity Icon",
+    id: 'fallback-entity-icon',
+    label: 'Fallback - Entity Icon',
     element: (
       <Avatar>
         <StandardIcon />

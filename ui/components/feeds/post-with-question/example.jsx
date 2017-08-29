@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 import {
   Post,
   PostHeader,
@@ -12,7 +12,7 @@ import {
   PostFooterActions,
   PostFooterMeta,
   Comments
-} from "../post/example";
+} from '../post/example';
 
 /// ////////////////////////////////////////
 // Export
@@ -29,7 +29,7 @@ export default (
               Barbecue Party Tips For A Truly Amazing Event?
             </h3>
             <p>
-              Hey there! Here's the latest demo presentation{" "}
+              Hey there! Here's the latest demo presentation{' '}
               <a href="javascript:void(0);" title="Jenna Davis">
                 @Jenna Davis
               </a>, let me know if there are any changes. I've updated slides

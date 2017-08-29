@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import classNames from 'classnames';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import _ from '../../../shared/helpers';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -14,11 +14,11 @@ import _ from "../../../shared/helpers";
 let Subtab = props => (
   <li
     className={classNames(
-      "slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center",
+      'slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center',
       {
-        "slds-has-notification": props.hasNotification,
-        "slds-has-focus": props.hasFocus,
-        "slds-active": props.active
+        'slds-has-notification': props.hasNotification,
+        'slds-has-focus': props.hasFocus,
+        'slds-active': props.active
       },
       props.className
     )}
@@ -26,13 +26,13 @@ let Subtab = props => (
   >
     <a
       aria-controls={props.tabPanelId}
-      aria-selected={props.active ? "true" : "false"}
+      aria-selected={props.active ? 'true' : 'false'}
       className="slds-tabs_default__link slds-p-horizontal_xx-small"
       href="javascript:void(0);"
       id={props.tabItemId}
       role="tab"
-      tabIndex={props.active ? "0" : "-1"}
-      title={props.title || "Subtab Name"}
+      tabIndex={props.active ? '0' : '-1'}
+      title={props.title || 'Subtab Name'}
     >
       {props.itemUnsaved ? (
         <abbr
@@ -51,62 +51,62 @@ let Subtab = props => (
           title="New Activity"
         >
           <span className="slds-assistive-text">
-            New activity in Tab: {props.title || "Subtab Name"}
+            New activity in Tab: {props.title || 'Subtab Name'}
           </span>
         </span>
       )}
       <div
         className="slds-icon_container"
-        title={_.startCase(props.symbol) || "Case"}
+        title={_.startCase(props.symbol) || 'Case'}
       >
         <SvgIcon
           className="slds-icon slds-icon_small slds-icon-text-default"
           sprite="standard"
-          symbol={props.symbol || "case"}
+          symbol={props.symbol || 'case'}
         />
         <span className="slds-assistive-text">
-          {_.startCase(props.symbol) || "Case"}:
+          {_.startCase(props.symbol) || 'Case'}:
         </span>
       </div>
       <span
         className={classNames(
-          "slds-truncate",
-          props.pinned ? "slds-assistive-text" : null
+          'slds-truncate',
+          props.pinned ? 'slds-assistive-text' : null
         )}
-        title={props.title || "Subtab Name"}
+        title={props.title || 'Subtab Name'}
       >
-        {props.title || "Subtab Name"}
+        {props.title || 'Subtab Name'}
       </span>
     </a>
     {props.menuIcon ? (
       <div
         className={classNames(
-          "slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none",
-          props.actionOverflow == "true" ? "slds-is-open" : null
+          'slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none',
+          props.actionOverflow == 'true' ? 'slds-is-open' : null
         )}
       >
         <ButtonIcon
           className="slds-button_icon-container slds-button_icon-x-small"
-          tabIndex={props.active ? "0" : "-1"}
+          tabIndex={props.active ? '0' : '-1'}
           symbol="chevrondown"
           aria-haspopup="true"
-          assistiveText={"Actions for " + props.title}
-          title={"Actions for " + props.title}
+          assistiveText={'Actions for ' + props.title}
+          title={'Actions for ' + props.title}
         />
       </div>
     ) : null}
     <div
       className={classNames(
-        "slds-col_bump-left slds-p-left_none slds-p-right_none",
-        props.pinned ? "slds-assistive-text" : null
+        'slds-col_bump-left slds-p-left_none slds-p-right_none',
+        props.pinned ? 'slds-assistive-text' : null
       )}
     >
       <ButtonIcon
         className="slds-button_icon-container slds-button_icon-x-small"
-        tabIndex={props.active ? "0" : "-1"}
+        tabIndex={props.active ? '0' : '-1'}
         symbol="close"
-        assistiveText={"Close " + props.title}
-        title={"Close " + props.title}
+        assistiveText={'Close ' + props.title}
+        title={'Close ' + props.title}
       />
     </div>
   </li>
@@ -153,8 +153,8 @@ export default (
 
 export let states = [
   {
-    id: "subtabs-has-focus",
-    label: "Tab - Focus",
+    id: 'subtabs-has-focus',
+    label: 'Tab - Focus',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
@@ -196,8 +196,8 @@ export let states = [
     `
   },
   {
-    id: "subtabs-unsaved",
-    label: "Unsaved Tab",
+    id: 'subtabs-unsaved',
+    label: 'Unsaved Tab',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
@@ -235,8 +235,8 @@ export let states = [
     )
   },
   {
-    id: "subtabs-borders",
-    label: "With Borders",
+    id: 'subtabs-borders',
+    label: 'With Borders',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
@@ -275,8 +275,8 @@ export let states = [
     )
   },
   {
-    id: "subtabs-menu",
-    label: "Tab - Action Overflow",
+    id: 'subtabs-menu',
+    label: 'Tab - Action Overflow',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
@@ -315,8 +315,8 @@ export let states = [
     )
   },
   {
-    id: "subtabs-notification",
-    label: "Tab Notification",
+    id: 'subtabs-notification',
+    label: 'Tab Notification',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">

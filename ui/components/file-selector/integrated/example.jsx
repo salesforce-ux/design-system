@@ -1,23 +1,23 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import { FileSelector } from "../base/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import { FileSelector } from '../base/example';
 
 let IntegratedFileSelector = props => (
   <div
     className={classNames(
-      "slds-file-selector slds-file-selector_integrated",
+      'slds-file-selector slds-file-selector_integrated',
       props.className
     )}
   >
     <div
       className={classNames(
-        "slds-file-selector__dropzone slds-file-selector__dropzone_integrated",
-        props.drag ? "slds-has-drag" : null,
-        props.draggover ? "slds-has-drag-over" : null
+        'slds-file-selector__dropzone slds-file-selector__dropzone_integrated',
+        props.drag ? 'slds-has-drag' : null,
+        props.draggover ? 'slds-has-drag-over' : null
       )}
       aria-hidden="true"
     >
@@ -48,9 +48,9 @@ let IntegratedFileSelector = props => (
         )}
         <span className="slds-file-selector__text slds-file-selector__text_integrated slds-text-heading_medium slds-text-align_center">
           {props.draggoverError ? (
-            "Too many files selected. Attach up to 1 file."
+            'Too many files selected. Attach up to 1 file.'
           ) : (
-            "Drop Files"
+            'Drop Files'
           )}
         </span>
       </label>
@@ -60,7 +60,7 @@ let IntegratedFileSelector = props => (
 );
 
 export default (
-  <div className="demo-only" style={{ width: "320px", height: "320px" }}>
+  <div className="demo-only" style={{ width: '320px', height: '320px' }}>
     <IntegratedFileSelector className="slds-file-selector_integrated">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -75,10 +75,10 @@ export default (
 
 export let states = [
   {
-    id: "integrated-file-selector-drag",
-    label: "Drag",
+    id: 'integrated-file-selector-drag',
+    label: 'Drag',
     element: (
-      <div className="demo-only" style={{ width: "320px", height: "320px" }}>
+      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
         <IntegratedFileSelector className="slds-file-selector_integrated" drag>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -92,10 +92,10 @@ export let states = [
     )
   },
   {
-    id: "integrated-file-selector-draggover",
-    label: "Dragover",
+    id: 'integrated-file-selector-draggover',
+    label: 'Dragover',
     element: (
-      <div className="demo-only" style={{ width: "320px", height: "320px" }}>
+      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
         <IntegratedFileSelector
           className="slds-file-selector_integrated"
           drag
@@ -113,10 +113,10 @@ export let states = [
     )
   },
   {
-    id: "integrated-file-selector-draggover-error",
-    label: "Dragover with error",
+    id: 'integrated-file-selector-draggover-error',
+    label: 'Dragover with error',
     element: (
-      <div className="demo-only" style={{ width: "320px", height: "320px" }}>
+      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
         <IntegratedFileSelector
           className="slds-file-selector_integrated"
           drag

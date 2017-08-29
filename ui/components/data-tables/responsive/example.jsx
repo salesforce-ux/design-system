@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -12,7 +12,7 @@ import classNames from "classnames";
 
 let Table = props => (
   <table
-    className={classNames("slds-table slds-table_bordered", props.className)}
+    className={classNames('slds-table slds-table_bordered', props.className)}
   >
     {props.children}
   </table>
@@ -226,13 +226,13 @@ export default <Horizontal />;
 
 export let states = [
   {
-    id: "data-table-responsive-horizontal",
-    label: "Stacked with Horizontal Cells",
+    id: 'data-table-responsive-horizontal',
+    label: 'Stacked with Horizontal Cells',
     element: <Horizontal />
   },
   {
-    id: "data-table-responsive-stacked",
-    label: "Stacked",
+    id: 'data-table-responsive-stacked',
+    label: 'Stacked',
     element: <Stacked />
   }
   // , @TODO - wait for S1 to fix scrolling

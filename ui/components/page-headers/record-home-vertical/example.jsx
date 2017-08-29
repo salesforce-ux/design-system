@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import Truncate from "../../../shared/truncate/index.react";
-import Heading from "../../heading/index.react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import MediaObject from "../../../utilities/media-objects/index.react";
-import SvgIcon from "../../../shared/svg-icon";
+import React from 'react';
+import Truncate from '../../../shared/truncate/index.react';
+import Heading from '../../heading/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import SvgIcon from '../../../shared/svg-icon';
 
 const image = (
   <div className="slds-icon_container slds-icon-standard-lead">
@@ -16,7 +16,7 @@ const image = (
 );
 
 export default (
-  <div className="demo-only" style={{ width: "300px" }}>
+  <div className="demo-only" style={{ width: '300px' }}>
     <div className="slds-page-header slds-page-header_vertical">
       <div className="slds-grid slds-grid_vertical">
         <div>

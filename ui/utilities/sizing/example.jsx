@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 let SizePreviewExample = props => (
   <div className={`slds-size_${props.size}`}>
@@ -13,8 +13,8 @@ let SizePreviewExample = props => (
 
 export let examples = [
   {
-    id: "two-column",
-    label: "2 Column Span",
+    id: 'two-column',
+    label: '2 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-2" />
@@ -24,8 +24,8 @@ export let examples = [
     )
   },
   {
-    id: "three-column",
-    label: "3 Column Span",
+    id: 'three-column',
+    label: '3 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-3" />
@@ -38,8 +38,8 @@ export let examples = [
     )
   },
   {
-    id: "four-column",
-    label: "4 Column Span",
+    id: 'four-column',
+    label: '4 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-4" />
@@ -55,8 +55,8 @@ export let examples = [
     )
   },
   {
-    id: "five-column",
-    label: "5 Column Span",
+    id: 'five-column',
+    label: '5 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-5" />
@@ -73,8 +73,8 @@ export let examples = [
     )
   },
   {
-    id: "six-column",
-    label: "6 Column Span",
+    id: 'six-column',
+    label: '6 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-6" />
@@ -92,8 +92,8 @@ export let examples = [
     )
   },
   {
-    id: "7-column",
-    label: "7 Column Span",
+    id: '7-column',
+    label: '7 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-7" />
@@ -112,8 +112,8 @@ export let examples = [
     )
   },
   {
-    id: "8-column",
-    label: "8 Column Span",
+    id: '8-column',
+    label: '8 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-8" />
@@ -135,8 +135,8 @@ export let examples = [
     )
   },
   {
-    id: "12-column",
-    label: "12 Column Span",
+    id: '12-column',
+    label: '12 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
         <SizePreviewExample size="1-of-12" />

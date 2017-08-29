@@ -1,29 +1,29 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const referenceId = "expando-unique-id";
+const referenceId = 'expando-unique-id';
 
 /* -----------------------------------------------------------------------------
     Public
 ----------------------------------------------------------------------------- */
 export let Section = props => (
-  <div className={classNames("slds-section", props.className)}>
+  <div className={classNames('slds-section', props.className)}>
     {props.children}
   </div>
 );
 
 export let SectionContent = props => (
   <div
-    aria-hidden={props.isOpen ? "false" : "true"}
-    className={classNames("slds-section__content", props.className)}
+    aria-hidden={props.isOpen ? 'false' : 'true'}
+    className={classNames('slds-section__content', props.className)}
     id={props.referenceId}
   >
     {props.children}
@@ -31,7 +31,7 @@ export let SectionContent = props => (
 );
 
 export let SectionTitle = props => (
-  <h3 className={classNames("slds-section__title", props.className)}>
+  <h3 className={classNames('slds-section__title', props.className)}>
     {props.children}
   </h3>
 );
@@ -39,7 +39,7 @@ export let SectionTitle = props => (
 export let SectionTitleAction = props => (
   <button
     aria-controls={props.referenceId}
-    aria-expanded={props.isOpen ? "true" : "false"}
+    aria-expanded={props.isOpen ? 'true' : 'false'}
     className="slds-button slds-section__title-action"
   >
     <SvgIcon
@@ -78,8 +78,8 @@ export default (
 
 export let examples = [
   {
-    id: "non-collapsable",
-    label: "Non-collapsable",
+    id: 'non-collapsable',
+    label: 'Non-collapsable',
     element: (
       <Section className="slds-is-open">
         <SectionTitle className="slds-theme_shade">
@@ -107,8 +107,8 @@ export let examples = [
 
 export let states = [
   {
-    id: "closed",
-    label: "Closed",
+    id: 'closed',
+    label: 'Closed',
     element: (
       <Section>
         <SectionTitle>

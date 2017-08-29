@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 
 export const Context = props => (
-  <div style={{ height: "180px" }}>{props.children}</div>
+  <div style={{ height: '180px' }}>{props.children}</div>
 );
 
 export default (
@@ -22,8 +22,8 @@ export default (
 
 export let states = [
   {
-    id: "docked-form-footer-with-error",
-    label: "With error(s)",
+    id: 'docked-form-footer-with-error',
+    label: 'With error(s)',
     element: (
       <div className="slds-docked-form-footer">
         <ButtonIcon
@@ -43,8 +43,8 @@ export let states = [
     )
   },
   {
-    id: "docked-form-footer-with-popover",
-    label: "With error popover",
+    id: 'docked-form-footer-with-popover',
+    label: 'With error popover',
     element: (
       <div className="slds-docked-form-footer">
         <ButtonIcon
@@ -66,11 +66,11 @@ export let states = [
           aria-label="Contextual title of this dialog"
           aria-describedby="dialog-description-01"
           style={{
-            position: "absolute",
-            bottom: "56px",
-            left: "50%",
-            marginLeft: "66px",
-            transform: "translateX(-50%)"
+            position: 'absolute',
+            bottom: '56px',
+            left: '50%',
+            marginLeft: '66px',
+            transform: 'translateX(-50%)'
           }}
         >
           <ButtonIcon

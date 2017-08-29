@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -33,7 +33,7 @@ const ActionsDropdown = (
           className="slds-icon slds-icon_small slds-icon-standard-note slds-m-right_x-small"
           sprite="standard"
           symbol="note"
-        />{" "}
+        />{' '}
         New Note
       </MenuItem>
       <MenuItem>
@@ -41,7 +41,7 @@ const ActionsDropdown = (
           className="slds-icon slds-icon_small slds-icon-standard-log-a-call slds-m-right_x-small"
           sprite="standard"
           symbol="log_a_call"
-        />{" "}
+        />{' '}
         Log a Call
       </MenuItem>
       <MenuItem>
@@ -49,7 +49,7 @@ const ActionsDropdown = (
           className="slds-icon slds-icon_small slds-icon-standard-event slds-m-right_x-small"
           sprite="standard"
           symbol="event"
-        />{" "}
+        />{' '}
         New Event
       </MenuItem>
     </MenuList>
@@ -58,11 +58,11 @@ const ActionsDropdown = (
 
 let GlobalSearch = props => (
   <div
-    aria-expanded={props.expanded ? "true" : "false"}
+    aria-expanded={props.expanded ? 'true' : 'false'}
     aria-haspopup="listbox"
     className={classNames(
-      "slds-form-element slds-lookup",
-      props.expanded ? "slds-is-open" : null
+      'slds-form-element slds-lookup',
+      props.expanded ? 'slds-is-open' : null
     )}
     role="combobox"
   >
@@ -352,7 +352,7 @@ let GlobalSearchSearchOptions = props => (
 
 export let GlobalHeader = props => (
   <header
-    className={classNames("slds-global-header_container", props.className)}
+    className={classNames('slds-global-header_container', props.className)}
   >
     <a
       href="javascript:void(0);"
@@ -379,14 +379,14 @@ export let GlobalHeader = props => (
         <li className="slds-grid">
           <ButtonIcon
             className={classNames(
-              "slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites",
+              'slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites',
               {
-                "slds-is-selected": props.favoritesSelected,
-                "slds-is-disabled": props.favoritesDisabled
+                'slds-is-selected': props.favoritesSelected,
+                'slds-is-disabled': props.favoritesDisabled
               }
             )}
             disabled={props.favoritesDisabled}
-            aria-pressed={props.favoritesSelected ? "true" : "false"}
+            aria-pressed={props.favoritesSelected ? 'true' : 'false'}
             iconClassName="slds-global-header__icon"
             symbol="favorite"
             title="Toggle Favorites"
@@ -394,13 +394,13 @@ export let GlobalHeader = props => (
           />
           <span
             className={classNames(
-              "slds-dropdown-trigger slds-dropdown-trigger_click",
-              props.actions ? "slds-is-open" : null
+              'slds-dropdown-trigger slds-dropdown-trigger_click',
+              props.actions ? 'slds-is-open' : null
             )}
           >
             <ButtonIcon
               className={classNames(
-                "slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+                'slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none'
               )}
               hasPopup
               disabled={props.favoritesDisabled}
@@ -412,8 +412,8 @@ export let GlobalHeader = props => (
         </li>
         <li
           className={classNames(
-            "slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small",
-            props.actions ? "slds-is-open" : null
+            'slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small',
+            props.actions ? 'slds-is-open' : null
           )}
         >
           <ButtonIcon
@@ -427,8 +427,8 @@ export let GlobalHeader = props => (
         </li>
         <li
           className={classNames(
-            "slds-dropdown-trigger slds-dropdown-trigger_click",
-            props.help ? "slds-is-open" : null
+            'slds-dropdown-trigger slds-dropdown-trigger_click',
+            props.help ? 'slds-is-open' : null
           )}
         >
           <ButtonIcon
@@ -442,8 +442,8 @@ export let GlobalHeader = props => (
         </li>
         <li
           className={classNames(
-            "slds-dropdown-trigger slds-dropdown-trigger_click",
-            props.setup ? "slds-is-open" : null
+            'slds-dropdown-trigger slds-dropdown-trigger_click',
+            props.setup ? 'slds-is-open' : null
           )}
         >
           <ButtonIcon
@@ -458,8 +458,8 @@ export let GlobalHeader = props => (
         </li>
         <li
           className={classNames(
-            "slds-dropdown-trigger slds-dropdown-trigger_click",
-            props.setup ? "slds-is-open" : null
+            'slds-dropdown-trigger slds-dropdown-trigger_click',
+            props.setup ? 'slds-is-open' : null
           )}
         >
           <ButtonIcon
@@ -473,8 +473,8 @@ export let GlobalHeader = props => (
         </li>
         <li
           className={classNames(
-            "slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small",
-            props.setup ? "slds-is-open" : null
+            'slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small',
+            props.setup ? 'slds-is-open' : null
           )}
         >
           <button
@@ -502,7 +502,7 @@ export let GlobalHeader = props => (
 /// ///////////////////////////////////////////
 
 export const Context = props => (
-  <div className="demo-only" style={{ height: "340px" }}>
+  <div className="demo-only" style={{ height: '340px' }}>
     {props.children}
   </div>
 );
@@ -511,36 +511,36 @@ export default <GlobalHeader />;
 
 export let states = [
   {
-    id: "favorites-selected",
-    label: "Favorites selected",
+    id: 'favorites-selected',
+    label: 'Favorites selected',
     element: <GlobalHeader favoritesSelected />
   },
   {
-    id: "favorites-disabled",
-    label: "Favorites disabled",
+    id: 'favorites-disabled',
+    label: 'Favorites disabled',
     element: <GlobalHeader favoritesDisabled />
   },
   {
-    id: "actions-active",
-    label: "Global actions active",
+    id: 'actions-active',
+    label: 'Global actions active',
     element: <GlobalHeader actions />
   },
   {
-    id: "global-header-setup-active",
-    label: "Setup active",
+    id: 'global-header-setup-active',
+    label: 'Setup active',
     element: <GlobalHeader setup />
   },
   {
-    id: "global-header-search-active",
-    label: "Active",
+    id: 'global-header-search-active',
+    label: 'Active',
     element: <GlobalHeader expanded />,
     script: `
       document.getElementById('global-search-01').focus()
     `
   },
   {
-    id: "global-header-search-typeahead",
-    label: "Typeahead",
+    id: 'global-header-search-typeahead',
+    label: 'Typeahead',
     element: <GlobalHeader expanded searchingFor="ibm" />,
     script: `
       document.getElementById('global-search-01').focus()

@@ -1,25 +1,25 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "fixed",
-    label: "Fixed",
+    id: 'fixed',
+    label: 'Fixed',
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: "150px", width: "300px", padding: "2rem" }}
+        style={{ height: '150px', width: '300px', padding: '2rem' }}
       >
         <div className="slds-is-fixed">
           <div
             style={{
-              position: "absolute",
-              top: "1rem",
-              left: "1rem",
-              border: "1px solid red",
-              background: "#f4f6f9"
+              position: 'absolute',
+              top: '1rem',
+              left: '1rem',
+              border: '1px solid red',
+              background: '#f4f6f9'
             }}
           >
             An element with fixed positioning is positioned relative to the
@@ -35,24 +35,24 @@ export let examples = [
       </div>
     ),
     description:
-      "`.slds-is-fixed` can be used to position a container relative to the viewport."
+      '`.slds-is-fixed` can be used to position a container relative to the viewport.'
   },
   {
-    id: "absolute",
-    label: "Absolute",
+    id: 'absolute',
+    label: 'Absolute',
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: "150px", width: "300px", padding: "2rem" }}
+        style={{ height: '150px', width: '300px', padding: '2rem' }}
       >
         <div className="slds-is-absolute">
           <div
             style={{
-              position: "absolute",
-              top: "1rem",
-              left: "1rem",
-              border: "1px solid red",
-              background: "#f4f6f9"
+              position: 'absolute',
+              top: '1rem',
+              left: '1rem',
+              border: '1px solid red',
+              background: '#f4f6f9'
             }}
           >
             An element with absolute positioning is positioned relative to its
@@ -69,24 +69,24 @@ export let examples = [
       </div>
     ),
     description:
-      "`.slds-is-absolute` can be used to position a container relative to its closest ancestor with relative positioning."
+      '`.slds-is-absolute` can be used to position a container relative to its closest ancestor with relative positioning.'
   },
   {
-    id: "relative",
-    label: "Relative",
+    id: 'relative',
+    label: 'Relative',
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: "150px", width: "300px", padding: "2rem" }}
+        style={{ height: '150px', width: '300px', padding: '2rem' }}
       >
         <div className="slds-is-relative">
           <div
             style={{
-              position: "absolute",
-              top: "1rem",
-              left: "1rem",
-              border: "1px solid red",
-              background: "#f4f6f9"
+              position: 'absolute',
+              top: '1rem',
+              left: '1rem',
+              border: '1px solid red',
+              background: '#f4f6f9'
             }}
           >
             An absolutely positioned element is positioned relative to the
@@ -101,24 +101,24 @@ export let examples = [
       </div>
     ),
     description:
-      "`.slds-is-relative` can be used to contain children if children are absolutely positioned and out of flow. It is also used to position element without changing layout."
+      '`.slds-is-relative` can be used to contain children if children are absolutely positioned and out of flow. It is also used to position element without changing layout.'
   },
   {
-    id: "static",
-    label: "Static",
+    id: 'static',
+    label: 'Static',
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: "150px", width: "300px", padding: "2rem" }}
+        style={{ height: '150px', width: '300px', padding: '2rem' }}
       >
         <div className="slds-is-static">
           <div
             style={{
-              position: "absolute",
-              top: "1rem",
-              left: "1rem",
-              border: "1px solid red",
-              background: "#f4f6f9"
+              position: 'absolute',
+              top: '1rem',
+              left: '1rem',
+              border: '1px solid red',
+              background: '#f4f6f9'
             }}
           >
             A static positioned element is positioned exactly as it comes in the
@@ -132,6 +132,6 @@ export let examples = [
       </div>
     ),
     description:
-      "`.slds-is-static` resets positioning of element back to normal behavior."
+      '`.slds-is-static` resets positioning of element back to normal behavior.'
   }
 ];

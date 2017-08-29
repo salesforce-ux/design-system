@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { DatePicker } from "../base/example";
-import { UtilityIcon } from "../../icons/base/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { FormElement } from "../../form-element/base/example";
-import { Input } from "../../input/base/example";
+import React from 'react';
+import { DatePicker } from '../base/example';
+import { UtilityIcon } from '../../icons/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const dateInputId = "date-input-id";
-const dateRangeInputId01 = "date-input-id-01";
-const dateRangeInputId02 = "date-input-id-02";
+const dateInputId = 'date-input-id';
+const dateRangeInputId01 = 'date-input-id-01';
+const dateRangeInputId02 = 'date-input-id-02';
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -22,7 +22,7 @@ const dateRangeInputId02 = "date-input-id-02";
 
 // Demo wrapper
 export const Context = props => (
-  <div style={{ height: "25rem" }}>{props.children}</div>
+  <div style={{ height: '25rem' }}>{props.children}</div>
 );
 
 // Default
@@ -70,8 +70,8 @@ export default (
 
 export let states = [
   {
-    id: "start-date",
-    label: "Start date selected",
+    id: 'start-date',
+    label: 'Start date selected',
     element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
@@ -133,8 +133,8 @@ export let states = [
     )
   },
   {
-    id: "end-date-week",
-    label: "End date selected (Same week)",
+    id: 'end-date-week',
+    label: 'End date selected (Same week)',
     element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
@@ -192,8 +192,8 @@ export let states = [
     )
   },
   {
-    id: "end-date-weeks",
-    label: "End date selected (Different week)",
+    id: 'end-date-weeks',
+    label: 'End date selected (Different week)',
     element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
@@ -261,8 +261,8 @@ export let states = [
     )
   },
   {
-    id: "today-in-range",
-    label: "Today - In selected range",
+    id: 'today-in-range',
+    label: 'Today - In selected range',
     element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
@@ -330,8 +330,8 @@ export let states = [
     )
   },
   {
-    id: "span-across-month-in-range",
-    label: "Current and adjacent month in selected range",
+    id: 'span-across-month-in-range',
+    label: 'Current and adjacent month in selected range',
     element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">

@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import { WaffleIcon } from "../../dynamic-icons/waffle/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { WaffleIcon } from '../../dynamic-icons/waffle/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-const tabPanelId01 = "context-tab-panel-1";
-const tabPanelId02 = "context-tab-panel-2";
-const tabPanelId03 = "context-tab-panel-3";
-const tabId01 = "context-tab-id-1";
-const tabId02 = "context-tab-id-2";
-const tabId03 = "context-tab-id-3";
+const tabPanelId01 = 'context-tab-panel-1';
+const tabPanelId02 = 'context-tab-panel-2';
+const tabPanelId03 = 'context-tab-panel-3';
+const tabId01 = 'context-tab-id-1';
+const tabId02 = 'context-tab-id-2';
+const tabId03 = 'context-tab-id-3';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -31,13 +31,13 @@ let ShortCutKey = props => (
 let ContextTab = props => (
   <li
     className={classNames(
-      "slds-context-bar__item slds-context-bar__item_tab",
+      'slds-context-bar__item slds-context-bar__item_tab',
       props.className,
       {
-        "slds-is-active": props.itemActive,
-        "slds-is-unsaved": props.itemUnsaved,
-        "slds-is-pinned": props.pinned,
-        "slds-has-notification": props.itemUnread
+        'slds-is-active': props.itemActive,
+        'slds-is-unsaved': props.itemUnsaved,
+        'slds-is-pinned': props.pinned,
+        'slds-has-notification': props.itemUnread
       }
     )}
     role="presentation"
@@ -46,9 +46,9 @@ let ContextTab = props => (
       href="javascript:void(0);"
       className="slds-context-bar__label-action"
       role="tab"
-      title={props.title || "tab name"}
-      aria-selected={props.itemActive ? "true" : "false"}
-      tabIndex={props.itemActive ? "0" : "-1"}
+      title={props.title || 'tab name'}
+      aria-selected={props.itemActive ? 'true' : 'false'}
+      tabIndex={props.itemActive ? '0' : '-1'}
       aria-controls={props.tabPanelId}
       id={props.id}
     >
@@ -65,46 +65,46 @@ let ContextTab = props => (
           title="New Activity"
         >
           <span className="slds-assistive-text">
-            New activity in Tab: {props.title || "Subtab Name"}
+            New activity in Tab: {props.title || 'Subtab Name'}
           </span>
         </span>
       )}
       <div
         className="slds-icon_container"
-        title={_.startCase(props.symbol) || "Case"}
+        title={_.startCase(props.symbol) || 'Case'}
       >
         <SvgIcon
           className="slds-icon slds-icon_small slds-icon-text-default"
           sprite="standard"
-          symbol={props.symbol || "case"}
+          symbol={props.symbol || 'case'}
         />
         <span className="slds-assistive-text">
-          {_.startCase(props.symbol) || "Case"}
+          {_.startCase(props.symbol) || 'Case'}
         </span>
       </div>
       <span
         className={classNames(
-          "slds-truncate",
-          props.pinned ? "slds-assistive-text" : null
+          'slds-truncate',
+          props.pinned ? 'slds-assistive-text' : null
         )}
-        title={props.title || "tab name"}
+        title={props.title || 'tab name'}
       >
-        {props.title || "tab name"}
+        {props.title || 'tab name'}
       </span>
     </a>
     <div
       className={classNames(
-        "slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none",
-        props.actionOverflow == "true" ? "slds-is-open" : null
+        'slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none',
+        props.actionOverflow == 'true' ? 'slds-is-open' : null
       )}
     >
       <ButtonIcon
         className="slds-button_icon-container slds-button_icon-x-small"
-        tabIndex={props.itemActive ? "0" : "-1"}
+        tabIndex={props.itemActive ? '0' : '-1'}
         symbol="chevrondown"
         aria-haspopup="true"
-        assistiveText={"Actions for " + props.title}
-        title={"Actions for " + props.title}
+        assistiveText={'Actions for ' + props.title}
+        title={'Actions for ' + props.title}
       />
       <Menu className="slds-dropdown_right">
         <MenuList>
@@ -125,10 +125,10 @@ let ContextTab = props => (
       <div className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none">
         <ButtonIcon
           className="slds-button_icon-container slds-button_icon-x-small"
-          tabIndex={props.itemActive ? "0" : "-1"}
+          tabIndex={props.itemActive ? '0' : '-1'}
           symbol="close"
-          assistiveText={"Close " + props.title}
-          title={"Close " + props.title}
+          assistiveText={'Close ' + props.title}
+          title={'Close ' + props.title}
         />
       </div>
     ) : null}
@@ -139,8 +139,8 @@ let ContextTabPanel = props => (
   <div
     id={props.id}
     className={classNames(
-      "slds-p-vertical_medium",
-      props.show ? "slds-show" : "slds-hide"
+      'slds-p-vertical_medium',
+      props.show ? 'slds-show' : 'slds-hide'
     )}
     role="tabpanel"
     aria-labelledby={props.tabId}
@@ -156,7 +156,7 @@ let ContextTabPanel = props => (
 export let ContextTabBar = props => (
   <div
     className={classNames(
-      "slds-context-bar slds-context-bar_tabs",
+      'slds-context-bar slds-context-bar_tabs',
       props.className
     )}
   >
@@ -166,15 +166,15 @@ export let ContextTabBar = props => (
           <WaffleIcon className="slds-context-bar__button" />
         </div>
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title={props.appName || "App Name"}>
-            {props.appName || "App Name"}
+          <span className="slds-truncate" title={props.appName || 'App Name'}>
+            {props.appName || 'App Name'}
           </span>
         </span>
       </div>
 
       <div
         className={classNames(
-          "slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click",
+          'slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click',
           props.objectSwitchClassName
         )}
       >
@@ -226,20 +226,20 @@ export let ContextTabBar = props => (
       </div>
       <div
         className={classNames(
-          "slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click",
+          'slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click',
           props.addTabClassName
         )}
       >
         <div className="slds-context-bar__icon-action">
           <ButtonIcon
             className={classNames(
-              "slds-button_icon-container slds-button_icon-small",
-              props.splitViewActive ? "slds-is-selected" : null
+              'slds-button_icon-container slds-button_icon-small',
+              props.splitViewActive ? 'slds-is-selected' : null
             )}
             symbol="side_list"
             assistiveText="Toggle split view"
             title="Toggle split view"
-            aria-expanded={props.splitViewActive ? "true" : "false"}
+            aria-expanded={props.splitViewActive ? 'true' : 'false'}
             aria-controls="id_of_split_view_container"
           />
         </div>
@@ -247,8 +247,8 @@ export let ContextTabBar = props => (
       <div className="slds-context-bar__vertical-divider" />
       <div
         className={classNames(
-          "slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click",
-          props.addTabActive ? "slds-is-open" : null,
+          'slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click',
+          props.addTabActive ? 'slds-is-open' : null,
           props.addTabClassName
         )}
       >
@@ -266,10 +266,10 @@ export let ContextTabBar = props => (
             role="dialog"
             aria-label="Add tab by URL or ID"
             style={{
-              position: "absolute",
-              left: "1.125rem",
-              top: "2.75rem",
-              marginLeft: "-10rem"
+              position: 'absolute',
+              left: '1.125rem',
+              top: '2.75rem',
+              marginLeft: '-10rem'
             }}
           >
             <div className="slds-popover__body">
@@ -315,7 +315,7 @@ export let ContextTabBar = props => (
 /// ///////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: "16rem" }}>{props.children}</div>
+  <div style={{ height: '16rem' }}>{props.children}</div>
 );
 
 export default (
@@ -345,8 +345,8 @@ export default (
 
 export let states = [
   {
-    id: "split-view",
-    label: "Split View - Active",
+    id: 'split-view',
+    label: 'Split View - Active',
     element: (
       <div className="demo-only">
         <ContextTabBar splitViewActive>
@@ -381,8 +381,8 @@ export let states = [
     )
   },
   {
-    id: "tab-active",
-    label: "Tab - Active",
+    id: 'tab-active',
+    label: 'Tab - Active',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -417,8 +417,8 @@ export let states = [
     )
   },
   {
-    id: "tab-active-focus",
-    label: "Tab - Active Focus",
+    id: 'tab-active-focus',
+    label: 'Tab - Active Focus',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -454,10 +454,10 @@ export let states = [
     )
   },
   {
-    id: "tab-item-action-menu-open",
-    label: "Tab - Action Overflow",
+    id: 'tab-item-action-menu-open',
+    label: 'Tab - Action Overflow',
     element: (
-      <div className="demo-only" style={{ height: "12rem" }}>
+      <div className="demo-only" style={{ height: '12rem' }}>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -491,8 +491,8 @@ export let states = [
     )
   },
   {
-    id: "unsaved-tab",
-    label: "Unsaved Tab",
+    id: 'unsaved-tab',
+    label: 'Unsaved Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -528,8 +528,8 @@ export let states = [
     )
   },
   {
-    id: "unread-tab",
-    label: "Unread Tab",
+    id: 'unread-tab',
+    label: 'Unread Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -566,8 +566,8 @@ export let states = [
     )
   },
   {
-    id: "unread-unsaved-tab",
-    label: "Unread/Unsaved Tab",
+    id: 'unread-unsaved-tab',
+    label: 'Unread/Unsaved Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -605,8 +605,8 @@ export let states = [
     )
   },
   {
-    id: "pinned-tab",
-    label: "Pinned Tab",
+    id: 'pinned-tab',
+    label: 'Pinned Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -642,8 +642,8 @@ export let states = [
     )
   },
   {
-    id: "pinned-tab-active",
-    label: "Pinned Tab - Active",
+    id: 'pinned-tab-active',
+    label: 'Pinned Tab - Active',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -679,8 +679,8 @@ export let states = [
     )
   },
   {
-    id: "pinned-tab-active-focus",
-    label: "Pinned Tab - Active Focus",
+    id: 'pinned-tab-active-focus',
+    label: 'Pinned Tab - Active Focus',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -717,8 +717,8 @@ export let states = [
     )
   },
   {
-    id: "unsaved-pinned-tab",
-    label: "Unsaved Pinned Tab",
+    id: 'unsaved-pinned-tab',
+    label: 'Unsaved Pinned Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -755,8 +755,8 @@ export let states = [
     )
   },
   {
-    id: "unread-pinned-tab",
-    label: "Unread Pinned Tab",
+    id: 'unread-pinned-tab',
+    label: 'Unread Pinned Tab',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -793,8 +793,8 @@ export let states = [
     )
   },
   {
-    id: "overflow-tabs",
-    label: "Overflow Tabs",
+    id: 'overflow-tabs',
+    label: 'Overflow Tabs',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -847,10 +847,10 @@ export let states = [
     )
   },
   {
-    id: "overflow-tabs-open",
-    label: "Overflow Tabs - Open",
+    id: 'overflow-tabs-open',
+    label: 'Overflow Tabs - Open',
     element: (
-      <div className="demo-only" style={{ height: "8rem" }}>
+      <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -921,8 +921,8 @@ export let states = [
     )
   },
   {
-    id: "unsaved-overflow-tabs",
-    label: "Unsaved Overflow Tabs",
+    id: 'unsaved-overflow-tabs',
+    label: 'Unsaved Overflow Tabs',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -982,10 +982,10 @@ export let states = [
     )
   },
   {
-    id: "unsaved-overflow-tabs-open",
-    label: "Unsaved Overflow Tabs - Open",
+    id: 'unsaved-overflow-tabs-open',
+    label: 'Unsaved Overflow Tabs - Open',
     element: (
-      <div className="demo-only" style={{ height: "8rem" }}>
+      <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1069,8 +1069,8 @@ export let states = [
     )
   },
   {
-    id: "unread-overflow-tabs",
-    label: "Unread Overflow Tabs",
+    id: 'unread-overflow-tabs',
+    label: 'Unread Overflow Tabs',
     element: (
       <div className="demo-only">
         <ContextTabBar>
@@ -1134,10 +1134,10 @@ export let states = [
     )
   },
   {
-    id: "unread-overflow-tabs-open",
-    label: "Unread Overflow Tabs - Open",
+    id: 'unread-overflow-tabs-open',
+    label: 'Unread Overflow Tabs - Open',
     element: (
-      <div className="demo-only" style={{ height: "8rem" }}>
+      <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1225,8 +1225,8 @@ export let states = [
     )
   },
   {
-    id: "object-switcher-active",
-    label: "Object Switcher - Active",
+    id: 'object-switcher-active',
+    label: 'Object Switcher - Active',
     element: (
       <div className="demo-only">
         <ContextTabBar objectSwitchClassName="slds-is-active">
@@ -1260,10 +1260,10 @@ export let states = [
     )
   },
   {
-    id: "object-switcher-menu-open",
-    label: "Object Switcher - Open",
+    id: 'object-switcher-menu-open',
+    label: 'Object Switcher - Open',
     element: (
-      <div className="demo-only" style={{ height: "11rem" }}>
+      <div className="demo-only" style={{ height: '11rem' }}>
         <ContextTabBar objectSwitchClassName="slds-is-open">
           <ContextTab
             title="Home"
@@ -1295,10 +1295,10 @@ export let states = [
     )
   },
   {
-    id: "add-tab-dialog-open",
-    label: "Add Tab Dialog - Open",
+    id: 'add-tab-dialog-open',
+    label: 'Add Tab Dialog - Open',
     element: (
-      <div className="demo-only" style={{ height: "8rem" }}>
+      <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar addTabActive>
           <ContextTab
             title="Home"

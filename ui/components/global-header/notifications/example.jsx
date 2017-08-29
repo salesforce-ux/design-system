@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Trigger } from "../../menus/dropdown/example";
-import { GlobalHeader } from "../base/example";
-import { Avatar } from "../../avatar/base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Trigger } from '../../menus/dropdown/example';
+import { GlobalHeader } from '../base/example';
+import { Avatar } from '../../avatar/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partials
@@ -41,7 +41,7 @@ let UnreadIcon = props => (
 let NotificationItem = props => (
   <li
     className={classNames(
-      "slds-global-header__notification slds-p-around_xx-small",
+      'slds-global-header__notification slds-p-around_xx-small',
       props.className
     )}
   >
@@ -89,7 +89,7 @@ let PopoverMenu = props => (
     role="dialog"
     aria-label="Notifications"
     aria-describedby="notifications-container"
-    style={{ position: "absolute", right: "3.125rem" }}
+    style={{ position: 'absolute', right: '3.125rem' }}
   >
     <div
       id="notifications-container"
@@ -105,7 +105,7 @@ let PopoverMenu = props => (
 /// //////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ height: "28.571rem" }}>
+  <div className="demo-only" style={{ height: '28.571rem' }}>
     <GlobalHeader popoverMenu>
       <PopoverMenu>
         <NotificationItem

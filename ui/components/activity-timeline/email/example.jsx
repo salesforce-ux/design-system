@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import MediaObject from "../../../utilities/media-objects/index.react";
-import { TimelineIcon, TimelineActions } from "../base/example";
+import React from 'react';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import { TimelineIcon, TimelineActions } from '../base/example';
 
 export let ActivityTimelineItem = props => (
   <div className="slds-timeline__item">
@@ -44,7 +44,7 @@ export let ActivityTimelineItem = props => (
               </a>
             </span>
             <span className="slds-no-flex slds-text-body_small">
-              {" "}
+              {' '}
               + 44 more
             </span>
           </li>

@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "vertical-list",
-    label: "Default",
+    id: 'vertical-list',
+    label: 'Default',
     element: (
       <ul>
         <li>Vertical List</li>
@@ -16,8 +16,8 @@ export let examples = [
     )
   },
   {
-    id: "unordered-list-decimal",
-    label: "Dotted",
+    id: 'unordered-list-decimal',
+    label: 'Dotted',
     element: (
       <ul className="slds-list_dotted">
         <li>Basic ordered list</li>
@@ -27,8 +27,8 @@ export let examples = [
     )
   },
   {
-    id: "ordered-list-decimal",
-    label: "Decimal",
+    id: 'ordered-list-decimal',
+    label: 'Decimal',
     element: (
       <ol className="slds-list_ordered">
         <li>Basic ordered list</li>
@@ -38,8 +38,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-links",
-    label: "Links",
+    id: 'vertical-list-links',
+    label: 'Links',
     element: (
       <ul>
         <li>
@@ -55,8 +55,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-block-links",
-    label: "Block links",
+    id: 'vertical-list-block-links',
+    label: 'Block links',
     element: (
       <ul className="slds-has-block-links">
         <li>
@@ -72,8 +72,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-block-links-space",
-    label: "Block links with space",
+    id: 'vertical-list-block-links-space',
+    label: 'Block links with space',
     element: (
       <ul className="slds-has-block-links_space">
         <li>
@@ -91,8 +91,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-inline-block-links",
-    label: "Inline block links",
+    id: 'vertical-list-inline-block-links',
+    label: 'Inline block links',
     element: (
       <ul className="slds-has-inline-block-links">
         <li>
@@ -110,8 +110,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-inline-block-links-space",
-    label: "Inline block links with space",
+    id: 'vertical-list-inline-block-links-space',
+    label: 'Inline block links with space',
     element: (
       <ul className="slds-has-inline-block-links_space">
         <li>
@@ -129,8 +129,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-list-nested",
-    label: "Nested vertical lists",
+    id: 'vertical-list-nested',
+    label: 'Nested vertical lists',
     element: (
       <ul>
         <li>Vertical List with nested vertical lists</li>
@@ -152,8 +152,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-top",
-    label: "Top",
+    id: 'vertical-dividers-top',
+    label: 'Top',
     element: (
       <ul className="slds-has-dividers_top">
         <li className="slds-item">List item with top divider</li>
@@ -163,8 +163,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-top-space",
-    label: "Top with space",
+    id: 'vertical-dividers-top-space',
+    label: 'Top with space',
     element: (
       <ul className="slds-has-dividers_top-space">
         <li className="slds-item">List item with top divider with space</li>
@@ -174,8 +174,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-top",
-    label: "Top with link",
+    id: 'vertical-dividers-link-top',
+    label: 'Top with link',
     element: (
       <ul className="slds-has-dividers_top slds-has-block-links">
         <li className="slds-item">
@@ -191,8 +191,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-top-space",
-    label: "Top with link and space",
+    id: 'vertical-dividers-link-top-space',
+    label: 'Top with link and space',
     element: (
       <ul className="slds-has-dividers_top slds-has-block-links_space">
         <li className="slds-item">
@@ -208,8 +208,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-bottom",
-    label: "Bottom",
+    id: 'vertical-dividers-bottom',
+    label: 'Bottom',
     element: (
       <ul className="slds-has-dividers_bottom">
         <li className="slds-item">List item with bottom divider</li>
@@ -219,8 +219,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-bottom-space",
-    label: "Bottom with space",
+    id: 'vertical-dividers-bottom-space',
+    label: 'Bottom with space',
     element: (
       <ul className="slds-has-dividers_bottom-space">
         <li className="slds-item">List item with bottom divider with space</li>
@@ -230,8 +230,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-bottom",
-    label: "Bottom with link",
+    id: 'vertical-dividers-link-bottom',
+    label: 'Bottom with link',
     element: (
       <ul className="slds-has-dividers_bottom slds-has-block-links">
         <li className="slds-item">
@@ -249,8 +249,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-bottom-space",
-    label: "Bottom with link and space",
+    id: 'vertical-dividers-link-bottom-space',
+    label: 'Bottom with link and space',
     element: (
       <ul className="slds-has-dividers_bottom slds-has-block-links_space">
         <li className="slds-item">
@@ -268,8 +268,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-around",
-    label: "Around",
+    id: 'vertical-dividers-around',
+    label: 'Around',
     element: (
       <ul className="slds-has-dividers_around">
         <li className="slds-item">List item with around divider</li>
@@ -279,8 +279,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-around-space",
-    label: "Around with space",
+    id: 'vertical-dividers-around-space',
+    label: 'Around with space',
     element: (
       <ul className="slds-has-dividers_around-space">
         <li className="slds-item">List item with around divider with space</li>
@@ -290,8 +290,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-around",
-    label: "Around with link",
+    id: 'vertical-dividers-link-around',
+    label: 'Around with link',
     element: (
       <ul className="slds-has-dividers_around slds-has-block-links">
         <li className="slds-item">
@@ -309,8 +309,8 @@ export let examples = [
     )
   },
   {
-    id: "vertical-dividers-link-around-space",
-    label: "Around with link and space",
+    id: 'vertical-dividers-link-around-space',
+    label: 'Around with link and space',
     element: (
       <ul className="slds-has-dividers_around slds-has-block-links_space">
         <li className="slds-item">

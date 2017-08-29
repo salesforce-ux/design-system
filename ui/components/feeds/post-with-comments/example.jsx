@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import { Publisher } from "../../publishers/comment/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import { Publisher } from '../../publishers/comment/example';
 import {
   Post,
   PostHeader,
@@ -13,14 +13,14 @@ import {
   PostFooterActions,
   PostFooterMeta,
   Comments
-} from "../post/example";
+} from '../post/example';
 import {
   Comment,
   CommentHeader,
   CommentContent,
   CommentFooter
-} from "../comment/example";
-import _ from "../../../shared/helpers";
+} from '../comment/example';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -54,7 +54,7 @@ export default (
           <PostHeader />
           <PostContent>
             <p>
-              Hey there! Here's the latest demo presentation{" "}
+              Hey there! Here's the latest demo presentation{' '}
               <a href="javascript:void(0);" title="Jenna Davis">
                 @Jenna Davis
               </a>, let me know if there are any changes. I've updated slides
@@ -77,8 +77,8 @@ export default (
 
 export let states = [
   {
-    id: "post-with-overflow",
-    label: "Overflow Bar",
+    id: 'post-with-overflow',
+    label: 'Overflow Bar',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -87,7 +87,7 @@ export let states = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Here's the latest demo presentation{" "}
+                  Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -117,8 +117,8 @@ export let states = [
     )
   },
   {
-    id: "post-with-publisher-active",
-    label: "Publisher active",
+    id: 'post-with-publisher-active',
+    label: 'Publisher active',
     element: (
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -127,7 +127,7 @@ export let states = [
               <PostHeader />
               <PostContent>
                 <p>
-                  Here's the latest demo presentation{" "}
+                  Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated

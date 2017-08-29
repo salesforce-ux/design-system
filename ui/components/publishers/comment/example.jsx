@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import MediaObject from "../../../utilities/media-objects/index.react";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import MediaObject from '../../../utilities/media-objects/index.react';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -27,7 +27,7 @@ export let Publisher = props => (
   <MediaObject figureLeft={image} className="slds-comment slds-hint-parent">
     <div
       className={classNames(
-        "slds-publisher slds-publisher_comment",
+        'slds-publisher slds-publisher_comment',
         props.className
       )}
     >

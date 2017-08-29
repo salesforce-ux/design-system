@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
 import {
   Modal,
   ModalHeader,
   ModalContent
-} from "../../../components/modals/base/example";
+} from '../../../components/modals/base/example';
 
 /// ////////////////////////////////////////
 // Export
@@ -15,10 +15,10 @@ import {
 
 export let states = [
   {
-    id: "default",
-    label: "Default",
+    id: 'default',
+    label: 'Default',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalContent className="slds-modal__menu">
             <button className="slds-button slds-button_neutral">
@@ -35,10 +35,10 @@ export let states = [
     )
   },
   {
-    id: "with-header",
-    label: "With Header",
+    id: 'with-header',
+    label: 'With Header',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
             <h2 className="slds-text-heading_medium">
@@ -62,10 +62,10 @@ export let states = [
     )
   },
   {
-    id: "with-header-and-tagline",
-    label: "With Header and Tagline",
+    id: 'with-header-and-tagline',
+    label: 'With Header and Tagline',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
             <h2 className="slds-text-heading_medium">Delete Account</h2>
@@ -85,10 +85,10 @@ export let states = [
     )
   },
   {
-    id: "with-header-and-tagline-plus-image",
-    label: "With Header and Tagline + image",
+    id: 'with-header-and-tagline-plus-image',
+    label: 'With Header and Tagline + image',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
             <span className="slds-icon_container slds-icon-action-share-thanks slds-m-bottom_x-small">

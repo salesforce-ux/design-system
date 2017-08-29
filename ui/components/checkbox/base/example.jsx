@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -16,7 +16,7 @@ let Demo = props => (
 );
 
 let Fieldset = props => (
-  <fieldset className={classNames("slds-form-element", props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}
   </fieldset>
 );
@@ -28,7 +28,7 @@ let Legend = props => (
 );
 
 let FormElement = props => (
-  <div className={classNames("slds-form-element", props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
@@ -40,20 +40,20 @@ let FormElementLabel = props => (
 );
 
 let FormElementControl = props => (
-  <div className={classNames("slds-form-element__control", props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
 );
 
 export let Checkbox = props => {
-  const uniqueId = _.uniqueId("checkbox-");
+  const uniqueId = _.uniqueId('checkbox-');
 
   return (
     <span className="slds-checkbox">
       {props.children}
       <input
         type="checkbox"
-        name={props.name || "options"}
+        name={props.name || 'options'}
         id={props.id ? props.id : uniqueId}
         disabled={props.disabled}
         defaultChecked={props.checked}
@@ -61,14 +61,14 @@ export let Checkbox = props => {
         tabIndex={props.tabIndex}
       />
       <label
-        className={classNames("slds-checkbox__label", props.className)}
+        className={classNames('slds-checkbox__label', props.className)}
         htmlFor={props.id ? props.id : uniqueId}
       >
         <span className="slds-checkbox_faux" />
         <span
           className={classNames(
-            "slds-form-element__label",
-            props.hideLabel ? "slds-assistive-text" : null
+            'slds-form-element__label',
+            props.hideLabel ? 'slds-assistive-text' : null
           )}
         >
           {props.label}
@@ -143,7 +143,7 @@ let GroupRequired = props => (
     <Legend>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Checkbox Group Label
     </Legend>
     <FormElementControl>
@@ -158,7 +158,7 @@ let GroupError = props => (
     <Legend>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Checkbox Group Label
     </Legend>
     <FormElementControl>
@@ -195,8 +195,8 @@ export default (
 
 export let states = [
   {
-    id: "indeterminate",
-    label: "Indeterminate",
+    id: 'indeterminate',
+    label: 'Indeterminate',
     element: <Indeterminate />,
     script: `
       var checkbox = document.getElementById('checkbox-indeterminate-01')
@@ -204,41 +204,41 @@ export let states = [
     `
   },
   {
-    id: "required",
-    label: "Required",
+    id: 'required',
+    label: 'Required',
     element: <Required />
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: <ErrorState />
   },
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: <Disabled />
   }
 ];
 
 export let examples = [
   {
-    id: "group",
-    label: "Group",
+    id: 'group',
+    label: 'Group',
     element: <Group />
   },
   {
-    id: "group-required",
-    label: "Group Required",
+    id: 'group-required',
+    label: 'Group Required',
     element: <GroupRequired />
   },
   {
-    id: "group-error",
-    label: "Group with error",
+    id: 'group-error',
+    label: 'Group with error',
     element: <GroupError />
   },
   {
-    id: "group-disabled",
-    label: "Group Disabled",
+    id: 'group-disabled',
+    label: 'Group Disabled',
     element: <GroupDisabled />
   }
 ];

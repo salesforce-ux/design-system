@@ -1,24 +1,24 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   NavVertical,
   NavVerticalItem,
   NavVerticalSection
-} from "../base/example";
-import classNames from "classnames";
+} from '../base/example';
+import classNames from 'classnames';
 
-const sectionId01 = "entity-header";
-const sectionId02 = "folder-header";
-const sectionId03 = "all-results";
+const sectionId01 = 'entity-header';
+const sectionId02 = 'folder-header';
+const sectionId03 = 'all-results';
 
 export let states = [
   {
-    id: "collapsed",
-    label: "Collapsed",
+    id: 'collapsed',
+    label: 'Collapsed',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <NavVertical>
           <NavVerticalSection id={sectionId01} title="Reports">
             <NavVerticalItem aria-describedby={sectionId01} active>
@@ -61,10 +61,10 @@ export let states = [
     )
   },
   {
-    id: "expanded",
-    label: "Expanded",
+    id: 'expanded',
+    label: 'Expanded',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <NavVertical>
           <NavVerticalSection id={sectionId01} title="Reports">
             <NavVerticalItem aria-describedby={sectionId01} active>

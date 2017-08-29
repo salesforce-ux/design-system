@@ -1,25 +1,25 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { Avatar } from "../../avatar/base/example";
-import { StandardIcon } from "../../icons/standard/example";
+import React from 'react';
+import { Avatar } from '../../avatar/base/example';
+import { StandardIcon } from '../../icons/standard/example';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   EntityOption
-} from "../../combobox/base/example";
-import { ListboxPill } from "../../pills/listbox-of-pill-options/example";
-import SvgIcon from "../../../shared/svg-icon";
+} from '../../combobox/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import SvgIcon from '../../../shared/svg-icon';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const listboxSelectionsId = "listbox-selections-unique-id";
-const listboxOptionId01 = "listbox-option-unique-id-01";
-const listboxOptionId02 = "listbox-option-unique-id-02";
+const listboxSelectionsId = 'listbox-selections-unique-id';
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -51,7 +51,7 @@ const ListboxDropdown = props => (
 
 // Demo wrapper
 export const Context = props => (
-  <div style={{ height: "10rem" }}>{props.children}</div>
+  <div style={{ height: '10rem' }}>{props.children}</div>
 );
 
 // Default
@@ -69,8 +69,8 @@ export default (
 // States
 export let states = [
   {
-    id: "focused",
-    label: "Focused",
+    id: 'focused',
+    label: 'Focused',
     element: (
       <ComboboxContainer
         containerClassName="slds-has-input-focus"
@@ -88,8 +88,8 @@ export let states = [
     `
   },
   {
-    id: "open-item-focused",
-    label: "Open - Item Focused",
+    id: 'open-item-focused',
+    label: 'Open - Item Focused',
     element: (
       <ComboboxContainer
         inputIcon="right"
@@ -104,8 +104,8 @@ export let states = [
     )
   },
   {
-    id: "options-selected",
-    label: "Option(s) Selected",
+    id: 'options-selected',
+    label: 'Option(s) Selected',
     element: (
       <ComboboxContainer
         inputIcon="right"
@@ -139,8 +139,8 @@ export let states = [
     )
   },
   {
-    id: "focused-options-selected",
-    label: "Focused - Option(s) Selected",
+    id: 'focused-options-selected',
+    label: 'Focused - Option(s) Selected',
     element: (
       <ComboboxContainer
         isOpen

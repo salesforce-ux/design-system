@@ -1,21 +1,21 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { Progress, Step } from "../base/example";
+import React from 'react';
+import { Progress, Step } from '../base/example';
 import {
   Modal,
   ModalHeader,
   ModalContent,
   ModalFooter
-} from "../../modals/base/example";
+} from '../../modals/base/example';
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ height: "640px" }}>
+  <div className="demo-only" style={{ height: '640px' }}>
     <Modal className="slds-modal_large" aria-labelledby="header43">
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading_medium">

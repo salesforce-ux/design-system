@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Checkbox } from "../../checkbox/base/example";
-import { TileMedia } from "../base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Checkbox } from '../../checkbox/base/example';
+import { TileMedia } from '../base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Export
@@ -13,10 +13,10 @@ import classNames from "classnames";
 
 export let states = [
   {
-    id: "tile-task",
-    label: "Default",
+    id: 'tile-task',
+    label: 'Default',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
           media={
@@ -34,10 +34,10 @@ export let states = [
     )
   },
   {
-    id: "tile-task-with-action",
-    label: "With actions",
+    id: 'tile-task-with-action',
+    label: 'With actions',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
           media={

@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import { Panel } from "../detail/example";
-import { PanelBody } from "../detail/example";
-import { PanelSection } from "../detail/example";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import { Panel } from '../detail/example';
+import { PanelBody } from '../detail/example';
+import { PanelSection } from '../detail/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -16,14 +16,14 @@ import { PanelSection } from "../detail/example";
 let Demo = props => (
   <div
     className="demo-only slds-grid"
-    style={{ height: "800px", maxWidth: "420px", overflow: "hidden" }}
+    style={{ height: '800px', maxWidth: '420px', overflow: 'hidden' }}
   >
     {props.children}
   </div>
 );
 
 export let Filters = props => (
-  <div className={classNames("slds-filters", props.className)}>
+  <div className={classNames('slds-filters', props.className)}>
     {props.children}
   </div>
 );
@@ -31,7 +31,7 @@ export let Filters = props => (
 export let FiltersHeader = props => (
   <div
     className={classNames(
-      "slds-filters__header slds-grid slds-has-divider_bottom-space",
+      'slds-filters__header slds-grid slds-has-divider_bottom-space',
       props.className
     )}
   >
@@ -63,14 +63,14 @@ export let FiltersFooter = props => (
 export let FilterObject = props => {
   let ariaDesribedBy;
   if (props.errorMessage) {
-    ariaDesribedBy = "error-filter-01";
+    ariaDesribedBy = 'error-filter-01';
   }
 
   return (
     <li className="slds-item slds-hint-parent">
       <div
         className={classNames(
-          "slds-filters__item slds-grid slds-grid_vertical-align-center",
+          'slds-filters__item slds-grid slds-grid_vertical-align-center',
           props.className
         )}
       >
@@ -93,12 +93,12 @@ export let FilterObject = props => {
             symbol="close"
             assistiveText={
               props.type ? (
-                "Remove filter: " + props.type + " " + props.children
+                'Remove filter: ' + props.type + ' ' + props.children
               ) : (
-                "Remove filter: " + props.children
+                'Remove filter: ' + props.children
               )
             }
-            title={"Remove " + props.children}
+            title={'Remove ' + props.children}
           />
         ) : null}
       </div>
@@ -299,18 +299,18 @@ export default <Default />;
 
 export let states = [
   {
-    id: "filtering-new-object",
-    label: "New filter",
+    id: 'filtering-new-object',
+    label: 'New filter',
     element: <NewFilter />
   },
   {
-    id: "filtering-error",
-    label: "Error",
+    id: 'filtering-error',
+    label: 'Error',
     element: <ErrorPanel />
   },
   {
-    id: "filtering-locked",
-    label: "Locked Filters",
+    id: 'filtering-locked',
+    label: 'Locked Filters',
     element: <Locked />
   }
 ];

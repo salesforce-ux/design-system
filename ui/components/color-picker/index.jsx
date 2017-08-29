@@ -1,50 +1,50 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from "react";
-import _ from "../../shared/helpers";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import _ from '../../shared/helpers';
+import classNames from 'classnames';
 
 // internal imports
-import SvgIcon from "../../shared/svg-icon";
-import { Button } from "../buttons/base/example";
-import Tabs from "../tabs/index.react";
-import { Popover } from "../popovers/base/example";
-import { FormElement } from "../form-element/base/example";
-import { Input } from "../input/base/example";
+import SvgIcon from '../../shared/svg-icon';
+import { Button } from '../buttons/base/example';
+import Tabs from '../tabs/index.react';
+import { Popover } from '../popovers/base/example';
+import { FormElement } from '../form-element/base/example';
+import { Input } from '../input/base/example';
 
 const swatchColors = [
-  "#e3abec",
-  "#c2dbf7",
-  "#9fd6ff",
-  "#9de7da",
-  "#9df0c0",
-  "#fff099",
-  "#fed49a",
-  "#d073e0",
-  "#86baf3",
-  "#5ebbff",
-  "#44d8be",
-  "#3be282",
-  "#ffe654",
-  "#ffb758",
-  "#bd35bd",
-  "#5779c1",
-  "#5ebbff",
-  "#00aea9",
-  "#3cba4c",
-  "#f5bc25",
-  "#f99221",
-  "#580d8c",
-  "#001970",
-  "#0a2399",
-  "#0b7477",
-  "#0b6b50",
-  "#b67e11",
-  "#b85d0d"
+  '#e3abec',
+  '#c2dbf7',
+  '#9fd6ff',
+  '#9de7da',
+  '#9df0c0',
+  '#fff099',
+  '#fed49a',
+  '#d073e0',
+  '#86baf3',
+  '#5ebbff',
+  '#44d8be',
+  '#3be282',
+  '#ffe654',
+  '#ffb758',
+  '#bd35bd',
+  '#5779c1',
+  '#5ebbff',
+  '#00aea9',
+  '#3cba4c',
+  '#f5bc25',
+  '#f99221',
+  '#580d8c',
+  '#001970',
+  '#0a2399',
+  '#0b7477',
+  '#0b6b50',
+  '#b67e11',
+  '#b85d0d'
 ];
 
-const errorMessage = "Please ensure value is correct";
+const errorMessage = 'Please ensure value is correct';
 
 /**
  * Swatch Subcomponent
@@ -52,7 +52,7 @@ const errorMessage = "Please ensure value is correct";
 const Swatch = props => {
   return (
     <span
-      key={_.uniqueId("swatch-")}
+      key={_.uniqueId('swatch-')}
       className="slds-swatch"
       style={{ background: props.color }}
     >
@@ -68,7 +68,7 @@ const Swatch = props => {
  */
 export const ColorPickerSummary = props => {
   const { hasSummaryError } = props;
-  const errorId = "color-picker-summary-error";
+  const errorId = 'color-picker-summary-error';
 
   return (
     <div className="slds-color-picker__summary">
@@ -96,8 +96,8 @@ export const ColorPickerSummary = props => {
       </Button>
 
       <FormElement
-        className={classNames("slds-color-picker__summary-input", {
-          "slds-has-error": hasSummaryError
+        className={classNames('slds-color-picker__summary-input', {
+          'slds-has-error': hasSummaryError
         })}
       >
         <Input
@@ -121,14 +121,14 @@ export const ColorPickerSummary = props => {
  */
 export const ColorPickerSwatches = props => {
   const { isMenuRole } = props;
-  const swatchesRole = isMenuRole ? "menu" : "listbox";
-  const linkRole = isMenuRole ? "menuitem" : "option";
+  const swatchesRole = isMenuRole ? 'menu' : 'listbox';
+  const linkRole = isMenuRole ? 'menuitem' : 'option';
 
   return (
     <ul className="slds-color-picker__swatches" role={swatchesRole}>
       {swatchColors.map((swatch, index) => (
         <li
-          key={_.uniqueId("color-picker-swatch-")}
+          key={_.uniqueId('color-picker-swatch-')}
           className="slds-color-picker__swatch"
           role="presentation"
         >
@@ -150,13 +150,13 @@ export const ColorPickerSwatches = props => {
  * Custom Picker Subcomponent
  */
 const ColorPickerCustom = props => {
-  const rangeInputId = _.uniqueId("color-picker-input-range-");
-  const hexInputId = _.uniqueId("color-picker-input-hex-");
-  const rInputId = _.uniqueId("color-picker-input-r-");
-  const gInputId = _.uniqueId("color-picker-input-g-");
-  const bInputId = _.uniqueId("color-picker-input-b-");
+  const rangeInputId = _.uniqueId('color-picker-input-range-');
+  const hexInputId = _.uniqueId('color-picker-input-hex-');
+  const rInputId = _.uniqueId('color-picker-input-r-');
+  const gInputId = _.uniqueId('color-picker-input-g-');
+  const bInputId = _.uniqueId('color-picker-input-b-');
   const { hasCustomError } = props;
-  const customErrorId = "color-picker-custom-error";
+  const customErrorId = 'color-picker-custom-error';
 
   return (
     <div className="slds-color-picker__custom">
@@ -166,11 +166,11 @@ const ColorPickerCustom = props => {
       </p>
       <div
         className="slds-color-picker__custom-range"
-        style={{ background: "hsl(220, 100%, 50%)" }}
+        style={{ background: 'hsl(220, 100%, 50%)' }}
       >
         <a
           className="slds-color-picker__range-indicator"
-          style={{ bottom: "45%", left: "46%" }}
+          style={{ bottom: '45%', left: '46%' }}
           href="#"
           aria-live="assertive"
           aria-atomic="true"
@@ -200,8 +200,8 @@ const ColorPickerCustom = props => {
       <div className="slds-color-picker__custom-inputs">
         <FormElement
           label="Hex"
-          className={classNames("slds-color-picker__input-custom-hex", {
-            "slds-has-error": hasCustomError
+          className={classNames('slds-color-picker__input-custom-hex', {
+            'slds-has-error': hasCustomError
           })}
           inputId={hexInputId}
         >
@@ -296,7 +296,7 @@ class ColorPicker extends React.Component {
   render() {
     const { selectedTabIndex } = this.state;
     const { isOpen, hasSummaryError, hasCustomError } = this.props;
-    const popoverState = isOpen ? "slds-show" : "slds-hide";
+    const popoverState = isOpen ? 'slds-show' : 'slds-hide';
     const colorPickerSummary = this.isSwatchesOnlyMode() ? null : (
       <ColorPickerSummary hasSummaryError={hasSummaryError} />
     );
@@ -330,7 +330,7 @@ class ColorPicker extends React.Component {
 
         <Popover
           title="Choose a color"
-          className={classNames("slds-color-picker__selector", popoverState)}
+          className={classNames('slds-color-picker__selector', popoverState)}
           footer={footerContent}
         >
           {colorPickerContent}

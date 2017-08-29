@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -23,7 +23,7 @@ const image = (
 );
 
 let Publisher = props => (
-  <div className={classNames("slds-publisher", props.className)}>
+  <div className={classNames('slds-publisher', props.className)}>
     <label
       htmlFor="comment-text-input2"
       className="slds-publisher__toggle-visibility slds-m-bottom_small"

@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 class ProgressRing extends Component {
   getCoordinatesForPercent(percent) {
@@ -19,12 +19,12 @@ class ProgressRing extends Component {
     const isLong = percent > 50 ? 1 : 0;
     let stateClass;
 
-    if (isWarning) stateClass = "slds-progress-ring_warning";
-    if (isExpired) stateClass = "slds-progress-ring_expired";
-    if (isComplete) stateClass = "slds-progress-ring_complete";
+    if (isWarning) stateClass = 'slds-progress-ring_warning';
+    if (isExpired) stateClass = 'slds-progress-ring_expired';
+    if (isComplete) stateClass = 'slds-progress-ring_complete';
 
     return (
-      <div className={classNames("slds-progress-ring", stateClass)}>
+      <div className={classNames('slds-progress-ring', stateClass)}>
         <div
           className="slds-progress-ring__progress"
           role="progressbar"

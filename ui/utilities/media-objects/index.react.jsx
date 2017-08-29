@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 class Component extends React.Component {
   render() {
-    const className = classNames("slds-media", this.props.className, {
+    const className = classNames('slds-media', this.props.className, {
       [`slds-media_${this.props.flavor}`]: this.props.flavor
     });
     return (
@@ -14,7 +14,7 @@ class Component extends React.Component {
         {this.renderFigure(
           this.props.figureCenter,
           classNames(
-            "slds-media__figure_stacked",
+            'slds-media__figure_stacked',
             this.props.figureCenterClassName
           )
         )}
@@ -26,7 +26,7 @@ class Component extends React.Component {
         {this.renderFigure(
           this.props.figureRight,
           classNames(
-            "slds-media__figure_reverse",
+            'slds-media__figure_reverse',
             this.props.figureRightClassName
           )
         )}
@@ -35,12 +35,12 @@ class Component extends React.Component {
   }
   renderFigure(figure, className) {
     if (!figure) return null;
-    className = classNames("slds-media__figure", className);
+    className = classNames('slds-media__figure', className);
     return <div className={className}>{figure}</div>;
   }
 }
 
-Component.displayName = "MediaObject";
+Component.displayName = 'MediaObject';
 Component.PropTypes = {
   figureLeft: React.PropTypes.node,
   figureLeftClassName: React.PropTypes.string,
@@ -48,7 +48,7 @@ Component.PropTypes = {
   figureRightClassName: React.PropTypes.string,
   figureCenter: React.PropTypes.node,
   figureCenterClassName: React.PropTypes.string,
-  flavor: React.PropTypes.oneOf(["center", "small", "stacked"])
+  flavor: React.PropTypes.oneOf(['center', 'small', 'stacked'])
 };
 
 export default Component;

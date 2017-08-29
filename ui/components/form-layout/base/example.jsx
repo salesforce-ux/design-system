@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import { FormElement } from "../../form-element/base/example";
-import { Input } from "../../input/base/example";
-import { Textarea } from "../../textarea/base/example";
-import { Radio } from "../../radio-group/base/example";
-import { Checkbox } from "../../checkbox/base/example";
+import React from 'react';
+import classNames from 'classnames';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
+import { Textarea } from '../../textarea/base/example';
+import { Radio } from '../../radio-group/base/example';
+import { Checkbox } from '../../checkbox/base/example';
 
-const inputId01 = "input-id-01";
-const inputId02 = "input-id-02";
-const inputId03 = "input-id-03";
+const inputId01 = 'input-id-01';
+const inputId02 = 'input-id-02';
+const inputId03 = 'input-id-03';
 
 let Form = props => (
-  <div className={classNames("slds-form", props.className)}>
+  <div className={classNames('slds-form', props.className)}>
     <FormElement label="Text Input" inputId={inputId01}>
       <Input id={inputId01} />
     </FormElement>
@@ -49,8 +49,8 @@ export default <Form className="slds-form_stacked" />;
 
 export let states = [
   {
-    id: "horizontal",
-    label: "Horizontal",
+    id: 'horizontal',
+    label: 'Horizontal',
     element: <Form className="slds-form_horizontal" />
   }
 ];

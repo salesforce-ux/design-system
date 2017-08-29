@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import _ from "../../../shared/helpers";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { StandardIcon } from "../../icons/standard/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import _ from '../../../shared/helpers';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { StandardIcon } from '../../icons/standard/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -17,8 +17,8 @@ let NotificationContainer = props => (
 );
 
 let Notification = props => {
-  const headingUniqueId = _.uniqueId("dialog-heading-id-");
-  const bodyUniqueId = _.uniqueId("dialog-body-id-");
+  const headingUniqueId = _.uniqueId('dialog-heading-id-');
+  const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
   return (
     <section
@@ -45,7 +45,7 @@ let Notification = props => {
               id={props.headingID}
             >
               <span className="slds-assistive-text">
-                {props.type + " notification:"}
+                {props.type + ' notification:'}
               </span>
               {props.title}
             </h2>
@@ -55,14 +55,14 @@ let Notification = props => {
         <ButtonIcon
           className="slds-button--icon-container slds-notification__close"
           symbol="close"
-          assistiveText={"Dismiss " + props.title + " notification"}
-          title={"Dismiss " + props.title + " notification"}
+          assistiveText={'Dismiss ' + props.title + ' notification'}
+          title={'Dismiss ' + props.title + ' notification'}
         />
       </div>
       {props.footer ? (
         <footer
           className={classNames(
-            "slds-notification__footer",
+            'slds-notification__footer',
             props.footerClassName
           )}
         >
@@ -78,7 +78,7 @@ let Notification = props => {
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only slds-is-relative" style={{ height: "4.5rem" }}>
+  <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
     <NotificationContainer>
       <div
         aria-live="assertive"
@@ -99,10 +99,10 @@ export default (
 
 export let examples = [
   {
-    id: "task-notification",
-    label: "Task Notification",
+    id: 'task-notification',
+    label: 'Task Notification',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: "4.5rem" }}>
+      <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -122,10 +122,10 @@ export let examples = [
     )
   },
   {
-    id: "stacked-2",
-    label: "Stacked Notifications",
+    id: 'stacked-2',
+    label: 'Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: "15rem" }}>
+      <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -151,10 +151,10 @@ export let examples = [
     )
   },
   {
-    id: "stacked-3",
-    label: "Three Stacked Notifications",
+    id: 'stacked-3',
+    label: 'Three Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: "15rem" }}>
+      <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -186,10 +186,10 @@ export let examples = [
     )
   },
   {
-    id: "overflow-six",
-    label: "Six Stacked Notifications",
+    id: 'overflow-six',
+    label: 'Six Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: "17rem" }}>
+      <div className="demo-only slds-is-relative" style={{ height: '17rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"

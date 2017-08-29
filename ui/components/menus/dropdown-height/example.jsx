@@ -1,19 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Trigger } from "../dropdown/example";
-import { Menu } from "../dropdown/example";
-import { MenuList } from "../dropdown/example";
-import { MenuItem } from "../dropdown/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Trigger } from '../dropdown/example';
+import { Menu } from '../dropdown/example';
+import { MenuList } from '../dropdown/example';
+import { MenuItem } from '../dropdown/example';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
 let Length5 = props => (
-  <div className="demo-only" style={{ height: "260px" }}>
+  <div className="demo-only" style={{ height: '260px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-5">
@@ -34,7 +34,7 @@ let Length5 = props => (
 );
 
 let Length7 = props => (
-  <div className="demo-only" style={{ height: "300px" }}>
+  <div className="demo-only" style={{ height: '300px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-7">
@@ -55,7 +55,7 @@ let Length7 = props => (
 );
 
 let Length10 = props => (
-  <div className="demo-only" style={{ height: "430px" }}>
+  <div className="demo-only" style={{ height: '430px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-10">
@@ -76,7 +76,7 @@ let Length10 = props => (
 );
 
 let IconLength5 = props => (
-  <div className="demo-only" style={{ height: "260px" }}>
+  <div className="demo-only" style={{ height: '260px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-5">
@@ -167,7 +167,7 @@ let IconLength5 = props => (
 );
 
 let IconLength7 = props => (
-  <div className="demo-only" style={{ height: "320px" }}>
+  <div className="demo-only" style={{ height: '320px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-7">
@@ -258,7 +258,7 @@ let IconLength7 = props => (
 );
 
 let IconLength10 = props => (
-  <div className="demo-only" style={{ height: "450px" }}>
+  <div className="demo-only" style={{ height: '450px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-10">
@@ -354,33 +354,33 @@ let IconLength10 = props => (
 
 export let states = [
   {
-    id: "dropdown-menu-length-5",
-    label: "5 items",
+    id: 'dropdown-menu-length-5',
+    label: '5 items',
     element: <Length5 />
   },
   {
-    id: "dropdown-menu-length-7",
-    label: "7 items",
+    id: 'dropdown-menu-length-7',
+    label: '7 items',
     element: <Length7 />
   },
   {
-    id: "dropdown-menu-length-10",
-    label: "10 items",
+    id: 'dropdown-menu-length-10',
+    label: '10 items',
     element: <Length10 />
   },
   {
-    id: "dropdown-menu-length-5-icon",
-    label: "5 items with icon",
+    id: 'dropdown-menu-length-5-icon',
+    label: '5 items with icon',
     element: <IconLength5 />
   },
   {
-    id: "dropdown-menu-length-7-icon",
-    label: "7 items with icon",
+    id: 'dropdown-menu-length-7-icon',
+    label: '7 items with icon',
     element: <IconLength7 />
   },
   {
-    id: "dropdown-menu-length-10-icon",
-    label: "10 items with icon",
+    id: 'dropdown-menu-length-10-icon',
+    label: '10 items with icon',
     element: <IconLength10 />
   }
 ];

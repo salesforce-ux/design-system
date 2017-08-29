@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 import {
   Fieldset,
   Legend,
   FormElementControl
-} from "../../radio-group/base/example";
-import { VisualPicker } from "../coverable-content/example";
-import { UtilityIcon } from "../../icons/base/example";
+} from '../../radio-group/base/example';
+import { VisualPicker } from '../coverable-content/example';
+import { UtilityIcon } from '../../icons/base/example';
 
 const PackageOne = [
   <span className="slds-text-heading_small" key={_.uniqueId()}>
@@ -44,7 +44,7 @@ export let VisualPickerMediaObject = props => (
   <a
     href="javascript:void(0);"
     className={classNames(
-      "slds-box slds-box_link slds-box_x-small slds-media",
+      'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
   >
@@ -89,8 +89,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled option",
+    id: 'disabled',
+    label: 'Disabled option',
     element: (
       <Fieldset>
         <Legend>Select a plan</Legend>
@@ -126,10 +126,10 @@ export let states = [
 
 export let examples = [
   {
-    id: "link",
-    label: "Text link",
+    id: 'link',
+    label: 'Text link',
     element: (
-      <div className="demo-only" style={{ width: "24rem" }}>
+      <div className="demo-only" style={{ width: '24rem' }}>
         <VisualPickerMediaObject symbol="user">
           <h2
             className="slds-truncate slds-text-heading_small"

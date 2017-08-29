@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -34,23 +34,23 @@ let Popover = props => (
 
 export let states = [
   {
-    id: "info",
-    label: "Info",
+    id: 'info',
+    label: 'Info',
     element: <Popover theme="info" />
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: <Popover theme="error" />
   },
   {
-    id: "warning",
-    label: "Warning",
+    id: 'warning',
+    label: 'Warning',
     element: <Popover theme="warning" />
   },
   {
-    id: "success",
-    label: "Success",
+    id: 'success',
+    label: 'Success',
     element: <Popover theme="success" />
   }
 ];

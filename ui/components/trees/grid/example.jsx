@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
-import SvgIcon from "../../../shared/svg-icon";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
+import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -72,32 +72,32 @@ const TreeGrid = props => (
 
 const Row = props => (
   <tr
-    aria-expanded={props["aria-expanded"]}
-    aria-level={props["aria-level"]}
-    aria-posinset={props["aria-posinset"]}
-    aria-setsize={props["aria-setsize"]}
+    aria-expanded={props['aria-expanded']}
+    aria-level={props['aria-level']}
+    aria-posinset={props['aria-posinset']}
+    aria-setsize={props['aria-setsize']}
     className="slds-hint-parent"
-    tabIndex={props.focusable ? "0" : null}
+    tabIndex={props.focusable ? '0' : null}
   >
     <th className="slds-tree__item" data-label="Account Name" scope="row">
       <ButtonIcon
         aria-hidden="true"
         assistiveText={
-          props["aria-expanded"] ? (
+          props['aria-expanded'] ? (
             `Expand ${props.name}`
           ) : (
             `Collapse ${props.name}`
           )
         }
         className={classNames(
-          "slds-button_icon slds-button_icon-x-small slds-m-right_x-small",
-          props["aria-expanded"] ? null : "slds-is-disabled"
+          'slds-button_icon slds-button_icon-x-small slds-m-right_x-small',
+          props['aria-expanded'] ? null : 'slds-is-disabled'
         )}
         iconClassName="slds-button__icon_small"
         symbol="chevronright"
         tabIndex="-1"
         title={
-          props["aria-expanded"] ? (
+          props['aria-expanded'] ? (
             `Collapse ${props.name}`
           ) : (
             `Expand ${props.name}`
@@ -160,7 +160,7 @@ const Default = props => (
       focusable
     />
     <Row
-      aria-expanded={props.isExpanded ? "true" : "false"}
+      aria-expanded={props.isExpanded ? 'true' : 'false'}
       aria-level="1"
       aria-posinset="2"
       aria-setsize="4"
@@ -373,8 +373,8 @@ export default (
 
 export let states = [
   {
-    id: "expanded",
-    label: "Expanded",
+    id: 'expanded',
+    label: 'Expanded',
     element: (
       <TreeGrid>
         <Default isExpanded additionalItem={<Expanded />} />
@@ -382,8 +382,8 @@ export let states = [
     )
   },
   {
-    id: "deep-nesting",
-    label: "Deeply nested branches",
+    id: 'deep-nesting',
+    label: 'Deeply nested branches',
     element: (
       <TreeGrid>
         <DeepNesting />

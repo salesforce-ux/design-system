@@ -1,53 +1,53 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { FormElementStatic } from "../../panels/detail/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { FormElementStatic } from '../../panels/detail/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
-const path1Id = "path-1";
-const path2Id = "path-2";
-const path3Id = "path-3";
-const path4Id = "path-4";
-const path5Id = "path-5";
-const path6Id = "path-6";
-const path7Id = "path-7";
-const path8Id = "path-8";
-const path9Id = "path-9";
-const path10Id = "path-10";
-const path11Id = "path-11";
-const path12Id = "path-12";
+const path1Id = 'path-1';
+const path2Id = 'path-2';
+const path3Id = 'path-3';
+const path4Id = 'path-4';
+const path5Id = 'path-5';
+const path6Id = 'path-6';
+const path7Id = 'path-7';
+const path8Id = 'path-8';
+const path9Id = 'path-9';
+const path10Id = 'path-10';
+const path11Id = 'path-11';
+const path12Id = 'path-12';
 
-const pathContent1Id = "path-content-1";
-const pathContent2Id = "path-content-2";
-const pathContent3Id = "path-content-3";
-const pathContent4Id = "path-content-4";
-const pathContent5Id = "path-content-5";
-const pathContent6Id = "path-content-6";
-const pathContent7Id = "path-content-7";
-const pathContent8Id = "path-content-8";
-const pathContent9Id = "path-content-9";
-const pathContent10Id = "path-content-10";
-const pathContent11Id = "path-content-11";
-const pathContent12Id = "path-content-12";
+const pathContent1Id = 'path-content-1';
+const pathContent2Id = 'path-content-2';
+const pathContent3Id = 'path-content-3';
+const pathContent4Id = 'path-content-4';
+const pathContent5Id = 'path-content-5';
+const pathContent6Id = 'path-content-6';
+const pathContent7Id = 'path-content-7';
+const pathContent8Id = 'path-content-8';
+const pathContent9Id = 'path-content-9';
+const pathContent10Id = 'path-content-10';
+const pathContent11Id = 'path-content-11';
+const pathContent12Id = 'path-content-12';
 
 let Demo = props => (
-  <div className={classNames("demo-only", props.className)} {...props}>
+  <div className={classNames('demo-only', props.className)} {...props}>
     {props.children}
   </div>
 );
 
 let Coach = props => (
   <div
-    className={classNames("slds-path", {
-      "slds-is-expanded": props.isExpanded
+    className={classNames('slds-path', {
+      'slds-is-expanded': props.isExpanded
     })}
   >
     {props.children}
@@ -55,7 +55,7 @@ let Coach = props => (
 );
 
 let Path = props => (
-  <div className={classNames("slds-grid slds-path__track", props.className)}>
+  <div className={classNames('slds-grid slds-path__track', props.className)}>
     {props.children}
   </div>
 );
@@ -81,7 +81,7 @@ let Triggerup = props => (
 let Action = props => (
   <button
     className={classNames(
-      "slds-button slds-button_brand slds-path__mark-complete",
+      'slds-button slds-button_brand slds-path__mark-complete',
       props.className
     )}
   >
@@ -91,12 +91,12 @@ let Action = props => (
 
 let ListMain = props => {
   let ariaOrientation;
-  if (props.listRole === "listbox") {
-    ariaOrientation = "horizontal";
+  if (props.listRole === 'listbox') {
+    ariaOrientation = 'horizontal';
   }
   return (
     <div
-      className={classNames("slds-path__scroller", props.className)}
+      className={classNames('slds-path__scroller', props.className)}
       role="application"
     >
       <div className="slds-path__scroller_inner">
@@ -130,26 +130,26 @@ let ListMain = props => {
 
 let ListItem = props => {
   let ariaExpanded;
-  if (props.role === "tab") {
-    ariaExpanded = props.ariaExpanded || "false";
+  if (props.role === 'tab') {
+    ariaExpanded = props.ariaExpanded || 'false';
   }
 
   return (
     <li
-      className={classNames("slds-path__item", props.className, {
-        "slds-is-active": props.tabIndex
+      className={classNames('slds-path__item', props.className, {
+        'slds-is-active': props.tabIndex
       })}
       role="presentation"
     >
       <a
         aria-controls={props.ariaControls}
         aria-expanded={ariaExpanded}
-        aria-selected={props.tabIndex ? "true" : "false"}
+        aria-selected={props.tabIndex ? 'true' : 'false'}
         className="slds-path__link"
         href="javascript:void(0);"
         id={props.id}
         role={props.role}
-        tabIndex={props.tabIndex || "-1"}
+        tabIndex={props.tabIndex || '-1'}
       >
         {props.children}
       </a>
@@ -158,9 +158,9 @@ let ListItem = props => {
 };
 
 let CoachContent = props => {
-  const contentClassNames = classNames("slds-path__content", {
-    "slds-hide": !props.isActive,
-    "slds-show": props.isActive
+  const contentClassNames = classNames('slds-path__content', {
+    'slds-hide': !props.isActive,
+    'slds-show': props.isActive
   });
 
   return (
@@ -202,18 +202,18 @@ let CoachExample1 = props => (
       <h2 className="slds-path__coach-title">Guidance for Success</h2>
       <div className="slds-text-longform slds-path__guidance-content">
         <p>
-          Regularly cross-sell related products using{" "}
+          Regularly cross-sell related products using{' '}
           <a href="javascript:void(0);">cross-sell tactics and principles</a>.
         </p>
         <p>
-          Prepare demo deck using the{" "}
+          Prepare demo deck using the{' '}
           <a href="javascript:void(0);">latest template</a> and review with
           Marketing and Sales teams. Review demo copy with Legal and Doc team.
         </p>
         <p>
           Look up <a href="javascript:void(0);">
             needs analysis principles
-          </a>{" "}
+          </a>{' '}
           and review selling plan with Sales Engineer.
         </p>
       </div>
@@ -244,7 +244,7 @@ let CoachExample2 = props => (
       <h2 className="slds-path__coach-title">Guidance for Success</h2>
       <div className="slds-text-longform slds-path__guidance-content">
         <p>
-          Check out the latest Negotiation and Review tactics on our{" "}
+          Check out the latest Negotiation and Review tactics on our{' '}
           <a href="javascript:void(0);">online portal here</a>.
         </p>
         <p>
@@ -1165,7 +1165,7 @@ let PathOverflow = props => (
 );
 
 let PathMediumCoaching = props => (
-  <Demo className="slds-region_medium" style={{ width: "700px" }}>
+  <Demo className="slds-region_medium" style={{ width: '700px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
@@ -1389,7 +1389,7 @@ let PathMediumCoaching = props => (
 );
 
 let PathSmallCoaching = props => (
-  <Demo className="slds-region_small" style={{ width: "360px" }}>
+  <Demo className="slds-region_small" style={{ width: '360px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
         <div className="slds-grid slds-path__scroller-container">
@@ -1620,48 +1620,48 @@ export default <Default />;
 
 export let states = [
   {
-    id: "later-stage",
-    label: "With Different Stage Selected - without coaching",
+    id: 'later-stage',
+    label: 'With Different Stage Selected - without coaching',
     element: <PathNoCoachStageSelected />
   },
   {
-    id: "with-coaching",
-    label: "With Coaching Available",
+    id: 'with-coaching',
+    label: 'With Coaching Available',
     element: <PathCoach />
   },
   {
-    id: "current-coaching",
-    label: "Current Stage Coaching Visible",
+    id: 'current-coaching',
+    label: 'Current Stage Coaching Visible',
     element: <PathCoachVisible />
   },
   {
-    id: "different-coaching",
-    label: "With Different Stage Selected - with coaching",
+    id: 'different-coaching',
+    label: 'With Different Stage Selected - with coaching',
     element: <PathStageSelected />
   },
   {
-    id: "lost",
-    label: "Lost",
+    id: 'lost',
+    label: 'Lost',
     element: <PathStageLost />
   },
   {
-    id: "won",
-    label: "Won",
+    id: 'won',
+    label: 'Won',
     element: <PathStageWon />
   },
   {
-    id: "with-overflow",
-    label: "Path with Overflow",
+    id: 'with-overflow',
+    label: 'Path with Overflow',
     element: <PathOverflow />
   },
   {
-    id: "medium-coaching",
-    label: "Path Medium Coaching Visible",
+    id: 'medium-coaching',
+    label: 'Path Medium Coaching Visible',
     element: <PathMediumCoaching />
   },
   {
-    id: "small-coaching",
-    label: "Path Small Coaching Visible",
+    id: 'small-coaching',
+    label: 'Path Small Coaching Visible',
     element: <PathSmallCoaching />
   }
 ];

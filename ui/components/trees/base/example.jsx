@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -147,7 +147,7 @@ let Default = props => (
       <li
         role="treeitem"
         aria-level="1"
-        tabIndex={!props.isSelected ? "0" : null}
+        tabIndex={!props.isSelected ? '0' : null}
       >
         <TreeItem>{props.itemContent}</TreeItem>
       </li>
@@ -163,7 +163,7 @@ let Default = props => (
             role="treeitem"
             aria-level="2"
             aria-selected={!!props.isSelected}
-            tabIndex={props.isSelected ? "0" : null}
+            tabIndex={props.isSelected ? '0' : null}
           >
             <TreeItem />
           </li>
@@ -198,18 +198,18 @@ export default <Default />;
 
 export let states = [
   {
-    id: "expanded",
-    label: "Expanded",
+    id: 'expanded',
+    label: 'Expanded',
     element: <Default isExpanded />
   },
   {
-    id: "selected",
-    label: "Item Selected",
+    id: 'selected',
+    label: 'Item Selected',
     element: <Default isExpanded isSelected />
   },
   {
-    id: "deep-nesting",
-    label: "Deeply nested branches",
+    id: 'deep-nesting',
+    label: 'Deeply nested branches',
     element: <Default isExpanded additionalItems={<AdditionalItems />} />
   }
 ];

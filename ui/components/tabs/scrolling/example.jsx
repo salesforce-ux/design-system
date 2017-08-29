@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import Tabs from "../index.react";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import Tabs from '../index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -21,8 +21,8 @@ export let Scroller = props => (
 
 export let states = [
   {
-    id: "default",
-    label: "Default",
+    id: 'default',
+    label: 'Default',
     element: (
       <div className="slds-tabs_default">
         <Scroller>
@@ -351,8 +351,8 @@ export let states = [
     )
   },
   {
-    id: "scoped",
-    label: "Scoped",
+    id: 'scoped',
+    label: 'Scoped',
     element: (
       <div className="slds-tabs_scoped">
         <Scroller>

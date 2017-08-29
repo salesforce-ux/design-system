@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Checkbox } from "../../checkbox/base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Checkbox } from '../../checkbox/base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -14,18 +14,18 @@ import classNames from "classnames";
 export let Tile = props => (
   <article
     className={classNames(
-      "slds-tile",
+      'slds-tile',
       props.className,
-      props.actions ? "slds-hint-parent" : null
+      props.actions ? 'slds-hint-parent' : null
     )}
   >
     {props.actions ? (
       <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
         <h3
           className="slds-tile__title slds-truncate"
-          title={props.title || "Title"}
+          title={props.title || 'Title'}
         >
-          <a href="javascript:void(0);">{props.title || "Title"}</a>
+          <a href="javascript:void(0);">{props.title || 'Title'}</a>
         </h3>
         <div className="slds-shrink-none">
           <ButtonIcon
@@ -41,9 +41,9 @@ export let Tile = props => (
     ) : (
       <h3
         className="slds-tile__title slds-truncate"
-        title={props.title || "Title"}
+        title={props.title || 'Title'}
       >
-        <a href="javascript:void(0);">{props.title || "Title"}</a>
+        <a href="javascript:void(0);">{props.title || 'Title'}</a>
       </h3>
     )}
     <div className="slds-tile__detail">
@@ -55,9 +55,9 @@ export let Tile = props => (
 export let TileMedia = props => (
   <article
     className={classNames(
-      "slds-tile slds-media",
+      'slds-tile slds-media',
       props.className,
-      props.actions ? "slds-hint-parent" : null
+      props.actions ? 'slds-hint-parent' : null
     )}
   >
     {props.media ? (
@@ -68,9 +68,9 @@ export let TileMedia = props => (
         <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
           <h3
             className="slds-tile__title slds-truncate"
-            title={props.title || "Title"}
+            title={props.title || 'Title'}
           >
-            <a href="javascript:void(0);">{props.title || "Title"}</a>
+            <a href="javascript:void(0);">{props.title || 'Title'}</a>
           </h3>
           <div className="slds-shrink-none">
             <ButtonIcon
@@ -86,9 +86,9 @@ export let TileMedia = props => (
       ) : (
         <h3
           className="slds-tile__title slds-truncate"
-          title={props.title || "Title"}
+          title={props.title || 'Title'}
         >
-          <a href="javascript:void(0);">{props.title || "Title"}</a>
+          <a href="javascript:void(0);">{props.title || 'Title'}</a>
         </h3>
       )}
       <div className="slds-tile__detail">
@@ -152,44 +152,44 @@ const avatar = (
 /// ////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: "30rem" }}>
+  <div className="demo-only" style={{ width: '30rem' }}>
     <Tile title="Salesforce UX" />
   </div>
 );
 
 export let examples = [
   {
-    id: "with-action",
-    label: "Default with actions",
+    id: 'with-action',
+    label: 'Default with actions',
     element: (
-      <div className="demo-only" style={{ width: "30rem" }}>
+      <div className="demo-only" style={{ width: '30rem' }}>
         <Tile title="Salesforce UX" actions />
       </div>
     )
   },
   {
-    id: "with-icon",
-    label: "With icon",
+    id: 'with-icon',
+    label: 'With icon',
     element: (
-      <div className="demo-only" style={{ width: "30rem" }}>
+      <div className="demo-only" style={{ width: '30rem' }}>
         <TileMedia title="Salesforce UX" media={icon} />
       </div>
     )
   },
   {
-    id: "with-avatar",
-    label: "With avatar",
+    id: 'with-avatar',
+    label: 'With avatar',
     element: (
-      <div className="demo-only" style={{ width: "30rem" }}>
+      <div className="demo-only" style={{ width: '30rem' }}>
         <TileMedia title="Lexee L. Jackson" media={avatar} />
       </div>
     )
   },
   {
-    id: "task",
-    label: "Task",
+    id: 'task',
+    label: 'Task',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <TileMedia
           title="Contact Trammel Crow Company"
           media={
@@ -207,10 +207,10 @@ export let examples = [
     )
   },
   {
-    id: "article",
-    label: "Article",
+    id: 'article',
+    label: 'Article',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>by Steve Author</p>
           <ul className="slds-list_horizontal slds-has-dividers_right">
@@ -222,10 +222,10 @@ export let examples = [
     )
   },
   {
-    id: "article-liker-bar",
-    label: "Article With like bar",
+    id: 'article-liker-bar',
+    label: 'Article With like bar',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <Tile title="Company One beats Company Two to the 200-mile affordable electric car">
           <p>
             ...an introduction for beginners about climbing ropes and how they
@@ -272,10 +272,10 @@ export let examples = [
     )
   },
   {
-    id: "board",
-    label: "Board",
+    id: 'board',
+    label: 'Board',
     element: (
-      <div className="demo-only" style={{ width: "320px" }}>
+      <div className="demo-only" style={{ width: '320px' }}>
         <ul className="slds-has-dividers_around-space">
           <li className="slds-item">
             <Tile title="Anypoint Connectors" className="slds-tile_board">

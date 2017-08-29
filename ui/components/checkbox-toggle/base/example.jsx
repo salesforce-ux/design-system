@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -15,7 +15,7 @@ let Demo = props => (
 );
 
 let Fieldset = props => (
-  <fieldset className={classNames("form--element", props.className)}>
+  <fieldset className={classNames('form--element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">
       Share email with
     </legend>
@@ -26,14 +26,14 @@ let Fieldset = props => (
 );
 
 let LabelWrapper = props => (
-  <div className={classNames("slds-form-element", props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
 
 let Label = props => (
   <label
-    className={classNames("slds-checkbox_toggle slds-grid", props.className)}
+    className={classNames('slds-checkbox_toggle slds-grid', props.className)}
     htmlFor={props.id}
   >
     {props.children}
@@ -59,14 +59,14 @@ let Checkbox = props => (
 let Toggle = props => (
   <span
     id="toggle-desc"
-    className={classNames("slds-checkbox_faux_container", props.className)}
+    className={classNames('slds-checkbox_faux_container', props.className)}
     aria-live="assertive"
   >
     <span className="slds-checkbox_faux" />
-    <span className={classNames("slds-checkbox_on", props.className)}>
+    <span className={classNames('slds-checkbox_on', props.className)}>
       Enabled
     </span>
-    <span className={classNames("slds-checkbox_off", props.className)}>
+    <span className={classNames('slds-checkbox_off', props.className)}>
       Disabled
     </span>
   </span>
@@ -119,13 +119,13 @@ export default <StateA />;
 
 export let states = [
   {
-    id: "checkbox-toggle-checked",
-    label: "Checked",
+    id: 'checkbox-toggle-checked',
+    label: 'Checked',
     element: <StateB />
   },
   {
-    id: "checkbox-toggle-disabled",
-    label: "Disabled",
+    id: 'checkbox-toggle-disabled',
+    label: 'Disabled',
     element: <StateC />
   }
 ];

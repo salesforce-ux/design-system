@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import SvgIcon from "../../../shared/svg-icon";
-import { Input } from "../../input/base/example";
-import { Textarea } from "../../textarea/base/example";
-import { Checkbox } from "../../checkbox/base/example";
-import { Radio } from "../../radio-group/base/example";
+import React from 'react';
+import classNames from 'classnames';
+import SvgIcon from '../../../shared/svg-icon';
+import { Input } from '../../input/base/example';
+import { Textarea } from '../../textarea/base/example';
+import { Checkbox } from '../../checkbox/base/example';
+import { Radio } from '../../radio-group/base/example';
 
-const inputLabel = "Form Element Label";
-const inputId = "input-unique-id";
-const errorId = "error-message-unique-id";
+const inputLabel = 'Form Element Label';
+const inputId = 'input-unique-id';
+const errorId = 'error-message-unique-id';
 
 export let FormElement = props => {
   const {
@@ -32,24 +32,24 @@ export let FormElement = props => {
   } = props;
 
   let inputIconPosition;
-  if (inputIcon === "left") {
-    inputIconPosition = "slds-input-has-icon slds-input-has-icon_left";
-  } else if (inputIcon === "right") {
-    inputIconPosition = "slds-input-has-icon slds-input-has-icon_right";
-  } else if (inputIcon === "both") {
-    inputIconPosition = "slds-input-has-icon slds-input-has-icon_left-right";
+  if (inputIcon === 'left') {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_left';
+  } else if (inputIcon === 'right') {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_right';
+  } else if (inputIcon === 'both') {
+    inputIconPosition = 'slds-input-has-icon slds-input-has-icon_left-right';
   }
 
   return (
     <div
       {...rest}
-      className={classNames("slds-form-element", className)}
+      className={classNames('slds-form-element', className)}
       role={role}
     >
       {label ? (
         <label
-          className={classNames("slds-form-element__label", {
-            "slds-assistive-text": hideLabel
+          className={classNames('slds-form-element__label', {
+            'slds-assistive-text': hideLabel
           })}
           htmlFor={inputId}
         >
@@ -78,7 +78,7 @@ export let FormElement = props => {
       ) : null}
       <div
         className={classNames(
-          "slds-form-element__control",
+          'slds-form-element__control',
           inputIconPosition,
           formControlClassName
         )}
@@ -103,8 +103,8 @@ export default (
 
 export let states = [
   {
-    id: "required",
-    label: "Required",
+    id: 'required',
+    label: 'Required',
     element: (
       <FormElement label={inputLabel} inputId={inputId} required>
         <Input id={inputId} required />
@@ -112,8 +112,8 @@ export let states = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <FormElement
         className="slds-has-error"
@@ -131,8 +131,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "input",
-    label: "Input",
+    id: 'input',
+    label: 'Input',
     element: (
       <FormElement label={inputLabel} inputId={inputId}>
         <Input id={inputId} />
@@ -140,8 +140,8 @@ export let examples = [
     )
   },
   {
-    id: "textarea",
-    label: "Textarea",
+    id: 'textarea',
+    label: 'Textarea',
     element: (
       <FormElement label={inputLabel} inputId={inputId}>
         <Textarea id={inputId} />
@@ -149,8 +149,8 @@ export let examples = [
     )
   },
   {
-    id: "checkbox",
-    label: "Checkbox",
+    id: 'checkbox',
+    label: 'Checkbox',
     element: (
       <FormElement>
         <Checkbox label="Checkbox Label" />
@@ -158,8 +158,8 @@ export let examples = [
     )
   },
   {
-    id: "radio-group",
-    label: "Radio Group",
+    id: 'radio-group',
+    label: 'Radio Group',
     element: (
       <fieldset className="slds-form-element">
         <legend className="slds-form-element__legend slds-form-element__label">
@@ -173,8 +173,8 @@ export let examples = [
     )
   },
   {
-    id: "inline-help",
-    label: "Inline Help",
+    id: 'inline-help',
+    label: 'Inline Help',
     element: (
       <FormElement
         label={inputLabel}
@@ -186,8 +186,8 @@ export let examples = [
     )
   },
   {
-    id: "tooltip-help",
-    label: "Tooltip Help",
+    id: 'tooltip-help',
+    label: 'Tooltip Help',
     element: (
       <FormElement label={inputLabel} inputId={inputId} tooltip>
         <Input id={inputId} />

@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import _ from "../../shared/helpers";
-import React from "react";
-import classNames from "classnames";
+import _ from '../../shared/helpers';
+import React from 'react';
+import classNames from 'classnames';
 
-import Truncate from "../../shared/truncate/index.react.jsx";
+import Truncate from '../../shared/truncate/index.react.jsx';
 
 class LabelHeading extends React.Component {
   render() {
-    const className = classNames("slds-text-title_caps", this.props.className);
+    const className = classNames('slds-text-title_caps', this.props.className);
     return (
       <p {...this.props} className={className}>
         {this.props.children}
@@ -21,7 +21,7 @@ class LabelHeading extends React.Component {
 class MediumHeading extends React.Component {
   render() {
     const className = classNames(
-      "slds-text-heading_medium",
+      'slds-text-heading_medium',
       this.props.className
     );
     return (
@@ -34,17 +34,17 @@ class MediumHeading extends React.Component {
 
 class Heading extends React.Component {
   render() {
-    const props = _.omit(this.props, "flavor");
-    const Tag = this.props.flavor === "medium" ? MediumHeading : LabelHeading;
+    const props = _.omit(this.props, 'flavor');
+    const Tag = this.props.flavor === 'medium' ? MediumHeading : LabelHeading;
     return <Tag {...props}>{this.props.children}</Tag>;
   }
 }
 
 Heading.propTypes = {
-  flavor: React.PropTypes.oneOf(["label", "medium"]),
+  flavor: React.PropTypes.oneOf(['label', 'medium']),
   truncate: React.PropTypes.number
 };
 
-Heading.defaultProps = { flavor: "label" };
+Heading.defaultProps = { flavor: 'label' };
 
 export default Heading;

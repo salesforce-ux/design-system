@@ -1,22 +1,22 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionTitleAction
-} from "../../expandable-section/base/example";
+} from '../../expandable-section/base/example';
 
-const referenceId01 = "accordion-details-01";
-const referenceId02 = "accordion-details-02";
-const referenceId03 = "accordion-details-03";
+const referenceId01 = 'accordion-details-01';
+const referenceId02 = 'accordion-details-02';
+const referenceId03 = 'accordion-details-03';
 
 let Accordion = props => (
-  <ul className={classNames("slds-accordion", props.className)}>
+  <ul className={classNames('slds-accordion', props.className)}>
     {props.children}
   </ul>
 );
@@ -25,14 +25,14 @@ let AccordionSection = props => (
   <li className="slds-accordion__list-item">
     <section
       className={classNames(
-        "slds-accordion__section",
-        props.isOpen ? "slds-is-open" : null
+        'slds-accordion__section',
+        props.isOpen ? 'slds-is-open' : null
       )}
     >
-      <div className={classNames("slds-accordion__summary", props.className)}>
+      <div className={classNames('slds-accordion__summary', props.className)}>
         <h3
           className={classNames(
-            "slds-text-heading_small slds-accordion__summary-heading",
+            'slds-text-heading_small slds-accordion__summary-heading',
             props.className
           )}
         >
@@ -65,7 +65,7 @@ let AccordionSection = props => (
       </div>
       <div
         aria-hidden={!props.isOpen}
-        className={classNames("slds-accordion__content", props.className)}
+        className={classNames('slds-accordion__content', props.className)}
         id={props.referenceId}
       >
         {props.children}
@@ -102,8 +102,8 @@ export default (
 
 export let states = [
   {
-    id: "section-one-open",
-    label: "Section one open",
+    id: 'section-one-open',
+    label: 'Section one open',
     element: (
       <Accordion>
         <AccordionSection
@@ -131,8 +131,8 @@ export let states = [
     )
   },
   {
-    id: "section-two-open",
-    label: "Section two open",
+    id: 'section-two-open',
+    label: 'Section two open',
     element: (
       <Accordion>
         <AccordionSection
@@ -160,8 +160,8 @@ export let states = [
     )
   },
   {
-    id: "section-three-open",
-    label: "Section three open",
+    id: 'section-three-open',
+    label: 'Section three open',
     element: (
       <Accordion>
         <AccordionSection
@@ -189,8 +189,8 @@ export let states = [
     )
   },
   {
-    id: "styled",
-    label: "Styled",
+    id: 'styled',
+    label: 'Styled',
     element: (
       <div className="slds-card">
         <Accordion>

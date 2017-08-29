@@ -1,24 +1,24 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let Pill = props => (
-  <span className={classNames("slds-pill slds-pill_link", props.className)}>
+  <span className={classNames('slds-pill slds-pill_link', props.className)}>
     {props.children}
     <a
       href="javascript:void(0);"
       className="slds-pill__action"
-      title={props.label || "Full pill label verbiage mirrored here"}
+      title={props.label || 'Full pill label verbiage mirrored here'}
     >
-      <span className="slds-pill__label">{props.label || "Pill Label"}</span>
+      <span className="slds-pill__label">{props.label || 'Pill Label'}</span>
     </a>
     <ButtonIcon
       className="slds-button_icon slds-pill__remove"
@@ -30,7 +30,7 @@ export let Pill = props => (
 );
 
 export let PillContainer = props => (
-  <div className={classNames("slds-pill_container", props.className)}>
+  <div className={classNames('slds-pill_container', props.className)}>
     {props.children}
   </div>
 );
@@ -43,8 +43,8 @@ export default <Pill />;
 
 export let examples = [
   {
-    id: "icon",
-    label: "With icon",
+    id: 'icon',
+    label: 'With icon',
     element: (
       <Pill>
         <span className="slds-pill__icon_container">
@@ -60,8 +60,8 @@ export let examples = [
     )
   },
   {
-    id: "avatar",
-    label: "With avatar",
+    id: 'avatar',
+    label: 'With avatar',
     element: (
       <Pill>
         <span className="slds-pill__icon_container">
@@ -77,10 +77,10 @@ export let examples = [
     )
   },
   {
-    id: "truncated",
-    label: "Truncated",
+    id: 'truncated',
+    label: 'Truncated',
     element: (
-      <div className="demo-only" style={{ width: "220px" }}>
+      <div className="demo-only" style={{ width: '220px' }}>
         <PillContainer>
           <Pill label="Pill label that is longer than the area that contains it" />
         </PillContainer>
@@ -88,8 +88,8 @@ export let examples = [
     )
   },
   {
-    id: "container",
-    label: "Pill with Container",
+    id: 'container',
+    label: 'Pill with Container',
     element: (
       <PillContainer>
         <Pill />
@@ -99,8 +99,8 @@ export let examples = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <Pill className="slds-has-error">
         <span className="slds-pill__icon_container">

@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import MediaObject from "./index.react";
-import { Avatar } from "../../components/avatar/base/example";
+import React from 'react';
+import MediaObject from './index.react';
+import { Avatar } from '../../components/avatar/base/example';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -45,33 +45,33 @@ let MediaExample = props => (
 
 export let examples = [
   {
-    id: "default",
-    label: "Default",
+    id: 'default',
+    label: 'Default',
     element: <MediaExample figureLeft={image} />
   },
   {
-    id: "center",
-    label: "Centered vertically",
+    id: 'center',
+    label: 'Centered vertically',
     element: <MediaExample figureLeft={image} flavor="center" />
   },
   {
-    id: "reverse",
-    label: "Reverse",
+    id: 'reverse',
+    label: 'Reverse',
     element: <MediaExample figureRight={image} />
   },
   {
-    id: "reverse-center",
-    label: "Reverse centered vertically",
+    id: 'reverse-center',
+    label: 'Reverse centered vertically',
     element: <MediaExample figureRight={image} flavor="center" />
   },
   {
-    id: "double",
-    label: "Double figures",
+    id: 'double',
+    label: 'Double figures',
     element: <MediaExample figureLeft={image} figureRight={image} />
   },
   {
-    id: "responsive",
-    label: "Responsive",
+    id: 'responsive',
+    label: 'Responsive',
     element: (
       <div className="demo-only slds-size_3-of-4">
         <MediaObject figureLeft={image} flavor="responsive">

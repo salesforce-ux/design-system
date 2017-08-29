@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { WaffleIcon } from "../../dynamic-icons/waffle/example";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { WaffleIcon } from '../../dynamic-icons/waffle/example';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -43,7 +43,7 @@ const contextDropdown = (
 /// ///////////////////////////////////////////
 
 export let ContextBar = props => (
-  <div className={classNames("slds-context-bar", props.className)}>
+  <div className={classNames('slds-context-bar', props.className)}>
     {/* Primary Section */}
     <div className="slds-context-bar__primary">
       {/* App Switcher */}
@@ -53,11 +53,11 @@ export let ContextBar = props => (
         </div>
         {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title={props.appName || "App Name"}>
+          <span className="slds-truncate" title={props.appName || 'App Name'}>
             {props.stencil ? (
-              "🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢"
+              '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢'
             ) : (
-              props.appName || "App Name"
+              props.appName || 'App Name'
             )}
           </span>
         </span>
@@ -75,7 +75,7 @@ export let ContextBar = props => (
             title="Home"
           >
             <span className="slds-truncate" title="Home">
-              {props.stencil ? "🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢" : "Home"}
+              {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home'}
             </span>
           </a>
         </li>
@@ -86,7 +86,7 @@ export let ContextBar = props => (
             title="Menu Item"
           >
             <span className="slds-truncate" title="Menu Item">
-              {props.stencil ? "🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢" : "Menu Item"}
+              {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item'}
             </span>
           </a>
           <div className="slds-context-bar__icon-action slds-p-left_none">
@@ -109,7 +109,7 @@ export let ContextBar = props => (
                 title="Menu Item"
               >
                 <span className="slds-truncate" title="Menu Item">
-                  {props.stencil ? "🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢" : "Menu Item"}
+                  {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item'}
                 </span>
               </a>
             </li>
@@ -130,22 +130,22 @@ export let ContextBar = props => (
 /// ///////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: "16rem" }}>{props.children}</div>
+  <div style={{ height: '16rem' }}>{props.children}</div>
 );
 
 export default <ContextBar itemActive />;
 
 export let states = [
   {
-    id: "item-active",
-    label: "Item Active",
+    id: 'item-active',
+    label: 'Item Active',
     element: (
       <ContextBar>
         <li className="slds-context-bar__item slds-is-active">
           <a
             href="javascript:void(0);"
             className="slds-context-bar__label-action"
-            title={"Menu Item"}
+            title={'Menu Item'}
           >
             <span className="slds-assistive-text">Current Page:</span>
             <span className="slds-truncate" title="Menu Item">
@@ -158,7 +158,7 @@ export let states = [
             <a
               href="javascript:void(0);"
               className="slds-context-bar__label-action"
-              title={"Menu Item " + i}
+              title={'Menu Item ' + i}
             >
               <span className="slds-truncate" title="Menu Item">
                 Menu Item

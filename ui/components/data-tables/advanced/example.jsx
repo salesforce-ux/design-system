@@ -1,56 +1,56 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import _ from '../../../shared/helpers';
 
 import {
   AdvancedDataTable as Table,
   Thead,
   AdvancedDataTableTr as Tr
-} from "../";
+} from '../';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 const columns = [
-  "Name",
-  "Account Name",
-  "Close Date",
-  "Stage",
-  "Confidence",
-  "Amount",
-  "Contact"
+  'Name',
+  'Account Name',
+  'Close Date',
+  'Stage',
+  'Confidence',
+  'Amount',
+  'Contact'
 ];
 
 const rows = [
   {
-    recordName: "Acme - 1,200 Widgets",
-    accountName: "Acme",
-    closeDate: "4/10/15",
-    stage: "Value Proposition",
-    confidence: "30%",
-    amount: "$25,000,000",
-    contact: "jrogers@acme.com"
+    recordName: 'Acme - 1,200 Widgets',
+    accountName: 'Acme',
+    closeDate: '4/10/15',
+    stage: 'Value Proposition',
+    confidence: '30%',
+    amount: '$25,000,000',
+    contact: 'jrogers@acme.com'
   },
   {
-    recordName: "Acme - 200 Widgets",
-    accountName: "Acme",
-    closeDate: "1/31/15",
-    stage: "Prospecting",
-    confidence: "60%",
-    amount: "$5,000,000",
-    contact: "bob@acme.com"
+    recordName: 'Acme - 200 Widgets',
+    accountName: 'Acme',
+    closeDate: '1/31/15',
+    stage: 'Prospecting',
+    confidence: '60%',
+    amount: '$5,000,000',
+    contact: 'bob@acme.com'
   },
   {
-    recordName: "salesforce.com - 1,000 Widgets",
-    accountName: "salesforce.com",
-    closeDate: "1/31/15 3:45PM",
-    stage: "Id. Decision Makers",
-    confidence: "70%",
-    amount: "$25,000",
-    contact: "nathan@salesforce.com"
+    recordName: 'salesforce.com - 1,000 Widgets',
+    accountName: 'salesforce.com',
+    closeDate: '1/31/15 3:45PM',
+    stage: 'Id. Decision Makers',
+    confidence: '70%',
+    amount: '$25,000',
+    contact: 'nathan@salesforce.com'
   }
 ];
 
@@ -81,8 +81,8 @@ export default (
 
 export let states = [
   {
-    id: "cell-focused",
-    label: "Cell Focused",
+    id: 'cell-focused',
+    label: 'Cell Focused',
     element: (
       <Table>
         <Thead columns={columns} />
@@ -106,8 +106,8 @@ export let states = [
     )
   },
   {
-    id: "actionable-mode",
-    label: "Actionable Mode",
+    id: 'actionable-mode',
+    label: 'Actionable Mode',
     element: (
       <Table>
         <Thead columns={columns} actionableMode />
@@ -131,8 +131,8 @@ export let states = [
     )
   },
   {
-    id: "row-selected",
-    label: "Row Selected (Actionable mode)",
+    id: 'row-selected',
+    label: 'Row Selected (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode />
@@ -141,7 +141,7 @@ export let states = [
             <Tr
               key={i}
               index={i + 1}
-              className={i === 1 ? "slds-is-selected" : null}
+              className={i === 1 ? 'slds-is-selected' : null}
               recordName={rows[i].recordName}
               accountName={rows[i].accountName}
               closeDate={rows[i].closeDate}
@@ -158,8 +158,8 @@ export let states = [
     )
   },
   {
-    id: "all-row-selected",
-    label: "All Rows Selected (Actionable mode)",
+    id: 'all-row-selected',
+    label: 'All Rows Selected (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode selectAll />
@@ -185,8 +185,8 @@ export let states = [
     )
   },
   {
-    id: "sorted-column-asc",
-    label: "Sorted Ascending (Actionable mode)",
+    id: 'sorted-column-asc',
+    label: 'Sorted Ascending (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode sortDirection="ascending" />
@@ -210,8 +210,8 @@ export let states = [
     )
   },
   {
-    id: "sorted-column-desc",
-    label: "Sorted Descending (Actionable mode)",
+    id: 'sorted-column-desc',
+    label: 'Sorted Descending (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode sortDirection="descending" />
@@ -237,8 +237,8 @@ export let states = [
     )
   },
   {
-    id: "resized-column",
-    label: "Column resized (Actionable mode)",
+    id: 'resized-column',
+    label: 'Column resized (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />

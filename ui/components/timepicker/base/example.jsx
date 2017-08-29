@@ -1,36 +1,36 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   Option
-} from "../../combobox/base/example";
-import { DatePicker } from "../../datepickers/base/example";
-import { UtilityIcon } from "../../icons/base/example";
-import { FormElement } from "../../form-element/base/example";
-import { Input } from "../../input/base/example";
+} from '../../combobox/base/example';
+import { DatePicker } from '../../datepickers/base/example';
+import { UtilityIcon } from '../../icons/base/example';
+import { FormElement } from '../../form-element/base/example';
+import { Input } from '../../input/base/example';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const dateInputId = "date-input-id";
-const timeInputId = "time-input-id";
-const listboxOptionId01 = "listbox-option-unique-id-01";
-const listboxOptionId02 = "listbox-option-unique-id-02";
-const listboxOptionId03 = "listbox-option-unique-id-03";
-const listboxOptionId04 = "listbox-option-unique-id-04";
-const listboxOptionId05 = "listbox-option-unique-id-05";
-const listboxOptionId06 = "listbox-option-unique-id-06";
-const listboxOptionId07 = "listbox-option-unique-id-07";
-const listboxOptionId08 = "listbox-option-unique-id-08";
-const listboxOptionId09 = "listbox-option-unique-id-09";
-const listboxOptionId10 = "listbox-option-unique-id-10";
-const listboxOptionId11 = "listbox-option-unique-id-11";
-const listboxOptionId12 = "listbox-option-unique-id-12";
+const dateInputId = 'date-input-id';
+const timeInputId = 'time-input-id';
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
+const listboxOptionId04 = 'listbox-option-unique-id-04';
+const listboxOptionId05 = 'listbox-option-unique-id-05';
+const listboxOptionId06 = 'listbox-option-unique-id-06';
+const listboxOptionId07 = 'listbox-option-unique-id-07';
+const listboxOptionId08 = 'listbox-option-unique-id-08';
+const listboxOptionId09 = 'listbox-option-unique-id-09';
+const listboxOptionId10 = 'listbox-option-unique-id-10';
+const listboxOptionId11 = 'listbox-option-unique-id-11';
+const listboxOptionId12 = 'listbox-option-unique-id-12';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -94,7 +94,7 @@ const ListboxDropdown = props => (
 
 // Demo wrapper
 export const Context = props => (
-  <div style={{ height: "15rem" }}>{props.children}</div>
+  <div style={{ height: '15rem' }}>{props.children}</div>
 );
 
 // Default
@@ -111,8 +111,8 @@ export default (
 
 export let states = [
   {
-    id: "focused",
-    label: "Focused",
+    id: 'focused',
+    label: 'Focused',
     element: (
       <ComboboxContainer
         label="Time"
@@ -126,8 +126,8 @@ export let states = [
     )
   },
   {
-    id: "open-item-focused",
-    label: "Open - Item Focused",
+    id: 'open-item-focused',
+    label: 'Open - Item Focused',
     element: (
       <ComboboxContainer
         label="Time"
@@ -142,8 +142,8 @@ export let states = [
     )
   },
   {
-    id: "time-selection",
-    label: "Open - Time selected",
+    id: 'time-selection',
+    label: 'Open - Time selected',
     element: (
       <ComboboxContainer
         label="Time"

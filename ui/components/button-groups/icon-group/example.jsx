@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonGroup } from "../base/example";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import { ButtonGroup } from '../base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 /// ////////////////////////////////////////
 // Export
@@ -36,8 +36,8 @@ export default (
 
 export let states = [
   {
-    id: "button-group-icon-selected",
-    label: "Selected",
+    id: 'button-group-icon-selected',
+    label: 'Selected',
     element: (
       <ButtonGroup>
         <ButtonIcon

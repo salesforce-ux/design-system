@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   Post,
   PostHeader,
@@ -10,20 +10,20 @@ import {
   PostFooterActions,
   PostFooterMeta,
   Comments
-} from "../post/example";
+} from '../post/example';
 import {
   Comment,
   CommentHeader,
   CommentContent,
   CommentFooter
-} from "../comment/example";
+} from '../comment/example';
 
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: "25rem" }}>
+  <div className="demo-only" style={{ width: '25rem' }}>
     <div className="slds-region_narrow">
       <div className="slds-feed">
         <ul className="slds-feed__list">
@@ -32,7 +32,7 @@ export default (
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated
@@ -73,7 +73,7 @@ export default (
               <PostHeader />
               <PostContent>
                 <p>
-                  Hey there! Here's the latest demo presentation{" "}
+                  Hey there! Here's the latest demo presentation{' '}
                   <a href="javascript:void(0);" title="Jenna Davis">
                     @Jenna Davis
                   </a>, let me know if there are any changes. I've updated

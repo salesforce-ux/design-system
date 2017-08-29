@@ -1,30 +1,30 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-require("./generate-tokens-components");
+require('./generate-tokens-components');
 
-const autoprefixer = require("gulp-autoprefixer");
-const gulp = require("gulp");
-const gutil = require("gulp-util");
-const minifycss = require("gulp-minify-css");
-const plumber = require("gulp-plumber");
-const sass = require("gulp-sass");
-const sourcemaps = require("gulp-sourcemaps");
-const StyleStats = require("stylestats");
-const runSequence = require("run-sequence");
+const autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const minifycss = require('gulp-minify-css');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const StyleStats = require('stylestats');
+const runSequence = require('run-sequence');
 
-const paths = require("../helpers/paths");
+const paths = require('../helpers/paths');
 
-const sign = x => (x < 0 ? "" : "+");
+const sign = x => (x < 0 ? '' : '+');
 const toKB = n => (n / 1024).toFixed(2);
 
-gulp.task("stylestats", ["styles"], done => {
-  const localFile = "assets/styles/slds.css";
+gulp.task('stylestats', ['styles'], done => {
+  const localFile = 'assets/styles/slds.css';
   const remoteFile =
-    "https://www.lightningdesignsystem.com/assets/styles/slds.css";
+    'https://www.lightningdesignsystem.com/assets/styles/slds.css';
 
-  const localStats = new StyleStats(localFile, ".stylestatsrc");
-  const remoteStats = new StyleStats(remoteFile, ".stylestatsrc");
+  const localStats = new StyleStats(localFile, '.stylestatsrc');
+  const remoteStats = new StyleStats(remoteFile, '.stylestatsrc');
   const remote = {};
 
   remoteStats.parse((error, result) => {
@@ -65,9 +65,9 @@ gulp.task("stylestats", ["styles"], done => {
   });
 });
 
-gulp.task("styles:sass", [], () =>
+gulp.task('styles:sass', [], () =>
   gulp
-    .src("ui/index.scss")
+    .src('ui/index.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(
@@ -76,32 +76,32 @@ gulp.task("styles:sass", [], () =>
           precision: 10,
           includePaths: [paths.ui, paths.node_modules]
         })
-        .on("error", sass.logError)
+        .on('error', sass.logError)
     )
     .pipe(autoprefixer({ remove: false }))
-    .pipe(minifycss({ advanced: false, roundingPrecision: "-1" }))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("assets/styles"))
+    .pipe(minifycss({ advanced: false, roundingPrecision: '-1' }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'))
 );
 
-gulp.task("styles:framework", ["generate:tokens:sass"], () =>
-  gulp.start("styles:sass")
+gulp.task('styles:framework', ['generate:tokens:sass'], () =>
+  gulp.start('styles:sass')
 );
 
 // Quick check that all variants compile correctly to CSS
-gulp.task("styles:test", () =>
+gulp.task('styles:test', () =>
   gulp
-    .src("ui/index-*.scss")
+    .src('ui/index-*.scss')
     .pipe(
       sass
         .sync({
           includePaths: [paths.node_modules]
         })
-        .on("error", sass.logError)
+        .on('error', sass.logError)
     )
-    .pipe(gulp.dest("assets/styles/.test"))
+    .pipe(gulp.dest('assets/styles/.test'))
 );
 
-gulp.task("styles", callback => {
-  runSequence("styles:framework", "styles:test", callback);
+gulp.task('styles', callback => {
+  runSequence('styles:framework', 'styles:test', callback);
 });

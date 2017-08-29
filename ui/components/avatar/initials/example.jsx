@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Avatar } from "../base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Avatar } from '../base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Export
@@ -23,8 +23,8 @@ export default (
 
 export let states = [
   {
-    id: "avatar-square-initials",
-    label: "Square Initials",
+    id: 'avatar-square-initials',
+    label: 'Square Initials',
     element: (
       <Avatar className="slds-avatar_medium">
         <abbr
@@ -37,8 +37,8 @@ export let states = [
     )
   },
   {
-    id: "avatar-circle-initials",
-    label: "Circle Initials",
+    id: 'avatar-circle-initials',
+    label: 'Circle Initials',
     element: (
       <Avatar className="slds-avatar_circle slds-avatar_medium">
         <abbr
@@ -51,8 +51,8 @@ export let states = [
     )
   },
   {
-    id: "size-x-small",
-    label: "Size - X Small",
+    id: 'size-x-small',
+    label: 'Size - X Small',
     element: (
       <Avatar className="slds-avatar_x-small">
         <abbr
@@ -65,8 +65,8 @@ export let states = [
     )
   },
   {
-    id: "size-small",
-    label: "Size - Small",
+    id: 'size-small',
+    label: 'Size - Small',
     element: (
       <Avatar className="slds-avatar_small">
         <abbr
@@ -79,8 +79,8 @@ export let states = [
     )
   },
   {
-    id: "size-medium",
-    label: "Size - Medium",
+    id: 'size-medium',
+    label: 'Size - Medium',
     element: (
       <Avatar className="slds-avatar_medium">
         <abbr
@@ -93,8 +93,8 @@ export let states = [
     )
   },
   {
-    id: "size-large",
-    label: "Size - Large",
+    id: 'size-large',
+    label: 'Size - Large',
     element: (
       <Avatar className="slds-avatar_large">
         <abbr

@@ -1,16 +1,16 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   Modal,
   ModalHeader,
   ModalContent,
   ModalFooter
-} from "../../modals/base/example";
+} from '../../modals/base/example';
 
 export default (
-  <div className="demo-only" style={{ height: "24rem" }}>
+  <div className="demo-only" style={{ height: '24rem' }}>
     <Modal
       role="alertdialog"
       aria-labelledby="prompt-heading-id"

@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Modal, ModalHeader, ModalContent } from "../../modals/base/example";
-import { Avatar } from "../../avatar/base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import { Avatar } from '../../avatar/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -17,24 +17,24 @@ export let AppLauncherTile = props => (
     draggable={props.draggable}
     href="javascript:void(0);"
     className={classNames(
-      "slds-app-launcher__tile slds-text-link_reset",
+      'slds-app-launcher__tile slds-text-link_reset',
       props.className,
       {
-        "slds-is-draggable": props.draggable,
-        "slds-app-launcher__tile_small": props.flavor === "small",
-        "slds-is-grabbed": props.grabbed
+        'slds-is-draggable': props.draggable,
+        'slds-app-launcher__tile_small': props.flavor === 'small',
+        'slds-is-grabbed': props.grabbed
       }
     )}
   >
     <div
-      className={classNames("slds-app-launcher__tile-figure", {
-        "slds-app-launcher__tile-figure_small": props.flavor === "small"
+      className={classNames('slds-app-launcher__tile-figure', {
+        'slds-app-launcher__tile-figure_small': props.flavor === 'small'
       })}
     >
       {props.symbol ? (
         <SvgIcon
           className={
-            "slds-icon slds-icon-standard-" + props.symbol + " slds-icon_large"
+            'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon_large'
           }
           sprite="standard"
           symbol={props.symbol}
@@ -42,7 +42,7 @@ export let AppLauncherTile = props => (
       ) : (
         <Avatar className="slds-avatar_large">
           <abbr
-            className={classNames("slds-avatar__initials", props.figureClass)}
+            className={classNames('slds-avatar__initials', props.figureClass)}
             title="company name"
           >
             {props.objectInitials}
@@ -63,8 +63,8 @@ export let AppLauncherTile = props => (
       ) : null}
     </div>
     <div
-      className={classNames("slds-app-launcher__tile-body", {
-        "slds-app-launcher__tile-body_small": props.flavor === "small"
+      className={classNames('slds-app-launcher__tile-body', {
+        'slds-app-launcher__tile-body_small': props.flavor === 'small'
       })}
     >
       {props.children}
@@ -77,7 +77,7 @@ export let AppLauncherTile = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ width: "20rem" }}>
+  <div className="demo-only" style={{ width: '20rem' }}>
     <AppLauncherTile objectInitials="SC" figureClass="slds-icon-custom-27">
       <h2 className="slds-text-link">Sales Cloud</h2>
       <p>
@@ -89,10 +89,10 @@ export default (
 
 export let states = [
   {
-    id: "draggable",
-    label: "Draggable",
+    id: 'draggable',
+    label: 'Draggable',
     element: (
-      <div className="demo-only" style={{ width: "20rem" }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <AppLauncherTile
           objectInitials="SC"
           figureClass="slds-icon-custom-27"
@@ -107,10 +107,10 @@ export let states = [
     )
   },
   {
-    id: "grabbed",
-    label: "Grabbed",
+    id: 'grabbed',
+    label: 'Grabbed',
     element: (
-      <div className="demo-only" style={{ width: "20rem" }}>
+      <div className="demo-only" style={{ width: '20rem' }}>
         <AppLauncherTile
           objectInitials="SC"
           figureClass="slds-icon-custom-27"

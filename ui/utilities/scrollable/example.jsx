@@ -1,19 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "auto",
-    label: "Auto",
+    id: 'auto',
+    label: 'Auto',
     element: (
       <div
         className="slds-scrollable"
-        style={{ height: "5rem", width: "24rem" }}
+        style={{ height: '5rem', width: '24rem' }}
       >
         <p>Scrollable Content Here</p>
-        <div className="slds-text-longform" style={{ width: "150%" }}>
+        <div className="slds-text-longform" style={{ width: '150%' }}>
           <p>
             Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
             ullamco deserunt aute id consequat veniam incididunt duis in sint
@@ -37,12 +37,12 @@ export let examples = [
     )
   },
   {
-    id: "none",
-    label: "None",
+    id: 'none',
+    label: 'None',
     element: (
       <div
         className="slds-scrollable_none"
-        style={{ height: "5rem", width: "24rem" }}
+        style={{ height: '5rem', width: '24rem' }}
       >
         <p>Scrollable Content Here</p>
         <div className="slds-text-longform">
@@ -69,15 +69,15 @@ export let examples = [
     )
   },
   {
-    id: "x-axis",
-    label: "X-axis",
+    id: 'x-axis',
+    label: 'X-axis',
     element: (
       <div
         className="slds-scrollable_x"
-        style={{ height: "5rem", width: "24rem" }}
+        style={{ height: '5rem', width: '24rem' }}
       >
         <p>Scrollable Content Here</p>
-        <div className="slds-text-longform" style={{ width: "150%" }}>
+        <div className="slds-text-longform" style={{ width: '150%' }}>
           <p>
             Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
             ullamco deserunt aute id consequat veniam incididunt duis in sint
@@ -101,12 +101,12 @@ export let examples = [
     )
   },
   {
-    id: "y-axis",
-    label: "Y-axis",
+    id: 'y-axis',
+    label: 'Y-axis',
     element: (
       <div
         className="slds-scrollable_y"
-        style={{ height: "5rem", width: "24rem" }}
+        style={{ height: '5rem', width: '24rem' }}
       >
         <p>Scrollable Content Here</p>
         <div className="slds-text-longform">

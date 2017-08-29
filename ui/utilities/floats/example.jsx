@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export const Context = props => (
   <div className="slds-clearfix">{props.children}</div>
@@ -15,8 +15,8 @@ export default (
 
 export let examples = [
   {
-    id: "left",
-    label: "Left",
+    id: 'left',
+    label: 'Left',
     element: (
       <div className="slds-clearfix">
         <div className="slds-float_left">
@@ -26,8 +26,8 @@ export let examples = [
     )
   },
   {
-    id: "right",
-    label: "Right",
+    id: 'right',
+    label: 'Right',
     element: (
       <div className="slds-clearfix">
         <div className="slds-float_right">
@@ -37,8 +37,8 @@ export let examples = [
     )
   },
   {
-    id: "none",
-    label: "None",
+    id: 'none',
+    label: 'None',
     element: (
       <div className="slds-float_none">
         <p>I’m not floooaaaating</p>
@@ -46,8 +46,8 @@ export let examples = [
     )
   },
   {
-    id: "clearfix",
-    label: "Clearfix",
+    id: 'clearfix',
+    label: 'Clearfix',
     element: (
       <div className="slds-clearfix">
         <div className="slds-float_left">

@@ -1,31 +1,31 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonGroupList } from "../../button-groups/list/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import { Tooltip } from "../../tooltips/base/example";
+import React from 'react';
+import { ButtonGroupList } from '../../button-groups/list/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import { Tooltip } from '../../tooltips/base/example';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   Option
-} from "../../combobox/base/example";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+} from '../../combobox/base/example';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-const listboxOptionId01 = "listbox-option-unique-id-01";
-const listboxOptionId02 = "listbox-option-unique-id-02";
-const listboxOptionId03 = "listbox-option-unique-id-03";
-const listboxOptionId04 = "listbox-option-unique-id-04";
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId03 = 'listbox-option-unique-id-03';
+const listboxOptionId04 = 'listbox-option-unique-id-04';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let Demo = props => (
-  <div className="demo-only" style={{ minHeight: "180px" }}>
+  <div className="demo-only" style={{ minHeight: '180px' }}>
     {props.children}
   </div>
 );
@@ -34,7 +34,7 @@ export let RichTextEditor = props => (
   <div
     {...props}
     className={classNames(
-      "slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap",
+      'slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap',
       props.className
     )}
   >
@@ -47,7 +47,7 @@ export let RteToolbar = props => (
     role="toolbar"
     aria-label={props.disabledLabel}
     className={classNames(
-      "slds-rich-text-editor__toolbar slds-shrink-none",
+      'slds-rich-text-editor__toolbar slds-shrink-none',
       props.className
     )}
   >
@@ -143,7 +143,7 @@ export let RteFormatText = props => (
         className="slds-button_icon-border-filled"
         symbol="bold"
         tabIndex={props.tabIndexSetting}
-        aria-describedby={props.hasTooltip ? "bold" : null}
+        aria-describedby={props.hasTooltip ? 'bold' : null}
         disabled={props.disabledButtons}
         assistiveText="Bold"
       />
@@ -302,12 +302,12 @@ export let RteAlignText = props => (
 
 export let RteInsertContent = props => (
   <ButtonGroupList
-    role={props.overflow ? "presentation" : null}
-    aria-label={!props.overflow ? "Insert content" : null}
+    role={props.overflow ? 'presentation' : null}
+    aria-label={!props.overflow ? 'Insert content' : null}
   >
-    <li role={props.overflow ? "presentation" : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={props.overflow ? "menuitem" : null}
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button_icon-border-filled"
         symbol="emoji"
@@ -315,9 +315,9 @@ export let RteInsertContent = props => (
         assistiveText="Add Emoji"
       />
     </li>
-    <li role={props.overflow ? "presentation" : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={props.overflow ? "menuitem" : null}
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button_icon-border-filled"
         symbol="image"
@@ -325,9 +325,9 @@ export let RteInsertContent = props => (
         assistiveText="Add Image"
       />
     </li>
-    <li role={props.overflow ? "presentation" : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={props.overflow ? "menuitem" : null}
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button_icon-border-filled"
         symbol="link"
@@ -354,12 +354,12 @@ export let RteInsertUser = props => (
 
 export let RteClearFormatting = props => (
   <ButtonGroupList
-    role={props.overflow ? "presentation" : null}
-    aria-label={!props.overflow ? "Remove Formatting" : null}
+    role={props.overflow ? 'presentation' : null}
+    aria-label={!props.overflow ? 'Remove Formatting' : null}
   >
-    <li role={props.overflow ? "presentation" : null}>
+    <li role={props.overflow ? 'presentation' : null}>
       <ButtonIcon
-        role={props.overflow ? "menuitem" : null}
+        role={props.overflow ? 'menuitem' : null}
         tabIndex="-1"
         className="slds-button_icon-border-filled"
         symbol="remove_formatting"
@@ -374,9 +374,9 @@ export let RteTextarea = props => (
   <div className="slds-rich-text-editor__textarea slds-grid">
     {props.text ? (
       <div
-        aria-describedby={props["aria-describedby"]}
+        aria-describedby={props['aria-describedby']}
         aria-label="Compose text"
-        contentEditable={!props.disabled ? "true" : null}
+        contentEditable={!props.disabled ? 'true' : null}
         suppressContentEditableWarning
         className="slds-rich-text-area__content slds-grow"
       >
@@ -384,9 +384,9 @@ export let RteTextarea = props => (
       </div>
     ) : (
       <div
-        aria-describedby={props["aria-describedby"]}
+        aria-describedby={props['aria-describedby']}
         aria-label="Compose text"
-        contentEditable={!props.disabled ? "true" : null}
+        contentEditable={!props.disabled ? 'true' : null}
         suppressContentEditableWarning
         className="slds-rich-text-area__content slds-text-color_weak slds-grow"
       >
@@ -401,8 +401,8 @@ let TextInputExample = props => (
     <h1>Heading - h1</h1>
     <p>
       Lorem ipsum dolor sit amet, <strong>strong</strong> adipisicing elit, sed
-      do <em>emphasis</em> tempor incididunt ut <u>underlined</u> et dolore{" "}
-      <strike>strikethrough</strike> aliqua. Ut <sub>subscript</sub> ad{" "}
+      do <em>emphasis</em> tempor incididunt ut <u>underlined</u> et dolore{' '}
+      <strike>strikethrough</strike> aliqua. Ut <sub>subscript</sub> ad{' '}
       <sup>superscript</sup> veniam, <abbr>quis</abbr> nostrud exercitation
       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
       dolor in <a href="#">link</a> in voluptate velit esse cillum dolore eu
@@ -489,10 +489,10 @@ let TextInputExample = props => (
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,{" "}
+      veniam,{' '}
       <a href="#">
         https://url.com/document/d/1dSOGKlCQtSG73NcSJB7qCJVyjE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/ed
-      </a>{" "}
+      </a>{' '}
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat.
     </p>
@@ -518,8 +518,8 @@ export default (
 
 export let states = [
   {
-    id: "focused",
-    label: "Focused",
+    id: 'focused',
+    label: 'Focused',
     element: (
       <Demo>
         <RichTextEditor className="slds-has-focus">
@@ -534,8 +534,8 @@ export let states = [
     )
   },
   {
-    id: "filled-out",
-    label: "Filled Out",
+    id: 'filled-out',
+    label: 'Filled Out',
     element: (
       <Demo>
         <RichTextEditor>
@@ -550,8 +550,8 @@ export let states = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <Demo>
         <RichTextEditor className="slds-has-error">
@@ -575,8 +575,8 @@ export let states = [
     )
   },
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <Demo>
         <RichTextEditor>
@@ -591,8 +591,8 @@ export let states = [
     )
   },
   {
-    id: "tooltip",
-    label: "Tooltip",
+    id: 'tooltip',
+    label: 'Tooltip',
     element: (
       <Demo>
         <RichTextEditor>
@@ -605,7 +605,7 @@ export let states = [
           <Tooltip
             className="slds-nubbin_top-left"
             id="bold"
-            style={{ position: "absolute", top: "48px", left: "2px" }}
+            style={{ position: 'absolute', top: '48px', left: '2px' }}
           >
             Bold <kbd>cmd+b</kbd>
           </Tooltip>
@@ -617,8 +617,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "bottom-toolbar",
-    label: "Bottom toolbar",
+    id: 'bottom-toolbar',
+    label: 'Bottom toolbar',
     element: (
       <Demo>
         <RichTextEditor>
@@ -634,8 +634,8 @@ export let examples = [
     )
   },
   {
-    id: "email",
-    label: "Email",
+    id: 'email',
+    label: 'Email',
     element: (
       <Demo>
         <RichTextEditor>
@@ -655,8 +655,8 @@ export let examples = [
     )
   },
   {
-    id: "feed",
-    label: "Feed",
+    id: 'feed',
+    label: 'Feed',
     element: (
       <Demo>
         <RichTextEditor>
@@ -675,8 +675,8 @@ export let examples = [
     )
   },
   {
-    id: "note",
-    label: "Notes",
+    id: 'note',
+    label: 'Notes',
     element: (
       <Demo>
         <RichTextEditor>

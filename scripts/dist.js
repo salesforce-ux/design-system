@@ -1,30 +1,30 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const _ = require("lodash");
-const fs = require("fs");
-const path = require("path");
-const async = require("async");
-const autoprefixer = require("autoprefixer");
-const gulp = require("gulp");
-const gulpinsert = require("gulp-insert");
-const gulprename = require("gulp-rename");
-const Immutable = require("immutable");
-const postcss = require("gulp-postcss");
-const rimraf = require("rimraf");
-const sass = require("gulp-sass");
-const minifycss = require("gulp-minify-css");
-const ui = require("./ui");
-const webpack = require("webpack");
-const { createLibrary } = require("./compile/bundle");
+const _ = require('lodash');
+const fs = require('fs');
+const path = require('path');
+const async = require('async');
+const autoprefixer = require('autoprefixer');
+const gulp = require('gulp');
+const gulpinsert = require('gulp-insert');
+const gulprename = require('gulp-rename');
+const Immutable = require('immutable');
+const postcss = require('gulp-postcss');
+const rimraf = require('rimraf');
+const sass = require('gulp-sass');
+const minifycss = require('gulp-minify-css');
+const ui = require('./ui');
+const webpack = require('webpack');
+const { createLibrary } = require('./compile/bundle');
 
-const packageJSON = require("../package.json");
-const paths = require("./helpers/paths");
-const releaseNotes = require("./npm/release-notes");
+const packageJSON = require('../package.json');
+const paths = require('./helpers/paths');
+const releaseNotes = require('./npm/release-notes');
 
 const SLDS_VERSION = packageJSON.version;
-const DISPLAY_NAME = "Lightning Design System";
-const MODULE_NAME = "salesforce-lightning-design-system";
+const DISPLAY_NAME = 'Lightning Design System';
+const MODULE_NAME = 'salesforce-lightning-design-system';
 
 // /////////////////////////////////////////////////////////////
 // Helpers
@@ -48,12 +48,12 @@ async.series(
    */
     done => {
       gulp
-        .src(["./package.json", "./README-dist.md"], {
+        .src(['./package.json', './README-dist.md'], {
           base: paths.root
         })
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -61,20 +61,20 @@ async.series(
    */
     done =>
       releaseNotes({ isInternal: packageJSON.config.slds.internal })
-        .pipe(fs.createWriteStream(distPath("RELEASENOTES.md")))
-        .on("finish", () => done()),
+        .pipe(fs.createWriteStream(distPath('RELEASENOTES.md')))
+        .on('finish', () => done()),
 
     /**
    * Cleanup the package.json
    */
     done => {
       const packageJSON = JSON.parse(
-        fs.readFileSync(distPath("package.json")).toString()
+        fs.readFileSync(distPath('package.json')).toString()
       );
-      packageJSON.name = "@salesforce-ux/design-system";
+      packageJSON.name = '@salesforce-ux/design-system';
       _.set(
         packageJSON,
-        ["slds", "dependencies"],
+        ['slds', 'dependencies'],
         Immutable.fromJS(packageJSON.devDependencies)
           .filter((v, k) => /^@salesforce-ux/.test(k))
           .toJS()
@@ -86,7 +86,7 @@ async.series(
       delete packageJSON.engines;
       delete packageJSON.important;
       fs.writeFile(
-        distPath("package.json"),
+        distPath('package.json'),
         JSON.stringify(packageJSON, null, 2),
         done
       );
@@ -101,13 +101,13 @@ async.series(
    */
     done => {
       gulp
-        .src("**/*.scss", {
+        .src('**/*.scss', {
           base: paths.ui,
           cwd: paths.ui
         })
-        .pipe(gulp.dest(distPath("scss")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('scss')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -115,12 +115,12 @@ async.series(
    */
     done => {
       gulp
-        .src("licenses/License-for-Sass.txt", {
+        .src('licenses/License-for-Sass.txt', {
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("scss")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('scss')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     // //////////////////////////////////
@@ -133,14 +133,14 @@ async.series(
     done => {
       gulp
         .src(
-          "@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**",
+          '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**',
           {
             cwd: paths.node_modules
           }
         )
-        .pipe(gulp.dest(distPath("assets/icons")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/icons')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -148,12 +148,12 @@ async.series(
    */
     done => {
       gulp
-        .src("@salesforce-ux/icons/dist/ui.icons.json", {
+        .src('@salesforce-ux/icons/dist/ui.icons.json', {
           cwd: paths.node_modules
         })
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
 
     // //////////////////////////////////
@@ -165,12 +165,12 @@ async.series(
    */
     done => {
       gulp
-        .src("fonts/**/*", {
+        .src('fonts/**/*', {
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("assets/fonts")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/fonts')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -178,12 +178,12 @@ async.series(
    */
     done => {
       gulp
-        .src("licenses/License-for-font.txt", {
+        .src('licenses/License-for-font.txt', {
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("assets/fonts")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/fonts')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     // //////////////////////////////////
@@ -195,13 +195,13 @@ async.series(
    */
     done => {
       gulp
-        .src("images/**/*", {
-          base: "assets/images",
+        .src('images/**/*', {
+          base: 'assets/images',
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("assets/images")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/images')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -209,12 +209,12 @@ async.series(
    */
     done => {
       gulp
-        .src("licenses/License-for-images.txt", {
+        .src('licenses/License-for-images.txt', {
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("assets/images")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/images')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     // //////////////////////////////////
@@ -226,12 +226,12 @@ async.series(
    */
     done => {
       gulp
-        .src("downloads/swatches/**", {
+        .src('downloads/swatches/**', {
           cwd: paths.assets
         })
-        .pipe(gulp.dest(distPath("swatches")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('swatches')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     // //////////////////////////////////
@@ -243,13 +243,13 @@ async.series(
    */
     done => {
       gulp
-        .src("**/*.*", {
+        .src('**/*.*', {
           base: `${paths.designTokens}`,
           cwd: `${paths.designTokens}`
         })
-        .pipe(gulp.dest(distPath("design-tokens")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('design-tokens')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -257,13 +257,13 @@ async.series(
    */
     done => {
       gulp
-        .src("components/**/tokens/**/*.yml", {
+        .src('components/**/tokens/**/*.yml', {
           base: path.resolve(paths.ui),
           cwd: path.resolve(paths.ui)
         })
-        .pipe(gulp.dest(distPath("ui")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('ui')))
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -271,51 +271,51 @@ async.series(
    */
     done => {
       gulp
-        .src(distPath("scss/index.scss"))
+        .src(distPath('scss/index.scss'))
         .pipe(
           sass({
             precision: 10,
             includePaths: [paths.node_modules]
           })
         )
-        .pipe(sass().on("error", sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer({ remove: false })]))
         .pipe(
           gulprename(function(path) {
             path.basename =
-              MODULE_NAME + path.basename.substring("index".length);
-            path.extname = ".css";
+              MODULE_NAME + path.basename.substring('index'.length);
+            path.extname = '.css';
             return path;
           })
         )
-        .pipe(gulp.dest(distPath("assets/styles/")))
-        .on("error", done)
-        .on("finish", done);
+        .pipe(gulp.dest(distPath('assets/styles/')))
+        .on('error', done)
+        .on('finish', done);
     },
     /**
    * Minify CSS
    */
     done => {
       gulp
-        .src(distPath("assets/styles/*.css"), { base: distPath() })
+        .src(distPath('assets/styles/*.css'), { base: distPath() })
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
+        .on('error', done)
         .pipe(
           minifycss({
             advanced: false,
-            roundingPrecision: "-1"
+            roundingPrecision: '-1'
           })
         )
         .pipe(
           gulprename(function(path) {
-            path.basename += ".min";
+            path.basename += '.min';
             return path;
           })
         )
-        .on("error", done)
+        .on('error', done)
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -323,25 +323,25 @@ async.series(
    */
     done => {
       gulp
-        .src(["**/*.css", "scss/index*"], {
+        .src(['**/*.css', 'scss/index*'], {
           base: distPath(),
           cwd: distPath()
         })
         .pipe(gulpinsert.prepend(`/*! ${DISPLAY_NAME} ${SLDS_VERSION} */\n`))
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
     done => {
       gulp
-        .src(["scss/**/*.scss", "!scss/index*.scss", "!scss/vendor/**/*.*"], {
+        .src(['scss/**/*.scss', '!scss/index*.scss', '!scss/vendor/**/*.*'], {
           base: distPath(),
           cwd: distPath()
         })
         .pipe(gulpinsert.prepend(`// ${DISPLAY_NAME} ${SLDS_VERSION}\n`))
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
@@ -349,25 +349,25 @@ async.series(
    */
     done => {
       gulp
-        .src(distPath("README-dist.md"))
-        .pipe(gulprename("README.md"))
-        .on("error", done)
+        .src(distPath('README-dist.md'))
+        .pipe(gulprename('README.md'))
+        .on('error', done)
         .pipe(
           gulpinsert.prepend(
             `# ${DISPLAY_NAME} \n# Version: ${SLDS_VERSION} \n`
           )
         )
-        .on("error", done)
+        .on('error', done)
         .pipe(gulp.dest(distPath()))
-        .on("error", done)
-        .on("finish", done);
+        .on('error', done)
+        .on('finish', done);
     },
 
     /**
    * Remove old README-dist
    */
     done => {
-      rimraf(distPath("README-dist.md"), done);
+      rimraf(distPath('README-dist.md'), done);
     },
 
     /**

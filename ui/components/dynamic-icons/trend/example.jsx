@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import _ from "../../../shared/helpers";
-import classNames from "classnames";
+import React from 'react';
+import _ from '../../../shared/helpers';
+import classNames from 'classnames';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -13,7 +13,7 @@ let Trend = props => {
   const { assistiveText, ...rest } = props;
 
   return (
-    <span {...rest} className={classNames("slds-icon-trend", props.className)}>
+    <span {...rest} className={classNames('slds-icon-trend', props.className)}>
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path
           className="slds-icon-trend__arrow"
@@ -54,8 +54,8 @@ export default (
 // States
 export let states = [
   {
-    id: "down",
-    label: "Down",
+    id: 'down',
+    label: 'Down',
     element: (
       <Trend
         data-slds-trend="down"
@@ -66,8 +66,8 @@ export let states = [
     )
   },
   {
-    id: "up",
-    label: "Up",
+    id: 'up',
+    label: 'Up',
     element: (
       <Trend
         data-slds-trend="up"
@@ -78,8 +78,8 @@ export let states = [
     )
   },
   {
-    id: "static",
-    label: "Static (no animation)",
+    id: 'static',
+    label: 'Static (no animation)',
     element: (
       <Trend
         data-slds-trend="up"
@@ -89,8 +89,8 @@ export let states = [
     )
   },
   {
-    id: "paused",
-    label: "Paused",
+    id: 'paused',
+    label: 'Paused',
     element: (
       <Trend
         data-slds-trend="up"

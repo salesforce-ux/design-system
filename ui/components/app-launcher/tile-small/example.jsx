@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Modal, ModalHeader, ModalContent } from "../../modals/base/example";
-import { AppLauncherTile } from "../tile/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import { AppLauncherTile } from '../tile/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Export
@@ -14,7 +14,7 @@ import classNames from "classnames";
 export default (
   <div
     className="demo-only"
-    style={{ width: "6rem", paddingLeft: ".5rem", paddingRight: ".5rem" }}
+    style={{ width: '6rem', paddingLeft: '.5rem', paddingRight: '.5rem' }}
   >
     <AppLauncherTile
       flavor="small"

@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const _ = require("lodash");
-const path = require("path");
+const _ = require('lodash');
+const path = require('path');
 
 /**
  * Remove a module from the cache
@@ -10,7 +10,7 @@ const path = require("path");
  * @param {string} id
  */
 export const removeFromCache = (() => {
-  const patterns = ["app_modules", "site"].map(
+  const patterns = ['app_modules', 'site'].map(
     k => new RegExp(_.escapeRegExp(path.resolve(__dirname, k)))
   );
   const shouldRemove = id =>
@@ -29,12 +29,12 @@ export const removeFromCache = (() => {
 })();
 
 export const watchPaths = {
-  css: ["assets/**/*.css"],
-  sass: ["ui/**/*.scss", "design-tokens/*.yml"],
-  js: ["app_modules/**/*.{js,jsx}", "ui/**/*.{js,jsx}", "site/**/*.{js,jsx}"],
+  css: ['assets/**/*.css'],
+  sass: ['ui/**/*.scss', 'design-tokens/*.yml'],
+  js: ['app_modules/**/*.{js,jsx}', 'ui/**/*.{js,jsx}', 'site/**/*.{js,jsx}'],
   tokens: [
-    "ui/**/tokens/*.yml",
-    "design-tokens/**/*.yml",
-    "!design-tokens/components.yml"
+    'ui/**/tokens/*.yml',
+    'design-tokens/**/*.yml',
+    '!design-tokens/components.yml'
   ]
 };

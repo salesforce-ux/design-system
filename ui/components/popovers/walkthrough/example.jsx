@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Popover } from "../base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Popover } from '../base/example';
+import classNames from 'classnames';
 
-const headingUniqueId = "dialog-heading-id-01";
+const headingUniqueId = 'dialog-heading-id-01';
 
 let Header = props => (
   <header className="slds-popover__header slds-p-vertical_medium">
@@ -60,8 +60,8 @@ export default (
 
 export let examples = [
   {
-    id: "micro-setup",
-    label: "Micro Setup",
+    id: 'micro-setup',
+    label: 'Micro Setup',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -79,8 +79,8 @@ export let examples = [
     )
   },
   {
-    id: "micro-setup-alternate",
-    label: "Micro Setup - Alternate",
+    id: 'micro-setup-alternate',
+    label: 'Micro Setup - Alternate',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -98,8 +98,8 @@ export let examples = [
     )
   },
   {
-    id: "micro-setup-in-page",
-    label: "Micro Setup - In Page",
+    id: 'micro-setup-in-page',
+    label: 'Micro Setup - In Page',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -117,8 +117,8 @@ export let examples = [
     )
   },
   {
-    id: "micro-setup-inline-form",
-    label: "Micro Setup - Inline Form",
+    id: 'micro-setup-inline-form',
+    label: 'Micro Setup - Inline Form',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -152,8 +152,8 @@ export let examples = [
     )
   },
   {
-    id: "action-popover",
-    label: "Action Popover",
+    id: 'action-popover',
+    label: 'Action Popover',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"
@@ -183,8 +183,8 @@ export let examples = [
     )
   },
   {
-    id: "action-popover-heading",
-    label: "Action Popover - With Heading",
+    id: 'action-popover-heading',
+    label: 'Action Popover - With Heading',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"

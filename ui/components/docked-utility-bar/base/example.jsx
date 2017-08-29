@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -13,7 +13,7 @@ import classNames from "classnames";
 export let UtilityPanel = props => (
   <section
     className={classNames(
-      "slds-utility-panel slds-grid slds-grid_vertical",
+      'slds-utility-panel slds-grid slds-grid_vertical',
       props.className
     )}
     role="dialog"
@@ -31,7 +31,7 @@ export let UtilityPanel = props => (
           </span>
         </div>
         <div className="slds-media__body">
-          <h2 id="panel-heading-01">{props.header || "Header"}</h2>
+          <h2 id="panel-heading-01">{props.header || 'Header'}</h2>
         </div>
       </div>
       <div className="slds-col_bump-left slds-shrink-none">
@@ -50,14 +50,14 @@ export let UtilityPanel = props => (
 export let UtilityBarItem = props => (
   <li
     className={classNames(
-      "slds-utility-bar__item",
-      { "slds-has-notification": props.notification },
+      'slds-utility-bar__item',
+      { 'slds-has-notification': props.notification },
       props.className
     )}
   >
     <button
-      className={classNames("slds-button slds-utility-bar__action", {
-        "slds-is-active": props.active
+      className={classNames('slds-button slds-utility-bar__action', {
+        'slds-is-active': props.active
       })}
       aria-pressed={!!props.active}
     >
@@ -99,7 +99,7 @@ const PanelOpen = (
 /// ////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: "540px" }}>{props.children}</div>
+  <div style={{ height: '540px' }}>{props.children}</div>
 );
 
 export default (
@@ -122,8 +122,8 @@ export default (
 
 export let states = [
   {
-    id: "open",
-    label: "Panel Open",
+    id: 'open',
+    label: 'Panel Open',
     element: (
       <UtilityBar panel={PanelOpen}>
         <UtilityBarItem symbol="call" active>
@@ -139,8 +139,8 @@ export let states = [
     )
   },
   {
-    id: "notification",
-    label: "Item has notification",
+    id: 'notification',
+    label: 'Item has notification',
     element: (
       <UtilityBar>
         <UtilityBarItem symbol="call">Call</UtilityBarItem>

@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
 import {
   Menu,
   MenuList,
   MenuItem,
   Trigger
-} from "../../menus/dropdown/example";
-import classNames from "classnames";
+} from '../../menus/dropdown/example';
+import classNames from 'classnames';
 
 export let ButtonGroupList = props => (
   <ul
     {...props}
-    className={classNames("slds-button-group-list", props.className)}
+    className={classNames('slds-button-group-list', props.className)}
   >
     {props.children}
   </ul>
@@ -42,8 +42,8 @@ export default (
 
 export let states = [
   {
-    id: "button-group-disabled",
-    label: "Default Disabled",
+    id: 'button-group-disabled',
+    label: 'Default Disabled',
     element: (
       <ButtonGroupList>
         <li>
@@ -63,8 +63,8 @@ export let states = [
     )
   },
   {
-    id: "button-group-more",
-    label: "More Icon",
+    id: 'button-group-more',
+    label: 'More Icon',
     element: (
       <ButtonGroupList>
         <li>
@@ -86,10 +86,10 @@ export let states = [
     )
   },
   {
-    id: "button-group-more-open",
-    label: "More Icon Open",
+    id: 'button-group-more-open',
+    label: 'More Icon Open',
     element: (
-      <div className="demo-only" style={{ height: "8.75rem" }}>
+      <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroupList>
           <li>
             <button className="slds-button slds-button_neutral">Refresh</button>
@@ -119,8 +119,8 @@ export let states = [
     )
   },
   {
-    id: "button-group-icon-disabled",
-    label: "More Icon Disabled",
+    id: 'button-group-icon-disabled',
+    label: 'More Icon Disabled',
     element: (
       <ButtonGroupList>
         <li>
@@ -151,12 +151,12 @@ export let states = [
     )
   },
   {
-    id: "button-group-inverse",
-    label: "Inverse",
+    id: 'button-group-inverse',
+    label: 'Inverse',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
           <li>
@@ -187,12 +187,12 @@ export let states = [
     )
   },
   {
-    id: "button-group-inverse-disabled",
-    label: "Inverse Disabled",
+    id: 'button-group-inverse-disabled',
+    label: 'Inverse Disabled',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
           <li>
@@ -225,12 +225,12 @@ export let states = [
     )
   },
   {
-    id: "button-group-icon-inverse-disabled",
-    label: "Inverse More Icon Disabled",
+    id: 'button-group-icon-inverse-disabled',
+    label: 'Inverse More Icon Disabled',
     element: (
       <div
         className="demo-only"
-        style={{ padding: "0.5rem", background: "#16325c" }}
+        style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
           <li>

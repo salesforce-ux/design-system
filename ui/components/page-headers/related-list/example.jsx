@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import BreadCrumbs, { Crumb } from "../../breadcrumbs/index.react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import Heading from "../../heading/index.react";
+import React from 'react';
+import BreadCrumbs, { Crumb } from '../../breadcrumbs/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import Heading from '../../heading/index.react';
 
 export default (
   <div className="slds-page-header">

@@ -1,24 +1,24 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-import { ButtonIcon } from "../../button-icons/base/example";
-import SvgIcon from "../../../shared/svg-icon";
+import { ButtonIcon } from '../../button-icons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // Partial(s)
 /// ///////////////////////////////////////////
 
 export let Popover = props => {
-  const headingUniqueId = _.uniqueId("dialog-heading-id-");
-  const bodyUniqueId = _.uniqueId("dialog-body-id-");
+  const headingUniqueId = _.uniqueId('dialog-heading-id-');
+  const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
   return (
     <section
-      className={classNames("slds-popover", props.className)}
+      className={classNames('slds-popover', props.className)}
       role="dialog"
       aria-labelledby={
         !props.header && props.headerTitle ? headingUniqueId : props.headingId
@@ -30,8 +30,8 @@ export let Popover = props => {
       {props.closeButton ? (
         <ButtonIcon
           className={classNames(
-            "slds-button_icon-small slds-float_right slds-popover__close",
-            props.inverse ? "slds-button_icon-inverse" : "slds-button_icon"
+            'slds-button_icon-small slds-float_right slds-popover__close',
+            props.inverse ? 'slds-button_icon-inverse' : 'slds-button_icon'
           )}
           symbol="close"
           assistiveText="Close dialog"
@@ -42,7 +42,7 @@ export let Popover = props => {
         <Header
           id={headingUniqueId}
           className={props.headerClassName}
-          title={props.headerTitle || "Heading Title"}
+          title={props.headerTitle || 'Heading Title'}
           symbol={props.headerIconName}
           assistiveText={props.headerAssistiveText}
         />
@@ -50,14 +50,14 @@ export let Popover = props => {
         props.header
       )}
       <div
-        className={classNames("slds-popover__body", props.bodyClassName)}
+        className={classNames('slds-popover__body', props.bodyClassName)}
         id={bodyUniqueId}
       >
         {props.children}
       </div>
       {props.footer ? (
         <footer
-          className={classNames("slds-popover__footer", props.footerClassName)}
+          className={classNames('slds-popover__footer', props.footerClassName)}
         >
           {props.footer}
         </footer>
@@ -67,7 +67,7 @@ export let Popover = props => {
 };
 
 let Header = props => (
-  <header className={classNames("slds-popover__header", props.className)}>
+  <header className={classNames('slds-popover__header', props.className)}>
     {props.symbol ? (
       <span
         className="slds-icon_container slds-m-right_small"
@@ -102,8 +102,8 @@ export default (
 
 export let examples = [
   {
-    id: "header",
-    label: "With Header",
+    id: 'header',
+    label: 'With Header',
     element: (
       <Popover
         className="slds-nubbin_left"
@@ -118,8 +118,8 @@ export let examples = [
     )
   },
   {
-    id: "footer",
-    label: "With Footer",
+    id: 'footer',
+    label: 'With Footer',
     element: (
       <Popover
         className="slds-nubbin_left"

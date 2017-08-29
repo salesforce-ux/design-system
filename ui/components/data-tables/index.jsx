@@ -1,11 +1,11 @@
-import React from "react";
-import classNames from "classnames";
-import _ from "../../shared/helpers";
+import React from 'react';
+import classNames from 'classnames';
+import _ from '../../shared/helpers';
 
-import { ButtonIcon } from "../button-icons/base/example";
-import { Checkbox } from "../checkbox/base/example";
-import { Tooltip } from "../tooltips/base/example";
-import SvgIcon from "../../shared/svg-icon";
+import { ButtonIcon } from '../button-icons/base/example';
+import { Checkbox } from '../checkbox/base/example';
+import { Tooltip } from '../tooltips/base/example';
+import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
   <div className="slds-table_edit_container slds-is-relative">
@@ -23,10 +23,10 @@ export const InlineEditTableContainer = props => (
 export const AdvancedDataTable = props => (
   <table
     className={classNames(
-      "slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout",
+      'slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout',
       props.className,
       {
-        "slds-table_edit": props.isEditable
+        'slds-table_edit': props.isEditable
       }
     )}
     role="grid"
@@ -49,7 +49,7 @@ export const AdvancedDataTable = props => (
  * @prop {string} sortDirection - Specifies the sort direction of a specific column
  */
 export const Thead = props => {
-  const selectAllColumnWidth = props.hasErrorColumn ? "2rem" : "3.25rem";
+  const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
   const mainColumnWidth = props.mainColumnWidth || null;
 
   return (
@@ -60,7 +60,7 @@ export const Thead = props => {
         <SelectAllTh
           actionableMode={props.actionableMode}
           checked={props.selectAll}
-          className={!props.hasErrorColumn ? "slds-text-align_right" : null}
+          className={!props.hasErrorColumn ? 'slds-text-align_right' : null}
           style={{ width: selectAllColumnWidth }}
         />
 
@@ -71,12 +71,12 @@ export const Thead = props => {
               i === 0 && props.sortDirection ? props.sortDirection : null
             }
             className={classNames({
-              "slds-is-sorted": i === 0 && props.sortDirection,
-              "slds-is-sorted_asc":
-                i === 0 && props.sortDirection === "ascending",
-              "slds-is-sorted_desc":
-                i === 0 && props.sortDirection === "descending",
-              "slds-has-focus": i === 0 && props.hasFocus
+              'slds-is-sorted': i === 0 && props.sortDirection,
+              'slds-is-sorted_asc':
+                i === 0 && props.sortDirection === 'ascending',
+              'slds-is-sorted_desc':
+                i === 0 && props.sortDirection === 'descending',
+              'slds-has-focus': i === 0 && props.hasFocus
             })}
             columnName={props.columns[i]}
             key={i}
@@ -105,16 +105,16 @@ export const Thead = props => {
  */
 export let Th = props => {
   const { columnName, actionableMode, ...rest } = props;
-  const tabIndex = actionableMode ? "0" : "-1";
-  const uniqueId = _.uniqueId("cell-resize-handle-");
+  const tabIndex = actionableMode ? '0' : '-1';
+  const uniqueId = _.uniqueId('cell-resize-handle-');
 
   return (
     <th
       {...rest}
       aria-label={columnName}
-      aria-sort={props["aria-sort"] || "none"}
+      aria-sort={props['aria-sort'] || 'none'}
       className={classNames(
-        "slds-is-sortable slds-is-resizable slds-text-title_caps",
+        'slds-is-sortable slds-is-resizable slds-text-title_caps',
         props.className
       )}
       scope="col"
@@ -126,8 +126,8 @@ export let Th = props => {
         tabIndex={tabIndex}
       >
         <span className="slds-assistive-text">Sort by: </span>
-        <span className="slds-truncate" title={columnName || "Column Name"}>
-          {columnName || "Column Name"}
+        <span className="slds-truncate" title={columnName || 'Column Name'}>
+          {columnName || 'Column Name'}
         </span>
         <div className="slds-icon_container">
           <SvgIcon
@@ -142,12 +142,12 @@ export let Th = props => {
         aria-live="assertive"
         aria-atomic="true"
       >
-        Sorted {props["aria-sort"] ? props["aria-sort"] : "none"}
+        Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
       </span>
       <div className="slds-resizable">
         <input
           aria-label={
-            columnName + " column width" || "Column Name column width"
+            columnName + ' column width' || 'Column Name column width'
           }
           className="slds-resizable__input slds-assistive-text"
           id={uniqueId}
@@ -175,7 +175,7 @@ export const SelectAllTh = props => (
   <th style={props.style} className={props.className} scope="col">
     <div className="slds-th__action slds-th__action_form">
       <Checkbox
-        tabIndex={props.actionableMode ? "0" : "-1"}
+        tabIndex={props.actionableMode ? '0' : '-1'}
         label="Select All"
         hideLabel
         checked={props.checked ? true : null}
@@ -189,7 +189,7 @@ export const SelectAllTh = props => (
  * @param {*} props
  */
 export const ActionsTh = props => (
-  <th scope="col" style={{ width: "3.25rem" }}>
+  <th scope="col" style={{ width: '3.25rem' }}>
     <div className="slds-th__action">
       <span className="slds-assistive-text">Actions</span>
     </div>
@@ -201,7 +201,7 @@ export const ActionsTh = props => (
  * @param {*} props
  */
 export const ErrorsTh = props => (
-  <th scope="col" style={{ width: "3.75rem" }}>
+  <th scope="col" style={{ width: '3.75rem' }}>
     <div className="slds-th__action">
       <span className="slds-assistive-text">Errors</span>
     </div>
@@ -226,12 +226,12 @@ export const ErrorsTh = props => (
  */
 export const AdvancedDataTableTr = props => (
   <tr
-    className={classNames("slds-hint-parent", props.className)}
+    className={classNames('slds-hint-parent', props.className)}
     aria-selected={props.rowSelected}
   >
     <SelectRowTd
       className="slds-text-align_right"
-      checkTabIndex={props.actionableMode ? "0" : "-1"}
+      checkTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
       index={props.index}
     />
@@ -241,7 +241,7 @@ export const AdvancedDataTableTr = props => (
       cellText={props.recordName}
       hasFocus={!props.actionableMode && props.index === 1 && props.hasFocus}
       index={props.index}
-      tabIndex={!props.actionableMode && props.index === 1 ? "0" : null}
+      tabIndex={!props.actionableMode && props.index === 1 ? '0' : null}
     />
     <ReadOnlyTd cellText={props.accountName} />
     <ReadOnlyTd cellText={props.closeDate} />
@@ -287,10 +287,10 @@ export const AdvancedDataTableTd = props => {
 
   if (className || isEditable || hasFocus || isEdited || hasError) {
     classes = classNames(className, {
-      "slds-cell-edit": isEditable,
-      "slds-has-focus": hasFocus,
-      "slds-is-edited": isEdited,
-      "slds-has-error": hasError
+      'slds-cell-edit': isEditable,
+      'slds-has-focus': hasFocus,
+      'slds-is-edited': isEdited,
+      'slds-has-error': hasError
     });
   }
 
@@ -322,8 +322,8 @@ export const AdvancedDataTableBodyTh = props => {
 
   if (isEditable || hasFocus) {
     classes = classNames({
-      "slds-cell-edit": isEditable,
-      "slds-has-focus": hasFocus
+      'slds-cell-edit': isEditable,
+      'slds-has-focus': hasFocus
     });
   }
 
@@ -381,7 +381,7 @@ export const RowActionsTd = props => (
       className="slds-button_icon-border-filled slds-button_icon-x-small"
       iconClassName="slds-button__icon_hint slds-button__icon_small"
       symbol="down"
-      tabIndex={props.actionableMode ? "0" : "-1"}
+      tabIndex={props.actionableMode ? '0' : '-1'}
       title="Show More"
     />
   </AdvancedDataTableTd>
@@ -405,19 +405,19 @@ export const ErrorTd = props => (
   >
     <ButtonIcon
       aria-describedby={
-        props.hasError && props.hasFocus ? "error-tooltip-01" : null
+        props.hasError && props.hasFocus ? 'error-tooltip-01' : null
       }
-      aria-hidden={props.hasError ? null : "true"}
+      aria-hidden={props.hasError ? null : 'true'}
       assistiveText={`Item ${props.index} has errors`}
       className={classNames(
-        "slds-button_icon-error slds-m-horizontal_xxx-small",
+        'slds-button_icon-error slds-m-horizontal_xxx-small',
         {
-          "slds-hidden": !props.hasError
+          'slds-hidden': !props.hasError
         }
       )}
-      id={"error-0" + props.index}
+      id={'error-0' + props.index}
       symbol="warning"
-      tabIndex={props.actionableMode && props.hasError ? null : "-1"}
+      tabIndex={props.actionableMode && props.hasError ? null : '-1'}
       title={`Item ${props.index} has errors`}
     />
     <span className="slds-row-number slds-text-body_small slds-text-color_weak" />
@@ -470,7 +470,7 @@ export const ReadOnlyBodyTh = props => (
 export const ReadOnlyCellContent = props => (
   <div className="slds-truncate" title={props.cellText}>
     {props.cellLink ? (
-      <a href={props.cellLink} tabIndex={props.actionableMode ? "0" : "-1"}>
+      <a href={props.cellLink} tabIndex={props.actionableMode ? '0' : '-1'}>
         {props.cellText}
       </a>
     ) : (
@@ -504,9 +504,9 @@ export const ReadOnlyCellContent = props => (
 export const InlineEditTr = props => (
   <tr className="slds-hint-parent" aria-selected={props.rowSelected}>
     <ErrorTd
-      tabIndex={props.focusableCell === "error" && props.index === 1 ? 0 : null}
+      tabIndex={props.focusableCell === 'error' && props.index === 1 ? 0 : null}
       hasFocus={
-        props.focusedCell === "error" && props.index === 1 ? true : null
+        props.focusedCell === 'error' && props.index === 1 ? true : null
       }
       index={props.index}
       hasError={props.showRowError && props.index === 1 ? true : null}
@@ -515,45 +515,45 @@ export const InlineEditTr = props => (
     <SelectRowTd
       cellTabIndex={
         !props.actionableMode &&
-        props.focusableCell === "selectRow" &&
+        props.focusableCell === 'selectRow' &&
         props.index === 1 ? (
-          "0"
+          '0'
         ) : null
       }
-      checkTabIndex={props.actionableMode ? "0" : "-1"}
+      checkTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
-      hasFocus={props.focusedCell === "selectRow" && props.index === 1}
+      hasFocus={props.focusedCell === 'selectRow' && props.index === 1}
       isEditable
       index={props.index}
     />
     <EditableBodyTh
-      buttonText={"Edit Name: Item " + props.index}
+      buttonText={'Edit Name: Item ' + props.index}
       cellLink="javascript:void(0);"
       cellText={props.recordName}
       index={props.index}
       actionableMode={props.actionableMode}
       tabIndex={
         !props.actionableMode &&
-        props.focusableCell === "recordName" &&
+        props.focusableCell === 'recordName' &&
         props.index === 1 ? (
-          "0"
+          '0'
         ) : null
       }
-      hasFocus={props.focusedCell === "recordName" && props.index === 1}
+      hasFocus={props.focusedCell === 'recordName' && props.index === 1}
     />
     <EditableTd
-      buttonText={"Edit Account Name: Item " + props.index}
+      buttonText={'Edit Account Name: Item ' + props.index}
       cellText={props.accountName}
       index={props.index}
       actionableMode={props.actionableMode}
       tabIndex={
         !props.actionableMode &&
-        props.focusableCell === "accountName" &&
+        props.focusableCell === 'accountName' &&
         props.index === 1 ? (
-          "0"
+          '0'
         ) : null
       }
-      hasFocus={props.focusedCell === "accountName" && props.index === 1}
+      hasFocus={props.focusedCell === 'accountName' && props.index === 1}
       isEditing={props.showEdit && props.index === 1}
       isEdited={props.showEditedCell && props.index === 1 ? true : null}
       hasError={props.showCellError && props.index === 1 ? true : null}
@@ -566,32 +566,32 @@ export const InlineEditTr = props => (
       ) : null}
     </EditableTd>
     <EditableTd
-      buttonText={"Edit Close Date: Item " + props.index}
+      buttonText={'Edit Close Date: Item ' + props.index}
       cellText={props.closeDate}
       index={props.index}
       actionableMode={props.actionableMode}
     />
     <EditableTd
-      buttonText={"Edit Stage: Item " + props.index}
+      buttonText={'Edit Stage: Item ' + props.index}
       cellText={props.stage}
       index={props.index}
       actionableMode={props.actionableMode}
     />
     <EditableTd
-      buttonText={"Edit Confidence: Item " + props.index}
+      buttonText={'Edit Confidence: Item ' + props.index}
       cellText={props.confidence}
       index={props.index}
       actionableMode={props.actionableMode}
       isLocked
     />
     <EditableTd
-      buttonText={"Edit Amount: Item " + props.index}
+      buttonText={'Edit Amount: Item ' + props.index}
       cellText={props.amount}
       index={props.index}
       actionableMode={props.actionableMode}
     />
     <EditableTd
-      buttonText={"Edit Contact: Item " + props.index}
+      buttonText={'Edit Contact: Item ' + props.index}
       cellText={props.contact}
       index={props.index}
       actionableMode={props.actionableMode}
@@ -682,7 +682,7 @@ export const EditableCellContent = props => (
         href={props.cellLink}
         className="slds-truncate"
         id={`link-0${props.index}`}
-        tabIndex={props.actionableMode ? "0" : "-1"}
+        tabIndex={props.actionableMode ? '0' : '-1'}
         title={props.cellText}
       >
         {props.cellText}
@@ -696,12 +696,12 @@ export const EditableCellContent = props => (
       assistiveText={props.buttonText}
       className="slds-cell-edit__button slds-m-left_x-small"
       disabled={props.isLocked}
-      iconClassName={classNames("slds-button__icon_hint", {
-        "slds-button__icon_edit": !props.isLocked,
-        "slds-button__icon_lock slds-button__icon_small": props.isLocked
+      iconClassName={classNames('slds-button__icon_hint', {
+        'slds-button__icon_edit': !props.isLocked,
+        'slds-button__icon_lock slds-button__icon_small': props.isLocked
       })}
-      symbol={props.isLocked ? "lock" : "edit"}
-      tabIndex={props.actionableMode ? "0" : "-1"}
+      symbol={props.isLocked ? 'lock' : 'edit'}
+      tabIndex={props.actionableMode ? '0' : '-1'}
       title={props.buttonText}
     />
   </span>
@@ -717,13 +717,13 @@ export const EditPopover = props => (
   <section
     className="slds-popover slds-popover_edit"
     role="dialog"
-    style={{ position: "absolute", top: "0", left: "0.0625rem" }}
+    style={{ position: 'absolute', top: '0', left: '0.0625rem' }}
   >
     <span id="form-start" tabIndex="0" />
     <div className="slds-popover__body">
       <div
-        className={classNames("slds-form-element slds-grid slds-wrap", {
-          "slds-has-error": props.hasError
+        className={classNames('slds-form-element slds-grid slds-wrap', {
+          'slds-has-error': props.hasError
         })}
       >
         <label
@@ -740,13 +740,13 @@ export const EditPopover = props => (
         <div className="slds-form-element__control slds-grow">
           <input
             id="company-01"
-            className={classNames("slds-input", {
-              "input--required": props.isRequired
+            className={classNames('slds-input', {
+              'input--required': props.isRequired
             })}
             type="text"
             defaultValue="Acme Enterprises"
             required={props.isRequired}
-            aria-describedby={props.hasError ? "error-message-01" : null}
+            aria-describedby={props.hasError ? 'error-message-01' : null}
           />
         </div>
         {props.hasError ? (
@@ -768,7 +768,7 @@ export const ErrorTooltip = props => (
   <Tooltip
     className="slds-nubbin_bottom-left slds-theme_error"
     id="error-tooltip-01"
-    style={{ position: "absolute", top: "-1rem", left: "0", width: "auto" }}
+    style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}
   >
     Company encountered an error.
   </Tooltip>

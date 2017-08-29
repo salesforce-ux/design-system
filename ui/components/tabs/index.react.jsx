@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import _ from "../../shared/helpers";
-import React from "react";
-import classNames from "classnames";
+import _ from '../../shared/helpers';
+import React from 'react';
+import classNames from 'classnames';
 
 const PT = React.PropTypes;
 
@@ -13,8 +13,8 @@ class TabContent extends React.Component {
     const classNameComputed = classNames(
       className,
       classNames(`slds-tabs_${flavor}__content`, {
-        "slds-show": current,
-        "slds-hide": !current
+        'slds-show': current,
+        'slds-hide': !current
       })
     );
 
@@ -33,7 +33,7 @@ class TabContent extends React.Component {
 
 TabContent.propTypes = {
   current: PT.bool,
-  flavor: PT.oneOf(["scoped", "default", "path"])
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 TabContent.defaultProps = { current: true };
@@ -43,8 +43,8 @@ class TabItem extends React.Component {
     return React.cloneElement(this.props.content, {
       tabIndex: tabIndex,
       className: `slds-tabs_${this.props.flavor}__link`,
-      "aria-selected": this.props.current,
-      "aria-controls": this.props["aria-controls"] || this.props.id
+      'aria-selected': this.props.current,
+      'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
   renderDefault(tabIndex) {
@@ -75,7 +75,7 @@ class TabItem extends React.Component {
     const classNameComputed = classNames(
       className,
       classNames(`slds-tabs_${flavor}__item`, {
-        "slds-is-active": current
+        'slds-is-active': current
       })
     );
     const tabIndex = current ? 0 : -1;
@@ -90,7 +90,7 @@ class TabItem extends React.Component {
 TabItem.propTypes = {
   title: PT.string,
   content: PT.node,
-  flavor: PT.oneOf(["scoped", "default", "path"])
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 class TabItemOverflow extends React.Component {
@@ -106,8 +106,8 @@ class TabItemOverflow extends React.Component {
     } = this.props;
     const classNameComputed = classNames(
       className,
-      classNames("slds-tabs__item_overflow", {
-        "slds-is-active": current
+      classNames('slds-tabs__item_overflow', {
+        'slds-is-active': current
       })
     );
     const tabIndex = current ? 0 : -1;
@@ -125,7 +125,7 @@ class TabItemOverflow extends React.Component {
 TabItemOverflow.propTypes = {
   title: PT.string,
   content: PT.node,
-  flavor: PT.oneOf(["scoped", "default", "path"])
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 class Tabs extends React.Component {
@@ -182,12 +182,12 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   selectedIndex: PT.number,
-  flavor: PT.oneOf(["scoped", "default", "path"])
+  flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
 Tabs.defaultProps = {
   selectedIndex: 0,
-  flavor: "default"
+  flavor: 'default'
 };
 
 Tabs.Item = TabItem;

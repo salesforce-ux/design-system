@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Modal, ModalHeader, ModalContent } from "../../modals/base/example";
-import { AppLauncherTile } from "../tile/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import { AppLauncherTile } from '../tile/example';
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionTitleAction
-} from "../../expandable-section/base/example";
-import classNames from "classnames";
+} from '../../expandable-section/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -134,16 +134,16 @@ let AppLauncherModal = props => (
 /*
  * DragDropId relates app launcher tile anchor aria-describedby to the div that holds the instructions for drag & drop
  */
-const dragDropId = "drag-instructions";
+const dragDropId = 'drag-instructions';
 
 const itemTiles = [
-  { label: "Accounts", symbol: "account" },
-  { label: "Announcements", symbol: "announcement" },
-  { label: "Approvals", symbol: "approval" },
-  { label: "Campaigns", symbol: "campaign" },
-  { label: "Cases", symbol: "case" },
-  { label: "Coaching", symbol: "coaching" },
-  { label: "Contacts", symbol: "contact" }
+  { label: 'Accounts', symbol: 'account' },
+  { label: 'Announcements', symbol: 'announcement' },
+  { label: 'Approvals', symbol: 'approval' },
+  { label: 'Campaigns', symbol: 'campaign' },
+  { label: 'Cases', symbol: 'case' },
+  { label: 'Coaching', symbol: 'coaching' },
+  { label: 'Contacts', symbol: 'contact' }
 ];
 
 /*
@@ -152,54 +152,54 @@ const itemTiles = [
  */
 const appTiles = [
   {
-    description: "The primary internal Salesforce org. Used to run our...",
+    description: 'The primary internal Salesforce org. Used to run our...',
     dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-27",
+    figureClass: 'slds-icon-custom-27',
     grabbed: false,
-    initials: "SC",
-    label: "Sales Cloud"
+    initials: 'SC',
+    label: 'Sales Cloud'
   },
   {
-    description: "Salesforce Marketing Cloud lets businesses of any size...",
+    description: 'Salesforce Marketing Cloud lets businesses of any size...',
     dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-59",
+    figureClass: 'slds-icon-custom-59',
     grabbed: false,
-    initials: "MC",
-    label: "Marketing Cloud"
+    initials: 'MC',
+    label: 'Marketing Cloud'
   },
   {
-    description: "Community for managing employee benefits and time off.",
+    description: 'Community for managing employee benefits and time off.',
     dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-10",
+    figureClass: 'slds-icon-custom-10',
     grabbed: false,
-    initials: "HR",
-    label: "HR Concierge"
+    initials: 'HR',
+    label: 'HR Concierge'
   },
   {
-    description: "Manage your finances across multiple financial platforms...",
+    description: 'Manage your finances across multiple financial platforms...',
     dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-6",
+    figureClass: 'slds-icon-custom-6',
     grabbed: false,
-    initials: "MM",
-    label: "My Money"
-  },
-  {
-    description:
-      "The key to call center and contact center management is more...",
-    dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-91",
-    grabbed: false,
-    initials: "CC",
-    label: "Call Center"
+    initials: 'MM',
+    label: 'My Money'
   },
   {
     description:
-      "Areas of Focus are used to track customer support for your...",
+      'The key to call center and contact center management is more...',
     dragDropId: dragDropId,
-    figureClass: "slds-icon-custom-50",
+    figureClass: 'slds-icon-custom-91',
     grabbed: false,
-    initials: "CS",
-    label: "Customer Support Communitiy"
+    initials: 'CC',
+    label: 'Call Center'
+  },
+  {
+    description:
+      'Areas of Focus are used to track customer support for your...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-50',
+    grabbed: false,
+    initials: 'CS',
+    label: 'Customer Support Communitiy'
   }
 ];
 
@@ -219,7 +219,7 @@ appTilesMoved[2] = Object.assign({}, appTilesMoved[2], { grabbed: true });
 const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
 export default (
-  <div className="demo-only" style={{ height: "800px" }}>
+  <div className="demo-only" style={{ height: '800px' }}>
     <AppLauncherModal
       appTiles={appTiles}
       dragDropId={dragDropId}
@@ -233,10 +233,10 @@ export default (
 
 export let states = [
   {
-    id: "grabbed",
-    label: "Tile grabbed",
+    id: 'grabbed',
+    label: 'Tile grabbed',
     element: (
-      <div className="demo-only" style={{ height: "800px" }}>
+      <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesGrabbed}
           dragDropId={dragDropId}
@@ -250,10 +250,10 @@ export let states = [
     )
   },
   {
-    id: "moved",
-    label: "Tile moved in list",
+    id: 'moved',
+    label: 'Tile moved in list',
     element: (
-      <div className="demo-only" style={{ height: "800px" }}>
+      <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesMoved}
           dragDropId={dragDropId}
@@ -266,10 +266,10 @@ export let states = [
     )
   },
   {
-    id: "dropped",
-    label: "Tile dropped",
+    id: 'dropped',
+    label: 'Tile dropped',
     element: (
-      <div className="demo-only" style={{ height: "800px" }}>
+      <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesDropped}
           dragDropId={dragDropId}

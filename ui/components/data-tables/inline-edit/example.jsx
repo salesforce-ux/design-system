@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import _ from "../../../shared/helpers";
+import React from 'react';
+import _ from '../../../shared/helpers';
 
 import {
   InlineEditTableContainer as Container,
@@ -10,45 +10,45 @@ import {
   Thead,
   InlineEditTr as Tr,
   ErrorTooltip
-} from "../";
+} from '../';
 
 const columns = [
-  "Name",
-  "Account Name",
-  "Close Date",
-  "Stage",
-  "Confidence",
-  "Amount",
-  "Contact"
+  'Name',
+  'Account Name',
+  'Close Date',
+  'Stage',
+  'Confidence',
+  'Amount',
+  'Contact'
 ];
 
 const rows = [
   {
-    recordName: "Acme - 1,200 Widgets",
-    accountName: "Acme",
-    closeDate: "4/10/15",
-    stage: "Value Proposition",
-    confidence: "30%",
-    amount: "$25,000,000",
-    contact: "jrogers@acme.com"
+    recordName: 'Acme - 1,200 Widgets',
+    accountName: 'Acme',
+    closeDate: '4/10/15',
+    stage: 'Value Proposition',
+    confidence: '30%',
+    amount: '$25,000,000',
+    contact: 'jrogers@acme.com'
   },
   {
-    recordName: "Acme - 200 Widgets",
-    accountName: "Acme",
-    closeDate: "1/31/15",
-    stage: "Prospecting",
-    confidence: "60%",
-    amount: "$5,000,000",
-    contact: "bob@acme.com"
+    recordName: 'Acme - 200 Widgets',
+    accountName: 'Acme',
+    closeDate: '1/31/15',
+    stage: 'Prospecting',
+    confidence: '60%',
+    amount: '$5,000,000',
+    contact: 'bob@acme.com'
   },
   {
-    recordName: "salesforce.com - 1,000 Widgets",
-    accountName: "salesforce.com",
-    closeDate: "1/31/15 3:45PM",
-    stage: "Id. Decision Makers",
-    confidence: "70%",
-    amount: "$25,000",
-    contact: "nathan@salesforce.com"
+    recordName: 'salesforce.com - 1,000 Widgets',
+    accountName: 'salesforce.com',
+    closeDate: '1/31/15 3:45PM',
+    stage: 'Id. Decision Makers',
+    confidence: '70%',
+    amount: '$25,000',
+    contact: 'nathan@salesforce.com'
   }
 ];
 
@@ -61,7 +61,7 @@ export default (
     <Table
       className="slds-no-cell-focus"
       isEditable
-      style={{ width: "66.75rem" }}
+      style={{ width: '66.75rem' }}
     >
       <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
       <tbody>
@@ -86,11 +86,11 @@ export default (
 
 export let states = [
   {
-    id: "with-link",
-    label: "Cell focused - Link (Actionable mode)",
+    id: 'with-link',
+    label: 'Cell focused - Link (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -123,11 +123,11 @@ export let states = [
     `
   },
   {
-    id: "checkbox",
-    label: "Cell focused - Checkbox (Actionable mode)",
+    id: 'checkbox',
+    label: 'Cell focused - Checkbox (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -160,11 +160,11 @@ export let states = [
     `
   },
   {
-    id: "focused",
-    label: "Cell focused (Navigation mode)",
+    id: 'focused',
+    label: 'Cell focused (Navigation mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
           <tbody>
             {_.times(rows.length, i => (
@@ -188,11 +188,11 @@ export let states = [
     )
   },
   {
-    id: "edit",
-    label: "Cell edit (Actionable mode)",
+    id: 'edit',
+    label: 'Cell edit (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -225,11 +225,11 @@ export let states = [
     `
   },
   {
-    id: "required",
-    label: "Cell edit — Required (Actionable mode)",
+    id: 'required',
+    label: 'Cell edit — Required (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             actionableMode
             columns={columns}
@@ -263,11 +263,11 @@ export let states = [
     `
   },
   {
-    id: "error",
-    label: "Cell edit — Error (Actionable mode)",
+    id: 'error',
+    label: 'Cell edit — Error (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             actionableMode
             columns={columns}
@@ -302,11 +302,11 @@ export let states = [
     `
   },
   {
-    id: "edited",
-    label: "Cell edited (Actionable mode)",
+    id: 'edited',
+    label: 'Cell edited (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             actionableMode
             columns={columns}
@@ -335,11 +335,11 @@ export let states = [
     )
   },
   {
-    id: "row-error",
-    label: "Error - Row level on save (Actionable mode)",
+    id: 'row-error',
+    label: 'Error - Row level on save (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             actionableMode
             columns={columns}
@@ -374,11 +374,11 @@ export let states = [
     `
   },
   {
-    id: "row-error-focused",
-    label: "Error indicator - Focused (Actionable mode)",
+    id: 'row-error-focused',
+    label: 'Error indicator - Focused (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             actionableMode
             columns={columns}
@@ -415,11 +415,11 @@ export let states = [
     `
   },
   {
-    id: "header-cell-focused",
-    label: "Header cell focused (Navigation mode)",
+    id: 'header-cell-focused',
+    label: 'Header cell focused (Navigation mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: "66.75rem" }}>
+        <Table isEditable style={{ width: '66.75rem' }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -446,14 +446,14 @@ export let states = [
     )
   },
   {
-    id: "header-cell-marked",
-    label: "Header cell marked (Navigation mode)",
+    id: 'header-cell-marked',
+    label: 'Header cell marked (Navigation mode)',
     element: (
       <Container>
         <Table
           className="slds-no-cell-focus"
           isEditable
-          style={{ width: "66.75rem" }}
+          style={{ width: '66.75rem' }}
         >
           <Thead
             columns={columns}

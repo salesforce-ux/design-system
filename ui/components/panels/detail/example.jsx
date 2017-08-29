@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { Checkbox } from "../../checkbox/base/example";
-import { Select } from "../../select/base/example";
-import { Pill, PillContainer } from "../../pills/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { Checkbox } from '../../checkbox/base/example';
+import { Select } from '../../select/base/example';
+import { Pill, PillContainer } from '../../pills/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -17,10 +17,10 @@ let Demo = props => (
   <div
     className="demo-only slds-grid"
     style={{
-      height: "845px",
-      maxWidth: "420px",
-      background: "#f4f6f9",
-      padding: "1rem"
+      height: '845px',
+      maxWidth: '420px',
+      background: '#f4f6f9',
+      padding: '1rem'
     }}
   >
     {props.children}
@@ -30,7 +30,7 @@ let Demo = props => (
 export let Panel = props => (
   <div
     className={classNames(
-      "slds-panel slds-grid slds-grid_vertical slds-nowrap",
+      'slds-panel slds-grid slds-grid_vertical slds-nowrap',
       props.className
     )}
   >
@@ -41,7 +41,7 @@ export let Panel = props => (
 export let PanelBody = props => (
   <div
     className={classNames(
-      "slds-form slds-form_stacked slds-grow slds-scrollable_y",
+      'slds-form slds-form_stacked slds-grow slds-scrollable_y',
       props.className
     )}
   >
@@ -50,7 +50,7 @@ export let PanelBody = props => (
 );
 
 export let PanelSection = props => (
-  <div className={classNames("slds-panel__section", props.className)}>
+  <div className={classNames('slds-panel__section', props.className)}>
     {props.children}
   </div>
 );
@@ -95,16 +95,16 @@ let PanelHeader = props => (
 export let FormElementStatic = props => (
   <li
     className={classNames(
-      "slds-form-element slds-hint-parent slds-border_bottom",
-      props.inlineEdit ? "slds-form-element_edit" : null
+      'slds-form-element slds-hint-parent slds-border_bottom',
+      props.inlineEdit ? 'slds-form-element_edit' : null
     )}
   >
     <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">
       <span
         className={classNames(
-          "slds-form-element__static",
-          props.longform ? "slds-text-longform" : null
+          'slds-form-element__static',
+          props.longform ? 'slds-text-longform' : null
         )}
       >
         {props.text}
@@ -363,13 +363,13 @@ export default <Default />;
 
 export let states = [
   {
-    id: "panel-form-edit-mode",
-    label: "Form with Inline Edit",
+    id: 'panel-form-edit-mode',
+    label: 'Form with Inline Edit',
     element: <HasEditing />
   },
   {
-    id: "panel-form-edit-mode-active",
-    label: "Form with Inline Edit Active",
+    id: 'panel-form-edit-mode-active',
+    label: 'Form with Inline Edit Active',
     element: <IsEditing />
   }
 ];

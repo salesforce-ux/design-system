@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import { SpinnerContainer, Spinner } from "../../spinners/base/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import { SpinnerContainer, Spinner } from '../../spinners/base/example';
 
-let inputId = "text-input-id-1";
+let inputId = 'text-input-id-1';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -14,14 +14,14 @@ let inputId = "text-input-id-1";
 
 // Might need to move this to its own component example
 export let FormElement = props => (
-  <div className={classNames("slds-form-element", props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
 
 export let FormElementLabel = props => (
   <label
-    className={classNames("slds-form-element__label", props.className)}
+    className={classNames('slds-form-element__label', props.className)}
     htmlFor={inputId}
   >
     {props.children}
@@ -29,7 +29,7 @@ export let FormElementLabel = props => (
 );
 
 export let FormElementControl = props => (
-  <div className={classNames("slds-form-element__control", props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
 );
@@ -39,10 +39,10 @@ export let Input = props => {
     <input
       {...props}
       id={props.id || inputId}
-      className={classNames("slds-input", props.className)}
-      type={props.type || "text"}
-      placeholder={props.placeholder || "Placeholder Text"}
-      readOnly={props["readOnly"]}
+      className={classNames('slds-input', props.className)}
+      type={props.type || 'text'}
+      placeholder={props.placeholder || 'Placeholder Text'}
+      readOnly={props['readOnly']}
       defaultValue={props.defaultValue}
     />
   );
@@ -66,7 +66,7 @@ let Required = props => (
     <FormElementLabel>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Input Label
     </FormElementLabel>
     <FormElementControl>
@@ -80,7 +80,7 @@ let ErrorState = props => (
     <FormElementLabel>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Input Label
     </FormElementLabel>
     <FormElementControl>
@@ -97,7 +97,7 @@ let ErrorIcon = props => (
     <FormElementLabel>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Input Label
     </FormElementLabel>
     <FormElementControl className="slds-input-has-icon slds-input-has-icon_left">
@@ -143,33 +143,33 @@ export default (
 
 export let states = [
   {
-    id: "input-required",
-    label: "Required",
+    id: 'input-required',
+    label: 'Required',
     element: <Required />
   },
   {
-    id: "input-disabled",
-    label: "Disabled",
+    id: 'input-disabled',
+    label: 'Disabled',
     element: <Disabled />
   },
   {
-    id: "input-error",
-    label: "Error",
+    id: 'input-error',
+    label: 'Error',
     element: <ErrorState errorId="error-message" />
   },
   {
-    id: "input-error-icon",
-    label: "Error with icon",
+    id: 'input-error-icon',
+    label: 'Error with icon',
     element: <ErrorIcon errorId="error-message" />
   },
   {
-    id: "read-only",
-    label: "Readonly",
+    id: 'read-only',
+    label: 'Readonly',
     element: <Readonly />
   },
   {
-    id: "static",
-    label: "Static",
+    id: 'static',
+    label: 'Static',
     element: (
       <FormElement>
         <span className="slds-form-element__label">Input Label</span>
@@ -183,8 +183,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "left-icon",
-    label: "Left Icon",
+    id: 'left-icon',
+    label: 'Left Icon',
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
@@ -200,8 +200,8 @@ export let examples = [
     )
   },
   {
-    id: "right-icon",
-    label: "Right Icon",
+    id: 'right-icon',
+    label: 'Right Icon',
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
@@ -217,8 +217,8 @@ export let examples = [
     )
   },
   {
-    id: "double-icon",
-    label: "Left & Right Icon",
+    id: 'double-icon',
+    label: 'Left & Right Icon',
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
@@ -242,8 +242,8 @@ export let examples = [
     )
   },
   {
-    id: "double-icon-spinner",
-    label: "Icons with Spinner",
+    id: 'double-icon-spinner',
+    label: 'Icons with Spinner',
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
@@ -270,8 +270,8 @@ export let examples = [
     )
   },
   {
-    id: "fixed-text",
-    label: "Fixed text",
+    id: 'fixed-text',
+    label: 'Fixed text',
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
@@ -284,10 +284,10 @@ export let examples = [
     )
   },
   {
-    id: "field-level-help",
-    label: "Field level help",
+    id: 'field-level-help',
+    label: 'Field level help',
     element: (
-      <div className="demo-only" style={{ paddingTop: "5rem" }}>
+      <div className="demo-only" style={{ paddingTop: '5rem' }}>
         <div className="slds-form-element">
           <label
             className="slds-form-element__label slds-align-middle"
@@ -322,11 +322,11 @@ export let examples = [
           id="help"
           role="tooltip"
           style={{
-            position: "absolute",
-            top: "15px",
-            left: "72px",
-            marginLeft: "-1rem",
-            width: "20rem"
+            position: 'absolute',
+            top: '15px',
+            left: '72px',
+            marginLeft: '-1rem',
+            width: '20rem'
           }}
         >
           <div className="slds-popover__body slds-text-longform">

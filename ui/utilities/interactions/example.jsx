@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "reset",
-    label: "Link reset",
+    id: 'reset',
+    label: 'Link reset',
     element: (
       <a href="javascript:void(0);" className="slds-text-link_reset">
         Link
@@ -14,8 +14,8 @@ export let examples = [
     )
   },
   {
-    id: "link",
-    label: "Link reset with text link inside",
+    id: 'link',
+    label: 'Link reset with text link inside',
     element: (
       <a href="javascript:void(0);" className="slds-text-link_reset">
         This text is a link but looks like normal text...<span className="slds-text-link">More</span>.
@@ -23,8 +23,8 @@ export let examples = [
     )
   },
   {
-    id: "halo-focus",
-    label: "Link reset with halo focus",
+    id: 'halo-focus',
+    label: 'Link reset with halo focus',
     element: (
       <a href="javascript:void(0);" className="slds-has-blur-focus">
         Link with halo focus
@@ -32,15 +32,15 @@ export let examples = [
     )
   },
   {
-    id: "button-reset",
-    label: "Button reset with halo focus",
+    id: 'button-reset',
+    label: 'Button reset with halo focus',
     element: (
       <button className="slds-button slds-text-link_reset">Button</button>
     )
   },
   {
-    id: "faux",
-    label: "Faux Link on a span",
+    id: 'faux',
+    label: 'Faux Link on a span',
     element: (
       <span className="slds-text-link_faux">
         Span with faux link interactions

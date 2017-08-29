@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Modal, ModalHeader, ModalContent } from "../../modals/base/example";
-import { AppLauncherTile } from "../tile/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import { AppLauncherTile } from '../tile/example';
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionTitleAction
-} from "../../expandable-section/base/example";
-import classNames from "classnames";
+} from '../../expandable-section/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -120,7 +120,7 @@ let AppLauncherModal = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ height: "800px" }}>
+  <div className="demo-only" style={{ height: '800px' }}>
     <AppLauncherModal />
     <div className="slds-backdrop slds-backdrop_open" />
   </div>

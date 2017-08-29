@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
-import { FormElement } from "../../form-element/base/example";
+import React from 'react';
+import classNames from 'classnames';
+import { FormElement } from '../../form-element/base/example';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const sliderId = "slider-id-01";
+const sliderId = 'slider-id-01';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -19,15 +19,15 @@ const SliderLabel = props => (
   <span className="slds-slider-label">
     <span className="slds-slider-label__label">Slider Label</span>
     <span className="slds-slider-label__range">
-      {props.min || "0"} - {props.max || "100"}
+      {props.min || '0'} - {props.max || '100'}
     </span>
   </span>
 );
 
 const Slider = props => (
-  <div className={classNames("slds-slider", props.className)}>
+  <div className={classNames('slds-slider', props.className)}>
     <input
-      aria-describedby={props["aria-describedby"]}
+      aria-describedby={props['aria-describedby']}
       id={props.id || sliderId}
       className="slds-slider__range"
       type="range"
@@ -57,8 +57,8 @@ export default (
 // States
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider value="50" disabled />
@@ -66,8 +66,8 @@ export let states = [
     )
   },
   {
-    id: "value-0",
-    label: "Value: 0",
+    id: 'value-0',
+    label: 'Value: 0',
     element: (
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="0" />
@@ -75,8 +75,8 @@ export let states = [
     )
   },
   {
-    id: "value-25",
-    label: "Value: 25",
+    id: 'value-25',
+    label: 'Value: 25',
     element: (
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="25" />
@@ -84,8 +84,8 @@ export let states = [
     )
   },
   {
-    id: "value-50",
-    label: "Value: 50",
+    id: 'value-50',
+    label: 'Value: 50',
     element: (
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="50" />
@@ -93,8 +93,8 @@ export let states = [
     )
   },
   {
-    id: "value-75",
-    label: "Value: 75",
+    id: 'value-75',
+    label: 'Value: 75',
     element: (
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="75" />
@@ -102,8 +102,8 @@ export let states = [
     )
   },
   {
-    id: "value-100",
-    label: "Value: 100",
+    id: 'value-100',
+    label: 'Value: 100',
     element: (
       <FormElement label={<SliderLabel min="0" max="100" />} inputId={sliderId}>
         <Slider value="100" />
@@ -115,8 +115,8 @@ export let states = [
 // Examples
 export let examples = [
   {
-    id: "min-max",
-    label: "Min/Max Range",
+    id: 'min-max',
+    label: 'Min/Max Range',
     element: (
       <FormElement label={<SliderLabel min="0" max="400" />} inputId={sliderId}>
         <Slider value="200" min="0" max="400" />
@@ -124,8 +124,8 @@ export let examples = [
     )
   },
   {
-    id: "steps",
-    label: "Min/Max Range with Steps",
+    id: 'steps',
+    label: 'Min/Max Range with Steps',
     element: (
       <FormElement label={<SliderLabel min="0" max="400" />} inputId={sliderId}>
         <Slider value="200" min="0" max="400" step="100" />
@@ -133,8 +133,8 @@ export let examples = [
     )
   },
   {
-    id: "width-x-small",
-    label: "Width: x-small",
+    id: 'width-x-small',
+    label: 'Width: x-small',
     element: (
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider className="slds-size_x-small" value="50" />
@@ -142,8 +142,8 @@ export let examples = [
     )
   },
   {
-    id: "width-small",
-    label: "Width: small",
+    id: 'width-small',
+    label: 'Width: small',
     element: (
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider className="slds-size_small" value="50" />
@@ -151,8 +151,8 @@ export let examples = [
     )
   },
   {
-    id: "width-medium",
-    label: "Width: medium",
+    id: 'width-medium',
+    label: 'Width: medium',
     element: (
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider className="slds-size_medium" value="50" />
@@ -160,8 +160,8 @@ export let examples = [
     )
   },
   {
-    id: "width-large",
-    label: "Width: large",
+    id: 'width-large',
+    label: 'Width: large',
     element: (
       <FormElement label={<SliderLabel />} inputId={sliderId}>
         <Slider className="slds-size_large" value="50" />
@@ -169,8 +169,8 @@ export let examples = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <FormElement
         className="slds-has-error"

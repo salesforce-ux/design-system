@@ -1,82 +1,82 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 import {
   Modal,
   ModalHeader,
   ModalContent,
   ModalFooter
-} from "../../modals/base/example";
-import { CheckboxAddButton } from "../../checkbox-button/base/example";
+} from '../../modals/base/example';
+import { CheckboxAddButton } from '../../checkbox-button/base/example';
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   EntityOption
-} from "../../combobox/base/example";
-import { Th } from "../../data-tables/";
-import { PillContainer } from "../../pills/base/example";
-import { ListboxPill } from "../../pills/listbox-of-pill-options/example";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
+} from '../../combobox/base/example';
+import { Th } from '../../data-tables/';
+import { PillContainer } from '../../pills/base/example';
+import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects
 ----------------------------------------------------------------------------- */
 
-const listboxSelectionsId = "listbox-selections-unique-id";
-const listboxOptionId01 = "listbox-option-unique-id-01";
-const listboxOptionId02 = "listbox-option-unique-id-02";
-const columns = ["Name", "Product Code", "List Price", "Product Family"];
+const listboxSelectionsId = 'listbox-selections-unique-id';
+const listboxOptionId01 = 'listbox-option-unique-id-01';
+const listboxOptionId02 = 'listbox-option-unique-id-02';
+const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
 const rows = [
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   },
   {
-    name: "Analytics",
-    productCode: "ANTLY",
-    listPrice: "5000.00",
-    productFamily: "Analytics Product"
+    name: 'Analytics',
+    productCode: 'ANTLY',
+    listPrice: '5000.00',
+    productFamily: 'Analytics Product'
   }
 ];
 
@@ -115,7 +115,7 @@ let ProductListHeader = props => (
     />
     {props.selectedFilters ? props.selectedFilters : null}
     <div className="slds-text-title slds-m-top_x-small" aria-live="polite">
-      {props.itemsSelected || "0"} Item(s) Selected
+      {props.itemsSelected || '0'} Item(s) Selected
     </div>
   </div>
 );
@@ -128,7 +128,7 @@ let ProductList = props => (
     >
       <thead>
         <tr className="slds-line-height_reset">
-          <th scope="col" style={{ width: "3.75rem" }} />
+          <th scope="col" style={{ width: '3.75rem' }} />
           {_.times(columns.length, i => (
             <Th key={i} columnName={columns[i]} aria-label={columns[i]} />
           ))}
@@ -140,18 +140,18 @@ let ProductList = props => (
 );
 
 let RowData = props => {
-  let checkboxLabel = "Select item " + props.index;
+  let checkboxLabel = 'Select item ' + props.index;
 
   return (
     <tr
-      className={classNames("slds-hint-parent", props.className)}
+      className={classNames('slds-hint-parent', props.className)}
       aria-selected={props.checked}
     >
       <td
         role="gridcell"
-        tabIndex={props.index === 1 ? "0" : "-1"}
+        tabIndex={props.index === 1 ? '0' : '-1'}
         className="slds-text-align_right"
-        style={{ width: "3.75rem" }}
+        style={{ width: '3.75rem' }}
       >
         <CheckboxAddButton
           label={checkboxLabel}
@@ -211,7 +211,7 @@ let FilteredItems = props => (
 ----------------------------------------------------------------------------- */
 
 export default (
-  <div className="demo-only" style={{ height: "640px" }}>
+  <div className="demo-only" style={{ height: '640px' }}>
     <Modal
       className="slds-modal_large slds-list-builder"
       aria-labelledby="id-of-modalheader-h2"
@@ -250,10 +250,10 @@ export default (
 
 export let states = [
   {
-    id: "items-selected",
-    label: "Items selected",
+    id: 'items-selected',
+    label: 'Items selected',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"
@@ -295,10 +295,10 @@ export let states = [
     )
   },
   {
-    id: "filtered",
-    label: "Filtered Results",
+    id: 'filtered',
+    label: 'Filtered Results',
     element: (
-      <div className="demo-only" style={{ height: "640px" }}>
+      <div className="demo-only" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"

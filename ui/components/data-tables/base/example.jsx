@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -11,7 +11,7 @@ import classNames from "classnames";
 let Table = props => (
   <table
     className={classNames(
-      "slds-table slds-table_bordered slds-table_cell-buffer",
+      'slds-table slds-table_bordered slds-table_cell-buffer',
       props.className
     )}
   >
@@ -117,8 +117,8 @@ export default (
 
 export let states = [
   {
-    id: "data-table-striped-rows",
-    label: "With striped rows",
+    id: 'data-table-striped-rows',
+    label: 'With striped rows',
     element: (
       <Table className="slds-table_striped">
         <thead>
@@ -133,8 +133,8 @@ export let states = [
     )
   },
   {
-    id: "data-table-no-hover",
-    label: "With no row hovers",
+    id: 'data-table-no-hover',
+    label: 'With no row hovers',
     element: (
       <Table className="slds-no-row-hover">
         <thead>
@@ -148,8 +148,8 @@ export let states = [
     )
   },
   {
-    id: "data-table-vertical-borders",
-    label: "With vertical borders",
+    id: 'data-table-vertical-borders',
+    label: 'With vertical borders',
     element: (
       <Table className="slds-table_col-bordered">
         <thead>

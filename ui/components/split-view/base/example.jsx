@@ -1,72 +1,72 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
-import _ from "../../../shared/helpers";
-import { ButtonIcon } from "../../button-icons/base/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
+import _ from '../../../shared/helpers';
+import { ButtonIcon } from '../../button-icons/base/example';
 
 const results = [
   {
     unread: true,
-    colOne: "Riley Shultz",
-    colTwo: "99",
-    colThree: "Biotech, Inc.",
-    colFour: "Nurturing"
+    colOne: 'Riley Shultz',
+    colTwo: '99',
+    colThree: 'Biotech, Inc.',
+    colFour: 'Nurturing'
   },
   {
     unread: true,
-    colOne: "Jason A. - VP of Sales",
-    colTwo: "92",
-    colThree: "Case Management Solutions",
-    colFour: "Contacted"
+    colOne: 'Jason A. - VP of Sales',
+    colTwo: '92',
+    colThree: 'Case Management Solutions',
+    colFour: 'Contacted'
   },
   {
     unread: true,
-    colOne: "Josh Smith",
-    colTwo: "90",
-    colThree: "Acme, Inc.",
-    colFour: "Contacted"
+    colOne: 'Josh Smith',
+    colTwo: '90',
+    colThree: 'Acme, Inc.',
+    colFour: 'Contacted'
   },
   {
     unread: true,
-    colOne: "Bobby Tree",
-    colTwo: "89",
-    colThree: "Salesforce, Inc.",
-    colFour: "Closing"
+    colOne: 'Bobby Tree',
+    colTwo: '89',
+    colThree: 'Salesforce, Inc.',
+    colFour: 'Closing'
   },
   {
     selected: true,
-    colOne: "Riley Shultz",
-    colTwo: "74",
-    colThree: "Tesla",
-    colFour: "Contacted"
+    colOne: 'Riley Shultz',
+    colTwo: '74',
+    colThree: 'Tesla',
+    colFour: 'Contacted'
   },
   {
     unread: true,
-    colOne: "Andy Smith",
-    colTwo: "72",
-    colThree: "Universal Technologies",
-    colFour: "New"
+    colOne: 'Andy Smith',
+    colTwo: '72',
+    colThree: 'Universal Technologies',
+    colFour: 'New'
   },
   {
-    colOne: "Jim Steele",
-    colTwo: "71",
-    colThree: "BigList, Inc.",
-    colFour: "New"
+    colOne: 'Jim Steele',
+    colTwo: '71',
+    colThree: 'BigList, Inc.',
+    colFour: 'New'
   },
   {
-    colOne: "John Gardner",
-    colTwo: "70",
-    colThree: "3C Systems",
-    colFour: "Contacted"
+    colOne: 'John Gardner',
+    colTwo: '70',
+    colThree: '3C Systems',
+    colFour: 'Contacted'
   },
   {
-    colOne: "Sarah Loehr",
-    colTwo: "68",
-    colThree: "MedLife, Inc.",
-    colFour: "New"
+    colOne: 'Sarah Loehr',
+    colTwo: '68',
+    colThree: 'MedLife, Inc.',
+    colFour: 'New'
   }
 ];
 
@@ -77,27 +77,27 @@ const results = [
 let SplitView = props => (
   <div
     className={classNames(
-      "slds-split-view_container",
-      props.hidden ? "slds-is-closed" : "slds-is-open"
+      'slds-split-view_container',
+      props.hidden ? 'slds-is-closed' : 'slds-is-open'
     )}
   >
     <ButtonIcon
       aria-controls="split-view-id"
-      aria-expanded={props.hidden ? "false" : "true"}
+      aria-expanded={props.hidden ? 'false' : 'true'}
       className={classNames(
-        "slds-button_icon slds-split-view__toggle-button",
-        props.hidden ? "slds-is-closed" : "slds-is-open"
+        'slds-button_icon slds-split-view__toggle-button',
+        props.hidden ? 'slds-is-closed' : 'slds-is-open'
       )}
       iconClassName="slds-button__icon_x-small"
       symbol="left"
-      assistiveText={props.hidden ? "Open Split View" : "Close Split View"}
-      title={props.hidden ? "Open Split View" : "Close Split View"}
+      assistiveText={props.hidden ? 'Open Split View' : 'Close Split View'}
+      title={props.hidden ? 'Open Split View' : 'Close Split View'}
     />
     <article
-      aria-hidden={props.hidden ? "true" : "false"}
+      aria-hidden={props.hidden ? 'true' : 'false'}
       id="split-view-id"
       className={classNames(
-        "slds-split-view slds-grid slds-grid_vertical slds-grow",
+        'slds-split-view slds-grid slds-grid_vertical slds-grow',
         props.className
       )}
     >
@@ -201,9 +201,9 @@ let SplitView = props => (
 let Row = props => (
   <li
     className={classNames(
-      "slds-split-view__list-item",
+      'slds-split-view__list-item',
       props.className,
-      props.unread ? "slds-is-unread" : null
+      props.unread ? 'slds-is-unread' : null
     )}
     role="presentation"
   >
@@ -226,26 +226,26 @@ let Row = props => (
       <div className="slds-grid slds-wrap">
         <span
           className="slds-truncate slds-text-body_regular slds-text-color_default"
-          title={props.colOne || "Object Name"}
+          title={props.colOne || 'Object Name'}
         >
-          {props.colOne || "Column 1"}
+          {props.colOne || 'Column 1'}
         </span>
         <span
           className="slds-truncate slds-col_bump-left"
-          title={props.colTwo || "Column 2"}
+          title={props.colTwo || 'Column 2'}
         >
-          {props.colTwo || "Column 2"}
+          {props.colTwo || 'Column 2'}
         </span>
       </div>
       <div className="slds-grid slds-wrap">
-        <span className="slds-truncate" title={props.colThree || "Column 3"}>
-          {props.colThree || "Column 3"}
+        <span className="slds-truncate" title={props.colThree || 'Column 3'}>
+          {props.colThree || 'Column 3'}
         </span>
         <span
           className="slds-truncate slds-col_bump-left"
-          title={props.colFour || "Column 4"}
+          title={props.colFour || 'Column 4'}
         >
-          {props.colFour || "Column 4"}
+          {props.colFour || 'Column 4'}
         </span>
       </div>
     </a>
@@ -259,7 +259,7 @@ let Row = props => (
 export default (
   <div
     className="demo-only"
-    style={{ display: "flex", width: "20rem", height: "37.5rem" }}
+    style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
   >
     <SplitView>
       {results
@@ -280,12 +280,12 @@ export default (
 
 export let states = [
   {
-    id: "selected-item",
-    label: "Selected Item",
+    id: 'selected-item',
+    label: 'Selected Item',
     element: (
       <div
         className="demo-only"
-        style={{ display: "flex", width: "20rem", height: "37.5rem" }}
+        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
       >
         <SplitView>
           {results
@@ -306,12 +306,12 @@ export let states = [
     )
   },
   {
-    id: "overflow",
-    label: "Overflow",
+    id: 'overflow',
+    label: 'Overflow',
     element: (
       <div
         className="demo-only"
-        style={{ display: "flex", width: "20rem", height: "37.5rem" }}
+        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
       >
         <SplitView>
           {results.map((result, i) => (
@@ -329,12 +329,12 @@ export let states = [
     )
   },
   {
-    id: "unread",
-    label: "Unread Items",
+    id: 'unread',
+    label: 'Unread Items',
     element: (
       <div
         className="demo-only"
-        style={{ display: "flex", width: "20rem", height: "37.5rem" }}
+        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
       >
         <SplitView>
           {results.map((result, i) => (
@@ -353,12 +353,12 @@ export let states = [
     )
   },
   {
-    id: "panel-collapsed",
-    label: "Collapsed Panel",
+    id: 'panel-collapsed',
+    label: 'Collapsed Panel',
     element: (
       <div
         className="demo-only"
-        style={{ display: "flex", width: "20rem", height: "37.5rem" }}
+        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
       >
         <SplitView hidden>
           {results.map((result, i) => (

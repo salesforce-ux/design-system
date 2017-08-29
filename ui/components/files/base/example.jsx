@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { ButtonGroup } from "../../button-groups/base/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { ButtonGroup } from '../../button-groups/base/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -14,7 +14,7 @@ import classNames from "classnames";
 let ActionsMenu = props => {
   let buttonIconClassName;
   if (props.whiteIcons) {
-    buttonIconClassName = "slds-button_icon-inverse";
+    buttonIconClassName = 'slds-button_icon-inverse';
   }
 
   return (
@@ -22,7 +22,7 @@ let ActionsMenu = props => {
       <ButtonGroup className={props.className}>
         <ButtonIcon
           className={classNames(
-            "slds-button_icon slds-button_icon-x-small",
+            'slds-button_icon slds-button_icon-x-small',
             buttonIconClassName
           )}
           symbol="download"
@@ -31,7 +31,7 @@ let ActionsMenu = props => {
         />
         <ButtonIcon
           className={classNames(
-            "slds-button_icon slds-button_icon-x-small",
+            'slds-button_icon slds-button_icon-x-small',
             buttonIconClassName
           )}
           symbol="down"
@@ -57,26 +57,26 @@ export let ExternalIcon = props => (
   <div className="slds-file__external-icon">
     <span
       className="slds-file__icon slds-icon_container"
-      title={"salesforce1" || props.symbol}
+      title={'salesforce1' || props.symbol}
     >
       <SvgIcon
         className="slds-icon slds-icon-text-default"
         sprite="utility"
-        symbol={"salesforce1" || props.symbol}
+        symbol={'salesforce1' || props.symbol}
       />
       <span className="slds-assistive-text">
-        Data provided by: {"salesforce1" || props.symbol}
+        Data provided by: {'salesforce1' || props.symbol}
       </span>
     </span>
   </div>
 );
 
 export let File = props => (
-  <div className={classNames("slds-file", props.className)}>
+  <div className={classNames('slds-file', props.className)}>
     <figure>
       <a
         href="javascript:void(0);"
-        className={classNames("slds-file__crop", props.cropClass)}
+        className={classNames('slds-file__crop', props.cropClass)}
       >
         {props.overlay ? <div className="slds-file_overlay" /> : null}
         {props.image ? (
@@ -87,23 +87,23 @@ export let File = props => (
         ) : (
           <span
             className="slds-file__icon slds-icon_container"
-            title={props.symbol || "unknown file type"}
+            title={props.symbol || 'unknown file type'}
           >
             <SvgIcon
-              className={classNames("slds-icon", props.iconType)}
-              sprite={props.sprite || "doctype"}
-              symbol={props.symbol || "unknown"}
+              className={classNames('slds-icon', props.iconType)}
+              sprite={props.sprite || 'doctype'}
+              symbol={props.symbol || 'unknown'}
             />
             <span className="slds-assistive-text">
-              {props.title || "Image Title"}
+              {props.title || 'Image Title'}
             </span>
           </span>
         )}
       </a>
       {!props.noCaption ? (
         <figcaption
-          className={classNames("slds-file__title", props.titleClass, {
-            "slds-file-has-actions": props.actions
+          className={classNames('slds-file__title', props.titleClass, {
+            'slds-file-has-actions': props.actions
           })}
         >
           <div className="slds-media slds-media_small slds-media_center">
@@ -111,15 +111,15 @@ export let File = props => (
               {props.symbol ? (
                 <span
                   className="slds-icon_container"
-                  title={props.symbol || "unknown file type"}
+                  title={props.symbol || 'unknown file type'}
                 >
                   <SvgIcon
                     className="slds-icon slds-icon_x-small"
                     sprite="doctype"
-                    symbol={props.symbol || "unknown"}
+                    symbol={props.symbol || 'unknown'}
                   />
                   <span className="slds-assistive-text">
-                    {props.symbol || "unknown file type"}
+                    {props.symbol || 'unknown file type'}
                   </span>
                 </span>
               ) : null}
@@ -127,9 +127,9 @@ export let File = props => (
             <div className="slds-media__body">
               <span
                 className="slds-file__text slds-truncate"
-                title={props.title || "Image Title"}
+                title={props.title || 'Image Title'}
               >
-                {props.title || "Image Title"}
+                {props.title || 'Image Title'}
                 {props.overlay ? (
                   <span className="slds-assistive-text">more files</span>
                 ) : null}
@@ -156,18 +156,18 @@ export let AttachmentLink = props => (
         <div className="slds-file__crop slds-file__crop_16-by-9">
           <img
             src="/assets/images/placeholder-img@16x9.jpg"
-            alt={props.title || "Image Title"}
+            alt={props.title || 'Image Title'}
           />
         </div>
       </div>
     </div>
     <div className="slds-media__body">
       <h3 className="slds-text-heading_small">
-        {props.articleTitle || "Article Title"}
+        {props.articleTitle || 'Article Title'}
       </h3>
-      <p>{props.articleDescription || "Article Description"}</p>
+      <p>{props.articleDescription || 'Article Description'}</p>
       <span className="slds-text-body_small">
-        {props.articleTitle || "http://www.linkurl.com"}
+        {props.articleTitle || 'http://www.linkurl.com'}
       </span>
     </div>
   </a>
@@ -178,7 +178,7 @@ export let AttachmentLink = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <div style={{ width: "20rem" }}>
+  <div style={{ width: '20rem' }}>
     <File
       className="slds-file_card"
       titleClass="slds-file__title_card"
@@ -191,10 +191,10 @@ export default (
 
 export let examples = [
   {
-    id: "attachment-file-no-image",
-    label: "File with no image",
+    id: 'attachment-file-no-image',
+    label: 'File with no image',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
           titleClass="slds-file__title_card"
@@ -205,19 +205,19 @@ export let examples = [
     )
   },
   {
-    id: "attachment-file-no-title",
-    label: "File with no title",
+    id: 'attachment-file-no-title',
+    label: 'File with no title',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File className="slds-file_card" noCaption symbol="pdf" image />
       </div>
     )
   },
   {
-    id: "attachment-file-with-actions",
-    label: "File with actions",
+    id: 'attachment-file-with-actions',
+    label: 'File with actions',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
           titleClass="slds-file__title_card"
@@ -230,10 +230,10 @@ export let examples = [
     )
   },
   {
-    id: "attachment-file-with-no-title-actions",
-    label: "File with no title + actions",
+    id: 'attachment-file-with-no-title-actions',
+    label: 'File with no title + actions',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
           symbol="pdf"
@@ -248,10 +248,10 @@ export let examples = [
     )
   },
   {
-    id: "attachment-file-external-icon",
-    label: "File with external icon",
+    id: 'attachment-file-external-icon',
+    label: 'File with external icon',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
           titleClass="slds-file__title_card"
@@ -263,10 +263,10 @@ export let examples = [
     )
   },
   {
-    id: "attachment-file-loading-no-title",
-    label: "File in loading state with title",
+    id: 'attachment-file-loading-no-title',
+    label: 'File in loading state with title',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
           titleClass="slds-file__title_card"
@@ -278,10 +278,10 @@ export let examples = [
     )
   },
   {
-    id: "attachment-file-loading",
-    label: "File in loading state without title",
+    id: 'attachment-file-loading',
+    label: 'File in loading state without title',
     element: (
-      <div style={{ width: "20rem" }}>
+      <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card slds-file_center-icon"
           iconType="slds-file__loading-icon slds-icon_large"
@@ -293,8 +293,8 @@ export let examples = [
     )
   },
   {
-    id: "multi-attachments",
-    label: "< 3 file attachments",
+    id: 'multi-attachments',
+    label: '< 3 file attachments',
     element: (
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
@@ -318,8 +318,8 @@ export let examples = [
     )
   },
   {
-    id: "multi-attachments-overflow",
-    label: "> 3 file attachments",
+    id: 'multi-attachments-overflow',
+    label: '> 3 file attachments',
     element: (
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
@@ -352,8 +352,8 @@ export let examples = [
     )
   },
   {
-    id: "link-attachment",
-    label: "Link attachment",
+    id: 'link-attachment',
+    label: 'Link attachment',
     element: (
       <AttachmentLink
         articleTitle="Maui By Air The Best Way Around The Island"

@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 let FormElement = props => (
-  <div className={classNames("slds-form-element", props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
@@ -21,7 +21,7 @@ let FormElementLabel = props => (
 );
 
 let FormElementControl = props => (
-  <div className={classNames("slds-form-element__control", props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
 );
@@ -29,10 +29,10 @@ let FormElementControl = props => (
 export let Select = props => (
   <div className="slds-select_container">
     <select
-      aria-describedby={props["aria-describedby"]}
-      className={classNames("slds-select", props.className)}
+      aria-describedby={props['aria-describedby']}
+      className={classNames('slds-select', props.className)}
       disabled={props.disabled}
-      id={props.id || "select-01"}
+      id={props.id || 'select-01'}
       required={props.required}
       multiple={props.multiple}
     >
@@ -50,7 +50,7 @@ let Required = props => (
     <FormElementLabel>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Select Label
     </FormElementLabel>
     <FormElementControl>
@@ -68,7 +68,7 @@ let ErrorState = props => (
     <FormElementLabel>
       <abbr className="slds-required" title="required">
         *
-      </abbr>{" "}
+      </abbr>{' '}
       Select Label
     </FormElementLabel>
     <FormElementControl>
@@ -129,23 +129,23 @@ export default (
 
 export let states = [
   {
-    id: "select-required",
-    label: "Required",
+    id: 'select-required',
+    label: 'Required',
     element: <Required />
   },
   {
-    id: "select-error",
-    label: "Error",
+    id: 'select-error',
+    label: 'Error',
     element: <ErrorState />
   },
   {
-    id: "select-disabled",
-    label: "Disabled",
+    id: 'select-disabled',
+    label: 'Disabled',
     element: <Disabled />
   },
   {
-    id: "select-multiple",
-    label: "Multiple Selection",
+    id: 'select-multiple',
+    label: 'Multiple Selection',
     element: <Multiple />
   }
 ];

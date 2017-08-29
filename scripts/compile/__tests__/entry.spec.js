@@ -3,9 +3,9 @@
 
 /* eslint-env jest */
 
-const { entry, manifest } = require("../entry");
+const { entry, manifest } = require('../entry');
 
-it("creates an entry", () => {
+it('creates an entry', () => {
   expect.assertions(1);
   entry.fork(
     e => {
@@ -17,7 +17,7 @@ it("creates an entry", () => {
   );
 });
 
-it("creates a manifest", () => {
+it('creates a manifest', () => {
   expect.assertions(1);
   manifest.fork(
     e => {

@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
-const textareaId = "textarea-id-01";
+const textareaId = 'textarea-id-01';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
 export let FormElement = props => (
-  <div className={classNames("slds-form-element", props.className)}>
+  <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
@@ -23,7 +23,7 @@ export let FormElementLabel = props => (
 );
 
 export let FormElementControl = props => (
-  <div className={classNames("slds-form-element__control", props.className)}>
+  <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
 );
@@ -32,8 +32,8 @@ export let Textarea = props => (
   <textarea
     {...props}
     id={props.id || textareaId}
-    className={classNames("slds-textarea", props.className)}
-    placeholder={props.placeholder || "Placeholder Text"}
+    className={classNames('slds-textarea', props.className)}
+    placeholder={props.placeholder || 'Placeholder Text'}
   />
 );
 
@@ -52,8 +52,8 @@ export default (
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: (
       <FormElement>
         <FormElementLabel>Textarea Label</FormElementLabel>
@@ -64,14 +64,14 @@ export let states = [
     )
   },
   {
-    id: "required",
-    label: "Required",
+    id: 'required',
+    label: 'Required',
     element: (
       <FormElement>
         <FormElementLabel>
           <abbr className="slds-required" title="required">
             *
-          </abbr>{" "}
+          </abbr>{' '}
           Textarea Label
         </FormElementLabel>
         <FormElementControl>
@@ -81,14 +81,14 @@ export let states = [
     )
   },
   {
-    id: "error",
-    label: "Error",
+    id: 'error',
+    label: 'Error',
     element: (
       <FormElement className="slds-has-error">
         <FormElementLabel>
           <abbr className="slds-required" title="required">
             *
-          </abbr>{" "}
+          </abbr>{' '}
           Textarea Label
         </FormElementLabel>
         <FormElementControl>
@@ -101,8 +101,8 @@ export let states = [
     )
   },
   {
-    id: "read-only",
-    label: "Read only",
+    id: 'read-only',
+    label: 'Read only',
     element: (
       <FormElement>
         <span className="slds-form-element__label">Textarea Label</span>

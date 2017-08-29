@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export default (
   <div className="demo-only">
@@ -64,7 +64,7 @@ export default (
         </li>
       </ol>
       <span className="slds-wizard__progress">
-        <span className="slds-wizard__progress-bar" style={{ width: "50%" }} />
+        <span className="slds-wizard__progress-bar" style={{ width: '50%' }} />
       </span>
     </div>
   </div>

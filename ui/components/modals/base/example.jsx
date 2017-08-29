@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -22,16 +22,16 @@ export let Modal = props => (
     tabIndex="-1"
     {...props}
     aria-modal="true"
-    aria-describedby={props["aria-describedby"] || "modal-content-id-1"}
-    className={classNames("slds-modal slds-fade-in-open", props.className)}
+    aria-describedby={props['aria-describedby'] || 'modal-content-id-1'}
+    className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">{props.children}</div>
   </section>
 );
 
 export let ModalHeader = props => (
-  <header className={classNames("slds-modal__header", props.className)}>
-    {props.closeButton != "false" ? (
+  <header className={classNames('slds-modal__header', props.className)}>
+    {props.closeButton != 'false' ? (
       <ButtonIcon
         className="slds-modal__close slds-button_icon-inverse"
         iconClassName="slds-button__icon_large"
@@ -46,15 +46,15 @@ export let ModalHeader = props => (
 
 export let ModalContent = props => (
   <div
-    className={classNames("slds-modal__content", props.className)}
-    id={props["aria-describedby"] || "modal-content-id-1"}
+    className={classNames('slds-modal__content', props.className)}
+    id={props['aria-describedby'] || 'modal-content-id-1'}
   >
     {props.children}
   </div>
 );
 
 export let ModalFooter = props => (
-  <footer className={classNames("slds-modal__footer", props.className)}>
+  <footer className={classNames('slds-modal__footer', props.className)}>
     {props.children}
   </footer>
 );
@@ -64,7 +64,7 @@ export let ModalFooter = props => (
 /// ///////////////////////////////////////////
 
 let Taglines = props => (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2
@@ -76,7 +76,7 @@ let Taglines = props => (
         <p className="slds-m-top_x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend across
           mulitple lines, so I&rsquo;m making up content to show that to you. It
-          is allowed to{" "}
+          is allowed to{' '}
           <a href="javascript:void(0);">contain links or be a link</a>.
         </p>
       </ModalHeader>
@@ -107,7 +107,7 @@ let Taglines = props => (
 );
 
 let Large = props => (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal className="slds-modal_large" aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2
@@ -144,7 +144,7 @@ let Large = props => (
 );
 
 let Directional = props => (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2
@@ -185,7 +185,7 @@ let Directional = props => (
 );
 
 let Headless = props => (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal aria-label="Meaningful description of the modal content">
       <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
@@ -215,7 +215,7 @@ let Headless = props => (
 );
 
 let Footless = props => (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2
@@ -252,7 +252,7 @@ let Footless = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <Demo style={{ height: "640px" }}>
+  <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2
@@ -290,18 +290,18 @@ export default (
 
 export let examples = [
   {
-    id: "taglines",
-    label: "Taglines",
+    id: 'taglines',
+    label: 'Taglines',
     element: <Taglines />
   },
   {
-    id: "headless",
-    label: "Header empty",
+    id: 'headless',
+    label: 'Header empty',
     element: <Headless />
   },
   {
-    id: "footless",
-    label: "Footer removed",
+    id: 'footless',
+    label: 'Footer removed',
     element: <Footless />
   }
 ];

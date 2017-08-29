@@ -1,9 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import _ from "../../../shared/helpers";
-import classNames from "classnames";
+import React from 'react';
+import _ from '../../../shared/helpers';
+import classNames from 'classnames';
 
 // This icon is a sprite of 20 frames laid out horizontally
 // Each frame is composed of 2 circles positioned on top of each other
@@ -11,7 +11,7 @@ const frames = 20;
 
 export const Ellie = props => (
   <span
-    className={classNames("slds-icon-ellie", props.className)}
+    className={classNames('slds-icon-ellie', props.className)}
     title={props.title}
   >
     <svg viewBox={`0 0 ${frames * 14} 14`} aria-hidden="true">
@@ -54,8 +54,8 @@ export default (
 
 export let states = [
   {
-    id: "paused",
-    label: "Paused",
+    id: 'paused',
+    label: 'Paused',
     element: (
       <Ellie
         className="slds-is-animated slds-is-paused"
@@ -65,8 +65,8 @@ export let states = [
     )
   },
   {
-    id: "static",
-    label: "Static (no animation)",
+    id: 'static',
+    label: 'Static (no animation)',
     element: (
       <Ellie title="Description of the icon" assistiveText="Text alternative" />
     )

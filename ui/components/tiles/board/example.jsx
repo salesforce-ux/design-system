@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Tile, TileMedia } from "../base/example";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Tile, TileMedia } from '../base/example';
 
 export default (
-  <div className="demo-only" style={{ width: "320px" }}>
+  <div className="demo-only" style={{ width: '320px' }}>
     <ul className="slds-has-dividers_around-space">
       <li className="slds-item">
         <Tile title="Anypoint Connectors" className="slds-tile_board">

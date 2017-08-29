@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
+import React from 'react';
 
 export let examples = [
   {
-    id: "description-list",
-    label: "Default",
+    id: 'description-list',
+    label: 'Default',
     element: (
       <dl>
         <dt>First Label:</dt>
@@ -17,8 +17,8 @@ export let examples = [
     )
   },
   {
-    id: "description-list-inline",
-    label: "Inline",
+    id: 'description-list-inline',
+    label: 'Inline',
     element: (
       <dl className="slds-dl_inline">
         <dt className="slds-dl_inline__label">First Label:</dt>
@@ -29,8 +29,8 @@ export let examples = [
     )
   },
   {
-    id: "description-list-horizontal",
-    label: "Horizontal",
+    id: 'description-list-horizontal',
+    label: 'Horizontal',
     element: (
       <dl className="slds-dl_horizontal">
         <dt className="slds-dl_horizontal__label">First Label:</dt>

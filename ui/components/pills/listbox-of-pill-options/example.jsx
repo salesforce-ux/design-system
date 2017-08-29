@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { PillContainer } from "../base/example";
-import { Avatar } from "../../avatar/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { PillContainer } from '../base/example';
+import { Avatar } from '../../avatar/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -14,7 +14,7 @@ import classNames from "classnames";
 
 export let ListboxPill = props => (
   <span
-    className={classNames("slds-pill", props.className)}
+    className={classNames('slds-pill', props.className)}
     role="option"
     tabIndex={props.tabIndex}
     aria-selected="true"
@@ -22,9 +22,9 @@ export let ListboxPill = props => (
     {props.children}
     <span
       className="slds-pill__label"
-      title={props.label || "Full pill label verbiage mirrored here"}
+      title={props.label || 'Full pill label verbiage mirrored here'}
     >
-      {props.label || "Pill Label"}
+      {props.label || 'Pill Label'}
     </span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
       <SvgIcon
@@ -73,8 +73,8 @@ export default (
 
 export let states = [
   {
-    id: "listbox-pill-with-icon",
-    label: "With icon",
+    id: 'listbox-pill-with-icon',
+    label: 'With icon',
     element: (
       <PillContainer>
         <ListboxHoriz>
@@ -113,8 +113,8 @@ export let states = [
     )
   },
   {
-    id: "listbox-pill-with-avatar",
-    label: "With avatar",
+    id: 'listbox-pill-with-avatar',
+    label: 'With avatar',
     element: (
       <PillContainer>
         <ListboxHoriz>

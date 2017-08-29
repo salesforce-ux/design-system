@@ -1,20 +1,20 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import Truncate from "../../../shared/truncate/index.react";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { StandardIcon } from "../../icons/standard/example";
-import { UtilityIcon } from "../../icons/base/example";
+import React from 'react';
+import Truncate from '../../../shared/truncate/index.react';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { StandardIcon } from '../../icons/standard/example';
+import { UtilityIcon } from '../../icons/base/example';
 import {
   Card,
   CardHeader,
   CardBody,
   CardFooter
-} from "../../cards/base/example";
-import SvgIcon from "../../../shared/svg-icon";
-import Heading from "../../heading/index.react";
-import classNames from "classnames";
+} from '../../cards/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import Heading from '../../heading/index.react';
+import classNames from 'classnames';
 
 const icon = (
   <SvgIcon
@@ -31,7 +31,7 @@ const image = (
 );
 
 export let ObjectHome = props => (
-  <div className={classNames("slds-page-header", props.className)}>
+  <div className={classNames('slds-page-header', props.className)}>
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <div className="slds-media slds-no-space slds-grow">
@@ -144,8 +144,8 @@ export default <ObjectHome />;
 
 export let examples = [
   {
-    id: "card",
-    label: "Inside a card",
+    id: 'card',
+    label: 'Inside a card',
     element: (
       <div className="slds-card">
         <ObjectHome />
@@ -153,8 +153,8 @@ export let examples = [
     )
   },
   {
-    id: "tab-card",
-    label: "Inside a tabs card",
+    id: 'tab-card',
+    label: 'Inside a tabs card',
     element: (
       <div className="slds-tabs_card">
         <ObjectHome />

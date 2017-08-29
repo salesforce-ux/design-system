@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import _ from "../helpers";
-import React from "react";
+import _ from '../helpers';
+import React from 'react';
 
 class Truncate extends React.Component {
   // TODO: Remove span

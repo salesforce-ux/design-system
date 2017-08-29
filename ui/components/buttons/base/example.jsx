@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import classNames from 'classnames';
 
 export let Button = props => (
   <button
-    className={classNames("slds-button", props.className)}
+    className={classNames('slds-button', props.className)}
     disabled={props.disabled}
   >
     {props.children}
@@ -22,16 +22,16 @@ export default <Button>Button</Button>;
 
 export let states = [
   {
-    id: "disabled",
-    label: "Disabled",
+    id: 'disabled',
+    label: 'Disabled',
     element: <Button disabled>Button</Button>
   }
 ];
 
 export let examples = [
   {
-    id: "with-icon-left",
-    label: "With left icon",
+    id: 'with-icon-left',
+    label: 'With left icon',
     element: (
       <Button className="slds-button_neutral">
         <SvgIcon
@@ -44,8 +44,8 @@ export let examples = [
     )
   },
   {
-    id: "with-icon-right",
-    label: "With right icon",
+    id: 'with-icon-right',
+    label: 'With right icon',
     element: (
       <Button className="slds-button_neutral">
         Button Neutral

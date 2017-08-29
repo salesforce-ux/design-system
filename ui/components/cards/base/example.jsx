@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from "react";
-import SvgIcon from "../../../shared/svg-icon";
-import { Menu, MenuList, MenuItem } from "../../menus/dropdown/example";
-import { ButtonIcon } from "../../button-icons/base/example";
-import { TileMedia } from "../../tiles/base/example";
-import { StandardIcon } from "../../icons/standard/example";
-import classNames from "classnames";
+import React from 'react';
+import SvgIcon from '../../../shared/svg-icon';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
+import { ButtonIcon } from '../../button-icons/base/example';
+import { TileMedia } from '../../tiles/base/example';
+import { StandardIcon } from '../../icons/standard/example';
+import classNames from 'classnames';
 
 const headerActionOverflow = (
   <button
@@ -47,23 +47,23 @@ const headerSearch = (
 /// ////////////////////////////////////////
 
 export let Card = props => (
-  <article className={classNames("slds-card", props.className)}>
+  <article className={classNames('slds-card', props.className)}>
     {props.children}
   </article>
 );
 
 export let CardHeader = props => (
-  <div className={classNames("slds-card__header slds-grid", props.className)}>
+  <div className={classNames('slds-card__header slds-grid', props.className)}>
     <header
       className={classNames(
-        "slds-media slds-media_center slds-has-flexi-truncate",
-        props.search ? "slds-size_1-of-3" : null
+        'slds-media slds-media_center slds-has-flexi-truncate',
+        props.search ? 'slds-size_1-of-3' : null
       )}
     >
       {props.symbol ? (
         <div className="slds-media__figure">
           <span
-            className={"slds-icon_container slds-icon-standard-" + props.symbol}
+            className={'slds-icon_container slds-icon-standard-' + props.symbol}
             title="description of icon when needed"
           >
             <SvgIcon
@@ -89,11 +89,11 @@ export let CardHeader = props => (
     {props.search ? headerSearch : null}
     <div
       className={classNames(
-        "slds-no-flex",
-        props.search ? "slds-size_1-of-3" : null
+        'slds-no-flex',
+        props.search ? 'slds-size_1-of-3' : null
       )}
     >
-      {props.actions == "overflow" ? (
+      {props.actions == 'overflow' ? (
         <ButtonIcon
           className="slds-button_icon-border-filled slds-button_icon-x-small"
           symbol="down"
@@ -109,13 +109,13 @@ export let CardHeader = props => (
 );
 
 export let CardBody = props => (
-  <div className={classNames("slds-card__body", props.className)}>
+  <div className={classNames('slds-card__body', props.className)}>
     {props.children}
   </div>
 );
 
 export let CardFooter = props => (
-  <footer className={classNames("slds-card__footer", props.className)}>
+  <footer className={classNames('slds-card__footer', props.className)}>
     {props.children}
   </footer>
 );
@@ -138,8 +138,8 @@ export default (
 
 export let states = [
   {
-    id: "empty",
-    label: "Empty",
+    id: 'empty',
+    label: 'Empty',
     element: (
       <Card>
         <CardHeader symbol="contact" actions>
@@ -154,8 +154,8 @@ export let states = [
 
 export let examples = [
   {
-    id: "related-list-table",
-    label: "With data-table",
+    id: 'related-list-table',
+    label: 'With data-table',
     element: (
       <Card>
         <CardHeader symbol="contact" actions>
@@ -222,8 +222,8 @@ export let examples = [
     )
   },
   {
-    id: "related-list-tiles",
-    label: "With tiles",
+    id: 'related-list-tiles',
+    label: 'With tiles',
     element: (
       <Card>
         <CardHeader actions symbol="contact">
@@ -284,8 +284,8 @@ export let examples = [
     )
   },
   {
-    id: "card-wrapper",
-    label: "Wrapped cards",
+    id: 'card-wrapper',
+    label: 'Wrapped cards',
     element: (
       <div className="slds-card-wrapper">
         <Card>

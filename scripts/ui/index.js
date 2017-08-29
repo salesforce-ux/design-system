@@ -65,7 +65,10 @@ const addShowcaseAndDocPaths = (type, componentId, item) => {
     .set("showcase", getShowcase(showcase));
 };
 
-const uiFromComments = () => getComments().map(createParser).map(createUI);
+const uiFromComments = () =>
+  getComments()
+    .map(createParser)
+    .map(createUI);
 
 const ui = () =>
   uiFromComments().map(u =>

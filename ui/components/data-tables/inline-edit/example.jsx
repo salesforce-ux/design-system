@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import _ from '../../../shared/helpers';
+import React from "react";
+import _ from "../../../shared/helpers";
 
 import {
   InlineEditTableContainer as Container,
@@ -10,35 +10,47 @@ import {
   Thead,
   InlineEditTr as Tr,
   ErrorTooltip
-} from '../';
+} from "../";
 
-const columns = ['Name', 'Account Name', 'Close Date', 'Stage', 'Confidence', 'Amount', 'Contact'];
+const columns = [
+  "Name",
+  "Account Name",
+  "Close Date",
+  "Stage",
+  "Confidence",
+  "Amount",
+  "Contact"
+];
 
-const rows = [{
-  'recordName': 'Acme - 1,200 Widgets',
-  'accountName': 'Acme',
-  'closeDate': '4/10/15',
-  'stage': 'Value Proposition',
-  'confidence': '30%',
-  'amount': '$25,000,000',
-  'contact': 'jrogers@acme.com'
-}, {
-  'recordName': 'Acme - 200 Widgets',
-  'accountName': 'Acme',
-  'closeDate': '1/31/15',
-  'stage': 'Prospecting',
-  'confidence': '60%',
-  'amount': '$5,000,000',
-  'contact': 'bob@acme.com'
-}, {
-  'recordName': 'salesforce.com - 1,000 Widgets',
-  'accountName': 'salesforce.com',
-  'closeDate': '1/31/15 3:45PM',
-  'stage': 'Id. Decision Makers',
-  'confidence': '70%',
-  'amount': '$25,000',
-  'contact': 'nathan@salesforce.com'
-}];
+const rows = [
+  {
+    recordName: "Acme - 1,200 Widgets",
+    accountName: "Acme",
+    closeDate: "4/10/15",
+    stage: "Value Proposition",
+    confidence: "30%",
+    amount: "$25,000,000",
+    contact: "jrogers@acme.com"
+  },
+  {
+    recordName: "Acme - 200 Widgets",
+    accountName: "Acme",
+    closeDate: "1/31/15",
+    stage: "Prospecting",
+    confidence: "60%",
+    amount: "$5,000,000",
+    contact: "bob@acme.com"
+  },
+  {
+    recordName: "salesforce.com - 1,000 Widgets",
+    accountName: "salesforce.com",
+    closeDate: "1/31/15 3:45PM",
+    stage: "Id. Decision Makers",
+    confidence: "70%",
+    amount: "$25,000",
+    contact: "nathan@salesforce.com"
+  }
+];
 
 /// ///////////////////////////////////////////
 // Export
@@ -49,16 +61,13 @@ export default (
     <Table
       className="slds-no-cell-focus"
       isEditable
-      style={{ width: '66.75rem' }}
+      style={{ width: "66.75rem" }}
     >
-      <Thead
-        columns={columns}
-        hasErrorColumn
-        mainColumnWidth="8.75rem"
-      />
+      <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
       <tbody>
-        { _.times(rows.length, i =>
-          <Tr key={i}
+        {_.times(rows.length, i => (
+          <Tr
+            key={i}
             index={i + 1}
             recordName={rows[i].recordName}
             accountName={rows[i].accountName}
@@ -69,7 +78,7 @@ export default (
             contact={rows[i].contact}
             focusableCell="recordName"
           />
-        )}
+        ))}
       </tbody>
     </Table>
   </Container>
@@ -77,14 +86,11 @@ export default (
 
 export let states = [
   {
-    id: 'with-link',
-    label: 'Cell focused - Link (Actionable mode)',
-    element:
+    id: "with-link",
+    label: "Cell focused - Link (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -92,8 +98,9 @@ export let states = [
             actionableMode
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -106,23 +113,21 @@ export let states = [
                 focusedCell="recordName"
                 actionableMode
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('link-01').focus()
     `
   },
   {
-    id: 'checkbox',
-    label: 'Cell focused - Checkbox (Actionable mode)',
-    element:
+    id: "checkbox",
+    label: "Cell focused - Checkbox (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -130,8 +135,9 @@ export let states = [
             actionableMode
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -144,31 +150,26 @@ export let states = [
                 focusedCell="selectRow"
                 actionableMode
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('checkbox-01').focus()
     `
   },
   {
-    id: 'focused',
-    label: 'Cell focused (Navigation mode)',
-    element:
+    id: "focused",
+    label: "Cell focused (Navigation mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
-          <Thead
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
+        <Table isEditable style={{ width: "66.75rem" }}>
+          <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -180,20 +181,18 @@ export let states = [
                 focusableCell="accountName"
                 focusedCell="accountName"
               />
-            )}
+            ))}
           </tbody>
         </Table>
       </Container>
+    )
   },
   {
-    id: 'edit',
-    label: 'Cell edit (Actionable mode)',
-    element:
+    id: "edit",
+    label: "Cell edit (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -201,8 +200,9 @@ export let states = [
             actionableMode
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -214,24 +214,22 @@ export let states = [
                 actionableMode
                 showEdit
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('company-01').focus()
       document.getElementById('company-01').select()
     `
   },
   {
-    id: 'required',
-    label: 'Cell edit — Required (Actionable mode)',
-    element:
+    id: "required",
+    label: "Cell edit — Required (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             actionableMode
             columns={columns}
@@ -239,8 +237,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -253,24 +252,22 @@ export let states = [
                 showEdit
                 showEditRequired
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('company-01').focus()
       document.getElementById('company-01').select()
     `
   },
   {
-    id: 'error',
-    label: 'Cell edit — Error (Actionable mode)',
-    element:
+    id: "error",
+    label: "Cell edit — Error (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             actionableMode
             columns={columns}
@@ -278,8 +275,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -293,24 +291,22 @@ export let states = [
                 showEditRequired
                 showEditError
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('company-01').focus()
       document.getElementById('company-01').select()
     `
   },
   {
-    id: 'edited',
-    label: 'Cell edited (Actionable mode)',
-    element:
+    id: "edited",
+    label: "Cell edited (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             actionableMode
             columns={columns}
@@ -318,8 +314,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -331,20 +328,18 @@ export let states = [
                 actionableMode
                 showEditedCell
               />
-            )}
+            ))}
           </tbody>
         </Table>
       </Container>
+    )
   },
   {
-    id: 'row-error',
-    label: 'Error - Row level on save (Actionable mode)',
-    element:
+    id: "row-error",
+    label: "Error - Row level on save (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             actionableMode
             columns={columns}
@@ -352,8 +347,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -368,23 +364,21 @@ export let states = [
                 showCellError
                 showRowError
               />
-            )}
+            ))}
           </tbody>
         </Table>
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('button-01').focus()
     `
   },
   {
-    id: 'row-error-focused',
-    label: 'Error indicator - Focused (Actionable mode)',
-    element:
+    id: "row-error-focused",
+    label: "Error indicator - Focused (Actionable mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             actionableMode
             columns={columns}
@@ -392,8 +386,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -409,24 +404,22 @@ export let states = [
                 showRowError
                 showRowErrorTooltip
               />
-            )}
+            ))}
           </tbody>
         </Table>
         <ErrorTooltip />
-      </Container>,
+      </Container>
+    ),
     script: `
       document.getElementById('error-01').focus()
     `
   },
   {
-    id: 'header-cell-focused',
-    label: 'Header cell focused (Navigation mode)',
-    element:
+    id: "header-cell-focused",
+    label: "Header cell focused (Navigation mode)",
+    element: (
       <Container>
-        <Table
-          isEditable
-          style={{ width: '66.75rem' }}
-        >
+        <Table isEditable style={{ width: "66.75rem" }}>
           <Thead
             columns={columns}
             hasErrorColumn
@@ -434,8 +427,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -445,20 +439,21 @@ export let states = [
                 amount={rows[i].amount}
                 contact={rows[i].contact}
               />
-            )}
+            ))}
           </tbody>
         </Table>
       </Container>
+    )
   },
   {
-    id: 'header-cell-marked',
-    label: 'Header cell marked (Navigation mode)',
-    element:
+    id: "header-cell-marked",
+    label: "Header cell marked (Navigation mode)",
+    element: (
       <Container>
         <Table
           className="slds-no-cell-focus"
           isEditable
-          style={{ width: '66.75rem' }}
+          style={{ width: "66.75rem" }}
         >
           <Thead
             columns={columns}
@@ -467,8 +462,9 @@ export let states = [
             mainColumnWidth="8.75rem"
           />
           <tbody>
-            { _.times(rows.length, i =>
-              <Tr key={i}
+            {_.times(rows.length, i => (
+              <Tr
+                key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
@@ -478,9 +474,10 @@ export let states = [
                 amount={rows[i].amount}
                 contact={rows[i].contact}
               />
-            )}
+            ))}
           </tbody>
         </Table>
       </Container>
+    )
   }
 ];

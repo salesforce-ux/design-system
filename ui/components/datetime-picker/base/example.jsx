@@ -1,43 +1,43 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React from "react";
 import {
   ComboboxContainer,
   Listbox,
   ListboxItem,
   Option
-} from '../../combobox/base/example';
-import { DatePicker } from '../../datepickers/base/example';
-import { UtilityIcon } from '../../icons/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
-import { FormElement } from '../../form-element/base/example';
-import { Input } from '../../input/base/example';
+} from "../../combobox/base/example";
+import { DatePicker } from "../../datepickers/base/example";
+import { UtilityIcon } from "../../icons/base/example";
+import { ButtonIcon } from "../../button-icons/base/example";
+import { FormElement } from "../../form-element/base/example";
+import { Input } from "../../input/base/example";
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const dateInputId = 'date-input-id';
-const timeInputId = 'time-input-id';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
-const listboxOptionId03 = 'listbox-option-unique-id-03';
-const listboxOptionId04 = 'listbox-option-unique-id-04';
-const listboxOptionId05 = 'listbox-option-unique-id-05';
-const listboxOptionId06 = 'listbox-option-unique-id-06';
-const listboxOptionId07 = 'listbox-option-unique-id-07';
-const listboxOptionId08 = 'listbox-option-unique-id-08';
-const listboxOptionId09 = 'listbox-option-unique-id-09';
-const listboxOptionId10 = 'listbox-option-unique-id-10';
-const listboxOptionId11 = 'listbox-option-unique-id-11';
-const listboxOptionId12 = 'listbox-option-unique-id-12';
+const dateInputId = "date-input-id";
+const timeInputId = "time-input-id";
+const listboxOptionId01 = "listbox-option-unique-id-01";
+const listboxOptionId02 = "listbox-option-unique-id-02";
+const listboxOptionId03 = "listbox-option-unique-id-03";
+const listboxOptionId04 = "listbox-option-unique-id-04";
+const listboxOptionId05 = "listbox-option-unique-id-05";
+const listboxOptionId06 = "listbox-option-unique-id-06";
+const listboxOptionId07 = "listbox-option-unique-id-07";
+const listboxOptionId08 = "listbox-option-unique-id-08";
+const listboxOptionId09 = "listbox-option-unique-id-09";
+const listboxOptionId10 = "listbox-option-unique-id-10";
+const listboxOptionId11 = "listbox-option-unique-id-11";
+const listboxOptionId12 = "listbox-option-unique-id-12";
 
 /* -----------------------------------------------------------------------------
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox
     className="slds-dropdown slds-dropdown--fluid slds-dropdown--length-5"
     vertical
@@ -82,17 +82,17 @@ const ListboxDropdown = props =>
     <ListboxItem>
       <Option id={listboxOptionId12} title="5:00pm" />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{ height: '25rem' }}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: "25rem" }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -134,9 +134,9 @@ export default (
 
 export let states = [
   {
-    id: 'date-selection',
-    label: 'Date selected',
-    element:
+    id: "date-selection",
+    label: "Date selected",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
           <legend className="slds-form-element__label">Date and Time</legend>
@@ -147,9 +147,19 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
-                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateInputId}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -171,11 +181,12 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
-    id: 'time-selection',
-    label: 'Time selected',
-    element:
+    id: "time-selection",
+    label: "Time selected",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
           <legend className="slds-form-element__label">Date and Time</legend>
@@ -186,9 +197,19 @@ export let states = [
                 label="Date"
                 inputId={dateInputId}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
-                <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateInputId}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -212,5 +233,6 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   }
 ];

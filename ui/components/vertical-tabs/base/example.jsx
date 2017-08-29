@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
 class VerticalTabs extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -13,22 +13,26 @@ class VerticalTabs extends React.Component {
     };
   }
 
-  render () {
+  render() {
     const { currentTabIndex } = this.state;
 
     return (
       <div className="slds-vertical-tabs">
-        <ul className="slds-vertical-tabs__nav" role="tablist" aria-orientation="vertical">
+        <ul
+          className="slds-vertical-tabs__nav"
+          role="tablist"
+          aria-orientation="vertical"
+        >
           {this.props.tabs.map((tab, index) => {
-            const isActive = index === currentTabIndex ? 'slds-is-active' : '';
+            const isActive = index === currentTabIndex ? "slds-is-active" : "";
             const tabIndex = index === currentTabIndex ? 0 : -1;
-            const isAriaSelected = index === currentTabIndex ? 'true' : 'false';
+            const isAriaSelected = index === currentTabIndex ? "true" : "false";
             const ariaControlId = `slds-vertical-tabs-${index}`;
             const tabNavId = `slds-vertical-tabs-${index}__nav`;
 
             return (
               <li
-                className={classNames('slds-vertical-tabs__nav-item', isActive)}
+                className={classNames("slds-vertical-tabs__nav-item", isActive)}
                 title={tab.label}
                 role="presentation"
                 key={tabNavId}
@@ -52,12 +56,16 @@ class VerticalTabs extends React.Component {
 
         {this.props.tabs.map((tab, index) => {
           const tabContentId = `slds-vertical-tabs-${index}`;
-          const showHideClass = index === currentTabIndex ? 'slds-show' : 'slds-hide';
+          const showHideClass =
+            index === currentTabIndex ? "slds-show" : "slds-hide";
           const ariaLabelledBy = `slds-vertical-tabs-${index}__nav`;
 
           return (
             <div
-              className={classNames('slds-vertical-tabs__content', showHideClass)}
+              className={classNames(
+                "slds-vertical-tabs__content",
+                showHideClass
+              )}
               id={tabContentId}
               role="tabpanel"
               aria-labelledby={ariaLabelledBy}
@@ -74,7 +82,7 @@ class VerticalTabs extends React.Component {
 
 let exampleTabs = [
   {
-    label: 'Tab 1',
+    label: "Tab 1",
     content: (
       <div className="slds-text-longform">
         <h3 className="slds-text-heading_medium">Tab Title</h3>
@@ -85,7 +93,7 @@ let exampleTabs = [
     )
   },
   {
-    label: 'Tab 2',
+    label: "Tab 2",
     content: (
       <div className="slds-text-longform">
         <p>Content for Tab 2</p>
@@ -93,7 +101,7 @@ let exampleTabs = [
     )
   },
   {
-    label: 'Tab 3 has a really long label and can wrap or truncate',
+    label: "Tab 3 has a really long label and can wrap or truncate",
     content: (
       <div className="slds-text-longform">
         <p>Content for Tab 3</p>
@@ -102,6 +110,4 @@ let exampleTabs = [
   }
 ];
 
-export default (
-  <VerticalTabs tabs={exampleTabs} />
-);
+export default <VerticalTabs tabs={exampleTabs} />;

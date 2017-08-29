@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
+import React from "react";
+import SvgIcon from "../../../shared/svg-icon";
+import classNames from "classnames";
 
-export let StatefulButton = props =>
+export let StatefulButton = props => (
   <button
-    className={classNames('slds-button slds-button_stateful', props.className)}
+    className={classNames("slds-button slds-button_stateful", props.className)}
     disabled={props.disabled}
     aria-live="assertive"
   >
@@ -35,7 +35,8 @@ export let StatefulButton = props =>
       />
       Unfollow
     </span>
-  </button>;
+  </button>
+);
 
 /// ////////////////////////////////////////
 // Export

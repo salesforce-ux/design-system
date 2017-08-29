@@ -3,7 +3,7 @@ const RawSource = require("webpack-sources/lib/RawSource");
 const UglifyJS = require("uglify-es");
 
 class Plugin {
-  apply (compiler) {
+  apply(compiler) {
     compiler.plugin("compilation", compilation => {
       compilation.plugin("optimize-chunk-assets", (chunks, callback) => {
         const files = chunks.reduce(

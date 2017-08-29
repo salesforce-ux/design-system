@@ -1,30 +1,29 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import { DatePicker } from '../base/example';
-import { UtilityIcon } from '../../icons/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
-import { FormElement } from '../../form-element/base/example';
-import { Input } from '../../input/base/example';
+import React from "react";
+import { DatePicker } from "../base/example";
+import { UtilityIcon } from "../../icons/base/example";
+import { ButtonIcon } from "../../button-icons/base/example";
+import { FormElement } from "../../form-element/base/example";
+import { Input } from "../../input/base/example";
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const dateInputId = 'date-input-id';
-const dateRangeInputId01 = 'date-input-id-01';
-const dateRangeInputId02 = 'date-input-id-02';
+const dateInputId = "date-input-id";
+const dateRangeInputId01 = "date-input-id-01";
+const dateRangeInputId02 = "date-input-id-02";
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Demo wrapper
-export const Context = props =>
-  <div style={{height: '25rem'}}>
-    {props.children}
-  </div>;
+export const Context = props => (
+  <div style={{ height: "25rem" }}>{props.children}</div>
+);
 
 // Default
 export default (
@@ -71,12 +70,14 @@ export default (
 
 export let states = [
   {
-    id: 'start-date',
-    label: 'Start date selected',
-    element:
+    id: "start-date",
+    label: "Start date selected",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
-          <legend className="slds-form-element__label">Start and End Date</legend>
+          <legend className="slds-form-element__label">
+            Start and End Date
+          </legend>
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
@@ -84,9 +85,19 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateRangeInputId01}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -99,7 +110,13 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                  />
+                }
               >
                 <Input id={dateRangeInputId02} placeholder=" " />
                 <ButtonIcon
@@ -113,14 +130,17 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
-    id: 'end-date-week',
-    label: 'End date selected (Same week)',
-    element:
+    id: "end-date-week",
+    label: "End date selected (Same week)",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
-          <legend className="slds-form-element__label">Start and End Date</legend>
+          <legend className="slds-form-element__label">
+            Start and End Date
+          </legend>
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
@@ -128,9 +148,15 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected dateRange="week-4" />}
+                dropdown={
+                  <DatePicker todayActive dateSelected dateRange="week-4" />
+                }
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateRangeInputId01}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -143,9 +169,15 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected dateRange="week-4" />}
+                dropdown={
+                  <DatePicker todayActive dateSelected dateRange="week-4" />
+                }
               >
-                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/27/2014" />
+                <Input
+                  id={dateRangeInputId02}
+                  placeholder=" "
+                  defaultValue="06/27/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -157,14 +189,17 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
-    id: 'end-date-weeks',
-    label: 'End date selected (Different week)',
-    element:
+    id: "end-date-weeks",
+    label: "End date selected (Different week)",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
-          <legend className="slds-form-element__label">Start and End Date</legend>
+          <legend className="slds-form-element__label">
+            Start and End Date
+          </legend>
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
@@ -172,9 +207,20 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" dateRangeMulti />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected="single"
+                    dateRange="week-4"
+                    dateRangeMulti
+                  />
+                }
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateRangeInputId01}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -187,9 +233,20 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActive dateSelected dateRange="week-4-5" dateRangeMulti />}
+                dropdown={
+                  <DatePicker
+                    todayActive
+                    dateSelected
+                    dateRange="week-4-5"
+                    dateRangeMulti
+                  />
+                }
               >
-                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/29/2014" />
+                <Input
+                  id={dateRangeInputId02}
+                  placeholder=" "
+                  defaultValue="06/29/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -201,14 +258,17 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
-    id: 'today-in-range',
-    label: 'Today - In selected range',
-    element:
+    id: "today-in-range",
+    label: "Today - In selected range",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
-          <legend className="slds-form-element__label">Start and End Date</legend>
+          <legend className="slds-form-element__label">
+            Start and End Date
+          </legend>
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
@@ -216,9 +276,20 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange dateSelected="single" dateRange="week-4" dateRangeMulti />}
+                dropdown={
+                  <DatePicker
+                    todayActiveInRange
+                    dateSelected="single"
+                    dateRange="week-4"
+                    dateRangeMulti
+                  />
+                }
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateRangeInputId01}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -231,9 +302,20 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={<DatePicker todayActiveInRange dateSelected dateRange="week-4-5" dateRangeMulti />}
+                dropdown={
+                  <DatePicker
+                    todayActiveInRange
+                    dateSelected
+                    dateRange="week-4-5"
+                    dateRangeMulti
+                  />
+                }
               >
-                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/30/2014" />
+                <Input
+                  id={dateRangeInputId02}
+                  placeholder=" "
+                  defaultValue="06/30/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -245,14 +327,17 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   },
   {
-    id: 'span-across-month-in-range',
-    label: 'Current and adjacent month in selected range',
-    element:
+    id: "span-across-month-in-range",
+    label: "Current and adjacent month in selected range",
+    element: (
       <div className="slds-form slds-form--compound">
         <fieldset className="slds-form-element">
-          <legend className="slds-form-element__label">Start and End Date</legend>
+          <legend className="slds-form-element__label">
+            Start and End Date
+          </legend>
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
@@ -260,9 +345,15 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={<DatePicker dateSelected="single" dateRange="week-5" />}
+                dropdown={
+                  <DatePicker dateSelected="single" dateRange="week-5" />
+                }
               >
-                <Input id={dateRangeInputId01} placeholder=" " defaultValue="06/24/2014" />
+                <Input
+                  id={dateRangeInputId01}
+                  placeholder=" "
+                  defaultValue="06/24/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -277,7 +368,11 @@ export let states = [
                 inputIcon="right"
                 dropdown={<DatePicker dateSelected dateRange="week-5" />}
               >
-                <Input id={dateRangeInputId02} placeholder=" " defaultValue="06/30/2014" />
+                <Input
+                  id={dateRangeInputId02}
+                  placeholder=" "
+                  defaultValue="06/30/2014"
+                />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon--right"
                   symbol="event"
@@ -289,5 +384,6 @@ export let states = [
           </div>
         </fieldset>
       </div>
+    )
   }
 ];

@@ -17,7 +17,10 @@ const renderMessage = result =>
   `${result.selector} not applied to ${result.restrict}`;
 
 const shortReport = errors =>
-  _(errors).groupBy(x => x).mapValues(v => v.length).value();
+  _(errors)
+    .groupBy(x => x)
+    .mapValues(v => v.length)
+    .value();
 
 const renderReport = (fullReport, fileCount) => ({
   uniqueErrors: Object.keys(fullReport).length,
@@ -67,7 +70,10 @@ const report = validate => {
 };
 
 const runValidations = validate =>
-  gulp.src([".html/*"]).pipe(report(validate)).pipe(gulp.dest(".reports/"));
+  gulp
+    .src([".html/*"])
+    .pipe(report(validate))
+    .pipe(gulp.dest(".reports/"));
 
 const validate = () =>
   getComments()

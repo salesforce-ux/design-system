@@ -1,20 +1,23 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import { Avatar } from '../../avatar/base/example';
-import { StandardIcon } from '../../icons/standard/example';
-import { ComboboxContainer, Listbox, ListboxItem, EntityOption }
-  from '../base/example';
-import { ListboxPill }
-  from '../../pills/listbox-of-pill-options/example';
-import SvgIcon from '../../../shared/svg-icon';
+import React from "react";
+import { Avatar } from "../../avatar/base/example";
+import { StandardIcon } from "../../icons/standard/example";
+import {
+  ComboboxContainer,
+  Listbox,
+  ListboxItem,
+  EntityOption
+} from "../base/example";
+import { ListboxPill } from "../../pills/listbox-of-pill-options/example";
+import SvgIcon from "../../../shared/svg-icon";
 
-const listboxSelectionsId = 'listbox-selections-unique-id';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxSelectionsId = "listbox-selections-unique-id";
+const listboxOptionId01 = "listbox-option-unique-id-01";
+const listboxOptionId02 = "listbox-option-unique-id-02";
 
-const ListboxDropdown = props =>
+const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
@@ -31,10 +34,11 @@ const ListboxDropdown = props =>
         entityMeta
       />
     </ListboxItem>
-  </Listbox>;
+  </Listbox>
+);
 
 export default (
-  <div className="demo-only" style={{ height: '10rem' }}>
+  <div className="demo-only" style={{ height: "10rem" }}>
     <ComboboxContainer
       inputIcon="right"
       inputIconRightSymbol="search"
@@ -48,10 +52,10 @@ export default (
 
 export let states = [
   {
-    id: 'focused',
-    label: 'Focused',
-    element:
-      <div className="demo-only" style={{ height: '10rem' }}>
+    id: "focused",
+    label: "Focused",
+    element: (
+      <div className="demo-only" style={{ height: "10rem" }}>
         <ComboboxContainer
           containerClassName="slds-has-input-focus"
           inputIcon="right"
@@ -62,16 +66,17 @@ export let states = [
           listbox={<ListboxDropdown />}
           objectSwitcher
         />
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `
   },
   {
-    id: 'open-item-focused',
-    label: 'Open - Item Focused',
-    element:
-      <div className="demo-only" style={{ height: '10rem' }}>
+    id: "open-item-focused",
+    label: "Open - Item Focused",
+    element: (
+      <div className="demo-only" style={{ height: "10rem" }}>
         <ComboboxContainer
           inputIcon="right"
           inputIconRightSymbol="search"
@@ -83,11 +88,12 @@ export let states = [
           aria-activedescendant={listboxOptionId01}
         />
       </div>
+    )
   },
   {
-    id: 'options-selected',
-    label: 'Option(s) Selected',
-    element:
+    id: "options-selected",
+    label: "Option(s) Selected",
+    element: (
       <ComboboxContainer
         inputIcon="right"
         inputIconRightSymbol="search"
@@ -117,12 +123,13 @@ export let states = [
           </ListboxItem>
         </Listbox>
       </ComboboxContainer>
+    )
   },
   {
-    id: 'focused-options-selected',
-    label: 'Focused - Option(s) Selected',
-    element:
-      <div className="demo-only" style={{ height: '10rem' }}>
+    id: "focused-options-selected",
+    label: "Focused - Option(s) Selected",
+    element: (
+      <div className="demo-only" style={{ height: "10rem" }}>
         <ComboboxContainer
           isOpen
           containerClassName="slds-has-input-focus"
@@ -155,7 +162,8 @@ export let states = [
             </ListboxItem>
           </Listbox>
         </ComboboxContainer>
-      </div>,
+      </div>
+    ),
     script: `
       document.getElementById('combobox-unique-id').focus()
     `

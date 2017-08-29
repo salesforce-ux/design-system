@@ -9,9 +9,10 @@ const Task = require("data.task");
 const I = require("immutable");
 const { writeToDist } = require("./ui");
 
-const createPreviewer = process.env.SLDS_PREVIEWER === "development"
-  ? require("../../design-system-previewer")
-  : require("@salesforce-ux/design-system-previewer");
+const createPreviewer =
+  process.env.SLDS_PREVIEWER === "development"
+    ? require("../../design-system-previewer")
+    : require("@salesforce-ux/design-system-previewer");
 
 const { watchPaths } = require("./watch");
 

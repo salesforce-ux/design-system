@@ -9,7 +9,7 @@ const { ui, variants } = require("../ui");
 const FOLDERNAME = "__internal";
 
 const webpackPath = prefix => filepath =>
-  path.join(prefix, filepath.replace(/^\.\//, "").concat('.js'));
+  path.join(prefix, filepath.replace(/^\.\//, "").concat(".js"));
 
 const setKeyIfExists = (keypath, fixFilePath) => (entry, item) =>
   Either.fromNullable(item.get(keypath)).fold(
@@ -48,19 +48,18 @@ const entry = ui().map(ui =>
 );
 
 const manifest = entry.map(entryMap =>
-  entryMap
-    .reduce(
-      (manifest, entries, prefix) =>
-        manifest
-          .merge(entries.flip())
-          // Need to add a common "entry" with a name that can be referenced
-          // in design-system-site
-          .set(
-            `${I.List(prefix.split("/")).last()}/common`,
-            `${prefix}/common.js`
-          ),
-      I.Map({})
-    )
+  entryMap.reduce(
+    (manifest, entries, prefix) =>
+      manifest
+        .merge(entries.flip())
+        // Need to add a common "entry" with a name that can be referenced
+        // in design-system-site
+        .set(
+          `${I.List(prefix.split("/")).last()}/common`,
+          `${prefix}/common.js`
+        ),
+    I.Map({})
+  )
 );
 
 module.exports = { FOLDERNAME, entry, manifest };

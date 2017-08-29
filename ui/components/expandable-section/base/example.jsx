@@ -1,42 +1,45 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
+import React from "react";
+import SvgIcon from "../../../shared/svg-icon";
+import classNames from "classnames";
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const referenceId = 'expando-unique-id';
+const referenceId = "expando-unique-id";
 
 /* -----------------------------------------------------------------------------
     Public
 ----------------------------------------------------------------------------- */
-export let Section = props =>
-  <div className={classNames('slds-section', props.className)}>
+export let Section = props => (
+  <div className={classNames("slds-section", props.className)}>
     {props.children}
-  </div>;
+  </div>
+);
 
-export let SectionContent = props =>
+export let SectionContent = props => (
   <div
-    aria-hidden={props.isOpen ? 'false' : 'true'}
-    className={classNames('slds-section__content', props.className)}
+    aria-hidden={props.isOpen ? "false" : "true"}
+    className={classNames("slds-section__content", props.className)}
     id={props.referenceId}
   >
     {props.children}
-  </div>;
+  </div>
+);
 
-export let SectionTitle = props =>
-  <h3 className={classNames('slds-section__title', props.className)}>
+export let SectionTitle = props => (
+  <h3 className={classNames("slds-section__title", props.className)}>
     {props.children}
-  </h3>;
+  </h3>
+);
 
-export let SectionTitleAction = props =>
+export let SectionTitleAction = props => (
   <button
     aria-controls={props.referenceId}
-    aria-expanded={props.isOpen ? 'true' : 'false'}
+    aria-expanded={props.isOpen ? "true" : "false"}
     className="slds-button slds-section__title-action"
   >
     <SvgIcon
@@ -44,8 +47,11 @@ export let SectionTitleAction = props =>
       sprite="utility"
       symbol="switch"
     />
-    <span className="slds-truncate" title={props.children}>{props.children}</span>
-  </button>;
+    <span className="slds-truncate" title={props.children}>
+      {props.children}
+    </span>
+  </button>
+);
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -59,32 +65,51 @@ export default (
       </SectionTitleAction>
     </SectionTitle>
     <SectionContent referenceId={referenceId} isOpen>
-      <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+      <p>
+        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+        vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+        condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna
+        mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.
+      </p>
     </SectionContent>
   </Section>
 );
 
 export let examples = [
   {
-    id: 'non-collapsable',
-    label: 'Non-collapsable',
-    element:
+    id: "non-collapsable",
+    label: "Non-collapsable",
+    element: (
       <Section className="slds-is-open">
         <SectionTitle className="slds-theme_shade">
-          <span className="slds-truncate slds-p-horizontal_small" title="Section Title">Section Title</span>
+          <span
+            className="slds-truncate slds-p-horizontal_small"
+            title="Section Title"
+          >
+            Section Title
+          </span>
         </SectionTitle>
         <SectionContent isOpen>
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+          <p>
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+            vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus
+            eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a
+            pharetra augue.
+          </p>
         </SectionContent>
       </Section>
+    )
   }
 ];
 
 export let states = [
   {
-    id: 'closed',
-    label: 'Closed',
-    element:
+    id: "closed",
+    label: "Closed",
+    element: (
       <Section>
         <SectionTitle>
           <SectionTitleAction referenceId={referenceId}>
@@ -92,8 +117,16 @@ export let states = [
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent referenceId={referenceId}>
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+          <p>
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+            vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus
+            eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a
+            pharetra augue.
+          </p>
         </SectionContent>
       </Section>
+    )
   }
 ];

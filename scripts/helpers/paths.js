@@ -5,9 +5,10 @@
 
 const path = require("path");
 
-const root = process.env.NODE_ENV === "test"
-  ? path.resolve(__dirname, "../../", "__fixtures__")
-  : path.resolve(__dirname, "../../");
+const root =
+  process.env.NODE_ENV === "test"
+    ? path.resolve(__dirname, "../../", "__fixtures__")
+    : path.resolve(__dirname, "../../");
 const app_modules = path.resolve(root, "app_modules");
 const node_modules = path.resolve(root, "node_modules");
 

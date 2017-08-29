@@ -1,21 +1,24 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
-import { NavVertical, NavVerticalItem, NavVerticalSection }
-  from '../base/example';
-import classNames from 'classnames';
+import React from "react";
+import {
+  NavVertical,
+  NavVerticalItem,
+  NavVerticalSection
+} from "../base/example";
+import classNames from "classnames";
 
-const sectionId01 = 'entity-header';
-const sectionId02 = 'folder-header';
-const sectionId03 = 'all-results';
+const sectionId01 = "entity-header";
+const sectionId02 = "folder-header";
+const sectionId03 = "all-results";
 
 export let states = [
   {
-    id: 'collapsed',
-    label: 'Collapsed',
-    element:
-      <div className="demo-only" style={{ width: '320px' }}>
+    id: "collapsed",
+    label: "Collapsed",
+    element: (
+      <div className="demo-only" style={{ width: "320px" }}>
         <NavVertical>
           <NavVerticalSection id={sectionId01} title="Reports">
             <NavVerticalItem aria-describedby={sectionId01} active>
@@ -42,11 +45,7 @@ export let states = [
               Shared with Me
             </NavVerticalItem>
           </NavVerticalSection>
-          <NavVerticalSection
-            title="Folders"
-            collapsed
-            listId={sectionId03}
-          >
+          <NavVerticalSection title="Folders" collapsed listId={sectionId03}>
             <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item One
             </NavVerticalItem>
@@ -59,12 +58,13 @@ export let states = [
           </NavVerticalSection>
         </NavVertical>
       </div>
+    )
   },
   {
-    id: 'expanded',
-    label: 'Expanded',
-    element:
-      <div className="demo-only" style={{ width: '320px' }}>
+    id: "expanded",
+    label: "Expanded",
+    element: (
+      <div className="demo-only" style={{ width: "320px" }}>
         <NavVertical>
           <NavVerticalSection id={sectionId01} title="Reports">
             <NavVerticalItem aria-describedby={sectionId01} active>
@@ -91,11 +91,7 @@ export let states = [
               Shared with Me
             </NavVerticalItem>
           </NavVerticalSection>
-          <NavVerticalSection
-            title="Folders"
-            expanded
-            listId={sectionId03}
-          >
+          <NavVerticalSection title="Folders" expanded listId={sectionId03}>
             <NavVerticalItem aria-describedby={sectionId02}>
               Overflow Item One
             </NavVerticalItem>
@@ -108,5 +104,6 @@ export let states = [
           </NavVerticalSection>
         </NavVertical>
       </div>
+    )
   }
 ];

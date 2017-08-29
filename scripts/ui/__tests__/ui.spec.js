@@ -3,13 +3,13 @@
 
 /* eslint-env jest */
 
-const {ui}= require("../");
+const { ui } = require("../");
 
 describe("scripts/ui.js", () => {
   describe("ui", () => {
     let result;
 
-    beforeAll((done) => {
+    beforeAll(done => {
       ui().fork(
         e => {
           throw e;
@@ -36,7 +36,13 @@ describe("scripts/ui.js", () => {
     });
 
     it("includes the examples skeleton for components", () => {
-      const showcase = result.getIn(["components", "buttons", "restrictees", 0, "showcase"]);
+      const showcase = result.getIn([
+        "components",
+        "buttons",
+        "restrictees",
+        0,
+        "showcase"
+      ]);
       expect(showcase.toJS()).toMatchSnapshot();
     });
 

@@ -136,7 +136,6 @@
   *
   * @selector .slds-is-incomplete
   * @restrict .slds-path__item
-  * @modifier
   */
   .slds-is-incomplete {
     background-color: $color-background-path-incomplete;
@@ -156,7 +155,6 @@
   * @selector .slds-is-active
   * @restrict .slds-path__item
   * @notes This class must be placed on the item programatically when the guidance section is activated
-  * @modifier
   */
   .slds-is-active {
     background-color: $color-background-inverse;
@@ -183,7 +181,6 @@
    *
    * @selector .slds-is-won
    * @restrict .slds-path__item
-   * @modifier
    */
   .slds-is-active,
   .slds-is-active.slds-is-won {
@@ -203,7 +200,6 @@
    *
    * @selector .slds-is-complete
    * @restrict .slds-path__item
-   * @modifier
    */
   .slds-is-complete {
     background-color: $color-background-path-complete;
@@ -242,7 +238,6 @@
    *
    * @selector .slds-is-current
    * @restrict .slds-path__item
-   * @modifier
    */
   .slds-is-current {
     background-color: $color-background-path-current;
@@ -265,8 +260,7 @@
   *
   * @selector .slds-is-lost
   * @restrict .slds-path__item
-  * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and  the opportunity is lost
-  * @modifier
+  * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and the opportunity is lost
   */
   .slds-is-lost,
   .slds-is-lost:hover {

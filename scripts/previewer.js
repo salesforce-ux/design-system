@@ -5,6 +5,7 @@ const _ = require('lodash');
 const paths = require('./helpers/paths');
 const path = require('path');
 const gulp = require('gulp');
+const exec = require('child_process').exec;
 const Task = require('data.task');
 const I = require('immutable');
 const { writeToDist } = require('./ui');
@@ -43,10 +44,14 @@ const listen = () =>
 
     gulp.watch(watchPaths.tokens, ['styles:framework']);
 
+    // Annotations
+    sassWatcher.on('change', event => {
+      exec('npm run writeUI', () => emit('bundle'));
+    });
+
     // CSS
     gulp.watch(watchPaths.css, event => {
       emit('styles');
-      setTimeout(() => writeToDist().fork(console.error, console.log), 200);
     });
 
     gulp.start('styles:framework');

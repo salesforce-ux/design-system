@@ -180,7 +180,8 @@
     "test-mocha": "NODE_ENV=test; mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
     "test-jest": "NODE_ENV=test; jest",
     "travis": "node scripts/npm/build-travis.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "writeUI": "babel-node scripts/npm/write-ui.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [

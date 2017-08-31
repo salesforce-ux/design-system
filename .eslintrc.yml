@@ -2,6 +2,8 @@ parser: 'babel-eslint'
 extends:
   - standard
   - standard-jsx
+  - prettier
+  - prettier/react
 rules:
   semi: [2, 'always']
   jsx-quotes: ['error', 'prefer-double']

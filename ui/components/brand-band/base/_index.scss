@@ -161,8 +161,8 @@
 
 // This template is used on the oneAloha wrapper surrounding an iframed page and has now been extended so that it effectively neutralizes the space created by brand band
 .slds-template_iframe {
-  width: (100% + ($template-gutters * 2));
-  height: (100% + ($template-gutters * 2));
+  width: calc(100% + ($template-gutters * 2));
+  height: calc(100% + ($template-gutters * 2));
   margin: ($template-gutters * -1);
   background-color: $card-color-background;
 }

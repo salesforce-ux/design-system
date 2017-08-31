@@ -29,10 +29,7 @@ Array [
           "test": /\\\\\\.scss\\$/,
           "use": Array [
             Object {
-              "loader": "style-loader/useable",
-              "options": Object {
-                "insertInto": "iframe[data-slds-doc]",
-              },
+              "loader": "style-loader",
             },
             Object {
               "loader": "raw-loader",
@@ -120,10 +117,7 @@ Array [
           "test": /\\\\\\.scss\\$/,
           "use": Array [
             Object {
-              "loader": "style-loader/useable",
-              "options": Object {
-                "insertInto": "iframe[data-slds-doc]",
-              },
+              "loader": "style-loader",
             },
             Object {
               "loader": "raw-loader",
@@ -207,10 +201,7 @@ Array [
           "test": /\\\\\\.scss\\$/,
           "use": Array [
             Object {
-              "loader": "style-loader/useable",
-              "options": Object {
-                "insertInto": "iframe[data-slds-doc]",
-              },
+              "loader": "style-loader",
             },
             Object {
               "loader": "raw-loader",

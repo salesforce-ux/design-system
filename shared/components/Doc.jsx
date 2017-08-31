@@ -6,12 +6,12 @@ import React from 'react';
 import styles from '../styles/doc.scss';
 
 export default class extends React.Component {
-  componentDidMount() {
-    styles.use();
-  }
-  componentWillUnmount() {
-    styles.unuse();
-  }
+  //componentDidMount() {
+  //styles.use();
+  //}
+  //componentWillUnmount() {
+  //styles.unuse();
+  //}
   render() {
     return <div {...this.props} className="🎉" />;
   }

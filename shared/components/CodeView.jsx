@@ -14,14 +14,14 @@ const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
 
 class CodeBlock extends React.Component {
-  componentDidMount() {
-    prism.use();
-    prismO.use();
-  }
-  componentWillUnmount() {
-    prism.unuse();
-    prismO.unuse();
-  }
+  //componentDidMount() {
+  //prism.use();
+  //prismO.use();
+  //}
+  //componentWillUnmount() {
+  //prism.unuse();
+  //prismO.unuse();
+  //}
   getCode() {
     const { language, children } = this.props;
     const code = children ? children.toString() : '';
@@ -69,7 +69,7 @@ class CodeView extends React.Component {
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.kids() : null}
-        <div>
+        <div className="slds-m-top_large">
           <CodeBlock language="html">{this.state.code}</CodeBlock>
         </div>
         {position === 'top' ? this.kids() : null}

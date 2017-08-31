@@ -18,24 +18,23 @@ require('./scripts/gulp/styles');
 
 // NOTE: Don't remove reports on purpose.
 // This exception is already fixed on the remove-website branch.
-gulp.task('clean', () => del.sync([
-  paths.generated,
-  paths.tmp,
-  paths.dist,
-  paths.logs,
-  paths.build,
-  // paths.reports, OMITTED FOR NOW
-  paths.html,
-  path.join(paths.designTokens, 'dist')
-]));
+gulp.task('clean', () =>
+  del.sync([
+    paths.generated,
+    paths.tmp,
+    paths.logs,
+    paths.build,
+    // paths.reports, OMITTED FOR NOW
+    paths.html,
+    path.join(paths.designTokens, 'dist')
+  ])
+);
 
 gulp.task('build', callback => {
   runSequence(
     'clean',
-    [
-      'generate:tokens:all',
-      'generate:examples'
-    ],
+    ['generate:tokens:all', 'generate:examples'],
     'styles',
-  callback);
+    callback
+  );
 });

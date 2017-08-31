@@ -30,8 +30,7 @@ module.exports = I.fromJS({
         test: /\.scss$/,
         use: [
           {
-            loader: 'style-loader/useable',
-            options: { insertInto: 'iframe[data-slds-doc]' }
+            loader: 'style-loader'
           },
           { loader: 'raw-loader' },
           { loader: 'sass-loader' }

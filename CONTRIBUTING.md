@@ -101,7 +101,7 @@ Having trouble getting these steps to work on your machine? Follow the [troubles
 
 ## Using the Previewer
 
-<img src="docs/previewer.v1.png" alt="previewer component/variant/modifier selection" />
+<img src="docs/previewer.v1.jpg" alt="previewer component/variant/modifier selection" />
 
 The previewer is an interactive tool for creating components.
 

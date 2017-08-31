@@ -17,26 +17,40 @@ const snapUrl = branch =>
 const download = (url, dest) =>
   new Task((rej, res) =>
     request(url)
-    .pipe(fs.createWriteStream(dest))
-    .on('error', rej)
-    .on('finish', () => res(dest))
+      .pipe(fs.createWriteStream(dest))
+      .on('error', rej)
+      .on('finish', () => res(dest))
   );
 
 const stat = filepath =>
   new Task((rej, res) =>
-  fs.stat(filepath, (err, r) =>
-    err ? rej(err) : res(r))
+    fs.stat(filepath, (err, r) => (err ? rej(err) : res(r)))
   );
 
 const statOrDownload = (url, filepath) =>
   stat(filepath)
-  .fold(e => download(url, filepath),
-        x => Task.of(filepath))
-  .chain(x => x);
+    .fold(e => download(url, filepath), x => Task.of(filepath))
+    .chain(x => x);
 
-Task.of(path.resolve(__dirname, 'snap.json'))
-  .chain(filepath => statOrDownload(snapUrl(branch), filepath))
-  .chain(refPath => compare(refPath, snapPath))
+const readFile = filepath =>
+  new Task((rej, res) =>
+    fs.readFile(
+      filepath,
+      'utf-8',
+      (err, contents) => (err ? rej(err) : res(contents))
+    )
+  );
+
+const getSnap = () => readFile(snapPath);
+
+const getRef = () =>
+  Task.of(path.resolve(__dirname, 'snap.json'))
+    .chain(filepath => statOrDownload(snapUrl(branch), filepath))
+    .chain(readFile);
+
+Task.of(refContents => snapContents => compare(refContents, snapContents))
+  .ap(getSnap())
+  .ap(getRef())
   .map(report =>
     report
       .filter(x => !x.passed)

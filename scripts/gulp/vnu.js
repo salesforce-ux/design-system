@@ -1,6 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+const fs = require('fs');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const minimist = require('minimist');
@@ -13,13 +14,19 @@ const jar = require('vnu-jar/vnu-jar');
 // the pattern for all other gulp scripts
 const FILEPATH = '.reports/';
 const FILENAME = 'vnu_report.json';
+const IGNORE = [
+  /(.*)role=gridcell(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
+  /(.*)listbox(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
+  /trees_grid(.*)tr(.*)missing one or more/ // "Element “tr“ is missing one or more of the following attributes"
+];
 
 const lint = function(dir, opt, cb) {
+  let output;
   let vnu = 'java -jar ' + jar;
 
   const options = _.assign(
     {
-      'errors-only': false,
+      'errors-only': true,
       format: 'gnu',
       html: false,
       'no-stream': false,
@@ -32,10 +39,16 @@ const lint = function(dir, opt, cb) {
   Object.keys(options).forEach(key => {
     let val = options[key];
     if (key === 'format' && val !== 'gnu') vnu += '--format ' + val + ' ';
-    if (val === true) vnu += '--' + key + ' ';
+    if (val === true) vnu += ' --' + key + ' ';
   });
   console.log(vnu, dir);
-  exec(`${vnu} ${dir}`, { maxBuffer: Infinity }, cb);
+  const child = exec(`${vnu} ${dir}`, { maxBuffer: Infinity }, e =>
+    cb(e, output)
+  );
+
+  child.stderr.on('data', function(data) {
+    output += data;
+  });
 };
 
 const parseLine = file => {
@@ -65,11 +78,17 @@ const getComponentsToTest = argv =>
     .map(x => `.html/${x}*.html`)
     .join(' ');
 
+const printToTerminalForCI = console.log;
+
 const createVnuReport = (stream, argv) => {
   // eslint-disable-next-line handle-callback-err
-  lint(getComponentsToTest(argv), {}, (err, stdout, stderr) => {
-    console.log(stderr);
-    const contents = JSON.stringify(report(stderr), null, 2);
+  lint(getComponentsToTest(argv), {}, (err, output) => {
+    const filtered = String(output)
+      .split('\n')
+      .filter(line => !IGNORE.some(ignore => line.match(ignore)))
+      .join('\n');
+    printToTerminalForCI(filtered);
+    const contents = JSON.stringify(report(filtered), null, 2);
     stream.write(
       new gutil.File({
         path: FILENAME,

@@ -20,6 +20,8 @@ pre[class*="language-"] {
   box-shadow: none;
   text-shadow: none;
   tab-size: 2;
+  height: auto;
+  font-size: 0.875rem;
 
   // Remove extra shadows
   &:before,

@@ -276,9 +276,13 @@ export let examples = [
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
         <FormElementControl className="slds-input-has-fixed-addon">
-          <span className="slds-form-element__addon">$</span>
-          <Input />
-          <span className="slds-form-element__addon">euro</span>
+          <span className="slds-form-element__addon" id="fixed-text-addon-pre">
+            $
+          </span>
+          <Input aria-describedby="fixed-text-addon-pre fixed-text-addon-post" />
+          <span className="slds-form-element__addon" id="fixed-text-addon-post">
+            euro
+          </span>
         </FormElementControl>
       </FormElement>
     )

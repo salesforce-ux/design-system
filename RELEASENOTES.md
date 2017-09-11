@@ -5,7 +5,7 @@
 <!-- ## [Unreleased] -->
 ## **Release [2.4.0] - September 12, 2017**
 
-Please checkout our [FAQ](/faq/) regarding the Winter '18 release and the customer impact of our theming initiative.
+Please checkout our [FAQ](/faq/) to find out more of what changed in our Winter '18 release.
 
 ## Features
 

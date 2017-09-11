@@ -1,64 +1,73 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const paths = require('./helpers/paths');
-const path = require('path');
-const gulp = require('gulp');
-const createPreviewer = require('@salesforce-ux/design-system-previewer');
+const _ = require("lodash");
+const paths = require("./helpers/paths");
+const path = require("path");
+const gulp = require("gulp");
+const bundlePath = path.resolve(__dirname, "../assets/scripts");
+const { writeToDist } = require("./ui");
 
-const { getComments, getMarkup } = require('./markup-style');
-const { watchPaths, removeFromCache } = require('./watch');
+const createPreviewer = process.env.SLDS_PREVIEWER === "development"
+  ? require("../../design-system-previewer")
+  : require("@salesforce-ux/design-system-previewer");
 
-require('./gulp/styles');
+const { watchPaths } = require("./watch");
 
-const getComments_ = done =>
-  getComments().fork(done, x => done(null, x));
+const Bundle = require("./compile/bundle");
+const bundleConfig = Bundle.configs.umd.setIn(["output", "path"], bundlePath);
 
-const getMarkup_ = (component, variant, done) =>
-  getMarkup(component, variant).fold(done, markup => done(null, markup));
+require("./gulp/styles");
 
 const previewer = createPreviewer({
   // where are your static assets
   publicPath: {
-    '/assets': [ path.resolve(__dirname, '../assets') ],
-    '/assets/icons': [ paths.icons ]
+    "/assets": [path.resolve(__dirname, "../assets")],
+    "/assets/icons": [paths.icons]
   },
   // where is your css?
-  cssUrl: '/assets/styles/index.css',
-  // get me some comments as a string
-  getComments: getComments_,
-  // get me some markup for a component/variant
-  getMarkup: getMarkup_
+  cssUrl: "/assets/styles/index.css", // ignored by git
+  // get me the js bundle
+  scriptUrl: `/assets/scripts/${bundleConfig.getIn(["output", "filename"])}`
 });
 
-previewer.listen(3003, ({ server, emit }) => {
-  // Sass
-  const sassWatcher = gulp.watch(
-    watchPaths.sass,
-    ['styles:sass'] // This will trigger watchPaths.css
-  );
+const listen = () =>
+  previewer.listen(3003, ({ server, emit }) => {
+    // Sass
+    const sassWatcher = gulp.watch(
+      watchPaths.sass,
+      ["styles:sass"] // This will trigger watchPaths.css
+    );
 
-  const tokenWatcher = gulp.watch(
-    watchPaths.tokens,
-    ['styles:framework']
-  );
+    gulp.watch(watchPaths.tokens, ["styles:framework"]);
 
-  sassWatcher.on('change', () => {
-    emit('comments');
+    // CSS
+    gulp.watch(watchPaths.css, event => {
+      emit("styles");
+      setTimeout(() => writeToDist().fork(console.error, console.log), 200);
+    });
+
+    gulp.start("styles:framework");
+
+    const emitReady = _.once(() => {
+      emit("ready");
+    });
+
+    // JS
+    Bundle.watch(bundleConfig).fork(
+      e => {
+        throw e;
+      },
+      stats => {
+        emit("bundle");
+        emitReady();
+      }
+    );
+
   });
 
-  gulp.start('styles:framework');
+console.log("Start compiling JS library for Previewer...");
 
-  // JS
-  gulp.watch(watchPaths.js, event => {
-    removeFromCache(require.resolve(event.path));
-    emit('markup');
-  });
-
-  // CSS
-  gulp.watch(watchPaths.css, event => {
-    emit('styles');
-  });
-
-  console.log(`Previewer available at: http://localhost:${server.address().port}/preview`);
+writeToDist().fork(console.error, () => {
+  listen();
 });

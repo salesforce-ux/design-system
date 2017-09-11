@@ -9,11 +9,11 @@
  *
  * The active tab has two markup requirements:
  *
- * - The `.slds-active` class should be placed on the `li` with `.slds-tabs--{variant}__item`.
- * - The corresponding `.slds-tabs--{variant}__content` container receives `.slds-show`.
+ * - The `.slds-active` class should be placed on the `li` with `.slds-tabs_{variant}__item`.
+ * - The corresponding `.slds-tabs_{variant}__content` container receives `.slds-show`.
  * - In order to achieve the focus state styling, apply `.slds-has-focus` to the parent `li`.
  *
- * Inactive `.slds-tabs--{variant}__content` containers receive `.slds-hide`.
+ * Inactive `.slds-tabs_{variant}__content` containers receive `.slds-hide`.
  * When the user clicks a different tab, move the `.slds-active` class and
  * toggle the `.slds-hide`/`.slds-show` classes.
  *

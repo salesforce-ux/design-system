@@ -2,13 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Our sizing class names are set up in a human-readable format, e.g. `.slds-size--1-of-2`. This equates to a width of 50%.
+ * Our sizing class names are set up in a human-readable format, e.g. `.slds-size_1-of-2`. This equates to a width of 50%.
  *
- * By default, a group of sizing helpers are created based on standard grid column spans of &ndash; 2, 3, 4, 5, 6, 7, 8 and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class `.slds-size--1-of-3` on each element. This will make each card take up 33.333% of containing section.
+ * By default, a group of sizing helpers are created based on standard grid column spans of &ndash; 2, 3, 4, 5, 6, 7, 8 and 12. For example, if you need 3 cards to horizontally align along the same x-axis, you would use the class `.slds-size_1-of-3` on each element. This will make each card take up 33.333% of containing section.
  *
- * Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. `.slds-medium-size--1-of-3` you will output a width at the specified breakpoint name.
+ * Our sizing helpers have the option to be responsive. By pre-pending a breakpoint name to a sizing helper, e.g. `.slds-medium-size_1-of-3` you will output a width at the specified breakpoint name.
  *
- * Absolute sizing helpers are also available (where widths are declared in `rem` units): `xx-small`, `x-small`, `medium`, `large`, `x-large` and `xx-large` as defined in the <a href="/design-tokens/#category-sizing">sizing category of the Design Tokens</a>. e.g. `.slds-size--large`.
+ * Absolute sizing helpers are also available (where widths are declared in `rem` units): `xx-small`, `x-small`, `medium`, `large`, `x-large` and `xx-large` as defined in the <a href="/design-tokens/#category-sizing">sizing category of the Design Tokens</a>. e.g. `.slds-size_large`.
  *
  * In some uncommon cases, you may need a sizing helper that is up to a certain breakpoint. For these, use the classes prefixed with `max-` to achieve this result.
  *
@@ -29,7 +29,7 @@
  *
  * A real world example would look like this:
  *
- * `&lt;div class="slds-size--1-of-2 slds-small-size--1-of-3 slds-medium-size--1-of-4 slds-large-size--1-of-3"&gt;`
+ * `&lt;div class="slds-size_1-of-2 slds-small-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_1-of-3"&gt;`
  *
  * This will equate to the following width output for your element:
  *

@@ -5,7 +5,7 @@ import React from 'react';
 
 let SizePreviewExample = props =>
   <div className={`slds-size_${props.size}`}>
-    <div className="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">.slds-size_{props.size}</div>
+    <div className="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">.slds-size_{props.size}</div>
   </div>;
 
 export let examples = [

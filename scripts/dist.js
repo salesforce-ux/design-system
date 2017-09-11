@@ -6,15 +6,15 @@ const path = require('path');
 const async = require('async');
 const autoprefixer = require('autoprefixer');
 const gulp = require('gulp');
-const gulpfile = require('gulp-file');
 const gulpinsert = require('gulp-insert');
 const gulprename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const rimraf = require('rimraf');
 const sass = require('gulp-sass');
 const minifycss = require('gulp-minify-css');
-const Task = require('data.task');
-const { ui, examples } = require('./ui');
+const ui = require('./ui');
+const webpack = require('webpack');
+const {createLibrary} = require('./compile/bundle');
 
 const packageJSON = require('../package.json');
 const paths = require('./helpers/paths');
@@ -28,17 +28,6 @@ const MODULE_NAME = 'salesforce-lightning-design-system';
 // /////////////////////////////////////////////////////////////
 
 const distPath = path.resolve.bind(path, paths.dist);
-
-const writeFile = (name, getContents, done) =>
-  getContents()
-  .map(x => JSON.stringify(x, null, 2))
-  .chain(json =>
-    new Task((rej, res) =>
-      gulpfile(name, json, { src: true })
-      .pipe(gulp.dest(distPath()))
-      .on('finish', res)
-      .on('error', rej)))
-  .fork(done, () => done(null, null));
 
 // /////////////////////////////////////////////////////////////
 // Tasks
@@ -347,11 +336,18 @@ async.series([
   },
 
   /**
-   * Add ui.json and ui.examples.json
+   * Add ui.json
    */
-  (done) => writeFile('ui.json', ui, done),
+  (done) =>
+    ui
+    .writeToDist()
+    .fork(done, () => done(null, null)),
 
-  (done) => writeFile('ui.examples.json', examples, done)
+  (done) =>
+    createLibrary(distPath())
+    .fork(e => done(e),
+          x => done(null, x)
+    )
 
 ], err => {
   if (err) throw err;

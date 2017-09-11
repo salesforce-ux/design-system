@@ -6,7 +6,7 @@
  *
  * Depending on your context, you will either need a linked pill or a pill option inside of a listbox.
  *
- * For linked pills, a modifier class of `slds-pill--link` needs to be added to the existing `<span>` with the classname of `slds-pill`. You need an `<a>` inside of the span with the `slds-pill--link` class. The `<a>` will get the classname of `slds-pill__action`. This will treat the interactions differently from an unlinked pill option inside of a listbox.
+ * For linked pills, a modifier class of `slds-pill_link` needs to be added to the existing `<span>` with the classname of `slds-pill`. You need an `<a>` inside of the span with the `slds-pill_link` class. The `<a>` will get the classname of `slds-pill__action`. This will treat the interactions differently from an unlinked pill option inside of a listbox.
  *
  * For both linked pills and unlinked pill options, a `<span>` with the classname of `slds-pill__label` should contain the string of text describing the pill object.
  *

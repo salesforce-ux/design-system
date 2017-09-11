@@ -315,3 +315,29 @@ props:
     value: '#56AAD0'
   MACROS:
     value: '#47CFD2'
+  SERVICE_CREW_MEMBER:
+    value: '#7E8BE4'
+  SERVICE_CREW:
+    value: '#FA975C'
+  CONTRACT_LINE_ITEM:
+    value: '#6EC06E'
+  QUIP_SHEET:
+    value: '#30C85A'
+  OMNI_SUPERVISOR:
+    value: '#8A76F0'
+  QUICK_TEXT:
+    value: '#62B7E5'
+  TEMPLATE:
+    value: '#3C97DD'
+  LEAD_LIST:
+    value: '#F88962'
+  CONTACT_LIST:
+    value: '#A094ED'
+  LIST_EMAIL:
+    value: '#8BAEB5'
+  OPPORTUNITY_SPLITS:
+    value: '#FCB95B'
+  ENTITY:
+    value: '#F88962'
+  BOT:
+    value: '#54698F'

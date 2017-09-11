@@ -6,7 +6,7 @@ import { Listbox, ListboxList, ListboxItem, PickList } from '../../picklist/base
 import { Popover } from '../../popovers/base/example';
 import { FormElement } from '../../form-element/base/example';
 import SvgIcon from '../../../shared/svg-icon';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)

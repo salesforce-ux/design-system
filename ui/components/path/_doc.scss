@@ -22,7 +22,7 @@
  *     <tbody>
  *       <tr>
  *         <th class="slds-align-top" scope="row">
- *           <code>.slds-tabs--path__nav</code>
+ *           <code>.slds-tabs_path__nav</code>
  *         </th>
  *         <td class="slds-cell-wrap slds-align-top">
  *           <code>role="listbox"</code>
@@ -33,7 +33,7 @@
  *       </tr>
  *       <tr>
  *         <th class="slds-align-top" scope="row">
- *           <code>.slds-tabs--path__link</code>
+ *           <code>.slds-tabs_path__link</code>
  *         </th>
  *         <td class="slds-cell-wrap slds-align-top">
  *           <code>role="option"</code>
@@ -47,13 +47,13 @@
  * </div>
  *
  * **Notable Attributes - Without Coaching**
- * - `aria-orientation="horizontal"` should be applied to the `slds-tabs--path__nav` element to indicate to the user to use horizontal navigation
+ * - `aria-orientation="horizontal"` should be applied to the `slds-tabs_path__nav` element to indicate to the user to use horizontal navigation
  * - `aria-selected="true"` should be applied to the selected Sales Stage as you navigate through the Stages
  *
  * **Notable Attributes - With Coaching**
- * - When the Stage Coaching is not visible, `aria-expanded="false"` should be set on each `slds-tabs--path__link` Tab
+ * - When the Stage Coaching is not visible, `aria-expanded="false"` should be set on each `slds-tabs_path__link` Tab
  * - When the Stage Coaching is visible, `aria-expanded` should be set to `true`
- * - `aria-selected="true"` is used to describe the currently active `slds-tabs--path__link` Tab, not the Stage the Sale is currently set to
+ * - `aria-selected="true"` is used to describe the currently active `slds-tabs_path__link` Tab, not the Stage the Sale is currently set to
  *
  * **Keyboard navigation**
  * - For both with and without Stage Coaching variants, the following keyboard navigation applies

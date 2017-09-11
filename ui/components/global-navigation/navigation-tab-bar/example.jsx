@@ -7,7 +7,7 @@ import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import classNames from 'classnames';
-import _ from 'lodash';
+import _ from '../../../shared/helpers';
 
 const tabPanelId01 = 'context-tab-panel-1';
 const tabPanelId02 = 'context-tab-panel-2';

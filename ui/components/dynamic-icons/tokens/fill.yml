@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: fill
+  type: color
+  cssProperties:
+  - 'background'
+  - 'color'
+  - 'fill'
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  GLOBAL_ACTION_FILL_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Brand fill color'

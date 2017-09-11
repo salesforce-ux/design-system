@@ -1,0 +1,79 @@
+
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Hover and click animations for help icon
+ *
+ * @variant
+ * @name global-action-help
+ * @selector .slds-icon-help
+ * @restrict button, a
+ */
+.slds-icon-help {
+  width: $global-action-icon-size;
+  height: $global-action-icon-size;
+	fill: $fill-header-button;
+
+	&:hover .slds-icon-help_hover {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	&:focus {
+		animation: slds-click-global-action 80ms cubic-bezier(1,1.9,.94,.98);
+
+		.slds-icon-help_focus {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	mask {
+	  mask-type: alpha;
+	}
+}
+
+/**
+ * @summary Modifies hover effect of global help icon
+ * @selector .slds-icon-help_hover
+ * @restrict .slds-icon-help circle
+ */
+.slds-icon-help_hover {
+  opacity: 0;
+  transform: scale(0.1, 0.1);
+  transform-origin: 45px 47px;
+  transition: all 200ms ease-out;
+  fill: $fill-header-button-hover;
+}
+
+/**
+ * @summary Modifies focus effect of global help icon
+ * @selector .slds-icon-help_focus
+ * @restrict .slds-icon-help circle
+ */
+.slds-icon-help_focus {
+  opacity: 0;
+  transform: scale(0.1, 0.1);
+  transform-origin: 45px 47px;
+  transition: all 200ms ease-out;
+  fill: $fill-header-button-focus;
+}
+
+.slds-icon-help svg {
+	width: $global-action-icon-size;
+	height: $global-action-icon-size;
+}
+
+.slds-icon-help g {
+ 	mask: url(#questionMark);
+}
+
+@keyframes slds-click-global-action {
+  25% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    transform: scale(0.98, 0.98);
+  }
+}

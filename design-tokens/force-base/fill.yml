@@ -27,3 +27,6 @@ props:
   FILL_HEADER_BUTTON_HOVER:
     value: '{!ENDEAVOUR}'
     comment: 'Hovered header button icon color'
+  FILL_HEADER_BUTTON_FOCUS:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Focused header button icon color'

@@ -5,6 +5,8 @@
 <!-- ## [Unreleased] -->
 ## **Release [2.4.0] - September 12, 2017**
 
+Please checkout our [FAQ](/faq/) regarding the Winter '18 release and the customer impact of our theming initiative.
+
 ## Features
 
 The following are now available:
@@ -34,7 +36,7 @@ The following are now available:
 The following issues have now been resolved:
 
 **Alerts**
-- Fixes grammatical errors in alerts documentation ([aa8099a](https://github.com/salesforce-ux/design-system-internal/commit/aa8099a))
+- Fixed grammatical errors in alerts documentation ([aa8099a](https://github.com/salesforce-ux/design-system-internal/commit/aa8099a))
 
 **Button Group**
 - Button menu uses filled button icon modifier by default ([f9c2168](https://github.com/salesforce-ux/design-system-internal/commit/f9c2168))
@@ -43,15 +45,16 @@ The following issues have now been resolved:
 - Added `pointer-events:none` to svg in button
 
 **Cards**
-- Remove border when inside of a modal ([f58c355](https://github.com/salesforce-ux/design-system-internal/commit/f58c355))
+- Removed card look when inside of a modal ([f58c355](https://github.com/salesforce-ux/design-system-internal/commit/f58c355))
+- Removed card look when inside of a tabset
 
 **Color Picker**
-- Added more descriptive assistive text and fixed tabindex on swatches ([fc989c1](https://github.com/salesforce-ux/design-system-internal/commit/fc989c1))
-- Added input error state ui and examples ([b982bf7](https://github.com/salesforce-ux/design-system-internal/commit/b982bf7))
+- Added more descriptive assistive text and fixed `tabindex` on swatches ([fc989c1](https://github.com/salesforce-ux/design-system-internal/commit/fc989c1))
+- Added `input` error state ui and examples ([b982bf7](https://github.com/salesforce-ux/design-system-internal/commit/b982bf7))
 - Added focus state to color picker slider thumb ([c29d368](https://github.com/salesforce-ux/design-system-internal/commit/c29d368))
 
 **Combobox**
-- Add role=none to div that wraps input ([e695ae7](https://github.com/salesforce-ux/design-system-internal/commit/e695ae7))
+- Added `role=none` to `div` that wraps `input` ([e695ae7](https://github.com/salesforce-ux/design-system-internal/commit/e695ae7))
 - Removed title and assistive text from search icon
 
 **Date Picker**
@@ -63,11 +66,11 @@ The following issues have now been resolved:
 - Removed double focus on ul
 
 **File-selectors**
-- Fix file selector input labelling
+- Fixed file selector input labelling
 
 **Global Navigation**
 - Added animation and made UI changes
-- Updated restriction rules in sass docs to make .slds-is-pinned work
+- Updated restriction rules in sass docs to make `.slds-is-pinned` work
 
 **Grids**
 - Fix IE sizing issue by adding max-width ([00a0e35](https://github.com/salesforce-ux/design-system-internal/commit/00a0e35))
@@ -76,23 +79,23 @@ The following issues have now been resolved:
 - Removed extra `.slds-modal__header` class from headless modal example
 
 **Normalize**
-- Remove `[hidden] { display: none; }` to fix Visual Force charts disappearance when SLDS is added
+- Removed `[hidden] { display: none; }` to fix Visual Force charts disappearance when SLDS is added
 
 **Notifications**
 - Updated assistive text for dismiss notification button and added event type to header and live region ([d96535d](https://github.com/salesforce-ux/design-system-internal/commit/d96535d))
 - Updated styling to add bordercolor and darker drop shadow ([f977ee6](https://github.com/salesforce-ux/design-system-internal/commit/f977ee6))
 
 **Path**
-- Simplify and fix active tab focus styling across all stage states ([3f9fbd4](https://github.com/salesforce-ux/design-system-internal/commit/3f9fbd4))
+- Simplified and fix active tab focus styling across all stage states ([3f9fbd4](https://github.com/salesforce-ux/design-system-internal/commit/3f9fbd4))
 
 **Responsive Tables**
 - Added back example ([d427148](https://github.com/salesforce-ux/design-system-internal/commit/d427148))
 
 **Split View**
-- Change color of background ([08cee01](https://github.com/salesforce-ux/design-system-internal/commit/08cee01))
+- Changed color of background ([08cee01](https://github.com/salesforce-ux/design-system-internal/commit/08cee01))
 
 **Static/Read Only Inputs**
-- Update font size, weight, and color ([ce7b275](https://github.com/salesforce-ux/design-system-internal/commit/ce7b275))
+- Updated font size, weight, and color ([ce7b275](https://github.com/salesforce-ux/design-system-internal/commit/ce7b275))
 
 ## Tokens
 

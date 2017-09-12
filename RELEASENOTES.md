@@ -25,8 +25,7 @@ The following are now available:
 - Added new Progress Ring component
 
 **Scoped Notification**
-- Added scoped inline notifications
-- Added 2 themes
+- Added scoped inline notifications component
 
 **Slider**
 - Added two `spans` inside `label` to give the ability to visually hide one or both
@@ -36,44 +35,43 @@ The following are now available:
 The following issues have now been resolved:
 
 **Alerts**
-- Fixed grammatical errors in alerts documentation ([aa8099a](https://github.com/salesforce-ux/design-system-internal/commit/aa8099a))
+- Fixed grammatical errors in alerts documentation ([aa8099a](https://github.com/salesforce-ux/design-system/commit/aa8099a))
 
 **Button Group**
-- Button menu uses filled button icon modifier by default ([f9c2168](https://github.com/salesforce-ux/design-system-internal/commit/f9c2168))
+- Button menu uses filled button icon modifier by default ([f9c2168](https://github.com/salesforce-ux/design-system/commit/f9c2168))
 
 **Buttons**
-- Added `pointer-events:none` to svg in button
+- Added `pointer-events:none` to svg in button ([cc9cd5f](https://github.com/salesforce-ux/design-system/commit/cc9cd5f))
 
 **Cards**
-- Removed card look when inside of a modal ([f58c355](https://github.com/salesforce-ux/design-system-internal/commit/f58c355))
+- Removed card look when inside of a modal ([f58c355](https://github.com/salesforce-ux/design-system/commit/f58c355))
 - Removed card look when inside of a tabset
 
 **Color Picker**
-- Added more descriptive assistive text and fixed `tabindex` on swatches ([fc989c1](https://github.com/salesforce-ux/design-system-internal/commit/fc989c1))
-- Added `input` error state ui and examples ([b982bf7](https://github.com/salesforce-ux/design-system-internal/commit/b982bf7))
-- Added focus state to color picker slider thumb ([c29d368](https://github.com/salesforce-ux/design-system-internal/commit/c29d368))
+- Added more descriptive assistive text and fixed `tabindex` on swatches ([fc989c1](https://github.com/salesforce-ux/design-system/commit/fc989c1))
+- Added `input` error state ui and examples ([b982bf7](https://github.com/salesforce-ux/design-system/commit/b982bf7))
+- Added focus state to color picker slider thumb ([c29d368](https://github.com/salesforce-ux/design-system/commit/c29d368))
 
 **Combobox**
-- Added `role=none` to `div` that wraps `input` ([e695ae7](https://github.com/salesforce-ux/design-system-internal/commit/e695ae7))
+- Added `role=none` to `div` that wraps `input` ([e695ae7](https://github.com/salesforce-ux/design-system/commit/e695ae7))
 - Removed title and assistive text from search icon
 
 **Date Picker**
-- Added styles when adjacent month is selected within a week range ([bab8e26](https://github.com/salesforce-ux/design-system-internal/commit/bab8e26))
+- Added styles when adjacent month is selected within a week range ([bab8e26](https://github.com/salesforce-ux/design-system/commit/bab8e26))
 
 **Dueling Picklist**
 - Added documentation on focus management
 - Fixed syntax and grammatical errors in dueling picklist accessibility docs
-- Removed double focus on ul
+- Removed double focus on ul ([c231132](https://github.com/salesforce-ux/design-system/commit/c231132))
 
 **File-selectors**
 - Fixed file selector input labelling
 
 **Global Navigation**
-- Added animation and made UI changes
-- Updated restriction rules in sass docs to make `.slds-is-pinned` work
+- Added animation on active and when hovering on a global navigation list item ([074771a](https://github.com/salesforce-ux/design-system/commit/074771a))
 
 **Grids**
-- Fix IE sizing issue by adding max-width ([00a0e35](https://github.com/salesforce-ux/design-system-internal/commit/00a0e35))
+- Fix IE sizing issue by adding max-width ([00a0e35](https://github.com/salesforce-ux/design-system/commit/00a0e35))
 
 **Modals**
 - Removed extra `.slds-modal__header` class from headless modal example
@@ -82,25 +80,38 @@ The following issues have now been resolved:
 - Removed `[hidden] { display: none; }` to fix Visual Force charts disappearance when SLDS is added
 
 **Notifications**
-- Updated assistive text for dismiss notification button and added event type to header and live region ([d96535d](https://github.com/salesforce-ux/design-system-internal/commit/d96535d))
-- Updated styling to add bordercolor and darker drop shadow ([f977ee6](https://github.com/salesforce-ux/design-system-internal/commit/f977ee6))
+- Updated assistive text for dismiss notification button and added event type to header and live region ([d96535d](https://github.com/salesforce-ux/design-system/commit/d96535d))
+- Updated styling to add bordercolor and darker drop shadow ([f977ee6](https://github.com/salesforce-ux/design-system/commit/f977ee6))
 
 **Path**
-- Simplified and fix active tab focus styling across all stage states ([3f9fbd4](https://github.com/salesforce-ux/design-system-internal/commit/3f9fbd4))
+- Simplified and fix active tab focus styling across all stage states ([3f9fbd4](https://github.com/salesforce-ux/design-system/commit/3f9fbd4))
 
 **Responsive Tables**
-- Added back example ([d427148](https://github.com/salesforce-ux/design-system-internal/commit/d427148))
-
-**Split View**
-- Changed color of background ([08cee01](https://github.com/salesforce-ux/design-system-internal/commit/08cee01))
-
-**Static/Read Only Inputs**
-- Updated font size, weight, and color ([ce7b275](https://github.com/salesforce-ux/design-system-internal/commit/ce7b275))
+- Examples for using responsive tables can now be found on the site again ([d427148](https://github.com/salesforce-ux/design-system/commit/d427148))
 
 ## Tokens
 
 **Colors**
-- Reduced and updated gray palettes to 12 total ([ff582b0](https://github.com/salesforce-ux/design-system-internal/commit/ff582b0))
+- Reduced and updated gray palettes to 12 total ([ff582b0](https://github.com/salesforce-ux/design-system/commit/ff582b0))
+
+## Design Changes
+
+**Cards**
+- Background color changed to white
+- Added drop shadow for improved depth and heirarchy
+- Cards found inside of a tabset have their drop shadow removed
+
+**Data Tables**
+- Decreased row height for improved content density
+
+**Split View**
+- Changed color of background
+
+**Static/Read Only Inputs**
+- Updated font size, weight, and color ([ce7b275](https://github.com/salesforce-ux/design-system/commit/ce7b275))
+
+**Default Tabs**
+- Tabs take on the look and feel of a card
 
 ## **Release [2.3.1] - May 25, 2017**
 

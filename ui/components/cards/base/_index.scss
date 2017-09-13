@@ -17,9 +17,6 @@
 */
 .slds-card {
   padding: 0;
-  background: $card-color-background;
-  border: $border-width-thin solid $color-border;
-  border-radius: $border-radius-medium;
   background-clip: padding-box;
 
   // Adds spacing between cards
@@ -49,7 +46,7 @@
   &__header {
     padding-top: $spacing-small;
     padding-bottom: $spacing-small; // Picsa: Added
-    // margin-bottom: $spacing-small; // Picsa: Illogical use of margin removed
+    // margin-bottom: $spacing-small; // Picsa: removed
   }
 
   &__header-link {
@@ -78,7 +75,7 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    margin-top: $spacing-small;
+    padding-top: $spacing-small;
     padding-bottom: $spacing-small;
     text-align: right;
   }
@@ -99,6 +96,7 @@
     }
 
     .slds-card__footer {
+      padding-top: $spacing-small;
       padding-bottom: $spacing-small;
 
       @include mq-large-min {

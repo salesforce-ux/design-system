@@ -2,14 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 
-// These classes all give us the ability to add a class that doesn't exist in Communities and add the card look in different circumstances
-.slds-card-wrapper {
-  border: $border-width-thin solid $card-color-border;
-}
-
+// These .slds-card-wrapper classes all give us the ability to add a class that doesn't exist in Communities to add a card look in different circumstances
 .slds-card-wrapper {
   padding: $card-wrapper-spacing;
   background: $card-color-background;
+  border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
   box-shadow: $card-shadow;
@@ -21,7 +18,11 @@
 
 .slds-card,
 .slds-card-wrapper,
-.slds-modal {
+.slds-modal,
+.slds-tabs_default,
+.slds-tabs--default,
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card {
 
   // Make cards inside cards or card wrappers invisible.
   .slds-card,
@@ -32,3 +33,61 @@
     box-shadow: none;
   }
 }
+
+.slds-card,
+.slds-card-wrapper,
+.slds-modal,
+.slds-tabs_default,
+.slds-tabs--default {
+
+  .slds-card_boundary {
+    border: $border-width-thin solid $card-color-border;
+  }
+}
+
+// Removed the taxonomy comments below due to the Platform classes included
+/**
+ * Needed when tabs need to look like they're in a card
+ *
+ * .slds-tabs_card
+ * .slds-tabs_default
+ */
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card {
+  padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
+  box-shadow: $card-shadow;
+  border: $border-width-thin solid $card-color-border;
+  border-radius: $border-radius-medium;
+
+  // This makes cards look plain when inside a tabset
+  .slds-card,
+  .slds-card-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Pull cards to edge of already padding tab content area
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .slds-card_boundary {
+    border: $border-width-thin solid $card-color-border;
+
+    .slds-card__header {
+      padding-left: $card-header-padding;
+      padding-right: $card-header-padding;
+    }
+
+    .slds-card__footer {
+      padding-left: $card-footer-padding;
+      padding-right: $card-footer-padding;
+    }
+  }
+}
+

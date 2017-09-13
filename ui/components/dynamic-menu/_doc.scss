@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The Dynamic Menu is a modified concept of the [Menu component](/components/menu/), used when the number of actions available to the user is dynamic or variable. It can also be useful when
+ * The Dynamic Menu is a modified concept of the [Menu component](/components/menus/), used when the number of actions available to the user is dynamic or variable. It can also be useful when
  * the number of actions in the menu is large enough that a search functionality would be required.
  *
  * The component is composed of a [Popover](/components/popovers), coupled with either a `listbox` of options or an always expanded [Autocomplete Combobox](/components/combobox) and a list of additional actions pinned to the bottom of the dialog. The Popover and pinned actions are constant through the 3 different states the Dynamic Menu can take.

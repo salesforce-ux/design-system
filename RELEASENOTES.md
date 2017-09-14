@@ -3,7 +3,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
-## **Release [2.4.0] - September 12, 2017**
+## **Release [2.4.1] - September 14, 2017**
 
 ## Big Impact
 
@@ -23,6 +23,19 @@ We've made several enhancements in the Winter ’18 release which might affect y
 - On some pages, you’ll notice the header is attached to a list view. If you have a custom page where you’d like to attach the header to a component below, add the `.slds-has-bottom-magnet` class to the `slds-page-header`. Then add `.slds-has-top-magnet` to the component below. This will visually attach the components to each other.
 - If you have been using SLDS in Visualforce via the `<apex:slds />` tag, your Visualforce pages will also inherit the new styling in Winter ’18
 - For more detailed information, please visit this developer blog post: [Get your Lightning components ready for Winter ’18](https://developer.salesforce.com/blogs/developer-relations/2017/08/winter-coming-lightning.html)
+
+## Fixes
+
+**Buttons**
+- Removed dark border on focus, fixing bug when buttons are found inside of a button group
+
+**Cards**
+- Added `slds-card_boundary` class to provide card-like look when component is inside a tabset
+
+**Magnet**
+- Force magnet layout by making their properties immutable when using `slds-has-top-magnet` and `slds-has-bottom-magnet`
+
+## **Release [2.4.0] - September 12, 2017**
 
 ## Features
 

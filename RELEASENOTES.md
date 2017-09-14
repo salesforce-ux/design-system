@@ -5,7 +5,24 @@
 <!-- ## [Unreleased] -->
 ## **Release [2.4.0] - September 12, 2017**
 
-Please checkout our [FAQ](/faq/) to find out more of what changed in our Winter '18 release.
+## Big Impact
+
+We've made several enhancements in the Winter ’18 release which might affect your components and pages.
+
+**As a designer what do I need to know about the design changes in the Winter ‘18 release?**
+- We’ve enhanced font hierarchy to draw attention to what's most important in the moment and improve legibility.
+- We’ve condensed the spacing of content (from 16px to 12px) to allow more information on the page. You’ll especially notice this in the tightening of data tables.
+- We've added layering and a colorful graphics to the layout to create contrast between foreground and background cards. The cards have white backgrounds and drop shadows, while the page background introduces color.
+- The components we’ve updated are cards, avatar, data tables, and page headers.
+- For more detailed information, please visit this Salesforce UX blog post: [Evolving the Lightning User Experience](https://medium.com/salesforce-ux/evolving-the-lightning-user-experience-5f1de21f7af)
+
+**As a developer what do I need to know about the design changes in the Winter ‘18 release?**
+- With the changes to the page background color, you may notice some of your custom components are transparent, rendering the text on the dark background. You can fix that easily by adding the class `.slds-card` to the outer wrapper of your component.
+- If you need default tabs to appear to be in a card, you can place the `.slds-tabs_card` class on the `.slds-tabs_default` DOM node. This will give the tabset padding and drop-shadows like a card.
+- When the `.slds-card` class is used inside `.slds-tabs_default`, `.slds-modal`, or another `.slds-card`, they no longer have the drop-shadow card look. Instead they are simply white. In some situations, you may need to differentiate your card from content around it. You can add the `.slds-card_boundary` class to the `.slds-card` for a rounded border.
+- On some pages, you’ll notice the header is attached to a list view. If you have a custom page where you’d like to attach the header to a component below, add the `.slds-has-bottom-magnet` class to the `slds-page-header`. Then add `.slds-has-top-magnet` to the component below. This will visually attach the components to each other.
+- If you have been using SLDS in Visualforce via the `<apex:slds />` tag, your Visualforce pages will also inherit the new styling in Winter ’18
+- For more detailed information, please visit this developer blog post: [Get your Lightning components ready for Winter ’18](https://developer.salesforce.com/blogs/developer-relations/2017/08/winter-coming-lightning.html)
 
 ## Features
 

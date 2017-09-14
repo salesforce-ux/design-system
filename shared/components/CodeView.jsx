@@ -56,6 +56,7 @@ class CodeView extends React.Component {
   kids() {
     return (
       <div
+        className="docs-codeblock__example"
         ref={div => {
           this.div = div;
         }}
@@ -69,7 +70,7 @@ class CodeView extends React.Component {
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.kids() : null}
-        <div>
+        <div className="docs-codeblock__source">
           <CodeBlock language="html">{this.state.code}</CodeBlock>
         </div>
         {position === 'top' ? this.kids() : null}

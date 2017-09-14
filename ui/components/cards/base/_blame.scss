@@ -14,8 +14,11 @@
   background-clip: padding-box;
   box-shadow: $card-shadow;
 
-  .slds-card__header {
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -87,6 +90,11 @@
     .slds-card__header {
       padding-left: $card-header-padding;
       padding-right: $card-header-padding;
+    }
+
+    .slds-card__body_inner,
+    .slds-card__body--inner {
+      padding: $card-body-padding;
     }
 
     .slds-card__footer {

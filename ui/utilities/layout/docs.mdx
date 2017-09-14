@@ -4,49 +4,41 @@ import CodeView from '../../../shared/components/CodeView';
   Layout utility classes will help you to achieve layouts found within the Salesforce Platform.
 </div>
 
-## Magnet class utilities
+## Magnets
 
-The magnet utilities are used to vertically attach adjacent card like components.
+The magnet utilities are used to vertically attach adjacent card-like components.
 
-The components/utilities that provide a card like look are the following:
+The components/utilities that provide a card-like look are the following:
 
 * [Cards](/components/cards/)
 * [Page Headers](/components/page-headers)
 * [Box](/utilities/box)
 
-**Bottom Magnet**
+If you need a card-like component to appear flush to the card-like component below, you can add the classes  `slds-has-bottom-magnet` and `slds-has-top-magnet`.
 
-If you need a card like component to appear flush to the card like component below, you the class  `slds-has-bottom-magnet`.
-
-<CodeView>
-  <div className="slds-box slds-has-bottom-magnet">
-    My Component
+<div className="slds-grid slds-grid_pull-padded">
+  <div className="slds-col slds-p-horizontal_medium">
+    <strong>Before</strong>
+    <CodeView>
+      <div className="slds-card">
+        <div className="slds-p-around_medium">My First Component</div>
+      </div>
+      <div className="slds-card">
+        <div className="slds-p-around_medium">My Second Component</div>
+      </div>
+    </CodeView>
   </div>
-</CodeView>
-
-You'll notice the component's bottom side is flattened out.
-
-**Top Magnet**
-
-If you need a card like component to appear flush to the card like component above, you the class  `slds-has-top-magnet`.
-
-<CodeView>
-  <div className="slds-box slds-has-top-magnet">
-    My Component
+  <div className="slds-col slds-p-horizontal_medium">
+    <strong>After</strong>
+    <CodeView>
+      <div className="slds-card slds-has-bottom-magnet">
+        <div className="slds-p-around_medium">My First Component</div>
+      </div>
+      <div className="slds-card slds-has-top-magnet">
+        <div className="slds-p-around_medium">My Second Component</div>
+      </div>
+    </CodeView>
   </div>
-</CodeView>
+</div>
 
-You'll notice the component's top side is flattened out.
-
-**Adjacently Attached**
-
-Here is a simple example connecting two adjacent components.
-
-<CodeView>
-  <div className="slds-card slds-has-bottom-magnet">
-    <div className="slds-p-around_medium">My First Component</div>
-  </div>
-  <div className="slds-card slds-has-top-magnet">
-    <div className="slds-p-around_medium">My Second Component</div>
-  </div>
-</CodeView>
+In the after example, you'll notice the component's top and bottom side are flattened out and appear connected.

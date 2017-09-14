@@ -145,5 +145,16 @@
       color: $color-text-button-default-disabled;
       cursor: default;
     }
+
+    &[disabled]:checked +.slds-checkbox_faux,
+    &[disabled]:checked +.slds-checkbox--faux,
+    &[disabled]:checked ~ .slds-checkbox_faux,
+    &[disabled]:checked ~ .slds-checkbox--faux,
+    &[disabled]:checked + .slds-checkbox_button__label,
+    &[disabled]:checked + .slds-checkbox--button__label {
+      background-color: $color-background-button-default-disabled;
+      color: $color-text-button-default-disabled;
+      cursor: default;
+    }
   }
 }

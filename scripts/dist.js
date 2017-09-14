@@ -48,7 +48,7 @@ async.series(
    */
     done => {
       gulp
-        .src(['./package.json', './README-dist.md'], {
+        .src(['./package.json', './README-dist.md', './RELEASENOTES*'], {
           base: paths.root
         })
         .pipe(gulp.dest(distPath()))
@@ -59,10 +59,10 @@ async.series(
     /**
    * Make release notes
    */
-    done =>
-      releaseNotes({ isInternal: packageJSON.config.slds.internal })
-        .pipe(fs.createWriteStream(distPath('RELEASENOTES.md')))
-        .on('finish', () => done()),
+    // done =>
+    //   releaseNotes({ isInternal: packageJSON.config.slds.internal })
+    //     .pipe(fs.createWriteStream(distPath("RELEASENOTES.md")))
+    //     .on("finish", () => done()),
 
     /**
    * Cleanup the package.json

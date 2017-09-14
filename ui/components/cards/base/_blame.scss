@@ -2,28 +2,35 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 
-// These classes all give us the ability to add a class that doesn't exist in Communities and add the card look in different circumstances
-.slds-card-wrapper {
-  border: $border-width-thin solid $card-color-border;
-}
-
+// These .slds-card-wrapper classes all give us the ability to add a class
+// that doesn't exist in Communities to add a card look in different
+// circumstances. It can also be used to combine several cards into a one
+// card look. This class does not react to the .slds-card_boundary.
 .slds-card-wrapper {
   padding: $card-wrapper-spacing;
   background: $card-color-background;
+  border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
   box-shadow: $card-shadow;
 
-  .slds-card__header {
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .slds-card,
 .slds-card-wrapper,
-.slds-modal {
+.slds-modal,
+.slds-tabs_default,
+.slds-tabs--default,
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card {
 
-  // Make cards inside cards or card wrappers invisible.
+  // Make cards inside these elements render invisibly.
   .slds-card,
   .slds-card-wrapper {
     background: $card-color-background;
@@ -32,3 +39,68 @@
     box-shadow: none;
   }
 }
+
+// Bring cards back from the dead and give them a border when needed
+.slds-card,
+.slds-modal,
+.slds-tabs_default,
+.slds-tabs--default {
+
+  .slds-card_boundary {
+    border: $border-width-thin solid $card-color-border;
+    border-radius: $border-radius-medium;
+  }
+}
+
+/**
+ * This class allows default tabs to appear to be in a card
+ *
+ * .slds-tabs_card
+ * .slds-tabs_default
+ */
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card {
+  padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
+  box-shadow: $card-shadow;
+  border: $border-width-thin solid $card-color-border;
+  border-radius: $border-radius-medium;
+
+  // This removes the padding for the plain cards when inside a padded tabset
+  .slds-card,
+  .slds-card-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Pull cards to edge of already padded tab content area
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Restore cards inside .slds-tabs_card when needed
+  .slds-card_boundary {
+    border: $border-width-thin solid $card-color-border;
+    border-radius: $border-radius-medium;
+
+    .slds-card__header {
+      padding-left: $card-header-padding;
+      padding-right: $card-header-padding;
+    }
+
+    .slds-card__body_inner,
+    .slds-card__body--inner {
+      padding: $card-body-padding;
+    }
+
+    .slds-card__footer {
+      padding-left: $card-footer-padding;
+      padding-right: $card-footer-padding;
+    }
+  }
+}
+

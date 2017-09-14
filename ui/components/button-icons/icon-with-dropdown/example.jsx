@@ -11,7 +11,7 @@ import { ButtonIcon } from '../base/example';
 export default (
   <ButtonIcon
     hasDropdown
-    className="slds-button_icon slds-button_icon-more"
+    className="slds-button_icon-more"
     assistiveText="More options"
     title="More Options"
   />
@@ -24,7 +24,7 @@ export let states = [
     element: (
       <ButtonIcon
         hasDropdown
-        className="slds-button_icon slds-button_icon-container-more"
+        className="slds-button_icon-container-more"
         assistiveText="More options"
         title="More Options"
       />

@@ -7,21 +7,13 @@ import stripIndent from 'strip-indent';
 import { html as beautify } from 'js-beautify';
 
 import Prism from '../vendor/prism';
-import prism from '../vendor/prism/_prism.scss';
-import prismO from '../vendor/prism/_prism-overrides.scss';
+import '../vendor/prism/_prism.scss';
+import '../vendor/prism/_prism-overrides.scss';
 
 const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
 
 class CodeBlock extends React.Component {
-  //componentDidMount() {
-  //prism.use();
-  //prismO.use();
-  //}
-  //componentWillUnmount() {
-  //prism.unuse();
-  //prismO.unuse();
-  //}
   getCode() {
     const { language, children } = this.props;
     const code = children ? children.toString() : '';
@@ -41,7 +33,6 @@ class CodeBlock extends React.Component {
     );
   }
 }
-
 class CodeView extends React.Component {
   constructor() {
     super();
@@ -56,6 +47,7 @@ class CodeView extends React.Component {
   kids() {
     return (
       <div
+        className="docs-codeblock__example"
         ref={div => {
           this.div = div;
         }}
@@ -69,7 +61,7 @@ class CodeView extends React.Component {
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.kids() : null}
-        <div className="slds-m-top_large">
+        <div className="docs-codeblock__source">
           <CodeBlock language="html">{this.state.code}</CodeBlock>
         </div>
         {position === 'top' ? this.kids() : null}

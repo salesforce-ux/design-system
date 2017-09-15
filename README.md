@@ -7,18 +7,17 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 
 ## Quick start
 
-```bash
-npm install
-npm start
-# visit http://localhost:3003/local/preview
-```
+1. Clone the project with `git clone https://github.com/salesforce-ux/design-system.git`
+2. Run `npm install` in the root design-system folder.
+3. Run `npm start` to launch the Previewer.
+4. Visit http://localhost:3003/local/preview
 
 Having trouble getting these steps to work on your machine? Follow the [troubleshooting](#troubleshooting) guide below.
 
 
 ## Previewer
 
-<img src="docs/previewer.png" alt="previewer component/variant/modifier selection" width="600px"/>
+<img src="docs/previewer.v1.jpg" alt="previewer component/variant/modifier selection" width="600px"/>
 
 The previewer is an interactive tool for creating components.
 
@@ -63,11 +62,9 @@ For a more complex example, see: https://github.com/salesforce-ux/design-system-
 
 While there is a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
 
-`@base`: creates a new component
-
-`@variant`: a component implementation with corresponding markup
-
-`@modifier`: a class that alters appearance when applied to existing markup
+* `@base`: creates a new component
+* `@variant`: a component implementation with corresponding markup
+* `@modifier`: a class that alters appearance when applied to existing markup
 
 
 The markup for a `@variant` will be required from the `/ui/:component/:variant/example.jsx`.
@@ -84,8 +81,19 @@ For example:
 
 ```
 
-<img src="docs/variant.png" alt="folder structure for variant markup" width="200px"/>
+**Folder Structure:**
 
+```
+ui/
+└── components/
+    └── data-tables/
+        ├── _doc.scss
+        ├── _doc.mdx
+        └── advanced/
+            └── example.jsx
+            └── _index.scss
+
+```
 
 All other selectors which are not `@base/@variant/@modifier` are considered child elements of a component.
 

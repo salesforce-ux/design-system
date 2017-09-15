@@ -94,15 +94,6 @@
   .slds-tabs__item--overflow {
     overflow: visible;
   }
-
-  // This should move to cards css
-  // This makes cards look plain when inside a tabset
-  .slds-card {
-    background: $card-color-background;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
 }
 
 /**
@@ -235,5 +226,3 @@
 .slds-tabs--default__content {
   @include tabs-content;
 }
-
-@import 'blame';

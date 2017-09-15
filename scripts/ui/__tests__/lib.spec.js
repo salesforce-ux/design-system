@@ -63,6 +63,6 @@ describe('scripts/lib.js', () => {
         )
       )
     );
-    expect(allMarkup).toMatchSnapshot();
+    expect(allMarkup.toJS()).toMatchSnapshot();
   });
 });

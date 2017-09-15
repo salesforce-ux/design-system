@@ -27,14 +27,15 @@
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
-    "@salesforce-ux/design-system-previewer": "2.1.2",
+    "@salesforce-ux/design-system-previewer": "2.1.4",
     "@salesforce-ux/icons": "7.31.0",
-    "@salesforce-ux/instant-vrt": "0.0.2",
+    "@salesforce-ux/instant-vrt": "1.1.2",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",
     "babel-core": "6.24.0",
     "babel-eslint": "7.2.1",
+    "babel-jest": "20.0.3",
     "babel-loader": "6.2.8",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
@@ -58,6 +59,7 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-react": "6.10.3",
     "eslint-plugin-standard": "3.0.1",
+    "express": "4.15.4",
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
     "glob": "7.1.1",
@@ -91,7 +93,7 @@
     "husky": "0.14.3",
     "immutable": "3.8.1",
     "invariant": "2.2.2",
-    "jest": "19.0.2",
+    "jest": "20.0.4",
     "js-beautify": "1.6.12",
     "js-yaml": "3.8.3",
     "lint-staged": "4.0.4",
@@ -114,10 +116,12 @@
     "moment": "2.18.1",
     "no-case": "2.3.1",
     "node-sass": "4.5.2",
+    "openport": "0.0.4",
     "postcss": "5.2.16",
     "prettier": "1.6.0",
     "pretty-time": "0.2.0",
     "prop-types": "15.5.10",
+    "puppeteer": "0.10.1",
     "raw-loader": "0.5.1",
     "react": "15.4.2",
     "react-addons-test-utils": "15.5.0",
@@ -138,6 +142,7 @@
     "theo": "6.0.0-beta.2",
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
+    "touch": "3.1.0",
     "uglify-es": "3.0.15",
     "uuid": "3.0.1",
     "vnu-jar": "17.9.0",
@@ -150,7 +155,7 @@
     "fsevents": "*"
   },
   "engines": {
-    "node": ">=6.5.0 <7.0.0",
+    "node": ">=8.0.0",
     "npm": ">=3.10.6"
   },
   "license": "SEE LICENSE IN README.md",
@@ -179,6 +184,7 @@
     "test": "NODE_ENV=test; babel-node scripts/npm/test.js",
     "test-mocha": "NODE_ENV=test; mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
     "test-jest": "NODE_ENV=test; jest",
+    "test-vrt": "NODE_ENV=test node jest.vrt.watcher.js --watch",
     "travis": "node scripts/npm/build-travis.js",
     "precommit": "lint-staged",
     "writeUI": "babel-node scripts/npm/write-ui.js"
@@ -190,6 +196,7 @@
     ]
   },
   "jest": {
-    "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$"
+    "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",
+    "setupTestFrameworkScriptFile": "./jest.setup.js"
   }
 }

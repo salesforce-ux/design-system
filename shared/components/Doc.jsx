@@ -3,15 +3,11 @@
 
 import React from 'react';
 
-import styles from '../styles/doc.scss';
+import '../styles/doc.scss';
 
+// This is a stub. We felt it was important to have a common parent around the magic mdx component.
+// it also brings in doc style...
 export default class extends React.Component {
-  componentDidMount() {
-    styles.use();
-  }
-  componentWillUnmount() {
-    styles.unuse();
-  }
   render() {
     return <div {...this.props} className="🎉" />;
   }

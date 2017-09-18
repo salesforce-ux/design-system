@@ -205,7 +205,7 @@
     background-color: $color-background-path-complete;
 
     .slds-path__stage {
-      transform: translateY(-50%) rotateX(0deg);
+      transform: rotateX(0deg);
     }
 
     .slds-path__title {
@@ -220,7 +220,7 @@
       background-color: $color-background-path-complete-hover;
 
       .slds-path__stage {
-        transform: translateY(-50%) rotateX(-180deg);
+        transform: rotateX(-180deg);
       }
 
       .slds-path__title {
@@ -368,7 +368,8 @@
   top: 50%;
   left: ($square-icon-medium-content / 2);
   width: 100%;
-  transform: translateY(-50%) rotateX(-180deg);
+  margin-top: (($square-icon-medium-content - $spacing-xx-small) * -1);
+  transform: rotateX(-180deg);
 }
 
 

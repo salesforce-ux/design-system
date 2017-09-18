@@ -31,6 +31,10 @@
     background-color: $color-background-button-default-hover;
   }
 
+  &:focus {
+    border-color: $color-border-brand-primary;
+  }
+
   &:active {
     background-color: $color-background-button-default-active;
   }

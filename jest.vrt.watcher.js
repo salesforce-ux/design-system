@@ -4,14 +4,10 @@
 const { spawn, fork } = require('child_process');
 const path = require('path');
 
-const jest = spawn(
-  './node_modules/.bin/jest',
-  process.argv.slice(2).filter(a => a !== '-u'),
-  {
-    cwd: path.resolve(__dirname),
-    stdio: 'inherit'
-  }
-);
+const jest = spawn('./node_modules/.bin/jest', process.argv.slice(2), {
+  cwd: path.resolve(__dirname),
+  stdio: 'inherit'
+});
 
 if (process.argv.includes('--watch')) {
   const glob = require('glob');

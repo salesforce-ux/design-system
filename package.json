@@ -184,7 +184,7 @@
     "test": "NODE_ENV=test; babel-node scripts/npm/test.js",
     "test-mocha": "NODE_ENV=test; mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
     "test-jest": "NODE_ENV=test; jest",
-    "test-vrt": "NODE_ENV=test node jest.vrt.watcher.js --watch",
+    "test-vrt": "NODE_ENV=test node jest.vrt.watcher.js",
     "travis": "node scripts/npm/build-travis.js",
     "precommit": "lint-staged",
     "writeUI": "babel-node scripts/npm/write-ui.js"

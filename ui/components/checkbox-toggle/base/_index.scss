@@ -11,7 +11,8 @@
  */
 .slds-checkbox_toggle,
 .slds-checkbox--toggle {
-  width: 100%;
+  display: inline-block;
+  width: auto;
 
   .slds-checkbox_faux,
   .slds-checkbox--faux {

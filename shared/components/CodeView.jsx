@@ -47,7 +47,6 @@ class CodeView extends React.Component {
   kids() {
     return (
       <div
-        className="docs-codeblock__example"
         ref={div => {
           this.div = div;
         }}

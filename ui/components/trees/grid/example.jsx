@@ -10,7 +10,7 @@ import SvgIcon from '../../../shared/svg-icon';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-const TreeGrid = props => (
+export const TreeGrid = props => (
   <table
     className="slds-table slds-table_bordered slds-tree slds-table_tree"
     role="treegrid"
@@ -110,29 +110,29 @@ const Row = props => (
         </a>
       </div>
     </th>
-    <td data-label="Employees">
+    <td data-label="Employees" role="gridcell">
       <div className="slds-truncate" title={props.employees}>
         {props.employees}
       </div>
     </td>
-    <td data-label="Phone Number">
+    <td data-label="Phone Number" role="gridcell">
       <div className="slds-truncate" title={props.phone}>
         {props.phone}
       </div>
     </td>
-    <td data-label="Account Owner">
+    <td data-label="Account Owner" role="gridcell">
       <div className="slds-truncate" title={props.owner}>
         <a href="javascript:void(0);" tabIndex="-1">
           {props.owner}
         </a>
       </div>
     </td>
-    <td data-label="Billing City">
+    <td data-label="Billing City" role="gridcell">
       <div className="slds-truncate" title={props.city}>
         {props.city}
       </div>
     </td>
-    <td className="slds-cell-shrink">
+    <td className="slds-cell-shrink" role="gridcell">
       <ButtonIcon
         aria-haspopup="true"
         assistiveText={`More actions for ${props.name}`}
@@ -146,7 +146,7 @@ const Row = props => (
   </tr>
 );
 
-const Default = props => (
+export const DefaultRows = props => (
   <tbody>
     <Row
       aria-level="1"
@@ -195,7 +195,7 @@ const Default = props => (
   </tbody>
 );
 
-const Expanded = props => (
+export const ExpandedRow = props => (
   <Row
     aria-level="2"
     aria-posinset="1"
@@ -208,7 +208,7 @@ const Expanded = props => (
   />
 );
 
-const DeepNesting = props => (
+export const DeepNestingRows = props => (
   <tbody>
     <Row
       aria-level="1"
@@ -367,7 +367,7 @@ const DeepNesting = props => (
 
 export default (
   <TreeGrid>
-    <Default />
+    <DefaultRows />
   </TreeGrid>
 );
 
@@ -377,7 +377,7 @@ export let states = [
     label: 'Expanded',
     element: (
       <TreeGrid>
-        <Default isExpanded additionalItem={<Expanded />} />
+        <DefaultRows isExpanded additionalItem={<ExpandedRow />} />
       </TreeGrid>
     )
   },
@@ -386,7 +386,7 @@ export let states = [
     label: 'Deeply nested branches',
     element: (
       <TreeGrid>
-        <DeepNesting />
+        <DeepNestingRows />
       </TreeGrid>
     )
   }

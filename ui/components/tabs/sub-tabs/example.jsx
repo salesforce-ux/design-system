@@ -18,7 +18,8 @@ let Subtab = props => (
       {
         'slds-has-notification': props.hasNotification,
         'slds-has-focus': props.hasFocus,
-        'slds-active': props.active
+        'slds-active': props.active,
+        'slds-is-unsaved': props.itemUnsaved
       },
       props.className
     )}
@@ -329,6 +330,46 @@ export let states = [
           <Subtab
             title="Chat - Customer"
             hasNotification
+            tabItemId="subtab-tabitem-02"
+            tabPanelId="subtab-tabpanel-02"
+            symbol="live_chat"
+          />
+        </ul>
+        <div
+          className="slds-tabs_default__content slds-show"
+          id="subtab-tabpanel-01"
+          role="tabpanel"
+          aria-labelledby="subtab-tabitem-01"
+        >
+          Item One Content
+        </div>
+        <div
+          className="slds-tabs_default__content slds-hide"
+          id="subtab-tabpanel-02"
+          role="tabpanel"
+          aria-labelledby="subtab-tabitem-02"
+        >
+          Item Two Content
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'subtabs-notification-dirty',
+    label: 'Unsaved With Notification',
+    element: (
+      <div className="slds-tabs_default slds-sub-tabs">
+        <ul className="slds-tabs_default__nav" role="tablist">
+          <Subtab
+            title="00071938"
+            active
+            tabItemId="subtab-tabitem-01"
+            tabPanelId="subtab-tabpanel-01"
+          />
+          <Subtab
+            title="Chat - Customer"
+            hasNotification
+            itemUnsaved
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
             symbol="live_chat"

@@ -28,13 +28,13 @@
     width: auto;
 
     &:first-child {
-      float: left;
-      margin-right: $spacing-x-small;
+      float: $left;
+      margin-#{$right}: $spacing-x-small;
 
       + .slds-button {
-        float: right;
+        float: $right;
         margin-top: 0;
-        margin-left: $spacing-x-small;
+        margin-#{$left}: $spacing-x-small;
       }
     }
   }

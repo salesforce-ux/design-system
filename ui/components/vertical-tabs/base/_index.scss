@@ -28,7 +28,7 @@
  */
 .slds-vertical-tabs__nav {
   width: $size-x-small;
-  border-right: $border-width-thin solid $color-border;
+  border-#{$right}: $border-width-thin solid $color-border;
   background: $color-background;
 }
 
@@ -87,8 +87,8 @@
  * @modifier
  */
 .slds-vertical-tabs__nav-item.slds-is-active {
-  margin-right: -1px;
-  border-right: 0;
+  margin-#{$right}: -1px;
+  border-#{$right}: 0;
   background: $color-background-alt;
   color: $color-text-brand;
 

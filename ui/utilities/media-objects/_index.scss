@@ -18,7 +18,7 @@
    */
   &__figure {
     flex-shrink: 0;
-    margin-right: $spacing-small;
+    margin-#{$right}: $spacing-small;
 
     &_fixed-width {
       min-width: $square-icon-large-boundary; // accommodate largest icon size
@@ -55,12 +55,12 @@
  */
 .slds-media_small .slds-media__figure,
 .slds-media--small .slds-media__figure {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
 }
 
 .slds-media_small .slds-media__figure_reverse,
 .slds-media--small .slds-media__figure--reverse {
-  margin-left: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
 }
 
 /**
@@ -71,12 +71,12 @@
  */
 .slds-media_large .slds-media__figure,
 .slds-media--large .slds-media__figure {
-  margin-right: $spacing-large;
+  margin-#{$right}: $spacing-large;
 }
 
 .slds-media_large .slds-media__figure_reverse,
 .slds-media--large .slds-media__figure--reverse {
-  margin-left: $spacing-large;
+  margin-#{$left}: $spacing-large;
 }
 
 /**
@@ -98,7 +98,7 @@
  */
 .slds-media__figure_reverse,
 .slds-media__figure--reverse {
-  margin: 0 0 0 $spacing-small;
+  margin: side-values(0 0 0 $spacing-small);
 }
 
 @include deprecate('4.0.0') {
@@ -112,7 +112,7 @@
 
     &.slds-media_small .slds-media__figure,
     &.slds-media--small .slds-media__figure {
-      margin-left: $spacing-xx-small;
+      margin-#{$left}: $spacing-xx-small;
     }
   }
 
@@ -126,7 +126,7 @@
     .slds-media__figure_reverse,
     .slds-media__figure--reverse {
       order: 3;
-      margin: 0 0 0 $spacing-medium;
+      margin: side-values(0 0 0 $spacing-medium);
     }
 
     .slds-media__body {

@@ -18,7 +18,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   border-bottom: 3px solid $color-background-context-bar-brand-accent;
   color: $color-text-default;
   position: relative;
-  padding: 0 0 0 $spacing-large;
+  padding: side-values(0 0 0 $spacing-large);
 
   /**
    * Primary zone
@@ -58,7 +58,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   &__vertical-divider {
     width: 0;
     overflow: hidden;
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
   }
 
   /** Any item on the horizontal axis of the context nav bar
@@ -102,8 +102,8 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       background: rgba(0, 0, 0, 0.25);
       position: absolute;
       bottom: -3px;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
 
       @supports (mix-blend-mode: soft-light) {
         background: rgba(0, 0, 0, 0.75);
@@ -132,8 +132,8 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
         background: $color-background-context-bar-brand-accent;
         position: absolute;
         top: 0;
-        left: -1px;
-        right: -1px;
+        #{$left}: -1px;
+        #{$right}: -1px;
         animation: navBounceIn 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
 
@@ -186,7 +186,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
      */
     &_divider-left,
     &--divider-left {
-      border-left: $border-width-thin solid $color-border;
+      border-#{$left}: $border-width-thin solid $color-border;
     }
 
     /**
@@ -197,7 +197,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
      */
     &_divider-right,
     &--divider-right {
-      border-right: $border-width-thin solid $color-border;
+      border-#{$right}: $border-width-thin solid $color-border;
     }
   }
 
@@ -249,7 +249,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
     display: flex;
     align-items: center;
     align-content: center;
-    margin-left: ($spacing-xx-small * -1);
+    margin-#{$left}: ($spacing-xx-small * -1);
     padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
     border-radius: 0;
@@ -279,15 +279,15 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
     .slds-icon-waffle_container {
       @include square($square-icon-large-content);
       margin: {
-        right: $spacing-xx-small;
-        left: ($spacing-x-small * -1);
+        #{$right}: $spacing-xx-small;
+        #{$left}: ($spacing-x-small * -1);
       }
     }
 
     .slds-icon-waffle {
       margin: {
-        right: auto;
-        left: auto;
+        #{$right}: auto;
+        #{$left}: auto;
       }
     }
   }
@@ -299,7 +299,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
   // Need to reset styles from default
   .slds-context-bar__icon-action {
-    margin-left: auto;
+    margin-#{$left}: auto;
   }
 
 
@@ -334,7 +334,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   &__item_tab,
   &__item--tab {
     width: $size-x-small;
-    border-right: $border-width-thin solid $color-border;
+    border-#{$right}: $border-width-thin solid $color-border;
 
     .slds-context-bar__label-action {
       padding: 0 $spacing-x-small;
@@ -350,7 +350,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
      */
     &.slds-is-pinned {
       width: auto;
-      padding-right: $spacing-x-small;
+      padding-#{$right}: $spacing-x-small;
 
       .slds-context-bar__label-action {
         padding: 0 $spacing-x-small;
@@ -363,13 +363,13 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
     .slds-context-bar__label-action {
       position: relative;
-      padding-left: $spacing-x-small;
+      padding-#{$left}: $spacing-x-small;
       font-style: italic;
       line-height: normal;
     }
 
     .slds-indicator_unread {
-      margin-left: -0.35rem; // Random but matches spec
+      margin-#{$left}: -0.35rem; // Random but matches spec
     }
   }
 
@@ -392,7 +392,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       flex-shrink: 0;
       height: 6px;
       width: 6px;
-      left: auto;
+      #{$left}: auto;
       position: relative;
       top: auto;
     }
@@ -438,7 +438,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
  * @restrict .slds-context-bar__label-action
  */
 .slds-context-bar__app-name {
-  padding: 0 $spacing-large 0 0;
+  padding: side-values(0 $spacing-large 0 0);
   font-size: rem(18px); // @todo tokenize
   font-weight: $font-weight-light;
   line-height: $line-height-heading;
@@ -454,8 +454,8 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 .slds-context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
-  border-left: $border-width-thin solid $color-border;
-  border-right: $border-width-thin solid $color-border;
+  border-#{$left}: $border-width-thin solid $color-border;
+  border-#{$right}: $border-width-thin solid $color-border;
 }
 
 // Themes - Pre-defined themes

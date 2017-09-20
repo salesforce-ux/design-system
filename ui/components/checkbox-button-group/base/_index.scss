@@ -41,8 +41,8 @@
    */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
-    padding-left: $spacing-medium;
-    padding-right: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
+    padding-#{$right}: $spacing-medium;
     text-align: center;
     vertical-align: middle;
     position: relative;
@@ -73,7 +73,7 @@
   // after the first button
   + .slds-checkbox_button,
   + .slds-checkbox--button {
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
     border-radius: 0;
     margin: 0;
   }
@@ -84,7 +84,7 @@
   &:first-child > .slds-checkbox--faux,
   &:first-child > .slds-checkbox_button__label,
   &:first-child > .slds-checkbox--button__label {
-    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    border-radius: corner-values($border-radius-medium 0 0 $border-radius-medium);
   }
 
   &:last-child > .slds-checkbox_faux,
@@ -93,7 +93,7 @@
   .slds-button--last > .slds-checkbox--faux,
   &:last-child > .slds-checkbox_button__label,
   &:last-child > .slds-checkbox--button__label {
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
   }
 
   // Hide input and style checkbox--faux

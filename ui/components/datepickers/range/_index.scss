@@ -24,9 +24,14 @@
     // scss-lint:disable SelectorDepth
     // re-calculate for last child
     .slds-is-selected-multi:last-child > .slds-day:after {
-      left: auto;
-      right: 0;
-      transform: translateX($spacing-xx-small);
+      #{$left}: auto;
+      #{$right}: 0;
+      @include if-ltr {
+        transform: translateX($spacing-xx-small);
+      }
+      @include if-rtl {
+        transform: translateX($spacing-xx-small * -1);
+      }
     }
   }
 
@@ -44,14 +49,24 @@
     }
     // re-calculate for first child
     .slds-is-selected-multi:first-child > .slds-day:before {
-      left: 0;
-      transform: translateX($spacing-xx-small * -1);
+      #{$left}: 0;
+      @include if-ltr {
+        transform: translateX($spacing-xx-small * -1);
+      }
+      @include if-rtl {
+        transform: translateX($spacing-xx-small * 1);
+      }
     }
     // re-calculate for last child
     .slds-is-selected-multi:last-child > .slds-day:after {
-      left: auto;
-      right: 0;
-      transform: translateX($spacing-xx-small);
+      #{$left}: auto;
+      #{$right}: 0;
+      @include if-ltr {
+        transform: translateX($spacing-xx-small);
+      }
+      @include if-rtl {
+        transform: translateX($spacing-xx-small * -1);
+      }
     }
   }
 

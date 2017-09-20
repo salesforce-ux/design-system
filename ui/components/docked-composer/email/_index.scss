@@ -25,14 +25,14 @@
  * @restrict .slds-email-composer div
  */
 .slds-email-composer__combobox {
-  padding-left: $spacing-xx-large;
+  padding-#{$left}: $spacing-xx-large;
   border: 0;
   border-bottom: $border-width-thin solid $color-border;
   border-radius: 0;
 
   .slds-form-element__label {
     position: absolute;
-    left: $spacing-small;
+    #{$left}: $spacing-small;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -51,5 +51,5 @@
 .slds-email-composer__recipient {
   position: absolute;
   top: 0;
-  right: $spacing-small;
+  #{$right}: $spacing-small;
 }

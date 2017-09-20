@@ -114,8 +114,8 @@
       color: $color-text-inverse;
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
       bottom: 0;
 
       .slds-media__body {
@@ -135,8 +135,8 @@
       background: $color-background;
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
     }
 
     /**
@@ -150,8 +150,8 @@
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
+      #{$left}: 0;
+      #{$right}: 0;
       padding: $spacing-medium;
     }
   }
@@ -164,7 +164,7 @@
    */
 
   &-has-actions {
-    padding-right: $spacing-xx-large;
+    padding-#{$right}: $spacing-xx-large;
   }
 
   /**
@@ -180,8 +180,8 @@
     color: $color-text-inverse;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     bottom: 0;
     z-index: 1;
   }
@@ -210,7 +210,7 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
-  }
+  } 
 
   /**
    * This positions the action menu on the title bar
@@ -221,7 +221,7 @@
   &__actions-menu {
     position: absolute;
     bottom: $spacing-x-small;
-    right: $spacing-xx-small;
+    #{$right}: $spacing-xx-small;
   }
 
   /**
@@ -235,7 +235,7 @@
   &__external-icon {
     position: absolute;
     top: ($spacing-x-large + $spacing-x-small);
-    left: $spacing-large;
+    #{$left}: $spacing-large;
   }
 
   /**

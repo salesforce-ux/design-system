@@ -26,7 +26,7 @@
   align-items: flex-start;
   white-space: nowrap;
   position: relative;
-  padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
+  padding: side-values($spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small);
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid $color-border;
@@ -40,19 +40,19 @@
  * @restrict .slds-rich-text-editor__toolbar
  */
 .slds-rich-text-editor__toolbar_bottom {
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
   border-top: $border-width-thin solid $color-border;
   border-bottom: 0;
 }
 
 // Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left
 .slds-rich-text-editor .slds-button-group-list {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
   margin-bottom: $spacing-xx-small;
-  margin-left: 0;
+  margin-#{$left}: 0;
 
   &:last-child {
-    margin-right: 0;
+    margin-#{$right}: 0;
   }
 }
 
@@ -63,7 +63,7 @@
  * @restrict .slds-rich-text-editor__toolbar div
  */
 .slds-rich-text-editor__select {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
 }
 
 /**
@@ -100,7 +100,7 @@
   min-height: $size-xx-small;
   max-height: $size-small;
   padding: $spacing-medium;
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
   background-color: $color-background-input;
 }
 
@@ -204,7 +204,7 @@
   }
 
   dd {
-    margin-left: 2.5rem;
+    margin-#{$left}: 2.5rem;
   }
 
   abbr[title],

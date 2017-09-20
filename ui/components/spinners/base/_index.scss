@@ -4,9 +4,9 @@
 .slds-spinner_container {
   position: absolute;
   top: 0;
-  right: 0;
+  #{$right}: 0;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   z-index: $z-index-spinner;
   background-color: $color-background-temp-modal-tint-alt;
   visibility: visible;
@@ -41,7 +41,7 @@
 .slds-spinner {
   position: absolute;
   top: 50%;
-  left: 50%;
+  #{$left}: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -71,7 +71,7 @@
 .slds-spinner__dot-b {
   position: absolute;
   top: 0;
-  left: 0;
+  #{$left}: 0;
   width: 100%;
 }
 
@@ -194,7 +194,7 @@
   .slds-spinner__dot-a:before,
   .slds-spinner__dot-b:before {
     top: -0.0625rem;
-    left: -0.0625rem;
+    #{$left}: -0.0625rem;
     animation-name: dotsBounceBefore-extraExtraSmall;
   }
 
@@ -202,7 +202,7 @@
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
     top: -0.0625rem;
-    right: -0.0625rem;
+    #{$right}: -0.0625rem;
     animation-name: dotsBounceAfter-extraExtraSmall;
   }
 }
@@ -268,7 +268,7 @@
   .slds-spinner__dot-a:before,
   .slds-spinner__dot-b:before {
     top: -0.125rem;
-    left: -0.125rem;
+    #{$left}: -0.125rem;
     animation-name: dotsBounceBefore-extraSmall;
   }
 
@@ -276,7 +276,7 @@
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
     top: -0.125rem;
-    right: -0.125rem;
+    #{$right}: -0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
   }
 }
@@ -342,7 +342,7 @@
   .slds-spinner__dot-a:before,
   .slds-spinner__dot-b:before {
     top: -0.125rem;
-    left: -0.125rem;
+    #{$left}: -0.125rem;
     animation-name: dotsBounceBefore-small;
   }
 
@@ -350,7 +350,7 @@
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
     top: -0.125rem;
-    right: -0.125rem;
+    #{$right}: -0.125rem;
     animation-name: dotsBounceAfter-small;
   }
 }
@@ -417,7 +417,7 @@
   .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.25rem;
-    left: -0.25rem;
+    #{$left}: -0.25rem;
   }
 
   &.slds-spinner:after,
@@ -425,7 +425,7 @@
   .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.25rem;
-    right: -0.25rem;
+    #{$right}: -0.25rem;
   }
 }
 
@@ -491,7 +491,7 @@
   .slds-spinner__dot-b:before {
     animation-name: dotsBounceBefore-medium;
     top: -0.3125rem;
-    left: -0.3125rem;
+    #{$left}: -0.3125rem;
   }
 
   &.slds-spinner:after,
@@ -499,7 +499,7 @@
   .slds-spinner__dot-b:after {
     animation-name: dotsBounceAfter-medium;
     top: -0.3125rem;
-    right: -0.3125rem;
+    #{$right}: -0.3125rem;
   }
 }
 

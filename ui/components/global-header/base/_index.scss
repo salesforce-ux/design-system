@@ -14,7 +14,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
+  #{$left}: 0;
   z-index: $z-index-sticky;
 
   // Position for when assistive text becomes into focus
@@ -58,12 +58,12 @@
     padding: 0;
 
     .slds-input {
-      padding-left: ($spacing-large * 2);
+      padding-#{$left}: ($spacing-large * 2);
     }
 
     .slds-input__icon_left,
     .slds-input__icon--left {
-      left: ($spacing-medium + $spacing-xx-small);
+      #{$left}: ($spacing-medium + $spacing-xx-small);
     }
   }
 

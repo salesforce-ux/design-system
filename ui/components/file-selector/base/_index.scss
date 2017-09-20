@@ -114,8 +114,8 @@
    * @required
    */
   .slds-file-selector__text {
-    margin-left: $spacing-x-small;
-    margin-right: $spacing-small;
+    margin-#{$left}: $spacing-x-small;
+    margin-#{$right}: $spacing-small;
   }
 }
 
@@ -186,8 +186,8 @@
   @include absolute-center;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  #{$left}: 0;
+  #{$right}: 0;
   bottom: 0;
   border: 0;
   opacity: 0;

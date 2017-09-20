@@ -53,7 +53,7 @@
   padding: 0.3rem $spacing-x-small;
   line-height: 1;
   background: $color-background-alt;
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
 }
 
 /**
@@ -161,9 +161,9 @@
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    #{$right}: 0;
     bottom: 0;
-    left: 0;
+    #{$left}: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0) 99%),
       linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0));
   }
@@ -204,7 +204,7 @@
   display: flex;
 
   .slds-swatch {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
     height: $spacing-large;
     width: $spacing-large;
     border: $border-width-thin solid $color-border;
@@ -312,7 +312,7 @@
   }
 
   .slds-form-element:not(:first-child) {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
 
   input {

@@ -25,7 +25,7 @@
  */
 .slds-float_left,
 .slds-float--left {
-  float: left;
+  float: $left;
 }
 
 /**
@@ -49,5 +49,5 @@
  */
 .slds-float_right,
 .slds-float--right {
-  float: right;
+  float: $right;
 }

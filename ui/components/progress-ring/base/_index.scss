@@ -56,9 +56,9 @@
 .slds-progress-ring__content {
   position: absolute;
   top: $progress-ring-width;
-  right: $progress-ring-width;
+  #{$right}: $progress-ring-width;
   bottom: $progress-ring-width;
-  left: $progress-ring-width;
+  #{$left}: $progress-ring-width;
   display: flex;
   align-items: center;
   justify-content: center;

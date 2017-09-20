@@ -9,10 +9,10 @@
     @include square($square-icon-medium-content);
     position: absolute;
     bottom: $spacing-xx-small;
-    right: $spacing-xx-small;
+    #{$right}: $spacing-xx-small;
   }
 
   .slds-has-alert {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }

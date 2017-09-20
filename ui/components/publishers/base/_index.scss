@@ -77,7 +77,7 @@
    * @required
    */
   &__actions > .slds-button {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 
   /**

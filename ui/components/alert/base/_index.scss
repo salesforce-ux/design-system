@@ -18,7 +18,7 @@
   position: relative;
   background: rgba($color-background-toast, 0.95);
   font-weight: $font-weight-light;
-  padding: $spacing-x-small $spacing-x-large $spacing-x-small $spacing-x-small;
+  padding: side-values($spacing-x-small $spacing-x-large $spacing-x-small $spacing-x-small);
   text-align: center;
   width: 100%;
 
@@ -29,11 +29,11 @@
    * @restrict .slds-notify button
    */
   .slds-notify__close {
-    float: right;
+    float: $right;
     position: absolute;
     top: 50%;
-    right: $spacing-small;
-    margin-left: $spacing-xx-small;
+    #{$right}: $spacing-small;
+    margin-#{$left}: $spacing-xx-small;
     transform: translateY(-50%);
   }
 }

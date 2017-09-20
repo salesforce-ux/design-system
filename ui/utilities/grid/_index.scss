@@ -135,8 +135,8 @@
 .slds-grid_pull-padded,
 .slds-grid--pull-padded {
   margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
+    #{$right}: ($spacing-small * -1);
+    #{$left}: ($spacing-small * -1);
   }
 }
 
@@ -149,8 +149,8 @@
 .slds-grid_pull-padded-xxx-small,
 .slds-grid--pull-padded-xxx-small {
   margin: {
-    right: ($spacing-xxx-small * -1);
-    left: ($spacing-xxx-small * -1);
+    #{$right}: ($spacing-xxx-small * -1);
+    #{$left}: ($spacing-xxx-small * -1);
   }
 }
 
@@ -163,8 +163,8 @@
 .slds-grid_pull-padded-xx-small,
 .slds-grid--pull-padded-xx-small {
   margin: {
-    right: ($spacing-xx-small * -1);
-    left: ($spacing-xx-small * -1);
+    #{$right}: ($spacing-xx-small * -1);
+    #{$left}: ($spacing-xx-small * -1);
   }
 }
 
@@ -177,8 +177,8 @@
 .slds-grid_pull-padded-x-small,
 .slds-grid--pull-padded-x-small {
   margin: {
-    right: ($spacing-x-small * -1);
-    left: ($spacing-x-small * -1);
+    #{$right}: ($spacing-x-small * -1);
+    #{$left}: ($spacing-x-small * -1);
   }
 }
 
@@ -191,8 +191,8 @@
 .slds-grid_pull-padded-small,
 .slds-grid--pull-padded-small {
   margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
+    #{$right}: ($spacing-small * -1);
+    #{$left}: ($spacing-small * -1);
   }
 }
 
@@ -205,8 +205,8 @@
 .slds-grid_pull-padded-medium,
 .slds-grid--pull-padded-medium {
   margin: {
-    right: ($spacing-medium * -1);
-    left: ($spacing-medium * -1);
+    #{$right}: ($spacing-medium * -1);
+    #{$left}: ($spacing-medium * -1);
   }
 }
 
@@ -219,8 +219,8 @@
 .slds-grid_pull-padded-large,
 .slds-grid--pull-padded-large {
   margin: {
-    right: ($spacing-large * -1);
-    left: ($spacing-large * -1);
+    #{$right}: ($spacing-large * -1);
+    #{$left}: ($spacing-large * -1);
   }
 }
 
@@ -261,7 +261,7 @@
 .slds-col_rule-right,
 .slds-col--rule-right {
   @include mq-large-min {
-    border-right: 1px solid $color-border-separator;
+    border-#{$right}: 1px solid $color-border-separator;
   }
 }
 
@@ -289,7 +289,7 @@
 .slds-col_rule-left,
 .slds-col--rule-left {
   @include mq-large-min {
-    border-left: 1px solid $color-border-separator;
+    border-#{$left}: 1px solid $color-border-separator;
   }
 }
 
@@ -366,7 +366,7 @@
 
 // Resets spacing/bullets for when grids are used on unordered lists
 .slds-text-longform ul.slds-grid {
-  margin-left: 0;
+  margin-#{$left}: 0;
   list-style: none;
 }
 
@@ -376,24 +376,24 @@
   .slds-col_padded,
   .slds-col--padded {
     padding: {
-      right: $spacing-small;
-      left: $spacing-small;
+      #{$right}: $spacing-small;
+      #{$left}: $spacing-small;
     }
   }
 
   .slds-col_padded-medium,
   .slds-col--padded-medium {
     padding: {
-      right: $spacing-medium;
-      left: $spacing-medium;
+      #{$right}: $spacing-medium;
+      #{$left}: $spacing-medium;
     }
   }
 
   .slds-col_padded-large,
   .slds-col--padded-large {
     padding: {
-      right: $spacing-large;
-      left: $spacing-large;
+      #{$right}: $spacing-large;
+      #{$left}: $spacing-large;
     }
   }
 
@@ -425,7 +425,7 @@
 
       &_right,
       &--right {
-        border-right: 1px solid $color-border-separator;
+        border-#{$right}: 1px solid $color-border-separator;
       }
 
       &_bottom,
@@ -435,7 +435,7 @@
 
       &_left,
       &--left {
-        border-left: 1px solid $color-border-separator;
+        border-#{$left}: 1px solid $color-border-separator;
       }
     }
   }
@@ -606,7 +606,7 @@
  */
 .slds-col_bump-right,
 .slds-col--bump-right {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -617,7 +617,7 @@
  */
 .slds-col_bump-bottom,
 .slds-col--bump-bottom {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -628,7 +628,7 @@
  */
 .slds-col_bump-left,
 .slds-col--bump-left {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 
@@ -709,8 +709,8 @@
 .slds-container_center,
 .slds-container--center {
   margin: {
-    left: auto;
-    right: auto;
+    #{$left}: auto;
+    #{$right}: auto;
   }
 }
 
@@ -722,7 +722,7 @@
  */
 .slds-container_left,
 .slds-container--left {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -733,7 +733,7 @@
  */
 .slds-container_right,
 .slds-container--right {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 .slds-grid_overflow,

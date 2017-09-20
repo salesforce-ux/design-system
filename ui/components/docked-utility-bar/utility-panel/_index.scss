@@ -12,7 +12,7 @@
   bottom: $line-height-button;
   width: rem(340px);
   height: rem(480px);
-  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  border-radius: corner-values($border-radius-medium $border-radius-medium 0 0);
   border: $border-width-thin solid $color-border {
     bottom: none;
   }
@@ -38,7 +38,7 @@
   &__header {
     background: $color-background-docked-panel-header;
     border-bottom: $border-width-thick solid $color-border-brand;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    border-radius: corner-values($border-radius-medium $border-radius-medium 0 0);
     padding: $spacing-x-small $spacing-small;
   }
 

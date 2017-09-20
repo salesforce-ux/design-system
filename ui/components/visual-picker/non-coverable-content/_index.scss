@@ -12,7 +12,7 @@
 .slds-visual-picker__text-check {
   position: absolute;
   top: rem(-1px);
-  right: rem(10px);
+  #{$right}: rem(10px);
   width: $square-icon-x-small-content;
   height: $square-icon-x-small-content;
 }

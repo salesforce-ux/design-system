@@ -36,8 +36,8 @@
    */
   .slds-radio_faux,
   .slds-radio--faux {
-    padding-left: $spacing-medium;
-    padding-right: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
+    padding-#{$right}: $spacing-medium;
     text-align: center;
     vertical-align: middle;
   }
@@ -45,7 +45,7 @@
   // Apply left borders to anything radio button after the first button
   + .slds-radio_button,
   + .slds-radio--button {
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
     margin: 0;
   }
 
@@ -55,7 +55,7 @@
   &:first-child > .slds-radio--faux,
   &:first-child > .slds-radio_button__label,
   &:first-child > .slds-radio--button__label {
-    border-radius: $border-radius-medium 0 0 $border-radius-medium;
+    border-radius: corner-values($border-radius-medium 0 0 $border-radius-medium);
   }
 
   // The middle selector doesn't seem to be applied anywhere? I didn't find a .button--last anywhere?
@@ -65,7 +65,7 @@
   .slds-button--last > .slds-radio--faux,
   &:last-child > .slds-radio_button__label,
   &:last-child > .slds-radio--button__label {
-    border-radius: 0 $border-radius-medium $border-radius-medium 0;
+    border-radius: corner-values(0 $border-radius-medium $border-radius-medium 0);
   }
 
   // Hide input and style radio--faux

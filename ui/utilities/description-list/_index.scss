@@ -19,7 +19,7 @@
      * @modifier
      */
     &__label {
-      float: left;
+      float: $left;
       clear: left;
     }
 
@@ -30,8 +30,8 @@
      * @modifier
      */
     &__detail {
-      float: left;
-      padding-left: $spacing-xx-small;
+      float: $left;
+      padding-#{$left}: $spacing-xx-small;
     }
   }
 }
@@ -56,7 +56,7 @@
      */
     &__label {
       width: 30%;
-      padding-right: $spacing-small;
+      padding-#{$right}: $spacing-small;
     }
 
     /**

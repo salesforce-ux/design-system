@@ -101,7 +101,7 @@ async.series(
    */
     done => {
       gulp
-        .src('**/*.scss', {
+        .src(['**/*.scss', '**/*.rtl.scss'], {
           base: paths.ui,
           cwd: paths.ui
         })
@@ -271,7 +271,13 @@ async.series(
    */
     done => {
       gulp
-        .src(distPath('scss/index.scss'))
+        .src([
+          distPath('scss/index-ltng.scss'),
+          distPath('scss/index-ltng.rtl.scss'),
+          distPath('scss/index-vf.scss'),
+          distPath('scss/index-vf.rtl.scss'),
+          distPath('scss/slds-fonts.scss')
+        ])
         .pipe(
           sass({
             precision: 10,
@@ -297,7 +303,13 @@ async.series(
    */
     done => {
       gulp
-        .src(distPath('assets/styles/*.css'), { base: distPath() })
+        .src(
+          [
+            distPath('assets/styles/*.css'),
+            distPath('assets/styles/*.rtl.css')
+          ],
+          { base: distPath() }
+        )
         .pipe(gulp.dest(distPath()))
         .on('error', done)
         .pipe(
@@ -323,7 +335,7 @@ async.series(
    */
     done => {
       gulp
-        .src(['**/*.css', 'scss/index*'], {
+        .src(['**/*.css', '**/*.rtl.css', 'scss/index*'], {
           base: distPath(),
           cwd: distPath()
         })

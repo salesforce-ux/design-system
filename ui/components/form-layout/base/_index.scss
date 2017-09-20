@@ -41,7 +41,7 @@
 .slds-form_horizontal,
 .slds-form--horizontal {
   @include mq-medium-min {
-    text-align: right;
+    text-align: $right;
   }
 
   .slds-form-element {
@@ -49,14 +49,14 @@
     > .slds-form-element__legend,
     > .slds-form-element__label {
       @include mq-medium-min {
-        float: left;
-        text-align: right;
+        float: $left;
+        text-align: $right;
         display: inline-block;
         width: 33%;
         vertical-align: top;
         position: relative;
         top: (($line-height-button / 2) - ($line-height-text / 2));
-        margin-right: 0;
+        margin-#{$right}: 0;
         margin-bottom: 0;
       }
     }
@@ -72,7 +72,7 @@
     @include mq-medium-min {
       width: 66%;
       display: inline-block;
-      text-align: left;
+      text-align: $left;
     }
   }
 }
@@ -99,7 +99,7 @@
   @include mq-small-min {
 
     .slds-form-element {
-      margin-right: $spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
 
       + .slds-form-element {
         margin-top: 0;

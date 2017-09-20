@@ -58,17 +58,17 @@
       min-width: 0%;
       flex-grow: 1;
       width: calc(100% - 4.75rem);
-      padding-right: 4.75rem;
+      padding-#{$right}: 4.75rem;
     }
 
     .slds-path__scroll-controls {
       display: flex;
       position: absolute;
-      right: 0;
+      #{$right}: 0;
       top: 0;
       bottom: 0;
-      margin-right: $spacing-x-small;
-      padding-left: $spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
+      padding-#{$left}: $spacing-x-small;
       background-color: $color-background-alt;
     }
   }
@@ -129,7 +129,7 @@
 .slds-path__nav {
   display: flex;
   align-items: flex-start;
-  margin-right: $spacing-small;
+  margin-#{$right}: $spacing-small;
 
   /**
   * @summary Creates the incomplete stage of the path
@@ -296,12 +296,12 @@
     background-color 0.1s linear;
 
   &:first-child {
-    border-radius: $border-radius-pill 0 0 $border-radius-pill;
+    border-radius: corner-values($border-radius-pill 0 0 $border-radius-pill);
   }
 
   &:last-child {
-    border-radius: 0 $border-radius-pill $border-radius-pill 0;
-    border-right: 0;
+    border-radius: corner-values(0 $border-radius-pill $border-radius-pill 0);
+    border-#{$right}: 0;
   }
 
   &:before {
@@ -309,14 +309,14 @@
     display: block;
     position: absolute;
     top: $border-width-thick;
-    left: (($height-sales-path / 2) * -1);
+    #{$left}: (($height-sales-path / 2) * -1);
     width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
     height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
     border: $border-width-thick solid $color-border-path-divider;
-    border-left: 0;
+    border-#{$left}: 0;
     border-bottom: 0;
     background-clip: padding-box;
-    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
+    transform: scale3d(0.8, 1.1, 1) rotate(if-ltr(45deg, 315deg));
     transition: transform 0.1s ease-in-out, background-color 0.1s linear;
   }
 
@@ -366,7 +366,7 @@
 .slds-path__stage {
   position: absolute;
   top: 50%;
-  left: ($square-icon-medium-content / 2);
+  #{$left}: ($square-icon-medium-content / 2);
   width: 100%;
   transform: translateY(-50%) rotateX(-180deg);
 }
@@ -439,7 +439,7 @@
  */
 .slds-path__mark-complete {
   flex-shrink: 0;
-  margin-right: $spacing-small;
+  margin-#{$right}: $spacing-small;
   border-radius: $border-radius-pill;
 }
 
@@ -481,7 +481,7 @@
  * @restrict .slds-path__content div
  */
 .slds-path__keys {
-  padding-left: $spacing-small;
+  padding-#{$left}: $spacing-small;
 }
 
 /**
@@ -491,8 +491,8 @@
  * @restrict .slds-path__content div
  */
 .slds-path__guidance {
-  margin-right: $spacing-x-small;
-  padding-left: $spacing-small;
+  margin-#{$right}: $spacing-x-small;
+  padding-#{$left}: $spacing-small;
   padding-bottom: $spacing-xx-small;
   background-color: $color-background-guidance;
 }
@@ -503,7 +503,7 @@
   width: 50%;
   margin-top: $spacing-medium;
   padding-top: $spacing-x-small;
-  padding-right: $spacing-small;
+  padding-#{$right}: $spacing-small;
 }
 
 /**
@@ -557,7 +557,7 @@
 
   .slds-path__stage-name {
     display: block;
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 
   .slds-path__action {
@@ -566,17 +566,17 @@
     align-content: center;
     width: 100%;
     margin-top: $spacing-x-small;
-    padding-right: $spacing-x-small;
-    padding-left: $spacing-x-small;
+    padding-#{$right}: $spacing-x-small;
+    padding-#{$left}: $spacing-x-small;
   }
 
   .slds-path__mark-complete {
-    margin-right: 0;
+    margin-#{$right}: 0;
   }
 
   .slds-path__keys,
   .slds-path__guidance {
     width: 100%;
-    margin-right: 0;
+    margin-#{$right}: 0;
   }
 }

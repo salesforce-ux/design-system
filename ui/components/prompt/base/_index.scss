@@ -18,8 +18,8 @@
   }
 
   .slds-modal__content {
-    padding-left: $spacing-x-large;
-    padding-right: $spacing-x-large;
+    padding-#{$left}: $spacing-x-large;
+    padding-#{$right}: $spacing-x-large;
   }
 
   .slds-modal__footer {

@@ -69,7 +69,7 @@
  * @notes Contains elements such as the list filter, view switcher and refresh button
  */
 .slds-split-view__header {
-  padding: $spacing-medium $spacing-medium $spacing-x-small $spacing-large;
+  padding: side-values($spacing-medium $spacing-medium $spacing-x-small $spacing-large);
 }
 
 /**
@@ -82,7 +82,7 @@
     top: $border-width-thin solid $split-view-color-border;
     bottom: $border-width-thin solid $split-view-color-border;
   }
-  padding: $spacing-x-small $spacing-medium $spacing-x-small $spacing-large;
+  padding: side-values($spacing-x-small $spacing-medium $spacing-x-small $spacing-large);
 }
 
 /**
@@ -117,7 +117,7 @@
   @include square(8px);
   position: absolute;
   top: $spacing-medium;
-  left: $spacing-x-small;
+  #{$left}: $spacing-x-small;
   display: block;
   border-radius: $border-radius-circle;
   background: $color-background-notification-badge;
@@ -130,7 +130,7 @@
  */
 .slds-split-view__list-item-action {
   color: currentColor;
-  padding: $spacing-small $spacing-medium $spacing-small $spacing-large;
+  padding: side-values($spacing-small $spacing-medium $spacing-small $spacing-large);
 
   &:hover,
   &:focus {
@@ -160,7 +160,7 @@
  */
 .slds-split-view__toggle-button {
   position: absolute;
-  right: (0.75rem * -1);
+  #{$right}: (0.75rem * -1);
   height: 100%;
   width: 0.75rem;
   background: $color-background-alt;

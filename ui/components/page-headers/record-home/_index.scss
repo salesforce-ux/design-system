@@ -48,7 +48,7 @@
   &-row {
     margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
     padding: $page-header-spacing-row;
-    border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
+    border-radius: corner-values(0 0 $page-header-border-radius $page-header-border-radius);
     background-color: $page-header-color-background-alt;
     position: relative;
     z-index: 2;
@@ -63,17 +63,17 @@
    */
   &-block {
     padding: {
-      right: $spacing-x-large;
-      left: $spacing-x-large;
+      #{$right}: $spacing-x-large;
+      #{$left}: $spacing-x-large;
     }
     max-width: 25%;
 
     &:first-child {
-      padding-left: 0;
+      padding-#{$left}: 0;
     }
 
     &:last-child {
-      padding-right: 0;
+      padding-#{$right}: 0;
     }
   }
 }

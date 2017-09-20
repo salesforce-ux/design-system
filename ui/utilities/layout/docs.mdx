@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import { Magnet } from './';
 
 <div className="lead">
 Layout utility classes will help you to achieve layouts found within the Salesforce Platform.
@@ -16,27 +17,19 @@ The components/utilities that provide a card-like look are the following:
 
 If you need a card-like component to appear flush to the card-like component below, you can add the classes  `slds-has-bottom-magnet` and `slds-has-top-magnet`.
 
-<div className="slds-grid slds-grid_pull-padded">
-  <div className="slds-col slds-p-horizontal_medium">
+<div className="slds-grid slds-grid_pull-padded slds-wrap">
+  <div className="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_medium">
     <strong>Before</strong>
     <CodeView>
-      <div className="slds-card">
-        <div className="slds-p-around_medium">My First Component</div>
-      </div>
-      <div className="slds-card">
-        <div className="slds-p-around_medium">My Second Component</div>
-      </div>
+      <Magnet />
+      <Magnet />
     </CodeView>
   </div>
-  <div className="slds-col slds-p-horizontal_medium">
+  <div className="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_medium">
     <strong>After</strong>
     <CodeView>
-      <div className="slds-card slds-has-bottom-magnet">
-        <div className="slds-p-around_medium">My First Component</div>
-      </div>
-      <div className="slds-card slds-has-top-magnet">
-        <div className="slds-p-around_medium">My Second Component</div>
-      </div>
+      <Magnet className="slds-has-bottom-magnet" />
+      <Magnet className="slds-has-top-magnet" />
     </CodeView>
   </div>
 </div>

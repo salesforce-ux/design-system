@@ -1,0 +1,73 @@
+/* eslint-env jest */
+import React from 'react';
+
+import {
+  ContextTab,
+  ContextTabBar,
+  ContextTabPanel
+} from '../navigation-tab-bar/example';
+
+import {
+  Subtab,
+  Subtabs,
+  SubtabList,
+  SubtabPanel
+} from '../../tabs/sub-tabs/example';
+
+import createHelpers from '../../../../jest.setup';
+
+const { matchesMarkupAndStyle } = createHelpers(__dirname);
+
+it('renders a global-navigation with sub-tabs', () => {
+  matchesMarkupAndStyle(
+    <div className="demo-only" style={{ height: '8rem' }}>
+      <ContextTabBar className="slds-has-sub-tabs">
+        <ContextTab
+          title="Home"
+          symbol="home"
+          tabPanelId="context-tab-panel-1"
+          id="context-tab-id-1"
+          itemActive
+        />
+        <ContextTab
+          title="Tab Item 1"
+          tabPanelId="context-tab-panel-2"
+          id="context-tab-id-2"
+        />
+        <ContextTab
+          title="Tab Item 2"
+          tabPanelId="context-tab-panel-3"
+          id="context-tab-id-3"
+        />
+      </ContextTabBar>
+      <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
+        <Subtabs>
+          <SubtabList>
+            <Subtab
+              active
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="Chat - Customer"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+              symbol="live_chat"
+            />
+          </SubtabList>
+          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            Item One Content
+          </SubtabPanel>
+          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        </Subtabs>
+      </ContextTabPanel>
+      <ContextTabPanel id="context-tab-panel-2" tabId="context-tab-id-2">
+        Tab One Content
+      </ContextTabPanel>
+      <ContextTabPanel id="context-tab-panel-3" tabId="context-tab-id-3">
+        Tab Two Content
+      </ContextTabPanel>
+    </div>
+  );
+});

@@ -152,6 +152,30 @@ export default (
   </div>
 );
 
+export const Subtabs = props => (
+  <div className="slds-tabs_default slds-sub-tabs">{props.children}</div>
+);
+
+export const SubtabList = props => (
+  <ul className="slds-tabs_default__nav" role="tablist">
+    {props.children}
+  </ul>
+);
+
+export const SubtabPanel = props => (
+  <div
+    className={classNames('slds-tabs_default__content', {
+      'slds-show': props.isVisible,
+      'slds-hide': !props.isVisible
+    })}
+    id={props.id}
+    role="tabpanel"
+    aria-labelledby={props.tabId}
+  >
+    {props.children}
+  </div>
+);
+
 export let states = [
   {
     id: 'subtabs-has-focus',

@@ -6,7 +6,12 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import { ButtonIcon } from '../../button-icons/base/example';
-import { Subtab } from '../../tabs/sub-tabs/example';
+import {
+  Subtab,
+  Subtabs,
+  SubtabList,
+  SubtabPanel
+} from '../../tabs/sub-tabs/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -29,7 +34,7 @@ let ShortCutKey = props => (
 );
 
 // Context Tab
-let ContextTab = props => (
+export let ContextTab = props => (
   <li
     className={classNames(
       'slds-context-bar__item slds-context-bar__item_tab',
@@ -136,7 +141,7 @@ let ContextTab = props => (
   </li>
 );
 
-let ContextTabPanel = props => (
+export let ContextTabPanel = props => (
   <div
     id={props.id}
     className={classNames(props.show ? 'slds-show' : 'slds-hide')}
@@ -1352,8 +1357,8 @@ export let states = [
           />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
-          <div className="slds-tabs_default slds-sub-tabs">
-            <ul className="slds-tabs_default__nav" role="tablist">
+          <Subtabs>
+            <SubtabList>
               <Subtab
                 active
                 title="00071938"
@@ -1366,24 +1371,14 @@ export let states = [
                 tabPanelId="subtab-tabpanel-02"
                 symbol="live_chat"
               />
-            </ul>
-            <div
-              className="slds-tabs_default__content slds-show"
-              id="subtab-tabpanel-01"
-              role="tabpanel"
-              aria-labelledby="subtab-tabitem-01"
-            >
+            </SubtabList>
+            <SubtabPanel tabId="subtab-tabitem-01" isVisible>
               Item One Content
-            </div>
-            <div
-              className="slds-tabs_default__content slds-hide"
-              id="subtab-tabpanel-02"
-              role="tabpanel"
-              aria-labelledby="subtab-tabitem-02"
-            >
+            </SubtabPanel>
+            <SubtabPanel tabId="subtab-tabitem-02">
               Item Two Content
-            </div>
-          </div>
+            </SubtabPanel>
+          </Subtabs>
         </ContextTabPanel>
         <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
           Tab One Content

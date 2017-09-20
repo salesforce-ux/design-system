@@ -3,6 +3,16 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.4.3] - September 19, 2017**
+
+## Fixes
+
+**Buttons**
+- Removed dark border on focus, fixing bug when buttons are found inside of a button group
+
+**Modal**
+- Update background color token to transparent value
+
 ## **Release [2.4.1] - September 14, 2017**
 
 ## Big Impact
@@ -25,9 +35,6 @@ We've made several enhancements in the Winter ’18 release which might affect y
 - For more detailed information, please visit this developer blog post: [Get your Lightning components ready for Winter ’18](https://developer.salesforce.com/blogs/developer-relations/2017/08/winter-coming-lightning.html)
 
 ## Fixes
-
-**Buttons**
-- Removed dark border on focus, fixing bug when buttons are found inside of a button group
 
 **Cards**
 - Added `slds-card_boundary` class to provide card-like look when component is inside a tabset

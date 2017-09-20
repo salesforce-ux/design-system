@@ -233,8 +233,8 @@
  */
 .slds-button_icon-more,
 .slds-button--icon-more {
+  @include button-icon;
   line-height: $line-height-button;
-  height: $square-icon-medium-boundary;
   padding: 0 $spacing-x-small;
   background-color: $button-color-background-primary;
   border-color: $button-color-border-primary;
@@ -267,7 +267,6 @@
 .slds-button_icon-container-more,
 .slds-button--icon-container-more {
   line-height: $line-height-button;
-  height: $square-icon-medium-boundary;
   padding: 0 $spacing-x-small;
   vertical-align: middle;
 }

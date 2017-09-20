@@ -6,6 +6,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import { ButtonIcon } from '../../button-icons/base/example';
+import { Subtab } from '../../tabs/sub-tabs/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -1326,6 +1327,75 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
+      </div>
+    )
+  },
+  {
+    id: 'sub-tabs-open',
+    label: 'Sub Tabs - Open',
+    element: (
+      <div className="demo-only" style={{ height: '8rem' }}>
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+        </ContextTabBar>
+        <ContextTabPanel id={tabPanelId01} tabId={tabId01}>
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
+          Tab Two Content
+        </ContextTabPanel>
+
+        <div className="slds-tabs_default slds-sub-tabs">
+          <ul className="slds-tabs_default__nav" role="tablist">
+            <Subtab
+              active
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="Chat - Customer"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+              symbol="live_chat"
+            />
+          </ul>
+          <div
+            className="slds-tabs_default__content slds-show"
+            id="subtab-tabpanel-01"
+            role="tabpanel"
+            aria-labelledby="subtab-tabitem-01"
+          >
+            Item One Content
+          </div>
+          <div
+            className="slds-tabs_default__content slds-hide"
+            id="subtab-tabpanel-02"
+            role="tabpanel"
+            aria-labelledby="subtab-tabitem-02"
+          >
+            Item Two Content
+          </div>
+        </div>
       </div>
     )
   }

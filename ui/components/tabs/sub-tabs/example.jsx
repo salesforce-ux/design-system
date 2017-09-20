@@ -11,7 +11,7 @@ import _ from '../../../shared/helpers';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Subtab = props => (
+export let Subtab = props => (
   <li
     className={classNames(
       'slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center',

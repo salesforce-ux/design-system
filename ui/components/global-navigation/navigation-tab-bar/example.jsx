@@ -139,10 +139,7 @@ let ContextTab = props => (
 let ContextTabPanel = props => (
   <div
     id={props.id}
-    className={classNames(
-      'slds-p-vertical_medium',
-      props.show ? 'slds-show' : 'slds-hide'
-    )}
+    className={classNames(props.show ? 'slds-show' : 'slds-hide')}
     role="tabpanel"
     aria-labelledby={props.tabId}
   >
@@ -1335,18 +1332,18 @@ export let states = [
     label: 'Sub Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
-        <ContextTabBar>
+        <ContextTabBar className="slds-has-sub-tabs">
           <ContextTab
             title="Home"
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
+            itemActive
           />
           <ContextTab
             title="Tab Item 1"
             tabPanelId={tabPanelId02}
             id={tabId02}
-            itemActive
           />
           <ContextTab
             title="Tab Item 2"
@@ -1354,8 +1351,39 @@ export let states = [
             id={tabId03}
           />
         </ContextTabBar>
-        <ContextTabPanel id={tabPanelId01} tabId={tabId01}>
-          Tab Home Content
+        <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
+          <div className="slds-tabs_default slds-sub-tabs">
+            <ul className="slds-tabs_default__nav" role="tablist">
+              <Subtab
+                active
+                title="00071938"
+                tabItemId="subtab-tabitem-01"
+                tabPanelId="subtab-tabpanel-01"
+              />
+              <Subtab
+                title="Chat - Customer"
+                tabItemId="subtab-tabitem-02"
+                tabPanelId="subtab-tabpanel-02"
+                symbol="live_chat"
+              />
+            </ul>
+            <div
+              className="slds-tabs_default__content slds-show"
+              id="subtab-tabpanel-01"
+              role="tabpanel"
+              aria-labelledby="subtab-tabitem-01"
+            >
+              Item One Content
+            </div>
+            <div
+              className="slds-tabs_default__content slds-hide"
+              id="subtab-tabpanel-02"
+              role="tabpanel"
+              aria-labelledby="subtab-tabitem-02"
+            >
+              Item Two Content
+            </div>
+          </div>
         </ContextTabPanel>
         <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
           Tab One Content
@@ -1363,39 +1391,6 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-
-        <div className="slds-tabs_default slds-sub-tabs">
-          <ul className="slds-tabs_default__nav" role="tablist">
-            <Subtab
-              active
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="Chat - Customer"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-              symbol="live_chat"
-            />
-          </ul>
-          <div
-            className="slds-tabs_default__content slds-show"
-            id="subtab-tabpanel-01"
-            role="tabpanel"
-            aria-labelledby="subtab-tabitem-01"
-          >
-            Item One Content
-          </div>
-          <div
-            className="slds-tabs_default__content slds-hide"
-            id="subtab-tabpanel-02"
-            role="tabpanel"
-            aria-labelledby="subtab-tabitem-02"
-          >
-            Item Two Content
-          </div>
-        </div>
       </div>
     )
   }

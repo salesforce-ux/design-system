@@ -10,8 +10,14 @@
 **Buttons**
 - Removed dark border on focus, fixing bug when buttons are found inside of a button group
 
+**Checkbox/Radio Button Group**
+- Fixed issue when a selection is made then that selection is put into a disabled state
+
 **Modal**
 - Update background color token to transparent value
+
+**Path**
+- Use transform to properly align checkmark inside of path element
 
 ## **Release [2.4.1] - September 14, 2017**
 
@@ -1630,6 +1636,8 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
+[2.4.2]: https://github.com/salesforce-ux/design-system/compare/v2.4.1...v2.4.2
+[2.4.1]: https://github.com/salesforce-ux/design-system/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/salesforce-ux/design-system/compare/v2.3.1...v2.4.0
 [2.3.1]: https://github.com/salesforce-ux/design-system/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/salesforce-ux/design-system/compare/v2.2.2...v2.3.0

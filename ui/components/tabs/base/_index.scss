@@ -194,6 +194,33 @@
         background-color: $color-brand-dark;
       }
     }
+
+    .slds-indicator_unread {
+      display: inline-block;
+      height: rem(6px);
+      width: rem(6px);
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  /**
+   * @summary Creates styles for a Tab Item when its in an unsaved or dirty state
+   * @selector .slds-is-unsaved
+   * @restrict .slds-tabs_default__item
+   */
+  &.slds-is-unsaved {
+    
+    .slds-indicator_unread {
+      margin-left: -0.35rem; //random but matches spec
+    }
+
+    .slds-indicator_unsaved {
+      position: relative;
+      top: ($spacing-xx-small * -1);
+    }
+
   }
 }
 

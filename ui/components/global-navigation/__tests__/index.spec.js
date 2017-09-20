@@ -18,7 +18,7 @@ import createHelpers from '../../../../jest.setup';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
-it('renders a global-navigation with sub-tabs', () => {
+it('renders a global-navigation with sub-tabs', () =>
   matchesMarkupAndStyle(
     <div className="demo-only" style={{ height: '8rem' }}>
       <ContextTabBar className="slds-has-sub-tabs">
@@ -69,5 +69,4 @@ it('renders a global-navigation with sub-tabs', () => {
         Tab Two Content
       </ContextTabPanel>
     </div>
-  );
-});
+  ));

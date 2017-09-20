@@ -41,7 +41,19 @@ const delay = delay =>
   });
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, 'assets')));
+
+app.get('/', (req, res) => {
+  res.send(`
+    <!doctype>
+    <html>
+      <head>
+        <link type="text/css" rel="stylesheet" href="/assets/styles/index.css" />
+      </head>
+      <body></body>
+    </html>
+  `);
+});
+app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 
 let server;
 let port;
@@ -70,36 +82,15 @@ beforeAll(async () => {
     userAgent:
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
     viewport: {
-      width: 400,
-      height: 400,
+      width: 1280,
+      height: 800,
       deviceScaleFactor: 1,
       isMobile: false,
       hasTouch: false,
       isLandscape: false
     }
   });
-  await page.setContent(`
-    <!doctype>
-    <html>
-      <head></head>
-      <body></body>
-    </html>
-  `);
-  const href = `http://localhost:${port}/styles/index.css`;
-  await page.evaluate(
-    h =>
-      new Promise((resolve, reject) => {
-        const link = document.createElement('link');
-        link.type = 'text/css';
-        link.rel = 'stylesheet';
-        link.href = h;
-        link.onload = resolve;
-        link.onerror = reject;
-        document.head.appendChild(link);
-      }),
-    href
-  );
-  await delay(450);
+  await page.goto(`http://localhost:${port}`);
 });
 
 jasmine.getEnv().addReporter({

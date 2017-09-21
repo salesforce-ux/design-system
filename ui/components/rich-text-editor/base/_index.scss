@@ -116,6 +116,46 @@
  * These are the overrides for both input and output from the RTE.
  * We may need to add or adjust these later based on further input.
  */
+
+.slds-rich-text-editor__textarea {
+
+  .ql-editor {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    user-select: text;
+
+    .ql-blank:before {
+      color: #54698d;
+      content: attr(data-placeholder);
+      pointer-events: none;
+      position: absolute;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .overflow-menu {
+    z-index: 2;
+  }
+
+  .ql-active {
+    background-color: rgb(238,241,246);
+  }
+
+  .ql-clipboard {
+    position: absolute !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
 .slds-rich-text-editor__textarea,
 .slds-rich-text-editor__output {
   line-height: $line-height-text;
@@ -224,5 +264,29 @@
   th,
   td {
     padding: $spacing-x-small;
+  }
+
+  .sans-serif {
+    font-family: sans-serif;
+  }
+
+  .courier {
+    font-family: courier;
+  }
+
+  .verdana {
+    font-family: verdana;
+  }
+
+  .tahoma {
+    font-family: tahoma;
+  }
+
+  .garamond {
+    font-family: garamond;
+  }
+
+  .serif {
+    font-family: serif;
   }
 }

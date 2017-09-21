@@ -8,9 +8,12 @@ import {
   ListboxItem,
   Option
 } from '../base/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 
-const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -139,19 +142,14 @@ export let states = [
           listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
           readonly
         >
-          <Listbox
-            id={listboxSelectionsId}
-            aria-label="Selected Options:"
-            className="slds-p-top_xxx-small"
-            horizontal
-          >
-            <ListboxItem>
+          <ListboxPills className="slds-p-top_xxx-small">
+            <ListboxPillsItem>
               <ListboxPill label="Option A" tabIndex="0" />
-            </ListboxItem>
-            <ListboxItem>
+            </ListboxPillsItem>
+            <ListboxPillsItem>
               <ListboxPill label="Option B" />
-            </ListboxItem>
-          </Listbox>
+            </ListboxPillsItem>
+          </ListboxPills>
         </ComboboxContainer>
       </div>
     )

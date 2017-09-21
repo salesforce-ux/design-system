@@ -4,7 +4,11 @@
 import React from 'react';
 import { Avatar } from '../../avatar/base/example';
 import { StandardIcon } from '../../icons/standard/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 import {
   ComboboxContainer,
   Listbox,
@@ -133,22 +137,22 @@ export let states = [
           autocomplete
           listbox={<ListboxDropdown />}
         >
-          <Listbox aria-label="Selected Options:" inline>
-            <ListboxItem>
+          <ListboxPills>
+            <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
                 <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
-            </ListboxItem>
-            <ListboxItem>
+            </ListboxPillsItem>
+            <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
                 <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
-            </ListboxItem>
-          </Listbox>
+            </ListboxPillsItem>
+          </ListboxPills>
         </ComboboxContainer>
       </div>
     )
@@ -167,26 +171,22 @@ export let states = [
           autocomplete
           listbox={<ListboxDropdown />}
         >
-          <Listbox
-            id={listboxSelectionsId}
-            aria-label="Selected Options:"
-            inline
-          >
-            <ListboxItem>
+          <ListboxPills>
+            <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
                 <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
-            </ListboxItem>
-            <ListboxItem>
+            </ListboxPillsItem>
+            <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
                 <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                   <StandardIcon />
                 </Avatar>
               </ListboxPill>
-            </ListboxItem>
-          </Listbox>
+            </ListboxPillsItem>
+          </ListboxPills>
         </ComboboxContainer>
       </div>
     ),

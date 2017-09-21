@@ -24,8 +24,8 @@ let TreeItem = props => (
       <span className="slds-truncate" title="Tree Item">
         Tree Item
       </span>
-      { props.hasMetatext && 
-        <span className="slds-tree__item-meta slds-tree__item-meta_text" title="Tree Item Metatext" >
+      { props.hasMetatext &&
+        <span className="slds-tree__item-meta" title="Tree Item Metatext" >
           Tree Item Metatext
         </span>
       }
@@ -156,7 +156,7 @@ let Default = props => (
         aria-level="1"
         tabIndex={!props.isSelected ? '0' : null}
       >
-        <TreeItem hasMetatext={props.hasMetatext}>{props.itemContent}</TreeItem>
+        <TreeItem>{props.itemContent}</TreeItem>
       </li>
       <li
         role="treeitem"
@@ -172,7 +172,7 @@ let Default = props => (
             aria-selected={!!props.isSelected}
             tabIndex={props.isSelected ? '0' : null}
           >
-            <TreeItem />
+            <TreeItem hasMetatext={props.hasMetatext}/>
           </li>
           {props.additionalItems}
         </ul>
@@ -222,6 +222,6 @@ export let states = [
   {
     id: 'metatext',
     label: 'Metatext',
-    element: <Default hasMetatext />
+    element: <Default isExpanded hasMetatext />
   }
 ];

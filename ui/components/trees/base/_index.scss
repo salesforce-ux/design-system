@@ -130,11 +130,10 @@
   /**
    * The meta text or secondary text of a tree item
    *
-   * @selector .slds-tree__item-meta_text
+   * @selector .slds-tree__item-meta
    * @restrict .slds-tree__item span
    */
-  .slds-tree__item-meta_text,
-  .slds-tree__item-meta--text {
+  .slds-tree__item-meta {
     display: block;
     margin-top: ($spacing-small * -1); // Offset $line-height-text from result-text
     color: $color-text-label;

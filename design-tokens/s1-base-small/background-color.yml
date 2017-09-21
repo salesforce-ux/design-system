@@ -1,0 +1,16 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ../force-base/aliases/color.yml
+props:
+  COLOR_BACKGROUND_TEMP_MODAL_TINT:
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    comment: The color of the mask overlay that appears when you enter a modal state.

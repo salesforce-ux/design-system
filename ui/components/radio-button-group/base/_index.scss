@@ -124,6 +124,20 @@
         cursor: default;
       }
     }
+
+    &[disabled]:checked + .slds-radio_faux,
+    &[disabled]:checked + .slds-radio--faux,
+    &[disabled]:checked ~ .slds-radio_faux,
+    &[disabled]:checked ~ .slds-radio--faux,
+    &[disabled]:checked + .slds-radio_button__label,
+    &[disabled]:checked + .slds-radio--button__label {
+
+      &:hover,
+      &:focus {
+        background-color: $color-background-button-default-disabled;
+        color: $color-text-button-default-disabled;
+      }
+    }
   }
 }
 

@@ -66,19 +66,49 @@ p.doc {
 }
 
 blockquote.doc {
-  background-color: #f7f7f7;
-  color: #5876a3;
+  background-color: #fafaf9;
   font-size: 1.125rem;
   font-weight: 300;
   padding: 1rem;
-  border-left: 2px solid #5876a3;
+  margin: 1.5rem 0;
   border: 1px solid #f2f2f2;
-  margin: 1.5rem;
+  border-left-width: 0.125rem;
+
+  .lead {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
 }
 
 blockquote.doc p:only-child,
 blockquote.doc p:last-child {
   margin-bottom: 0;
+}
+
+// this is the default blockquote color
+.site-blockquote_note.doc {
+  border-left-color: #00396b;
+
+  .lead {
+    color: #00396b;
+  }
+}
+
+.site-blockquote_ally.doc {
+  border-left-color: #0070d2;
+
+  .lead {
+    color: #0070d2;
+  }
+}
+
+.site-blockquote_warning.doc {
+  border-left-color: #ffb75d;
+
+  // the following text color is different to meet the a11y ratio
+  .lead {
+    color: #d47500;
+  }
 }
 
 ul.doc,
@@ -107,7 +137,7 @@ th.doc {
 
 thead.doc th.doc,
 thead.doc td.doc {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
 }
 
 tr.doc td.doc,

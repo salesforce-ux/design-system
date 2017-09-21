@@ -72,13 +72,11 @@
 /**
  * @selector .slds-tree
  * @restrict .slds-tree_container ul, table
- * @required
  */
 .slds-tree {
   /**
    * @selector .slds-tree__item
    * @restrict .slds-tree div, .slds-tree th
-   * @required
    */
   &__item {
     display: flex;
@@ -90,7 +88,6 @@
      *
      * @selector .slds-is-disabled
      * @restrict .slds-tree__item button
-     * @required
      * @modifier
      */
     .slds-is-disabled {
@@ -119,7 +116,6 @@
      * @selector .slds-is-hovered
      * @restrict .slds-tree__item
      * @notes Class should be applied via Javascript
-     * @required
      * @modifier
      */
     &.slds-is-hovered,
@@ -129,6 +125,25 @@
     }
   }
 
+  /**
+   * The meta text or secondary text of a tree item
+   *
+   * @selector .slds-tree__item-meta_text
+   * @restrict .slds-tree__item span
+   */
+  .slds-tree__item-meta_text,
+  .slds-tree__item-meta--text {
+    display: block;
+    margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+    color: $color-text-label;
+  }
+
+  /**
+   * Styles the focus and selected state for any tree item that has role="treeitem"
+   *
+   * @selector [role="treeitem"]
+   * @restrict .slds-tree li
+   */
   [role="treeitem"] {
 
     &:focus {
@@ -161,7 +176,6 @@
    * @selector .slds-is-selected
    * @restrict .slds-tree__item
    * @notes Class should be applied via Javascript
-   * @required
    * @modifier
    */
   @include deprecate('5.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
@@ -177,7 +191,6 @@
    *
    * @selector .slds-is-focused
    * @restrict .slds-tree__item
-   * @required
    * @modifier
    */
   @include deprecate('5.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {

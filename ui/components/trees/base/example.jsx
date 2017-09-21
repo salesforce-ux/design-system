@@ -23,6 +23,14 @@ let TreeItem = props => (
     <span className="slds-truncate" title="Tree Item">
       Tree Item
     </span>
+    {props.hasMetatext && (
+      <span
+        className="slds-tree__item-meta slds-tree__item-meta_text"
+        title="Tree Item Metatext"
+      >
+        Tree Item Metatext
+      </span>
+    )}
     {props.children}
   </div>
 );
@@ -149,7 +157,7 @@ let Default = props => (
         aria-level="1"
         tabIndex={!props.isSelected ? '0' : null}
       >
-        <TreeItem>{props.itemContent}</TreeItem>
+        <TreeItem hasMetatext={props.hasMetatext}>{props.itemContent}</TreeItem>
       </li>
       <li
         role="treeitem"
@@ -211,5 +219,10 @@ export let states = [
     id: 'deep-nesting',
     label: 'Deeply nested branches',
     element: <Default isExpanded additionalItems={<AdditionalItems />} />
+  },
+  {
+    id: 'metatext',
+    label: 'Metatext',
+    element: <Default hasMetatext />
   }
 ];

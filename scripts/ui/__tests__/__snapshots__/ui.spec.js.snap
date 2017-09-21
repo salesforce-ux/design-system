@@ -330,6 +330,7 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
         "name": "data-tables",
         "role": "grid",
         "s1": "false",
+        "scroller": true,
         "selector": ".slds-table",
         "summary": "Data tables are an enhanced version of an HTML table and are used to display tabular data.",
         "support": "dev-ready",

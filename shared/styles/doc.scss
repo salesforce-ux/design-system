@@ -9,62 +9,60 @@
 
 
 // Type Styles
-
-body {
-  overflow: hidden;
+// Type scale — http://www.modularscale.com/?1&em&1.2
+.doc {
+  font-size: 1rem;
 }
 
 h1.doc,
 h2.doc,
+h3.doc,
 h4.doc,
 h5.doc,
-p.doc,
-lead.doc {
-  font-weight: 300;
+h6.doc {
+  color: #16325c;
 }
 
 h1.doc {
-  font-size: 3rem;
-  margin-bottom: 1rem
+  font-size: 2.488rem;
+  margin-bottom: 2rem
 }
 
 h2.doc {
-  font-size: 2rem;
+  font-size: 2.074rem;
   margin: 2rem 0 1rem;
 }
 
 h3.doc {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.728rem;
   margin: 2rem 0 1rem;
 }
 
 h4.doc {
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   margin: 2rem 0 1rem;
 }
 
 h5.doc {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
 }
 
 h6.doc {
   font-size: 1rem;
-  font-weight: 700;
   text-transform: uppercase;
   margin: 1rem 0;
 }
 
 p.doc {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
-lead.doc {
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+.lead {
+  font-size: 1.44rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
 }
 
 blockquote.doc {
@@ -75,7 +73,6 @@ blockquote.doc {
   padding: 1rem;
   border-left: 2px solid #5876a3;
   border: 1px solid #f2f2f2;
-  border-left: 2px solid #5876a3;
   margin: 1.5rem;
 }
 
@@ -86,8 +83,6 @@ blockquote.doc p:last-child {
 
 ul.doc,
 ol.doc {
-  font-size: 1.125rem;
-  font-weight: 300;
   margin: 0 0 1.5rem 3rem;
 }
 

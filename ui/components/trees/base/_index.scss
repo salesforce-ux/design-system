@@ -241,10 +241,6 @@
   // scss-lint:enable SelectorDepth
 
   .slds-button {
-    align-self: center;
-  }
-
-  li &__item .slds-button {
     align-self: flex-start;
     margin-top: $spacing-x-small;
   }

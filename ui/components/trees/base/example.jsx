@@ -20,17 +20,20 @@ let TreeItem = props => (
       tabIndex="-1"
       title="Expand Tree Item"
     />
-    <span className="slds-truncate" title="Tree Item">
-      Tree Item
-    </span>
-    {props.hasMetatext && (
-      <span
-        className="slds-tree__item-meta slds-tree__item-meta_text"
-        title="Tree Item Metatext"
-      >
-        Tree Item Metatext
+    { props.hasMetatext ?
+      <span>
+        <span className="slds-truncate" title="Tree Item">
+          Tree Item
+        </span>
+        <span className="slds-tree__item-meta slds-tree__item-meta_text" title="Tree Item Metatext">
+          Tree Item Metatext
+        </span>
       </span>
-    )}
+      :
+      <span className="slds-truncate" title="Tree Item">
+        Tree Item
+      </span>
+    }
     {props.children}
   </div>
 );

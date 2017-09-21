@@ -134,7 +134,7 @@
   .slds-tree__item-meta_text,
   .slds-tree__item-meta--text {
     display: block;
-    margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
+    margin-top: ($spacing-small * -1); // Offset $line-height-text from result-text
     color: $color-text-label;
   }
 
@@ -238,7 +238,8 @@
   // scss-lint:enable SelectorDepth
 
   .slds-button {
-    align-self: center;
+    align-self: flex-start;
+    margin-top: $spacing-x-small;
   }
 
   .slds-pill {

@@ -45,8 +45,15 @@ let TreeBranch = props => (
       tabIndex="-1"
       title="Expand Tree Branch"
     />
-    <span className="slds-truncate" title="Tree Branch">
-      Tree Branch
+    <span>
+      <span className="slds-truncate" title="Tree Branch">
+        Tree Branch
+      </span>
+      { props.hasMetatext &&
+        <span className="slds-tree__item-meta" title="Tree Branch Metatext" >
+          Tree Branch Metatext
+        </span>
+      }
     </span>
   </div>
 );
@@ -183,7 +190,7 @@ let Default = props => (
         aria-expanded="false"
         aria-label="Tree Branch"
       >
-        <TreeBranch />
+        <TreeBranch hasMetatext={props.hasMetatext} />
         <ul role="group">
           <li role="treeitem" aria-level="2">
             <TreeItem />

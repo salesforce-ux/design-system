@@ -90,6 +90,11 @@
     border: $border-width-thin solid $color-border;
     border-radius: $border-radius-medium;
     background-color: $color-background-input;
+
+    .slds-listbox_inline {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   /**

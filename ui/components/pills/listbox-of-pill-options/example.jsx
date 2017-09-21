@@ -6,6 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { PillContainer } from '../base/example';
 import { Avatar } from '../../avatar/base/example';
 import SvgIcon from '../../../shared/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
@@ -39,9 +40,12 @@ export let ListboxPill = props => (
   </span>
 );
 
-export let ListboxHoriz = props => (
+export let ListboxPills = props => (
   <ul
-    className="slds-listbox slds-listbox_horizontal"
+    className={classNames(
+      'slds-listbox slds-listbox_horizontal slds-listbox_inline',
+      props.className
+    )}
     role="listbox"
     aria-label="Selected Options:"
     aria-orientation="horizontal"
@@ -50,8 +54,10 @@ export let ListboxHoriz = props => (
   </ul>
 );
 
-export let ListItemHoriz = props => (
-  <li role="presentation">{props.children}</li>
+export let ListboxPillsItem = props => (
+  <li className="slds-listbox-item" role="presentation">
+    {props.children}
+  </li>
 );
 
 /// ////////////////////////////////////////
@@ -60,14 +66,14 @@ export let ListItemHoriz = props => (
 
 export default (
   <PillContainer>
-    <ListboxHoriz>
-      <ListItemHoriz>
+    <ListboxPills>
+      <ListboxPillsItem>
         <ListboxPill tabIndex="0" />
-      </ListItemHoriz>
-      <ListItemHoriz>
+      </ListboxPillsItem>
+      <ListboxPillsItem>
         <ListboxPill />
-      </ListItemHoriz>
-    </ListboxHoriz>
+      </ListboxPillsItem>
+    </ListboxPills>
   </PillContainer>
 );
 
@@ -77,38 +83,27 @@ export let states = [
     label: 'With icon',
     element: (
       <PillContainer>
-        <ListboxHoriz>
-          <ListItemHoriz>
+        <ListboxPills>
+          <ListboxPillsItem>
             <ListboxPill tabIndex="0">
-              <span
-                className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
                 title="Account"
-              >
-                <SvgIcon
-                  className="slds-icon"
-                  sprite="standard"
-                  symbol="account"
-                />
-                <span className="slds-assistive-text">Account</span>
-              </span>
+                assistiveText="Account"
+              />
             </ListboxPill>
-          </ListItemHoriz>
-          <ListItemHoriz>
+          </ListboxPillsItem>
+          <ListboxPillsItem>
             <ListboxPill>
-              <span
-                className="slds-icon_container slds-icon-standard-case slds-pill__icon_container"
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                symbol="case"
                 title="Case"
-              >
-                <SvgIcon
-                  className="slds-icon"
-                  sprite="standard"
-                  symbol="case"
-                />
-                <span className="slds-assistive-text">Case</span>
-              </span>
+                assistiveText="Case"
+              />
             </ListboxPill>
-          </ListItemHoriz>
-        </ListboxHoriz>
+          </ListboxPillsItem>
+        </ListboxPills>
       </PillContainer>
     )
   },
@@ -117,8 +112,8 @@ export let states = [
     label: 'With avatar',
     element: (
       <PillContainer>
-        <ListboxHoriz>
-          <ListItemHoriz>
+        <ListboxPills>
+          <ListboxPillsItem>
             <ListboxPill tabIndex="0">
               <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                 <img
@@ -128,8 +123,8 @@ export let states = [
                 />
               </Avatar>
             </ListboxPill>
-          </ListItemHoriz>
-          <ListItemHoriz>
+          </ListboxPillsItem>
+          <ListboxPillsItem>
             <ListboxPill>
               <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                 <img
@@ -139,8 +134,8 @@ export let states = [
                 />
               </Avatar>
             </ListboxPill>
-          </ListItemHoriz>
-        </ListboxHoriz>
+          </ListboxPillsItem>
+        </ListboxPills>
       </PillContainer>
     )
   }

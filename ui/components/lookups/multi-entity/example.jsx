@@ -10,14 +10,16 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
-import SvgIcon from '../../../shared/svg-icon';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -114,27 +116,27 @@ export let states = [
         autocomplete
         objectSwitcher
       >
-        <Listbox
-          id={listboxSelectionsId}
-          aria-label="Selected Options:"
-          className="slds-p-top_xxx-small"
-          inline
-        >
-          <ListboxItem>
+        <ListboxPills className="slds-p-top_xxx-small">
+          <ListboxPillsItem>
             <ListboxPill label="Acme" tabIndex="0">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="account" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                title="Account"
+                assistiveText="Account"
+              />
             </ListboxPill>
-          </ListboxItem>
-          <ListboxItem>
+          </ListboxPillsItem>
+          <ListboxPillsItem>
             <ListboxPill label="Salesforce.com, Inc.">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="opportunity" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                symbol="opportunity"
+                title="Opportunity"
+                assistiveText="Opportunity"
+              />
             </ListboxPill>
-          </ListboxItem>
-        </Listbox>
+          </ListboxPillsItem>
+        </ListboxPills>
       </ComboboxContainer>
     )
   },
@@ -152,27 +154,27 @@ export let states = [
         listbox={<ListboxDropdown />}
         objectSwitcher
       >
-        <Listbox
-          id={listboxSelectionsId}
-          aria-label="Selected Options:"
-          className="slds-p-top_xxx-small"
-          inline
-        >
-          <ListboxItem>
+        <ListboxPills className="slds-p-top_xxx-small">
+          <ListboxPillsItem>
             <ListboxPill label="Acme" tabIndex="0">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="account" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                title="Account"
+                assistiveText="Account"
+              />
             </ListboxPill>
-          </ListboxItem>
-          <ListboxItem>
+          </ListboxPillsItem>
+          <ListboxPillsItem>
             <ListboxPill label="Salesforce.com, Inc.">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="opportunity" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                symbol="opportunity"
+                title="Opportunity"
+                assistiveText="Opportunity"
+              />
             </ListboxPill>
-          </ListboxItem>
-        </Listbox>
+          </ListboxPillsItem>
+        </ListboxPills>
       </ComboboxContainer>
     ),
     script: `

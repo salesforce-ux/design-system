@@ -2,7 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 import { ButtonIcon } from '../../button-icons/base/example';
 import { Avatar } from '../../avatar/base/example';
 import { FormElement } from '../../form-element/base/example';
@@ -19,7 +23,6 @@ import _ from '../../../shared/helpers';
 ----------------------------------------------------------------------------- */
 
 const listboxId = 'listbox-unique-id';
-const listboxSelectionsId = 'listbox-selections-unique-id';
 const comboboxId = 'combobox-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
@@ -525,27 +528,26 @@ export let states = [
           autocomplete
           listbox={<ListboxDropdown />}
         >
-          <Listbox
-            id={listboxSelectionsId}
-            aria-label="Selected Options:"
-            className="slds-p-top_xxx-small"
-            horizontal
-          >
-            <ListboxItem>
+          <ListboxPills className="slds-p-top_xxx-small">
+            <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
-            </ListboxItem>
-            <ListboxItem>
+            </ListboxPillsItem>
+            <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
-            </ListboxItem>
-          </Listbox>
+            </ListboxPillsItem>
+          </ListboxPills>
         </ComboboxContainer>
       </div>
     )

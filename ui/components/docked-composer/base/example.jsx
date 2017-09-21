@@ -27,7 +27,11 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
@@ -965,19 +969,14 @@ export let examples = [
             <ComboboxContainer
               id="recipients-to"
               formClassName="slds-email-composer__combobox"
-              aria-controls="selected-recipients-to"
               selectedOptionsInline
               staticListbox
               label="To"
               placeholder=" "
               autocomplete
             >
-              <Listbox
-                id="selected-recipients-to"
-                aria-label="Recipients:"
-                inline
-              >
-                <ListboxItem>
+              <ListboxPills>
+                <ListboxPillsItem>
                   <ListboxPill label="jrogers@cloudhub.com" tabIndex="0">
                     <Avatar className="slds-avatar_x-small slds-pill__icon_container">
                       <img
@@ -987,8 +986,8 @@ export let examples = [
                       />
                     </Avatar>
                   </ListboxPill>
-                </ListboxItem>
-              </Listbox>
+                </ListboxPillsItem>
+              </ListboxPills>
             </ComboboxContainer>
             <ComboboxContainer
               id="recipients-bcc"

@@ -17,7 +17,11 @@ import {
 } from '../../combobox/base/example';
 import { Th } from '../../data-tables/';
 import { PillContainer } from '../../pills/base/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import {
+  ListboxPills,
+  ListboxPillsItem,
+  ListboxPill
+} from '../../pills/listbox-of-pill-options/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -25,7 +29,6 @@ import _ from '../../../shared/helpers';
     Variables and Objects
 ----------------------------------------------------------------------------- */
 
-const listboxSelectionsId = 'listbox-selections-unique-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
@@ -185,24 +188,24 @@ let RowData = props => {
 
 let FilteredItem = props => (
   <PillContainer className="slds-pill_container_bare">
-    <Listbox horizonta>
-      <ListboxItem>
+    <ListboxPills>
+      <ListboxPillsItem>
         <ListboxPill label="Analytics" tabIndex="0" />
-      </ListboxItem>
-    </Listbox>
+      </ListboxPillsItem>
+    </ListboxPills>
   </PillContainer>
 );
 
 let FilteredItems = props => (
   <PillContainer className="slds-pill_container_bare">
-    <Listbox horizontal>
-      <ListboxItem>
+    <ListboxPills>
+      <ListboxPillsItem>
         <ListboxPill label="Option A" tabIndex="0" />
-      </ListboxItem>
-      <ListboxItem>
+      </ListboxPillsItem>
+      <ListboxPillsItem>
         <ListboxPill label="Option B" />
-      </ListboxItem>
-    </Listbox>
+      </ListboxPillsItem>
+    </ListboxPills>
   </PillContainer>
 );
 

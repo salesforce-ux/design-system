@@ -16,6 +16,8 @@
  *
  * Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex="-1"` or removing `tabindex`, respectively.
  *
+ * You can add metatext (see: metatext state) to any tree item, which adds a smaller, second line of text below tree node labels to provide supplemental information (to provide users with added context, aid with identification/disambiguation). To add metatext, include an additional `span` within the treeitem with the classes `slds-tree__item-meta slds-tree__item-meta_text`. The metatext `span` and label/title `span` should also be wrapped in a `span` in order to ensure proper spacing.
+ *
  * #### Accessibility
  *
  * **Interaction requirements**

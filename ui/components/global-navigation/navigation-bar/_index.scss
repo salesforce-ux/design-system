@@ -411,7 +411,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
   align-self: center;
   font-size: $font-size-medium-a;
   position: relative;
-  top: -6px;
+  top: rem(-6px);
 }
 
 // Context Bar dropdown trigger specifics

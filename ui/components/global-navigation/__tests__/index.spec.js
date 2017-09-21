@@ -4,7 +4,8 @@ import React from 'react';
 import {
   ContextTab,
   ContextTabBar,
-  ContextTabPanel
+  ContextTabPanel,
+  MoreTab
 } from '../navigation-tab-bar/example';
 
 import {
@@ -69,4 +70,39 @@ it('renders a global-navigation with sub-tabs', () =>
         Tab Two Content
       </ContextTabPanel>
     </div>
+  ));
+
+  it('renders an overflowed global-navigation with dropdown, unread, and unsaved', () =>
+  matchesMarkupAndStyle(
+    <div className="demo-only" style={{ height: '8rem' }}>
+    <ContextTabBar>
+      <ContextTab
+        title="Home"
+        symbol="home"
+        tabPanelId="context-tab-panel-1"
+        id="context-tab-id-1"
+        itemActive
+      />
+      <ContextTab
+        title="Tab Item 1"
+        tabPanelId="context-tab-panel-2"
+        id="context-tab-id-2"
+      />
+      <ContextTab
+        title="Tab Item 2"
+        tabPanelId="context-tab-panel-3"
+        id="context-tab-id-3"
+      />
+      <MoreTab itemUnread itemUnsaved />
+    </ContextTabBar>
+    <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
+      Tab Home Content
+    </ContextTabPanel>
+    <ContextTabPanel id="context-tab-panel-2" tabId="context-tab-id-2">
+      Tab One Content
+    </ContextTabPanel>
+    <ContextTabPanel id="context-tab-panel-3" tabId="context-tab-id-3">
+      Tab Two Content
+    </ContextTabPanel>
+  </div>
   ));

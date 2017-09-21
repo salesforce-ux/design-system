@@ -313,7 +313,7 @@ export let ContextTabBar = props => (
   </div>
 );
 
-const MoreTab = props => (
+export const MoreTab = props => (
   <li
     className={classNames(
       'slds-context-bar__item',

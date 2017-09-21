@@ -16,6 +16,8 @@
  *
  * Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex="-1"` or removing `tabindex`, respectively.
  *
+ * When implementing collapsed rows, we suggest showing the content DOM nodes within each collapsed row only once the row is expanded for performance reasons. You can additionally toggle the hidden row with `slds-show` and `slds-hide` if you intend to keep all of the content in the DOM.
+ *
  * You can add metatext (see: metatext state) to any tree item, which adds a smaller, second line of text below tree node labels to provide supplemental information (to provide users with added context, aid with identification/disambiguation). To add metatext, include an additional `span` within the treeitem with the class `slds-tree__item-meta`. We've added an additional parent span around the label/title and metatext to ensure the spacing works properly when metatext is included.
  *
  * #### Accessibility

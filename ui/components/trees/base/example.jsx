@@ -24,14 +24,11 @@ let TreeItem = props => (
       <span className="slds-truncate" title="Tree Item">
         Tree Item
       </span>
-      {props.hasMetatext && (
-        <span
-          className="slds-tree__item-meta slds-tree__item-meta_text"
-          title="Tree Item Metatext"
-        >
+      { props.hasMetatext && 
+        <span className="slds-tree__item-meta slds-tree__item-meta_text" title="Tree Item Metatext" >
           Tree Item Metatext
         </span>
-      )}
+      }
     </span>
     {props.children}
   </div>

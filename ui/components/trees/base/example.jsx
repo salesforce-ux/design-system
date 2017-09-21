@@ -172,7 +172,7 @@ let Default = props => (
             aria-selected={!!props.isSelected}
             tabIndex={props.isSelected ? '0' : null}
           >
-            <TreeItem hasMetatext={props.hasMetatext}/>
+            <TreeItem hasMetatext={props.hasMetatext} />
           </li>
           {props.additionalItems}
         </ul>

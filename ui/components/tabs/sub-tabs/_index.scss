@@ -39,7 +39,8 @@
   letter-spacing: 0;
   margin-bottom: 0;
 
-  &.slds-active {
+  &.slds-active,
+  &.slds-is-open {
     background: $color-background-context-bar-brand-light;
   }
 

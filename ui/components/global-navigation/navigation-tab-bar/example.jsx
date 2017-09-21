@@ -313,6 +313,85 @@ export let ContextTabBar = props => (
   </div>
 );
 
+const MoreTab = props => (
+  <li
+    className={classNames(
+      'slds-context-bar__item',
+      'slds-context-bar__dropdown-trigger',
+      'slds-dropdown-trigger',
+      'slds-dropdown-trigger_click',
+      'slds-is-open',
+      {
+        'slds-has-notification': props.itemUnread,
+        'slds-is-unsaved': props.itemUnsaved
+      }
+    )}
+  >
+    <button
+      className="slds-button slds-context-bar__label-action"
+      title="More Tab Items"
+      aria-haspopup="true"
+    >
+      {props.itemUnsaved ? (
+        <abbr className="slds-indicator_unsaved" title="Tab Not Saved">
+          *
+        </abbr>
+      ) : null}
+      <span
+        aria-label="New Activity"
+        className="slds-indicator_unread"
+        role="alert"
+        title="New Activity"
+      >
+        <span className="slds-assistive-text">
+          New Tab activity with in More Tabs menu
+        </span>
+      </span>
+
+      <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
+        More <span className="slds-assistive-text">Tabs</span>
+      </span>
+      <SvgIcon
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+        sprite="utility"
+        symbol="chevrondown"
+      />
+    </button>
+    <Menu className="slds-dropdown_right">
+      <MenuList>
+        <MenuItem
+          className="slds-has-notification slds-is-unread"
+          title="Chat - Customer"
+        >
+          <abbr
+            className="slds-indicator_unsaved"
+            title="Tab(s) within menu not saved"
+          >
+            *
+          </abbr>
+          <span className="slds-indicator_unread" title="New Activity">
+            <span className="slds-assistive-text">New Activity</span>
+          </span>
+          <SvgIcon
+            className="slds-icon slds-icon_small slds-icon-text-default"
+            sprite="standard"
+            symbol="live_chat"
+          />
+          <span>Chat - Customer</span>
+        </MenuItem>
+        <MenuItem title="Overflow Tab Item">
+          <SvgIcon
+            className="slds-icon slds-icon_small slds-icon-text-default"
+            sprite="standard"
+            symbol="case"
+          />
+          <span>Overflow Tab Item</span>
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  </li>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
@@ -1035,7 +1114,7 @@ export let states = [
               <MenuList>
                 <MenuItem className="slds-is-unsaved" title="Overflow Tab Item">
                   <abbr
-                    className="slds-unsaved-indicator"
+                    className="slds-indicator_unsaved"
                     title="Tab(s) within menu not saved"
                   >
                     *
@@ -1214,6 +1293,43 @@ export let states = [
               </MenuList>
             </Menu>
           </li>
+        </ContextTabBar>
+        <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+    )
+  },
+  {
+    id: 'unread-unsaved-overflow-tabs-open',
+    label: 'Unread Unsaved Overflow Tabs - Open',
+    element: (
+      <div className="demo-only" style={{ height: '8rem' }}>
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+          />
+          <MoreTab itemUnread itemUnsaved />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content

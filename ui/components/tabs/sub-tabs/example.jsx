@@ -5,6 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import { ButtonIcon } from '../../button-icons/base/example';
+import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import _ from '../../../shared/helpers';
 
 /// ///////////////////////////////////////////
@@ -415,6 +416,340 @@ export let states = [
         >
           Item Two Content
         </div>
+      </div>
+    )
+  },
+  {
+    id: 'subtabs-overflow',
+    label: 'Overflowed',
+    element: (
+      <div
+        className="demo-only"
+        style={{ height: '8rem', overflow: 'visible' }}
+      >
+        <Subtabs>
+          <SubtabList>
+            <Subtab
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="00071939"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+            />
+            <li className="slds-tabs_default__item slds-sub-tabs__item  slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+              <button
+                className="slds-button slds-tabs_default__link slds-p-horizontal_xx-small"
+                title="More Tab Items"
+                aria-haspopup="true"
+              >
+                <span
+                  className="slds-p-left_xx-small slds-truncate"
+                  title="More Tabs"
+                >
+                  More <span className="slds-assistive-text">Tabs</span>
+                </span>
+                <SvgIcon
+                  className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+                  sprite="utility"
+                  symbol="chevrondown"
+                />
+              </button>
+              <Menu className="slds-dropdown_right">
+                <MenuList>
+                  <MenuItem title="Chat - Customer">
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="live_chat"
+                    />
+                    <span>Chat - Customer</span>
+                  </MenuItem>
+                  <MenuItem title="Overflow Tab Item">
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="case"
+                    />
+                    <span>Overflow Tab Item</span>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </li>
+          </SubtabList>
+          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            Item One Content
+          </SubtabPanel>
+          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        </Subtabs>
+      </div>
+    )
+  },
+  {
+    id: 'subtabs-overflow-notification',
+    label: 'Overflowed with notification',
+    element: (
+      <div
+        className="demo-only"
+        style={{ height: '8rem', overflow: 'visible' }}
+      >
+        <Subtabs>
+          <SubtabList>
+            <Subtab
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="00071939"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+            />
+            <li className="slds-tabs_default__item slds-sub-tabs__item  slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-notification">
+              <button
+                className="slds-button slds-tabs_default__link slds-p-horizontal_xx-small"
+                title="More Tab Items"
+                aria-haspopup="true"
+              >
+                <span
+                  aria-label="New Activity"
+                  className="slds-indicator_unread"
+                  role="alert"
+                  title="New Activity"
+                >
+                  <span className="slds-assistive-text">
+                    New Tab activity with in More Tabs menu
+                  </span>
+                </span>
+                <span
+                  className="slds-p-left_xx-small slds-truncate"
+                  title="More Tabs"
+                >
+                  More <span className="slds-assistive-text">Tabs</span>
+                </span>
+                <SvgIcon
+                  className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+                  sprite="utility"
+                  symbol="chevrondown"
+                />
+              </button>
+              <Menu className="slds-dropdown_right">
+                <MenuList>
+                  <MenuItem
+                    className="slds-has-notification"
+                    title="Chat - Customer"
+                  >
+                    <span
+                      className="slds-indicator_unread"
+                      title="New Activity"
+                    >
+                      <span className="slds-assistive-text">New Activity</span>
+                    </span>
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="live_chat"
+                    />
+                    <span>Chat - Customer</span>
+                  </MenuItem>
+                  <MenuItem title="Overflow Tab Item">
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="case"
+                    />
+                    <span>Overflow Tab Item</span>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </li>
+          </SubtabList>
+          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            Item One Content
+          </SubtabPanel>
+          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        </Subtabs>
+      </div>
+    )
+  },
+  {
+    id: 'subtabs-overflow-dirty',
+    label: 'Overflowed and unsaved',
+    element: (
+      <div
+        className="demo-only"
+        style={{ height: '8rem', overflow: 'visible' }}
+      >
+        <Subtabs>
+          <SubtabList>
+            <Subtab
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="00071939"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+            />
+            <li className="slds-tabs_default__item slds-sub-tabs__item  slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-is-unsaved">
+              <button
+                className="slds-button slds-tabs_default__link slds-p-horizontal_xx-small"
+                title="More Tab Items"
+                aria-haspopup="true"
+              >
+                <abbr
+                  className="slds-indicator_unsaved"
+                  title="Tab(s) within menu not saved"
+                >
+                  *
+                </abbr>
+                <span
+                  className="slds-p-left_xx-small slds-truncate"
+                  title="More Tabs"
+                >
+                  More <span className="slds-assistive-text">Tabs</span>
+                </span>
+                <SvgIcon
+                  className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+                  sprite="utility"
+                  symbol="chevrondown"
+                />
+              </button>
+              <Menu className="slds-dropdown_right">
+                <MenuList>
+                  <MenuItem title="Chat - Customer">
+                    <abbr
+                      className="slds-indicator_unsaved"
+                      title="Tab(s) within menu not saved"
+                    >
+                      *
+                    </abbr>
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="live_chat"
+                    />
+                    <span>Chat - Customer</span>
+                  </MenuItem>
+                  <MenuItem title="Overflow Tab Item">
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="case"
+                    />
+                    <span>Overflow Tab Item</span>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </li>
+          </SubtabList>
+          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            Item One Content
+          </SubtabPanel>
+          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        </Subtabs>
+      </div>
+    )
+  },
+  {
+    id: 'subtabs-overflow-notification-dirty',
+    label: 'Overflowed with notification',
+    element: (
+      <div
+        className="demo-only"
+        style={{ height: '8rem', overflow: 'visible' }}
+      >
+        <Subtabs>
+          <SubtabList>
+            <Subtab
+              title="00071938"
+              tabItemId="subtab-tabitem-01"
+              tabPanelId="subtab-tabpanel-01"
+            />
+            <Subtab
+              title="00071939"
+              tabItemId="subtab-tabitem-02"
+              tabPanelId="subtab-tabpanel-02"
+            />
+            <li className="slds-tabs_default__item slds-sub-tabs__item  slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-notification slds-is-unsaved">
+              <button
+                className="slds-button slds-tabs_default__link slds-p-horizontal_xx-small"
+                title="More Tab Items"
+                aria-haspopup="true"
+              >
+                <abbr
+                  className="slds-indicator_unsaved"
+                  title="Tab(s) within menu not saved"
+                >
+                  *
+                </abbr>
+                <span
+                  aria-label="New Activity"
+                  className="slds-indicator_unread"
+                  role="alert"
+                  title="New Activity"
+                >
+                  <span className="slds-assistive-text">
+                    New Tab activity with in More Tabs menu
+                  </span>
+                </span>
+                <span
+                  className="slds-p-left_xx-small slds-truncate"
+                  title="More Tabs"
+                >
+                  More <span className="slds-assistive-text">Tabs</span>
+                </span>
+                <SvgIcon
+                  className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+                  sprite="utility"
+                  symbol="chevrondown"
+                />
+              </button>
+              <Menu className="slds-dropdown_right">
+                <MenuList>
+                  <MenuItem
+                    className="slds-has-notification"
+                    title="Chat - Customer"
+                  >
+                    <abbr
+                      className="slds-indicator_unsaved"
+                      title="Tab(s) within menu not saved"
+                    >
+                      *
+                    </abbr>
+                    <span
+                      className="slds-indicator_unread"
+                      title="New Activity"
+                    >
+                      <span className="slds-assistive-text">New Activity</span>
+                    </span>
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="live_chat"
+                    />
+                    <span>Chat - Customer</span>
+                  </MenuItem>
+                  <MenuItem title="Overflow Tab Item">
+                    <SvgIcon
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                      sprite="standard"
+                      symbol="case"
+                    />
+                    <span>Overflow Tab Item</span>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </li>
+          </SubtabList>
+          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            Item One Content
+          </SubtabPanel>
+          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        </Subtabs>
       </div>
     )
   }

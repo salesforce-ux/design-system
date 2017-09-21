@@ -408,9 +408,10 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 .slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
-  align-self: flex-start;
+  align-self: center;
   font-size: $font-size-medium-a;
-  margin-top: 0.2rem; // Random but matches spec
+  position: relative;
+  top: -6px;
 }
 
 // Context Bar dropdown trigger specifics

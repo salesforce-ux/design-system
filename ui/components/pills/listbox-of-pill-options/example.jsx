@@ -6,6 +6,7 @@ import { ButtonIcon } from '../../button-icons/base/example';
 import { PillContainer } from '../base/example';
 import { Avatar } from '../../avatar/base/example';
 import SvgIcon from '../../../shared/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
@@ -85,32 +86,21 @@ export let states = [
         <ListboxPills>
           <ListboxPillsItem>
             <ListboxPill tabIndex="0">
-              <span
-                className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
                 title="Account"
-              >
-                <SvgIcon
-                  className="slds-icon"
-                  sprite="standard"
-                  symbol="account"
-                />
-                <span className="slds-assistive-text">Account</span>
-              </span>
+                assistiveText="Account"
+              />
             </ListboxPill>
           </ListboxPillsItem>
           <ListboxPillsItem>
             <ListboxPill>
-              <span
-                className="slds-icon_container slds-icon-standard-case slds-pill__icon_container"
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                symbol="case"
                 title="Case"
-              >
-                <SvgIcon
-                  className="slds-icon"
-                  sprite="standard"
-                  symbol="case"
-                />
-                <span className="slds-assistive-text">Case</span>
-              </span>
+                assistiveText="Case"
+              />
             </ListboxPill>
           </ListboxPillsItem>
         </ListboxPills>

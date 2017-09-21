@@ -140,16 +140,20 @@ export let states = [
           <ListboxPills>
             <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
             </ListboxPillsItem>
             <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
@@ -174,16 +178,20 @@ export let states = [
           <ListboxPills>
             <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
             </ListboxPillsItem>
             <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>

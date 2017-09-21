@@ -107,16 +107,21 @@ export let states = [
         <ListboxPills className="slds-p-top_xxx-small">
           <ListboxPillsItem>
             <ListboxPill label="Acme" tabIndex="0">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="account" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                title="Account"
+                assistiveText="Account"
+              />
             </ListboxPill>
           </ListboxPillsItem>
           <ListboxPillsItem>
             <ListboxPill label="Salesforce.com, Inc.">
-              <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                <StandardIcon symbol="opportunity" />
-              </Avatar>
+              <StandardIcon
+                containerClassName="slds-pill__icon_container"
+                symbol="opportunity"
+                title="Opportunity"
+                assistiveText="Opportunity"
+              />
             </ListboxPill>
           </ListboxPillsItem>
         </ListboxPills>
@@ -141,16 +146,21 @@ export let states = [
           <ListboxPills className="slds-p-top_xxx-small">
             <ListboxPillsItem>
               <ListboxPill label="Acme" tabIndex="0">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon symbol="account" />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  title="Account"
+                  assistiveText="Account"
+                />
               </ListboxPill>
             </ListboxPillsItem>
             <ListboxPillsItem>
               <ListboxPill label="Salesforce.com, Inc.">
-                <Avatar className="slds-avatar_x-small slds-pill__icon_container">
-                  <StandardIcon symbol="opportunity" />
-                </Avatar>
+                <StandardIcon
+                  containerClassName="slds-pill__icon_container"
+                  symbol="opportunity"
+                  title="Opportunity"
+                  assistiveText="Opportunity"
+                />
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>

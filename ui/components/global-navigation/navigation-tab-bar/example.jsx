@@ -410,7 +410,6 @@ export default (
         symbol="home"
         tabPanelId={tabPanelId01}
         id={tabId01}
-        itemActive
       />
       <ContextTab title="Tab Item 1" tabPanelId={tabPanelId02} id={tabId02} />
       <ContextTab title="Tab Item 2" tabPanelId={tabPanelId03} id={tabId03} />

@@ -75,7 +75,7 @@
         right-radius: $border-radius-medium;
         left-radius: $border-radius-medium;
       }
-      bottom: $border-width-thick solid $color-border;
+      bottom: $border-width-thin solid $color-border;
     }
     padding: $spacing-medium;
     text-align: center;
@@ -165,15 +165,15 @@
    */
   &__footer {
     border: {
-      top: $border-width-thick solid $color-border;
+      top: $border-width-thin solid $color-border;
       bottom: {
         right-radius: $border-radius-medium;
         left-radius: $border-radius-medium;
       }
     }
     padding: $spacing-small $spacing-medium;
-    background-color: $color-background;
-    text-align: right;
+    background-color: #fff;
+    text-align: left;
     box-shadow: $shadow-drop-down;
 
     /**

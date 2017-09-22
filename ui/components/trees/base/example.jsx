@@ -20,8 +20,19 @@ let TreeItem = props => (
       tabIndex="-1"
       title="Expand Tree Item"
     />
-    <span className="slds-truncate" title="Tree Item">
-      Tree Item
+    <span className="slds-size_1-of-1">
+      <span className="slds-tree__item-label slds-truncate" title="Tree Item">
+        Tree Item
+      </span>
+      {props.hasMetatext && (
+        <span
+          className="slds-tree__item-meta slds-truncate"
+          title="Tree Item Metatext"
+        >
+          <span className="slds-assistive-text">:</span>
+          Tree Item Metatext
+        </span>
+      )}
     </span>
     {props.children}
   </div>
@@ -38,8 +49,18 @@ let TreeBranch = props => (
       tabIndex="-1"
       title="Expand Tree Branch"
     />
-    <span className="slds-truncate" title="Tree Branch">
-      Tree Branch
+    <span className="slds-size_1-of-1">
+      <span className="slds-tree__item-label slds-truncate" title="Tree Branch">
+        Tree Branch
+      </span>
+      {props.hasMetatext && (
+        <span
+          className="slds-tree__item-meta slds-truncate"
+          title="Tree Branch Metatext"
+        >
+          Tree Branch Metatext
+        </span>
+      )}
     </span>
   </div>
 );
@@ -165,7 +186,7 @@ let Default = props => (
             aria-selected={!!props.isSelected}
             tabIndex={props.isSelected ? '0' : null}
           >
-            <TreeItem />
+            <TreeItem hasMetatext={props.hasMetatext} />
           </li>
           {props.additionalItems}
         </ul>
@@ -174,9 +195,15 @@ let Default = props => (
         role="treeitem"
         aria-level="1"
         aria-expanded="false"
-        aria-label="Tree Branch"
+        aria-label={
+          props.hasMetatext ? (
+            'Tree Branch: Tree Branch Metatext'
+          ) : (
+            'Tree Branch'
+          )
+        }
       >
-        <TreeBranch />
+        <TreeBranch hasMetatext={props.hasMetatext} />
         <ul role="group">
           <li role="treeitem" aria-level="2">
             <TreeItem />
@@ -211,5 +238,10 @@ export let states = [
     id: 'deep-nesting',
     label: 'Deeply nested branches',
     element: <Default isExpanded additionalItems={<AdditionalItems />} />
+  },
+  {
+    id: 'metatext',
+    label: 'Metatext',
+    element: <Default isExpanded hasMetatext />
   }
 ];

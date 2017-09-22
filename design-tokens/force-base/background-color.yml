@@ -117,6 +117,12 @@ props:
   COLOR_BACKGROUND_NOTIFICATION_NEW:
     value: '{!PALETTE_COOL_GRAY_2}'
     comment: Background color for a new notification list item.
+  COLOR_BACKGROUND_REMINDER:
+    value: '{!LINK_WATER}'
+    comment: Background color for reminder notification
+  COLOR_BACKGROUND_REMINDER_HOVER:
+    value: '{!WHITE}'
+    comment: Background color for reminder notification on hover
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
     value: '{!DEEP_COVE}'
     comment: Stage left org switcher dropdown arrow background color.

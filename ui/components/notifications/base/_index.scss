@@ -31,7 +31,7 @@
   box-shadow: $shadow-reminder;
 
   + .slds-notification {
-    margin-top: $spacing-small;
+    margin-top: $spacing-x-small;
   }
 
   &:nth-of-type(4) {
@@ -60,14 +60,14 @@
  * @restrict .slds-notification__body a
  */
 .slds-notification__target {
-  padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
+  padding: $spacing-small;
   border-radius: $border-radius-medium;
-  background-color: $color-background-alt;
+  background-color: $color-background-reminder;
   color: $color-text-default;
 
   &:hover,
   &:focus {
-    background-color: $color-background;
+    background-color: $color-background-reminder-hover;
     text-decoration: none;
   }
 }

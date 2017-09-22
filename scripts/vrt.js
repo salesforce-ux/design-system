@@ -41,12 +41,13 @@ const readFile = filepath =>
     )
   );
 
-const getSnap = () => readFile(snapPath);
+const getSnap = () => readFile(snapPath).map(JSON.parse);
 
 const getRef = () =>
   Task.of(path.resolve(__dirname, 'snap.json'))
     .chain(filepath => statOrDownload(snapUrl(branch), filepath))
-    .chain(readFile);
+    .chain(readFile)
+    .map(JSON.parse);
 
 Task.of(refContents => snapContents => compare(refContents, snapContents))
   .ap(getSnap())

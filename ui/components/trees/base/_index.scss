@@ -130,6 +130,16 @@
   }
 
   /**
+   * The label text of a tree item or tree branch
+   *
+   * @selector .slds-tree__item-label
+   * @restrict .slds-tree__item span
+   */
+  .slds-tree__item-label {
+    display: block;
+  }
+
+  /**
    * The meta text or secondary text of a tree item
    *
    * @selector .slds-tree__item-meta

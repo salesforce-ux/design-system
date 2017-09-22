@@ -5,7 +5,7 @@ import {
   ContextTab,
   ContextTabBar,
   ContextTabPanel,
-  MoreTab
+  ContextTabBarOverflow
 } from '../navigation-tab-bar/example';
 
 import {
@@ -93,7 +93,7 @@ it('renders an overflowed global-navigation with dropdown, unread, and unsaved',
           tabPanelId="context-tab-panel-3"
           id="context-tab-id-3"
         />
-        <MoreTab itemUnread itemUnsaved />
+        <ContextTabBarOverflow isOpen itemUnread itemUnsaved />
       </ContextTabBar>
       <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
         Tab Home Content

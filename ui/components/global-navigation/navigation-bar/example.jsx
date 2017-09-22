@@ -9,9 +9,9 @@ import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
-/// ///////////////////////////////////////////
-// Partial(s)
-/// ///////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Elements
+----------------------------------------------------------------------------- */
 
 // Context Item Dropdown
 const contextDropdown = (
@@ -38,34 +38,24 @@ const contextDropdown = (
   </Menu>
 );
 
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
 export let ContextBar = props => (
   <div className={classNames('slds-context-bar', props.className)}>
-    {/* Primary Section */}
     <div className="slds-context-bar__primary">
-      {/* App Switcher */}
       <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
         <div className="slds-context-bar__icon-action">
           <WaffleIcon className="slds-context-bar__button" />
         </div>
-        {/* App Name */}
         <span className="slds-context-bar__label-action slds-context-bar__app-name">
           <span className="slds-truncate" title={props.appName || 'App Name'}>
-            {props.stencil ? (
-              '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢'
-            ) : (
-              props.appName || 'App Name'
-            )}
+            {props.appName || 'App Name'}
           </span>
         </span>
       </div>
     </div>
-    {/* End Primary */}
-
-    {/* Secondary Section */}
     <nav className="slds-context-bar__secondary" role="navigation">
       <ul className="slds-grid">
         <li className="slds-context-bar__item">
@@ -75,7 +65,7 @@ export let ContextBar = props => (
             title="Home"
           >
             <span className="slds-truncate" title="Home">
-              {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Home'}
+              Home
             </span>
           </a>
         </li>
@@ -86,7 +76,7 @@ export let ContextBar = props => (
             title="Menu Item"
           >
             <span className="slds-truncate" title="Menu Item">
-              {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item'}
+              Menu Item
             </span>
           </a>
           <div className="slds-context-bar__icon-action slds-p-left_none">
@@ -109,7 +99,7 @@ export let ContextBar = props => (
                 title="Menu Item"
               >
                 <span className="slds-truncate" title="Menu Item">
-                  {props.stencil ? '🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢' : 'Menu Item'}
+                  Menu Item
                 </span>
               </a>
             </li>
@@ -119,15 +109,8 @@ export let ContextBar = props => (
         )}
       </ul>
     </nav>
-    {/* End Secondary Section */}
-
-    {/* Tertiary Section Goes Here */}
   </div>
 );
-
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
 
 export const Context = props => (
   <div style={{ height: '16rem' }}>{props.children}</div>

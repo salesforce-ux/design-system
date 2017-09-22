@@ -25,8 +25,8 @@
  * @summary Sub tabs
  *
  * @name sub-tabs
- * @selector .slds-tabs_default
- * @restrict div
+ * @selector .slds-sub-tabs
+ * @restrict .slds-tabs_default
  * @variant
  */
 
@@ -34,6 +34,11 @@
   border-bottom-width: $border-width-thin;
 }
 
+/**
+ * @summary Sub tab item
+ * @selector .slds-sub-tabs__item
+ * @restrict .slds-sub-tabs li
+ */
 .slds-sub-tabs__item {
   text-transform: none;
   letter-spacing: 0;
@@ -47,15 +52,24 @@
   &:after {
     content: none;
   }
+
+  .slds-tabs_default__link:focus {
+    text-decoration: underline;
+  }
 }
 
+/**
+ * @summary Modifier that notifies a parent component that it has sub tabs inside of it
+ * @selector .slds-has-sub-tabs
+ * @restrict .slds-context-bar
+ */
 .slds-has-sub-tabs {
 
-  .slds-context-bar__item_tab.slds-is-active, 
+  .slds-context-bar__item_tab.slds-is-active,
   .slds-context-bar__item_tab.slds-is-active:hover {
     animation: none;
-    background-color: transparent; 
-    
+    background-color: transparent;
+
     &:after {
       content: '';
       display: block;

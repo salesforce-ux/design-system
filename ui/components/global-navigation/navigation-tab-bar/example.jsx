@@ -22,18 +22,39 @@ const tabId01 = 'context-tab-id-1';
 const tabId02 = 'context-tab-id-2';
 const tabId03 = 'context-tab-id-3';
 
-/// ///////////////////////////////////////////
-// Partial(s)
-/// ///////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Elements
+----------------------------------------------------------------------------- */
 
-let ShortCutKey = props => (
+const ShortCutKey = props => (
   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
     <span className="slds-assistive-text">:</span>
     {props.children}
   </span>
 );
 
-// Context Tab
+const IndicatorUnsaved = props => (
+  <abbr
+    className="slds-indicator_unsaved"
+    title={props.title || 'Tab Not Saved'}
+  >
+    *
+  </abbr>
+);
+
+const IndicatorUnread = props => (
+  <span
+    aria-label="New Activity"
+    className="slds-indicator_unread"
+    role="alert"
+    title="New Activity"
+  >
+    <span className="slds-assistive-text">
+      New Tab activity with in More Tabs menu
+    </span>
+  </span>
+);
+
 export let ContextTab = props => (
   <li
     className={classNames(
@@ -151,10 +172,6 @@ export let ContextTabPanel = props => (
     {props.children}
   </div>
 );
-
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
 
 export let ContextTabBar = props => (
   <div
@@ -313,15 +330,15 @@ export let ContextTabBar = props => (
   </div>
 );
 
-export const MoreTab = props => (
+export const ContextTabBarOverflow = props => (
   <li
     className={classNames(
       'slds-context-bar__item',
       'slds-context-bar__dropdown-trigger',
       'slds-dropdown-trigger',
       'slds-dropdown-trigger_click',
-      'slds-is-open',
       {
+        'slds-is-open': props.isOpen,
         'slds-has-notification': props.itemUnread,
         'slds-is-unsaved': props.itemUnsaved
       }
@@ -332,22 +349,8 @@ export const MoreTab = props => (
       title="More Tab Items"
       aria-haspopup="true"
     >
-      {props.itemUnsaved ? (
-        <abbr className="slds-indicator_unsaved" title="Tab Not Saved">
-          *
-        </abbr>
-      ) : null}
-      <span
-        aria-label="New Activity"
-        className="slds-indicator_unread"
-        role="alert"
-        title="New Activity"
-      >
-        <span className="slds-assistive-text">
-          New Tab activity with in More Tabs menu
-        </span>
-      </span>
-
+      {props.itemUnsaved ? <IndicatorUnsaved /> : null}
+      {props.itemUnread ? <IndicatorUnread /> : null}
       <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
         More <span className="slds-assistive-text">Tabs</span>
       </span>
@@ -363,15 +366,14 @@ export const MoreTab = props => (
           className="slds-has-notification slds-is-unread"
           title="Chat - Customer"
         >
-          <abbr
-            className="slds-indicator_unsaved"
-            title="Tab(s) within menu not saved"
-          >
-            *
-          </abbr>
-          <span className="slds-indicator_unread" title="New Activity">
-            <span className="slds-assistive-text">New Activity</span>
-          </span>
+          {props.itemUnsaved ? (
+            <IndicatorUnsaved title="Tab(s) within menu not saved" />
+          ) : null}
+          {props.itemUnread ? (
+            <span className="slds-indicator_unread" title="New Activity">
+              <span className="slds-assistive-text">New Activity</span>
+            </span>
+          ) : null}
           <SvgIcon
             className="slds-icon slds-icon_small slds-icon-text-default"
             sprite="standard"
@@ -392,9 +394,9 @@ export const MoreTab = props => (
   </li>
 );
 
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
 
 export const Context = props => (
   <div style={{ height: '16rem' }}>{props.children}</div>
@@ -897,24 +899,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              aria-haspopup="true"
-            >
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tab Items"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-          </li>
+          <ContextTabBarOverflow />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -951,44 +936,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              aria-haspopup="true"
-            >
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tab Items"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-            <Menu className="slds-dropdown_right">
-              <MenuList>
-                <MenuItem>
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="case"
-                  />
-                  <span>Overflow Tab Item</span>
-                </MenuItem>
-                <MenuItem>
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="case"
-                  />
-                  <span>Overflow Tab Item</span>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </li>
+          <ContextTabBarOverflow isOpen />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -1025,31 +973,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-unsaved">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              title="More Tab Items"
-              aria-haspopup="true"
-            >
-              <abbr
-                className="slds-indicator_unsaved"
-                title="Tab(s) within menu not saved"
-              >
-                *
-              </abbr>
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tabs"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-          </li>
+          <ContextTabBarOverflow isOpen itemUnsaved />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -1086,57 +1010,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-is-unsaved">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              title="More Tab Items"
-              aria-haspopup="true"
-            >
-              <abbr
-                className="slds-indicator_unsaved"
-                title="Tab(s) within menu not saved"
-              >
-                *
-              </abbr>
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tabs"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-            <Menu className="slds-dropdown_right">
-              <MenuList>
-                <MenuItem className="slds-is-unsaved" title="Overflow Tab Item">
-                  <abbr
-                    className="slds-indicator_unsaved"
-                    title="Tab(s) within menu not saved"
-                  >
-                    *
-                  </abbr>
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="case"
-                  />
-                  <span>Overflow Tab Item</span>
-                </MenuItem>
-                <MenuItem title="Overflow Tab Item">
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="case"
-                  />
-                  <span>Overflow Tab Item</span>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </li>
+          <ContextTabBarOverflow isOpen itemUnsaved />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -1173,35 +1047,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-has-notification">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              title="More Tab Items"
-              aria-haspopup="true"
-            >
-              <span
-                aria-label="New Activity"
-                className="slds-indicator_unread"
-                role="alert"
-                title="New Activity"
-              >
-                <span className="slds-assistive-text">
-                  New Tab activity with in More Tabs menu
-                </span>
-              </span>
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tabs"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-          </li>
+          <ContextTabBarOverflow itemUnread />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -1238,61 +1084,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-notification">
-            <button
-              className="slds-button slds-context-bar__label-action"
-              title="More Tab Items"
-              aria-haspopup="true"
-            >
-              <span
-                aria-label="New Activity"
-                className="slds-indicator_unread"
-                role="alert"
-                title="New Activity"
-              >
-                <span className="slds-assistive-text">
-                  New Tab activity with in More Tabs menu
-                </span>
-              </span>
-              <span
-                className="slds-p-left_xx-small slds-truncate"
-                title="More Tabs"
-              >
-                More <span className="slds-assistive-text">Tabs</span>
-              </span>
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-                sprite="utility"
-                symbol="chevrondown"
-              />
-            </button>
-            <Menu className="slds-dropdown_right">
-              <MenuList>
-                <MenuItem
-                  className="slds-has-notification"
-                  title="Chat - Customer"
-                >
-                  <span className="slds-indicator_unread" title="New Activity">
-                    <span className="slds-assistive-text">New Activity</span>
-                  </span>
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="live_chat"
-                  />
-                  <span>Chat - Customer</span>
-                </MenuItem>
-                <MenuItem title="Overflow Tab Item">
-                  <SvgIcon
-                    className="slds-icon slds-icon_small slds-icon-text-default"
-                    sprite="standard"
-                    symbol="case"
-                  />
-                  <span>Overflow Tab Item</span>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </li>
+          <ContextTabBarOverflow isOpen itemUnread />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content
@@ -1329,7 +1121,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <MoreTab itemUnread itemUnsaved />
+          <ContextTabBarOverflow isOpen itemUnread itemUnsaved />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content

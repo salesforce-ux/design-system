@@ -3,11 +3,12 @@
 
 import React from 'react';
 import _ from '../../../shared/helpers';
-
 import {
   AdvancedDataTable as Table,
   Thead,
-  AdvancedDataTableTr as Tr
+  AdvancedDataTableTr as Tr,
+  RetailDataTableTr,
+  ActionsTh
 } from '../';
 
 /// ////////////////////////////////////////
@@ -51,6 +52,52 @@ const rows = [
     confidence: '70%',
     amount: '$25,000',
     contact: 'nathan@salesforce.com'
+  }
+];
+
+const productColumns = ['Product', 'Quantity', 'Date Added', 'Price'];
+
+const productRows = [
+  {
+    productImgSrc: '//',
+    productName: 'Men‘s Better Than Naked Jacket',
+    productProperties: [
+      { label: 'Size', value: 'Medium' },
+      { label: 'Color', value: 'Yellow' },
+      { label: 'Item No.', value: '1007100' }
+    ],
+    labelInventory: 'In Stock',
+    quantity: 1,
+    dateAdded: '4/10/17',
+    priceOriginal: 130.0,
+    priceDiscount: 104.0
+  },
+  {
+    productImgSrc: '//',
+    productName: 'Women’s Hyper-track Guide',
+    productProperties: [
+      { label: 'Size', value: '9.5' },
+      { label: 'Color', value: 'Blue' },
+      { label: 'Item No.', value: '2800100' }
+    ],
+    labelInventory: 'In Stock',
+    quantity: 1,
+    dateAdded: '4/10/17',
+    priceOriginal: 120.0,
+    priceDiscount: 96.0
+  },
+  {
+    productName: 'Women’s Denali Jacket',
+    productProperties: [
+      { label: 'Size', value: 'SM' },
+      { label: 'Color', value: 'Pink' },
+      { label: 'Item No.', value: '2000100' }
+    ],
+    labelInventory: 'In Stock',
+    quantity: '1',
+    dateAdded: '4/10/17',
+    priceOriginal: 179.0,
+    priceDiscount: 143.2
   }
 ];
 
@@ -259,6 +306,46 @@ export let states = [
           ))}
         </tbody>
       </Table>
+    )
+  }
+];
+
+export let examples = [
+  {
+    id: 'product-listing',
+    label: 'Product Listing',
+    element: (
+      <table className="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+          <tr className="slds-text-title_caps">
+            {_.times(productColumns.length, i => (
+              <th scope="col" key={i}>
+                <div className="slds-truncate" title={productColumns[i]}>
+                  {productColumns[i]}
+                </div>
+              </th>
+            ))}
+            <ActionsTh />
+          </tr>
+        </thead>
+        <tbody>
+          {_.times(productRows.length, i => (
+            <RetailDataTableTr
+              key={i}
+              index={i + 1}
+              productImgSrc={productRows[i].productImgSrc}
+              productName={productRows[i].productName}
+              productProperties={productRows[i].productProperties}
+              labelInventory={productRows[i].labelInventory}
+              quantity={productRows[i].quantity}
+              dateAdded={productRows[i].dateAdded}
+              priceOriginal={productRows[i].priceOriginal}
+              priceDiscount={productRows[i].priceDiscount}
+              actionableMode
+            />
+          ))}
+        </tbody>
+      </table>
     )
   }
 ];

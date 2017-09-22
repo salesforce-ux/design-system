@@ -773,3 +773,33 @@ export const ErrorTooltip = props => (
     Company encountered an error.
   </Tooltip>
 );
+
+/**
+ * @name RetailDataTableTr - Table row for advanced data table components
+ * @param {*} props
+ * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
+ * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
+ * @prop {boolean} rowSelected
+ * @prop {integer} index - Row index in the Grid
+ * @prop {string} className - CSS classes for the tr element
+ * @prop {string} dateAdded
+ * @prop {string} labelInventory
+ * @prop {string} priceOriginal
+ * @prop {string} priceDiscount
+ * @prop {string} productImgSrc
+ * @prop {string} productName
+ * @prop {*} productProperties
+ * @prop {string} quantity
+ */
+export const RetailDataTableTr = props => (
+  <tr
+    className={classNames('slds-hint-parent', props.className)}
+    aria-selected={props.rowSelected}
+  >
+    <td />
+    <ReadOnlyTd cellText={props.quantity} />
+    <ReadOnlyTd cellText={props.dateAdded} />
+    <ReadOnlyTd cellText={props.priceOriginal} />
+    <RowActionsTd actionableMode={props.actionableMode} />
+  </tr>
+);

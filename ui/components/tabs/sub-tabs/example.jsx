@@ -300,45 +300,6 @@ export let states = [
     `
   },
   {
-    id: 'subtabs-unsaved',
-    label: 'Unsaved Tab',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            itemUnsaved
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
-  },
-  {
     id: 'subtabs-borders',
     label: 'With Borders',
     element: (
@@ -419,6 +380,45 @@ export let states = [
     )
   },
   {
+    id: 'subtabs-unsaved',
+    label: 'Unsaved Tab',
+    element: (
+      <div className="slds-tabs_default slds-sub-tabs">
+        <ul className="slds-tabs_default__nav" role="tablist">
+          <Subtab
+            title="00071938"
+            active
+            itemUnsaved
+            tabItemId="subtab-tabitem-01"
+            tabPanelId="subtab-tabpanel-01"
+          />
+          <Subtab
+            title="Chat - Customer"
+            tabItemId="subtab-tabitem-02"
+            tabPanelId="subtab-tabpanel-02"
+            symbol="live_chat"
+          />
+        </ul>
+        <div
+          className="slds-tabs_default__content slds-show"
+          id="subtab-tabpanel-01"
+          role="tabpanel"
+          aria-labelledby="subtab-tabitem-01"
+        >
+          Item One Content
+        </div>
+        <div
+          className="slds-tabs_default__content slds-hide"
+          id="subtab-tabpanel-02"
+          role="tabpanel"
+          aria-labelledby="subtab-tabitem-02"
+        >
+          Item Two Content
+        </div>
+      </div>
+    )
+  },
+  {
     id: 'unread',
     label: 'Unread Tab',
     element: (
@@ -459,7 +459,7 @@ export let states = [
   },
   {
     id: 'unsaved',
-    label: 'Unsaved Tab',
+    label: 'Unread Unsaved Tab',
     element: (
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">

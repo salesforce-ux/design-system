@@ -53,7 +53,8 @@
     content: none;
   }
 
-  .slds-tabs_default__link:focus {
+  .slds-tabs_default__link:focus,
+  &.slds-has-focus {
     text-decoration: underline;
   }
 }

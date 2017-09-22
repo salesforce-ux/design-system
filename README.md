@@ -127,7 +127,22 @@ gulp lint:js
 gulp lint:js:test
 gulp lint:spaces
 gulp lint:html
-gulp lint:vnu (optional: --component "{trees_base_with*,trees_base_deep*}")
+
+# HTML5 validation
+gulp lint:vnu
+# HTML5 validation on comma separated component names
+gulp lint:vnu --components button, path, trees
+```
+
+### `gulp a11y`
+
+Run aXe Core against the components for Accessibility issues
+
+```bash
+# All components
+gulp a11y
+# Comma separated list of components
+gulp a11y --components button, path, trees
 ```
 
 ### Compilation

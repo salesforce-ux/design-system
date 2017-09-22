@@ -2,9 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
+import { Avatar } from '../avatar/base/example';
 import { ButtonIcon } from '../button-icons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
+import MediaObject from '../../utilities/media-objects/index.react';
 import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
@@ -775,6 +777,22 @@ export const ErrorTooltip = props => (
 );
 
 /**
+ * @name ProductImage - Table row for advanced data table components
+ * @param {*} props
+ * @prop {string} productImgSrc
+ * @prop {string} productName
+ */
+export const ProductImage = props => (
+  <Avatar className="slds-avatar_large">
+    <img
+      alt={props.productName}
+      src={props.productImgSrc}
+      title={props.productName}
+    />
+  </Avatar>
+);
+
+/**
  * @name RetailDataTableTr - Table row for advanced data table components
  * @param {*} props
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
@@ -796,7 +814,31 @@ export const RetailDataTableTr = props => (
     className={classNames('slds-hint-parent', props.className)}
     aria-selected={props.rowSelected}
   >
-    <td />
+    <td>
+      <MediaObject
+        figureLeft={
+          <ProductImage
+            productName={props.productName}
+            productImgSrc={props.productImgSrc}
+          />
+        }
+      >
+        <ReadOnlyCellContent
+          actionableMode={props.actionableMode}
+          cellLink="javascript:void(0);"
+          cellText={props.productName}
+        />
+        <ul>
+          {_.times(props.productProperties.length, i => (
+            <li key={i}>
+              {props.productProperties[i].label}:{' '}
+              <strong>{props.productProperties[i].value}</strong>
+            </li>
+          ))}
+        </ul>
+        <p>{props.labelInventory}</p>
+      </MediaObject>
+    </td>
     <ReadOnlyTd cellText={props.quantity} />
     <ReadOnlyTd cellText={props.dateAdded} />
     <ReadOnlyTd cellText={props.priceOriginal} />

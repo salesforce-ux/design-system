@@ -59,45 +59,46 @@ const productColumns = ['Product', 'Quantity', 'Date Added', 'Price'];
 
 const productRows = [
   {
-    productImgSrc: '//',
-    productName: 'Men‘s Better Than Naked Jacket',
+    productImgSrc: '/assets/images/product1.jpg',
+    productName: 'Baseball Cap',
     productProperties: [
-      { label: 'Size', value: 'Medium' },
-      { label: 'Color', value: 'Yellow' },
+      { label: 'Size', value: '7 3/4' },
+      { label: 'Color', value: 'Blue' },
       { label: 'Item No.', value: '1007100' }
     ],
     labelInventory: 'In Stock',
     quantity: 1,
     dateAdded: '4/10/17',
-    priceOriginal: 130.0,
-    priceDiscount: 104.0
+    priceOriginal: '$23.00',
+    priceDiscount: '$20.00'
   },
   {
-    productImgSrc: '//',
-    productName: 'Women’s Hyper-track Guide',
+    productImgSrc: '/assets/images/product2.jpg',
+    productName: 'Construction Hat',
     productProperties: [
-      { label: 'Size', value: '9.5' },
-      { label: 'Color', value: 'Blue' },
+      { label: 'Size', value: 'One size fits most' },
+      { label: 'Color', value: 'Yellow' },
       { label: 'Item No.', value: '2800100' }
     ],
     labelInventory: 'In Stock',
     quantity: 1,
     dateAdded: '4/10/17',
-    priceOriginal: 120.0,
-    priceDiscount: 96.0
+    priceOriginal: '$52.00',
+    priceDiscount: '$40.00'
   },
   {
-    productName: 'Women’s Denali Jacket',
+    productImgSrc: '/assets/images/product3.jpg',
+    productName: 'Campaign Hat',
     productProperties: [
-      { label: 'Size', value: 'SM' },
-      { label: 'Color', value: 'Pink' },
+      { label: 'Size', value: 'Small' },
+      { label: 'Color', value: 'Tan' },
       { label: 'Item No.', value: '2000100' }
     ],
     labelInventory: 'In Stock',
     quantity: '1',
     dateAdded: '4/10/17',
-    priceOriginal: 179.0,
-    priceDiscount: 143.2
+    priceOriginal: '$79.00',
+    priceDiscount: '$59.00'
   }
 ];
 

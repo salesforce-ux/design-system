@@ -101,7 +101,6 @@ const ListBox = props => (
       'slds-is-disabled': props.disabled
     })}
     role="application"
-    aria-disabled={props.disabled}
   >
     <ul
       aria-describedby="option-drag-label"

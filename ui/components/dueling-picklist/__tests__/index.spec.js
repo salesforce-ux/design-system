@@ -25,7 +25,7 @@ it('renders a dueling picklist with a required option', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={RequiredSnapShot} />));
 
 it('renders a disabled dueling picklist', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DisabledSnapShot} />));
+  matchesMarkupAndStyle(<MultiSelect dataSet={DisabledSnapShot} disabled />));
 
 it('renders a dueling picklist with a selected option', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={SelectedSnapShot} />));

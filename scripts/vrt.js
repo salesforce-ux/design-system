@@ -49,7 +49,9 @@ const getRef = () =>
     .chain(readFile)
     .map(JSON.parse);
 
-Task.of(refContents => snapContents => compare(refContents, snapContents))
+Task.of(refContents => snapContents =>
+  Object.keys(refContents).map(k => compare(refContents[k], snapContents[k]))
+)
   .ap(getSnap())
   .ap(getRef())
   .map(report =>

@@ -50,7 +50,12 @@ const getRef = () =>
     .map(JSON.parse);
 
 Task.of(refContents => snapContents =>
-  Object.keys(refContents).map(k => compare(refContents[k], snapContents[k]))
+  Object.keys(refContents).map(
+    k =>
+      snapContents[k]
+        ? Object.assign({ file: k }, compare(refContents[k], snapContents[k]))
+        : { passed: true }
+  )
 )
   .ap(getSnap())
   .ap(getRef())

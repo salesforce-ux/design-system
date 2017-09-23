@@ -8,7 +8,7 @@ import {
   Thead,
   Th,
   AdvancedDataTableTr as Tr,
-  RetailDataTableTr,
+  ProductDataTableTr,
   ActionsTh
 } from '../';
 
@@ -329,7 +329,7 @@ export let examples = [
         </thead>
         <tbody>
           {_.times(productRows.length, i => (
-            <RetailDataTableTr
+            <ProductDataTableTr
               key={i}
               index={i + 1}
               productImgSrc={productRows[i].productImgSrc}

@@ -794,7 +794,7 @@ export const ProductImage = props => (
 );
 
 /**
- * @name RetailDataTableTr - Table row for advanced data table components
+ * @name ProductDataTableTr - Table row for advanced data table components
  * @param {*} props
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
@@ -810,7 +810,7 @@ export const ProductImage = props => (
  * @prop {*} productProperties
  * @prop {string} quantity
  */
-export const RetailDataTableTr = props => (
+export const ProductDataTableTr = props => (
   <tr
     className={classNames(
       'slds-hint-parent',

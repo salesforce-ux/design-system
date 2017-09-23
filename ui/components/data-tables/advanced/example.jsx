@@ -6,6 +6,7 @@ import _ from '../../../shared/helpers';
 import {
   AdvancedDataTable as Table,
   Thead,
+  Th,
   AdvancedDataTableTr as Tr,
   RetailDataTableTr,
   ActionsTh
@@ -316,16 +317,13 @@ export let examples = [
     id: 'product-listing',
     label: 'Product Listing',
     element: (
-      <table className="slds-table slds-table_bordered slds-table_cell-buffer">
+      <Table>
         <thead>
-          <tr className="slds-text-title_caps">
+          <tr className="slds-line-height_reset">
             {_.times(productColumns.length, i => (
-              <th scope="col" key={i}>
-                <div className="slds-truncate" title={productColumns[i]}>
-                  {productColumns[i]}
-                </div>
-              </th>
+              <Th columnName={productColumns[i]} key={i} />
             ))}
+
             <ActionsTh />
           </tr>
         </thead>
@@ -346,7 +344,7 @@ export let examples = [
             />
           ))}
         </tbody>
-      </table>
+      </Table>
     )
   }
 ];

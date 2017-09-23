@@ -6,6 +6,7 @@ import { Avatar } from '../avatar/base/example';
 import { ButtonIcon } from '../button-icons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
+import { Input } from '../input/base/example';
 import MediaObject from '../../utilities/media-objects/index.react';
 import SvgIcon from '../../shared/svg-icon';
 
@@ -783,13 +784,13 @@ export const ErrorTooltip = props => (
  * @prop {string} productName
  */
 export const ProductImage = props => (
-  <Avatar className="slds-avatar_large">
+  <div className="slds-size_xx-small">
     <img
       alt={props.productName}
       src={props.productImgSrc}
       title={props.productName}
     />
-  </Avatar>
+  </div>
 );
 
 /**
@@ -811,7 +812,11 @@ export const ProductImage = props => (
  */
 export const RetailDataTableTr = props => (
   <tr
-    className={classNames('slds-hint-parent', props.className)}
+    className={classNames(
+      'slds-hint-parent',
+      'slds-align-top',
+      props.className
+    )}
     aria-selected={props.rowSelected}
   >
     <td>
@@ -836,12 +841,25 @@ export const RetailDataTableTr = props => (
             </li>
           ))}
         </ul>
-        <p>{props.labelInventory}</p>
+        <p className="slds-text-color_success">{props.labelInventory}</p>
       </MediaObject>
     </td>
-    <ReadOnlyTd cellText={props.quantity} />
+    <td>
+      <span>
+        <Input
+          defaultValue={props.quantity}
+          placeholder=" "
+          className="slds-size_xxx-small slds-text-align_center"
+        />
+      </span>
+    </td>
     <ReadOnlyTd cellText={props.dateAdded} />
-    <ReadOnlyTd cellText={props.priceOriginal} />
+    <td>
+      <p>
+        <strike>{props.priceOriginal}</strike>
+      </p>
+      <p>{props.priceDiscount}</p>
+    </td>
     <RowActionsTd actionableMode={props.actionableMode} />
   </tr>
 );

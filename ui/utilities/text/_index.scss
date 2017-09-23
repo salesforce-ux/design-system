@@ -147,6 +147,16 @@
 }
 
 /**
+ * @summary Success color of text
+ *
+ * @selector .slds-text-color_success
+ * @modifier
+ */
+.slds-text-color_success {
+  color: $color-text-success;
+}
+
+/**
  * @summary Default color of text on inversed background
  *
  * @selector .slds-text-color_inverse

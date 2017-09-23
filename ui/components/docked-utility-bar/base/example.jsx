@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /// ////////////////////////////////////////
 
 export let UtilityPanel = props => (
-  <section
+  <div
     className={classNames(
       'slds-utility-panel slds-grid slds-grid_vertical',
       props.className
@@ -19,7 +19,7 @@ export let UtilityPanel = props => (
     role="dialog"
     aria-labelledby="panel-heading-01"
   >
-    <header className="slds-utility-panel__header slds-grid slds-shrink-none">
+    <div className="slds-utility-panel__header slds-grid slds-shrink-none">
       <div className="slds-media slds-media_center">
         <div className="slds-media__figure slds-m-right_x-small">
           <span className="slds-icon_container">
@@ -42,9 +42,9 @@ export let UtilityPanel = props => (
           title="Close Panel"
         />
       </div>
-    </header>
+    </div>
     <div className="slds-utility-panel__body">{props.children}</div>
-  </section>
+  </div>
 );
 
 export let UtilityBarItem = props => (

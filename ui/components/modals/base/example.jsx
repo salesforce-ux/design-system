@@ -47,7 +47,7 @@ export let ModalHeader = props => (
 export let ModalContent = props => (
   <div
     className={classNames('slds-modal__content', props.className)}
-    id={props['aria-describedby'] || 'modal-content-id-1'}
+    id={props.id ? props.id : props['aria-describedby'] || 'modal-content-id-1'}
   >
     {props.children}
   </div>

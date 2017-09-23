@@ -59,7 +59,7 @@ const FontFamilyDropdown = props => (
   <Listbox
     className="slds-dropdown slds-dropdown_fluid"
     vertical
-    listboxId="family-listbox"
+    id="family-listbox"
   >
     <ListboxItem>
       <Option
@@ -80,7 +80,7 @@ const FontSizeDropdown = props => (
   <Listbox
     className="slds-dropdown slds-dropdown_fluid"
     vertical
-    id="family-listbox"
+    id="size-listbox"
   >
     <ListboxItem>
       <Option

@@ -29,7 +29,7 @@
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "2.1.4",
     "@salesforce-ux/icons": "7.31.0",
-    "@salesforce-ux/instant-vrt": "1.1.6",
+    "@salesforce-ux/instant-vrt": "1.1.7",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "babel-cli": "6.23.0",

@@ -1,7 +1,7 @@
 const minimist = require('minimist');
 const packageJSON = require('../package.json');
 const fs = require('fs');
-const compare = require('@salesforce-ux/instant-vrt');
+const compare = require('@salesforce-ux/instant-vrt/compare');
 const path = require('path');
 const request = require('request');
 const Task = require('data.task');
@@ -41,14 +41,22 @@ const readFile = filepath =>
     )
   );
 
-const getSnap = () => readFile(snapPath);
+const getSnap = () => readFile(snapPath).map(JSON.parse);
 
 const getRef = () =>
   Task.of(path.resolve(__dirname, 'snap.json'))
     .chain(filepath => statOrDownload(snapUrl(branch), filepath))
-    .chain(readFile);
+    .chain(readFile)
+    .map(JSON.parse);
 
-Task.of(refContents => snapContents => compare(refContents, snapContents))
+Task.of(refContents => snapContents =>
+  Object.keys(refContents).map(
+    k =>
+      snapContents[k]
+        ? Object.assign({ file: k }, compare(refContents[k], snapContents[k]))
+        : { passed: true }
+  )
+)
   .ap(getSnap())
   .ap(getRef())
   .map(report =>

@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
-import { Avatar } from '../avatar/base/example';
 import { ButtonIcon } from '../button-icons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';

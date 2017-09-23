@@ -8,6 +8,7 @@ import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';
+import { Tooltip } from '../../tooltips/base/example';
 
 const inputLabel = 'Form Element Label';
 const inputId = 'input-unique-id';
@@ -74,6 +75,18 @@ export let FormElement = props => {
             />
             <span className="slds-assistive-text">Help</span>
           </button>
+          <Tooltip
+            className="slds-nubbin_bottom-left"
+            id="help"
+            style={{
+              position: 'absolute',
+              top: '-45px',
+              left: '-15px',
+              width: '170px'
+            }}
+          >
+            Some helpful information
+          </Tooltip>
         </div>
       ) : null}
       <div
@@ -189,9 +202,17 @@ export let examples = [
     id: 'tooltip-help',
     label: 'Tooltip Help',
     element: (
-      <FormElement label={inputLabel} inputId={inputId} tooltip>
-        <Input id={inputId} />
-      </FormElement>
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '3rem',
+          position: 'relative'
+        }}
+      >
+        <FormElement label={inputLabel} inputId={inputId} tooltip>
+          <Input id={inputId} />
+        </FormElement>
+      </div>
     )
   }
 ];

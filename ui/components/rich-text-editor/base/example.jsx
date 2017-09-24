@@ -402,7 +402,7 @@ let TextInputExample = props => (
     <p>
       Lorem ipsum dolor sit amet, <strong>strong</strong> adipisicing elit, sed
       do <em>emphasis</em> tempor incididunt ut <u>underlined</u> et dolore{' '}
-      <strike>strikethrough</strike> aliqua. Ut <sub>subscript</sub> ad{' '}
+      <s>strikethrough</s> aliqua. Ut <sub>subscript</sub> ad{' '}
       <sup>superscript</sup> veniam, <abbr>quis</abbr> nostrud exercitation
       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
       dolor in <a href="#">link</a> in voluptate velit esse cillum dolore eu

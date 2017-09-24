@@ -73,9 +73,9 @@ export let FilterObject = props => {
         >
           <span className="slds-assistive-text">Edit filter:</span>
           {props.type ? (
-            <span className="slds-text-body_small">{props.type}</span>
+            <span className="slds-show slds-text-body_small">{props.type}</span>
           ) : null}
-          <span>{props.children}</span>
+          <span className="slds-show">{props.children}</span>
         </button>
         {props.removable ? (
           <ButtonIcon

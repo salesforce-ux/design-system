@@ -32,7 +32,7 @@ const ListboxDropdown = props => (
   >
     {props.heading ? (
       <li role="presentation" className="slds-listbox__item">
-        <span
+        <div
           className="slds-media slds-listbox__option slds-listbox__option_plain"
           role="presentation"
           id={listboxOptionId00}
@@ -40,7 +40,7 @@ const ListboxDropdown = props => (
           <h3 className="slds-text-title_caps" role="presentation">
             {props.heading}
           </h3>
-        </span>
+        </div>
       </li>
     ) : null}
     <ListboxItem>

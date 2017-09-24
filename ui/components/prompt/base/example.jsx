@@ -26,7 +26,10 @@ export default (
         </h2>
       </ModalHeader>
 
-      <ModalContent className="slds-p-around_medium">
+      <ModalContent
+        className="slds-p-around_medium"
+        id="prompt-message-wrapper"
+      >
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
           deserunt aute id consequat veniam incididunt duis in sint irure nisi.

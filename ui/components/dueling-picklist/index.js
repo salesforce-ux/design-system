@@ -90,6 +90,7 @@ const SelectionGroup = props => {
         disabled={props.disabled}
         options={props.group.options}
         ariaLabelledby={groupLabelID}
+        listboxLabel={props.group.label}
       />
     </div>
   );
@@ -111,7 +112,11 @@ const ListBox = props => (
       role="listbox"
     >
       {props.options.map(option => (
-        <Option key={_.uniqueId('cell-resize-handle-')} option={option} />
+        <Option
+          key={_.uniqueId('cell-resize-handle-')}
+          option={option}
+          listboxLabel={props.listboxLabel}
+        />
       ))}
     </ul>
   </div>
@@ -121,7 +126,7 @@ const Option = props => (
   <li role="presentation" className="slds-listbox__item">
     <div
       className={classNames(
-        'slds-listbox__option slds-listbox__option_plain slds-media',
+        'slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline',
         {
           'slds-is-grabbed': props.option.isGrabbed,
           'slds-is-selected': props.option.isSelected
@@ -132,14 +137,26 @@ const Option = props => (
       role="option"
       tabIndex={props.option.tabIndex}
     >
-      <span className="slds-truncate" title={props.option.text}>
-        {props.option.text}
-        {props.option.required ? (
-          <abbr className="slds-required" title="required">
-            *
-          </abbr>
-        ) : null}
+      <span className="slds-media__body">
+        <span className="slds-truncate" title={props.option.text}>
+          {props.option.text}
+        </span>
       </span>
+      {props.option.locked && (
+        <span className="slds-media__figure slds-media__figure_reverse">
+          <span className="slds-icon_container" title="Locked item">
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              sprite="utility"
+              symbol="lock"
+            />
+            <span className="slds-assistive-text">
+              {' '}
+              : item cannot be removed from {props.listboxLabel}
+            </span>
+          </span>
+        </span>
+      )}
     </div>
   </li>
 );
@@ -256,7 +273,7 @@ export const DisabledSnapShot = {
   ]
 };
 
-export const RequiredSnapShot = {
+export const LockedSnapShot = {
   liveRegionText: '',
   optionDragLabel:
     'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists. Required items must remain in the second category.',
@@ -298,7 +315,7 @@ export const RequiredSnapShot = {
           tabIndex: 0,
           isSelected: false,
           isGrabbed: false,
-          required: true
+          locked: true
         },
         {
           text: 'Option 5',

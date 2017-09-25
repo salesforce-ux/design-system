@@ -39,12 +39,13 @@ export const AdvancedDataTable = props => (
 );
 
 /**
- * @name Thead - thead block for both advanced and inline edit grids
+ * @name Thead - thead block for advanced, inline, and product edit grids
  * @param {*} props
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
+ * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
  * @prop {boolean} selectAll - Specifies whether the select all checkbox is marked
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
@@ -59,12 +60,14 @@ export const Thead = props => {
       <tr className="slds-line-height_reset">
         {props.hasErrorColumn ? <ErrorsTh /> : null}
 
-        <SelectAllTh
-          actionableMode={props.actionableMode}
-          checked={props.selectAll}
-          className={!props.hasErrorColumn ? 'slds-text-align_right' : null}
-          style={{ width: selectAllColumnWidth }}
-        />
+        {props.hasNoSelectability ? null : (
+          <SelectAllTh
+            actionableMode={props.actionableMode}
+            checked={props.selectAll}
+            className={!props.hasErrorColumn ? 'slds-text-align_right' : null}
+            style={{ width: selectAllColumnWidth }}
+          />
+        )}
 
         {_.times(props.columns.length, i => (
           <Th

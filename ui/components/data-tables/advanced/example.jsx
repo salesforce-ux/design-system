@@ -318,15 +318,7 @@ export let examples = [
     label: 'Product Listing',
     element: (
       <Table>
-        <thead>
-          <tr className="slds-line-height_reset">
-            {_.times(productColumns.length, i => (
-              <Th columnName={productColumns[i]} key={i} />
-            ))}
-
-            <ActionsTh />
-          </tr>
-        </thead>
+        <Thead columns={productColumns} actionableMode hasNoSelectability />
         <tbody>
           {_.times(productRows.length, i => (
             <ProductDataTableTr

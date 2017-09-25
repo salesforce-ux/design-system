@@ -5,7 +5,7 @@
   "repo": "design-system",
   "is-prerelease": false,
   "is-draft": false,
-  "tag": "v0.12.6",
+  "tag": "v0.12.7",
   "build-scripts": [
     "npm install",
     "npm run dist"

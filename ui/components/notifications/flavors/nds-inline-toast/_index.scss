@@ -10,3 +10,8 @@
     margin: $spacing-none;
   }
 }
+
+.toast-notification-surround {
+  position: absolute;
+  z-index: $z-index-toast;
+}

@@ -76,6 +76,7 @@ export let MenuList = props => (
   <ul
     className={classNames('slds-dropdown__list', props.className)}
     role="menu"
+    aria-label={props.ariaLabel}
   >
     {props.children}
   </ul>
@@ -137,8 +138,6 @@ const RightIcon = (
 export let MenuItemHasSubmenu = props => {
   const {
     className,
-    isSelectable,
-    isSelected,
     children,
     iconRight,
     itemName,
@@ -146,11 +145,6 @@ export let MenuItemHasSubmenu = props => {
     title,
     ...rest
   } = props;
-  let ariaChecked;
-
-  if (isSelectable) {
-    ariaChecked = isSelected ? 'true' : 'false';
-  }
 
   return (
     <li
@@ -160,8 +154,8 @@ export let MenuItemHasSubmenu = props => {
     >
       <a
         href="javascript:void(0);"
-        role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
-        aria-checked={ariaChecked}
+        aria-haspopup="true"
+        role="menuitem"
         tabIndex={tabIndex || '-1'}
       >
         <span className="slds-truncate" title={title || itemName}>
@@ -172,7 +166,7 @@ export let MenuItemHasSubmenu = props => {
       <Menu
         className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
       >
-        <MenuList>
+        <MenuList ariaLabel={props.itemName}>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>

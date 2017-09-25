@@ -126,6 +126,64 @@ export let MenuItem = props => {
   );
 };
 
+const RightIcon = (
+  <SvgIcon
+    className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none"
+    sprite="utility"
+    symbol="right"
+  />
+);
+
+export let MenuItemHasSubmenu = props => {
+  const {
+    className,
+    isSelectable,
+    isSelected,
+    children,
+    iconRight,
+    itemName,
+    tabIndex,
+    title,
+    ...rest
+  } = props;
+  let ariaChecked;
+
+  if (isSelectable) {
+    ariaChecked = isSelected ? 'true' : 'false';
+  }
+
+  return (
+    <li
+      {...rest}
+      className={classNames('slds-dropdown__item slds-has-submenu', className)}
+      role="presentation"
+    >
+      <a
+        href="javascript:void(0);"
+        role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
+        aria-checked={ariaChecked}
+        tabIndex={tabIndex || '-1'}
+      >
+        <span className="slds-truncate" title={title || itemName}>
+          {props.itemName}
+        </span>
+        {iconRight || null}
+      </a>
+      <Menu
+        className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
+      >
+        <MenuList>
+          <MenuItem tabIndex="0">Menu Item One</MenuItem>
+          <MenuItem>Menu Item Two</MenuItem>
+          <MenuItem>Menu Item Three</MenuItem>
+          <li className="slds-has-divider_top-space" role="separator" />
+          <MenuItem>Menu Item Four</MenuItem>
+        </MenuList>
+      </Menu>
+    </li>
+  );
+};
+
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
@@ -354,6 +412,27 @@ export let examples = [
           </MenuList>
         </Menu>
       </Trigger>
+    )
+  },
+  {
+    id: 'submenu',
+    label: 'Submenu',
+    element: (
+      <div className="demo-only" style={{ height: '165px' }}>
+        <Trigger className="slds-is-open">
+          <Menu className="slds-dropdown_left">
+            <MenuList>
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+              <MenuItemHasSubmenu
+                iconRight={RightIcon}
+                itemName="Menu Item Three"
+                submenuClassnames="slds-dropdown_submenu-right"
+              />
+            </MenuList>
+          </Menu>
+        </Trigger>
+      </div>
     )
   }
 ];

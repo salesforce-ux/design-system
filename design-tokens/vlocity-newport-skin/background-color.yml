@@ -1,0 +1,24 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+- ../color-palettes.yml
+props:
+  ## 
+  COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: '{!NEWPORT_BACKGROUND_PRIMARY_BLUE}'
+  COLOR_BRAND:
+    value: '{!NEWPORT_COLOR_BRAND_ORANGE}'
+    comment: Our product brand orange.
+  CARD_COLOR_BACKGROUND:
+    value: '{!NEWPORT_CARD_BACKGROUND_LIGHT_BLUE}'
+  COLOR_BORDER_INPUT_ACTIVE:
+    value: '{!NEWPORT_COLOR_BRAND_ORANGE}'

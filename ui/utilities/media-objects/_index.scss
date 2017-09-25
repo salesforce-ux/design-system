@@ -79,6 +79,17 @@
   margin-left: $spacing-large;
 }
 
+
+/**
+ * Aligns the figure and body to be inline-block of each other
+ *
+ * @selector .slds-media_inline
+ * @modifier
+ */
+.slds-media_inline .slds-media__body {
+  flex: 0 1 auto;
+}
+
 /**
  * Aligns the content in the .slds-media__body to the middle of the .slds-media__figure
  *
@@ -100,6 +111,7 @@
 .slds-media__figure--reverse {
   margin: 0 0 0 $spacing-small;
 }
+
 
 @include deprecate('4.0.0') {
 

@@ -1,33 +1,31 @@
-/*
-Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-
-import gulp from 'gulp';
-import cache from 'gulp-cached';
-import gulpif from 'gulp-if';
-import runSequence from 'run-sequence';
-import lintspaces from 'gulp-lintspaces';
-import eslint from 'gulp-eslint';
-import eslintFriendlyFormatter from 'eslint-friendly-formatter';
-import scsslint from 'gulp-scss-lint';
-import browserSync from 'browser-sync';
-import htmlhint from 'gulp-htmlhint';
+const gulp = require('gulp');
+const cache = require('gulp-cached');
+const gutil = require('gulp-util');
+const lintspaces = require('gulp-lintspaces');
+const eslint = require('gulp-eslint');
+const stylelint = require('gulp-stylelint');
+const htmlhint = require('gulp-htmlhint');
+const tokenlint = require('./plugins/lint-tokens');
+const yamlValidate = require('gulp-yaml-validate');
+const {validate} = require('./validate');
+const vnu = require('./vnu');
 
 gulp.task('lint:sass', () =>
   gulp.src([
     'site/assets/styles/**/*.scss',
     'ui/**/*.scss'
   ])
-  .pipe(cache('lintsass'))
-  .pipe(scsslint({
-    bundleExec: true
+  .pipe(cache('stylelint'))
+  .pipe(stylelint({
+    reporters: [
+      {
+        formatter: 'string',
+        console: true
+      }
+    ]
   }))
 );
 
@@ -36,6 +34,8 @@ gulp.task('lint:spaces', () =>
     '*.{js,json,md,yml,txt}',
     '.*',
     '!.DS_Store',
+    '!LICENSE-icons-images.txt',
+    '!CONTRIBUTING.md',
     'ui/**/*.*',
     'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
     'scripts/**/*.{js,sh,jsx}'
@@ -50,13 +50,12 @@ gulp.task('lint:spaces', () =>
   .pipe(lintspaces.reporter())
 );
 
-function lintjs(files, options) {
+function lintjs (files, options) {
   return () => {
     return gulp.src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format(eslintFriendlyFormatter))
-      .pipe(gulpif(!browserSync.active, eslint.failAfterError()));
+      .pipe(eslint.format('codeframe'));
   };
 }
 
@@ -77,8 +76,8 @@ gulp.task('lint:js:test', lintjs([
 
 // This task lints pre-built assets (not the JSX templates),
 // So you typically have to run `npm run build` before linting HTML files.
-gulp.task('lint:html', () => {
-  return gulp.src('.www/components/**/*.html')
+gulp.task('lint:html', ['generate:wrappedexamples'], () => {
+  return gulp.src('.html/*.html')
     .pipe(htmlhint({
       // Rules documentation:
       // https://github.com/yaniswang/HTMLHint/wiki/Rules
@@ -104,4 +103,37 @@ gulp.task('lint:html', () => {
     .pipe(htmlhint.reporter());
 });
 
-gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html']);
+gulp.task('lint:tokens:yaml', () =>
+  gulp.src([
+    './ui/components/**/tokens/*.yml',
+    './design-tokens/aliases/*.yml'
+  ])
+    .pipe(yamlValidate())
+);
+
+gulp.task('lint:tokens:components', () =>
+  gulp.src([
+    './ui/components/**/tokens/*.yml',
+    '!./ui/components/**/tokens/bg-*.yml', // icons
+    '!./ui/components/**/tokens/force-font-commons.yml' // fonts
+  ])
+    .pipe(tokenlint())
+    .pipe(tokenlint.report('verbose'))
+);
+
+gulp.task('lint:tokens:aliases', () =>
+  gulp.src([
+    './design-tokens/aliases/*.yml'
+  ])
+    .pipe(tokenlint({ prefix: false }))
+    .pipe(tokenlint.report('verbose'))
+);
+
+gulp.task('lint:tokens', ['lint:tokens:yaml', 'lint:tokens:components', 'lint:tokens:aliases']);
+
+gulp.task('lint', ['lint:sass', 'lint:spaces', 'lint:js', 'lint:html', 'lint:tokens']);
+
+gulp.task('lint:examples', ['lint:vnu', 'lint:validate', 'a11y']);
+
+gulp.task('lint:validate', ['generate:wrappedexamples'], () =>
+  validate().fork(console.error, x => x));

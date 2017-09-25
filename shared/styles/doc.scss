@@ -1,0 +1,133 @@
+// CodeView
+.docs-codeblock {
+  margin-bottom: 2rem;
+}
+
+.docs-codeblock__example {
+  padding: 1rem;
+}
+
+
+// Type Styles
+
+body {
+  overflow: hidden;
+}
+
+h1.doc,
+h2.doc,
+h4.doc,
+h5.doc,
+p.doc,
+lead.doc {
+  font-weight: 300;
+}
+
+h1.doc {
+  font-size: 3rem;
+  margin-bottom: 1rem
+}
+
+h2.doc {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+h3.doc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 2rem 0 1rem;
+}
+
+h4.doc {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem;
+}
+
+h5.doc {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+h6.doc {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+p.doc {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+lead.doc {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+blockquote.doc {
+  background-color: #f7f7f7;
+  color: #5876a3;
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 1rem;
+  border-left: 2px solid #5876a3;
+  border: 1px solid #f2f2f2;
+  border-left: 2px solid #5876a3;
+  margin: 1.5rem;
+}
+
+blockquote.doc p:only-child,
+blockquote.doc p:last-child {
+  margin-bottom: 0;
+}
+
+ul.doc,
+ol.doc {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 3rem;
+}
+
+ul.doc {
+  list-style: disc;
+}
+
+ol.doc {
+  list-style: decimal;
+}
+
+table.doc {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 1.5rem;
+}
+
+td.doc,
+th.doc {
+  padding: 0.5rem;
+}
+
+thead.doc th.doc,
+thead.doc td.doc {
+  padding: 0.5rem 0.5rem;
+}
+
+tr.doc td.doc,
+tr.doc th.doc {
+  border-top: 1px solid #f2f2f2;
+}
+
+tr.doc td:not(:first-child),
+tr.doc th:not(:first-child) {
+  border-left: 1px solid #f2f2f2;
+}
+
+code.doc {
+  background: #F6F9FB;
+  color: #1990B8;
+  padding: 0 2px;
+  border-radius: 0.125rem;
+}

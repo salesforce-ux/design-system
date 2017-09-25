@@ -19,6 +19,7 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
     - salesforce-lightning-design-system.css (regular CSS — which should not be used within a component that already has access to the SLDS CSS within the platform — please use the scoping tool mentioned below)
     - salesforce-lightning-design-system.min.css (minified CSS)
     - (The scoped files for -vf and -ltng have been removed from the download. If you still need a scoped file, a custom scoped file should be built using [the file scoping tool](https://tools.lightningdesignsystem.com/css-customizer))
+* design-tokens/dist/ - the Design Tokens, usable in all formats
 * scss/ - the Sass source for the Lightning Design System CSS
 * swatches/
   - salesforce-lightning-design-system.ase
@@ -26,6 +27,6 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 
 ## Licenses
 
-* Source code is licensed under [BSD License Clause 2](http://opensource.org/licenses/BSD-2-Clause)
-* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
-* The font is licensed under our [font license](https://www.lightningdesignsystem.com/assets/licenses/License-for-font.txt)
+* Source code is licensed under [BSD 3-Clause](https://git.io/sfdc-license)
+* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
+* The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)

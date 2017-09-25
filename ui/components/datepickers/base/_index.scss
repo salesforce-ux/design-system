@@ -1,0 +1,127 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiates a datepicker component
+ *
+ * @name base
+ * @selector .slds-datepicker
+ * @restrict div
+ * @variant
+ */
+.slds-datepicker {
+  padding: 0;
+  font-size: $font-size-small;
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  th {
+    padding: $spacing-x-small;
+    font-weight: $font-weight-regular;
+    color: $color-text-label;
+  }
+
+  td {
+    padding: $spacing-xx-small;
+    text-align: center;
+    font-size: $font-size-small;
+
+    /**
+     * @summary Style for calendar days
+     *
+     * @selector .slds-day
+     * @restrict .slds-datepicker td span
+     */
+    > .slds-day {
+      @include square($square-icon-medium-boundary);
+      display: block;
+      position: relative;
+      min-width: $square-icon-medium-boundary;
+      line-height: $square-icon-medium-boundary;
+      border-radius: $border-radius-circle;
+      margin: auto;
+    }
+
+    /**
+     * @summary Indicates today
+     *
+     * @selector .slds-is-today
+     * @restrict .slds-datepicker td
+     */
+    &:hover:not(.slds-disabled-text) > .slds-day,
+    &:focus:not(.slds-disabled-text) > .slds-day,
+    &.slds-is-today > .slds-day {
+      background: $color-background-row-hover;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+
+      > .slds-day {
+        box-shadow: $color-border-brand-dark 0 0 0 1px inset;
+      }
+    }
+
+    /**
+     * @summary Indicates selected days
+     *
+     * @selector .slds-is-selected
+     * @restrict .slds-datepicker td
+     */
+    &.slds-is-selected:not(.slds-is-today) > .slds-day {
+      background: $color-background-button-brand-hover;
+      color: $color-text-button-brand-hover;
+    }
+
+    &.slds-is-selected:focus > .slds-day {
+      background: $color-background-row-hover;
+      box-shadow: $color-border-brand-dark 0 0 3px;
+      color: currentColor;
+    }
+  }
+
+  /**
+   * @summary Aligns filter items horizontally
+   *
+   * @selector .slds-datepicker__filter
+   * @restrict .slds-datepicker div
+   */
+  &__filter {
+    padding: $spacing-xx-small;
+  }
+
+  /**
+   * @summary Spaces out month filter
+   *
+   * @selector .slds-datepicker__month_filter
+   * @restrict .slds-datepicker div
+   */
+  &__filter_month,
+  &__filter--month {
+    padding: side-values(0 $spacing-xx-small 0 0);
+  }
+
+  /**
+   * @summary Container of the month table
+   *
+   * @selector .slds-datepicker__month
+   * @restrict .slds-datepicker table
+   */
+  &__month {
+    font-size: $font-size-small;
+  }
+}
+
+/**
+ * @summary Indicates days that are in previous/next months
+ *
+ * @selector .slds-disabled-text
+ * @restrict .slds-datepicker td
+ */
+.slds-disabled-text {
+  color: $color-text-button-default-disabled;
+}

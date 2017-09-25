@@ -1,1 +1,0 @@
-A scoped tabset style has a closed container with a defined border. Initialize a scoped tab set by applying the `.slds-tab--scoped` class to the containing `<div>` around the tab list and tab panels. The `<ul>` element also requires the class `.slds-tab--scoped__nav` to prevent styles from bleeding into nested tabs.

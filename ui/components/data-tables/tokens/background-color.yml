@@ -1,0 +1,18 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  TABLE_COLOR_BACKGROUND_STRIPES:
+    value: '{!PALETTE_GRAY_2}'
+  TABLE_COLOR_BACKGROUND_HEADER:
+    value: '{!PALETTE_GRAY_1}'
+  TABLE_COLOR_BACKGROUND_HEADER_HOVER:
+    value: '{!PALETTE_GRAY_2}'
+  TABLE_COLOR_BACKGROUND_HEADER_FOCUS:
+    value: '{!PALETTE_GRAY_1}'

@@ -1,9 +1,890 @@
-# Salesforce Lightning Design System
-# Release notes
+##### Salesforce Lightning Design System - Release notes
 
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.4.3] - September 19, 2017**
+
+## Fixes
+
+**Buttons**
+- Removed dark border on focus, fixing bug when buttons are found inside of a button group
+
+**Modal**
+- Update background color token to transparent value
+
+## **Release [2.4.1] - September 14, 2017**
+
+## Big Impact
+
+We've made several enhancements in the Winter ’18 release which might affect your components and pages.
+
+**As a designer what do I need to know about the design changes in the Winter ‘18 release?**
+- We’ve enhanced font hierarchy to draw attention to what's most important in the moment and improve legibility.
+- We’ve condensed the spacing of content (from 16px to 12px) to allow more information on the page. You’ll especially notice this in the tightening of data tables.
+- We've added layering and a colorful graphics to the layout to create contrast between foreground and background cards. The cards have white backgrounds and drop shadows, while the page background introduces color.
+- The components we’ve updated are cards, avatar, data tables, and page headers.
+- For more detailed information, please visit this Salesforce UX blog post: [Evolving the Lightning User Experience](https://medium.com/salesforce-ux/evolving-the-lightning-user-experience-5f1de21f7af)
+
+**As a developer what do I need to know about the design changes in the Winter ‘18 release?**
+- With the changes to the page background color, you may notice some of your custom components are transparent, rendering the text on the dark background. You can fix that easily by adding the class `.slds-card` to the outer wrapper of your component.
+- If you need default tabs to appear to be in a card, you can place the `.slds-tabs_card` class on the `.slds-tabs_default` DOM node. This will give the tabset padding and drop-shadows like a card.
+- When the `.slds-card` class is used inside `.slds-tabs_default`, `.slds-modal`, or another `.slds-card`, they no longer have the drop-shadow card look. Instead they are simply white. In some situations, you may need to differentiate your card from content around it. You can add the `.slds-card_boundary` class to the `.slds-card` for a rounded border.
+- On some pages, you’ll notice the header is attached to a list view. If you have a custom page where you’d like to attach the header to a component below, add the `.slds-has-bottom-magnet` class to the `slds-page-header`. Then add `.slds-has-top-magnet` to the component below. This will visually attach the components to each other.
+- If you have been using SLDS in Visualforce via the `<apex:slds />` tag, your Visualforce pages will also inherit the new styling in Winter ’18
+- For more detailed information, please visit this developer blog post: [Get your Lightning components ready for Winter ’18](https://developer.salesforce.com/blogs/developer-relations/2017/08/winter-coming-lightning.html)
+
+## Fixes
+
+**Cards**
+- Added `slds-card_boundary` class to provide card-like look when component is inside a tabset
+
+**Magnet**
+- Force magnet layout by making their properties immutable when using `slds-has-top-magnet` and `slds-has-bottom-magnet`
+
+## **Release [2.4.0] - September 12, 2017**
+
+## Features
+
+The following are now available:
+
+**Badges**
+- Added dark blue badge
+- Added white badge with icon and normalized text
+
+**Dynamic Menu**
+- Removed dynamic lists from combobox component and created new dynamic menu component
+
+**Progress Bar**
+- Added green variant
+
+**Progress Ring**
+- Added new Progress Ring component
+
+**Scoped Notification**
+- Added scoped inline notifications component
+
+**Slider**
+- Added two `spans` inside `label` to give the ability to visually hide one or both
+
+## Fixes
+
+The following issues have now been resolved:
+
+**Alerts**
+- Fixed grammatical errors in alerts documentation ([aa8099a](https://github.com/salesforce-ux/design-system/commit/aa8099a))
+
+**Button Group**
+- Button menu uses filled button icon modifier by default ([f9c2168](https://github.com/salesforce-ux/design-system/commit/f9c2168))
+
+**Buttons**
+- Added `pointer-events:none` to svg in button ([cc9cd5f](https://github.com/salesforce-ux/design-system/commit/cc9cd5f))
+
+**Cards**
+- Removed card look when inside of a modal ([f58c355](https://github.com/salesforce-ux/design-system/commit/f58c355))
+- Removed card look when inside of a tabset
+
+**Color Picker**
+- Added more descriptive assistive text and fixed `tabindex` on swatches ([fc989c1](https://github.com/salesforce-ux/design-system/commit/fc989c1))
+- Added `input` error state ui and examples ([b982bf7](https://github.com/salesforce-ux/design-system/commit/b982bf7))
+- Added focus state to color picker slider thumb ([c29d368](https://github.com/salesforce-ux/design-system/commit/c29d368))
+
+**Combobox**
+- Added `role=none` to `div` that wraps `input` ([e695ae7](https://github.com/salesforce-ux/design-system/commit/e695ae7))
+- Removed title and assistive text from search icon
+
+**Date Picker**
+- Added styles when adjacent month is selected within a week range ([bab8e26](https://github.com/salesforce-ux/design-system/commit/bab8e26))
+
+**Dueling Picklist**
+- Added documentation on focus management
+- Fixed syntax and grammatical errors in dueling picklist accessibility docs
+- Removed double focus on ul ([c231132](https://github.com/salesforce-ux/design-system/commit/c231132))
+
+**File-selectors**
+- Fixed file selector input labelling
+
+**Global Navigation**
+- Added animation on active and when hovering on a global navigation list item ([074771a](https://github.com/salesforce-ux/design-system/commit/074771a))
+
+**Grids**
+- Fix IE sizing issue by adding max-width ([00a0e35](https://github.com/salesforce-ux/design-system/commit/00a0e35))
+
+**Modals**
+- Removed extra `.slds-modal__header` class from headless modal example
+
+**Normalize**
+- Removed `[hidden] { display: none; }` to fix Visual Force charts disappearance when SLDS is added
+
+**Notifications**
+- Updated assistive text for dismiss notification button and added event type to header and live region ([d96535d](https://github.com/salesforce-ux/design-system/commit/d96535d))
+- Updated styling to add bordercolor and darker drop shadow ([f977ee6](https://github.com/salesforce-ux/design-system/commit/f977ee6))
+
+**Path**
+- Simplified and fix active tab focus styling across all stage states ([3f9fbd4](https://github.com/salesforce-ux/design-system/commit/3f9fbd4))
+
+**Responsive Tables**
+- Examples for using responsive tables can now be found on the site again ([d427148](https://github.com/salesforce-ux/design-system/commit/d427148))
+
+## Tokens
+
+**Colors**
+- Reduced and updated gray palettes to 12 total ([ff582b0](https://github.com/salesforce-ux/design-system/commit/ff582b0))
+
+## Design Changes
+
+**Cards**
+- Background color changed to white
+- Added drop shadow for improved depth and heirarchy
+- Cards found inside of a tabset have their drop shadow removed
+
+**Data Tables**
+- Decreased row height for improved content density
+
+**Split View**
+- Changed color of background
+
+**Static/Read Only Inputs**
+- Updated font size, weight, and color ([ce7b275](https://github.com/salesforce-ux/design-system/commit/ce7b275))
+
+**Default Tabs**
+- Tabs take on the look and feel of a card
+
+## **Release [2.3.1] - May 25, 2017**
+
+## Big Impact
+
+**BEM naming change**
+
+Initially we used the double dash style for BEM notation (`--`). Due to the fact that double dashes are problematic in an XML environment (which doesn't allow double dashes within comments), we have upgraded our syntax to use the single underscore style (`_`). This change is backward compatible for 18 months. But all components going forward are built with the single underscore BEM style.
+
+## Fixes
+
+The following issues have now been resolved:
+
+* Removed dotted underline for `abbr` that Chrome introduced in version 58
+* Fix issue on Spinner component where Firefox and IE11 wouldn't respect its z-index token
+* Fix line-height issue on `slds-form-element__static` when the output was multi-line
+* Fix BEM naming convention on visibility classes - [#452](https://github.com/salesforce-ux/design-system/issues/452)
+
+## **Release [2.3.0] - May 15, 2017**
+
+## Features
+
+The following are now available:
+
+**Accordion**
+
+* Added Accordion component —  [Accordion](/components/accordion)
+
+**Button**
+
+* Added class `slds-is-selected-clicked` to handle click event on stateful button - [Stateful Button](/components/buttons?modifiers=.slds-is-selected-clicked&variant=stateful)
+
+**Combobox**
+
+* Added Combobox component — [Combobox](/components/combobox)
+
+**Docked Utility Bar**
+
+* Added two line support for docked utility bar items
+
+**Dueling Picklist**
+
+* Re-named from Multi-select — [Dueling Picklist](/components/dueling-picklist)
+
+**Dynamic Icons**
+
+* Added Ellie animated icon
+* Added Equalizer animated icon
+* Added Score animated icon
+* Added Waffle animated icon
+* Added Strength animated icon
+* Added Trend animated icon
+
+**Expandable Section**
+
+* Added Expandable section component — [Expandable Section](/components/expandable-section?modifiers=.slds-is-open&variant=base)
+* Added non-collapsable example
+
+**Input**
+
+* Added an example for Search input with loading spinner - [Input with spinner](/components/input?example=double-icon-spinner&variant=base)
+* Added `slds-has-input-focus` utility class to provide focus styles on an element
+
+**Lookups**
+
+* Uses new combobox HTML
+
+**Menus**
+
+* Added `slds-dropdown—fluid` to adjust the width of a dropdown so it can be fluid to its container
+* Added updated styles for base HTML elements in the Rich Text Editor
+* Added the same updated styles in the output of the Rich Text Editor using the `.slds-rich-text-editor__output` class
+* Added `slds-pill_link` to modify pill for when we want the hyperlink to take up 100% of the available pill
+* Added `slds-pill__action` to the actionable link element inside of `slds-pill—link`
+
+**Path**
+
+* Re-named from Process
+
+**Picklist**
+
+* Uses new combobox HTML
+
+**Pills**
+
+* Added listbox of pill option variant — [Listbox of Pill Options](/components/pills?variant=listbox-of-pill-options)
+
+**Popover**
+
+* Added `slds-popover_walkthrough-alt` to modify the background of a walkthrough popover - [Walkthrough Popover](/components/popovers?example=action-popover&variant=walkthrough)
+
+**Progress Bar**
+
+* Added Progress Bar component — [Progress Bar](/components/progress-bar)
+
+**Rich text editor**
+
+* Added bottom toolbar support - [Bottom toolbar example](/components/rich-text-editor?example=bottom-toolbar&variant=base)
+* Added long-form formatting support
+
+**Spinner**
+
+* Xx-small Spinner variant — [Spinner](/components/spinners?modifiers=.slds-spinner_xx-small&variant=base)
+
+**Split View List**
+
+* Added Split View component — [Split View](/components/split-view)
+
+**Visual Picker**
+
+* Added Visual Picker component — [Visual Picker](/components/visual-picker)
+
+**Vertical Navigation**
+
+* Added Vertical Navigation component — [Vertical Navigation](/components/vertical-navigation/)
+* Deprecated Navigation component for this improved version
+
+**Visibility**
+
+* Improved visibility classes for responsive design — [#429](https://github.com/salesforce-ux/design-system/pull/429) - Thanks [@3den](https://github.com/3den)!
+
+## Fixes
+
+The following issues have now been resolved:
+
+* Fix for `::-ms-clear` to remove native clear button in IE
+* Whenever `slds-truncate` is used, it is required to be used in conjunction with a [title] attribute
+* The Alert component icon is now contained within `slds-icon_container`
+* The Button icon component is required to have `slds-button—icon` applied to the `<button />` element. Before, `slds-button—icon-inverse`, `slds-button—icon-container`, `slds-button—icon-border`, `slds-button—icon-border-filled`, `slds-button—icon-border-inverse`, `slds-button—icon-more`, and `slds-button—icon-error` were used in conjunction with the `slds-button` classname but we now require `slds-button—icon` to be a part of this grouping of classnames
+* The Stateful button component is required to have `slds-button—stateful` applied to the `<button />` element
+* The Toast component icon is now contained within `slds-icon_container`
+* The Page header component "entity" icon is now contained within `slds-icon_container`
+* The Feeds component "Post" examples have been updated to be contained within the `slds-feed` list
+* The Compound Form Layout example was updated so each `fieldset` is correctly using the `slds-form-element` class and the whole form is now contained in `slds-form—compound`
+* Unless the HTML output is represented as a list — `ul`, `ol`, or `dl` — all examples were updated to use `slds-bottom—[position]` instead of `slds-has-divider—[position]`
+* Whenever `slds-dropdown` is used, it is required to be contained inside an element that has the classname `slds-dropdown-trigger`
+* Whenever `slds-form—stacked`, `slds-form—horizontal`, and `slds-form—compound` is used, it is required to be used in conjunction with `slds-form`
+* Whenever `slds-icon-text-default`, `slds-icon-text-warning`, or `slds-icon-text-error` is used, it is required to be used in conjunction with `slds-icon`
+* Fixed a bug where the task2 icon corresponding class name was incorrectly named "task-2"
+* Scoped :focus style for data-tables to `slds-table`
+* Fixed an issue where assistive text in an parent with `text-transform: uppercase` would get read as full-caps (e.g. "Sorted ascending" in data table headers getting read as
+* Rounded corners have been removed from utility icons so that they no longer clip incorrectly
+* Breadcrumbs now wrap properly
+* Focus state for pills has been moved to the containing element, rather than just the text inside of the pill
+* Updated z-index of Docked Utility Bar to 4 to play nicely with others
+* Prevent docked composer content from collapsing in Safari
+* Updated cursor style for disabled state on radio button groups
+
+## Deprecated
+
+The following features are being marked as deprecated in this release and will be removed in three releases:
+
+* Navigation was removed from site navigation and replaced with improved Vertical Navigation — [Vertical Navigation](/components/vertical-navigation/)
+
+## Design
+
+The following updates have been made to component designs:
+
+* Touch components have been removed from the site
+
+**Dropdown Menus:**
+
+* Sub-headings inside of dropdown menus should now be truncated
+
+**Docked Composer:**
+
+* Added focus state around entire composer panel
+* Title inside of composer panel header should truncate instead of wrap to two lines
+
+**Feeds:**
+
+* Removed the like count in the bottom right of the Feed post
+* Changed spacing between feed posts from 1.5rem to .75rem
+* Add top border to feed footer on mobile
+
+**Files:**
+
+* Added example for no title
+* Added example for loading state
+* Updated location of the files action menu
+
+**Popovers**
+
+* Always have a close button icon
+
+## Tokens
+
+The following changes have been made to tokens:
+
+* `TASK_2` was renamed into `TASK2`
+* Standard icon set: Added `ENTITLEMENT`
+* Standard icon set: Added `LIVE_CHAT`
+
+**s1-base/sizing**
+
+* Removed `MAX_HEIGHT_ACTION_OVERFLOW_MENU`
+* Removed `MAX_WIDTH_ACTION_BAR`
+* Removed `MAX_WIDTH_ACTION_BAR_ITEM`
+* Added `UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS`
+* Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_HOVER`
+* Added `VERTICAL_NAVIGATION_COLOR_BACKGROUND_SHADE_ROW_ACTIVE`
+
+
+## Accessibility
+
+The following changes have been made to make our product more accessible:
+
+**Activity Timeline**
+
+- Added `title` attribute to item icons
+- Changed the checkbox markup to match the new, "Explicit Label" markup pattern
+
+**App Launcher**
+
+- Changed `slds-modal` to be a `<section />` element
+- Changed `slds-modal__header` to be a `<header />` element
+- Changed the App Tiles icons to match the new [Avatar Fallback Entity Initials](/components/avatar) pattern, adding an `<abbr />` tag
+- Removed Assistive Text from Drag Handle image as it's irrelevant to screen reader users
+- Implemented the new Expandable Section pattern to the expanding sections
+  - Placed a button element inside the section heading elements
+  - Added `aria-expanded="true|false"` to reflect state
+  - Added `aria-controls="id_of_expanding_section"` to associate the button to the content it controls and gave the content wrapper the same id
+- Added three new states for Accessible Drag and Drop
+  - Added in the three missing states, necessary to demonstrate the Assistive Technology implementation for the full Drag and Drop lifecycle. "Grabbed", "Moved in list" and "Dropped"
+  - Added a live region to be used to update the user of Assistive Technology, to the current state of the operation
+  - Add an additional hidden piece of instructional text, that instructs the user how to perform the operation: "Press space bar to move this app within the list." This is present in the default state.
+  - Each focusable tile element, should be `aria-describedby="id-of-span-containing-instructional-text"`
+  - In the grabbed state
+    - Remove the instructional text as the user has performed the action, but keep the container
+    - Change the content of the live region, to be "{App Name}: current position {x} of 6. Use the up and down arrows to move this app"
+  - In the "Moved in List" state, implement the same changes applied to Grabbed but:
+    - Update the live region text to be: "{App Name}: new position {x} of 4."
+  - In the dropped state
+    - Update the live region text to be: "{App Name}: final position {x} of 4."
+    - Replace the hidden instructional text to be what it was in the base state
+
+**Avatars**
+
+- Added missing title attributes
+
+**Button**
+
+- Fixed the color contrast issues on the Success Button
+
+**Card**
+
+- Changed `slds-card__footer` to a `<footer />` element
+- Changed Tiles to be a list of `slds-tile`'s
+
+**Checkbox Button Group**
+
+- Removed `for` attributes on wrapping `span` elements
+
+**Date Picker**
+
+- Added `role="dialog"` to the `slds-datepicker`
+- Added `aria-label` to the `dialog` to describe its purpose
+- Made the first day cell focusable as it is a ARIA `grid` widget
+- Added `aria-multiselectable="true"` to the `grid` to indicate you can selected multiple dates
+- Removed `headers` attribute from each `gridcell`
+- Added assistive text for when we mark today's date in the grid. We do this to provide additional meaning since the grey background color is not enough of an indicator to non-sighted users
+- Changed the "Today" option to be a selectable cell, just like any other day in the grid, by removing its `<a />` tag
+
+**Docked Composer**
+
+- Changed the container element to be a `<section role="dialog" />`
+- Added `aria-describedby="id_of_body_element"` to the element that holds the `dialog` role. Gave the Composer body the same ID
+- Changed the header to be to a `<header />` element
+- Removed redundant word "icon" in assistive text for icons in the Overflow Menu items
+- Removed a duplicate `role="dialog"` attribute from the Popout variant as it created nested dialogs
+- Added a means to tell a Docked Composer is "Minimized" by adding Assistive Text to the header
+- Changed the Composer body and footer to be truly hidden when minimized
+
+**Docked Composer - Task**
+
+- Added assistive text to the icons used in the Lookup examples
+- Upgraded the Lookups to ARIA 1.1 Specification
+  - See Lookup Notes for details
+- Upgraded `listbox` markup to include option group headings being accessible, to match Picklist
+  - See Lookup Notes for details
+- Fixed Listbox `option`'s markup to not wrap `div` elements in `span` elements
+
+**Docked Composer - Voice**
+
+- Added `aria-live="assertive"` to the header for alerting a user of a change in status of a call
+- Changed the Mute button to be an ARIA Toggle Button with `aria-pressed="true|false"`
+- Made "Recent Activity" on Incoming call example an `<h3 />`
+- Updated icon assistive text for icons in the Incoming Call example
+- Added assistive text to the icons used in the Lookup examples on Log a Call
+- Upgraded the Lookups to ARIA 1.1 Specification
+  - See Lookup Notes for details
+- Upgraded `listbox` markup to include option group headings being accessible, to match Picklist
+  - See Lookup Notes for details
+- Fixed Listbox `option`'s markup to not wrap `div` elements in `span` elements
+
+**Docked Form Footer**
+
+- Fixed button text on "with errors" state from "Settings" to "Review the Following Errors"
+
+**Docked Utility Bar**
+
+- Removed invalid role of `footer` from the `<footer />` element
+- Implemented the ARIA Toggle Button pattern using `aria-pressed="true|false"` on buttons. Provides indication of an active or open utility panel
+
+**Docked Utility Panel**
+
+- Changed the container element to be a `<section role="dialog" />`
+- Changed the header to be to a `<header />` element
+- Made sure the content of a minimized Panel is not focusable by removing it from the DOM completely
+
+**Expandable Section**
+
+- Added `aria-controls` to the `<button />` element that performs the action
+- Added `aria-expanded="true|false"` to the `<button />` element that performs the action
+- Added `aria-hidden="true|false"` to the `slds-section__content` wrapper
+- Added an ID to `slds-section__content` which the `<button />` uses as its `aria-controls` value
+
+**Feeds**
+
+- Changed "Like" buttons to be `<button />` elements
+- Changed "Like" buttons to be ARIA Toggle Buttons with `aria-pressed="true|false"`
+- Changed "More Comments" button to be a `<button />` element
+- Changed "Share" buttons to be `<button />` elements
+
+**Form Layout**
+
+- Updated Checkbox and Radio Buttons to match newer "Explicit Label" pattern
+
+**Global Header**
+
+- Added `aria-label` to the Notifications dialog
+- Added `aria-describedby` to the Notifications dialog
+- Upgrade the ARIA Combobox markup to ARIA 1.1 Specification
+  - See Lookup Notes for details
+- Upgraded `listbox` markup to include option group headings being accessible, to match Picklist
+  - See Lookup Notes for details
+- Fixed Listbox `option`'s markup to not wrap `div` elements in `span` elements
+- Fixed Favorites Button to communicate pressed state by Implementing the ARIA Toggle Button pattern using `aria-pressed`
+
+**Global Navigation**
+
+- Changed the App Launcher link to be a `<button />` as it launches a Modal
+- Fixed a malformed `title` attribute of the App Name
+- Fixed the `title` attribute of the Object Switcher link to match visual text
+- Fixed the `title` attribute of the Object Switcher Menu Button
+
+**Global Navigation - Navigation Bar**
+
+- Fixed Menu item title attributes
+- Removed `aria-haspopup=true` from dropdown `li`.
+- Removed `tabindex="0"` from `slds-context-bar__icon-action`.
+- Removed `tabindex="-1"` from `slds-context-bar__icon-action`'s button.
+- Added `aria-haspopup="true"` to `slds-context-bar__icon-action`'s button.
+- Added assistive text to active item for Current page.
+
+**Global Navigation - Tab Bar**
+
+- Fixed `title` attribute on the Split View Toggle Button
+- Removed `aria-haspopup` from Split View Toggle Button
+- Implemented a simple Expanding Section ARIA pattern on the Split View Toggle button
+  - Added `aria-expanded="true|false" to reflect state
+  - Added `aria-controls="id_of_expanding_section"` to associate the button to the content it controls
+- Added `aria-controls` to each `role="tab"`
+- Created a `tabpanel` for each `tab`
+  - Added a unique ID to each which matches corresponding `aria-controls` attribute
+  - Added `aria-labelledby` to each which matches corresponding `tab` ID
+- Updated the "New Tab" button text to match its function
+- Updated the "New Tab" button title attribute
+- Removed `aria-haspopup` attribute from "New Tab" button
+- Added `aria-label` to the New Tab `dialog`
+- Removed focusable hidden remove buttons in Pinned Tabs
+
+**Input - Field Level Help**
+
+- Moved `aria-describedby` from the `input` to the Tooltip Trigger `<button />`
+- Removed `aria-live` from the Tooltip
+
+**List Builder**
+
+- Changed the `role="dialog"` element to be a `<section />`
+- Changed `slds-modal__header` to be a `<header />` element
+- Changed `slds-modal__footer` to be a `<footer />` element
+- Replaced selected Pills to be the new Listbox of Pills component
+- Updated Lookup mark-up to match new structure. See Lookup notes
+
+**Lookup**
+
+- Upgrade the ARIA Combobox markup to ARIA 1.1 Specification
+  - Moved `role="combobox"` attribute from the `input` element to `slds-lookup` root element
+  - Moved `aria-expanded="true|false"` attribute from the `input` element to `slds-lookup` root element
+  - Added `aria-haspopup="listbox"` attribute to `slds-lookup` root element
+  - Added `autocomplete="off"` to the `input` element
+  - Added `aria-controls=""` to the `input` element which points to the ID of the `listbox`
+  - Added `role="textbox"` to the `input` element
+  - Removed `aria-owns` attribute from the `input` element as the `listbox` is not a child of the `combobox` role
+  - Changed `type` attribute on the `input` element to be `text`
+- Upgraded `listbox` markup to include option group headings being accessible, to match Picklist
+  - Moved `role="listbox"` attribute from the `ul` element to the `slds-lookup__menu` root element
+  - When a `listbox` has option groups (a `slds-lookup__item_label`)
+    - `ul` element has `role="group"` with an `aria-label` of the same text as the `slds-lookup__item_label` text
+    - `slds-lookup__item_label`, becomes a presentational list item by placing it inside an `li[role="presentation"]` and being a child of the `ul`, as the `aria-label` on the `group` replaces its function
+  - When a `listbox` has no option groups (no `slds-lookup__item_label`)
+    - `ul` element has `role="presentation"` and no `aria-label`
+- Fixed Listbox `option`'s markup to not wrap `div` elements in `span` elements
+
+**Menus**
+
+- Added `aria-checked` to Menu items with `role="menuitemcheckbox"` in all cases. Shouldn't just be added when `true`, setting `false` is important to communicate
+
+**Modals**
+
+- Added `aria-describedby` to the `slds-modal` element. This points to ID of `slds-modal__content`
+- Added `aria-label` to Header Empty example, in the absence of a header with a heading tag
+
+**Panels - Details**
+
+- Updated the checkbox mark-up to be the new "explicit label" version
+- Added `aria-haspopup="true"` to "More Actions" button in the Panel header
+- Changed "Follow up on '15 contact" to be an `<h2 />` element
+- Changed the list of fields to be a list `<ul />`
+- Switched the DOM order of the field and edit pencil, so the edit action comes after the field
+
+**Panels - Filtering**
+
+- Changed the footer actions to be `<button />` elements instead of links
+- Changed "Matching all these filters" to a heading for better hierarchy
+- Changed the filters to be `<button />` elements instead of links.
+- Locked filters are now `disabled`, which is possible with the change in element used, to be a `<button />`
+- Each filter button now includes additional assistive text to better describe the action: "Edit filter: "
+- Improved repetitive button text for the remove filter buttons. Now follows the format of `"Remove Filter: ${name_of_filter}"` instead of just "Remove"
+- Panel error message converted from `aria-live` to be `role="alert"`, which is implicitly "live"
+- Inline error messages are now associated to the invalid filter button with `aria-describedby` being placed on the offending button
+
+**Path**
+
+- Fixed focus so that only one stage is focusable at a time
+- Fixed focus styling on stages
+- Removed `aria-live` from stages
+- Added non-visual indicator of "Current Stage" by adding "Current Stage:" assistive text
+- Updated semantics when no coaching available
+  - Swapped `tabset` to `listbox`
+  - Swapped `tab` to `option`
+  - Added `aria-orientation="horizontal"`
+- Update `aria-controls` on each `tab` to match a unique ID
+- Updates to expandable coaching tab panels
+  - Update button text on coaching expand/collapse toggle button so it's clear
+  - Add aria-expanded="false" by default to the `slds-tabs_path__link` which have `role="tab"`
+  - When the `tabpanel` is expanded, `aria-expanded="true"` is set on the currently selected `tab`
+- Change the "edit" link to be a `<button />` in the coaching panels
+
+**Picklist**
+
+- Upgrade the ARIA Combobox markup to ARIA 1.1 Specification
+  - Moved `role="combobox"` attribute from the `input` element to `slds-picklist` root element
+  - Moved `aria-expanded="true|false"` attribute from the `input` element to `slds-picklist` root element
+  - Added `aria-haspopup="listbox"` attribute to `slds-picklist` root element
+  - Added `autocomplete="off"` to the `input` element
+  - Added `aria-controls=""` to the `input` element which points to the ID of the `listbox`
+  - Added `role="textbox"` to the `input` element
+  - Removed `aria-owns` attribute from the `input` element as the `listbox` is not a child of the `combobox` role
+  - Changed `type` attribute on the `input` element to be `text`
+- Changed the expand trigger button `title` attribute to match button text
+- Moved the ID from `slds-dropdown__list` to `slds-dropdown` with `role="listbox"`
+- Implemented Listbox of Pills component on Multi Select states
+
+**Pills**
+
+- Add title attributes to all icons or avatars in a Pill
+
+**Popovers**
+
+- Popovers without headers get `aria-label` applied to the `dialog`
+- "Tesla Motors" Panel heading changed to `h2`
+- Add a close button to all Popovers that don't have any
+- Updated implementation guidelines
+
+**Progress Indicator**
+
+- Only apply `aria-describedby` to markers when a tooltip is shown
+- In the Modal example, DOM order is fixed to follow visual order
+- Updates to `slds-progress-bar`
+  - Added `role="progressbar"`
+  - Added `aria-valuemin="0"`
+  - Added `aria-valuemax="100"` to essentially make the progress bar a percentage
+  - Added `aria-valuenow` to track current progress
+
+**Prompt**
+
+- Added an ID to `slds-modal__content` for `aria-describedby` to work on the `alertdialog`
+
+**Publisher**
+
+- Made the "To: My Followers" definition list be part of the comment box `label` as a string, to create a better label
+- Made the Publisher Actions not focusable when hidden
+
+**Select**
+
+- Added missing `required` attribute to Required and Error states
+
+**Tabs**
+
+- Fixed Sub Tabs `tabpanels` ID typos
+
+**Vertical Navigation**
+
+- Now uses a `<nav />` element as its parent
+- Added `aria-label` to the `nav` element so it's easily identifiable from other navigation regions on the same page
+- Added `aria-current="page"` to the "active" link
+
+**Utilities - List**
+
+- Name Value Pairs changed to definition lists
+
+## Release [2.2.2] - March 8th, 2017
+
+**ADDED**
+
+The following classes are now available:
+
+- Added `slds-table_resizable-cols` as a modifier to `slds-table`. Should be used if your table supports resizable columns.
+
+**FIXES**
+
+The following issues have now been resolved:
+
+- `slds-table_fixed-layout` can now be used with the basic table - [#396](https://github.com/salesforce-ux/design-system/issues/396)
+
+## February 24, 2017
+
+**SITE IA/ENHANCEMENTS**
+
+- Updated [iOS implementation documentation](/platforms/ios/)
+
+**NEW IOS RELEASE (3.0.0)**
+
+- Substantial script rewrite to handle future token changes
+- You can now use design tokens in Swift
+- Updated tokens to Spring ’17
+- See detailed [release notes](https://github.com/salesforce-ux/design-system-ios/blob/master/CHANGELOG.md) for design-system-ios
+
+## February 3, 2017
+
+**SITE IA/ENHANCEMENTS**
+
+- New and improved [Messaging Guidelines](/guidelines/messaging-overview)
+
+## Release [2.2.1] - January 9, 2017
+
+**NEW COMPONENTS AND VARIANTS**
+
+The following components are now available:
+
+- Added a toast for small columns - [Small Column Toast](/components/notifications#flavor-toast-small)
+
+## Release [2.2.0] - January 6, 2017
+
+**SITE IA/ENHANCEMENTS**
+
+The following site enhancements are now available:
+
+**NEW COMPONENTS AND VARIANTS**
+
+The following components are now available:
+
+- Added Global Navigation Tab bar (Workspace Tabs) - [Global Navigation Tab bar](/components/global-navigation/#flavor-navigation-tab-bar)
+- Added Checkbox Add Button - [Checkbox Add Button](/components/forms/#flavor-checkbox-add-button)
+- Added Button Group List - [Button Group List](/components/button-groups/#flavor-list) - the new recommended way to mark up button groups.
+- Added Rich Text Editor - [Rich Text Editor](/components/rich-text-editor)
+- Added Global Header Notifications - [Global Header Notifications](/components/global-header#flavor-notifications)
+- Added Popover Header - [Popover Header](/components/popovers/#flavor-base-popover-header)
+- Added Popover Footer - [Popover Footer](/components/popovers/#flavor-base-popover-footer)
+- Added Progress Indicator - [Progress Indicator](/components/progress-indicator/)
+- Added Walkthrough Popovers - [Walkthrough Popovers](/components/walkthrough/#flavor-popovers-default)
+- Added Walkthrough Header - [Walkthrough Header](/components/walkthrough/#flavor-header)
+- Added Success Button - [Success Button](/components/buttons/#flavor-base-success)
+- Added Sub Tabs - [Sub Tabs](/components/tabs/#flavor-sub-tabs)
+- Added Dynamic Lists Dropdown - [Dynamic Lists](/components/menus/#flavor-dynamic-list)
+
+**ADDED**
+
+The following classes are now available:
+
+- Added `slds-float_none` utility - [Utilities › Floats › Float None](/components/utilities/floats/#flavor-float-none)
+- Added `slds-button_icon-container-more` modifier - [Button Icons › Button Icon with Dropdown](/components/button-icons/#flavor-icon-with-dropdown)
+- Added `slds-button_icon-more-filled` for more buttons that require a background.
+- Added `slds-text-color_inverse` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse)
+- Added `slds-text-color_inverse-weak` utility - [Utilities › Text › Color](/components/utilities/text/#flavor-color-text-color-inverse-weak)
+- Added `slds-is-absolute` utility for overriding a components default positioning - [Utilities › Position › Absolute](/components/utilities/position/#flavor-absolute)
+- Added additional spacing support for normalizing padding on a grid region
+- Added `slds-border_bottom` utility [Utilities › Borders › Border Bottom](/components/utilities/borders/#flavor-border-bottom)
+- Added `slds-border_left` utility [Utilities › Borders › Border Left](/components/utilities/borders/#flavor-border-left)
+- Added `slds-border_right` utility [Utilities › Borders › Border Right](/components/utilities/borders/#flavor-border-right)
+- Added `slds-border_top` utility [Utilities › Borders › Border Top](/components/utilities/borders/#flavor-border-top)
+- Added `slds-box_xx-small` utility [Utilities › Themes › Box](/components/utilities/themes/#flavor-box-xx-small)
+- Added support for dark backgrounds on `slds-dropdown` by adding modifier `slds-dropdown_inverse`
+- Added support for narrow region on feeds.
+
+**CHANGES**
+
+The following changes have been made in this release:
+
+- Global actions icon on global header updated to have a background color
+- Changed global header icon's color and size
+- Changed background color of docked panels
+  - Docked Utility Panel - [Docked Utility Panel](/components/docked-utility-bar/#flavor-utility-panel)
+  - Docked Composer Panel - [Docked Composer Panel](/components/docked-composer)
+- Cards are now responsive - [Cards](/components/cards/)
+- Improvements made to `slds-type-focus` utility - [Utilities › Interactions](/components/utilities/interactions/#flavor-faux-links)
+- Avatars now support initials.
+- Stateful icon buttons are now compatible with `slds-button_icon-container`
+- Spacing adjustments made to lookup items
+- Spacing adjustments made to feeds
+
+**FIXED**
+
+The following issues have now been resolved:
+
+- Accessibility improvement - Picklists changed to a read-only combobox with a listbox.
+- Add collapsable margin to `slds-card__body` to account for white space when the footer is empty
+- Data Table › Inline edit now has full support
+- Icon inside of an input field now uses the correct token
+- Modal content properly wraps and hyphenates longform text
+- Fixed flex issue on docked composer that made popout example stretch the height of the viewport
+
+**DEPRECATED**
+
+The following features are being marked as deprecated in this release and will be removed in three releases:
+
+- Process › Wizard - Please use the new Progress Indicator instead [Progress Indicator](/components/progress-indicator/)
+
+**REMOVED**
+
+The following features are being removed in this release:
+
+- `$css-prefix` is no longer available to change the prefix of `slds-` class names to something of your choice. As an alternative, please use this PostCSS plugin to customize class name prefixes: [postcss-slds-prefix](https://github.com/salesforce-ux/postcss-slds-prefix).
+- Removed custom styled scrollbar mixin from `slds--scrollable-` helpers
+- Deleted legacy font-files for older, unsupported browsers (*.eot, *.svg)
+
+**TOKENS**
+
+Tokens are now part of the Lightning Design System.
+
+Token files previously available from the `@salesforce-ux/design-tokens` npm package are now available in `design-tokens/dist` in the `@salesforce-ux/design-system` package (the same applies for the zip download).
+
+The following tokens have been add/removed/deprecated in this release:
+
+- Added `force-base/fill.json`
+  - Added token: `FILL_HEADER_BUTTON`
+  - Added token: `FILL_HEADER_BUTTON_HOVER`
+- Added `force-base/text-transform.json`
+  - Added token: `TEXT_TRANSFORM`
+- Added token: `FONT_FAMILY_TEXT`
+- Added token: `FONT_FAMILY_HEADING`
+- Added token: `Z_INDEX_STICKY`
+- Added token: `FONT_FAMILY_TEXT`
+- Added token: `FONT_FAMILY_HEADING`
+- Added token: `PROGRESS_COLOR_BACKGROUND`
+- Added token: `PROGRESS_COLOR_BACKGROUND_SHADE`
+- Added token: `PROGRESS_COLOR_BORDER`
+- Added token: `PROGRESS_COLOR_BORDER_SHADE`
+- Added token: `PROGRESS_COLOR_BORDER_HOVER`
+- Added token: `PROGRESS_COLOR_BORDER_ACTIVE`
+- Added token: `PROGRESS_BAR_HEIGHT`
+- Added token: `PROGRESS_BAR_COLOR_BACKGROUND`
+- Added token: `PROGRESS_BAR_COLOR_BACKGROUND_FILL`
+- Added token: `COLOR_STROKE_BRAND`
+- Added token: `COLOR_STROKE_BRAND_HOVER`
+- Added token: `COLOR_STROKE_BRAND_ACTIVE`
+- Added token: `COLOR_STROKE_DISABLED`
+- Added token: `COLOR_STROKE_HEADER_BUTTON`
+- Added token: `FILL_BRAND`
+- Added token: `FILL_BRAND_HOVER`
+- Added token: `FILL_BRAND_ACTIVE`
+- Added token: `BORDER_STROKE_WIDTH_THIN`
+- Added token: `BORDER_STROKE_WIDTH_THICK`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER`
+- Added token: `COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE`
+- Added token: `COLOR_TEXT_SUCCESS_INVERSE`
+- Added token: `CUSTOM_101`
+- Added token: `CUSTOM_102`
+- Added token: `CUSTOM_103`
+- Added token: `CUSTOM_104`
+- Added token: `CUSTOM_105`
+- Added token: `CUSTOM_106`
+- Added token: `CUSTOM_107`
+- Added token: `CUSTOM_108`
+- Added token: `CUSTOM_109`
+- Added token: `CUSTOM_110`
+- Added token: `CUSTOM_111`
+- Added token: `CUSTOM_112`
+- Added token: `CUSTOM_113`
+- Added token: `CUSTOM_NOTIFICATION`
+- Added token: `DATADOTCOM`
+- Added token: `RTC_PRESENCE`
+- Added token: `PRODUCT_CONSUMED`
+- Added token: `PRODUCT_TRANSFER`
+- Added token: `PRODUCT_ITEM`
+- Added token: `PRODUCT_ITEM_TRANSACTION`
+- Added token: `LOCATION`
+- Added token: `ADDRESS`
+- Added token: `CAROUSEL`
+- Added token: `ASSIGNED_RESOURCE`
+- Added token: `OPERATING_HOURS`
+- Added token: `PRODUCT_REQUIRED`
+- Added token: `RESOURCE_ABSENCE`
+- Added token: `RESOURCE_CAPACITY`
+- Added token: `RESOURCE_PREFERENCE`
+- Added token: `RESOURCE_SKILL`
+- Added token: `SERVICE_TERRITORY_MEMBER`
+- Added token: `SERVICE_APPOINTMENT`
+- Added token: `SERVICE_REPORT`
+- Added token: `SERVICE_RESOURCE`
+- Added token: `SERVICE_TERRITORY`
+- Added token: `SKILL`
+- Added token: `SKILL_REQUIREMENT`
+- Added token: `TIMESLOT`
+- Added token: `WORK_TYPE`
+- Added alias: `SANS_SERIF`
+- Added alias: `MALIBU`
+- Added alias: `SANS_SERIF`
+- Added alias: `EBONY_CLAY`
+- Added alias: `OXFORD_BLUE`
+- Added alias: `RIVER_BED`
+- Deprecated `FONT_FAMILY`
+
+## Release [2.1.4] - November 7, 2016
+
+**FIXED**
+
+The following issues have now been resolved:
+
+- Title attributes were added to all button icons and truncated text for accessibility
+- Added line-height fix for `.slds-button—icon-border-inverse`
+- Amended `.slds-button_icon` documentation
+- Removed unnecessary `.slds-not-selected` class from stateful `.slds-button_icon` markup and adjusted documentation
 
 ## Release [2.1.3] - September 21, 2016
 
@@ -13,7 +894,7 @@ The following issues have now been resolved:
 
 - Included the logo SVG asset used in the Global header
 - Use `@support` for progressive enhancement of `mix-blend-mode` for active/hover states in Global Navigation
-- Removed the demo style `.slds-text-align--center` from `.slds-card__body`
+- Removed the demo style `.slds-text-align_center` from `.slds-card__body`
 
 **DEPRECATED**
 
@@ -30,7 +911,7 @@ The following site enhancements are now available:
 - New Checkbox Toggle guidelines under [Data Entry section](/guidelines/data-entry/).
 - New "Touch" section under "Components", where you’ll find patterns especially optimized for touch
 - Link to Styling with Design Tokens on the platform added on [Design Tokens](/design-tokens/), [Lightning Components](/platforms/lightning/), and [Downloads](/downloads/) pages.
-- Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icon/)
+- Button Icon component has been moved out of Buttons and into its own category [Button Icon](/components/button-icons/)
 - Picklist component has been moved out of Menus and into its own category [Picklist](/components/picklist/)
 
 **NEW COMPONENTS AND VARIANTS**
@@ -59,12 +940,12 @@ The following classes are now available:
 
 - Text color helpers - [Utilities › Text › Color](/components/utilities/text/#flavor-color)
 - Text title utility - `.slds-text-title` - [Utilities › Text › Text Title](/components/utilities/text/#flavor-title)
-- Text link utility - Made text inside of `.slds-text-link--reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
+- Text link utility - Made text inside of `.slds-text-link_reset` appear as a link - [Utilities › Interactions › Text Link](/components/utilities/interactions/#flavor-text-link)
 - Truncation containers [Utilities › Truncation](/components/utilities/truncation/#flavor-max-width)
-- Absolute sizes utility classes: `.slds-size--xx-small`, `.slds-size--x-small`, `.slds-size--medium`, `.slds-size--large`, `.slds-size--x-large`, `.slds-size--xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
+- Absolute sizes utility classes: `.slds-size_xx-small`, `.slds-size_x-small`, `.slds-size_medium`, `.slds-size_large`, `.slds-size_x-large`, `.slds-size_xx-large` and their responsive equivalents - in [Utilities › Sizing](/components/utilities/sizing/)
 - Hyphenation utility for non-truncated headings in narrow containers - [Utilities › Hyphenation](/components/utilities/hyphenation/)
 - Position utilities - [Utilities › Position](/components/utilities/position/)
-- Table column borders - Added vertical column borders on a table by applying `.slds-table--col-bordered`
+- Table column borders - Added vertical column borders on a table by applying `.slds-table_col-bordered`
 - Name/Value pair lists - 3 variations - horizontal, inline and stacked - [Utilities › Lists › Name Value Pair](/components/utilities/lists/#flavor-name-value-pair)
 - Generated grid column spans 1, 2, 3, 4, 5, 6, 7, 8, and 12 for all breakpoints
 - Added archives for previous versions of the site for customers that can't upgrade yet. These site archives are currently available at the bottom of the [Downloads page](/downloads/)
@@ -85,8 +966,8 @@ The following changes have been made in this release:
 - Renamed "slide-out" panel to "details" - [Detail Panel Component](/components/panels/#detail)
 - Renamed "Base" data table to "Basic" data table - [Data Table Component](/components/data-tables/)
 - Abstracted complex data table features into a variant named "Advanced" data table - [Data Table Component](/components/data-tables/#advanced)
-- Improvements made to `.slds-text-link--reset` - [Utilities › Interactions › Text Link Reset](/components/utilities/interactions/#link-reset)
-- Removed light font-weight from the text utility `.slds-text-heading--small` - [Utilities › Text › Text Heading Small](/components/utilities/text/#flavor-heading-heading-small)
+- Improvements made to `.slds-text-link_reset` - [Utilities › Interactions › Text Link Reset](/components/utilities/interactions/#link-reset)
+- Removed light font-weight from the text utility `.slds-text-heading_small` - [Utilities › Text › Text Heading Small](/components/utilities/text/#flavor-heading-heading-small)
 - Removed `position: relative` from `.slds-grid`
 - Feeds are now responsive
 - Added close button to error popover so a screen reader can access popover
@@ -94,7 +975,7 @@ The following changes have been made in this release:
 - Feeds:
   - Changed post's comment metric labels to lowercase
   - Added hint-hover to post's comment action overflow icon
-  - Changed post's comment "link" text to use `.slds-color-link--weak`
+  - Changed post's comment "link" text to use `.slds-color-link_weak`
   - Removed dotted line separator from post's attachment payload
   - Moved URL of post's attachment to the bottom of the content ordering
   - Removed truncation from preamble
@@ -115,7 +996,7 @@ The following issues have now been resolved:
   - Modified tab order of global header actions
   - Added `title` attribute to global header actions
   - Changed avatar wrapper from anchor to a button
-  - Allowed `.slds-assistive-text` to become visible on focus if `.slds-assistive-text--focus` is used
+  - Allowed `.slds-assistive-text` to become visible on focus if `.slds-assistive-text_focus` is used
   - Added aria roles to global search input
   - Changed global search listbox options to be non-actionable
   - Moved "click enter to search" and "go to" options back into `<ul>` so they can be discovered by screen readers
@@ -136,7 +1017,7 @@ The following issues have now been resolved:
   - Placed utility bar buttons inside `<ul>`
 - Files accessibility fixes
   - Fixed invalid markup by moving button group outside of anchor
-  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image--overlay`
+  - Image overlay is now enabled by adding an extra html element before the image and adding the class `.slds-image_overlay`
 - Card accessibility fixes
   - Moved `<header>` element to only contain the card header text, rather than the text and overflow menu
   - Changed `<p>` tags with truncation in related list markup to `<span>` tags
@@ -188,7 +1069,7 @@ The following issues have now been resolved:
 - Fixed label for / textarea id mismatch in form textarea example
 - Fixed modal close button styling so the focus halo no longer overlaps with the modal body
 - Labeled the dialog with the heading of the modal using `aria-labelledby="id_of_heading"` and removed `aria-hidden="false"` from modal
-- Added an example usage of `slds-table--striped` in the basic data table example
+- Added an example usage of `slds-table_striped` in the basic data table example
 - Reverted modal components for the touch devices to prototype status while a fix for using them in Salesforce1 is found
 - Added a title attribute to the truncation example
 - Changed status of single-line truncation to dev-ready
@@ -217,8 +1098,8 @@ The following changes have been made in this release:
 The following issues have now been resolved:
 
 - Text inputs are referencing the correct 32px tall token - fixes https://github.com/salesforce-ux/design-system/issues/150
-- Resolve issue where `<th>` stayed white on striped row when `slds-table--striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
-- Toggle checkboxes are now aligned vertically with their label (`slds-form-element__label m-bottom--` › `slds-form-element__label slds-m-bottom--none`) — [Checkbox Toggle variant](/components/forms/#flavor-checkbox-toggle)
+- Resolve issue where `<th>` stayed white on striped row when `slds-table_striped` is applied - fixes https://github.com/salesforce-ux/design-system/issues/232
+- Toggle checkboxes are now aligned vertically with their label (`slds-form-element__label m-bottom--` › `slds-form-element__label slds-m-bottom_none`) — [Checkbox Toggle variant](/components/forms/#flavor-checkbox-toggle)
 
 **REMOVED**
 
@@ -284,9 +1165,9 @@ The following changes have been made in this release:
 - Visual density changes in cards
 - Visual density changes in popovers
 - "View all" links in cards and popover panels are now aligned to the right
-- `slds-modal--content` should use the additive class of `slds-p-vertical--large` and `slds-p-horizontal--x-large`, instead of `slds-p-around--medium`.
+- `slds-modal_content` should use the additive class of `slds-p-vertical_large` and `slds-p-horizontal_x-large`, instead of `slds-p-around_medium`.
 - Removed first and last cell padding from Data Tables to allow nesting. New
-  class `.slds-table--cell-buffer` can be added to the table or `.slds-cell-buffer--left` and `.slds-cell-buffer--right` for individual cell application.
+  class `.slds-table_cell-buffer` can be added to the table or `.slds-cell-buffer_left` and `.slds-cell-buffer_right` for individual cell application.
 - Field level help icon moved to the right of the input label
 - Removed over-reaching a:focus styles due to a recent FFOX visual change
 - Data table sortable headings now have actionable area so they can be focusable
@@ -313,41 +1194,41 @@ The following features are being marked as deprecated in this release and will b
 - Page headers have been updated. Version 1.0.0 has been deprecated. Will continue to work but please update to new markup - [Page Header component](/components/page-headers/)
 - `.slds-toggle-visibility` is no longer needed in button-groups. The final button will no longer disappear if it is a button-icon, but instead will gray down like a normal disabled button.
 - `.slds-button-space-left` is no longer supported. Please use spacing utilities instead.
-- `.slds-button--icon-bare` is no longer needed. Please use `.slds-button--icon` instead.
-- `.slds-card--empty` is no longer needed. Please use `.slds-text-align--center` utility class instead.
+- `.slds-button_icon-bare` is no longer needed. Please use `.slds-button_icon` instead.
+- `.slds-card_empty` is no longer needed. Please use `.slds-text-align_center` utility class instead.
 - `.slds-button` inside of `.slds-is-sortable` is no longer needed. The entire cell is hyperlinked now, no need for the button.
 - `.slds-form-element__helper` is no longer supported.
 - `.slds-input__icon` no longer supports a color by default. Please use `.slds-icon-text-default` on the SVG icon instead.
 - `.slds-icon__container` is no longer supported. Please use `.slds-icon_container` instead.
 - `.slds-icon-custom-XX` is no longer supported. Please use `.slds-icon-custom-customXX` instead.
-- `.slds-dropdown--nubbin-top` is no longer supported. Please use `.slds-nubbin--top` instead.
-- `.slds-has-icon--left`, `.slds-has-icon--right`, and `.slds-has-icon--left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
+- `.slds-dropdown_nubbin-top` is no longer supported. Please use `.slds-nubbin_top` instead.
+- `.slds-has-icon_left`, `.slds-has-icon_right`, and `.slds-has-icon_left-right` within dropdowns are no longer needed. Icons can be placed within the flow of a `.slds-dropdown__item`.
 - `.slds-modal-backdrop` is no longer supported. Please use `.slds-backdrop` instead.
 - `.slds-notify-container` is no longer supported. Please use `.slds-notify_container` instead.
 - `.slds-pill-container` and `.slds-pill__container` are no longer supported. Please use `.slds-pill_container` instead.
-- `.slds-pill__container--bare` is no longer supported. Please use `.slds-pill_container--bare` instead.
-- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs--default__item` or `.slds-tabs--scoped__item`.
+- `.slds-pill__container_bare` is no longer supported. Please use `.slds-pill_container_bare` instead.
+- `.slds-tabs__item` is no longer supported. Please use specific element selectors instead, such as `.slds-tabs_default__item` or `.slds-tabs_scoped__item`.
 - `.slds-tooltip` and `.slds-tooltip__body` are no longer supported. Please use `.slds-popover` and `.slds-popover__body` instead.
 - `.slds-tree-container` is no longer supported, please use `.slds-tree_container` instead.
-- `.slds-col-rule--left`, `.slds-col-rule--right`, `.slds-col-rule--top`, and `.slds-col-rule--bottom` are no longer supported. Please use `.slds-col--rule-left`, `.slds-col--rule-right`, `.slds-col--rule-top`, and `.slds-col--rule-bottom` instead.
-- `.slds-nowrap--small`, `.slds-nowrap--medium`, and `.slds-nowrap--large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
-- `.slds-align-content-center` is no longer supported. Please use `.slds-align--absolute-center` instead.
-- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers--{position}` instead.
-- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider--{position}` instead.
-- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider--around` instead.
-- `.slds-has-cards--space` is no longer supported. Please use `.slds-has-divider--around-space` instead.
+- `.slds-col-rule_left`, `.slds-col-rule_right`, `.slds-col-rule_top`, and `.slds-col-rule_bottom` are no longer supported. Please use `.slds-col_rule-left`, `.slds-col_rule-right`, `.slds-col_rule-top`, and `.slds-col_rule-bottom` instead.
+- `.slds-nowrap_small`, `.slds-nowrap_medium`, and `.slds-nowrap_large` are no longer supported. Please use `.slds-small-nowrap`, `.slds-medium-nowrap`, and `.slds-large-nowrap` instead.
+- `.slds-align-content-center` is no longer supported. Please use `.slds-align_absolute-center` instead.
+- `.slds-has-dividers` is no longer supported. Please use `.slds-has-dividers_{position}` instead.
+- `.slds-has-divider` is no longer supported. Please use `.slds-has-divider_{position}` instead.
+- `.slds-has-cards` is no longer supported. Please use `.slds-has-divider_around` instead.
+- `.slds-has-cards_space` is no longer supported. Please use `.slds-has-divider_around-space` instead.
 - `.slds-section-title` is no longer supported. Please use `.slds-section__title` instead.
 - `.slds-collapsed` is no longer supported. Please use `.slds-is-collapsed` instead.
 - `.slds-expanded` is no longer supported. Please use `.slds-is-expanded` instead.
-- The rule that hides the close button in Notification Prompt `.slds-modal--prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
+- The rule that hides the close button in Notification Prompt `.slds-modal_prompt .slds-modal__close` is no longer needed as the HTML should be removed. Please remove the button from the dialog header.
 
 **REMOVED**
 
 The following features are being removed in this release:
 
 - Removed the `$static-icon-path` configuration variable, since it wasn’t used anywhere in the codebase
-- Removed `slds-button--small`, since it’s the same as the new default button size
-- Removed `slds-input--small`, since it’s the same as the new default input size
+- Removed `slds-button_small`, since it’s the same as the new default button size
+- Removed `slds-input_small`, since it’s the same as the new default input size
 - Removed `slds-tile__title`, since it didn't apply any styles
 
 **🗒 Notes About Scoped CSS files, the Unmanaged Package, Visualforce and Lightning Components**
@@ -452,10 +1333,10 @@ The following classes are now available:
 - Added max-width sizing utilities - [Max Width sizing](/components/utilities/sizing)
 - Added zero spacing utility classes - [Spacing utilities](/components/utilities/spacing/)
 - Additional Grid System classes:
-  - Added `.slds-grid--align-end` for horizontal alignment on main grid axis
-  - Added `.slds-grid--vertical-align-end` and `.slds-grid--vertical-align-center` for vertical alignment on grid cross axis
-  - Added `.slds-grid--stretch` for multi-row vertical stretch support
-  - Added `.slds-grid--reverse` and `.slds-grid--vertical-reverse` to reverse the direction of the grid
+  - Added `.slds-grid_align-end` for horizontal alignment on main grid axis
+  - Added `.slds-grid_vertical-align-end` and `.slds-grid_vertical-align-center` for vertical alignment on grid cross axis
+  - Added `.slds-grid_stretch` for multi-row vertical stretch support
+  - Added `.slds-grid_reverse` and `.slds-grid_vertical-reverse` to reverse the direction of the grid
 - Added `.slds-text-error` for use on icons for validation errors
 - Added color to user selection to force good contrast on dark backgrounds
 
@@ -471,8 +1352,8 @@ The following changes have been made in this release:
 - Removed icon color from `.slds-input__icon` so an icon color class is now additionally required
 - Reordered tokens so large form factor has priority
 - Moved Page Header theme from Utilities to its top-level component category [Page Header component](/components/page-headers/)
-- Removed `.slds-m-top--x-small` in the page header and replaced with a new class `.slds-page-header__info`
-- Vertical spacing adjusted on *small* viewport for `.slds-form--stacked`, `.slds-form--horizontal` and `.slds-form--inline`
+- Removed `.slds-m-top_x-small` in the page header and replaced with a new class `.slds-page-header__info`
+- Vertical spacing adjusted on *small* viewport for `.slds-form_stacked`, `.slds-form_horizontal` and `.slds-form_inline`
 - Widths of the Grid container change to `480px` for small, `768px` for medium, `1024px` for large and `1280px` for x-large.
 - The last element inside `.slds-text-longform` now retains the bottom margin.
 
@@ -491,20 +1372,20 @@ The following issues have now been resolved:
 
 The following features are being marked as deprecated in this release and will be removed in three releases:
 
-- Deprecated `.slds-card--empty`. Use `.slds-text-align--center` instead. - [Card component](/components/cards/#empty)
+- Deprecated `.slds-card_empty`. Use `.slds-text-align_center` instead. - [Card component](/components/cards/#empty)
 - Deprecated `.slds-section-title`. Use `.slds-section__title` instead - [Section Title](/components/utilities/text/#section-title) for full details
-- Deprecated `.slds-button--icon-bare`. Use `.slds-button--icon` instead - [Button Icon](/components/buttons/#icon)
+- Deprecated `.slds-button_icon-bare`. Use `.slds-button_icon` instead - [Button Icon](/components/buttons/#icon)
 - Deprecated tabs descendant selectors [Tabs component](/components/tabs/):
-  - `.slds-tabs--default > slds-tabs__item` use `.slds-tabs--default__item` instead.
-  - `.slds-tabs--default > slds-tabs__content` use `.slds-tabs--default__content` instead.
-  - `.slds-tabs--default > a` use `.slds-tabs--default__link` instead.
-  - `.slds-tabs--scoped > slds-tabs__item` use `.slds-tabs--scoped__item` instead.
-  - `.slds-tabs--scoped > slds-tabs__content` use `.slds-tabs--scoped__content` instead.
-  - `.slds-tabs--scoped > a` use `.slds-tabs--scoped__link` instead.
-- Deprecated `.slds--tooltip`. Use `.slds-popover--tooltip` instead.
-- Deprecated responsive `.slds-nowrap--{size}` classes due to inconsistent naming. Use `.slds-{size}--nowrap` instead.
-- Deprecated `.slds-modal-backdrop` and `.slds-modal-backdrop--open` in favor of `.slds-backdrop` and `.slds-backdrop--open` to reuse in other components.
-- Deprecated `.slds-col-rule--{position}` classes due to inconsistent naming. Use `.slds-col--rule-{position}` instead.
+  - `.slds-tabs_default > slds-tabs__item` use `.slds-tabs_default__item` instead.
+  - `.slds-tabs_default > slds-tabs__content` use `.slds-tabs_default__content` instead.
+  - `.slds-tabs_default > a` use `.slds-tabs_default__link` instead.
+  - `.slds-tabs_scoped > slds-tabs__item` use `.slds-tabs_scoped__item` instead.
+  - `.slds-tabs_scoped > slds-tabs__content` use `.slds-tabs_scoped__content` instead.
+  - `.slds-tabs_scoped > a` use `.slds-tabs_scoped__link` instead.
+- Deprecated `.slds--tooltip`. Use `.slds-popover_tooltip` instead.
+- Deprecated responsive `.slds-nowrap_{size}` classes due to inconsistent naming. Use `.slds-{size}_nowrap` instead.
+- Deprecated `.slds-modal-backdrop` and `.slds-modal-backdrop_open` in favor of `.slds-backdrop` and `.slds-backdrop_open` to reuse in other components.
+- Deprecated `.slds-col-rule_{position}` classes due to inconsistent naming. Use `.slds-col_rule-{position}` instead.
 
 ## Release 0.12.2 - February 8, 2016
 
@@ -527,7 +1408,7 @@ The following features are being marked as deprecated in this release and will b
 **CHANGES**
 - Apply proper accessibility requirements (aria-labelledby) to tabs (fixes https://github.com/salesforce-ux/design-system/issues/107). Updated documentation to reflect previous refactoring.
 - Fix for inverse button-group icon bug
-- Make `.slds-text-body--small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
+- Make `.slds-text-body_small` inherit theme color (fixes https://github.com/salesforce-ux/design-system/issues/123)
 - Mark all list utilities "dev-ready" - [/components/utilities/lists](/components/utilities/lists)
 - Field-level help popover background color token update
 - Fix truncation on Sales Path (fixes https://github.com/salesforce-ux/design-system/issues/135)
@@ -549,7 +1430,7 @@ The following features are being marked as deprecated in this release and will b
 - Tabs have been refactored, changing descendent selectors to BEM syntax (deprecated)
 - Changed source order of Media Objects > Reversed and Media Objects > Double (No longer reordering using flexbox order property)
 - Adjusted Activity Timline > Base to reflect Media Object changes. Removed `dl` with single `dt` & `dd` pairs. Replaced with `span`s.
-- `slds-modal-backdrop` and `slds-modal-backdrop--open` is deprecated in favor of `slds-backdrop` and `slds-backdrop--open` since it is used in other components.
+- `slds-modal-backdrop` and `slds-modal-backdrop_open` is deprecated in favor of `slds-backdrop` and `slds-backdrop_open` since it is used in other components.
 - Removed icon color from `.slds-input__icon` so that an icon color class is required in addition
 
 **CHANGES**
@@ -568,20 +1449,20 @@ The following features are being marked as deprecated in this release and will b
 **DEPRECATED**
 - Buttons no longer have default horizontal spacing and require a class or wrapper to provide space
 - Name change: Responsive button changed to Horizontal button
-- `slds-modal-backdrop` and `slds-modal-backdrop--open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop--open` instead
+- `slds-modal-backdrop` and `slds-modal-backdrop_open` deprecated in version 0.12.0, use `slds-backdrop` and `slds-backdrop_open` instead
 - Descendant selectors on tabs were changed to BEM syntax
-  - `slds-tabs--default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--default__item` instead
-  - `slds-tabs--default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--default__content` instead
-  - `slds-tabs--default > a` deprecated in version 0.12.0, use `slds-tabs--default__link` instead
-  - `slds-tabs--scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs--scoped__item` instead
-  - `slds-tabs--scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs--scoped__content` instead
-  - `slds-tabs--scoped > a` deprecated in version 0.12.0, use `slds-tabs--scoped__link` instead
-- Decendent selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
+  - `slds-tabs_default > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs_default__item` instead
+  - `slds-tabs_default > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs_default__content` instead
+  - `slds-tabs_default > a` deprecated in version 0.12.0, use `slds-tabs_default__link` instead
+  - `slds-tabs_scoped > slds-tabs__item` deprecated in version 0.12.0, use `slds-tabs_scoped__item` instead
+  - `slds-tabs_scoped > slds-tabs__content` deprecated in version 0.12.0, use `slds-tabs_scoped__content` instead
+  - `slds-tabs_scoped > a` deprecated in version 0.12.0, use `slds-tabs_scoped__link` instead
+- Descendant selector on `.slds-input__icon` fill color deprecated in version 0.12.0, use `slds-icon-text-default` (or any icon color class) on the icon in addition to the original class
 
 ## Release 0.11.0 - October 29, 2015
 
 - Changed notifications > modal to notifications > modal-toast
-- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top--x-small` is placed on the `p` itself.
+- Modals > Taglines no longer has a `slds-modal__header p` selector. Instead, `slds-m-top_x-small` is placed on the `p` itself.
 - Stateful button has a `[disabled]` state
 - If button-groups need their final down icon to hide when [disabled], the `.slds-toggle-visibility` should be added to the icon. (This affects all page headers, and cards > base.)
 - Nubbins shadows now have proper light source
@@ -604,13 +1485,13 @@ The following features are being marked as deprecated in this release and will b
 
 **BREAKING CHANGES**
 
-- Changed `.slds-tooltip` to `.slds-popover--tooltip`, `.slds-tooltip` will become deprecated (*).
-- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider--top`, `.slds-has-divider--bottom`
+- Changed `.slds-tooltip` to `.slds-popover_tooltip`, `.slds-tooltip` will become deprecated (*).
+- Deprecated `.slds-has-divider` (*), now requires a top or bottom direction appened, e.g. `.slds-has-divider_top`, `.slds-has-divider_bottom`
 - Deprecated "Menu with Icons" dropdown variant
   - No longer depends on class names that deal with icon positioning
   - `.slds-dropdown__item` are set to `display: flex` with `justify-content: space-between` by default now. This allows for icon + text to be left aligned and a single icon to be positioned on the same axis to the right hand side. The icon + text that is positioned to the left requires an HTML element, like a `<p>` with the class `.slds-truncate` applied.
-  - `.slds-has-icon`, `.slds-has-icon--left`, `.slds-has-icon--right` and children classes `.slds-icon--left`, `.slds-icon--right` have been deprecated but will persist in code base (*)
-  - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that SVG now requires a class of `.slds-icon--selected`
+  - `.slds-has-icon`, `.slds-has-icon_left`, `.slds-has-icon_right` and children classes `.slds-icon_left`, `.slds-icon_right` have been deprecated but will persist in code base (*)
+  - If user invokes selection on a dropdown item and wants feedback such a a checkmark, that SVG now requires a class of `.slds-icon_selected`
 - <em> (*) Code is still in codebase but will be deprecated, TBD but preliminary removal of release 0.20.0</em>
 
 **NEW COMPONENTS**
@@ -631,8 +1512,8 @@ The following features are being marked as deprecated in this release and will b
 ## Release 0.10.0 - October 20, 2015
 
 - Changed `.slds-button__icon` fill colors to use currentColor value to match text color changes
-- Updated `.slds-button--icon-*` demo and fixed class name typo
-- Added new button variant: `.slds-button--destructive`
+- Updated `.slds-button_icon-*` demo and fixed class name typo
+- Added new button variant: `.slds-button_destructive`
 - Removed max-width (960px) from Modals > Large
 - Added new notification state in modals Notifications > Modal
 - Added `.slds-no-flex` to SVG in Notifications > Toast (needed for modal application)
@@ -641,13 +1522,13 @@ The following features are being marked as deprecated in this release and will b
 - `@salesforce-ux/design-system` package now includes */assets/icons* and */assets/images*
 
 **BREAKING CHANGES**
-- Changed `.slds-button--icon-border-small` to `.slds-button--icon-x-small`. This aligns with our other icon names which separate sizing from style
-- Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button--icon-inverse`. The class `.slds-button__icon--inverse` was removed from the SVG within.
+- Changed `.slds-button_icon-border-small` to `.slds-button_icon-x-small`. This aligns with our other icon names which separate sizing from style
+- Brought inverse close icons into alignment with the other icon buttons. Class on `.slds-button` has an added `.slds-button_icon-inverse`. The class `.slds-button__icon_inverse` was removed from the SVG within.
 
 **BUG FIXES**
-- `.slds-button--icon-*` can be placed on an `a` and aligns to the center
-- :hover, :focus state added for `.slds-button--icon-bare`
-- fixed line-height in `.slds-button--icon-border-small` and `.slds-button--icon-bare`
+- `.slds-button_icon-*` can be placed on an `a` and aligns to the center
+- :hover, :focus state added for `.slds-button_icon-bare`
+- fixed line-height in `.slds-button_icon-border-small` and `.slds-button_icon-bare`
 - Added `overflow: auto;` to the options container for a Multi Select picklist
 
 **NEW COMPONENTS**
@@ -698,7 +1579,7 @@ The following features are being marked as deprecated in this release and will b
   - CSS files scoped in `.slds` have been added/updated for the following:
   - Visualforce (`-vf`)
   - Lightning Platform (`-ltng`)
-  - General Use (Most likely in conjuction with other frameworks) (`-scoped`)
+  - General Use (Most likely in conjunction with other frameworks) (`-scoped`)
 
 ### Site
 
@@ -749,7 +1630,13 @@ The following features are being marked as deprecated in this release and will b
 
 Lots of bug fixes and TLC.
 
-[Unreleased]: https://github.com/salesforce-ux/design-system-internal/compare/v2.1.2...winter-17
+[2.4.0]: https://github.com/salesforce-ux/design-system/compare/v2.3.1...v2.4.0
+[2.3.1]: https://github.com/salesforce-ux/design-system/compare/v2.3.0...v2.3.1
+[2.3.0]: https://github.com/salesforce-ux/design-system/compare/v2.2.2...v2.3.0
+[2.2.2]: https://github.com/salesforce-ux/design-system/compare/v2.2.1...v2.2.2
+[2.2.1]: https://github.com/salesforce-ux/design-system/compare/v2.2.0...v2.2.1
+[2.2.0]: https://github.com/salesforce-ux/design-system/compare/v2.1.4...v2.2.0
+[2.1.4]: https://github.com/salesforce-ux/design-system/compare/v2.1.3...v2.1.4
 [2.1.3]: https://github.com/salesforce-ux/design-system/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/salesforce-ux/design-system/compare/v2.0.3...v2.1.2
 [2.0.3]: https://github.com/salesforce-ux/design-system/compare/v2.0.2...v2.0.3

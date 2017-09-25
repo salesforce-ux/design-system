@@ -1,0 +1,22 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Dynamic Menu is a modified concept of the [Menu component](/components/menus/), used when the number of actions available to the user is dynamic or variable. It can also be useful when
+ * the number of actions in the menu is large enough that a search functionality would be required.
+ *
+ * The component is composed of a [Popover](/components/popovers), coupled with either a `listbox` of options or an always expanded [Autocomplete Combobox](/components/combobox) and a list of additional actions pinned to the bottom of the dialog. The Popover and pinned actions are constant through the 3 different states the Dynamic Menu can take.
+ *
+ * When there are no actions other than the pinned actions, static content is displayed in the body of the Popover informing the user of the empty state. When there are 10 or less options in the menu a `listbox` is used to display them in the body of the Popover. When there are more than 10 options an Autocomplete Combobox is used to display some options and allow searching through the rest of avialble options that may not be displayed.
+ *
+ * Both the `listbox` and Combobox versions come with `Up` and `Down` arrow key navigation through the list. The `listbox` variant should only have a single focusable option. The Combobox variant should follow the expected keyboard behavior listed on the [Combobox Component](/components/combobox) page.
+ *
+ * @summary The Dynamic Menu can be used to give a user a variable number of actions to take. When that list of actions is long, a search mechanism is provided.
+ *
+ * @base
+ * @name dynamic-menu
+ * @selector .slds-dynamic-menu
+ * @support dev-ready
+ * @s1 false
+ * @scroller
+ */

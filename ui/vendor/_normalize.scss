@@ -1,5 +1,6 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
+// *** Updated - removed `[hidden] {display:none}` causing VF charts to disappear since they contain the hidden attribute with a value ***
 //
 // 1. Set default font family to sans-serif.
 // 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -70,11 +71,9 @@ audio:not([controls]) {
 }
 
 //
-// Address `[hidden]` styling not present in IE 8/9/10.
 // Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
 //
 
-[hidden],
 template {
   display: none;
 }
@@ -237,7 +236,7 @@ samp {
 // -------------------- //
 
 //
-// Known limitation: by default, Chrome and Safari on OS X allow very limited
+// Known limitation: by default, Chrome and Safari on macOS allow very limited
 // styling of `select`, unless a `border` property is set.
 //
 
@@ -361,7 +360,7 @@ input[type="search"] {
 }
 
 //
-// Remove inner padding and search cancel button in Safari and Chrome on OS X.
+// Remove inner padding and search cancel button in Safari and Chrome on macOS.
 // Safari (but not Chrome) clips the cancel button when the search input has
 // padding (and `textfield` appearance).
 //
@@ -401,7 +400,7 @@ textarea {
 
 //
 // Don't inherit the `font-weight` (applied by a rule above).
-// NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+// NOTE: the default cannot safely be changed in Chrome and Safari on macOS.
 //
 
 optgroup {

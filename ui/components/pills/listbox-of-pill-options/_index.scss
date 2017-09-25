@@ -1,0 +1,43 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A Listbox of Pills is a way to display a list of selected options when performing user input, usually from a multi-select [Combobox](/components/combobox), [Lookup](/components/lookups) or [Picklist](/components/picklist).
+ *
+ * #### Accessibility
+ *
+ * **Interaction requirements**
+ *
+ * - Only 1 focusabled Pill per set of Pills
+ * - The remove button must not be a focusable element, but can be clickable
+ * - Delete with a keyboard is performed with the `Backspace` or `Delete` key when focused on a pill
+ *
+ * **Notable attributes**
+ *
+ * - `role="listbox"` is placed on the `ul`
+ * - `aria-label` is applied to `listbox` to describe what the list of options are to the user
+ * - `aria-orientation="horizontal"` is applied to the `listbox` to describe the left to right direction of the pills
+ * - `role="presentation"` is placed on the `li` elements
+ * - `role="option"` is placed on the `slds-pill` elements
+ * - `aria-selected="true"` is applied to all `option` elements, this is because they have all be selected
+ * - `tabindex="0"` is applied to the `option` that is in focus last. By default it is placed on the first `option`
+ *
+ * **Keyboard navigation**
+ *
+ * - The first `option` in the list will be take user focus initially, when tabbed to
+ * - `Right` arrow key will move focus to the next pill in the list
+ * - `Left` arrow key will move focus to the previous pill in the list
+ * - `Left` arrow key when on the first `option` should cycle user focus to the last `option`
+ * - `Right` arrow key when on the last `option` should cycle user focus to the first `option`
+ * - `Delete` or `Backspace` key when focused on an `option` should remove that `option`. Focus should then be placed on the nearest `option`
+ *   - When on the last `option`, place user focus on the previous `option`
+ *   - When on the first `option`, place user focus on the next `option`
+ *   - When on the only `option`, place user focus on the `listbox` or any `input` element the `option` might be associated with
+ *
+ * @summary A listbox of Pills is a way to display a list of selected options when performing user input
+ *
+ * @name listbox-of-pill-options
+ * @selector .slds-listbox [role="listbox"]
+ * @restrict .slds-pill
+ * @variant
+ */

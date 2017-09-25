@@ -1,7 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - base
-  - call
-  - email
-  - event
-  - task

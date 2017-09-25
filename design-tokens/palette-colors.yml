@@ -1,0 +1,45 @@
+
+global:
+  type: color
+  category: color
+
+imports:
+- ./color-palettes.yml
+
+props:
+  COLOR_GRAY_1:
+    value: "{!PALETTE_GRAY_1}"
+    comment: "Gray Color 1"
+  COLOR_GRAY_2:
+    value: "{!PALETTE_GRAY_2}"
+    comment: "Gray Color 2"
+  COLOR_GRAY_3:
+    value: "{!PALETTE_GRAY_3}"
+    comment: "Gray Color 3"
+  COLOR_GRAY_4:
+    value: "{!PALETTE_GRAY_4}"
+    comment: "Gray Color 4"
+  COLOR_GRAY_5:
+    value: "{!PALETTE_GRAY_5}"
+    comment: "Gray Color 5"
+  COLOR_GRAY_6:
+    value: "{!PALETTE_GRAY_6}"
+    comment: "Gray Color 6"
+  COLOR_GRAY_7:
+    value: "{!PALETTE_GRAY_7}"
+    comment: "Gray Color 7"
+  COLOR_GRAY_8:
+    value: "{!PALETTE_GRAY_8}"
+    comment: "Gray Color 8"
+  COLOR_GRAY_9:
+    value: "{!PALETTE_GRAY_9}"
+    comment: "Gray Color 9"
+  COLOR_GRAY_10:
+    value: "{!PALETTE_GRAY_10}"
+    comment: "Gray Color 10"
+  COLOR_GRAY_11:
+    value: "{!PALETTE_GRAY_11}"
+    comment: "Gray Color 11"
+  COLOR_GRAY_12:
+    value: "{!PALETTE_GRAY_12}"
+    comment: "Gray Color 12"

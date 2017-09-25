@@ -1,0 +1,28 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  SLIDER_HANDLE_COLOR_BACKGROUND:
+    value: '{!AZURE}'
+  SLIDER_HANDLE_COLOR_BACKGROUND_HOVER:
+    value: '{!SCIENCE_BLUE}'
+  SLIDER_HANDLE_COLOR_BACKGROUND_FOCUS:
+    value: '{!SCIENCE_BLUE}'
+  SLIDER_HANDLE_COLOR_BACKGROUND_ACTIVE:
+    value: '{!SCIENCE_BLUE}'
+  SLIDER_TRACK_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_4}'
+  SLIDER_TRACK_COLOR_BACKGROUND_FILL:
+    value: '{!AZURE}'
+  SLIDER_COLOR_BACKGROUND_DISABLED:
+    value: '{!PALETTE_GRAY_4}'

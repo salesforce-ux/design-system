@@ -1,9 +1,0 @@
-status: 'dev-ready'
-flavors:
-  - vertical
-  - vertical-dividers
-  - horizontal
-  - horizontal-dividers
-  - single-divider
-  - description-list
-  - name-value-pair

@@ -1,5 +1,0 @@
-status: 'dev-ready'
-classBase: 'button'
-flavors:
-  - base
-  - stateful

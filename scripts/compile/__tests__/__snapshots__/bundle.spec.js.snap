@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doesn't change configs 1`] = `
+Array [
+  Object {
+    "entry": "./scripts/compile/slds.js",
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.jsx\\?\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "test": /\\\\\\.scss\\$/,
+          "use": Array [
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "raw-loader",
+            },
+            Object {
+              "loader": "sass-loader",
+            },
+          ],
+        },
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.mdx\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+            },
+            Object {
+              "loader": "./scripts/compile/mdx-post-loader",
+            },
+            Object {
+              "loader": "mdx-loader",
+              "options": Object {
+                "unwrapped": false,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "__internal/slds.umd.js",
+      "library": "SLDS",
+      "libraryTarget": "umd",
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "plugins": null,
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+  Object {
+    "entry": Object {
+      "__internal/chunked/showcase/ui/components/buttons/base/example.jsx.js": "./ui/components/buttons/base/example.jsx",
+      "__internal/chunked/showcase/ui/components/buttons/stateful/example.jsx.js": "./ui/components/buttons/stateful/example.jsx",
+      "__internal/chunked/showcase/ui/components/buttons/with-icon/example.jsx.js": "./ui/components/buttons/with-icon/example.jsx",
+      "__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js": "./ui/components/data-tables/advanced/example.jsx",
+      "__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js": "./ui/components/data-tables/base/example.jsx",
+      "__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js": "./ui/components/data-tables/inline-edit/example.jsx",
+      "__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js": "./ui/utilities/alignment/example.jsx",
+      "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js": "./ui/utilities/floats/example.jsx",
+    },
+    "externals": Object {
+      "js-beautify": "JSBeautify",
+      "react": "React",
+      "react-dom": "ReactDOM",
+    },
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.jsx\\?\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "test": /\\\\\\.scss\\$/,
+          "use": Array [
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "raw-loader",
+            },
+            Object {
+              "loader": "sass-loader",
+            },
+          ],
+        },
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.mdx\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+            },
+            Object {
+              "loader": "./scripts/compile/mdx-post-loader",
+            },
+            Object {
+              "loader": "mdx-loader",
+              "options": Object {
+                "unwrapped": false,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name]",
+      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_showcase",
+      "library": Array [
+        "SLDS",
+        "[name]",
+      ],
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "plugins": null,
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+  Object {
+    "entry": Object {
+      "__internal/chunked/docs/ui/components/buttons/docs.mdx.js": "./ui/components/buttons/docs.mdx",
+    },
+    "externals": Object {
+      "js-beautify": "JSBeautify",
+      "react": "React",
+      "react-dom": "ReactDOM",
+    },
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.jsx\\?\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "test": /\\\\\\.scss\\$/,
+          "use": Array [
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "raw-loader",
+            },
+            Object {
+              "loader": "sass-loader",
+            },
+          ],
+        },
+        Object {
+          "exclude": /node_modules/,
+          "test": /\\\\\\.mdx\\$/,
+          "use": Array [
+            Object {
+              "loader": "babel-loader",
+            },
+            Object {
+              "loader": "./scripts/compile/mdx-post-loader",
+            },
+            Object {
+              "loader": "mdx-loader",
+              "options": Object {
+                "unwrapped": false,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name]",
+      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_docs",
+      "library": Array [
+        "SLDS",
+        "[name]",
+      ],
+      "publicPath": "/assets/scripts/bundle/",
+    },
+    "plugins": null,
+    "resolve": Object {
+      "alias": Object {
+        "lodash": "",
+      },
+      "extensions": Array [
+        ".js",
+        ".jsx",
+      ],
+    },
+  },
+]
+`;

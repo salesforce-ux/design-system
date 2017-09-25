@@ -1,5 +1,0 @@
-status: 'dev-ready'
-className: 'form--stacked'
-showFormFactors:
-  - small
-  - large

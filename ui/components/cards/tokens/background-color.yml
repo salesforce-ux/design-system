@@ -1,0 +1,13 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  CARD_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Default Card component background color.

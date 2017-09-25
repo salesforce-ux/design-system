@@ -1,0 +1,26 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: sizing
+  type: size
+  cssProperties:
+  - '*height'
+  - '*width'
+props:
+  COLOR_PICKER_SELECTOR_WIDTH:
+    value: 14rem
+  COLOR_PICKER_SWATCHES_WIDTH:
+    value: 13.3rem
+  COLOR_PICKER_RANGE_HEIGHT:
+    value: 5rem
+  COLOR_PICKER_SLIDER_HEIGHT:
+    value: 1.5rem
+  COLOR_PICKER_THUMB_WIDTH:
+    value: 0.375rem
+  COLOR_PICKER_RANGE_INDICATOR_SIZE:
+    value: 0.75rem
+  COLOR_PICKER_INPUT_CUSTOM_HEX_WIDTH:
+    value: 4.2rem
+  COLOR_PICKER_SWATCH_SIZE:
+    value: 1.25rem

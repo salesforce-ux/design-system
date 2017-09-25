@@ -1,0 +1,36 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- ./aliases/color.yml
+- ../color-palettes.yml
+props:
+  ## DEFAULT
+  COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_5}'
+  ## BRANDING
+  COLOR_BORDER_BRAND_PRIMARY:
+    value: '{!BLUE_BORDER_PRIMARY}'
+  COLOR_BORDER_BRAND_PRIMARY_HOVER:
+    value: '{!BLUE_BORDER_SECONDARY}'
+  COLOR_BORDER_BRAND_PRIMARY_FOCUS:
+    value: '{!BLUE_BORDER_SECONDARY}'
+  COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
+    value: '{!BLUE_BORDER_SECONDARY}'
+  ## COMPONENTS
+  PAGE_HEADER_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  CARD_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  CARD_FOOTER_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  PAGE_HEADER_JOINED_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  BUTTON_COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_5}'

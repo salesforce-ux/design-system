@@ -1,0 +1,13 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  NOTIFICATION_COLOR_BACKGROUND_INVERSE:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Dark notification component background color.

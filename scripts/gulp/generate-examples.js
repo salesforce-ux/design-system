@@ -1,77 +1,86 @@
-/*
-Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const I = require('immutable');
+const Task = require('data.task');
+const insert = require('gulp-insert');
+const through = require('through2');
+const React = require('react');
+const ReactDOM = require('react-dom/server');
+const showcase = require('../ui/showcase');
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+const { ui } = require('../ui');
+const createInstance = require('../lib');
+const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
+const paths = require('../helpers/paths');
+const beautify = require('js-beautify');
 
-import fs from 'fs';
-import gulp from 'gulp';
-import gutil from 'gulp-util';
-import path from 'path';
-import through from 'through2';
-import beautify from  'js-beautify';
-import { renderToStaticMarkup } from 'react-dom/server';
+const prettyHTML = html =>
+  beautify.html(html, {
+    brace_style: 'end-expand',
+    indent_size: 2,
+    indent_char: ' ',
+    unformatted: [],
+    'wrap_line_length ': 78,
+    indent_inner_html: true
+  });
 
-import { resolve } from 'path';
-import { assign, flatMap } from 'lodash';
-import { generateUI } from './generate-ui';
-
-const prettyHTML = html => beautify.html(html, {
-  'indent_size': 2,
-  'indent_char': ' ',
-  'unformatted': ['a'],
-  'wrap_line_length ': 78,
-  'indent_inner_html': true
-});
-
-const toStates = (ex, k) =>
-  [{ id: k, element: ex[k] }];
-
-const getStates = file =>
-  file.preview ? toStates(file, 'preview')
-    : file.default ? toStates(file, 'default')
-      : file.states;
-
-const requireExample = flavor =>
-  require(resolve(__PATHS__.ui, flavor.examplePath));
-
-export const addExamples = comps =>
-  comps.map(c => assign(c, {
-    flavors: c.flavors
-        .filter(f => f.examplePath)
-        .map(f => assign(f, { examples: getStates(requireExample(f)) }))
-  })
+gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
+  gulp
+    .src(`${paths.generated}/examples/*.html`)
+    .pipe(
+      insert.wrap(
+        '<!DOCTYPE html><html lang="en" dir="rtl"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../.assets/styles/index.css" /></head><body>',
+        '</body></html>'
+      )
+    )
+    .pipe(gulp.dest(paths.html))
 );
 
-export const getComponents = schema =>
-  flatMap(generateUI(schema), 'components');
+const getFileName = (component, variant, item) =>
+  I.List.of(component.get('id'), variant.get('id'), item.get('id')).join('_');
 
-const getName = (component, flavor, example) =>
-  `${component.id}_${flavor.id}_${example.id}`;
+const getWrappedElement = item =>
+  item.get('Context')
+    ? React.createElement(item.get('Context'), null, item.get('element'))
+    : item.get('element');
 
-const flattenExamples = comps =>
-  flatMap(comps, comp =>
-    flatMap(comp.flavors, flavor =>
-      flatMap(flavor.examples, ex =>
-        assign(ex, { uid: getName(comp, flavor, ex) }))));
-
-const toHtml = el =>
-  prettyHTML(renderToStaticMarkup(el));
+const render = item =>
+  React.isValidElement(item.get('element'))
+    ? prettyHTML(ReactDOM.renderToStaticMarkup(getWrappedElement(item)))
+    : `FAILED: ${item.get('id')}`;
 
 gulp.task('generate:examples', () => {
   const stream = through.obj();
-  const examples = flattenExamples(addExamples(getComponents()));
-  examples.forEach(ex =>
-    stream.write(new gutil.File({
-      path: `${ex.uid}.html`,
-      contents: new Buffer(toHtml(ex.element))
-    })));
-  stream.end();
-  return stream
-    .pipe(gulp.dest(resolve(__PATHS__.generated, 'examples')));
+  ui()
+    .chain(uiJSON =>
+      Task.of(createInstance(uiJSON)).map(SLDS =>
+        uiJSON.get('components').map(comp =>
+          SLDS.variants(comp)
+            .filter(variant => variant.get('showcasePath'))
+            .map(variant =>
+              showcase(variant.get('showcasePath'), true).map(section =>
+                section.get('items').map(i =>
+                  stream.write(
+                    new gutil.File({
+                      path: `${getFileName(comp, variant, i)}.html`,
+                      contents: Buffer.from(render(i))
+                    })
+                  )
+                )
+              )
+            )
+        )
+      )
+    )
+    .fork(
+      e => {
+        throw e;
+      },
+      () => stream.end()
+    );
+
+  return stream.pipe(gulp.dest(`${paths.generated}/examples`));
 });

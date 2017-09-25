@@ -1,6 +1,0 @@
-status: 'dev-ready'
-className: 'form--inline'
-showFormFactors:
-  - small
-  - medium
-  - large

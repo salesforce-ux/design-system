@@ -1,0 +1,1005 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scripts/ui.js ui has not changed 1`] = `
+Object {
+  "components": Object {
+    "buttons": Object {
+      "annotations": Object {
+        "base": true,
+        "category": "base",
+        "layout": "responsive",
+        "name": "buttons",
+        "role": "button",
+        "selector": ".slds-button",
+        "summary": "Buttons are used to invoke an event",
+        "support": "dev-ready",
+        "type": "action",
+      },
+      "description": "Create a button with a \`button\` or \`a\` element to retain the native click
+function.
+
+Use a disabled attribute when a button can’t be clicked.",
+      "docPath": "./ui/components/buttons/docs.mdx",
+      "id": "buttons",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "name": "base",
+            "restrict": "button, a, span",
+            "selector": ".slds-button",
+            "summary": "This neutralizes all the base styles making it look like a text link",
+            "variant": true,
+          },
+          "description": "The base \`.slds-button\` looks like a plain text link. It removes all the
+styling of the native button. It’s typically used to trigger a modal or
+display a “like” link. All button variations are built by adding another
+class to \`.slds-button\`.
+
+Add the \`.slds-button_neutral\` class to create a neutral button, which
+has a white background and gray border.
+
+Use a neutral icon button is for buttons with an icon on the left or
+right (not for stateful buttons). Add the \`.slds-button_neutral\` class
+to \`.slds-button\`.
+
+The SVG inside receives the \`.slds-button__icon\` class. You can position
+the icon on the right or the left using \`.slds-button__icon_right\` or
+\`.slds-button__icon_left\` , which apply the correct amount of space
+between the icon and the text.
+
+To create the brand button, add the \`.slds-button_brand\` class to
+the \`.slds-button\` class.
+
+To create the destructive button, add the \`.slds-button_destructive\`
+class to the \`.slds-button\` class.
+
+Use the inverse button on dark backgrounds. Add the \`.slds-button_inverse\`
+class to the \`.slds-button\` class.",
+          "docPath": null,
+          "id": "base",
+          "restrictees": Array [
+            Object {
+              "annotations": Object {
+                "group": "theme",
+                "modifier": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_neutral",
+              },
+              "description": "Creates the gray border with white background default style",
+              "docPath": null,
+              "id": ".slds-button_neutral",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "group": "theme",
+                "modifier": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_brand",
+              },
+              "description": "Creates the brand blue Salesforce style",
+              "docPath": null,
+              "id": ".slds-button_brand",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "group": "theme",
+                "modifier": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_inverse",
+              },
+              "description": "Creates the inverse style for dark backgrounds",
+              "docPath": null,
+              "id": ".slds-button_inverse",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "group": "theme",
+                "modifier": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_destructive",
+              },
+              "description": "Creates a red button style",
+              "docPath": null,
+              "id": ".slds-button_destructive",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "group": "theme",
+                "modifier": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_success",
+              },
+              "description": "Creates a green button style",
+              "docPath": null,
+              "id": ".slds-button_success",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "deprecated": true,
+                "restrict": ".slds-button",
+                "selector": ".slds-button_small",
+              },
+              "description": "Creates a smaller button style",
+              "docPath": null,
+              "id": ".slds-button_small",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "name": "stateful",
+                "restrict": ".slds-button",
+                "selector": ".slds-button_stateful",
+                "summary": "Initiates a stateful button",
+                "variant": true,
+              },
+              "description": "The stateful button requires the \`.slds-button--neutral\` class in addition to the \`.slds-button\` class.
+
+The stateful inverse button works just like the stateful button. It requires the \`.slds-button--inverse\` class in addition to the \`.slds-button\` class.
+
+It uses the class \`.slds-not-selected\` in its initial state. When the user activates the button, use JavaScript to toggle the class to \`.slds-is-selected\`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the \`.slds-button__icon--stateful\` class as well as the \`.slds-button__icon--left\` class setting the icon on the left.
+
+Stateful icons can be toggled on and off and retain their state. Like stateful buttons, the initial state is \`.slds-not-selected\`, and JavaScript is used to toggle it to \`.slds-is-selected\` when activated.
+
+#### Accessibility
+
+For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the button. The \`aria-live=\\"assertive\\"\` attribute means the value of the \`<span>\` inside the button will be spoken whenever it changes.",
+              "docPath": null,
+              "id": "stateful",
+              "restrictees": Array [
+                Object {
+                  "annotations": Object {
+                    "group": "interaction",
+                    "modifier": true,
+                    "notes": "This class should be toggled with JavaScript",
+                    "restrict": ".slds-button_stateful",
+                    "selector": ".slds-not-selected",
+                  },
+                  "description": "Default state of a stateful button",
+                  "docPath": null,
+                  "id": ".slds-not-selected",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "group": "interaction",
+                    "modifier": true,
+                    "notes": "This class should be toggled with JavaScript",
+                    "restrict": ".slds-button_stateful",
+                    "selector": ".slds-is-selected-clicked",
+                  },
+                  "description": "When button is selected and still has focus from click",
+                  "docPath": null,
+                  "id": ".slds-is-selected-clicked",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "group": "interaction",
+                    "modifier": true,
+                    "notes": "This class should be toggled with JavaScript",
+                    "restrict": ".slds-button_stateful",
+                    "selector": ".slds-is-selected",
+                  },
+                  "description": "When button is pressed and selected",
+                  "docPath": null,
+                  "id": ".slds-is-selected",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+              ],
+              "showcase": Array [
+                Object {
+                  "items": Array [
+                    Object {
+                      "id": "default",
+                    },
+                  ],
+                  "title": "default",
+                },
+              ],
+              "showcasePath": "./ui/components/buttons/stateful/example.jsx",
+            },
+            Object {
+              "annotations": Object {
+                "name": "with-icon",
+                "restrict": ".slds-button svg",
+                "selector": ".slds-button__icon",
+                "variant": true,
+              },
+              "description": "Sizing for icon that sits inside button__icon",
+              "docPath": null,
+              "id": "with-icon",
+              "restrictees": Array [
+                Object {
+                  "annotations": Object {
+                    "group": "icon-size",
+                    "modifier": true,
+                    "restrict": ".slds-button__icon",
+                    "selector": ".slds-button__icon_large",
+                  },
+                  "description": "Large size button icon svg",
+                  "docPath": null,
+                  "id": ".slds-button__icon_large",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "group": "icon-size",
+                    "modifier": true,
+                    "restrict": ".slds-button__icon",
+                    "selector": ".slds-button__icon_small",
+                  },
+                  "description": "Small size button icon svg",
+                  "docPath": null,
+                  "id": ".slds-button__icon_small",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "group": "icon-size",
+                    "modifier": true,
+                    "restrict": ".slds-button__icon",
+                    "selector": ".slds-button__icon_x-small",
+                  },
+                  "description": "x-small size button icon svg",
+                  "docPath": null,
+                  "id": ".slds-button__icon_x-small",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+              ],
+              "showcase": Array [
+                Object {
+                  "items": Array [
+                    Object {
+                      "id": "icon-right",
+                      "label": "Neutral with right icon",
+                    },
+                  ],
+                  "title": "examples",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "id": "default",
+                    },
+                  ],
+                  "title": "default",
+                },
+              ],
+              "showcasePath": "./ui/components/buttons/with-icon/example.jsx",
+            },
+          ],
+          "showcase": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "id": "disabled",
+                  "label": "Disabled",
+                },
+              ],
+              "title": "states",
+            },
+            Object {
+              "items": Array [
+                Object {
+                  "id": "default",
+                },
+              ],
+              "title": "default",
+            },
+          ],
+          "showcasePath": "./ui/components/buttons/base/example.jsx",
+        },
+      ],
+      "showcase": Array [],
+      "showcasePath": null,
+    },
+    "data-tables": Object {
+      "annotations": Object {
+        "base": true,
+        "category": "structure",
+        "layout": "adaptive",
+        "name": "data-tables",
+        "role": "grid",
+        "s1": "false",
+        "scroller": true,
+        "selector": ".slds-table",
+        "summary": "Data tables are an enhanced version of an HTML table and are used to display tabular data.",
+        "support": "dev-ready",
+        "type": "data-display, data-entry, navigation",
+      },
+      "description": "To initialize a data table, apply the \`slds-table\` class to the
+\`table\` element. This class creates a \`table\`
+with formatted cells and allows you to use data table utilities.
+
+#### Accessibility
+To create an accessible table, the top row of column headers (\`th\`)
+are placed in a \`thead\`. Each one receives the \`scope=\\"col\\"\`
+attribute. The first non-actionable (meaning that doesn't contain a checkbox
+or menu) column in each row should be marked as a \`th\` with a
+\`scope=\\"row\\"\` attribute.",
+      "docPath": null,
+      "id": "data-tables",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "name": "base",
+            "required": true,
+            "restrict": "table",
+            "selector": ".slds-table",
+            "summary": "Initializes data table",
+            "variant": true,
+          },
+          "description": "",
+          "docPath": null,
+          "id": "base",
+          "restrictees": Array [
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table",
+                "selector": ".slds-no-row-hover",
+              },
+              "description": "Default Table Row Hover",
+              "docPath": null,
+              "id": ".slds-no-row-hover",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table tr",
+                "selector": ".slds-is-selected",
+              },
+              "description": "Selected Table Row + Hover",
+              "docPath": null,
+              "id": ".slds-is-selected",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table th, .slds-table td",
+                "selector": ".slds-cell-wrap",
+              },
+              "description": "By default, nowrap is applied",
+              "docPath": null,
+              "id": ".slds-cell-wrap",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table th, .slds-table td",
+                "selector": ".slds-cell-buffer_left",
+              },
+              "description": "Use to add a left padding buffer to cells",
+              "docPath": null,
+              "id": ".slds-cell-buffer_left",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table th, .slds-table td",
+                "selector": ".slds-cell-buffer_right",
+              },
+              "description": "Use to add a right padding buffer to cells",
+              "docPath": null,
+              "id": ".slds-cell-buffer_right",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table th, .slds-table td",
+                "selector": ".slds-has-focus",
+              },
+              "description": "Focus state on a cell",
+              "docPath": null,
+              "id": ".slds-has-focus",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "required": true,
+                "restrict": ".slds-table",
+                "selector": ".slds-table_cell-buffer",
+              },
+              "description": "Add left and right padding to the first and last cells of a table",
+              "docPath": null,
+              "id": ".slds-table_cell-buffer",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table",
+                "selector": ".slds-table_bordered",
+              },
+              "description": "Add vertical borders to a table",
+              "docPath": null,
+              "id": ".slds-table_bordered",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table",
+                "selector": ".slds-table_col-bordered",
+              },
+              "description": "Add column borders",
+              "docPath": null,
+              "id": ".slds-table_col-bordered",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "modifier": true,
+                "restrict": ".slds-table",
+                "selector": ".slds-table_striped",
+              },
+              "description": "Add alternating strips to rows",
+              "docPath": null,
+              "id": ".slds-table_striped",
+              "restrictees": Array [],
+              "showcase": Array [],
+              "showcasePath": null,
+            },
+            Object {
+              "annotations": Object {
+                "name": "advanced",
+                "restrict": ".slds-table",
+                "selector": ".slds-table_fixed-layout",
+                "summary": "Set table to use fixed layout for width and truncation purposes",
+                "variant": true,
+              },
+              "description": "",
+              "docPath": null,
+              "id": "advanced",
+              "restrictees": Array [
+                Object {
+                  "annotations": Object {
+                    "restrict": ".slds-table_fixed-layout th",
+                    "selector": ".slds-is-sortable",
+                  },
+                  "description": "If the column is sortable than lets handle the actionable
+region of the \`<th>\` cell",
+                  "docPath": null,
+                  "id": ".slds-is-sortable",
+                  "restrictees": Array [
+                    Object {
+                      "annotations": Object {
+                        "restrict": ".slds-is-sortable .slds-icon",
+                        "selector": ".slds-is-sortable__icon",
+                      },
+                      "description": "Icon inside sortable th",
+                      "docPath": null,
+                      "id": ".slds-is-sortable__icon",
+                      "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                  ],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "restrict": ".slds-table_fixed-layout th div, .slds-table_fixed-layout th a",
+                    "selector": ".slds-th__action",
+                  },
+                  "description": "Actionable area inside th",
+                  "docPath": null,
+                  "id": ".slds-th__action",
+                  "restrictees": Array [
+                    Object {
+                      "annotations": Object {
+                        "restrict": ".slds-th__action",
+                        "selector": ".slds-th__action_form",
+                      },
+                      "description": "Allows for alignment of form element, such as a checkbox",
+                      "docPath": null,
+                      "id": ".slds-th__action_form",
+                      "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                  ],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "restrict": ".slds-table_fixed-layout th",
+                    "selector": ".slds-is-sorted",
+                  },
+                  "description": "Active state of sorted column",
+                  "docPath": null,
+                  "id": ".slds-is-sorted",
+                  "restrictees": Array [
+                    Object {
+                      "annotations": Object {
+                        "modifier": true,
+                        "name": "sorted-ascending",
+                        "restrict": ".slds-is-sorted",
+                        "selector": ".slds-is-sorted_asc",
+                      },
+                      "description": "Change direction of arrow",
+                      "docPath": null,
+                      "id": "sorted-ascending",
+                      "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                  ],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "restrict": ".slds-table_fixed-layout",
+                    "selector": ".slds-table_resizable-cols",
+                  },
+                  "description": "Resizable data table columns",
+                  "docPath": null,
+                  "id": ".slds-table_resizable-cols",
+                  "restrictees": Array [
+                    Object {
+                      "annotations": Object {
+                        "restrict": ".slds-table_resizable-cols th",
+                        "selector": ".slds-is-resizable",
+                      },
+                      "description": "Provide an indicator that resizing is available",
+                      "docPath": null,
+                      "id": ".slds-is-resizable",
+                      "restrictees": Array [
+                        Object {
+                          "annotations": Object {
+                            "restrict": ".slds-is-resizable div",
+                            "selector": ".slds-resizable",
+                          },
+                          "description": "Resizable handle",
+                          "docPath": null,
+                          "id": ".slds-resizable",
+                          "restrictees": Array [
+                            Object {
+                              "annotations": Object {
+                                "restrict": ".slds-resizable span",
+                                "selector": ".slds-resizable__handle",
+                              },
+                              "description": "Grab handle to resize column",
+                              "docPath": null,
+                              "id": ".slds-resizable__handle",
+                              "restrictees": Array [
+                                Object {
+                                  "annotations": Object {
+                                    "restrict": ".slds-resizable__handle span",
+                                    "selector": ".slds-resizable__divider",
+                                  },
+                                  "description": "Grab handle divider indicator when resizing column",
+                                  "docPath": null,
+                                  "id": ".slds-resizable__divider",
+                                  "restrictees": Array [],
+                                  "showcase": Array [],
+                                  "showcasePath": null,
+                                },
+                              ],
+                              "showcase": Array [],
+                              "showcasePath": null,
+                            },
+                          ],
+                          "showcase": Array [],
+                          "showcasePath": null,
+                        },
+                      ],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                  ],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+                Object {
+                  "annotations": Object {
+                    "name": "inline-edit",
+                    "required": true,
+                    "restrict": ".slds-table_fixed-layout",
+                    "selector": ".slds-table_edit",
+                    "summary": "Initiates inline-edit mode for data-tables",
+                    "variant": true,
+                  },
+                  "description": "Inline edit plugin for advanced tables
+
+#### Accessibility
+The Advanced Data Table and Inline Edit Data Table are based on the semantics,
+roles and interaction model of the [ARIA Grid](http://w3c.github.io/aria/practices/aria-practices.html#grid).
+In SLDS we overlay the ARIA Grid on top of native HTML table semantics.
+
+The role of Grid comes with 2 distinct modes, Navigation mode and Actionable
+mode. Both come with very specific keyboard interaction modals. Navigation
+mode is the default mode of the Grid.
+
+**Navigation Mode**
+- Tabbing into the grid focuses the first data cell in the table.
+- The second tab key press takes the user focus out of the grid onto the next focusable element on the page.
+- Once the user has tabbed out of the grid, tabbing back into the grid will return focus to the last cell the user was focused on.
+- Navigation in the grid is accomplished via the arrow keys.
+- No actionable items in cell contents are focusable.
+- Pressing the Enter key on a chosen grid cell, places the entire Grid into Actionable mode.
+
+**Actionable Mode**
+- Once in Actionable mode, all focusable items in the entire grid can be tabbed to.
+- Arrow navigation still takes the user cell to cell in any direction, but focuses on the first actionable item in the cell, if there is one.
+- Pressing the Escape key exits Actionable mode, placing the user back into Navigation mode, keeping the users cursor on the same cell they were focused in.
+- When interacting with a component in a cell, such as a Menu, that also uses the Escape key as an exit action, pressing Escape will take the user back to the triggering element in the current cell. A subsequent press of Escape will return the user to Navigation mode.
+
+For the purposes of these docs, the Default state of Inline Edit is
+representative of Navigation mode, all other states are assumed to be in Actionable Mode.",
+                  "docPath": null,
+                  "id": "inline-edit",
+                  "restrictees": Array [
+                    Object {
+                      "annotations": Object {
+                        "required": true,
+                        "restrict": ".slds-table_edit td",
+                        "selector": ".slds-cell-error",
+                      },
+                      "description": "Cell that has error icon appear within",
+                      "docPath": null,
+                      "id": ".slds-cell-error",
+                      "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                    Object {
+                      "annotations": Object {
+                        "restrict": ".slds-table_edit th, .slds-table_edit td",
+                        "selector": ".slds-cell-edit",
+                      },
+                      "description": "Informs a table cell that it has editing capabilities",
+                      "docPath": null,
+                      "id": ".slds-cell-edit",
+                      "restrictees": Array [
+                        Object {
+                          "annotations": Object {
+                            "modifier": true,
+                            "restrict": ".slds-cell-edit",
+                            "selector": ".slds-is-edited",
+                          },
+                          "description": "Informs a cell that it has been edited but not saved",
+                          "docPath": null,
+                          "id": ".slds-is-edited",
+                          "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
+                        },
+                        Object {
+                          "annotations": Object {
+                            "modifier": true,
+                            "restrict": ".slds-cell-edit",
+                            "selector": ".slds-has-error",
+                          },
+                          "description": "Informs a cell that it has an error inside of it",
+                          "docPath": null,
+                          "id": ".slds-has-error",
+                          "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
+                        },
+                        Object {
+                          "annotations": Object {
+                            "restrict": ".slds-cell-edit button",
+                            "selector": ".slds-cell-edit__button",
+                          },
+                          "description": "",
+                          "docPath": null,
+                          "id": ".slds-cell-edit__button",
+                          "restrictees": Array [],
+                          "showcase": Array [],
+                          "showcasePath": null,
+                        },
+                      ],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                    Object {
+                      "annotations": Object {
+                        "modifier": true,
+                        "restrict": ".slds-table_edit",
+                        "selector": ".slds-no-cell-focus",
+                      },
+                      "description": "Handles children of the table where we don't want any focusable cells",
+                      "docPath": null,
+                      "id": ".slds-no-cell-focus",
+                      "restrictees": Array [],
+                      "showcase": Array [],
+                      "showcasePath": null,
+                    },
+                  ],
+                  "showcase": Array [
+                    Object {
+                      "items": Array [
+                        Object {
+                          "id": "default",
+                        },
+                      ],
+                      "title": "default",
+                    },
+                  ],
+                  "showcasePath": "./ui/components/data-tables/inline-edit/example.jsx",
+                },
+              ],
+              "showcase": Array [
+                Object {
+                  "items": Array [
+                    Object {
+                      "id": "default",
+                    },
+                  ],
+                  "title": "default",
+                },
+              ],
+              "showcasePath": "./ui/components/data-tables/advanced/example.jsx",
+            },
+          ],
+          "showcase": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "id": "default",
+                },
+              ],
+              "title": "default",
+            },
+          ],
+          "showcasePath": "./ui/components/data-tables/base/example.jsx",
+        },
+      ],
+      "showcase": Array [],
+      "showcasePath": null,
+    },
+  },
+  "utilities": Object {
+    "alignment": Object {
+      "annotations": Object {
+        "name": "alignment",
+        "selector": "[class*='slds-align_']",
+        "summary": "Alignment utilities will assist with general alignment problems",
+        "support": "dev-ready",
+        "utility": true,
+      },
+      "description": "",
+      "docPath": null,
+      "id": "alignment",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "modifier": true,
+            "name": "absolute-center",
+            "restrict": "*",
+            "selector": ".slds-align_absolute-center",
+            "summary": "Class will absolutely center children content",
+          },
+          "description": "",
+          "docPath": null,
+          "id": "absolute-center",
+          "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
+        },
+      ],
+      "showcase": Array [
+        Object {
+          "items": Array [
+            Object {
+              "id": "absolute-center",
+              "label": "Absolute center",
+            },
+          ],
+          "title": "examples",
+        },
+      ],
+      "showcasePath": "./ui/utilities/alignment/example.jsx",
+    },
+    "floats": Object {
+      "annotations": Object {
+        "name": "floats",
+        "selector": "[class*='slds-float_']",
+        "summary": "Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.",
+        "support": "dev-ready",
+        "utility": true,
+      },
+      "description": "To float an element on the left, add the \`.slds-float_left\` class to the element. To float it on the right, add the \`.slds-float_right\` class.
+
+Note: The floated element must be first in the document flow, even if it renders on the right.
+
+If you want the parent of the floated element to contain the floats, add the \`.slds-clearfix\` class to the parent.",
+      "docPath": null,
+      "id": "floats",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "modifier": true,
+            "name": "float-left",
+            "restrict": "*",
+            "selector": ".slds-float_left",
+            "summary": "Pulls element from document flow and floats left. Text and other elements wrap around it.",
+          },
+          "description": "",
+          "docPath": null,
+          "id": "float-left",
+          "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
+        },
+        Object {
+          "annotations": Object {
+            "modifier": true,
+            "name": "float-none",
+            "restrict": "*",
+            "selector": ".slds-float_none",
+            "summary": "Removes float from an element that has attribute already",
+          },
+          "description": "",
+          "docPath": null,
+          "id": "float-none",
+          "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
+        },
+        Object {
+          "annotations": Object {
+            "modifier": true,
+            "name": "float-right",
+            "restrict": "*",
+            "selector": ".slds-float_right",
+            "summary": "Pulls element from document flow and floats right. Text and other elements wrap around it.",
+          },
+          "description": "",
+          "docPath": null,
+          "id": "float-right",
+          "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": null,
+        },
+      ],
+      "showcase": Array [
+        Object {
+          "items": Array [
+            Object {
+              "id": "left",
+              "label": "Left",
+            },
+            Object {
+              "id": "right",
+              "label": "Right",
+            },
+            Object {
+              "id": "none",
+              "label": "None",
+            },
+            Object {
+              "id": "clearfix",
+              "label": "Clearfix",
+            },
+          ],
+          "title": "examples",
+        },
+        Object {
+          "items": Array [
+            Object {
+              "id": "default",
+            },
+          ],
+          "title": "default",
+        },
+      ],
+      "showcasePath": "./ui/utilities/floats/example.jsx",
+    },
+  },
+}
+`;
+
+exports[`scripts/ui.js ui includes the examples skeleton for components 1`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "id": "disabled",
+        "label": "Disabled",
+      },
+    ],
+    "title": "states",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "id": "default",
+      },
+    ],
+    "title": "default",
+  },
+]
+`;
+
+exports[`scripts/ui.js ui includes the examples skeleton for utilities 1`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "id": "left",
+        "label": "Left",
+      },
+      Object {
+        "id": "right",
+        "label": "Right",
+      },
+      Object {
+        "id": "none",
+        "label": "None",
+      },
+      Object {
+        "id": "clearfix",
+        "label": "Clearfix",
+      },
+    ],
+    "title": "examples",
+  },
+  Object {
+    "items": Array [
+      Object {
+        "id": "default",
+      },
+    ],
+    "title": "default",
+  },
+]
+`;

@@ -1,0 +1,40 @@
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/spacing.yml"
+props:
+  ## Card defaults
+  CARD_SPACING_MARGIN:
+    value: '{!SPACING_MEDIUM}'
+    comment: Use for vertical spacing between cards
+  CARD_HEADER_PADDING:
+    value: '{!SPACING_SMALL} {!SPACING_MEDIUM} 0'
+  CARD_HEADER_MARGIN:
+    value: '0 0 {!SPACING_SMALL}'
+  CARD_BODY_PADDING:
+    value: '0 {!SPACING_MEDIUM}'
+  CARD_FOOTER_MARGIN:
+    value: '{!SPACING_SMALL}'
+  CARD_FOOTER_PADDING:
+    value: '0 {!SPACING_MEDIUM} {!SPACING_SMALL}'
+  ## Replace with global token
+  CARD_WRAPPER_SPACING:
+    value: '{!SPACING_MEDIUM}'
+  ## Need to remove from product before removing these
+  CARD_SPACING_SMALL:
+    value: '{!SPACING_SMALL}'
+  CARD_SPACING_LARGE:
+    value: '{!SPACING_LARGE}'

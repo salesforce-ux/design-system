@@ -22,7 +22,7 @@ linters:
   ColorVariable:
     enabled: false
   Comment:
-    enabled: true
+    enabled: false
     allowed: 'Copyright'
   DeclarationOrder:
     enabled: false
@@ -63,7 +63,7 @@ linters:
     enabled: true
     style: include_zero
   MergeableSelector:
-    enabled: true
+    enabled: false
     force_nesting: true
   NameFormat:
     enabled: true
@@ -90,10 +90,10 @@ linters:
   SelectorDepth:
     enabled: true
     max_depth: 3
-  SelectorFormat: # Note: this does not warn about malformed selector that start with #{$css-prefix}
+  SelectorFormat:
     enabled: true
     convention: '^[a-z0-9_\-]+$'
-    convention_explanation: 'Valid class names: block_container, block, block--modifier, block__element, block__element--modifier'
+    convention_explanation: 'Valid class names: block_container, block, block_modifier, block--modifier (deprecated), block__element, block__element--modifier (deprecated), block__element_modifier'
     severity: error
   Shorthand:
     enabled: false

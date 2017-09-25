@@ -1,0 +1,40 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ./aliases/color.yml
+- ../color-palettes.yml
+props:
+  ## DEFAULT
+  COLOR_TEXT_PRIMARY:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Primary body text color
+  COLOR_TEXT_SECONDARY:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Secondary body text color
+  COLOR_TEXT_TERTIARY:
+    value: '{!PALETTE_GRAY_8}'
+    comment: Tertiary body text color
+  ## BRANDING
+  COLOR_TEXT_BRAND_PRIMARY:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Text color found on any primary brand color
+  ## INTERACTIONS
+  COLOR_TEXT_LINK_PRIMARY:
+    value: '{!BLUE_TEXT_PRIMARY}'
+  COLOR_TEXT_LINK_PRIMARY_HOVER:
+    value: '{!BLUE_TEXT_SECONDARY}'
+  COLOR_TEXT_LINK_PRIMARY_ACTIVE:
+    value: '{!BLUE_TEXT_SECONDARY}'
+  COLOR_TEXT_LINK_PRIMARY_FOCUS:
+    value: '{!BLUE_TEXT_SECONDARY}'
+
+  ## BUTTONS
+  BUTTON_COLOR_TEXT_PRIMARY:
+    value: '{!PALETTE_GRAY_1}'

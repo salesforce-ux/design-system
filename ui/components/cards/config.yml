@@ -1,8 +1,0 @@
-status: 'dev-ready'
-classBase: 'card'
-flavors:
-  - base
-  - base-narrow
-  - related-list-with-tiles
-  - related-list-with-table
-  - related-list-narrow

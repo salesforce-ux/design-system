@@ -1,0 +1,9 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./force-base-skin/fill.yml
+- ./force-base-skin/border-color.yml
+- ./force-base-skin/background-color.yml
+- ./force-base-skin/box-shadow.yml
+- ./force-base-skin/text-color.yml

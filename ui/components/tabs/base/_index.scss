@@ -1,0 +1,228 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The default tab set style encapsulates everything that is underneath it
+ * without enclosing it visually. Initialize a default tab set by applying the
+ * `.slds-tab_default` class to the containing `<div>` around the tab list and
+ * tab panels. The `<ul>` element also requires the class `.slds-tab_default__nav`
+ * to prevent styles from bleeding into nested tabs.
+ *
+ * The overflow tab style is provided as a tab item type that acts as a menu
+ * component and appears as a tab item. It could contain those tab items that
+ * don't all fit in a horizontal orientation. Initialize a default tab set and
+ * in the last tab item of the set, apply the additional classes `slds-dropdown-trigger`
+ * and `.slds-tabs__item_overflow`. Include an `<a>` element to contain the
+ * tab item label like the other tab items. After the `<a>` element, the
+ * `.slds-dropdown` segment of a search overflow menu component is used. The
+ * `slds-dropdown__list` element also then requires a `slds-dropdown_length-X`
+ * class, where X is the number of items to show in it.
+ *
+ * @summary Initializes a default tablist
+ *
+ * @name base
+ * @selector .slds-tabs_default
+ * @restrict div
+ * @variant
+ */
+.slds-tabs_default,
+.slds-tabs--default {
+  @include tabs;
+  background-color: $color-foreground-primary;
+
+  /**
+   * @summary Creates the container for the default tabs
+   * @selector .slds-tabs_default__nav
+   * @restrict .slds-tabs_default ul
+   */
+  &__nav {
+    @include tabs-nav;
+    border-bottom: $border-width-thick solid $color-border;
+  }
+
+  @include deprecate('4.0.0') {
+
+    .slds-tabs__item {
+
+      + .slds-tabs__item {
+        @include mq-medium-min {
+          margin-#{$left}: $spacing-large;
+        }
+      }
+
+      > a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        border-bottom: $border-width-thick solid transparent;
+        padding: 0 $spacing-x-small;
+        color: $color-text-action-label;
+
+        @include mq-medium-min {
+          padding: 0 $spacing-medium;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-color: $color-border-tab-selected;
+          color: $color-text-action-label-active;
+        }
+      }
+
+      &.slds-active a {
+        border-color: $color-border-tab-selected;
+        color: $color-text-action-label-active;
+
+        &:focus {
+          color: $color-text-tab-label-selected;
+        }
+      }
+    }
+
+    > .slds-tabs__content {
+      @include tabs-content;
+    }
+  }
+
+  /**
+   * @summary A tab item that has an overflow menu
+   * @selector .slds-tabs__item_overflow
+   * @restrict .slds-tabs_default__item
+   */
+  .slds-tabs__item_overflow,
+  .slds-tabs__item--overflow {
+    overflow: visible;
+  }
+}
+
+/**
+ * @summary Styles each list item as a single tab
+ * @selector .slds-tabs_default__item
+ * @restrict .slds-tabs_default ul li
+ */
+.slds-tabs_default__item,
+.slds-tabs--default__item {
+  color: $color-text-action-label;
+  position: relative;
+  padding: 0 $spacing-small;
+  margin-bottom: ($border-width-thick * -1);
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+
+  &:after {
+    display: block;
+    content: '';
+    bottom: 0;
+    #{$left}: 0;
+    #{$right}: 0;
+    position: absolute;
+    height: $border-width-thick;
+  }
+
+  /**
+   * @summary Active state for a tab item
+   * @selector .slds-is-active
+   * @restrict .slds-tabs_default__item
+   * @notes Required on the `<li>` element that is associated with the active tab panel
+   * @modifier
+   */
+  &.slds-active,
+  &.slds-is-active {
+    color: $color-text-action-label-active;
+
+    &:after {
+      background-color: $color-brand-dark;
+    }
+
+    .slds-tabs_default__link,
+    .slds-tabs--default__link {
+      font-weight: $tabs-font-weight;
+
+      &:hover {
+        color: $color-text-action-label-active;
+      }
+    }
+  }
+
+  &:hover {
+
+    &:after {
+      background-color: $color-brand-dark;
+    }
+  }
+
+  /**
+   * @summary Focus state for a tab item
+   * @selector .slds-has-focus
+   * @restrict .slds-tabs_default__item
+   * @modifier
+   */
+  &:focus,
+  &.slds-has-focus {
+    outline: 0;
+    color: $color-text-tab-label-selected;
+
+    &:after {
+      height: ($border-width-thick + 1);
+      background-color: $color-brand-dark;
+    }
+  }
+
+  // Remove box-shadow when slds-button is used in conjunction with class
+  .slds-tabs_default__link:focus,
+  .slds-tabs--default__link:focus {
+    box-shadow: none;
+  }
+
+  /**
+  * @summary Creates styles for a Tab Item when its tab has new activity in
+  * @selector .slds-has-notification
+  * @restrict .slds-tabs_default__item
+  */
+  &.slds-has-notification {
+    background: $color-background-notification-new;
+    color: $color-text-default;
+
+    &:after {
+      background-color: $color-border;
+    }
+
+    &:hover {
+
+      &:after {
+        background-color: $color-brand-dark;
+      }
+    }
+  }
+}
+
+/**
+ * @summary Styles each actionable element inside each tab item
+ * @selector .slds-tabs_default__link
+ * @restrict .slds-tabs_default__item a
+ */
+.slds-tabs_default__link,
+.slds-tabs--default__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  color: currentColor;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+/**
+ * @summary Styles each tab content wrapper
+ * @selector .slds-tabs_default__content
+ * @restrict .slds-tabs_default div
+ */
+.slds-tabs_default__content,
+.slds-tabs--default__content {
+  @include tabs-content;
+}

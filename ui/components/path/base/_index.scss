@@ -1,0 +1,582 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-path
+ * @restrict div
+ * @variant
+ * @s1 false
+ */
+.slds-path {
+  margin-top: 1rem;
+  border: transparent $border-width-thin solid;
+
+  /**
+   * @summary Indicates the coaching section is expanded
+   *
+   * @selector .slds-is-expanded
+   * @restrict .slds-path
+   */
+  &.slds-is-expanded {
+    padding-bottom: $spacing-medium;
+    border-color: $color-border;
+    background-color: $color-background-path-expanded;
+  }
+}
+
+/**
+ * @summary Allows the path itself to be responsive
+ *
+ * @selector .slds-path__track
+ * @restrict .slds-path div
+ */
+.slds-path__track {
+  position: relative;
+  top: -1rem;
+
+  /**
+   * Indicates the scroller is in the overflow state
+   *
+   * @selector .slds-has-overflow
+   * @restrict .slds-path__track
+   */
+  &.slds-has-overflow {
+    /**
+     *
+     * @summary Allows the path to scroll when necessary
+     *
+     * @selector .slds-path__scroller_inner
+     * @restrict .slds-path__scroller div
+     */
+    .slds-path__scroller_inner {
+      overflow: hidden;
+    }
+
+    .slds-path__scroller-container {
+      position: relative;
+      min-width: 0%;
+      flex-grow: 1;
+      width: calc(100% - 4.75rem);
+      padding-#{$right}: 4.75rem;
+    }
+
+    .slds-path__scroll-controls {
+      display: flex;
+      position: absolute;
+      #{$right}: 0;
+      top: 0;
+      bottom: 0;
+      margin-#{$right}: $spacing-x-small;
+      padding-#{$left}: $spacing-x-small;
+      background-color: $color-background-alt;
+    }
+  }
+}
+
+/**
+ * @summary Creates the scrolling container for tab overflow
+ *
+ * @selector .slds-path__scroller
+ * @restrict .slds-path__track div
+ */
+.slds-path__scroller {
+  width: 100%;
+}
+
+/**
+ * @summary Container for the buttons that control the scrolling
+ *
+ * @selector .slds-path__scroll-controls
+ * @restrict .slds-path__track div
+ *
+ */
+.slds-path__scroll-controls {
+  display: none;
+}
+
+/**
+ * @summary Shows the stage name when in the smaller state
+ *
+ * @selector .slds-path__stage-name
+ * @restrict .slds-path__track span
+ *
+ */
+.slds-path__stage-name {
+  display: none;
+}
+
+/**
+ * @summary Creates the container for toggle button and path
+ *
+ * @selector .slds-path__scroller_container
+ * @restrict .slds-path__scroller div
+ */
+.slds-path__scroller-container {
+  width: 100%;
+}
+
+.slds-path__action {
+  flex-shrink: 0;
+}
+
+/**
+ * @summary Horizontal list of stages in path component
+ *
+ * @selector .slds-path__nav
+ * @restrict .slds-path__scroller_inner ul
+ */
+.slds-path__nav {
+  display: flex;
+  align-items: flex-start;
+  margin-#{$right}: $spacing-small;
+
+  /**
+  * @summary Creates the incomplete stage of the path
+  *
+  * @selector .slds-is-incomplete
+  * @restrict .slds-path__item
+  */
+  .slds-is-incomplete {
+    background-color: $color-background-path-incomplete;
+
+    &:hover {
+      background-color: $color-background-path-incomplete-hover;
+    }
+
+    .slds-path__link {
+      color: $color-text-default;
+    }
+  }
+
+  /**
+  * @summary Creates the active stage of the sales path
+  *
+  * @selector .slds-is-active
+  * @restrict .slds-path__item
+  * @notes This class must be placed on the item programatically when the guidance section is activated
+  */
+  .slds-is-active {
+    background-color: $color-background-inverse;
+
+    .slds-path__link {
+      color: $color-text-inverse;
+    }
+
+    &:hover {
+      background-color: $color-background-alt-inverse;
+
+      + .slds-path__item:before {
+        background-color: $color-background-alt-inverse;
+      }
+    }
+
+    + .slds-path__item:before {
+      background-color: $color-background-inverse;
+    }
+  }
+
+  /**
+   * @summary Creates success stage of the path
+   *
+   * @selector .slds-is-won
+   * @restrict .slds-path__item
+   */
+  .slds-is-active,
+  .slds-is-active.slds-is-won {
+
+    .slds-path__title {
+      transform: rotateX(0deg);
+    }
+
+    .slds-path__stage {
+      transform: rotateX(-180deg);
+    }
+  }
+
+
+  /**
+   * @summary Creates the completed stage of the path
+   *
+   * @selector .slds-is-complete
+   * @restrict .slds-path__item
+   */
+  .slds-is-complete {
+    background-color: $color-background-path-complete;
+
+    .slds-path__stage {
+      transform: translateY(-50%) rotateX(0deg);
+    }
+
+    .slds-path__title {
+      transform: rotateX(180deg);
+    }
+
+    .slds-path__link {
+      color: $color-text-action-label-active;
+    }
+
+    &:hover {
+      background-color: $color-background-path-complete-hover;
+
+      .slds-path__stage {
+        transform: translateY(-50%) rotateX(-180deg);
+      }
+
+      .slds-path__title {
+        transform: rotateX(0deg);
+      }
+
+      .slds-path__link {
+        color: $color-text-inverse;
+      }
+    }
+  }
+
+  /**
+   * @summary Creates the current stage of the path
+   *
+   * @selector .slds-is-current
+   * @restrict .slds-path__item
+   */
+  .slds-is-current {
+    background-color: $color-background-path-current;
+
+    &:hover {
+      background-color: $color-background-path-current-hover;
+    }
+
+    + .slds-is-incomplete:before {
+      background-color: $color-background-path-current;
+    }
+
+    &:hover + .slds-is-incomplete:before {
+      background-color: $color-background-path-current-hover;
+    }
+  }
+
+  /**
+  * @summary Creates lost stage of the path
+  *
+  * @selector .slds-is-lost
+  * @restrict .slds-path__item
+  * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and the opportunity is lost
+  */
+  .slds-is-lost,
+  .slds-is-lost:hover {
+    background-color: $color-background-path-lost;
+  }
+
+  // Lets make sure we have the right color when these steps are activated
+  .slds-is-current,
+  .slds-is-lost {
+
+    .slds-path__link {
+      color: $color-text-inverse;
+    }
+  }
+}
+
+// Note: Order matters. Keep the path__item below the above selectors
+/**
+ * @summary Individual stages of a path
+ *
+ * @selector .slds-path__item
+ * @restrict .slds-path__nav li
+ */
+.slds-path__item {
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 5rem;
+  text-align: center;
+  perspective: 500px;
+  transition:
+    transform 0.1s ease-in-out,
+    background-color 0.1s linear;
+
+  &:first-child {
+    border-radius: corner-values($border-radius-pill 0 0 $border-radius-pill);
+  }
+
+  &:last-child {
+    border-radius: corner-values(0 $border-radius-pill $border-radius-pill 0);
+    border-#{$right}: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $border-width-thick;
+    #{$left}: (($height-sales-path / 2) * -1);
+    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
+    border: $border-width-thick solid $color-border-path-divider;
+    border-#{$left}: 0;
+    border-bottom: 0;
+    background-clip: padding-box;
+    transform: scale3d(0.8, 1.1, 1) rotate(if-ltr(45deg, 315deg));
+    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
+  + .slds-is-complete:before,
+  + .slds-is-current:before {
+    background-color: $color-background-path-complete;
+  }
+
+  &:hover + .slds-is-complete:before,
+  &:hover + .slds-is-current:before {
+    background-color: $color-background-path-complete-hover;
+  }
+
+  + .slds-is-incomplete:before,
+  + .slds-is-lost:before {
+    background-color: $color-background-path-incomplete;
+  }
+
+  &:hover + .slds-is-incomplete:before,
+  &:hover + .slds-is-lost:before {
+    background-color: $color-background-path-incomplete-hover;
+  }
+}
+
+
+/**
+ * @summary Contains the name of the stage
+ *
+ * @selector .slds-path__title
+ * @restrict .slds-path__link span
+ */
+.slds-path__title {
+  @include truncate;
+}
+
+/**
+ * @summary Contains the check mark when the stage is completed
+ *
+ * @selector .slds-path__stage
+ * @restrict .slds-path__link span
+ */
+.slds-path__stage {
+  position: absolute;
+  top: 50%;
+  #{$left}: ($square-icon-medium-content / 2);
+  width: 100%;
+  transform: translateY(-50%) rotateX(-180deg);
+}
+
+
+/**
+ * @summary Creates actionable element inside of each path item
+ *
+ * @selector .slds-path__link
+ * @restrict .slds-path__item a
+ */
+.slds-path__link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
+  line-height: $line-height-salespath;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.slds-path__title,
+.slds-path__stage {
+  display: block;
+  transition: transform 0.2s linear;
+  // we should be able to get rid of this prefix once this issue is fixed
+  // https://github.com/postcss/autoprefixer/issues/653
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/**
+ * @summary Button that toggles visibility of stage's tabpanel
+ *
+ * @selector .slds-path__trigger
+ * @restrict .slds-path button
+ */
+.slds-path__trigger {
+  flex-shrink: 0; // added instead of flex-none
+  margin: 0 $spacing-small;
+  border-radius: $border-radius-circle;
+  transition: $duration-quickly transform ease-in-out;
+}
+
+// @TODO: Move to global utility?
+.slds-flip_vertical,
+.slds-flip--vertical {
+  transform: rotateX(180deg);
+}
+
+.slds-flip_horizontal,
+.slds-flip--horizontal {
+  transform: rotateY(180deg);
+}
+
+/**
+ * @summary Actionable button that invokes a completion of the path
+ *
+ * @selector .slds-path__mark-complete
+ * @restrict .slds-path button
+ */
+.slds-path__mark-complete {
+  flex-shrink: 0;
+  margin-#{$right}: $spacing-small;
+  border-radius: $border-radius-pill;
+}
+
+/**
+ * @summary Actionable button that invokes a current stage of the path
+ *
+ * @selector .slds-path__mark-current
+ * @restrict .slds-path button, .slds-path-coach button
+ */
+.slds-path__mark-current {
+  border-color: $color-border-inverse;
+  background-color: $color-background-inverse;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-alt-inverse;
+  }
+}
+
+/**
+ * @summary Tabpanel of each stage of the path
+ *
+ * @selector .slds-path__content
+ * @restrict .slds-path div
+ */
+.slds-path__content {
+  position: relative;
+  top: -1rem; // This matches the shift for the top border
+  padding: 0 $spacing-x-small;
+}
+
+// @TODO: .slds-path__coach
+// Remove align-spread
+
+/**
+ * @summary Key field section of expanded tabpanel
+ *
+ * @selector .slds-path__keys
+ * @restrict .slds-path__content div
+ */
+.slds-path__keys {
+  padding-#{$left}: $spacing-small;
+}
+
+/**
+ * @summary Guidance section of expanded tabpanel
+ *
+ * @selector .slds-path__guidance
+ * @restrict .slds-path__content div
+ */
+.slds-path__guidance {
+  margin-#{$right}: $spacing-x-small;
+  padding-#{$left}: $spacing-small;
+  padding-bottom: $spacing-xx-small;
+  background-color: $color-background-guidance;
+}
+
+// Layout adjustments for sub section sof expanded tabpanel
+.slds-path__keys,
+.slds-path__guidance {
+  width: 50%;
+  margin-top: $spacing-medium;
+  padding-top: $spacing-x-small;
+  padding-#{$right}: $spacing-small;
+}
+
+/**
+ * @summary This creates the underlined titles in the coaching area
+ *
+ * @selector .slds-path__coach-title
+ * @restrict .slds-path__keys div, .slds-path__guidance h2
+ */
+.slds-path__coach-title {
+  margin-bottom: $spacing-x-small;
+  border-bottom: $color-border $border-width-thin solid;
+  padding-bottom: $spacing-x-small;
+  font-size: $font-size-heading-x-small;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  line-height: 1.125; // to align heading in Guidance (due to edit button)
+}
+
+/**
+ * @summary This creates the space at the top of the guidance area
+ *
+ * @selector .slds-path__guidance-content
+ * @restrict .slds-path__guidance div
+ */
+.slds-path__guidance-content {
+  padding-top: $spacing-x-small;
+}
+
+/**
+ * @summary This class should be placed on a containing div when the Path container is between 565px and 1280px
+ *
+ * @selector .slds-region_medium
+ * @restrict div
+ */
+.slds-region_medium {
+  // If overriding styles are needed, they should be placed here
+}
+
+/**
+ * @summary This class should be placed on a containing div when the Path container is between 360px and 564px
+ *
+ * @selector .slds-region_medium
+ * @restrict div
+ */
+.slds-region_small {
+
+  .slds-path__track,
+  .slds-path__coach {
+    @include flex-wrap(true);
+  }
+
+  .slds-path__stage-name {
+    display: block;
+    margin-#{$left}: $spacing-small;
+  }
+
+  .slds-path__action {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-top: $spacing-x-small;
+    padding-#{$right}: $spacing-x-small;
+    padding-#{$left}: $spacing-x-small;
+  }
+
+  .slds-path__mark-complete {
+    margin-#{$right}: 0;
+  }
+
+  .slds-path__keys,
+  .slds-path__guidance {
+    width: 100%;
+    margin-#{$right}: 0;
+  }
+}

@@ -80,7 +80,7 @@ export let ListboxItem = props => (
 * @prop {string}  className - A CSS class for the outer element
 */
 export let ListboxOption = props => (
-  <span
+  <div
     id={props.id || 'listbox-option-unique-id'}
     className={classNames(
       'slds-media slds-listbox__option',
@@ -94,7 +94,7 @@ export let ListboxOption = props => (
     tabIndex={props.tabIndex}
   >
     {props.children}
-  </span>
+  </div>
 );
 
 /**

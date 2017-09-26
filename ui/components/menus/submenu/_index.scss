@@ -57,13 +57,6 @@
     .slds-dropdown_submenu {
       display: none;
     }
-
-    &:hover {
-
-      .slds-dropdown_submenu {
-        display: block;
-      }
-    }
   }
 
   [role="menuitem"][aria-expanded="true"] + .slds-dropdown_submenu {

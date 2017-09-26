@@ -24,6 +24,7 @@ const RightIcon = (
 
 export let MenuItemHasSubmenu = props => {
   const {
+    ariaExpanded,
     className,
     children,
     iconRight,
@@ -43,7 +44,7 @@ export let MenuItemHasSubmenu = props => {
         role="menuitem"
         href="javascript:void(0);"
         aria-haspopup="true"
-        aria-expanded="true"
+        aria-expanded={ariaExpanded}
         tabIndex={tabIndex || '-1'}
       >
         <span className="slds-truncate" title={title || itemName}>
@@ -66,24 +67,31 @@ export let MenuItemHasSubmenu = props => {
   );
 };
 
+export const Context = props => (
+  <div className="demo-only" style={{ height: '300px' }}>
+    {props.children}
+  </div>
+);
+
+export const Submenu = props => (
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown_left">
+      <MenuList>
+        <MenuItem tabIndex="0">Menu Item One</MenuItem>
+        <MenuItem>Menu Item Two</MenuItem>
+        <MenuItemHasSubmenu
+          ariaExpanded={props.ariaExpanded}
+          iconRight={RightIcon}
+          itemName="Menu Item Three"
+          submenuClassnames="slds-dropdown_submenu-right"
+        />
+      </MenuList>
+    </Menu>
+  </Trigger>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ height: '300px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left">
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItemHasSubmenu
-            iconRight={RightIcon}
-            itemName="Menu Item Three"
-            submenuClassnames="slds-dropdown_submenu-right"
-          />
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </div>
-);
+export default <Submenu ariaExpanded />;

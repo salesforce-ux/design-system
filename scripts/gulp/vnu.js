@@ -87,7 +87,9 @@ const createVnuReport = (stream, argv) => {
       .split('\n')
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
       .join('\n');
-    printToTerminalForCI(filtered);
+    if (filtered) {
+      throw new Error(filtered);
+    }
     const contents = JSON.stringify(report(filtered), null, 2);
     stream.write(
       new gutil.File({

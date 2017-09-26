@@ -34,6 +34,7 @@ export let MenuItemHasSubmenu = props => {
       <a
         href="javascript:void(0);"
         role="menuitem"
+        aria-haspopup="true"
         aria-expanded="true"
         tabIndex={tabIndex || '-1'}
       >

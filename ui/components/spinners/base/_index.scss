@@ -121,6 +121,40 @@
   animation-delay: 750ms;
 }
 
+/**
+ * @summary Set a delay of 300ms on spinner
+ * @selector .slds-spinner_delayed
+ * @restrict .slds-spinner
+ * @modifier
+ * @group timing
+ */
+.slds-spinner_delayed {
+
+  &:before {
+    animation-delay: 216.66667ms;
+  }
+
+  .slds-spinner__dot-a:before {
+    animation-delay: 383.33333ms;
+  }
+
+  .slds-spinner__dot-b:before {
+    animation-delay: 550ms;
+  }
+
+  &:after {
+    animation-delay: 716.66667ms;
+  }
+
+  .slds-spinner__dot-a:after {
+    animation-delay: 883.33333ms;
+  }
+
+  .slds-spinner__dot-b:after {
+    animation-delay: 1050ms;
+  }
+}
+
 
 /**
  * This creates the blue brand spinner
@@ -149,8 +183,6 @@
  *
  * @selector .slds-spinner_inverse
  * @restrict .slds-spinner
- * @modifier
- * @group color
  */
 
 .slds-spinner_inverse,

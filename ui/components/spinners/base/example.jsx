@@ -8,7 +8,7 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Demo = props => (
+const Demo = props => (
   <div
     className={classNames('demo-only', props.className)}
     style={{ height: '6rem' }}
@@ -75,6 +75,31 @@ export let examples = [
       <Demo className="demo--inverse">
         <SpinnerContainer className="slds-is-fixed">
           <Spinner className="slds-spinner_medium" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'inverse',
+    label: 'On inverse background',
+    element: (
+      <div
+        className="demo-only"
+        style={{ backgroundColor: '#16325c', height: '6rem' }}
+      >
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_inverse" />
+        </SpinnerContainer>
+      </div>
+    )
+  },
+  {
+    id: 'delayed',
+    label: 'With 300ms delay',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_delayed" />
         </SpinnerContainer>
       </Demo>
     )

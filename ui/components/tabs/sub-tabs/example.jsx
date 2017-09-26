@@ -519,10 +519,16 @@ export let states = [
             />
             <SubtabOverflow />
           </SubtabList>
-          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+          <SubtabPanel
+            id="subtab-tabpanel-01"
+            tabId="subtab-tabitem-01"
+            isVisible
+          >
             Item One Content
           </SubtabPanel>
-          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+            Item Two Content
+          </SubtabPanel>
         </Subtabs>
       </div>
     )
@@ -549,10 +555,16 @@ export let states = [
             />
             <SubtabOverflow isOpen />
           </SubtabList>
-          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+          <SubtabPanel
+            id="subtab-tabpanel-01"
+            tabId="subtab-tabitem-01"
+            isVisible
+          >
             Item One Content
           </SubtabPanel>
-          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+            Item Two Content
+          </SubtabPanel>
         </Subtabs>
       </div>
     )
@@ -579,10 +591,16 @@ export let states = [
             />
             <SubtabOverflow isOpen itemUnread />
           </SubtabList>
-          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+          <SubtabPanel
+            id="subtab-tabpanel-01"
+            tabId="subtab-tabitem-01"
+            isVisible
+          >
             Item One Content
           </SubtabPanel>
-          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+            Item Two Content
+          </SubtabPanel>
         </Subtabs>
       </div>
     )
@@ -609,10 +627,16 @@ export let states = [
             />
             <SubtabOverflow isOpen itemUnsaved />
           </SubtabList>
-          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+          <SubtabPanel
+            id="subtab-tabpanel-01"
+            tabId="subtab-tabitem-01"
+            isVisible
+          >
             Item One Content
           </SubtabPanel>
-          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+            Item Two Content
+          </SubtabPanel>
         </Subtabs>
       </div>
     )
@@ -639,10 +663,16 @@ export let states = [
             />
             <SubtabOverflow isOpen itemUnsaved itemUnread />
           </SubtabList>
-          <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+          <SubtabPanel
+            id="subtab-tabpanel-01"
+            tabId="subtab-tabitem-01"
+            isVisible
+          >
             Item One Content
           </SubtabPanel>
-          <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+            Item Two Content
+          </SubtabPanel>
         </Subtabs>
       </div>
     )

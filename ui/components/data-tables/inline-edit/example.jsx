@@ -8,7 +8,7 @@ import {
   InlineEditTableContainer as Container,
   AdvancedDataTable as Table,
   Thead,
-  InlineEditTr as Tr,
+  InlineEditTr,
   ErrorTooltip
 } from '../';
 
@@ -66,16 +66,10 @@ export default (
       <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
       <tbody>
         {_.times(rows.length, i => (
-          <Tr
+          <InlineEditTr
             key={i}
             index={i + 1}
-            recordName={rows[i].recordName}
-            accountName={rows[i].accountName}
-            closeDate={rows[i].closeDate}
-            stage={rows[i].stage}
-            confidence={rows[i].confidence}
-            amount={rows[i].amount}
-            contact={rows[i].contact}
+            {...rows[i]}
             focusableCell="recordName"
           />
         ))}
@@ -99,16 +93,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 focusableCell="recordName"
                 focusedCell="recordName"
                 actionableMode
@@ -136,16 +124,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 focusableCell="selectRow"
                 focusedCell="selectRow"
                 actionableMode
@@ -168,18 +150,13 @@ export let states = [
           <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 focusableCell="accountName"
                 focusedCell="accountName"
+                actionableMode
               />
             ))}
           </tbody>
@@ -201,16 +178,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 showEdit
               />
@@ -238,16 +209,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 showEdit
                 showEditRequired
@@ -276,16 +241,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 showEdit
                 showEditRequired
@@ -315,16 +274,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 showEditedCell
               />
@@ -348,16 +301,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 focusableCell="accountName"
                 focusedCell="accountName"
@@ -387,16 +334,10 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
                 focusableCell="error"
                 focusedCell="error"
@@ -428,7 +369,7 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}
@@ -463,7 +404,7 @@ export let states = [
           />
           <tbody>
             {_.times(rows.length, i => (
-              <Tr
+              <InlineEditTr
                 key={i}
                 index={i + 1}
                 recordName={rows[i].recordName}

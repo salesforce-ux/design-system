@@ -7,9 +7,9 @@ import {
   AdvancedDataTable as Table,
   Thead,
   Th,
-  AdvancedDataTableTr as Tr,
-  ProductDataTableTr,
-  ActionsTh
+  ActionsTh,
+  AdvancedDataTableTr,
+  ProductDataTableTr
 } from '../';
 
 /// ////////////////////////////////////////
@@ -112,17 +112,7 @@ export default (
     <Thead columns={columns} />
     <tbody>
       {_.times(rows.length, i => (
-        <Tr
-          key={i}
-          index={i + 1}
-          recordName={rows[i].recordName}
-          accountName={rows[i].accountName}
-          closeDate={rows[i].closeDate}
-          stage={rows[i].stage}
-          confidence={rows[i].confidence}
-          amount={rows[i].amount}
-          contact={rows[i].contact}
-        />
+        <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
       ))}
     </tbody>
   </Table>
@@ -137,18 +127,7 @@ export let states = [
         <Thead columns={columns} />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
-              key={i}
-              index={i + 1}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
-              hasFocus
-            />
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasFocus />
           ))}
         </tbody>
       </Table>
@@ -162,16 +141,10 @@ export let states = [
         <Thead columns={columns} actionableMode />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
+            <AdvancedDataTableTr
               key={i}
               index={i + 1}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
+              {...rows[i]}
               actionableMode
             />
           ))}
@@ -187,17 +160,11 @@ export let states = [
         <Thead columns={columns} actionableMode />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
+            <AdvancedDataTableTr
               key={i}
               index={i + 1}
               className={i === 1 ? 'slds-is-selected' : null}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
+              {...rows[i]}
               rowSelected={i === 1 ? true : null}
               actionableMode
             />
@@ -214,19 +181,13 @@ export let states = [
         <Thead columns={columns} actionableMode selectAll />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
+            <AdvancedDataTableTr
               key={i}
               index={i + 1}
               className="slds-is-selected"
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
-              rowSelected
+              {...rows[i]}
               actionableMode
+              rowSelected
             />
           ))}
         </tbody>
@@ -241,16 +202,10 @@ export let states = [
         <Thead columns={columns} actionableMode sortDirection="ascending" />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
+            <AdvancedDataTableTr
               key={i}
               index={i + 1}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
+              {...rows[i]}
               actionableMode
             />
           ))}
@@ -267,16 +222,10 @@ export let states = [
         <tbody>
           {_.reverse(
             _.times(rows.length, i => (
-              <Tr
+              <AdvancedDataTableTr
                 key={i}
                 index={i + 1}
-                recordName={rows[i].recordName}
-                accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
-                amount={rows[i].amount}
-                contact={rows[i].contact}
+                {...rows[i]}
                 actionableMode
               />
             ))
@@ -293,16 +242,10 @@ export let states = [
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
+            <AdvancedDataTableTr
               key={i}
               index={i + 1}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
+              {...rows[i]}
               actionableMode
             />
           ))}
@@ -324,14 +267,7 @@ export let examples = [
             <ProductDataTableTr
               key={i}
               index={i + 1}
-              productImgSrc={productRows[i].productImgSrc}
-              productName={productRows[i].productName}
-              productProperties={productRows[i].productProperties}
-              labelInventory={productRows[i].labelInventory}
-              quantity={productRows[i].quantity}
-              dateAdded={productRows[i].dateAdded}
-              priceOriginal={productRows[i].priceOriginal}
-              priceDiscount={productRows[i].priceDiscount}
+              {...productRows[i]}
               actionableMode
             />
           ))}

@@ -474,6 +474,10 @@
           fill: $color-text-button-default-disabled;
         }
       }
+
+      .slds-indicator_unsaved {
+        top: rem(-4px);
+      }
     }
 
     /**

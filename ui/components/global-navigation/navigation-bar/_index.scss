@@ -178,6 +178,11 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       }
     }
 
+    // Enforce background on items that have a notification
+    &.slds-has-notification {
+      background: $color-background-context-bar-brand-light;
+    }
+
     /**
      * Add a left border to a context bar item
      *
@@ -363,7 +368,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
     .slds-context-bar__label-action {
       position: relative;
-      padding-left: $spacing-x-small;
       font-style: italic;
       line-height: normal;
     }
@@ -379,9 +383,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
    * @restrict .slds-context-bar__item, .slds-context-bar__item .slds-dropdown__item
    */
   .slds-has-notification {
-    background: $color-background-context-bar-brand-light;
-    color: $color-text-default;
-
     /**
      * @summary Unread notification icon
      * @selector .slds-indicator_unread
@@ -408,9 +409,9 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 .slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
-  align-self: flex-start;
-  font-size: $font-size-medium-a;
-  margin-top: 0.2rem; // Random but matches spec
+  align-self: center;
+  position: relative;
+  top: rem(-6px);
 }
 
 // Context Bar dropdown trigger specifics

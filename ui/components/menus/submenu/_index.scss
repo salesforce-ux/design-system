@@ -65,4 +65,8 @@
       }
     }
   }
+
+  [role="menuitem"][aria-expanded="true"] + .slds-dropdown_submenu {
+    display: block;
+  }
 }

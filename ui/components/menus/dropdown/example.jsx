@@ -153,9 +153,10 @@ export let MenuItemHasSubmenu = props => {
       role="presentation"
     >
       <a
+        role="menuitem"
         href="javascript:void(0);"
         aria-haspopup="true"
-        role="menuitem"
+        aria-expanded="true"
         tabIndex={tabIndex || '-1'}
       >
         <span className="slds-truncate" title={title || itemName}>
@@ -167,11 +168,11 @@ export let MenuItemHasSubmenu = props => {
         className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
       >
         <MenuList ariaLabel={props.itemName}>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
+          <MenuItem tabIndex="0">Submenu Item One</MenuItem>
+          <MenuItem>Submenu Item Two</MenuItem>
+          <MenuItem>Submenu Item Three</MenuItem>
           <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
+          <MenuItem>Submenu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </li>

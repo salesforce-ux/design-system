@@ -34,7 +34,7 @@ export let MenuItemHasSubmenu = props => {
       <a
         href="javascript:void(0);"
         role="menuitem"
-        aria-checked={ariaChecked}
+        aria-expanded="true"
         tabIndex={tabIndex || '-1'}
       >
         <span className="slds-truncate" title={title || itemName}>

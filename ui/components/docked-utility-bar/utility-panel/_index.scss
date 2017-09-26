@@ -5,7 +5,7 @@
  * Container of the utility panel
  *
  * @selector .slds-utility-panel
- * @restrict .slds-utility-bar_container section
+ * @restrict .slds-utility-bar_container div
  */
 .slds-utility-panel {
   position: fixed;
@@ -33,7 +33,7 @@
    * Header that contains an icon, title and panel actions such as minimizing the panel
    *
    * @selector .slds-utility-panel__header
-   * @restrict header
+   * @restrict div
    */
   &__header {
     background: $color-background-docked-panel-header;

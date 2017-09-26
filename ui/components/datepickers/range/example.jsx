@@ -52,7 +52,6 @@ export default (
             label="End Date"
             inputId={dateRangeInputId02}
             inputIcon="right"
-            dropdown={<DatePicker todayActive />}
           >
             <Input id={dateRangeInputId02} placeholder=" " />
             <ButtonIcon
@@ -110,13 +109,6 @@ export let states = [
                 label="End Date"
                 inputId={dateRangeInputId02}
                 inputIcon="right"
-                dropdown={
-                  <DatePicker
-                    todayActive
-                    dateSelected="single"
-                    dateRange="week-4"
-                  />
-                }
               >
                 <Input id={dateRangeInputId02} placeholder=" " />
                 <ButtonIcon
@@ -148,9 +140,6 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={
-                  <DatePicker todayActive dateSelected dateRange="week-4" />
-                }
               >
                 <Input
                   id={dateRangeInputId01}
@@ -207,14 +196,6 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={
-                  <DatePicker
-                    todayActive
-                    dateSelected="single"
-                    dateRange="week-4"
-                    dateRangeMulti
-                  />
-                }
               >
                 <Input
                   id={dateRangeInputId01}
@@ -276,14 +257,6 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={
-                  <DatePicker
-                    todayActiveInRange
-                    dateSelected="single"
-                    dateRange="week-4"
-                    dateRangeMulti
-                  />
-                }
               >
                 <Input
                   id={dateRangeInputId01}
@@ -345,9 +318,6 @@ export let states = [
                 label="Start Date"
                 inputId={dateRangeInputId01}
                 inputIcon="right"
-                dropdown={
-                  <DatePicker dateSelected="single" dateRange="week-5" />
-                }
               >
                 <Input
                   id={dateRangeInputId01}

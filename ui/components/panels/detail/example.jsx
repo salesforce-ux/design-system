@@ -133,9 +133,7 @@ let FormElement = props => (
 
 let Lookup = props => (
   <div className="slds-form-element slds-lookup slds-has-selection">
-    <span className="slds-form-element__label" htmlFor={props.id}>
-      {props.label}
-    </span>
+    <span className="slds-form-element__label">{props.label}</span>
     <div className="slds-form-element__control">{props.children}</div>
   </div>
 );
@@ -253,7 +251,7 @@ let IsEditing = props => (
           <h3 className="slds-text-heading_small slds-m-bottom_medium">
             Task Information
           </h3>
-          <ul>
+          <div>
             <FormElement label="Subject" id="text-input-01">
               <input
                 className="slds-input"
@@ -317,13 +315,13 @@ let IsEditing = props => (
                 defaultValue="Adam was open to doing more business in the 4th quarter. Follow up with marketing demo and email templates."
               />
             </FormElement>
-          </ul>
+          </div>
         </PanelSection>
         <PanelSection>
           <h3 className="slds-text-heading_small slds-m-bottom_medium">
             Additional Information
           </h3>
-          <ul>
+          <div>
             <FormElement label="Status" id="non-text-input-01">
               <Select id="non-text-input-01">
                 <option>Not Started</option>
@@ -338,7 +336,7 @@ let IsEditing = props => (
                 <option>High</option>
               </Select>
             </FormElement>
-          </ul>
+          </div>
         </PanelSection>
       </PanelBody>
       <div className="slds-panel__actions slds-border_top">

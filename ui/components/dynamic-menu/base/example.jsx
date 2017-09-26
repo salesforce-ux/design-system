@@ -33,14 +33,14 @@ const ListboxList = props => (
     aria-label="My Favorites"
   >
     <ListboxItem>
-      <span
+      <div
         className="slds-media slds-listbox__option slds-listbox__option_plain"
         role="presentation"
       >
         <h3 className="slds-text-title_caps" role="presentation">
           My Favorites
         </h3>
-      </span>
+      </div>
     </ListboxItem>
     {accounts.slice(0, props.length).map((value, i) => (
       <ListboxItem key={value}>

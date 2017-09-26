@@ -45,16 +45,8 @@ export let FiltersBody = props => (
 
 export let FiltersFooter = props => (
   <div className="slds-filters__footer slds-grid slds-shrink-none">
-    <button
-      className="slds-button_reset slds-text-link"
-      href="javascript:void(0);"
-    >
-      Add Filter
-    </button>
-    <button
-      className="slds-button_reset slds-text-link slds-col_bump-left"
-      href="javascript:void(0);"
-    >
+    <button className="slds-button_reset slds-text-link">Add Filter</button>
+    <button className="slds-button_reset slds-text-link slds-col_bump-left">
       Remove All
     </button>
   </div>
@@ -75,16 +67,15 @@ export let FilterObject = props => {
         )}
       >
         <button
-          href="javascript:void(0);"
           className="slds-button_reset slds-grow slds-has-blur-focus"
           aria-describedby={ariaDesribedBy}
           disabled={props.disabled}
         >
           <span className="slds-assistive-text">Edit filter:</span>
           {props.type ? (
-            <p className="slds-text-body_small">{props.type}</p>
+            <span className="slds-show slds-text-body_small">{props.type}</span>
           ) : null}
-          <p>{props.children}</p>
+          <span className="slds-show">{props.children}</span>
         </button>
         {props.removable ? (
           <ButtonIcon

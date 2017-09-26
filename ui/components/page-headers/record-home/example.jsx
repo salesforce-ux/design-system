@@ -40,10 +40,7 @@ export let RecordHome = props => (
           <button className="slds-button slds-button_neutral">Edit</button>
           <button className="slds-button slds-button_neutral">Delete</button>
           <button className="slds-button slds-button_neutral">Clone</button>
-          <div
-            className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
-            aria-expanded="false"
-          >
+          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               className="slds-button_icon-border-filled"
               symbol="down"

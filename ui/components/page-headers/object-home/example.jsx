@@ -88,10 +88,7 @@ export let ObjectHome = props => (
         </p>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-bottom">
-        <div
-          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
-          aria-expanded="false"
-        >
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small">
           <ButtonIcon
             className="slds-button_icon-more"
             symbol="settings"

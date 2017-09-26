@@ -55,6 +55,7 @@ let Required = props => (
     </FormElementLabel>
     <FormElementControl>
       <Select required>
+        <option value="">Please select</option>
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
@@ -73,6 +74,7 @@ let ErrorState = props => (
     </FormElementLabel>
     <FormElementControl>
       <Select aria-describedby="error-02" required>
+        <option value="">Please select</option>
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
@@ -89,6 +91,7 @@ let Disabled = props => (
     <FormElementLabel>Select Label</FormElementLabel>
     <FormElementControl>
       <Select disabled>
+        <option value="">Please select</option>
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
@@ -119,6 +122,7 @@ export default (
     <FormElementLabel>Select Label</FormElementLabel>
     <FormElementControl>
       <Select>
+        <option value="">Please select</option>
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>

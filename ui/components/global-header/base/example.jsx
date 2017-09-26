@@ -77,7 +77,7 @@ let GlobalSearch = props => (
         symbol="search"
       />
       <input
-        aria-activedescendant=""
+        aria-activedescendant={props.value ? 'option-00' : null}
         aria-autocomplete="list"
         aria-controls="global-search-list-01"
         autoComplete="off"

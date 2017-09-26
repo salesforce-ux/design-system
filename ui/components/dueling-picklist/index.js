@@ -119,7 +119,7 @@ const ListBox = props => (
 
 const Option = props => (
   <li role="presentation" className="slds-listbox__item">
-    <span
+    <div
       className={classNames(
         'slds-listbox__option slds-listbox__option_plain slds-media',
         {
@@ -140,7 +140,7 @@ const Option = props => (
           </abbr>
         ) : null}
       </span>
-    </span>
+    </div>
   </li>
 );
 

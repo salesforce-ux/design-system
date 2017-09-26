@@ -36,8 +36,8 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
-const dialogHeadingId = 'modal-heading-id-1';
-const dialogBodyId = 'modal-content-id-1';
+const dialogHeadingId = 'dialog-heading-id-1';
+const dialogBodyId = 'dialog-content-id-1';
 
 const composers = [
   {
@@ -320,7 +320,7 @@ export let states = [
           aria-labelledby={dialogHeadingId}
           aria-describedby={dialogBodyId}
         >
-          <ModalContent>
+          <ModalContent id="modal-content-id">
             <DockedComposerPanel footer={<Footer />} nestedDialog>
               <div className="slds-align_absolute-center">
                 Docked Composer Panel Body <br /> This area consumes the feature
@@ -970,7 +970,6 @@ export let examples = [
               id="recipients-to"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline
-              staticListbox
               label="To"
               placeholder=" "
               autocomplete
@@ -993,7 +992,6 @@ export let examples = [
               id="recipients-bcc"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline
-              staticListbox
               label="Bcc"
               placeholder=" "
               autocomplete
@@ -1002,7 +1000,6 @@ export let examples = [
               id="recipients-cc"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline
-              staticListbox
               label="Cc"
               placeholder=" "
               autocomplete

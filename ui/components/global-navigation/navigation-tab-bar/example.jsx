@@ -247,27 +247,6 @@ export let ContextTabBar = props => (
       <div
         className={classNames(
           'slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click',
-          props.addTabClassName
-        )}
-      >
-        <div className="slds-context-bar__icon-action">
-          <ButtonIcon
-            className={classNames(
-              'slds-button_icon-container slds-button_icon-small',
-              props.splitViewActive ? 'slds-is-selected' : null
-            )}
-            symbol="side_list"
-            assistiveText="Toggle split view"
-            title="Toggle split view"
-            aria-expanded={props.splitViewActive ? 'true' : 'false'}
-            aria-controls="id_of_split_view_container"
-          />
-        </div>
-      </div>
-      <div className="slds-context-bar__vertical-divider" />
-      <div
-        className={classNames(
-          'slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click',
           props.addTabActive ? 'slds-is-open' : null,
           props.addTabClassName
         )}
@@ -427,42 +406,6 @@ export default (
 );
 
 export let states = [
-  {
-    id: 'split-view',
-    label: 'Split View - Active',
-    element: (
-      <div className="demo-only">
-        <ContextTabBar splitViewActive>
-          <ContextTab
-            title="Home"
-            symbol="home"
-            tabPanelId={tabPanelId01}
-            id={tabId01}
-            itemActive
-          />
-          <ContextTab
-            title="Tab Item 1"
-            tabPanelId={tabPanelId02}
-            id={tabId02}
-          />
-          <ContextTab
-            title="Tab Item 2"
-            tabPanelId={tabPanelId03}
-            id={tabId03}
-          />
-        </ContextTabBar>
-        <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
-          Tab Home Content
-        </ContextTabPanel>
-        <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
-          Tab One Content
-        </ContextTabPanel>
-        <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
-          Tab Two Content
-        </ContextTabPanel>
-      </div>
-    )
-  },
   {
     id: 'tab-active',
     label: 'Tab - Active',

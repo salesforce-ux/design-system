@@ -4,7 +4,7 @@ import React from 'react';
 import {
   MultiSelect,
   DefaultSnapShot,
-  RequiredSnapShot,
+  LockedSnapShot,
   DisabledSnapShot,
   SelectedSnapShot,
   MultiSelectedSnapShot,
@@ -22,7 +22,7 @@ it('renders a default dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} />));
 
 it('renders a dueling picklist with a required option', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={RequiredSnapShot} />));
+  matchesMarkupAndStyle(<MultiSelect dataSet={LockedSnapShot} />));
 
 it('renders a disabled dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={DisabledSnapShot} disabled />));

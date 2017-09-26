@@ -127,58 +127,6 @@ export let MenuItem = props => {
   );
 };
 
-const RightIcon = (
-  <SvgIcon
-    className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none"
-    sprite="utility"
-    symbol="right"
-  />
-);
-
-export let MenuItemHasSubmenu = props => {
-  const {
-    className,
-    children,
-    iconRight,
-    itemName,
-    tabIndex,
-    title,
-    ...rest
-  } = props;
-
-  return (
-    <li
-      {...rest}
-      className={classNames('slds-dropdown__item slds-has-submenu', className)}
-      role="presentation"
-    >
-      <a
-        role="menuitem"
-        href="javascript:void(0);"
-        aria-haspopup="true"
-        aria-expanded="true"
-        tabIndex={tabIndex || '-1'}
-      >
-        <span className="slds-truncate" title={title || itemName}>
-          {props.itemName}
-        </span>
-        {iconRight || null}
-      </a>
-      <Menu
-        className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
-      >
-        <MenuList ariaLabel={props.itemName}>
-          <MenuItem tabIndex="0">Submenu Item One</MenuItem>
-          <MenuItem>Submenu Item Two</MenuItem>
-          <MenuItem>Submenu Item Three</MenuItem>
-          <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Submenu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </li>
-  );
-};
-
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
@@ -407,27 +355,6 @@ export let examples = [
           </MenuList>
         </Menu>
       </Trigger>
-    )
-  },
-  {
-    id: 'submenu',
-    label: 'Submenu',
-    element: (
-      <div className="demo-only" style={{ height: '165px' }}>
-        <Trigger className="slds-is-open">
-          <Menu className="slds-dropdown_left">
-            <MenuList>
-              <MenuItem tabIndex="0">Menu Item One</MenuItem>
-              <MenuItem>Menu Item Two</MenuItem>
-              <MenuItemHasSubmenu
-                iconRight={RightIcon}
-                itemName="Menu Item Three"
-                submenuClassnames="slds-dropdown_submenu-right"
-              />
-            </MenuList>
-          </Menu>
-        </Trigger>
-      </div>
     )
   }
 ];

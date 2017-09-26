@@ -2,9 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * @name submenu
  * @summary
  * @selector .slds-has-submenu
  * @restrict .slds-dropdown__item
+ * @variant
  */
 .slds-has-submenu {
   position: relative;
@@ -28,7 +30,6 @@
     left: auto;
     right: 100%;
     margin-right: $spacing-xx-small;
-
   }
 
   /**

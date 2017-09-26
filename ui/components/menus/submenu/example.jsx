@@ -23,7 +23,15 @@ const RightIcon = (
 );
 
 export let MenuItemHasSubmenu = props => {
-  const { className, children, iconRight, tabIndex, title, ...rest } = props;
+  const {
+    className,
+    children,
+    iconRight,
+    itemName,
+    tabIndex,
+    title,
+    ...rest
+  } = props;
 
   return (
     <li
@@ -32,8 +40,8 @@ export let MenuItemHasSubmenu = props => {
       role="presentation"
     >
       <a
-        href="javascript:void(0);"
         role="menuitem"
+        href="javascript:void(0);"
         aria-haspopup="true"
         aria-expanded="true"
         tabIndex={tabIndex || '-1'}
@@ -46,12 +54,12 @@ export let MenuItemHasSubmenu = props => {
       <Menu
         className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
       >
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
+        <MenuList ariaLabel={props.itemName}>
+          <MenuItem tabIndex="0">Submenu Item One</MenuItem>
+          <MenuItem>Submenu Item Two</MenuItem>
+          <MenuItem>Submenu Item Three</MenuItem>
           <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
+          <MenuItem>Submenu Item Four</MenuItem>
         </MenuList>
       </Menu>
     </li>
@@ -63,8 +71,8 @@ export let MenuItemHasSubmenu = props => {
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only" style={{ height: '165px' }}>
-    <Trigger className="slds-is-open" triggerIcon={moreIcon}>
+  <div className="demo-only" style={{ height: '300px' }}>
+    <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>

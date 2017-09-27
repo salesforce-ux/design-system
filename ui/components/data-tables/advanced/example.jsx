@@ -236,7 +236,7 @@ export let states = [
   },
   {
     id: 'resized-column',
-    label: 'Column resized (Actionable mode)',
+    label: 'Column Resized (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />
@@ -298,7 +298,7 @@ export let examples = [
 export let examples = [
   {
     id: 'header-icon',
-    label: 'Header Icon',
+    label: 'Column Header Icon',
     element: (
       <Table>
         <Thead

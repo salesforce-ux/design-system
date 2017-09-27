@@ -294,3 +294,30 @@ export let examples = [
     )
   }
 ];
+
+export let examples = [
+  {
+    id: 'header-icon',
+    label: 'Header Icon',
+    element: (
+      <Table>
+        <Thead columns={columns} hasMenus />
+        <tbody>
+          {_.times(rows.length, i => (
+            <Tr
+              key={i}
+              index={i + 1}
+              recordName={rows[i].recordName}
+              accountName={rows[i].accountName}
+              closeDate={rows[i].closeDate}
+              stage={rows[i].stage}
+              confidence={rows[i].confidence}
+              amount={rows[i].amount}
+              contact={rows[i].contact}
+            />
+          ))}
+        </tbody>
+      </Table>
+    )
+  }
+];

@@ -353,6 +353,16 @@
   &--form {
     display: inline-flex; // Allows for alignment of form element, such as a checkbox
   }
+
+  /**
+   * Allows for alignment of button, such as a menu
+   *
+   * @selector .slds-th__action_button
+   * @restrict .slds-th__action
+   */
+  &_button {
+    margin-left: auto;
+  }
 }
 
 /**

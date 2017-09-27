@@ -51,6 +51,7 @@ export const AdvancedDataTable = props => (
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
  * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
+ * @prop {boolean} hasMenus - Specifies whether the cells in the thead have a menu button
  * @prop {boolean} selectAll - Specifies whether the select all checkbox is marked
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
@@ -96,6 +97,7 @@ export const Thead = props => {
                   ? props.singleColumnWidth
                   : mainColumnWidth
             }}
+            hasMenus={props.hasMenus}
           />
         ))}
 
@@ -114,7 +116,7 @@ export const Thead = props => {
  * @prop {string} columnName - Display name of the column header
  */
 export let Th = props => {
-  const { columnName, actionableMode, ...rest } = props;
+  const { columnName, actionableMode, hasMenus, ...rest } = props;
   const tabIndex = actionableMode ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
@@ -146,6 +148,16 @@ export let Th = props => {
             symbol="arrowdown"
           />
         </div>
+        {hasMenus ? (
+          <ButtonIcon
+            assistiveText="Show More"
+            className="slds-th__action_button slds-button_icon-x-small"
+            iconClassName="slds-button__icon_hint slds-button__icon_small"
+            symbol="chevrondown"
+            tabIndex={actionableMode ? '0' : '-1'}
+            title="Show More"
+          />
+        ) : null}
       </a>
       <span
         className="slds-assistive-text"

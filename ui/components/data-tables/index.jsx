@@ -780,7 +780,50 @@ export const ErrorTooltip = props => (
 );
 
 /**
- * @name ProductImage - Table row for advanced data table components
+ * @name ProductDataTableTr - Table row for advanced data table components
+ * @param {*} props
+ * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
+ * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
+ * @prop {boolean} rowSelected
+ * @prop {integer} index - Row index in the Grid
+ * @prop {string} className - CSS classes for the tr element
+ * @prop {string} dateAdded
+ * @prop {string} labelInventory
+ * @prop {string} priceOriginal
+ * @prop {string} priceDiscount
+ * @prop {string} productImgSrc
+ * @prop {string} productName
+ * @prop {*} productProperties
+ * @prop {integer} quantity
+ */
+export const ProductDataTableTr = props => (
+  <tr
+    className={classNames(
+      'slds-hint-parent',
+      'slds-align-top',
+      props.className
+    )}
+    aria-selected={props.rowSelected}
+  >
+    <ProductItemDetailsTd
+      productImgSrc={props.productImgSrc}
+      productName={props.productName}
+      actionableMode={props.actionableMode}
+      productProperties={props.productProperties}
+      labelInventory={props.labelInventory}
+    />
+    <ProductQuantityTd quantity={props.quantity} />
+    <ReadOnlyTd cellText={props.dateAdded} />
+    <ProductPriceTd
+      priceDiscount={props.priceDiscount}
+      priceOriginal={props.priceOriginal}
+    />
+    <RowActionsTd actionableMode={props.actionableMode} />
+  </tr>
+);
+
+/**
+ * @name ProductImage - A common cell container for product image
  * @param {*} props
  * @prop {string} productImgSrc
  * @prop {string} productName
@@ -796,72 +839,72 @@ export const ProductImage = props => (
 );
 
 /**
- * @name ProductDataTableTr - Table row for advanced data table components
+ * @name ProductPriceTd - A common cell container for product price
  * @param {*} props
- * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
- * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
- * @prop {boolean} rowSelected
- * @prop {integer} index - Row index in the Grid
- * @prop {string} className - CSS classes for the tr element
- * @prop {string} dateAdded
- * @prop {string} labelInventory
- * @prop {string} priceOriginal
  * @prop {string} priceDiscount
- * @prop {string} productImgSrc
- * @prop {string} productName
- * @prop {*} productProperties
- * @prop {string} quantity
+ * @prop {string} priceOriginal
  */
-export const ProductDataTableTr = props => (
-  <tr
-    className={classNames(
-      'slds-hint-parent',
-      'slds-align-top',
-      props.className
-    )}
-    aria-selected={props.rowSelected}
-  >
-    <td>
-      <MediaObject
-        figureLeft={
-          <ProductImage
-            productName={props.productName}
-            productImgSrc={props.productImgSrc}
-          />
-        }
-      >
-        <ReadOnlyCellContent
-          actionableMode={props.actionableMode}
-          cellLink="javascript:void(0);"
-          cellText={props.productName}
+export const ProductPriceTd = props => (
+  <td>
+    <p>
+      <s>{props.priceOriginal}</s>
+    </p>
+    <p>{props.priceDiscount}</p>
+  </td>
+);
+
+/**
+  * @name ProductItemDetailsTd - A common cell container for product details
+  * @param {*} props
+  * @prop {*} children
+  * @prop {boolean} actionableMode - Determines whether or not the grid is in actionable or navigation mode
+  * @prop {string} labelInventory
+  * @prop {string} productImgSrc
+  * @prop {string} productName
+  * @prop {*} productProperties
+*/
+export const ProductItemDetailsTd = props => (
+  <td>
+    <MediaObject
+      figureLeft={
+        <ProductImage
+          productName={props.productName}
+          productImgSrc={props.productImgSrc}
         />
-        <ul>
-          {_.times(props.productProperties.length, i => (
-            <li key={i}>
-              {props.productProperties[i].label}:{' '}
-              <strong>{props.productProperties[i].value}</strong>
-            </li>
-          ))}
-        </ul>
-        <p className="slds-text-color_success">{props.labelInventory}</p>
-      </MediaObject>
-    </td>
-    <td>
-      <span>
-        <Input
-          defaultValue={props.quantity}
-          placeholder=" "
-          className="slds-size_xxx-small slds-text-align_center"
-        />
-      </span>
-    </td>
-    <ReadOnlyTd cellText={props.dateAdded} />
-    <td>
-      <p>
-        <strike>{props.priceOriginal}</strike>
-      </p>
-      <p>{props.priceDiscount}</p>
-    </td>
-    <RowActionsTd actionableMode={props.actionableMode} />
-  </tr>
+      }
+    >
+      <ReadOnlyCellContent
+        actionableMode={props.actionableMode}
+        cellLink="javascript:void(0);"
+        cellText={props.productName}
+      />
+      <ul>
+        {_.times(props.productProperties.length, i => (
+          <li key={i}>
+            {props.productProperties[i].label}:{' '}
+            <strong>{props.productProperties[i].value}</strong>
+          </li>
+        ))}
+      </ul>
+      <p className="slds-text-color_success">{props.labelInventory}</p>
+    </MediaObject>
+  </td>
+);
+
+/**
+  * @name ProductQuantityTd - A common cell container for product quantity field
+  * @param {*} props
+  * @prop {*} children
+  * @prop {integer} quantity
+*/
+export const ProductQuantityTd = props => (
+  <td>
+    <span>
+      <Input
+        defaultValue={props.quantity}
+        placeholder=" "
+        className="slds-size_xxx-small slds-text-align_center"
+      />
+    </span>
+  </td>
 );

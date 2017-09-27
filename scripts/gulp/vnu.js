@@ -86,7 +86,9 @@ const createVnuReport = stream => {
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
       .join('\n');
     if (vnuOutput && vnuOutput !== 'undefined') {
-      throw vnuOutput;
+      console.log('-----VNU ERROR----');
+      console.log(vnuOutput);
+      throw new Error('Html Failure (Vnu)');
     }
     const contents = JSON.stringify(report(vnuOutput), null, 2);
     stream.write(

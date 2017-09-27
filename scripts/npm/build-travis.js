@@ -19,16 +19,12 @@ const runScript = () =>
 
 const runExtraScripts = () => {
   // build snapshot
-  exec(
-    `create-snap ${paths.generated}/examples/ ${paths.generated} ${paths.root}/assets/styles/index.css`
-  );
+  //exec(
+  //`create-snap ${paths.generated}/examples/ ${paths.generated} ${paths.root}/assets/styles/index.css`
+  //);
   // pass snapshot path to vrt and the output of that as components to lint
   exec(`
-    echo Running VRT.... &&
-    R=$(node scripts/vrt.js --path ${paths.generated}/snapshot.json) &&
-    echo 'VRT RESULTS:' &&
-    echo $R
-    gulp lint:examples --components $(echo $R)
+    gulp lint:examples --components ""
   `);
 };
 
@@ -41,10 +37,10 @@ const isTag = () => !!process.env.TRAVIS_TAG;
 
 const shouldPushToBuildServer = () => isMerge() || isTag();
 
-if (process.env.BUILD_SERVER_HOST_NEW) {
-  if (shouldPushToBuildServer()) {
-    runScript();
-    runExtraScripts();
-    publishBuild();
-  }
-}
+//if (process.env.BUILD_SERVER_HOST_NEW) {
+//if (shouldPushToBuildServer()) {
+//runScript();
+runExtraScripts();
+//publishBuild();
+//}
+//}

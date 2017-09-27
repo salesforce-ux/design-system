@@ -33,6 +33,35 @@ let BreadcrumbMenu = props => (
   </Trigger>
 );
 
+export const Context = props => (
+  <div className="demo-only" style={{ height: '300px' }}>
+    {props.children}
+  </div>
+);
+
+/* for snapshot tests */
+export const BreadcrumbsWithOverflow = props => (
+  <BreadCrumbs listClassNames="slds-grid_vertical-align-center">
+    <Crumb hasMenu>
+      <BreadcrumbMenu />
+    </Crumb>
+    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
+      Parent Entity
+    </Crumb>
+    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
+      Parent Record Name
+    </Crumb>
+  </BreadCrumbs>
+);
+
+/// ///////////////////////////////////////////
+// Export
+/// ///////////////////////////////////////////
+
+/* export for snapshot tests */
+export default <BreadcrumbsWithOverflow />;
+
+/* export for site examples */
 export let examples = [
   {
     id: 'base',

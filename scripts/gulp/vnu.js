@@ -4,7 +4,7 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
-const minimist = require('minimist');
+const argv = require('yargs').argv;
 const through = require('through2');
 const exec = require('child_process').exec;
 const _ = require('lodash');
@@ -69,28 +69,26 @@ const report = output =>
     )
     .value();
 
-const parseComponentArgument = argv =>
-  minimist(argv.slice(2)).components || '*';
+const parseComponentArgument = () =>
+  (argv.components && argv.components.split(',')) || '*';
 
-const getComponentsToTest = argv =>
-  String(parseComponentArgument(argv))
+const getComponentsToTest = () =>
+  String(parseComponentArgument())
     .split(',')
     .map(x => `.html/${x}*.html`)
     .join(' ');
 
-const printToTerminalForCI = console.log;
-
-const createVnuReport = (stream, argv) => {
+const createVnuReport = stream => {
   // eslint-disable-next-line handle-callback-err
-  lint(getComponentsToTest(argv), {}, (err, output) => {
-    const filtered = String(output)
+  lint(getComponentsToTest(), {}, (err, output) => {
+    const vnuOutput = String(output)
       .split('\n')
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
       .join('\n');
-    if (filtered) {
-      throw new Error(filtered);
+    if (vnuOutput && vnuOutput !== 'undefined') {
+      throw vnuOutput;
     }
-    const contents = JSON.stringify(report(filtered), null, 2);
+    const contents = JSON.stringify(report(vnuOutput), null, 2);
     stream.write(
       new gutil.File({
         path: FILENAME,
@@ -105,6 +103,6 @@ const createVnuReport = (stream, argv) => {
 // gulp lint:vnu --components path,tabs,data-tables
 gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
   const stream = through.obj();
-  createVnuReport(stream, process.argv);
+  createVnuReport(stream);
   return stream.pipe(gulp.dest(FILEPATH));
 });

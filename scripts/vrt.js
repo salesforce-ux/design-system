@@ -1,4 +1,4 @@
-const minimist = require('minimist');
+const args = require('yargs').argv;
 const packageJSON = require('../package.json');
 const fs = require('fs');
 const compare = require('@salesforce-ux/instant-vrt/compare');
@@ -9,7 +9,7 @@ const Task = require('data.task');
 // the indexName is really just for local dev
 const branch = process.env.TRAVIS_BRANCH || packageJSON.config.search.indexName;
 
-const snapPath = minimist(process.argv.slice(2)).path;
+const snapPath = args.path;
 
 const snapUrl = branch =>
   `${process.env.VRT_HOST}/snapshot/${branch}?useToken=true`;

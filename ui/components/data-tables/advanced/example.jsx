@@ -56,9 +56,9 @@ const rows = [
   }
 ];
 
-const productColumns = ['Product', 'Quantity', 'Date Added', 'Price'];
+export const productColumns = ['Product', 'Quantity', 'Date Added', 'Price'];
 
-const productRows = [
+export const productRows = [
   {
     productImgSrc: '/assets/images/product1.jpg',
     productName: 'Baseball Cap',

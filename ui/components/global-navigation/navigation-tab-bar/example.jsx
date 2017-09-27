@@ -1222,10 +1222,14 @@ export let states = [
                 symbol="live_chat"
               />
             </SubtabList>
-            <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+            <SubtabPanel
+              id="subtab-tabpanel-01"
+              tabId="subtab-tabitem-01"
+              isVisible
+            >
               Item One Content
             </SubtabPanel>
-            <SubtabPanel tabId="subtab-tabitem-02">
+            <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
               Item Two Content
             </SubtabPanel>
           </Subtabs>

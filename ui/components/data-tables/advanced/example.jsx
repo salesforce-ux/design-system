@@ -301,7 +301,11 @@ export let examples = [
     label: 'Header Icon',
     element: (
       <Table>
-        <Thead columns={columns} hasMenus />
+        <Thead
+          columns={columns}
+          columnsWithEinstein={['Confidence']}
+          hasMenus
+        />
         <tbody>
           {_.times(rows.length, i => (
             <Tr

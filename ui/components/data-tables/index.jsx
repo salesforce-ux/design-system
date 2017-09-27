@@ -12,6 +12,7 @@ import {
   Input
 } from '../input/base/example';
 import MediaObject from '../../utilities/media-objects/index.react';
+import { Ellie } from '../dynamic-icons/ellie/example';
 import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
@@ -48,6 +49,7 @@ export const AdvancedDataTable = props => (
  * @param {*} props
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
+ * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
  * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
@@ -97,6 +99,7 @@ export const Thead = props => {
                   ? props.singleColumnWidth
                   : mainColumnWidth
             }}
+            columnsWithEinstein={props.columnsWithEinstein}
             hasMenus={props.hasMenus}
           />
         ))}
@@ -114,9 +117,16 @@ export const Thead = props => {
  * @prop {string} aria-sort
  * @prop {string} className
  * @prop {string} columnName - Display name of the column header
+ * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
  */
 export let Th = props => {
-  const { columnName, actionableMode, hasMenus, ...rest } = props;
+  const {
+    columnName,
+    actionableMode,
+    hasMenus,
+    columnsWithEinstein,
+    ...rest
+  } = props;
   const tabIndex = actionableMode ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
@@ -138,6 +148,18 @@ export let Th = props => {
         tabIndex={tabIndex}
       >
         <span className="slds-assistive-text">Sort by: </span>
+
+        {Array.isArray(columnsWithEinstein) &&
+        columnsWithEinstein.includes(columnName) ? (
+          <div className="slds-icon_container slds-m-right_xx-small">
+            <Ellie
+              className="slds-is-paused"
+              title="Description of the icon"
+              assistiveText="Text alternative"
+            />
+          </div>
+        ) : null}
+
         <span className="slds-truncate" title={columnName || 'Column Name'}>
           {columnName || 'Column Name'}
         </span>

@@ -85,7 +85,7 @@ const createVnuReport = stream => {
       .split('\n')
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
       .join('\n');
-    if (vnuOutput && vnuOutput !== 'undefined') {
+    if (vnuOutput && !vnuOutput.match(/^undefined/)) {
       console.log('-----VNU ERROR----');
       console.log(vnuOutput);
       throw new Error('Html Failure (Vnu)');

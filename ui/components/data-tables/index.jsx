@@ -13,6 +13,7 @@ import {
 } from '../input/base/example';
 import MediaObject from '../../utilities/media-objects/index.react';
 import { Ellie } from '../dynamic-icons/ellie/example';
+import { Score } from '../dynamic-icons/score/example';
 import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
@@ -257,10 +258,13 @@ export const ErrorsTh = props => (
  * @param {*} props
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
+ * @prop {boolean} hasScore - Specifies whether a row has a score cell
  * @prop {boolean} rowSelected
  * @prop {integer} index - Row index in the Grid
  * @prop {string} accountName
  * @prop {string} amount
+ * @prop {string} amountScore
+ * @prop {string} amountScoreLabel
  * @prop {string} className - CSS classes for the tr element
  * @prop {string} closeDate
  * @prop {string} confidence
@@ -291,7 +295,19 @@ export const AdvancedDataTableTr = props => (
     <ReadOnlyTd cellText={props.closeDate} />
     <ReadOnlyTd cellText={props.stage} />
     <ReadOnlyTd cellText={props.confidence} />
-    <ReadOnlyTd cellText={props.amount} />
+    {props.hasScores && props.amountScore && props.amountScoreLabel ? (
+      <AdvancedDataTableTd>
+        <div className="slds-grid slds-grid_vertical-align-center">
+          <div className="slds-truncate">{props.amount}</div>
+          <div className="slds-icon_container slds-m-left_x-small slds-m-right_xx-small">
+            <Score data-slds-state={props.amountScore} />
+          </div>
+          <div className="slds-truncate">{props.amountScoreLabel}</div>
+        </div>
+      </AdvancedDataTableTd>
+    ) : (
+      <ReadOnlyTd cellText={props.amount} />
+    )}
     <ReadOnlyTd
       actionableMode={props.actionableMode}
       cellLink="javascript:void(0);"

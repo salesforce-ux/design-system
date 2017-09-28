@@ -34,7 +34,9 @@ const rows = [
     stage: 'Value Proposition',
     confidence: '30%',
     amount: '$25,000,000',
-    contact: 'jrogers@acme.com'
+    contact: 'jrogers@acme.com',
+    amountScore: 'positive',
+    amountScoreLabel: 'High'
   },
   {
     recordName: 'Acme - 200 Widgets',
@@ -52,7 +54,9 @@ const rows = [
     stage: 'Id. Decision Makers',
     confidence: '70%',
     amount: '$25,000',
-    contact: 'nathan@salesforce.com'
+    contact: 'nathan@salesforce.com',
+    amountScore: 'negative',
+    amountScoreLabel: 'Low'
   }
 ];
 
@@ -297,8 +301,8 @@ export let examples = [
 
 export let examples = [
   {
-    id: 'header-icon',
-    label: 'Column Header Icon',
+    id: 'header-and-cell-icon',
+    label: 'Header and Cell Icon',
     element: (
       <Table>
         <Thead
@@ -318,6 +322,9 @@ export let examples = [
               confidence={rows[i].confidence}
               amount={rows[i].amount}
               contact={rows[i].contact}
+              amountScore={rows[i].amountScore}
+              amountScoreLabel={rows[i].amountScoreLabel}
+              hasScores
             />
           ))}
         </tbody>

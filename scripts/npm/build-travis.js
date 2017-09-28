@@ -23,13 +23,19 @@ const runExtraScripts = () => {
     `create-snap ${paths.generated}/examples/ ${paths.generated} ${paths.root}/assets/styles/index.css`
   );
   // pass snapshot path to vrt and the output of that as components to lint
-  exec(`
-    echo Running VRT.... &&
-    R=$(node scripts/vrt.js --path ${paths.generated}/snapshot.json) &&
-    echo 'VRT RESULTS:' &&
-    echo $R
-    gulp lint:examples --components $(echo $R)
-  `);
+  exec(
+    `
+      echo Running VRT.... &&
+      R=$(node scripts/vrt.js --path ${paths.generated}/snapshot.json) &&
+      echo 'VRT RESULTS:' &&
+      echo $R;
+      if [ -z $R ]; then
+          gulp lint:examples
+      else
+          gulp lint:examples --components $(echo $R)
+      fi
+    `
+  );
 };
 
 const publishBuild = () => exec('NODE_ENV=production npm run build-server');

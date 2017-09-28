@@ -4,7 +4,7 @@
 import React from 'react';
 import _ from '../../../shared/helpers';
 
-let Score = props => (
+export const Score = props => (
   <span
     {...props}
     className="slds-icon-score"

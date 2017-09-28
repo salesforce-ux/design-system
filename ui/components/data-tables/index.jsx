@@ -112,6 +112,43 @@ export const Thead = props => {
 };
 
 /**
+ * @name ThAction - Common th cell for use in advanced data grids that have sorting or interaction
+ * @param {*} props
+ * @prop {array} children
+ * @prop {integer} tabIndex
+ */
+export let ThAction = props =>
+  props.hasMenus ? (
+    <div className="slds-th__action">
+      <a
+        className="slds-text-link_reset slds-truncate slds-has-flexi-truncate"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex={props.tabIndex}
+      >
+        {props.children}
+      </a>
+      <ButtonIcon
+        assistiveText="Show More"
+        className="slds-th__action_button slds-button_icon-x-small"
+        iconClassName="slds-button__icon_hint slds-button__icon_small"
+        symbol="chevrondown"
+        tabIndex={props.tabIndex}
+        title="Show More"
+      />
+    </div>
+  ) : (
+    <a
+      className="slds-th__action slds-text-link_reset"
+      href="javascript:void(0);"
+      role="button"
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </a>
+  );
+
+/**
  * @name Th - Common th cell for use in advanced data grids that have sorting or interaction
  * @param {*} props
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
@@ -142,46 +179,45 @@ export let Th = props => {
       )}
       scope="col"
     >
-      <a
-        className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
-        role="button"
-        tabIndex={tabIndex}
-      >
+      <ThAction hasMenus={hasMenus} tabIndex={tabIndex}>
         <span className="slds-assistive-text">Sort by: </span>
 
         {Array.isArray(columnsWithEinstein) &&
         columnsWithEinstein.includes(columnName) ? (
-          <div className="slds-icon_container slds-m-right_xx-small">
-            <Ellie
-              className="slds-is-paused"
-              title="Description of the icon"
-              assistiveText="Text alternative"
-            />
+          <div className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+            <div className="slds-icon_container slds-m-right_xx-small">
+              <Ellie
+                className="slds-is-paused"
+                title="Description of the icon"
+                assistiveText="Text alternative"
+              />
+            </div>
+            <span className="slds-truncate" title={columnName || 'Column Name'}>
+              {columnName || 'Column Name'}
+            </span>
+            <div className="slds-icon_container">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
+                sprite="utility"
+                symbol="arrowdown"
+              />
+            </div>
           </div>
-        ) : null}
-
-        <span className="slds-truncate" title={columnName || 'Column Name'}>
-          {columnName || 'Column Name'}
-        </span>
-        <div className="slds-icon_container">
-          <SvgIcon
-            className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
-            sprite="utility"
-            symbol="arrowdown"
-          />
-        </div>
-        {hasMenus ? (
-          <ButtonIcon
-            assistiveText="Show More"
-            className="slds-th__action_button slds-button_icon-x-small"
-            iconClassName="slds-button__icon_hint slds-button__icon_small"
-            symbol="chevrondown"
-            tabIndex={actionableMode ? '0' : '-1'}
-            title="Show More"
-          />
-        ) : null}
-      </a>
+        ) : (
+          [
+            <span className="slds-truncate" title={columnName || 'Column Name'}>
+              {columnName || 'Column Name'}
+            </span>,
+            <div className="slds-icon_container">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
+                sprite="utility"
+                symbol="arrowdown"
+              />
+            </div>
+          ]
+        )}
+      </ThAction>
       <span
         className="slds-assistive-text"
         aria-live="assertive"

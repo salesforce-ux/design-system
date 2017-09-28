@@ -117,7 +117,7 @@
     "node-sass": "4.5.2",
     "openport": "0.0.4",
     "postcss": "5.2.16",
-    "prettier": "1.6.0",
+    "prettier": "1.7.2",
     "pretty-time": "0.2.0",
     "prop-types": "15.5.10",
     "puppeteer": "0.10.1",

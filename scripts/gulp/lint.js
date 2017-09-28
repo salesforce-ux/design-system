@@ -39,7 +39,8 @@ gulp.task('lint:spaces', () =>
       '!CONTRIBUTING.md',
       'ui/**/*.*',
       'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
-      'scripts/**/*.{js,sh,jsx}'
+      'scripts/**/*.{js,sh,jsx}',
+      '!**/__snapshots__/*'
     ])
     .pipe(cache('lintspaces'))
     .pipe(
@@ -146,6 +147,7 @@ gulp.task('lint', [
   'lint:sass',
   'lint:spaces',
   'lint:js',
+  'lint:js:test',
   'lint:html',
   'lint:tokens'
 ]);

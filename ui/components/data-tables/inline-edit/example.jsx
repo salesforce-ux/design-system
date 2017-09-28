@@ -156,7 +156,6 @@ export let states = [
                 {...rows[i]}
                 focusableCell="accountName"
                 focusedCell="accountName"
-                actionableMode
               />
             ))}
           </tbody>

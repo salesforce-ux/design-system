@@ -5,7 +5,12 @@ import _ from '../../shared/helpers';
 import { ButtonIcon } from '../button-icons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
-import { Input } from '../input/base/example';
+import {
+  FormElement,
+  FormElementControl,
+  FormElementLabel,
+  Input
+} from '../input/base/example';
 import MediaObject from '../../utilities/media-objects/index.react';
 import SvgIcon from '../../shared/svg-icon';
 
@@ -811,7 +816,11 @@ export const ProductDataTableTr = props => (
       productProperties={props.productProperties}
       labelInventory={props.labelInventory}
     />
-    <ProductQuantityTd quantity={props.quantity} />
+    <ProductQuantityTd
+      inputId={`product-quantity-text-input-id-${props.index}`}
+      labelText={`${props.productName} quantity`}
+      quantity={props.quantity}
+    />
     <ReadOnlyTd cellText={props.dateAdded} />
     <ProductPriceTd
       priceDiscount={props.priceDiscount}
@@ -894,17 +903,25 @@ export const ProductItemDetailsTd = props => (
   * @name ProductQuantityTd - A common cell container for product quantity field
   * @param {*} props
   * @prop {*} children
+  * @prop {string} inputId
+  * @prop {string} labelText
   * @prop {integer} quantity
 */
 export const ProductQuantityTd = props => (
   <td>
-    <span>
-      <Input
-        defaultValue={props.quantity}
-        placeholder=" "
-        className="slds-size_xxx-small slds-text-align_center"
-      />
-    </span>
+    <FormElement>
+      <FormElementLabel className="slds-assistive-text" id={props.inputId}>
+        {props.labelText}
+      </FormElementLabel>
+      <FormElementControl>
+        <Input
+          id={props.inputId}
+          defaultValue={props.quantity}
+          placeholder=" "
+          className="slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+        />
+      </FormElementControl>
+    </FormElement>
   </td>
 );
 

@@ -118,7 +118,7 @@
  */
 
 .slds-rich-text-editor__textarea {
-
+  // stylelint-disable selector-class-pattern
   .ql-editor {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -141,9 +141,10 @@
   }
 
   .ql-active {
-    background-color: rgb(238,241,246);
+    background-color: rgb(238, 241, 246);
   }
 
+  // stylelint-disable declaration-no-important
   .ql-clipboard {
     position: absolute !important;
     margin: -1px !important;

@@ -9,4 +9,3 @@ imports:
 props:
   INPUT_STATIC_COLOR:
     value: "{!PALETTE_GRAY_12}"
-

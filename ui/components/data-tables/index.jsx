@@ -230,9 +230,9 @@ export const ErrorsTh = props => (
  * @prop {string} stage
  */
 export const AdvancedDataTableTr = props => (
-  <tr
-    className={classNames('slds-hint-parent', props.className)}
-    aria-selected={props.rowSelected}
+  <AdvancedDataTableTrElement
+    className={props.className}
+    rowSelected={props.rowSelected}
   >
     <SelectRowTd
       className="slds-text-align_right"
@@ -259,7 +259,7 @@ export const AdvancedDataTableTr = props => (
       cellText={props.contact}
     />
     <RowActionsTd actionableMode={props.actionableMode} />
-  </tr>
+  </AdvancedDataTableTrElement>
 );
 
 /**
@@ -507,7 +507,10 @@ export const ReadOnlyCellContent = props => (
  * @prop {string} stage
  */
 export const InlineEditTr = props => (
-  <tr className="slds-hint-parent" aria-selected={props.rowSelected}>
+  <AdvancedDataTableTrElement
+    className={props.className}
+    rowSelected={props.rowSelected}
+  >
     <ErrorTd
       tabIndex={props.focusableCell === 'error' && props.index === 1 ? 0 : null}
       hasFocus={
@@ -602,7 +605,7 @@ export const InlineEditTr = props => (
       actionableMode={props.actionableMode}
     />
     <RowActionsTd actionableMode={props.actionableMode} isEditable />
-  </tr>
+  </AdvancedDataTableTrElement>
 );
 
 /**
@@ -797,13 +800,9 @@ export const ErrorTooltip = props => (
  * @prop {integer} quantity
  */
 export const ProductDataTableTr = props => (
-  <tr
-    className={classNames(
-      'slds-hint-parent',
-      'slds-align-top',
-      props.className
-    )}
-    aria-selected={props.rowSelected}
+  <AdvancedDataTableTrElement
+    className={classNames(props.className, 'slds-align-top')}
+    rowSelected={props.rowSelected}
   >
     <ProductItemDetailsTd
       productImgSrc={props.productImgSrc}
@@ -819,7 +818,7 @@ export const ProductDataTableTr = props => (
       priceOriginal={props.priceOriginal}
     />
     <RowActionsTd actionableMode={props.actionableMode} />
-  </tr>
+  </AdvancedDataTableTrElement>
 );
 
 /**
@@ -907,4 +906,18 @@ export const ProductQuantityTd = props => (
       />
     </span>
   </td>
+);
+
+/**
+  * @name AdvancedDataTableTrElement - A common row container for advanced data table types: base, inline-edit, and product
+  * @param {*} props
+  * @prop {*} children
+*/
+export const AdvancedDataTableTrElement = props => (
+  <tr
+    className={classNames('slds-hint-parent', props.className)}
+    aria-selected={props.rowSelected}
+  >
+    {props.children}
+  </tr>
 );

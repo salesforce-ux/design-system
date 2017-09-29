@@ -50,7 +50,7 @@
   .slds-dropdown_submenu-bottom {
     top: auto;
     bottom: 0;
-    margin-bottom: (-1 * $spacing-xx-small);
+    margin-bottom: ($spacing-xx-small * -1);
   }
 
   &.slds-dropdown__item {

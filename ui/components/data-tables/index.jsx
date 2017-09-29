@@ -463,6 +463,7 @@ export const SelectRowTd = props => (
       checked={props.checked}
       hideLabel
       id={`checkbox-0${props.index}`}
+      name={`checkbox-0${props.index}`}
       label={`Select item ${props.index}`}
       tabIndex={props.checkTabIndex}
     />

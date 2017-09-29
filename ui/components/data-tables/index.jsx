@@ -5,6 +5,13 @@ import _ from '../../shared/helpers';
 import { ButtonIcon } from '../button-icons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
+import {
+  FormElement,
+  FormElementControl,
+  FormElementLabel,
+  Input
+} from '../input/base/example';
+import MediaObject from '../../utilities/media-objects/index.react';
 import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
@@ -37,12 +44,13 @@ export const AdvancedDataTable = props => (
 );
 
 /**
- * @name Thead - thead block for both advanced and inline edit grids
+ * @name Thead - thead block for advanced, inline, and product edit grids
  * @param {*} props
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
+ * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
  * @prop {boolean} selectAll - Specifies whether the select all checkbox is marked
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
@@ -57,12 +65,14 @@ export const Thead = props => {
       <tr className="slds-line-height_reset">
         {props.hasErrorColumn ? <ErrorsTh /> : null}
 
-        <SelectAllTh
-          actionableMode={props.actionableMode}
-          checked={props.selectAll}
-          className={!props.hasErrorColumn ? 'slds-text-align_right' : null}
-          style={{ width: selectAllColumnWidth }}
-        />
+        {props.hasNoSelectability ? null : (
+          <SelectAllTh
+            actionableMode={props.actionableMode}
+            checked={props.selectAll}
+            className={!props.hasErrorColumn ? 'slds-text-align_right' : null}
+            style={{ width: selectAllColumnWidth }}
+          />
+        )}
 
         {_.times(props.columns.length, i => (
           <Th
@@ -225,9 +235,9 @@ export const ErrorsTh = props => (
  * @prop {string} stage
  */
 export const AdvancedDataTableTr = props => (
-  <tr
-    className={classNames('slds-hint-parent', props.className)}
-    aria-selected={props.rowSelected}
+  <AdvancedDataTableTrElement
+    className={props.className}
+    rowSelected={props.rowSelected}
   >
     <SelectRowTd
       className="slds-text-align_right"
@@ -254,7 +264,7 @@ export const AdvancedDataTableTr = props => (
       cellText={props.contact}
     />
     <RowActionsTd actionableMode={props.actionableMode} />
-  </tr>
+  </AdvancedDataTableTrElement>
 );
 
 /**
@@ -502,7 +512,10 @@ export const ReadOnlyCellContent = props => (
  * @prop {string} stage
  */
 export const InlineEditTr = props => (
-  <tr className="slds-hint-parent" aria-selected={props.rowSelected}>
+  <AdvancedDataTableTrElement
+    className={props.className}
+    rowSelected={props.rowSelected}
+  >
     <ErrorTd
       tabIndex={props.focusableCell === 'error' && props.index === 1 ? 0 : null}
       hasFocus={
@@ -597,7 +610,7 @@ export const InlineEditTr = props => (
       actionableMode={props.actionableMode}
     />
     <RowActionsTd actionableMode={props.actionableMode} isEditable />
-  </tr>
+  </AdvancedDataTableTrElement>
 );
 
 /**
@@ -772,4 +785,156 @@ export const ErrorTooltip = props => (
   >
     Company encountered an error.
   </Tooltip>
+);
+
+/**
+ * @name ProductDataTableTr - Table row for advanced data table components
+ * @param {*} props
+ * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
+ * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
+ * @prop {boolean} rowSelected
+ * @prop {integer} index - Row index in the Grid
+ * @prop {string} className - CSS classes for the tr element
+ * @prop {string} dateAdded
+ * @prop {string} labelInventory
+ * @prop {string} priceOriginal
+ * @prop {string} priceDiscount
+ * @prop {string} productImgSrc
+ * @prop {string} productName
+ * @prop {*} productProperties
+ * @prop {integer} quantity
+ */
+export const ProductDataTableTr = props => (
+  <AdvancedDataTableTrElement
+    className={classNames(props.className, 'slds-align-top')}
+    rowSelected={props.rowSelected}
+  >
+    <ProductItemDetailsTd
+      productImgSrc={props.productImgSrc}
+      productName={props.productName}
+      actionableMode={props.actionableMode}
+      productProperties={props.productProperties}
+      labelInventory={props.labelInventory}
+    />
+    <ProductQuantityTd
+      inputId={`product-quantity-text-input-id-${props.index}`}
+      labelText={`${props.productName} quantity`}
+      quantity={props.quantity}
+    />
+    <ReadOnlyTd cellText={props.dateAdded} />
+    <ProductPriceTd
+      priceDiscount={props.priceDiscount}
+      priceOriginal={props.priceOriginal}
+    />
+    <RowActionsTd actionableMode={props.actionableMode} />
+  </AdvancedDataTableTrElement>
+);
+
+/**
+ * @name ProductImage - A common cell container for product image
+ * @param {*} props
+ * @prop {string} productImgSrc
+ * @prop {string} productName
+ */
+export const ProductImage = props => (
+  <div className="slds-size_xx-small">
+    <img
+      alt={props.productName}
+      src={props.productImgSrc}
+      title={props.productName}
+    />
+  </div>
+);
+
+/**
+ * @name ProductPriceTd - A common cell container for product price
+ * @param {*} props
+ * @prop {string} priceDiscount
+ * @prop {string} priceOriginal
+ */
+export const ProductPriceTd = props => (
+  <td>
+    <p>
+      <s>{props.priceOriginal}</s>
+    </p>
+    <p>{props.priceDiscount}</p>
+  </td>
+);
+
+/**
+  * @name ProductItemDetailsTd - A common cell container for product details
+  * @param {*} props
+  * @prop {*} children
+  * @prop {boolean} actionableMode - Determines whether or not the grid is in actionable or navigation mode
+  * @prop {string} labelInventory
+  * @prop {string} productImgSrc
+  * @prop {string} productName
+  * @prop {*} productProperties
+*/
+export const ProductItemDetailsTd = props => (
+  <td>
+    <MediaObject
+      figureLeft={
+        <ProductImage
+          productName={props.productName}
+          productImgSrc={props.productImgSrc}
+        />
+      }
+    >
+      <ReadOnlyCellContent
+        actionableMode={props.actionableMode}
+        cellLink="javascript:void(0);"
+        cellText={props.productName}
+      />
+      <ul>
+        {_.times(props.productProperties.length, i => (
+          <li key={i}>
+            {props.productProperties[i].label}:{' '}
+            <strong>{props.productProperties[i].value}</strong>
+          </li>
+        ))}
+      </ul>
+      <p className="slds-text-color_success">{props.labelInventory}</p>
+    </MediaObject>
+  </td>
+);
+
+/**
+  * @name ProductQuantityTd - A common cell container for product quantity field
+  * @param {*} props
+  * @prop {*} children
+  * @prop {string} inputId
+  * @prop {string} labelText
+  * @prop {integer} quantity
+*/
+export const ProductQuantityTd = props => (
+  <td>
+    <FormElement>
+      <FormElementLabel className="slds-assistive-text" id={props.inputId}>
+        {props.labelText}
+      </FormElementLabel>
+      <FormElementControl>
+        <Input
+          id={props.inputId}
+          defaultValue={props.quantity}
+          placeholder=" "
+          className="slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+        />
+      </FormElementControl>
+    </FormElement>
+  </td>
+);
+
+/**
+  * @name AdvancedDataTableTrElement - A common row container for advanced data table types: base, inline-edit, and product
+  * @param {*} props
+  * @prop {*} children
+*/
+export const AdvancedDataTableTrElement = props => (
+  <tr
+    className={classNames('slds-hint-parent', props.className)}
+    aria-selected={props.rowSelected}
+  >
+    {props.children}
+  </tr>
 );

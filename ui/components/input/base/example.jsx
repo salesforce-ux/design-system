@@ -22,7 +22,7 @@ export let FormElement = props => (
 export let FormElementLabel = props => (
   <label
     className={classNames('slds-form-element__label', props.className)}
-    htmlFor={inputId}
+    htmlFor={props.id || inputId}
   >
     {props.children}
   </label>

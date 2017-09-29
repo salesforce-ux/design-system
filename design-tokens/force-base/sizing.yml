@@ -18,6 +18,9 @@ global:
   - 'padding*'
   - transform
 props:
+  SIZE_XXX_SMALL:
+    value: 3rem
+    comment: Generic sizing token scale for UI components.
   SIZE_XX_SMALL:
     value: 6rem
     comment: Generic sizing token scale for UI components.

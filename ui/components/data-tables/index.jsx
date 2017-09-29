@@ -112,7 +112,7 @@ export const Thead = props => {
 };
 
 /**
- * @name ThAction - Common th cell for use in advanced data grids that have sorting or interaction
+ * @name ThAction - Common th cell contents for use in advanced data grids that have sorting or interaction
  * @param {*} props
  * @prop {array} children
  * @prop {integer} tabIndex
@@ -455,7 +455,6 @@ export const SelectRowTd = props => (
       checked={props.checked}
       hideLabel
       id={`checkbox-0${props.index}`}
-      name={`checkbox-0${props.index}`}
       label={`Select item ${props.index}`}
       tabIndex={props.checkTabIndex}
     />

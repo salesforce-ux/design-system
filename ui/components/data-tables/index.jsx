@@ -117,17 +117,17 @@ export const Thead = props => {
  * @prop {array} children
  * @prop {integer} tabIndex
  */
-export let ThAction = props =>
-  props.hasMenus ? (
-    <div className="slds-th__action">
-      <a
-        className="slds-text-link_reset slds-truncate slds-has-flexi-truncate"
-        href="javascript:void(0);"
-        role="button"
-        tabIndex={props.tabIndex}
-      >
-        {props.children}
-      </a>
+export let ThAction = props => (
+  <div className="slds-th__action">
+    <a
+      className="slds-text-link_reset slds-truncate slds-has-flexi-truncate"
+      href="javascript:void(0);"
+      role="button"
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </a>
+    {props.hasMenus ? (
       <ButtonIcon
         assistiveText="Show More"
         className="slds-th__action_button slds-button_icon-x-small"
@@ -136,17 +136,9 @@ export let ThAction = props =>
         tabIndex={props.tabIndex}
         title="Show More"
       />
-    </div>
-  ) : (
-    <a
-      className="slds-th__action slds-text-link_reset"
-      href="javascript:void(0);"
-      role="button"
-      tabIndex={props.tabIndex}
-    >
-      {props.children}
-    </a>
-  );
+    ) : null}
+  </div>
+);
 
 /**
  * @name Th - Common th cell for use in advanced data grids that have sorting or interaction

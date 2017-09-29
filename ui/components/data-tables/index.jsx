@@ -192,7 +192,11 @@ export let Th = props => {
                 assistiveText="Text alternative"
               />
             </div>
-            <span className="slds-truncate" title={columnName || 'Column Name'}>
+            <span
+              key={`th-${props.index}`}
+              className="slds-truncate"
+              title={columnName || 'Column Name'}
+            >
               {columnName || 'Column Name'}
             </span>
             <div className="slds-icon_container">
@@ -205,10 +209,17 @@ export let Th = props => {
           </div>
         ) : (
           [
-            <span className="slds-truncate" title={columnName || 'Column Name'}>
+            <span
+              key={`th-${props.index}`}
+              className="slds-truncate"
+              title={columnName || 'Column Name'}
+            >
               {columnName || 'Column Name'}
             </span>,
-            <div className="slds-icon_container">
+            <div
+              key={`sort-icon-${props.index}`}
+              className="slds-icon_container"
+            >
               <SvgIcon
                 className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
                 sprite="utility"

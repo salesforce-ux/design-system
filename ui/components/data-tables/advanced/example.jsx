@@ -312,20 +312,7 @@ export let examples = [
         />
         <tbody>
           {_.times(rows.length, i => (
-            <Tr
-              key={i}
-              index={i + 1}
-              recordName={rows[i].recordName}
-              accountName={rows[i].accountName}
-              closeDate={rows[i].closeDate}
-              stage={rows[i].stage}
-              confidence={rows[i].confidence}
-              amount={rows[i].amount}
-              contact={rows[i].contact}
-              amountScore={rows[i].amountScore}
-              amountScoreLabel={rows[i].amountScoreLabel}
-              hasScores
-            />
+            <Tr key={i} index={i + 1} {...rows[i]} hasScores />
           ))}
         </tbody>
       </Table>

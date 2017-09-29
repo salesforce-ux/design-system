@@ -15,7 +15,9 @@ const { ui } = require('../ui');
 const createInstance = require('../lib');
 const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
 const paths = require('../helpers/paths');
+const path = require('path');
 const beautify = require('js-beautify');
+const glob = require('glob');
 
 const prettyHTML = html =>
   beautify.html(html, {
@@ -52,7 +54,27 @@ const render = item =>
     ? prettyHTML(ReactDOM.renderToStaticMarkup(getWrappedElement(item)))
     : `FAILED: ${item.get('id')}`;
 
-gulp.task('generate:examples', () => {
+const transform = stream => (file, encoding, callback) => {
+  const json = JSON.parse(String(file.contents));
+  stream.write(
+    new gutil.File({
+      path: `${path.basename(file.path, 'json')}html`,
+      contents: Buffer.from(json.snapshot.html)
+    })
+  );
+  callback();
+};
+
+gulp.task('generate:examples:snapshots', () => {
+  const stream = through.obj();
+  gulp
+    .src(path.resolve(paths.ui, '**/__snapshots__/*.json'))
+    .pipe(through.obj(transform(stream)))
+    .on('finish', () => stream.end());
+  return stream.pipe(gulp.dest(`${paths.generated}/examples`));
+});
+
+gulp.task('generate:examples:showcase', () => {
   const stream = through.obj();
   ui()
     .chain(uiJSON =>
@@ -84,3 +106,8 @@ gulp.task('generate:examples', () => {
 
   return stream.pipe(gulp.dest(`${paths.generated}/examples`));
 });
+
+gulp.task('generate:examples', [
+  'generate:examples:snapshots',
+  'generate:examples:showcase'
+]);

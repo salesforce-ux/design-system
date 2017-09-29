@@ -56,65 +56,70 @@ app.get('/', (req, res) => {
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 
 let server;
-let port;
 let browser;
 let page;
 let CURRENT_TEST_NAME;
 
-beforeAll(async () => {
-  // Server gets started before each suite and then closed afterwards
-  // This needs to be here so that matchesMarkupAndStyle() will work even when
-  // not using the watcher
-  port = await new Promise((resolve, reject) => {
-    openport.find(function(err, port) {
-      err ? reject(err) : resolve(port);
-    });
-  });
-  console.log('Running on port', port);
-  server = await new Promise(resolve => {
-    const server = app.listen(port, () => {
-      resolve(server);
-    });
-  });
-  browser = await puppeteer.launch();
-  page = await browser.newPage();
-  await page.emulate({
-    userAgent:
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
-    viewport: {
-      width: 1280,
-      height: 800,
-      deviceScaleFactor: 1,
-      isMobile: false,
-      hasTouch: false,
-      isLandscape: false
+module.exports = (dirname, port) => {
+  jasmine.getEnv().addReporter({
+    specStarted: function(result) {
+      CURRENT_TEST_NAME = result.fullName;
     }
   });
-  await page.goto(`http://localhost:${port}`);
-});
 
-jasmine.getEnv().addReporter({
-  specStarted: function(result) {
-    CURRENT_TEST_NAME = result.fullName;
-  }
-});
-
-afterAll(async () => {
-  browser.close();
-  await new Promise(resolve => {
-    server.close(() => resolve());
+  beforeAll(async () => {
+    // Server gets started before each suite and then closed afterwards
+    // This needs to be here so that matchesMarkupAndStyle() will work even when
+    // not using the watcher
+    port =
+      port ||
+      (await new Promise((resolve, reject) => {
+        openport.find(function(err, port) {
+          err ? reject(err) : resolve(port);
+        });
+      }));
+    console.log('running on port', port);
+    server = await new Promise(resolve => {
+      const server = app.listen(port, () => {
+        resolve(server);
+      });
+    });
+    browser = await puppeteer.launch();
+    page = await browser.newPage();
+    await page.emulate({
+      userAgent:
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+      viewport: {
+        width: 1280,
+        height: 800,
+        deviceScaleFactor: 1,
+        isMobile: false,
+        hasTouch: false,
+        isLandscape: false
+      }
+    });
+    await page.goto(`http://localhost:${port}`);
   });
-});
 
-module.exports = dirname => ({
-  matchesMarkupAndStyle: async element => {
-    await page.evaluate(
-      `document.body.innerHTML = \`${ReactDOM.renderToStaticMarkup(element)}\``
-    );
-    await delay(250);
-    const markupAndStyle = await page
-      .evaluate(getMarkupAndStyle('body > *'))
-      .then(diff => ({ html: beautify(diff.html), style: diff.style }));
-    assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
-  }
-});
+  afterAll(async () => {
+    browser.close();
+    await new Promise(resolve => {
+      server.close(() => resolve());
+    });
+  });
+
+  return {
+    matchesMarkupAndStyle: async element => {
+      await page.evaluate(
+        `document.body.innerHTML = \`${ReactDOM.renderToStaticMarkup(
+          element
+        )}\``
+      );
+      await delay(250);
+      const markupAndStyle = await page
+        .evaluate(getMarkupAndStyle('body > *'))
+        .then(diff => ({ html: beautify(diff.html), style: diff.style }));
+      assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
+    }
+  };
+};

@@ -4,9 +4,12 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.setup';
-import { BreadcrumbsWithOverflow } from '../base/example';
+import { BreadcrumbsBase, BreadcrumbsWithOverflow } from '../base/example';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
+
+it('renders a base breadcrumb', () =>
+  matchesMarkupAndStyle(<BreadcrumbsBase />));
 
 it('renders a overflow menu as the first breadcrumb', () =>
   matchesMarkupAndStyle(<BreadcrumbsWithOverflow />));

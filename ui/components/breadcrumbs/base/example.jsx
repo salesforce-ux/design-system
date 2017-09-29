@@ -39,6 +39,17 @@ export const Context = props => (
   </div>
 );
 
+export const BreadcrumbsBase = props => (
+  <BreadCrumbs>
+    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
+      Parent Entity
+    </Crumb>
+    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
+      Parent Record Name
+    </Crumb>
+  </BreadCrumbs>
+);
+
 /* for snapshot tests */
 export const BreadcrumbsWithOverflow = props => (
   <BreadCrumbs listClassNames="slds-grid_vertical-align-center">
@@ -59,24 +70,10 @@ export const BreadcrumbsWithOverflow = props => (
 /// ///////////////////////////////////////////
 
 /* export for snapshot tests */
-export default <BreadcrumbsWithOverflow />;
+export default <BreadcrumbsBase />;
 
 /* export for site examples */
 export let examples = [
-  {
-    id: 'base',
-    label: 'Base',
-    element: (
-      <BreadCrumbs>
-        <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-          Parent Entity
-        </Crumb>
-        <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-          Parent Record Name
-        </Crumb>
-      </BreadCrumbs>
-    )
-  },
   {
     id: 'overflow-breadcrumbs',
     label: 'Breadcrumbs with Overflow Menu',

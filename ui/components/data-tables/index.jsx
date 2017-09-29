@@ -888,7 +888,12 @@ export const ProductItemDetailsTd = props => (
       />
       <ul>
         {_.times(props.productProperties.length, i => (
-          <li key={i} className="slds-truncate">
+          <li
+            key={i}
+            className="slds-truncate"
+            title={`${props.productProperties[i].label}: ${props
+              .productProperties[i].value}`}
+          >
             {props.productProperties[i].label}:{' '}
             <strong>{props.productProperties[i].value}</strong>
           </li>

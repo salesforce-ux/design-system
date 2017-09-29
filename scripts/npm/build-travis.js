@@ -30,7 +30,7 @@ const runExtraScripts = () => {
       echo 'VRT RESULTS:' &&
       echo $R;
       if [ -z $R ]; then
-          gulp lint:examples
+          echo No changes so no lint!
       else
           gulp lint:examples --components $(echo $R)
       fi

@@ -298,24 +298,3 @@ export let examples = [
     )
   }
 ];
-
-export let examples = [
-  {
-    id: 'header-and-cell-icon',
-    label: 'Header and Cell Icon',
-    element: (
-      <Table>
-        <Thead
-          columns={columns}
-          columnsWithEinstein={['Confidence']}
-          hasMenus
-        />
-        <tbody>
-          {_.times(rows.length, i => (
-            <Tr key={i} index={i + 1} {...rows[i]} hasScores />
-          ))}
-        </tbody>
-      </Table>
-    )
-  }
-];

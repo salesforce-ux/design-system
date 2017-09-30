@@ -127,14 +127,21 @@ export let ThAction = props => (
     >
       {props.children}
     </a>
+    <span
+      className="slds-assistive-text"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
+    </span>
     {props.hasMenus ? (
       <ButtonIcon
-        assistiveText="Show More"
+        assistiveText={`Show ${props.columnName} column actions`}
         className="slds-th__action_button slds-button_icon-x-small"
         iconClassName="slds-button__icon_hint slds-button__icon_small"
         symbol="chevrondown"
         tabIndex={props.tabIndex}
-        title="Show More"
+        title={`Show ${props.columnName} column actions`}
       />
     ) : null}
   </div>
@@ -171,7 +178,7 @@ export let Th = props => {
       )}
       scope="col"
     >
-      <ThAction hasMenus={hasMenus} tabIndex={tabIndex}>
+      <ThAction hasMenus={hasMenus} tabIndex={tabIndex} columnName={columnName}>
         <span className="slds-assistive-text">Sort by: </span>
 
         {Array.isArray(columnsWithEinstein) &&
@@ -180,8 +187,8 @@ export let Th = props => {
             <div className="slds-icon_container slds-m-right_xx-small">
               <Ellie
                 className="slds-is-paused"
-                title="Description of the icon"
-                assistiveText="Text alternative"
+                title="Einstein calculated"
+                assistiveText="Einstein calculated"
               />
             </div>
             <span
@@ -221,13 +228,6 @@ export let Th = props => {
           ]
         )}
       </ThAction>
-      <span
-        className="slds-assistive-text"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
-      </span>
       <div className="slds-resizable">
         <input
           aria-label={
@@ -618,9 +618,9 @@ export const InlineEditTr = props => (
       cellTabIndex={
         !props.actionableMode &&
         props.focusableCell === 'selectRow' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       checkTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
@@ -637,9 +637,9 @@ export const InlineEditTr = props => (
       tabIndex={
         !props.actionableMode &&
         props.focusableCell === 'recordName' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       hasFocus={props.focusedCell === 'recordName' && props.index === 1}
     />
@@ -651,9 +651,9 @@ export const InlineEditTr = props => (
       tabIndex={
         !props.actionableMode &&
         props.focusableCell === 'accountName' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       hasFocus={props.focusedCell === 'accountName' && props.index === 1}
       isEditing={props.showEdit && props.index === 1}

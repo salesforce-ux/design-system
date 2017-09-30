@@ -853,12 +853,12 @@ export const ProductImage = props => (
  * @prop {string} priceOriginal
  */
 export const ProductPriceTd = props => (
-  <td>
+  <AdvancedDataTableTd>
     <p>
       <s>{props.priceOriginal}</s>
     </p>
     <p>{props.priceDiscount}</p>
-  </td>
+  </AdvancedDataTableTd>
 );
 
 /**
@@ -872,7 +872,7 @@ export const ProductPriceTd = props => (
   * @prop {*} productProperties
 */
 export const ProductItemDetailsTd = props => (
-  <td>
+  <AdvancedDataTableBodyTh>
     <MediaObject
       figureLeft={
         <ProductImage
@@ -888,7 +888,12 @@ export const ProductItemDetailsTd = props => (
       />
       <ul>
         {_.times(props.productProperties.length, i => (
-          <li key={i}>
+          <li
+            key={i}
+            className="slds-truncate"
+            title={`${props.productProperties[i].label}: ${props
+              .productProperties[i].value}`}
+          >
             {props.productProperties[i].label}:{' '}
             <strong>{props.productProperties[i].value}</strong>
           </li>
@@ -896,7 +901,7 @@ export const ProductItemDetailsTd = props => (
       </ul>
       <p className="slds-text-color_success">{props.labelInventory}</p>
     </MediaObject>
-  </td>
+  </AdvancedDataTableBodyTh>
 );
 
 /**
@@ -908,7 +913,7 @@ export const ProductItemDetailsTd = props => (
   * @prop {integer} quantity
 */
 export const ProductQuantityTd = props => (
-  <td>
+  <AdvancedDataTableTd>
     <FormElement>
       <FormElementLabel className="slds-assistive-text" id={props.inputId}>
         {props.labelText}
@@ -922,7 +927,7 @@ export const ProductQuantityTd = props => (
         />
       </FormElementControl>
     </FormElement>
-  </td>
+  </AdvancedDataTableTd>
 );
 
 /**

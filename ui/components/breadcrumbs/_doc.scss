@@ -7,6 +7,10 @@
  * utility. When you add the `.slds-breadcrumb` class, the separators are
  * automatically generated.
  *
+ * **Overflow Menu Variant**
+ *
+ * The overflow menu breadcrumbs variant is a composition of the overflow menu with actions example of the menus component and breadcrumbs component. To implement this, include the overflow menu as the first `<li>` in the breadcrumb component. In order to vertically align all of the breadcrumb items to the center, add the `.slds-grid_vertical-align-center` class to the `<ol>`.
+ *
  * #### Accessibility
  *
  * Place the breadcrumb in a `nav` element with `role="navigation"`.

@@ -34,7 +34,7 @@ let BreadcrumbMenu = props => (
 );
 
 export const Context = props => (
-  <div className="demo-only" style={{ height: '300px' }}>
+  <div className="demo-only" style={{ height: '200px' }}>
     {props.children}
   </div>
 );
@@ -77,20 +77,6 @@ export let examples = [
   {
     id: 'overflow-breadcrumbs',
     label: 'Breadcrumbs with Overflow Menu',
-    element: (
-      <div style={{ height: '250px' }}>
-        <BreadCrumbs listClassNames="slds-grid_vertical-align-center">
-          <Crumb hasMenu>
-            <BreadcrumbMenu />
-          </Crumb>
-          <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-            Parent Entity
-          </Crumb>
-          <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-            Parent Record Name
-          </Crumb>
-        </BreadCrumbs>
-      </div>
-    )
+    element: <BreadcrumbsWithOverflow />
   }
 ];

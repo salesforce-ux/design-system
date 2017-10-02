@@ -143,7 +143,8 @@ export let examples = [
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
-              Card Body (custom goes in here)
+              This is a card inside an `.slds-tabs_card` to show how styling is
+              removed when cards are nested inside.
             </CardBody>
             <CardFooter>Card Footer</CardFooter>
           </Card>
@@ -152,7 +153,28 @@ export let examples = [
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
-              Card Body (custom goes in here)
+              This is a card inside an `.slds-tabs_card` to show how styling is
+              removed when cards are nested inside.
+            </CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card className="slds-card_boundary">
+            <CardHeader symbol="contact" actions>
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              This is a card inside an `.slds-tabs_card` to illustrate how
+              `.slds-card_boundary` adds a rounded border when desired.
+            </CardBody>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+          <Card className="slds-card_boundary">
+            <CardHeader symbol="contact" actions>
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              This is a card inside an `.slds-tabs_card` to illustrate how
+              `.slds-card_boundary` adds a rounded border when desired.
             </CardBody>
             <CardFooter>Card Footer</CardFooter>
           </Card>

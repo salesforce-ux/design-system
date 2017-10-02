@@ -17,11 +17,12 @@ const FILENAME = 'vnu_report.json';
 const IGNORE = [
   /(.*)role=gridcell(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
   /(.*)listbox(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
-  /trees_grid(.*)tr(.*)missing one or more/ // "Element “tr“ is missing one or more of the following attributes"
+  /trees_grid(.*)tr(.*)missing one or more/, // "Element “tr“ is missing one or more of the following attributes"
+  /treegrid(.*)tr(.*)missing one or more/ // Has comp name in the rule and two tests
 ];
 
 const lint = function(dir, opt, cb) {
-  let output;
+  let output = '';
   let vnu = 'java -jar ' + jar;
 
   const options = _.assign(
@@ -85,7 +86,8 @@ const createVnuReport = stream => {
       .split('\n')
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
       .join('\n');
-    if (vnuOutput && !vnuOutput.match(/^undefined/)) {
+
+    if (vnuOutput) {
       console.log('-----VNU ERROR----');
       console.log(vnuOutput);
       throw new Error('Html Failure (Vnu)');

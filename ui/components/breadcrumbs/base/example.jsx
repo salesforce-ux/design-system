@@ -34,7 +34,7 @@ let BreadcrumbMenu = props => (
 );
 
 export const Context = props => (
-  <div className="demo-only" style={{ height: '200px' }}>
+  <div className="demo-only" style={{ height: '150px' }}>
     {props.children}
   </div>
 );

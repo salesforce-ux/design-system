@@ -36,7 +36,11 @@ let run = (script, done) => {
   command.on('error', callback);
 };
 
-const tests = [{ test: 'test-mocha' }, { test: 'test-jest' }];
+const tests = [
+  { test: 'test-mocha' },
+  { test: 'test:unit' },
+  { test: 'test:integration' }
+];
 
 // HACK: The order of these tests is directly related
 // to "formatTestOut" in scripts/helpers/publish.js

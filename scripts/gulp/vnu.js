@@ -18,7 +18,7 @@ const IGNORE = [
   /(.*)role=gridcell(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
   /(.*)listbox(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
   /trees_grid(.*)tr(.*)missing one or more/, // "Element “tr“ is missing one or more of the following attributes"
-  /treegrid(.*)tr(.*)missing one or more/ // Has comp name in the rule and two tests
+  /treegrid(.*)tr(.*)missing one or more/i // Has comp name in the rule and two tests
 ];
 
 const lint = function(dir, opt, cb) {

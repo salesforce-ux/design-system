@@ -76,6 +76,7 @@ export let MenuList = props => (
   <ul
     className={classNames('slds-dropdown__list', props.className)}
     role="menu"
+    aria-label={props.ariaLabel}
   >
     {props.children}
   </ul>

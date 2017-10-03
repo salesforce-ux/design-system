@@ -1,0 +1,66 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name submenu
+ * @summary
+ * @selector .slds-has-submenu
+ * @restrict .slds-dropdown__item
+ * @variant
+ */
+.slds-has-submenu {
+  position: relative;
+
+  /**
+   * @summary
+   * @selector .slds-dropdown_submenu
+   * @restrict .slds-has-submenu div
+   */
+  .slds-dropdown_submenu {
+    top: 0;
+    transform: none;
+  }
+
+  /**
+   * @summary Open submenu to the left of the parent menu item
+   * @selector .slds-dropdown_submenu-left
+   * @restrict .slds-dropdown_submenu
+   */
+  .slds-dropdown_submenu-left {
+    left: auto;
+    right: 100%;
+    margin-right: $spacing-xx-small;
+  }
+
+  /**
+   * @summary Open submenu to the right of the parent menu item
+   * @selector .slds-dropdown_submenu-right
+   * @restrict .slds-dropdown_submenu
+   */
+  .slds-dropdown_submenu-right {
+    left: 100%;
+    margin-left: $spacing-xx-small;
+  }
+
+  /**
+   * @summary Open submenu along the bottom of the parent menu item
+   * @selector .slds-dropdown_submenu-bottom
+   * @restrict .slds-dropdown_submenu
+   */
+  .slds-dropdown_submenu-bottom {
+    top: auto;
+    bottom: 0;
+    margin-bottom: ($spacing-xx-small * -1);
+  }
+
+  &.slds-dropdown__item {
+
+    .slds-dropdown_submenu {
+      display: none;
+    }
+  }
+
+  [role="menuitem"][aria-expanded="true"] + .slds-dropdown_submenu {
+    display: block;
+  }
+}

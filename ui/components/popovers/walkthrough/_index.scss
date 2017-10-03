@@ -14,10 +14,19 @@
 .slds-popover_walkthrough,
 .slds-popover--walkthrough {
   @include inverse-text($support: ('borders', 'text-utilities', 'icons'));
-  background: $color-background-inverse;
+  background: $popover-walkthrough-color-background;
+  border-color: $popover-walkthrough-color-background;
+
+  a {
+    text-decoration: underline;
+  }
 
   .slds-popover__header {
-    background: $color-background-alt-inverse;
+    background-color: $popover-walkthrough-header-color-background;
+    background-image:  url($popover-walkthrough-header-image);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
     border-color: inherit;
     padding: $spacing-small $spacing-medium;
   }
@@ -35,6 +44,27 @@
     margin-top: $spacing-x-small;
     margin-right: $spacing-x-small;
   }
+
+  .slds-text-title {
+    color: $color-text-inverse;
+  }
+
+  &.slds-nubbin_top,
+  &.slds-nubbin--top,
+  &.slds-nubbin_top-left,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
+  &.slds-nubbin--top-right,
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top {
+
+    &:before {
+      background-color: $popover-walkthrough-header-color-background;
+    }
+
+  }
 }
 
 /**
@@ -44,8 +74,24 @@
  * @restrict .slds-popover_walkthrough
  * @modifier
  */
-.slds-popover_walkthrough-alt {
-  border-color: $color-border-brand-dark;
-  background: $color-brand-dark;
+.slds-popover_walkthrough-alt,
+.slds-popover_feature {
+  border-color: $popover-walkthrough-color-background-alt;
+  background-color: $popover-walkthrough-color-background-alt;
+  background-image:  url($popover-walkthrough-image);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
   color: $color-text-inverse;
+
+  &.slds-nubbin_bottom,
+  &.slds-nubbin--bottom,
+  &.slds-nubbin_bottom-left,
+  &.slds-nubbin--bottom-left,
+  &.slds-nubbin_bottom-right,
+  &.slds-nubbin--bottom-right {
+    &:before {
+      background-color: $popover-walkthrough-cloud-color-background;
+    }
+  }
 }

@@ -97,3 +97,15 @@ props:
     value: '{!PALETTE_GRAY_2}'
   TABLE_COLOR_BACKGROUND_HEADER_HOVER:
     value: '{!PALETTE_GRAY_1}'
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND:
+    value: '#032e61'
+  POPOVER_WALKTHROUGH_HEADER_COLOR_BACKGROUND:
+    value: '#164A85'
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND_ALT:
+    value: '#164A85'
+  POPOVER_WALKTHROUGH_IMAGE:
+    value: '/assets/images/popovers/popover-body.png'
+    type: string
+  POPOVER_WALKTHROUGH_HEADER_IMAGE:
+    value: '/assets/images/popovers/popover-header.png'
+    type: string

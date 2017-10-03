@@ -1,0 +1,16 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Feature components are use to describe notable features
+ *
+ * @summary Initializes a feature non-modal dialog
+ *
+ * @name feature
+ * @selector .slds-popover_feature
+ * @restrict .slds-popover
+ * @variant
+ */
+
+// Styles for feature popover are in walkthrough variant due to similar styling with action popovers.
+// When styling changes, move .slds-popover_feature selector into this file

@@ -14,6 +14,7 @@ const elements = [
   'li',
   'code',
   'blockquote',
+  'pre',
   'tr',
   'td',
   'th',

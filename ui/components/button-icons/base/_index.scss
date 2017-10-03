@@ -362,5 +362,13 @@
     .slds-button__icon--inverse-hint {
       fill: $color-text-icon-inverse-hint-hover;
     }
+
+    .slds-button:disabled {
+
+      .slds-button__icon_hint,
+      .slds-button__icon--hint {
+        fill: currentColor;
+      }
+    }
   }
 }

@@ -284,31 +284,158 @@ export let examples = [
     )
   },
   {
+    id: 'nested-cards',
+    label: 'Nested cards',
+    element: (
+      <Card>
+        <CardHeader actions symbol="contact">
+          <span className="slds-text-heading_small">Outer Card Header</span>
+        </CardHeader>
+        <CardBody className="slds-card__body_inner">
+          <Card>
+            <CardHeader actions symbol="contact">
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              <p>
+                This is a card inside an `.slds-card` to show how styling is
+                removed when cards are nested inside each other.
+              </p>
+            </CardBody>
+            <CardFooter>
+              <a href="javascript:void(0);">
+                View All{' '}
+                <span className="slds-assistive-text">entity type</span>
+              </a>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader actions symbol="contact">
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              <p>
+                This is a card inside an `.slds-card` to show how styling is
+                removed when cards are nested inside each other.
+              </p>
+            </CardBody>
+            <CardFooter>
+              <a href="javascript:void(0);">
+                View All{' '}
+                <span className="slds-assistive-text">entity type</span>
+              </a>
+            </CardFooter>
+          </Card>
+          <Card className="slds-card_boundary">
+            <CardHeader actions symbol="contact">
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              <p>
+                This is a card inside an `.slds-card` to illustrate how
+                `.slds-card_boundary` adds a rounded border when desired.
+              </p>
+            </CardBody>
+            <CardFooter>
+              <a href="javascript:void(0);">
+                View All{' '}
+                <span className="slds-assistive-text">entity type</span>
+              </a>
+            </CardFooter>
+          </Card>
+          <Card className="slds-card_boundary">
+            <CardHeader actions symbol="contact">
+              <span className="slds-text-heading_small">Card Header</span>
+            </CardHeader>
+            <CardBody className="slds-card__body_inner">
+              <p>
+                This is a card inside an `.slds-card` to illustrate how
+                `.slds-card_boundary` adds a rounded border when desired.
+              </p>
+            </CardBody>
+            <CardFooter>
+              <a href="javascript:void(0);">
+                View All{' '}
+                <span className="slds-assistive-text">entity type</span>
+              </a>
+            </CardFooter>
+          </Card>
+        </CardBody>
+        <CardFooter>
+          <a href="javascript:void(0);">
+            View All <span className="slds-assistive-text">entity type</span>
+          </a>
+        </CardFooter>
+      </Card>
+    )
+  },
+  {
     id: 'card-wrapper',
     label: 'Wrapped cards',
     element: (
       <div className="slds-card-wrapper">
+        <header>
+          <h2 className="slds-text-heading_medium">
+            Outer card wrapper header
+          </h2>
+        </header>
         <Card>
           <CardHeader actions symbol="contact">
-            <span className="slds-text-heading_small">Contacts (3)</span>
+            <span className="slds-text-heading_small">Card Header</span>
           </CardHeader>
-          <CardBody>
-            <Card>
-              <CardBody>
-                <p>
-                  This is a card inside a card wrapper to show the lack of
-                  styling when nested.
-                </p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody>
-                <p>
-                  This is a card inside a card wrapper to show the lack of
-                  styling when nested.
-                </p>
-              </CardBody>
-            </Card>
+          <CardBody className="slds-card__body_inner">
+            <p>
+              This is a card inside an `.slds-card-wrapper` to show how styling
+              is removed when cards are nested inside.
+            </p>
+          </CardBody>
+          <CardFooter>
+            <a href="javascript:void(0);">
+              View All <span className="slds-assistive-text">entity type</span>
+            </a>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader actions symbol="contact">
+            <span className="slds-text-heading_small">Card Header</span>
+          </CardHeader>
+          <CardBody className="slds-card__body_inner">
+            <p>
+              This is a card inside an `.slds-card-wrapper` to show how styling
+              is removed when cards are nested inside.
+            </p>
+          </CardBody>
+          <CardFooter>
+            <a href="javascript:void(0);">
+              View All <span className="slds-assistive-text">entity type</span>
+            </a>
+          </CardFooter>
+        </Card>
+        <Card className="slds-card_boundary">
+          <CardHeader actions symbol="contact">
+            <span className="slds-text-heading_small">Card Header</span>
+          </CardHeader>
+          <CardBody className="slds-card__body_inner">
+            <p>
+              This is a card inside an `.slds-card-wrapper` to illustrate how
+              `.slds-card_boundary` adds a rounded border when desired.
+            </p>
+          </CardBody>
+          <CardFooter>
+            <a href="javascript:void(0);">
+              View All <span className="slds-assistive-text">entity type</span>
+            </a>
+          </CardFooter>
+        </Card>
+        <Card className="slds-card_boundary">
+          <CardHeader actions symbol="contact">
+            <span className="slds-text-heading_small">Card Header</span>
+          </CardHeader>
+          <CardBody className="slds-card__body_inner">
+            <p>
+              This is a card inside an `.slds-card-wrapper` to illustrate how
+              `.slds-card_boundary` adds a rounded border when desired.
+            </p>
           </CardBody>
           <CardFooter>
             <a href="javascript:void(0);">

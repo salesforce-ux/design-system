@@ -50,6 +50,7 @@
     "cssstats": "3.0.0",
     "data.either": "1.5.0",
     "del": "2.2.2",
+    "enzyme": "2.9.1",
     "eslint": "3.19.0",
     "eslint-config-prettier": "2.3.0",
     "eslint-config-standard": "10.2.0",

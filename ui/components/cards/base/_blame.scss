@@ -80,15 +80,18 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
+// Restore cards inside .slds-tabs_card as needed
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card,
+.slds-card-wrapper {
 
-  // Restore cards inside .slds-tabs_card when needed
   .slds-card_boundary {
     border: $border-width-thin solid $card-color-border;
     border-radius: $border-radius-medium;
 
     .slds-card__header {
-      padding-left: $card-header-padding;
-      padding-right: $card-header-padding;
+      padding: $card-header-padding;
     }
 
     .slds-card__body_inner,
@@ -97,8 +100,7 @@
     }
 
     .slds-card__footer {
-      padding-left: $card-footer-padding;
-      padding-right: $card-footer-padding;
+      padding: $card-footer-padding;
     }
   }
 }

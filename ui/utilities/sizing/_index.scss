@@ -57,6 +57,12 @@ $_sizes: (
 
   @media (min-width: #{pem($breakpoint)}) {
 
+    // Fixes issue when sizing is used with slds-col
+    [class*="slds-#{$size}-size_"],
+    [class*="slds-#{$size}-size--"] {
+      flex: none;
+    }
+
     // Generate responsive absolute (rem) width names,
     // e.g. <div class="slds-medium-size--x-small">
     @each $name, $width in $_sizes {
@@ -64,8 +70,6 @@ $_sizes: (
       .slds-#{$size}-size_#{$name},
       .slds-#{$size}-size--#{$name} {
         width: $width;
-        flex: 0 0 $width;
-        max-width: $width; // IE fix
       }
     }
 
@@ -86,6 +90,12 @@ $_sizes: (
 
   @media (max-width: #{pem($breakpoint)}) {
 
+    // Fixes issue when sizing is used with slds-col
+    [class*="slds-max-#{$size}-size_"],
+    [class*="slds-max-#{$size}-size--"] {
+      flex: none;
+    }
+
     // Generate responsive absolute (rem) width names (up to size),
     // e.g. <div class="slds-max-medium-size--x-small">
     @each $name, $width in $_sizes {
@@ -93,8 +103,6 @@ $_sizes: (
       .slds-max-#{$size}-size_#{$name},
       .slds-max-#{$size}-size--#{$name} {
         width: $width;
-        flex: 0 0 $width;
-        max-width: $width; // IE fix
       }
     }
 
@@ -112,4 +120,10 @@ $_sizes: (
       }
     }
   }
+}
+
+// Fixes issue when sizing is used with slds-col
+[class*="slds-size_"],
+[class*="slds-size--"] {
+  flex: none;
 }

@@ -23,10 +23,14 @@ let run = (script, done) => {
     }
   };
 
-  let command = spawn('npm', ['run', script.test, '--', '--color'], {
-    cwd: paths.root,
-    stdio: ['inherit', 'pipe', 'inherit']
-  });
+  let command = spawn(
+    'npm',
+    ['run', script.test, '--', '--color', '--verbose'],
+    {
+      cwd: paths.root,
+      stdio: ['inherit', 'pipe', 'inherit']
+    }
+  );
   command.stdout.on('data', d => {
     let str = d.toString();
     logs += stripAnsi(str);

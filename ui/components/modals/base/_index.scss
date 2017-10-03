@@ -245,6 +245,25 @@
 /**
  * Widens the modal to take more horizontal space
  *
+ * @selector .slds-modal_medium
+ * @restrict .slds-modal
+ * @modifier
+ * @group size
+ */
+.slds-modal_medium {
+
+  .slds-modal__container {
+    @include mq-medium-min {
+      width: 90%;
+      max-width: 75rem;
+      min-width: 40rem; // TODO: Tokenize
+    }
+  }
+}
+
+/**
+ * Widens the modal to take more horizontal space
+ *
  * @selector .slds-modal_large
  * @restrict .slds-modal
  * @modifier
@@ -252,8 +271,6 @@
  */
 .slds-modal_large .slds-modal__container,
 .slds-modal--large .slds-modal__container {
-
-  // TODO: We'll want to readdress this to do the .99 thing
   @include mq-medium-min {
     width: 90%;
     max-width: none;

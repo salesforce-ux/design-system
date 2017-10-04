@@ -15,7 +15,7 @@ const jar = require('vnu-jar/vnu-jar');
 const FILEPATH = '.reports/';
 const FILENAME = 'vnu_report.json';
 const IGNORE = [
-  /(.*)_JAVA_OPTIONS_(.*)/i, // "Travis outputs this to make this interesting"
+  /(.*)_JAVA_OPTIONS(.*)/i, // "Travis outputs this to make this interesting"
   /(.*)role=gridcell(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
   /(.*)listbox(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
   /trees_grid(.*)tr(.*)missing one or more/, // "Element “tr“ is missing one or more of the following attributes"

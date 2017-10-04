@@ -25,6 +25,7 @@ gulp.task('a11y', ['generate:wrappedexamples'], done => {
         bypass: { enabled: false }
       }
     },
+    exclude: '#GoogleMapID',
     urls: urlsToTest,
     showOnlyViolations: true
   };

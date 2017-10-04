@@ -1,0 +1,104 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Base variant
+ * @name base
+ * @selector .slds-map
+ * @restrict div
+ * @variant
+ */
+.slds-map {
+  position: relative;
+  width: 100%;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/**
+ * @summary Modifier that informs the parent grid container the coordinates panel is active
+ * @selector .slds-has-coordinates
+ * @restrict .slds-map div
+ */
+.slds-has-coordinates {
+  max-height: 660px;
+
+  .slds-map:before {
+    padding-top: 75%;
+  }
+}
+
+/**
+ * @summary Element inside the coordinates panel that contains the title of the panel
+ * @selector .slds-coordinates
+ * @restrict .slds-has-coordinates div
+ */
+.slds-coordinates {
+  overflow: auto;
+}
+
+/**
+ * @summary Element inside the coordinates panel that contains the title of the panel
+ * @selector .slds-coordinates__header
+ * @restrict .slds-coordinates div
+ */
+.slds-coordinates__header {
+  padding: $spacing-medium;
+}
+
+/**
+ * @summary Title inside the coordinates panel
+ * @selector .slds-coordinates__title
+ * @restrict .slds-coordinates h2
+ */
+.slds-coordinates__title {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+/**
+ * @summary Actionable items inside of the coordinates list
+ * @selector .slds-coordinates__item-action
+ * @restrict .slds-coordinates li a
+ */
+.slds-coordinates__item-action {
+  padding: $spacing-x-small $spacing-medium;
+  width: 100%;
+
+  .slds-text-link {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-row-hover;
+    outline: 0;
+
+    .slds-text-link {
+      text-decoration: underline;
+    }
+  }
+
+  &:active {
+    background-color: $color-background-row-active;
+  }
+
+  &[aria-pressed="true"] {
+    background-color: $color-background-row-selected;
+  }
+}

@@ -9,7 +9,7 @@ import classNames from 'classnames';
 
 const headingUniqueId = 'dialog-heading-id-01';
 
-let Header = props => (
+export let Header = props => (
   <header className="slds-popover__header slds-p-vertical_medium">
     <h2 id={headingUniqueId} className="slds-text-heading_medium">
       {props.title}
@@ -17,11 +17,11 @@ let Header = props => (
   </header>
 );
 
-let Footer = props => (
+export let Footer = props => (
   <div className="slds-grid slds-grid_vertical-align-center">
-    <span className="slds-text-title">Step 2 of 4</span>
+    {props.steps ? <span className="slds-text-title">Step 2 of 4</span> : null}
     {props.skipButton ? (
-      <button className="slds-button slds-button_brand slds-col_bump-left">
+      <button className="slds-button slds-button_inverse slds-col_bump-left">
         Skip
       </button>
     ) : null}
@@ -33,6 +33,11 @@ let Footer = props => (
     {props.nextButton ? (
       <button className="slds-button slds-button_brand slds-col_bump-left">
         Next
+      </button>
+    ) : null}
+    {props.learnMoreButton ? (
+      <button className="slds-button slds-button_neutral slds-col_bump-left">
+        Learn More
       </button>
     ) : null}
   </div>
@@ -47,7 +52,7 @@ export default (
     className="slds-popover_walkthrough slds-nubbin_left"
     headingId={headingUniqueId}
     header={<Header title="Manage your channels" />}
-    footer={<Footer nextButton />}
+    footer={<Footer steps nextButton />}
     closeButton
     inverse
   >
@@ -67,7 +72,7 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer setupButton nextButton />}
+        footer={<Footer steps setupButton nextButton />}
         closeButton
         inverse
       >
@@ -86,7 +91,7 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton setupButton />}
+        footer={<Footer steps skipButton setupButton />}
         closeButton
         inverse
       >
@@ -102,10 +107,10 @@ export let examples = [
     label: 'Micro Setup - In Page',
     element: (
       <Popover
-        className="slds-popover_walkthrough slds-nubbin_left"
+        className="slds-popover_walkthrough slds-nubbin_bottom"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton />}
+        footer={<Footer steps skipButton />}
         closeButton
         inverse
       >
@@ -124,7 +129,7 @@ export let examples = [
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Manage your channels" />}
-        footer={<Footer skipButton nextButton />}
+        footer={<Footer steps skipButton nextButton />}
         closeButton
         inverse
       >
@@ -156,39 +161,8 @@ export let examples = [
     label: 'Action Popover',
     element: (
       <Popover
-        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"
-        title="Action dialog"
-        closeButton
-        inverse
-      >
-        <div className="slds-media slds-media_center">
-          <div className="slds-media__figure">
-            <span
-              className="slds-icon_container"
-              title="description of icon when needed"
-            >
-              <SvgIcon
-                className="slds-icon slds-icon_small slds-icon-text-default"
-                sprite="utility"
-                symbol="touch_action"
-              />
-              <span className="slds-assistive-text">Description of icon</span>
-            </span>
-          </div>
-          <div className="slds-media__body">
-            <p>Text that describes the action</p>
-          </div>
-        </div>
-      </Popover>
-    )
-  },
-  {
-    id: 'action-popover-heading',
-    label: 'Action Popover - With Heading',
-    element: (
-      <Popover
-        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_top-left"
-        headingId="dialog-heading-id-01"
+        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
+        headingId={headingUniqueId}
         closeButton
         inverse
       >
@@ -207,10 +181,45 @@ export let examples = [
             </span>
           </div>
           <div className="slds-media__body">
-            <h2 id="dialog-heading-id-01" className="slds-text-heading_small">
+            <h2 id={headingUniqueId} className="slds-text-heading_small">
+              Text that describes the action
+            </h2>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
+          </div>
+        </div>
+      </Popover>
+    )
+  },
+  {
+    id: 'action-popover-heading',
+    label: 'Action Popover - With Heading',
+    element: (
+      <Popover
+        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
+        headingId={headingUniqueId}
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__figure">
+            <span
+              className="slds-icon_container"
+              title="description of icon when needed"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="utility"
+                symbol="touch_action"
+              />
+              <span className="slds-assistive-text">Description of icon</span>
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <h2 id={headingUniqueId} className="slds-text-heading_small">
               Title
             </h2>
             <p>Text that describes the action</p>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
           </div>
         </div>
       </Popover>

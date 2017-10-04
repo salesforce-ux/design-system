@@ -23,13 +23,14 @@ let run = (script, done) => {
     }
   };
 
-  const args = ['run', script.test, '--', '--color'].concat(
+  const args = ['run', script.test, '--', '--color', '--verbose'].concat(
     process.argv.slice(2)
   );
   let command = spawn('npm', args, {
     cwd: paths.root,
     stdio: ['inherit', 'pipe', 'inherit']
   });
+
   command.stdout.on('data', d => {
     let str = d.toString();
     logs += stripAnsi(str);

@@ -1,5 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
 import { Magnet } from './';
+import Example from '../../../shared/components/Example';
 
 <div className="lead">
 Layout utility classes will help you to achieve layouts found within the Salesforce Platform.
@@ -17,6 +18,7 @@ The components/utilities that provide a card-like look are the following:
 
 If you need a card-like component to appear flush to the card-like component below, you can add the classes  `slds-has-bottom-magnet` and `slds-has-top-magnet`.
 
+<Example title="layout card">
 <div className="slds-grid slds-grid_pull-padded slds-wrap">
   <div className="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_medium">
     <strong>Before</strong>
@@ -33,5 +35,6 @@ If you need a card-like component to appear flush to the card-like component bel
     </CodeView>
   </div>
 </div>
+</Example>
 
 In the after example, you'll notice the component's top and bottom side are flattened out and appear connected.

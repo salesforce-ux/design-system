@@ -23,14 +23,14 @@ let run = (script, done) => {
     }
   };
 
-  let command = spawn(
-    'npm',
-    ['run', script.test, '--', '--color', '--verbose'],
-    {
-      cwd: paths.root,
-      stdio: ['inherit', 'pipe', 'inherit']
-    }
+  const args = ['run', script.test, '--', '--color', '--verbose'].concat(
+    process.argv.slice(2)
   );
+  let command = spawn('npm', args, {
+    cwd: paths.root,
+    stdio: ['inherit', 'pipe', 'inherit']
+  });
+
   command.stdout.on('data', d => {
     let str = d.toString();
     logs += stripAnsi(str);
@@ -40,7 +40,7 @@ let run = (script, done) => {
   command.on('error', callback);
 };
 
-const tests = [{ test: 'test-mocha' }, { test: 'test-jest' }];
+const tests = [{ test: 'test:unit' }, { test: 'test:integration' }];
 
 // HACK: The order of these tests is directly related
 // to "formatTestOut" in scripts/helpers/publish.js

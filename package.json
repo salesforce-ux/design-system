@@ -182,9 +182,10 @@
     "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
     "test": "NODE_ENV=test; babel-node scripts/npm/test.js",
-    "test-mocha": "NODE_ENV=test; mocha --compilers js:babel-register --reporter min 'test/unit/**/*.js'",
-    "test-jest": "NODE_ENV=test; jest",
-    "test-vrt": "NODE_ENV=test node jest.vrt.watcher.js",
+    "test:unit": "NODE_ENV=test node jest.vrt.watcher.js",
+    "test:compile-integration": "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
+    "test:integration": "NODE_ENV=test; npm run test:compile-integration && jest --config={} test/docs/docs.spec.js",
+    "test-vrt": "npm run build && npm run test:unit && npm run test:integration",
     "travis": "node scripts/npm/build-travis.js",
     "precommit": "lint-staged",
     "writeUI": "babel-node scripts/npm/write-ui.js"

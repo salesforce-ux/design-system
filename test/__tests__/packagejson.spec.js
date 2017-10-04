@@ -14,8 +14,8 @@ describe('package.json', () => {
 
   it('should reference dependencies with strict version numbers', () => {
     Object.keys(dependencies)
-      .filter((name) => trustedDependencies.indexOf(name) === -1)
-      .map((name) => {
+      .filter(name => trustedDependencies.indexOf(name) === -1)
+      .map(name => {
         const version = dependencies[name];
         const message = `Trust this dependency? Consider adding '${name}' to the list of trustedDependencies`;
 

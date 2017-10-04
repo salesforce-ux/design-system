@@ -49,12 +49,12 @@ const getRef = () =>
     .chain(readFile)
     .map(JSON.parse);
 
-Task.of(refContents => snapContents =>
+Task.of(snapContents => refContents =>
   Object.keys(snapContents).map(
     k =>
       refContents[k]
         ? Object.assign({ file: k }, compare(refContents[k], snapContents[k]))
-        : { passed: false } // if it doesn't exist, fail it so we can lint
+        : { file: k, passed: false } // if it doesn't exist, fail it so we can lint
   )
 )
   .ap(getSnap())

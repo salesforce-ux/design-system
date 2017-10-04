@@ -71,10 +71,16 @@ it('renders overflowed subtab', () =>
           />
           <SubtabOverflow isOpen />
         </SubtabList>
-        <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+        <SubtabPanel
+          tabId="subtab-tabitem-01"
+          id="subtab-tabpanel-01"
+          isVisible
+        >
           Item One Content
         </SubtabPanel>
-        <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
+          Item Two Content
+        </SubtabPanel>
       </Subtabs>
     </div>
   ));
@@ -96,10 +102,16 @@ it('renders overflowed subtab with notification', () =>
           />
           <SubtabOverflow isOpen itemUnread />
         </SubtabList>
-        <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+        <SubtabPanel
+          tabId="subtab-tabitem-01"
+          id="subtab-tabpanel-01"
+          isVisible
+        >
           Item One Content
         </SubtabPanel>
-        <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
+          Item Two Content
+        </SubtabPanel>
       </Subtabs>
     </div>
   ));
@@ -121,10 +133,16 @@ it('renders dirty overflowed subtab', () =>
           />
           <SubtabOverflow isOpen itemUnsaved />
         </SubtabList>
-        <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+        <SubtabPanel
+          tabId="subtab-tabitem-01"
+          id="subtab-tabpanel-01"
+          isVisible
+        >
           Item One Content
         </SubtabPanel>
-        <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
+          Item Two Content
+        </SubtabPanel>
       </Subtabs>
     </div>
   ));
@@ -146,10 +164,16 @@ it('renders dirty overflowed subtab with notification', () =>
           />
           <SubtabOverflow isOpen itemUnsaved itemUnread />
         </SubtabList>
-        <SubtabPanel tabId="subtab-tabitem-01" isVisible>
+        <SubtabPanel
+          tabId="subtab-tabitem-01"
+          id="subtab-tabpanel-01"
+          isVisible
+        >
           Item One Content
         </SubtabPanel>
-        <SubtabPanel tabId="subtab-tabitem-02">Item Two Content</SubtabPanel>
+        <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
+          Item Two Content
+        </SubtabPanel>
       </Subtabs>
     </div>
   ));

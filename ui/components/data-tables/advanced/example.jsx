@@ -261,14 +261,47 @@ export let states = [
 
 export let examples = [
   {
-    id: 'header-and-cell-icon',
-    label: 'Header and Cell Icon',
+    id: 'header-icon-menu-button',
+    label: 'Header Icon and Menu Button',
     element: (
       <Table>
         <Thead
+          actionableMode
           columns={columns}
           columnsWithEinstein={['Confidence']}
           hasMenus
+        />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'header-menu-button',
+    label: 'Header Menu Button',
+    element: (
+      <Table>
+        <Thead actionableMode columns={columns} hasMenus />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'cell-icon',
+    label: 'Cell Icon',
+    element: (
+      <Table>
+        <Thead
+          actionableMode
+          className="slds-has-button-menu"
+          columns={columns}
         />
         <tbody>
           {_.times(rows.length, i => (

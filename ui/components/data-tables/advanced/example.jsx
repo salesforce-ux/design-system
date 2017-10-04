@@ -16,7 +16,7 @@ import {
 // Partial(s)
 /// ////////////////////////////////////////
 
-const columns = [
+export const columns = [
   'Name',
   'Account Name',
   'Close Date',
@@ -26,7 +26,7 @@ const columns = [
   'Contact'
 ];
 
-const rows = [
+export const rows = [
   {
     recordName: 'Acme - 1,200 Widgets',
     accountName: 'Acme',

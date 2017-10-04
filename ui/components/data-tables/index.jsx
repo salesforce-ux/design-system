@@ -90,7 +90,8 @@ export const Thead = props => {
                 i === 0 && props.sortDirection === 'ascending',
               'slds-is-sorted_desc':
                 i === 0 && props.sortDirection === 'descending',
-              'slds-has-focus': i === 0 && props.hasFocus
+              'slds-has-focus': i === 0 && props.hasFocus,
+              'slds-has-button-menu': props.hasMenus
             })}
             columnName={props.columns[i]}
             key={i}
@@ -110,42 +111,6 @@ export const Thead = props => {
     </thead>
   );
 };
-
-/**
- * @name ThAction - Common th cell contents for use in advanced data grids that have sorting or interaction
- * @param {*} props
- * @prop {array} children
- * @prop {integer} tabIndex
- */
-export let ThAction = props => (
-  <div className="slds-th__action">
-    <a
-      className="slds-text-link_reset slds-truncate slds-has-flexi-truncate"
-      href="javascript:void(0);"
-      role="button"
-      tabIndex={props.tabIndex}
-    >
-      {props.children}
-    </a>
-    <span
-      className="slds-assistive-text"
-      aria-live="assertive"
-      aria-atomic="true"
-    >
-      Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
-    </span>
-    {props.hasMenus ? (
-      <ButtonIcon
-        assistiveText={`Show ${props.columnName} column actions`}
-        className="slds-th__action_button slds-button_icon-x-small"
-        iconClassName="slds-button__icon_hint slds-button__icon_small"
-        symbol="chevrondown"
-        tabIndex={props.tabIndex}
-        title={`Show ${props.columnName} column actions`}
-      />
-    ) : null}
-  </div>
-);
 
 /**
  * @name Th - Common th cell for use in advanced data grids that have sorting or interaction
@@ -178,7 +143,12 @@ export let Th = props => {
       )}
       scope="col"
     >
-      <ThAction hasMenus={hasMenus} tabIndex={tabIndex} columnName={columnName}>
+      <a
+        className="slds-th__action slds-text-link_reset slds-truncate slds-has-flexi-truncate"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex={props.tabIndex}
+      >
         <span className="slds-assistive-text">Sort by: </span>
 
         {Array.isArray(columnsWithEinstein) &&
@@ -227,7 +197,24 @@ export let Th = props => {
             </div>
           ]
         )}
-      </ThAction>
+      </a>
+      {props.hasMenus ? (
+        <ButtonIcon
+          assistiveText={`Show ${props.columnName} column actions`}
+          className="slds-th__action_button slds-button_icon-x-small"
+          iconClassName="slds-button__icon_hint slds-button__icon_small"
+          symbol="chevrondown"
+          tabIndex={props.tabIndex}
+          title={`Show ${props.columnName} column actions`}
+        />
+      ) : null}
+      <span
+        className="slds-assistive-text"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
+      </span>
       <div className="slds-resizable">
         <input
           aria-label={

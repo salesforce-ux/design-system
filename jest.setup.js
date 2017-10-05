@@ -23,13 +23,13 @@ const beautify = html =>
     indent_inner_html: true
   });
 
-const getMarkupAndStyle = selector => `
+const getMarkupAndStyle = (originalMarkup, selector) => `
   (function() {
     const el = document.querySelector("${selector}")
     const kids = Array.from(el.querySelectorAll('*'))
     const extractCSS = el => getComputedStyle(el).cssText;
     return {
-      html: el.outerHTML,
+      html: \`${originalMarkup}\`,
       style: [extractCSS(el)].concat(kids.map(extractCSS))
     }
   })()
@@ -110,14 +110,11 @@ module.exports = (dirname, port) => {
 
   return {
     matchesMarkupAndStyle: async element => {
-      await page.evaluate(
-        `document.body.innerHTML = \`${ReactDOM.renderToStaticMarkup(
-          element
-        )}\``
-      );
+      const renderedMarkup = ReactDOM.renderToStaticMarkup(element);
+      await page.evaluate(`document.body.innerHTML = \`${renderedMarkup}\``);
       await delay(250);
       const markupAndStyle = await page
-        .evaluate(getMarkupAndStyle('body > *'))
+        .evaluate(getMarkupAndStyle(renderedMarkup, 'body > *'))
         .then(diff => ({ html: beautify(diff.html), style: diff.style }));
       assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
     }

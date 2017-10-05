@@ -23,13 +23,13 @@ const beautify = html =>
     indent_inner_html: true
   });
 
-const getMarkupAndStyle = (originalMarkup, selector) => `
+const getMarkupAndStyle = selector => `
   (function() {
     const el = document.querySelector("${selector}")
     const kids = Array.from(el.querySelectorAll('*'))
     const extractCSS = el => getComputedStyle(el).cssText;
     return {
-      html: \`${originalMarkup}\`,
+      html: el.outerHTML,
       style: [extractCSS(el)].concat(kids.map(extractCSS))
     }
   })()
@@ -114,8 +114,8 @@ module.exports = (dirname, port) => {
       await page.evaluate(`document.body.innerHTML = \`${renderedMarkup}\``);
       await delay(250);
       const markupAndStyle = await page
-        .evaluate(getMarkupAndStyle(renderedMarkup, 'body > *'))
-        .then(diff => ({ html: beautify(diff.html), style: diff.style }));
+        .evaluate(getMarkupAndStyle('body > *'))
+        .then(diff => ({ html: beautify(renderedMarkup), style: diff.style }));
       assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
     }
   };

@@ -266,7 +266,6 @@ export let examples = [
     element: (
       <Table>
         <Thead
-          actionableMode
           columns={columns}
           columnsWithEinstein={['Confidence']}
           hasMenus
@@ -284,7 +283,7 @@ export let examples = [
     label: 'Header Menu Button',
     element: (
       <Table>
-        <Thead actionableMode columns={columns} hasMenus />
+        <Thead columns={columns} hasMenus />
         <tbody>
           {_.times(rows.length, i => (
             <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
@@ -298,11 +297,7 @@ export let examples = [
     label: 'Cell Icon',
     element: (
       <Table>
-        <Thead
-          actionableMode
-          className="slds-has-button-menu"
-          columns={columns}
-        />
+        <Thead className="slds-has-button-menu" columns={columns} />
         <tbody>
           {_.times(rows.length, i => (
             <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasScores />
@@ -319,12 +314,7 @@ export let examples = [
         <Thead columns={productColumns} actionableMode hasNoSelectability />
         <tbody>
           {_.times(productRows.length, i => (
-            <ProductDataTableTr
-              key={i}
-              index={i + 1}
-              {...productRows[i]}
-              actionableMode
-            />
+            <ProductDataTableTr key={i} index={i + 1} {...productRows[i]} />
           ))}
         </tbody>
       </Table>

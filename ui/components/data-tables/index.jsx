@@ -147,7 +147,7 @@ export let Th = props => {
         className="slds-th__action slds-text-link_reset slds-truncate slds-has-flexi-truncate"
         href="javascript:void(0);"
         role="button"
-        tabIndex={props.tabIndex}
+        tabIndex={tabIndex}
       >
         <span className="slds-assistive-text">Sort by: </span>
 

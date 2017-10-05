@@ -37,15 +37,6 @@ const formatStats = stats => ({
   declarationCount: stats.declarations.total
 });
 
-const formatTestCounts = out => {
-  const matches = out.match(/(\d+)\s+(SUCCESS|passing)/gi);
-  if (!matches) return {};
-  return {
-    unitTests: parseInt(matches[0]),
-    integrationTests: parseInt(matches[1])
-  };
-};
-
 const hasError = x =>
   Object.keys(x).some(k => Object.keys(x[k]).includes('error'));
 
@@ -116,11 +107,6 @@ const prepare = done => {
         async.series(
           [
             done => {
-              let counts =
-                fs.readFileSync(`${paths.logs}/test.txt`, 'utf-8') || '';
-              done(null, formatTestCounts(counts));
-            },
-            done => {
               let css = fs.readFileSync(buildPaths.buildDist(CSS_PATH), 'utf8');
               let stats = cssstats(css);
               done(null, formatStats(stats));
@@ -143,9 +129,9 @@ const prepare = done => {
               done(null, { validationFailures: JSON.parse(report).total });
             }
           ],
-          (err, [counts, tests, html, a11y, validations]) => {
+          (err, [counts, html, a11y, validations]) => {
             if (err) return done(err);
-            done(null, _.assign({}, counts, tests, html, a11y, validations));
+            done(null, _.assign({}, counts, html, a11y, validations));
           }
         ),
       // zip

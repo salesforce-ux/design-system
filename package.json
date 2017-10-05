@@ -181,11 +181,8 @@
     "previewer": "babel-node scripts/previewer",
     "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
-    "test": "NODE_ENV=test; babel-node scripts/npm/test.js",
-    "test:unit": "NODE_ENV=test node jest.vrt.watcher.js",
     "test:compile-integration": "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
-    "test:integration": "NODE_ENV=test; npm run test:compile-integration && jest --config={} test/docs/docs.spec.js",
-    "test-vrt": "npm run build && npm run test:unit && npm run test:integration",
+    "test": "node jest.vrt.watcher.js",
     "travis": "node scripts/npm/build-travis.js",
     "precommit": "lint-staged",
     "writeUI": "babel-node scripts/npm/write-ui.js"

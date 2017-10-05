@@ -23,7 +23,7 @@
 
   .slds-popover__header {
     background-color: $popover-walkthrough-header-color-background;
-    background-image:  url($popover-walkthrough-header-image);
+    background-image: url($popover-walkthrough-header-image);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -63,7 +63,6 @@
     &:before {
       background-color: $popover-walkthrough-header-color-background;
     }
-
   }
 }
 
@@ -78,7 +77,7 @@
 .slds-popover_feature {
   border-color: $popover-walkthrough-color-background-alt;
   background-color: $popover-walkthrough-color-background-alt;
-  background-image:  url($popover-walkthrough-image);
+  background-image: url($popover-walkthrough-image);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -90,6 +89,7 @@
   &.slds-nubbin--bottom-left,
   &.slds-nubbin_bottom-right,
   &.slds-nubbin--bottom-right {
+
     &:before {
       background-color: $popover-walkthrough-cloud-color-background;
     }

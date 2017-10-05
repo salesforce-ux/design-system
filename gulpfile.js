@@ -31,10 +31,5 @@ gulp.task('clean', () =>
 );
 
 gulp.task('build', callback => {
-  runSequence(
-    'clean',
-    ['generate:tokens:all', 'generate:examples'],
-    'styles',
-    callback
-  );
+  runSequence('clean', ['generate:tokens:all'], 'styles', callback);
 });

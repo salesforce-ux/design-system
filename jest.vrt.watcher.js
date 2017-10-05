@@ -1,9 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const { spawn, fork } = require('child_process');
+const { execSync, spawn, fork } = require('child_process');
 const path = require('path');
 
+if (!process.env.TRAVIS_COMMIT_MESSAGE) {
+  // skip this since travis did it
+  execSync('npm run build', { stdio: ['inherit', 'inherit', 'inherit'] });
+}
+
+execSync('npm run test:compile-integration', {
+  stdio: ['inherit', 'inherit', 'inherit']
+});
+
+console.log(process.argv);
 const jest = spawn('./node_modules/.bin/jest', process.argv.slice(2), {
   cwd: path.resolve(__dirname),
   stdio: 'inherit'

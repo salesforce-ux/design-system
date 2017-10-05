@@ -144,7 +144,7 @@ export let Th = props => {
       scope="col"
     >
       <a
-        className="slds-th__action slds-text-link_reset slds-truncate slds-has-flexi-truncate"
+        className="slds-th__action slds-text-link_reset slds-truncate"
         href="javascript:void(0);"
         role="button"
         tabIndex={tabIndex}

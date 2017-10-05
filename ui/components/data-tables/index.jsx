@@ -201,7 +201,7 @@ export let Th = props => {
       {props.hasMenus ? (
         <ButtonIcon
           assistiveText={`Show ${props.columnName} column actions`}
-          className="slds-th__action_button slds-button_icon-x-small"
+          className="slds-th__action-button slds-button_icon-x-small"
           iconClassName="slds-button__icon_hint slds-button__icon_small"
           symbol="chevrondown"
           tabIndex={props.tabIndex}

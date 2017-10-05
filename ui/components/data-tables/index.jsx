@@ -198,6 +198,13 @@ export let Th = props => {
           ]
         )}
       </a>
+      <span
+        className="slds-assistive-text"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
+      </span>
       {props.hasMenus ? (
         <ButtonIcon
           assistiveText={`Show ${props.columnName} column actions`}
@@ -208,13 +215,6 @@ export let Th = props => {
           title={`Show ${props.columnName} column actions`}
         />
       ) : null}
-      <span
-        className="slds-assistive-text"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
-      </span>
       <div className="slds-resizable">
         <input
           aria-label={

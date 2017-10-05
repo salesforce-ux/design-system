@@ -29,7 +29,7 @@ const product = productRows[0];
 it('renders a table with menu button', () =>
   matchesMarkupAndStyle(
     <AdvancedDataTable>
-      <Thead actionableMode columns={columns} hasMenus />
+      <Thead columns={columns} hasMenus />
       <tbody>
         {_.times(rows.length, i => (
           <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />

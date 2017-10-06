@@ -341,3 +341,15 @@ props:
     value: '#F88962'
   BOT:
     value: '#54698F'
+  MESSAGING_USER:
+    value: '#34BECD'
+  MESSAGING_CONVERSATION:
+    value: '#34BECD'
+  MESSAGING_SESSION:
+    value: '#34BECD'
+  IOT_ORCHESTRATIONS:
+    value: '#2A739E'
+  RETURN_PRODUCT:
+    value: '#009688'
+  RETURN_PRODUCT_LINE_ITEM:
+    value: '#009688'

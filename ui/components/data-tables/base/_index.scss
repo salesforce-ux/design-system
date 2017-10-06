@@ -302,7 +302,7 @@
 }
 
 /**
- * If the column is sortable than lets handle the actionable
+ * If the column is sortable, then let's handle the actionable
  * region of the `<th>` cell
  *
  * @selector .slds-is-sortable
@@ -353,6 +353,30 @@
   &--form {
     display: inline-flex; // Allows for alignment of form element, such as a checkbox
   }
+
+  /**
+   * Allows for alignment of button, such as a menu
+   *
+   * @selector .slds-th__action-button
+   * @restrict .slds-th__action
+   */
+  &-button {
+    position: absolute;
+    top: 50%;
+    right: $spacing-xx-small;
+    transform: translateY(-50%);
+  }
+}
+
+/**
+ * If the column header has a menu button, then let's add right padding to the
+ * header to preserve truncation
+ *
+ * @selector .slds-has-button-menu
+ * @restrict .slds-table_fixed-layout th
+ */
+.slds-has-button-menu .slds-th__action {
+  padding-right: $spacing-large;
 }
 
 /**

@@ -12,6 +12,8 @@ import {
   Input
 } from '../input/base/example';
 import MediaObject from '../../utilities/media-objects/index.react';
+import { Ellie } from '../dynamic-icons/ellie/example';
+import { Score } from '../dynamic-icons/score/example';
 import SvgIcon from '../../shared/svg-icon';
 
 export const InlineEditTableContainer = props => (
@@ -48,9 +50,11 @@ export const AdvancedDataTable = props => (
  * @param {*} props
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
+ * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
  * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
+ * @prop {boolean} hasMenus - Specifies whether the cells in the thead have a menu button
  * @prop {boolean} selectAll - Specifies whether the select all checkbox is marked
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
@@ -86,7 +90,8 @@ export const Thead = props => {
                 i === 0 && props.sortDirection === 'ascending',
               'slds-is-sorted_desc':
                 i === 0 && props.sortDirection === 'descending',
-              'slds-has-focus': i === 0 && props.hasFocus
+              'slds-has-focus': i === 0 && props.hasFocus,
+              'slds-has-button-menu': props.hasMenus
             })}
             columnName={props.columns[i]}
             key={i}
@@ -96,6 +101,8 @@ export const Thead = props => {
                   ? props.singleColumnWidth
                   : mainColumnWidth
             }}
+            columnsWithEinstein={props.columnsWithEinstein}
+            hasMenus={props.hasMenus}
           />
         ))}
 
@@ -112,9 +119,16 @@ export const Thead = props => {
  * @prop {string} aria-sort
  * @prop {string} className
  * @prop {string} columnName - Display name of the column header
+ * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
  */
 export let Th = props => {
-  const { columnName, actionableMode, ...rest } = props;
+  const {
+    columnName,
+    actionableMode,
+    hasMenus,
+    columnsWithEinstein,
+    ...rest
+  } = props;
   const tabIndex = actionableMode ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
@@ -136,16 +150,53 @@ export let Th = props => {
         tabIndex={tabIndex}
       >
         <span className="slds-assistive-text">Sort by: </span>
-        <span className="slds-truncate" title={columnName || 'Column Name'}>
-          {columnName || 'Column Name'}
-        </span>
-        <div className="slds-icon_container">
-          <SvgIcon
-            className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
-            sprite="utility"
-            symbol="arrowdown"
-          />
-        </div>
+
+        {Array.isArray(columnsWithEinstein) &&
+        columnsWithEinstein.includes(columnName) ? (
+          <div className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+            <div className="slds-icon_container slds-m-right_xx-small">
+              <Ellie
+                className="slds-is-paused"
+                title="Einstein calculated"
+                assistiveText="Einstein calculated"
+              />
+            </div>
+            <span
+              key={`th-${props.index}`}
+              className="slds-truncate"
+              title={columnName || 'Column Name'}
+            >
+              {columnName || 'Column Name'}
+            </span>
+            <div className="slds-icon_container">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
+                sprite="utility"
+                symbol="arrowdown"
+              />
+            </div>
+          </div>
+        ) : (
+          [
+            <span
+              key={`th-${props.index}`}
+              className="slds-truncate"
+              title={columnName || 'Column Name'}
+            >
+              {columnName || 'Column Name'}
+            </span>,
+            <div
+              key={`sort-icon-${props.index}`}
+              className="slds-icon_container"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon"
+                sprite="utility"
+                symbol="arrowdown"
+              />
+            </div>
+          ]
+        )}
       </a>
       <span
         className="slds-assistive-text"
@@ -154,6 +205,16 @@ export let Th = props => {
       >
         Sorted {props['aria-sort'] ? props['aria-sort'] : 'none'}
       </span>
+      {props.hasMenus ? (
+        <ButtonIcon
+          assistiveText={`Show ${props.columnName} column actions`}
+          className="slds-th__action-button slds-button_icon-x-small"
+          iconClassName="slds-button__icon_hint slds-button__icon_small"
+          symbol="chevrondown"
+          tabIndex={props.actionableMode ? '0' : '-1'}
+          title={`Show ${props.columnName} column actions`}
+        />
+      ) : null}
       <div className="slds-resizable">
         <input
           aria-label={
@@ -223,10 +284,13 @@ export const ErrorsTh = props => (
  * @param {*} props
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
+ * @prop {boolean} hasScore - Specifies whether a row has a score cell
  * @prop {boolean} rowSelected
  * @prop {integer} index - Row index in the Grid
  * @prop {string} accountName
  * @prop {string} amount
+ * @prop {string} amountScore
+ * @prop {string} amountScoreLabel
  * @prop {string} className - CSS classes for the tr element
  * @prop {string} closeDate
  * @prop {string} confidence
@@ -257,7 +321,19 @@ export const AdvancedDataTableTr = props => (
     <ReadOnlyTd cellText={props.closeDate} />
     <ReadOnlyTd cellText={props.stage} />
     <ReadOnlyTd cellText={props.confidence} />
-    <ReadOnlyTd cellText={props.amount} />
+    {props.hasScores && props.amountScore && props.amountScoreLabel ? (
+      <AdvancedDataTableTd>
+        <div className="slds-grid slds-grid_vertical-align-center">
+          <div className="slds-truncate">{props.amount}</div>
+          <div className="slds-icon_container slds-m-left_x-small slds-m-right_xx-small">
+            <Score data-slds-state={props.amountScore} />
+          </div>
+          <div className="slds-truncate">{props.amountScoreLabel}</div>
+        </div>
+      </AdvancedDataTableTd>
+    ) : (
+      <ReadOnlyTd cellText={props.amount} />
+    )}
     <ReadOnlyTd
       actionableMode={props.actionableMode}
       cellLink="javascript:void(0);"
@@ -529,9 +605,9 @@ export const InlineEditTr = props => (
       cellTabIndex={
         !props.actionableMode &&
         props.focusableCell === 'selectRow' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       checkTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
@@ -548,9 +624,9 @@ export const InlineEditTr = props => (
       tabIndex={
         !props.actionableMode &&
         props.focusableCell === 'recordName' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       hasFocus={props.focusedCell === 'recordName' && props.index === 1}
     />
@@ -562,9 +638,9 @@ export const InlineEditTr = props => (
       tabIndex={
         !props.actionableMode &&
         props.focusableCell === 'accountName' &&
-        props.index === 1 ? (
-          '0'
-        ) : null
+        props.index === 1
+          ? '0'
+          : null
       }
       hasFocus={props.focusedCell === 'accountName' && props.index === 1}
       isEditing={props.showEdit && props.index === 1}

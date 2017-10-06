@@ -16,7 +16,7 @@ import {
 // Partial(s)
 /// ////////////////////////////////////////
 
-const columns = [
+export const columns = [
   'Name',
   'Account Name',
   'Close Date',
@@ -26,7 +26,7 @@ const columns = [
   'Contact'
 ];
 
-const rows = [
+export const rows = [
   {
     recordName: 'Acme - 1,200 Widgets',
     accountName: 'Acme',
@@ -34,7 +34,9 @@ const rows = [
     stage: 'Value Proposition',
     confidence: '30%',
     amount: '$25,000,000',
-    contact: 'jrogers@acme.com'
+    contact: 'jrogers@acme.com',
+    amountScore: 'positive',
+    amountScoreLabel: 'High'
   },
   {
     recordName: 'Acme - 200 Widgets',
@@ -52,7 +54,9 @@ const rows = [
     stage: 'Id. Decision Makers',
     confidence: '70%',
     amount: '$25,000',
-    contact: 'nathan@salesforce.com'
+    contact: 'nathan@salesforce.com',
+    amountScore: 'negative',
+    amountScoreLabel: 'Low'
   }
 ];
 
@@ -236,7 +240,7 @@ export let states = [
   },
   {
     id: 'resized-column',
-    label: 'Column resized (Actionable mode)',
+    label: 'Column Resized (Actionable mode)',
     element: (
       <Table>
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />
@@ -256,6 +260,52 @@ export let states = [
 ];
 
 export let examples = [
+  {
+    id: 'header-icon-menu-button',
+    label: 'Header Icon and Menu Button',
+    element: (
+      <Table>
+        <Thead
+          columns={columns}
+          columnsWithEinstein={['Confidence']}
+          hasMenus
+        />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'header-menu-button',
+    label: 'Header Menu Button',
+    element: (
+      <Table>
+        <Thead columns={columns} hasMenus />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'cell-icon',
+    label: 'Cell Icon',
+    element: (
+      <Table>
+        <Thead className="slds-has-button-menu" columns={columns} />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasScores />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
   {
     id: 'product-listing',
     label: 'Product Listing',

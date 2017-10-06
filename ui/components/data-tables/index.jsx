@@ -211,7 +211,7 @@ export let Th = props => {
           className="slds-th__action-button slds-button_icon-x-small"
           iconClassName="slds-button__icon_hint slds-button__icon_small"
           symbol="chevrondown"
-          tabIndex={props.tabIndex}
+          tabIndex={props.actionableMode ? '0' : '-1'}
           title={`Show ${props.columnName} column actions`}
         />
       ) : null}

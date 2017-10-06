@@ -314,7 +314,12 @@ export let examples = [
         <Thead columns={productColumns} actionableMode hasNoSelectability />
         <tbody>
           {_.times(productRows.length, i => (
-            <ProductDataTableTr key={i} index={i + 1} {...productRows[i]} />
+            <ProductDataTableTr
+              key={i}
+              index={i + 1}
+              {...productRows[i]}
+              actionableMode
+            />
           ))}
         </tbody>
       </Table>

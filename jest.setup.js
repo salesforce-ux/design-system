@@ -6,22 +6,13 @@
 
 const childProcess = require('child_process');
 const express = require('express');
-const { html: htmlBeautify } = require('js-beautify');
 const path = require('path');
 const openport = require('openport');
 const puppeteer = require('puppeteer');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
 const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
-
-const beautify = html =>
-  htmlBeautify(html, {
-    indent_size: 2,
-    indent_char: ' ',
-    unformatted: ['a'],
-    'wrap_line_length ': 78,
-    indent_inner_html: true
-  });
+const { beautify } = require('./shared/utils/beautify');
 
 const getMarkupAndStyle = selector => `
   (function() {

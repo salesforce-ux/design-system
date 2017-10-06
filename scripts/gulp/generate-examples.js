@@ -16,18 +16,8 @@ const createInstance = require('../lib');
 const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
 const paths = require('../helpers/paths');
 const path = require('path');
-const beautify = require('js-beautify');
+const { beautify: prettyHTML } = require('../../shared/utils/beautify');
 const glob = require('glob');
-
-const prettyHTML = html =>
-  beautify.html(html, {
-    brace_style: 'end-expand',
-    indent_size: 2,
-    indent_char: ' ',
-    unformatted: [],
-    'wrap_line_length ': 78,
-    indent_inner_html: true
-  });
 
 gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
   gulp
@@ -65,16 +55,7 @@ const transform = stream => (file, encoding, callback) => {
   callback();
 };
 
-gulp.task('generate:examples:snapshots', () => {
-  const stream = through.obj();
-  gulp
-    .src(path.resolve(paths.ui, '**/__snapshots__/*.json'))
-    .pipe(through.obj(transform(stream)))
-    .on('finish', () => stream.end());
-  return stream.pipe(gulp.dest(`${paths.generated}/examples`));
-});
-
-gulp.task('generate:examples:showcase', () => {
+gulp.task('generate:examples', () => {
   const stream = through.obj();
   ui()
     .chain(uiJSON =>
@@ -106,8 +87,3 @@ gulp.task('generate:examples:showcase', () => {
 
   return stream.pipe(gulp.dest(`${paths.generated}/examples`));
 });
-
-gulp.task('generate:examples', [
-  'generate:examples:snapshots',
-  'generate:examples:showcase'
-]);

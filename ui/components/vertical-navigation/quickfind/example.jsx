@@ -6,7 +6,7 @@ import {
   NavVertical,
   NavVerticalItem,
   NavVerticalSection
-} from '../base/example';
+} from '../list/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 import SvgIcon from '../../../shared/svg-icon';

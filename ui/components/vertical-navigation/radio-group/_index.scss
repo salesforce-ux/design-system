@@ -1,0 +1,69 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name radio-group
+ * @summary Version of vertical nav that uses radio buttons
+ * @selector .slds-nav-vertical__item [type="radio"]
+ * @restrict .slds-nav-vertical
+ * @variant
+ */
+
+.slds-nav-vertical__item {
+
+  [type="radio"] {
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:focus + .slds-nav-vertical__action {
+
+      /**
+       * Used for styling the radio button
+       *
+       * @selector .slds-nav-vertical_radio-faux
+       * @restrict .slds-nav-vertical__action span
+       */
+      .slds-nav-vertical_radio-faux {
+        text-decoration: underline;
+      }
+    }
+
+    &:checked + .slds-nav-vertical__action {
+      color: $color-text-link-focus;
+      background-color: $color-background-row-selected;
+      &:before {
+        content: '';
+        width: 4px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        background: $color-brand-darker;
+      }
+    }
+
+    &:checked + .slds-nav-vertical__action .slds-nav-vertical_radio-faux {
+      color: $color-text-link-focus;
+      background-color: $color-background-row-selected;
+    }
+  }
+}
+
+.slds-nav-vertical_shade {
+
+  .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
+    background-color: $vertical-navigation-color-background-shade-row-active;
+    border-color: $color-border;
+
+    .slds-nav-vertical_radio-faux {
+      background-color: $vertical-navigation-color-background-shade-row-active;
+    }
+  }
+}
+

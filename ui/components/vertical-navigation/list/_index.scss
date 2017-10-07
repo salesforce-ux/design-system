@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @name base
+ * @name list
  * @selector .slds-nav-vertical
- * @restrict nav
+ * @restrict nav, fieldset
  * @variant
  */
 .slds-nav-vertical {
@@ -56,7 +56,7 @@
  * Section title of the vertical navigation
  *
  * @selector .slds-nav-vertical__title
- * @restrict .slds-nav-vertical h2
+ * @restrict .slds-nav-vertical h2, .slds-nav-vertical legend
  */
 .slds-nav-vertical__title {
   padding: $spacing-x-small $spacing-medium;
@@ -75,7 +75,7 @@
  * List of the vertical navigation
  *
  * @selector .slds-nav-vertical__item
- * @restrict .slds-nav-vertical li
+ * @restrict .slds-nav-vertical li, .slds-nav-vertical span
  */
 .slds-nav-vertical__item {
   position: relative;
@@ -87,7 +87,7 @@
     top: 0;
     bottom: 0;
     position: absolute;
-    background: $color-brand-dark;
+    background: $color-brand-darker;
   }
 }
 
@@ -95,7 +95,7 @@
  * Actionable element inside of vertical navigation list item
  *
  * @selector .slds-nav-vertical__action
- * @restrict .slds-nav-vertical a, .slds-nav-vertical button
+ * @restrict .slds-nav-vertical a, .slds-nav-vertical button, .slds-nav-vertical label
  */
 .slds-nav-vertical__action {
   display: flex;
@@ -141,7 +141,7 @@
  * @modifier
  */
 .slds-nav-vertical__item.slds-is-active {
-  color: $color-text-link;
+  color: $color-text-link-focus;
 
   .slds-nav-vertical__action {
     background-color: $color-background-row-selected;
@@ -167,7 +167,7 @@
      * @modifier
      */
     .slds-is-active {
-      color: $color-text-link;
+      color: $color-text-link-focus;
 
       .slds-navigation-list-vertical__action,
       .slds-navigation-list--vertical__action {

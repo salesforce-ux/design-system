@@ -48,6 +48,21 @@ export let NavVerticalItem = props => (
 
 export let NavVerticalSection = props => {
   let hasExpando = props.collapsed || props.expanded;
+  let isNavVerticalRadioSet = props.isNavVerticalRadioSet;
+  let hasExpandoContent = null;
+  let noExpandoContent = null;
+
+  if (isNavVerticalRadioSet) {
+    hasExpandoContent = <div>{props.children}</div>;
+  } else {
+    hasExpandoContent = <ul>{props.children}</ul>;
+  }
+
+  if (isNavVerticalRadioSet) {
+    noExpandoContent = <div>{props.children}</div>;
+  } else {
+    noExpandoContent = <ul id={props.listId}>{props.children}</ul>;
+  }
 
   return (
     <div
@@ -58,7 +73,7 @@ export let NavVerticalSection = props => {
         props.className
       )}
     >
-      {!hasExpando && props.title ? (
+      {!hasExpando && !isNavVerticalRadioSet && props.title ? (
         <h2
           id={props.id}
           className={classNames(
@@ -93,10 +108,10 @@ export let NavVerticalSection = props => {
             'slds-show': props.expanded
           })}
         >
-          <ul>{props.children}</ul>
+          {hasExpandoContent}
         </div>
       ) : (
-        <ul id={props.listId}>{props.children}</ul>
+        noExpandoContent
       )}
     </div>
   );

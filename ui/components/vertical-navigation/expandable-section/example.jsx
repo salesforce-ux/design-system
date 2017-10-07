@@ -6,7 +6,7 @@ import {
   NavVertical,
   NavVerticalItem,
   NavVerticalSection
-} from '../base/example';
+} from '../list/example';
 import classNames from 'classnames';
 
 const sectionId01 = 'entity-header';

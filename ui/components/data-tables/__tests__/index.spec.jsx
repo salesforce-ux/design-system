@@ -5,7 +5,6 @@ import _ from '../../../shared/helpers';
 
 import {
   AdvancedDataTable,
-  AdvancedDataTableTr,
   ProductDataTableTr,
   ProductQuantityTd,
   ProductPriceTd,
@@ -13,46 +12,13 @@ import {
   Thead
 } from '../';
 
-import {
-  rows,
-  columns,
-  productColumns,
-  productRows
-} from '../advanced/example';
+import { productColumns, productRows } from '../advanced/example';
 
 import createHelpers from '../../../../jest.setup';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 const product = productRows[0];
-
-it('renders a table with menu button', () =>
-  matchesMarkupAndStyle(
-    <AdvancedDataTable>
-      <Thead columns={columns} hasMenus />
-      <tbody>
-        {_.times(rows.length, i => (
-          <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
-        ))}
-      </tbody>
-    </AdvancedDataTable>
-  ));
-
-it('renders a table with icons in cells', () =>
-  matchesMarkupAndStyle(
-    <AdvancedDataTable>
-      <Thead
-        actionableMode
-        className="slds-has-button-menu"
-        columns={columns}
-      />
-      <tbody>
-        {_.times(rows.length, i => (
-          <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasScores />
-        ))}
-      </tbody>
-    </AdvancedDataTable>
-  ));
 
 it('renders a product details cell', () =>
   matchesMarkupAndStyle(<ProductItemDetailsTd {...product} actionableMode />));

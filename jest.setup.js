@@ -6,22 +6,13 @@
 
 const childProcess = require('child_process');
 const express = require('express');
-const { html: htmlBeautify } = require('js-beautify');
 const path = require('path');
 const openport = require('openport');
 const puppeteer = require('puppeteer');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
 const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
-
-const beautify = html =>
-  htmlBeautify(html, {
-    indent_size: 2,
-    indent_char: ' ',
-    unformatted: ['a'],
-    'wrap_line_length ': 78,
-    indent_inner_html: true
-  });
+const { beautify } = require('./shared/utils/beautify');
 
 const getMarkupAndStyle = selector => `
   (function() {
@@ -110,15 +101,12 @@ module.exports = (dirname, port) => {
 
   return {
     matchesMarkupAndStyle: async element => {
-      await page.evaluate(
-        `document.body.innerHTML = \`${ReactDOM.renderToStaticMarkup(
-          element
-        )}\``
-      );
+      const renderedMarkup = ReactDOM.renderToStaticMarkup(element);
+      await page.evaluate(`document.body.innerHTML = \`${renderedMarkup}\``);
       await delay(250);
       const markupAndStyle = await page
         .evaluate(getMarkupAndStyle('body > *'))
-        .then(diff => ({ html: beautify(diff.html), style: diff.style }));
+        .then(diff => ({ html: beautify(renderedMarkup), style: diff.style }));
       assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
     }
   };

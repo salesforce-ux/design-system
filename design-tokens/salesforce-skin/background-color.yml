@@ -15,45 +15,34 @@ props:
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'
-  ## BRAND BAND
-  ## Desktop
-  BRAND_BAND_USER_DEFAULT_IMAGE:
-    value: '/assets/images/themes/classic/banner-user-default.png'
+  ## BANNERS
+  BRAND_BAND_DEFAULT_IMAGE:
+    value: '/assets/images/themes/oneSalesforce/banner-brand-default.png'
     type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
-    value: '/assets/images/themes/classic/banner-group-private-default.png'
+  BANNER_USER_DEFAULT_IMAGE:
+    value: '/assets/images/themes/oneSalesforce/banner-user-default.png'
     type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
-    value: '/assets/images/themes/classic/banner-group-public-default.png'
+  BANNER_GROUP_DEFAULT_IMAGE:
+    value: '/assets/images/themes/oneSalesforce/banner-group-public-default.png'
     type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
-    value: '/assets/images/themes/classic/banner-group-unlisted-default.png'
+  ## AVATARS
+  USER_DEFAULT_AVATAR:
+    value: ''
     type: string
-  ## Tablet
-  BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
-    value: '/assets/images/themes/classic/banner-user-default-medium.png'
+  USER_DEFAULT_AVATAR_MEDIUM:
+    value: ''
     type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
-    value: '/assets/images/themes/classic/banner-group-private-default-medium.png'
+  USER_DEFAULT_AVATAR_LARGE:
+    value: ''
     type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
-    value: '/assets/images/themes/classic/banner-group-public-default-medium.png'
+  GROUP_DEFAULT_AVATAR:
+    value: ''
     type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
-    value: '/assets/images/themes/classic/banner-group-unlisted-default-medium.png'
+  GROUP_DEFAULT_AVATAR_MEDIUM:
+    value: ''
     type: string
-  ## Mobile
-  BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
-    value: '/assets/images/themes/classic/banner-user-default-small.png'
-    type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
-    value: '/assets/images/themes/classic/banner-group-private-default-small.png'
-    type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
-    value: '/assets/images/themes/classic/banner-group-public-default-small.png'
-    type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
-    value: '/assets/images/themes/classic/banner-group-unlisted-default-small.png'
+  GROUP_DEFAULT_AVATAR_LARGE:
+    value: ''
     type: string
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:

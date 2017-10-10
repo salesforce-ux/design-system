@@ -15,11 +15,11 @@ props:
   ENVIRONMENT_HUB:
     value: '#54698d'
   FLOW:
-    value: '#54698d'
+    value: '#0079BC'
   SOSSESSION:
     value: '#54698d'
   PROCESS:
-    value: '#54698d'
+    value: '#0079BC'
   NEWS:
     value: '#7F8DE1'
   HOME:

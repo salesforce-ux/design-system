@@ -10,7 +10,8 @@ global:
   - box-shadow
 imports:
 - ../force-base/aliases/color.yml
+- ../color-palettes.yml
 props:
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
-    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    value: '{!PALETTE_GRAY_8}'
     comment: The color of the mask overlay that appears when you enter a modal state.

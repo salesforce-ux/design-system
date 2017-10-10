@@ -156,7 +156,7 @@ props:
     value: '{!PALETTE_COOL_GRAY_8}'
     comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
-    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    value: '{!PALETTE_COOL_GRAY_8}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
     value: '{!WHITE_TRANSPARENT_75}'

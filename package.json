@@ -182,7 +182,8 @@
     "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
     "test:compile-integration": "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
-    "test": "node jest.vrt.watcher.js",
+    "test": "node jest.local.js",
+    "test:travis": "node jest.travis.js",
     "travis": "node scripts/npm/build-travis.js",
     "precommit": "lint-staged",
     "writeUI": "babel-node scripts/npm/write-ui.js"

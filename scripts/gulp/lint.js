@@ -60,7 +60,8 @@ function lintjs(files, options) {
       .src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format('codeframe'));
+      .pipe(eslint.format('codeframe'))
+      .pipe(eslint.failAfterError());
   };
 }
 
@@ -68,8 +69,7 @@ gulp.task(
   'lint:js',
   lintjs([
     '*.js',
-    'app_modules/**/*.{js,jsx}',
-    'scripts/**/*.{js,jsx}',
+    'shared/**/*.{js,jsx}',
     'site/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     '!**/*.spec.{js,jsx}'

@@ -4,16 +4,14 @@
 const { execSync, spawn, fork } = require('child_process');
 const path = require('path');
 
-if (!process.env.TRAVIS_COMMIT_MESSAGE) {
-  // skip this since travis did it
-  execSync('npm run build', { stdio: ['inherit', 'inherit', 'inherit'] });
-}
+execSync('npm run build', { stdio: ['inherit', 'inherit', 'inherit'] });
 
 execSync('npm run test:compile-integration', {
   stdio: ['inherit', 'inherit', 'inherit']
 });
 
-console.log(process.argv);
+// travis runs the same thing, but slightly different to break the build on err
+// Check jest.travis.js
 const jest = spawn('./node_modules/.bin/jest', process.argv.slice(2), {
   cwd: path.resolve(__dirname),
   stdio: 'inherit'

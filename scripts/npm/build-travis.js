@@ -14,8 +14,12 @@ const exec = (command, cwd = '') =>
     env: Object.assign({}, process.env)
   });
 
-const runScript = () =>
-  exec('NODE_ENV=production npm run build && npm run test && npm run lint');
+const runScript = () => {
+  exec('NODE_ENV=production');
+  exec('npm run build');
+  exec('npm run test:travis');
+  exec('npm run lint');
+};
 
 const runExtraScripts = () => {
   // build snapshot
@@ -47,6 +51,8 @@ const isTag = () => !!process.env.TRAVIS_TAG;
 
 const shouldPushToBuildServer = () => isMerge() || isTag();
 
+// This exists solely to skip the push build so we don't waste time
+// push is a noop
 if (process.env.BUILD_SERVER_HOST_NEW) {
   if (shouldPushToBuildServer()) {
     runScript();

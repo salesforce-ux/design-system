@@ -68,8 +68,7 @@ gulp.task(
   'lint:js',
   lintjs([
     '*.js',
-    'app_modules/**/*.{js,jsx}',
-    'scripts/**/*.{js,jsx}',
+    'shared/**/*.{js,jsx}',
     'site/**/*.{js,jsx}',
     'ui/**/*.{js,jsx}',
     '!**/*.spec.{js,jsx}'

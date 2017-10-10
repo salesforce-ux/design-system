@@ -60,7 +60,8 @@ function lintjs(files, options) {
       .src(files)
       .pipe(cache('lintjs'))
       .pipe(eslint(options))
-      .pipe(eslint.format('codeframe'));
+      .pipe(eslint.format('codeframe'))
+      .pipe(eslint.failAfterError());
   };
 }
 

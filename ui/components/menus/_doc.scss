@@ -1,6 +1,5 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
 /**
  * The unordered menu list with `[role="menu"]` should be contained in a `<div>`
  * with the class `.slds-dropdown`. The exception to this is the **Action
@@ -14,8 +13,8 @@
  * HTML element.
  *
  * **Submenu Variant**
- * 
- * To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu. In order to open the submenu, set `aria-expanded` to `true` on the `<a>` within the `<li>` when the user clicks or hovers over the list item, or presses enter while focused on the list item. 
+ *
+ * To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu. In order to open the submenu, set `aria-expanded` to `true` on the `<a>` within the `<li>` when the user clicks or hovers over the list item, or presses enter while focused on the list item.
  *
  * **Accessibility**
  *

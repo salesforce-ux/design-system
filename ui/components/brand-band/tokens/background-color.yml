@@ -11,42 +11,28 @@ props:
   BRAND_BAND_DEFAULT_IMAGE:
     value: ''
     type: string
-  BRAND_BAND_USER_DEFAULT_IMAGE:
+  BANNER_USER_DEFAULT_IMAGE:
     value: ''
     type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE:
+  BANNER_GROUP_DEFAULT_IMAGE:
     value: ''
     type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE:
+  USER_DEFAULT_AVATAR:
     value: ''
     type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE:
+  USER_DEFAULT_AVATAR_MEDIUM:
     value: ''
     type: string
-  ## Tablet
-  BRAND_BAND_USER_DEFAULT_IMAGE_MEDIUM:
+  USER_DEFAULT_AVATAR_LARGE:
     value: ''
     type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_MEDIUM:
+  GROUP_DEFAULT_AVATAR:
     value: ''
     type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_MEDIUM:
+  GROUP_DEFAULT_AVATAR_MEDIUM:
     value: ''
     type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_MEDIUM:
-    value: ''
-    type: string
-  ## Mobile
-  BRAND_BAND_USER_DEFAULT_IMAGE_SMALL:
-    value: ''
-    type: string
-  BRAND_BAND_GROUP_PRIVATE_DEFAULT_IMAGE_SMALL:
-    value: ''
-    type: string
-  BRAND_BAND_GROUP_PUBLIC_DEFAULT_IMAGE_SMALL:
-    value: ''
-    type: string
-  BRAND_BAND_GROUP_UNLISTED_DEFAULT_IMAGE_SMALL:
+  GROUP_DEFAULT_AVATAR_LARGE:
     value: ''
     type: string
   ## Colors

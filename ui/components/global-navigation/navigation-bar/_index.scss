@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$color-background-context-bar-brand-light: rgba(desaturate($color-background-context-bar-brand-accent, 30%), 0.1);
+$color-background-context-bar-brand-light: rgba($color-background-context-bar-brand-accent, 0.1);
 
 /**
  * @summary Navigation bar wrapper

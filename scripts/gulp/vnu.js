@@ -16,10 +16,10 @@ const FILEPATH = '.reports/';
 const FILENAME = 'vnu_report.json';
 const IGNORE = [
   /(.*)_JAVA_OPTIONS(.*)/i, // "Travis outputs this to make this interesting"
-  /(.*)role=gridcell(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
-  /(.*)listbox(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
-  /trees_grid(.*)tr(.*)missing one or more/, // "Element “tr“ is missing one or more of the following attributes"
-  /treegrid(.*)tr(.*)missing one or more/i // Has comp name in the rule and two tests
+  /(.*)role=gridcell(.*)must be contained in, or owned by, an element with(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
+  /(.*)listbox(.*)for attribute(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
+  /trees_grid(.*)tr(.*)is missing one or more of the following attributes:(.*)role/, // "Element “tr“ is missing one or more of the following attributes"
+  /(.*)aria-expanded(.*)not allowed on element(.*)a(.*) at this point/ // Attribute “aria-expanded” not allowed on element “a” at this point.
 ];
 
 const lint = function(dir, opt, cb) {

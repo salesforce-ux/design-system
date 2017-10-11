@@ -189,6 +189,35 @@ export let states = [
     )
   },
   {
+    id: 'multiple-sections-open',
+    label: 'Multiple sections open',
+    element: (
+      <Accordion>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen
+          referenceId={referenceId01}
+        >
+          Accordion details - A
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen={false}
+          referenceId={referenceId02}
+        >
+          Accordion details - B
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen
+          referenceId={referenceId03}
+        >
+          Accordion details - C
+        </AccordionSection>
+      </Accordion>
+    )
+  },
+  {
     id: 'styled',
     label: 'Styled',
     element: (

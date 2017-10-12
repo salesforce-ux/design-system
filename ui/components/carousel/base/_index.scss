@@ -1,0 +1,147 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiates a carousel component
+ * @name base
+ * @selector .slds-carousel
+ * @restrict div
+ * @variant
+ */
+.slds-carousel {
+  display: flex;
+  position: relative;
+}
+
+/**
+ * @summary Main stage for carousel's tab-panels and tab-list inidicators
+ * @selector .slds-carousel__stage
+ * @restrict .slds-carousel div
+ */
+.slds-carousel__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * @summary Actionable element that contains the carousel's tab-panel content
+ * @selector .slds-carousel__panel-action
+ * @restrict .slds-carousel__stage a
+ */
+.slds-carousel__panel-action {
+  display: block;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+
+  &:focus {
+    @include focus-button;
+    border-color: $color-border-brand;
+    outline: 0;
+  }
+}
+
+/**
+ * @summary Element that contains the image inside the carousel's tab-panel
+ * @selector .slds-carousel__image
+ * @restrict .slds-carousel__panel-action div
+ */
+.slds-carousel__image {
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
+  overflow: hidden;
+}
+
+/**
+ * @summary Element that contains the content inside the carousel's tab-panel
+ * @selector .slds-carousel__content
+ * @restrict .slds-carousel__panel-action div
+ */
+.slds-carousel__content {
+  background: $carousel-color-background;
+  padding: $spacing-small;
+  border-bottom-left-radius: $border-radius-medium;
+  border-bottom-right-radius: $border-radius-medium;
+  text-align: center;
+}
+
+/**
+ * @summary Heading element that contains the title of the carousel's tab-panel
+ * @selector .slds-carousel__content-title
+ * @restrict .slds-carousel__content h2
+ */
+.slds-carousel__content-title {
+  font-size: $font-size-heading-small;
+  font-weight: 600;
+}
+
+/**
+ * @summary List element that contains the carousel's tab-list inidicators
+ * @selector .slds-carousel__indicators
+ * @restrict .slds-carousel ul
+ */
+.slds-carousel__indicators {
+  align-self: center;
+  margin: $spacing-x-small 0;
+}
+
+/**
+ * @summary Carousel's tab-list inidicator items
+ * @selector .slds-carousel__indicator
+ * @restrict .slds-carousel__indicators li
+ */
+.slds-carousel__indicator {
+  display: inline-flex;
+  margin: 0 $spacing-xxx-small;
+}
+
+/**
+ * @summary Actionable element inside of each tab-list indicator
+ * @selector .slds-carousel__indicator-action
+ * @restrict .slds-carousel__indicator a
+ */
+.slds-carousel__indicator-action {
+  width: $carousel-indicator-width;
+  height: $carousel-indicator-width;
+  background: $carousel-indicator-color-background;
+  border: $border-width-thin solid $color-border;
+  border-radius: 50%;
+
+  @include mq-medium-min {
+    width: ($carousel-indicator-width / 2);
+    height: ($carousel-indicator-width / 2);
+  }
+
+  /**
+   * @summary Active state notifying the tab that its current panel is active
+   * @selector .slds-is-active
+   * @restrict .slds-carousel__indicator-action
+   */
+  &.slds-is-active,
+  &.slds-is-active:hover {
+    background: $carousel-indicator-color-background-active;
+    border-color: $carousel-indicator-color-background-active;
+  }
+
+  &:hover {
+    background-color: $carousel-indicator-color-background-hover;
+  }
+
+  &:focus {
+    @include focus-button;
+    background-color: $carousel-indicator-color-background-focus;
+    border-color: $carousel-indicator-color-background-focus;
+    outline: 0;
+  }
+}
+
+/**
+ * @summary Element that contains the auto-play button icon to toggle on/off
+ * @selector .slds-carousel__autoplay
+ * @restrict .slds-carousel__stage div
+ */
+.slds-carousel__autoplay {
+  position: absolute;
+  left: 0;
+  bottom: $spacing-x-small;
+}

@@ -14,7 +14,7 @@ let TreeItem = props => (
     <ButtonIcon
       aria-hidden="true"
       assistiveText="Expand Tree Item"
-      className="slds-button_icon slds-m-right_x-small slds-is-disabled"
+      className="slds-m-right_x-small slds-is-disabled"
       iconClassName="slds-button__icon_small"
       symbol="chevronright"
       tabIndex="-1"
@@ -196,11 +196,9 @@ let Default = props => (
         aria-level="1"
         aria-expanded="false"
         aria-label={
-          props.hasMetatext ? (
-            'Tree Branch: Tree Branch Metatext'
-          ) : (
-            'Tree Branch'
-          )
+          props.hasMetatext
+            ? 'Tree Branch: Tree Branch Metatext'
+            : 'Tree Branch'
         }
       >
         <TreeBranch hasMetatext={props.hasMetatext} />

@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
 * @summary Creates a button that looks like a plain icon
 *
@@ -30,22 +32,11 @@
   color: $color-text-icon-default;
 }
 
-@include deprecate('4.0.0', 'Use .slds-button--icon instead') {
-
-  .slds-button_icon-bare,
-  .slds-button--icon-bare {
-    line-height: $line-height-reset;
-    vertical-align: middle;
-    color: $color-text-icon-default;
-  }
-}
-
 /**
  * @summary Default width + height for button icon with containers
  * @name Default
  * @selector .slds-button_icon-container
  * @restrict .slds-button_icon
- * @modifier
  * @group container-size
  */
 
@@ -57,7 +48,12 @@
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
 .slds-button_icon-border-inverse,
-.slds-button--icon-border-inverse {
+.slds-button--icon-border-inverse,
+.slds-button_icon-brand,
+.slds-button_icon-more,
+.slds-button--icon-more,
+.slds-button_icon-container-more,
+.slds-button--icon-container-more {
   @include square($square-icon-medium-boundary);
 }
 
@@ -66,8 +62,7 @@
  * @name Transparent background
  * @selector .slds-button_icon-border
  * @restrict .slds-button_icon
- * @modifier
- * @group borders
+ * @group theme
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
@@ -81,13 +76,12 @@
  * @summary Gives a white icon color on a dark background
  * @selector .slds-button_icon-border-inverse
  * @restrict .slds-button_icon
- * @group borders
+ * @group theme
  */
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
-  @include button-icon;
   background-color: $color-background-button-inverse;
-  color: $color-text-link-inverse;
+  border-color: $button-color-border-primary;
 
   &[disabled] {
     background-color: $color-background-button-inverse-disabled;
@@ -96,12 +90,28 @@
 }
 
 /**
+ * @summary Gives a white icon color on a branded background
+ * @selector .slds-button_icon-brand
+ * @restrict .slds-button_icon
+ * @group theme
+ */
+.slds-button_icon-brand {
+  @include button-brand;
+
+  &[disabled] {
+    background: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+
+/**
  * @summary Button icon with background
  * @name Filled background
  * @selector .slds-button_icon-border-filled
  * @restrict .slds-button_icon
- * @modifier
- * @group borders
+ * @group theme
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
@@ -120,7 +130,9 @@
  * @group color
  */
 .slds-button_icon-inverse,
-.slds-button--icon-inverse {
+.slds-button--icon-inverse,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse {
   color: $color-text-link-inverse;
 
   &:hover,
@@ -175,13 +187,11 @@
  * @name small
  * @selector .slds-button_icon-small
  * @restrict .slds-button_icon
- * @modifier
  * @group container-size
  */
 .slds-button_icon-small,
 .slds-button--icon-small {
   @include square($square-icon-small-boundary);
-  border-radius: $border-radius-small;
 }
 
 /**
@@ -189,13 +199,11 @@
  * @name x-small
  * @selector .slds-button_icon-x-small
  * @restrict .slds-button_icon
- * @modifier
  * @group container-size
  */
 .slds-button_icon-x-small,
 .slds-button--icon-x-small {
   @include square($square-icon-x-small-boundary);
-  border-radius: $border-radius-small;
   line-height: $line-height-reset;
 
   .slds-button__icon {
@@ -208,13 +216,11 @@
  * @name xx-small
  * @selector .slds-button_icon-xx-small
  * @restrict .slds-button_icon
- * @modifier
  * @group container-size
  */
 .slds-button_icon-xx-small,
 .slds-button--icon-xx-small {
   @include square($square-icon-xx-small-boundary);
-  border-radius: $border-radius-small;
   line-height: $line-height-reset;
 
   .slds-button__icon {
@@ -222,10 +228,8 @@
   }
 }
 
-
 /**
  * @summary Button icon with dropdown
- *
  * @name icon-with-dropdown
  * @selector .slds-button_icon-more
  * @restrict button
@@ -233,15 +237,11 @@
  */
 .slds-button_icon-more,
 .slds-button--icon-more {
-  @include button-icon;
-  line-height: $line-height-button;
+  width: auto;
   padding: 0 $spacing-x-small;
   background-color: $button-color-background-primary;
   border-color: $button-color-border-primary;
-
-  &-filled {
-    background-color: $color-background-button-default;
-  }
+  color: $color-text-icon-default;
 
   &:hover,
   &:focus {
@@ -263,9 +263,11 @@
     }
   }
 }
+
 // WTF is going on here?
 .slds-button_icon-container-more,
 .slds-button--icon-container-more {
+  width: auto;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
   vertical-align: middle;

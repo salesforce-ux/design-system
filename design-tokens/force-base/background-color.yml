@@ -153,10 +153,10 @@ props:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
   COLOR_BACKGROUND_TEMP_MODAL:
-    value: '{!PALETTE_COOL_GRAY_8}'
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
     comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
-    value: '{!PALETTE_COOL_GRAY_8}'
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
     value: '{!WHITE_TRANSPARENT_75}'

@@ -1,0 +1,96 @@
+import CodeView from '../../../shared/components/CodeView';
+import Example from '../../../shared/components/Example';
+import Carousel from './';
+
+<div className="lead">
+  A carousel allows multiple pieces of featured content to occupy an allocated amount of space.
+</div>
+
+<Example>
+  <CodeView>
+    <Carousel panelActive="1" autoPlay />
+  </CodeView>
+</Example>
+
+A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time.
+
+## Navigating between panels
+
+You are able to navigate between panels but interacting with the `slds-carousel__indicator` elements that sit below the panel.
+
+<Example>
+  <div className="slds-grid slds-grid_pull-padded">
+    <div className="slds-size_1-of-3 slds-p-horizontal_medium">
+      <Carousel panelActive="1" />
+    </div>
+    <div className="slds-size_1-of-3 slds-p-horizontal_medium">
+      <Carousel panelActive="2" />
+    </div>
+  </div>
+</Example>
+
+A panel becomes visible by toggling the `slds-hide` class with the `slds-show` class on the `slds-carousel__panel` element.
+
+```html
+<div id="content-id-01" class="slds-carousel__panel slds-show" role="tabpanel" aria-labelledby="indicator-id-01">
+  ...
+</div>
+<div id="content-id-02" class="slds-carousel__panel slds-hide" role="tabpanel" aria-labelledby="indicator-id-02">
+  ...
+</div>
+```
+
+When making the `slds-carousel__panel` active, the indicator should be updated with the `slds-is-active` class. This provides visual feedback showing which carousel panel is active.
+
+## Auto-play
+
+<Example>
+  <Carousel panelActive="1" autoPlay />
+</Example>
+
+If the Carousel is set to auto-play, a pause button is required to be first in the HTML before the tab set.
+
+```html
+<div class="slds-carousel__stage">
+
+  <!-- Pause Button -->
+  <span class="slds-carousel__autoplay">
+    <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-xx-small" aria-pressed="false" title="Stop auto-play">
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#pause"></use>
+      </svg>
+      <span class="slds-assistive-text">Stop auto-play</span>
+    </button>
+  </span>
+
+  <!-- Tabs -->
+  <div class="slds-carousel__panels">
+    ...
+  </div>
+  ...
+</div>
+```
+
+When that pause button is interacted with, the `aria-pressed` role needs to be toggled to `true`.
+
+### Accessibility
+
+A Carousel is built using a tabbed UI specification and requires the following to meet accessibility requirements:
+
+- The tab list, which should have `role="tablist"`
+- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+
+**Expected markup:**
+
+- Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+- Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+
+**Expected keyboard interactions:**
+
+- Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+- Tab key, when focus is before the tab list, moves focus to the selected tab panel
+- Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
+- Shift+Tab keys, when focus is on first element in a tab panel, move focus to the selected tab

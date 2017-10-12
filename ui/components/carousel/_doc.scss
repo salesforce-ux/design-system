@@ -1,0 +1,45 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time.
+ *
+ * You are able to navigate between panels but interacting with the `slds-carousel__indicator` elements that sit below the panel.
+ *
+ * A panel becomes visible by toggling the `slds-hide` class with the `slds-show` class on the `slds-carousel__panel` element.
+ *
+ * When making the `slds-carousel__panel` active, the indicator should be updated with the `slds-is-active` class. This provides visual feedback showing which carousel panel is active.
+ *
+ * ### Accessibility
+ *
+ * A Carousel is built using a tabbed UI specification and requires the following to meet accessibility requirements:
+ *
+ * - The tab list, which should have `role="tablist"`
+ * - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+ * - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+ *
+ * **Expected markup:**
+ *
+ * - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+ * - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+ * - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+ * - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+ * - When the Carousel is set to auto-play, the HTML for the pause button is required to precede the HTML of the tab set
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+ * - Tab key, when focus is before the tab list, moves focus to the selected tab panel
+ * - Tab key, when focus is on selected tabpanel, moves focus into the selected tabpanel's associated tab or to the next focusable element on the page if that panel has no focusable elements
+ * - Shift+Tab keys, when focus is on first element in a tab panel, move focus focus entirely from tabset
+ *
+ * @summary A carousel allows multiple pieces of featured content to occupy an allocated amount of space.
+ *
+ * @base
+ * @name carousel
+ * @selector .slds-carousel
+ * @support dev-ready
+ * @category base
+ * @type navigation
+ * @layout responsive
+ */

@@ -30,8 +30,8 @@
  *
  * - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
  * - Tab key, when focus is before the tab list, moves focus to the selected tab panel
- * - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
- * - Shift+Tab keys, when focus is on first element in a tab panel, move focus to the selected tab
+ * - Tab key, when focus is on selected tabpanel, moves focus into the selected tabpanel's associated tab or to the next focusable element on the page if that panel has no focusable elements
+ * - Shift+Tab keys, when focus is on first element in a tab panel, move focus focus entirely from tabset
  *
  * @summary A carousel allows multiple pieces of featured content to occupy an allocated amount of space.
  *

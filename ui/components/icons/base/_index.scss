@@ -177,3 +177,14 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 .slds-icon-text-light {
   fill: $color-text-input-icon;
 }
+
+/**
+ * @selector .slds-current-color
+ * @restrict *
+ */
+.slds-current-color {
+
+  .slds-icon {
+    fill: currentColor;
+  }
+}

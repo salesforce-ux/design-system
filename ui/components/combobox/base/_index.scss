@@ -59,6 +59,11 @@
   &:focus {
     border-color: $color-border-brand-primary;
   }
+
+  &[disabled] {
+    background-color: $color-background-input-disabled;
+    border-color: $color-border-input-disabled;
+  }
 }
 
 /**

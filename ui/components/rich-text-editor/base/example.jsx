@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ButtonGroupList } from '../../button-groups/list/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
 import {

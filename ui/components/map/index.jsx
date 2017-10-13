@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import { Avatar } from '../avatar/base/example';
-import { ButtonIcon } from '../button-icons/base/example';
+import ButtonIcon from '../button-icons/';
 import { StandardIcon } from '../icons/standard/example';
 import {
   Modal,

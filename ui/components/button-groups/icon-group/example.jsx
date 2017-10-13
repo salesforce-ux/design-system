@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ButtonGroup } from '../base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 
 /// ////////////////////////////////////////
 // Export

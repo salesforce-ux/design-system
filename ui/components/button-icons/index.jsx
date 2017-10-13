@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import SvgIcon from '../../shared/svg-icon';
 import classNames from 'classnames';
 
-class ButtonIcon2 extends Component {
+class ButtonIcon extends Component {
   render() {
     let {
       id,
@@ -14,7 +14,7 @@ class ButtonIcon2 extends Component {
       assistiveText,
       hasDropdown,
       size,
-      background,
+      variant,
       theme,
       feedback,
       selected,
@@ -22,29 +22,47 @@ class ButtonIcon2 extends Component {
       ...rest
     } = this.props;
 
+    /**
+     * Neutral - Bordered with Filled Container
+     */
     if (theme === 'neutral') {
-      background = 'slds-button_icon-border-filled';
+      variant = 'slds-button_icon-border-filled';
 
       if (size === 'medium') {
         size = null;
       }
+      if (hasDropdown) {
+        variant = null;
+      }
+      /**
+     * Inverse - Bare/Bordered on Inverse Background
+     */
     } else if (theme === 'inverse') {
-      background = 'slds-button_icon-inverse';
+      variant = 'slds-button_icon-inverse';
 
       if (size) {
-        background = 'slds-button_icon-border-inverse';
+        variant = 'slds-button_icon-border-inverse';
       }
+      /**
+     * Brand
+     */
     } else if (theme === 'brand') {
-      background = 'slds-button_icon-brand';
+      variant = 'slds-button_icon-brand';
 
       if (size === 'medium') {
         size = null;
       }
+      /**
+     * Transparent - Bordered with Transparent Container
+     */
     } else if (theme === 'transparent') {
-      background = 'slds-button_icon-border';
+      variant = 'slds-button_icon-border';
 
       if (size === 'medium') {
         size = null;
+      }
+      if (hasDropdown) {
+        variant = null;
       }
     }
 
@@ -54,7 +72,11 @@ class ButtonIcon2 extends Component {
         className={classNames(
           'slds-button slds-button_icon',
           selected && 'slds-is-selected',
-          hasDropdown && 'slds-button_icon-more',
+          {
+            'slds-button_icon-more': hasDropdown && theme === 'neutral',
+            'slds-button_icon-container-more':
+              hasDropdown && theme === 'transparent'
+          },
           {
             'slds-button_icon-container': size === 'medium',
             'slds-button_icon-small': size === 'small',
@@ -64,7 +86,7 @@ class ButtonIcon2 extends Component {
           {
             'slds-button_icon-error': feedback === 'error'
           },
-          background,
+          variant,
           className
         )}
         aria-haspopup={hasDropdown ? 'true' : this.props['aria-haspopup']}
@@ -90,4 +112,4 @@ class ButtonIcon2 extends Component {
   }
 }
 
-export default ButtonIcon2;
+export default ButtonIcon;

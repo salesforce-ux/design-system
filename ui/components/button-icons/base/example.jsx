@@ -4,54 +4,16 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import ButtonIcon2 from '../';
+import ButtonIcon from '../';
 
-export let ButtonIcon = props => (
-  <button
-    className={classNames(
-      'slds-button slds-button_icon',
-      props.className,
-      props.selected ? 'slds-is-selected' : null
-    )}
-    disabled={props.disabled}
-    role={props.role}
-    aria-describedby={props['aria-describedby']}
-    aria-haspopup={props.hasDropdown ? 'true' : props['aria-haspopup']}
-    aria-expanded={props['aria-expanded']}
-    aria-controls={props['aria-controls']}
-    aria-hidden={props['aria-hidden']}
-    aria-pressed={props['aria-pressed']}
-    aria-live={props.assertive ? 'assertive' : props['aria-live']}
-    id={props.id}
-    tabIndex={props.tabIndex}
-    title={props.title || 'Provide description of action'}
-  >
-    <SvgIcon
-      className={classNames('slds-button__icon', props.iconClassName)}
-      sprite="utility"
-      symbol={props.symbol || 'settings'}
-    />
-    {props.hasDropdown ? (
-      <SvgIcon
-        className="slds-button__icon slds-button__icon_x-small"
-        sprite="utility"
-        symbol="down"
-      />
-    ) : null}
-    <span className="slds-assistive-text">
-      {props.assistiveText || 'Provide description of action'}
-    </span>
-  </button>
-);
-
-export default <ButtonIcon2 />;
+export default <ButtonIcon />;
 
 export let states = [
   {
-    id: 'button-icon-error',
+    id: 'error',
     label: 'Error',
     element: (
-      <ButtonIcon2
+      <ButtonIcon
         feedback="error"
         symbol="warning"
         title="Error"
@@ -60,9 +22,32 @@ export let states = [
     )
   },
   {
-    id: 'button-icon-disabled',
-    label: 'Disabled',
-    element: <ButtonIcon2 disabled />
+    id: 'bare-disabled',
+    label: 'Bare - Disabled',
+    element: <ButtonIcon disabled />
+  },
+  {
+    id: 'border-transparent-disabled',
+    label: 'Bordered with Transparent Container - Disabled',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
+        <ButtonIcon theme="transparent" symbol="settings" disabled />
+      </div>
+    )
+  },
+  {
+    id: 'border-filled-disabled',
+    label: 'Bordered with Filled Container - Disabled',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
+        <ButtonIcon theme="neutral" symbol="settings" disabled />
+      </div>
+    )
+  },
+  {
+    id: 'brand-disabled',
+    label: 'Brand - Disabled',
+    element: <ButtonIcon theme="brand" symbol="settings" disabled />
   }
 ];
 
@@ -70,68 +55,77 @@ export let examples = [
   {
     id: 'brand',
     label: 'Brand',
-    element: <ButtonIcon2 theme="brand" symbol="search" />
+    element: <ButtonIcon theme="brand" symbol="search" />
+  },
+  {
+    id: 'container-transparent',
+    label: 'Transparent Container',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
+        <ButtonIcon size="medium" symbol="search" />
+      </div>
+    )
   },
   {
     id: 'border-transparent',
-    label: 'Bordered: Transparent',
+    label: 'Bordered with Transparent Container',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-        <ButtonIcon2 theme="transparent" symbol="search" />
+        <ButtonIcon theme="transparent" symbol="search" />
       </div>
     )
   },
   {
     id: 'border-filled',
-    label: 'Bordered: Filled',
+    label: 'Bordered with Filled Container',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-        <ButtonIcon2 theme="neutral" symbol="search" />
+        <ButtonIcon theme="neutral" symbol="search" />
       </div>
     )
   },
   {
     id: 'border-inverse',
-    label: 'Bordered: Inverse',
+    label: 'Bordered on Inverse Background',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
-        <ButtonIcon2 theme="inverse" size="medium" />
+        <ButtonIcon theme="inverse" size="medium" />
       </div>
     )
   },
   {
     id: 'inverse',
-    label: 'Inverse',
+    label: 'Bare on Inverse Background',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
-        <ButtonIcon2 theme="inverse" />
+        <ButtonIcon theme="inverse" />
       </div>
     )
   },
   {
     id: 'size-small',
-    label: 'Size: small',
+    label: 'Small sized container',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-        <ButtonIcon2 theme="neutral" size="small" symbol="search" />
+        <ButtonIcon theme="neutral" size="small" symbol="search" />
       </div>
     )
   },
   {
     id: 'size-x-small',
-    label: 'Size: x-small',
+    label: 'x-small sized container',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-        <ButtonIcon2 theme="neutral" size="x-small" symbol="search" />
+        <ButtonIcon theme="neutral" size="x-small" symbol="search" />
       </div>
     )
   },
   {
     id: 'size-xx-small',
-    label: 'Size: xx-small',
+    label: 'xx-small sized container',
     element: (
       <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-        <ButtonIcon2 theme="neutral" size="xx-small" symbol="search" />
+        <ButtonIcon theme="neutral" size="xx-small" symbol="search" />
       </div>
     )
   },
@@ -140,7 +134,61 @@ export let examples = [
     label: 'Hint on hover',
     element: (
       <div className="slds-hint-parent">
-        <ButtonIcon2 iconClassName="slds-button__icon_hint" />
+        <ButtonIcon iconClassName="slds-button__icon_hint" />
+      </div>
+    )
+  },
+  {
+    id: 'hint-hover-bordered-transparent',
+    label: 'Hint on hover - Bordered with Transparent Container',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
+        <div className="slds-hint-parent">
+          <ButtonIcon
+            theme="transparent"
+            iconClassName="slds-button__icon_hint"
+          />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'hint-hover-bordered-filled',
+    label: 'Hint on hover - Bordered with Filled Container',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
+        <div className="slds-hint-parent">
+          <ButtonIcon theme="neutral" iconClassName="slds-button__icon_hint" />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'hint-hover-bare-inverse',
+    label: 'Hint on hover - Bare on Inverse Background',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+        <div className="slds-hint-parent">
+          <ButtonIcon
+            theme="inverse"
+            iconClassName="slds-button__icon_inverse-hint"
+          />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'hint-hover-bordered-inverse',
+    label: 'Hint on hover - Bordered on Inverse Background',
+    element: (
+      <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
+        <div className="slds-hint-parent">
+          <ButtonIcon
+            theme="inverse"
+            size="medium"
+            iconClassName="slds-button__icon_inverse-hint"
+          />
+        </div>
       </div>
     )
   }

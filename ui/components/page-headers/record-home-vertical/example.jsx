@@ -4,7 +4,7 @@
 import React from 'react';
 import Truncate from '../../../shared/truncate/index.react';
 import Heading from '../../heading/index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import MediaObject from '../../../utilities/media-objects/index.react';
 import SvgIcon from '../../../shared/svg-icon';
 

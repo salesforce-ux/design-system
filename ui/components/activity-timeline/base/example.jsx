@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { ActivityTimelineItem as Event } from '../event/example';
 import { ActivityTimelineItem as Call } from '../call/example';
 import { ActivityTimelineItem as Email } from '../email/example';

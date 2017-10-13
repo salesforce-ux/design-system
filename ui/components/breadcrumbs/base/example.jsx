@@ -3,7 +3,7 @@
 
 import React from 'react';
 import BreadCrumbs from '../index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Trigger } from '../../menus/dropdown/example';
 import { Menu } from '../../menus/dropdown/example';
 import { MenuList } from '../../menus/dropdown/example';

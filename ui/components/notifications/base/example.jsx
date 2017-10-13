@@ -3,7 +3,7 @@
 
 import React from 'react';
 import _ from '../../../shared/helpers';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';

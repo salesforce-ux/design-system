@@ -24,7 +24,8 @@ gulp.task('lint:sass', () =>
             formatter: 'string',
             console: true
           }
-        ]
+        ],
+        failAfterError: true
       })
     )
 );
@@ -51,7 +52,7 @@ gulp.task('lint:spaces', () =>
         ]
       })
     )
-    .pipe(lintspaces.reporter())
+    .pipe(lintspaces.reporter({ breakOnWarning: true }))
 );
 
 function lintjs(files, options) {
@@ -110,7 +111,7 @@ gulp.task('lint:html', ['generate:wrappedexamples'], () => {
         'spec-char-escape': false
       })
     )
-    .pipe(htmlhint.reporter());
+    .pipe(htmlhint.failReporter());
 });
 
 gulp.task('lint:tokens:yaml', () =>

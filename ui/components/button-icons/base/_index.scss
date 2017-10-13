@@ -4,13 +4,13 @@
 @import 'deprecate';
 
 /**
-* @summary Creates a button that looks like a plain icon
-*
-* @name base
-* @selector .slds-button_icon
-* @restrict button
-* @variant
-*/
+ * @summary Creates a button that looks like a plain icon
+ *
+ * @name base
+ * @selector .slds-button_icon
+ * @restrict button
+ * @variant
+ */
 .slds-button_icon,
 .slds-button--icon,
 .slds-button_icon-inverse,
@@ -34,13 +34,9 @@
 
 /**
  * @summary Default width + height for button icon with containers
- * @name Default
  * @selector .slds-button_icon-container
  * @restrict .slds-button_icon
- * @group container-size
  */
-
-// Append class to this list if it requires a default size of 2x2rem
 .slds-button_icon-container,
 .slds-button--icon-container,
 .slds-button_icon-border,
@@ -58,11 +54,9 @@
 }
 
 /**
- * @summary Creates an icon button with a border
- * @name Transparent background
+ * @summary Transparent themed button icon - Button icon has a border with a transparent background
  * @selector .slds-button_icon-border
  * @restrict .slds-button_icon
- * @group theme
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled,
@@ -73,10 +67,9 @@
 }
 
 /**
- * @summary Gives a white icon color on a dark background
+ * @summary Button icon with border and transparent background, to be used on an inversed background
  * @selector .slds-button_icon-border-inverse
  * @restrict .slds-button_icon
- * @group theme
  */
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
@@ -90,10 +83,9 @@
 }
 
 /**
- * @summary Gives a white icon color on a branded background
+ * @summary Branded button icon - Button icon has a filled background with the brand color
  * @selector .slds-button_icon-brand
  * @restrict .slds-button_icon
- * @group theme
  */
 .slds-button_icon-brand {
   @include button-brand;
@@ -107,11 +99,9 @@
 
 
 /**
- * @summary Button icon with background
- * @name Filled background
+ * @summary Neutral themed button icon - Button icon has a border with a filled background
  * @selector .slds-button_icon-border-filled
  * @restrict .slds-button_icon
- * @group theme
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
@@ -124,10 +114,9 @@
 }
 
 /**
- * @summary Button icon on inversed background
+ * @summary Bare button icon with no border or background, to be used on an inversed background
  * @selector .slds-button_icon-inverse
  * @restrict .slds-button_icon
- * @group color
  */
 .slds-button_icon-inverse,
 .slds-button--icon-inverse,
@@ -154,7 +143,7 @@
 }
 
 /**
- * @summary Button icon for errors
+ * @summary Error state - Typically used in conjunction with an error toolip
  * @selector .slds-button_icon-error
  * @restrict .slds-button_icon
  */
@@ -169,25 +158,13 @@
   }
 }
 
-// Stateful Button Icon
-.slds-button_icon-container.slds-is-selected,
-.slds-button--icon-container.slds-is-selected,
-.slds-button_icon-border.slds-is-selected,
-.slds-button--icon-border.slds-is-selected,
-.slds-button_icon-border-filled.slds-is-selected {
-  @include button-brand;
-
-  .slds-button__icon {
-    fill: $color-text-button-brand;
-  }
-}
-
 /**
- * @summary Button icon container - size small modifier
+ * @summary Changes a button icon container to be 24x24px
  * @name small
  * @selector .slds-button_icon-small
  * @restrict .slds-button_icon
- * @group container-size
+ * @group size
+ * @modifier
  */
 .slds-button_icon-small,
 .slds-button--icon-small {
@@ -195,11 +172,12 @@
 }
 
 /**
- * @summary Button icon container - size x-small modifier
+ * @summary Changes a button icon container to be 20x20px
  * @name x-small
  * @selector .slds-button_icon-x-small
  * @restrict .slds-button_icon
- * @group container-size
+ * @group size
+ * @modifier
  */
 .slds-button_icon-x-small,
 .slds-button--icon-x-small {
@@ -212,11 +190,12 @@
 }
 
 /**
- * @summary Button icon container - size xx-small modifier
+ * @summary Changes a button icon container to be 16x16px
  * @name xx-small
  * @selector .slds-button_icon-xx-small
  * @restrict .slds-button_icon
- * @group container-size
+ * @group size
+ * @modifier
  */
 .slds-button_icon-xx-small,
 .slds-button--icon-xx-small {
@@ -229,11 +208,9 @@
 }
 
 /**
- * @summary Button icon with dropdown
- * @name icon-with-dropdown
+ * @summary Creates a button menu icon container that has borders and a filled background
  * @selector .slds-button_icon-more
- * @restrict button
- * @variant
+ * @restrict .slds-button_icon
  */
 .slds-button_icon-more,
 .slds-button--icon-more {
@@ -264,51 +241,17 @@
   }
 }
 
-// WTF is going on here?
+/**
+ * @summary Creates a button menu icon container that has no borders
+ * @selector .slds-button_icon-container-more
+ * @restrict .slds-button_icon
+ */
 .slds-button_icon-container-more,
 .slds-button--icon-container-more {
   width: auto;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
   vertical-align: middle;
-}
-
-/**
- * The stateful button requires the `.slds-button--icon-border` class in addition to the `.slds-button` class.
- *
- * The stateful inverse button works just like the stateful button. It requires the `.slds-button--icon-border-inverse` class in addition to the `.slds-button` class.
- *
- * Stateful icons can be toggled on and off and retain their state. JavaScript is used to add the `.slds-is-selected` class to the button when activated.
- *
- * #### Accessibility
- *
- * For accessibility, implement the [ARIA Toggle Button](http://w3c.github.io/aria-practices/#button) concept.
- * - Similar to a mute button, the button represents a pressed or unpressed state.
- * - Button text doesn't change per state
- * - `aria-pressed` is set to `true` or `false`, depending its state
- *
- * @summary Stateful Button Icon
- * @name stateful
- * @selector .slds-is-selected
- * @restrict .slds-button_icon
- * @variant
- */
-.slds-button--icon-container.slds-is-selected,
-.slds-button--icon-border.slds-is-selected,
-.slds-button--icon-border-filled.slds-is-selected {
-  @include button-brand;
-
-  .slds-button__icon {
-    fill: $color-text-button-brand;
-  }
-
-  &:hover,
-  &:focus {
-
-    .slds-button__icon {
-      fill: $color-text-button-brand;
-    }
-  }
 }
 
 /**
@@ -322,10 +265,7 @@
 }
 
 /**
- * A parent class must be put on anything that contains
- * a .slds-button__icon_inverse-hint so that the child reacts
- * when the parent is hovered. This is for a dark background.
- *
+ * @summary A parent class must be put on anything that contains a .slds-button__icon_inverse-hint so that the child reacts when the parent is hovered. This is for a dark background.
  * @selector .slds-button__icon_inverse-hint
  * @restrict .slds-button_icon .slds-button__icon
  */
@@ -334,8 +274,7 @@
   fill: $color-text-icon-inverse-hint;
 }
 
-// Parent class for hint parent
-// How do we document this?
+// Handles hint on hover behavior of an inverse button icon, both bordered and non-bordered
 .slds-hint-parent {
 
   .slds-button_icon-border-inverse,

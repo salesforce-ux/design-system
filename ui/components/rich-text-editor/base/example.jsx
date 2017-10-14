@@ -25,7 +25,11 @@ const listboxOptionId04 = 'listbox-option-unique-id-04';
 /// ////////////////////////////////////////
 
 export let Demo = props => (
-  <div className="demo-only" style={{ minHeight: '180px' }}>
+  <div
+    className={classNames('demo-only', props.className)}
+    style={{ minHeight: '180px' }}
+    {...props}
+  >
     {props.children}
   </div>
 );
@@ -99,7 +103,7 @@ const FontSizeDropdown = props => (
 
 export let RteFormatFont = props => (
   <div
-    className="slds-grid"
+    className="slds-grid slds-rich-text-editor__spacing-wrapper"
     role="group"
     aria-label="Format font family &amp; size"
   >
@@ -638,6 +642,27 @@ export let examples = [
     label: 'Email',
     element: (
       <Demo>
+        <RichTextEditor>
+          <RteToolbar>
+            <RteFormatFont />
+            <RteFormatText tabIndexSetting="-1" />
+            <RteFormatColor />
+            <RteFormatBody />
+            <RteAlignText />
+            <RteInsertContent />
+            <RteClearFormatting />
+          </RteToolbar>
+
+          <RteTextarea placeholder="Compose Email..." />
+        </RichTextEditor>
+      </Demo>
+    )
+  },
+  {
+    id: 'toolbar-narrow',
+    label: 'Toolbar Narrow',
+    element: (
+      <Demo style={{ width: '294px' }} className="slds-region_narrow">
         <RichTextEditor>
           <RteToolbar>
             <RteFormatFont />

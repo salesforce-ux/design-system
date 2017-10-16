@@ -349,7 +349,7 @@ props:
     value: '#34BECD'
   IOT_ORCHESTRATIONS:
     value: '#2A739E'
-  RETURN_PRODUCT:
+  PRODUCT_RETURN:
     value: '#009688'
-  RETURN_PRODUCT_LINE_ITEM:
+  PRODUCT_RETURN_LINE_ITEM:
     value: '#009688'

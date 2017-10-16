@@ -354,22 +354,22 @@ props:
   PRODUCT_RETURN_LINE_ITEM:
     value: '#009688'
   CHANNEL_PROGRAM_HISTORY:
-    VALUE: '#0EB58A'
+    value: '#0EB58A'
   CHANNEL_PROGRAM_LEVELS:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   CHANNEL_PROGRAM_MEMBERS:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   CHANNEL_PROGRAMS:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   CUSTOMERS:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   PARTNER_FUND_ALLOCATION:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   PARTNER_FUND_CLAIM:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   PARTNER_FUND_REQUEST:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   PARTNER_MARKETING_BUDGET:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'
   PARTNERS:
-     VALUE: '#0EB58A'
+    value: '#0EB58A'

@@ -115,12 +115,12 @@
   line-height: 1;
 
   @include mq-medium-min {
-    margin-right: $spacing-medium;
+    margin-#{$right}: $spacing-medium;
     padding: 0;
   }
 
   .slds-icon {
-    margin-right: $spacing-xx-small;
+    margin-#{$right}: $spacing-xx-small;
   }
 
   /**
@@ -153,7 +153,7 @@
 
   @include mq-medium-min {
     margin: {
-      left: auto;
+      #{$left}: auto;
       bottom: 0;
     }
   }
@@ -206,7 +206,7 @@
   // class .slds-region--narrow
   .slds-post__footer-meta-list {
     margin: {
-      left: 0;
+      #{$left}: 0;
       bottom: $spacing-medium;
     }
   }

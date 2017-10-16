@@ -1,0 +1,61 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * @summary Vlocity Newport branded select
+ *
+ * @name newport
+ * @selector .vlocity-newport-select
+ * @restrict .slds-select
+ * @variant
+ */
+
+
+.vlocity-newport-select_container {
+  .vlocity-newport-select {
+    border: none;
+    border-bottom: 1px solid #dddbda;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .vlocity-newport-icon {
+    position: absolute;
+    right: 1px;
+    top: 5px;
+
+    .slds-button__icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      fill: #54698D;
+    }
+  }
+}
+
+
+.vlocity-newport-select_container:before {
+  border-bottom: none;
+  top: 0;
+}
+
+.vlocity-newport-select_container:after {
+  border-top: none;
+  bottom: 0;
+}
+
+.vlocity-newport-select:active,
+.vlocity-newport-select:focus {
+  box-shadow: none;
+  border-color: #FF6D00;
+}
+
+
+.slds-has-error .vlocity-newport-select {
+  border-bottom: 1px solid #c23934;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

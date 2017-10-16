@@ -24,7 +24,7 @@
   display: flex;
   position: fixed;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   width: 100%;
   height: $height-docked-bar;
   background: $color-background-docked-panel;
@@ -52,7 +52,7 @@
  */
 .slds-utility-bar__item {
   display: flex;
-  margin-right: $border-width-thin;
+  margin-#{$right}: $border-width-thin;
 }
 
 /**
@@ -74,8 +74,8 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     height: 2px;
     background: transparent;
   }
@@ -121,7 +121,7 @@
   display: flex;
   flex-direction: column;
   line-height: 1;
-  text-align: left;
+  text-align: $left;
 }
 
 /**

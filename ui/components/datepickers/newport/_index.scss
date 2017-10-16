@@ -1,0 +1,36 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * @summary Vlocity Newport branded datepicker
+ *
+ * @name newport
+ * @selector .vlocity-newport-datepicker
+ * @restrict .slds-datepicker
+ * @variant
+ */
+
+
+.vlocity-newport-datepicker {
+	td {
+		&.slds-is-selected:not(.slds-is-today) > .slds-day {
+	      background: #FF6D00;
+	      color: $color-text-button-brand-hover;
+	    }
+	}
+
+	.slds-text-link {
+		color: #FF6D00;
+		&:hover {
+			color: #FF6D00;
+		}
+	}
+}
+
+
+.vlocity-newport-dropdown-trigger { 
+	.slds-input-has-icon_right .slds-input__icon {
+		left: 0;
+	}
+}

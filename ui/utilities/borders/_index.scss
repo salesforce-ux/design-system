@@ -22,7 +22,7 @@
  */
 .slds-border_left,
 .slds-border--left {
-  border-left: $border-width-thin solid $color-border;
+  border-#{$left}: $border-width-thin solid $color-border;
 }
 
 /**
@@ -34,7 +34,7 @@
  */
 .slds-border_right,
 .slds-border--right {
-  border-right: $border-width-thin solid $color-border;
+  border-#{$right}: $border-width-thin solid $color-border;
 }
 
 /**

@@ -199,7 +199,7 @@
 
   .slds-slider__value {
     position: absolute;
-    left: 0;
+    #{$left}: 0;
     bottom: 0;
     padding: 0;
   }

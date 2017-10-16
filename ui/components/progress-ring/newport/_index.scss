@@ -1,0 +1,48 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Vlocity Newport branded Progress Ring component
+ *
+ * @name newport
+ * @selector .vlocity-newport-progress-ring
+ * @restrict .slds-progress-ring
+ * @variant
+ */
+
+.vlocity-newport-progress-ring {
+
+  /**
+   *
+   * @selector .slds-progress-ring__path
+   * @restrict .slds-progress-ring__progress path
+   */
+  .slds-progress-ring__path {
+    fill: #FF6D00;
+  }
+}
+
+
+
+/**
+ * @summary Complete colors
+ *
+ * @selector .slds-progress-ring_complete
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group theme
+ */
+.slds-progress-ring_complete {
+
+  .slds-icon {
+    fill: $color-background-progress-ring-content;
+  }
+
+  .slds-progress-ring__path {
+    fill: $color-background-success;
+  }
+
+  .slds-progress-ring__content {
+    background: $color-background-success;
+  }
+}

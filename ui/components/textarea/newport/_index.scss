@@ -1,0 +1,34 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * @summary Vlocity Newport branded textarea
+ *
+ * @name newport
+ * @selector .vlocity-newport-textarea
+ * @restrict .slds-textarea
+ * @variant
+ */
+
+.vlocity-newport-textarea {
+	border: none;
+    border-bottom: 1px solid #dddbda;
+    padding: .5rem 0;
+    border-radius: 0;
+
+    &:active,
+    &:focus {
+		box-shadow: none;
+    }
+}
+
+
+.slds-has-error .vlocity-newport-textarea {
+	box-shadow: none;
+
+	&:active,
+	&:focus {
+		box-shadow: none;
+	}
+}

@@ -12,7 +12,7 @@
   @include deprecate('4.0.0', '`notify-container` is deprecated, use `notify_container` instead.');
   position: fixed;
   width: 100%;
-  left: 0;
+  #{$left}: 0;
   top: 0;
   z-index: $z-index-toast;
   text-align: center;
@@ -35,9 +35,9 @@
   font-weight: $font-weight-light;
   border-radius: $border-radius-medium;
   margin: $spacing-x-small;
-  padding: $spacing-small $spacing-xx-large $spacing-small $spacing-large;
+  padding: side-values($spacing-small $spacing-xx-large $spacing-small $spacing-large);
   min-width: rem(480px);
-  text-align: left;
+  text-align: $left;
   justify-content: flex-start;
 
   /**
@@ -48,11 +48,11 @@
    * @required
    */
   .slds-notify__close {
-    float: right;
+    float: $right;
     position: absolute;
     top: $spacing-small;
-    right: $spacing-small;
-    margin-left: $spacing-xx-small;
+    #{$right}: $spacing-small;
+    margin-#{$left}: $spacing-xx-small;
     transform: translateY($spacing-xxx-small * -1);
   }
 }
@@ -66,6 +66,6 @@
   .slds-notify--toast {
     min-width: auto;
     width: 100%;
-    margin-left: 0;
+    margin-#{$left}: 0;
   }
 }

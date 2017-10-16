@@ -1,0 +1,41 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
+ * @name base
+ * @selector .slds-combobox-lookup
+ * @restrict div
+ * @variant
+ */
+
+/**
+ * @summary Vlocity Newport branded Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
+ * @name newport
+ * @selector .vlocity-newport-combobox-lookup
+ * @restrict .slds-combobox-lookup
+ * @variant
+ */
+
+// .vlocity-newport-lookup {
+  
+// }
+
+
+
+ .vlocity-newport-combobox_container.slds-has-inline-listbox {
+    border: none;
+    border-bottom: 1px solid #dddbda;
+
+    &:focus {
+      box-shadow: none;
+      border-color: #ff6d00;
+    }
+ }
+
+ .vlocity-newport-combobox_container.slds-has-inline-listbox.slds-has-input-focus {
+    box-shadow: none;
+    border-color: #ff6d00;
+ }

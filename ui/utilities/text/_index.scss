@@ -176,7 +176,7 @@
  */
 .slds-text-align_left,
 .slds-text-align--left {
-  text-align: left;
+  text-align: $left;
 }
 
 /**
@@ -198,7 +198,7 @@
  */
 .slds-text-align_right,
 .slds-text-align--right {
-  text-align: right;
+  text-align: $right;
 }
 
 

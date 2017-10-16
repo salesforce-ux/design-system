@@ -49,7 +49,7 @@ $_eq-bar-height-max: 14px;
 .slds-icon-eq__bar {
   position: absolute;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   width: fix-ie-rounding(4);
   height: rem($_eq-bar-height-min) * 3;
   background: #0070d2;
@@ -57,12 +57,12 @@ $_eq-bar-height-max: 14px;
   transform-origin: bottom;
 
   &:nth-of-type(2) {
-    left: fix-ie-rounding(5);
+    #{$left}: fix-ie-rounding(5);
     height: rem($_eq-bar-height-max);
   }
 
   &:nth-of-type(3) {
-    left: fix-ie-rounding(10);
+    #{$left}: fix-ie-rounding(10);
     height: rem($_eq-bar-height-min) * 4;
   }
 }

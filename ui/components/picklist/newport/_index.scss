@@ -1,0 +1,46 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * @summary Vlocity Newport branded picklist
+ *
+ * @name newport
+ * @selector .vlocity-newport-combobox-picklist
+ * @restrict .slds-combobox-picklist
+ * @variant
+ */
+
+@include deprecate('4.0.0', 'A picklist should use the readonly version of a combobox') {
+
+  .vlocity-newport-combobox-picklist {
+  	[role="combobox"] .slds-input__icon > input[readonly] {
+	  &:focus {
+	    border-color: #FF6D00; //$color-border-brand-primary;
+	  }
+	}
+  }
+}
+
+
+
+.vlocity-newport-combobox_container {
+	.slds-dropdown {
+		border-top: none;
+	    border-radius: 0 0 0.25rem 0;
+
+	    .slds-listbox__option.slds-has-focus, 
+		.slds-listbox__option:focus, 
+		.slds-listbox__option:hover, 
+		.slds-listbox__option.slds-has-focus, 
+		.slds-listbox__option:focus, 
+		.slds-listbox__option:hover {
+			background-color: #CCCCCC;
+		}
+	}
+
+	[role=combobox] input[readonly]:focus {
+		border-bottom: 2px solid #FF6D00;
+	}
+}
+

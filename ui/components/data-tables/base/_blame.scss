@@ -18,7 +18,7 @@
 
 // For wrapping header/listView for Object home lists which goes all the way to the bottom of the page
 .slds-table_joined-wrapper {
-  padding: $card-wrapper-spacing $card-wrapper-spacing 0 $card-wrapper-spacing;
+  padding: side-values($card-wrapper-spacing $card-wrapper-spacing 0 $card-wrapper-spacing);
   border-radius: $border-radius-medium;
   background-clip: padding-box;
 

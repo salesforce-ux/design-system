@@ -1,0 +1,7 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+    NEWPORT_BACKGROUND_PRIMARY_BLUE: "#1564BF"
+    NEWPORT_COLOR_BRAND_ORANGE: "#FF6D00"
+    NEWPORT_CARD_BACKGROUND_LIGHT_BLUE: "#f8fbfe"

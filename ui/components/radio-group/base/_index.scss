@@ -123,5 +123,5 @@
 .slds-form-element .slds-radio [type='radio'] ~ .slds-radio--faux,
 .slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux,
 .slds-radio [type='radio'] + .slds-radio__label .slds-radio--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }

@@ -10,7 +10,7 @@
   position: fixed;
   display: block;
   width: ($size-medium + $spacing-x-small); // this is 320, not 300px
-  right: $spacing-xx-small;
+  #{$right}: $spacing-xx-small;
   top: $spacing-xx-small;
   padding: $spacing-xx-small $spacing-xx-small $spacing-x-small;
   z-index: $z-index-reminder;
@@ -60,7 +60,7 @@
  * @restrict .slds-notification__body a
  */
 .slds-notification__target {
-  padding: $spacing-small $spacing-large $spacing-medium $spacing-small;
+  padding: side-values($spacing-small $spacing-large $spacing-medium $spacing-small);
   border-radius: $border-radius-medium;
   background-color: $color-background-alt;
   color: $color-text-default;
@@ -79,7 +79,7 @@
  * @restrict .slds-notification div
  */
 .slds-notification__footer {
-  padding: $spacing-small $spacing-small $spacing-medium $spacing-small;
+  padding: side-values($spacing-small $spacing-small $spacing-medium $spacing-small);
 }
 
 /**
@@ -91,5 +91,5 @@
 .slds-notification__close {
   position: absolute;
   top: 0;
-  right: 0;
+  #{$right}: 0;
 }

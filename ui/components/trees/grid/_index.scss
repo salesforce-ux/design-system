@@ -66,5 +66,5 @@
  */
 .slds-table_tree__toggle,
 .slds-table--tree__toggle {
-  margin-left: ($spacing-xx-small * -1);
+  margin-#{$left}: ($spacing-xx-small * -1);
 }

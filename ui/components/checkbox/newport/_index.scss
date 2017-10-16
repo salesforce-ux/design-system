@@ -1,0 +1,48 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Vlocity Newport branded checkbox
+ *
+ * @name newport
+ * @selector .vlocity-newport-checkbox
+ * @restrict .slds-checkbox
+ * @variant
+ */
+.vlocity-newport-checkbox {
+	[type=checkbox] {
+		&:checked+.slds-checkbox--faux,
+		&:checked+.slds-checkbox__label .slds-checkbox--faux, 
+		&:checked+.slds-checkbox__label .slds-checkbox_faux,
+		&:checked+.slds-checkbox_faux,
+		&:checked~.slds-checkbox--faux,
+    &:checked~.slds-checkbox_faux, {
+    	background: #FF6D00;
+    	border: none;
+    	outline: unset;
+      &:after {
+				height: .4rem;
+				width: .7rem;
+      	border-bottom: 2px solid #FFF;
+				border-left: 2px solid #FFF;
+			}
+		}
+	}
+}
+
+.slds-has-error .vlocity-newport-checkbox {
+	[type=checkbox] {
+		&:checked+.slds-checkbox--faux,
+		&:checked+.slds-checkbox__label .slds-checkbox--faux, 
+		&:checked+.slds-checkbox__label .slds-checkbox_faux, 
+		&:checked+.slds-checkbox_faux,
+		&:checked~.slds-checkbox--faux,
+		&:checked~.slds-checkbox_faux {
+			border-color: #FFF;
+			background-color: #c23934;
+			&:after {
+				border-color: #fff;
+			}
+		}
+	}
+}

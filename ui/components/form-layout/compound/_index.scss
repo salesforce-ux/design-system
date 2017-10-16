@@ -22,7 +22,7 @@
     }
 
     .slds-form-element + .slds-form-element {
-      margin-left: $spacing-x-small;
+      margin-#{$left}: $spacing-x-small;
     }
   }
 
@@ -32,7 +32,7 @@
       position: relative;
 
       + .slds-form-element__control {
-        padding-left: $spacing-x-small;
+        padding-#{$left}: $spacing-x-small;
       }
     }
   }

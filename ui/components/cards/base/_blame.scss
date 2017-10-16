@@ -17,8 +17,8 @@
   .slds-card__header,
   .slds-card__body,
   .slds-card__footer {
-    padding-left: 0;
-    padding-right: 0;
+    padding-#{$left}: 0;
+    padding-#{$right}: 0;
   }
 }
 
@@ -67,18 +67,18 @@
   // This removes the padding for the plain cards when inside a padded tabset
   .slds-card,
   .slds-card-wrapper {
-    padding-left: 0;
-    padding-right: 0;
+    padding-#{$left}: 0;
+    padding-#{$right}: 0;
   }
 
   // Pull cards to edge of already padded tab content area
   .slds-card__header,
   .slds-card__body,
   .slds-card__footer {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+    padding-#{$left}: 0;
+    padding-#{$right}: 0;
+    margin-#{$left}: 0;
+    margin-#{$right}: 0;
   }
 
   // Restore cards inside .slds-tabs_card when needed
@@ -87,8 +87,8 @@
     border-radius: $border-radius-medium;
 
     .slds-card__header {
-      padding-left: $card-header-padding;
-      padding-right: $card-header-padding;
+      padding-#{$left}: $card-header-padding;
+      padding-#{$right}: $card-header-padding;
     }
 
     .slds-card__body_inner,
@@ -97,8 +97,8 @@
     }
 
     .slds-card__footer {
-      padding-left: $card-footer-padding;
-      padding-right: $card-footer-padding;
+      padding-#{$left}: $card-footer-padding;
+      padding-#{$right}: $card-footer-padding;
     }
   }
 }

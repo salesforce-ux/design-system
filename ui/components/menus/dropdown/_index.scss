@@ -106,12 +106,12 @@
 
     ~ .slds-dropdown_left[class*="slds-nubbin"],
     ~ .slds-dropdown--left[class*="slds-nubbin"] {
-      left: ($spacing-x-small * -1);
+      #{$left}: ($spacing-x-small * -1);
     }
 
     ~ .slds-dropdown_right[class*="slds-nubbin"],
     ~ .slds-dropdown--right[class*="slds-nubbin"] {
-      right: ($spacing-x-small * -1);
+      #{$right}: ($spacing-x-small * -1);
     }
   }
 }
@@ -125,8 +125,8 @@
 .slds-dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
-  left: 50%;
-  float: left;
+  #{$left}: 50%;
+  float: $left;
   min-width: $size-xx-small;
   max-width: $size-medium;
   margin-top: $spacing-xxx-small;
@@ -137,7 +137,7 @@
   font-size: $font-size-small;
   background: $color-background-alt;
   box-shadow: $shadow-drop-down;
-  transform: translateX(-50%);
+  transform: translateX(if-ltr(-50%, 50%));
 
   /**
    * @summary Positions dropdown to left side of target
@@ -148,7 +148,7 @@
    */
   &_left,
   &--left {
-    left: 0;
+    #{$left}: 0;
     transform: translateX(0);
   }
 
@@ -161,8 +161,8 @@
    */
   &_right,
   &--right {
-    left: auto;
-    right: 0;
+    #{$left}: auto;
+    #{$right}: 0;
     transform: translateX(0);
   }
 
@@ -400,24 +400,24 @@
 
       &.slds-dropdown_left,
       &.slds-dropdown--left {
-        left: ($spacing-medium * -1);
+        #{$left}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: $spacing-large;
-          margin-left: 0;
+          #{$left}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
 
       &.slds-dropdown_right,
       &.slds-dropdown--right {
-        right: ($spacing-medium * -1);
+        #{$right}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: auto;
-          right: $spacing-large;
-          margin-left: 0;
+          #{$left}: auto;
+          #{$right}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
     }
@@ -504,14 +504,14 @@
       &--left > a,
       &_left > span,
       &--left > span {
-        padding-left: $spacing-x-large;
+        padding-#{$left}: $spacing-x-large;
       }
 
       &_right > a,
       &--right > a,
       &_right > span,
       &--right > span {
-        padding-right: $spacing-x-large;
+        padding-#{$right}: $spacing-x-large;
       }
 
       &_left-right > a,
@@ -519,8 +519,8 @@
       &_left-right > span,
       &--left-right > span {
         padding: {
-          left: $spacing-x-large;
-          right: $spacing-x-large;
+          #{$left}: $spacing-x-large;
+          #{$right}: $spacing-x-large;
         }
       }
 
@@ -533,12 +533,12 @@
 
         &_left,
         &--left {
-          left: $spacing-small;
+          #{$left}: $spacing-small;
         }
 
         &_right,
         &--right {
-          right: $spacing-small;
+          #{$right}: $spacing-small;
         }
       }
     }

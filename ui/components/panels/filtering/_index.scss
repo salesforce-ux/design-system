@@ -10,7 +10,7 @@
  */
 .slds-panel_filters,
 .slds-panel--filters {
-  margin-left: $spacing-medium;
+  margin-#{$left}: $spacing-medium;
   box-shadow: $shadow-drop-down;
   border-radius: 0;
 }

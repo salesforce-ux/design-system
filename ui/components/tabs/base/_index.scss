@@ -46,7 +46,7 @@
 
       + .slds-tabs__item {
         @include mq-medium-min {
-          margin-left: $spacing-large;
+          margin-#{$left}: $spacing-large;
         }
       }
 
@@ -114,8 +114,8 @@
     display: block;
     content: '';
     bottom: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     position: absolute;
     height: $border-width-thick;
   }

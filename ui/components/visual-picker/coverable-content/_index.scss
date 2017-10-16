@@ -85,12 +85,12 @@
         content: '';
         position: absolute;
         top: 0;
-        right: 0;
+        #{$right}: 0;
         border-color: transparent;
         border-style: solid;
         border-radius: 0.5rem;
         border-width: 1rem;
-        border-right-color: $color-brand;
+        border-#{$right}-color: $color-brand;
         border-top-color: $color-brand;
       }
     }

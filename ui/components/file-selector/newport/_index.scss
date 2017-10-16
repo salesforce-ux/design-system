@@ -1,0 +1,98 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+
+/**
+ * @summary Vlocity Newport branded file selecter
+ *
+ * @name newport
+ * @selector .vlocity-newport-file-selector
+ * @restrict .slds-file-selector
+ * @variant
+ */
+
+.vlocity-newport-file-selector {
+	width: 15rem;
+
+	.slds-file-selector__dropzone {
+	    width: inherit;
+	    padding: 0;
+	    border: 1px solid #dddbda;
+	    border-radius: .25rem;
+	    background-color: #F8FBFE;
+	}
+
+	.slds-file-selector__body,
+	.slds-file-selector__button  {
+		width: 100%;
+	}
+
+	.slds-file-selector__body {
+		position: relative;
+		height: inherit;
+
+		.slds-file-selector__button {
+			height: inherit;
+			max-height: 2.3rem;
+    		line-height: 2.3rem;
+    		background-color: #F8FBFE;
+    		border: none;
+    		color: #54698D;
+    		font-size: 0.75rem;
+		}
+
+		span.vlocity-newport-file-icon {
+			position: absolute;
+			right: 0.5rem;
+			padding: 0.3rem;
+			border-radius: 0.25rem;
+			border: 1px solid #dddbda;
+
+			svg.slds-button__icon {
+				fill: #54698D;
+				width: 1.2rem;
+				height: 1.2rem;
+			}
+		}
+	}
+
+	.vlocity-newport-file-list {
+		margin: 0 0.5rem;
+
+		li {
+			position: relative;
+		    width: 100%;
+		    height: 2.15rem;
+		    margin: 0.5rem 0;
+		    border: 1px solid #dddbda;
+		    background-color: white;
+		    border-radius: 0.25rem;
+
+		    .slds-button.slds-button_neutral {
+		    	border: none;
+		    	color: #061C3F;
+		    	font-size: 0.75rem;
+		    }
+		}
+
+		.slds-file-selector__button {
+			height: inherit;
+    		max-height: 2rem;
+		}
+
+		span.vlocity-newport-file-icon {
+			position: absolute;
+			right: 0.3rem;
+			padding: 0.4rem 0;
+
+			svg.slds-button__icon {
+				fill: #54698D;
+				width: 1.2rem;
+				height: 1.2rem;
+			}
+		}
+	}
+}
+
+
+

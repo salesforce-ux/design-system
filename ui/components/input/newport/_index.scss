@@ -12,4 +12,74 @@
 .vlocity-newport-input {
   border-radius: 0;
   border-width: 0 0 1px 0;
+  padding: 0;
+
+	&:focus,
+	&:active {
+	  outline: 0;
+	  box-shadow: none;
+	}
+}
+
+
+.slds-has-error .vlocity-newport-input {
+	box-shadow: none;
+	&:focus,
+	&:active {
+		box-shadow: none;
+	}
+}
+
+
+/**
+ * @summary Vlocity Newport branded text input with icon
+ *
+ * @name newport
+ * @selector .vlocity-newport-input-has-icon
+ * @restrict .slds-input-has-icon
+ * @variant
+ */
+
+.vlocity-newport-input-has-icon {
+
+	/**
+   * Positions .slds-input__icon to the left of the text input
+   *
+   * @selector .vlocity-newport-input-has-icon_left
+   * @restrict .vlocity-newport-input-has-icon
+   */
+  
+	&_left,
+  &--left {
+    .slds-input__icon {
+      #{$left}: $spacing-none;
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-#{$left}: $spacing-large;
+    }
+  }
+
+
+	/**
+   * Positions .slds-input__icon to the right of the text input
+   *
+   * @selector .vlocity-newport-input-has-icon_right
+   * @restrict .vlocity-newport-input-has-icon
+   */
+  
+	&_right,
+  &--right {
+    .slds-input__icon {
+      #{$right}: $spacing-none;
+    }
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-#{$right}: $spacing-large;
+    }
+  }
 }

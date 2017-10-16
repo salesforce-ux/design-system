@@ -1,0 +1,24 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Vlocity Newport branded modal
+ *
+ * @name newport
+ * @selector .vlocity-newport-modal
+ * @restrict .slds-modal
+ * @variant
+ */
+
+.vlocity-newport-modal {
+  .slds-modal__close {
+    left: unset;
+    right: -.5rem;
+  }
+
+  .slds-text-heading--medium, 
+  .slds-text-heading_medium {
+    font-size: 1.125rem;
+    color: #1564BF;
+  }
+}

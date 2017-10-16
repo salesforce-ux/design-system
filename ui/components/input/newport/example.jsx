@@ -103,7 +103,7 @@ let NewportErrorIcon = props => (
       </abbr>{' '}
       Input Label
     </FormElementLabel>
-    <FormElementControl className="slds-input-has-icon slds-input-has-icon_left">
+    <FormElementControl className="slds-input-has-icon vlocity-newport-input-has-icon vlocity-newport-input-has-icon_left">
       <SvgIcon className="slds-input__icon" sprite="utility" symbol="warning" />
       <NewportInput required aria-describedby={props.errorId} />
     </FormElementControl>
@@ -191,7 +191,7 @@ export let examples = [
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left">
+        <FormElementControl className="slds-input-has-icon vlocity-newport-input-has-icon vlocity-newport-input-has-icon_left">
           <SvgIcon
             className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"
@@ -208,7 +208,7 @@ export let examples = [
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon_right">
+        <FormElementControl className="slds-input-has-icon vlocity-newport-input-has-icon vlocity-newport-input-has-icon_right">
           <SvgIcon
             className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
             sprite="utility"
@@ -225,7 +225,7 @@ export let examples = [
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right">
+        <FormElementControl className="slds-input-has-icon vlocity-newport-input-has-icon vlocity-newport-input-has-icon_left-right">
           <SvgIcon
             className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"
@@ -250,7 +250,7 @@ export let examples = [
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right">
+        <FormElementControl className="slds-input-has-icon vlocity-newport-input-has-icon vlocity-newport-input-has-icon_left-right">
           <SvgIcon
             className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"

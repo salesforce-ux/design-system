@@ -58,29 +58,3 @@
     text-decoration: underline;
   }
 }
-
-/**
- * @summary Modifier that notifies a parent component that it has sub tabs inside of it
- * @selector .slds-has-sub-tabs
- * @restrict .slds-context-bar
- */
-.slds-has-sub-tabs {
-
-  .slds-context-bar__item_tab.slds-is-active,
-  .slds-context-bar__item_tab.slds-is-active:hover {
-    animation: none;
-    background-color: transparent;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -3px;
-      height: 3px;
-      width: 100%;
-      background-color: $color-background-context-bar;
-      border: 0;
-      mix-blend-mode: unset;
-    }
-  }
-}

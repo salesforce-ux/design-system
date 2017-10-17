@@ -120,6 +120,7 @@ props:
   COLOR_BACKGROUND_REMINDER:
     value: '{!LINK_WATER}'
     comment: Background color for reminder notification
+    release: 2.5.0
   COLOR_BACKGROUND_REMINDER_HOVER:
     value: '{!WHITE}'
     comment: Background color for reminder notification on hover

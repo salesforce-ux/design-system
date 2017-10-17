@@ -8,10 +8,12 @@ ignoreFiles:
 # https://github.com/salesforce-ux/stylelint-config-slds
 extends: "stylelint-config-slds"
 
+defaultSeverity: "error"
+
 # Overrides
 rules:
   "selector-class-pattern":
     - "^(slds|site|demo)(-[a-z0-9_-]+|)$"
     -
-      severity: warning
+      severity: error
       resolveNestedSelectors: true

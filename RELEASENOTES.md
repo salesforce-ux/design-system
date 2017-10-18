@@ -3,6 +3,16 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.4.4] - October 17, 2017**
+
+## Fixes
+
+**Cards**
+- Fixed padding-left and padding-right on nested `slds-card__header` and `slds-card__footer` with `slds-card_boundary`
+
+**Sizing**
+- Fixed known IE11 bug when you have nested flex containers with flex-basis on children
+
 ## **Release [2.4.3] - September 19, 2017**
 
 ## Fixes

@@ -43,3 +43,45 @@ props:
   COLOR_GRAY_12:
     value: "{!PALETTE_GRAY_12}"
     comment: "Gray Color 12"
+  BRAND_PRIMARY:
+    value: "#1589ee"
+    comment: "Primary brand color"
+  BRAND_PRIMARY_ACTIVE:
+    value: "#007add"
+    comment: "Primary brand color for interactions"
+  BRAND_LIGHT:
+    value: "#f4f6fe"
+    comment: ""
+  BRAND_LIGHT_ACTIVE:
+    value: "#e3e5ed"
+    comment: ""
+  BRAND_DARK:
+    value: "#182337"
+    comment: ""
+  BRAND_DARK_ACTIVE:
+    value: "#253045"
+    comment: ""
+  BRAND_A11Y:
+    value: "#23538d"
+    comment: ""
+  BRAND_A11Y_ACTIVE:
+    value: "#06457d"
+    comment: ""
+  BRAND_CONTRAST:
+    value: "#1a1b1e"
+    comment: ""
+  BRAND_CONTRAST_ACTIVE:
+    value: "#0d0e12"
+    comment: ""
+  BRAND_BACKGROUND:
+    value: "#AFC5DE"
+    comment: ""
+  BRAND_HEADER:
+    value: "#ffffff"
+    comment: ""
+  BRAND_HEADER_CONTRAST:
+    value: "#474747"
+    comment: ""
+  BRAND_HEADER_CONTRAST_ACTIVE:
+    value: "#474747"
+    comment: ""

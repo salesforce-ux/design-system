@@ -14,6 +14,8 @@ import {
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';
 const referenceId03 = 'accordion-details-03';
+const referenceId04 = 'accordion-details-04';
+const referenceId05 = 'accordion-details-05';
 
 let Accordion = props => (
   <ul className={classNames('slds-accordion', props.className)}>
@@ -246,6 +248,53 @@ export let states = [
           </AccordionSection>
         </Accordion>
       </div>
+    )
+  }
+];
+
+export let examples = [
+  {
+    id: 'nested-accordions',
+    label: 'Nested Accordions',
+    element: (
+      <Accordion>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen
+          referenceId={referenceId01}
+        >
+          <Accordion>
+            <AccordionSection
+              summary="Nested accordion summary"
+              isOpen
+              referenceId={referenceId04}
+            >
+              Accordion details - A
+            </AccordionSection>
+            <AccordionSection
+              summary="Nested accordion summary"
+              isOpen={false}
+              referenceId={referenceId05}
+            >
+              Accordion details - B
+            </AccordionSection>
+          </Accordion>
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen={false}
+          referenceId={referenceId02}
+        >
+          Accordion details - B
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen={false}
+          referenceId={referenceId03}
+        >
+          Accordion details - C
+        </AccordionSection>
+      </Accordion>
     )
   }
 ];

@@ -3,12 +3,12 @@ global:
   category: illustrations
 
 props:
-  EMPTY_STATE_ASSISTANT:
+  ILLUSTRATION_EMPTY_STATE_ASSISTANT:
     value: '/assets/images/illustrations/empty-state-assistant.svg'
     type: string
-  EMPTY_STATE_EVENTS:
+  ILLUSTRATION_EMPTY_STATE_EVENTS:
     value: '/assets/images/illustrations/empty-state-events.svg'
     type: string
-  EMPTY_STATE_TASKS:
+  ILLUSTRATION_EMPTY_STATE_TASKS:
     value: '/assets/images/illustrations/empty-state-tasks.svg'
     type: string

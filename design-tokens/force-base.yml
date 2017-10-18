@@ -20,6 +20,7 @@ imports:
 - ./force-base/z-index.yml
 - ./palette-colors.yml
 - ./components.yml
+- ./illustrations.yml
 auraImports:
 - 'force:mqCommons'
 - 'force:fontCommons'

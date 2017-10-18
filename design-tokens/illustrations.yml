@@ -1,0 +1,14 @@
+global:
+  type: image
+  category: illustrations
+
+props:
+  ILLUSTRATION_EMPTY_STATE_ASSISTANT:
+    value: '/assets/images/illustrations/empty-state-assistant.svg'
+    type: string
+  ILLUSTRATION_EMPTY_STATE_EVENTS:
+    value: '/assets/images/illustrations/empty-state-events.svg'
+    type: string
+  ILLUSTRATION_EMPTY_STATE_TASKS:
+    value: '/assets/images/illustrations/empty-state-tasks.svg'
+    type: string

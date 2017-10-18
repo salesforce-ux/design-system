@@ -83,5 +83,5 @@ props:
     value: "#474747"
     comment: ""
   BRAND_HEADER_CONTRAST_ACTIVE:
-    value: ""
+    value: "#474747"
     comment: ""

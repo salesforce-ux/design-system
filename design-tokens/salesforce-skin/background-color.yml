@@ -97,7 +97,7 @@ props:
     value: '{!SCIENCE_BLUE}'
     comment: Background color for default mobile chrome (ex. global header)
   COLOR_BACKGROUND_CHROME_DESKTOP:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Background color for default desktop chrome (ex. global header)
   ## BRANDING
   COLOR_BRAND:
@@ -166,7 +166,7 @@ props:
     comment: Background color for highlighting text in search results.
   ## MODALS
   COLOR_BACKGROUND_MODAL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Standard modal header
   COLOR_BACKGROUND_MODAL_BRAND:
     value: '{!SCIENCE_BLUE}'
@@ -286,13 +286,13 @@ props:
     comment: Hovered active toggle background color.
   ## INPUT
   COLOR_BACKGROUND_INPUT:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Default input field
   COLOR_BACKGROUND_INPUT_ACTIVE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Selected input field (when user has clicked or tabbed into field)
   COLOR_BACKGROUND_INPUT_CHECKBOX:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Default checkboxes
   COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
     value: '{!PALETTE_GRAY_5}'
@@ -352,7 +352,7 @@ props:
     comment: Color of the indicator dot.
   ## PILL
   COLOR_BACKGROUND_PILL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Background color for pills.
   ## IMAGE
   COLOR_BACKGROUND_IMAGE_OVERLAY:

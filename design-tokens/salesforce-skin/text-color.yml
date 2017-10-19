@@ -29,7 +29,7 @@ props:
     value: '{!PALETTE_GRAY_9}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
   COLOR_TEXT_INVERSE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Inverse text color for dark backgrounds
   COLOR_TEXT_INVERSE_WEAK:
     value: '{!PALETTE_GRAY_7}'
@@ -85,13 +85,13 @@ props:
     value: '{!PALETTE_GRAY_5}'
     comment: Default icon color - disabled state
   COLOR_TEXT_ICON_INVERSE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Icon color on dark background
   COLOR_TEXT_ICON_INVERSE_HOVER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Icon color on dark background - hover state
   COLOR_TEXT_ICON_INVERSE_ACTIVE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Icon color on dark background - active state
   COLOR_TEXT_ICON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
@@ -100,7 +100,7 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: Hovered icon color for a button that has a parent element that has a hover state
   COLOR_TEXT_BROWSER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Top bar icon color
   COLOR_TEXT_BROWSER_ACTIVE:
     value: '{!BLACK_TRANSPARENT_40}'
@@ -167,7 +167,7 @@ props:
       - 'border*'
     comment: Hover link text
   COLOR_TEXT_LINK_INVERSE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Link color on dark background
   COLOR_TEXT_LINK_INVERSE_HOVER:
     value: '{!WHITE_TRANSPARENT_75}'
@@ -223,13 +223,13 @@ props:
     value: '{!WHITE}'
     comment: Text color for brandable primary button
   COLOR_TEXT_BUTTON_BRAND_HOVER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Text color for brandable primary button - hover state
   COLOR_TEXT_BUTTON_BRAND_ACTIVE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Text color for brandable primary button - active state
   COLOR_TEXT_BUTTON_BRAND_DISABLED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Text color for brandable primary button - disabled state
   COLOR_TEXT_BUTTON_DEFAULT:
     value: '{!SCIENCE_BLUE}'
@@ -254,7 +254,7 @@ props:
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   ## MODALS
   COLOR_TEXT_MODAL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Modal header title
   COLOR_TEXT_MODAL_BUTTON:
     value: '{!PALETTE_GRAY_9}'

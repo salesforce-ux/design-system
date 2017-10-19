@@ -163,7 +163,7 @@ props:
     value: '{!PALETTE_GRAY_6}'
     comment: Border color on disabled form elements.
   COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: The borders to create the checkmark
   ## ICONS
   COLOR_BORDER_ICON_INVERSE_HINT:
@@ -174,7 +174,7 @@ props:
     comment: Hovered border color for a button with an icon that has a parent element that has a hover state
   ## TOGGLE
   COLOR_BORDER_TOGGLE_CHECKED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
   ## NOTIFICATION
   COLOR_BORDER_REMINDER:
@@ -200,7 +200,7 @@ props:
     value: '{!SCIENCE_BLUE}'
     comment: Border color for a selected tab in a tab group.
   COLOR_BORDER_TAB_ACTIVE:
-    value: "{!WHITE}"
+    value: "{!PALETTE_GRAY_1}"
     comment: Border color for an active tab.
   ## PAGE HEADERS
   PAGE_HEADER_COLOR_BORDER:

@@ -33,11 +33,6 @@ props:
   SHADOW_FOCUS_INSET:
     value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!AZURE} inset'
     comment: Inset shadow for editable grid
-  ## OVERLAYS
-  SHADOW_OVERLAY:
-    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
-    comment: Shadow for overlays.
-    deprecated: true
   ## DROPDOWNS
   SHADOW_DROP_DOWN:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
@@ -47,10 +42,6 @@ props:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_20}'
     comment: Shadow for notifications that should be elevated above other components but under modals.
   ## BUTTONS
-  SHADOW_BUTTON:
-    value: '{!OFFSET_NONE} 1px 1px {!OFFSET_NONE} {!BLACK_TRANSPARENT_05}'
-    comment: Shadow for buttons.
-    deprecated: true
   SHADOW_BUTTON_FOCUS:
     value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!SCIENCE_BLUE}'
     comment: Custom glow for focus states on UI elements with explicit containers.

@@ -37,11 +37,6 @@ props:
   COLOR_BORDER_SEPARATOR_INVERSE:
     value: '{!SAN_JUAN}'
     comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
-  COLOR_BORDER_HINT:
-    value: '{!SAN_JUAN}'
-    specificity: builders
-    comment: Used to delineate the boundary of a specific region. Specific to builders.
-    deprecated: true
   ## BRANDING
   COLOR_BORDER_BRAND:
     value: '{!AZURE}'

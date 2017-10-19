@@ -184,10 +184,6 @@ props:
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
     value: '{!PALETTE_DARK_GRAY_TRANSPARENT_40}'
     comment: The color of the mask overlay that appears when you enter a modal state.
-  COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
-    value: '{!WHITE_TRANSPARENT_75}'
-    comment: The color of the mask overlay that appears when you enter a modal state.
-    deprecated: true
   COLOR_BACKGROUND_BACKDROP:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: The color of the mask overlay that appears when you enter a modal state.
@@ -213,10 +209,6 @@ props:
   COLOR_BACKGROUND_ERROR_DARK:
     value: '{!FLUSH_MAHOGANY}'
     comment: Dark color for UI elements related to errors. Accessible with white text.
-  COLOR_BACKGROUND_ERROR_ALT:
-    value: '{!DEEP_BLUSH}'
-    comment: Alternative color for UI elements related to errors.
-    deprecated: true
   COLOR_BACKGROUND_OFFLINE:
     value: '{!PALETTE_GRAY_11}'
     comment: Color for UI elements related to the offline state.
@@ -306,10 +298,6 @@ props:
   COLOR_BACKGROUND_INPUT_ERROR:
     value: '{!PIPPIN}'
     comment: Background color for input field that has encountered an error.
-  COLOR_BACKGROUND_INPUT_SEARCH:
-    value: '{!BLACK_TRANSPARENT_16}'
-    comment: Background color for search input fields.
-    deprecated: true
   ## TOAST
   COLOR_BACKGROUND_TOAST:
     value: '{!PALETTE_GRAY_9}'

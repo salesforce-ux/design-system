@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
 import ButtonIcon from '../button-icons/';
+import { StandardIcon } from '../icons/standard/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
 import {
@@ -165,10 +166,12 @@ export let Th = props => {
         columnsWithEinstein.includes(columnName) ? (
           <div className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
             <div className="slds-icon_container slds-m-right_xx-small">
-              <Ellie
-                className="slds-is-paused"
-                title="Einstein calculated"
-                assistiveText="Einstein calculated"
+              <SvgIcon
+                className="slds-icon slds-icon_x-small slds-icon-standard-account slds-th__icon"
+                sprite="standard"
+                symbol="account"
+                title="Accounts"
+                assistiveText="Accounts"
               />
             </div>
             <span

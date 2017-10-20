@@ -48,40 +48,52 @@ props:
     comment: "Primary brand color"
   BRAND_PRIMARY_ACTIVE:
     value: "#007add"
-    comment: "Primary brand color for interactions"
+    comment: "Active / Hover state of BRAND_PRIMARY"
   BRAND_LIGHT:
     value: "#f4f6fe"
-    comment: ""
+    comment: "Light variant of BRAND that is accessible with dark colors"
   BRAND_LIGHT_ACTIVE:
     value: "#e3e5ed"
-    comment: ""
+    comment: "Active / Hover state of BRAND_LIGHT"
   BRAND_DARK:
     value: "#182337"
-    comment: ""
+    comment: "Dark variant of BRAND that is accessible with light colors"
   BRAND_DARK_ACTIVE:
     value: "#253045"
-    comment: ""
+    comment: "Active / Hover state of BRAND_DARK"
   BRAND_A11Y:
     value: "#23538d"
-    comment: ""
+    comment: "Dark variant of BRAND that is accessible with white"
   BRAND_A11Y_ACTIVE:
     value: "#06457d"
-    comment: ""
+    comment: "Active / Hover state of BRAND_A11Y"
   BRAND_CONTRAST:
     value: "#1a1b1e"
-    comment: ""
+    comment: "Variant of BRAND that is accessible with BRAND"
   BRAND_CONTRAST_ACTIVE:
     value: "#0d0e12"
-    comment: ""
-  BRAND_BACKGROUND:
+    comment: "Active / Hover state of BRAND_CONTRAST"
+  BRAND_BACKGROUND_PRIMARY:
     value: "#AFC5DE"
-    comment: ""
+    comment: "Primary page background color"
+  BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: "rgba(175,197,222,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
+  BRAND_BACKGROUND_DARK:
+    value: "#205C9F"
+    comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
+  BRAND_BACKGROUND_DARK_TRANSPARENT:
+    value: "rgba(32,92,159,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
   BRAND_HEADER:
     value: "#ffffff"
-    comment: ""
+    comment: "Background color a branded app header"
   BRAND_HEADER_CONTRAST:
     value: "#474747"
-    comment: ""
+    comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_CONTRAST_ACTIVE:
     value: "#474747"
-    comment: ""
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
+  BRAND_TEXT_LINK:
+    value: "#0070D2"
+    comment: "Primary text link brand color"

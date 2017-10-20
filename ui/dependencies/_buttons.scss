@@ -37,8 +37,8 @@
 }
 
 @mixin button-brand {
-  background-color: $color-background-brand-primary;
-  border-color: $button-color-border-brand-primary;
+  background-color: $brand-a11-y;
+  border-color: $brand-a11-y;
   color: $color-text-brand-primary;
 
   &:link,
@@ -49,14 +49,14 @@
 
   &:hover,
   &:focus {
-    background-color: $color-background-brand-primary-hover;
-    border-color: $color-border-brand-primary-hover;
+    background-color: $brand-a11-y-active;
+    border-color: $brand-a11-y-active;
     color: $color-text-brand-primary;
   }
 
   &:active {
-    background-color: $color-background-brand-primary-active;
-    border-color: $color-border-brand-primary-active;
+    background-color: $brand-a11-y-active;
+    border-color: $brand-a11-y-active;
   }
 }
 

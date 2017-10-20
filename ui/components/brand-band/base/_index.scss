@@ -29,7 +29,7 @@
     left: 0;
     background-image:
       url($brand-band-default-image),
-      linear-gradient(to top, $brand-band-color-background-secondary-transparent 0, $brand-band-color-background-secondary);
+      linear-gradient(to top, $brand-background-dark-transparent 0, $brand-background-dark);
     background-repeat: repeat-x;
     background-position: top left;
   }
@@ -44,7 +44,7 @@
     top: 0;
     width: 100%;
     height: $brand-band-scrim-height;
-    background-image: linear-gradient(to bottom, $brand-band-color-background-primary-transparent 60%, $brand-band-color-background-primary);
+    background-image: linear-gradient(to bottom, $brand-background-primary-transparent 60%, $brand-background-primary);
   }
 
   &.slds-brand-band_cover {

@@ -145,10 +145,10 @@
   }
 
   &[aria-selected="true"] {
-    box-shadow: inset 4px 0 0 $color-brand;
+    box-shadow: inset 4px 0 0 $brand-primary-active;
 
     &:focus {
-      box-shadow: inset 4px 0 0 $color-brand, inset 0 0 0 1px $color-brand;
+      box-shadow: inset 4px 0 0 $brand-primary-active, inset 0 0 0 1px $brand-primary-active;
     }
   }
 }

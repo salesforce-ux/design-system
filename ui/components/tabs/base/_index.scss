@@ -71,7 +71,7 @@
       }
 
       &.slds-active a {
-        border-color: $color-border-tab-selected;
+        border-color: $brand-primary;
         color: $color-text-action-label-active;
 
         &:focus {
@@ -132,7 +132,7 @@
     color: $color-text-action-label-active;
 
     &:after {
-      background-color: $color-brand-dark;
+      background-color: $brand-primary;
     }
 
     .slds-tabs_default__link,
@@ -148,7 +148,7 @@
   &:hover {
 
     &:after {
-      background-color: $color-brand-dark;
+      background-color: $brand-primary-active;
     }
   }
 
@@ -165,7 +165,7 @@
 
     &:after {
       height: ($border-width-thick + 1);
-      background-color: $color-brand-dark;
+      background-color: $brand-primary;
     }
   }
 

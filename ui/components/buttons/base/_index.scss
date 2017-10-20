@@ -46,7 +46,7 @@
   border-radius: $button-border-radius;
   line-height: $line-height-button;
   text-decoration: none;
-  color: $color-text-link;
+  color: $brand-text-link;
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none;
   // stylelint-enable property-no-vendor-prefix
@@ -62,7 +62,7 @@
 
   &:hover,
   &:focus {
-    color: $color-text-link-hover;
+    color: $brand-text-link-active;
   }
 
   &:focus {
@@ -70,7 +70,7 @@
   }
 
   &:active {
-    color: $color-text-link-active;
+    color: $brand-text-link-active;
   }
 
   &[disabled] {

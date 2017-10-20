@@ -75,8 +75,12 @@
    * @required
    */
   &__logo {
-    flex-shrink: 0;
-    width: rem(45px);
+    width: rem(200px);
+    height: rem(40px);
+    background-image: url($header-logo-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
   }
 
   /**

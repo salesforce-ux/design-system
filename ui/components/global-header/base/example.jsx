@@ -368,9 +368,7 @@ export let GlobalHeader = props => (
     </a>
     <div className="slds-global-header slds-grid slds-grid_align-spread">
       <div className="slds-global-header__item">
-        <div className="slds-global-header__logo">
-          <img src="/assets/images/logo-noname.svg" alt="" />
-        </div>
+        <div className="slds-global-header__logo" />
       </div>
       <div className="slds-global-header__item slds-global-header__item_search">
         <GlobalSearch expanded={props.expanded} value={props.searchingFor} />

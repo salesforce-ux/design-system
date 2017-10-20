@@ -349,7 +349,29 @@ props:
     value: '#34BECD'
   IOT_ORCHESTRATIONS:
     value: '#2A739E'
-  RETURN_PRODUCT:
+  PRODUCT_RETURN:
     value: '#009688'
-  RETURN_PRODUCT_LINE_ITEM:
+  PRODUCT_RETURN_LINE_ITEM:
     value: '#009688'
+  CHANNEL_PROGRAM_HISTORY:
+    value: '#0EB58A'
+  CHANNEL_PROGRAM_LEVELS:
+    value: '#0EB58A'
+  CHANNEL_PROGRAM_MEMBERS:
+    value: '#0EB58A'
+  CHANNEL_PROGRAMS:
+    value: '#0EB58A'
+  CUSTOMERS:
+    value: '#0EB58A'
+  PARTNER_FUND_ALLOCATION:
+    value: '#0EB58A'
+  PARTNER_FUND_CLAIM:
+    value: '#0EB58A'
+  PARTNER_FUND_REQUEST:
+    value: '#0EB58A'
+  PARTNER_MARKETING_BUDGET:
+    value: '#0EB58A'
+  PARTNERS:
+    value: '#0EB58A'
+  PAST_CHAT:
+    value: '#F88960'

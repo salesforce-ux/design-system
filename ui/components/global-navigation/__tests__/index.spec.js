@@ -22,13 +22,14 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 it('renders a global-navigation with sub-tabs', () =>
   matchesMarkupAndStyle(
     <div className="demo-only" style={{ height: '8rem' }}>
-      <ContextTabBar className="slds-has-sub-tabs">
+      <ContextTabBar>
         <ContextTab
           title="Home"
           symbol="home"
           tabPanelId="context-tab-panel-1"
           id="context-tab-id-1"
           itemActive
+          hasSubtabs
         />
         <ContextTab
           title="Tab Item 1"

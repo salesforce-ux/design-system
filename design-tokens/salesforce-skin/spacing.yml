@@ -19,7 +19,7 @@ global:
 imports:
 - "../force-base/aliases/spacing.yml"
 props:
-  ## Globals
+  ## GLOBALS
   COMPONENT_SPACING_MARGIN:
     value: '{!SPACING_SMALL}'
   COMPONENT_SPACING_PADDING:
@@ -28,10 +28,10 @@ props:
     value: '{!SPACING_SMALL}'
   TEMPLATE_PROFILE_GUTTERS:
     value: '8rem {!SPACING_SMALL} {!SPACING_SMALL}'
-  ## Tables
+  ## TABLES
   TABLE_CELL_SPACING:
     value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'
-  ## Card
+  ## CARD
   CARD_SPACING_MARGIN:
     value: '{!SPACING_SMALL}'
   CARD_FOOTER_PADDING:

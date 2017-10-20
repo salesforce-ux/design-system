@@ -7,6 +7,7 @@
  * @selector .slds-nav-vertical__item [type="radio"]
  * @restrict .slds-nav-vertical
  * @variant
+ * @release 2.5.0
  */
 
 .slds-nav-vertical__item {
@@ -22,7 +23,6 @@
     position: absolute;
 
     &:focus + .slds-nav-vertical__action {
-
       /**
        * Used for styling the radio button
        *
@@ -37,6 +37,7 @@
     &:checked + .slds-nav-vertical__action {
       color: $color-text-link-focus;
       background-color: $color-background-row-selected;
+
       &:before {
         content: '';
         width: 4px;
@@ -66,4 +67,3 @@
     }
   }
 }
-

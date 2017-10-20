@@ -112,15 +112,15 @@
  */
 .slds-is-open {
 
-  .slds-accordion__summary {
+  > .slds-accordion__summary {
     margin-bottom: $spacing-small;
+
+    .slds-accordion__summary-action-icon {
+      transform: rotate(0deg);
+    }
   }
 
-  .slds-accordion__summary-action-icon {
-    transform: rotate(0deg);
-  }
-
-  .slds-accordion__content {
+  > .slds-accordion__content {
     visibility: visible;
     opacity: 1;
     height: auto;

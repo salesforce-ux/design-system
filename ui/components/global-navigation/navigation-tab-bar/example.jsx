@@ -64,7 +64,8 @@ export let ContextTab = props => (
         'slds-is-active': props.itemActive,
         'slds-is-unsaved': props.itemUnsaved,
         'slds-is-pinned': props.pinned,
-        'slds-has-notification': props.itemUnread
+        'slds-has-notification': props.itemUnread,
+        'slds-has-sub-tabs': props.hasSubtabs
       }
     )}
     role="presentation"
@@ -1187,13 +1188,14 @@ export let states = [
     label: 'Sub Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
-        <ContextTabBar className="slds-has-sub-tabs">
+        <ContextTabBar>
           <ContextTab
             title="Home"
             symbol="home"
             tabPanelId={tabPanelId01}
             id={tabId01}
             itemActive
+            hasSubtabs
           />
           <ContextTab
             title="Tab Item 1"

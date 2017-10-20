@@ -212,6 +212,7 @@
 .slds-button_icon-more,
 .slds-button--icon-more {
   width: auto;
+  line-height: $line-height-button;
   padding: 0 $spacing-x-small;
   background-color: $button-color-background-primary;
   border-color: $button-color-border-primary;

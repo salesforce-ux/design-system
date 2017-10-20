@@ -36,7 +36,7 @@ export let examples = [
   },
   {
     id: 'hint-hover',
-    label: 'Hint of hover',
+    label: 'Hint on hover',
     element: (
       <div className="slds-hint-parent">
         <ButtonIcon

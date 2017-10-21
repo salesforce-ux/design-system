@@ -6,6 +6,6 @@ import React from 'react';
 import createHelpers from '../../../../jest.setup';
 import { GlobalHeader } from '../base/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkupAndStyle } = createHelpers(__dirname, 5555);
 
 it('renders a global header', () => matchesMarkupAndStyle(<GlobalHeader />));

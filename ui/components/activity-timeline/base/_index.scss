@@ -1,136 +1,179 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
- * @summary Create each activity timeline item in a list
+ * @summary Create each expandable activity timeline item in a list
  *
  * @name base
- * @selector .slds-timeline__media
- * @restrict .slds-media
- * @support dev-ready
+ * @selector .slds-timeline__item_expandable
+ * @restrict .slds-timeline div
  * @variant
  */
-.slds-timeline__media,
-.slds-media_timeline,
-.slds-media--timeline {
-  @include deprecate('4.0.0', 'Use .slds-timeline__media instead of .slds-media--timeline');
-  @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
-  padding-bottom: $spacing-large;
+.slds-timeline__item_expandable {
+  position: relative;
+  padding-bottom: $spacing-medium;
 
   &:before {
+    content: '';
+    background: $color-border;
+    height: 100%;
+    width: $border-width-thick;
+    position: absolute;
+    left: $square-icon-medium-boundary-alt;
+    top: 0;
+    bottom: 0;
     margin-left: $border-width-thin;
+  }
+
+  .slds-media__figure {
+    margin-right: $spacing-xx-small;
+    z-index: 1;
+
+    .slds-button_icon {
+      margin-right: $spacing-x-small;
+    }
+  }
+
+  .slds-media__body {
+    padding: 0 $spacing-xx-small;
+  }
+
+  .slds-checkbox {
+    margin-right: $spacing-xx-small;
+  }
+
+  .slds-timeline__actions_inline {
+    flex-flow: row nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: $spacing-x-small;
+
+    .slds-timeline__date {
+      padding-right: $spacing-x-small;
+      margin-bottom: 0;
+    }
+  }
+
+  /**
+   * @summary Class to show and hide details
+   *
+   * @selector .slds-timeline__item_details
+   * @restrict .slds-timeline__item article
+   */
+  .slds-timeline__item_details {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  /**
+   * @selector .slds-is-open
+   * @restrict .slds-timeline__item_expandable
+   */
+  &.slds-is-open {
+
+    .slds-timeline__item_details {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      padding: $spacing-medium;
+    }
+
+    .slds-timeline__details-action-icon {
+      transform: rotate(0);
+      transform-origin: 45%;
+    }
   }
 }
 
 /**
- * @selector .slds-timeline__title
- * @restrict .slds-timeline__media h3
- * @deprecated
+ * @selector .slds-timeline__item_call
+ * @restrict .slds-timeline__item
  */
-.slds-timeline__title {
-  @include deprecate('4.0.0', '.slds-timeline__title is no longer in use, please remove from DOM.') {
-    position: relative;
+.slds-timeline__item_call:before {
+  background: $log-a-call;
+}
 
-    &-content {
-      position: relative;
-      top: -1px;
-      padding-right: $spacing-medium;
-      background: $color-background-alt;
-      z-index: 2;
-    }
+/**
+ * @selector .slds-timeline__item_email
+ * @restrict .slds-timeline__item
+ */
+.slds-timeline__item_email:before {
+  background: $email;
+}
 
-    &:after {
-      position: absolute;
-      right: 0;
-      bottom: $spacing-x-small;
-      left: 0;
-      border-bottom: $border-width-thin dashed $color-border;
-      content: ' ';
-      z-index: 1;
-    }
+/**
+ * @selector .slds-timeline__item_event
+ * @restrict .slds-timeline__item
+ */
+.slds-timeline__item_event:before {
+  background: $event;
+}
+
+/**
+ * @selector .slds-timeline__item_task
+ * @restrict .slds-timeline__item
+ */
+.slds-timeline__item_task:before {
+  background: $task;
+}
+
+/*
+ * @selector .slds-timeline__trigger
+ * @restrict .slds-timeline__media_expandable div
+ */
+.slds-timeline__trigger {
+  padding: $spacing-xx-small;
+
+  &:hover {
+    background-color: $color-background-reminder;
   }
 }
 
-.slds-timeline {
-  /**
-   * Icon associated with timeline item
-   *
-   * @selector .slds-timeline__icon
-   * @restrict .slds-timeline__media .slds-media__figure
-   */
-  &__icon {
-    margin-top: ($spacing-small * -1);
-    border: $border-width-thick solid #fff;
-    border-top-width: $spacing-small;
-    border-bottom-width: $spacing-small;
-  }
+/**
+ * Icon associated with timeline item
+ *
+ * @selector .slds-timeline__icon
+ * @restrict .slds-timeline__media .slds-media__figure, .slds-timeline__media .slds-icon_container
+ */
+.slds-timeline__icon {
+  border: $border-width-thick solid #fff;
+}
 
-  /**
-   * Container for date and action overflow on the right of a timeline item
-   *
-   * @selector .slds-timeline__actions
-   * @restrict .slds-timeline__item div
-   * @notes This is directly inside the `.slds-media--reverse` > `.slds-media__figure`
-   */
-  &__actions {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-  }
+/**
+ * Container for date and action overflow on the right of a timeline item
+ *
+ * @selector .slds-timeline__actions
+ * @restrict .slds-timeline__item div
+ * @notes This is directly inside the `.slds-media--reverse` > `.slds-media__figure`
+ */
+.slds-timeline__actions {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
 
-  /**
-   * Styles the date inside `.slds-timeline__actions`
-   *
-   * @selector .slds-timeline__date
-   * @restrict .slds-timeline__actions p
-   */
-  &__date {
-    margin-bottom: $spacing-xx-small;
-    font-size: $font-size-small;
-    color: $color-text-weak;
-  }
+/**
+ * Styles the date inside `.slds-timeline__actions`
+ *
+ * @selector .slds-timeline__date
+ * @restrict .slds-timeline__actions p
+ */
+.slds-timeline__date {
+  margin-bottom: $spacing-xx-small;
+  font-size: $font-size-small;
+  color: $color-text-weak;
+}
 
-  /**
-   * @name call
-   * @selector .slds-timeline__media_call
-   * @restrict .slds-timeline__media
-   * @variant
-   */
-  &__media_call:before,
-  &__media--call:before {
-    background: $log-a-call;
-  }
-
-  /**
-   * @name email
-   * @selector .slds-timeline__media_email
-   * @restrict .slds-timeline__media
-   * @variant
-   */
-  &__media_email:before,
-  &__media--email:before {
-    background: $email;
-  }
-
-  /**
-   * @name event
-   * @selector .slds-timeline__media_event
-   * @restrict .slds-timeline__media
-   * @variant
-   */
-  &__media_event:before,
-  &__media--event:before {
-    background: $event;
-  }
-
-  /**
-   * @name task
-   * @selector .slds-timeline__media_task
-   * @restrict .slds-timeline__media
-   * @variant
-   */
-  &__media_task:before,
-  &__media--task:before {
-    background: $task;
-  }
+/**
+ * @summary Icon inside of actionable button within an expandable timeline item
+ *
+ * @selector .slds-timeline__details-action-icon
+ * @restrict .slds-timeline__media_expandable svg
+ */
+.slds-timeline__details-action-icon {
+  transform: rotate(-90deg);
 }

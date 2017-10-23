@@ -6,6 +6,8 @@
  * consume the full width of the main page area or be placed in the smaller right
  * sidebar.
  *
+ * Note: This new version of activity timeline allows for expandable detail sections on each timeline item. The static version is still supported.
+ *
  * ##### Accessibility
  *
  * Text describing the type of timeline item is placed in a `span`. It is the
@@ -13,11 +15,28 @@
  * `.slds-assistive-text` class. The `SVG` image does not need the
  * `.slds-assistive-text` class.
  *
+ * #### Notable attributes
+ *
+ * **Button:**
+ * - `aria-controls` is used to create an association between the button and the details section. If the details section has an `id="email-content"`, then the button should have `aria-controls="email-content"`.
+ * - The title of the timeline item can also be used as a button to open the details section. If the details section has an `id="email-content"`, then the div with `slds-timeline__trigger` should have `aria-controls="email-content"` and the click handler.
+ * - `aria-expanded` indicates if the details section is open or closed and is read aloud by assitive technology when the button is focused.
+ *
+ * **Section:**
+ * - `aria-hidden` indicates if the details section is open or closed, and if set to `true`, assistive technology hides the details section.
+ *
+ * ##### Keyboard navigation
+ * - The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+ *
+ * #### Updating Operation and State
+ * - When the user interacts with the button to open the details section, `aria-expanded` on the button should be `true` and `aria-hidden` on the details section should be `false`.
+ * - When the user interacts with the button to close the details section, `aria-expanded` on the button should be `false` and `aria-hidden` on the details section should be `true`.
+ *
  * @summary The activity timeline displays each of the user’s upcoming, current, and past activities.
  *
  * @base
  * @name activity-timeline
- * @selector .slds-timeline__media
+ * @selector .slds-timeline__media, .slds-timeline__item_expandable
  * @support dev-ready
  * @category feature
  * @type data-display

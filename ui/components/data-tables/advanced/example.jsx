@@ -109,6 +109,11 @@ export const productRows = [
   }
 ];
 
+const columnHeaderIcons = [
+  ['Confidence', 'Ellie'],
+  ['Account Name', 'Account']
+];
+
 export const AdvancedTable = () => (
   <Table>
     <Thead columns={columns} />
@@ -280,7 +285,7 @@ export let examples = [
       <Table>
         <Thead
           columns={columns}
-          columnsWithEinstein={['Confidence']}
+          columnHeaderIcons={columnHeaderIcons}
           hasMenus
         />
         <tbody>

@@ -349,9 +349,9 @@ props:
     value: '#34BECD'
   IOT_ORCHESTRATIONS:
     value: '#2A739E'
-  PRODUCT_RETURN:
+  RETURN_ORDER:
     value: '#009688'
-  PRODUCT_RETURN_LINE_ITEM:
+  RETURN_ORDER_LINE_ITEM:
     value: '#009688'
   CHANNEL_PROGRAM_HISTORY:
     value: '#0EB58A'

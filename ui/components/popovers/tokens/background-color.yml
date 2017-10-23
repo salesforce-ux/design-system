@@ -5,6 +5,7 @@ global:
   - 'background*'
   - 'border*'
   - box-shadow
+  - text-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 props:
@@ -17,12 +18,6 @@ props:
   POPOVER_WALKTHROUGH_COLOR_BACKGROUND_ALT:
     value: '{!SCIENCE_BLUE}'
     comment: The default background color for alternative Popover Walkthrough
-  POPOVER_WALKTHROUGH_CLOUD_COLOR_BACKGROUND:
-    value: '#215ca0'
-    comment: The background color for Popover Walkthrough Cloud Nubbins
-  POPOVER_WALKTHROUGH_IMAGE:
-    value: ''
-    type: string
   POPOVER_WALKTHROUGH_HEADER_IMAGE:
     value: ''
     type: string

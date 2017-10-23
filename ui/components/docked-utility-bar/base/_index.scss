@@ -87,7 +87,7 @@
 
   &:focus:after {
     height: ($border-width-thick + 1px);
-    background: $color-brand;
+    background: $brand-primary;
   }
 
   &:hover,
@@ -106,7 +106,7 @@
     color: inherit;
 
     &:after {
-      background: $color-brand;
+      background: $brand-primary;
     }
   }
 }

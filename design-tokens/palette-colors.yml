@@ -61,10 +61,10 @@ props:
   BRAND_DARK_ACTIVE:
     value: "#253045"
     comment: "Active / Hover state of BRAND_DARK"
-  BRAND_A11Y:
+  BRAND_ACCESSIBLE:
     value: "#0070d2"
     comment: "Dark variant of BRAND that is accessible with white"
-  BRAND_A11Y_ACTIVE:
+  BRAND_ACCESSIBLE_ACTIVE:
     value: "#005fb2"
     comment: "Active / Hover state of BRAND_A11Y"
   BRAND_CONTRAST:

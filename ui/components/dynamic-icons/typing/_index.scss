@@ -1,0 +1,120 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes typing icon
+ *
+ * @name typing
+ * @selector .slds-icon-typing
+ * @restrict span
+ * @variant
+ */
+
+.slds-icon-typing {
+  display: inline-block;
+  padding: $spacing-xx-small 0;
+
+  /**
+   * @summary Add when you wish to animate the dots
+   *
+   * @selector .slds-is-animated
+   * @restrict .slds-icon-typing
+   * @modifier
+   */
+  &.slds-is-animated {
+
+    .slds-icon-typing__dot {
+      animation: slds-icon-typing__dot-first 1.2s infinite ease-in-out;
+    }
+
+    .slds-icon-typing__dot:nth-child(1) {
+      animation-name: slds-icon-typing__dot-first;
+    }
+
+    .slds-icon-typing__dot:nth-child(2) {
+      animation-name: slds-icon-typing__dot-second;
+    }
+
+    .slds-icon-typing__dot:nth-child(3) {
+      animation-name: slds-icon-typing__dot-third;
+    }
+  }
+
+  /**
+   * @summary Add when you wish to pause the dots animation
+   *
+   * @selector .slds-is-paused
+   * @restrict .slds-icon-typing
+   * @modifier
+   */
+  &.slds-is-paused {
+
+    .slds-icon-typing__dot {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/**
+ * @summary Dots within the typing icon
+ *
+ * @selector .slds-icon-typing__dot
+ * @restrict .slds-icon-typing span
+ */
+.slds-icon-typing__dot {
+  background-color: $typing-icon-dot-color-background-gray;
+  border-radius: $border-radius-circle;
+  display: inline-block;
+  height: $typing-icon-dot-size;
+  margin: 0 $spacing-xxx-small;
+  width: $typing-icon-dot-size;
+}
+
+@keyframes slds-icon-typing__dot-first {
+
+  0% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+
+  16% {
+    background-color: $typing-icon-dot-color-background-gray-dark;
+  }
+
+  33%,
+  100% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+}
+
+@keyframes slds-icon-typing__dot-second {
+
+  0%,
+  33% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+
+  50% {
+    background-color: $typing-icon-dot-color-background-gray-dark;
+  }
+
+  67%,
+  100% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+}
+
+@keyframes slds-icon-typing__dot-third {
+
+  0%,
+  67% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+
+  83% {
+    background-color: $typing-icon-dot-color-background-gray-dark;
+  }
+
+  100% {
+    background-color: $typing-icon-dot-color-background-gray;
+  }
+}

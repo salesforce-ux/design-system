@@ -11,3 +11,9 @@ props:
   COLOR_BACKGROUND_ICON_WAFFLE:
     value: '{!PALETTE_GRAY_9}'
     comment: Default color for animated icon waffle for app switcher.
+  TYPING_ICON_DOT_COLOR_BACKGROUND_GRAY:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Default background color for a typing icon dot.
+  TYPING_ICON_DOT_COLOR_BACKGROUND_GRAY_DARK:
+    value: '{!PALETTE_GRAY_6}'
+    comment: Active background color for a typing icon dot when animcating.

@@ -145,6 +145,30 @@ import { PathStageSelected } from '../path/base/example';
     />
   </FormElement>
 </div>
+<div style={{ height: '380px' }}>
+  <FormElement
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    label="Date"
+    inputId="date-input-id"
+    inputIcon="right"
+    dropdown={
+      <DatePicker
+        todayActiveInRange
+        dateSelected
+        dateRange="week-4-5"
+        dateRangeMulti
+      />
+    }
+  >
+    <Input id="date-input-id" placeholder=" " />
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="event"
+      assistiveText="Select a date"
+      title="Select a date"
+    />
+  </FormElement>
+</div>
 
 ### Docked Composer
 <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto', position: 'relative' }}>

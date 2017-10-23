@@ -3,14 +3,21 @@
   margin-bottom: 2rem;
 }
 
-.docs-codeblock__example {
+.docs-codeblock-example,
+.docs-codeblock-source {
+  border: solid 3px #f2f2f2;
   padding: 1rem;
+}
+
+.docs-codeblock-example + .docs-codeblock-source {
+  border-top: none;
 }
 
 
 // Type Styles
 // Type scale — http://www.modularscale.com/?1&em&1.2
 .doc {
+  color: #5876a3;
   font-size: 1rem;
 }
 
@@ -21,6 +28,12 @@ h4.doc,
 h5.doc,
 h6.doc {
   color: #16325c;
+
+  a.doc-anchor {
+    color:#706e6b;
+    font-size: inherit;
+    margin-left: 0.5rem;
+  }
 }
 
 h1.doc {
@@ -30,7 +43,7 @@ h1.doc {
 
 h2.doc {
   font-size: 2.074rem;
-  margin: 2rem 0 1rem;
+  margin: 4rem 0 1rem;
 }
 
 h3.doc {
@@ -60,6 +73,10 @@ p.doc {
   margin-bottom: 1.5rem;
 }
 
+a.doc {
+  color: #0070d2;
+}
+
 .lead {
   font-size: 1.44rem;
   font-weight: 300;
@@ -75,10 +92,23 @@ blockquote.doc {
   border: 1px solid #f2f2f2;
   border-left-width: 0.125rem;
 
+  .doc {
+    color: #3e3e3c;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
   .lead {
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 600;
   }
+}
+
+blockquote.doc p:only-child,
+blockquote.doc p:first-child {
+  margin-top: 0;
 }
 
 blockquote.doc p:only-child,
@@ -95,7 +125,7 @@ blockquote.doc p:last-child {
   }
 }
 
-.site-blockquote_ally.doc {
+.site-blockquote_a11y.doc {
   border-left-color: #0070d2;
 
   .lead {
@@ -156,4 +186,8 @@ code.doc {
   color: #1990B8;
   padding: 0 2px;
   border-radius: 0.125rem;
+}
+
+ul.doc-toc {
+  margin-left: 1.5rem;
 }

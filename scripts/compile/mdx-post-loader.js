@@ -1,10 +1,4 @@
 const elements = [
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
   'p',
   'a',
   'em',
@@ -22,7 +16,12 @@ const elements = [
   'thead',
   'tbody'
 ];
-const factories = elements.map(el => `${el}: El('${el}')`).join(',');
+
+const headingElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+const elementFactories = elements.map(el => `${el}: El('${el}')`).join(',');
+const headingFactories = headingElements
+  .map(el => `${el}: HeadingEl('${el}')`)
+  .join(',');
 
 // We wrap the normal mdxc stuff with our own loader so we can add .doc to each element and
 // have a bit of control with a Doc component wrapper
@@ -38,11 +37,27 @@ module.exports = code =>
       return React.createElement(el, Object.assign(props, {className}), kids)
     }
 
-    const factories = {${factories}};
+    const toc = [];
+
+    const HeadingEl = el => (props, ...kids) => {
+      const className = addDocClass(props.className);
+
+      // routing to the same page runs this entire thing again, with no lifecycle hooks to prevent dupes
+      let matchedItem = toc.filter(item => item.id === props.id);
+      if(!matchedItem.length) {
+        // build a list of headings and id for the table of contents component on the doc page
+        toc.push({'id': props.id, 'title': kids[0], 'el': el});
+      }
+
+      return React.createElement(el, Object.assign(props, {className}), kids, <a className="doc doc-anchor" href={'#'+props.id}>#</a>)
+    }
+
+    const factories = {${headingFactories + ',' + elementFactories}};
 
     ${code.replace(
       /export default function/,
       'export const Content = function'
     )}
-    export default props => <Doc><Content {...props} factories={factories} /></Doc>
+
+    export default props => <Doc><Content tableOfContentsData={toc} {...props} factories={factories} /></Doc>
   `;

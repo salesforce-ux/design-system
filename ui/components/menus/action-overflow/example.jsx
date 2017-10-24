@@ -11,6 +11,11 @@ import { MenuItem } from '../dropdown/example';
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
+export const Context = props => (
+  <div className="demo-only" style={{ height: '165px' }}>
+    {props.children}
+  </div>
+);
 
 const moreIcon = (
   <ButtonIcon
@@ -23,20 +28,20 @@ const moreIcon = (
   />
 );
 
+export const ActionOverflow = props => (
+  <Trigger className="slds-is-open" triggerIcon={moreIcon}>
+    <Menu className="slds-dropdown_left slds-dropdown_actions">
+      <MenuList>
+        <MenuItem tabIndex="0">Action One</MenuItem>
+        <MenuItem>Action Two</MenuItem>
+        <MenuItem>Action Three</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ height: '165px' }}>
-    <Trigger className="slds-is-open" triggerIcon={moreIcon}>
-      <Menu className="slds-dropdown_left slds-dropdown_actions">
-        <MenuList>
-          <MenuItem tabIndex="0">Action One</MenuItem>
-          <MenuItem>Action Two</MenuItem>
-          <MenuItem>Action Three</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </div>
-);
+export default <ActionOverflow />;

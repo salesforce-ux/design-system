@@ -45,7 +45,7 @@ const emailIcons = [
 ];
 
 describe('Activity Timeline Expandable', () => {
-  xit('renders a hover state', () => {
+  it('renders a hover state', () => {
     const wrapper = mount(
       <TimelineItem
         id="call-item"
@@ -64,7 +64,7 @@ describe('Activity Timeline Expandable', () => {
         .find('.slds-timeline__trigger')
         .at(0)
         .simulate('mouseEnter')
-        .getNode()
+        .html()
     );
   });
 

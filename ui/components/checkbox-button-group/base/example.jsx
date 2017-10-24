@@ -17,17 +17,18 @@ let Fieldset = props => (
   </fieldset>
 );
 
-let CheckboxGroup = props => (
+export let CheckboxGroup = props => (
   <div className="slds-checkbox_button-group">{props.children}</div>
 );
 
-let Checkbox = props => (
+export let Checkbox = props => (
   <span
     className={classNames('slds-button slds-checkbox_button', props.className)}
   >
     <input
       aria-describedby={props.errorId}
       disabled={props.disabled}
+      defaultChecked={props.checked}
       id={props.id}
       name="checkbox"
       type="checkbox"

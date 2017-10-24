@@ -101,9 +101,12 @@ module.exports = (dirname, port) => {
 
   return {
     matchesMarkupAndStyle: async element => {
-      const renderedMarkup = ReactDOM.renderToStaticMarkup(element);
+      const renderedMarkup =
+        typeof element === 'string'
+          ? element
+          : ReactDOM.renderToStaticMarkup(element);
       await page.evaluate(`document.body.innerHTML = \`${renderedMarkup}\``);
-      await delay(250);
+      await delay(750);
       const markupAndStyle = await page
         .evaluate(getMarkupAndStyle('body > *'))
         .then(diff => ({ html: beautify(renderedMarkup), style: diff.style }));

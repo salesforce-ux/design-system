@@ -150,7 +150,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $color-text-link-hover;
+    color: $brand-text-link-active;
     border-color: $color-border;
   }
 }
@@ -168,7 +168,7 @@
 .slds-is-active .slds-tabs_scoped__link,
 .slds-is-active .slds-tabs--scoped__link {
   background-color: $color-foreground-primary;
-  color: $color-text-link;
+  color: $brand-text-link;
   border-color: $color-border;
   font-weight: $tabs-font-weight;
 

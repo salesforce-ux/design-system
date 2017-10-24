@@ -62,7 +62,7 @@
       outline: 0;
 
       > .slds-day {
-        box-shadow: $color-border-brand-dark 0 0 0 1px inset;
+        box-shadow: $brand-accessible 0 0 0 1px inset;
       }
     }
 
@@ -73,13 +73,13 @@
      * @restrict .slds-datepicker td
      */
     &.slds-is-selected:not(.slds-is-today) > .slds-day {
-      background: $color-background-button-brand-hover;
+      background: $brand-accessible;
       color: $color-text-button-brand-hover;
     }
 
     &.slds-is-selected:focus > .slds-day {
-      background: $color-background-row-hover;
-      box-shadow: $color-border-brand-dark 0 0 3px;
+      background: $brand-accessible-active;
+      box-shadow: $brand-accessible-active 0 0 3px;
       color: currentColor;
     }
   }

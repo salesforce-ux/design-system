@@ -102,12 +102,12 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux_container .slds-checkbox_faux,
       + .slds-checkbox--faux_container .slds-checkbox--faux {
-        border-color: $color-background-toggle-active;
-        background-color: $color-background-toggle-active;
+        border-color: $brand-accessible;
+        background-color: $brand-accessible;
 
         &:hover,
         &:focus {
-          background-color: $color-background-toggle-active-hover;
+          background-color: $brand-accessible-active;
         }
 
         &:before {

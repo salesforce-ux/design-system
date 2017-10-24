@@ -83,7 +83,9 @@ export let UtilityBarItem = props => (
 export let UtilityBar = props => (
   <footer className="slds-utility-bar_container" aria-label="Utility Bar">
     <h2 className="slds-assistive-text">Utility Bar</h2>
-    <ul className="slds-utility-bar">{props.children}</ul>
+    <ul className={classNames('slds-utility-bar', props.className)}>
+      {props.children}
+    </ul>
     {props.panel}
   </footer>
 );

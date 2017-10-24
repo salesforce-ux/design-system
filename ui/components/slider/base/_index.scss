@@ -6,14 +6,14 @@
   width: $slider-handle-size;
   height: $slider-handle-size;
   border-radius: 50%;
-  background: $slider-handle-color-background;
+  background: $brand-accessible;
   border: 0;
   box-shadow: $slider-handle-shadow;
   cursor: pointer;
   transition: background 0.15s ease-in-out;
 
   &:hover {
-    background-color: $slider-handle-color-background-hover;
+    background-color: $brand-accessible-active;
   }
 }
 
@@ -89,21 +89,21 @@
   }
 
   &:focus::-webkit-slider-thumb {
-    background-color: $slider-handle-color-background-focus;
+    background-color: $brand-accessible-active;
     box-shadow: $shadow-button-focus;
   }
 
   &:active::-webkit-slider-thumb {
-    background-color: $slider-handle-color-background-active;
+    background-color: $brand-accessible-active;
   }
 
   &:focus::-moz-range-thumb {
-    background-color: $slider-handle-color-background-focus;
+    background-color: $brand-accessible-active;
     box-shadow: $shadow-button-focus;
   }
 
   &:active::-moz-range-thumb {
-    background-color: $slider-handle-color-background-active;
+    background-color: $brand-accessible-active;
   }
 
   &[disabled] {

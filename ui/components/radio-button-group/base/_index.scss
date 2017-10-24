@@ -86,13 +86,13 @@
     &:checked ~ .slds-radio--faux,
     &:checked + .slds-radio_button__label,
     &:checked + .slds-radio--button__label {
-      background-color: $color-background-button-brand;
+      background-color: $brand-accessible;
       color: $color-text-button-brand;
 
       // Need something stronger when the input is checked
       &:hover,
       &:focus {
-        background-color: $color-background-button-brand;
+        background-color: $brand-accessible-active;
       }
     }
 

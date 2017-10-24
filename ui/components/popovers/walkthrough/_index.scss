@@ -29,6 +29,7 @@
     background-size: contain;
     border-color: inherit;
     padding: $spacing-small $spacing-medium;
+    text-shadow: 0 0 4px $popover-walkthrough-color-background;
   }
 
   .slds-popover__body,
@@ -75,23 +76,8 @@
  */
 .slds-popover_walkthrough-alt,
 .slds-popover_feature {
+
   border-color: $popover-walkthrough-color-background-alt;
   background-color: $popover-walkthrough-color-background-alt;
-  background-image: url($popover-walkthrough-image);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
   color: $color-text-inverse;
-
-  &.slds-nubbin_bottom,
-  &.slds-nubbin--bottom,
-  &.slds-nubbin_bottom-left,
-  &.slds-nubbin--bottom-left,
-  &.slds-nubbin_bottom-right,
-  &.slds-nubbin--bottom-right {
-
-    &:before {
-      background-color: $popover-walkthrough-cloud-color-background;
-    }
-  }
 }

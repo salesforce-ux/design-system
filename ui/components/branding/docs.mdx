@@ -1,0 +1,199 @@
+import Page from './docs/Page';
+import { Button } from '../buttons/base/example';
+import { ButtonIcon } from '../button-icons/base/example';
+import { GlobalHeader } from '../global-header/base/example';
+import { ContextBar } from '../global-navigation/navigation-bar/example';
+import { FormElement } from '../form-element/base/example';
+import { Input } from '../input/base/example';
+import { Checkbox } from '../checkbox/base/example';
+import { Radio } from '../radio-group/base/example';
+import { CheckboxAddButton } from '../checkbox-button/base/example';
+import { CheckboxGroup, Checkbox as CheckboxButton } from '../checkbox-button-group/base/example';
+import { MultiSelect, SelectedSnapShot } from '../dueling-picklist/';
+import { RadioButtonGroup, RadioButton } from '../radio-button-group/base/example';
+import { Slider } from '../slider/base/example';
+import { ActionOverflow } from '../menus/action-overflow/example';
+import { DatePicker } from '../datepickers/base/example';
+import { DockedComposerPanel, Footer } from '../docked-composer/base/example'
+import { UtilityPanel, UtilityBarItem, UtilityBar } from '../docked-utility-bar/base/example';
+import { Spinner } from '../spinners/base/example';
+import { PathStageSelected } from '../path/base/example';
+
+<div className="lead">
+  An inventory of brandable component inside of SLDS
+</div>
+
+### Brand Band/Page Background
+<Page bgColor="#AFC5DE" medium />
+
+### Global Links
+<a href="javascript:void(0);">Brand-able Text Link</a>
+
+### Button Brand
+<Button className="slds-button_brand">Button Brand</Button>
+<Button className="slds-button_brand" disabled>Button Brand</Button>
+
+### Button Icons
+<ButtonIcon
+  className="slds-button_icon-border-filled"
+/>
+
+### Stateful Button Icon
+<ButtonIcon
+  className="slds-button_icon-border-filled"
+  aria-pressed="false"
+  symbol="like"
+  assistiveText="Like"
+  title="Like"
+/>
+<ButtonIcon
+  className="slds-button_icon-border-filled"
+  aria-pressed="true"
+  selected
+  symbol="like"
+  assistiveText="Like"
+  title="Like"
+/>
+
+### Global Header
+<div style={{ position: 'relative', height: '60px' }}>
+  <GlobalHeader className="slds-is-absolute" favoritesSelected />
+</div>
+
+### Global Navigation
+<ContextBar itemActive />
+
+### Checkbox
+<FormElement>
+  <Checkbox label="Checkbox Label" checked />
+</FormElement>
+
+### Checkbox Button
+<FormElement>
+  <CheckboxAddButton />
+</FormElement>
+
+### Checkbox Button Group
+<fieldset className="slds-form-element">
+  <legend className="slds-form-element__legend slds-form-element__label">
+    Scheduled Day(s)
+  </legend>
+  <div className="slds-form-element__control">
+    <CheckboxGroup>
+      <CheckboxButton checked id="c-monday">Mon</CheckboxButton>
+      <CheckboxButton id="c-tuesday">Tue</CheckboxButton>
+      <CheckboxButton id="c-wednesday">Wed</CheckboxButton>
+      <CheckboxButton id="c-thursday">Thu</CheckboxButton>
+      <CheckboxButton id="c-friday">Fri</CheckboxButton>
+    </CheckboxGroup>
+  </div>
+</fieldset>
+
+### Dueling Picklist
+<MultiSelect dataSet={SelectedSnapShot} />
+
+### Radio Button Group
+<fieldset className="slds-form-element">
+  <legend className="slds-form-element__legend slds-form-element__label">
+    Scheduled Day(s)
+  </legend>
+  <div className="slds-form-element__control">
+    <RadioButtonGroup>
+      <RadioButton checked id="r-monday">Mon</RadioButton>
+      <RadioButton id="r-tuesday">Tue</RadioButton>
+      <RadioButton id="r-wednesday">Wed</RadioButton>
+      <RadioButton id="r-thursday">Thu</RadioButton>
+      <RadioButton id="r-friday">Fri</RadioButton>
+    </RadioButtonGroup>
+  </div>
+</fieldset>
+
+### Radio Group
+<FormElement>
+  <Radio checked label="Radio Label One" />
+  <Radio label="Radio Label Two" />
+</FormElement>
+
+### Slider
+<Slider value="50" />
+
+### Data Table
+
+### Path
+<PathStageSelected />
+
+### Menu (Action Overflow)
+<div style={{ height: '120px' }}>
+  <ActionOverflow />
+</div>
+
+### Datepicker
+<div style={{ height: '380px' }}>
+  <FormElement
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    label="Date"
+    inputId="date-input-id"
+    inputIcon="right"
+    dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
+  >
+    <Input id="date-input-id" placeholder=" " />
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="event"
+      assistiveText="Select a date"
+      title="Select a date"
+    />
+  </FormElement>
+</div>
+<div style={{ height: '380px' }}>
+  <FormElement
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    label="Date"
+    inputId="date-input-id"
+    inputIcon="right"
+    dropdown={
+      <DatePicker
+        todayActiveInRange
+        dateSelected
+        dateRange="week-4-5"
+        dateRangeMulti
+      />
+    }
+  >
+    <Input id="date-input-id" placeholder=" " />
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="event"
+      assistiveText="Select a date"
+      title="Select a date"
+    />
+  </FormElement>
+</div>
+
+### Docked Composer
+<div style={{ height: '500px', minWidth: '615px', overflowX: 'auto', position: 'relative' }}>
+  <div className="slds-docked_container slds-is-absolute">
+    <DockedComposerPanel className="slds-is-open">
+      <div className="slds-align_absolute-center">
+        Docked Composer Panel Body <br /> This area consumes the feature
+      </div>
+    </DockedComposerPanel>
+  </div>
+</div>
+
+### Docked Utility Panel
+<div style={{ height: '540px', position: 'relative' }}>
+  <ul className="slds-utility-bar slds-is-absolute">
+    <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
+    <UtilityBarItem symbol="clock">History</UtilityBarItem>
+    <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+  </ul>
+  <UtilityPanel className="slds-is-open slds-is-absolute" header="Call">
+    <div className="slds-align_absolute-center">Utility Panel Body</div>
+  </UtilityPanel>
+</div>
+
+### Spinners
+<div style={{ height: '6rem', position: 'relative' }}>
+  <Spinner className="slds-spinner_medium slds-spinner_brand" />
+</div>

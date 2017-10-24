@@ -20,7 +20,7 @@
   // Position for when assistive text becomes into focus
   .slds-assistive-text_focus,
   .slds-assistive-text--focus {
-    background: $global-header-color-background;
+    background: $brand-header;
     top: 0;
   }
 }
@@ -30,7 +30,7 @@
  * @restrict .slds-global-header_container div
  */
 .slds-global-header {
-  background: $global-header-color-background;
+  background: $brand-header;
   box-shadow: $shadow-header;
   padding: $spacing-x-small 0;
   height: $height-header;
@@ -93,20 +93,20 @@
   &__button_icon,
   &__button--icon {
     margin: 0 $spacing-xx-small;
-    color: $fill-header-button;
+    color: $brand-header-contrast;
 
     .slds-icon {
-      fill: $fill-header-button; // backwards compatible for old implementations
+      fill: $brand-header-contrast; // backwards compatible for old implementations
     }
 
     &:hover:not(:disabled),
     &:focus {
-      color: $fill-header-button-hover;
+      color: $brand-header-contrast-active;
     }
 
     &:hover:not(:disabled) .slds-icon,
     &:focus .slds-icon {
-      fill: $fill-header-button-hover; // backwards compatible for old implementations
+      fill: $brand-header-contrast-active; // backwards compatible for old implementations
     }
   }
 
@@ -119,13 +119,13 @@
    */
   &__button_icon-actions,
   &__button--icon-actions {
-    background: $fill-header-button;
+    background: $brand-header-contrast;
     border-radius: $border-radius-medium;
     color: $color-text-icon-inverse;
 
     &:hover,
     &:focus {
-      background-color: $fill-header-button-hover;
+      background-color: $brand-header-contrast-active;
       color: $color-text-icon-inverse;
     }
   }
@@ -144,7 +144,7 @@
     .slds-icon,
     .slds-button__icon {
       color: $color-text-icon-inverse;
-      stroke: $color-stroke-header-button;
+      stroke: $brand-header-contrast;
       stroke-width: $border-stroke-width-thick;
       stroke-linejoin: round;
       stroke-linecap: round;
@@ -155,12 +155,12 @@
     &:focus .slds-icon,
     &:focus .slds-button__icon {
       color: $color-text-icon-inverse;
-      stroke: $color-stroke-brand-hover;
+      stroke: $brand-header-contrast-active;
     }
 
     &:active .slds-icon,
     &:active .slds-button__icon {
-      stroke: $color-stroke-brand-active;
+      stroke: $brand-header-contrast-active;
     }
 
     /**
@@ -175,8 +175,8 @@
 
       .slds-icon,
       .slds-button__icon {
-        color: $fill-brand;
-        stroke: $color-stroke-brand;
+        color: $brand-accessible-active;
+        stroke: $brand-accessible-active;
         stroke-width: $border-stroke-width-thin;
       }
 

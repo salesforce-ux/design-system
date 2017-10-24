@@ -113,13 +113,13 @@
     &:checked ~ .slds-checkbox--faux,
     &:checked + .slds-checkbox_button__label,
     &:checked + .slds-checkbox--button__label {
-      background-color: $color-background-button-brand;
+      background-color: $brand-accessible;
       color: $color-text-button-brand;
 
       // Need something stronger when the input is checked
       &:hover,
       &:focus {
-        background-color: $color-background-button-brand;
+        background-color: $brand-accessible-active;
       }
     }
 

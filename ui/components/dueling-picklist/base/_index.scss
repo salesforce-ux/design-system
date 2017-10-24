@@ -52,12 +52,12 @@
   overflow: auto;
 
   [aria-selected="true"] {
-    background-color: $color-background-button-brand;
+    background-color: $brand-accessible;
     color: $color-text-button-brand;
 
     &:hover,
     &:focus {
-      background: $color-background-button-brand-hover;
+      background: $brand-accessible-active;
       color: $color-text-button-brand-hover;
     }
   }

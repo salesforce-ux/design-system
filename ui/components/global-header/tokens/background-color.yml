@@ -9,6 +9,6 @@ props:
   GLOBAL_HEADER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'
     comment: Global Header background color
-  HEADER_LOGO_IMAGE:
-    value: '/assets/images/logo-noname.svg'
+  BRAND_LOGO_IMAGE:
+    value: '/assets/images/logo.svg'
     type: string

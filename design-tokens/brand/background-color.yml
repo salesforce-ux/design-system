@@ -11,7 +11,6 @@ global:
 imports:
 - ../color-palettes.yml
 props:
-  ## BRANDING
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'
     deprecated: true

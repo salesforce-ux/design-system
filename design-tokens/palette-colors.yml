@@ -74,16 +74,16 @@ props:
     value: "#0d0e12"
     comment: "Active / Hover state of BRAND_CONTRAST"
   BRAND_BACKGROUND_PRIMARY:
-    value: "#AFC5DE"
+    value: "#fafaf9"
     comment: "Primary page background color"
   BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: "rgba(175,197,222,0)"
+    value: "rgba(250,250,249,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
   BRAND_BACKGROUND_DARK:
-    value: "#205C9F"
+    value: "#dddbda"
     comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
   BRAND_BACKGROUND_DARK_TRANSPARENT:
-    value: "rgba(32,92,159,0)"
+    value: "rgba(221,219,218,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
   BRAND_HEADER:
     value: "#ffffff"

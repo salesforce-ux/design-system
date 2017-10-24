@@ -164,7 +164,6 @@ export let Th = props => {
             className="slds-icon slds-icon_x-small slds-icon-standard-account"
             sprite="standard"
             symbol="account"
-            title="Accounts"
           />
         );
       default:

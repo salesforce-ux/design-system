@@ -3,14 +3,23 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import Immutable from 'immutable';
+
+const DEFAULT_THEME_TOKENS = require('../../../../design-tokens/dist/salesforce-skin.json');
+const THEME_TOKENS = require('../../../../design-tokens/dist/brand.json');
+let bgColor = DEFAULT_THEME_TOKENS.BRAND_BACKGROUND_PRIMARY;
+if (THEME_TOKENS.BRAND_BACKGROUND_PRIMARY) {
+  bgColor = THEME_TOKENS.BRAND_BACKGROUND_PRIMARY;
+}
 
 class Page extends Component {
   render() {
+    console.log(bgColor);
     return (
       <div
         style={{
           minHeight: '20rem',
-          backgroundColor: this.props.bgColor,
+          backgroundColor: bgColor,
           position: 'relative',
           zIndex: '1'
         }}

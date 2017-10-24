@@ -1,8 +1,10 @@
+import _ from '../../shared/helpers';
 import Page from './docs/Page';
 import { Button } from '../buttons/base/example';
 import { ButtonIcon } from '../button-icons/base/example';
 import { GlobalHeader } from '../global-header/base/example';
 import { ContextBar } from '../global-navigation/navigation-bar/example';
+import { ContextTabBar, ContextTab, ContextTabPanel } from '../global-navigation/navigation-tab-bar/example';
 import { FormElement } from '../form-element/base/example';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
@@ -18,16 +20,25 @@ import { DockedComposerPanel, Footer } from '../docked-composer/base/example'
 import { UtilityPanel, UtilityBarItem, UtilityBar } from '../docked-utility-bar/base/example';
 import { Spinner } from '../spinners/base/example';
 import { PathStageSelected } from '../path/base/example';
+import { InlineEditTable } from '../data-tables/inline-edit/example';
 
 <div className="lead">
   An inventory of brandable component inside of SLDS
 </div>
 
 ### Brand Band/Page Background
-<Page bgColor="#AFC5DE" medium />
+<Page medium />
 
-### Global Links
+### Global Text Links
 <a href="javascript:void(0);">Brand-able Text Link</a>
+
+### Button Text
+<button className="slds-button" href="javascript:void(0);">Brand-able Button Link</button>
+<button className="slds-button" disabled>Brand-able Button Link</button>
+
+### Button Neutral
+<Button className="slds-button_neutral">Button Neutral</Button>
+<Button className="slds-button_neutral" disabled>Button Neutral</Button>
 
 ### Button Brand
 <Button className="slds-button_brand">Button Brand</Button>
@@ -55,6 +66,11 @@ import { PathStageSelected } from '../path/base/example';
   title="Like"
 />
 
+### Data Table
+<div className="slds-scrollable_none">
+  <InlineEditTable />
+</div>
+
 ### Global Header
 <div style={{ position: 'relative', height: '60px' }}>
   <GlobalHeader className="slds-is-absolute" favoritesSelected />
@@ -62,6 +78,29 @@ import { PathStageSelected } from '../path/base/example';
 
 ### Global Navigation
 <ContextBar itemActive />
+
+### Global Navigation Tab Bar
+<div className="demo-only">
+  <ContextTabBar>
+    <ContextTab
+      title="Home"
+      symbol="home"
+      tabPanelId="context-tab-panel-1"
+      id="context-tab-id-1"
+    />
+    <ContextTab title="Tab Item 1" tabPanelId="context-tab-panel-2" id="context-tab-id-2" itemActive />
+    <ContextTab title="Tab Item 2" tabPanelId="context-tab-panel-3" id="context-tab-id-3" />
+  </ContextTabBar>
+  <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
+    Tab Home Content
+  </ContextTabPanel>
+  <ContextTabPanel id="context-tab-panel-2" tabId="context-tab-id-2">
+    Tab One Content
+  </ContextTabPanel>
+  <ContextTabPanel id="context-tab-panel-3" tabId="context-tab-id-3">
+    Tab Two Content
+  </ContextTabPanel>
+</div>
 
 ### Checkbox
 <FormElement>

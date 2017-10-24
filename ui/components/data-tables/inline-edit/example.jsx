@@ -52,6 +52,31 @@ const rows = [
   }
 ];
 
+export const InlineEditTable = () => (
+  <Container>
+    <Table isEditable style={{ width: '66.75rem' }}>
+      <Thead
+        columns={columns}
+        hasErrorColumn
+        mainColumnWidth="8.75rem"
+        actionableMode
+      />
+      <tbody>
+        {_.times(rows.length, i => (
+          <InlineEditTr
+            key={i}
+            index={i + 1}
+            {...rows[i]}
+            focusableCell="recordName"
+            focusedCell="recordName"
+            actionableMode
+          />
+        ))}
+      </tbody>
+    </Table>
+  </Container>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////

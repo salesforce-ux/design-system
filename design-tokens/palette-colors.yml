@@ -61,11 +61,11 @@ props:
   BRAND_DARK_ACTIVE:
     value: "#253045"
     comment: "Active / Hover state of BRAND_DARK"
-  BRAND_A11Y:
-    value: "#23538d"
+  BRAND_ACCESSIBLE:
+    value: "#0070d2"
     comment: "Dark variant of BRAND that is accessible with white"
-  BRAND_A11Y_ACTIVE:
-    value: "#06457d"
+  BRAND_ACCESSIBLE_ACTIVE:
+    value: "#005fb2"
     comment: "Active / Hover state of BRAND_A11Y"
   BRAND_CONTRAST:
     value: "#1a1b1e"
@@ -97,3 +97,6 @@ props:
   BRAND_TEXT_LINK:
     value: "#0070D2"
     comment: "Primary text link brand color"
+  BRAND_TEXT_LINK_ACTIVE:
+    value: "#005fb2"
+    comment: "Active / Hover state of BRAND_TEXT_LINK"

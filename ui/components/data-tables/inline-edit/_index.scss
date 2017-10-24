@@ -102,7 +102,7 @@
 
     &.slds-has-focus { // This is the focused state
       background-color: $color-background-alt;
-      box-shadow: $color-border-selection 0 0 0 1px inset;
+      box-shadow: $brand-accessible 0 0 0 1px inset;
     }
   }
 
@@ -134,7 +134,7 @@
 // Requires .slds-th__action inside the <th>
 .slds-has-focus .slds-th__action {
   background-color: $color-background-alt;
-  box-shadow: $color-border-selection 0 0 0 1px inset;
+  box-shadow: $brand-accessible-active 0 0 0 1px inset;
 }
 
 // Handles focus for resizable columns
@@ -145,7 +145,7 @@
 .slds-is-resizable .slds-th__action:focus,
 .slds-is-resizable .slds-th__action:focus:hover {
   background-color: $table-color-background-header-hover;
-  box-shadow: $color-border-selection 0 0 0 1px inset, $color-border-selection -0.25rem 0 0 inset;
+  box-shadow: $brand-accessible-active 0 0 0 1px inset, $brand-accessible-active -0.25rem 0 0 inset;
 }
 
 
@@ -161,7 +161,7 @@
 
   &.slds-has-focus { // This is the focused state
     background-color: $color-background-alt;
-    box-shadow: $color-border-selection 0 0 0 1px inset;
+    box-shadow: $brand-accessible-active 0 0 0 1px inset;
 
     .slds-button__icon_edit,
     .slds-button__icon--edit,
@@ -171,7 +171,7 @@
     }
 
     &:hover {
-      box-shadow: $color-border-selection 0 0 0 1px inset;
+      box-shadow: $brand-accessible-active 0 0 0 1px inset;
     }
 
     a:focus {

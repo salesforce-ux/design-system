@@ -157,22 +157,22 @@
   * @notes This class must be placed on the item programatically when the guidance section is activated
   */
   .slds-is-active {
-    background-color: $color-background-inverse;
+    background-color: $brand-dark;
 
     .slds-path__link {
       color: $color-text-inverse;
     }
 
     &:hover {
-      background-color: $color-background-alt-inverse;
+      background-color: $brand-dark-active;
 
       + .slds-path__item:before {
-        background-color: $color-background-alt-inverse;
+        background-color: $brand-dark-active;
       }
     }
 
     + .slds-path__item:before {
-      background-color: $color-background-inverse;
+      background-color: $brand-dark;
     }
   }
 
@@ -240,18 +240,18 @@
    * @restrict .slds-path__item
    */
   .slds-is-current {
-    background-color: $color-background-path-current;
+    background-color: $brand-accessible;
 
     &:hover {
-      background-color: $color-background-path-current-hover;
+      background-color: $brand-accessible-active;
     }
 
     + .slds-is-incomplete:before {
-      background-color: $color-background-path-current;
+      background-color: $brand-accessible;
     }
 
     &:hover + .slds-is-incomplete:before {
-      background-color: $color-background-path-current-hover;
+      background-color: $brand-accessible-active;
     }
   }
 
@@ -450,12 +450,12 @@
  * @restrict .slds-path button, .slds-path-coach button
  */
 .slds-path__mark-current {
-  border-color: $color-border-inverse;
-  background-color: $color-background-inverse;
+  border-color: $brand-dark;
+  background-color: $brand-dark;
 
   &:hover,
   &:focus {
-    background-color: $color-background-alt-inverse;
+    background-color: $brand-dark-active;
   }
 }
 

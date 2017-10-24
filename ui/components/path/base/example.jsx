@@ -662,7 +662,7 @@ let PathCoachVisible = props => (
   </Demo>
 );
 
-let PathStageSelected = props => (
+export let PathStageSelected = props => (
   <Demo>
     <Coach isExpanded>
       <Path>

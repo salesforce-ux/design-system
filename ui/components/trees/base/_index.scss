@@ -171,7 +171,7 @@
 
     &[aria-selected="true"] > .slds-tree__item {
       background: $color-background-row-selected;
-      box-shadow: $color-background-button-brand 4px 0 0 inset;
+      box-shadow: $brand-primary-active 4px 0 0 inset;
     }
 
     > [role="group"] {

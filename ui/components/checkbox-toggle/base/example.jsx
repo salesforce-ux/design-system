@@ -25,13 +25,13 @@ let Fieldset = props => (
   </fieldset>
 );
 
-let LabelWrapper = props => (
+export let LabelWrapper = props => (
   <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
 );
 
-let Label = props => (
+export let Label = props => (
   <label
     className={classNames('slds-checkbox_toggle slds-grid', props.className)}
     htmlFor={props.id}
@@ -40,13 +40,13 @@ let Label = props => (
   </label>
 );
 
-let FauxLabel = props => (
+export let FauxLabel = props => (
   <span className="slds-form-element__label slds-m-bottom_none">
     {props.children}
   </span>
 );
 
-let Checkbox = props => (
+export let Checkbox = props => (
   <input
     name="checkbox"
     type="checkbox"
@@ -56,7 +56,7 @@ let Checkbox = props => (
   />
 );
 
-let Toggle = props => (
+export let Toggle = props => (
   <span
     id="toggle-desc"
     className={classNames('slds-checkbox_faux_container', props.className)}

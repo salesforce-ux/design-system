@@ -24,7 +24,7 @@ const SliderLabel = props => (
   </span>
 );
 
-const Slider = props => (
+export const Slider = props => (
   <div className={classNames('slds-slider', props.className)}>
     <input
       aria-describedby={props['aria-describedby']}

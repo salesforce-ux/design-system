@@ -11,9 +11,10 @@ global:
 imports:
 - ../color-palettes.yml
 props:
-  ## PAGE
+  ## BRANDING
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'
+    deprecated: true
   ## BANNERS
   BRAND_BAND_DEFAULT_IMAGE:
     value: '/assets/images/themes/oneSalesforce/banner-brand-default.png'
@@ -46,11 +47,15 @@ props:
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
     value: 'rgba(175,197,222,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
     value: '#205C9F'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
     value: 'rgba(32,92,159,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'
+    deprecated: true

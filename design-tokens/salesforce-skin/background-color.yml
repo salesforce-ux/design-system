@@ -14,9 +14,23 @@ imports:
 - ./aliases/color.yml
 - ../color-palettes.yml
 props:
+  ## BRANDING
+  BRAND_BACKGROUND_PRIMARY:
+    value: "#AFC5DE"
+    comment: "Primary page background color"
+  BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: "rgba(175,197,222,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
+  BRAND_BACKGROUND_DARK:
+    value: "#205C9F"
+    comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
+  BRAND_BACKGROUND_DARK_TRANSPARENT:
+    value: "rgba(32,92,159,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
   ## PAGE
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'
+    deprecated: true
   ## BANNERS
   BRAND_BAND_DEFAULT_IMAGE:
     value: '/assets/images/themes/oneSalesforce/banner-brand-default.png'
@@ -49,14 +63,18 @@ props:
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
     value: 'rgb(253,253,253)'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
     value: 'rgba(253,253,253,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+    deprecated: true
   BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
     value: 'rgba(253,253,253,0)'
     comment: 'These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_SECONDARY changes, solves webkit bug'
+    deprecated: true
   ## BACKGROUNDS
   COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_2}'

@@ -2,6 +2,7 @@
 import React from 'react';
 
 import _ from '../../../shared/helpers';
+import { render, mount } from 'enzyme';
 
 import {
   AdvancedDataTable,
@@ -10,14 +11,16 @@ import {
   ProductQuantityTd,
   ProductPriceTd,
   ProductItemDetailsTd,
+  Table,
   Thead
 } from '../';
 
 import {
+  columnHeaderIcons,
   columns,
-  rows,
   productColumns,
-  productRows
+  productRows,
+  rows
 } from '../advanced/example';
 
 import createHelpers from '../../../../jest.setup';
@@ -97,3 +100,24 @@ it('renders an advanced data table with radio group', () =>
       </tbody>
     </AdvancedDataTable>
   ));
+
+it('renders a table header hover state', () => {
+  const wrapper = mount(
+    <AdvancedDataTable>
+      <Thead columns={columns} columnHeaderIcons={columnHeaderIcons} hasMenus />
+      <tbody>
+        {_.times(rows.length, i => (
+          <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+        ))}
+      </tbody>
+    </AdvancedDataTable>
+  );
+
+  return matchesMarkupAndStyle(
+    wrapper
+      .find('th a.slds-th__action')
+      .at(1)
+      .simulate('mouseEnter')
+      .html()
+  );
+});

@@ -19,12 +19,12 @@ describe('bare button icon', () => {
         <ButtonIcon iconClassName="slds-button__icon_hint" />
       </div>
     );
-    matchesMarkupAndStyle(
+    return matchesMarkupAndStyle(
       wrapper
         .find('.slds-hint-parent')
         .at(0)
         .simulate('mouseEnter')
-        .getNode()
+        .html()
     );
   });
 });

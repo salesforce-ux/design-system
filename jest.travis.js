@@ -9,6 +9,6 @@ execSync('npm run test:compile-integration', {
 
 // local runs the same thing, but slightly different to not throw
 // Check jest.vrt.watch.js
-execSync('./node_modules/.bin/jest --color', {
+execSync('./node_modules/.bin/jest --color --bail --ci', {
   stdio: ['inherit', 'inherit', 'inherit']
 });

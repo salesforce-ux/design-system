@@ -3,7 +3,7 @@
 
 import React from 'react';
 import BreadCrumbs, { Crumb } from '../../breadcrumbs/index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
 

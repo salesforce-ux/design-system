@@ -3,7 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Trigger } from '../../menus/dropdown/example';
 import { GlobalHeader } from '../base/example';
 import { Avatar } from '../../avatar/base/example';

@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { File } from '../../files/base/example';
 import { AttachmentLink } from '../../files/base/example';
 import { Publisher } from '../../publishers/comment/example';

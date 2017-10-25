@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Truncate from '../../../shared/truncate/index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import {

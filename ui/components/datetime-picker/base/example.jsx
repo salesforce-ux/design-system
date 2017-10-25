@@ -10,7 +10,7 @@ import {
 } from '../../combobox/base/example';
 import { DatePicker } from '../../datepickers/base/example';
 import { UtilityIcon } from '../../icons/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 

@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';

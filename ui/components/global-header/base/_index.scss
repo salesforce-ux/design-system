@@ -121,12 +121,16 @@
   &__button--icon-actions {
     background: $brand-header-contrast;
     border-radius: $border-radius-medium;
-    color: $color-text-icon-inverse;
+    color: $brand-header;
 
     &:hover,
     &:focus {
       background-color: $brand-header-contrast-active;
-      color: $color-text-icon-inverse;
+      color: $brand-header;
+    }
+
+    .slds-button__icon {
+      @include square(1rem);
     }
   }
 
@@ -143,7 +147,7 @@
 
     .slds-icon,
     .slds-button__icon {
-      color: $color-text-icon-inverse;
+      color: $brand-header;
       stroke: $brand-header-contrast;
       stroke-width: $border-stroke-width-thick;
       stroke-linejoin: round;
@@ -154,12 +158,7 @@
     &:hover .slds-button__icon,
     &:focus .slds-icon,
     &:focus .slds-button__icon {
-      color: $color-text-icon-inverse;
-      stroke: $brand-header-contrast-active;
-    }
-
-    &:active .slds-icon,
-    &:active .slds-button__icon {
+      color: $brand-header;
       stroke: $brand-header-contrast-active;
     }
 
@@ -175,23 +174,26 @@
 
       .slds-icon,
       .slds-button__icon {
-        color: $brand-accessible-active;
-        stroke: $brand-accessible-active;
+        color: $brand-header;
+        stroke: $brand-accessible;
         stroke-width: $border-stroke-width-thin;
+        fill: $brand-header;
       }
 
       &:hover .slds-icon,
       &:hover .slds-button__icon,
       &:focus .slds-icon,
       &:focus .slds-button__icon {
-        color: $fill-brand-hover;
-        stroke: $color-stroke-brand-hover;
+        color: $brand-header;
+        stroke: $brand-accessible-active;
+        fill: $brand-header;
       }
 
       &:active .slds-icon,
       &:active .slds-button__icon {
-        color: $fill-brand-active;
-        stroke: $color-stroke-brand-active;
+        color: $brand-header;
+        stroke: $brand-accessible-active;
+        fill: $brand-header;
       }
     }
 

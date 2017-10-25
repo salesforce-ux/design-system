@@ -107,6 +107,17 @@ export const productRows = [
   }
 ];
 
+export const AdvancedTable = () => (
+  <Table>
+    <Thead columns={columns} />
+    <tbody>
+      {_.times(rows.length, i => (
+        <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+      ))}
+    </tbody>
+  </Table>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////

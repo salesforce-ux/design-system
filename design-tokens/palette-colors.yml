@@ -49,6 +49,9 @@ props:
   BRAND_PRIMARY_ACTIVE:
     value: "#007add"
     comment: "Active / Hover state of BRAND_PRIMARY"
+  BRAND_PRIMARY_TRANSPARENT:
+    value: "rgba(21,137,238,0.1)"
+    comment: "Transparent value of BRAND_PRIMARY"
   BRAND_LIGHT:
     value: "#f4f6fe"
     comment: "Light variant of BRAND that is accessible with dark colors"

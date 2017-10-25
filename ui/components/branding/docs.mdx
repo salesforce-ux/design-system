@@ -1,8 +1,10 @@
 import Page from './docs/Page';
+import Token from './docs/Token';
 import { Button } from '../buttons/base/example';
 import ButtonIcon from '../button-icons/';
 import { GlobalHeader } from '../global-header/base/example';
 import { ContextBar } from '../global-navigation/navigation-bar/example';
+import { ContextTabBar, ContextTab, ContextTabPanel } from '../global-navigation/navigation-tab-bar/example';
 import { FormElement } from '../form-element/base/example';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
@@ -18,25 +20,115 @@ import { DockedComposerPanel, Footer } from '../docked-composer/base/example'
 import { UtilityPanel, UtilityBarItem, UtilityBar } from '../docked-utility-bar/base/example';
 import { Spinner } from '../spinners/base/example';
 import { PathStageSelected } from '../path/base/example';
+import { InlineEditTable } from '../data-tables/inline-edit/example';
 
 <div className="lead">
   An inventory of brandable component inside of SLDS
 </div>
 
-### Brand Band/Page Background
-<Page bgColor="#AFC5DE" medium />
+### Global Header
+<div style={{ position: 'relative', height: '60px' }}>
+  <GlobalHeader className="slds-is-absolute" />
+</div>
+<div style={{ position: 'relative', height: '60px' }}>
+  <GlobalHeader className="slds-is-absolute" favoritesSelected />
+</div>
 
-### Global Links
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_HEADER" />
+<Token tokenSet="force-base" token="BRAND_HEADER_CONTRAST" />
+<Token tokenSet="force-base" token="BRAND_HEADER_CONTRAST_ACTIVE" />
+
+### Global Navigation
+<ContextBar itemActive />
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+<Token tokenSet="force-base" token="BRAND_PRIMARY_TRANSPARENT" />
+
+### Global Navigation Tab Bar
+<div className="demo-only">
+  <ContextTabBar>
+    <ContextTab
+      title="Home"
+      symbol="home"
+      tabPanelId="context-tab-panel-1"
+      id="context-tab-id-1"
+    />
+    <ContextTab title="Tab Item 1" tabPanelId="context-tab-panel-2" id="context-tab-id-2" itemActive />
+    <ContextTab title="Tab Item 2" tabPanelId="context-tab-panel-3" id="context-tab-id-3" />
+  </ContextTabBar>
+  <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
+    Tab Home Content
+  </ContextTabPanel>
+  <ContextTabPanel id="context-tab-panel-2" tabId="context-tab-id-2">
+    Tab One Content
+  </ContextTabPanel>
+  <ContextTabPanel id="context-tab-panel-3" tabId="context-tab-id-3">
+    Tab Two Content
+  </ContextTabPanel>
+</div>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+<Token tokenSet="force-base" token="BRAND_PRIMARY_TRANSPARENT" />
+
+### Brand Band/Page Background
+<Page medium />
+
+**Tokens Used**
+
+<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_PRIMARY" />
+<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
+<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_DARK" />
+<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
+
+### Global Text Links
 <a href="javascript:void(0);">Brand-able Text Link</a>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+
+### Button Text
+<button className="slds-button" href="javascript:void(0);">Brand-able Button Link</button>
+<button className="slds-button" disabled>Brand-able Button Link</button>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+
+### Button Neutral
+<Button className="slds-button_neutral">Button Neutral</Button>
+<Button className="slds-button_neutral" disabled>Button Neutral</Button>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
 
 ### Button Brand
 <Button className="slds-button_brand">Button Brand</Button>
 <Button className="slds-button_brand" disabled>Button Brand</Button>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+
 ### Button Icons
 <ButtonIcon
   className="slds-button_icon-border-filled"
 />
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
 
 ### Stateful Button Icon
 <ButtonIcon
@@ -55,13 +147,10 @@ import { PathStageSelected } from '../path/base/example';
   title="Like"
 />
 
-### Global Header
-<div style={{ position: 'relative', height: '60px' }}>
-  <GlobalHeader className="slds-is-absolute" favoritesSelected />
+### Data Table
+<div className="slds-scrollable_none">
+  <InlineEditTable />
 </div>
-
-### Global Navigation
-<ContextBar itemActive />
 
 ### Checkbox
 <FormElement>

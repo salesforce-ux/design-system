@@ -1,8 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$color-background-context-bar-brand-light: rgba($brand-primary, 0.1);
-
 /**
  * @summary Navigation bar wrapper
  *
@@ -89,7 +87,7 @@ $color-background-context-bar-brand-light: rgba($brand-primary, 0.1);
     &.slds-is-active {
       outline: 0;
       border-radius: 0;
-      background-color: $color-background-context-bar-brand-light;
+      background-color: $brand-primary-transparent;
       text-decoration: none;
       cursor: pointer;
     }
@@ -121,7 +119,7 @@ $color-background-context-bar-brand-light: rgba($brand-primary, 0.1);
         }
 
         100% {
-          background-color: $color-background-context-bar-brand-light;
+          background-color: $brand-primary-transparent;
         }
       }
 
@@ -158,7 +156,7 @@ $color-background-context-bar-brand-light: rgba($brand-primary, 0.1);
       }
 
       &:hover {
-        border-bottom-color: $color-background-context-bar-brand-light;
+        border-bottom-color: $brand-primary-transparent;
       }
     }
 
@@ -180,7 +178,7 @@ $color-background-context-bar-brand-light: rgba($brand-primary, 0.1);
 
     // Enforce background on items that have a notification
     &.slds-has-notification {
-      background: $color-background-context-bar-brand-light;
+      background: $brand-primary-transparent;
     }
 
     /**

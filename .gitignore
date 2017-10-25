@@ -50,5 +50,9 @@ coverage
 # Ignore tokens distribution
 /design-tokens/dist
 
+# Ignore test design-tokens + images
+/design-tokens/__themes__
+/assets/images/__local__
+
 # Legacy folders
 /git_modules

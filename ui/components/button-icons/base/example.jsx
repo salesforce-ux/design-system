@@ -32,7 +32,7 @@ export let ButtonIcon = props => (
     />
     {props.hasDropdown ? (
       <SvgIcon
-        className="slds-button__icon slds-button__icon_x-small"
+        className="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small"
         sprite="utility"
         symbol="down"
       />

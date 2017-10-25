@@ -86,7 +86,7 @@ export const ColorPickerSummary = props => {
       >
         <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
         <SvgIcon
-          className="slds-button__icon slds-button__icon_small"
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
           sprite="utility"
           symbol="down"
         />

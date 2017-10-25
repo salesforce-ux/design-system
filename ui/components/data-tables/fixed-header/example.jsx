@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Table, RowData } from '../inline-edit/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';

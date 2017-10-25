@@ -4,7 +4,7 @@
 import React from 'react';
 import Truncate from '../../../shared/truncate/index.react';
 import Heading from '../../heading/index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import { StandardIcon } from '../../icons/standard/example';
 import { StatefulButton } from '../../buttons/stateful/example';

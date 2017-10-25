@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Checkbox } from '../../checkbox/base/example';
 import { Select } from '../../select/base/example';
 import { Pill, PillContainer } from '../../pills/base/example';

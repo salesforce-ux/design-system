@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////

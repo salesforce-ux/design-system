@@ -4,7 +4,7 @@
 import React from 'react';
 import { DatePicker } from '../base/example';
 import { UtilityIcon } from '../../icons/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
 

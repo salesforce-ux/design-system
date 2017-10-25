@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { FormElementStatic } from '../../panels/detail/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -662,7 +662,7 @@ let PathCoachVisible = props => (
   </Demo>
 );
 
-let PathStageSelected = props => (
+export let PathStageSelected = props => (
   <Demo>
     <Coach isExpanded>
       <Path>

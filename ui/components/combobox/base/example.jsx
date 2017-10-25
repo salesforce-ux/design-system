@@ -7,7 +7,7 @@ import {
   ListboxPillsItem,
   ListboxPill
 } from '../../pills/listbox-of-pill-options/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Avatar } from '../../avatar/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';

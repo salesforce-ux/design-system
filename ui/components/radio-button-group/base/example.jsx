@@ -10,11 +10,11 @@ import { Fieldset, Legend } from '../../radio-group/base/example';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let RadioButtonGroup = props => (
+export let RadioButtonGroup = props => (
   <div className="slds-radio_button-group">{props.children}</div>
 );
 
-let RadioButton = props => (
+export let RadioButton = props => (
   <span
     className={classNames('slds-button slds-radio_button', props.className)}
   >
@@ -24,6 +24,7 @@ let RadioButton = props => (
       id={props.id}
       disabled={props.disabled}
       aria-describedby={props.errorId}
+      defaultChecked={props.checked}
     />
     <label className="slds-radio_button__label" htmlFor={props.id}>
       <span className="slds-radio_faux">{props.children}</span>

@@ -63,8 +63,8 @@
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-        border-bottom: $border-width-thick solid $color-brand;
-        border-left: $border-width-thick solid $color-brand;
+        border-bottom: $border-width-thick solid $brand-primary-active;
+        border-left: $border-width-thick solid $brand-primary-active;
       }
     }
 
@@ -105,7 +105,7 @@
       left: 50%;
       width: $square-icon-x-small-content;
       height: 2px;
-      background: $color-brand;
+      background: $brand-primary-active;
       border: 0;
       transform: translate3d(-50%, -50%, 0);
     }

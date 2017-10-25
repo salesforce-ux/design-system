@@ -43,7 +43,7 @@
    * @group interaction
    */
   &.slds-has-focus {
-    box-shadow: 0 0 4px 2px $color-border-brand;
+    box-shadow: 0 0 4px 2px $brand-accessible;
   }
 
   /**
@@ -84,7 +84,7 @@
    */
   &__header {
     background: $color-background-docked-panel-header;
-    border-bottom: $border-width-thick solid $color-border-brand;
+    border-bottom: $border-width-thick solid $brand-primary;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
     padding: $spacing-x-small $spacing-small;
   }

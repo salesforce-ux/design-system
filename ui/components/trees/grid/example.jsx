@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 
@@ -83,11 +83,9 @@ const Row = props => (
       <ButtonIcon
         aria-hidden="true"
         assistiveText={
-          props['aria-expanded'] ? (
-            `Expand ${props.name}`
-          ) : (
-            `Collapse ${props.name}`
-          )
+          props['aria-expanded']
+            ? `Expand ${props.name}`
+            : `Collapse ${props.name}`
         }
         className={classNames(
           'slds-button_icon slds-button_icon-x-small slds-m-right_x-small',
@@ -97,11 +95,9 @@ const Row = props => (
         symbol="chevronright"
         tabIndex="-1"
         title={
-          props['aria-expanded'] ? (
-            `Collapse ${props.name}`
-          ) : (
-            `Expand ${props.name}`
-          )
+          props['aria-expanded']
+            ? `Collapse ${props.name}`
+            : `Expand ${props.name}`
         }
       />
       <div className="slds-truncate" title={props.name}>

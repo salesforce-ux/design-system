@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
@@ -58,12 +58,20 @@ export let ContextBar = props => (
     </div>
     <nav className="slds-context-bar__secondary" role="navigation">
       <ul className="slds-grid">
-        <li className="slds-context-bar__item">
+        <li
+          className={classNames(
+            'slds-context-bar__item',
+            props.itemActive && 'slds-is-active'
+          )}
+        >
           <a
             href="javascript:void(0);"
             className="slds-context-bar__label-action"
             title="Home"
           >
+            {props.itemActive && (
+              <span className="slds-assistive-text">Current Page:</span>
+            )}
             <span className="slds-truncate" title="Home">
               Home
             </span>
@@ -90,23 +98,21 @@ export let ContextBar = props => (
           </div>
           {!props.hideDropdown ? contextDropdown : null}
         </li>
-        {!props.children ? (
-          _.times(3, i => (
-            <li className="slds-context-bar__item" key={i}>
-              <a
-                href="javascript:void(0);"
-                className="slds-context-bar__label-action"
-                title="Menu Item"
-              >
-                <span className="slds-truncate" title="Menu Item">
-                  Menu Item
-                </span>
-              </a>
-            </li>
-          ))
-        ) : (
-          props.children
-        )}
+        {!props.children
+          ? _.times(3, i => (
+              <li className="slds-context-bar__item" key={i}>
+                <a
+                  href="javascript:void(0);"
+                  className="slds-context-bar__label-action"
+                  title="Menu Item"
+                >
+                  <span className="slds-truncate" title="Menu Item">
+                    Menu Item
+                  </span>
+                </a>
+              </li>
+            ))
+          : props.children}
       </ul>
     </nav>
   </div>

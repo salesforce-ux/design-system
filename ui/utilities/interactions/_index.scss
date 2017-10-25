@@ -35,18 +35,18 @@
  * @modifier
  */
 .slds-text-link {
-  color: $color-text-link;
+  color: $brand-text-link;
   text-decoration: none;
   transition: color 0.1s linear;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: $color-text-link-hover;
+    color: $brand-text-link-active;
   }
 
   &:active {
-    color: $color-text-link-active;
+    color: $brand-text-link-active;
   }
 }
 

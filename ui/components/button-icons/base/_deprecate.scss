@@ -1,0 +1,12 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use .slds-button--icon instead') {
+
+  .slds-button_icon-bare,
+  .slds-button--icon-bare {
+    line-height: $line-height-reset;
+    vertical-align: middle;
+    color: $color-text-icon-default;
+  }
+}

@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { ButtonGroup } from '../../button-groups/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////

@@ -8,7 +8,7 @@ import {
   ModalContent,
   ModalFooter
 } from '../../modals/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 
 export default (

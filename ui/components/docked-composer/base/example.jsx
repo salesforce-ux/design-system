@@ -4,7 +4,7 @@
 import React from 'react';
 import { Avatar } from '../../avatar/base/example';
 import { Pill } from '../../pills/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Modal, ModalContent } from '../../modals/base/example';
 import {

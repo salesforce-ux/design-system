@@ -2,15 +2,14 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../base/example';
+import ButtonIcon from '../';
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
-
+/**
+ * Default
+ */
 export default (
   <ButtonIcon
-    className="slds-button_icon-border-filled"
+    theme="neutral"
     aria-pressed="false"
     symbol="like"
     assistiveText="Like"
@@ -18,13 +17,16 @@ export default (
   />
 );
 
+/**
+ * States
+ */
 export let states = [
   {
     id: 'button-icon-stateful-selected',
     label: 'Selected',
     element: (
       <ButtonIcon
-        className="slds-button_icon-border-filled"
+        theme="neutral"
         aria-pressed="true"
         selected
         symbol="like"

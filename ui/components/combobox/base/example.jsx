@@ -7,7 +7,7 @@ import {
   ListboxPillsItem,
   ListboxPill
 } from '../../pills/listbox-of-pill-options/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Avatar } from '../../avatar/base/example';
 import { FormElement } from '../../form-element/base/example';
 import { Input } from '../../input/base/example';
@@ -214,21 +214,17 @@ export let ComboboxContainer = props => {
               ) : props.inputIcon === 'left' || props.inputIcon === 'both' ? (
                 <UtilityIcon
                   assistiveText={
-                    props.inputIconLeftSymbol === 'search' ? (
-                      false
-                    ) : (
-                      props.inputIconLeftAssistiveText
-                    )
+                    props.inputIconLeftSymbol === 'search'
+                      ? false
+                      : props.inputIconLeftAssistiveText
                   }
                   containerClassName="slds-input__icon slds-input__icon_left"
                   className="slds-icon slds-icon_x-small slds-icon-text-default"
                   symbol={props.inputIconLeftSymbol || 'search'}
                   title={
-                    props.inputIconLeftSymbol === 'search' ? (
-                      false
-                    ) : (
-                      props.inputIconLeftAssistiveText
-                    )
+                    props.inputIconLeftSymbol === 'search'
+                      ? false
+                      : props.inputIconLeftAssistiveText
                   }
                 />
               ) : null}
@@ -245,13 +241,11 @@ export let ComboboxContainer = props => {
                 role="textbox"
                 type="text"
                 placeholder={
-                  !props.placeholder ? props.autocomplete ? (
-                    'Search Salesforce'
-                  ) : (
-                    'Select an Option'
-                  ) : (
-                    props.placeholder
-                  )
+                  !props.placeholder
+                    ? props.autocomplete
+                      ? 'Search Salesforce'
+                      : 'Select an Option'
+                    : props.placeholder
                 }
                 readOnly={props['readonly']}
                 defaultValue={props.value}
@@ -261,21 +255,17 @@ export let ComboboxContainer = props => {
               {props.inputIcon === 'right' && props.inputButtonIcon != true ? (
                 <UtilityIcon
                   title={
-                    props.inputIconRightSymbol === 'search' ? (
-                      false
-                    ) : (
-                      props.inputIconRightAssistiveText
-                    )
+                    props.inputIconRightSymbol === 'search'
+                      ? false
+                      : props.inputIconRightAssistiveText
                   }
                   containerClassName="slds-input__icon slds-input__icon_right"
                   className="slds-icon slds-icon_x-small slds-icon-text-default"
                   symbol={props.inputIconRightSymbol || 'search'}
                   assistiveText={
-                    props.inputIconRightSymbol === 'search' ? (
-                      false
-                    ) : (
-                      props.inputIconRightAssistiveText
-                    )
+                    props.inputIconRightSymbol === 'search'
+                      ? false
+                      : props.inputIconRightAssistiveText
                   }
                 />
               ) : null}
@@ -349,11 +339,9 @@ export let EntityOption = props => (
     </span>
     <span className="slds-media__body">
       <span className="slds-listbox__option-text slds-listbox__option-text_entity">
-        {props.typeahead ? (
-          props.children
-        ) : (
-          props.entityTitle || 'Salesforce.com, Inc.'
-        )}
+        {props.typeahead
+          ? props.children
+          : props.entityTitle || 'Salesforce.com, Inc.'}
       </span>
       {props.entityMeta ? (
         <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">

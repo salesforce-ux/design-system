@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Panel } from '../detail/example';
@@ -83,11 +83,9 @@ export let FilterObject = props => {
             iconClassName="slds-button__icon_hint"
             symbol="close"
             assistiveText={
-              props.type ? (
-                'Remove filter: ' + props.type + ' ' + props.children
-              ) : (
-                'Remove filter: ' + props.children
-              )
+              props.type
+                ? 'Remove filter: ' + props.type + ' ' + props.children
+                : 'Remove filter: ' + props.children
             }
             title={'Remove ' + props.children}
           />

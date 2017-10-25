@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Tabs from '../index.react';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)

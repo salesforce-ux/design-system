@@ -5,7 +5,7 @@ import {
   Listbox,
   ListboxItem
 } from '../../combobox/base/example';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Popover } from '../../popovers/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import _ from '../../../shared/helpers';

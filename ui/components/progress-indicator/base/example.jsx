@@ -4,7 +4,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
-import { ButtonIcon } from '../../button-icons/base/example';
+import ButtonIcon from '../../button-icons/';
 import { Tooltip } from '../../tooltips/base/example';
 import { ProgressBar } from '../../progress-bar/base/example';
 import {

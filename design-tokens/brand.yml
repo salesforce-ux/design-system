@@ -3,4 +3,3 @@
 
 imports:
 - ./brand/background-color.yml
-- ./__themes__/coke.yml

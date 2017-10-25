@@ -13,6 +13,9 @@ props:
   BRAND_PRIMARY_ACTIVE:
     value: "#e00000"
     comment: "Active / Hover state of BRAND_PRIMARY"
+  BRAND_PRIMARY_TRANSPARENT:
+    value: "RGBA(244,0,0,0.1)"
+    comment: "Transparent value of BRAND_PRIMARY"
   BRAND_LIGHT:
     value: "#fff6f3"
     comment: "Light variant of BRAND that is accessible with dark colors"
@@ -56,7 +59,7 @@ props:
     value: "#474747"
     comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_CONTRAST_ACTIVE:
-    value: "#474747"
+    value: "#333333"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
   BRAND_TEXT_LINK:
     value: "#a3190a"

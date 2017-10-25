@@ -14,7 +14,6 @@ if (THEME_TOKENS.BRAND_BACKGROUND_PRIMARY) {
 
 class Page extends Component {
   render() {
-    console.log(bgColor);
     return (
       <div
         style={{

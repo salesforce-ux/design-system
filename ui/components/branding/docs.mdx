@@ -1,3 +1,4 @@
+import TableOfContents from '../../../shared/components/TableOfContents';
 import Page from './docs/Page';
 import Token from './docs/Token';
 import { Button } from '../buttons/base/example';
@@ -21,10 +22,13 @@ import { UtilityPanel, UtilityBarItem, UtilityBar } from '../docked-utility-bar/
 import { Spinner } from '../spinners/base/example';
 import { PathStageSelected } from '../path/base/example';
 import { InlineEditTable } from '../data-tables/inline-edit/example';
+prop tableOfContentsData
 
 <div className="lead">
   An inventory of brandable component inside of SLDS
 </div>
+
+<TableOfContents data={tableOfContentsData} />
 
 ### Global Header
 <div style={{ position: 'relative', height: '60px' }}>

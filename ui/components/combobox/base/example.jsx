@@ -230,7 +230,7 @@ export let ComboboxContainer = props => {
               ) : null}
               {/* Input */}
               <Input
-                className="slds-combobox__input slds-combobox__input-value"
+                className="slds-combobox__input"
                 id={props.id || comboboxId}
                 aria-activedescendant={props['aria-activedescendant']}
                 aria-autocomplete={props.autocomplete ? 'list' : null}

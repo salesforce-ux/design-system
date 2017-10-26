@@ -1,10 +1,14 @@
-import CodeView from '../../../shared/components/CodeView';
+import { CodeView } from '../../../shared/components/CodeView';
+import TableOfContents from '../../../shared/components/TableOfContents';
 import { Magnet } from './';
 import Example from '../../../shared/components/Example';
+prop tableOfContentsData
 
 <div className="lead">
 Layout utility classes will help you to achieve layouts found within the Salesforce Platform.
 </div>
+
+<TableOfContents data={tableOfContentsData} />
 
 ## Magnets
 
@@ -23,15 +27,19 @@ If you need a card-like component to appear flush to the card-like component bel
   <div className="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_medium">
     <strong>Before</strong>
     <CodeView>
-      <Magnet />
-      <Magnet />
+      <div>
+        <Magnet />
+        <Magnet />
+      </div>
     </CodeView>
   </div>
   <div className="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_medium">
     <strong>After</strong>
     <CodeView>
-      <Magnet className="slds-has-bottom-magnet" />
-      <Magnet className="slds-has-top-magnet" />
+      <div>
+        <Magnet className="slds-has-bottom-magnet" />
+        <Magnet className="slds-has-top-magnet" />
+      </div>
     </CodeView>
   </div>
 </div>

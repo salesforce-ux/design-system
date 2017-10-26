@@ -17,6 +17,7 @@ const { Docs } = require('../../.generated/docs.js');
 const { beautify } = require('../../shared/utils/beautify.js');
 const mkdirp = require('../../shared/utils/mkdirp.js');
 
+// Render each to fill allexample cache in the example component
 glob('ui/**/docs.mdx').forEach(filepath => {
   const component = Docs.req(filepath.replace(/^ui/, '.'));
   ReactDOM.renderToStaticMarkup(component.default());

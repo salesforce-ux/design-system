@@ -1,5 +1,6 @@
 const elements = [
   'p',
+  'div',
   'a',
   'em',
   'strong',

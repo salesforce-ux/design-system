@@ -13,6 +13,7 @@ const React = require('react');
 const ReactDOM = require('react-dom/server');
 const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
 const { beautify } = require('./shared/utils/beautify');
+const { renderWithBetterError } = require('./shared/utils/render');
 
 const getMarkupAndStyle = selector => `
   (function() {
@@ -58,23 +59,32 @@ module.exports = (dirname, port) => {
     }
   });
 
+  const getPort = () =>
+    new Promise((resolve, reject) => {
+      openport.find(function(err, port) {
+        err ? reject(err) : resolve(port);
+      });
+    });
+
+  const startServer = p =>
+    new Promise((resolve, reject) => {
+      const server = app.listen(p, () => resolve(server)).on('error', reject);
+    });
+
   beforeAll(async () => {
     // Server gets started before each suite and then closed afterwards
     // This needs to be here so that matchesMarkupAndStyle() will work even when
     // not using the watcher
-    port =
-      port ||
-      (await new Promise((resolve, reject) => {
-        openport.find(function(err, port) {
-          err ? reject(err) : resolve(port);
-        });
-      }));
+    port = port || (await getPort());
     console.log('running on port', port);
-    server = await new Promise(resolve => {
-      const server = app.listen(port, () => {
-        resolve(server);
-      });
-    });
+    try {
+      server = await startServer(port);
+    } catch (e) {
+      console.log('failed to start server', e);
+      port = await getPort();
+      console.log('trying new port', port);
+      server = await startServer(port); // only try twice
+    }
     browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.emulate({
@@ -104,7 +114,10 @@ module.exports = (dirname, port) => {
       const renderedMarkup =
         typeof element === 'string'
           ? element
-          : ReactDOM.renderToStaticMarkup(element);
+          : renderWithBetterError(
+              element,
+              `${CURRENT_TEST_NAME} failed on ${element}`
+            );
       await page.evaluate(`document.body.innerHTML = \`${renderedMarkup}\``);
       await delay(750);
       const markupAndStyle = await page

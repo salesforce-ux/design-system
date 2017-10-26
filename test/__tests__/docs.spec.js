@@ -15,12 +15,16 @@ import createHelpers from '../../jest.setup';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 const { Docs } = require('../../.generated/docs.js');
 const { beautify } = require('../../shared/utils/beautify.js');
+const { renderWithBetterError } = require('../../shared/utils/render.js');
 const mkdirp = require('../../shared/utils/mkdirp.js');
 
 // Render each to fill allexample cache in the example component
 glob('ui/**/docs.mdx').forEach(filepath => {
   const component = Docs.req(filepath.replace(/^ui/, '.'));
-  ReactDOM.renderToStaticMarkup(component.default());
+  renderWithBetterError(
+    component.default(),
+    `-----${filepath} failed to compile`
+  );
 });
 
 const createVrt = example =>

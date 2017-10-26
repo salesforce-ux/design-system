@@ -16,23 +16,23 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 describe('Vertical Nav Radio Group', () => {
   it('renders a focus state', () => {
     const wrapper = mount(<NavVerticalRadioSet />);
-    matchesMarkupAndStyle(
+    return matchesMarkupAndStyle(
       wrapper
         .find('.slds-nav-vertical__item')
         .at(0)
         .simulate('focus')
-        .getNode()
+        .html()
     );
   });
 
   it('renders a hover state', () => {
     const wrapper = mount(<NavVerticalRadioSet />);
-    matchesMarkupAndStyle(
+    return matchesMarkupAndStyle(
       wrapper
         .find('.slds-nav-vertical__item')
         .at(0)
         .simulate('mouseEnter')
-        .getNode()
+        .html()
     );
   });
 

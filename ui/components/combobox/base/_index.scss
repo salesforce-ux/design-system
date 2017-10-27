@@ -210,8 +210,16 @@
   }
 }
 
+/**
+ * Class to target styling the value of a combobox input
+ *
+ * @selector .slds-combobox__input-value
+ * @restrict .slds-combobox input
+ */
 [class*="slds-input-has-icon_left"] .slds-combobox__input[value],
-[class*="slds-input-has-icon--left"] .slds-combobox__input[value] {
+[class*="slds-input-has-icon--left"] .slds-combobox__input[value],
+[class*="slds-input-has-icon_left"] .slds-combobox__input-value,
+[class*="slds-input-has-icon--left"] .slds-combobox__input-value {
   padding-left: ($square-icon-small-boundary + $spacing-small);
 }
 
@@ -372,7 +380,8 @@
     display: inline-flex;
   }
 
-  .slds-combobox__input[value] {
+  .slds-combobox__input[value],
+  .slds-combobox__input-value {
     box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
   }
 }

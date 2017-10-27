@@ -24,25 +24,6 @@ props:
   BANNER_GROUP_DEFAULT_IMAGE:
     value: '/assets/images/themes/oneSalesforce/banner-group-public-default.png'
     type: string
-  ## AVATARS
-  USER_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: '#AFC5DE'

@@ -31,35 +31,6 @@ props:
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'
     deprecated: true
-  ## BANNERS
-  BRAND_BAND_DEFAULT_IMAGE:
-    value: '/assets/images/themes/oneSalesforce/banner-brand-default.png'
-    type: string
-  BANNER_USER_DEFAULT_IMAGE:
-    value: '/assets/images/themes/oneSalesforce/banner-user-default.png'
-    type: string
-  BANNER_GROUP_DEFAULT_IMAGE:
-    value: '/assets/images/themes/oneSalesforce/banner-group-public-default.png'
-    type: string
-  ## AVATARS
-  USER_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
   ## BRAND BAND COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'

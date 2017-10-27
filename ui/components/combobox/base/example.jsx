@@ -426,7 +426,7 @@ let ObjectSwitcher = props => (
         <span className="slds-assistive-text">Searching in: Accounts</span>
       </span>
       <SvgIcon
-        className="slds-button__icon slds-button__icon_x-small"
+        className="slds-button__icon slds-button__icon_x-small slds-m-left_xxx-small"
         sprite="utility"
         symbol="down"
       />

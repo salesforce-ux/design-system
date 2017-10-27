@@ -25,7 +25,7 @@ import { InlineEditTable } from '../data-tables/inline-edit/example';
 prop tableOfContentsData
 
 <div className="lead">
-  An inventory of brandable component inside of SLDS
+  An inventory of brand-able components inside of SLDS
 </div>
 
 <TableOfContents data={tableOfContentsData} />
@@ -151,20 +151,39 @@ prop tableOfContentsData
   title="Like"
 />
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+
 ### Data Table
 <div className="slds-scrollable_none">
   <InlineEditTable />
 </div>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
 
 ### Checkbox
 <FormElement>
   <Checkbox label="Checkbox Label" checked />
 </FormElement>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY_ACTIVE" />
+
 ### Checkbox Button
 <FormElement>
   <CheckboxAddButton />
 </FormElement>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY_ACTIVE" />
 
 ### Checkbox Button Group
 <fieldset className="slds-form-element">
@@ -182,8 +201,18 @@ prop tableOfContentsData
   </div>
 </fieldset>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+
 ### Dueling Picklist
 <MultiSelect dataSet={SelectedSnapShot} />
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
 
 ### Radio Button Group
 <fieldset className="slds-form-element">
@@ -201,24 +230,47 @@ prop tableOfContentsData
   </div>
 </fieldset>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+
 ### Radio Group
 <FormElement>
   <Radio checked label="Radio Label One" />
   <Radio label="Radio Label Two" />
 </FormElement>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+
 ### Slider
 <Slider value="50" />
 
-### Data Table
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
 
 ### Path
 <PathStageSelected />
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Token tokenSet="force-base" token="BRAND_DARK" />
+<Token tokenSet="force-base" token="BRAND_DARK_ACTIVE" />
 
 ### Menu (Action Overflow)
 <div style={{ height: '120px' }}>
   <ActionOverflow />
 </div>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
 
 ### Datepicker
 <div style={{ height: '380px' }}>
@@ -263,6 +315,10 @@ prop tableOfContentsData
   </FormElement>
 </div>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+
 ### Docked Composer
 <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto', position: 'relative' }}>
   <div className="slds-docked_container slds-is-absolute">
@@ -273,6 +329,10 @@ prop tableOfContentsData
     </DockedComposerPanel>
   </div>
 </div>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY" />
 
 ### Docked Utility Panel
 <div style={{ height: '540px', position: 'relative' }}>
@@ -286,7 +346,15 @@ prop tableOfContentsData
   </UtilityPanel>
 </div>
 
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+
 ### Spinners
 <div style={{ height: '6rem', position: 'relative' }}>
   <Spinner className="slds-spinner_medium slds-spinner_brand" />
 </div>
+
+**Tokens Used**
+
+<Token tokenSet="force-base" token="BRAND_PRIMARY" />

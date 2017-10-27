@@ -4,38 +4,11 @@ global:
   cssProperties:
   - 'background*'
 props:
-  ## Defaults for when brand band is turned OFF!
-  ## Overridden in salesforce-skin
-  #
-  ## Desktop
+  ## IMAGE
   BRAND_BAND_DEFAULT_IMAGE:
     value: ''
     type: string
-  BANNER_USER_DEFAULT_IMAGE:
-    value: ''
-    type: string
-  BANNER_GROUP_DEFAULT_IMAGE:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  USER_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_LARGE:
-    value: ''
-    type: string
-  ## Colors
+  ## COLORS
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
     value: 'transparent'
   BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:

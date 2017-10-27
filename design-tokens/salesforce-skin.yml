@@ -3,6 +3,7 @@
 
 imports:
 - ./salesforce-skin/background-color.yml
+- ./salesforce-skin/image-paths.yml
 - ./salesforce-skin/border-color.yml
 - ./salesforce-skin/border-radius.yml
 - ./salesforce-skin/box-shadow.yml

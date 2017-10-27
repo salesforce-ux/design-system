@@ -1,0 +1,23 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: utility
+  type: string
+props:
+  BANNER_USER_DEFAULT_IMAGE:
+    value: ''
+  BANNER_GROUP_DEFAULT_IMAGE:
+    value: ''
+  USER_DEFAULT_AVATAR:
+    value: ''
+  USER_DEFAULT_AVATAR_MEDIUM:
+    value: ''
+  USER_DEFAULT_AVATAR_SMALL:
+    value: ''
+  GROUP_DEFAULT_AVATAR:
+    value: ''
+  GROUP_DEFAULT_AVATAR_MEDIUM:
+    value: ''
+  GROUP_DEFAULT_AVATAR_SMALL:
+    value: ''

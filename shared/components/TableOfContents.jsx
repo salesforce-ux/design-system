@@ -9,7 +9,7 @@ class TableOfContents extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <ul className="doc doc-toc">
+      <ul className={classNames('doc doc-toc', this.props.className)}>
         {data.map((item, index) => (
           <li className="doc" key={index}>
             <a className="doc" href={`#${item.id}`}>

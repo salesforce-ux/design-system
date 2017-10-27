@@ -59,6 +59,6 @@ module.exports = code =>
       /export default function/,
       'export const Content = function'
     )}
-
-    export default props => <Doc><Content tableOfContentsData={toc} {...props} factories={factories} /></Doc>
+    console.log(toc)
+    export default props => <Doc tableOfContentsData={toc}><Content {...props} factories={factories} /></Doc>
   `;

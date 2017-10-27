@@ -193,7 +193,7 @@
 .slds-chat-message__text_inbound,
 .slds-chat-message__text_outbound,
 .slds-chat-message__text_outbound-agent {
-  border-radius: 8px 8px 0;
+  border-radius: $border-radius-large $border-radius-large 0;
   color: $color-text-inverse;
   min-height: 2rem;
   padding: $spacing-x-small;
@@ -208,7 +208,7 @@
  */
 .slds-chat-message__text_inbound {
   background-color: $chat-message-color-background-inbound;
-  border-radius: 8px 8px 8px 0;
+  border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
   color: $color-text-default;
 }
 

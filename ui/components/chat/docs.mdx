@@ -1,0 +1,772 @@
+import {CodeView, CodeBlock} from '../../../shared/components/CodeView';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import TableOfContents from '../../../shared/components/TableOfContents';
+import {Chat,ChatList,ChatListItem,ChatMessage,ChatMessageBody,ChatAvatar,ChatEvent,ChatBookend} from './';
+import { DoctypeIcon } from '../icons/doctype/example';
+prop tableOfContentsData
+
+<div className="doc lead">
+  The Chat component is used to display real-time and past chat logs between service agents and customers. It comes with a number of sub components that can be used to display the different types of chat items.
+</div>
+
+<TableOfContents data={tableOfContentsData} />
+
+<Example title="Chat list">
+  <Chat>
+    <ChatList>
+      <ChatListItem type="bookend">
+        <ChatBookend
+          type="start"
+          name="Andy Martinez"
+          timeStamp="4:58 PM"
+        />
+      </ChatListItem>
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="inbound"
+            name="Andy Martinez"
+            timeStamp="4:59 PM"
+          >
+            Hi, my Alexa only speaks French
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody type="outbound">
+            Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="inbound"
+            name="Andy Martinez"
+            timeStamp="5:09 PM"
+          >
+            I'm not trying to program any language
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound"
+            name="Jason Dewar"
+            timeStamp="5:15 PM"
+          >
+            Sorry ot hear that. Let me see what I can do about this.
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    </ChatList>
+  </Chat>
+</Example>
+
+## Structuring a chat
+
+To correctly structure and communicate a chat, you should first follow the basic structure that forms any chat log and can contain any type of chat item.
+
+A chat consists of an unordered list of possible chat items, wrapped in a `section` which has the accessible role of `log`.
+
+<Blockquote
+  header="Accessible Role"
+  type="a11y"
+>
+  The <code className="doc">log</code> role has an implicit <code className="doc">aria-live</code> property value of <code className="doc">polite</code>, meaning that it comes for free. It also has an implicit <code className="doc">aria-relevant</code> property value of <code className="doc">additions text</code>. Together this means any additional text, or chat items added to the list will automatically be politely announced by a screen reader
+</Blockquote>
+
+<CodeBlock>
+  <Chat>
+    <ChatList>
+      <ChatListItem />
+    </ChatList>
+  </Chat>
+</CodeBlock>
+
+Each `slds-chat-listitem` comes with 4 modifier classes, each one needing to be applied based on the type of chat item you are display in the list item:
+
+| Chat item | Modifier | When to apply
+|---|---|---|
+| [Inbound message](#Inbound-messages) | `.slds-chat-listitem slds-chat-listitem_inbound` | Apply to all list items that contain inbound messages |
+| [Outbound message](#Outbound-messages) | `.slds-chat-listitem slds-chat-listitem_outbound` | Apply to all list items that contain outbound messages |
+| [Chat event](#Displaying-events-during-a-chat-session) | `.slds-chat-listitem slds-chat-listitem_event` | Apply to all list items that contain events |
+| [Chat bookend](#Starting-and-ending-a-chat) | `.slds-chat-listitem slds-chat-listitem_bookend` | Apply to all list items that contain chat log bookends |
+
+The modifiers are used to apply any specific styling to the type of chat item it represents, including spacing, position and layout.
+
+## Starting and ending a chat
+
+When each chat session is started or stopped, it is represented with a bookend. The bookend displays when the chat was stopped or started and by who.
+
+### Chat started bookend
+
+<CodeView>
+  <ChatBookend
+    type="start"
+    name="Taylor Watson-Rice"
+    timeStamp="4:59 PM"
+  />
+</CodeView>
+
+### Chat stopped bookend
+<CodeView>
+  <ChatBookend
+    type="stop"
+    name="Taylor Watson-Rice"
+    timeStamp="4:59 PM"
+  />
+</CodeView>
+
+## Chat messages
+
+Chat messages are comprised of the message text, and message meta data including the persons name and time at which the message was sent. Chat message come in 3 forms:
+
+### Inbound messages
+
+<Blockquote
+  header="Use of aria-label"
+  type="a11y"
+>
+  Each message meta data wrapper has <code className="doc">aria-label</code> added, which we can use to form more human sounding messages as they arrive, <b>"Hi, my Alexa only speaks French said Taylor Watson-Rice at 4:59 PM"</b>. A screen reader, when <code className="doc">aria-label</code> is applied to an element, will only announce the contents of the label, not the text content held in it.
+</Blockquote>
+
+<Example title="Chat Inbound message">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="inbound"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              Hi, my Alexa only speaks French
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Consecutive inbound messages
+
+Consecutive messages only display name and time meta data once
+
+<Example title="Chat Consecutive Inbound message">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatMessageBody type="inbound">
+              Hi, my Alexa only speaks French
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="inbound"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              I'm having trouble changing that.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Inbound with avatar
+
+Inbound messages can optionally display the customers avatar. When displaying an avatar in inbound messages, be sure to apply the `slds-chat-message_faux-avatar` modifier to any consecutive `slds-chat-message` containers, to ensure correct alignment where the avatar is missing.
+
+<Example title="Chat Inbound message with avatar">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody type="inbound">
+              Hi, my Alexa only speaks French
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage hasFauxAvatar>
+            <ChatMessageBody
+              type="inbound"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              I'm having trouble changing that.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Receiving a file attachment
+
+During a chat an agent can request the customer upload a file attachment to be sent to the agent.
+
+<Example title="Chat Inbound message with file attachment">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody
+              type="inbound"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              <DoctypeIcon
+                assistiveText="Attachment"
+                className="slds-icon_small"
+                containerClassName="slds-chat-icon"
+                symbol="attachment"
+                title="Attachment"
+              />
+              <a href="javascript:void(0)">filename_of_attachment.jpg</a>
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Customer is typing
+
+Whilst chatting with customers, agents can see when a customer is typing a response by using the [Dynamic Icon, Typing](/components/dynamic-icons).
+
+<Blockquote
+  header="Assistive text"
+  type="a11y"
+>
+  It's important to set descriptive assistive text to the typing icon, as this is the only means a screen reader user will know a customer is currently typing. The assistive text, because it is text content, will be announced as the icon is added to the DOM. As an example, we use <b>"Customer is typing"</b>
+</Blockquote>
+
+<CodeView>
+  <Chat>
+    <ChatList>
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody isTyping type="inbound" />
+        </ChatMessage>
+      </ChatListItem>
+    </ChatList>
+  </Chat>
+</CodeView>
+
+#### Sneak peak
+
+We can take that experience one step further when the sneak peak feature is enabled. This allows agents to see what customers are typing in real time, as they type it.
+
+<Blockquote
+  header="aria-hidden"
+  type="a11y"
+>
+  When the sneak peak feature is active, we take care to try and reduce the verbosity a screen reader user will encounter. As they will hear the final message once it is typed, we have found it is preferred to use <code className="doc">aria-hidden="true"</code> on the text they are currently typing, to reduce noise.
+</Blockquote>
+
+
+<CodeView>
+  <Chat>
+    <ChatList>
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody isTyping hasSneakPeak type="inbound">
+            Hi, my Alexa only spe
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    </ChatList>
+  </Chat>
+</CodeView>
+
+### Outbound messages
+
+Outbound messages come in 2 forms. Ones that are written by the agent in the current chat session, and ones which have been written by other agents who have dealt with the customer during the same chat session.
+
+#### Outbound message by current agent
+
+<Example title="Chat Outbound message current agent">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound"
+              name="Amber Cann"
+              timeStamp="4:59 PM"
+            >
+              Hi Taylor, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo? <a href="javascript:void(0)">http://www/amazon.com</a>
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Outbound message by another agent
+
+<Example title="Chat Outbound message another agent">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound-agent"
+              name="Jason Dewar"
+              timeStamp="4:59 PM"
+            >
+              So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients. Have you tried visiting our help site?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Consecutive outbound messages
+
+For consecutive outbound messages the same rules apply to both types, as consecutive inbound messages.
+
+<Example title="Chat consecutive outbound messages">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody type="outbound">
+              Hi Andy, thank you for contacting Amazon Support. Can you please
+              tell me what language you are trying to program on your Amazon
+              Echo?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              It might be the cause of the problem
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+## Displaying events during a chat session
+
+During a chat session a number of events can occur and these are displayed to the agent, with descriptions and sometimes messages.
+### Basic chat event
+
+The basic type of events that can occur include;
+- Rasing a flag
+- Lowering a flag
+- A whisper
+- File request
+- File sent
+- File request cancelled
+- Transfer request
+- Transfer accepted
+- Transfer cancelled
+- Transfer declined
+
+<Example title="Chat event types">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="priority"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> raised a flag
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="lower_flag"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> lowered the flag
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="chat"
+            timeStamp="5:09 PM"
+          >
+            Whisper from super <b>SuperAlly</b>
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="share_file"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> sent a file request to <b>Andy Martinez</b>
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="file"
+            timeStamp="5:09 PM"
+          >
+            <b>Andy Martinez</b> sent a file
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="cancel_file_request"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> cancelled the file request
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="change_owner"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="change_owner"
+            timeStamp="5:09 PM"
+          >
+            <b>Technical Support Team</b> accepted the transfer request
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="cancel_transfer"
+            timeStamp="5:09 PM"
+          >
+            <b>Jason Dewar</b> cancelled the transfer request
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            symbol="cancel_request"
+            timeStamp="5:09 PM"
+          >
+            <b>Technical Support Team</b> declined the transfer request
+          </ChatEvent>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+### Chat event with an agent message
+
+Sometimes an agent might add a message to an event for another agent to read.
+
+<Example title="Chat event with agent message">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="event">
+          <ChatEvent
+            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            symbol="change_owner"
+            timeStamp="5:19 PM"
+          >
+            <b>Jason Dewar</b> sent a transfer request to <b>Amber Cann</b>
+          </ChatEvent>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+### Chat event - error
+
+In the event of an error occurring during the chat, an error event can be displayed to the agent. This is done by adding the `.slds-has-error` modifier class.
+
+<Blockquote
+  header="Role alert"
+  type="a11y"
+>
+  Event errors have the addition <code>role="alert"</code> to their container. A chat log has a <code>aria-live="polite"</code> value, but we would like to inform agents of errors immediately. The <code>role="alert"</code> attribute comes with an implicit <code>aria-live</code> value of <code>assertive</code> which will achieve this.
+</Blockquote>
+
+<Example title="Chat event error">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="event">
+          <ChatEvent
+            hasError
+            symbol="error"
+            iconAssistiveText="warning"
+            timeStamp="5:06 PM"
+          >
+            The file sent by <b>Andy Martinez</b> is too large
+          </ChatEvent>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+## Putting it all together
+
+<Example title="Chat full list">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="bookend">
+          <ChatBookend
+            type="start"
+            name="Andy Martinez"
+            timeStamp="4:58 PM"
+          />
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatMessageBody
+              type="inbound"
+              name="Andy Martinez"
+              timeStamp="4:59 PM"
+            >
+              Hi, my Alexa only speaks French
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody type="outbound-agent">
+              Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound-agent"
+              name="Jason Dewar"
+              timeStamp="5:02 PM"
+            >
+              Have you tried turning it off and on again?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatMessageBody
+              type="inbound"
+              name="Andy Martinez"
+              timeStamp="5:09 PM"
+            >
+              yes, of course
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound-agent"
+              name="Jason Dewar"
+              timeStamp="5:15 PM"
+            >
+              Sorry ot hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            symbol="change_owner"
+            timeStamp="5:19 PM"
+          >
+            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent symbol="change_owner" timeStamp="5:20 PM">
+            <b>Technical Support Team</b> accepted the transfer request
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent symbol="change_owner" timeStamp="5:22 PM">
+            <b>Amber Cann</b> accepted this chat
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound"
+              name="Amber Cann"
+              timeStamp="5:23 PM"
+            >
+              Hi Andy, my name is Amber and I can help you solve your issue.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatMessageBody
+              type="inbound"
+              name="Andy Martinez"
+              timeStamp="5:29 PM"
+            >
+              Nevermind, I speak french.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="bookend">
+          <ChatBookend type="stop" name="Andy Martinez" timeStamp="5:30 PM" />
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+## Past Chats
+
+An agent has the ability to view past chats with particular customers. In this instance the exact same components and markup for all types of chat items can be used, with just 4 differences:
+
+- A single modifier class of `.slds-chat_past` is added to the `.slds-chat` container
+- Each chat message `.slds-chat-listitem` container looses it's `.slds-chat-listitem_inbound` or `.slds-chat-listitem_outbound` modifier class
+- Each chat message `.slds-chat-message__text` looses it's `.slds-chat-message__text_inbound` or `.slds-chat-message__text_outbound` modifier class
+- `.slds-chat-message__meta` moves to before `.slds-chat-message__text` in DOM order
+
+<Example title="Chat past chat">
+  <CodeView>
+    <Chat isPast>
+      <ChatList>
+        <ChatListItem type="bookend">
+          <ChatBookend
+            type="start"
+            name="Andy Martinez"
+            timeStamp="4:58 PM"
+          />
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody
+              isPast
+              name="Andy Martinez"
+              timeStamp="4:59 PM"
+            >
+              Hi, my Alexa only speaks French
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
+              Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:03 PM">
+              Have you tried turning it off and on again?
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody
+              isPast
+              name="Andy Martinez"
+              timeStamp="5:09 PM"
+            >
+              yes, of course
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody
+              isPast
+              name="Jason Dewar"
+              timeStamp="5:15 PM"
+            >
+              Sorry ot hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent
+            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            symbol="change_owner"
+            timeStamp="5:19 PM"
+          >
+            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent symbol="change_owner" timeStamp="5:20 PM">
+            <b>Technical Support Team</b> accepted the transfer request
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem type="event">
+          <ChatEvent symbol="change_owner" timeStamp="5:22 PM">
+            <b>Amber Cann</b> accepted this chat
+          </ChatEvent>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody
+              isPast
+              name="Amber Cann"
+              timeStamp="5:23 PM"
+            >
+              Hi Andy, my name is Amber and I can help you solve your issue.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem>
+          <ChatMessage>
+            <ChatMessageBody
+              isPast
+              name="Andy Martinez"
+              timeStamp="5:29 PM"
+            >
+              Nevermind, I speak french.
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="bookend">
+          <ChatBookend type="stop" name="Andy Martinez" timeStamp="5:30 PM" />
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>

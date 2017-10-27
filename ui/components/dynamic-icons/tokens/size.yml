@@ -7,7 +7,12 @@ global:
   cssProperties:
   - '*width'
   - '*height'
+imports:
+- "../../../../design-tokens/force-base/sizing.yml"
 props:
   GLOBAL_ACTION_ICON_SIZE:
     value: '1.5rem'
     comment: 'Global action icon size'
+  TYPING_ICON_DOT_SIZE:
+    value: '.5rem'
+    comment: 'Typing icon size'

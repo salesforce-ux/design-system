@@ -9,7 +9,10 @@ export let DoctypeIcon = props => {
   const symbol = props.symbol || 'xml';
   return (
     <span
-      className={classNames('slds-icon_container slds-icon-doctype-' + symbol)}
+      className={classNames(
+        'slds-icon_container slds-icon-doctype-' + symbol,
+        props.containerClassName
+      )}
       title={props.title || 'Description of icon when needed'}
     >
       <SvgIcon

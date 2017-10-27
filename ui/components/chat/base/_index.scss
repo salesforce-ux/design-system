@@ -1,0 +1,375 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * This component is used to display a current or psat chat session between a customer and a service agent.
+ * It appears in the form of a "Log"
+ *
+ * @summary Root container of a chat session
+ *
+ * @name base
+ * @selector .slds-chat
+ * @restrict section[role="log"]
+ * @variant
+ */
+.slds-chat {
+  margin-bottom: $spacing-small;
+}
+
+
+/**
+ * The chat payload should be dispalyed in the form of a list. Each item in the list has a number of vertical and horiztonal spacing rules based on it's type
+ *
+ * @summary Handles the display of chat items within a list
+ *
+ * @selector .slds-chat-list
+ * @restrict .slds-chat ul
+ */
+.slds-chat-list {
+  padding: 0 $spacing-small;
+}
+
+/**
+ * @summary Handles spacing and direction of items in the list
+ *
+ * @selector .slds-chat-listitem
+ * @restrict .slds-chat-list li
+ */
+.slds-chat-listitem {
+  display: flex;
+  margin-top: $spacing-small;
+}
+
+/**
+ * @summary Modifier used to style outbound message list items
+ *
+ * @selector .slds-chat-listitem_outbound
+ * @restrict .slds-chat-listitem
+ * @modifier
+ */
+.slds-chat-listitem_outbound {
+  justify-content: flex-end;
+}
+
+/**
+ * @summary Modifier used to style inbound message list items
+ *
+ * @selector .slds-chat-listitem_inbound
+ * @restrict .slds-chat-listitem
+ * @modifier
+ */
+
+/**
+ * @summary Selector to style sibling, same type message list items
+ *
+ * @selector .slds-chat-listitem_inbound + .slds-chat-listitem_inbound, .slds-chat-listitem_outbound + .slds-chat-listitem_outbound
+ */
+.slds-chat-listitem_inbound + .slds-chat-listitem_inbound,
+.slds-chat-listitem_outbound + .slds-chat-listitem_outbound {
+  margin-top: $spacing-xx-small;
+}
+
+/**
+ * @summary Modifier used for spacing bookend items
+ *
+ * @selector .slds-chat-listitem_bookend
+ * @restrict .slds-chat-listitem
+ * @modifier
+ */
+.slds-chat-listitem_bookend {
+  margin: $spacing-medium 0;
+}
+
+.slds-chat-listitem_bookend + .slds-chat-listitem_bookend {
+  margin-top: $spacing-xx-large;
+}
+
+/**
+ * @summary Modifier used for spacing event items
+ *
+ * @selector .slds-chat-listitem_event
+ * @restrict .slds-chat-listitem
+ * @modifier
+ */
+.slds-chat-listitem_event {
+  margin: $spacing-large 0;
+}
+
+
+/**
+ * @summary Used to style icons with a chat log
+ *
+ * @selector .slds-chat-icon
+ * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container
+ */
+.slds-chat-icon {
+  margin-right: $spacing-x-small;
+
+  .slds-icon {
+    fill: $color-text-weak;
+  }
+}
+
+
+/**
+ * Chat logs are mainly made up of chat messages between an agent and a customer
+ *
+ * @summary styles the outter part of a chat message
+ *
+ * @selector .slds-chat-message
+ * @restrict .slds-chat-listitem div
+ */
+.slds-chat-message {
+  display: flex;
+}
+
+/**
+ * @summary Used for when customer avatars are used in consequtive inbound messages to align the message body with the previous message
+ *
+ * @selector .slds-chat-message_faux-avatar
+ * @restrict .slds-chat-message
+ * @modifier
+ */
+.slds-chat-message_faux-avatar {
+  padding-left: ($spacing-x-large + $spacing-x-small);
+}
+
+/**
+ * @summary Used to style avatars in chat logs
+ *
+ * @selector .slds-chat-avatar
+ * @restrict .slds-chat-message .slds-avatar
+ */
+.slds-chat-avatar {
+  margin-right: $spacing-x-small;
+  min-width: 2rem;
+}
+
+/**
+ * @summary Used to style the avatar intials for chat
+ *
+ * @selector .slds-chat-avatar__intials
+ * @restrict .slds-chat-avatar .slds-avatar__initials
+ */
+.slds-chat-avatar__intials {
+  background-color: $chat-message-color-background-inbound;
+  color: $color-text-weak;
+
+  // combat abbr override styling in avatar
+  &.slds-chat-avatar__intials:hover {
+    color: $color-text-weak;
+  }
+}
+
+/**
+ * @summary Used to contain and align chat messages with their avatars
+ *
+ * @selector .slds-chat-message__body
+ * @restrict .slds-chat-message div
+ */
+
+/**
+ * @summary Used to style the chat text from agent or customer
+ *
+ * @selector .slds-chat-message__text
+ * @restrict .slds-chat-message__body div
+ */
+.slds-chat-message__text {
+  @include break-word;
+  font-size: $font-size-text-small;
+  max-width: 420px;
+  white-space: pre-line;
+
+  a {
+    color: $color-brand-darker;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.slds-chat-message__text_inbound,
+.slds-chat-message__text_outbound,
+.slds-chat-message__text_outbound-agent {
+  border-radius: 8px 8px 0;
+  color: $color-text-inverse;
+  min-height: 2rem;
+  padding: $spacing-x-small;
+}
+
+/**
+ * @summary Used for any specific inbound text styling
+ *
+ * @selector .slds-chat-message__text_inbound
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_inbound {
+  background-color: $chat-message-color-background-inbound;
+  border-radius: 8px 8px 8px 0;
+  color: $color-text-default;
+}
+
+/**
+ * @summary Used for any specific outbound text styling
+ *
+ * @selector .slds-chat-message__text_outbound
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_outbound {
+  background-color: $chat-message-color-background-outbound;
+}
+
+/**
+ * @summary Used for any specific outbound (from another agent) text styling
+ *
+ * @selector .slds-chat-message__text_outbound-agent
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_outbound-agent {
+  background-color: $chat-message-color-background-outbound-agent;
+}
+
+.slds-chat-message__text_outbound,
+.slds-chat-message__text_outbound-agent {
+
+  a {
+    color: $color-text-inverse;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * @summary Used when sneak peak is enabled for customer messages
+ *
+ * @selector .slds-chat-message__text_sneak-peak
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_sneak-peak {
+  font-style: italic;
+
+  .slds-icon-typing {
+    margin-right: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Used to style chat message meta data
+ *
+ * @selector .slds-chat-message__meta
+ * @restrict .slds-chat-message div
+ */
+.slds-chat-message__meta {
+  color: $color-text-weak;
+  font-size: $font-size-text-x-small;
+  margin: $spacing-xxx-small 0 0 $spacing-x-small;
+}
+
+
+/**
+ * During any chat, certain events can occur which need to be displayed to the user
+ *
+ * @selector .slds-chat-event
+ * @restrict .slds-chat-listitem div
+ */
+.slds-chat-event {
+
+  align-items: center;
+  color: $color-text-weak;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: $font-size-text-small;
+  text-align: center;
+  width: 100%;
+
+  /**
+    * @summary Modifier to indicate the event was an error
+    *
+    * @selector .slds-has-error
+    * @restrict .slds-chat-event[role="alert"]
+    * @modifier
+    */
+  &.slds-has-error {
+    color: $color-text-error;
+
+    svg {
+      fill: $color-text-error;
+    }
+  }
+}
+
+/**
+  * @summary Used to style the horizontal rules on an event
+  *
+  * @selector .slds-chat-event__rule
+  * @restrict .slds-chat-event div
+  */
+.slds-chat-event__rule {
+  border-top: $border-width-thin $color-border solid;
+  height: 1px;
+  flex-grow: 1;
+}
+
+/**
+  * @summary Used for styling the event body text
+  *
+  * @selector .slds-chat-event__body
+  * @restrict .slds-chat-event div
+  */
+.slds-chat-event__body {
+  align-items: center;
+  display: flex;
+  margin: 0 $spacing-x-small;
+}
+
+/**
+  * @summary Used to style any messages from an agent in the event
+  *
+  * @selector .slds-chat-event__agent-message
+  * @restrict .slds-chat-event div
+  */
+.slds-chat-event__agent-message {
+  flex-grow: 3;
+  font-size: $font-size-text-x-small;
+  font-style: italic;
+  margin-top: $spacing-x-small;
+  width: 100%;
+}
+
+
+/**
+ * Chat sessions are started and stopped with bookends to the conversation
+ *
+ * @summary Used to style a chat bookend
+ *
+ * @selector .slds-chat-bookend
+ * @restrict .slds-chat-listitem div
+ */
+.slds-chat-bookend {
+  align-items: center;
+  border: $color-border 0 solid;
+  border-bottom-width: $border-width-thin;
+  color: $color-text-weak;
+  display: flex;
+  font-size: $font-size-text-small;
+  justify-content: center;
+  padding: $spacing-x-small 0;
+  width: 100%;
+}
+
+/**
+ * @summary Modifier for bookends which stop a chat session
+ *
+ * @selector .slds-chat-bookend_stop
+ * @restrict .slds-chat-bookend
+ * @modifier
+ */
+.slds-chat-bookend_stop {
+  border-width: $border-width-thin 0 0;
+}

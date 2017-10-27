@@ -12,16 +12,3 @@ props:
     value: '/assets/images/themes/oneSalesforce/banner-user-default.png'
   BANNER_GROUP_DEFAULT_IMAGE:
     value: '/assets/images/themes/oneSalesforce/banner-group-public-default.png'
-  ## AVATARS
-  USER_DEFAULT_AVATAR:
-    value: ''
-  USER_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-  USER_DEFAULT_AVATAR_LARGE:
-    value: ''
-  GROUP_DEFAULT_AVATAR:
-    value: ''
-  GROUP_DEFAULT_AVATAR_MEDIUM:
-    value: ''
-  GROUP_DEFAULT_AVATAR_LARGE:
-    value: ''

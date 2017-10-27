@@ -7,25 +7,17 @@ global:
 props:
   BANNER_USER_DEFAULT_IMAGE:
     value: ''
-    type: string
   BANNER_GROUP_DEFAULT_IMAGE:
     value: ''
-    type: string
   USER_DEFAULT_AVATAR:
     value: ''
-    type: string
   USER_DEFAULT_AVATAR_MEDIUM:
     value: ''
-    type: string
-  USER_DEFAULT_AVATAR_LARGE:
+  USER_DEFAULT_AVATAR_SMALL:
     value: ''
-    type: string
   GROUP_DEFAULT_AVATAR:
     value: ''
-    type: string
   GROUP_DEFAULT_AVATAR_MEDIUM:
     value: ''
-    type: string
-  GROUP_DEFAULT_AVATAR_LARGE:
+  GROUP_DEFAULT_AVATAR_SMALL:
     value: ''
-    type: string

@@ -1,0 +1,20 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  CHAT_MESSAGE_COLOR_BACKGROUND_INBOUND:
+    value: '{!PALETTE_COOL_GRAY_3}'
+    comment: Inbound chat message background color.
+  CHAT_MESSAGE_COLOR_BACKGROUND_OUTBOUND:
+    value: '{!ENDEAVOUR}'
+    comment: Outbound chat message background color.
+  CHAT_MESSAGE_COLOR_BACKGROUND_OUTBOUND_AGENT:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Outbound agent chat message background color.

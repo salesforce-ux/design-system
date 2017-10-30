@@ -17,7 +17,7 @@ const exec = (command, cwd = '') =>
 const runScript = () => {
   exec('NODE_ENV=production');
   exec('npm run build');
-  exec('npm run test:travis');
+  // exec('npm run test:travis');
   exec('npm run lint');
 };
 

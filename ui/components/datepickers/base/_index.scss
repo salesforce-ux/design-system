@@ -75,10 +75,6 @@
      * @selector .slds-is-selected
      * @restrict .slds-datepicker td
      */
-    // &.slds-is-selected {
-    //   color: $color-text-brand-primary;
-    // }
-
     &.slds-is-selected > .slds-day {
       background: $brand-accessible;
       color: $color-text-brand-primary;

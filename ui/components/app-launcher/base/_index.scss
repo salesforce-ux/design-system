@@ -81,6 +81,17 @@
         padding-bottom: $spacing-xx-small;
       }
     }
+
+    /**
+     * Add styles associated with a tile being grabbed in drag and drop interaction
+     *
+     * @selector .slds-is-grabbed
+     * @restrict .slds-app-launcher__tile
+     * @modifier
+     */
+    &.slds-is-grabbed {
+      transform: rotate(3deg);
+    }
   }
 
 

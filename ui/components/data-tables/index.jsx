@@ -15,6 +15,7 @@ import MediaObject from '../../utilities/media-objects/index.react';
 import { Ellie } from '../dynamic-icons/ellie/example';
 import { Score } from '../dynamic-icons/score/example';
 import SvgIcon from '../../shared/svg-icon';
+import { Radio } from '../radio-group/base/example';
 
 export const InlineEditTableContainer = props => (
   <div className="slds-table_edit_container slds-is-relative">
@@ -59,6 +60,7 @@ export const AdvancedDataTable = props => (
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
  * @prop {string} sortDirection - Specifies the sort direction of a specific column
+ * @prop {string} radioGroupId - common id of radio group
  */
 export const Thead = props => {
   const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
@@ -77,6 +79,14 @@ export const Thead = props => {
             style={{ width: selectAllColumnWidth }}
           />
         )}
+
+        {props.radioGroupId ? (
+          <RadioGroupTh
+            style={{ width: selectAllColumnWidth }}
+            radioGroupId={props.radioGroupId}
+            label={props.label}
+          />
+        ) : null}
 
         {_.times(props.columns.length, i => (
           <Th
@@ -256,6 +266,24 @@ export const SelectAllTh = props => (
 );
 
 /**
+ * @name RadioGroupTh - Radio group column header
+ * @param {*} props
+ * @prop {object} style - React style object
+ * @prop {string} radioGroupId - common id of radio group
+ * @prop {string} label - header text for radio group column
+ */
+export const RadioGroupTh = props => (
+  <th
+    className={props.className}
+    scope="col"
+    style={props.style}
+    id={props.radioGroupId}
+  >
+    <span className="slds-assistive-text">{props.label}</span>
+  </th>
+);
+
+/**
  * @name ActionsTh - Common "Row Level Actions" column header for all grids
  * @param {*} props
  */
@@ -297,6 +325,7 @@ export const ErrorsTh = props => (
  * @prop {string} contact
  * @prop {string} recordName
  * @prop {string} stage
+ * @prop {string} radioGroupId - common id of radio group
  */
 export const AdvancedDataTableTr = props => (
   <AdvancedDataTableTrElement
@@ -305,9 +334,10 @@ export const AdvancedDataTableTr = props => (
   >
     <SelectRowTd
       className="slds-text-align_right"
-      checkTabIndex={props.actionableMode ? '0' : '-1'}
+      inputTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
       index={props.index}
+      radioGroupId={props.radioGroupId}
     />
     <ReadOnlyBodyTh
       actionableMode={props.actionableMode}
@@ -427,9 +457,10 @@ export const AdvancedDataTableBodyTh = props => {
  * @prop {boolean} hasFocus - Determines whether the cell is in user focus
  * @prop {boolean} isEditable - Determines whether the cell is editable
  * @prop {integer} cellTabIndex - Set tabindex on the cell
- * @prop {integer} checkTabIndex - Set tabindex on the checkbox
+ * @prop {integer} inputTabIndex - Set tabindex on the checkbox
  * @prop {integer} index - Grid row index
  * @prop {string} className
+ * @prop {string} radioGroupId - common id of radio group
  */
 export const SelectRowTd = props => (
   <AdvancedDataTableTd
@@ -438,13 +469,25 @@ export const SelectRowTd = props => (
     isEditable={props.isEditable}
     tabIndex={props.cellTabIndex}
   >
-    <Checkbox
-      checked={props.checked}
-      hideLabel
-      id={`checkbox-0${props.index}`}
-      label={`Select item ${props.index}`}
-      tabIndex={props.checkTabIndex}
-    />
+    {props.radioGroupId ? (
+      <Radio
+        checked={props.checked}
+        hideLabel
+        id={`radio-0${props.index}`}
+        labelId={`radio-button-label-0${props.index}`}
+        label={`Select item ${props.index}`}
+        radioGroupId={props.radioGroupId}
+        tabIndex={props.inputTabIndex}
+      />
+    ) : (
+      <Checkbox
+        checked={props.checked}
+        hideLabel
+        id={`checkbox-0${props.index}`}
+        label={`Select item ${props.index}`}
+        tabIndex={props.inputTabIndex}
+      />
+    )}
   </AdvancedDataTableTd>
 );
 
@@ -609,7 +652,7 @@ export const InlineEditTr = props => (
           ? '0'
           : null
       }
-      checkTabIndex={props.actionableMode ? '0' : '-1'}
+      inputTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
       hasFocus={props.focusedCell === 'selectRow' && props.index === 1}
       isEditable

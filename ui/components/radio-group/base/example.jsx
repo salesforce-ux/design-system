@@ -39,15 +39,32 @@ export let Radio = props => {
     <span className={classNames('slds-radio', props.className)}>
       <input
         type="radio"
-        id={uniqueId}
+        id={props.id ? props.id : uniqueId}
         name={props.name || 'options'}
         disabled={props.disabled}
         defaultChecked={props.checked}
+        tabIndex={props.tabIndex}
         aria-describedby={props.errorId}
+        aria-labelledby={
+          props.labelId && props.radioGroupId
+            ? props.labelId + ' ' + props.radioGroupId
+            : null
+        }
       />
-      <label className="slds-radio__label" htmlFor={uniqueId}>
+      <label
+        className="slds-radio__label"
+        htmlFor={props.id ? props.id : uniqueId}
+        id={props.labelId}
+      >
         <span className="slds-radio_faux" />
-        <span className="slds-form-element__label">{props.label}</span>
+        <span
+          className={classNames(
+            'slds-form-element__label',
+            props.hideLabel ? 'slds-assistive-text' : null
+          )}
+        >
+          {props.label}
+        </span>
       </label>
     </span>
   );

@@ -5,6 +5,7 @@ import _ from '../../../shared/helpers';
 
 import {
   AdvancedDataTable,
+  AdvancedDataTableTr,
   ProductDataTableTr,
   ProductQuantityTd,
   ProductPriceTd,
@@ -12,7 +13,12 @@ import {
   Thead
 } from '../';
 
-import { productColumns, productRows } from '../advanced/example';
+import {
+  columns,
+  rows,
+  productColumns,
+  productRows
+} from '../advanced/example';
 
 import createHelpers from '../../../../jest.setup';
 
@@ -64,6 +70,28 @@ it('renders a product table', () =>
             index={i + 1}
             {...productRows[i]}
             actionableMode
+          />
+        ))}
+      </tbody>
+    </AdvancedDataTable>
+  ));
+
+it('renders an advanced data table with radio group', () =>
+  matchesMarkupAndStyle(
+    <AdvancedDataTable>
+      <Thead
+        columns={columns}
+        hasNoSelectability
+        radioGroupId="radio-group-header"
+        label="Choose a Row to Select"
+      />
+      <tbody>
+        {_.times(rows.length, i => (
+          <AdvancedDataTableTr
+            key={i}
+            index={i + 1}
+            {...rows[i]}
+            radioGroupId="radio-group-header"
           />
         ))}
       </tbody>

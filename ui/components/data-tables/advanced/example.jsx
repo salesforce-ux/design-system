@@ -16,6 +16,8 @@ import {
 // Partial(s)
 /// ////////////////////////////////////////
 
+const radioGroupCommonId = 'radio-group-header';
+
 export const columns = [
   'Name',
   'Account Name',
@@ -330,6 +332,30 @@ export let examples = [
               index={i + 1}
               {...productRows[i]}
               actionableMode
+            />
+          ))}
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'radio-group',
+    label: 'Radio Group',
+    element: (
+      <Table>
+        <Thead
+          columns={columns}
+          hasNoSelectability
+          radioGroupId={radioGroupCommonId}
+          label="Choose a Row to Select"
+        />
+        <tbody>
+          {_.times(rows.length, i => (
+            <AdvancedDataTableTr
+              key={i}
+              index={i + 1}
+              {...rows[i]}
+              radioGroupId={radioGroupCommonId}
             />
           ))}
         </tbody>

@@ -151,6 +151,10 @@
   [role="gridcell"]:active {
     box-shadow: none;
   }
+
+  .slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux {
+    margin-right: 0;
+  }
 }
 
 /**

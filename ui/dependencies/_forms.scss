@@ -60,6 +60,9 @@
       &:active {
         box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
       }
+      &:disabled {
+        border-color: $color-border-input-disabled;
+      }
     }
   }
 }

@@ -127,6 +127,7 @@
     "raw-loader": "0.5.1",
     "react": "15.4.2",
     "react-addons-test-utils": "15.5.0",
+    "react-autobind": "1.0.6",
     "react-dom": "15.4.2",
     "rimraf": "2.6.1",
     "run-sequence": "1.2.2",

@@ -39,6 +39,7 @@ module.exports = code =>
     }
 
     const toc = [];
+    export const getToc = () => toc;
 
     const HeadingEl = el => (props, ...kids) => {
       const className = addDocClass(props.className);
@@ -59,6 +60,5 @@ module.exports = code =>
       /export default function/,
       'export const Content = function'
     )}
-    console.log(toc)
     export default props => <Doc tableOfContentsData={toc}><Content {...props} factories={factories} /></Doc>
   `;

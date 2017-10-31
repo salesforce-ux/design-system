@@ -35,6 +35,8 @@ props:
   ## PAGE DEFAULTS FROM SALESFORCE-SKIN
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_1}'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+    deprecated: true
   ###################
   COLOR_BACKGROUND:
     value: '{!PALETTE_COOL_GRAY_2}'

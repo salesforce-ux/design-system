@@ -5,10 +5,39 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import style from './Token.scss';
 
+export class Tokens extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: this.props.open || false
+    };
+  }
+
+  render() {
+    return (
+      <div className="doc-tokens-group">
+        <button
+          className="slds-button"
+          onClick={() => this.setState({ open: !this.state.open })}
+        >
+          {this.state.open ? 'Hide' : 'Show'} Tokens Used {this.props.text}
+        </button>
+        <div
+          className={classNames(
+            this.state.open ? 'slds-is-expanded' : 'slds-is-collapsed'
+          )}
+        >
+          <div className="slds-grid slds-wrap">{this.props.children}</div>
+        </div>
+      </div>
+    );
+  }
+}
+
 class Token extends Component {
   render() {
     let tokenValue;
-    let { token, tokenSet = 'salesforce-skin' } = this.props;
+    let { token, tokenSet = 'force-base' } = this.props;
     let tokenPath = require(`../../../../design-tokens/dist/${tokenSet}.json`);
     let set = JSON.stringify(tokenPath);
     JSON.parse(set, (key, value) => {
@@ -18,7 +47,12 @@ class Token extends Component {
     });
 
     return (
-      <div className="doc-token slds-media slds-media_center">
+      <div
+        className={classNames(
+          'doc-token slds-media slds-media_center',
+          this.props.grid && 'slds-size_1-of-2 slds-large-size_1-of-3'
+        )}
+      >
         <div className="slds-media__figure">
           <div className="doc-token__image">
             <div style={{ backgroundColor: tokenValue }} />
@@ -26,12 +60,14 @@ class Token extends Component {
         </div>
         <div className="slds-media__body">
           <p>
-            <strong>Name:</strong>
-            <span>{token}</span>
+            <strong>Name: </strong>
+            <div title={token} className="slds-truncate">
+              {token}
+            </div>
           </p>
           <p>
-            <strong>Value:</strong>
-            <span>{tokenValue}</span>
+            <strong>Value: </strong>
+            <span title={tokenValue}>{tokenValue}</span>
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import TableOfContents from '../../../shared/components/TableOfContents';
 import Page from './docs/Page';
-import Token from './docs/Token';
+import Token, { Tokens } from './docs/Token';
 import { Button } from '../buttons/base/example';
 import ButtonIcon from '../button-icons/';
 import { GlobalHeader } from '../global-header/base/example';
@@ -22,6 +22,7 @@ import { UtilityPanel, UtilityBarItem, UtilityBar } from '../docked-utility-bar/
 import { Spinner } from '../spinners/base/example';
 import { PathStageSelected } from '../path/base/example';
 import { InlineEditTable } from '../data-tables/inline-edit/example';
+import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-navigation/list/example';
 prop tableOfContentsData
 
 <div className="lead">
@@ -29,6 +30,30 @@ prop tableOfContentsData
 </div>
 
 <TableOfContents data={tableOfContentsData} />
+
+## Brand tokens
+<Tokens open>
+  <Token grid token="BRAND_PRIMARY" />
+  <Token grid token="BRAND_PRIMARY_ACTIVE" />
+  <Token grid token="BRAND_PRIMARY_TRANSPARENT" />
+  <Token grid token="BRAND_LIGHT" />
+  <Token grid token="BRAND_LIGHT_ACTIVE" />
+  <Token grid token="BRAND_DARK" />
+  <Token grid token="BRAND_DARK_ACTIVE" />
+  <Token grid token="BRAND_ACCESSIBLE" />
+  <Token grid token="BRAND_ACCESSIBLE_ACTIVE" />
+  <Token grid token="BRAND_CONTRAST" />
+  <Token grid token="BRAND_CONTRAST_ACTIVE" />
+  <Token grid token="BRAND_BACKGROUND_PRIMARY" />
+  <Token grid token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
+  <Token grid token="BRAND_BACKGROUND_DARK" />
+  <Token grid token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
+  <Token grid token="BRAND_TEXT_LINK" />
+  <Token grid token="BRAND_TEXT_LINK_ACTIVE" />
+  <Token grid token="BRAND_HEADER" />
+  <Token grid token="BRAND_HEADER_CONTRAST" />
+  <Token grid token="BRAND_HEADER_CONTRAST_ACTIVE" />
+</Tokens>
 
 ### Global Header
 <div style={{ position: 'relative', height: '60px' }}>
@@ -38,19 +63,19 @@ prop tableOfContentsData
   <GlobalHeader className="slds-is-absolute" favoritesSelected />
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_HEADER" />
-<Token tokenSet="force-base" token="BRAND_HEADER_CONTRAST" />
-<Token tokenSet="force-base" token="BRAND_HEADER_CONTRAST_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_HEADER" />
+  <Token token="BRAND_HEADER_CONTRAST" />
+  <Token token="BRAND_HEADER_CONTRAST_ACTIVE" />
+</Tokens>
 
 ### Global Navigation
 <ContextBar itemActive />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY" />
-<Token tokenSet="force-base" token="BRAND_PRIMARY_TRANSPARENT" />
+<Tokens>
+  <Token token="BRAND_PRIMARY" />
+  <Token token="BRAND_PRIMARY_TRANSPARENT" />
+</Tokens>
 
 ### Global Navigation Tab Bar
 <div className="demo-only">
@@ -75,64 +100,71 @@ prop tableOfContentsData
   </ContextTabPanel>
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY" />
-<Token tokenSet="force-base" token="BRAND_PRIMARY_TRANSPARENT" />
+<Tokens>
+  <Token token="BRAND_PRIMARY" />
+  <Token token="BRAND_PRIMARY_TRANSPARENT" />
+</Tokens>
 
 ### Brand Band/Page Background
 <Page medium />
 
-**Tokens Used**
+<Tokens text="for Lite Theme" open>
+  <Token token="BRAND_BACKGROUND_PRIMARY" />
+  <Token token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
+  <Token token="BRAND_BACKGROUND_DARK" />
+  <Token token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
+</Tokens>
 
-<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_PRIMARY" />
-<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
-<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_DARK" />
-<Token tokenSet="salesforce-skin" token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
+<Tokens text="for Branded Theme">
+  <Token tokenSet="brand" token="BRAND_BACKGROUND_PRIMARY" />
+  <Token tokenSet="brand" token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
+  <Token tokenSet="brand" token="BRAND_BACKGROUND_DARK" />
+  <Token tokenSet="brand" token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
+</Tokens>
 
 ### Global Text Links
 <a href="javascript:void(0);">Brand-able Text Link</a>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_TEXT_LINK" />
+  <Token token="BRAND_TEXT_LINK_ACTIVE" />
+</Tokens>
 
 ### Button Text
 <button className="slds-button" href="javascript:void(0);">Brand-able Button Link</button>
 <button className="slds-button" disabled>Brand-able Button Link</button>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_TEXT_LINK" />
+  <Token token="BRAND_TEXT_LINK_ACTIVE" />
+</Tokens>
 
 ### Button Neutral
 <Button className="slds-button_neutral">Button Neutral</Button>
 <Button className="slds-button_neutral" disabled>Button Neutral</Button>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_TEXT_LINK" />
+  <Token token="BRAND_TEXT_LINK_ACTIVE" />
+</Tokens>
 
 ### Button Brand
 <Button className="slds-button_brand">Button Brand</Button>
 <Button className="slds-button_brand" disabled>Button Brand</Button>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Button Icons
 <ButtonIcon
   className="slds-button_icon-border-filled"
 />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Stateful Button Icon
 <ButtonIcon
@@ -151,39 +183,39 @@ prop tableOfContentsData
   title="Like"
 />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Data Table
 <div className="slds-scrollable_none">
   <InlineEditTable />
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+  <Token token="BRAND_TEXT_LINK" />
+  <Token token="BRAND_TEXT_LINK_ACTIVE" />
+</Tokens>
 
 ### Checkbox
 <FormElement>
   <Checkbox label="Checkbox Label" checked />
 </FormElement>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_PRIMARY_ACTIVE" />
+</Tokens>
 
 ### Checkbox Button
 <FormElement>
   <CheckboxAddButton />
 </FormElement>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_PRIMARY_ACTIVE" />
+</Tokens>
 
 ### Checkbox Button Group
 <fieldset className="slds-form-element">
@@ -201,18 +233,18 @@ prop tableOfContentsData
   </div>
 </fieldset>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Dueling Picklist
 <MultiSelect dataSet={SelectedSnapShot} />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Radio Button Group
 <fieldset className="slds-form-element">
@@ -230,10 +262,10 @@ prop tableOfContentsData
   </div>
 </fieldset>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Radio Group
 <FormElement>
@@ -241,36 +273,72 @@ prop tableOfContentsData
   <Radio label="Radio Label Two" />
 </FormElement>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Slider
 <Slider value="50" />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+</Tokens>
 
 ### Path
 <PathStageSelected />
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE_ACTIVE" />
-<Token tokenSet="force-base" token="BRAND_DARK" />
-<Token tokenSet="force-base" token="BRAND_DARK_ACTIVE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" />
+  <Token token="BRAND_DARK" />
+  <Token token="BRAND_DARK_ACTIVE" />
+</Tokens>
 
 ### Menu (Action Overflow)
 <div style={{ height: '120px' }}>
   <ActionOverflow />
 </div>
 
-**Tokens Used**
+<Tokens>
+  <Token token="BRAND_TEXT_LINK" />
+</Tokens>
 
-<Token tokenSet="force-base" token="BRAND_TEXT_LINK" />
+### Vertical Navigation
+<NavVertical>
+  <NavVerticalSection id="entity-header" title="Reports">
+    <NavVerticalItem aria-describedby="entity-header" active>
+      Recent
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="entity-header">
+      Created by Me
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="entity-header">
+      Private Reports
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="entity-header">
+      Public Reports
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="entity-header">
+      All Reports
+    </NavVerticalItem>
+  </NavVerticalSection>
+  <NavVerticalSection id="folder-header" title="Folders">
+    <NavVerticalItem aria-describedby="folder-header">
+      Created by Me
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="folder-header">
+      Shared with Me
+    </NavVerticalItem>
+    <NavVerticalItem aria-describedby="folder-header">
+      All Reports
+    </NavVerticalItem>
+  </NavVerticalSection>
+</NavVertical>
+
+<Tokens>
+  <Token token="BRAND_PRIMARY_ACTIVE" />
+</Tokens>
 
 ### Datepicker
 <div style={{ height: '380px' }}>
@@ -315,9 +383,9 @@ prop tableOfContentsData
   </FormElement>
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_ACCESSIBLE" />
+<Tokens>
+  <Token token="BRAND_ACCESSIBLE" />
+</Tokens>
 
 ### Docked Composer
 <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto', position: 'relative' }}>
@@ -330,9 +398,9 @@ prop tableOfContentsData
   </div>
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+<Tokens>
+  <Token token="BRAND_PRIMARY" />
+</Tokens>
 
 ### Docked Utility Panel
 <div style={{ height: '540px', position: 'relative' }}>
@@ -346,15 +414,15 @@ prop tableOfContentsData
   </UtilityPanel>
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+<Tokens>
+  <Token token="BRAND_PRIMARY" />
+</Tokens>
 
 ### Spinners
 <div style={{ height: '6rem', position: 'relative' }}>
   <Spinner className="slds-spinner_medium slds-spinner_brand" />
 </div>
 
-**Tokens Used**
-
-<Token tokenSet="force-base" token="BRAND_PRIMARY" />
+<Tokens>
+  <Token token="BRAND_PRIMARY" />
+</Tokens>

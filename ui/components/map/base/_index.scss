@@ -33,7 +33,6 @@
 /**
  * @summary Modifier that informs the parent grid container the coordinates panel is active
  * @selector .slds-has-coordinates
- * @restrict .slds-map div
  */
 .slds-has-coordinates {
   max-height: 660px;
@@ -74,7 +73,7 @@
 /**
  * @summary Actionable items inside of the coordinates list
  * @selector .slds-coordinates__item-action
- * @restrict .slds-coordinates li a
+ * @restrict .slds-coordinates li button
  */
 .slds-coordinates__item-action {
   padding: $spacing-x-small $spacing-medium;

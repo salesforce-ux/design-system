@@ -71,7 +71,7 @@
  * @restrict .slds-carousel__content h2
  */
 .slds-carousel__content-title {
-  font-size: $font-size-heading-small;
+  font-size: $font-size-text-medium;
   font-weight: 600;
 }
 
@@ -92,7 +92,7 @@
  */
 .slds-carousel__indicator {
   display: inline-flex;
-  margin: 0 $spacing-xxx-small;
+  margin: 0 $spacing-xx-small;
 }
 
 /**
@@ -106,11 +106,6 @@
   background: $carousel-indicator-color-background;
   border: $border-width-thin solid $color-border;
   border-radius: 50%;
-
-  @include mq-medium-min {
-    width: ($carousel-indicator-width / 2);
-    height: ($carousel-indicator-width / 2);
-  }
 
   /**
    * @summary Active state notifying the tab that its current panel is active
@@ -138,10 +133,10 @@
 /**
  * @summary Element that contains the auto-play button icon to toggle on/off
  * @selector .slds-carousel__autoplay
- * @restrict .slds-carousel__stage div
+ * @restrict .slds-carousel__stage span
  */
 .slds-carousel__autoplay {
   position: absolute;
   left: 0;
-  bottom: $spacing-x-small;
+  bottom: $spacing-xx-small;
 }

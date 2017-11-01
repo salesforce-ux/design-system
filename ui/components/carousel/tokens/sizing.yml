@@ -19,5 +19,5 @@ global:
   - transform
 props:
   CAROUSEL_INDICATOR_WIDTH:
-    value: 1.5rem
+    value: 1rem
     comment: Default width for carousel indicator width

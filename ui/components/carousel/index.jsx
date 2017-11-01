@@ -75,7 +75,7 @@ const CarouselPanel = props => (
 const CarouselPlayToggle = props => (
   <span className="slds-carousel__autoplay">
     <ButtonIcon
-      className="slds-button_icon-border-filled slds-button_icon-xx-small"
+      className="slds-button_icon-border-filled slds-button_icon-x-small"
       symbol={props.stop ? 'right' : 'pause'}
       aria-controls={props['aria-controls']}
       aria-pressed={props.stop}

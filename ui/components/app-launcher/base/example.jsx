@@ -110,7 +110,11 @@ let AppLauncherModal = props => (
                   className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
                   key={i}
                 >
-                  <a href="javascript:void(0);" className="slds-truncate">
+                  <a
+                    href="javascript:void(0);"
+                    className="slds-truncate"
+                    title={tile.label}
+                  >
                     {tile.label}
                   </a>
                 </li>

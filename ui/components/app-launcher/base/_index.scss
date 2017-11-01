@@ -12,23 +12,9 @@
  */
 .slds-app-launcher {
   /**
-   * Defines the header region of the app launcher modal
-   *
-   * @selector .slds-app-launcher__header
-   * @restrict .slds-app-launcher header
-   * @required
-   */
-  &__header,
-  &__content {
-    background: $color-background;
-  }
-
-  /**
-   * Sets styles to search box, things like width and such
-   *
+   * @summary Sets styles to search box, things like width and such
    * @selector .slds-app-launcher__header-search
    * @restrict .slds-app-launcher__header div
-   * @required
    */
   &__header-search {
     flex: 0 1 $size-large;
@@ -36,22 +22,22 @@
   }
 
   /**
-   * Defines the body region of the app launcher modal
-   *
+   * @summary Defines the body region of the app launcher modal
    * @selector .slds-app-launcher__content
    * @restrict .slds-app-launcher div
-   * @required
    */
   &__content {
     flex: 1 1 auto;
+
+    .slds-section__title-action {
+      background: transparent;
+    }
   }
 
   /**
-   * Tile cards that contains the app information, the icon and description
-   *
+   * @summary Tile cards that contains the app information, the icon and description
    * @selector .slds-app-launcher__tile
-   * @restrict a
-   * @required
+   * @restrict .slds-app-launcher a
    */
   &__tile {
     display: flex;
@@ -68,11 +54,9 @@
     }
 
     /**
-     * Add styles associated with drag and drop of a tile
-     *
+     * @summary Add styles associated with drag and drop of a tile
      * @selector .slds-is-draggable
      * @restrict .slds-app-launcher__tile
-     * @modifier
      */
     &.slds-is-draggable {
 
@@ -81,15 +65,24 @@
         padding-bottom: $spacing-xx-small;
       }
     }
+
+    /**
+     * Add styles associated with a tile being grabbed in drag and drop interaction
+     *
+     * @selector .slds-is-grabbed
+     * @restrict .slds-app-launcher__tile
+     * @modifier
+     */
+    &.slds-is-grabbed {
+      transform: rotate(3deg);
+    }
   }
 
 
   /**
-   * App image or icon
-   *
+   * @summary App image or icon
    * @selector .slds-app-launcher__tile-figure
    * @restrict .slds-app-launcher__tile div
-   * @required
    */
   &__tile-figure {
     display: flex;
@@ -97,33 +90,28 @@
     flex-shrink: 0;
     padding: $spacing-small;
     color: $color-text-inverse;
-    background: $color-background-alt;
     border-radius: $border-radius-medium 0 0 $border-radius-medium;
     text-align: center;
   }
 
 
   /**
-   * App title and description
-   *
+   * @summary App title and description
    * @selector .slds-app-launcher__tile-body
    * @restrict .slds-app-launcher__tile div
-   * @required
    */
   &__tile-body {
     flex: 1 1 auto;
-    background: $color-background-alt-2;
+    background: $color-background;
     padding: $spacing-x-small $spacing-small;
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
   /**
-   * Tile card that containes the just app icon and title
-   *
+   * @summary Tile card that containes the just app icon and title
    * @selector .slds-app-launcher__tile_small
    * @restrict .slds-app-launcher__tile
-   * @required
-   * @modifier
+   * @deprecated
    */
   &__tile_small,
   &__tile--small {
@@ -143,14 +131,11 @@
     }
   }
 
-
   /**
-   * App image or icon of a small tile
-   *
+   * @summary App image or icon of a small tile
    * @selector .slds-app-launcher__tile-figure_small
    * @restrict .slds-app-launcher__tile-figure
-   * @required
-   * @modifier
+   * @deprecated
    */
   &__tile-figure_small,
   &__tile-figure--small {
@@ -159,12 +144,10 @@
   }
 
   /**
-   * App title, no description
-   *
+   * @summary App title, no description
    * @selector .slds-app-launcher__tile-body_small
    * @restrict .slds-app-launcher__tile-body
-   * @required
-   * @modifier
+   * @deprecated
    */
   &__tile-body_small,
   &__tile-body--small {

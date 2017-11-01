@@ -4,13 +4,13 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
-import { AppLauncherTile } from '../tile/example';
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionTitleAction
 } from '../../expandable-section/base/example';
+import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -44,6 +44,7 @@ let AppLauncherModal = props => (
               className="slds-input"
               id="app-launcher-search"
               placeholder="Find an app"
+              value={props.searchTerm}
             />
           </div>
         </div>
@@ -102,21 +103,20 @@ let AppLauncherModal = props => (
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent isOpen referenceId="itemsContent">
-          <ul className="slds-grid slds-grid_pull-padded slds-wrap">
+          <ul className="slds-grid slds-wrap">
             {props.itemTiles.map((tile, i) => {
               return (
                 <li
-                  className="slds-p-horizontal_small slds-size_xx-small"
+                  className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
                   key={i}
                 >
-                  <AppLauncherTile flavor="small" symbol={tile.symbol}>
-                    <p
-                      className="slds-truncate slds-text-link"
-                      title={tile.label}
-                    >
-                      {tile.label}
-                    </p>
-                  </AppLauncherTile>
+                  <a
+                    href="javascript:void(0);"
+                    className="slds-truncate"
+                    title={tile.label}
+                  >
+                    {tile.label}
+                  </a>
                 </li>
               );
             })}
@@ -125,6 +125,67 @@ let AppLauncherModal = props => (
       </Section>
     </ModalContent>
   </Modal>
+);
+
+export const AppLauncherTile = props => (
+  <a
+    aria-describedby={props.draggable ? props.referenceId : null}
+    draggable={props.draggable}
+    href="javascript:void(0);"
+    className={classNames(
+      'slds-app-launcher__tile slds-text-link_reset',
+      props.className,
+      {
+        'slds-is-draggable': props.draggable,
+        'slds-app-launcher__tile_small': props.flavor === 'small',
+        'slds-is-grabbed': props.grabbed
+      }
+    )}
+  >
+    <div
+      className={classNames('slds-app-launcher__tile-figure', {
+        'slds-app-launcher__tile-figure_small': props.flavor === 'small'
+      })}
+    >
+      {props.symbol ? (
+        <SvgIcon
+          className={
+            'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon_large'
+          }
+          sprite="standard"
+          symbol={props.symbol}
+        />
+      ) : (
+        <Avatar className="slds-avatar_large">
+          <abbr
+            className={classNames('slds-avatar__initials', props.figureClass)}
+            title="company name"
+          >
+            {props.objectInitials}
+          </abbr>
+        </Avatar>
+      )}
+      {props.draggable ? (
+        <span
+          className="slds-icon_container"
+          title="Drag item to a new location"
+        >
+          <SvgIcon
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            sprite="utility"
+            symbol="rows"
+          />
+        </span>
+      ) : null}
+    </div>
+    <div
+      className={classNames('slds-app-launcher__tile-body', {
+        'slds-app-launcher__tile-body_small': props.flavor === 'small'
+      })}
+    >
+      {props.children}
+    </div>
+  </a>
 );
 
 /// ///////////////////////////////////////////
@@ -144,6 +205,25 @@ const itemTiles = [
   { label: 'Cases', symbol: 'case' },
   { label: 'Coaching', symbol: 'coaching' },
   { label: 'Contacts', symbol: 'contact' }
+];
+
+const searchItemTiles = [
+  {
+    label: (
+      <span>
+        <mark>Sales</mark> Invoices
+      </span>
+    ),
+    symbol: 'account'
+  },
+  {
+    label: (
+      <span>
+        <mark>Sales</mark> Objects
+      </span>
+    ),
+    symbol: 'announcement'
+  }
 ];
 
 /*
@@ -200,6 +280,21 @@ const appTiles = [
     grabbed: false,
     initials: 'CS',
     label: 'Customer Support Communitiy'
+  }
+];
+
+const appTilesSearch = [
+  {
+    description: 'The primary internal Salesforce org. Used to run our...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-27',
+    grabbed: false,
+    initials: 'SC',
+    label: (
+      <span>
+        <mark>Sales</mark> Cloud
+      </span>
+    )
   }
 ];
 
@@ -276,6 +371,23 @@ export let states = [
           dragDropInstructions="Press space bar to move this app within the list."
           dragDropLiveRegion="Sales Cloud: final position 4 of 6."
           itemTiles={itemTiles}
+        />
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
+  },
+  {
+    id: 'search',
+    label: 'Search',
+    element: (
+      <div className="demo-only" style={{ height: '800px' }}>
+        <AppLauncherModal
+          appTiles={appTilesSearch}
+          dragDropId={dragDropId}
+          dragDropInstructions="Press space bar to move this app within the list."
+          dragDropLiveRegion=""
+          itemTiles={searchItemTiles}
+          searchTerm="sales"
         />
         <div className="slds-backdrop slds-backdrop_open" />
       </div>

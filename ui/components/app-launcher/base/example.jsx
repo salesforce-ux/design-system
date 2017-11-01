@@ -44,6 +44,7 @@ let AppLauncherModal = props => (
               className="slds-input"
               id="app-launcher-search"
               placeholder="Find an app"
+              value={props.searchTerm}
             />
           </div>
         </div>
@@ -122,7 +123,7 @@ let AppLauncherModal = props => (
   </Modal>
 );
 
-let AppLauncherTile = props => (
+export const AppLauncherTile = props => (
   <a
     aria-describedby={props.draggable ? props.referenceId : null}
     draggable={props.draggable}
@@ -202,6 +203,25 @@ const itemTiles = [
   { label: 'Contacts', symbol: 'contact' }
 ];
 
+const searchItemTiles = [
+  {
+    label: (
+      <span>
+        <mark>Sales</mark> Invoices
+      </span>
+    ),
+    symbol: 'account'
+  },
+  {
+    label: (
+      <span>
+        <mark>Sales</mark> Objects
+      </span>
+    ),
+    symbol: 'announcement'
+  }
+];
+
 /*
  * Tile data for All Apps section inside example.
  * Using data instead of hard-coding becase we want to move the position of one App Tile based on state (ie. moved, dropped).
@@ -256,6 +276,21 @@ const appTiles = [
     grabbed: false,
     initials: 'CS',
     label: 'Customer Support Communitiy'
+  }
+];
+
+const appTilesSearch = [
+  {
+    description: 'The primary internal Salesforce org. Used to run our...',
+    dragDropId: dragDropId,
+    figureClass: 'slds-icon-custom-27',
+    grabbed: false,
+    initials: 'SC',
+    label: (
+      <span>
+        <mark>Sales</mark> Cloud
+      </span>
+    )
   }
 ];
 
@@ -332,6 +367,23 @@ export let states = [
           dragDropInstructions="Press space bar to move this app within the list."
           dragDropLiveRegion="Sales Cloud: final position 4 of 6."
           itemTiles={itemTiles}
+        />
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
+  },
+  {
+    id: 'search',
+    label: 'Search',
+    element: (
+      <div className="demo-only" style={{ height: '800px' }}>
+        <AppLauncherModal
+          appTiles={appTilesSearch}
+          dragDropId={dragDropId}
+          dragDropInstructions="Press space bar to move this app within the list."
+          dragDropLiveRegion=""
+          itemTiles={searchItemTiles}
+          searchTerm="sales"
         />
         <div className="slds-backdrop slds-backdrop_open" />
       </div>

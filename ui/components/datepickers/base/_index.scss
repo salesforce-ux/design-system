@@ -54,8 +54,11 @@
     &:hover:not(.slds-disabled-text) > .slds-day,
     &:focus:not(.slds-disabled-text) > .slds-day,
     &.slds-is-today > .slds-day {
-      background: $color-background-row-hover;
       cursor: pointer;
+    }
+
+    &.slds-is-today > .slds-day {
+      background-color: $color-background-row-selected;
     }
 
     &:focus {
@@ -72,15 +75,15 @@
      * @selector .slds-is-selected
      * @restrict .slds-datepicker td
      */
-    &.slds-is-selected:not(.slds-is-today) > .slds-day {
+    &.slds-is-selected > .slds-day {
       background: $brand-accessible;
-      color: $color-text-button-brand-hover;
+      color: $color-text-brand-primary;
     }
 
     &.slds-is-selected:focus > .slds-day {
       background: $brand-accessible-active;
       box-shadow: $brand-accessible-active 0 0 3px;
-      color: currentColor;
+      color: $color-text-brand-primary;
     }
   }
 

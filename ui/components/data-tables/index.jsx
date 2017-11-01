@@ -62,7 +62,7 @@ export const AdvancedDataTable = props => (
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
  * @prop {string} sortDirection - Specifies the sort direction of a specific column
- * @prop {string} radioGroupId - common id of radio group
+ * @prop {string} isSingleSelect - Specifies if the row selection uses radio buttons
  */
 export const Thead = props => {
   const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
@@ -73,7 +73,7 @@ export const Thead = props => {
       <tr className="slds-line-height_reset">
         {props.hasErrorColumn ? <ErrorsTh /> : null}
 
-        {props.hasNoSelectability ? null : (
+        {props.hasNoSelectability || props.isSingleSelect ? null : (
           <SelectAllTh
             actionableMode={props.actionableMode}
             checked={props.selectAll}
@@ -82,13 +82,9 @@ export const Thead = props => {
           />
         )}
 
-        {props.radioGroupId ? (
-          <RadioGroupTh
-            style={{ width: selectAllColumnWidth }}
-            radioGroupId={props.radioGroupId}
-            label={props.label}
-          />
-        ) : null}
+        {props.isSingleSelect && (
+          <RadioGroupTh style={{ width: selectAllColumnWidth }} />
+        )}
 
         {_.times(props.columns.length, i => (
           <Th
@@ -278,12 +274,17 @@ export let Th = props => {
  */
 export const SelectAllTh = props => (
   <th style={props.style} className={props.className} scope="col">
+    <span id="check-group-header" className="slds-assistive-text">
+      Choose a row
+    </span>
     <div className="slds-th__action slds-th__action_form">
       <Checkbox
         tabIndex={props.actionableMode ? '0' : '-1'}
+        labelId="check-select-all-label"
         label="Select All"
         hideLabel
         checked={props.checked ? true : null}
+        groupId="check-group-header"
       />
     </div>
   </th>
@@ -293,17 +294,12 @@ export const SelectAllTh = props => (
  * @name RadioGroupTh - Radio group column header
  * @param {*} props
  * @prop {object} style - React style object
- * @prop {string} radioGroupId - common id of radio group
- * @prop {string} label - header text for radio group column
  */
 export const RadioGroupTh = props => (
-  <th
-    className={props.className}
-    scope="col"
-    style={props.style}
-    id={props.radioGroupId}
-  >
-    <span className="slds-assistive-text">{props.label}</span>
+  <th className={props.className} scope="col" style={props.style}>
+    <span id="radio-group-header" className="slds-assistive-text">
+      Choose a row to select
+    </span>
   </th>
 );
 
@@ -349,7 +345,7 @@ export const ErrorsTh = props => (
  * @prop {string} contact
  * @prop {string} recordName
  * @prop {string} stage
- * @prop {string} radioGroupId - common id of radio group
+ * @prop {string} isSingleSelect - Specifies whether to use a radio button for selection or not
  */
 export const AdvancedDataTableTr = props => (
   <AdvancedDataTableTrElement
@@ -361,7 +357,7 @@ export const AdvancedDataTableTr = props => (
       inputTabIndex={props.actionableMode ? '0' : '-1'}
       checked={props.rowSelected}
       index={props.index}
-      radioGroupId={props.radioGroupId}
+      isSingleSelect={props.isSingleSelect}
     />
     <ReadOnlyBodyTh
       actionableMode={props.actionableMode}
@@ -488,7 +484,7 @@ export const AdvancedDataTableBodyTh = props => {
  * @prop {integer} inputTabIndex - Set tabindex on the checkbox
  * @prop {integer} index - Grid row index
  * @prop {string} className
- * @prop {string} radioGroupId - common id of radio group
+ * @prop {string} isSingleSelect - common id of radio group
  */
 export const SelectRowTd = props => (
   <AdvancedDataTableTd
@@ -497,22 +493,24 @@ export const SelectRowTd = props => (
     isEditable={props.isEditable}
     tabIndex={props.cellTabIndex}
   >
-    {props.radioGroupId ? (
+    {props.isSingleSelect ? (
       <Radio
         checked={props.checked}
         hideLabel
         id={`radio-0${props.index}`}
         labelId={`radio-button-label-0${props.index}`}
         label={`Select item ${props.index}`}
-        radioGroupId={props.radioGroupId}
+        groupId="radio-group-header"
         tabIndex={props.inputTabIndex}
       />
     ) : (
       <Checkbox
         checked={props.checked}
         hideLabel
+        labelId={`check-button-label-0${props.index}`}
         id={`checkbox-0${props.index}`}
         label={`Select item ${props.index}`}
+        groupId="check-group-header"
         tabIndex={props.inputTabIndex}
       />
     )}

@@ -1,0 +1,51 @@
+// stylelint-disable selector-class-pattern
+.doc-spacing {
+  display: inline-flex;
+  outline: 1px dashed rgba(43, 40, 38, 0.35);
+}
+
+.doc-margin {
+  width: 3rem;
+  height: 3rem;
+  background: rgba(43, 40, 38, 0.35);
+}
+
+.doc-margin_primary {
+  background: #1589ee;
+  border-radius: 4px;
+}
+
+.doc-redline {
+  position: relative;
+  display: inline-block;
+  height: 1rem;
+  transform: translateY(calc(50% + 0.5rem));
+}
+
+.doc-redline > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #f30;
+  margin-top: -1px;
+}
+
+.doc-redline:before,
+.doc-redline:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: #f30;
+}
+
+.doc-redline:before {
+  left: 0;
+}
+
+.doc-redline:after {
+  right: 0;
+}

@@ -1,0 +1,59 @@
+import {InverseBadge, LightBadge, Badge} from './index';
+import { UtilityIcon } from '../icons/base/example';
+import { CodeView } from '../../../shared/components/CodeView';
+import TableOfContents from '../../../shared/components/TableOfContents';
+prop tableOfContentsData
+
+<div className="lead">
+Badges are labels which hold small amounts of information.
+</div>
+
+<TableOfContents data={tableOfContentsData} />
+
+<CodeView>
+  <Badge>I am Badge</Badge>
+</CodeView>
+
+## Badge Colors
+
+There are three different color badges you can use.
+
+  | Badge  | class  | description  |
+  |---|---|---|
+  | <Badge>Defaut Badge</Badge>                 | `.slds-badge`            | This is the default badge. You probably want to use this one unless you fall into a specific use-case.   |
+  | <InverseBadge>Darker Badge</InverseBadge>   | `.slds-badge_inverse`    | This badge is used when you need higher contrast than our default badge.  |
+  | <LightBadge>Lightest Badge</LightBadge>       | `.slds-badge_lightest`  | This badge is used when you want to include an icon.  |
+
+## Badges with Icons
+
+You can include an icon in your badge. The icon can be aligned to the left or right side of the text. You may also choose to put an icon in a badge without text, but in that case, be sure to include assitive text.
+
+<LightBadge>
+  <UtilityIcon
+    containerClassName="slds-m-right_xx-small"
+    className="slds-icon_xx-small slds-icon-text-default"
+    assistiveText={false}
+    symbol="world"
+  />
+  Icon on the left
+</LightBadge>
+
+<LightBadge>
+  Icon on the right
+  <UtilityIcon
+    containerClassName="slds-m-left_xx-small"
+    className="slds-icon_xx-small slds-icon-text-default"
+    assistiveText={false}
+    symbol="world"
+  />
+</LightBadge>
+
+If your badge contains an icon with no text, you need to include assitive text. If your icon indicates state make sure the user can read it.
+
+<LightBadge>
+  <UtilityIcon
+    className="slds-icon_xx-small slds-icon-text-default"
+    assistiveText="assistive text goes here, do it!"
+    symbol="world"
+  />
+</LightBadge>

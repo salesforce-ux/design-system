@@ -14,7 +14,7 @@
   padding: $spacing-xx-small $spacing-x-small;
   border-radius: $border-radius-pill;
   font-size: $font-size-x-small;
-  line-height: $line-height-heading;
+  line-height: normal;
   text-transform: uppercase;
   letter-spacing: 0.0625em;
   color: $color-text-default;
@@ -27,6 +27,10 @@
 
   &:empty {
     padding: 0;
+  }
+
+  .slds-icon_container {
+    vertical-align: middle;
   }
 }
 

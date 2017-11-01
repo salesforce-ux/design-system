@@ -322,7 +322,7 @@
     background-color: $table-color-background-header-hover;
     color: currentColor;
 
-    .slds-icon {
+    .slds-is-sortable__icon {
       display: inline-block;
       fill: $brand-accessible;
     }
@@ -362,7 +362,7 @@
    * Allows for alignment of button, such as a menu
    *
    * @selector .slds-th__action-button
-   * @restrict .slds-th__action
+   * @restrict .slds-has-button-menu
    */
   &-button {
     position: absolute;

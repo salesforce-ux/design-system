@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
 import ButtonIcon from '../button-icons/';
+import { StandardIcon } from '../icons/standard/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
 import {
@@ -51,7 +52,7 @@ export const AdvancedDataTable = props => (
  * @param {*} props
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
- * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
+ * @prop {array} columnHeaderIcons - List of column names->icon name blocks which show an icon
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
  * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
@@ -111,7 +112,7 @@ export const Thead = props => {
                   ? props.singleColumnWidth
                   : mainColumnWidth
             }}
-            columnsWithEinstein={props.columnsWithEinstein}
+            columnHeaderIcons={props.columnHeaderIcons}
             hasMenus={props.hasMenus}
           />
         ))}
@@ -129,18 +130,46 @@ export const Thead = props => {
  * @prop {string} aria-sort
  * @prop {string} className
  * @prop {string} columnName - Display name of the column header
- * @prop {array} columnsWithEinstein - List of column names which show an Ellie icon
+ * @prop {array} columnHeaderIcons - List of column names->icon name blocks which show an icon
  */
 export let Th = props => {
   const {
     columnName,
     actionableMode,
     hasMenus,
-    columnsWithEinstein,
+    columnHeaderIcons,
     ...rest
   } = props;
   const tabIndex = actionableMode ? '0' : '-1';
   const uniqueId = _.uniqueId('cell-resize-handle-');
+  const getIconName = name => {
+    const iconBlock = Array.isArray(columnHeaderIcons)
+      ? columnHeaderIcons.find(map => map[0] === columnName)
+      : null;
+    return iconBlock ? iconBlock[1] : null;
+  };
+  const getIconComponent = icon => {
+    switch (icon) {
+      case 'Ellie':
+        return (
+          <Ellie
+            className="slds-is-paused"
+            title="Einstein calculated"
+            assistiveText="Einstein calculated"
+          />
+        );
+      case 'Account':
+        return (
+          <SvgIcon
+            className="slds-icon slds-icon_x-small slds-icon-standard-account"
+            sprite="standard"
+            symbol="account"
+          />
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <th
@@ -160,16 +189,10 @@ export let Th = props => {
         tabIndex={tabIndex}
       >
         <span className="slds-assistive-text">Sort by: </span>
-
-        {Array.isArray(columnsWithEinstein) &&
-        columnsWithEinstein.includes(columnName) ? (
+        {getIconName(columnName) ? (
           <div className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
             <div className="slds-icon_container slds-m-right_xx-small">
-              <Ellie
-                className="slds-is-paused"
-                title="Einstein calculated"
-                assistiveText="Einstein calculated"
-              />
+              {getIconComponent(getIconName(columnName))}
             </div>
             <span
               key={`th-${props.index}`}

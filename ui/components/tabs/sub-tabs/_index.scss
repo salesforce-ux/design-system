@@ -46,7 +46,7 @@
 
   &.slds-active,
   &.slds-is-open {
-    background: rgba($color-background-context-bar-brand-accent, 0.1);
+    background: $brand-primary-transparent;
   }
 
   &:after {

@@ -395,6 +395,11 @@
       position: relative;
       top: auto;
     }
+
+    .slds-indicator_unsaved,
+    .slds-indicator--unsaved {
+      top: rem(-6px);
+    }
   }
 }
 
@@ -432,7 +437,6 @@
   color: $color-text-brand;
   align-self: center;
   position: relative;
-  top: rem(-6px);
 }
 
 // Context Bar dropdown trigger specifics

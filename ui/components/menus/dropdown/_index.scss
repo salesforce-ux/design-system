@@ -474,10 +474,6 @@
           fill: $color-text-button-default-disabled;
         }
       }
-
-      .slds-indicator_unsaved {
-        top: rem(-4px);
-      }
     }
 
     /**
@@ -500,6 +496,10 @@
     &.slds-is-selected .slds-icon_selected,
     &.slds-is-selected .slds-icon--selected {
       opacity: 1;
+    }
+
+    &.slds-has-notification .slds-indicator_unsaved {
+      top: rem(-6px);
     }
   }
 

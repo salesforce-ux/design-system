@@ -343,7 +343,10 @@ export const ContextTabBarOverflow = props => (
     <Menu className="slds-dropdown_right">
       <MenuList>
         <MenuItem
-          className="slds-has-notification slds-is-unread"
+          className={classNames({
+            'slds-has-notification': props.itemUnread,
+            'slds-is-unsaved': props.itemUnsaved
+          })}
           title="Chat - Customer"
         >
           {props.itemUnsaved ? (
@@ -916,7 +919,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             id={tabId03}
           />
-          <ContextTabBarOverflow isOpen itemUnsaved />
+          <ContextTabBarOverflow itemUnsaved />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content

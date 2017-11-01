@@ -214,10 +214,12 @@
     .slds-indicator_unread {
       margin-left: -0.35rem; // random but matches spec
     }
+  }
+
+  &.slds-has-notification {
 
     .slds-indicator_unsaved {
-      position: relative;
-      top: ($spacing-xx-small * -1);
+      top: rem(-4px);
     }
   }
 }

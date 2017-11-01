@@ -4,13 +4,13 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
-import { AppLauncherTile } from '../tile/example';
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionTitleAction
 } from '../../expandable-section/base/example';
+import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -102,21 +102,16 @@ let AppLauncherModal = props => (
           </SectionTitleAction>
         </SectionTitle>
         <SectionContent isOpen referenceId="itemsContent">
-          <ul className="slds-grid slds-grid_pull-padded slds-wrap">
+          <ul className="slds-grid slds-wrap">
             {props.itemTiles.map((tile, i) => {
               return (
                 <li
-                  className="slds-p-horizontal_small slds-size_xx-small"
+                  className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
                   key={i}
                 >
-                  <AppLauncherTile flavor="small" symbol={tile.symbol}>
-                    <p
-                      className="slds-truncate slds-text-link"
-                      title={tile.label}
-                    >
-                      {tile.label}
-                    </p>
-                  </AppLauncherTile>
+                  <a href="javascript:void(0);" className="slds-truncate">
+                    {tile.label}
+                  </a>
                 </li>
               );
             })}
@@ -125,6 +120,67 @@ let AppLauncherModal = props => (
       </Section>
     </ModalContent>
   </Modal>
+);
+
+let AppLauncherTile = props => (
+  <a
+    aria-describedby={props.draggable ? props.referenceId : null}
+    draggable={props.draggable}
+    href="javascript:void(0);"
+    className={classNames(
+      'slds-app-launcher__tile slds-text-link_reset',
+      props.className,
+      {
+        'slds-is-draggable': props.draggable,
+        'slds-app-launcher__tile_small': props.flavor === 'small',
+        'slds-is-grabbed': props.grabbed
+      }
+    )}
+  >
+    <div
+      className={classNames('slds-app-launcher__tile-figure', {
+        'slds-app-launcher__tile-figure_small': props.flavor === 'small'
+      })}
+    >
+      {props.symbol ? (
+        <SvgIcon
+          className={
+            'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon_large'
+          }
+          sprite="standard"
+          symbol={props.symbol}
+        />
+      ) : (
+        <Avatar className="slds-avatar_large">
+          <abbr
+            className={classNames('slds-avatar__initials', props.figureClass)}
+            title="company name"
+          >
+            {props.objectInitials}
+          </abbr>
+        </Avatar>
+      )}
+      {props.draggable ? (
+        <span
+          className="slds-icon_container"
+          title="Drag item to a new location"
+        >
+          <SvgIcon
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            sprite="utility"
+            symbol="rows"
+          />
+        </span>
+      ) : null}
+    </div>
+    <div
+      className={classNames('slds-app-launcher__tile-body', {
+        'slds-app-launcher__tile-body_small': props.flavor === 'small'
+      })}
+    >
+      {props.children}
+    </div>
+  </a>
 );
 
 /// ///////////////////////////////////////////

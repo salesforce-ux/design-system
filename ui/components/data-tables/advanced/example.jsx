@@ -109,10 +109,7 @@ export const productRows = [
   }
 ];
 
-const columnHeaderIcons = [
-  ['Confidence', 'Ellie'],
-  ['Account Name', 'Account']
-];
+const columnHeaderIcons = [['Confidence', 'Ellie']];
 
 export const AdvancedTable = () => (
   <Table>

@@ -4,7 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
-import { AppLauncherTile } from '../tile/example';
+import { AppLauncherTile } from '../base/example';
 import {
   Section,
   SectionContent,

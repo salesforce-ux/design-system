@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loader template snapshots the template 1`] = `
+"
+    import Doc from '../../../shared/components/Doc';
+
+  const addDocClass = className => [\\"doc\\", className].filter(x => x).join(\\" \\")
+
+  const El = el => (props, ...kids) => {
+  const className = addDocClass(props.className);
+  return React.createElement(el, Object.assign(props, { className }), kids);
+}
+  const HeadingEl = el => (props, ...kids) => {
+    const className = addDocClass(props.className);
+    const [_, headingLevel] = el.split(\\"h\\");
+
+    const parentHeadings = toc.filter(t => t.headingLevel < headingLevel);
+    const lastParentHeading = parentHeadings[parentHeadings.length - 1];
+    const item = { id: props.id, title: kids[0], headingLevel, children: [] };
+
+    if (lastParentHeading) {
+      lastParentHeading.children.push(item);
+    } else {
+      toc.push(item);
+    }
+
+    return React.createElement(
+    el,
+    Object.assign(props, { className }),
+    kids,
+    React.createElement(
+    \\"a\\",
+    { className: \\"doc doc-anchor\\", href: \`#\${props.id}\` },
+    \\"#\\"));
+
+
+  }
+
+  const factories = {h1: HeadingEl('h1'),h2: HeadingEl('h2'),h3: HeadingEl('h3'),h4: HeadingEl('h4'),h5: HeadingEl('h5'),h6: HeadingEl('h6'), p: El('p'),div: El('div'),a: El('a'),em: El('em'),strong: El('strong'),ol: El('ol'),ul: El('ul'),li: El('li'),code: El('code'),blockquote: El('blockquote'),pre: El('pre'),tr: El('tr'),td: El('td'),th: El('th'),table: El('table'),thead: El('thead'),tbody: El('tbody')}
+
+  const toc = [];
+  export const getToc = () => toc;
+
+    export const Content = function
+    export default props => <Doc><Content {...props} factories={factories} /></Doc>
+  "
+`;

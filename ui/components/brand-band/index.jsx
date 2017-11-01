@@ -4,8 +4,19 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-const tokenSet = require('../../../../design-tokens/dist/force-base.json');
+const tokenSet = require('../../../design-tokens/dist/force-base.json');
 let tokenValue = tokenSet.BRAND_BACKGROUND_PRIMARY;
+
+export const BrandBand = props => (
+  <div
+    className={classNames('slds-brand-band', {
+      'slds-brand-band_small': props.size === 'small',
+      'slds-brand-band_medium': props.size === 'medium',
+      'slds-brand-band_large': props.size === 'large',
+      'slds-brand-band_none': props.size === 'none'
+    })}
+  />
+);
 
 class Page extends Component {
   render() {
@@ -18,13 +29,7 @@ class Page extends Component {
           zIndex: '1'
         }}
       >
-        <div
-          className={classNames('slds-brand-band', {
-            'slds-brand-band_small': this.props.small,
-            'slds-brand-band_medium': this.props.medium,
-            'slds-brand-band_large': this.props.large
-          })}
-        />
+        <BrandBand {...this.props} />
       </div>
     );
   }

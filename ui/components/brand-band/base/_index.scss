@@ -47,12 +47,24 @@
     background-image: linear-gradient(to bottom, $brand-background-primary-transparent 60%, $brand-background-primary);
   }
 
+  /**
+   * @summary Changes background image to be set to cover rather than contain
+   * @selector .slds-brand-band_cover
+   * @restrict .slds-brand-band
+   * @modifier
+   */
   &.slds-brand-band_cover {
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  // Small Height Modifier (Made the default as a test)
+  /**
+   * @summary Sets height of brand band to
+   * @selector .slds-brand-band_small
+   * @restrict .slds-brand-band
+   * @modifier
+   * @group sizing
+   */
   &.slds-brand-band_small {
 
     &:before {
@@ -65,7 +77,13 @@
     }
   }
 
-  // Medium Height Modifier
+  /**
+   * @summary Sets height of brand band to
+   * @selector .slds-brand-band_medium
+   * @restrict .slds-brand-band
+   * @modifier
+   * @group sizing
+   */
   &.slds-brand-band_medium {
 
     &:before {
@@ -78,7 +96,13 @@
     }
   }
 
-  // Large Height Modifier
+  /**
+   * @summary Sets height of brand band to
+   * @selector .slds-brand-band_large
+   * @restrict .slds-brand-band
+   * @modifier
+   * @group sizing
+   */
   &.slds-brand-band_large {
 
     &:before {
@@ -104,7 +128,12 @@
     top: initial;
   }
 
-  // No image
+  /**
+   * @summary Removes image but keeps page background
+   * @selector .slds-brand-band_none
+   * @restrict .slds-brand-band
+   * @modifier
+   */
   &.slds-brand-band_none:before {
     height: 0;
   }

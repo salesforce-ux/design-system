@@ -1,0 +1,46 @@
+import TableOfContents from '../../../shared/components/TableOfContents';
+import BrandBandExample from './docs/BrandBand';
+import CodeView from '../../../shared/components/CodeView';
+import ColorToken from '../../../shared/components/ColorToken';
+prop tableOfContentsData
+
+<div className="lead">
+  The brand band provides theming capability that adds personality and improves information density and contrast
+</div>
+
+<TableOfContents data={tableOfContentsData} />
+
+This is the most common use case for the brand band. Our default size is `slds-brand-band_medium`. This will give the brand band image a height of 12.5rem or 200px.
+
+<BrandBandExample size="medium" />
+
+The brand band has a gradient fade into the background color of the page. A dark variant of the page background color fades down from the top of the brand band.
+
+## Brand band sizes
+
+The brand band comes with 3 sizes — small, medium and large. These will adjust the height of the brand band image.
+
+**Small**
+
+<BrandBandExample size="small" />
+
+**Medium (Default)**
+
+<BrandBandExample size="medium" />
+
+**Large**
+
+<BrandBandExample size="large" />
+
+## Removing the brand band image
+
+If you need to remove the brand band image from the component, you can simply pass in `slds-brand-band_none` to only display the page background color.
+
+<BrandBandExample size="none" />
+
+## Tokens
+
+<ColorToken token="BRAND_BACKGROUND_PRIMARY" />
+<ColorToken token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
+<ColorToken token="BRAND_BACKGROUND_DARK" />
+<ColorToken token="BRAND_BACKGROUND_DARK_TRANSPARENT" />

@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Initializes grid
  *
@@ -64,7 +66,8 @@
  * @modifier
  */
 .slds-wrap {
-  @include flex-wrap(true);
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 /**
@@ -74,35 +77,9 @@
  * @modifier
  */
 .slds-nowrap {
-  @include flex-item(expand);
-  @include flex-wrap(false);
-}
-
-@include deprecate('4.0.0', 'Use .slds-{size}-nowrap instead') {
-
-  .slds-nowrap_small,
-  .slds-nowrap--small {
-    @include mq-small-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
-    }
-  }
-
-  .slds-nowrap_medium,
-  .slds-nowrap--medium {
-    @include mq-medium-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
-    }
-  }
-
-  .slds-nowrap_large,
-  .slds-nowrap--large {
-    @include mq-large-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
-    }
-  }
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
 /**
@@ -127,6 +104,141 @@
 }
 
 /**
+ * @summary Apply 12px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters
+ * @modifier
+ */
+.slds-gutters {
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
+
+  .slds-col {
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+  }
+}
+
+/**
+ * @summary Apply 2px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_xxx-small
+ * @modifier
+ */
+.slds-gutters_xxx-small {
+  margin-right: ($spacing-xxx-small * -1);
+  margin-left: ($spacing-xxx-small * -1);
+
+  .slds-col {
+    padding-right: $spacing-xxx-small;
+    padding-left: $spacing-xxx-small;
+  }
+}
+
+/**
+ * @summary Apply 4px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_xx-small
+ * @modifier
+ */
+.slds-gutters_xx-small {
+  margin-right: ($spacing-xx-small * -1);
+  margin-left: ($spacing-xx-small * -1);
+
+  .slds-col {
+    padding-right: $spacing-xx-small;
+    padding-left: $spacing-xx-small;
+  }
+}
+
+/**
+ * @summary Apply 8px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_x-small
+ * @modifier
+ */
+.slds-gutters_x-small {
+  margin-right: ($spacing-x-small * -1);
+  margin-left: ($spacing-x-small * -1);
+
+  .slds-col {
+    padding-right: $spacing-x-small;
+    padding-left: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Apply 12px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_small
+ * @modifier
+ */
+.slds-gutters_small {
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
+
+  .slds-col {
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+  }
+}
+
+/**
+ * @summary Apply 16px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_medium
+ * @modifier
+ */
+.slds-gutters_medium {
+  margin-right: ($spacing-medium * -1);
+  margin-left: ($spacing-medium * -1);
+
+  .slds-col {
+    padding-right: $spacing-medium;
+    padding-left: $spacing-medium;
+  }
+}
+
+/**
+ * @summary Apply 24px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_large
+ * @modifier
+ */
+.slds-gutters_large {
+  margin-right: ($spacing-large * -1);
+  margin-left: ($spacing-large * -1);
+
+  .slds-col {
+    padding-right: $spacing-large;
+    padding-left: $spacing-large;
+  }
+}
+
+/**
+ * @summary Apply 48px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_x-large
+ * @modifier
+ */
+.slds-gutters_xx-large {
+  margin-right: ($spacing-xx-large * -1);
+  margin-left: ($spacing-xx-large * -1);
+
+  .slds-col {
+    padding-right: $spacing-xx-large;
+    padding-left: $spacing-xx-large;
+  }
+}
+
+/**
+ * @summary Apply 32px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_xx-large
+ * @modifier
+ */
+.slds-gutters_x-large {
+  margin-right: ($spacing-x-large * -1);
+  margin-left: ($spacing-x-large * -1);
+
+  .slds-col {
+    padding-right: $spacing-x-large;
+    padding-left: $spacing-x-large;
+  }
+}
+
+/**
  * @summary Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal_small`
  *
  * @selector .slds-grid_pull-padded
@@ -134,10 +246,8 @@
  */
 .slds-grid_pull-padded,
 .slds-grid--pull-padded {
-  margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
-  }
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
 }
 
 /**
@@ -148,10 +258,8 @@
  */
 .slds-grid_pull-padded-xxx-small,
 .slds-grid--pull-padded-xxx-small {
-  margin: {
-    right: ($spacing-xxx-small * -1);
-    left: ($spacing-xxx-small * -1);
-  }
+  margin-right: ($spacing-xxx-small * -1);
+  margin-left: ($spacing-xxx-small * -1);
 }
 
 /**
@@ -162,10 +270,8 @@
  */
 .slds-grid_pull-padded-xx-small,
 .slds-grid--pull-padded-xx-small {
-  margin: {
-    right: ($spacing-xx-small * -1);
-    left: ($spacing-xx-small * -1);
-  }
+  margin-right: ($spacing-xx-small * -1);
+  margin-left: ($spacing-xx-small * -1);
 }
 
 /**
@@ -176,10 +282,8 @@
  */
 .slds-grid_pull-padded-x-small,
 .slds-grid--pull-padded-x-small {
-  margin: {
-    right: ($spacing-x-small * -1);
-    left: ($spacing-x-small * -1);
-  }
+  margin-right: ($spacing-x-small * -1);
+  margin-left: ($spacing-x-small * -1);
 }
 
 /**
@@ -190,10 +294,8 @@
  */
 .slds-grid_pull-padded-small,
 .slds-grid--pull-padded-small {
-  margin: {
-    right: ($spacing-small * -1);
-    left: ($spacing-small * -1);
-  }
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
 }
 
 /**
@@ -204,10 +306,8 @@
  */
 .slds-grid_pull-padded-medium,
 .slds-grid--pull-padded-medium {
-  margin: {
-    right: ($spacing-medium * -1);
-    left: ($spacing-medium * -1);
-  }
+  margin-right: ($spacing-medium * -1);
+  margin-left: ($spacing-medium * -1);
 }
 
 /**
@@ -218,12 +318,33 @@
  */
 .slds-grid_pull-padded-large,
 .slds-grid--pull-padded-large {
-  margin: {
-    right: ($spacing-large * -1);
-    left: ($spacing-large * -1);
-  }
+  margin-right: ($spacing-large * -1);
+  margin-left: ($spacing-large * -1);
 }
 
+/**
+ * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_x-large`
+ *
+ * @selector .slds-grid_pull-padded-large
+ * @modifier
+ */
+.slds-grid_pull-padded-x-large,
+.slds-grid--pull-padded-x-large {
+  margin-right: ($spacing-x-large * -1);
+  margin-left: ($spacing-x-large * -1);
+}
+
+/**
+ * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_xx-large`
+ *
+ * @selector .slds-grid_pull-padded-large
+ * @modifier
+ */
+.slds-grid_pull-padded-xx-large,
+.slds-grid--pull-padded-xx-large {
+  margin-right: ($spacing-xx-large * -1);
+  margin-left: ($spacing-xx-large * -1);
+}
 
 /**
  * @summary Initializes a grid column
@@ -234,7 +355,7 @@
 .slds-col,
 [class*="slds-col_padded"],
 [class*="slds-col--padded"] {
-  @include flex-item(expand);
+  flex: 1 1 auto;
 }
 
 /**
@@ -368,77 +489,6 @@
 .slds-text-longform ul.slds-grid {
   margin-left: 0;
   list-style: none;
-}
-
-
-@include deprecate('4.0.0', 'Use spacing utilities instead instead of .slds-col--padded-*') {
-
-  .slds-col_padded,
-  .slds-col--padded {
-    padding: {
-      right: $spacing-small;
-      left: $spacing-small;
-    }
-  }
-
-  .slds-col_padded-medium,
-  .slds-col--padded-medium {
-    padding: {
-      right: $spacing-medium;
-      left: $spacing-medium;
-    }
-  }
-
-  .slds-col_padded-large,
-  .slds-col--padded-large {
-    padding: {
-      right: $spacing-large;
-      left: $spacing-large;
-    }
-  }
-
-  .slds-col_padded-around,
-  .slds-col--padded-around {
-    padding: $spacing-small;
-  }
-
-  .slds-col_padded-around-medium,
-  .slds-col--padded-around-medium {
-    padding: $spacing-medium;
-  }
-
-  .slds-col_padded-around-large,
-  .slds-col--padded-around-large {
-    padding: $spacing-large;
-  }
-}
-
-@include deprecate('4.0.0', 'Use .slds-col--rule-<position> instead of .slds-col-rule--*') {
-
-  .slds-col-rule {
-    @include mq-large-min {
-
-      &_top,
-      &--top {
-        border-top: 1px solid $color-border-separator;
-      }
-
-      &_right,
-      &--right {
-        border-right: 1px solid $color-border-separator;
-      }
-
-      &_bottom,
-      &--bottom {
-        border-bottom: 1px solid $color-border-separator;
-      }
-
-      &_left,
-      &--left {
-        border-left: 1px solid $color-border-separator;
-      }
-    }
-  }
 }
 
 /**
@@ -577,14 +627,6 @@
 .slds-align-bottom {
   vertical-align: bottom;
   align-self: flex-end;
-}
-
-.slds-align-content-center {
-  @include deprecate('4.0.0') {
-    flex: 1;
-    align-self: center;
-    justify-content: center;
-  }
 }
 
 /**

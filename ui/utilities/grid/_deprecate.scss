@@ -1,0 +1,110 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use .slds-{size}-nowrap instead') {
+
+  .slds-nowrap_small,
+  .slds-nowrap--small {
+    @include mq-small-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_medium,
+  .slds-nowrap--medium {
+    @include mq-medium-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+
+  .slds-nowrap_large,
+  .slds-nowrap--large {
+    @include mq-large-min {
+      @include flex-item(expand);
+      @include flex-wrap(false);
+    }
+  }
+}
+
+
+@include deprecate('4.0.0', 'Use spacing utilities instead instead of .slds-col--padded-*') {
+
+  .slds-col_padded,
+  .slds-col--padded {
+    padding: {
+      right: $spacing-small;
+      left: $spacing-small;
+    }
+  }
+
+  .slds-col_padded-medium,
+  .slds-col--padded-medium {
+    padding: {
+      right: $spacing-medium;
+      left: $spacing-medium;
+    }
+  }
+
+  .slds-col_padded-large,
+  .slds-col--padded-large {
+    padding: {
+      right: $spacing-large;
+      left: $spacing-large;
+    }
+  }
+
+  .slds-col_padded-around,
+  .slds-col--padded-around {
+    padding: $spacing-small;
+  }
+
+  .slds-col_padded-around-medium,
+  .slds-col--padded-around-medium {
+    padding: $spacing-medium;
+  }
+
+  .slds-col_padded-around-large,
+  .slds-col--padded-around-large {
+    padding: $spacing-large;
+  }
+}
+
+@include deprecate('4.0.0', 'Use .slds-col--rule-<position> instead of .slds-col-rule--*') {
+
+  .slds-col-rule {
+    @include mq-large-min {
+
+      &_top,
+      &--top {
+        border-top: 1px solid $color-border-separator;
+      }
+
+      &_right,
+      &--right {
+        border-right: 1px solid $color-border-separator;
+      }
+
+      &_bottom,
+      &--bottom {
+        border-bottom: 1px solid $color-border-separator;
+      }
+
+      &_left,
+      &--left {
+        border-left: 1px solid $color-border-separator;
+      }
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Use slds-align_absolute-center instead') {
+
+  .slds-align-content-center {
+
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+  }
+}

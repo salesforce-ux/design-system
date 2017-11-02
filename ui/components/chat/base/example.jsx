@@ -386,7 +386,7 @@ export const examples = [
                 name="Jason Dewar"
                 timeStamp="5:15 PM"
               >
-                Sorry ot hear that. Let me transfer you to a more technical
+                Sorry to hear that. Let me transfer you to a more technical
                 support member. Thank you for your patients!
               </ChatMessageBody>
             </ChatMessage>

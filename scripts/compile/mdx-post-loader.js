@@ -8,16 +8,20 @@ const {
   elementFactories,
   HeadingEl,
   El,
-  addDocClass
+  addDocClass,
+  last,
+  findChildHeadingByLevel
 } = createHelper();
 // We wrap the normal mdxc stuff with our own loader so we can add .doc to each element and
 // have a bit of control with a Doc component wrapper)
 
 module.exports = code =>
   `
-    import Doc from '../../../shared/components/Doc';
+  import Doc from '../../../shared/components/Doc';
 
   const addDocClass = ${addDocClass.toString()}
+  const last = ${last.toString()}
+  const findChildHeadingByLevel = ${findChildHeadingByLevel.toString()}
 
   const El = ${El.toString()}
   const HeadingEl = ${HeadingEl.toString()}

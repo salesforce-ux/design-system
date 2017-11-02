@@ -28,12 +28,15 @@ module.exports = code =>
 
   const factories = {${headingFactories}, ${elementFactories}}
 
-  const toc = [];
+  let toc = [];
   export const getToc = () => toc;
 
     ${code.replace(
       /export default function/,
       'export const Content = function'
     )}
-    export default props => <Doc><Content {...props} factories={factories} /></Doc>
+    export default props => {
+      toc = [];
+      return <Doc><Content {...props} factories={factories} /></Doc>
+    }
   `;

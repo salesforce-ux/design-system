@@ -41,7 +41,7 @@ describe('renders a light badge', () => {
       </LightBadge>
     ));
 
-  it('renders badge with icon only', () =>
+  xit('renders badge with icon only', () =>
     matchesMarkupAndStyle(
       <LightBadge>
         <UtilityIcon

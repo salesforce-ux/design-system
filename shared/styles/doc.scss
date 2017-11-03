@@ -225,13 +225,23 @@ ul.doc-toc {
   list-style: none;
 }
 
-li.doc a {
+.doc-toc li.doc a {
   font-size: .875rem;
+  font-weight: 700;
 }
 
-li.doc:before {
-  content: "-";
-  margin-right: .5rem;
+li.doc > ul.doc, li.doc > li.doc, ul.doc > ul.doc, ul.doc > li.doc {
+  margin-left: .4rem;
+}
+
+.doc-toc > li.doc > ul.doc > li.doc a {
+  font-weight: 400;
+}
+
+.doc-toc > li.doc > ul.doc ul.doc > li.doc a {
+  font-size: .75rem;
+  font-weight: 400;
+  color: #4872ab;
 }
 
 h2.doc-toc-header {

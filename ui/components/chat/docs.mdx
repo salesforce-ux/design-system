@@ -2,16 +2,12 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import TableOfContents from '../../../shared/components/TableOfContents';
 import {Chat,ChatList,ChatListItem,ChatMessage,ChatMessageBody,ChatAvatar,ChatEvent,ChatBookend} from './';
 import { DoctypeIcon } from '../icons/doctype/example';
-prop tableOfContentsData
 
 <div className="doc lead">
   The Chat component is used to display real-time and past chat logs between service agents and customers. It comes with a number of sub components that can be used to display the different types of chat items.
 </div>
-
-<TableOfContents data={tableOfContentsData} />
 
 <Example title="Chat list">
   <Chat>
@@ -59,7 +55,7 @@ prop tableOfContentsData
             name="Jason Dewar"
             timeStamp="5:15 PM"
           >
-            Sorry ot hear that. Let me see what I can do about this.
+            Sorry to hear that. Let me see what I can do about this.
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -602,7 +598,7 @@ In the event of an error occurring during the chat, an error event can be displa
               name="Jason Dewar"
               timeStamp="5:15 PM"
             >
-              Sorry ot hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -719,7 +715,7 @@ An agent has the ability to view past chats with particular customers. In this i
               name="Jason Dewar"
               timeStamp="5:15 PM"
             >
-              Sorry ot hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>

@@ -221,7 +221,35 @@ code.doc {
 }
 
 ul.doc-toc {
-  margin-left: 1.5rem;
+  margin-left: 0;
+  list-style: none;
+}
+
+.doc-toc li.doc a {
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+li.doc > ul.doc, li.doc > li.doc, ul.doc > ul.doc, ul.doc > li.doc {
+  margin-left: .4rem;
+}
+
+.doc-toc > li.doc > ul.doc > li.doc a {
+  font-weight: 400;
+}
+
+.doc-toc > li.doc > ul.doc ul.doc > li.doc a {
+  font-size: .75rem;
+  font-weight: 400;
+  color: #4872ab;
+}
+
+h2.doc-toc-header {
+  font-size: 1rem;
+  border-bottom: 1px solid #d9dbdd;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
 
 .doc-tokens-group .slds-button {

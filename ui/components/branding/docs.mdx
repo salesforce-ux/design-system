@@ -1,4 +1,3 @@
-import TableOfContents from '../../../shared/components/TableOfContents';
 import Page from './docs/Page';
 import Token, { Tokens } from './docs/Token';
 import { Button } from '../buttons/base/example';
@@ -23,37 +22,10 @@ import { Spinner } from '../spinners/base/example';
 import { PathStageSelected } from '../path/base/example';
 import { InlineEditTable } from '../data-tables/inline-edit/example';
 import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-navigation/list/example';
-prop tableOfContentsData
 
 <div className="lead">
   An inventory of brand-able components inside of SLDS
 </div>
-
-<TableOfContents data={tableOfContentsData} />
-
-## Brand tokens
-<Tokens open>
-  <Token grid token="BRAND_PRIMARY" />
-  <Token grid token="BRAND_PRIMARY_ACTIVE" />
-  <Token grid token="BRAND_PRIMARY_TRANSPARENT" />
-  <Token grid token="BRAND_LIGHT" />
-  <Token grid token="BRAND_LIGHT_ACTIVE" />
-  <Token grid token="BRAND_DARK" />
-  <Token grid token="BRAND_DARK_ACTIVE" />
-  <Token grid token="BRAND_ACCESSIBLE" />
-  <Token grid token="BRAND_ACCESSIBLE_ACTIVE" />
-  <Token grid token="BRAND_CONTRAST" />
-  <Token grid token="BRAND_CONTRAST_ACTIVE" />
-  <Token grid token="BRAND_BACKGROUND_PRIMARY" />
-  <Token grid token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
-  <Token grid token="BRAND_BACKGROUND_DARK" />
-  <Token grid token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
-  <Token grid token="BRAND_TEXT_LINK" />
-  <Token grid token="BRAND_TEXT_LINK_ACTIVE" />
-  <Token grid token="BRAND_HEADER" />
-  <Token grid token="BRAND_HEADER_CONTRAST" />
-  <Token grid token="BRAND_HEADER_CONTRAST_ACTIVE" />
-</Tokens>
 
 ### Global Header
 <div style={{ position: 'relative', height: '60px' }}>

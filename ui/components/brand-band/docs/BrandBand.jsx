@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import Page, { BrandBand } from '../';
-import ReactDOM from 'react-dom/server';
+import CodeBlock from '../../../../shared/components/CodeBlock';
 
 class BrandBandExample extends Component {
   render() {
@@ -12,13 +12,9 @@ class BrandBandExample extends Component {
         <div className="docs-codeblock-example">
           <Page {...this.props} />
         </div>
-        <div className="docs-codeblock-source">
-          <pre className="language-html">
-            <code>
-              {ReactDOM.renderToStaticMarkup(<BrandBand {...this.props} />)}
-            </code>
-          </pre>
-        </div>
+        <CodeBlock toggleCode={false}>
+          <BrandBand {...this.props} />
+        </CodeBlock>
       </div>
     );
   }

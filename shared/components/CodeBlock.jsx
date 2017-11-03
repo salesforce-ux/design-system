@@ -1,12 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/server';
 import stripIndent from 'strip-indent';
 import { beautify } from '../utils/beautify';
-
+import classNames from 'classnames';
 import Prism from '../vendor/prism';
 import '../vendor/prism/_prism.scss';
 import '../vendor/prism/_prism-overrides.scss';
@@ -14,7 +14,31 @@ import '../vendor/prism/_prism-overrides.scss';
 const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
 
-class CodeBlock extends React.Component {
+const ToggleButton = props => (
+  <div className="doc-toggle-code">
+    <button
+      {...props}
+      className="slds-button doc-toggle-code__button"
+      aria-live="polite"
+    >
+      {props.open ? 'Hide ' : 'Show '} Code
+    </button>
+  </div>
+);
+
+class CodeBlock extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+    this.toggleCodeBlock = this.toggleCodeBlock.bind(this);
+  }
+
+  toggleCodeBlock() {
+    this.setState({ open: !this.state.open });
+  }
+
   getCode() {
     const { language, children } = this.props;
     try {
@@ -27,10 +51,19 @@ class CodeBlock extends React.Component {
     const code = children ? ReactDOM.renderToStaticMarkup(children) : '';
     return highlight(beautify(code), language);
   }
+
   render() {
-    const { language } = this.props;
+    const { language, toggleCode = true } = this.props;
     return (
-      <div className="docs-codeblock-source">
+      <div
+        className={classNames(
+          'docs-codeblock-source',
+          toggleCode && (this.state.open ? 'code-expanded' : 'code-collapsed')
+        )}
+      >
+        {toggleCode && (
+          <ToggleButton open={this.state.open} onClick={this.toggleCodeBlock} />
+        )}
         <pre className={`language-${language}`}>
           <code
             className={`language-${language}`}
@@ -43,9 +76,12 @@ class CodeBlock extends React.Component {
     );
   }
 }
+
 CodeBlock.propTypes = {
-  language: PropTypes.string
+  language: PropTypes.string,
+  toggleCode: PropTypes.bool
 };
+
 CodeBlock.defaultProps = {
   language: 'html'
 };

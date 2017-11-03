@@ -8,12 +8,43 @@
 .docs-codeblock-source {
   border: solid 3px #f2f2f2;
   padding: 1rem;
+  position: relative;
 }
 
 .docs-codeblock-example + .docs-codeblock-source {
   border-top: 0;
 }
 
+.docs-codeblock-source.code-collapsed:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.docs-codeblock-source.code-collapsed pre {
+  height: (21px * 5); // Line-height * lines to show
+  overflow: hidden;
+}
+
+.docs-codeblock-source.code-expanded pre {
+  height: auto;
+}
+
+.doc-toggle-code {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.doc-toggle-code__button {
+  margin: 0 1rem;
+  font-weight: 700;
+}
 
 // Type Styles
 // Type scale — http://www.modularscale.com/?1&em&1.2

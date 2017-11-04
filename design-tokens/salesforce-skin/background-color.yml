@@ -324,7 +324,7 @@ props:
     comment: Background color for pills.
   ## IMAGE
   COLOR_BACKGROUND_IMAGE_OVERLAY:
-    value: '{!BLACK_TRANSPARENT_40}'
+    value: '{!BLACK_TRANSPARENT_60}'
     comment: Color of mask overlay that sits on top of an image when text is present.
   ## SUCCESS BUTTON
   COLOR_BACKGROUND_BUTTON_SUCCESS:

@@ -76,7 +76,7 @@
     }
 
     @else if nth($support, $i) == 'buttons' {
-      $link-selector: 'a:not(.slds-button--neutral), button:not(.slds-button--neutral)';
+      $link-selector: 'a:not([class*="slds-button_"]):not([class*="slds-button--"]), button:not([class*="slds-button_"]):not([class*="slds-button--"])';
     }
 
     @else if nth($support, $i) == 'borders' {

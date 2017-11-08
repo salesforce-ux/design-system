@@ -222,7 +222,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba($color-background-temp-modal-tint, 0.8);
+  background: $color-background-temp-modal-tint;
   z-index: $z-index-modal;
 
   /**

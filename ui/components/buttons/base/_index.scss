@@ -75,6 +75,10 @@
 
   &[disabled] {
     color: $color-text-button-default-disabled;
+
+    * {
+      pointer-events: none;
+    }
   }
 
   &:hover,

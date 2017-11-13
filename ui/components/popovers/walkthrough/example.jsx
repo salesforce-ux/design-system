@@ -6,8 +6,9 @@ import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
 import { Popover } from '../base/example';
 import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-const headingUniqueId = 'dialog-heading-id-01';
+const headingUniqueId = _.uniqueId('dialog-heading-id-');
 
 export let Header = props => (
   <header className="slds-popover__header slds-p-vertical_medium">
@@ -162,7 +163,7 @@ export let examples = [
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
-        headingId={headingUniqueId}
+        title="Dialog Title"
         closeButton
         inverse
       >
@@ -181,9 +182,9 @@ export let examples = [
             </span>
           </div>
           <div className="slds-media__body">
-            <h2 id={headingUniqueId} className="slds-text-heading_small">
+            <p className="slds-text-heading_small">
               Text that describes the action
-            </h2>
+            </p>
             <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
           </div>
         </div>

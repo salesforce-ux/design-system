@@ -116,6 +116,11 @@ props:
   POPOVER_WALKTHROUGH_HEADER_IMAGE:
     value: '/assets/images/popovers/popover-header.png'
     type: string
+  POPOVER_WALKTHROUGH_ALT_IMAGE:
+    value: '/assets/images/popovers/popover-action.png'
+    type: string
+  POPOVER_WALKTHROUGH_ALT_NUBBIN_COLOR_BACKGROUND:
+    value: '#215ca0'
   ## ROW INTERACTIONS
   COLOR_BACKGROUND_ROW_HOVER:
     value: '{!PALETTE_GRAY_2}'

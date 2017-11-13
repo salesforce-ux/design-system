@@ -79,5 +79,21 @@
 
   border-color: $popover-walkthrough-color-background-alt;
   background-color: $popover-walkthrough-color-background-alt;
+  background-image: url($popover-walkthrough-alt-image);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: $spacing-x-large;
   color: $color-text-inverse;
+
+  &.slds-nubbin_bottom,
+  &.slds-nubbin--bottom,
+  &.slds-nubbin_bottom-left,
+  &.slds-nubbin--bottom-left,
+  &.slds-nubbin_bottom-right,
+  &.slds-nubbin--bottom-right {
+
+    &:before {
+      background-color: $popover-walkthrough-alt-nubbin-color-background;
+    }
+  }
 }

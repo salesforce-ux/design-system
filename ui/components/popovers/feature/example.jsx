@@ -7,8 +7,9 @@ import ButtonIcon from '../../button-icons/';
 import { Popover } from '../base/example';
 import { Footer } from '../walkthrough/example';
 import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
-const headingUniqueId = 'dialog-heading-id-01';
+const headingUniqueId = _.uniqueId('dialog-heading-id-');
 
 /// ///////////////////////////////////////////
 // Export
@@ -17,16 +18,16 @@ const headingUniqueId = 'dialog-heading-id-01';
 export default (
   <Popover
     className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-    headingId={headingUniqueId}
+    title="Dialog Title"
     closeButton
     inverse
   >
     <div className="slds-media">
       <div className="slds-media__body">
-        <h2 id={headingUniqueId} className="slds-text-heading_small">
+        <p className="slds-text-heading_small">
           Shelly, it seems you frequent this record. Try favoriting it for easy
           access.
-        </h2>
+        </p>
       </div>
     </div>
   </Popover>
@@ -39,7 +40,7 @@ export let examples = [
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-        headingId={headingUniqueId}
+        title="Dialog Title"
         closeButton
         inverse
       >
@@ -58,10 +59,10 @@ export let examples = [
             </span>
           </div>
           <div className="slds-media__body">
-            <h2 id={headingUniqueId} className="slds-text-heading_small">
+            <p className="slds-text-heading_small">
               Shelly, it seems you frequent this record. Try favoriting it for
               easy access.
-            </h2>
+            </p>
           </div>
         </div>
       </Popover>

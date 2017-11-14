@@ -101,10 +101,10 @@
    * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   .slds-input__icon {
-    @include square($square-icon-medium-content);
+    @include square($square-icon-medium-content-alt);
     position: absolute;
     top: 50%;
-    margin-top: (($square-icon-medium-content / 2) * -1);
+    margin-top: (($square-icon-medium-content-alt / 2) * -1);
     line-height: 1;
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */

@@ -135,7 +135,7 @@ props:
     value: '{!PALETTE_GRAY_9}'
     comment: Action label text color
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Action label active text color
   ## INPUT
   COLOR_TEXT_INPUT_DISABLED:

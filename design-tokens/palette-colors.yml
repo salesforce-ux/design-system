@@ -70,6 +70,9 @@ props:
   BRAND_ACCESSIBLE_ACTIVE:
     value: "#005fb2"
     comment: "Active / Hover state of BRAND_A11Y"
+  BRAND_DISABLED:
+    value: "#c9c7c5"
+    comment: "Disabled state of BRAND_A11Y"
   BRAND_CONTRAST:
     value: "#1a1b1e"
     comment: "Variant of BRAND that is accessible with BRAND"
@@ -83,7 +86,7 @@ props:
     value: "rgba(250,250,249,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
   BRAND_BACKGROUND_DARK:
-    value: "#dddbda"
+    value: "#e8e8e8"
     comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
   BRAND_BACKGROUND_DARK_TRANSPARENT:
     value: "rgba(221,219,218,0)"
@@ -91,11 +94,17 @@ props:
   BRAND_HEADER:
     value: "#ffffff"
     comment: "Background color a branded app header"
+  BRAND_HEADER_ICON:
+    value: "#a6a6a6"
+    comment: "Icons of BRAND_HEADER that is accessible with BRAND_HEADER"
+  BRAND_HEADER_ICON_ACTIVE:
+    value: "#a6a6a6"
+    comment: "Active / Hover state of BRAND_HEADER_ICON"
   BRAND_HEADER_CONTRAST:
-    value: "#474747"
+    value: "#2c2c2c"
     comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_CONTRAST_ACTIVE:
-    value: "#474747"
+    value: "#2c2c2c"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
   BRAND_TEXT_LINK:
     value: "#0070D2"

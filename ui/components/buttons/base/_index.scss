@@ -169,8 +169,8 @@ a.slds-button--inverse:focus {
   @include button-brand;
 
   &[disabled] {
-    background: $color-background-button-brand-disabled;
-    border-color: $color-border-button-brand-disabled;
+    background: $brand-disabled;
+    border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
   }
 }

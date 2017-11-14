@@ -27,21 +27,65 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   An inventory of brand-able components inside of SLDS
 </div>
 
-### Global Header
+## Brand Token Set
+
+Below you will find our primary set of Brand tokens. These tokens are used through out the design system to change the brand of a Salesforce Orgs. These tokens are programatically created and derived into additional sets, such as accessible colors and light/dark variants of a brand color.
+
+This page is for informational purposes only.
+
+### Primary Brand colors
+<Tokens open>
+  <Token token="BRAND_PRIMARY" grid />
+  <Token token="BRAND_PRIMARY_ACTIVE" grid />
+  <Token token="BRAND_PRIMARY_TRANSPARENT" grid />
+</Tokens>
+
+### Light/Dark Brand colors
+<Tokens open>
+  <Token token="BRAND_LIGHT" grid />
+  <Token token="BRAND_LIGHT_ACTIVE" grid />
+  <Token token="BRAND_DARK" grid />
+  <Token token="BRAND_DARK_ACTIVE" grid />
+  <Token token="BRAND_CONTRAST" grid />
+  <Token token="BRAND_CONTRAST_ACTIVE" grid />
+</Tokens>
+
+### Accessible Brand colors
+<Tokens open>
+  <Token token="BRAND_ACCESSIBLE" grid />
+  <Token token="BRAND_ACCESSIBLE_ACTIVE" grid />
+  <Token token="BRAND_DISABLED" grid />
+</Tokens>
+
+### Header Brand colors
+<Tokens open>
+  <Token token="BRAND_HEADER" grid />
+  <Token token="BRAND_HEADER_ICON" grid />
+  <Token token="BRAND_HEADER_ICON_ACTIVE" grid />
+  <Token token="BRAND_HEADER_CONTRAST" grid />
+  <Token token="BRAND_HEADER_CONTRAST_ACTIVE" grid />
+</Tokens>
+
+### Background Brand colors
+<Tokens open>
+  <Token token="BRAND_BACKGROUND_PRIMARY" grid />
+  <Token token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" grid />
+  <Token token="BRAND_BACKGROUND_DARK" grid />
+  <Token token="BRAND_BACKGROUND_DARK_TRANSPARENT" grid />
+</Tokens>
+
+## Global Header
 <div style={{ position: 'relative', height: '60px' }}>
   <GlobalHeader className="slds-is-absolute" />
-</div>
-<div style={{ position: 'relative', height: '60px' }}>
-  <GlobalHeader className="slds-is-absolute" favoritesSelected />
 </div>
 
 <Tokens>
   <Token token="BRAND_HEADER" />
-  <Token token="BRAND_HEADER_CONTRAST" />
-  <Token token="BRAND_HEADER_CONTRAST_ACTIVE" />
+  <Token token="BRAND_HEADER_ICON" />
+  <Token token="BRAND_HEADER_ICON_ACTIVE" />
 </Tokens>
 
-### Global Navigation
+## Global Navigation
 <ContextBar itemActive />
 
 <Tokens>
@@ -49,7 +93,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY_TRANSPARENT" />
 </Tokens>
 
-### Global Navigation Tab Bar
+## Global Navigation Tab Bar
 <div className="demo-only">
   <ContextTabBar>
     <ContextTab
@@ -77,50 +121,17 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY_TRANSPARENT" />
 </Tokens>
 
-### Brand Band/Page Background
+## Brand Band/Page Background
 <Page medium />
 
-<Tokens text="for Lite Theme" open>
+<Tokens text="for Lite Theme">
   <Token token="BRAND_BACKGROUND_PRIMARY" />
   <Token token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
   <Token token="BRAND_BACKGROUND_DARK" />
   <Token token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
 </Tokens>
 
-<Tokens text="for Branded Theme">
-  <Token tokenSet="brand" token="BRAND_BACKGROUND_PRIMARY" />
-  <Token tokenSet="brand" token="BRAND_BACKGROUND_PRIMARY_TRANSPARENT" />
-  <Token tokenSet="brand" token="BRAND_BACKGROUND_DARK" />
-  <Token tokenSet="brand" token="BRAND_BACKGROUND_DARK_TRANSPARENT" />
-</Tokens>
-
-### Global Text Links
-<a href="javascript:void(0);">Brand-able Text Link</a>
-
-<Tokens>
-  <Token token="BRAND_TEXT_LINK" />
-  <Token token="BRAND_TEXT_LINK_ACTIVE" />
-</Tokens>
-
-### Button Text
-<button className="slds-button" href="javascript:void(0);">Brand-able Button Link</button>
-<button className="slds-button" disabled>Brand-able Button Link</button>
-
-<Tokens>
-  <Token token="BRAND_TEXT_LINK" />
-  <Token token="BRAND_TEXT_LINK_ACTIVE" />
-</Tokens>
-
-### Button Neutral
-<Button className="slds-button_neutral">Button Neutral</Button>
-<Button className="slds-button_neutral" disabled>Button Neutral</Button>
-
-<Tokens>
-  <Token token="BRAND_TEXT_LINK" />
-  <Token token="BRAND_TEXT_LINK_ACTIVE" />
-</Tokens>
-
-### Button Brand
+## Button Brand
 <Button className="slds-button_brand">Button Brand</Button>
 <Button className="slds-button_brand" disabled>Button Brand</Button>
 
@@ -129,16 +140,23 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Button Icons
+## Button Icons
 <ButtonIcon
   className="slds-button_icon-border-filled"
+/>
+<ButtonIcon
+  className="slds-button_icon-brand"
+/>
+<ButtonIcon
+  className="slds-button_icon-brand"
+  disabled
 />
 
 <Tokens>
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Stateful Button Icon
+## Stateful Button Icon
 <ButtonIcon
   className="slds-button_icon-border-filled"
   aria-pressed="false"
@@ -159,7 +177,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Data Table
+## Data Table
 <div className="slds-scrollable_none">
   <InlineEditTable />
 </div>
@@ -167,11 +185,9 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
 <Tokens>
   <Token token="BRAND_ACCESSIBLE" />
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
-  <Token token="BRAND_TEXT_LINK" />
-  <Token token="BRAND_TEXT_LINK_ACTIVE" />
 </Tokens>
 
-### Checkbox
+## Checkbox
 <FormElement>
   <Checkbox label="Checkbox Label" checked />
 </FormElement>
@@ -180,7 +196,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY_ACTIVE" />
 </Tokens>
 
-### Checkbox Button
+## Checkbox Button
 <FormElement>
   <CheckboxAddButton />
 </FormElement>
@@ -189,7 +205,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY_ACTIVE" />
 </Tokens>
 
-### Checkbox Button Group
+## Checkbox Button Group
 <fieldset className="slds-form-element">
   <legend className="slds-form-element__legend slds-form-element__label">
     Scheduled Day(s)
@@ -210,7 +226,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Dueling Picklist
+## Dueling Picklist
 <MultiSelect dataSet={SelectedSnapShot} />
 
 <Tokens>
@@ -218,7 +234,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Radio Button Group
+## Radio Button Group
 <fieldset className="slds-form-element">
   <legend className="slds-form-element__legend slds-form-element__label">
     Scheduled Day(s)
@@ -239,7 +255,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Radio Group
+## Radio Group
 <FormElement>
   <Radio checked label="Radio Label One" />
   <Radio label="Radio Label Two" />
@@ -249,7 +265,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Slider
+## Slider
 <Slider value="50" />
 
 <Tokens>
@@ -257,7 +273,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE_ACTIVE" />
 </Tokens>
 
-### Path
+## Path
 <PathStageSelected />
 
 <Tokens>
@@ -267,16 +283,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_DARK_ACTIVE" />
 </Tokens>
 
-### Menu (Action Overflow)
-<div style={{ height: '120px' }}>
-  <ActionOverflow />
-</div>
-
-<Tokens>
-  <Token token="BRAND_TEXT_LINK" />
-</Tokens>
-
-### Vertical Navigation
+## Vertical Navigation
 <NavVertical>
   <NavVerticalSection id="entity-header" title="Reports">
     <NavVerticalItem aria-describedby="entity-header" active>
@@ -312,7 +319,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY_ACTIVE" />
 </Tokens>
 
-### Datepicker
+## Datepicker
 <div style={{ height: '380px' }}>
   <FormElement
     className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
@@ -359,7 +366,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_ACCESSIBLE" />
 </Tokens>
 
-### Docked Composer
+## Docked Composer
 <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto', position: 'relative' }}>
   <div className="slds-docked_container slds-is-absolute">
     <DockedComposerPanel className="slds-is-open">
@@ -374,7 +381,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY" />
 </Tokens>
 
-### Docked Utility Panel
+## Docked Utility Panel
 <div style={{ height: '540px', position: 'relative' }}>
   <ul className="slds-utility-bar slds-is-absolute">
     <UtilityBarItem symbol="call" active>Call</UtilityBarItem>
@@ -390,7 +397,7 @@ import { NavVertical, NavVerticalItem, NavVerticalSection } from '../vertical-na
   <Token token="BRAND_PRIMARY" />
 </Tokens>
 
-### Spinners
+## Spinners
 <div style={{ height: '6rem', position: 'relative' }}>
   <Spinner className="slds-spinner_medium slds-spinner_brand" />
 </div>

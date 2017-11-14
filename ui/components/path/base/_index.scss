@@ -157,22 +157,22 @@
   * @notes This class must be placed on the item programatically when the guidance section is activated
   */
   .slds-is-active {
-    background-color: $brand-dark;
+    background-color: $color-background-path-active;
 
     .slds-path__link {
       color: $color-text-inverse;
     }
 
     &:hover {
-      background-color: $brand-dark-active;
+      background-color: $color-background-path-active;
 
       + .slds-path__item:before {
-        background-color: $brand-dark-active;
+        background-color: $color-background-path-active;
       }
     }
 
     + .slds-path__item:before {
-      background-color: $brand-dark;
+      background-color: $color-background-path-active;
     }
   }
 
@@ -240,18 +240,18 @@
    * @restrict .slds-path__item
    */
   .slds-is-current {
-    background-color: $brand-accessible;
+    background-color: $color-background-path-current;
 
     &:hover {
-      background-color: $brand-accessible-active;
+      background-color: $color-background-path-current-hover;
     }
 
     + .slds-is-incomplete:before {
-      background-color: $brand-accessible;
+      background-color: $color-background-path-current;
     }
 
     &:hover + .slds-is-incomplete:before {
-      background-color: $brand-accessible-active;
+      background-color: $color-background-path-current-hover;
     }
   }
 
@@ -273,6 +273,22 @@
 
     .slds-path__link {
       color: $color-text-inverse;
+    }
+  }
+
+  .slds-is-won {
+    background-color: $color-background-path-won;
+
+    .slds-path__link {
+      color: $color-text-action-label-active;
+    }
+
+    &:hover {
+      background-color: $color-background-path-won;
+
+      .slds-path__link {
+        color: currentColor;
+      }
     }
   }
 }
@@ -328,6 +344,10 @@
   + .slds-is-complete:before,
   + .slds-is-current:before {
     background-color: $color-background-path-complete;
+  }
+
+  + .slds-is-won:before {
+    background-color: $color-background-path-won;
   }
 
   &:hover + .slds-is-complete:before,
@@ -450,12 +470,12 @@
  * @restrict .slds-path button, .slds-path-coach button
  */
 .slds-path__mark-current {
-  border-color: $brand-dark;
-  background-color: $brand-dark;
+  border-color: $brand-accessible;
+  background-color: $brand-accessible;
 
   &:hover,
   &:focus {
-    background-color: $brand-dark-active;
+    background-color: $brand-accessible-active;
   }
 }
 

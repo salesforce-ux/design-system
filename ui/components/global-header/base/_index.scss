@@ -93,20 +93,20 @@
   &__button_icon,
   &__button--icon {
     margin: 0 $spacing-xx-small;
-    color: $brand-header-contrast;
+    color: $brand-header-icon;
 
     .slds-icon {
-      fill: $brand-header-contrast; // backwards compatible for old implementations
+      fill: $brand-header-icon; // backwards compatible for old implementations
     }
 
     &:hover:not(:disabled),
     &:focus {
-      color: $brand-header-contrast-active;
+      color: $brand-header-icon-active;
     }
 
     &:hover:not(:disabled) .slds-icon,
     &:focus .slds-icon {
-      fill: $brand-header-contrast-active; // backwards compatible for old implementations
+      fill: $brand-header-icon-active; // backwards compatible for old implementations
     }
   }
 
@@ -119,13 +119,13 @@
    */
   &__button_icon-actions,
   &__button--icon-actions {
-    background: $brand-header-contrast;
+    background: $brand-header-icon;
     border-radius: $border-radius-medium;
     color: $brand-header;
 
     &:hover,
     &:focus {
-      background-color: $brand-header-contrast-active;
+      background-color: $brand-header-icon-active;
       color: $brand-header;
     }
 
@@ -148,7 +148,7 @@
     .slds-icon,
     .slds-button__icon {
       color: $brand-header;
-      stroke: $brand-header-contrast;
+      stroke: $brand-header-icon;
       stroke-width: $border-stroke-width-thick;
       stroke-linejoin: round;
       stroke-linecap: round;
@@ -159,7 +159,7 @@
     &:focus .slds-icon,
     &:focus .slds-button__icon {
       color: $brand-header;
-      stroke: $brand-header-contrast-active;
+      stroke: $brand-header-icon-active;
     }
 
     /**

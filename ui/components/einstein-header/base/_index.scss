@@ -1,0 +1,57 @@
+.slds-einstein-header {
+  position: relative;
+  background-color: $einstein-header-background-color;
+  background-image: url($einstein-header-background);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  border-radius: calc(#{$border-radius-medium} - 1px) calc(#{$border-radius-medium} - 1px) 0 0;
+  border-bottom: $border-width-thin solid $color-border;
+  padding-top: $spacing-small;
+  padding-bottom: $spacing-small;
+  text-shadow: 0 0 4px $einstein-header-text-shadow;
+
+  .slds-popover__close {
+    color: currentColor;
+  }
+
+  &__figure,
+  &__figure:last-child {
+    margin-bottom: calc((#{$spacing-small} + 5px) * -1);
+    height: rem(76px);
+    background-image: url($einstein-header-figure);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+  &__actions {
+    padding-left: $spacing-medium;
+    display: flex;
+    align-items: center;
+  }
+
+  .slds-popover__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.slds-popover_einstein {
+
+  &.slds-nubbin_top,
+  &.slds-nubbin--top,
+  &.slds-nubbin_top-left,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
+  &.slds-nubbin--top-right,
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top {
+
+    &:before {
+      background-color: $einstein-header-background-color;
+    }
+  }
+}

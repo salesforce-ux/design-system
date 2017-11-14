@@ -1,0 +1,17 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+imports:
+- "../../../../design-tokens/force-base/aliases/color.yml"
+props:
+  EINSTEIN_HEADER_BACKGROUND:
+    value: '/assets/images/einstein-headers/einstein-header-background.svg'
+    type: string
+  EINSTEIN_HEADER_FIGURE:
+    value: '/assets/images/einstein-headers/einstein-figure.svg'
+    type: string
+  EINSTEIN_HEADER_BACKGROUND_COLOR:
+    value: '#95CBFC'
+    commnet: Background color for Einstein header

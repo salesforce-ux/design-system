@@ -1,0 +1,17 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+* The einstein card variant is used primarily on desktop within a &ldquo;narrow&rdquo; column
+* or &ldquo;side content area&rdquo;, which uses one-third of the viewport.
+* In addition, the `.slds-card` class is used for layout purposes
+* when a card has an adjacent card, those proceeding the initial will provide margin
+* to give the cards spacing between each other.
+*
+* @summary Card that contains insights of Einstein
+*
+* @name einstein
+* @selector .slds-card
+* @restrict article, div
+* @variant
+*/

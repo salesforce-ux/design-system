@@ -3,6 +3,7 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Popover } from '../base/example';
 import { Header, Footer } from '../walkthrough/example';
+import { EinsteinHeader } from '../../einstein-header/base';
 
 import createHelpers from '../../../../jest.setup';
 
@@ -24,8 +25,7 @@ xit('renders a walkthrough popover', () =>
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </Popover>
-  )
-);
+  ));
 
 xit('renders an action popover', () =>
   matchesMarkupAndStyle(
@@ -57,8 +57,7 @@ xit('renders an action popover', () =>
         </div>
       </div>
     </Popover>
-  )
-);
+  ));
 
 xit('renders a feature popover', () =>
   matchesMarkupAndStyle(
@@ -77,5 +76,27 @@ xit('renders a feature popover', () =>
         </div>
       </div>
     </Popover>
-  )
-);
+  ));
+
+xit('renders an einstein popover', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-nubbin_left slds-popover_einstein"
+      title="Dialog Title"
+      headingId={headingUniqueId}
+      header={
+        <EinsteinHeader
+          className="slds-popover__header"
+          closeButton
+          headingId={headingUniqueId}
+        />
+      }
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </Popover>
+  ));

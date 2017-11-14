@@ -1,0 +1,9 @@
+global:
+  type: shadow
+  category: text-shadow
+  cssProperties:
+  - text-shadow
+props:
+  EINSTEIN_HEADER_TEXT_SHADOW:
+    value: '#9EDAFF'
+    comment: Text shadow color for Einstein header background to make text more readable

@@ -3,6 +3,13 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.4.5] - November 14, 2017**
+
+## Fixes
+
+**Buttons**
+- Remove pointer-events from icons found within of buttons
+
 ## **Release [2.4.4] - October 17, 2017**
 
 ## Fixes

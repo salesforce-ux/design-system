@@ -29,19 +29,47 @@
   border: 1px solid $color-border-reminder;
   border-radius: $border-radius-medium;
   box-shadow: $shadow-reminder;
+  transition-duration: $duration-slowly;
+  transition-timing-function: ease-in-out;
+  transition-property:
+    margin,
+    max-height,
+    opacity,
+    top;
+
+  .slds-media__body {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: $duration-slowly;
+    transition-timing-function: ease-in-out;
+  }
 
   + .slds-notification {
     margin-top: $spacing-x-small;
   }
 
-  &:nth-of-type(4) {
-    position: relative;
-    top: -4.5rem;
-    transform: scaleX(0.95);
-    z-index: -1;
+  @for $i from 1 through 4 {
+
+    &:nth-of-type(#{$i}) {
+      z-index: (5 - $i);
+    }
   }
 
+  &:nth-of-type(n+3) {
+    overflow: hidden;
+  }
+
+  &:nth-of-type(n+4) {
+    margin-top: 0;
+    transform: scaleX(0.95) translateY(-90%);
+  }
+
+  &:nth-of-type(n+4) .slds-media__body,
   &:nth-of-type(n+5) {
+    opacity: 0;
+  }
+
+  &:nth-of-type(n+6) {
     display: none;
   }
 }

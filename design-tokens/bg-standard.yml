@@ -375,3 +375,7 @@ props:
     value: '#0EB58A'
   PAST_CHAT:
     value: '#F88960'
+  SEARCH:
+    value: '#62B7ED'
+  SURVEY:
+    value: '#319FD6'

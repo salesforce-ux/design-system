@@ -31,6 +31,7 @@ export let MenuItemHasSubmenu = props => {
     itemName,
     tabIndex,
     title,
+    submenuClassnames,
     ...rest
   } = props;
 
@@ -52,10 +53,8 @@ export let MenuItemHasSubmenu = props => {
         </span>
         {iconRight || null}
       </a>
-      <Menu
-        className={classNames('slds-dropdown_submenu', props.submenuClassnames)}
-      >
-        <MenuList ariaLabel={props.itemName}>
+      <Menu className={classNames('slds-dropdown_submenu', submenuClassnames)}>
+        <MenuList ariaLabel={itemName}>
           <MenuItem tabIndex="0">Submenu Item One</MenuItem>
           <MenuItem>Submenu Item Two</MenuItem>
           <MenuItem>Submenu Item Three</MenuItem>

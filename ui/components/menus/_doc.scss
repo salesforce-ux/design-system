@@ -16,6 +16,8 @@
  *
  * To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu. In order to open the submenu, set `aria-expanded` to `true` on the `<a>` within the `<li>` when the user clicks or hovers over the list item, or presses enter while focused on the list item.
  *
+ * To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div>` with the `slds-dropdown_submenu` class. To add it to the left, add `slds-dropdown_submenu-left`.
+ *
  * **Accessibility**
  *
  * The main thing that distinguishes menus from other popover blocks is keyboard

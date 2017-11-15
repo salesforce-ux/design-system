@@ -26,6 +26,8 @@
    * @summary Open submenu to the left of the parent menu item
    * @selector .slds-dropdown_submenu-left
    * @restrict .slds-dropdown_submenu
+   * @modifier
+   * @group submenu position
    */
   .slds-dropdown_submenu-left {
     left: auto;
@@ -37,6 +39,8 @@
    * @summary Open submenu to the right of the parent menu item
    * @selector .slds-dropdown_submenu-right
    * @restrict .slds-dropdown_submenu
+   * @modifier
+   * @group submenu position
    */
   .slds-dropdown_submenu-right {
     left: 100%;

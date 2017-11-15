@@ -144,7 +144,7 @@
    * @selector .slds-dropdown_left
    * @restrict .slds-dropdown
    * @modifier
-   * @group position
+   * @group menu position
    */
   &_left,
   &--left {
@@ -157,7 +157,7 @@
    * @selector .slds-dropdown_right
    * @restrict .slds-dropdown
    * @modifier
-   * @group position
+   * @group menu position
    */
   &_right,
   &--right {
@@ -171,7 +171,7 @@
    * @selector .slds-dropdown_bottom
    * @restrict .slds-dropdown
    * @modifier
-   * @group position
+   * @group menu position
    */
   &_bottom,
   &--bottom {
@@ -445,6 +445,7 @@
       position: relative;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: $spacing-x-small $spacing-small;
       color: $color-text-default;
       white-space: nowrap;

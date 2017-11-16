@@ -421,6 +421,38 @@
   }
 }
 
+$max-column-support: 15;
+
+@for $i from 1 through $max-column-support {
+
+  .slds-table_column-#{$i}-wrap tbody tr > *:nth-child(#{$i}) .slds-truncate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: none;
+    white-space: normal;
+  }
+}
+
+[class*="slds-table_column-"] tr td .slds-truncate {
+  overflow: hidden;
+  position: relative;
+  max-height: 3.25rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2.25rem;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 69%);
+  }
+}
+
+[class*="slds-table_column-"] tr:hover td .slds-truncate:after {
+  background: linear-gradient(to right, rgba(250, 250, 249, 0) 0%, rgba(250, 250, 249, 1) 69%);
+}
+
 /**
  * Resizable data table columns
  *

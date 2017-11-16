@@ -37,7 +37,8 @@ export const AdvancedDataTable = props => (
       'slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout',
       props.className,
       {
-        'slds-table_edit': props.isEditable
+        'slds-table_edit': props.isEditable,
+        'slds-table_column-3-wrap': props.columnWrap
       }
     )}
     role="grid"

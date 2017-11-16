@@ -58,3 +58,24 @@
     text-decoration: underline;
   }
 }
+
+.slds-has-pinned-regions {
+
+  .slds-sub-tabs__item {
+
+    &.slds-active,
+    &.slds-is-open {
+
+      &:before {
+        content: '';
+        height: 3px;
+        display: block;
+        background: $brand-primary;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        right: -1px;
+      }
+    }
+  }
+}

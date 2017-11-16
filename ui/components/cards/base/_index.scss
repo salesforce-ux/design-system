@@ -98,4 +98,21 @@
   margin-top: $spacing-x-small;
 }
 
+.slds-region__pinned-left {
+
+  .slds-card,
+  .slds-card-wrapper,
+  .slds-card_boundary,
+  .slds-tabs_card {
+    border-radius: 0;
+    border: 0;
+    border-bottom: $border-width-thin solid $color-border;
+    box-shadow: none;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
 @import 'blame';

@@ -1,0 +1,36 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary A region that can be inside of a layout
+ *
+ * @name base
+ * @selector .slds-region
+ * @restrict div
+ * @variant
+ */
+.slds-region {
+  background-color: $color-foreground-primary;
+}
+
+/**
+ * @summary A region that can be pinned on the top of a layout
+ *
+ * @selector .slds-region__pinned-top
+ * @restrict .slds-region
+ */
+.slds-region__pinned-top {
+  background-color: $color-foreground-primary;
+  border-bottom: $border-width-thin solid $card-color-border;
+}
+
+/**
+ * @summary A region that can be pinned on the left side of a layout
+ *
+ * @selector .slds-region__pinned-top
+ * @restrict .slds-region
+ */
+.slds-region__pinned-left {
+  background-color: $color-foreground-primary;
+  border-right: $border-width-thin solid $card-color-border;
+}

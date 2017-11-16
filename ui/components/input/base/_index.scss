@@ -106,6 +106,7 @@
     top: 50%;
     margin-top: (($square-icon-medium-content-alt / 2) * -1);
     line-height: 1;
+    border: 0; // Re-aligns icons to center
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {

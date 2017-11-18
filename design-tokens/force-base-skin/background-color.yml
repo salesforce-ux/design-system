@@ -16,11 +16,11 @@ props:
   COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_FOREGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_GRAY_1}'
   ## BRANDING DEFAULTS FROM SALESFORCE-SKIN
@@ -115,7 +115,7 @@ props:
     value: '{!WHITE}'
     comment: Background color for notification list item.
   COLOR_BACKGROUND_NOTIFICATION_NEW:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Background color for a new notification list item.
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
     value: '{!DEEP_COVE}'

@@ -88,11 +88,11 @@
   justify-content: space-between;
   text-align: center;
   order: 1;
-  
+
   .slds-item {
     display: flex;
     justify-content: center;
-    
+
     @include mq-medium-max {
       margin-right: 0;
     }

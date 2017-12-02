@@ -177,7 +177,7 @@ export let examples = [
     element: (
       <div
         className="demo-only"
-        style={{ background: '#f4f6f9', padding: '1rem' }}
+        style={{ background: '#F3F2F2', padding: '1rem' }}
       >
         <Progress className="slds-progress_shade" value="25">
           <Step done>Step 1</Step>

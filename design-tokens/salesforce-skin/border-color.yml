@@ -26,7 +26,7 @@ props:
     value: '{!DEEP_COVE}'
     comment: Border color to match UI elements using color-background-inverse.
   COLOR_BORDER_SEPARATOR:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Lightest separator color - used as default separator on white backgrounds.
   COLOR_BORDER_SEPARATOR_ALT:
     value: '{!PALETTE_GRAY_5}'
@@ -136,7 +136,7 @@ props:
     specificity: builders
     comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
   COLOR_BORDER_SELECTION_ACTIVE:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     specificity: builders
     comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.
   COLOR_BORDER_CANVAS_ELEMENT_SELECTION:

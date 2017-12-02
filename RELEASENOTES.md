@@ -3,12 +3,18 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.4.6] - November 22, 2017**
+
+## Fixes
+
+**Colors**
+- Modified tokens using gray-2 to use gray-3
 ## **Release [2.4.5] - November 14, 2017**
 
 ## Fixes
 
 **Buttons**
-- Remove pointer-events from icons found within of buttons
+- Remove pointer-events from icons found within buttons
 
 ## **Release [2.4.4] - October 17, 2017**
 

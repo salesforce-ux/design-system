@@ -36,17 +36,17 @@ props:
     deprecated: true
   ## BACKGROUNDS
   COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_FOREGROUND_PRIMARY:
     value: '{!PALETTE_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
   COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_GRAY_3}'
   COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_GRAY_1}'
@@ -123,10 +123,10 @@ props:
     value: '#215ca0'
   ## ROW INTERACTIONS
   COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used as the background color for the hover state on rows or items on list-like components.
   COLOR_BACKGROUND_ROW_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as the background color for the active state on rows or items on list-like components.
   COLOR_BACKGROUND_ROW_SELECTED:
     value: '{!PALETTE_GRAY_4}'
@@ -305,7 +305,7 @@ props:
     value: '{!WHITE}'
     comment: Background color for notification list item.
   COLOR_BACKGROUND_NOTIFICATION_NEW:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Background color for a new notification list item.
   ## REMINDER
   COLOR_BACKGROUND_REMINDER:
@@ -340,3 +340,19 @@ props:
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
     value: '{!DEEP_COVE}'
     comment: Stage left org switcher dropdown arrow background color.
+  ## COLOR PICKER
+  COLOR_PICKER_SLIDER_THUMB_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_3}'
+  ## PROGRESS INDICATOR
+  PROGRESS_COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_GRAY_3}'
+  PROGRESS_COLOR_BORDER_SHADE:
+    value: '{!PALETTE_GRAY_3}'
+  ## PAGE HEADERS
+  PAGE_HEADER_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Default Page Header background color
+  COLOR_BACKGROUND_ANCHOR:
+    value: '{!PALETTE_GRAY_3}'
+    deprecated: true
+    comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.

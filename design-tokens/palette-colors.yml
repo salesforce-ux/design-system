@@ -98,13 +98,19 @@ props:
     value: "#a6a6a6"
     comment: "Icons of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_ICON_ACTIVE:
-    value: "#a6a6a6"
+    value: "#969696"
     comment: "Active / Hover state of BRAND_HEADER_ICON"
   BRAND_HEADER_CONTRAST:
-    value: "#2c2c2c"
+    value: "#6a6a6a"
     comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_CONTRAST_ACTIVE:
-    value: "#2c2c2c"
+    value: "#5c5c5c"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
+  BRAND_HEADER_CONTRAST_INVERSE:
+    value: "#ffffff"
+    comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
+  BRAND_HEADER_CONTRAST_INVERSE_ACTIVE:
+    value: "#eeeeee"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
   BRAND_TEXT_LINK:
     value: "#0070D2"

@@ -256,6 +256,7 @@
     padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
     border-radius: 0;
+    flex-shrink: 0;
 
     &:focus {
       outline: 0;
@@ -417,6 +418,7 @@
     content: '';
     display: block;
     position: absolute;
+    left: 0;
     bottom: -3px;
     height: 3px;
     width: 100%;

@@ -47,7 +47,7 @@
   }
 
   .slds-text-title {
-    color: $color-text-inverse;
+    color: $popover-color-text;
   }
 
   &.slds-nubbin_top,
@@ -81,9 +81,14 @@
   background-color: $popover-walkthrough-color-background-alt;
   background-image: url($popover-walkthrough-alt-image);
   background-repeat: no-repeat;
+  background-size: 100% rem(36px);
   background-position: bottom;
-  padding-bottom: $spacing-x-large;
+  padding-bottom: $spacing-large;
   color: $color-text-inverse;
+
+  .slds-text-heading_small {
+    margin-bottom: $spacing-x-small;
+  }
 
   &.slds-nubbin_bottom,
   &.slds-nubbin--bottom,

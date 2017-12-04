@@ -1,0 +1,11 @@
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  POPOVER_COLOR_TEXT:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Text color for step counter in walkthrough variant of popovers

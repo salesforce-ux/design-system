@@ -16,6 +16,10 @@
   .slds-button {
     border-radius: 0;
     border-width: $border-width-thin;
+
+    &:focus {
+      z-index: $z-index-default;
+    }
   }
 }
 

@@ -51,6 +51,11 @@
 .slds-accordion__summary-heading {
   display: flex;
   flex-grow: 1;
+
+  .slds-button:focus {
+    text-decoration: underline;
+    box-shadow: none;
+  }
 }
 
 /**

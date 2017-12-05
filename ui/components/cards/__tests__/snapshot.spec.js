@@ -16,6 +16,6 @@ it('renders an einstein card', () =>
         hasLink
       />
       <CardBody className="slds-card__body_inner">Card Body Text</CardBody>
-      <CardFooter className="slds-m-top_none">Card Footer</CardFooter>
+      <CardFooter>Card Footer</CardFooter>
     </Card>
   ));

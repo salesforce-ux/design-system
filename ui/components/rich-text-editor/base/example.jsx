@@ -415,8 +415,9 @@ let TextInputExample = props => (
     </p>
     <h2>Heading - h2</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod{' '}
+      <a href="#">veryVeryLongWordWithHyperlinkExample</a> tempor incididunt ut
+      labore et dolore magna aliqua.
     </p>
     <ul>
       <li>Unordered list item</li>

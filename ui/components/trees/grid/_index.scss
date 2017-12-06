@@ -63,13 +63,14 @@
     align-self: center;
     margin-top: 0;
   }
-}
 
-/**
- * @selector .slds-table_tree__toggle
- * @restrict .slds-table_tree button
- */
-.slds-table_tree__toggle,
-.slds-table--tree__toggle {
-  margin-left: ($spacing-xx-small * -1);
+  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+  $max-nesting-depth: 20 !default;
+
+  @for $current-level from 1 through $max-nesting-depth {
+
+    [aria-level="#{$current-level}"] > .slds-tree__item {
+      padding-left: (($spacing-medium * $current-level) + $spacing-x-small);
+    }
+  }
 }

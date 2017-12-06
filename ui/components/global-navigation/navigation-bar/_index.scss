@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$color-background-context-bar-brand-light: rgba(desaturate($color-background-context-bar-brand-accent, 30%), 0.1);
+$color-background-context-bar-brand-light: rgba($color-background-context-bar-brand-accent, 0.1);
 
 /**
  * @summary Navigation bar wrapper
@@ -178,6 +178,11 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       }
     }
 
+    // Enforce background on items that have a notification
+    &.slds-has-notification {
+      background: $color-background-context-bar-brand-light;
+    }
+
     /**
      * Add a left border to a context bar item
      *
@@ -253,6 +258,7 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
     padding: 0 $spacing-x-small;
     color: $color-text-context-bar;
     border-radius: 0;
+    flex-shrink: 0;
 
     &:focus {
       outline: 0;
@@ -363,7 +369,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 
     .slds-context-bar__label-action {
       position: relative;
-      padding-left: $spacing-x-small;
       font-style: italic;
       line-height: normal;
     }
@@ -379,9 +384,6 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
    * @restrict .slds-context-bar__item, .slds-context-bar__item .slds-dropdown__item
    */
   .slds-has-notification {
-    background: $color-background-context-bar-brand-light;
-    color: $color-text-default;
-
     /**
      * @summary Unread notification icon
      * @selector .slds-indicator_unread
@@ -396,6 +398,35 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
       position: relative;
       top: auto;
     }
+
+    .slds-indicator_unsaved,
+    .slds-indicator--unsaved {
+      top: rem(-6px);
+    }
+  }
+}
+
+/**
+ * @summary Modifier that notifies a parent component that it has sub tabs inside of it
+ * @selector .slds-has-sub-tabs
+ * @restrict .slds-context-bar__item_tab
+ */
+.slds-context-bar__item_tab.slds-has-sub-tabs.slds-is-active,
+.slds-context-bar__item_tab.slds-has-sub-tabs.slds-is-active:hover {
+  animation: none;
+  background-color: transparent;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background-color: $color-background-context-bar;
+    border: 0;
+    mix-blend-mode: unset;
   }
 }
 
@@ -408,9 +439,8 @@ $color-background-context-bar-brand-light: rgba(desaturate($color-background-con
 .slds-indicator_unsaved,
 .slds-indicator--unsaved {
   color: $color-text-brand;
-  align-self: flex-start;
-  font-size: $font-size-medium-a;
-  margin-top: 0.2rem; // Random but matches spec
+  align-self: center;
+  position: relative;
 }
 
 // Context Bar dropdown trigger specifics

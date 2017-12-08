@@ -1,11 +1,11 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.5.0-dev",
+  "version": "2.6.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Spring ’18",
-    "id": "212"
+    "name": "Summer ’18",
+    "id": "214"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -19,7 +19,7 @@
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "spring-18"
+      "indexName": "summer-18"
     }
   },
   "devDependencies": {

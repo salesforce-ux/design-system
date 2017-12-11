@@ -65,9 +65,9 @@ props:
     comment: Shadow on images.
   ## PAGE HEADERS
   PAGE_HEADER_SHADOW:
-    value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
+    value: '0 2px 2px 0 {!BLACK_TRANSPARENT_10}'
     comment: Hard dropshadow on page header
   ## CARDS
   CARD_SHADOW:
-    value: '0 2px 0 0 {!BLACK_TRANSPARENT_10}'
+    value: '0 2px 2px 0 {!BLACK_TRANSPARENT_10}'
     comment: Hard dropshadow found on outer cards

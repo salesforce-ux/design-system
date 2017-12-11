@@ -1,0 +1,99 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import Example from '../../../shared/components/Example';
+import Carousel, { CarouselPlayToggle } from './';
+
+<div className="lead">
+  A carousel allows multiple pieces of featured content to occupy an allocated amount of space.
+</div>
+
+<Example title="carousel">
+  <CodeView style={{width: '480px', maxWidth: '100%'}}>
+    <Carousel panelActive="1" autoPlay />
+  </CodeView>
+</Example>
+
+A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time.
+
+## Navigating between panels
+
+You are able to navigate between panels but interacting with the `slds-carousel__indicator` elements that sit below the panel.
+
+### Panel 1 active
+<Example title="carousel-panel-transition-panel-1">
+  <CodeView style={{width: '480px', maxWidth: '100%'}}>
+    <Carousel panelActive="1" autoPlay />
+  </CodeView>
+</Example>
+
+### Panel 2 active
+<Example title="carousel-panel-transition-panel-2">
+  <CodeView style={{width: '480px', maxWidth: '100%'}}>
+    <Carousel panelActive="2" autoPlay />
+  </CodeView>
+</Example>
+
+<Example title="carousel-toggle-panels">
+  <CodeBlock toggleCode={false}>
+    <div className="slds-carousel__panels" style={{transform:'translateX(-100%)'}}>
+      <div id="content-id-01" class="slds-carousel__panel" aria-hidden="false" role="tabpanel" aria-labelledby="indicator-id-01" tabindex="-1">
+        ...
+      </div>
+      <div id="content-id-02" class="slds-carousel__panel" aria-hidden="true" role="tabpanel" aria-labelledby="indicator-id-02" tabindex="0">
+        ...
+      </div>
+    </div>
+  </CodeBlock>
+</Example>
+
+<Blockquote header="Accessibility" type="a11y">
+  A panel becomes visible by toggling the <code class="doc">aria-hidden</code> attribute from <code class="doc">false</code> to <code class="doc">true</code> on the <code class="doc">slds-carousel__panel</code> element. When a panel becomes active, the `tabindex` of the other non-visible panels should be set to -1 while the active panel remains at 0.
+</Blockquote>
+
+When a panel becomes active, apply an inline style to `slds-carousel__panel` to move the panels left to right. We do this by updating the location of the panel on its Y axis using transforms. The first panel should be `transform: translateX(0%)` but when any precedding panel becomes active it can be subtracted by 100%, moving 100% of each panel to the left. For example, panel 1 would be visible at `transform: translateX(0%)`, while panel 3 would be visible at `transform: translateX(-200%)`.
+
+When making the `slds-carousel__panel` active, the indicator should be updated with the `slds-is-active` class. This provides visual feedback showing which carousel panel is active.
+
+## Auto-play
+
+If the Carousel is set to auto-play, a pause button is required to be first in the HTML before the tab set.
+
+<Blockquote header="Accessibility" type="a11y">
+  When that pause button is interacted with, the <code class="doc">aria-pressed</code> role needs to be toggled to <code class="doc">true</code>.
+</Blockquote>
+
+<Example title="carousel-autoplay">
+  <CodeBlock toggleCode={false}>
+    <div className="slds-carousel__stage">
+      <CarouselPlayToggle stop />
+      <div className="slds-carousel__panels">
+        ...
+      </div>
+    </div>
+  </CodeBlock>
+</Example>
+
+## Accessibility
+
+A Carousel is built using a tabbed UI specification and requires the following to meet accessibility requirements:
+
+- The tab list, which should have `role="tablist"`
+- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+
+### Expected markup:
+
+- Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+- Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+- Each tab panel has an `aria-hidden` attribute whose value is toggled based on which panel is visible
+- When the Carousel is set to auto-play, the HTML for the pause button is required to precede the HTML of the tab set
+
+### Expected keyboard interactions:
+
+- Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+- Tab key, when focus is before the tab list, moves focus to the selected tab panel
+- Tab key, when focus is on selected tabpanel, moves focus into the selected tabpanel's associated tab or to the next focusable element on the page if that panel has no focusable elements
+- Shift+Tab keys, when focus is on first element in a tab panel, move focus focus entirely from tabset

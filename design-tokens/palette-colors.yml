@@ -100,6 +100,9 @@ props:
   BRAND_HEADER_ICON_ACTIVE:
     value: "#969696"
     comment: "Active / Hover state of BRAND_HEADER_ICON"
+  BRAND_HEADER_ICON_DISABLED:
+    value: "rgba(166,166,166,0.25)"
+    comment: "Disabled state of BRAND_HEADER_ICON"
   BRAND_HEADER_CONTRAST:
     value: "#6a6a6a"
     comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"

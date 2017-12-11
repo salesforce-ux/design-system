@@ -114,7 +114,7 @@
   }
 
   &:hover {
-    background-color: $color-background-row-hover;
+    background-color: $brand-primary-transparent;
     text-decoration: none;
   }
 
@@ -125,7 +125,7 @@
   }
 
   &:active {
-    background-color: $color-background-row-active;
+    background-color: $brand-primary-transparent;
 
     &:focus {
       text-decoration: none;
@@ -141,10 +141,9 @@
  * @modifier
  */
 .slds-nav-vertical__item.slds-is-active {
-  color: $brand-accessible;
 
   .slds-nav-vertical__action {
-    background-color: $color-background-row-selected;
+    background-color: $brand-primary-transparent;
   }
 }
 

@@ -106,6 +106,10 @@ p.doc {
   margin-bottom: 1.5rem;
 }
 
+p.doc:first-child {
+  margin-top: 0;
+}
+
 a.doc {
   color: #0070d2;
 }

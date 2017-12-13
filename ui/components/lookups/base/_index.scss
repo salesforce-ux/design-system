@@ -139,7 +139,7 @@
   &__item-action--label {
     padding: $spacing-x-small $spacing-medium;
 
-    .slds-icon {
+    > .slds-icon {
       margin-left: $spacing-xx-small;
       margin-right: $spacing-small;
     }

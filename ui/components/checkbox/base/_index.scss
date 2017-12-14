@@ -14,6 +14,26 @@
   display: inline-block;
 
   /**
+   * @summary stacks label over checkbox
+   *
+   * @selector .slds-checkbox_stacked
+   * @restrict .slds-checkbox
+   * @modifier
+   * @group layout
+   */
+  &.slds-checkbox_stacked {
+
+    .slds-checkbox__label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slds-checkbox_faux {
+      order: 1;
+    }
+  }
+
+  /**
    * Creates a custom styled checkbox
    *
    * @selector .slds-checkbox_faux

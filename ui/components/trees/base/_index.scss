@@ -170,8 +170,8 @@
     }
 
     &[aria-selected="true"] > .slds-tree__item {
-      background: $color-background-row-selected;
-      box-shadow: $brand-primary-active 4px 0 0 inset;
+      background: $brand-primary-transparent;
+      box-shadow: $brand-primary 4px 0 0 inset;
     }
 
     > [role="group"] {

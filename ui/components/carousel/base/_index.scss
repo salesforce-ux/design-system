@@ -57,7 +57,7 @@
 
   &:focus {
     @include focus-button;
-    border-color: $color-border-brand;
+    border-color: $brand-accessible-active;
     outline: 0;
   }
 }

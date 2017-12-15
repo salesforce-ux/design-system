@@ -220,11 +220,11 @@
     &:hover,
     &:focus {
       outline: 0;
-      background-color: $color-background-row-hover;
+      background-color: $brand-primary-transparent;
     }
 
     &:active {
-      background-color: $color-background-row-active;
+      background-color: $brand-primary-transparent;
     }
   }
 }

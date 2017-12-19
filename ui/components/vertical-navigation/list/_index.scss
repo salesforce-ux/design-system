@@ -114,7 +114,7 @@
   }
 
   &:hover {
-    background-color: $brand-primary-transparent;
+    background-color: $color-background-row-hover;
     text-decoration: none;
   }
 
@@ -125,7 +125,7 @@
   }
 
   &:active {
-    background-color: $brand-primary-transparent;
+    background-color: $color-background-row-active;
 
     &:focus {
       text-decoration: none;
@@ -166,11 +166,11 @@
      * @modifier
      */
     .slds-is-active {
-      color: $brand-accessible;
+      color: $color-text-default;
 
       .slds-navigation-list-vertical__action,
       .slds-navigation-list--vertical__action {
-        background-color: $color-background-row-selected;
+        background-color: $brand-primary-transparent;
         border-color: $color-border;
         border-left-color: $brand-primary;
 
@@ -220,11 +220,11 @@
     &:hover,
     &:focus {
       outline: 0;
-      background-color: $brand-primary-transparent;
+      background-color: $color-background-row-hover;
     }
 
     &:active {
-      background-color: $brand-primary-transparent;
+      background-color: $color-background-row-active;
     }
   }
 }

@@ -103,6 +103,7 @@
  * @required
  */
 .slds-accordion__content {
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -126,6 +127,7 @@
   }
 
   > .slds-accordion__content {
+    overflow: visible;
     visibility: visible;
     opacity: 1;
     height: auto;

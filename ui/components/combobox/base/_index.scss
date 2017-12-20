@@ -218,8 +218,8 @@
  */
 [class*="slds-input-has-icon_left"] .slds-combobox__input[value],
 [class*="slds-input-has-icon--left"] .slds-combobox__input[value],
-[class*="slds-input-has-icon_left"] .slds-combobox__input-value,
-[class*="slds-input-has-icon--left"] .slds-combobox__input-value {
+[class*="slds-input-has-icon_left"] .slds-combobox__input.slds-combobox__input-value,
+[class*="slds-input-has-icon--left"] .slds-combobox__input.slds-combobox__input-value {
   padding-left: ($square-icon-small-boundary + $spacing-small);
 }
 

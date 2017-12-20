@@ -118,7 +118,6 @@
    * @required
    */
   &__content {
-    @include hyphenate;
     overflow: hidden {
       y: auto;
     }

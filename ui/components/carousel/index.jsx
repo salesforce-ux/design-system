@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import ButtonIcon from '../button-icons/';
 import classNames from 'classnames';
+import _ from '../../shared/helpers';
 
 /**
  * Vars
@@ -46,17 +47,15 @@ const CarouselIndicator = props => (
 const CarouselPanel = props => (
   <div
     id={props.id}
-    className={classNames(
-      'slds-carousel__panel',
-      props.isActive ? 'slds-show' : 'slds-hide',
-      props.className
-    )}
+    className={classNames('slds-carousel__panel', props.className)}
     role="tabpanel"
+    aria-hidden={props.isActive ? 'true' : 'false'}
     aria-labelledby={props.indicatorId}
   >
     <a
       href="javascript:void(0);"
       className="slds-carousel__panel-action slds-text-link_reset"
+      tabIndex={props.isActive ? '0' : '-1'}
     >
       <div className="slds-carousel__image">
         <img src={props.src} width="640" height="312" alt={props.title} />
@@ -72,7 +71,7 @@ const CarouselPanel = props => (
 /**
  * Play/Pause Button Sub Component
  */
-const CarouselPlayToggle = props => (
+export const CarouselPlayToggle = props => (
   <span className="slds-carousel__autoplay">
     <ButtonIcon
       className="slds-button_icon-border-filled slds-button_icon-x-small"
@@ -95,7 +94,12 @@ class Carousel extends Component {
             <CarouselPlayToggle stop={this.props.autoPlay == 'stop'} />
           )}
 
-          <div className="slds-carousel__panels">
+          <div
+            className="slds-carousel__panels"
+            style={{
+              transform: `translateX(-${(this.props.panelActive - 1) * 100}%)`
+            }}
+          >
             <CarouselPanel
               isActive={this.props.panelActive == '1'}
               id={contentId01}

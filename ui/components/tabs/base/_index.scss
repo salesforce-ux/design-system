@@ -140,7 +140,7 @@
       font-weight: $tabs-font-weight;
 
       &:hover {
-        color: $color-text-action-label-active;
+        color: $brand-accessible-active;
       }
     }
   }
@@ -161,7 +161,7 @@
   &:focus,
   &.slds-has-focus {
     outline: 0;
-    color: $color-text-tab-label-selected;
+    color: $brand-accessible;
 
     &:after {
       height: ($border-width-thick + 1);

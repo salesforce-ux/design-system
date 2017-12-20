@@ -24,7 +24,6 @@
   &__body,
   &__header,
   &__footer {
-    @include hyphenate;
     position: relative;
     padding: $spacing-x-small $spacing-small;
   }

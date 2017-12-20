@@ -49,7 +49,7 @@ export let Checkbox = props => {
   const uniqueId = _.uniqueId('checkbox-');
 
   return (
-    <span className="slds-checkbox">
+    <span className={classNames('slds-checkbox', props.className)}>
       {props.children}
       <input
         type="checkbox"
@@ -61,7 +61,7 @@ export let Checkbox = props => {
         tabIndex={props.tabIndex}
       />
       <label
-        className={classNames('slds-checkbox__label', props.className)}
+        className={classNames('slds-checkbox__label')}
         htmlFor={props.id ? props.id : uniqueId}
       >
         <span className="slds-checkbox_faux" />
@@ -240,5 +240,20 @@ export let examples = [
     id: 'group-disabled',
     label: 'Group Disabled',
     element: <GroupDisabled />
+  },
+  {
+    id: 'stacked',
+    label: 'Stacked',
+    element: (
+      <FormElement>
+        <FormElementControl>
+          <Checkbox
+            className="slds-checkbox_stacked"
+            label="Checkbox Label"
+            checked
+          />
+        </FormElementControl>
+      </FormElement>
+    )
   }
 ];

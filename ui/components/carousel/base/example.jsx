@@ -5,7 +5,9 @@ import React from 'react';
 import Carousel from '../';
 
 export const Context = props => (
-  <div style={{ height: '420px' }}>{props.children}</div>
+  <div style={{ width: '480px', maxWidth: '100%', height: '340px' }}>
+    {props.children}
+  </div>
 );
 
 export default <Carousel panelActive="1" />;

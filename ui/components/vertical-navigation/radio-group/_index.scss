@@ -35,8 +35,8 @@
     }
 
     &:checked + .slds-nav-vertical__action {
-      color: $color-text-link-focus;
-      background-color: $color-background-row-selected;
+
+      background-color: $brand-primary-transparent;
 
       &:before {
         content: '';
@@ -45,13 +45,8 @@
         top: 0;
         bottom: 0;
         position: absolute;
-        background: $color-brand-darker;
+        background: $brand-primary;
       }
-    }
-
-    &:checked + .slds-nav-vertical__action .slds-nav-vertical_radio-faux {
-      color: $color-text-link-focus;
-      background-color: $color-background-row-selected;
     }
   }
 }
@@ -59,11 +54,7 @@
 .slds-nav-vertical_shade {
 
   .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
-    background-color: $vertical-navigation-color-background-shade-row-active;
+    background-color: $brand-primary-transparent;
     border-color: $color-border;
-
-    .slds-nav-vertical_radio-faux {
-      background-color: $vertical-navigation-color-background-shade-row-active;
-    }
   }
 }

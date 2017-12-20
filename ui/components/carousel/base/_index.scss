@@ -22,6 +22,27 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+/**
+ * @summary Tabpanel region that contains all carousel panels
+ * @selector .slds-carousel__panels
+ * @restrict .slds-carousel__stage div
+ */
+.slds-carousel__panels {
+  display: flex;
+  transition: transform 250ms ease-in;
+}
+
+/**
+ * @summary Tabpanel region that contains all carousel panels
+ * @selector .slds-carousel__panels
+ * @restrict .slds-carousel__stage div
+ */
+.slds-carousel__panel {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 /**
@@ -36,7 +57,7 @@
 
   &:focus {
     @include focus-button;
-    border-color: $color-border-brand;
+    border-color: $brand-accessible-active;
     outline: 0;
   }
 }
@@ -50,6 +71,10 @@
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   overflow: hidden;
+
+  > img {
+    width: 100%;
+  }
 }
 
 /**

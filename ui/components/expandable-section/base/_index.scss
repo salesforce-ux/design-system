@@ -62,6 +62,7 @@
    * @restrict .slds-section div
    */
   &__content {
+    overflow: hidden;
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -88,6 +89,7 @@
 
     .slds-section__content {
       padding-top: $spacing-small;
+      overflow: visible;
       visibility: visible;
       opacity: 1;
       height: auto;

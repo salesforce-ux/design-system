@@ -208,7 +208,7 @@
     &.slds-is-disabled .slds-button__icon,
     &:disabled .slds-icon,
     &:disabled .slds-button__icon {
-      stroke: $color-stroke-disabled;
+      stroke: $brand-header-icon-disabled;
     }
   }
 

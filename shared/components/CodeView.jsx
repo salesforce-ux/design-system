@@ -8,8 +8,8 @@ import CodeBlock from './CodeBlock';
 class CodeView extends React.Component {
   kids() {
     return (
-      <div className="docs-codeblock-example" style={this.props.style}>
-        {this.props.children}
+      <div className="docs-codeblock-example">
+        <div style={this.props.style}>{this.props.children}</div>
       </div>
     );
   }

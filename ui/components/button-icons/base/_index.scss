@@ -222,12 +222,12 @@
   &:focus {
 
     .slds-button__icon {
-      fill: $color-text-icon-default-hover;
+      fill: $brand-accessible;
     }
   }
 
   &:active .slds-button__icon {
-    fill: $color-text-icon-default-active;
+    fill: $brand-accessible-active;
   }
 
   &[disabled] {

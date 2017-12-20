@@ -87,7 +87,7 @@
     top: 0;
     bottom: 0;
     position: absolute;
-    background: $brand-primary-active;
+    background: $brand-primary;
   }
 }
 
@@ -141,10 +141,9 @@
  * @modifier
  */
 .slds-nav-vertical__item.slds-is-active {
-  color: $brand-accessible;
 
   .slds-nav-vertical__action {
-    background-color: $color-background-row-selected;
+    background-color: $brand-primary-transparent;
   }
 }
 
@@ -167,11 +166,11 @@
      * @modifier
      */
     .slds-is-active {
-      color: $brand-accessible;
+      color: $color-text-default;
 
       .slds-navigation-list-vertical__action,
       .slds-navigation-list--vertical__action {
-        background-color: $color-background-row-selected;
+        background-color: $brand-primary-transparent;
         border-color: $color-border;
         border-left-color: $brand-primary;
 

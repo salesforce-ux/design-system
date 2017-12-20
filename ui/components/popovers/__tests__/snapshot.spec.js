@@ -10,6 +10,8 @@ import createHelpers from '../../../../jest.setup';
 const { matchesMarkupAndStyle } = createHelpers(__dirname, 8080);
 const headingUniqueId = 'dialog-heading-id-01';
 
+// These tests are temporarily skipped. They fail on Travis since we're using tokens to bring in image paths.
+// Travis is using a different port from our snapshot tests, which causes them to fail.
 xit('renders a walkthrough popover', () =>
   matchesMarkupAndStyle(
     <Popover

@@ -58,7 +58,7 @@ const CarouselPanel = props => (
       tabIndex={props.isActive ? '0' : '-1'}
     >
       <div className="slds-carousel__image">
-        <img src={props.src} width="640" height="312" alt={props.title} />
+        <img src={props.src} alt={props.title} />
       </div>
       <div className="slds-carousel__content">
         <h2 className="slds-carousel__content-title">{props.title}</h2>

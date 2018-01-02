@@ -5,7 +5,7 @@ import React from 'react';
 import Carousel from '../';
 
 export const Context = props => (
-  <div style={{ width: '480px', maxWidth: '100%', height: '340px' }}>
+  <div style={{ width: '480px', maxWidth: '100%', height: '400px' }}>
     {props.children}
   </div>
 );

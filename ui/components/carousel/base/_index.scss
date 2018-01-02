@@ -88,6 +88,9 @@
   border-bottom-left-radius: $border-radius-medium;
   border-bottom-right-radius: $border-radius-medium;
   text-align: center;
+  height: 6.625rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /**

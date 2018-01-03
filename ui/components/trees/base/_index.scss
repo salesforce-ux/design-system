@@ -219,7 +219,7 @@
   @for $current-level from 1 through $max-nesting-depth {
 
     [aria-level="#{$current-level}"] > .slds-tree__item {
-      padding-left: ($spacing-medium * ($current-level - 1));
+      padding-left: ($spacing-medium * $current-level);
     }
   }
 

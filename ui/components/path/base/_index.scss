@@ -164,10 +164,10 @@
     }
 
     &:hover {
-      background-color: $color-background-path-active;
+      background-color: $color-background-path-active-hover;
 
       + .slds-path__item:before {
-        background-color: $color-background-path-active;
+        background-color: $color-background-path-active-hover;
       }
     }
 

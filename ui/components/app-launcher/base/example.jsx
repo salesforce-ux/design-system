@@ -44,7 +44,7 @@ let AppLauncherModal = props => (
               className="slds-input"
               id="app-launcher-search"
               placeholder="Find an app"
-              value={props.searchTerm}
+              defaultValue={props.searchTerm}
             />
           </div>
         </div>

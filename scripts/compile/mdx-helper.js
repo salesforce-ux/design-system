@@ -2,6 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 const React = require('react');
 
+// Counter used to generate uniqueIds on elementFactories
+let counter = 0;
+
 const elements = [
   'p',
   'div',
@@ -23,16 +26,28 @@ const elements = [
 ];
 
 const headingElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
 const elementFactories = elements.map(el => `${el}: El('${el}')`).join(',');
+
 const headingFactories = headingElements
   .map(el => `${el}: HeadingEl('${el}')`)
   .join(',');
 
 const addDocClass = className => ['doc', className].filter(x => x).join(' ');
 
+// Generate unique key to suppress React warnings
+const key = () => {
+  const id = ++counter;
+  return id;
+};
+
 const El = el => (props, ...kids) => {
   const className = addDocClass(props.className);
-  return React.createElement(el, Object.assign(props, { className }), kids);
+  return React.createElement(
+    el,
+    Object.assign(props, { className, key: key() }),
+    kids
+  );
 };
 
 module.exports = () => {
@@ -52,7 +67,13 @@ module.exports = () => {
 
     const lastParentHeading =
       toc.length && findChildHeadingByLevel(headingLevel, last(toc));
-    const item = { id: props.id, title: kids[0], headingLevel, children: [] };
+    const item = {
+      id: props.id,
+      key: props.id,
+      title: kids[0],
+      headingLevel,
+      children: []
+    };
 
     lastParentHeading ? lastParentHeading.children.push(item) : toc.push(item);
 
@@ -65,7 +86,7 @@ module.exports = () => {
         {
           className: 'doc doc-anchor',
           href: `#${props.id}`,
-          ariaLabel: 'Jump to section'
+          ['aria-label']: 'Jump to section'
         },
         '#'
       )
@@ -79,8 +100,9 @@ module.exports = () => {
     elementFactories,
     addDocClass,
     toc,
-    addDocClass,
     last,
-    findChildHeadingByLevel
+    findChildHeadingByLevel,
+    counter,
+    key
   };
 };

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom/server';
 import style from './Margin.scss';
 import classNames from 'classnames';
-import { CodeBlock } from '../../../../shared/components/CodeView';
+import CodeBlock from '../../../../shared/components/CodeBlock';
 
 const Redline = props => (
   <span className="doc-redline" style={{ width: props.width }}>
@@ -46,13 +46,9 @@ class Margin extends Component {
             />
           </div>
         </div>
-        <div className="docs-codeblock-source">
-          <pre className="language-html">
-            <code className="language-html">
-              {`<div class="${spacingClass}" />`}
-            </code>
-          </pre>
-        </div>
+        <CodeBlock toggleCode={false}>
+          <div className={`${spacingClass}`} />
+        </CodeBlock>
       </div>
     );
   }

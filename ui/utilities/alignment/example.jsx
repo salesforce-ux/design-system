@@ -3,18 +3,12 @@
 
 import React from 'react';
 
-export const Context = props => (
-  <div className="slds-align_absolute-center" style={{ height: '5rem' }}>
-    {props.children}
-  </div>
-);
-
 export let examples = [
   {
     id: 'absolute-center',
     label: 'Absolute center',
     element: (
-      <div className="slds-align_absolute-center">
+      <div className="slds-align_absolute-center" style={{ height: '5rem' }}>
         This content will be positioned in the absolute center of its container
       </div>
     )

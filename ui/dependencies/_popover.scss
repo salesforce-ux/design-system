@@ -39,7 +39,7 @@
 @mixin popover-nubbins($color: inherit, $shadow: true) {
   /**
    * @selector .slds-nubbin_top
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -59,7 +59,7 @@
 
   /**
    * @selector .slds-nubbin_top-left
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -85,7 +85,7 @@
 
   /**
    * @selector .slds-nubbin_top-right
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -113,7 +113,7 @@
 
   /**
    * @selector .slds-nubbin_bottom
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -133,7 +133,7 @@
 
   /**
    * @selector .slds-nubbin_bottom-left
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -160,7 +160,7 @@
 
   /**
    * @selector .slds-nubbin_bottom-right
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -189,7 +189,7 @@
 
   /**
    * @selector .slds-nubbin_left
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -209,7 +209,7 @@
 
   /**
    * @selector .slds-nubbin_left-top
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -234,7 +234,7 @@
 
   /**
    * @selector .slds-nubbin_left-bottom
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -264,7 +264,7 @@
 
   /**
    * @selector .slds-nubbin_right
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -284,7 +284,7 @@
 
   /**
    * @selector .slds-nubbin_right-top
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */
@@ -309,7 +309,7 @@
 
   /**
    * @selector .slds-nubbin_right-bottom
-   * @restrict .slds-popover
+   * @restrict .slds-popover, .slds-dropdown
    * @modifier
    * @group nubbins
    */

@@ -69,7 +69,11 @@ export const EinsteinHeader = props => (
           </div>
         ) : null}
         <div className="slds-media__body">
-          <h2 className="slds-truncate" id={props.headingId}>
+          <h2
+            className="slds-truncate"
+            id={props.headingId}
+            title={props.headerTitle || 'Einstein'}
+          >
             {props.hasLink ? (
               <a
                 href="javascript:void(0);"

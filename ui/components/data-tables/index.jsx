@@ -378,11 +378,15 @@ export const AdvancedDataTableTr = props => (
     {props.hasScores && props.amountScore && props.amountScoreLabel ? (
       <AdvancedDataTableTd>
         <div className="slds-grid slds-grid_vertical-align-center">
-          <div className="slds-truncate">{props.amount}</div>
+          <div className="slds-truncate" title={props.amount}>
+            {props.amount}
+          </div>
           <div className="slds-icon_container slds-m-left_x-small slds-m-right_xx-small">
             <Score data-slds-state={props.amountScore} />
           </div>
-          <div className="slds-truncate">{props.amountScoreLabel}</div>
+          <div className="slds-truncate" title={props.amountScoreLabel}>
+            {props.amountScoreLabel}
+          </div>
         </div>
       </AdvancedDataTableTd>
     ) : (

@@ -5,10 +5,24 @@
 import React from 'react';
 import createHelpers from '../../../../jest.setup';
 import { Submenu } from '../submenu/example';
+import { BaseMenu } from '../dropdown/example';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
-it('renders a closed submenu', () => matchesMarkupAndStyle(<Submenu />));
+describe('Base Menu', () => {
+  it('renders a base menu to the left', () =>
+    matchesMarkupAndStyle(<BaseMenu className="slds-dropdown_left" />));
 
-it('renders an open submenu', () =>
-  matchesMarkupAndStyle(<Submenu ariaExpanded />));
+  it('renders a base menu to the right', () =>
+    matchesMarkupAndStyle(<BaseMenu className="slds-dropdown_right" />));
+
+  it('renders a base menu to the bottom', () =>
+    matchesMarkupAndStyle(<BaseMenu className="slds-dropdown_bottom" />));
+});
+
+describe('Menu with submenu', () => {
+  it('renders a closed submenu', () => matchesMarkupAndStyle(<Submenu />));
+
+  it('renders an open submenu', () =>
+    matchesMarkupAndStyle(<Submenu ariaExpanded />));
+});

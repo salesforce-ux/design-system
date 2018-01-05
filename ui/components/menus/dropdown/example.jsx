@@ -88,6 +88,7 @@ export let MenuItem = props => {
     isSelectable,
     isSelected,
     children,
+    iconLeft,
     iconRight,
     tabIndex,
     title,
@@ -102,7 +103,11 @@ export let MenuItem = props => {
   return (
     <li
       {...rest}
-      className={classNames('slds-dropdown__item', className)}
+      className={classNames(
+        'slds-dropdown__item',
+        { 'slds-is-selected': isSelectable && isSelected },
+        className
+      )}
       role="presentation"
     >
       <a
@@ -117,6 +122,12 @@ export let MenuItem = props => {
               className="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
               sprite="utility"
               symbol="check"
+            />
+          ) : iconLeft ? (
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
             />
           ) : null}
           {children}
@@ -147,144 +158,160 @@ let Default = props => (
   </Demo>
 );
 
-let Small = props => (
-  <Demo style={{ height: '220px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_small">
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const BaseMenu = props => (
+  <Trigger className="slds-is-open">
+    <Menu className={classNames(props.className)}>
+      <MenuList>
+        <MenuItem tabIndex="0">Menu Item One</MenuItem>
+        <MenuItem>Menu Item Two</MenuItem>
+        <MenuItem>Menu Item Three</MenuItem>
+        <li className="slds-has-divider_top-space" role="separator" />
+        <MenuItem>Menu Item Four</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let Medium = props => (
-  <Demo style={{ height: '220px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_medium">
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const OverflowMenu = props => (
+  <Trigger className="slds-is-open">
+    <Menu className={classNames(props.className)}>
+      <MenuList>
+        <MenuItem
+          tabIndex="0"
+          isSelectable={props.isSelectable}
+          isSelected={props.isSelected}
+        >
+          Menu Item One
+        </MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Two</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Three</MenuItem>
+        <li className="slds-has-divider_top-space" role="separator" />
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Four</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Five</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Six</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Seven</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Eight</MenuItem>
+        <MenuItem isSelectable={props.isSelectable}>Menu Item Nine</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let Large = props => (
-  <Demo style={{ height: '220px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_large">
-        <MenuList>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const SubHeader = props => (
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown_left slds-dropdown_small">
+      <MenuList>
+        <li
+          className="slds-dropdown__header slds-truncate"
+          title="Menu Sub Heading"
+          role="separator"
+        >
+          <span className="slds-text-title_caps">Menu Sub Heading</span>
+        </li>
+        <MenuItem tabIndex="0">Menu Item One</MenuItem>
+        <MenuItem>Menu Item Two</MenuItem>
+        <li
+          className="slds-dropdown__header slds-truncate"
+          title="Menu Sub Heading"
+          role="separator"
+        >
+          <span className="slds-text-title_caps">Menu Sub Heading</span>
+        </li>
+        <MenuItem>Menu Item One</MenuItem>
+        <MenuItem>Menu Item Two</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let SubHeader = props => (
-  <Demo style={{ height: '260px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_small">
-        <MenuList>
-          <li
-            className="slds-dropdown__header slds-truncate"
-            title="Menu Sub Heading"
-            role="separator"
-          >
-            <span className="slds-text-title_caps">Menu Sub Heading</span>
-          </li>
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <li
-            className="slds-dropdown__header slds-truncate"
-            title="Menu Sub Heading"
-            role="separator"
-          >
-            <span className="slds-text-title_caps">Menu Sub Heading</span>
-          </li>
-          <MenuItem>Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const IconLeft = props => (
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown_left slds-dropdown_small">
+      <MenuList>
+        <MenuItem
+          isSelected={props.isSelectable}
+          isSelectable={props.isSelectable}
+          iconLeft={props.hasLeftIcon}
+          tabIndex="0"
+        >
+          Menu Item One
+        </MenuItem>
+        <MenuItem
+          isSelectable={props.isSelectable}
+          iconLeft={props.hasLeftIcon}
+        >
+          Menu Item Two
+        </MenuItem>
+        <MenuItem
+          isSelectable={props.isSelectable}
+          iconLeft={props.hasLeftIcon}
+        >
+          Menu Item Three
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let IconLeft = props => (
-  <Demo style={{ height: '170px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_small">
-        <MenuList>
-          <MenuItem
-            className="slds-is-selected"
-            isSelected="true"
-            isSelectable
-            tabIndex="0"
-          >
-            Menu Item One
-          </MenuItem>
-          <MenuItem isSelectable>Menu Item Two</MenuItem>
-          <MenuItem isSelectable>Menu Item Three</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const DoubleIcon = props => (
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown_left slds-dropdown_small">
+      <MenuList>
+        <MenuItem
+          isSelected="true"
+          isSelectable
+          iconRight={TableIcon}
+          tabIndex="0"
+        >
+          Table View
+        </MenuItem>
+        <MenuItem isSelectable iconRight={KanbanIcon}>
+          Kanban Board
+        </MenuItem>
+        <MenuItem isSelectable iconRight={ListIcon}>
+          List View
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let DoubleIcon = props => (
-  <Demo style={{ height: '170px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_small">
-        <MenuList>
-          <MenuItem
-            className="slds-is-selected"
-            isSelected="true"
-            isSelectable
-            iconRight={TableIcon}
-            tabIndex="0"
-          >
-            Table View
-          </MenuItem>
-          <MenuItem isSelectable iconRight={KanbanIcon}>
-            Kanban Board
-          </MenuItem>
-          <MenuItem isSelectable iconRight={ListIcon}>
-            List View
-          </MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const IconRight = props => (
+  <Trigger className="slds-is-open">
+    <Menu className="slds-dropdown_left slds-dropdown_small">
+      <MenuList>
+        <MenuItem iconRight={TableIcon} tabIndex="0">
+          Table View
+        </MenuItem>
+        <MenuItem iconRight={KanbanIcon}>Kanban Board</MenuItem>
+        <MenuItem iconRight={ListIcon}>List View</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
-let IconRight = props => (
-  <Demo style={{ height: '170px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left slds-dropdown_small">
-        <MenuList>
-          <MenuItem iconRight={TableIcon} tabIndex="0">
-            Table View
-          </MenuItem>
-          <MenuItem iconRight={KanbanIcon}>Kanban Board</MenuItem>
-          <MenuItem iconRight={ListIcon}>List View</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
+export const ActionOverflow = props => (
+  <Trigger
+    className="slds-is-open"
+    triggerIcon={
+      <ButtonIcon
+        className="slds-button_icon-border-filled slds-button_icon-x-small"
+        sprite="utility"
+        symbol="down"
+        assistiveText="Show More"
+        aria-haspopup="true"
+        title="Show More"
+      />
+    }
+  >
+    <Menu className="slds-dropdown_left slds-dropdown_actions">
+      <MenuList>
+        <MenuItem tabIndex="0">Action One</MenuItem>
+        <MenuItem>Action Two</MenuItem>
+        <MenuItem>Action Three</MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
 );
 
 /// ///////////////////////////////////////////
@@ -292,7 +319,9 @@ let IconRight = props => (
 /// ///////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: '260px' }}>{props.children}</div>
+  <div className="demo-only" style={{ height: '300px' }}>
+    {props.children}
+  </div>
 );
 
 export default (
@@ -333,28 +362,6 @@ export let examples = [
   {
     id: 'action-overflow',
     label: 'Overflow menu with actions',
-    element: (
-      <Trigger
-        className="slds-is-open"
-        triggerIcon={
-          <ButtonIcon
-            className="slds-button_icon-border-filled slds-button_icon-x-small"
-            sprite="utility"
-            symbol="down"
-            assistiveText="Show More"
-            aria-haspopup="true"
-            title="Show More"
-          />
-        }
-      >
-        <Menu className="slds-dropdown_left slds-dropdown_actions">
-          <MenuList>
-            <MenuItem tabIndex="0">Action One</MenuItem>
-            <MenuItem>Action Two</MenuItem>
-            <MenuItem>Action Three</MenuItem>
-          </MenuList>
-        </Menu>
-      </Trigger>
-    )
+    element: <ActionOverflow />
   }
 ];

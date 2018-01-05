@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * This component is used to display a current or psat chat session between a customer and a service agent.
+ * This component is used to display a current or past chat session between a customer and a service agent.
  * It appears in the form of a "Log"
  *
  * @summary Root container of a chat session
@@ -18,7 +18,7 @@
 
 
 /**
- * The chat payload should be dispalyed in the form of a list. Each item in the list has a number of vertical and horiztonal spacing rules based on it's type
+ * The chat payload should be displayed in the form of a list. Each item in the list has a number of vertical and horizontal spacing rules based on its type
  *
  * @summary Handles the display of chat items within a list
  *

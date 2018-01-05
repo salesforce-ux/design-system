@@ -119,7 +119,7 @@
 /**
  * @summary Initializes dropdown
  * @selector .slds-dropdown
- * @restrict .slds-dropdown-trigger div, .slds-dropdown-trigger ul
+ * @restrict .slds-dropdown-trigger div, .slds-dropdown-trigger ul, .slds-docked-composer_overflow div
  * @notes Applies positioning and container styles, by default, dropdown appears below and center of target
  */
 .slds-dropdown {

@@ -325,7 +325,7 @@
 /**
  * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_x-large`
  *
- * @selector .slds-grid_pull-padded-large
+ * @selector .slds-grid_pull-padded-x-large
  * @modifier
  */
 .slds-grid_pull-padded-x-large,
@@ -337,7 +337,7 @@
 /**
  * @summary Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_xx-large`
  *
- * @selector .slds-grid_pull-padded-large
+ * @selector .slds-grid_pull-padded-xx-large
  * @modifier
  */
 .slds-grid_pull-padded-xx-large,
@@ -723,7 +723,7 @@
 /**
  * @summary Restrict width of containers to a maximum of 1280px
  *
- * @selector .slds-container_large
+ * @selector .slds-container_x-large
  * @modifier
  */
 .slds-container_x-large,

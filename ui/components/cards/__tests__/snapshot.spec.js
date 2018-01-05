@@ -7,7 +7,7 @@ import createHelpers from '../../../../jest.setup';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname, 8080);
 
-it('renders an einstein card', () =>
+xit('renders an einstein card', () =>
   matchesMarkupAndStyle(
     <Card>
       <EinsteinHeader

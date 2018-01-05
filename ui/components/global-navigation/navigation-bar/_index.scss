@@ -362,7 +362,11 @@
     }
   }
 
-  // Dirty state of tabs
+  /**
+   * @summary Dirty state for a nav item
+   * @selector .slds-is-unsaved
+   * @restrict .slds-context-bar__item, .slds-dropdown__item
+   */
   .slds-is-unsaved {
 
     .slds-context-bar__label-action {

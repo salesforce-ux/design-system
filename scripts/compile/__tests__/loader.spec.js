@@ -27,7 +27,11 @@ describe('mdx helper', () => {
     expect(r).toEqual(
       ReactDOM.renderToStaticMarkup(
         <h2 id="hello" className="doc">
-          Hello<a className="doc doc-anchor" href="#hello">
+          Hello<a
+            className="doc doc-anchor"
+            href="#hello"
+            aria-label="Jump to section"
+          >
             #
           </a>
         </h2>
@@ -44,7 +48,13 @@ describe('mdx helper', () => {
 
     it('added to toc', () => {
       expect(helper.toc).toEqual([
-        { id: 'accordion', headingLevel: '2', title: 'Accordion', children: [] }
+        {
+          id: 'accordion',
+          headingLevel: '2',
+          key: 'accordion',
+          title: 'Accordion',
+          children: []
+        }
       ]);
     });
 

@@ -13,7 +13,11 @@ exports[`loader template snapshots the template 1`] = `
 
   const El = el => (props, ...kids) => {
   const className = addDocClass(props.className);
-  return React.createElement(el, Object.assign(props, { className }), kids);
+  return React.createElement(
+  el,
+  Object.assign(props, { className, key: key() }),
+  kids);
+
 }
   const HeadingEl = el => (props, ...kids) => {
     const className = addDocClass(props.className);
@@ -21,7 +25,13 @@ exports[`loader template snapshots the template 1`] = `
 
     const lastParentHeading =
     toc.length && findChildHeadingByLevel(headingLevel, last(toc));
-    const item = { id: props.id, title: kids[0], headingLevel, children: [] };
+    const item = {
+      id: props.id,
+      key: props.id,
+      title: kids[0],
+      headingLevel,
+      children: [] };
+
 
     lastParentHeading ? lastParentHeading.children.push(item) : toc.push(item);
 
@@ -34,12 +44,18 @@ exports[`loader template snapshots the template 1`] = `
     {
       className: 'doc doc-anchor',
       href: \`#\${props.id}\`,
-      ariaLabel: 'Jump to section' },
+      ['aria-label']: 'Jump to section' },
 
     '#'));
 
 
   }
+
+  let counter = 0
+  const key = () => {
+  const id = ++counter;
+  return id;
+}
 
   const factories = {h1: HeadingEl('h1'),h2: HeadingEl('h2'),h3: HeadingEl('h3'),h4: HeadingEl('h4'),h5: HeadingEl('h5'),h6: HeadingEl('h6'), p: El('p'),div: El('div'),a: El('a'),em: El('em'),strong: El('strong'),ol: El('ol'),ul: El('ul'),li: El('li'),code: El('code'),blockquote: El('blockquote'),pre: El('pre'),tr: El('tr'),td: El('td'),th: El('th'),table: El('table'),thead: El('thead'),tbody: El('tbody')}
 

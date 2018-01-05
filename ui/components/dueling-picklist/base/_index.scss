@@ -51,6 +51,11 @@
   background-color: $color-background-input-active;
   overflow: auto;
 
+  /**
+   * @summary Selected/dragging state of a listbox option
+   * @selector .slds-is-grabbed
+   * @restrict .slds-dueling-list__options div
+   */
   [aria-selected="true"] {
     background-color: $brand-accessible;
     color: $color-text-button-brand;
@@ -62,6 +67,11 @@
     }
   }
 
+  /**
+   * @summary Disabled state of a picklist option
+   * @selector .slds-is-disabled
+   * @restrict .slds-dueling-list__options
+   */
   &.slds-is-disabled {
     background-color: $color-background-input-disabled;
     border-color: $color-border-input-disabled;

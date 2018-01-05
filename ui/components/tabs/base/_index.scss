@@ -178,7 +178,7 @@
   /**
   * @summary Creates styles for a Tab Item when its tab has new activity in
   * @selector .slds-has-notification
-  * @restrict .slds-tabs_default__item
+  * @restrict .slds-tabs_default__item, .slds-dropdown__item
   */
   &.slds-has-notification {
     background: $color-background-notification-new;
@@ -227,7 +227,7 @@
 /**
  * @summary Styles each actionable element inside each tab item
  * @selector .slds-tabs_default__link
- * @restrict .slds-tabs_default__item a
+ * @restrict .slds-tabs_default__item a, .slds-tabs_default__item button
  */
 .slds-tabs_default__link,
 .slds-tabs--default__link {

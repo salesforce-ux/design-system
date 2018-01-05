@@ -60,7 +60,7 @@
    * @summary Class to show and hide details
    *
    * @selector .slds-timeline__item_details
-   * @restrict .slds-timeline__item article
+   * @restrict .slds-timeline__item_expandable article
    */
   .slds-timeline__item_details {
     visibility: hidden;
@@ -91,7 +91,7 @@
 
 /**
  * @selector .slds-timeline__item_call
- * @restrict .slds-timeline__item
+ * @restrict .slds-timeline__item_expandable
  */
 .slds-timeline__item_call:before {
   background: $log-a-call;
@@ -99,7 +99,7 @@
 
 /**
  * @selector .slds-timeline__item_email
- * @restrict .slds-timeline__item
+ * @restrict .slds-timeline__item_expandable
  */
 .slds-timeline__item_email:before {
   background: $email;
@@ -107,7 +107,7 @@
 
 /**
  * @selector .slds-timeline__item_event
- * @restrict .slds-timeline__item
+ * @restrict .slds-timeline__item_expandable
  */
 .slds-timeline__item_event:before {
   background: $event;
@@ -115,7 +115,7 @@
 
 /**
  * @selector .slds-timeline__item_task
- * @restrict .slds-timeline__item
+ * @restrict .slds-timeline__item_expandable
  */
 .slds-timeline__item_task:before {
   background: $task;
@@ -137,7 +137,7 @@
  * Icon associated with timeline item
  *
  * @selector .slds-timeline__icon
- * @restrict .slds-timeline__media .slds-media__figure, .slds-timeline__media .slds-icon_container
+ * @restrict .slds-timeline__media .slds-media__figure, .slds-timeline__media .slds-icon_container, .slds-timeline__item_expandable .slds-icon_container
  */
 .slds-timeline__icon {
   border: $border-width-thick solid #fff;
@@ -147,7 +147,7 @@
  * Container for date and action overflow on the right of a timeline item
  *
  * @selector .slds-timeline__actions
- * @restrict .slds-timeline__item div
+ * @restrict .slds-timeline__item div, .slds-timeline__trigger div
  * @notes This is directly inside the `.slds-media--reverse` > `.slds-media__figure`
  */
 .slds-timeline__actions {
@@ -172,7 +172,7 @@
  * @summary Icon inside of actionable button within an expandable timeline item
  *
  * @selector .slds-timeline__details-action-icon
- * @restrict .slds-timeline__media_expandable svg
+ * @restrict .slds-timeline__item_expandable svg
  */
 .slds-timeline__details-action-icon {
   transform: rotate(-90deg);

@@ -1,0 +1,232 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import { BaseMenu, SubHeader, IconLeft, DoubleIcon, IconRight, ActionOverflow, OverflowMenu } from '../menus/dropdown/example';
+import { Submenu } from '../menus/submenu/example';
+import { DoctypeIcon } from '../icons/doctype/example';
+
+<div className="doc lead">
+  A Menu offers a list of actions or functions that a user can access.
+</div>
+
+<Example title="base menu">
+  <CodeView style={{height: '200px'}}>
+    <BaseMenu className="slds-dropdown_left" />
+  </CodeView>
+</Example>
+
+The unordered menu list `<ul>` with `[role="menu"]` should be contained in a `<div>` with the class `.slds-dropdown`.
+
+The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger_click`.
+
+## Positioning
+
+There are 3 options for the positioning of the menu dropdown -- left, right, and bottom. To access these options, add a modifier to the `<div>` with class name `slds-dropdown`. For the standard positioning where the dropdown aligns with the left side of the dropdown trigger, use `slds-dropdown_left`, as seen above.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-dropdown slds-dropdown_left">...</div>
+</CodeBlock>
+
+### Positioned Right
+
+To position the dropdown to align with the right of the dropdown trigger, use `slds-dropdown_right`.
+
+<Example title="poistioned right">
+  <CodeView style={{height: '200px', marginLeft: '90px'}}>
+    <BaseMenu className="slds-dropdown_right" />
+  </CodeView>
+</Example>
+
+### Positioned Bottom
+
+To position the dropdown to sit on top of the dropdown trigger, use `slds-dropdown_bottom`.
+
+<Example title="positioned bottom">
+  <CodeView style={{marginLeft: '45px', marginTop: '163px'}}>
+      <BaseMenu className="slds-dropdown_bottom" />
+  </CodeView>
+</Example>
+
+## Width
+
+To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `<div>` with class `slds-dropdown` where the `*` is `xx-small`, `x-small`, `small`, `medium`, or `large`.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-dropdown slds-dropdown_left slds-dropdown_medium">...</div>
+</CodeBlock>
+
+| Modifier | Example |
+|---|---|
+| `.slds-dropdown_xx-small` <br/> 6rem / 96px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
+| `.slds-dropdown_x-small` <br/> 12rem / 192px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div> |
+| `.slds-dropdown_small` <br/> 15rem / 240px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div> |
+| `.slds-dropdown_medium` <br/> 20rem / 320px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div> |
+| `.slds-dropdown_large` <br/> 25rem / 400px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div> |
+
+## With Subheaders
+
+<Blockquote type="a11y" header="Accessible Role">
+  A subheading must have `role="separator"` on the `<li>` and the content inside the `<li>` should be in a `<span>`.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+    <span class="slds-text-title_caps">Menu Sub Heading</span>
+  </li>
+</CodeBlock>
+
+<Example title="subheaders">
+  <CodeView style={{height: '300px'}}>
+    <SubHeader/>
+  </CodeView>
+</Example>
+
+## With Icons
+
+Icons can be included on either the left, right, or both sides of an option.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  If using one of the icons to indicate selection (e.g. checkmarks), be sure to check out the <a href="#Menus-with-Selectable-Items">Menus with Selectable Items</a> docs for the Accessibility implications
+</Blockquote>
+
+### Icon on the Left
+
+<Example title="icon left">
+  <CodeView style={{height: '150px'}}>
+    <IconLeft hasLeftIcon/>
+  </CodeView>
+</Example>
+
+### Icon on the Right
+
+<Example title="icon right">
+  <CodeView style={{height: '150px'}}>
+    <IconRight/>
+  </CodeView>
+</Example>
+
+### Double Icon
+
+<Blockquote type="a11y" header="Accessibility Note">
+  If using one of the icons to indicate selection (e.g. checkmarks), be sure to check out the <a href="#Menus-with-Selectable-Items">Menus with Selectable Items</a> docs
+</Blockquote>
+
+<Example title="double icon">
+  <CodeView style={{height: '150px'}}>
+    <DoubleIcon/>
+  </CodeView>
+</Example>
+
+## With Selectable Items
+
+When creating a menu with selectable items:
+- All selectable items need the proper role, either `role="menuitemcheckbox"` or `role="menuitemradio"`
+- All selectable items should contain an icon
+- Each icon must have the class `slds-icon_selected` on the `<svg>`
+  - This hides icons of non-selected items
+- Items that have been selected need `aria-checked="true"` on the `<a>` element
+
+
+<Blockquote type="a11y" header="Revealing Icons for Selected Items">
+  A selected item reveals its icon when the class `slds-is-selected` is applied to the `<li>` and `aria-checked="true"` is applied to its `menuitemcheckbox` or `menuitemradio` child.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <li className="slds-dropdown__item slds-is-selected" role="presentation">
+    <a role="menuitemcheckbox" aria-checked="true">
+      ...
+    </a>
+  </li>
+</CodeBlock>
+
+<Example title="icon left selectable">
+  <CodeView style={{height: '150px'}}>
+    <IconLeft isSelectable/>
+  </CodeView>
+</Example>
+
+## With Overflow Scrolling
+
+<Example title="overflow scrolling">
+  <CodeView style={{height: '220px'}}>
+    <OverflowMenu className="slds-dropdown_left slds-dropdown_length-5" />
+  </CodeView>
+</Example>
+
+To force overflow scrolling after either 5, 7, or 10 items, add the modifier `slds-dropdown_length-*` to the `<div>` with class `slds-dropdown` where the `*` is either 5, 7, or 10.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-dropdown slds-dropdown_length-5">...</div>
+</CodeBlock>
+
+### Scrolling for Menu Items with Icons
+
+To force overflow scrolling after either 5, 7, or 10 items with icons, add the modifier `slds-dropdown_length-with-icon-*` to the `<div>` with class `slds-dropdown` where the `*` is either 5, 7, or 10.
+
+<CodeView style={{height: '250px'}}>
+    <OverflowMenu isSelectable isSelected='true' className="slds-dropdown_left slds-dropdown_length-with-icon-5" />
+</CodeView>
+
+## With a Submenu
+
+To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu.
+
+<Blockquote type="a11y" header="Accessibility Note">
+In order to open the submenu, set `aria-expanded` to `true` on the `<a>` within the `<li>` when the user clicks or hovers over the list item, or presses enter while focused on the list item.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <li className="slds-dropdown__item slds-has-submenu" role="presentation">
+    <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="-1">
+      ...
+    </a>
+  </li>
+</CodeBlock>
+
+### Submenu to Right
+
+To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div>` with the `slds-dropdown_submenu` class.
+
+<Example title="submenu right">
+  <CodeView style={{height: '300px'}}>
+    <Submenu ariaExpanded="true" />
+  </CodeView>
+</Example>
+
+### Submenu to Left
+
+To open the submenu to the left, add `slds-dropdown_submenu-left` to the `<div>` with the `slds-dropdown_submenu` class.
+
+<Example title="submenu left">
+  <CodeView style={{height: '300px', marginLeft: '150px'}}>
+    <Submenu ariaExpanded submenuClassnames="slds-dropdown_submenu-left"/>
+  </CodeView>
+</Example>
+
+## Overflow Menu with Actions
+
+For an overflow of action items, use the overflow menu with actions styling by adding the modifier `slds-dropdown_actions` to the `div` with class `slds-dropdown`. This pattern is typically used in conjunction with a button group.
+
+<Example title="action menu">
+  <CodeView style={{height: '150px'}}>
+      <ActionOverflow/>
+  </CodeView>
+</Example>
+
+## Accessibility
+
+The main thing that distinguishes menus from other popover blocks is keyboard navigation: elsewhere, users press the Tab key to navigate through actionable items, but in a menu, users press the arrow keys to navigate.
+### Expected markup
+- Menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
+- Menu has `role="menu"` and an `aria-labelledby` attribute whose value is the id of the menu trigger
+- Menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`
+- Menu items that open a submenu have both `aria-haspop="true"` and `aria-expanded` set to true or false on the `<a>` within the `<li>`, depending if the submenu is open or closed
+- Submenu has `role="menu"` and an `aria-labelledby` attribute whose value matches the name of the `<li>` that opened the submenu
+### Expected keyboard interactions
+- Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)
+- If a menu item opens a submenu, pressing enter or the right arrow key opens the submenu and focus goes to the first item in the submenu
+- If a submenu is open, pressing the left arrow key or Esc key closes the submenu and puts focus back on the menu item that opened the submenu
+- Tab key closes menu and moves focus to the next focusable element on the page
+- Esc key closes menu and moves focus back to the menu trigger
+- Any character key moves focus to the next menu item that starts with that character, if applicable

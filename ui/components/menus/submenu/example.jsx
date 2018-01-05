@@ -82,7 +82,9 @@ export const Submenu = props => (
           ariaExpanded={props.ariaExpanded}
           iconRight={RightIcon}
           itemName="Menu Item Three"
-          submenuClassnames="slds-dropdown_submenu-right"
+          submenuClassnames={
+            props.submenuClassnames || 'slds-dropdown_submenu-right'
+          }
         />
       </MenuList>
     </Menu>

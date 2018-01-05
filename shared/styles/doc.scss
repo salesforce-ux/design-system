@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.docs-codeblock-source {
+  margin-bottom: 1.5rem;
+}
+
 .docs-codeblock-example + .docs-codeblock-source {
   border-top: 0;
 }
@@ -125,7 +129,7 @@ blockquote.doc {
   font-size: 1.125rem;
   font-weight: 300;
   padding: 1rem;
-  margin: 1.5rem 0;
+  margin: 0 0 1.5rem 0;
   border: 1px solid #f2f2f2;
   border-left-width: 0.125rem;
 
@@ -237,6 +241,10 @@ ul.doc-toc {
 
 li.doc > ul.doc, li.doc > li.doc, ul.doc > ul.doc, ul.doc > li.doc {
   margin-left: .4rem;
+}
+
+li.doc > ul.doc {
+  margin-bottom: 0;
 }
 
 .doc-toc > li.doc > ul.doc > li.doc a {

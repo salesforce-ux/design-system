@@ -5,7 +5,7 @@ const through = require('through2');
 const exhaustively = require('stream-exhaust');
 
 describe('Release Notes', () => {
-  it('generates notes for internal builds', done => {
+  xit('generates notes for internal builds', done => {
     let data = '';
     const reader = exhaustively(
       through((chunk, enc, done) => done(null, (data += chunk)))
@@ -20,7 +20,7 @@ describe('Release Notes', () => {
       });
   });
 
-  it('generates notes for external builds', done => {
+  xit('generates notes for external builds', done => {
     let data = '';
     const reader = exhaustively(
       through((chunk, enc, d) => d(null, (data += chunk)))

@@ -3,12 +3,182 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.5.0] - January 8, 2018**
+
+## Features
+
+**General Notes**
+- Updated Color guidelines to include Gray palette and Branding tokens 
+- Introduced a new documentation style for Badges, Brand Band, Carousel, Chat, Menus, and the Grid utility.
+
+### The following components have been updated:
+
+**Activity Timeline**
+- Updated behavior and styling of activity timeline by adding expandable sections
+
+**Brand Band**
+- Added Brand Band component
+
+**Breadcrumbs**
+- Added overflow menu button option for breadcrumbs
+
+**Button Icons**
+- Added new branding variant 
+
+**Cards**
+- Added variant with Einstein branded header
+
+**Carousel**
+- Added Carousel component
+
+**Chat**
+- Added Chat component
+
+**Checkbox**
+- Added a stacked variant
+
+**Data Tables**
+- Added icons to data table headers and cells
+- Added header menu buttons to table headers
+- Added Product Listing example to advanced data tables
+- Added Radio Group example to advanced data tables
+
+**Global Header**
+- Updated styling to allow for rectangular logos
+
+**Grids**
+- Added top level gutter classes: `slds-gutters` and `slds-gutters_*` for sizes
+
+**Icons**
+- Added utility class `slds-current-color` to set an icon to use current color
+
+**Map**
+- Added Map component
+
+**Menus**
+- Added a variant for Menus with Submenus
+
+**Notifications**
+- Updated multiple styling attributes for reminder notifications, including background color, border color, and spacing
+
+**Popovers**
+- Added variant with Einstein branded header
+- Added variant for Feature callout 
+
+**Rich Text Editor**
+- Moved Quill styles to rich text editor
+
+**Spinners**
+- Added class `slds-spinner_delayed` to apply a 300ms delay to the animation
+
+**Trees**
+- Added new ability to include metatext on tree items
+
+**Utilities**
+- Added utility class `slds-size-xxx-small` for sizing 
+- Added utility class `slds-text-color-success` for text
+
+**Vertical Navigation**
+- Added a variant of vertical nav that uses radio groups as underlying markup
+
+## Fixes
+
+The following fixes are now available:
+
+**Accordion**
+- Adjusted styling to only target first accordion child
+- Changed accordion focus styling from overall highlight to underline of header text
+- Updated to hide content overflow when closed
+
+**App Launcher**
+- Added grab styling to match current use in product
+- Changed to Dev Ready from prototype
+
+**Button Groups**
+- Updated z-index for button group focus
+
+**Buttons**
+- Stopped events from happening on disabled buttons
+
+**Color Picker**
+- Added spacing utility class to dropdown button icon between color and arrow
+
+**Combobox**
+- Added class `slds-combobox__input-value` that must be applied, in order to propagate styling, when a selection is made in a single selection inline listbox 
+- Added spacing utility class to dropdown button icon between icon and arrow
+
+**Data Tables**
+- Added `slds-table_column-*-wrap` to add column wrap support
+
+**Date Picker**
+- Fixed background color used when today's date is selected
+
+**Dueling Picklist**
+- Fixed accessibility of disabled list boxes
+- Renamed Required to Locked, switched to lock icon instead of red asterisk
+
+**Expandable Section**
+- Updated to hide content overflow when closed
+
+**Global Navigation**
+- Changed global nav styling when subtabs are present with `slds-has-sub-tabs`
+- Prevented icons from shrinking when long text is present
+
+**Input**
+- Updated size of search icon to be 14x14px from 16x16px
+- Fixed vertical alignment issues when using `slds-input__icon`
+
+**Lookups**
+- Fixed icon alignment
+
+**Menus**
+- Fixed disabled menu items to turn disabled icons gray
+- Updated `slds-dropdown_xx-small` to use correct token
+
+**Modal**
+- Fixed modal background color
+- Removed hyphenation from modal body
+
+**Picklist**
+- Updated background and border colors of disabled picklist
+
+**Pills**
+- Update icons and improve consistency among pill usage
+
+**Popovers**
+- Updated background color of Walkthrough popovers
+- Added clouds to the header
+- Removed hyphenation from body text
+
+**Rich Text Editor**
+- Fixed issue where selection dropdowns overlapped content on smaller screens
+- Updated to prevent hyperlinks from breaking mid word
+
+**Tabs**
+- Adjusted position of unsaved indicator on a tab when used with notifications
+
+**Trees**
+- Added missing ARIA role `role=gridcell` to tree grid TD elements
+- Removed extra indentation spacing for base variant
+
+**Utilities**
+- Added missing BEM syntax to `slds-text-link_faux`
+
+**Vertical Navigation**
+- Changed active and hover background colors
+
+## Tokens
+
+**Sizing**
+- Added `$size-xxx-small` sizing token for UI components
+
 ## **Release [2.4.6] - November 22, 2017**
 
 ## Fixes
 
 **Colors**
 - Modified tokens using gray-2 to use gray-3
+
 ## **Release [2.4.5] - November 14, 2017**
 
 ## Fixes

@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.5.0-dev",
+  "version": "2.5.0",
   "author": "Salesforce",
   "slds": {
     "name": "Spring ’18",
@@ -11,10 +11,10 @@
     "'private' and 'config.slds.internal' should have the same value",
     "to prevent any accidental public publishes on npm and on our archive server."
   ],
-  "private": true,
+  "private": false,
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
       "appId": "B2KKG101RI",
@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "2.2.8",
-    "@salesforce-ux/icons": "8.2.0",
+    "@salesforce-ux/icons": "9.0.4",
     "@salesforce-ux/instant-vrt": "1.1.8",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",

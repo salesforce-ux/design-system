@@ -379,3 +379,13 @@ props:
     value: '#62B7ED'
   SURVEY:
     value: '#319FD6'
+  DATA_INTEGRATION_HUB:
+    value: '#2A739E'
+  ACTION_LIST_COMPONENT:
+    value: '#5876A3'
+  STAGE:
+    value: '#FF9A3C'
+  STAGE_COLLECTION:
+    value: '#FF9A3C'
+  KNOWLEDGE:
+    value: '#EC94ED'

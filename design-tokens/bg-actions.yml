@@ -402,3 +402,5 @@ props:
     value: '#00cdc0'
   ACTION_RECALL:
     value: '#4A698D'
+  ACTION_SCRIPT:
+    value: '#0070d2'

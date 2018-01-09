@@ -12,6 +12,6 @@ imports:
 - "../../../../design-tokens/color-palettes.yml"
 props:
   PAGE_HEADER_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: 'transparent'
   PAGE_HEADER_JOINED_COLOR_BORDER:
     value: '{!PALETTE_GRAY_5}'

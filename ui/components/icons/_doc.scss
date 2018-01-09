@@ -23,12 +23,12 @@
  * included in the `use` attribute with the underscore separator as shown on
  * the icon page. For example: log_a_call.
  *
- * <h3 class="site-text-heading--label">Changing the background of an icon</h3>
+ * ##### Changing the background of an icon
  *
  * Change a background color using composed class names:
  *
  * ```css
- * .slds-icon-[sprite name]-[icon name] {}
+ * .slds-icon-[sprite name]-[icon name]
  * ```
  *
  * Place the class on the `.slds-icon_container`.

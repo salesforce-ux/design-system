@@ -3,12 +3,180 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.5.0] - January 9, 2018**
+
+## Features
+
+**General Notes**
+- Updated Color guidelines to include Gray palette and Brand Colors
+- Introduced a new documentation style for Badges, Brand Band, Carousel, Chat, Menus, and the Grid utility.
+
+### The following components have been updated:
+
+**Activity Timeline**
+- Updated behavior and styling of activity timeline by adding expandable sections ([10cf834](https://github.com/salesforce-ux/design-system/commit/10cf834))
+
+**Brand Band**
+- Added Brand Band component
+
+**Breadcrumbs**
+- Added overflow menu button option for breadcrumbs ([a69621c](https://github.com/salesforce-ux/design-system/commit/a69621c))
+
+**Button Icons**
+- Added new branding variant
+
+**Cards**
+- Added variant with Einstein branded header
+
+**Carousel**
+- Added Carousel component
+
+**Chat**
+- Added Chat component
+
+**Checkbox**
+- Added a stacked variant
+
+**Data Tables**
+- Added icons to data table headers and cells ([59c44b2](https://github.com/salesforce-ux/design-system/commit/59c44b2))
+- Added header menu buttons to table headers ([33bd050](https://github.com/salesforce-ux/design-system/commit/33bd050))
+- Added Product Listing example to advanced data tables
+- Added Radio Group example to advanced data tables
+
+**Global Header**
+- Updated styling to allow for rectangular logos ([ea43705](https://github.com/salesforce-ux/design-system/commit/ea43705))
+
+**Grids**
+- Added top level gutter classes: `slds-gutters` and `slds-gutters_*` for sizes ([b6d7fd5](https://github.com/salesforce-ux/design-system/commit/b6d7fd5))
+
+**Icons**
+- Added utility class `slds-current-color` to set an icon to use current color ([c9974d1](https://github.com/salesforce-ux/design-system/commit/c9974d1))
+
+**Map**
+- Added Map component
+
+**Menus**
+- Added a variant for Menus with Submenus
+
+**Notifications**
+- Updated multiple styling attributes for reminder notifications, including background color, border color, and spacing ([9cbb18a](https://github.com/salesforce-ux/design-system/commit/9cbb18a))
+
+**Popovers**
+- Added variant with Einstein branded header
+- Added variant for Feature callout
+
+**Rich Text Editor**
+- Moved Quill styles to rich text editor ([402845b](https://github.com/salesforce-ux/design-system/commit/402845b))
+
+**Spinners**
+- Added class `slds-spinner_delayed` to apply a 300ms delay to the animation ([fbaa8d4](https://github.com/salesforce-ux/design-system/commit/fbaa8d4))
+
+**Trees**
+- Added new ability to include metatext on tree items ([754c9fe](https://github.com/salesforce-ux/design-system/commit/754c9fe))
+
+**Utilities**
+- Added utility class `slds-size-xxx-small` for sizing ([69d0eb2](https://github.com/salesforce-ux/design-system/commit/69d0eb2))
+- Added utility class `slds-text-color-success` for text ([e744eb2](https://github.com/salesforce-ux/design-system/commit/e744eb2))
+
+**Vertical Navigation**
+- Added a variant of vertical nav that uses radio groups as underlying markup
+
+## Fixes
+
+The following fixes are now available:
+
+**Accordion**
+- Adjusted styling to only target first accordion child ([9f8f601](https://github.com/salesforce-ux/design-system/commit/9f8f601))
+- Changed accordion focus styling from overall highlight to underline of header text ([0658e13](https://github.com/salesforce-ux/design-system/commit/0658e13))
+- Updated to hide content overflow when closed ([7fb7cb0](https://github.com/salesforce-ux/design-system/commit/7fb7cb0))
+
+**App Launcher**
+- Added grab styling to match current use in product
+- Changed to Dev Ready from prototype
+
+**Button Groups**
+- Updated z-index for button group focus ([259a6db](https://github.com/salesforce-ux/design-system/commit/259a6db))
+
+**Buttons**
+- Stopped events from happening on disabled buttons ([e661ee8](https://github.com/salesforce-ux/design-system/commit/e661ee8))
+
+**Color Picker**
+- Added spacing utility class to dropdown button icon between color and arrow ([69839b2](https://github.com/salesforce-ux/design-system/commit/69839b2))
+
+**Combobox**
+- Added class `slds-combobox__input-value` that must be applied, in order to propagate styling, when a selection is made in a single selection inline listbox ([1d4e30f](https://github.com/salesforce-ux/design-system/commit/1d4e30f))
+- Added spacing utility class to dropdown button icon between icon and arrow ([69839b2](https://github.com/salesforce-ux/design-system/commit/69839b2))
+
+**Data Tables**
+- Added `slds-table_column-*-wrap` to add column wrap support ([b841961](https://github.com/salesforce-ux/design-system/commit/b841961))
+
+**Date Picker**
+- Fixed background color used when today's date is selected ([75f0f6a](https://github.com/salesforce-ux/design-system/commit/75f0f6a))
+
+**Dueling Picklist**
+- Fixed accessibility of disabled list boxes ([4ea5889](https://github.com/salesforce-ux/design-system/commit/4ea5889))
+- Renamed Required to Locked, switched to lock icon instead of red asterisk ([3556b26](https://github.com/salesforce-ux/design-system/commit/3556b26))
+- Updated background and border colors of disabled picklist ([4ea5889](https://github.com/salesforce-ux/design-system/commit/4ea5889))
+
+**Expandable Section**
+- Updated to hide content overflow when closed ([7fb7cb0](https://github.com/salesforce-ux/design-system/commit/7fb7cb0))
+
+**Global Navigation**
+- Changed global nav styling when subtabs are present with `slds-has-sub-tabs` ([d99332b](https://github.com/salesforce-ux/design-system/commit/d99332b))
+- Prevented icons from shrinking when long text is present ([881da86](https://github.com/salesforce-ux/design-system/commit/881da86))
+
+**Input**
+- Updated size of search icon to be 14x14px from 16x16px ([add0ba0](https://github.com/salesforce-ux/design-system/commit/add0ba0))
+- Fixed vertical alignment issues when using `slds-input__icon` ([cb3fe60](https://github.com/salesforce-ux/design-system/commit/cb3fe60))
+
+**Lookups**
+- Fixed icon alignment ([9b3de3c](https://github.com/salesforce-ux/design-system/commit/9b3de3c))
+
+**Menus**
+- Fixed disabled menu items to turn disabled icons gray
+- Updated `slds-dropdown_xx-small` to use correct token ([0569d6d](https://github.com/salesforce-ux/design-system/commit/0569d6d))
+
+**Modal**
+- Fixed modal background color ([2f0ad5a](https://github.com/salesforce-ux/design-system/commit/2f0ad5a))
+- Removed hyphenation from modal body ([9f70ae7](https://github.com/salesforce-ux/design-system/commit/9f70ae7))
+
+**Pills**
+- Update icons and improve consistency among pill usage
+
+**Popovers**
+- Updated background color of Walkthrough popovers ([08b2aac](https://github.com/salesforce-ux/design-system/commit/08b2aac))
+- Added clouds to the header ([08b2aac](https://github.com/salesforce-ux/design-system/commit/08b2aac))
+- Removed hyphenation from body text ([9f70ae7](https://github.com/salesforce-ux/design-system/commit/9f70ae7))
+
+**Rich Text Editor**
+- Fixed issue where selection dropdowns overlapped content on smaller screens ([f1a7e8d](https://github.com/salesforce-ux/design-system/commit/f1a7e8d))
+- Updated to prevent hyperlinks from breaking mid word ([4827702](https://github.com/salesforce-ux/design-system/commit/4827702))
+
+**Tabs**
+- Adjusted position of unsaved indicator on a tab when used with notifications ([5916f2f](https://github.com/salesforce-ux/design-system/commit/5916f2f))
+
+**Trees**
+- Added missing ARIA role `role=gridcell` to tree grid TD elements ([f94d3dd](https://github.com/salesforce-ux/design-system/commit/f94d3dd))
+- Removed extra indentation spacing for base variant ([e64cfc1](https://github.com/salesforce-ux/design-system/commit/e64cfc1))
+
+**Utilities**
+- Added missing BEM syntax to `slds-text-link_faux` ([#505](https://github.com/salesforce-ux/design-system/issues/505))
+
+**Vertical Navigation**
+- Changed active and hover background colors ([ae7997c](https://github.com/salesforce-ux/design-system/commit/ae7997c))
+
+## Tokens
+
+**Sizing**
+- Added `$size-xxx-small` sizing token for UI components ([69d0eb2](https://github.com/salesforce-ux/design-system/commit/69d0eb2))
+
 ## **Release [2.4.6] - November 22, 2017**
 
 ## Fixes
 
 **Colors**
 - Modified tokens using gray-2 to use gray-3
+
 ## **Release [2.4.5] - November 14, 2017**
 
 ## Fixes

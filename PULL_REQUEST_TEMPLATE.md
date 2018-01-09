@@ -1,13 +1,7 @@
-<!--
-NOTE: Please make site changes for summer-17/winter-18 directly on the new site's repository.
-      Pull requests that don't follow this rule will get closed.
--->
-
 Changes proposed in this pull request:
 
-* 
-* 
-* 
+*
+*
 
 ### Reviewer, please refer to this "definition of done" checklist:
 
@@ -18,5 +12,4 @@ Changes proposed in this pull request:
 * [ ] Release notes mention the changes
 
 ⚠️ Once this pull request is merged, please merge the code into other development branches:
-[Merge branch 'spring-17' into summer-17](http://bit.ly/2fjT4LY)
-[Merge branch 'summer-17' into winter-18](http://bit.ly/2mbKAbV)
+[Merge branch 'spring-18' into summer-18](https://github.com/salesforce-ux/design-system-internal/tree/summer-18)

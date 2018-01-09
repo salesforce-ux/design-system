@@ -4,7 +4,7 @@
 /**
  * #### Implementation Notes and Requirements
  *
- * The timepicker has the following markup requirements:
+ * A timepicker is used to select a single time. The component is using the combobox HTML structure and has the following markup requirements:
  *
  * **Desktop**
  * - Add `.slds-is-open` to the element with `.slds-dropdown-trigger` to invoke the dropdown that contains the list of time options.

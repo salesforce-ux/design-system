@@ -31,6 +31,7 @@
  * - `left` and `right` arrow keys move focus _and_ selection, with `aria-selected="true"`
  *
  * **Responsive path**
+ *
  * When the Path needs to be placed in a more narrow column on desktop (between 360px and 564px) the class `.slds-region_small` should be placed on the container so it can adapt. If the container is between 565px and 1280px, the class `.slds-region_medium` should be applied.
  *
  * @summary A process component communicates to the user the progress of a particular process.

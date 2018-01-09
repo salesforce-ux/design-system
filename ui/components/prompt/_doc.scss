@@ -17,10 +17,10 @@
  * - Modal has an `aria-describedby` attribute that matches the id of the modal message container.
  * - Modal message container container should have `tab-index="0"`
  *
- * **Expected keyboard interaction (sme as Modal, with the addition of):**
+ * **Expected keyboard interaction (same as Modal, with the addition of):**
  * - Modal message container should take initial focus
  *
- * @summary Prompt notice grabs the user’s attention & alert them of system-related issues/updates.
+ * @summary Prompt notice grabs the user’s attention & alerts them of system-related issues/updates.
  *
  * @base
  * @name prompt

@@ -3,12 +3,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
-## **Release [2.5.0] - January 8, 2018**
+## **Release [2.5.0] - January 9, 2018**
 
 ## Features
 
 **General Notes**
-- Updated Color guidelines to include Gray palette and Branding tokens
+- Updated Color guidelines to include Gray palette and Brand Colors
 - Introduced a new documentation style for Badges, Brand Band, Carousel, Chat, Menus, and the Grid utility.
 
 ### The following components have been updated:

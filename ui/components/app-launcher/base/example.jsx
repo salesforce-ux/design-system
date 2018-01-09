@@ -16,7 +16,7 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 // Partial(s)
 /// ///////////////////////////////////////////
-let AppLauncherModal = props => (
+export let AppLauncherModal = props => (
   <Modal
     className="slds-modal_large slds-app-launcher"
     aria-labelledby="header43"
@@ -195,9 +195,9 @@ export const AppLauncherTile = props => (
 /*
  * DragDropId relates app launcher tile anchor aria-describedby to the div that holds the instructions for drag & drop
  */
-const dragDropId = 'drag-instructions';
+export const dragDropId = 'drag-instructions';
 
-const itemTiles = [
+export const itemTiles = [
   { label: 'Accounts', symbol: 'account' },
   { label: 'Announcements', symbol: 'announcement' },
   { label: 'Approvals', symbol: 'approval' },
@@ -207,7 +207,7 @@ const itemTiles = [
   { label: 'Contacts', symbol: 'contact' }
 ];
 
-const searchItemTiles = [
+export const searchItemTiles = [
   {
     label: (
       <span>
@@ -230,7 +230,7 @@ const searchItemTiles = [
  * Tile data for All Apps section inside example.
  * Using data instead of hard-coding becase we want to move the position of one App Tile based on state (ie. moved, dropped).
  */
-const appTiles = [
+export const appTiles = [
   {
     description: 'The primary internal Salesforce org. Used to run our...',
     dragDropId: dragDropId,
@@ -283,7 +283,7 @@ const appTiles = [
   }
 ];
 
-const appTilesSearch = [
+export const appTilesSearch = [
   {
     description: 'The primary internal Salesforce org. Used to run our...',
     dragDropId: dragDropId,
@@ -307,11 +307,11 @@ const moveItemPosition = function(arr, from, to) {
   return copyArr;
 };
 
-const appTilesGrabbed = appTiles.slice(0);
+export const appTilesGrabbed = appTiles.slice(0);
 appTilesGrabbed[0] = Object.assign({}, appTilesGrabbed[0], { grabbed: true });
-const appTilesMoved = moveItemPosition(appTiles, 0, 2);
+export const appTilesMoved = moveItemPosition(appTiles, 0, 2);
 appTilesMoved[2] = Object.assign({}, appTilesMoved[2], { grabbed: true });
-const appTilesDropped = moveItemPosition(appTiles, 0, 3);
+export const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
 export default (
   <div className="demo-only" style={{ height: '800px' }}>

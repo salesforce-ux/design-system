@@ -5,9 +5,8 @@ import React from 'react';
 import BreadCrumbs, { Crumb } from '../../breadcrumbs/index.react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
-import Heading from '../../heading/index.react';
 
-export default (
+export const RelatedList = props => (
   <div className="slds-page-header">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
@@ -80,3 +79,5 @@ export default (
     </div>
   </div>
 );
+
+export default <RelatedList />;

@@ -21,6 +21,12 @@ props:
   COLOR_BACKGROUND_PATH_ACTIVE_HOVER:
     value: '{!BISCAY}'
     comment: The hovered background color for Salespath stages that are complete.
+  COLOR_BACKGROUND_PATH_STEP_ACTION_ACTIVE:
+    value: '{!DEEP_COVE}'
+    comment: The background color for the step action arrow that are the active stage
+  COLOR_BACKGROUND_PATH_STEP_ACTION_CURRENT:
+    value: '{!SCIENCE_BLUE}'
+    comment: The background color for the step action arrow that are the current stage
   COLOR_BACKGROUND_PATH_CURRENT:
     value: '{!SCIENCE_BLUE}'
     comment: The background color for Salespath stages that are the current stage.

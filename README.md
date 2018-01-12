@@ -173,7 +173,7 @@ Delete temporary build and local files.
 
 The Salesforce Lightning Design System uses `npm` to manage dependencies. Please [install Node.js](https://nodejs.org), and try running `npm install` again.
 
-If Node.js is already installed, make sure you’re running v6 or up.
+If Node.js is already installed, make sure you’re running v8 or up.
 
 ### JavaScript and compilation issues
 

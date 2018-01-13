@@ -14,9 +14,9 @@ export let UtilityIcon = props => {
         props.containerClassName
       )}
       title={
-        props.title !== false ? (
-          props.title || 'Description of icon when needed'
-        ) : null
+        props.title !== false
+          ? props.title || 'Description of icon when needed'
+          : null
       }
     >
       <SvgIcon
@@ -38,3 +38,11 @@ export let UtilityIcon = props => {
 /// ///////////////////////////////////////////
 
 export default <UtilityIcon className="slds-icon-text-default" />;
+
+export let examples = [
+  {
+    id: 'currentColor',
+    label: 'Current Color',
+    element: <UtilityIcon containerClassName="slds-current-color" />
+  }
+];

@@ -181,6 +181,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 /**
  * @selector .slds-current-color
  * @restrict *
+ * @modifier
+ * @group color
  */
 .slds-current-color {
 

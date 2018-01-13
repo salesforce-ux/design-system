@@ -49,6 +49,10 @@
  * - [Standard](/components/icons?variant=standard) and [Custom](/components/icons?variant=custom) icons have a rounded square shape and use a class on the container for the background color.
  * - [Utility](/components/icons?variant=base) icons have no background color.
  *
+ * #### Changing the fill of an icon using currentColor
+ *
+ * To change the fill of an icon to match the current color of it's parent, add the `slds-current-color` class to the icon's container. This class utilizes the css currentColor value.
+ *
  * #### Accessibility
  *
  * Icons require a `span` with the `.slds-icon_container` class. This contains

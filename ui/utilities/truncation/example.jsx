@@ -4,7 +4,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-let ListItem = props => (
+export let ListItem = props => (
   <li
     className={classNames(
       'slds-list__item slds-m-right_large slds-grid',
@@ -19,7 +19,7 @@ let ListItem = props => (
   </li>
 );
 
-let List = props => (
+export let List = props => (
   <ul>
     <ListItem
       title="Lei Chan"
@@ -48,7 +48,7 @@ let List = props => (
 export let examples = [
   {
     id: 'fluid',
-    label: 'Fluid',
+    label: 'Single line',
     element: (
       <div className="slds-size_1-of-2">
         <p
@@ -58,6 +58,23 @@ export let examples = [
           Long text field with many lines and truncation will look like this.
           Even though the text might go on for ages and ages.
         </p>
+      </div>
+    )
+  },
+  {
+    id: 'nested-grids',
+    label: 'Single line within nested grid containers',
+    element: (
+      <div className="slds-grid" style={{ width: '200px' }}>
+        <div className="slds-grid slds-has-flexi-truncate">
+          <p
+            className="slds-truncate"
+            title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages."
+          >
+            Long text field with many lines and truncation will look like this.
+            Even though the text might go on for ages and ages.
+          </p>
+        </div>
       </div>
     )
   },

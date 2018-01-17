@@ -27,7 +27,7 @@ let Legend = props => (
   </legend>
 );
 
-let FormElement = props => (
+export let FormElement = props => (
   <div className={classNames('slds-form-element', props.className)}>
     {props.children}
   </div>
@@ -39,7 +39,7 @@ let FormElementLabel = props => (
   </label>
 );
 
-let FormElementControl = props => (
+export let FormElementControl = props => (
   <div className={classNames('slds-form-element__control', props.className)}>
     {props.children}
   </div>
@@ -82,7 +82,7 @@ export let Checkbox = props => {
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Indeterminate = props => (
+export let Indeterminate = props => (
   <FormElement>
     <FormElementControl>
       <Checkbox
@@ -93,7 +93,7 @@ let Indeterminate = props => (
   </FormElement>
 );
 
-let Required = props => (
+export let Required = props => (
   <FormElement>
     <FormElementControl>
       <Checkbox label="Checkbox Label">
@@ -105,7 +105,7 @@ let Required = props => (
   </FormElement>
 );
 
-let ErrorState = props => (
+export let ErrorState = props => (
   <FormElement className="slds-has-error">
     <FormElementControl>
       <Checkbox label="Checkbox Label" errorId="error_01">
@@ -120,7 +120,7 @@ let ErrorState = props => (
   </FormElement>
 );
 
-let Disabled = props => (
+export let Disabled = props => (
   <FormElement>
     <FormElementControl>
       <Checkbox label="Checkbox Label" disabled />
@@ -128,7 +128,7 @@ let Disabled = props => (
   </FormElement>
 );
 
-let Group = props => (
+export let Group = props => (
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
     <FormElementControl>
@@ -138,7 +138,7 @@ let Group = props => (
   </Fieldset>
 );
 
-let GroupRequired = props => (
+export let GroupRequired = props => (
   <Fieldset>
     <Legend>
       <abbr className="slds-required" title="required">
@@ -153,7 +153,7 @@ let GroupRequired = props => (
   </Fieldset>
 );
 
-let GroupError = props => (
+export let GroupError = props => (
   <Fieldset className="slds-has-error">
     <Legend>
       <abbr className="slds-required" title="required">
@@ -171,7 +171,7 @@ let GroupError = props => (
   </Fieldset>
 );
 
-let GroupDisabled = props => (
+export let GroupDisabled = props => (
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
     <FormElementControl>

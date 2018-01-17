@@ -4,7 +4,7 @@
 import React from 'react';
 import { StandardIcon } from '../../icons/standard/example';
 
-export default (
+export const PageHeader = props => (
   <div className="slds-page-header">
     <div className="slds-media">
       <div className="slds-media__figure">
@@ -28,3 +28,5 @@ export default (
     </div>
   </div>
 );
+
+export default <PageHeader />;

@@ -1,50 +1,39 @@
-// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
-// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
+/* eslint-env jest */
 import React from 'react';
+import createHelpers from '../../../../jest.setup';
+const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
-export let examples = [
-  {
-    id: 'reset',
-    label: 'Link reset',
-    element: (
+describe('renders interaction utilities', () => {
+  it('renders link reset', () =>
+    matchesMarkupAndStyle(
       <a href="javascript:void(0);" className="slds-text-link_reset">
         Link
       </a>
-    )
-  },
-  {
-    id: 'link',
-    label: 'Link reset with text link inside',
-    element: (
+    ));
+
+  it('renders link reset with text link inside', () =>
+    matchesMarkupAndStyle(
       <a href="javascript:void(0);" className="slds-text-link_reset">
         This text is a link but looks like normal text...<span className="slds-text-link">More</span>.
       </a>
-    )
-  },
-  {
-    id: 'halo-focus',
-    label: 'Link reset with halo focus',
-    element: (
+    ));
+
+  it('renders link reset with halo focus', () =>
+    matchesMarkupAndStyle(
       <a href="javascript:void(0);" className="slds-has-blur-focus">
         Link with halo focus
       </a>
-    )
-  },
-  {
-    id: 'button-reset',
-    label: 'Button reset',
-    element: (
+    ));
+
+  it('renders button reset', () =>
+    matchesMarkupAndStyle(
       <button className="slds-button slds-text-link_reset">Button</button>
-    )
-  },
-  {
-    id: 'faux',
-    label: 'Faux Link on a span',
-    element: (
+    ));
+
+  it('renders hover interactions on a span', () =>
+    matchesMarkupAndStyle(
       <span className="slds-text-link_faux">
         Span with faux link interactions
       </span>
-    )
-  }
-];
+    ));
+});

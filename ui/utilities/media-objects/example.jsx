@@ -26,6 +26,7 @@ const image = (
 let MediaExample = props => (
   <div className="demo-only slds-size_3-of-4">
     <MediaObject
+      className={props.className}
       figureLeft={props.figureLeft}
       figureRight={props.figureRight}
       flavor={props.flavor}
@@ -68,6 +69,16 @@ export let examples = [
     id: 'double',
     label: 'Double figures',
     element: <MediaExample figureLeft={image} figureRight={image} />
+  },
+  {
+    id: 'small',
+    label: 'Small space between figure and body',
+    element: <MediaExample className="slds-media_small" figureLeft={image} />
+  },
+  {
+    id: 'large',
+    label: 'Large space between figure and body',
+    element: <MediaExample className="slds-media_large" figureLeft={image} />
   },
   {
     id: 'responsive',

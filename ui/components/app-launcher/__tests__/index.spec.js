@@ -12,13 +12,6 @@ import {
   searchItemTiles
 } from '../base/example';
 
-import {
-  Subtab,
-  Subtabs,
-  SubtabList,
-  SubtabPanel
-} from '../../tabs/sub-tabs/example';
-
 import createHelpers from '../../../../jest.setup';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);

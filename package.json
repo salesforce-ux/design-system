@@ -11,10 +11,10 @@
     "'private' and 'config.slds.internal' should have the same value",
     "to prevent any accidental public publishes on npm and on our archive server."
   ],
-  "private": true,
+  "private": false,
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
       "appId": "B2KKG101RI",

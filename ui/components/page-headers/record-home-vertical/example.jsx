@@ -15,7 +15,7 @@ const image = (
   </div>
 );
 
-export default (
+export const RecordHomeVertical = props => (
   <div className="demo-only" style={{ width: '300px' }}>
     <div className="slds-page-header slds-page-header_vertical">
       <div className="slds-grid slds-grid_vertical">
@@ -145,3 +145,5 @@ export default (
     </div>
   </div>
 );
+
+export default <RecordHomeVertical />;

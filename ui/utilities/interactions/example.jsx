@@ -33,7 +33,7 @@ export let examples = [
   },
   {
     id: 'button-reset',
-    label: 'Button reset with halo focus',
+    label: 'Button reset',
     element: (
       <button className="slds-button slds-text-link_reset">Button</button>
     )

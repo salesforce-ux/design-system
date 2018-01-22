@@ -244,13 +244,14 @@
 }
 
 /**
- * @summary Used when sneak peak is enabled for customer messages
+ * @summary Used when sneak peek is enabled for customer messages
  *
- * @selector .slds-chat-message__text_sneak-peak
+ * @selector .slds-chat-message__text_sneak-peek
  * @restrict .slds-chat-message__text
  * @modifier
  */
-.slds-chat-message__text_sneak-peak {
+.slds-chat-message__text_sneak-peak,
+.slds-chat-message__text_sneak-peek {
   font-style: italic;
 
   .slds-icon-typing {

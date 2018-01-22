@@ -174,7 +174,7 @@ describe('Chat message body', () => {
 
   it('renders an inbound chat message body that shows sneak peak', () =>
     matchesMarkupAndStyle(
-      <ChatMessageBody type="inbound" hasSneakPeak isTyping isPaused>
+      <ChatMessageBody type="inbound" hasSneakPeek isTyping isPaused>
         Message
       </ChatMessageBody>
     ));

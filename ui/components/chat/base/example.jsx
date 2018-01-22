@@ -80,15 +80,15 @@ export const states = [
     )
   },
   {
-    id: 'inbound-customer-is-typing-with-sneak-peak',
-    label: 'Inbound Customer is Typing with Sneak Peak',
+    id: 'inbound-customer-is-typing-with-sneak-peek',
+    label: 'Inbound Customer is Typing with Sneak Peek',
     element: (
       <Chat>
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
               <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
-              <ChatMessageBody isTyping hasSneakPeak type="inbound">
+              <ChatMessageBody isTyping hasSneakPeek type="inbound">
                 Hi, my Alexa only speaks French and I'm having a lot of trouble
                 trying to make i
               </ChatMessageBody>

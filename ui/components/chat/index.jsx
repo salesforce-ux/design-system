@@ -63,7 +63,7 @@ export const ChatMessageBody = props => (
         'slds-chat-message__text_outbound': props.type === 'outbound',
         'slds-chat-message__text_outbound-agent':
           props.type === 'outbound-agent',
-        'slds-chat-message__text_sneak-peak': props.hasSneakPeak
+        'slds-chat-message__text_sneak-peek': props.hasSneakPeek
       })}
     >
       {props.isTyping && (
@@ -75,7 +75,7 @@ export const ChatMessageBody = props => (
         />
       )}
       {props.children && (
-        <span aria-hidden={props.hasSneakPeak ? 'true' : null}>
+        <span aria-hidden={props.hasSneakPeek ? 'true' : null}>
           {props.children}
         </span>
       )}

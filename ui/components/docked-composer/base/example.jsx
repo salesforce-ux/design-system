@@ -58,7 +58,7 @@ const composers = [
 // Partial(s)
 /// ////////////////////////////////////////
 
-const Footer = props => (
+export const Footer = props => (
   <div className="slds-col_bump-left slds-text-align_right">
     <button className="slds-button slds-button_brand">Action</button>
   </div>
@@ -185,7 +185,7 @@ export let DockedComposerPanel = props => (
   </section>
 );
 
-let ComposerOverflowMenu = props => (
+export let ComposerOverflowMenu = props => (
   <div className="slds-docked-composer slds-docked-composer_overflow">
     <button
       className="slds-button slds-button_icon slds-docked-composer_overflow__button"

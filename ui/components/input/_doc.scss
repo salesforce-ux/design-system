@@ -20,6 +20,10 @@
  * If the error message has an `id="my-error-message"`, then the input should
  * have `aria-describedby="my-error-message"`.
  *
+ * ##### Fixed Text
+ *
+ * When using the fixed text variants for prepending or appending symbols to inputs, please be sure to use `aria-labelledby` on the input, that points to the ids of the label, prepended text and appended text as a space separated list. The IDs must appear in that order, label, prepended, then appended.
+ *
  * If you need some type of field level help and if your tooltips are
  * available on hover, make sure they’re also available on keyboard focus. The
  * help icon needs to be associated to the tooltip so that when the user focuses

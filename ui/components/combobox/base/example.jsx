@@ -441,7 +441,7 @@ let ObjectSwitcher = props => (
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props => (
+export const ListboxDropdown = props => (
   <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption

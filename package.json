@@ -199,6 +199,13 @@
   },
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",
-    "setupTestFrameworkScriptFile": "./jest.setup.js"
+    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/shared/vendor/prism/"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/shared/vendor/prism/"
+    ]
   }
 }

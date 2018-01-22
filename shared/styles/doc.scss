@@ -11,8 +11,17 @@
   position: relative;
 }
 
+.docs-codeblock-example {
+  overflow: auto;
+}
+
 .docs-codeblock-source {
   margin-bottom: 1.5rem;
+}
+
+.docs-codeblock-source.code-collapsed,
+.docs-codeblock-source.code-expanded {
+  padding-top: 2rem;
 }
 
 .docs-codeblock-example + .docs-codeblock-source {
@@ -39,15 +48,28 @@
   height: auto;
 }
 
-.doc-toggle-code {
+.docs-codeblock__action-bar {
+  display: flex;
+  flex-direction: row-reverse;
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0;
   z-index: 1;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  background: #fff;
+}
+
+.docs-codeblock__action-bar li {
+  padding: 0 0.5rem;
+
+  + li {
+    border-right: 1px solid #f2f2f2;
+  }
 }
 
 .doc-toggle-code__button {
-  margin: 0 1rem;
   font-weight: 700;
 }
 

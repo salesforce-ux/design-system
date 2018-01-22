@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/server';
 import stripIndent from 'strip-indent';
 import { beautify } from '../utils/beautify';
 import classNames from 'classnames';
+import Copy from './Copy';
 import Prism from '../vendor/prism';
 import '../vendor/prism/_prism.scss';
 import '../vendor/prism/_prism-overrides.scss';
@@ -14,7 +15,7 @@ import '../vendor/prism/_prism-overrides.scss';
 const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
 
-const ToggleButton = props => (
+export const ToggleButton = props => (
   <div className="doc-toggle-code">
     <button
       {...props}
@@ -40,7 +41,7 @@ class CodeBlock extends Component {
   }
 
   getCode() {
-    const { language, children } = this.props;
+    const { children, language } = this.props;
     try {
       React.Children.only(children);
     } catch (error) {
@@ -49,7 +50,12 @@ class CodeBlock extends Component {
       );
     }
     const code = children ? ReactDOM.renderToStaticMarkup(children) : '';
-    return highlight(beautify(code), language);
+    return beautify(code);
+  }
+
+  getHighlightedCode() {
+    const { language } = this.props;
+    return highlight(this.getCode(), language);
   }
 
   render() {
@@ -61,14 +67,24 @@ class CodeBlock extends Component {
           toggleCode && (this.state.open ? 'code-expanded' : 'code-collapsed')
         )}
       >
-        {toggleCode && (
-          <ToggleButton open={this.state.open} onClick={this.toggleCodeBlock} />
-        )}
+        <ul className="docs-codeblock__action-bar">
+          {toggleCode && (
+            <li>
+              <ToggleButton
+                open={this.state.open}
+                onClick={this.toggleCodeBlock}
+              />
+            </li>
+          )}
+          <li>
+            <Copy key="copy" className="site-code_copy" text={this.getCode()} />
+          </li>
+        </ul>
         <pre className={`language-${language}`}>
           <code
             className={`language-${language}`}
             dangerouslySetInnerHTML={{
-              __html: this.getCode()
+              __html: this.getHighlightedCode()
             }}
           />
         </pre>

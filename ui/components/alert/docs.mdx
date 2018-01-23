@@ -1,0 +1,113 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import { Alert } from './base/example';
+import ButtonIcon from '../button-icons/';
+import { UtilityIcon } from '../icons/base/example';
+import Blockquote from '../../../shared/components/Blockquote';
+
+Alerts
+
+<div className="lead">
+  Alert banners communicate a state that affects the entire system, not just a feature or page. It persists over a session and appears without the user initiating the action.
+</div>
+
+## Default/Info Alert
+
+Use the info alert when notifying the user of neutral information about the system.
+
+<Example title="Informational alert">
+  <CodeView>
+    <Alert type="info">
+      <UtilityIcon
+        containerClassName="slds-m-right_x-small"
+        className="slds-icon_x-small"
+        assistiveText={false}
+        symbol="user"
+      />
+      <h2>
+        Logged in as John Smith (johnsmith@acme.com).{' '}
+        <a href="javascript:void(0);">Log out</a>
+      </h2>
+    </Alert>
+  </CodeView>
+</Example>
+
+<Blockquote type="a11y" header="Accessible Role">
+  Alert notifications should contain <code className="doc">role="alert"</code> on the container to signal to assistive technology that they require the user’s immediate attention.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">...</div>
+</CodeBlock>
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Use a span with the class <code className="doc">.slds-assistive-text</code> to let the user know what type of notification it is
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <span className="slds-assistive-text">Info</span>
+</CodeBlock>
+
+## Warning Alert
+
+Use the warning variant to warn the user about important system information that deserves caution.
+
+<Example title="Warning alert">
+  <CodeView>
+    <Alert type="warning">
+      <UtilityIcon
+        containerClassName="slds-m-right_x-small"
+        className="slds-icon_x-small"
+        assistiveText={false}
+        symbol="warning"
+      />
+      <h2>
+        Your browser is outdated. Your Salesforce experience may be degraded.{' '}
+        <a href="javascript:void(0);">More Information</a>
+      </h2>
+    </Alert>
+  </CodeView>
+</Example>
+
+## Error Alert
+
+Use the error variant when you need to alert the user about an error in the system that needs immediate attention.
+
+<Example title="Error alert">
+  <CodeView>
+    <Alert type="error">
+      <UtilityIcon
+        containerClassName="slds-m-right_x-small"
+        className="slds-icon_x-small"
+        assistiveText={false}
+        symbol="ban"
+      />
+      <h2>
+        Your browser is currently not supported. Your Salesforce may be
+        degraded. <a href="javascript:void(0);">More Information</a>
+      </h2>
+    </Alert>
+  </CodeView>
+</Example>
+
+## Offline Alert
+
+Use the offline alert to let the user know that they are not connected to the internet.
+
+<Example title="Offline alert">
+  <CodeView>
+    <Alert type="offline">
+      <UtilityIcon
+        containerClassName="slds-m-right_x-small"
+        className="slds-icon_x-small"
+        assistiveText={false}
+        symbol="offline"
+      />
+      <h2>
+        You are in offline mode.{' '}
+        <a href="javascript:void(0);">More Information</a>
+      </h2>
+    </Alert>
+  </CodeView>
+</Example>

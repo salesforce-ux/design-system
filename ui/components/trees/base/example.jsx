@@ -58,6 +58,7 @@ let TreeBranch = props => (
           className="slds-tree__item-meta slds-truncate"
           title="Tree Branch Metatext"
         >
+          <span className="slds-assistive-text">:</span>
           Tree Branch Metatext
         </span>
       )}
@@ -158,7 +159,7 @@ let AdditionalItems = props => (
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Default = props => (
+export const BaseTree = props => (
   <div className="slds-tree_container" role="application">
     <h4 className="slds-text-title_caps" id="treeheading">
       Tree Group Header
@@ -219,27 +220,27 @@ let Default = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default <Default />;
+export default <BaseTree />;
 
 export let states = [
   {
     id: 'expanded',
     label: 'Expanded',
-    element: <Default isExpanded />
+    element: <BaseTree isExpanded />
   },
   {
     id: 'selected',
     label: 'Item Selected',
-    element: <Default isExpanded isSelected />
+    element: <BaseTree isExpanded isSelected />
   },
   {
     id: 'deep-nesting',
     label: 'Deeply nested branches',
-    element: <Default isExpanded additionalItems={<AdditionalItems />} />
+    element: <BaseTree isExpanded additionalItems={<AdditionalItems />} />
   },
   {
     id: 'metatext',
     label: 'Metatext',
-    element: <Default isExpanded hasMetatext />
+    element: <BaseTree isExpanded hasMetatext />
   }
 ];

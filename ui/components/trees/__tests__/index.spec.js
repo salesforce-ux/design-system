@@ -7,6 +7,7 @@ import {
   DefaultRows,
   DeepNestingRows
 } from '../grid/example';
+import { BaseTree } from '../base/example';
 
 import createHelpers from '../../../../jest.setup';
 
@@ -25,6 +26,9 @@ it('renders an expanded Treegrid', () =>
       <DefaultRows isExpanded additionalItem={<ExpandedRow />} />
     </TreeGrid>
   ));
+
+it('renders a base Tree with metatext', () =>
+  matchesMarkupAndStyle(<BaseTree hasMetatext />));
 
 it('renders a deeply nested Treegrid', () =>
   matchesMarkupAndStyle(

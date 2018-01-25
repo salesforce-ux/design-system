@@ -75,7 +75,7 @@ export let Toggle = props => (
 /// ////////////////////////////////////////
 // State Constructor(s)
 /// ////////////////////////////////////////
-let StateA = props => (
+export let CheckboxToggle = props => (
   <Demo>
     <LabelWrapper>
       <Label>
@@ -87,7 +87,7 @@ let StateA = props => (
   </Demo>
 );
 
-let StateB = props => (
+export let CheckboxToggleChecked = props => (
   <Demo>
     <LabelWrapper>
       <Label>
@@ -99,7 +99,7 @@ let StateB = props => (
   </Demo>
 );
 
-let StateC = props => (
+export let CheckboxToggleDisabled = props => (
   <Demo>
     <LabelWrapper>
       <Label>
@@ -115,17 +115,17 @@ let StateC = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default <StateA />;
+export default <CheckboxToggle />;
 
 export let states = [
   {
     id: 'checkbox-toggle-checked',
     label: 'Checked',
-    element: <StateB />
+    element: <CheckboxToggleChecked />
   },
   {
     id: 'checkbox-toggle-disabled',
     label: 'Disabled',
-    element: <StateC />
+    element: <CheckboxToggleDisabled />
   }
 ];

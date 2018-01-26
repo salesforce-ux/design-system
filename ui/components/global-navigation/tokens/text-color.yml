@@ -1,4 +1,5 @@
 global:
+  scope: component
   type: color
   category: text-color
   cssProperties:

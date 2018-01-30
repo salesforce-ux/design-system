@@ -2,6 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
+  scope: component
   category: spacing
   type: size
   comment: ''

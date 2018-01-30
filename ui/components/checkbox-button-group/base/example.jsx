@@ -8,7 +8,7 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Fieldset = props => (
+export let Fieldset = props => (
   <fieldset className={classNames('slds-form-element', props.className)}>
     <legend className="slds-form-element__legend slds-form-element__label">
       Scheduled Day(s)

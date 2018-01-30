@@ -23,6 +23,7 @@ export let FormElementLabel = props => (
   <label
     className={classNames('slds-form-element__label', props.className)}
     htmlFor={props.id || inputId}
+    id={props.labelID}
   >
     {props.children}
   </label>
@@ -274,12 +275,14 @@ export let examples = [
     label: 'Fixed text',
     element: (
       <FormElement>
-        <FormElementLabel>Input Label</FormElementLabel>
+        <FormElementLabel labelID="fixed-text-label">
+          Input Label
+        </FormElementLabel>
         <FormElementControl className="slds-input-has-fixed-addon">
           <span className="slds-form-element__addon" id="fixed-text-addon-pre">
             $
           </span>
-          <Input aria-describedby="fixed-text-addon-pre fixed-text-addon-post" />
+          <Input aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" />
           <span className="slds-form-element__addon" id="fixed-text-addon-post">
             euro
           </span>

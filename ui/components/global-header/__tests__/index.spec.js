@@ -4,8 +4,16 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.setup';
-import { GlobalHeader } from '../base/example';
+import { GlobalHeaderDeprecated } from '../base/example';
+import GlobalHeader from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname, 5555);
+const { matchesMarkupAndStyle } = createHelpers(__dirname, 8888);
 
-it('renders a global header', () => matchesMarkupAndStyle(<GlobalHeader />));
+describe('render global header', () => {
+  it('renders the deprecated global header', () => {
+    matchesMarkupAndStyle(<GlobalHeaderDeprecated />);
+  });
+  it('render the global header', () => {
+    matchesMarkupAndStyle(<GlobalHeader />);
+  });
+});

@@ -6,10 +6,11 @@ import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import classNames from 'classnames';
+import GlobalHeader from '../';
 
-/// ///////////////////////////////////////////
-// Partial(s)
-/// ///////////////////////////////////////////
+/**
+ * Deprecated Global Header - Keep for testing
+ */
 
 const SetupDropdown = (
   <Menu className="slds-dropdown_right slds-nubbin_top-right">
@@ -56,7 +57,7 @@ const ActionsDropdown = (
   </Menu>
 );
 
-let GlobalSearch = props => (
+const GlobalSearch = props => (
   <div
     aria-expanded={props.expanded ? 'true' : 'false'}
     aria-haspopup="listbox"
@@ -112,7 +113,7 @@ let GlobalSearch = props => (
   </div>
 );
 
-let GlobalSearchMRUs = props => (
+const GlobalSearchMRUs = props => (
   <ul className="slds-lookup__list" role="group" aria-label="Recent Items">
     <li role="presentation">
       <h3
@@ -224,7 +225,7 @@ let GlobalSearchMRUs = props => (
   </ul>
 );
 
-let GlobalSearchSearchOptions = props => (
+const GlobalSearchSearchOptions = props => (
   <ul className="slds-lookup__list" role="presentation">
     <li role="presentation">
       <span
@@ -350,7 +351,7 @@ let GlobalSearchSearchOptions = props => (
   </ul>
 );
 
-export let GlobalHeader = props => (
+export const GlobalHeaderDeprecated = props => (
   <header
     className={classNames('slds-global-header_container', props.className)}
   >
@@ -400,7 +401,7 @@ export let GlobalHeader = props => (
               className={classNames(
                 'slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none'
               )}
-              hasPopup
+              aria-haspopup="true"
               disabled={props.favoritesDisabled}
               symbol="chevrondown"
               title="View Favorites"
@@ -416,7 +417,7 @@ export let GlobalHeader = props => (
         >
           <ButtonIcon
             className="slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
-            hasPopup
+            aria-haspopup="true"
             symbol="add"
             title="Global Actions"
             assistiveText="Global Actions"
@@ -432,7 +433,7 @@ export let GlobalHeader = props => (
           <ButtonIcon
             className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
-            hasPopup
+            aria-haspopup="true"
             symbol="question"
             title="Help and Training"
             assistiveText="Help and Training"
@@ -447,7 +448,7 @@ export let GlobalHeader = props => (
           <ButtonIcon
             className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
-            hasPopup
+            aria-haspopup="true"
             symbol="setup"
             title="Setup"
             assistiveText="Setup"
@@ -463,7 +464,7 @@ export let GlobalHeader = props => (
           <ButtonIcon
             className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
             iconClassName="slds-global-header__icon"
-            hasPopup
+            aria-haspopup="true"
             symbol="notification"
             title="Notifications"
             assistiveText="Notifications"
@@ -495,10 +496,6 @@ export let GlobalHeader = props => (
   </header>
 );
 
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
-
 export const Context = props => (
   <div className="demo-only" style={{ height: '340px' }}>
     {props.children}
@@ -511,27 +508,27 @@ export let states = [
   {
     id: 'favorites-selected',
     label: 'Favorites selected',
-    element: <GlobalHeader favoritesSelected />
+    element: <GlobalHeaderDeprecated favoritesSelected />
   },
   {
     id: 'favorites-disabled',
     label: 'Favorites disabled',
-    element: <GlobalHeader favoritesDisabled />
+    element: <GlobalHeaderDeprecated favoritesDisabled />
   },
   {
     id: 'actions-active',
     label: 'Global actions active',
-    element: <GlobalHeader actions />
+    element: <GlobalHeaderDeprecated actions />
   },
   {
     id: 'global-header-setup-active',
     label: 'Setup active',
-    element: <GlobalHeader setup />
+    element: <GlobalHeaderDeprecated setup />
   },
   {
     id: 'global-header-search-active',
     label: 'Active',
-    element: <GlobalHeader expanded />,
+    element: <GlobalHeaderDeprecated expanded />,
     script: `
       document.getElementById('global-search-01').focus()
     `
@@ -539,7 +536,7 @@ export let states = [
   {
     id: 'global-header-search-typeahead',
     label: 'Typeahead',
-    element: <GlobalHeader expanded searchingFor="ibm" />,
+    element: <GlobalHeaderDeprecated expanded searchingFor="ibm" />,
     script: `
       document.getElementById('global-search-01').focus()
     `

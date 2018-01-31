@@ -67,7 +67,10 @@ export let Trigger = props => (
 );
 
 export let Menu = props => (
-  <div className={classNames('slds-dropdown', props.className)}>
+  <div
+    className={classNames('slds-dropdown', props.className)}
+    style={props.style}
+  >
     {props.children}
   </div>
 );
@@ -123,13 +126,9 @@ export let MenuItem = props => {
               sprite="utility"
               symbol="check"
             />
-          ) : iconLeft ? (
-            <SvgIcon
-              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
-              sprite="utility"
-              symbol="user"
-            />
-          ) : null}
+          ) : (
+            iconLeft
+          )}
           {children}
         </span>
         {iconRight || null}
@@ -231,20 +230,38 @@ export const IconLeft = props => (
         <MenuItem
           isSelected={props.isSelectable}
           isSelectable={props.isSelectable}
-          iconLeft={props.hasLeftIcon}
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
           tabIndex="0"
         >
           Menu Item One
         </MenuItem>
         <MenuItem
           isSelectable={props.isSelectable}
-          iconLeft={props.hasLeftIcon}
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
         >
           Menu Item Two
         </MenuItem>
         <MenuItem
           isSelectable={props.isSelectable}
-          iconLeft={props.hasLeftIcon}
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
         >
           Menu Item Three
         </MenuItem>

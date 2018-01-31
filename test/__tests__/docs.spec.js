@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom/server';
 
 import createHelpers from '../../jest.setup';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkupAndStyle } = createHelpers(__dirname, 6868);
 const { Docs } = require('../../.generated/docs.js');
 const { beautify } = require('../../shared/utils/beautify.js');
 const { renderWithBetterError } = require('../../shared/utils/render.js');

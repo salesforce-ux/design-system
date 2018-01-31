@@ -1,0 +1,270 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import GlobalHeader, { Logo } from './';
+import GlobalActions, {Favorites,Task,Help,Setup,Notifications,Avatar} from './global-actions/';
+import GlobalNotifications from './notifications/';
+import GlobalFavorites from './favorites/';
+import GlobalSearch from './search/';
+import style from './docs/index.scss';
+
+<div className="lead doc">
+  The global header is the anchor for the Salesforce platform and spans all other parts of the UI. The functionality in the header is applicable across all contexts in the Salesforce ecosystem (internal or 3rd party).
+</div>
+
+<Example title="base global header">
+  <CodeView style={{ position: 'relative', height: '3.125rem' }}>
+    <GlobalHeader />
+  </CodeView>
+</Example>
+
+## Structuring the Global Header
+
+The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the classname `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
+
+<Example title="global header layout">
+  <CodeBlock toggleCode={false}>
+    <div className="slds-global-header">
+      <div className="slds-global-header__item">...</div>
+      <div className="slds-global-header__item slds-global-header__item_search">...</div>
+      <div className="slds-global-header__item">...</div>
+    </div>
+  </CodeBlock>
+</Example>
+
+In most scenarios, you will want to fixed the global header to the top of the viewport. To achieve this, wrap the global header component in a `<div>` with the classname `slds-global-header_container`.
+
+<Example title="global header container">
+  <CodeBlock toggleCode={false}>
+    <div className="slds-global-header_container">
+      <div className="slds-global-header">
+        ...
+      </div>
+    </div>
+  </CodeBlock>
+</Example>
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we need to provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
+</Blockquote>
+
+<Example title="global header jump links">
+  <CodeBlock toggleCode={false}>
+    <div className="slds-global-header_container">
+      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
+        Skip to Navigation
+      </a>
+      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
+        Skip to Main Content
+      </a>
+      <div className="slds-global-header">
+        ...
+      </div>
+    </div>
+  </CodeBlock>
+</Example>
+
+## Logo
+
+The logo region is simply a `<div>` with the classname `slds-global-header__logo`. The logo is applied as a background image with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
+
+<CodeView toggleCode={false}>
+  <div className="slds-global-header__item">
+    <Logo />
+  </div>
+</CodeView>
+
+## Global Search
+
+The global search component is used for application wide search. The form element is implemented as a [Combobox](/components/combobox), please refer to the accessibility guidelines on the Combobox component page for implementation guidance.
+
+### Default
+<Example title="Global Header Search Default State">
+  <CodeView style={{ position: 'relative', height: '3.5rem' }}>
+    <GlobalHeader />
+  </CodeView>
+</Example>
+
+### Focused and expanded
+<Example title="Global Header Search Expanded State">
+  <CodeView style={{ position: 'relative', height: '21rem' }}>
+    <GlobalHeader expanded />
+  </CodeView>
+</Example>
+
+### Active and typing
+<Example title="Global Header Search Active State">
+  <CodeView style={{ position: 'relative', height: '21rem' }}>
+    <GlobalHeader expanded searchingFor="IBM" />
+  </CodeView>
+</Example>
+
+## Global Actions Bar
+
+The global actions bar holds application wide task actions that will persist with the user through their experience.
+
+<Example title="Global Header Action Bar">
+  <CodeView>
+    <div className="slds-global-header">
+      <GlobalActions />
+    </div>
+  </CodeView>
+</Example>
+
+The global actions bar is located in the right region of the global header.
+
+<div className="docs-codeblock-example">
+  <div style={{ position: 'relative', height: '3.125rem' }}>
+    <GlobalHeader />
+  </div>
+</div>
+
+### Favorites
+
+The favorites action is used to "favorite" a commonly used page within a user's experience. When a user "favorites" a page by pressing the favorites action, the button icon changes color with a small animation to confirm your selection.
+
+#### Not pressed
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Favorites />
+  </li>
+</CodeView>
+
+#### Pressed
+
+When pressed, apply the class `slds-is-selected` to the `slds-global-actions__favorites-action` button element.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  When the favorites action is pressed, we need to toggle the <code className="doc">aria-pressed</code> attribute to <code className="doc">true</code>. This will inform a screen reader that the button has been pressed.
+</Blockquote>
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Favorites favoritesClicked />
+  </li>
+</CodeView>
+
+#### Disabled
+
+If the favorites action needs to become disabled, apply the `disabled` attribute and the class `slds-is-disabled` to the button with `class="slds-global-actions_favorites-action"`.
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Favorites favoritesDisabled />
+  </li>
+</CodeView>
+
+#### Favorites popover
+
+The favorites popover is invoked when a user clicks on the dropdown arrow action icon inside of the favorites button group. The favorites popover is implemented as a Popover component, please refer to the accessibility guidelines on the Popover component page for implementation guidance.
+
+<CodeView
+  style={{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    height: '16rem',
+    minWidth: '400px'
+  }}
+>
+  <GlobalActions showFavoritesPopup />
+</CodeView>
+
+### Task
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Task />
+  </li>
+</CodeView>
+
+#### Task menu
+
+When the global task action is invoked, a menu inside of a dropdown becomes visible. Please refer to the accessibility section of the [Menus component](/components/menus) for implementation guidelines.
+
+<CodeView
+  style={{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    height: '16rem',
+    minWidth: '400px'
+  }}
+>
+  <GlobalActions showTaskMenu />
+</CodeView>
+
+### Help
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Help />
+  </li>
+</CodeView>
+
+### Setup
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Setup />
+  </li>
+</CodeView>
+
+### Notifications
+
+Notifications are a way to notify a user about a global change within the application. This is commonly used to communicate a Chatter mention/reply or a status update on an opportunity pipeline.
+
+<Example title="Global Header Notification - With playground">
+  <div className="docs-codeblock-example" style={{ position: 'relative', height: '7.5rem' }}>
+    <GlobalHeader playground />
+  </div>
+</Example>
+
+#### No notifications
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Notifications />
+  </li>
+</CodeView>
+
+#### New notifications
+
+When a notification is coming through, we want to apply the `slds-incoming-notification` class to both the `slds-global-actions__notifications` button, as well as the `slds-notification-badge`. This will initiate the animation that there is a new incoming notification. A notification badge will also need to receive the `slds-show-notification` class, this ensures the badge becomes visible for the incoming animation to work. The `slds-show-notification` class should also be applied if a user has unread notifications upon their return to their application.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  The notification badge is hidden from screen readers by add the attribute <code className="doc">aria-hidden="true"</code> so the badge doesn't have to be inside the button itself. Since the badge count is hidden, we need to add the count number to the button text via some hidden assisitve text. The assistive text string should be updated with number of new notifications, such as "3 new notification". If there are no notifications, the assistive text should read "No notifications". The button element also requires <code className="doc">aria-live="assertive"</code> to announce any count updates.
+</Blockquote>
+
+<CodeView>
+  <li className="slds-global-actions__item">
+    <Notifications showNotification notificationCount="1" />
+  </li>
+</CodeView>
+
+#### Notification Popover
+
+The notification popover is invoked when a user clicks on the notification action icon. The notification popover is implemented as a [Popover component](/components/popovers), please refer to the accessibility guidelines on the Popover component page for implementation guidance.
+
+<div
+  className="docs-codeblock-example"
+  style={{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    height: '25rem',
+    minWidth: '400px'
+  }}
+>
+  <GlobalActions showNotification notificationCount="3" showNotificationPopup />
+</div>
+
+<CodeBlock>
+  <GlobalNotifications />
+</CodeBlock>
+
+#### Unread notifications
+
+When a notification item is unread, add the class `slds-global-header__notification_unread` to the `slds-global-header__notification` list item. This will provide the unread styles. In addition to adding the classname, please add a dot indicator, `<abbr class="slds-text-link slds-m-horizontal_xxx-small" title="unread">●</abbr>`, to provide visual affordance that the item is unread.

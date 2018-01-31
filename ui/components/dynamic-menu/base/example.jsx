@@ -26,7 +26,7 @@ const accounts = [
   'University of AZ Portable Generators'
 ];
 
-const ListboxList = props => (
+export const ListboxList = props => (
   <Listbox
     className="slds-dropdown_length-10"
     vertical
@@ -55,7 +55,7 @@ const ListboxList = props => (
   </Listbox>
 );
 
-const Footer = props => (
+export const Footer = props => (
   <ul>
     <li>
       <button className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1">
@@ -80,7 +80,7 @@ const Footer = props => (
   </ul>
 );
 
-const DynamicMenu = props => (
+export const DynamicMenu = props => (
   <Popover
     className="slds-nubbin_top-left slds-dynamic-menu"
     bodyClassName="slds-p-horizontal_none"

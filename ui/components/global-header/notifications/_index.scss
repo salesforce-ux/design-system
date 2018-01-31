@@ -3,14 +3,10 @@
 
 /**
  * @summary Handles styling for notification item interactions
- *
- * @name notifications
- * @selector .slds-global-header__notification
- * @restrict .slds-global-header_container li
- * @variant
  */
 .slds-global-header__notification {
   border-bottom: 1px solid $color-border;
+  padding: $spacing-xx-small;
 
   &_unread,
   &--unread {

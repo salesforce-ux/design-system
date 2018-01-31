@@ -146,7 +146,7 @@ let Default = props => (
   <Demo style={{ height: '220px' }}>
     <Trigger className="slds-is-open">
       <Menu className="slds-dropdown_left">
-        <MenuList>
+        <MenuList ariaLabel="Show More">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
           <MenuItem>Menu Item Three</MenuItem>
@@ -161,7 +161,7 @@ let Default = props => (
 export const BaseMenu = props => (
   <Trigger className="slds-is-open">
     <Menu className={classNames(props.className)}>
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
         <MenuItem>Menu Item Three</MenuItem>
@@ -175,7 +175,7 @@ export const BaseMenu = props => (
 export const OverflowMenu = props => (
   <Trigger className="slds-is-open">
     <Menu className={classNames(props.className)}>
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem
           tabIndex="0"
           isSelectable={props.isSelectable}
@@ -200,7 +200,7 @@ export const OverflowMenu = props => (
 export const SubHeader = props => (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left slds-dropdown_small">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <li
           className="slds-dropdown__header slds-truncate"
           title="Menu Sub Heading"
@@ -227,7 +227,7 @@ export const SubHeader = props => (
 export const IconLeft = props => (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left slds-dropdown_small">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem
           isSelected={props.isSelectable}
           isSelectable={props.isSelectable}
@@ -256,7 +256,7 @@ export const IconLeft = props => (
 export const DoubleIcon = props => (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left slds-dropdown_small">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem
           isSelected="true"
           isSelectable
@@ -279,7 +279,7 @@ export const DoubleIcon = props => (
 export const IconRight = props => (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left slds-dropdown_small">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem iconRight={TableIcon} tabIndex="0">
           Table View
         </MenuItem>
@@ -305,7 +305,7 @@ export const ActionOverflow = props => (
     }
   >
     <Menu className="slds-dropdown_left slds-dropdown_actions">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Action One</MenuItem>
         <MenuItem>Action Two</MenuItem>
         <MenuItem>Action Three</MenuItem>
@@ -327,7 +327,7 @@ export const Context = props => (
 export default (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
         <MenuItem>Menu Item Three</MenuItem>

@@ -75,7 +75,7 @@ export const Context = props => (
 export const Submenu = props => (
   <Trigger className="slds-is-open">
     <Menu className="slds-dropdown_left">
-      <MenuList>
+      <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
         <MenuItemHasSubmenu

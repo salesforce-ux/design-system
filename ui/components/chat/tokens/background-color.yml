@@ -19,3 +19,6 @@ props:
   CHAT_MESSAGE_COLOR_BACKGROUND_OUTBOUND_AGENT:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Outbound agent chat message background color.
+  CHAT_MESSAGE_COLOR_BACKGROUND_STATUS:
+    value: '{!PALETTE_COOL_GRAY_1}'
+    comment: Status chat message background color.

@@ -100,7 +100,7 @@
  * @summary Used to style icons with a chat log
  *
  * @selector .slds-chat-icon
- * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container
+ * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container, .slds-chat-message__action .slds-icon_container
  */
 .slds-chat-icon {
   margin-right: $spacing-x-small;
@@ -109,7 +109,6 @@
     fill: $color-text-weak;
   }
 }
-
 
 /**
  * Chat logs are mainly made up of chat messages between an agent and a customer
@@ -192,7 +191,9 @@
 
 .slds-chat-message__text_inbound,
 .slds-chat-message__text_outbound,
-.slds-chat-message__text_outbound-agent {
+.slds-chat-message__text_outbound-agent,
+.slds-chat-message__text_unsupported-type,
+.slds-chat-message__text_delivery-failure {
   border-radius: $border-radius-large $border-radius-large 0;
   color: $color-text-inverse;
   min-height: 2rem;
@@ -244,6 +245,55 @@
 }
 
 /**
+ * @summary Used for an inbound message that is not a supported message type
+ *
+ * @selector .slds-chat-message__text_unsupported-type
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_unsupported-type {
+  background-color: $chat-message-color-background-status;
+  border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
+  border: $color-border-warning $border-width-thin solid;
+  color: $color-text-default;
+
+  .slds-chat-icon.slds-icon-utility-warning {
+
+    .slds-icon {
+      fill: $color-text-warning;
+    }
+  }
+}
+
+/**
+ * @summary Used for an inbound message that fails to deliver
+ *
+ * @selector .slds-chat-message__text_delivery-failure
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_delivery-failure {
+  background-color: $chat-message-color-background-status;
+  border: $color-border-destructive $border-width-thin solid;
+  color: $color-text-default;
+
+  .slds-chat-message__text_delivery-failure-reason {
+    display: flex;
+    padding: $spacing-x-small $spacing-x-small 0;
+    margin: $spacing-x-small #{-$spacing-x-small} 0;
+    color: $color-text-error;
+    border-top: $color-border-destructive $border-width-thin solid;
+  }
+
+  .slds-chat-icon.slds-icon-utility-error {
+
+    .slds-icon {
+      fill: $color-text-error;
+    }
+  }
+}
+
+/**
  * @summary Used when sneak peek is enabled for customer messages
  *
  * @selector .slds-chat-message__text_sneak-peek
@@ -269,6 +319,26 @@
   color: $color-text-weak;
   font-size: $font-size-text-x-small;
   margin: $spacing-xxx-small 0 0 $spacing-x-small;
+}
+
+/**
+ * @summary Used to style chat message resend action
+ *
+ * @selector .slds-chat-message__action
+ * @restrict .slds-chat-message .slds-button
+ */
+.slds-chat-message__action {
+  font-size: $font-size-text-x-small;
+  margin-left: $spacing-x-small;
+  line-height: $line-height-heading;
+
+  .slds-chat-icon.slds-icon-utility-redo {
+
+    .slds-icon {
+      @include square($square-icon-small-content);
+      fill: $color-text-link;
+    }
+  }
 }
 
 

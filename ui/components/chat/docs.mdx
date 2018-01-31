@@ -26,14 +26,14 @@ import { DoctypeIcon } from '../icons/doctype/example';
             name="Andy Martinez"
             timeStamp="4:59 PM"
           >
-            Hi, my Alexa only speaks French
+            Hi, my CloudWidget only speaks French
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody type="outbound">
-            Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+            Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -120,7 +120,7 @@ When each chat session is started or stopped, it is represented with a bookend. 
 
 ## Chat messages
 
-Chat messages are comprised of the message text, and message meta data including the persons name and time at which the message was sent. Chat message come in 3 forms:
+Chat messages are comprised of the message text, and message meta data including the persons name and time at which the message was sent. Chat messages come in 3 forms:
 
 ### Inbound messages
 
@@ -128,7 +128,7 @@ Chat messages are comprised of the message text, and message meta data including
   header="Use of aria-label"
   type="a11y"
 >
-  Each message meta data wrapper has <code className="doc">aria-label</code> added, which we can use to form more human sounding messages as they arrive, <b>"Hi, my Alexa only speaks French said Taylor Watson-Rice at 4:59 PM"</b>. A screen reader, when <code className="doc">aria-label</code> is applied to an element, will only announce the contents of the label, not the text content held in it.
+  Each message meta data wrapper has <code className="doc">aria-label</code> added, which we can use to form more human sounding messages as they arrive, <b>"Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"</b>. A screen reader, when <code className="doc">aria-label</code> is applied to an element, will only announce the contents of the label, not the text content held in it.
 </Blockquote>
 
 <Example title="Chat Inbound message">
@@ -142,7 +142,7 @@ Chat messages are comprised of the message text, and message meta data including
               name="Taylor Watson-Rice"
               timeStamp="4:59 PM"
             >
-              Hi, my Alexa only speaks French
+              Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -162,7 +162,7 @@ Consecutive messages only display name and time meta data once
         <ChatListItem type="inbound">
           <ChatMessage>
             <ChatMessageBody type="inbound">
-              Hi, my Alexa only speaks French
+              Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -194,7 +194,7 @@ Inbound messages can optionally display the customers avatar. When displaying an
           <ChatMessage>
             <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
             <ChatMessageBody type="inbound">
-              Hi, my Alexa only speaks French
+              Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -289,7 +289,7 @@ We can take that experience one step further when the sneak peek feature is enab
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
           <ChatMessageBody isTyping hasSneakPeek type="inbound">
-            Hi, my Alexa only spe
+            Hi, my CloudWidget only spe
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -314,7 +314,7 @@ Outbound messages come in 2 forms. Ones that are written by the agent in the cur
               name="Amber Cann"
               timeStamp="4:59 PM"
             >
-              Hi Taylor, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo? <a href="javascript:void(0)">http://www/amazon.com</a>
+              Hi Taylor, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget? <a href="javascript:void(0)">http://www/cloud.widget</a>
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -336,7 +336,7 @@ Outbound messages come in 2 forms. Ones that are written by the agent in the cur
               name="Jason Dewar"
               timeStamp="4:59 PM"
             >
-              So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients. Have you tried visiting our help site?
+              So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience. Have you tried visiting our help site?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -356,9 +356,8 @@ For consecutive outbound messages the same rules apply to both types, as consecu
         <ChatListItem type="outbound">
           <ChatMessage>
             <ChatMessageBody type="outbound">
-              Hi Andy, thank you for contacting Amazon Support. Can you please
-              tell me what language you are trying to program on your Amazon
-              Echo?
+              Hi Andy, thank you for contacting Widget Support. Can you please
+              tell me what language you are trying to program on your CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -370,6 +369,65 @@ For consecutive outbound messages the same rules apply to both types, as consecu
               timeStamp="4:59 PM"
             >
               It might be the cause of the problem
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+### Delivery Status Messages
+
+#### Unsupported Message Type (Inbound)
+
+If a customer tries sending a message that is not supported, it will appear as an unsupported message type.
+
+<Example title="Chat Inbound message unsupported type">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody
+              type="unsupported-type"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+            Message type is not supported
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+#### Message Delivery Failure (Outbound)
+
+If the agent attempts to send a message that can't be delivered, a message delivery failure indication appears beneath the original message text, along with an option to resend.
+
+<Blockquote
+  header="Role alert"
+  type="a11y"
+>
+  Message delivery failures have the addition <code>role="alert"</code> to their container. A chat log has an <code>aria-live="polite"</code> value, but we would like to inform agents of errors immediately. The <code>role="alert"</code> attribute comes with an implicit <code>aria-live</code> value of <code>assertive</code> which will achieve this.
+</Blockquote>
+
+<Example title="Chat Outbound message with delivery failure">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="delivery-failure"
+              deliveryFailureReason="Message was not delivered because Andy stopped receiving messages."
+              name="Amber Cann"
+              timeStamp="4:59 PM"
+            >
+            It might be the cause of the problem
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -494,7 +552,7 @@ Sometimes an agent might add a message to an event for another agent to read.
       <ChatList>
         <ChatListItem type="event">
           <ChatEvent
-            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            agentMessage="Andy needs help changing the language on his CloudWidget"
             symbol="change_owner"
             timeStamp="5:19 PM"
           >
@@ -557,14 +615,14 @@ In the event of an error occurring during the chat, an error event can be displa
               name="Andy Martinez"
               timeStamp="4:59 PM"
             >
-              Hi, my Alexa only speaks French
+              Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem type="outbound">
           <ChatMessage>
             <ChatMessageBody type="outbound-agent">
-              Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+              Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -598,13 +656,13 @@ In the event of an error occurring during the chat, an error event can be displa
               name="Jason Dewar"
               timeStamp="5:15 PM"
             >
-              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem type="event">
           <ChatEvent
-            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            agentMessage="Andy needs help changing the language on his CloudWidget"
             symbol="change_owner"
             timeStamp="5:19 PM"
           >
@@ -679,14 +737,14 @@ An agent has the ability to view past chats with particular customers. In this i
               name="Andy Martinez"
               timeStamp="4:59 PM"
             >
-              Hi, my Alexa only speaks French
+              Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
             <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
-              Hi Andy, thank you for contacting Amazon Support. Can you please tell me what language you are trying to program on your Amazon Echo?
+              Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -715,13 +773,13 @@ An agent has the ability to view past chats with particular customers. In this i
               name="Jason Dewar"
               timeStamp="5:15 PM"
             >
-              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients!
+              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem type="event">
           <ChatEvent
-            agentMessage="Andy needs help changing the language on his Amazon Echo"
+            agentMessage="Andy needs help changing the language on his CloudWidget"
             symbol="change_owner"
             timeStamp="5:19 PM"
           >

@@ -28,7 +28,7 @@ export default (
             name="Taylor Watson-Rice"
             timeStamp="4:59 PM"
           >
-            Hi, my Alexa only speaks French
+            Hi, my CloudWidget only speaks French
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -51,10 +51,10 @@ export const states = [
                 name="Taylor Watson-Rice"
                 timeStamp="4:59 PM"
               >
-                Hi, my Alexa only speaks French and I'm having a lot of trouble.
-                I've followed this article but it doesn't work{' '}
+                Hi, my CloudWidget only speaks French and I'm having a lot of
+                trouble. I've followed this article but it doesn't work{' '}
                 <a href="javascript:void(0)">
-                  https://www.somehelpsite.com/alexa-speaks-french
+                  https://www.somehelpsite.com/CloudWidget-speaks-french
                 </a>
               </ChatMessageBody>
             </ChatMessage>
@@ -89,8 +89,8 @@ export const states = [
             <ChatMessage>
               <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
               <ChatMessageBody isTyping hasSneakPeek type="inbound">
-                Hi, my Alexa only speaks French and I'm having a lot of trouble
-                trying to make i
+                Hi, my CloudWidget only speaks French and I'm having a lot of
+                trouble trying to make i
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -140,10 +140,10 @@ export const states = [
                 name="Amber Cann"
                 timeStamp="4:59 PM"
               >
-                Hi Taylor, thank you for contacting Amazon Support. Can you
+                Hi Taylor, thank you for contacting Widget Support. Can you
                 please tell me what language you are trying to program on your
-                Amazon Echo?{' '}
-                <a href="javascript:void(0)">http://www/amazon.com</a>
+                CloudWidget?{' '}
+                <a href="javascript:void(0)">http://www/cloud.widget</a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -165,6 +165,50 @@ export const states = [
                 timeStamp="4:59 PM"
               >
                 {exampleMultiLineText}
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
+    id: 'inbound-unsupported-type',
+    label: 'Inbound Unsupported Type',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="JD" name="Jason Dewar" />
+              <ChatMessageBody
+                type="unsupported-type"
+                name="Jason Dewar"
+                timeStamp="4:59 PM"
+              >
+                Message type is not supported
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
+    id: 'outbound-delivery-failure',
+    label: 'Outbound Delivery Failure',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="outbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="delivery-failure"
+                deliveryFailureReason="Message was not delivered because Andy stopped receiving messages."
+                name="Jason Dewar"
+                timeStamp="4:59 PM"
+              >
+                It might be the cause of the problem
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -195,7 +239,7 @@ export const states = [
         <ChatList>
           <ChatListItem type="event">
             <ChatEvent
-              agentMessage="Andy needs help changing the language on his Amazon Echo"
+              agentMessage="Andy needs help changing the language on his CloudWidget"
               symbol="change_owner"
               timeStamp="5:19 PM"
             >
@@ -273,7 +317,7 @@ export const examples = [
             <ChatMessage>
               <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
               <ChatMessageBody type="inbound">
-                Hi, my Alexa only speaks French
+                Hi, my CloudWidget only speaks French
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -301,9 +345,9 @@ export const examples = [
           <ChatListItem type="outbound">
             <ChatMessage>
               <ChatMessageBody type="outbound">
-                Hi Andy, thank you for contacting Amazon Support. Can you please
-                tell me what language you are trying to program on your Amazon
-                Echo?
+                Hi Andy, thank you for contacting Widget Support. Can you please
+                tell me what language you are trying to program on your
+                CloudWidget?
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -343,16 +387,16 @@ export const examples = [
                 name="Andy Martinez"
                 timeStamp="4:59 PM"
               >
-                Hi, my Alexa only speaks French
+                Hi, my CloudWidget only speaks French
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
           <ChatListItem type="outbound">
             <ChatMessage>
               <ChatMessageBody type="outbound-agent">
-                Hi Andy, thank you for contacting Amazon Support. Can you please
-                tell me what language you are trying to program on your Amazon
-                Echo?
+                Hi Andy, thank you for contacting Widget Support. Can you please
+                tell me what language you are trying to program on your
+                CloudWidget?
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -393,7 +437,7 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="event">
             <ChatEvent
-              agentMessage="Andy needs help changing the language on his Amazon Echo"
+              agentMessage="Andy needs help changing the language on his CloudWidget"
               symbol="change_owner"
               timeStamp="5:19 PM"
             >

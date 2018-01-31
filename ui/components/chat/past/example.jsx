@@ -20,7 +20,7 @@ export default (
       <ChatListItem>
         <ChatMessage>
           <ChatMessageBody isPast name="Taylor Watson-Rice" timeStamp="4:59 PM">
-            Hi, my Alexa only speaks French
+            Hi, my CloudWidget only speaks French
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -38,9 +38,9 @@ export const states = [
           <ChatListItem>
             <ChatMessage>
               <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
-                Hi Andy, thank you for contacting Amazon Support. Can you please
-                tell me what language you are trying to program on your Amazon
-                Echo?
+                Hi Andy, thank you for contacting Widget Support. Can you please
+                tell me what language you are trying to program on your
+                CloudWidget?
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -71,16 +71,16 @@ export const examples = [
                 name="Taylor Watson-Rice"
                 timeStamp="4:59 PM"
               >
-                Hi, my Alexa only speaks French
+                Hi, my CloudWidget only speaks French
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
           <ChatListItem>
             <ChatMessage>
               <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
-                Hi Andy, thank you for contacting Amazon Support. Can you please
-                tell me what language you are trying to program on your Amazon
-                Echo?
+                Hi Andy, thank you for contacting Widget Support. Can you please
+                tell me what language you are trying to program on your
+                CloudWidget?
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -108,7 +108,7 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="event">
             <ChatEvent
-              agentMessage="Andy needs help changing the language on his Amazon Echo"
+              agentMessage="Andy needs help changing the language on his CloudWidget"
               symbol="change_owner"
               timeStamp="5:19 PM"
             >
@@ -155,7 +155,7 @@ export const examples = [
               <ChatMessageBody isPast name="Andy Martinez" timeStamp="4:59 PM">
                 Hello, me again. I tried following this guide{' '}
                 <a href="javascript:void(0)">
-                  https://www.somehelpsite.com/alexa-speaks-french
+                  https://www.somehelpsite.com/CloudWidget-speaks-french
                 </a>
               </ChatMessageBody>
             </ChatMessage>
@@ -163,7 +163,7 @@ export const examples = [
           <ChatListItem>
             <ChatMessage>
               <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
-                Hi Andy, thank you for contacting Amazon Support again. What can
+                Hi Andy, thank you for contacting Widget Support again. What can
                 I help you with?
               </ChatMessageBody>
             </ChatMessage>

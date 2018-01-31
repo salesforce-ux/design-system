@@ -63,6 +63,10 @@ export const ChatMessageBody = props => (
         'slds-chat-message__text_outbound': props.type === 'outbound',
         'slds-chat-message__text_outbound-agent':
           props.type === 'outbound-agent',
+        'slds-chat-message__text_unsupported-type':
+          props.type === 'unsupported-type',
+        'slds-chat-message__text_delivery-failure':
+          props.type === 'delivery-failure',
         'slds-chat-message__text_sneak-peek': props.hasSneakPeek
       })}
     >
@@ -74,17 +78,41 @@ export const ChatMessageBody = props => (
           title="Customer is typing"
         />
       )}
+      {props.type === 'unsupported-type' && (
+        <ChatIcon symbol="warning" assistiveText="Warning" />
+      )}
       {props.children && (
         <span aria-hidden={props.hasSneakPeek ? 'true' : null}>
           {props.children}
         </span>
       )}
+      {props.type === 'delivery-failure' && (
+        <ChatMessageDeliveryFailure>
+          {props.deliveryFailureReason}
+        </ChatMessageDeliveryFailure>
+      )}
     </div>
-    {props.name &&
+    {props.type === 'delivery-failure' ? (
+      <div className="slds-grid slds-grid_align-spread slds-grid_vertical-align-start">
+        {props.name &&
+          props.timeStamp &&
+          !props.isPast && (
+            <ChatMessageTimeStamp
+              name={props.name}
+              timeStamp={props.timeStamp}
+            />
+          )}
+        {props.type === 'delivery-failure' && (
+          <ChatMessageAction symbol="redo" actionTitle="Resend" />
+        )}
+      </div>
+    ) : (
+      props.name &&
       props.timeStamp &&
       !props.isPast && (
         <ChatMessageTimeStamp name={props.name} timeStamp={props.timeStamp} />
-      )}
+      )
+    )}
   </div>
 );
 
@@ -95,6 +123,26 @@ const ChatMessageTimeStamp = props => (
   >
     {props.isPast ? <b>{props.name}</b> : props.name} &bull; {props.timeStamp}
   </div>
+);
+
+const ChatMessageDeliveryFailure = props => (
+  <div className="slds-chat-message__text_delivery-failure-reason" role="alert">
+    <ChatIcon symbol="error" />
+    <span>{props.children}</span>
+  </div>
+);
+
+const ChatMessageAction = props => (
+  <button className="slds-button slds-chat-message__action slds-m-top_xxx-small">
+    <UtilityIcon
+      assistiveText={false}
+      title={false}
+      className="slds-icon_xx-small"
+      containerClassName="slds-chat-icon"
+      symbol={props.symbol}
+    />
+    <span>{props.actionTitle}</span>
+  </button>
 );
 
 export const ChatAvatar = props => (

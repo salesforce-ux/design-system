@@ -196,6 +196,29 @@ describe('Chat message body', () => {
         <a href="#">filename_of_attachment.jpg</a>
       </ChatMessageBody>
     ));
+
+  it('renders an inbound chat message body with an unsupported message type', () =>
+    matchesMarkupAndStyle(
+      <ChatMessageBody
+        type="unsupported-type"
+        name="Ayesha Mazumdar"
+        timeStamp="4:59 PM"
+      >
+        Message type is not supported
+      </ChatMessageBody>
+    ));
+
+  it('renders an outbound chat message body with a delivery failure', () =>
+    matchesMarkupAndStyle(
+      <ChatMessageBody
+        type="delivery-failure"
+        deliveryFailureReason="Message was not delivered because Andy stopped receiving messages."
+        name="Ayesha Mazumdar"
+        timeStamp="4:59 PM"
+      >
+        It might be the cause of the problem
+      </ChatMessageBody>
+    ));
 });
 
 describe('Chat Icon', () => {

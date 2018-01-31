@@ -150,33 +150,6 @@
   }
 
   /**
-  * @summary Creates the active stage of the sales path
-  *
-  * @selector .slds-is-active
-  * @restrict .slds-path__item
-  * @notes This class must be placed on the item programatically when the guidance section is activated
-  */
-  .slds-is-active {
-    background-color: $color-background-path-active;
-
-    .slds-path__link {
-      color: $color-text-inverse;
-    }
-
-    &:hover {
-      background-color: $color-background-path-active-hover;
-
-      + .slds-path__item:before {
-        background-color: $color-background-path-active-hover;
-      }
-    }
-
-    + .slds-path__item:before {
-      background-color: $color-background-path-active;
-    }
-  }
-
-  /**
    * @summary Creates success stage of the path
    *
    * @selector .slds-is-won
@@ -230,6 +203,42 @@
       .slds-path__link {
         color: $color-text-inverse;
       }
+    }
+  }
+
+  /**
+  * @summary Creates the active stage of the sales path
+  *
+  * @selector .slds-is-active
+  * @restrict .slds-path__item
+  * @notes This class must be placed on the item programatically when the guidance section is activated
+  */
+  .slds-is-active,
+  .slds-is-complete.slds-is-focused {
+    background-color: $color-background-path-active;
+
+    .slds-path__stage {
+      transform: translateY(-50%) rotateX(-180deg);
+    }
+
+    .slds-path__title {
+      transform: rotateX(0deg);
+    }
+
+    .slds-path__link {
+      color: $color-text-inverse;
+    }
+
+    &:hover {
+      background-color: $color-background-path-active-hover;
+
+      + .slds-path__item:before {
+        background-color: $color-background-path-active-hover;
+      }
+    }
+
+    + .slds-path__item:before {
+      background-color: $color-background-path-active;
     }
   }
 

@@ -18,7 +18,7 @@ props:
     comment: The hover background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_ACTIVE:
     value: '{!DEEP_COVE}'
-    comment: The background color for Salespath stages that are complete.
+    comment: The background color for Salespath stages that are active.
   COLOR_BACKGROUND_PATH_ACTIVE_HOVER:
     value: '{!BISCAY}'
     comment: The hovered background color for Salespath stages that are complete.

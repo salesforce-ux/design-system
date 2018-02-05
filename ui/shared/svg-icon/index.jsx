@@ -10,6 +10,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class SvgIcon extends React.Component {
   render() {
@@ -33,9 +34,9 @@ class SvgIcon extends React.Component {
 }
 
 SvgIcon.propTypes = {
-  className: React.PropTypes.string,
-  sprite: React.PropTypes.string,
-  symbol: React.PropTypes.string
+  className: PropTypes.string,
+  sprite: PropTypes.string,
+  symbol: PropTypes.string
 };
 
 export default SvgIcon;

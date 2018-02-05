@@ -3,6 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export const TypingIcon = props => (
   <span
@@ -22,10 +23,10 @@ export const TypingIcon = props => (
 );
 
 TypingIcon.propTypes = {
-  isAnimated: React.PropTypes.bool,
-  isPaused: React.PropTypes.bool,
-  title: React.PropTypes.string.isRequired,
-  assistiveText: React.PropTypes.string
+  isAnimated: PropTypes.bool,
+  isPaused: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  assistiveText: PropTypes.string
 };
 
 export default (

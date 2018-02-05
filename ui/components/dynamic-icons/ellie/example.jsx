@@ -4,6 +4,7 @@
 import React from 'react';
 import _ from '../../../shared/helpers';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 // This icon is a sprite of 20 frames laid out horizontally
 // Each frame is composed of 2 circles positioned on top of each other
@@ -36,8 +37,8 @@ export const Ellie = props => (
 );
 
 Ellie.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  assistiveText: React.PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  assistiveText: PropTypes.string.isRequired
 };
 
 /* -----------------------------------------------------------------------------

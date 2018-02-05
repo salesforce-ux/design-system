@@ -4,8 +4,9 @@
 import _ from '../../shared/helpers';
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
-const PT = React.PropTypes;
+const PT = PropTypes;
 
 class TabContent extends React.Component {
   render() {

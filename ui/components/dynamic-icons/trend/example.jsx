@@ -4,6 +4,7 @@
 import React from 'react';
 import _ from '../../../shared/helpers';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -33,8 +34,8 @@ let Trend = props => {
 };
 
 Trend.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  assistiveText: React.PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  assistiveText: PropTypes.string.isRequired
 };
 
 /* -----------------------------------------------------------------------------

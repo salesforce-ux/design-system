@@ -6,7 +6,7 @@
  *
  * @name base
  * @selector .slds-welcome-mat
- * @restrict div
+ * @restrict section
  * @variant
  */
 .slds-welcome-mat {
@@ -19,9 +19,14 @@
     margin: $spacing-medium 0;
   }
 
-  .slds-box:not(.slds-color-picker__box-complete) {
+  .slds-box:not(.slds-welcome-mat__tile-complete) {
     box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
     background: $color-background-alt;
+  }
+
+  .slds-box:not(.slds-welcome-mat__tile-complete):hover {
+    box-shadow: 0 0 0 1px $color-border-selection-hover inset,
+      0 2px 2px $welcome-mat-color-action-shadow;
   }
 
   .slds-progress-bar {
@@ -51,8 +56,8 @@
 /**
  * @summary Title element for the informational side of the Welcome Mat
  *
- * @selector .slds-welcome-mat_info-title
- * @restrict .slds-welcome-mat_info h3
+ * @selector .slds-welcome-mat__info-title
+ * @restrict .slds-welcome-mat__info h3
  */
 .slds-welcome-mat__info-title {
   margin-bottom: $spacing-large;
@@ -72,10 +77,10 @@
 /**
  * @summary Text description of walkthrough completion count
  *
- * @selector .slds-welcome-mat_info-complete
- * @restrict .slds-welcome-mat_info p
+ * @selector .slds-welcome-mat__info-complete
+ * @restrict .slds-welcome-mat__info p
  */
-.slds-welcome-mat_info-complete {
+.slds-welcome-mat__info-complete {
   font-weight: bold;
   margin-bottom: $spacing-medium;
 }
@@ -83,42 +88,74 @@
 /**
  * @summary Container element for the Actions side of the Welcome Mat
  *
- * @selector .slds-welcome-mat__actions
+ * @selector .slds-welcome-mat__tiles
  * @restrict .slds-welcome-mat div
  */
-.slds-welcome-mat__actions {
+.slds-welcome-mat__tiles {
   background: $color-background;
 }
 
 /**
- * @selector .slds-welcome-mat__action
- * @restrict .slds-welcome-mat__actions div
+ * @selector .slds-welcome-mat__tile
+ * @restrict .slds-welcome-mat__tiles div
  */
 
 /**
- * @selector .slds-welcome-mat__action-title
- * @restrict .slds-welcome-mat__action h4
+ * @selector .slds-welcome-mat__tile-title
+ * @restrict .slds-welcome-mat__tile h4
  */
-.slds-welcome-mat__action-title {
+.slds-welcome-mat__tile-title {
   font-weight: bold;
 }
 
 /**
- * @selector .slds-welcome-mat__action-content
- * @restrict .slds-welcome-mat__action p
+ * @selector .slds-welcome-mat__tile-content
+ * @restrict .slds-welcome-mat__tile p
  */
-.slds-welcome-mat__action-content {
+.slds-welcome-mat__tile-content {
   color: $color-text-weak;
   font-size: $font-size-text-x-small;
   line-height: $line-height-text;
 }
 
 /**
- * @selector .slds-color-picker__box-complete
- * @restrict .slds-color-picker .slds-box
+ * @selector .slds-welcome-mat__tile-icon-container
+ * @restrict .slds-welcome-mat__tile div
  */
-.slds-color-picker__box-complete {
+.slds-welcome-mat__tile-icon-container {
+  position: relative;
+}
+
+/**
+ * @selector .slds-welcome-mat__tile-complete
+ * @restrict .slds-welcome-mat__tile
+ * @modifier
+ */
+.slds-welcome-mat__tile-complete {
   .slds-icon {
     fill: $welcome-mat-color-complete-icon;
+  }
+}
+
+/**
+ *
+ */
+.slds-welcome-mat__icon-complete {
+  position: absolute;
+  bottom: -0.375rem;
+  right: -0.375rem;
+  display: flex;
+  align-items: center;
+  height: $welcome-mat-complete-icon-size;
+  width: $welcome-mat-complete-icon-size;
+  text-align: center;
+  border: 2px solid $color-background;
+  border-radius: $welcome-mat-complete-icon-size;
+  background: $progress-bar-color-background-fill-success;
+
+  .slds-icon {
+    width: 60%;
+    height: 60%;
+    fill: #fff;
   }
 }

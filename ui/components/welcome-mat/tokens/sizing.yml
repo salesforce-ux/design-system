@@ -16,3 +16,7 @@ props:
   WELCOME_MAT_WIDTH_PROGRESS_BAR:
     value: '12.5rem'
     comment: Welcome Mat Progress Bar width
+  
+  WELCOME_MAT_COMPLETE_ICON_SIZE:
+    value: '1.25rem'
+    comment: 'Size of the green completed check mark'

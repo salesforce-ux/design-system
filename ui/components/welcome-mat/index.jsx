@@ -1,9 +1,11 @@
 import React from 'react';
+import classNames from 'classnames';
 
 // component imports
 import { Modal, ModalHeader, ModalContent } from '../modals/base/example';
 import { ProgressBar } from '../progress-bar/base/example';
 import { VisualPickerMediaObject } from '../visual-picker/link/example';
+import { UtilityIcon } from '../icons/base/example';
 
 let Demo = props => (
   <div className="demo-only" {...props}>
@@ -43,12 +45,32 @@ let sampleTiles = [
 ];
 
 const WelcomeMatTile = props => {
-  const className = props.completed ? 'slds-color-picker__box-complete' : null;
+  const className = classNames('slds-welcome-mat__tile', {
+    'slds-welcome-mat__tile-complete': props.completed
+  });
+
+  const iconContent = props.completed ? (
+    <div className="slds-welcome-mat__tile-icon-container">
+      <UtilityIcon
+        className="slds-icon-text-default"
+        symbol={props.tile.symbol}
+      />
+      <div className="slds-welcome-mat__icon-complete">
+        <UtilityIcon className="slds-icon-text-default" symbol="check" />
+      </div>
+    </div>
+  ) : (
+    undefined
+  );
 
   return (
-    <VisualPickerMediaObject symbol={props.tile.symbol} className={className}>
-      <h4 className="slds-welcome-mat__action-title">{props.tile.title}</h4>
-      <p className="slds-welcome-mat__action-content">{props.tile.content}</p>
+    <VisualPickerMediaObject
+      symbol={props.tile.symbol}
+      className={className}
+      icon={iconContent}
+    >
+      <h4 className="slds-welcome-mat__tile-title">{props.tile.title}</h4>
+      <p className="slds-welcome-mat__tile-content">{props.tile.content}</p>
     </VisualPickerMediaObject>
   );
 };
@@ -69,13 +91,13 @@ export default props => {
               expert by the time you're done!
             </p>
 
-            <p className="slds-welcome-mat_info-complete">
+            <p className="slds-welcome-mat__info-complete">
               4/8 Walkthroughs completed
             </p>
             <ProgressBar value="50" className="slds-progress-bar_circular" />
           </div>
 
-          <div className="slds-welcome-mat__actions slds-size_1-of-2 slds-p-around_medium">
+          <div className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
             {sampleTiles.map((tile, tileIndex) => (
               <WelcomeMatTile
                 key={`tile-${tileIndex}`}

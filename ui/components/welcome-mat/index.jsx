@@ -27,7 +27,7 @@ let sampleTiles = [
     symbol: 'upload',
     title: 'Power Up the Utility Bar',
     content:
-      'Tap into case history or share notes with fellow agents&mdash;it all happens on the utility bar.'
+      'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
   },
   {
     symbol: 'magicwand',
@@ -43,30 +43,34 @@ let sampleTiles = [
 ];
 
 export default () => (
-  <Demo style={{ height: '640px' }}>
+  <Demo style={{ height: '740px' }}>
     <Modal className="slds-welcome-mat">
       <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-welcome-mat__content slds-grid">
-        <div className="slds-size_1-of-2 slds-p-around_xx-large">
-          <h1>Empower Your Agents with Service Cloud</h1>
-          <p>
+        <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
+          <h3 className="slds-welcome-mat__info-title">
+            Empower Your Agents with Service Cloud
+          </h3>
+          <p className="slds-welcome-mat__info-description">
             Your 30-day trial is under way. Learn how easy it is to use and set
             up Lightning Service Desk. You'll be your company's service expert
             by the time you're done!
           </p>
 
-          <p>4/8 Walkthroughs completed</p>
+          <p className="slds-welcome-mat_info-complete">
+            4/8 Walkthroughs completed
+          </p>
           <ProgressBar value="50" className="slds-progress-bar_circular" />
         </div>
 
-        <div className="slds-size_1-of-2 slds-p-around_medium">
+        <div className="slds-welcome-mat__actions slds-size_1-of-2 slds-p-around_medium">
           {sampleTiles.map((tile, tileIndex) => (
             <VisualPickerMediaObject
               key={`tile-${tileIndex}`}
               symbol={tile.symbol}
             >
-              <h2>{tile.title}</h2>
-              <p>{tile.content}</p>
+              <h4 className="slds-welcome-mat__action-title">{tile.title}</h4>
+              <p className="slds-welcome-mat__action-content">{tile.content}</p>
             </VisualPickerMediaObject>
           ))}
         </div>

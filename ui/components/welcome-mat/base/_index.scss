@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Words.
+ * @summary Welcome Mat component
  *
  * @name base
  * @selector .slds-welcome-mat
@@ -12,15 +12,101 @@
 .slds-welcome-mat {
   .slds-modal__container {
     width: 833px;
+    max-width: none;
   }
 
   .slds-box {
-    margin: 10px 0;
+    margin: $spacing-medium 0;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+    background: $color-background-alt;
+  }
+
+  .slds-progress-bar {
+    background: #fff;
+    width: 200px;
+    display: inline-block;
+  }
+
+  .slds-progress-bar__value {
+    background: $progress-bar-color-background-fill-success;
   }
 }
 
-.slds-welcome-mat__summary {
+/**
+ * @summary Container element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__info {
+  text-align: center;
+  background: url(/assets/images/welcome-mat/hero_image_clouds@2x.png) bottom
+    center no-repeat #89c5ec;
+  background-size: contain;
 }
 
-.slds-welcome-mat__action {
+/**
+ * @summary Title element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat_info-title
+ * @restrict .slds-welcome-mat_info h3
+ */
+.slds-welcome-mat__info-title {
+  margin-bottom: $spacing-large;
+  font-size: 42px;
+  line-height: 1.3;
+}
+
+/**
+ * @summary Description element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info-description
+ * @restrict .slds-welcome-mat__info p
+ */
+.slds-welcome-mat__info-description {
+  margin-bottom: $spacing-large;
+}
+
+/**
+ * @summary Text description of walkthrough completion count
+ *
+ * @selector .slds-welcome-mat_info-complete
+ * @restrict .slds-welcome-mat_info p
+ */
+.slds-welcome-mat_info-complete {
+  font-weight: bold;
+  margin-bottom: $spacing-medium;
+}
+
+/**
+ * @summary Container element for the Actions side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__actions
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__actions {
+  background: $color-background;
+}
+
+/**
+ * @selector .slds-welcome-mat__action
+ * @restrict .slds-welcome-mat__actions div
+ */
+
+/**
+ * @selector .slds-welcome-mat__action-title
+ * @restrict .slds-welcome-mat__action h4
+ */
+.slds-welcome-mat__action-title {
+  font-weight: bold;
+}
+
+/**
+ * @selector .slds-welcome-mat__action-content
+ * @restrict .slds-welcome-mat__action p
+ */
+.slds-welcome-mat__action-content {
+  color: $color-text-weak;
+  font-size: $font-size-text-x-small;
+  line-height: $line-height-text;
 }

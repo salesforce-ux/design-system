@@ -1,0 +1,18 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  category: sizing
+  type: size
+  cssProperties:
+  - '*height'
+  - '*width'
+props:
+  WELCOME_MAT_WIDTH:
+    value: '52.0625rem'
+    comment: Welcome Mat Width
+
+  WELCOME_MAT_WIDTH_PROGRESS_BAR:
+    value: '12.5rem'
+    comment: Welcome Mat Progress Bar width

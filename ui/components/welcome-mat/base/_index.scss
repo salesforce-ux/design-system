@@ -11,19 +11,19 @@
  */
 .slds-welcome-mat {
   .slds-modal__container {
-    width: 833px;
+    width: $welcome-mat-width;
     max-width: none;
   }
 
   .slds-box {
     margin: $spacing-medium 0;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
     background: $color-background-alt;
   }
 
   .slds-progress-bar {
-    background: #fff;
-    width: 200px;
+    background: $welcome-mat-color-background-progress-bar;
+    width: $welcome-mat-width-progress-bar;
     display: inline-block;
   }
 
@@ -41,7 +41,7 @@
 .slds-welcome-mat__info {
   text-align: center;
   background: url(/assets/images/welcome-mat/hero_image_clouds@2x.png) bottom
-    center no-repeat #89c5ec;
+    center no-repeat $welcome-mat-color-info-background;
   background-size: contain;
 }
 
@@ -53,8 +53,7 @@
  */
 .slds-welcome-mat__info-title {
   margin-bottom: $spacing-large;
-  font-size: 42px;
-  line-height: 1.3;
+  font-size: $welcome-mat-font-size-info-title;
 }
 
 /**

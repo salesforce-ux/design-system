@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  category: font-size
+  type: font-size
+  cssProperties:
+  - font
+  - font-size
+props:
+  WELCOME_MAT_FONT_SIZE_INFO_TITLE:
+    value: '2.625rem'
+    comment: Font size for the info title

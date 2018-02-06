@@ -1,0 +1,26 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  type: color
+  category: color
+  cssProperties:
+  - 'color'
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/color-palettes.yml"
+props:
+  WELCOME_MAT_COLOR_BACKGROUND_PROGRESS_BAR:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Progress Bar background is white
+
+  WELCOME_MAT_COLOR_ACTION_SHADOW:
+    value: 'rgba(0,0,0,0.05)'
+    comment: Box Shadow declaration
+
+  WELCOME_MAT_COLOR_INFO_BACKGROUND:
+    value: '#89c5ec'
+    comment: Background color for the Welcome Mat Info section

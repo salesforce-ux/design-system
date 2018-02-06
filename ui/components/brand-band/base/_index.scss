@@ -53,7 +53,7 @@
    * @restrict .slds-brand-band
    * @modifier
    */
-  &.slds-brand-band_cover {
+  &.slds-brand-band_cover:before {
     background-repeat: no-repeat;
     background-size: cover;
   }

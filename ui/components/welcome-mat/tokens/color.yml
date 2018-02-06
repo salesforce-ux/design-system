@@ -24,3 +24,7 @@ props:
   WELCOME_MAT_COLOR_INFO_BACKGROUND:
     value: '#89c5ec'
     comment: Background color for the Welcome Mat Info section
+
+  WELCOME_MAT_COLOR_COMPLETE_ICON:
+    value: '#A7B9D1'
+    comment: Completed icon color for the Welcome Mat Boxes

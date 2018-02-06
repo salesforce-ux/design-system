@@ -17,6 +17,9 @@
 
   .slds-box {
     margin: $spacing-medium 0;
+  }
+
+  .slds-box:not(.slds-color-picker__box-complete) {
     box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
     background: $color-background-alt;
   }
@@ -108,4 +111,14 @@
   color: $color-text-weak;
   font-size: $font-size-text-x-small;
   line-height: $line-height-text;
+}
+
+/**
+ * @selector .slds-color-picker__box-complete
+ * @restrict .slds-color-picker .slds-box
+ */
+.slds-color-picker__box-complete {
+  .slds-icon {
+    fill: $welcome-mat-color-complete-icon;
+  }
 }

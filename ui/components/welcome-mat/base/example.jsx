@@ -4,10 +4,10 @@ import WelcomeMat from '../';
 
 export default <WelcomeMat />;
 
-// export let examples = [
-//   {
-//     id: 'foo',
-//     label: 'bar',
-//     element: <WelcomeMat />
-//   }
-// ];
+export let states = [
+  {
+    id: 'completed',
+    label: 'steps-complete',
+    element: <WelcomeMat showAsCompleted />
+  }
+];

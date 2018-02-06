@@ -42,39 +42,50 @@ let sampleTiles = [
   }
 ];
 
-export default () => (
-  <Demo style={{ height: '740px' }}>
-    <Modal className="slds-welcome-mat">
-      <ModalHeader className="slds-modal__header_empty" />
-      <ModalContent className="slds-welcome-mat__content slds-grid">
-        <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
-          <h3 className="slds-welcome-mat__info-title">
-            Empower Your Agents with Service Cloud
-          </h3>
-          <p className="slds-welcome-mat__info-description">
-            Your 30-day trial is under way. Learn how easy it is to use and set
-            up Lightning Service Desk. You'll be your company's service expert
-            by the time you're done!
-          </p>
+const WelcomeMatTile = props => {
+  const className = props.completed ? 'slds-color-picker__box-complete' : null;
 
-          <p className="slds-welcome-mat_info-complete">
-            4/8 Walkthroughs completed
-          </p>
-          <ProgressBar value="50" className="slds-progress-bar_circular" />
-        </div>
+  return (
+    <VisualPickerMediaObject symbol={props.tile.symbol} className={className}>
+      <h4 className="slds-welcome-mat__action-title">{props.tile.title}</h4>
+      <p className="slds-welcome-mat__action-content">{props.tile.content}</p>
+    </VisualPickerMediaObject>
+  );
+};
 
-        <div className="slds-welcome-mat__actions slds-size_1-of-2 slds-p-around_medium">
-          {sampleTiles.map((tile, tileIndex) => (
-            <VisualPickerMediaObject
-              key={`tile-${tileIndex}`}
-              symbol={tile.symbol}
-            >
-              <h4 className="slds-welcome-mat__action-title">{tile.title}</h4>
-              <p className="slds-welcome-mat__action-content">{tile.content}</p>
-            </VisualPickerMediaObject>
-          ))}
-        </div>
-      </ModalContent>
-    </Modal>
-  </Demo>
-);
+export default props => {
+  return (
+    <Demo style={{ height: '720px' }}>
+      <Modal className="slds-welcome-mat">
+        <ModalHeader className="slds-modal__header_empty" />
+        <ModalContent className="slds-welcome-mat__content slds-grid">
+          <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
+            <h3 className="slds-welcome-mat__info-title">
+              Empower Your Agents with Service Cloud
+            </h3>
+            <p className="slds-welcome-mat__info-description">
+              Your 30-day trial is under way. Learn how easy it is to use and
+              set up Lightning Service Desk. You'll be your company's service
+              expert by the time you're done!
+            </p>
+
+            <p className="slds-welcome-mat_info-complete">
+              4/8 Walkthroughs completed
+            </p>
+            <ProgressBar value="50" className="slds-progress-bar_circular" />
+          </div>
+
+          <div className="slds-welcome-mat__actions slds-size_1-of-2 slds-p-around_medium">
+            {sampleTiles.map((tile, tileIndex) => (
+              <WelcomeMatTile
+                key={`tile-${tileIndex}`}
+                tile={tile}
+                completed={props.showAsCompleted}
+              />
+            ))}
+          </div>
+        </ModalContent>
+      </Modal>
+    </Demo>
+  );
+};

@@ -9,6 +9,7 @@
 
 - Add warm/cool header contrast tokens ([d6515ee](https://github.com/salesforce-ux/design-system/commit/d6515ee))
 - Set background image on Brand Band to not repeat ([d843c97](https://github.com/salesforce-ux/design-system/commit/d843c97))
+- Update bundle script to fix windows npm error ([#523](https://github.com/salesforce-ux/design-system/issues/523))
 
 ## **Release [2.5.1] - January 19, 2018**
 

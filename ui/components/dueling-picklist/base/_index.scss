@@ -53,7 +53,7 @@
 
   /**
    * @summary Selected/dragging state of a listbox option
-   * @selector .slds-is-grabbed
+   * @selector .slds-is-selected
    * @restrict .slds-dueling-list__options div
    */
   [aria-selected="true"] {
@@ -65,6 +65,15 @@
       background: $brand-accessible-active;
       color: $color-text-button-brand-hover;
     }
+  }
+
+  /**
+   * @summary grabbed state of a listbox option
+   * @selector .slds-is-grabbed
+   * @restrict .slds-dueling-list__options div
+   */
+  .slds-is-grabbed {
+    transform: rotate(3deg);
   }
 
   /**

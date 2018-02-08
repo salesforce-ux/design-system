@@ -1,0 +1,187 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import { MultiSelect, MultiSelectViewMode, DefaultSnapShot, LockedSnapShot, DisabledSnapShot, SelectedSnapShot, MultiSelectedSnapShot, GrabbedSnapShot, MovedInSnapShot, DroppedSnapShot, MoveToSnapShot, CountriesSnapshot, SelectedCountriesSnapshot, MultipleSelectedCountriesSnapshot, DroppedCountriesSnapshot } from './';
+import { DoctypeIcon } from '../icons/doctype/example';
+
+<div className="doc lead">
+  A dueling-picklist is used to move options between two lists and is often referred to as a multi-select. Sometimes, the list options can then be re-ordered, depending on the use case.
+</div>
+
+<Example title="Dueling Picklist with Reorder">
+  <MultiSelect dataSet={DefaultSnapShot} />
+</Example>
+
+This component is essentially 2 ARIA listboxes side by side, so we follow the [ARIA practices guide](https://www.w3.org/TR/wai-aria-practices/#Listbox) to help implement their interaction in an accessible way. Some additional details, supplementary to the ARIA guide include:
+
+## Notable Attributes
+- `aria-multiselectable="true"` should be set on each listbox
+- `aria-selected` should be placed on each `role="option"`, and set to `false` by default
+- `aria-labelledby` is used to identify the list to the user and should point to the list label
+- `aria-describedby` is used to provide operation instructions for the Drag and Drop interaction
+- `tabindex` should be set to "0" when an item is selected and "-1" otherwise
+
+## Focus Management
+- Initially, nothing should be selected and the first item in each list should have `tabindex="0"`
+- When an item is focused, it becomes selected
+- When focus leaves the list, the last selected item remains selected and focusable. When focus returns to the list focus is placed on the last selected item.
+- When moving items:
+  - With the move button: the items are unselected and added to the target list. The focus should remain on the move button.
+  - With a keyboard shortcut: focus remains on the item, but in the target list. Since the item is focused, it is also selected.
+  - If there are already selected items in the target list, they stay selected and the new items are added below them.
+
+## Expected Keyboard Navigation
+- Each list has a single focusable option inside. There is only ever one focusable option per list and it is expected that a user will use their arrow keys, and some modifier keys, to perform all actions.
+- Because we support drag and drop re-ordering within a list, we implement the second multi-select keyboard model.
+  - `up` and `down` arrows move focus _and_ selection, with `aria-selected="true"`. Any previously selected items are deselected.
+  - `shift + up` and `shift + down` move focus and creates addition selections
+  - `ctrl + down` or `ctrl + up` moves focus but selection remains where it is
+  - `ctrl + space` toggles selection on the focused option, in addition to previous selections
+  - `ctrl + a` selects all options in the list
+  - `cmd/ctrl + right` and `cmd/ctrl + left` Moves selected items between lists
+  - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
+    - `up` and `down` arrows move the selected items _within_ the current list
+
+
+## Edit Mode
+
+If the user needs to select multiple options for a field, like a list of languages supported, then use a dueling picklist without the re-order arrows on the right.
+
+<Blockquote header="Helpful Assistive Text" type="a11y">
+  The assistive text content in the `option-drag-label` `<div>` should provide clear instructions on how to drag and drop with a keyboard.
+</Blockquote>
+
+<Example title="Dueling Picklist">
+  <CodeView>
+    <MultiSelect dataSet={CountriesSnapshot} noReorder />
+  </CodeView>
+</Example>
+
+### Selected Item
+
+<Blockquote header="Aria Selected" type="a11y">
+  <code class="doc">aria-selected</code> should be placed on each <code class="doc">role="option"</code>, and set to <code class="doc">true</code> when the item is selected.
+</Blockquote>
+
+<Example title="Dueling Picklist with Item Selected">
+  <CodeView>
+    <MultiSelect dataSet={SelectedCountriesSnapshot} noReorder />
+  </CodeView>
+</Example>
+
+### Multiple Selected Items
+
+<Example title="Dueling Picklist with Multiple Items Selected">
+  <CodeView>
+    <MultiSelect dataSet={MultipleSelectedCountriesSnapshot} noReorder />
+  </CodeView>
+</Example>
+
+### Dropped Items
+
+<Blockquote type="a11y" header="Aria Live">
+  The `drag-live-region` `<div>` with `aria-live="assertive"` should update as items are moved to provide context about the state and location of the items.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div class="slds-dueling-list">
+    <div class="slds-assistive-text" id="drag-live-region" aria-live="assertive">
+      Arabic and German: Moved to Selected Languages.
+    </div>
+  </div>
+</CodeBlock>
+
+<Example title="Dueling Picklist with Items Dropped">
+  <CodeView>
+    <MultiSelect dataSet={DroppedCountriesSnapshot} noReorder />
+  </CodeView>
+</Example>
+
+### Locked Items
+
+If items are not able to be removed from the selected list, a lock icon appears next to the item name.
+
+<Example title="Dueling Picklist with a Locked Item">
+  <CodeView>
+    <MultiSelect dataSet={LockedSnapShot} noReorder />
+  </CodeView>
+</Example>
+
+### With Reordering
+
+If the order of the selected options matters, include the vertical arrows to the right. This allows the user to reorder the second listbox of options.
+
+<Example title="Dueling Picklist with Reoder Active">
+  <CodeView>
+    <MultiSelect dataSet={DefaultSnapShot} />
+  </CodeView>
+</Example>
+
+The following examples show the process of selecting an item, moving it within a list, and dropping it in a final position.
+
+<Blockquote type="a11y" header="Aria Live">
+  Pay attention to the `drag-live-region` `<div>` with `aria-live="assertive"`. This should update as items are moved to provide context about the state and location of the items at all times.
+</Blockquote>
+
+#### Item Selected
+
+<Example title="Dueling Picklist with Reoder Active Item Selected">
+  <CodeView>
+    <MultiSelect dataSet={SelectedSnapShot} />
+  </CodeView>
+</Example>
+
+#### Item Grabbed
+
+Within a list, users are able to drag and drop an item.
+
+<Example title="Dueling Picklist with Reoder Active Item Grabbed">
+  <CodeView>
+    <MultiSelect dataSet={GrabbedSnapShot} />
+  </CodeView>
+</Example>
+
+#### Item Moved Within a List
+
+<Example title="Dueling Picklist with Reoder Active Item Moved within List">
+  <CodeView>
+    <MultiSelect dataSet={MovedInSnapShot} />
+  </CodeView>
+</Example>
+
+#### Item Dropped in a List
+
+<Example title="Dueling Picklist with Reoder Active Item Dropped">
+  <CodeView>
+    <MultiSelect dataSet={DroppedSnapShot} />
+  </CodeView>
+</Example>
+
+### Disabled
+
+If the user is not able to interact with the dueling picklist, then it should be marked as disabled.
+
+<Blockquote type="a11y" header="Aria Disabled">
+  In disabled mode, both list boxes <code class="doc">ul[role=listbox]</code> should receive <code class="doc">aria-disabled="true"</code>, and all directional buttons should receive the <code class="doc">disabled</code> attribute.
+</Blockquote>
+
+<Blockquote type="note" header="Utility Class">
+  The class <code class="doc">slds-is-disabled</code> should also be applied to the divs with the class <code class="doc">slds-dueling-list_options</code>.
+</Blockquote>
+
+<Example title="Dueling Picklist Disabled">
+  <CodeView>
+    <MultiSelect dataSet={DisabledSnapShot} disabled />
+  </CodeView>
+</Example>
+
+## View Mode
+
+When the user is done selecting options, or is in view mode of the field, they are presented with a comma separated list.
+
+<Example title="Dueling Picklist in View Mode">
+  <CodeView>
+    <MultiSelectViewMode />
+  </CodeView>
+</Example>

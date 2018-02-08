@@ -3,6 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import { MultiSelect, DefaultSnapShot } from '../../dueling-picklist';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -150,6 +151,6 @@ export let states = [
   {
     id: 'select-multiple',
     label: 'Multiple Selection',
-    element: <Multiple />
+    element: <MultiSelect dataSet={DefaultSnapShot} noReorder />
   }
 ];

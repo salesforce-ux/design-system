@@ -11,7 +11,8 @@ import {
   GrabbedSnapShot,
   MovedInSnapShot,
   DroppedSnapShot,
-  MoveToSnapShot
+  MoveToSnapShot,
+  MultiSelectViewMode
 } from '../';
 
 import createHelpers from '../../../../jest.setup';
@@ -20,6 +21,9 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 it('renders a default dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} />));
+
+it('renders a default dueling picklist with no reordering', () =>
+  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} noReorder />));
 
 it('renders a dueling picklist with a required option', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={LockedSnapShot} />));
@@ -44,3 +48,6 @@ it('renders a dueling picklist with a dropped option', () =>
 
 it('renders a dueling picklist with an option that was moved to another list', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={MovedInSnapShot} />));
+
+it('renders a view mode of dueling picklist', () =>
+  matchesMarkupAndStyle(<MultiSelectViewMode />));

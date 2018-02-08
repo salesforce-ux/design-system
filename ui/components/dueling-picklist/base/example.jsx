@@ -12,7 +12,8 @@ import {
   GrabbedSnapShot,
   MovedInSnapShot,
   DroppedSnapShot,
-  MoveToSnapShot
+  MoveToSnapShot,
+  MultiSelectViewMode
 } from '../';
 /// ////////////////////////////////////////
 // Examples
@@ -60,5 +61,15 @@ export let states = [
     id: 'multi-select-moved-to',
     label: 'Moved to list',
     element: <MultiSelect dataSet={MoveToSnapShot} />
+  },
+  {
+    id: 'no-reordering-dueling-picklist',
+    label: 'No Reordering',
+    element: <MultiSelect dataSet={DefaultSnapShot} noReorder />
+  },
+  {
+    id: 'view-mode-dueling-picklist',
+    label: 'View Mode',
+    element: <MultiSelectViewMode />
   }
 ];

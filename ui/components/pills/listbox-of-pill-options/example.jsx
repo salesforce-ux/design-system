@@ -43,7 +43,7 @@ export let ListboxPill = props => (
 export let ListboxPills = props => (
   <ul
     className={classNames(
-      'slds-listbox slds-listbox_horizontal slds-listbox_inline',
+      'slds-listbox slds-listbox_horizontal',
       props.className
     )}
     role="listbox"
@@ -55,7 +55,11 @@ export let ListboxPills = props => (
 );
 
 export let ListboxPillsItem = props => (
-  <li className="slds-listbox-item" role="presentation">
+  <li
+    className={classNames('slds-listbox-item', props.className)}
+    role="presentation"
+    aria-hidden={props['aria-hidden']}
+  >
     {props.children}
   </li>
 );

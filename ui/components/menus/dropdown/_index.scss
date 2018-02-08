@@ -76,7 +76,8 @@
   &_click,
   &--click {
 
-    .slds-dropdown {
+    .slds-dropdown,
+    &:hover .slds-dropdown {
       display: none;
     }
 

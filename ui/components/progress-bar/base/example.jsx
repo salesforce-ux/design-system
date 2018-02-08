@@ -3,17 +3,19 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ///////////////////////////////////////////
 // Partial(s)
 /// ///////////////////////////////////////////
 
-export let ProgressBar = props => (
+export const ProgressBar = props => (
   <div
     className={classNames('slds-progress-bar', props.className)}
     aria-valuemin="0"
     aria-valuemax="100"
     aria-valuenow={props.value}
+    aria-labelledby={props['aria-labelledby']}
     role="progressbar"
   >
     <span
@@ -24,6 +26,23 @@ export let ProgressBar = props => (
     </span>
   </div>
 );
+
+export const ProgressBarDescriptive = props => {
+  const labelUniqueId = _.uniqueId('progress-bar-label-id-');
+
+  return (
+    <div className={classNames(props.className)}>
+      <div
+        className="slds-grid slds-grid_align-spread slds-text-color_weak slds-p-bottom_x-small"
+        id={labelUniqueId}
+      >
+        <span>{props.label}</span>
+        <span aria-hidden="true">{`${props.value}%`}</span>
+      </div>
+      <ProgressBar value={props.value} aria-labelledby={labelUniqueId} />
+    </div>
+  );
+};
 
 /// ///////////////////////////////////////////
 // Export
@@ -56,5 +75,15 @@ export let states = [
     id: '100',
     label: '100% complete',
     element: <ProgressBar value="100" />
+  }
+];
+
+export let examples = [
+  {
+    id: 'progress-bar-descriptive',
+    label: 'Descriptive Progress Bar',
+    element: (
+      <ProgressBarDescriptive label="Einstein Setup Assistant" value="25" />
+    )
   }
 ];

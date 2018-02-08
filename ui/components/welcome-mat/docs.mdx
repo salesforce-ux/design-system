@@ -24,20 +24,32 @@ Icon choices, colors, and tile content can be customized to fit your experience.
 
 As users complete items in the list, the list updates to show as completed.
 
-<Example title="Welcome Mat Completed Steps">
+As tiles are completed, they move to the bottom of the list, and get a modifier class of `slds-welcome-mat__tile_complete`.
+
+<Example title="Welcome Mat Partially Completed Steps">
   <CodeView>
-    <WelcomeMat showAsCompleted />
+    <WelcomeMat complete={2} />
   </CodeView>
 </Example>
 
-To show a step as complete, the `slds-welcome-mat__tile_complete` class should be added to each completed `slds-welcome-mat__tile`.
-
 ## Trailhead Connected
 
-The Trailhead Connected variant should only be used when users can achieve a badge in Trailhead for completing all steps in the current Welcome Mat. Only Trailhead connected mats may have the Trailhead font for the header.
+The Trailhead Connected variant should only be used when users can achieve a badge in Trailhead for completing all steps in the current Welcome Mat.
+
+Only Trailhead connected mats may have the Trailhead font for the header.
 
 <Example title="Welcome Mat Trailhead">
   <CodeView>
-    <WelcomeMat trailhead />
+    <WelcomeMat trailhead complete={1} />
+  </CodeView>
+</Example>
+
+## Trailhead Connected - Complete
+
+When all tiles on a Trailhead Connected Welcome Mat are completed, users should be presented with a message and link to view their new badge on their Trailblazer Profile page.
+
+<Example title="Welcome Mat Trailhead Complete">
+  <CodeView>
+    <WelcomeMat trailhead complete={5} />
   </CodeView>
 </Example>

@@ -5,8 +5,8 @@ export default <WelcomeMat />;
 
 export let states = [
   {
-    id: 'completed',
-    label: 'steps-complete',
-    element: <WelcomeMat showAsCompleted />
+    id: 'with-completed-tiles',
+    label: 'With Completed Tiles',
+    element: <WelcomeMat complete={2} />
   }
 ];

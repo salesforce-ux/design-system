@@ -89,14 +89,6 @@
 }
 
 /**
- * @selector .slds-welcome-mat__info-badge
- * @restrict .slds-welcome-mat__info-progress div
- */
-.slds-welcome-mat__info-badge {
-  margin-bottom: $spacing-x-small;
-}
-
-/**
  * @summary Container element for the Actions side of the Welcome Mat.
  *
  * @selector .slds-welcome-mat__tiles
@@ -111,8 +103,21 @@
  * to complete a greater objective. Based on a SLDS Visual Picker.
  *
  * @selector .slds-welcome-mat__tile
- * @restrict .slds-welcome-mat__tiles div
+ * @restrict .slds-welcome-mat__tiles .slds-box
  */
+.slds-welcome-mat__tile {
+  &:not(.slds-welcome-mat__tile_complete) .slds-welcome-mat__icon-check {
+    display: none;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 /**
  * @summary Title element for Welcome Mat Tile item.

@@ -2,12 +2,21 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * TODO
+ * The Trailhead Connected variant should be used when users can achieve 
+ * a badge in Trailhead for completing all steps in the current Welcome Mat.
+ *
+ * Only Trailhead Connected Mats may have the Trailhead font for the header.
  *
  * @name trailhead-connected
  * @selector .slds-welcome-mat_trailhead
  * @restrict .slds-welcome-mat
  * @variant
  */
-.slds-welcome-mat_trailhead {
+
+/**
+ * @selector .slds-welcome-mat__info-badge
+ * @restrict .slds-welcome-mat__info-progress img
+ */
+.slds-welcome-mat__info-badge {
+  margin-bottom: $spacing-x-small;
 }

@@ -19,20 +19,20 @@
     margin: $spacing-medium 0;
   }
 
-  .slds-box:not(.slds-welcome-mat__tile-complete) {
+  .slds-box:not(.slds-welcome-mat__tile_complete) {
     box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
     background: $color-background-alt;
-  }
 
-  .slds-box:not(.slds-welcome-mat__tile-complete):hover {
-    box-shadow: 0 0 0 1px $color-border-selection-hover inset,
-      0 2px 2px $welcome-mat-color-action-shadow;
+    &:hover {
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
+        0 2px 2px $welcome-mat-color-action-shadow;
+    }
   }
 
   .slds-progress-bar {
-    background: $welcome-mat-color-background-progress-bar;
-    width: $welcome-mat-width-progress-bar;
     display: inline-block;
+    width: $welcome-mat-width-progress-bar;
+    background: $welcome-mat-color-background-progress-bar;
   }
 
   .slds-progress-bar__value {
@@ -48,9 +48,11 @@
  */
 .slds-welcome-mat__info {
   text-align: center;
-  background: url(/assets/images/welcome-mat/hero_image_clouds@2x.png) bottom
-    center no-repeat $welcome-mat-color-info-background;
+  background-image: url($welcome-mat-background-image-info);
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-size: contain;
+  background-color: $welcome-mat-background-color-info;
 }
 
 /**
@@ -62,6 +64,8 @@
 .slds-welcome-mat__info-title {
   margin-bottom: $spacing-large;
   font-size: $welcome-mat-font-size-info-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
 }
 
 /**
@@ -75,18 +79,25 @@
 }
 
 /**
- * @summary Text description of walkthrough completion count
+ * @summary Text description of walkthrough progress
  *
- * @selector .slds-welcome-mat__info-complete
- * @restrict .slds-welcome-mat__info p
+ * @selector .slds-welcome-mat__info-progress
+ * @restrict .slds-welcome-mat__info div
  */
-.slds-welcome-mat__info-complete {
-  font-weight: bold;
+.slds-welcome-mat__info-progress {
   margin-bottom: $spacing-medium;
 }
 
 /**
- * @summary Container element for the Actions side of the Welcome Mat
+ * @selector .slds-welcome-mat__info-badge
+ * @restrict .slds-welcome-mat__info-progress div
+ */
+.slds-welcome-mat__info-badge {
+  margin-bottom: $spacing-x-small;
+}
+
+/**
+ * @summary Container element for the Actions side of the Welcome Mat.
  *
  * @selector .slds-welcome-mat__tiles
  * @restrict .slds-welcome-mat div
@@ -96,29 +107,38 @@
 }
 
 /**
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take 
+ * to complete a greater objective. Based on a SLDS Visual Picker.
+ *
  * @selector .slds-welcome-mat__tile
  * @restrict .slds-welcome-mat__tiles div
  */
 
 /**
+ * @summary Title element for Welcome Mat Tile item.
+ *
  * @selector .slds-welcome-mat__tile-title
  * @restrict .slds-welcome-mat__tile h4
  */
 .slds-welcome-mat__tile-title {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 /**
- * @selector .slds-welcome-mat__tile-content
+ * @summary Description element for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-description
  * @restrict .slds-welcome-mat__tile p
  */
-.slds-welcome-mat__tile-content {
-  color: $color-text-weak;
+.slds-welcome-mat__tile-description {
   font-size: $font-size-text-x-small;
   line-height: $line-height-text;
+  color: $color-text-weak;
 }
 
 /**
+ * @summary Icon Container for Welcome Mat Tile item.
+ *
  * @selector .slds-welcome-mat__tile-icon-container
  * @restrict .slds-welcome-mat__tile div
  */
@@ -127,35 +147,44 @@
 }
 
 /**
- * @selector .slds-welcome-mat__tile-complete
+ * @summary Complete modifier class for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile_complete
  * @restrict .slds-welcome-mat__tile
  * @modifier
  */
-.slds-welcome-mat__tile-complete {
+.slds-welcome-mat__tile_complete {
   .slds-icon {
-    fill: $welcome-mat-color-complete-icon;
+    fill: $welcome-mat-color-icon-complete;
   }
 }
 
 /**
+ * @summary Icon Check mark for completed Welcome Mat Tiles.
  *
+ * @selector .slds-welcome-mat__icon-check
+ * @restrict .slds-welcome-mat__tile-icon-container div
  */
-.slds-welcome-mat__icon-complete {
+.slds-welcome-mat__icon-check {
   position: absolute;
-  bottom: -0.375rem;
-  right: -0.375rem;
+  bottom: -$welcome-mat-complete-icon-size/2;
+  right: -$welcome-mat-complete-icon-size/2;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: $welcome-mat-complete-icon-size;
   width: $welcome-mat-complete-icon-size;
-  text-align: center;
-  border: 2px solid $color-background;
+  border: $border-width-thick solid $color-background;
   border-radius: $welcome-mat-complete-icon-size;
   background: $progress-bar-color-background-fill-success;
 
+  .slds-icon_container {
+    line-height: 0;
+  }
+
   .slds-icon {
-    width: 60%;
-    height: 60%;
-    fill: #fff;
+    width: $welcome-mat-check-size;
+    height: $welcome-mat-check-size;
+    fill: $color-text-inverse;
   }
 }

@@ -7,46 +7,49 @@ import { ProgressBar } from '../progress-bar/base/example';
 import { VisualPickerMediaObject } from '../visual-picker/link/example';
 import { UtilityIcon } from '../icons/base/example';
 
-let Demo = props => (
+const sampleTiles = [
+  {
+    symbol: 'animal_and_nature',
+    title: 'Welcome to Salesforce!',
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+  },
+  {
+    symbol: 'call',
+    title: 'Learn About OpenCTI',
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+  },
+  {
+    symbol: 'upload',
+    title: 'Power Up the Utility Bar',
+    description:
+      'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
+  },
+  {
+    symbol: 'magicwand',
+    title: 'Customize your view',
+    description:
+      "Tailor your cases to your team's workflow with custom list views."
+  },
+  {
+    symbol: 'knowledge_base',
+    title: 'Share the Knowledge',
+    description:
+      "Harness your team's collective know-how with our powerful knowledge base."
+  }
+];
+
+const sampleWalkthroughCount = 5;
+
+const Demo = props => (
   <div className="demo-only" {...props}>
     {props.children}
     <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );
 
-let sampleTiles = [
-  {
-    symbol: 'animal_and_nature',
-    title: 'Welcome to Salesforce!',
-    content: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
-  },
-  {
-    symbol: 'call',
-    title: 'Learn About OpenCTI',
-    content: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
-  },
-  {
-    symbol: 'upload',
-    title: 'Power Up the Utility Bar',
-    content:
-      'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
-  },
-  {
-    symbol: 'magicwand',
-    title: 'Customize your view',
-    content: "Tailor your cases to your team's workflow with custom list views."
-  },
-  {
-    symbol: 'knowledge_base',
-    title: 'Share the Knowledge',
-    content:
-      "Harness your team's collective know-how with our powerful knowledge base."
-  }
-];
-
 const WelcomeMatTile = props => {
   const className = classNames('slds-welcome-mat__tile', {
-    'slds-welcome-mat__tile-complete': props.completed
+    'slds-welcome-mat__tile_complete': props.completed
   });
 
   const iconContent = props.completed ? (
@@ -55,7 +58,7 @@ const WelcomeMatTile = props => {
         className="slds-icon-text-default"
         symbol={props.tile.symbol}
       />
-      <div className="slds-welcome-mat__icon-complete">
+      <div className="slds-welcome-mat__icon-check">
         <UtilityIcon className="slds-icon-text-default" symbol="check" />
       </div>
     </div>
@@ -70,12 +73,73 @@ const WelcomeMatTile = props => {
       icon={iconContent}
     >
       <h4 className="slds-welcome-mat__tile-title">{props.tile.title}</h4>
-      <p className="slds-welcome-mat__tile-content">{props.tile.content}</p>
+      <p className="slds-welcome-mat__tile-description">
+        {props.tile.description}
+      </p>
     </VisualPickerMediaObject>
   );
 };
 
+const RegularContent = props => {
+  const { complete } = props;
+  const completePercent = complete / sampleWalkthroughCount * 100;
+
+  return (
+    <div>
+      <div className="slds-welcome-mat__info-progress">
+        <p>
+          <strong>
+            {complete}/{sampleWalkthroughCount} Walkthroughs completed
+          </strong>
+        </p>
+      </div>
+      <ProgressBar
+        value={completePercent}
+        className="slds-progress-bar_circular"
+      />
+    </div>
+  );
+};
+
+const TrailheadContent = props => {
+  const { complete } = props;
+  const completePercent = complete / sampleWalkthroughCount * 100;
+
+  return (
+    <div>
+      <div className="slds-welcome-mat__info-progress">
+        <img
+          className="slds-welcome-mat__info-badge"
+          src="/assets/images/welcome-mat/trailhead_badge@2x.png"
+          width="50"
+          height="50"
+          alt="Trailhead Badge Title"
+        />
+        <p>
+          <strong>Essentials Explorer</strong>
+        </p>
+        <p>
+          {complete} of {sampleWalkthroughCount} modules completed
+        </p>
+      </div>
+      <ProgressBar
+        value={completePercent}
+        className="slds-progress-bar_circular"
+      />
+    </div>
+  );
+};
+
 export default props => {
+  const { showAsCompleted, trailhead } = props;
+  const complete = showAsCompleted ? sampleWalkthroughCount : 0;
+
+  const infoContent = trailhead ? (
+    <TrailheadContent complete={1} />
+  ) : (
+    <RegularContent complete={complete} />
+  );
+
   return (
     <Demo style={{ height: '720px' }}>
       <Modal className="slds-welcome-mat">
@@ -91,10 +155,7 @@ export default props => {
               expert by the time you're done!
             </p>
 
-            <p className="slds-welcome-mat__info-complete">
-              4/8 Walkthroughs completed
-            </p>
-            <ProgressBar value="50" className="slds-progress-bar_circular" />
+            {infoContent}
           </div>
 
           <div className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
@@ -102,7 +163,7 @@ export default props => {
               <WelcomeMatTile
                 key={`tile-${tileIndex}`}
                 tile={tile}
-                completed={props.showAsCompleted}
+                completed={showAsCompleted}
               />
             ))}
           </div>

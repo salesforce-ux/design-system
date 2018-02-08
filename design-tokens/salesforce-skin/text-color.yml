@@ -149,7 +149,7 @@ props:
     comment: Input icon
   ## LINKS
   COLOR_TEXT_LINK:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!SANTORINI}'
     comment: Link text (508)
   COLOR_TEXT_LINK_ACTIVE:
     value: '{!MIDNIGHT_BLUE}'

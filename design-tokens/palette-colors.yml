@@ -116,7 +116,7 @@ props:
     value: "#eeeeee"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
   BRAND_TEXT_LINK:
-    value: "#0070D2"
+    value: "#006DCC"
     comment: "Primary text link brand color"
   BRAND_TEXT_LINK_ACTIVE:
     value: "#005fb2"

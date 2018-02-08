@@ -6,6 +6,7 @@ import Tabs from '../index.react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
+import { MobileStacked, AdjacentMobileStacked } from '../mobile-stack/example';
 import {
   Card,
   CardHeader,
@@ -18,7 +19,7 @@ import classNames from 'classnames';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Default = props => (
+export const BaseTabs = props => (
   <Tabs className={props.className} selectedIndex={props.selectedIndex || 0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       {props.itemOneContent || 'Item One Content'}
@@ -32,7 +33,11 @@ let Default = props => (
   </Tabs>
 );
 
-let Overflowing = props => (
+export const TabsWithNestedScopedTabs = props => (
+  <BaseTabs itemOneContent={<ScopedTabs />} />
+);
+
+export const Overflowing = props => (
   <div className="demo-only" style={{ height: '10rem' }}>
     <Tabs>
       <Tabs.Item title="Item One" id="tab-default-1">
@@ -107,17 +112,68 @@ let Overflowing = props => (
   </div>
 );
 
+export const TabsWithCards = props => (
+  <Tabs className="slds-tabs_card" selectedIndex={0}>
+    <Tabs.Item title="Item One" id="tab-default-1">
+      <Card>
+        <CardHeader symbol="contact" actions>
+          <span className="slds-text-heading_small">Card Header</span>
+        </CardHeader>
+        <CardBody className="slds-card__body_inner">
+          This is a card inside an <code className="doc">
+            .slds-tabs_card
+          </code>{' '}
+          to show how styling is removed when cards are nested inside.
+        </CardBody>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
+      <Card>
+        <CardHeader symbol="contact" actions>
+          <span className="slds-text-heading_small">Card Header</span>
+        </CardHeader>
+        <CardBody className="slds-card__body_inner">
+          This is a card inside an <code className="doc">
+            .slds-tabs_card
+          </code>{' '}
+          to show how styling is removed when cards are nested inside.
+        </CardBody>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
+      <Card className="slds-card_boundary">
+        <CardHeader symbol="contact" actions>
+          <span className="slds-text-heading_small">Card Header</span>
+        </CardHeader>
+        <CardBody className="slds-card__body_inner">
+          This is a card inside an <code className="doc">
+            .slds-tabs_card
+          </code>{' '}
+          to illustrate how
+          <code className="doc">.slds-card_boundary</code> adds a rounded border
+          when desired.
+        </CardBody>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
+    </Tabs.Item>
+    <Tabs.Item title="Item Two" id="tab-default-2">
+      Item Two Content
+    </Tabs.Item>
+    <Tabs.Item title="Item Three" id="tab-default-3">
+      Item Three Content
+    </Tabs.Item>
+  </Tabs>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default <Default />;
+export default <BaseTabs />;
 
 export let states = [
   {
     id: 'selected',
     label: 'Item Two Selected',
-    element: <Default selectedIndex={1} />
+    element: <BaseTabs selectedIndex={1} />
   }
 ];
 
@@ -128,64 +184,23 @@ export let examples = [
     element: <Overflowing />
   },
   {
+    id: 'mobile',
+    label: 'mobile',
+    element: <MobileStacked />
+  },
+  {
+    id: 'adjacent-mobile',
+    label: 'adjacent-mobile',
+    element: <AdjacentMobileStacked />
+  },
+  {
     id: 'nested',
     label: 'With Nested Scoped Tabs',
-    element: <Default itemOneContent={<ScopedTabs />} />
+    element: <BaseTabs itemOneContent={<ScopedTabs />} />
   },
   {
     id: 'card-look',
     label: 'Tab Card-look',
-    element: (
-      <Tabs className="slds-tabs_card" selectedIndex={0}>
-        <Tabs.Item title="Item One" id="tab-default-1">
-          <Card>
-            <CardHeader symbol="contact" actions>
-              <span className="slds-text-heading_small">Card Header</span>
-            </CardHeader>
-            <CardBody className="slds-card__body_inner">
-              This is a card inside an `.slds-tabs_card` to show how styling is
-              removed when cards are nested inside.
-            </CardBody>
-            <CardFooter>Card Footer</CardFooter>
-          </Card>
-          <Card>
-            <CardHeader symbol="contact" actions>
-              <span className="slds-text-heading_small">Card Header</span>
-            </CardHeader>
-            <CardBody className="slds-card__body_inner">
-              This is a card inside an `.slds-tabs_card` to show how styling is
-              removed when cards are nested inside.
-            </CardBody>
-            <CardFooter>Card Footer</CardFooter>
-          </Card>
-          <Card className="slds-card_boundary">
-            <CardHeader symbol="contact" actions>
-              <span className="slds-text-heading_small">Card Header</span>
-            </CardHeader>
-            <CardBody className="slds-card__body_inner">
-              This is a card inside an `.slds-tabs_card` to illustrate how
-              `.slds-card_boundary` adds a rounded border when desired.
-            </CardBody>
-            <CardFooter>Card Footer</CardFooter>
-          </Card>
-          <Card className="slds-card_boundary">
-            <CardHeader symbol="contact" actions>
-              <span className="slds-text-heading_small">Card Header</span>
-            </CardHeader>
-            <CardBody className="slds-card__body_inner">
-              This is a card inside an `.slds-tabs_card` to illustrate how
-              `.slds-card_boundary` adds a rounded border when desired.
-            </CardBody>
-            <CardFooter>Card Footer</CardFooter>
-          </Card>
-        </Tabs.Item>
-        <Tabs.Item title="Item Two" id="tab-default-2">
-          Item Two Content
-        </Tabs.Item>
-        <Tabs.Item title="Item Three" id="tab-default-3">
-          Item Three Content
-        </Tabs.Item>
-      </Tabs>
-    )
+    element: <TabsWithCards />
   }
 ];

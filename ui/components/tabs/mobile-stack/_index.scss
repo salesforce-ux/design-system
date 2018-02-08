@@ -1,0 +1,80 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes a mobile drill-in tabset
+ *
+ * @name mobile
+ * @selector .slds-tabs_mobile
+ * @restrict ul
+ * @variant
+ */
+.slds-tabs_mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * @summary Styles each list item as a single drill-in tab
+ * @selector .slds-tabs_mobile__item
+ * @restrict .slds-tabs_mobile li
+ */
+.slds-tabs_mobile__item {
+  display: flex;
+  border-top: $border-width-thin solid $color-border;
+  height: $square-tappable;
+  align-items: center;
+
+  &:active {
+    background-color: $color-background-row-hover;
+  }
+
+  &:last-child {
+    border-bottom: $border-width-thin solid $color-border;
+  }
+}
+
+/**
+ * @summary Styles the tab title
+ * @selector .slds-tabs_mobile__title
+ * @restrict .slds-tabs_mobile div
+ */
+.slds-tabs_mobile__title {
+  width: 100%;
+  height: 100%;
+  color: $color-text-tab-label;
+  font-size: $font-size-text-medium;
+  padding: 0 $spacing-medium;
+
+  .slds-button:focus {
+    box-shadow: none;
+  }
+}
+
+/**
+ * @summary Actionable button inside of tab that would
+ * drill into the tab content
+ *
+ * @selector slds-tabs_mobile__title-action
+ * @restrict slds-tabs_mobile__title button
+ * @required
+ */
+.slds-tabs_mobile__title-action {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  .slds-button__icon {
+    flex-shrink: 0;
+  }
+}
+
+.slds-tabs_mobile+.slds-tabs_mobile {
+
+  .slds-tabs_mobile__item:first-child {
+    border-top: 0;
+  }
+}

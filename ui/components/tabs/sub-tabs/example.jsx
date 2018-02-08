@@ -216,11 +216,7 @@ export const SubtabOverflow = props => (
   </li>
 );
 
-/* -----------------------------------------------------------------------------
-    Exports
------------------------------------------------------------------------------ */
-
-export default (
+export const SubTabSet = props => (
   <div className="slds-tabs_default slds-sub-tabs">
     <ul className="slds-tabs_default__nav" role="tablist">
       <Subtab
@@ -255,46 +251,195 @@ export default (
   </div>
 );
 
+export const TabWithFocus = props => (
+  <div className="slds-tabs_default slds-sub-tabs">
+    <ul className="slds-tabs_default__nav" role="tablist">
+      <Subtab
+        title="00071938"
+        id="subtab-01"
+        active
+        hasFocus
+        tabItemId="subtab-tabitem-01"
+        tabPanelId="subtab-tabpanel-01"
+      />
+      <Subtab
+        title="Chat - Customer"
+        tabItemId="subtab-tabitem-02"
+        tabPanelId="subtab-tabpanel-02"
+        symbol="live_chat"
+      />
+    </ul>
+    <div
+      className="slds-tabs_default__content slds-show"
+      id="subtab-tabpanel-01"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-01"
+    >
+      Item One Content
+    </div>
+    <div
+      className="slds-tabs_default__content slds-hide"
+      id="subtab-tabpanel-02"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-02"
+    >
+      Item Two Content
+    </div>
+  </div>
+);
+
+export const TabsWithBorders = props => (
+  <div className="slds-tabs_default slds-sub-tabs">
+    <ul className="slds-tabs_default__nav" role="tablist">
+      <Subtab
+        title="00071938"
+        active
+        className="slds-border_right slds-border_left"
+        tabItemId="subtab-tabitem-01"
+        tabPanelId="subtab-tabpanel-01"
+      />
+      <Subtab
+        title="Chat - Customer"
+        tabItemId="subtab-tabitem-02"
+        tabPanelId="subtab-tabpanel-02"
+        symbol="live_chat"
+        className="slds-border_right"
+      />
+    </ul>
+    <div
+      className="slds-tabs_default__content slds-show"
+      id="subtab-tabpanel-01"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-01"
+    >
+      Item One Content
+    </div>
+    <div
+      className="slds-tabs_default__content slds-hide"
+      id="subtab-tabpanel-02"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-02"
+    >
+      Item Two Content
+    </div>
+  </div>
+);
+
+export const TabActionOverflow = props => (
+  <div className="slds-tabs_default slds-sub-tabs">
+    <ul className="slds-tabs_default__nav" role="tablist">
+      <Subtab
+        title="00071938"
+        active
+        menuIcon
+        tabItemId="subtab-tabitem-01"
+        tabPanelId="subtab-tabpanel-01"
+      />
+      <Subtab
+        title="Chat - Customer"
+        tabItemId="subtab-tabitem-02"
+        tabPanelId="subtab-tabpanel-02"
+        symbol="live_chat"
+        menuIcon
+      />
+    </ul>
+    <div
+      className="slds-tabs_default__content slds-show"
+      id="subtab-tabpanel-01"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-01"
+    >
+      Item One Content
+    </div>
+    <div
+      className="slds-tabs_default__content slds-hide"
+      id="subtab-tabpanel-02"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-02"
+    >
+      Item Two Content
+    </div>
+  </div>
+);
+
+export const StatusTab = props => (
+  <div className="slds-tabs_default slds-sub-tabs">
+    <ul className="slds-tabs_default__nav" role="tablist">
+      <Subtab
+        title="00071938"
+        active
+        itemUnsaved={props.itemUnsaved && !props.hasNotification}
+        tabItemId="subtab-tabitem-01"
+        tabPanelId="subtab-tabpanel-01"
+      />
+      <Subtab
+        title="Chat - Customer"
+        tabItemId="subtab-tabitem-02"
+        tabPanelId="subtab-tabpanel-02"
+        symbol="live_chat"
+        hasNotification={props.hasNotification}
+        itemUnsaved={props.itemUnsaved && props.hasNotification}
+      />
+    </ul>
+    <div
+      className="slds-tabs_default__content slds-show"
+      id="subtab-tabpanel-01"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-01"
+    >
+      Item One Content
+    </div>
+    <div
+      className="slds-tabs_default__content slds-hide"
+      id="subtab-tabpanel-02"
+      role="tabpanel"
+      aria-labelledby="subtab-tabitem-02"
+    >
+      Item Two Content
+    </div>
+  </div>
+);
+
+export const OverflowSubtabs = props => (
+  <div>
+    <Subtabs>
+      <SubtabList>
+        <Subtab
+          title="00071938"
+          tabItemId="subtab-tabitem-01"
+          tabPanelId="subtab-tabpanel-01"
+        />
+        <Subtab
+          title="00071939"
+          tabItemId="subtab-tabitem-02"
+          tabPanelId="subtab-tabpanel-02"
+        />
+        <SubtabOverflow
+          isOpen={props.isOpen}
+          itemUnread={props.itemUnread}
+          itemUnsaved={props.itemUnsaved}
+        />
+      </SubtabList>
+      <SubtabPanel id="subtab-tabpanel-01" tabId="subtab-tabitem-01" isVisible>
+        Item One Content
+      </SubtabPanel>
+      <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+        Item Two Content
+      </SubtabPanel>
+    </Subtabs>
+  </div>
+);
+/* -----------------------------------------------------------------------------
+    Exports
+----------------------------------------------------------------------------- */
+
+export default <SubTabSet />;
+
 export let states = [
   {
     id: 'subtabs-has-focus',
     label: 'Tab - Focus',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            id="subtab-01"
-            active
-            hasFocus
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    ),
+    element: <TabWithFocus />,
     script: `
       document.getElementById('subtab-01').focus()
     `
@@ -302,379 +447,51 @@ export let states = [
   {
     id: 'subtabs-borders',
     label: 'With Borders',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            className="slds-border_right slds-border_left"
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-            className="slds-border_right"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
+    element: <TabsWithBorders />
   },
   {
     id: 'subtabs-menu',
     label: 'Tab - Action Overflow',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            menuIcon
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-            menuIcon
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
+    element: <TabActionOverflow />
   },
   {
     id: 'subtabs-unsaved',
     label: 'Unsaved Tab',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            itemUnsaved
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
+    element: <StatusTab itemUnsaved />
   },
   {
     id: 'unread',
     label: 'Unread Tab',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            hasNotification
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
+    element: <StatusTab hasNotification />
   },
   {
     id: 'unsaved',
     label: 'Unread Unsaved Tab',
-    element: (
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
-          <Subtab
-            title="00071938"
-            active
-            tabItemId="subtab-tabitem-01"
-            tabPanelId="subtab-tabpanel-01"
-          />
-          <Subtab
-            title="Chat - Customer"
-            hasNotification
-            itemUnsaved
-            tabItemId="subtab-tabitem-02"
-            tabPanelId="subtab-tabpanel-02"
-            symbol="live_chat"
-          />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
-          id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
-        >
-          Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
-          Item Two Content
-        </div>
-      </div>
-    )
+    element: <StatusTab itemUnsaved hasNotification />
   },
   {
     id: 'overflow-tabs',
     label: 'Overflow Tabs',
-    element: (
-      <div
-        className="demo-only"
-        style={{ height: '8rem', overflow: 'visible' }}
-      >
-        <Subtabs>
-          <SubtabList>
-            <Subtab
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="00071939"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-            />
-            <SubtabOverflow />
-          </SubtabList>
-          <SubtabPanel
-            id="subtab-tabpanel-01"
-            tabId="subtab-tabitem-01"
-            isVisible
-          >
-            Item One Content
-          </SubtabPanel>
-          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-            Item Two Content
-          </SubtabPanel>
-        </Subtabs>
-      </div>
-    )
+    element: <OverflowSubtabs />
   },
   {
     id: 'overflow-tabs-open',
     label: 'Overflow Tabs - Open',
-    element: (
-      <div
-        className="demo-only"
-        style={{ height: '8rem', overflow: 'visible' }}
-      >
-        <Subtabs>
-          <SubtabList>
-            <Subtab
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="00071939"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-            />
-            <SubtabOverflow isOpen />
-          </SubtabList>
-          <SubtabPanel
-            id="subtab-tabpanel-01"
-            tabId="subtab-tabitem-01"
-            isVisible
-          >
-            Item One Content
-          </SubtabPanel>
-          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-            Item Two Content
-          </SubtabPanel>
-        </Subtabs>
-      </div>
-    )
+    element: <OverflowSubtabs isOpen />
   },
   {
     id: 'unread-overflow-tabs-open',
     label: 'Unread Overflow Tabs - Open',
-    element: (
-      <div
-        className="demo-only"
-        style={{ height: '8rem', overflow: 'visible' }}
-      >
-        <Subtabs>
-          <SubtabList>
-            <Subtab
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="00071939"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-            />
-            <SubtabOverflow isOpen itemUnread />
-          </SubtabList>
-          <SubtabPanel
-            id="subtab-tabpanel-01"
-            tabId="subtab-tabitem-01"
-            isVisible
-          >
-            Item One Content
-          </SubtabPanel>
-          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-            Item Two Content
-          </SubtabPanel>
-        </Subtabs>
-      </div>
-    )
+    element: <OverflowSubtabs isOpen itemUnread />
   },
   {
     id: 'unsaved-overflow-tabs-open',
     label: 'Unsaved Overflow Tabs - Open',
-    element: (
-      <div
-        className="demo-only"
-        style={{ height: '8rem', overflow: 'visible' }}
-      >
-        <Subtabs>
-          <SubtabList>
-            <Subtab
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="00071939"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-            />
-            <SubtabOverflow isOpen itemUnsaved />
-          </SubtabList>
-          <SubtabPanel
-            id="subtab-tabpanel-01"
-            tabId="subtab-tabitem-01"
-            isVisible
-          >
-            Item One Content
-          </SubtabPanel>
-          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-            Item Two Content
-          </SubtabPanel>
-        </Subtabs>
-      </div>
-    )
+    element: <OverflowSubtabs isOpen itemUnsaved />
   },
   {
     id: 'unsaved-unread-overflow-tabs-open',
     label: 'Unsaved Unread Overflow Tabs - Open',
-    element: (
-      <div
-        className="demo-only"
-        style={{ height: '8rem', overflow: 'visible' }}
-      >
-        <Subtabs>
-          <SubtabList>
-            <Subtab
-              title="00071938"
-              tabItemId="subtab-tabitem-01"
-              tabPanelId="subtab-tabpanel-01"
-            />
-            <Subtab
-              title="00071939"
-              tabItemId="subtab-tabitem-02"
-              tabPanelId="subtab-tabpanel-02"
-            />
-            <SubtabOverflow isOpen itemUnsaved itemUnread />
-          </SubtabList>
-          <SubtabPanel
-            id="subtab-tabpanel-01"
-            tabId="subtab-tabitem-01"
-            isVisible
-          >
-            Item One Content
-          </SubtabPanel>
-          <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-            Item Two Content
-          </SubtabPanel>
-        </Subtabs>
-      </div>
-    )
+    element: <OverflowSubtabs isOpen itemUnread itemUnsaved />
   }
 ];

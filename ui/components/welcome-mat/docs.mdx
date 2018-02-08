@@ -1,0 +1,43 @@
+import WelcomeMat from './';
+import Example from '../../../shared/components/Example';
+import CodeView from '../../../shared/components/CodeView';
+
+<div className="doc lead">
+  A Welcome Mat provides a series of unordered items a user can click to learn about a thematic topic.
+</div>
+
+<Example title="Welcome Mat Base">
+  <CodeView>
+    <WelcomeMat />
+  </CodeView>
+</Example>
+
+Welcome Mat tiles may trigger walkthroughs, modals, or take users to specific URLs.
+
+The Welcome Mat consists of two sections, the informational left pane and the actionable right pane. 
+
+The left pane should be used to educate users as to the theme of the content displayed in the right pane.
+
+Icon choices, colors, and tile content can be customized to fit your experience.
+
+## With Completed Steps
+
+As users complete items in the list, the list updates to show as completed.
+
+<Example title="Welcome Mat Completed Steps">
+  <CodeView>
+    <WelcomeMat showAsCompleted />
+  </CodeView>
+</Example>
+
+To show a step as complete, the `slds-welcome-mat__tile_complete` class should be added to each completed `slds-welcome-mat__tile`.
+
+## Trailhead Connected
+
+The Trailhead Connected variant should only be used when users can achieve a badge in Trailhead for completing all steps in the current Welcome Mat. Only Trailhead connected mats may have the Trailhead font for the header.
+
+<Example title="Welcome Mat Trailhead">
+  <CodeView>
+    <WelcomeMat trailhead />
+  </CodeView>
+</Example>

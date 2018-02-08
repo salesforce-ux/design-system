@@ -1,0 +1,19 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * An illustration is a component that displays an stateful image and message.
+ * Illustrations should be used within other components, such as cards, to express the state of the component (i.e. empty states).
+ * They should be accompanied by text that also describes the state of the component.
+ *
+ * #### Accessibility
+ *
+ * Each SVG tag requires an `aria-hidden="true"` attribute
+ *
+ * @summary Illustrations are used to display illustration images. They should be used within other components, such as cards.
+ *
+ * @base
+ * @name illustration
+ * @selector .slds-illustration
+ * @support dev-ready
+ */

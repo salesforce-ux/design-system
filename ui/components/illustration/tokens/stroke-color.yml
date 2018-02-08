@@ -1,0 +1,14 @@
+global:
+  type: color
+  category: stroke-color
+  cssProperties:
+  - stroke
+  - fill
+  - stop-color
+props:
+  ILLUSTRATION_COLOR_PRIMARY:
+    value: '#8cd3f8'
+    comment: Primary color for illustrations
+  ILLUSTRATION_COLOR_SECONDARY:
+    value: '#c2e8ff'
+    comment: Secondary color for illustrations

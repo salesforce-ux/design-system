@@ -92,7 +92,13 @@ gulp.task('lint:html', ['generate:wrappedexamples'], () => {
         // Rules documentation:
         // https://github.com/yaniswang/HTMLHint/wiki/Rules
         'alt-require': true,
-        'attr-lowercase': ['viewBox', 'preserveAspectRatio'],
+        'attr-lowercase': [
+          'viewBox',
+          'preserveAspectRatio',
+          'filterUnits',
+          'gradientTransform',
+          'stdDeviation'
+        ],
         'attr-no-duplication': true,
         'attr-unsafe-chars': true,
         'attr-value-double-quotes': true,
@@ -104,7 +110,7 @@ gulp.task('lint:html', ['generate:wrappedexamples'], () => {
         'src-not-empty': true,
         'tag-pair': true,
         'tag-self-close': true,
-        'tagname-lowercase': true,
+        'tagname-lowercase': false,
         'title-require': true,
         // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed
         // as <div>&lt;div></div> raises errors at the moment

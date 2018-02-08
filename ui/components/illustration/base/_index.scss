@@ -1,0 +1,70 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @summary Initiates an illustration component
+ *
+ * @name base
+ * @selector .slds-illustration
+ * @restrict div
+ * @variant
+ */
+.slds-illustration {
+
+  text-align: center;
+
+  /**
+   * @summary Applies width and height values for small illustrations
+   * @selector .slds-illustration_small
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */
+  &_small svg {
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    margin-bottom: $spacing-medium;
+  }
+
+  /**
+   * @summary Applies width and height values for large illustrations
+   * @selector .slds-illustration_large
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */
+  &_large svg {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    margin-bottom: $spacing-medium;
+  }
+
+  .slds-illustration__stroke-primary {
+    stroke: $illustration-color-primary;
+    stop-color: $illustration-color-primary;
+  }
+
+  .slds-illustration__stroke-secondary {
+    stroke: $illustration-color-secondary;
+    stop-color: $illustration-color-secondary;
+  }
+
+  .slds-illustration__fill-primary {
+    fill: $illustration-color-primary;
+  }
+
+  .slds-illustration__fill-secondary {
+    fill: $illustration-color-secondary;
+  }
+
+  .slds-illustration__stop-color-primary {
+    stop-color: $illustration-color-primary;
+  }
+
+  .slds-illustration__stop-color-secondary {
+    stop-color: $illustration-color-secondary;
+  }
+}

@@ -253,7 +253,7 @@
 
   .slds-modal__container {
     @include mq-medium-min {
-      width: 90%;
+      width: 70%;
       max-width: 75rem;
       min-width: 40rem; // TODO: Tokenize
     }

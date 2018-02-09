@@ -106,7 +106,7 @@
  * @restrict .slds-welcome-mat__tiles .slds-box
  */
 .slds-welcome-mat__tile {
-  &:not(.slds-welcome-mat__tile_complete) .slds-welcome-mat__icon-check {
+  &:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
     display: none;
   }
 
@@ -170,7 +170,9 @@
  * @selector .slds-welcome-mat__icon-check
  * @restrict .slds-welcome-mat__tile-icon-container div
  */
-.slds-welcome-mat__icon-check {
+.slds-welcome-mat .slds-icon-action-check {
+  line-height: 0;
+  padding: 4px;
   position: absolute;
   bottom: -$welcome-mat-complete-icon-size/2;
   right: -$welcome-mat-complete-icon-size/2;
@@ -183,13 +185,7 @@
   border-radius: $welcome-mat-complete-icon-size;
   background: $progress-bar-color-background-fill-success;
 
-  .slds-icon_container {
-    line-height: 0;
-  }
-
   .slds-icon {
-    width: $welcome-mat-check-size;
-    height: $welcome-mat-check-size;
     fill: $color-text-inverse;
   }
 }

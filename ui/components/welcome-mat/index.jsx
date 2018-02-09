@@ -48,10 +48,17 @@ const Demo = props => (
   </div>
 );
 
-const renderTiles = (tiles, complete) =>
-  tiles.map((tile, ti) => (
-    <WelcomeMatTile key={`tile-${ti}`} tile={tile} completed={complete} />
+const renderTiles = (tiles, complete) => {
+  const completeStr = complete ? 'complete' : 'incomplete';
+
+  return tiles.map((tile, ti) => (
+    <WelcomeMatTile
+      key={`tile-${completeStr}-${ti}`}
+      tile={tile}
+      completed={complete}
+    />
   ));
+};
 
 export default props => {
   const { complete = 0, trailhead } = props;

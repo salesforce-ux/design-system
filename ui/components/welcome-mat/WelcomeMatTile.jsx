@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { VisualPickerMediaObject } from '../visual-picker/link/example';
 import { UtilityIcon } from '../icons/base/example';
+import { ActionIcon } from '../icons/action/example';
 
 class WelcomeMatTile extends Component {
   render() {
@@ -22,9 +23,10 @@ class WelcomeMatTile extends Component {
               className="slds-icon-text-default"
               symbol={tile.symbol}
             />
-            <div className="slds-welcome-mat__icon-check">
-              <UtilityIcon className="slds-icon-text-default" symbol="check" />
-            </div>
+            <ActionIcon
+              className="slds-welcome-mat__icon-check"
+              symbol="check"
+            />
           </div>
         }
       >

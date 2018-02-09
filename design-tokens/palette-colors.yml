@@ -115,6 +115,18 @@ props:
   BRAND_HEADER_CONTRAST_INVERSE_ACTIVE:
     value: "#eeeeee"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
+  BRAND_HEADER_CONTRAST_COOL:
+    value: "#0B6493"
+    comment: "Variant of BRAND_HEADER_CONTRAST that provides a cool color"
+  BRAND_HEADER_CONTRAST_COOL_ACTIVE:
+    value: "#0A547B"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_COOL"
+  BRAND_HEADER_CONTRAST_WARM:
+    value: "#BF0201"
+    comment: "Variant of BRAND_HEADER_CONTRAST that provides a warm color"
+  BRAND_HEADER_CONTRAST_WARM_ACTIVE:
+    value: "#920A0A"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_WARM"
   BRAND_TEXT_LINK:
     value: "#006DCC"
     comment: "Primary text link brand color"

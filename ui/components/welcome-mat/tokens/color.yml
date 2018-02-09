@@ -10,9 +10,16 @@ global:
   - 'background*'
   - 'border*'
   - box-shadow
+
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+
+- ../../../../design-tokens/color-palettes.yml
+- ../../../../design-tokens/force-base/aliases/color.yml
 props:
+  WELCOME_MAT_TEXT_COLOR_INFO:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Text color for the Info section
+
   WELCOME_MAT_BACKGROUND_IMAGE_INFO:
     type: string
     value: '/assets/images/welcome-mat/hero_image_clouds@2x.png'

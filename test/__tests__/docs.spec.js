@@ -27,9 +27,6 @@ glob('ui/**/docs.mdx').forEach(filepath => {
   );
 });
 
-const createVrt = example =>
-  it(example.title, () => matchesMarkupAndStyle(example.component));
-
 const placeInExampleFolderForLinting = example => {
   const filename = `${example.title.replace(/\W/g, '_')}.html`;
   const filepath = path.resolve(__dirname, '../../', '.generated', 'examples');
@@ -40,6 +37,8 @@ const placeInExampleFolderForLinting = example => {
   );
 };
 
+// jest needs a test.
+it('generates mdx files and writes examples for linting', () => {});
+
 const allExamples = Docs.allExamples.default.getExamples();
-allExamples.forEach(createVrt);
 allExamples.forEach(placeInExampleFolderForLinting);

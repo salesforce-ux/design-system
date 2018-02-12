@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 export const GoingCamping = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 483 218"
     aria-hidden="true"
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
@@ -439,6 +439,7 @@ export const GoingCamping = props => (
 
 export const Maintenance = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 364 277"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"

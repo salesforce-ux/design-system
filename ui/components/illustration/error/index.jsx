@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 export const NoAccess = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 454 212"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -403,6 +404,7 @@ export const NoAccess = props => (
 
 export const NoConnection = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 454 265"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -749,6 +751,7 @@ export const NoConnection = props => (
 
 export const NotAvailableInLightning = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 470 267"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1003,6 +1006,7 @@ export const NotAvailableInLightning = props => (
 
 export const PageNotAvailable = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 470 229"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1387,6 +1391,7 @@ export const PageNotAvailable = props => (
 
 export const WalkthroughNotAvailable = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 424 253"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"

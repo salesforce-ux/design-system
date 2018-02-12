@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 export const LakeMountain = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 505 319"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -300,6 +301,7 @@ export const LakeMountain = props => (
 
 export const FishingDeals = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 466 297"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -774,6 +776,7 @@ export const FishingDeals = props => (
 
 export const NoEvents = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 396 237"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1093,6 +1096,7 @@ export const NoEvents = props => (
 );
 export const NoTask = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 454 182"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1394,6 +1398,7 @@ export const NoTask = props => (
 
 export const Setup = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 396 245"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"

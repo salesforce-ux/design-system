@@ -21,11 +21,14 @@
    * @modifier
    * @group width
    */
-  &_small svg {
-    width: 100%;
-    max-width: 300px;
-    max-height: 200px;
-    margin-bottom: $spacing-medium;
+  &.slds-illustration_small {
+
+    .slds-illustration__svg {
+      width: 100%;
+      max-width: 300px;
+      max-height: 200px;
+      margin-bottom: $spacing-medium;
+    }
   }
 
   /**
@@ -35,11 +38,14 @@
    * @modifier
    * @group width
    */
-  &_large svg {
-    width: 100%;
-    max-width: 600px;
-    max-height: 400px;
-    margin-bottom: $spacing-medium;
+  &.slds-illustration_large {
+
+    .slds-illustration__svg {
+      width: 100%;
+      max-width: 600px;
+      max-height: 400px;
+      margin-bottom: $spacing-medium;
+    }
   }
 
   .slds-illustration__stroke-primary {

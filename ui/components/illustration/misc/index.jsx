@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 export const GoneFishing = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 466 263"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -289,6 +290,7 @@ export const GoneFishing = props => (
 
 export const NoAccess2 = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 454 234"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -675,6 +677,7 @@ export const NoAccess2 = props => (
 
 export const NoContent = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 454 213"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1076,6 +1079,7 @@ export const NoContent = props => (
 
 export const NoPreview = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 272 146"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -1501,6 +1505,7 @@ export const NoPreview = props => (
 
 export const Preview = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 272 146"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
@@ -2037,9 +2042,9 @@ export const Preview = props => (
 
 export const Research = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 493 266"
     aria-hidden="true"
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >

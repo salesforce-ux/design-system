@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 export const Desert = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 468 194"
     aria-hidden="true"
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
@@ -243,6 +243,7 @@ export const Desert = props => (
 
 export const OpenRoad = props => (
   <svg
+    className="slds-illustration__svg"
     viewBox="0 0 470 264"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"

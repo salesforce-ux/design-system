@@ -6,7 +6,7 @@ import React from 'react';
 import createHelpers from '../../../../jest.setup';
 import WelcomeMat from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkupAndStyle } = createHelpers(__dirname, 8081);
 
 describe('Welcome Mat Snapshots', () => {
   it('renders a welcome mat', () => matchesMarkupAndStyle(<WelcomeMat />));

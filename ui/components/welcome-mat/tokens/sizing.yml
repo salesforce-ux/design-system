@@ -8,6 +8,7 @@ global:
   cssProperties:
   - '*height'
   - '*width'
+
 props:
   WELCOME_MAT_WIDTH:
     value: '52.0625rem'
@@ -16,11 +17,11 @@ props:
   WELCOME_MAT_WIDTH_PROGRESS_BAR:
     value: '12.5rem'
     comment: Welcome Mat Progress Bar width
-  
+
   WELCOME_MAT_COMPLETE_ICON_SIZE:
     value: '1.25rem'
     comment: 'Size of the green completed check mark'
-  
+
   WELCOME_MAT_CHECK_SIZE:
     value: 0.625rem
     comment: Size of the check mark in the green icon

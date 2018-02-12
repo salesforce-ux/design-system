@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The Trailhead Connected variant should be used when users can achieve 
+ * The Trailhead Connected variant should be used when users can achieve
  * a badge in Trailhead for completing all steps in the current Welcome Mat.
  *
  * Only Trailhead Connected Mats may have the Trailhead font for the header.
@@ -22,7 +22,7 @@
   position: relative;
 
   .slds-icon-action-check {
-    border: none;
+    border-width: 0;
     top: 50%;
     right: 0%;
     transform: translate3d(50%, -50%, 0);
@@ -40,10 +40,11 @@
 
 /**
  * @selector .slds-welcome-mat__info-progress_complete
- * @restrict .slds-welcome-mat__info-progress 
+ * @restrict .slds-welcome-mat__info-progress
  * @modifier
  */
 .slds-welcome-mat__info-progress_complete {
+
   .slds-icon-action-check {
     display: flex;
   }

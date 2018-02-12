@@ -10,6 +10,7 @@
  * @variant
  */
 .slds-welcome-mat {
+
   .slds-modal__container {
     width: $welcome-mat-width;
     max-width: none;
@@ -100,13 +101,14 @@
 }
 
 /**
- * @summary Welcome Mat Tile item. Shows an actionable step a user can take 
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take
  * to complete a greater objective. Based on a SLDS Visual Picker.
  *
  * @selector .slds-welcome-mat__tile
  * @restrict .slds-welcome-mat__tiles .slds-box
  */
 .slds-welcome-mat__tile {
+
   &:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
     display: none;
   }
@@ -160,6 +162,7 @@
  * @modifier
  */
 .slds-welcome-mat__tile_complete {
+
   .slds-icon {
     fill: $welcome-mat-color-icon-complete;
   }
@@ -175,8 +178,8 @@
   line-height: 0;
   padding: 4px;
   position: absolute;
-  bottom: -$welcome-mat-complete-icon-size/2;
-  right: -$welcome-mat-complete-icon-size/2;
+  bottom: -($welcome-mat-complete-icon-size / 2);
+  right: -($welcome-mat-complete-icon-size / 2);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -282,6 +282,14 @@
   }
 }
 
+.slds-input:required {
+  box-shadow: none;
+}
+
+.slds-input:required:focus {
+  box-shadow: $shadow-button-focus;
+}
+
 .slds-has-error {
   @include form-input-error('.slds-input');
 
@@ -289,12 +297,4 @@
     fill: $color-text-error;
     color: $color-text-error;
   }
-}
-
-.slds-input:required {
-  box-shadow: none;
-}
-
-.slds-input:required:focus {
-  box-shadow: $shadow-button-focus;
 }

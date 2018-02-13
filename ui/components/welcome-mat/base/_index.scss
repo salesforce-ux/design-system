@@ -48,13 +48,13 @@
  * @restrict .slds-welcome-mat div
  */
 .slds-welcome-mat__info {
+  color: $welcome-mat-text-color-info;
   text-align: center;
   background-image: url($welcome-mat-background-image-info);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: $welcome-mat-background-color-info;
-  color: $welcome-mat-text-color-info;
 }
 
 /**
@@ -139,9 +139,9 @@
  * @restrict .slds-welcome-mat__tile p
  */
 .slds-welcome-mat__tile-description {
+  color: $color-text-weak;
   font-size: $font-size-text-x-small;
   line-height: $line-height-text;
-  color: $color-text-weak;
 }
 
 /**
@@ -172,21 +172,21 @@
  * @summary Icon Check mark for completed Welcome Mat Tiles.
  *
  * @selector .slds-welcome-mat__icon-check
- * @restrict .slds-welcome-mat__tile-icon-container div
+ * @restrict .slds-welcome-mat__tile-icon-container svg
  */
 .slds-welcome-mat .slds-icon-action-check {
-  line-height: 0;
-  padding: 4px;
   position: absolute;
   bottom: -($welcome-mat-complete-icon-size / 2);
   right: -($welcome-mat-complete-icon-size / 2);
+  height: $welcome-mat-complete-icon-size;
+  width: $welcome-mat-complete-icon-size;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $welcome-mat-complete-icon-size;
-  width: $welcome-mat-complete-icon-size;
+  padding: 0.25rem;
   border: $border-width-thick solid $color-background;
   border-radius: $welcome-mat-complete-icon-size;
+  line-height: 0;
   background: $progress-bar-color-background-fill-success;
 
   .slds-icon {

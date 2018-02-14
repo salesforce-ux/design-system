@@ -37,7 +37,7 @@ class WelcomeMatTile extends React.Component {
           </div>
         }
       >
-        <h4 className="slds-welcome-mat__tile-title">{tile.title}</h4>
+        <h3 className="slds-welcome-mat__tile-title">{tile.title}</h3>
         <p className="slds-welcome-mat__tile-description">{tile.description}</p>
       </VisualPickerMediaObject>
     );

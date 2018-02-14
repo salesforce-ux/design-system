@@ -13,7 +13,7 @@ import {
 import { VisualPicker } from '../coverable-content/example';
 import { UtilityIcon } from '../../icons/base/example';
 
-const PackageOne = [
+export const PackageOne = [
   <span className="slds-text-heading_small" key={_.uniqueId()}>
     Lightning Professional
   </span>,
@@ -22,7 +22,7 @@ const PackageOne = [
   </span>
 ];
 
-const PackageTwo = [
+export const PackageTwo = [
   <span className="slds-text-heading_small" key={_.uniqueId()}>
     Lightning Enterprise
   </span>,
@@ -31,7 +31,7 @@ const PackageTwo = [
   </span>
 ];
 
-const PackageThree = [
+export const PackageThree = [
   <span className="slds-text-heading_small" key={_.uniqueId()}>
     Lightning Unlimited
   </span>,

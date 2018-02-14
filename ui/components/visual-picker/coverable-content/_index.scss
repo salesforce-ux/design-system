@@ -18,6 +18,10 @@
   text-align: center;
   cursor: pointer;
 
+  + .slds-visual-picker {
+    margin-left: $spacing-medium;
+  }
+
   &:active .slds-visual-picker__figure {
     border: $border-width-thin solid $color-border-selection-hover;
     box-shadow: 0 0 0 1px $color-border-selection-hover inset;

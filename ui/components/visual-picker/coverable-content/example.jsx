@@ -22,10 +22,14 @@ export let VisualPicker = props => {
 
   return (
     <div
-      className={classNames('slds-visual-picker', {
-        'slds-visual-picker_large': props.size === 'large',
-        'slds-visual-picker_medium': props.size == 'medium'
-      })}
+      className={classNames(
+        'slds-visual-picker',
+        {
+          'slds-visual-picker_large': props.size === 'large',
+          'slds-visual-picker_medium': props.size == 'medium'
+        },
+        props.className
+      )}
     >
       <input
         type={props.type}
@@ -38,8 +42,7 @@ export let VisualPicker = props => {
         {props.icon ? (
           <span
             className={classNames(
-              'slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center',
-              props.className
+              'slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center'
             )}
           >
             <span className="slds-is-selected">
@@ -83,8 +86,7 @@ export let VisualPicker = props => {
         ) : (
           <span
             className={classNames(
-              'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center',
-              props.className
+              'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center'
             )}
           >
             {props.children}

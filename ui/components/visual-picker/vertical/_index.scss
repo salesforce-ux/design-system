@@ -1,0 +1,32 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes a vertical visual picker component
+ *
+ * @name vertical
+ * @selector .slds-visual-picker_vertical
+ * @restrict .slds-visual-picker
+ * @variant
+ */
+.slds-visual-picker_vertical {
+
+  width: $size-large;
+  display: flex;
+
+  .slds-visual-picker__figure {
+    text-align: left;
+    padding: $spacing-medium;
+    height: $size-xx-small;
+  }
+
+  + .slds-visual-picker_vertical {
+    margin-left: 0;
+    margin-top: $spacing-large;
+  }
+
+  .slds-visual-picker__figure,
+  .slds-visual-picker__body {
+    width: $size-large;
+  }
+}

@@ -180,6 +180,26 @@ a.slds-button--inverse:focus {
 }
 
 /**
+ * Creates the outlined button with the brand color
+ *
+ * @selector .slds-button_outline-brand
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_outline-brand {
+  @include button;
+  @include button-base;
+  border-color: $brand-accessible;
+
+  &[disabled] {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
  * Creates the inverse style for dark backgrounds
  *
  * @selector .slds-button_inverse

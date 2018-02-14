@@ -154,4 +154,13 @@ describe('renders text utilities', () => {
         </div>
       </div>
     ));
+
+  it('renders monospace text font', () =>
+    matchesMarkupAndStyle(
+      <div style={{ padding: '0.5rem', background: '#16325c' }}>
+        <div className="slds-text-font_monospace">
+          The quick brown fox jumps over the lazy dog.
+        </div>
+      </div>
+    ));
 });

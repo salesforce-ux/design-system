@@ -3,3 +3,4 @@
 
 aliases:
   SANS_SERIF: "'Salesforce Sans', Arial, sans-serif"
+  MONOSPACE: "Consolas, Menlo, Monaco, Courier, monospace"

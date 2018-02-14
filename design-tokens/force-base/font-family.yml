@@ -18,3 +18,5 @@ props:
     value: '{!SANS_SERIF}'
   FONT_FAMILY_HEADING:
     value: '{!SANS_SERIF}'
+  FONT_FAMILY_MONOSPACE:
+    value: '{!MONOSPACE}'

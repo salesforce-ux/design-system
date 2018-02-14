@@ -157,5 +157,10 @@ export let examples = [
         <Text className="slds-text-color_inverse-weak" />
       </div>
     )
+  },
+  {
+    id: 'text-font-monospace',
+    label: 'Font - Monospace',
+    element: <Text className="slds-text-font_monospace" />
   }
 ];

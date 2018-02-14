@@ -271,3 +271,13 @@
     }
   }
 }
+
+/**
+* @summary Monospace font family
+*
+* @selector .slds-text-font_monospace
+* @modifier
+*/
+.slds-text-font_monospace {
+  font-family: $font-family-monospace;
+}

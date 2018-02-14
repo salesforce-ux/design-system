@@ -782,15 +782,6 @@ export const NoEvents = props => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <defs>
-      <linearGradient x1="50%" y1="0%" x2="50%" y2="78.2164727%">
-        <stop stopColor="#FFFFFF" offset="0%" />
-        <stop
-          className="slds-illustration__stop-color-secondary"
-          offset="100%"
-        />
-      </linearGradient>
-    </defs>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-102.000000, -79.000000)">
         <g>
@@ -835,7 +826,7 @@ export const NoEvents = props => (
               <path
                 vectorEffect="non-scaling-stroke"
                 d="M47.5993204,62 C47.5993204,62 45.3234189,54.9545453 55.0548818,54.9545455 C64.7863447,54.9545456 60.64481,54.9545466 68.525098,54.9545455 C76.4053859,54.9545443 75.8197996,45.1551939 68.7795875,45.0909091 L27.7910035,45.0909091 C27.7910035,45.0909091 10.4867295,45.1551939 6.38851862,45.0909091 C-2.1315161,45.1551939 -2.12749607,32.4090909 6.38851862,32.4090909 L91.0476222,32.4090909 C104.446387,32.4090909 104.102146,16.8434669 91.306569,16.9090909 C78.5109918,16.8434669 49.4432546,16.9090909 36.9059317,16.9090909 C33.2180637,16.9090909 26.6356862,16.5042063 26.6356862,8.45454545 C26.6356862,3.50059894 26.4270933,2.2662402 26.4270933,0"
-                stroke="url(#linearGradient-1)"
+                className="slds-illustration__stroke-secondary"
                 strokeWidth="3"
                 strokeLinecap="round"
                 transform="translate(50.500000, 31.000000) scale(-1, 1) translate(-50.500000, -31.000000) "

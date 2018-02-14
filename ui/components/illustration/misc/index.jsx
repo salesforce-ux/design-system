@@ -1085,86 +1085,6 @@ export const NoPreview = props => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <defs>
-      <circle vectorEffect="non-scaling-stroke" cx="60" cy="60" r="60" />
-      <filter
-        x="-1.7%"
-        y="-1.7%"
-        width="103.3%"
-        height="103.3%"
-        filterUnits="objectBoundingBox"
-      >
-        <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1" />
-        <feComposite
-          in="shadowOffsetInner1"
-          in2="SourceAlpha"
-          operator="arithmetic"
-          k2="-1"
-          k3="1"
-          result="shadowInnerInner1"
-        />
-        <feColorMatrix
-          values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0"
-          type="matrix"
-          in="shadowInnerInner1"
-        />
-      </filter>
-      <radialGradient
-        cx="-14.745295%"
-        cy="50%"
-        fx="-14.745295%"
-        fy="50%"
-        r="100%"
-        gradientTransform="translate(-0.147453,0.500000),scale(1.000000,0.750000),rotate(90.000000),translate(0.147453,-0.500000)"
-      >
-        <stop stopColor="#FFFFFF" offset="0%" />
-        <stop
-          className="slds-illustration__stop-color-secondary"
-          offset="100%"
-        />
-      </radialGradient>
-      <filter
-        x="-75.0%"
-        y="-75.0%"
-        width="250.0%"
-        height="250.0%"
-        filterUnits="objectBoundingBox"
-      >
-        <feGaussianBlur stdDeviation="6" in="SourceGraphic" />
-      </filter>
-      <circle vectorEffect="non-scaling-stroke" cx="60" cy="60" r="60" />
-      <filter
-        x="-1.7%"
-        y="-1.7%"
-        width="103.3%"
-        height="103.3%"
-        filterUnits="objectBoundingBox"
-      >
-        <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1" />
-        <feComposite
-          in="shadowOffsetInner1"
-          in2="SourceAlpha"
-          operator="arithmetic"
-          k2="-1"
-          k3="1"
-          result="shadowInnerInner1"
-        />
-        <feColorMatrix
-          values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0"
-          type="matrix"
-          in="shadowInnerInner1"
-        />
-      </filter>
-      <filter
-        x="-75.0%"
-        y="-75.0%"
-        width="250.0%"
-        height="250.0%"
-        filterUnits="objectBoundingBox"
-      >
-        <feGaussianBlur stdDeviation="6" in="SourceGraphic" />
-      </filter>
-    </defs>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-14.000000, -27.000000)">
         <g transform="translate(16.000000, 29.000000)">
@@ -1312,9 +1232,6 @@ export const NoPreview = props => (
                 />
               </g>
               <g>
-                <g fill="black" fillOpacity="1">
-                  <use filter="url(#filter-2)" xlinkHref="#path-1" />
-                </g>
                 <circle
                   vectorEffect="non-scaling-stroke"
                   fill="#FFFFFF"
@@ -1357,7 +1274,6 @@ export const NoPreview = props => (
             >
               <circle
                 vectorEffect="non-scaling-stroke"
-                filter="url(#filter-4)"
                 cx="12"
                 cy="12"
                 r="12"
@@ -1445,9 +1361,6 @@ export const NoPreview = props => (
                 />
               </g>
               <g>
-                <g fill="black" fillOpacity="1">
-                  <use filter="url(#filter-6)" xlinkHref="#path-5" />
-                </g>
                 <circle
                   vectorEffect="non-scaling-stroke"
                   fill="#FFFFFF"
@@ -1490,7 +1403,6 @@ export const NoPreview = props => (
             >
               <circle
                 vectorEffect="non-scaling-stroke"
-                filter="url(#filter-7)"
                 cx="12"
                 cy="12"
                 r="12"
@@ -1706,9 +1618,6 @@ export const Preview = props => (
                 />
               </g>
               <g>
-                <g fill="black" fillOpacity="1">
-                  <use filter="url(#filter-2)" xlinkHref="#path-1" />
-                </g>
                 <circle
                   vectorEffect="non-scaling-stroke"
                   fill="#FFFFFF"
@@ -1753,12 +1662,6 @@ export const Preview = props => (
                 />
               </g>
               <g>
-                <g
-                  className="slds-illustration__fill-secondary"
-                  fillOpacity="1"
-                >
-                  <use filter="url(#filter-4)" xlinkHref="#path-3" />
-                </g>
                 <circle
                   vectorEffect="non-scaling-stroke"
                   fill="#FFFFFF"

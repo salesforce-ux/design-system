@@ -50,12 +50,10 @@
 
   .slds-illustration__stroke-primary {
     stroke: $illustration-color-primary;
-    stop-color: $illustration-color-primary;
   }
 
   .slds-illustration__stroke-secondary {
     stroke: $illustration-color-secondary;
-    stop-color: $illustration-color-secondary;
   }
 
   .slds-illustration__fill-primary {
@@ -64,13 +62,5 @@
 
   .slds-illustration__fill-secondary {
     fill: $illustration-color-secondary;
-  }
-
-  .slds-illustration__stop-color-primary {
-    stop-color: $illustration-color-primary;
-  }
-
-  .slds-illustration__stop-color-secondary {
-    stop-color: $illustration-color-secondary;
   }
 }

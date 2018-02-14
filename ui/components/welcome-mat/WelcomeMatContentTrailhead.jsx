@@ -11,7 +11,7 @@ import { ActionIcon } from '../icons/action/example';
 
 class WelcomeMatContentTrailhead extends React.Component {
   render() {
-    const { complete, total } = this.props;
+    const { complete, total, labelId } = this.props;
     const completePercent = complete / total * 100;
     const isComplete = completePercent === 100;
 
@@ -25,9 +25,9 @@ class WelcomeMatContentTrailhead extends React.Component {
 
     return (
       <div>
-        <h3 className="slds-welcome-mat__info-title">
+        <h2 id={labelId} className="slds-welcome-mat__info-title">
           Hey there, Trailblazer!
-        </h3>
+        </h2>
         <p className="slds-welcome-mat__info-description">
           Your 30-day trial is under way. Learn how easy it is to use and set up
           Lightning Service Desk. You'll be your company's service expert by the
@@ -45,9 +45,11 @@ class WelcomeMatContentTrailhead extends React.Component {
               src="/assets/images/welcome-mat/trailhead_badge@2x.png"
               width="50"
               height="50"
-              alt="Trailhead Badge Title"
+              alt=""
             />
             <ActionIcon
+              title="complete"
+              assistiveText="Complete"
               className="slds-welcome-mat__icon-check slds-icon_xx-small"
               symbol="check"
             />
@@ -75,12 +77,14 @@ class WelcomeMatContentTrailhead extends React.Component {
 
 WelcomeMatContentTrailhead.propTypes = {
   complete: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired
+  total: PropTypes.number.isRequired,
+  labelId: PropTypes.string.isRequired
 };
 
 WelcomeMatContentTrailhead.defaultProps = {
   complete: 0,
-  total: 5
+  total: 5,
+  labelId: 'welcome-mat-label-1'
 };
 
 export default WelcomeMatContentTrailhead;

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import uuid from 'lodash.uniqueid';
 
 // component imports
 import { Modal, ModalHeader, ModalContent } from '../modals/base/example';
@@ -67,20 +68,27 @@ export default props => {
   const { complete = 0, trailhead } = props;
   const completeTiles = sampleTiles.slice(0, complete);
   const incompleteTiles = sampleTiles.slice(complete);
-
-  const infoContent = trailhead ? (
-    <WelcomeMatContentTrailhead complete={complete} total={tileCount} />
-  ) : (
-    <WelcomeMatContent complete={complete} total={tileCount} />
-  );
+  const welcomeMatLabelId = uuid('welcome-mat-label-');
 
   return (
     <Demo style={{ height: '620px' }}>
-      <Modal className="slds-welcome-mat">
+      <Modal className="slds-welcome-mat" aria-labelledby={welcomeMatLabelId}>
         <ModalHeader className="slds-modal__header_empty" />
         <ModalContent className="slds-welcome-mat__content slds-grid">
           <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
-            {infoContent}
+            {trailhead ? (
+              <WelcomeMatContentTrailhead
+                complete={complete}
+                total={tileCount}
+                labelId={welcomeMatLabelId}
+              />
+            ) : (
+              <WelcomeMatContent
+                complete={complete}
+                total={tileCount}
+                labelId={welcomeMatLabelId}
+              />
+            )}
           </div>
 
           <div className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">

@@ -25,8 +25,12 @@ class WelcomeMatTile extends React.Component {
             <UtilityIcon
               className="slds-icon-text-default"
               symbol={tile.symbol}
+              title={false}
+              assistiveText={false}
             />
             <ActionIcon
+              title="Complete"
+              assistiveText="Complete"
               className="slds-welcome-mat__icon-check"
               symbol="check"
             />

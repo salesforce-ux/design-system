@@ -68,13 +68,22 @@ export default props => {
   const { complete = 0, trailhead } = props;
   const completeTiles = sampleTiles.slice(0, complete);
   const incompleteTiles = sampleTiles.slice(complete);
-  const welcomeMatLabelId = uuid('welcome-mat-label-');
+  const id = uuid();
+  const welcomeMatLabelId = `welcome-mat-label-${id}`;
+  const welcomeMatDescipId = `welcome-mat-content-${id}`;
 
   return (
     <Demo style={{ height: '620px' }}>
-      <Modal className="slds-welcome-mat" aria-labelledby={welcomeMatLabelId}>
+      <Modal
+        className="slds-welcome-mat"
+        aria-labelledby={welcomeMatLabelId}
+        aria-describedby={welcomeMatDescipId}
+      >
         <ModalHeader className="slds-modal__header_empty" />
-        <ModalContent className="slds-welcome-mat__content slds-grid">
+        <ModalContent
+          className="slds-welcome-mat__content slds-grid"
+          aria-describedby={welcomeMatDescipId}
+        >
           <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
             {trailhead ? (
               <WelcomeMatContentTrailhead

@@ -29,8 +29,8 @@ class WelcomeMatTile extends React.Component {
               assistiveText={false}
             />
             <ActionIcon
-              title="Complete"
-              assistiveText="Complete"
+              title="Completed"
+              assistiveText="Completed"
               className="slds-welcome-mat__icon-check"
               symbol="check"
             />

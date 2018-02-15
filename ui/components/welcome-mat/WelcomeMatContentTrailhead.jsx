@@ -48,8 +48,8 @@ class WelcomeMatContentTrailhead extends React.Component {
               alt=""
             />
             <ActionIcon
-              title="complete"
-              assistiveText="Complete"
+              title="Completed"
+              assistiveText="Completed"
               className="slds-welcome-mat__icon-check slds-icon_xx-small"
               symbol="check"
             />

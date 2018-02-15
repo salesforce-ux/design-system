@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import uuid from 'lodash.uniqueid';
+import _ from '../../shared/helpers';
 
 // component imports
 import { Modal, ModalHeader, ModalContent } from '../modals/base/example';
@@ -68,9 +68,9 @@ export default props => {
   const { complete = 0, trailhead } = props;
   const completeTiles = sampleTiles.slice(0, complete);
   const incompleteTiles = sampleTiles.slice(complete);
-  const id = uuid();
-  const welcomeMatLabelId = `welcome-mat-label-${id}`;
-  const welcomeMatDescipId = `welcome-mat-content-${id}`;
+  const uniqueId = _.uniqueId('welcome-mat-');
+  const welcomeMatLabelId = `${uniqueId}-label`;
+  const welcomeMatDescipId = `${uniqueId}-content`;
 
   return (
     <Demo style={{ height: '620px' }}>
@@ -84,7 +84,7 @@ export default props => {
           className="slds-welcome-mat__content slds-grid"
           aria-describedby={welcomeMatDescipId}
         >
-          <div className="slds-welcome-mat__info slds-size_1-of-2 slds-p-around_xx-large">
+          <div className="slds-welcome-mat__info slds-size_1-of-2">
             {trailhead ? (
               <WelcomeMatContentTrailhead
                 complete={complete}

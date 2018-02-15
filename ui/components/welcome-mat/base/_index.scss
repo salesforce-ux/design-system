@@ -48,8 +48,12 @@
  * @restrict .slds-welcome-mat div
  */
 .slds-welcome-mat__info {
-  color: $welcome-mat-text-color-info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $spacing-xx-large $welcome-mat-spacing-info;
   text-align: center;
+  color: $welcome-mat-text-color-info;
   background-image: url($welcome-mat-background-image-info);
   background-position: bottom center;
   background-repeat: no-repeat;

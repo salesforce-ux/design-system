@@ -13,12 +13,12 @@ import * as Snapshot from './snapshots.data';
 import _ from '../../shared/helpers';
 
 <div className="lead doc">
-  A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied with a listbox of options.
+  A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied by a listbox of options.
 </div>
 
 ## Base Combobox
 
-A Base Combobox is a readonly text input that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
+A Base Combobox is a readonly text `input` that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
 
 <Example title="Combobox - Base">
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
@@ -48,28 +48,29 @@ A Base Combobox is a readonly text input that allows a user to select an option 
 - `slds-combobox` acts as the root node to the composite Combobox widget. It takes the `role="combobox"` attribute as a result
   - `aria-haspopup="listbox"` attribute is then applied to indicate the Combobox will display a popup, of type `listbox`
   - `aria-expanded="true|false"` attribute is applied to describe whether the popup of `listbox` is currently visible or not
-- The element `slds-combobox__form-element` between the `combobox` and it's `input` must have `role="none"`
+- The element `slds-combobox__form-element` between the `combobox` and its `input` must have `role="none"`
 
-### Textbox markup
+### Input markup
 
-- The Textbox is an `input` with a role of `textbox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
-- The Textbox has `autocomplete="off"` to remove the browsers suggestions from the `input`
-- The Textbox has `aria-controls=""` which points to the ID of the `listbox`. It informs Assistive Technology what DOM node the input controls, in display or content
-- The Textbox has the `type` attribute set to be `text` as it's not a search field
-- The Textbox has `readonly` attribute applied
+- The `input` is an `input` with a role of `textbox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
+- The `input` has the following attributes:
+  - `autocomplete="off"` to remove the browsers' suggestions from the `input`
+  - `aria-controls=""` which points to the ID of the `listbox`. It informs assistive technology what DOM node the `input` controls, in terms of visibility and / or content
+  - `type` attribute set to be `text` as it's not a search field
+  - `readonly`
 
 ### Displaying options
 
-To display the `Listbox` of options in a Combobox, it is most common that the user will click and place their focus inside the text input and the options will display instantly. Optionally, you can choose to not display the `Listbox` immediately and wait for user input by means of typing a letter or pressing the down arrow key, before displaying the options.
+To display the `listbox` of options in a Combobox, it is most common that the user will click and place their focus inside the text `input` and the options will display instantly. Optionally, you can choose to not display the `listbox` immediately and wait for user input by means of typing a letter or pressing the down arrow key in the `input` field, before displaying the options.
 
-To toggle visibility of the `Listbox` add the class `slds-is-open` to the `slds-dropdown-trigger` element.
+To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds-dropdown-trigger` element.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When toggling visibility of the Combobox, the <code className="doc">aria-expanded</code> attribute needs to be toggled to <code className="doc">true</code>, remembering to set it to <code className="doc">false</code> again when the options are hidden.
+  When toggling visibility of the Combobox, the <code className="doc">aria-expanded</code> attribute needs to be toggled to <code className="doc">true</code>. Set it to <code className="doc">false</code> again when the options are hidden.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The <code className="doc">listbox</code> of options must be an <b>owned</b> child of the <code className="doc">combobox</code>. If it cannot be a direct child of the <code className="doc">combobox</code> element then <code className="doc">aria-owns</code> must be placed on the <code className="doc">combobox</code> an point to the ID of the <code className="doc">listbox</code> instead.
+  The <code className="doc">listbox</code> of options must be an <b>owned</b> child of the <code className="doc">combobox</code>. If it cannot be a direct child of the <code className="doc">combobox</code> element, then <code className="doc">aria-owns</code> must be placed on the <code className="doc">combobox</code> and point to the ID of the <code className="doc">listbox</code> instead.
 </Blockquote>
 
 <Example title="Combobox - Displaying Options">
@@ -107,16 +108,15 @@ To toggle visibility of the `Listbox` add the class `slds-is-open` to the `slds-
 #### Listbox markup
 
 - The `listbox` has `role="listbox"` applied
-- The `listbox` can have child `option`'s. We place `role="option"` on a `span` element, inside a list item. As such the list item `li` needs to be removed from the Accessibility Tree with `role="presentation"`
+- The `listbox` can have child `option`s. We place `role="option"` on a `div` element, inside a list item. As such the list item `li` needs to be removed from the Accessibility Tree with `role="presentation"`
 - A `listbox` has the ability to group options together under a visual heading or label. This means the `role="listbox"` attribute is placed on a common parent element, which can wrap multiple lists (or groups) of options
-  - When a `listbox` has no option groups
-    - The `ul` element has `role="presentation"` to remove it from the Accessibility Tree
+  - When a `listbox` has no option groups, the `ul` element has `role="presentation"` to remove it from the Accessibility Tree
 - Every `option` has `aria-selected="false"` by default
 - Disabled `option`s should have `aria-disabled="true"` applied
 
 ### Grouped options
 
-Options within a Listbox can be grouped together under meaningful headings. This is useful if you wish to create separation between 2 or more sets of options within a single Listbox.
+Options within a `listbox` can be grouped together under meaningful headings. This is useful if you wish to create separation between 2 or more sets of options within a single `listbox`.
 
 <Example title="Combobox - Grouped Options">
   <CodeView style={{maxWidth: '40rem', height: '17rem'}}>
@@ -154,20 +154,20 @@ Options within a Listbox can be grouped together under meaningful headings. This
   </CodeView>
 </Example>
 
-#### Grouped Listbox markup
+#### Grouped listbox markup
 
 - When a `listbox` has option groups, each group gets a visual label. Exactly like `optgroup` in a `select` element
   - The `ul` element in this case has `role="group"` with an `aria-label` that matches the visible label
-  - Display the group label visually, but due to the way a listbox works it can only be marked as `role="presentation"`, as a `listbox` can only have `option` children. This allows us to communicate the group label visually and programmatically to a screen reader
+  - Display the group label visually, but due to the way a `listbox` works it can only be marked as `role="presentation"`, as a `listbox` can only have `option` children. This allows us to communicate the group label visually and programmatically to a screen reader
 
 ### Handling focus
 
 When a combobox is clicked or focused, it is common for the options to be displayed at the same time. When you leave the combobox it is also common that the options are hidden.
 
-When an option from the `Listbox` is "in focus", user focus never leaves the `input` field, we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
+When an option from the `listbox` is "in focus", user focus never leaves the `input` field, we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the input needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
+  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the <code className="doc">input</code> needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>. When no option is highlighted, <code className="doc">aria-activedescendant</code> must be removed.
 </Blockquote>
 
 <Example title="Combobox - Handling focus">
@@ -201,11 +201,11 @@ When an option from the `Listbox` is "in focus", user focus never leaves the `in
 To use a combobox with your keyboard, you must first place focus inside the `input`. From here:
 
 - If the Combobox is collapsed, use the `down` arrow key to expand it, updating `aria-expanded` to `true`
-- Use the `Escape` key to collapse the Combobox, uppdating `aria-expanded` to `false`
+- Use the `Escape` key to collapse the Combobox, updating `aria-expanded` to `false`
 - Use `up` or `down` arrow keys to cycle through the options, updating `aria-activedescendant` and setting `aria-selected="true"` on the next option with each key press
   - Each press of the arrow key **must** update the `input` value to reflect the currently selected option
-  - It is common to loop the selected option to the first option when you get to the last option in the list. Similarly looping to the last option when you reach to the first option.
-- By typing the first letter of an option name, the first matching option will highlight, updating aria-activedescendant` and setting `aria-selected="true"` on the option
+  - It is common to loop the selected option to the first option when you get to the last option in the list. Similarly, loop to the last option when you reach to the first option.
+- By typing the first letter of an option name, the first matching option will highlight, updating `aria-activedescendant` and setting `aria-selected="true"` on the option
   - When the letter doesn't match an option, highlighting don't move
 - `Enter` will select the highlighted option
 
@@ -213,7 +213,7 @@ To use a combobox with your keyboard, you must first place focus inside the `inp
 
 A user selects an option by using their mouse to click the option they require, or pressing the `Enter` key once they have arrowed to the desired option.
 
-Upon selection the Combobox collapses, only showing the input field. The value of the input inside the Combobox is set to match the selected option name so the user can see what was previously selected from the `Listbox` of options.
+Upon selection the Combobox collapses, only showing the `input` field. The value of the `input` inside the Combobox is set to match the selected option name so the user can see what was previously selected from the `listbox` of options.
 
 <Example title="Combobox - Selecting an Option">
 
@@ -251,7 +251,7 @@ Upon selection the Combobox collapses, only showing the input field. The value o
 
 #### Single selection
 
-When an option become selected, the class `slds-is-selected` should be applied to the `slds-listbox__option` element with the `role="option"`. This will provide visual feedback that the user has selected that element.
+When an option becomes selected, the class `slds-is-selected` should be applied to the `slds-listbox__option` element with the `role="option"`. This will provide visual feedback that the user has selected that element.
 
 <Example title="Combobox - Single Selection">
 
@@ -290,15 +290,15 @@ When an option become selected, the class `slds-is-selected` should be applied t
 
 ##### Re-opening with a selection
 
-When re-opening a Combobox that already has a selected value, the Listbox should be displayed with the selected option already highlighted.
+When re-opening a Combobox that already has a selected value, the `listbox` should be displayed with the selected option already highlighted.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to re-set the <code className="doc">aria-activedescendant</code> attribute on the input to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
+  Be sure to re-set the <code className="doc">aria-activedescendant</code> attribute on the `input` to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
 </Blockquote>
 
 #### Multiple selections
 
-When more than one option has been selected, the value of the input should be updated with the total number of selected items, such as "3 options selected".
+When more than one option has been selected, the value of the `input` should be updated with the total number of selected items, such as "3 options selected".
 
 <Blockquote type="a11y" header="Accessibility Note">
   The value of the Combobox is the only way you can communicate what option was selected to a screen reader. Given that the option names don't appear in the set value, adding "Current Selection:" to each selected option name allows a screen reader user to understand that the option was already selected from the list.
@@ -345,9 +345,9 @@ When more than one option has been selected, the value of the input should be up
 
 </Example>
 
-When a Combobox with multiple selected options is closed, a listbox of pills is also used to represent those selected options.
+When a Combobox with multiple selected options is closed, a [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) is also used to represent those selected options.
 
-The listbox of pills is positioned below the read-only input, outside of the Combobox, each pill represents a selected option. This allows a user to easily see and remove selected items from the Combobox without opening it again.
+The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) is positioned below the read-only `input`, outside of the Combobox. Each pill represents a selected option. This allows a user to easily see and remove selected items from the Combobox without opening it again.
 
 <Example title="Combobox - Multiple selection closed">
 
@@ -389,18 +389,18 @@ The listbox of pills is positioned below the read-only input, outside of the Com
 
 #### Editing multiple selections
 
-The Listbox of Pills allows you to quickly remove selections without opening the Combobox by clicking the remove "x" or using your delete key.
+The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) allows you to quickly remove selections without opening the Combobox by clicking the remove "x" or using your delete key.
 
-The Listbox of Pills acts as a single focusable element. Using the arrow keys whilst focused on the first pill, will cycle the user through the pill options.
+The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) acts as a single focusable element. Using the arrow keys whilst focused on the first pill will cycle the user through the pill options.
 
-## Autocomplete combobox
+## Autocomplete Combobox
 
-An autocomplete Combobox also allows a user to select an option from a list but that list can be affected by what the user types into the input of the Combobox. This can be useful when the list of options is very large, as user input can start to display options that only match the text they have entered.
+An autocomplete Combobox also allows a user to select an option from a list, but that list can be affected by what the user types into the `input` of the Combobox. This can be useful when the list of options is very large, as user input can start to display options that only match the text they have entered.
 
 If no option matches, the user can complete the value of the combobox by finishing their own text entry.
 
-<Blockquote type="a11y" header="Accessibility difference">
-  The difference between the <strong>base combobox</strong> and the <strong>autocomplete combobox</strong>, is that the text <code className="doc">input</code> must have the <code className="doc">readonly</code> attribute removed and replaced with <code className="doc">aria-autocomplete="list"</code>.
+<Blockquote type="a11y" header="Accessibility Difference">
+  The difference between the <strong>Base Combobox</strong> and the <strong>Autocomplete Combobox</strong>, is that the text <code className="doc">input</code> must have the <code className="doc">readonly</code> attribute removed and replaced with <code className="doc">aria-autocomplete="list"</code>.
 </Blockquote>
 
 <Example title="Combobox - Autocomplete">
@@ -429,7 +429,7 @@ If no option matches, the user can complete the value of the combobox by finishi
 
 ### Displaying options
 
-Displaying options happens just like a base Combobox, by placing user focus inside the Combobox text input.
+Displaying options happens just like a base Combobox, by placing user focus inside the Combobox text `input`.
 
 When a user stops interacting with the Combobox, or selects an option, the Combobox collapses and hides the options.
 
@@ -460,12 +460,12 @@ When a user stops interacting with the Combobox, or selects an option, the Combo
 
 ### Displaying options based on user input
 
-If an option from the pre-populated Listbox isn't what the user wants they can start typing into the input. This term will be used to filter the options by and narrow down the size of the list to something more relevant.
+If an option from the pre-populated `listbox` isn't what the user wants, they can start typing into the `input`. This term will be used to filter the options by and narrow down the size of the list to something more relevant.
 
-Whilst typing, the highlighted option in the listbox should be the users text string.
+Whilst typing, the highlighted option in the `listbox` should be the user's text string.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the input needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
+  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the `input` needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
 </Blockquote>
 
 <Example title="Combobox - Autocomplete - Displaying options based on user input">
@@ -531,9 +531,9 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 The user again can click on the desired option or press the `Enter` key with the desired option highlighted. Alternatively they can leave their entered text string as the value of the Combobox.
 
-Selecting an option from the Listbox will close the Listbox.
+Selecting an option from the `listbox` will close the `listbox`.
 
-To remove the selected option, simply clear the text input.
+To remove the selected option, simply clear the text `input`.
 
 <Example title="Combobox - Autocomplete - Selecting an option">
 
@@ -561,7 +561,7 @@ To remove the selected option, simply clear the text input.
 
 ### Multiple selection
 
-Multiple selection is much the same as the Base Combobox, a list of selected options are displayed below the Combobox as a Listbox of Pills.
+Multiple selection is much the same as the Base Combobox. A list of selected options are displayed below the Combobox as a [Listbox of Pills](/components/pills?variant=listbox-of-pill-options).
 
 <Example title="Combobox - Autocomplete - Multiple selections">
 
@@ -588,11 +588,11 @@ Multiple selection is much the same as the Base Combobox, a list of selected opt
 
 </Example>
 
-#### Editing Multiple selections
+#### Editing multiple selections
 
-The Listbox of Pills allows you to quickly remove selections without opening the Combobox by clicking the remove "x" or using your delete key.
+The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) allows you to quickly remove selections without opening the Combobox by clicking the remove "x" or using your delete key.
 
-The Listbox of Pills acts as a single focusable element. Using the arrow keys whilst focused on the first pill, will cycle the user through the pill options.
+The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) acts as a single focusable element. Using the arrow keys whilst focused on the first pill will cycle the user through the pill options.
 
 ## Entity Autocomplete Combobox (Lookup)
 
@@ -622,9 +622,9 @@ An Entity Autocomplete Combobox or Lookup, is used to search for and select Sale
 
 ### Displaying options
 
-Displaying options happens just like an Autocomplete Combobox, by placing user focus inside the Combobox text input.
+Displaying options happens just like an Autocomplete Combobox, by placing user focus inside the Combobox text `input`.
 
-The options now have extra information about them, such as the type of entity and any other important meta data.
+The options now have extra information about them, such as the type of entity and any other important metadata.
 
 <Example title="Combobox - Autocomplete - Entity - Displaying options">
 
@@ -651,7 +651,7 @@ The options now have extra information about them, such as the type of entity an
 
 ### Displaying options based on user input
 
-As with the Autocomplete Combobox the user can start typing into the input to search for Salesforce Entities that match their search term.
+As with the Autocomplete Combobox, the user can start typing into the `input` to search for Salesforce Entities that match their search term.
 
 In the resultant displayed options, we highlight the matched term by bolding it using the `<mark>` element.
 
@@ -682,7 +682,7 @@ In the resultant displayed options, we highlight the matched term by bolding it 
 
 The same keyboard interactions apply from the base Combobox, but with these differences:
 
-- `Up` and `Down` arrows **should not** update the `input` value to reflect the currently selected option. The input value should only be updated upon selection.
+- `Up` and `Down` arrows **should not** update the `input` value to reflect the currently selected option. The `input` value should only be updated upon selection.
 
 <Example title="Combobox - Autocomplete - Entity - Keyboard interactions">
 
@@ -710,9 +710,9 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 ### Selecting an option
 
-The user again can click on the desired option or press the `Enter` key with the desired option highlighted. The user can only select from the returned options, a plain text string is not a valid selection with the Entity Lookup.
+The user again can click on the desired option or press the `Enter` key with the desired option highlighted. The user can only select from the returned options; a plain text string is not a valid selection with the Entity Lookup.
 
-The selected option is still set as the value of the text `input`, but this time we make the input look like a dismissable pill. This `input` becomes readonly at this point, so the user can no longer type into it.
+The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissable pill. This `input` becomes readonly at this point, so the user can no longer type into it.
 
 To remove the selected option, simply press the `Delete` key when focused inside the text `input` or click the remove "x".
 
@@ -751,9 +751,9 @@ To remove the selected option, simply press the `Delete` key when focused inside
 
 </Example>
 
-## Multiple selection
+### Multiple selection
 
-Multiple selection is handled the same as the base and autocomplete combobox, a list of selected entities is display under the combobox as a Listbox of Pills.
+Multiple selection is handled the same as the Base and Autocomplete Combobox, a list of selected entities is displayed under the combobox as a [Listbox of Pills](/components/pills?variant=listbox-of-pill-options).
 
 <Example title="Combobox - Autocomplete - Entity - Multiple Selection">
 
@@ -780,7 +780,7 @@ Multiple selection is handled the same as the base and autocomplete combobox, a 
 
 ## Grouped Comboboxes (Cross-entity / Polymorphic)
 
-The Grouped Comboboxes should be used when a combobox has another text input addon prepended or appended to the primary combobox.
+The Grouped Comboboxes should be used when a Combobox has another Combobox appended or prepended to itself.
 
 The containing `div` of the comboboxes should have the class `slds-combobox-group` on it.
 
@@ -913,7 +913,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
 When a user is not focused on any element inside of the combobox group, the pill container should become collapsed to reduce vertical space.
 
-The combobox group element needs the class `slds-has-selection` when a selection has been made. The pill selections are found inside of another listbox located after the combobox group. It requires the class `slds-listbox_selection-group` to provide appropiate styling for the exanding and collapsing behavior of this region.
+The combobox group element needs the class `slds-has-selection` when a selection has been made. The pill selections are found inside of another [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) located after the combobox group. It requires the class `slds-listbox_selection-group` to provide appropriate styling for the expanding and collapsing behavior of this region.
 
 #### Collapsed
 
@@ -978,9 +978,9 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
 
 </Example>
 
-### Scoping Results
+### Scoping results
 
-A grouped combobox is intended to be used to filer down or scope you search results. You can do so by interacting with the object switcher to scope down to an object type.
+A grouped combobox is intended to be used to filter down or scope you search results. You can do so by interacting with the object switcher to scope down to an object type.
 
 The containing element should receive the class `slds-combobox_object-switcher` and `slds-combobox_addon-start`.
 

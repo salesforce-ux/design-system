@@ -1,0 +1,184 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Panel component
+ *
+ * @name base
+ * @selector .slds-panel
+ * @restrict div
+ * @variant
+ */
+.slds-panel {
+  background: $color-background-alt;
+  border-radius: $border-radius-medium;
+
+  /**
+   * Contains sub sections of a panel
+   *
+   * @selector .slds-panel__section
+   * @restrict .slds-panel div
+   * @required
+   */
+  &__section {
+    padding: $spacing-medium;
+  }
+
+  /**
+   * Contains form actions at the bottom of a panel
+   *
+   * @selector .slds-panel__actions
+   * @restrict .slds-panel div
+   * @required
+   */
+  &__actions {
+    padding: $spacing-small;
+  }
+
+  &.slds-is-editing {
+    box-shadow: $shadow-drop-down;
+  }
+}
+
+/**
+ * @summary Header element of a panel
+ * @selector .slds-panel__header
+ * @restrict .slds-panel div
+ */
+.slds-panel__header {
+  display: flex;
+  position: relative;
+  padding: $spacing-small $spacing-xx-large;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Modifier that notifies panel header that something other than a title and close button exist
+ * @selector .slds-panel__header_custom
+ * @restrict .slds-panel__header
+ * @modifier
+ */
+.slds-panel__header_custom {
+  padding: $spacing-small $spacing-medium;
+}
+
+/**
+ * @summary Close button of a panel
+ * @selector .slds-panel__close
+ * @restrict .slds-panel .slds-button
+ */
+.slds-panel__close {
+  position: absolute;
+  right: $spacing-small;
+  top: 50%;
+  margin-top: (($square-icon-small-boundary / 2) * -1);
+}
+
+/**
+ * @summary Body element of a panel
+ * @selector .slds-panel__body
+ * @restrict .slds-panel div
+ */
+.slds-panel__body {
+  padding: $spacing-medium;
+}
+
+/**
+ * @summary Modifier that changes the display of a panel to dock to the viewport
+ * @selector .slds-panel_docked
+ * @restrict .slds-panel
+ * @modifier
+ */
+.slds-panel_docked {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: $size-small;
+  height: 100%;
+  border-radius: 0;
+  transition: transform 300ms ease;
+
+  /**
+   * @summary Title of the header panel
+   * @selector .slds-panel__header-title
+   * @restrict .slds-panel__header h2
+   */
+  .slds-panel__header-title {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/**
+ * @summary Modifier that changes the display of a panel to dock but reflow the panel
+ * @selector .slds-panel_drawer
+ * @restrict .slds-panel_docked
+ * @modifier
+ */
+.slds-panel_drawer {
+  position: relative;
+}
+
+/**
+ * @summary Modifier that changes the position of a panel to the left
+ * @selector .slds-panel_docked-left
+ * @restrict .slds-panel_docked
+ * @modifier
+ */
+.slds-panel_docked-left {
+  left: 0;
+  box-shadow: $panel-docked-left-shadow;
+
+  /**
+   * @summary Modifier that informs the panel that it was invoked by a drill in link
+   * @selector .slds-is-directional
+   * @restrict .slds-panel_docked
+   * @modifier
+   */
+  &.slds-is-directional .slds-panel__close {
+    left: $spacing-small;
+    right: auto;
+  }
+}
+
+/**
+ * @summary Modifier that changes the position of a panel to the right
+ * @selector .slds-panel_docked-right
+ * @restrict .slds-panel_docked
+ * @modifier
+ */
+.slds-panel_docked-right {
+  right: 0;
+  box-shadow: $panel-docked-right-shadow;
+
+  &.slds-is-directional .slds-panel__close {
+    right: $spacing-small;
+    left: auto;
+  }
+}
+
+.slds-panel_drawer.slds-panel_slide-in {
+  display: block;
+}
+
+.slds-panel_drawer.slds-panel_slide-out {
+  display: none;
+}
+
+/**
+ * @summary Animates the panel back into the canvas
+ * @selector .slds-panel_slide-in
+ * @restrict .slds-panel
+ */
+.slds-panel.slds-panel_slide-in {
+  transform: translate3d(0, 0, 0);
+}
+
+/**
+ * @summary Animates the panel off the canvas
+ * @selector .slds-panel_slide-out
+ * @restrict .slds-panel
+ */
+.slds-panel.slds-panel_slide-out {
+  transform: translate3d(-120%, 0, 0);
+}

@@ -22,14 +22,19 @@ $_sizes: (
 
 // Absolute sizes (rem)
 @each $name, $width in $_sizes {
-  /*
-   * @selector .slds-size_#{$name}
-   * @modifier
-   */
+
   .slds-size_#{$name},
   .slds-size--#{$name} {
     width: $width;
   }
+}
+
+/**
+ * @selector .slds-size_full
+ * @modifier
+ */
+.slds-size_full {
+  width: 100%;
 }
 
 // Relative sizes (%)

@@ -1,0 +1,15 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+props:
+  PANEL_DOCKED_LEFT_SHADOW:
+    value: '1px 0 3px rgba(0,0,0,0.25)'
+    comment: Dropshadow found on docked UI panels when positioned to the left of a viewport
+  PANEL_DOCKED_RIGHT_SHADOW:
+    value: '-1px 0 3px 0 rgba(0,0,0,0.25)'
+    comment: Dropshadow found on docked UI panels when positioned to the left of a viewport

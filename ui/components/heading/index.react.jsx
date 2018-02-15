@@ -4,6 +4,7 @@
 import _ from '../../shared/helpers';
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import Truncate from '../../shared/truncate/index.react.jsx';
 
@@ -41,8 +42,8 @@ class Heading extends React.Component {
 }
 
 Heading.propTypes = {
-  flavor: React.PropTypes.oneOf(['label', 'medium']),
-  truncate: React.PropTypes.number
+  flavor: PropTypes.oneOf(['label', 'medium']),
+  truncate: PropTypes.number
 };
 
 Heading.defaultProps = { flavor: 'label' };

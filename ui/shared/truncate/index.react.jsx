@@ -3,6 +3,7 @@
 
 import _ from '../helpers';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Truncate extends React.Component {
   // TODO: Remove span
@@ -16,6 +17,6 @@ class Truncate extends React.Component {
   }
 }
 
-Truncate.propTypes = { truncate: React.PropTypes.number };
+Truncate.propTypes = { truncate: PropTypes.number };
 
 export default Truncate;

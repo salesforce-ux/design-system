@@ -40,7 +40,7 @@ export let VisualPickerMediaObject = props => {
 
 export default (
   <div className="demo-only" style={{ width: '24rem' }}>
-    <VisualPickerMediaObject symbol="user">
+    <VisualPickerMediaObject symbol="knowledge_base">
       <h2
         className="slds-truncate slds-text-heading_small"
         title="Share the knowledge"

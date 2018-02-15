@@ -573,7 +573,7 @@ export const ErrorTd = props => (
         }
       )}
       id={'error-0' + props.index}
-      symbol="warning"
+      symbol="ban"
       tabIndex={props.actionableMode && props.hasError ? null : '-1'}
       title={`Item ${props.index} has errors`}
     />
@@ -918,20 +918,6 @@ export const EditPopover = props => (
     </div>
     <span id="form-end" tabIndex="0" />
   </section>
-);
-
-/**
- * @name ErrorTooltip - Tooltip used to display a row error
- * @param {*} props
- */
-export const ErrorTooltip = props => (
-  <Tooltip
-    className="slds-nubbin_bottom-left slds-theme_error"
-    id="error-tooltip-01"
-    style={{ position: 'absolute', top: '-1rem', left: '0', width: 'auto' }}
-  >
-    Company encountered an error.
-  </Tooltip>
 );
 
 /**

@@ -26,6 +26,7 @@ export let Popover = props => {
       aria-label={!props.header && !props.headerTitle ? props.title : null}
       aria-describedby={bodyUniqueId}
       style={props.style}
+      id={props.popoverId}
     >
       {props.closeButton ? (
         <ButtonIcon

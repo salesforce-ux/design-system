@@ -1,0 +1,65 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Error popovers are used to notify the user of errors on the page
+ *
+ * If the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable`  modifier on the body element.
+ *
+ * In some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none" utility class to the body element.
+ *
+ * @summary Initializes an error non-modal dialog
+ *
+ * @name error
+ * @selector .slds-popover_error
+ * @restrict .slds-popover
+ * @variant
+ */
+
+.slds-popover_error {
+
+  .slds-popover__header {
+    background-color: $color-background-error-dark;
+    color: $color-text-inverse;
+  }
+
+  &.slds-nubbin_top,
+  &.slds-nubbin--top,
+  &.slds-nubbin_top-left,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
+  &.slds-nubbin--top-right,
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top {
+
+    &:before {
+      background-color: $color-background-error-dark;
+    }
+  }
+}
+
+.slds-popover_error,
+.slds-popover_warning {
+
+  .slds-popover__header {
+    border-radius: calc(#{$border-radius-medium} - 1px) calc(#{$border-radius-medium} - 1px) 0 0;
+  }
+
+  /**
+   * @summary Applies scrollable styles for popovers
+   * @selector .slds-popover__body_scrollable
+   * @restrict .slds-popover_error .slds-popover__body, .slds-popover_warning .slds-popover__body
+   */
+  .slds-popover__body_scrollable {
+
+    max-height: 150px;
+    overflow-y: auto;
+    border-bottom: $border-width-thin solid $color-border;
+
+    + .slds-popover__footer {
+      border-top: 0;
+    }
+  }
+}

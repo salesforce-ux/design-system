@@ -1,0 +1,54 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Warning popovers are used to warn the user about information on the page that deserves caution
+ *
+ * If the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable` modifier on the body element.
+ *
+ * In some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none" utility class to the body element.
+ *
+ * @summary Initializes an warning non-modal dialog
+ *
+ * @name warning
+ * @selector .slds-popover_warning
+ * @restrict .slds-popover
+ * @variant
+ */
+
+.slds-popover_warning {
+
+  .slds-popover__header {
+    background-color: $color-background-warning;
+    color: $color-gray-12;
+
+    .slds-icon {
+      fill: currentColor;
+    }
+  }
+
+  .slds-popover__close {
+    color: currentColor;
+
+    &:focus,
+    &:hover {
+      color: $color-gray-9;
+    }
+  }
+
+  &.slds-nubbin_top,
+  &.slds-nubbin--top,
+  &.slds-nubbin_top-left,
+  &.slds-nubbin--top-left,
+  &.slds-nubbin_top-right,
+  &.slds-nubbin--top-right,
+  &.slds-nubbin_left-top,
+  &.slds-nubbin--left-top,
+  &.slds-nubbin_right-top,
+  &.slds-nubbin--right-top {
+
+    &:before {
+      background-color: $color-background-warning;
+    }
+  }
+}

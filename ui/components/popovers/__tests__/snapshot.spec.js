@@ -4,6 +4,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Popover } from '../base/example';
 import { Header, Footer } from '../walkthrough/example';
 import { EinsteinHeader } from '../../einstein-header/base';
+import { FeedbackHeader, FeedbackFooter } from '../error/example';
 
 import createHelpers from '../../../../jest.setup';
 
@@ -99,6 +100,98 @@ xit('renders an einstein popover', () =>
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
+      </p>
+    </Popover>
+  ));
+
+it('renders an error popover', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-popover_error slds-nubbin_bottom-left"
+      headingId={headingUniqueId}
+      header={
+        <FeedbackHeader title="Resolve the following errors" symbol="ban" />
+      }
+      closeButton
+      inverse
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore.{' '}
+        <a href="javascript:void(0);" title="Learn More">
+          Learn More
+        </a>
+      </p>
+    </Popover>
+  ));
+
+it('renders an error popover with footer', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-popover_error slds-nubbin_bottom-left"
+      headingId={headingUniqueId}
+      header={
+        <FeedbackHeader title="Resolve the following errors" symbol="ban" />
+      }
+      footer={<FeedbackFooter />}
+      closeButton
+      inverse
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore.{' '}
+        <a href="javascript:void(0);" title="Learn More">
+          Learn More
+        </a>
+      </p>
+    </Popover>
+  ));
+
+it('renders a warning popover', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-popover_warning slds-nubbin_bottom-left"
+      headingId={headingUniqueId}
+      header={
+        <FeedbackHeader
+          title="Resolve the following errors"
+          symbol="warning"
+          iconDefault
+        />
+      }
+      closeButton
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore.{' '}
+        <a href="javascript:void(0);" title="Learn More">
+          Learn More
+        </a>
+      </p>
+    </Popover>
+  ));
+
+it('renders a warning popover with footer', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-popover_warning slds-nubbin_bottom-left"
+      headingId={headingUniqueId}
+      header={
+        <FeedbackHeader
+          title="Resolve the following errors"
+          symbol="warning"
+          iconDefault
+        />
+      }
+      footer={<FeedbackFooter />}
+      closeButton
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore.{' '}
+        <a href="javascript:void(0);" title="Learn More">
+          Learn More
+        </a>
       </p>
     </Popover>
   ));

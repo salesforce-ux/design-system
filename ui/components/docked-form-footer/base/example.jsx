@@ -4,6 +4,11 @@
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
+import { Popover } from '../../popovers/base/example';
+import { FeedbackHeader } from '../../popovers/error/example';
+import _ from '../../../shared/helpers';
+
+const headingUniqueId = _.uniqueId('dialog-heading-id-');
 
 export const Context = props => (
   <div style={{ height: '180px' }}>{props.children}</div>
@@ -27,11 +32,11 @@ export let states = [
     element: (
       <div className="slds-docked-form-footer">
         <ButtonIcon
-          assistiveText="Review the Following Errors"
+          assistiveText="Resolve error"
           className="slds-button_icon slds-button_icon-error"
           iconClassName="slds-button__icon_large"
-          symbol="warning"
-          title="Review the Following Errors"
+          symbol="ban"
+          title="Resolve error"
         />
         <button type="button" className="slds-button slds-button_neutral">
           Cancel
@@ -48,11 +53,11 @@ export let states = [
     element: (
       <div className="slds-docked-form-footer">
         <ButtonIcon
-          assistiveText="Review the Following Errors"
+          assistiveText="Resolve error"
           className="slds-button_icon slds-button_icon-error"
           iconClassName="slds-button__icon_large"
-          symbol="warning"
-          title="Review the Following Errors"
+          symbol="ban"
+          title="Resolve error"
         />
         <button type="button" className="slds-button slds-button_neutral">
           Cancel
@@ -60,36 +65,34 @@ export let states = [
         <button type="button" className="slds-button slds-button_brand">
           Save
         </button>
-        <section
-          className="slds-popover slds-nubbin_bottom-left slds-theme_error"
-          role="dialog"
-          aria-label="Contextual title of this dialog"
-          aria-describedby="dialog-description-01"
+        <Popover
+          className="slds-popover_error slds-nubbin_bottom-left"
+          headingId={headingUniqueId}
+          header={
+            <FeedbackHeader
+              headingId={headingUniqueId}
+              title="Resolve error"
+              symbol="ban"
+            />
+          }
+          closeButton
+          inverse
           style={{
             position: 'absolute',
             bottom: '56px',
             left: '50%',
-            marginLeft: '66px',
+            marginLeft: '62px',
             transform: 'translateX(-50%)'
           }}
         >
-          <ButtonIcon
-            className="slds-button_icon-inverse slds-button_icon-small slds-float_right slds-popover__close"
-            symbol="close"
-            assistiveText="Close"
-            title="Close"
-          />
-          <div
-            className="slds-popover__body slds-text-longform"
-            id="dialog-description-01"
-          >
-            <p>
-              Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
-              ullamco deserunt aute id consequat veniam incididunt duis in sint
-              irure nisi.
-            </p>
-          </div>
-        </section>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.{' '}
+            <a href="javascript:void(0);" title="Learn More">
+              Learn More
+            </a>
+          </p>
+        </Popover>
       </div>
     )
   }

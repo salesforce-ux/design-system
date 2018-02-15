@@ -1,0 +1,199 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Welcome Mat component
+ *
+ * @name base
+ * @selector .slds-welcome-mat
+ * @restrict section
+ * @variant
+ */
+.slds-welcome-mat {
+
+  .slds-modal__container {
+    width: $welcome-mat-width;
+    max-width: none;
+  }
+
+  .slds-box {
+    margin: $spacing-medium 0;
+  }
+
+  .slds-box:not(.slds-welcome-mat__tile_complete) {
+    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
+    background: $color-background-alt;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
+        0 2px 2px $welcome-mat-color-action-shadow;
+    }
+  }
+
+  .slds-progress-bar {
+    display: inline-block;
+    width: $welcome-mat-width-progress-bar;
+    background: $welcome-mat-color-background-progress-bar;
+  }
+
+  .slds-progress-bar__value {
+    background: $progress-bar-color-background-fill-success;
+  }
+}
+
+/**
+ * @summary Container element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $spacing-xx-large $welcome-mat-spacing-info;
+  text-align: center;
+  color: $welcome-mat-text-color-info;
+  background-image: url($welcome-mat-background-image-info);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $welcome-mat-background-color-info;
+}
+
+/**
+ * @summary Title element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info-title
+ * @restrict .slds-welcome-mat__info h2
+ */
+.slds-welcome-mat__info-title {
+  margin-bottom: $spacing-large;
+  font-size: $welcome-mat-font-size-info-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+}
+
+/**
+ * @summary Description element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info-description
+ * @restrict .slds-welcome-mat__info p
+ */
+.slds-welcome-mat__info-description {
+  margin-bottom: $spacing-large;
+}
+
+/**
+ * @summary Text description of walkthrough progress
+ *
+ * @selector .slds-welcome-mat__info-progress
+ * @restrict .slds-welcome-mat__info div
+ */
+.slds-welcome-mat__info-progress {
+  margin-bottom: $spacing-medium;
+}
+
+/**
+ * @summary Container element for the Actions side of the Welcome Mat.
+ *
+ * @selector .slds-welcome-mat__tiles
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__tiles {
+  background: $color-background;
+}
+
+/**
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take
+ * to complete a greater objective. Based on a SLDS Visual Picker.
+ *
+ * @selector .slds-welcome-mat__tile
+ * @restrict .slds-welcome-mat__tiles .slds-box
+ */
+.slds-welcome-mat__tile {
+
+  &:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
+    display: none;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * @summary Title element for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-title
+ * @restrict .slds-welcome-mat__tile h3
+ */
+.slds-welcome-mat__tile-title {
+  font-weight: $font-weight-bold;
+}
+
+/**
+ * @summary Description element for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-description
+ * @restrict .slds-welcome-mat__tile p
+ */
+.slds-welcome-mat__tile-description {
+  color: $color-text-weak;
+  font-size: $font-size-text-x-small;
+  line-height: $line-height-text;
+}
+
+/**
+ * @summary Icon Container for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-icon-container
+ * @restrict .slds-welcome-mat__tile div
+ */
+.slds-welcome-mat__tile-icon-container {
+  position: relative;
+}
+
+/**
+ * @summary Complete modifier class for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile_complete
+ * @restrict .slds-welcome-mat__tile
+ * @modifier
+ */
+.slds-welcome-mat__tile_complete {
+
+  .slds-icon {
+    fill: $welcome-mat-color-icon-complete;
+  }
+}
+
+/**
+ * @summary Icon Check mark for completed Welcome Mat Tiles.
+ *
+ * @selector .slds-welcome-mat__icon-check
+ * @restrict .slds-welcome-mat__tile-icon-container svg, .slds-welcome-mat__info-badge-container svg
+ */
+.slds-welcome-mat .slds-icon-action-check {
+  position: absolute;
+  bottom: -($welcome-mat-complete-icon-size / 2);
+  right: -($welcome-mat-complete-icon-size / 2);
+  height: $welcome-mat-complete-icon-size;
+  width: $welcome-mat-complete-icon-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: $border-width-thick solid $color-background;
+  border-radius: $welcome-mat-complete-icon-size;
+  line-height: 0;
+  background: $progress-bar-color-background-fill-success;
+
+  .slds-icon {
+    fill: $color-text-inverse;
+  }
+}

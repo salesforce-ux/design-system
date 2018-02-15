@@ -10,22 +10,29 @@ import { UtilityIcon } from '../../icons/base/example';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let VisualPickerMediaObject = props => (
-  <a
-    href="javascript:void(0);"
-    className={classNames(
-      'slds-box slds-box_link slds-box_x-small slds-media',
-      props.className
-    )}
-  >
-    <div className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-      <UtilityIcon className="slds-icon-text-default" symbol="knowledge_base" />
-    </div>
-    <div className="slds-media__body slds-border_left slds-p-around_small">
-      {props.children}
-    </div>
-  </a>
-);
+export let VisualPickerMediaObject = props => {
+  const symbol = props.symbol || 'knowledge_base';
+  const iconContent = props.icon || (
+    <UtilityIcon className="slds-icon-text-default" symbol={symbol} />
+  );
+
+  return (
+    <a
+      href="javascript:void(0);"
+      className={classNames(
+        'slds-box slds-box_link slds-box_x-small slds-media',
+        props.className
+      )}
+    >
+      <div className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+        {iconContent}
+      </div>
+      <div className="slds-media__body slds-border_left slds-p-around_small">
+        {props.children}
+      </div>
+    </a>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export
@@ -33,7 +40,7 @@ export let VisualPickerMediaObject = props => (
 
 export default (
   <div className="demo-only" style={{ width: '24rem' }}>
-    <VisualPickerMediaObject symbol="user">
+    <VisualPickerMediaObject symbol="knowledge_base">
       <h2
         className="slds-truncate slds-text-heading_small"
         title="Share the knowledge"

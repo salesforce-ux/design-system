@@ -1,0 +1,77 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name vertical
+ * @selector .slds-progress_vertical
+ * @restrict .slds-progress
+ * @variant
+ */
+.slds-progress_vertical {
+  float: left;
+  height: 100%;
+
+  .slds-progress__item.slds-is-active {
+    font-weight: $font-weight-bold;
+  }
+
+  .slds-progress-bar {
+    top: 0;
+    margin-top: 0;
+    margin-left: calc(#{$spacing-x-small} - #{$progress-bar-height} / 2);
+  }
+
+  .slds-progress__list {
+    flex-direction: column;
+    height: 100%;
+    align-items: left;
+  }
+
+  .slds-progress__item {
+    align-self: left;
+    align-items: center;
+
+    &:last-child {
+      align-items: flex-end;
+    }
+  }
+
+  .slds-progress__marker {
+    margin-right: $spacing-medium;
+    min-width: $square-icon-utility-small;
+  }
+
+  .slds-progress__marker_icon {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
+    margin-left: 1px;
+
+    svg {
+      fill: $progress-bar-color-background-fill;
+    }
+  }
+
+  /**
+   * Turn completed stage checkmark green
+   *
+   * @selector .slds-progress__marker_icon-success
+   * @restrict .slds-progress__marker_icon
+   */
+  .slds-progress__item.slds-is-completed .slds-progress__marker_icon-success {
+
+    svg {
+      fill: $progress-bar-color-background-fill-success;
+    }
+  }
+
+  .slds-progress__item.slds-has-error .slds-progress__marker_icon {
+    margin-left: 1px;
+
+    svg {
+      fill: $color-text-error;
+    }
+  }
+}

@@ -44,7 +44,7 @@ module.exports = I.fromJS({
             loader: 'babel-loader'
           },
           {
-            loader: './scripts/compile/mdx-loader.js'
+            loader: path.resolve(__dirname, 'scripts/compile/mdx-loader.js')
           }
         ]
       }

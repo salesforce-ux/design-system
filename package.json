@@ -111,7 +111,7 @@
     "lodash.uniqueid": "4.0.1",
     "lodash.upperfirst": "4.3.1",
     "markdown-it": "8.3.1",
-    "mdxc": "^1.0.0",
+    "mdxc": "1.0.0",
     "mkdirp": "0.5.1",
     "mocha": "3.2.0",
     "moment": "2.18.1",

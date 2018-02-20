@@ -111,8 +111,7 @@
     "lodash.uniqueid": "4.0.1",
     "lodash.upperfirst": "4.3.1",
     "markdown-it": "8.3.1",
-    "mdx-loader": "1.0.0-beta.3",
-    "mdxc": "1.0.0-beta.6",
+    "mdxc": "^1.0.0",
     "mkdirp": "0.5.1",
     "mocha": "3.2.0",
     "moment": "2.18.1",
@@ -167,10 +166,7 @@
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "greenkeeper": {
-    "ignore": [
-      "theo",
-      "webpack"
-    ]
+    "ignore": ["theo", "webpack"]
   },
   "scripts": {
     "build": "gulp build",
@@ -182,9 +178,11 @@
     "lint": "gulp lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
-    "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
+    "previewer-dev":
+      "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
-    "test:compile-integration": "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
+    "test:compile-integration":
+      "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
     "test": "node jest.local.js",
     "test:travis": "node jest.travis.js",
     "travis": "node scripts/npm/build-travis.js",
@@ -192,10 +190,7 @@
     "writeUI": "babel-node scripts/npm/write-ui.js"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "*.{js,jsx}": ["prettier --single-quote --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",

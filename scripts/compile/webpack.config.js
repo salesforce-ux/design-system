@@ -44,13 +44,7 @@ module.exports = I.fromJS({
             loader: 'babel-loader'
           },
           {
-            loader: './scripts/compile/mdx-post-loader'
-          },
-          {
-            loader: 'mdx-loader',
-            options: {
-              unwrapped: false
-            }
+            loader: './scripts/compile/mdx-loader.js'
           }
         ]
       }

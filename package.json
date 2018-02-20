@@ -190,7 +190,7 @@
     "writeUI": "babel-node scripts/npm/write-ui.js"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --single-quote --write", "git add"]
+    "*.{js,jsx,json}": ["prettier --single-quote --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",

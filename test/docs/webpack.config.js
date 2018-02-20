@@ -45,13 +45,10 @@ module.exports = {
             loader: 'babel-loader'
           },
           {
-            loader: './scripts/compile/mdx-post-loader'
-          },
-          {
-            loader: 'mdx-loader',
-            options: {
-              unwrapped: false
-            }
+            loader: path.resolve(
+              __dirname,
+              '../../scripts/compile/mdx-loader.js'
+            )
           }
         ]
       }

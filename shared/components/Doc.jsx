@@ -66,12 +66,18 @@ export const factories = tags.reduce(
 );
 
 export const createTableOfContents = (() => {
-  const createNode = (level, element) => ({
-    children: [],
-    id: element.props.id,
-    level,
-    title: element.props.children[0]
-  });
+  const createNode = (level, element) => {
+    const { children, id } = element.props;
+    return {
+      children: [],
+      id,
+      level,
+      title:
+        typeof children === 'string'
+          ? children
+          : Array.isArray(children) ? children[0] : children
+    };
+  };
   return element => {
     let keyPath = [];
     let tree = {

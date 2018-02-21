@@ -115,7 +115,7 @@ module.exports = (dirname, port) => {
       const renderedMarkup =
         typeof element === 'string'
           ? element
-          : renderWithBetterError(
+          : renderWithBetterError(ReactDOM)(
               element,
               `${CURRENT_TEST_NAME} failed on ${element}`
             );

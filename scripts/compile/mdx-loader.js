@@ -22,9 +22,10 @@ module.exports = code => {
   const tags = Array.from(md.renderer.tags.values()).sort();
   return `
     import React, { createElement } from 'react';
-    import Doc, { factories } from '../../../shared/components/Doc';
+    import Doc, { factories, createTableOfContents } from '../../../shared/components/Doc';
     ${imports.join('\n')}
     const { ${tags.join(',')} } = factories;
-    export const getElement = () => createElement(Doc, {}, ${elements})
+    export const getElement = () => createElement(Doc, {}, ${elements});
+    export const getContents = () => createTableOfContents(getElement());
   `;
 };

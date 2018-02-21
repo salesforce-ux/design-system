@@ -1,10 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
 import cx from 'classnames';
+import get from 'lodash.get';
+import React from 'react';
 
 import '../styles/doc.scss';
+import { flattenElement } from '../utils/react';
 
 export const createAnchor = (type, id) =>
   React.createElement(
@@ -60,6 +62,39 @@ export const factories = tags.reduce(
     }),
   {}
 );
+
+export const createTableOfContents = (() => {
+  const createNode = (level, element) => ({
+    children: [],
+    id: element.props.id,
+    level,
+    title: element.props.children[0]
+  });
+  return element => {
+    let keyPath = [];
+    let tree = {
+      level: 0,
+      children: []
+    };
+    flattenElement(element)
+      .filter(e => /^h[1-6]/.test(e.type))
+      .forEach(element => {
+        let level = parseInt(element.type[1], 10);
+        let levelLast = get(tree, keyPath.concat(['level']));
+        if (level <= levelLast) {
+          while (keyPath.length) {
+            const heading = get(tree, keyPath);
+            keyPath = keyPath.slice(0, -2);
+            if (heading.level === level) break;
+          }
+        }
+        const children = get(tree, keyPath.concat(['children']));
+        children.push(createNode(level, element));
+        keyPath.push('children', children.length - 1);
+      });
+    return tree;
+  };
+})();
 
 export default class Doc extends React.Component {
   render() {

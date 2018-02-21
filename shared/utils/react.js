@@ -1,5 +1,7 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 import React from 'react';
-import ReactDOM from 'react-dom/server';
 
 export const flatten = items => items.reduce((a, b) => a.concat(b), []);
 
@@ -25,7 +27,7 @@ export const mapElement = (element, fn) =>
       )
     : element;
 
-export const renderWithBetterError = (element, msg) => {
+export const renderWithBetterError = ReactDOM => (element, msg) => {
   try {
     return ReactDOM.renderToStaticMarkup(element);
   } catch (e) {

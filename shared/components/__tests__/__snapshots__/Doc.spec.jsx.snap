@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createTableOfContents 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "id": "aa",
+          "level": 2,
+          "title": "A",
+        },
+      ],
+      "id": "a",
+      "level": 1,
+      "title": "A",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [],
+              "id": "bbb",
+              "level": 3,
+              "title": "B",
+            },
+          ],
+          "id": "bb",
+          "level": 2,
+          "title": "B",
+        },
+      ],
+      "id": "b",
+      "level": 1,
+      "title": "B",
+    },
+  ],
+  "level": 0,
+}
+`;

@@ -12,8 +12,9 @@ const puppeteer = require('puppeteer');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
 const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
+
 const { beautify } = require('./shared/utils/beautify');
-const { renderWithBetterError } = require('./shared/utils/render');
+const { renderWithBetterError } = require('./shared/utils/react');
 
 const getMarkupAndStyle = selector => `
   (function() {

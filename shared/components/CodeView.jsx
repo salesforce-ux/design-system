@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
 
 class CodeView extends React.Component {
-  kids() {
+  renderChildren() {
     return (
       <div className="docs-codeblock-example">
         <div style={this.props.style}>{this.props.children}</div>
@@ -14,25 +14,30 @@ class CodeView extends React.Component {
     );
   }
   render() {
-    const { position, toggleCode } = this.props;
+    const { hideCodeBlock, position, toggleCode } = this.props;
     return (
       <div className="docs-codeblock">
-        {position === 'bottom' ? this.kids() : null}
-        <CodeBlock language="html" toggleCode={toggleCode}>
-          {this.props.children}
-        </CodeBlock>
-        {position === 'top' ? this.kids() : null}
+        {position === 'bottom' ? this.renderChildren() : null}
+        {hideCodeBlock ? null : (
+          <CodeBlock language="html" toggleCode={toggleCode}>
+            {this.props.children}
+          </CodeBlock>
+        )}
+        {position === 'top' ? this.renderChildren() : null}
       </div>
     );
   }
 }
 
 CodeView.propTypes = {
+  hideCodeBlock: PropTypes.bool,
   position: PropTypes.oneOf(['top', 'bottom']),
   toggleCode: PropTypes.bool
 };
 
 CodeView.defaultProps = {
+  // Used for example generation
+  hideCodeBlock: false,
   position: 'bottom'
 };
 

@@ -4,9 +4,8 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, '../../scripts/compile/docs'),
+  entry: path.resolve(__dirname, '../../scripts/compile/entry.docs'),
   output: {
-    library: 'Docs',
     path: path.join(__dirname, '../../.generated'),
     filename: 'docs.js',
     libraryTarget: 'commonjs'

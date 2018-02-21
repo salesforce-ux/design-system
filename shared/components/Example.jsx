@@ -3,19 +3,8 @@
 
 import React from 'react';
 
-import allExamples from './all-examples';
-
-class Example extends React.Component {
-  componentWillMount() {
-    allExamples.addExample({
-      title: this.props.title,
-      component: this.props.children
-    });
-  }
-
+export default class Example extends React.Component {
   render() {
     return this.props.children;
   }
 }
-
-export default Example;

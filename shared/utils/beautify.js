@@ -1,6 +1,6 @@
-const { html: htmlBeautify } = require('js-beautify');
+import { html as htmlBeautify } from 'js-beautify';
 
-const beautify = html =>
+export const beautify = html =>
   htmlBeautify(html, {
     brace_style: 'end-expand',
     indent_size: 2,
@@ -9,5 +9,3 @@ const beautify = html =>
     'wrap_line_length ': 78,
     indent_inner_html: true
   });
-
-module.exports = { beautify };

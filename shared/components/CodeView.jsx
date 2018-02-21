@@ -18,11 +18,9 @@ class CodeView extends React.Component {
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.renderChildren() : null}
-        {hideCodeBlock ? null : (
-          <CodeBlock language="html" toggleCode={toggleCode}>
-            {this.props.children}
-          </CodeBlock>
-        )}
+        <CodeBlock language="html" toggleCode={toggleCode}>
+          {this.props.children}
+        </CodeBlock>
         {position === 'top' ? this.renderChildren() : null}
       </div>
     );
@@ -30,14 +28,11 @@ class CodeView extends React.Component {
 }
 
 CodeView.propTypes = {
-  hideCodeBlock: PropTypes.bool,
   position: PropTypes.oneOf(['top', 'bottom']),
   toggleCode: PropTypes.bool
 };
 
 CodeView.defaultProps = {
-  // Used for example generation
-  hideCodeBlock: false,
   position: 'bottom'
 };
 

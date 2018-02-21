@@ -23,26 +23,22 @@ const placeInExampleFolderForLinting = example => {
   );
 };
 
-glob('ui/**/docs.mdx')
-  .slice(0, 1)
-  .forEach(filepath => {
-    const { getElement } = getDoc(filepath.replace(/^ui/, '.'));
-    const examples = flattenElement(getElement())
-      .filter(e => e.type === Example)
-      .map(e => ({
-        title: e.props.title,
-        element: mapElement(e.props.children, e => {
-          if (e.type === CodeBlock) return null;
-          if (e.type === CodeView) {
-            return React.cloneElement(e, {
-              hideCodeBlock: true
-            });
-          }
-          return e;
-        })
-      }))
-      .forEach(placeInExampleFolderForLinting);
-  });
+glob('**/docs.mdx', {
+  cwd: path.resolve(__dirname, '../../ui')
+}).forEach(filepath => {
+  const { getElement } = getDoc(`./${filepath}`);
+  const examples = flattenElement(getElement())
+    .filter(e => e.type === Example)
+    .map(e => ({
+      title: e.props.title,
+      element: mapElement(e.props.children, e => {
+        if (e.type === CodeBlock) return e.props.children;
+        if (e.type === CodeView) return e.props.children;
+        return e;
+      })
+    }))
+    .forEach(placeInExampleFolderForLinting);
+});
 
 // jest needs a test.
 it('generates mdx files and writes examples for linting', () => {});

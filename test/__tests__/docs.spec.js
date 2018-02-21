@@ -29,14 +29,22 @@ glob('**/docs.mdx', {
   const { getElement } = getDoc(`./${filepath}`);
   const examples = flattenElement(getElement())
     .filter(e => e.type === Example)
-    .map(e => ({
-      title: e.props.title,
-      element: mapElement(e.props.children, e => {
-        if (e.type === CodeBlock) return e.props.children;
-        if (e.type === CodeView) return e.props.children;
-        return e;
-      })
-    }))
+    .map(e => {
+      return {
+        title: e.props.title,
+        element: mapElement(e.props.children, e => {
+          const fragment = React.createElement.apply(
+            React,
+            [React.Fragment, null].concat(
+              React.Children.toArray(e.props.children)
+            )
+          );
+          if (e.type === CodeBlock) return fragment;
+          if (e.type === CodeView) return fragment;
+          return e;
+        })
+      };
+    })
     .forEach(placeInExampleFolderForLinting);
 });
 

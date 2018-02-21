@@ -5,7 +5,6 @@
 
 import fs from 'fs-extra';
 import { sync as glob } from 'glob';
-import mkdirp from 'mkdirp';
 import path from 'path';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
@@ -14,10 +13,6 @@ import { getDoc, CodeBlock, CodeView, Example } from '../../.generated/docs';
 
 import { beautify } from '../../shared/utils/beautify';
 import { flattenElement, mapElement } from '../../shared/utils/react';
-
-import createHelpers from '../../jest.setup';
-
-const { matchesMarkupAndStyle } = createHelpers(__dirname, 6868);
 
 const placeInExampleFolderForLinting = example => {
   const filename = `${example.title.replace(/\W/g, '_')}.html`;
@@ -28,7 +23,6 @@ const placeInExampleFolderForLinting = example => {
   );
 };
 
-// Render each to fill allexample cache in the example component
 glob('ui/**/docs.mdx')
   .slice(0, 1)
   .forEach(filepath => {

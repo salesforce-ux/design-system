@@ -47,13 +47,7 @@ Array [
               "loader": "babel-loader",
             },
             Object {
-              "loader": "./scripts/compile/mdx-post-loader",
-            },
-            Object {
-              "loader": "mdx-loader",
-              "options": Object {
-                "unwrapped": false,
-              },
+              "loader": "./scripts/compile/mdx-loader.js",
             },
           ],
         },
@@ -135,13 +129,7 @@ Array [
               "loader": "babel-loader",
             },
             Object {
-              "loader": "./scripts/compile/mdx-post-loader",
-            },
-            Object {
-              "loader": "mdx-loader",
-              "options": Object {
-                "unwrapped": false,
-              },
+              "loader": "./scripts/compile/mdx-loader.js",
             },
           ],
         },
@@ -219,13 +207,7 @@ Array [
               "loader": "babel-loader",
             },
             Object {
-              "loader": "./scripts/compile/mdx-post-loader",
-            },
-            Object {
-              "loader": "mdx-loader",
-              "options": Object {
-                "unwrapped": false,
-              },
+              "loader": "./scripts/compile/mdx-loader.js",
             },
           ],
         },

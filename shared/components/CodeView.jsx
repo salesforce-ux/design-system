@@ -14,7 +14,7 @@ class CodeView extends React.Component {
     );
   }
   render() {
-    const { hideCodeBlock, position, toggleCode } = this.props;
+    const { position, toggleCode } = this.props;
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.renderChildren() : null}

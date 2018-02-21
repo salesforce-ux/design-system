@@ -3,6 +3,7 @@
 
 const I = require('immutable');
 const path = require('path');
+
 const paths = require('../helpers/paths');
 
 module.exports = I.fromJS({

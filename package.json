@@ -145,10 +145,10 @@
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
     "touch": "3.1.0",
-    "uglify-es": "3.0.15",
+    "uglifyjs-webpack-plugin": "^1.2.0",
     "uuid": "3.0.1",
     "vnu-jar": "17.11.1",
-    "webpack": "2.5.0",
+    "webpack": "3.11.0",
     "webpack-node-externals": "1.5.4",
     "webpack-runtime-compiler": "0.0.1",
     "yargs": "8.0.1"
@@ -181,8 +181,7 @@
     "previewer-dev":
       "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
-    "test:compile-integration":
-      "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
+    "test:compile-integration": "webpack --config test/docs/webpack.config.js",
     "test": "node jest.local.js",
     "test:travis": "node jest.travis.js",
     "travis": "node scripts/npm/build-travis.js",

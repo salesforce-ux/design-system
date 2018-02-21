@@ -6,14 +6,15 @@ const I = require('immutable-ext');
 const webpack = require('webpack');
 const fs = require('fs');
 const path = require('path');
-const paths = require('../helpers/paths');
 const _ = require('lodash');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const toTask = require('futurize').futurize(Task);
 const writeFile = toTask(fs.writeFile);
 
+const paths = require('../helpers/paths');
+
 const { FOLDERNAME, entry, manifest } = require('./entry');
-const Minify = require('./minify');
 const webpackConfig = require('./webpack.config');
 
 const externals = {
@@ -114,7 +115,7 @@ const compileLibs = () =>
     .map(cfgs =>
       cfgs.map(cfg =>
         cfg.update('plugins', plugins =>
-          (plugins || I.List()).push(new Minify())
+          (plugins || I.List()).push(new UglifyJsPlugin())
         )
       )
     )

@@ -3,7 +3,7 @@
 
 const MDXC = require('mdxc');
 
-const importPattern = /import\s+.*?\s+from\s+['"].*?['"];/g;
+const importPattern = /import\s+.*?\s+from\s+['"].*?['"];?/g;
 
 const getMatches = (pattern, string) => {
   const matches = [];

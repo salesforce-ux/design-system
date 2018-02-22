@@ -27,10 +27,21 @@
 /**
  * @summary A region that can be pinned on the left side of a layout
  *
- * @selector .slds-region__pinned-top
+ * @selector .slds-region__pinned-left
  * @restrict .slds-region
  */
 .slds-region__pinned-left {
   background-color: $color-foreground-primary;
   border-right: $border-width-thin solid $card-color-border;
+}
+
+/**
+ * @summary A region that can be pinned on the right side of a layout
+ *
+ * @selector .slds-region__pinned-right
+ * @restrict .slds-region
+ */
+.slds-region__pinned-right {
+  background-color: $color-foreground-primary;
+  border-left: $border-width-thin solid $card-color-border;
 }

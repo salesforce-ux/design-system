@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom/server';
+import ReactDOM from 'react-dom/server.browser';
 import stripIndent from 'strip-indent';
 import { beautify } from '../utils/beautify';
 import classNames from 'classnames';

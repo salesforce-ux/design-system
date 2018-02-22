@@ -57,6 +57,10 @@
       box-shadow: $elevation-shadow-4;
     }
 
+    &:focus ~ label .slds-visual-picker__body > *:first-child {
+      text-decoration: underline;
+    }
+
     /**
      * @summary Non-selected state
      * @selector .slds-is-not-selected

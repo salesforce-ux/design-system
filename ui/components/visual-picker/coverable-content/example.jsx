@@ -17,6 +17,12 @@ import { UtilityIcon } from '../../icons/base/example';
 // Partial(s)
 /// ////////////////////////////////////////
 
+export const Option = props => (
+  <span className="slds-text-title" key={_.uniqueId()}>
+    {props.label}
+  </span>
+);
+
 export let VisualPicker = props => {
   const uniqueId = _.uniqueId('visual-picker-');
 
@@ -139,7 +145,7 @@ export default (
         icon
         sprite="utility"
         symbol="connected_apps"
-        label="Connected App"
+        label={<Option label="Connected App" />}
         size="medium"
       />
       <VisualPicker
@@ -147,7 +153,7 @@ export default (
         icon
         sprite="utility"
         symbol="custom_apps"
-        label="Custom App"
+        label={<Option label="Custom App" />}
         size="medium"
       />
     </FormElementControl>
@@ -167,7 +173,7 @@ export let states = [
             icon
             sprite="utility"
             symbol="connected_apps"
-            label="Connected App"
+            label={<Option label="Connected App" />}
             size="medium"
           />
           <VisualPicker
@@ -176,7 +182,7 @@ export let states = [
             icon
             sprite="utility"
             symbol="custom_apps"
-            label="Custom App"
+            label={<Option label="Custom App" />}
             size="medium"
           />
         </FormElementControl>
@@ -198,7 +204,7 @@ export let examples = [
             icon
             sprite="standard"
             symbol="account"
-            label="Account"
+            label={<Option label="Account" />}
             size="medium"
           />
           <VisualPicker
@@ -206,7 +212,7 @@ export let examples = [
             icon
             sprite="standard"
             symbol="lead"
-            label="Lead"
+            label={<Option label="Lead" />}
             size="medium"
           />
           <VisualPicker
@@ -214,7 +220,7 @@ export let examples = [
             icon
             sprite="standard"
             symbol="orders"
-            label="Orders"
+            label={<Option label="Orders" />}
             size="medium"
           />
         </FormElementControl>

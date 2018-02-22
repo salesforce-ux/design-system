@@ -109,13 +109,13 @@
   }
 
   &.slds-is-selected {
-    background-color: $brand-header-contrast;
-    border-color: $brand-header-contrast;
+    background-color: $brand-header-contrast-cool;
+    border-color: $brand-header-contrast-cool;
 
     &:hover,
     &:focus {
-      background-color: $brand-header-contrast-active;
-      border-color: $brand-header-contrast-active;
+      background-color: $brand-header-contrast-cool-active;
+      border-color: $brand-header-contrast-cool-active;
     }
 
     .slds-button__icon {
@@ -219,7 +219,7 @@
   position: absolute;
   top: rem(4px * -1);
   right: rem(4px * -1);
-  background: $brand-header-contrast;
+  background: $brand-header-contrast-warm;
   color: #fff;
   border-radius: $border-radius-pill;
   min-width: 1rem;

@@ -49,7 +49,7 @@ Component.propTypes = {
   figureRightClassName: PropTypes.string,
   figureCenter: PropTypes.node,
   figureCenterClassName: PropTypes.string,
-  flavor: PropTypes.oneOf(['center', 'small', 'stacked'])
+  flavor: PropTypes.oneOf(['center', 'small', 'stacked', 'responsive'])
 };
 
 export default Component;

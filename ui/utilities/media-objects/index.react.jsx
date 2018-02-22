@@ -42,7 +42,7 @@ class Component extends React.Component {
 }
 
 Component.displayName = 'MediaObject';
-Component.PropTypes = {
+Component.propTypes = {
   figureLeft: PropTypes.node,
   figureLeftClassName: PropTypes.string,
   figureRight: PropTypes.node,

@@ -36,9 +36,8 @@ const chunked = prefix =>
         '_'
       )}`
     )
-    .set(
-      'plugins',
-      I.List.of(
+    .update('plugins', plugins =>
+      plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
           name: `${prefix}/common.js`,
           minChunks: 2
@@ -111,9 +110,7 @@ const compileLibs = () =>
   configs
     .map(cfgs =>
       cfgs.map(cfg =>
-        cfg.update('plugins', plugins =>
-          (plugins || I.List()).push(new UglifyJsPlugin())
-        )
+        cfg.update('plugins', plugins => plugins.push(new UglifyJsPlugin()))
       )
     )
     .chain(compile);

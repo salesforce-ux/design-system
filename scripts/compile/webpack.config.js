@@ -3,6 +3,7 @@
 
 const I = require('immutable');
 const path = require('path');
+const webpack = require('webpack');
 
 const paths = require('../helpers/paths');
 
@@ -58,5 +59,5 @@ module.exports = I.fromJS({
       lodash: ''
     }
   },
-  plugins: []
+  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])]
 });

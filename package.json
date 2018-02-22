@@ -173,7 +173,7 @@
     "build-prod": "gulp build",
     "build-server": "babel-node scripts/npm/build-server.js",
     "build-travis": "babel-node scripts/npm/build-travis.js",
-    "dist": "babel-node scripts/dist.js",
+    "dist": "NODE_ENV=production babel-node scripts/dist.js",
     "gulp": "gulp",
     "lint": "gulp lint",
     "start": "npm run build && npm run previewer",

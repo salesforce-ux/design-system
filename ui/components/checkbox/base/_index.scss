@@ -28,8 +28,13 @@
       flex-direction: column;
     }
 
+    .slds-form-element__label {
+      margin-bottom: $spacing-xx-small;
+    }
+
     .slds-checkbox_faux {
       order: 1;
+      margin-bottom: 1px;
     }
   }
 
@@ -55,7 +60,6 @@
   .slds-form-element__label {
     display: inline;
     vertical-align: middle;
-    font-size: $font-size-medium;
   }
 
   [type="checkbox"] {

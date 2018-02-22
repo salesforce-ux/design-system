@@ -236,52 +236,6 @@
   display: flex;
 }
 
-/**
- * Fixed text that sits to the left or right of an input
- *
- * @selector .slds-form-element__addon
- * @restrict .slds-form-element span
- */
-.slds-form-element__addon {
-  display: inline-block;
-  margin: 0 $spacing-x-small;
-  align-self: center;
-}
-
-/**
- * Read-only components are used to display immutable data within a form
- *
- * @summary Initializes read-only form element
- *
- * @selector .slds-form-element__static
- * @restrict .slds-form-element span, .slds-form-element div
- */
-.slds-form-element__static {
-  display: inline-block;
-  padding-top: $spacing-xx-small;
-  padding-bottom: $spacing-xx-small;
-  min-height: calc(#{$line-height-button} + 2px); // For IE
-  font-size: $input-static-font-size;
-  font-weight: $input-static-font-weight;
-  color: $input-static-color;
-
-  // If read only state is longform
-  // Apply text line height
-  &.slds-text-longform {
-    line-height: $line-height-text;
-  }
-
-  /**
-   * Inline Edit on static form element
-   *
-   * @selector .slds-form-element__static_edit
-   * @restrict .slds-form-element__static
-   */
-  &--edit {
-    width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
-  }
-}
-
 .slds-input:required {
   box-shadow: none;
 }

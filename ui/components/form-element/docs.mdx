@@ -1,0 +1,342 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import ButtonIcon from '../button-icons/';
+import {FormElement} from './base/example';
+import {Input} from '../input/base/example';
+import {Checkbox} from '../checkbox/base/example';
+import {Textarea} from '../textarea/base/example';
+import {Avatar} from '../avatar/base/example';
+
+<div className="lead doc">
+  An HTML form element contains a HTML label and element
+</div>
+
+## Structuring a form element
+
+To create a form element, a `<div>` element with the class `slds-form-element` is required.
+
+A form element is made up of three primary elements, the label (`slds-form-element__label`), a container (`slds-form-element__control`), and the form element, i.e. `<input>`.
+
+<Example title="Form Element - Base">
+  <CodeView>
+    <FormElement label="Form Label" inputId="form-element-01">
+      <Input id="form-element-01" />
+    </FormElement>
+  </CodeView>
+</Example>
+
+### Form Label
+
+A form label should use the `<label>` element with the class `slds-form-element__label`.
+
+<Blockquote type="a11y" header="Accessibility requirement">
+  It is required to have the <code className="doc">for</code> attr applied the the label that points to the ID of the form element, <code className="doc"><input id="unique-id"></code>.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <label className="slds-form-element__label" htmlFor="unique-id-of-input">Form label</label>
+</CodeBlock>
+
+### Form Control
+
+A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the stucture of the form element.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-form-element__control">Any form type goes here</div>
+</CodeBlock>
+
+## States
+
+### Readonly/Static
+
+A form might require it to be in a read only state at any particular time. Each element should be replaced with a `<span>` with the class `slds-form-element__static`.
+
+<Example title="Form Element - Readonly">
+  <CodeView>
+    <div className="slds-form-element slds-form-element_small">
+      <span className="slds-form-element__label">Status</span>
+      <div className="slds-form-element__control">
+        <span className="slds-form-element__static">
+          In Progress
+        </span>
+      </div>
+    </div>
+  </CodeView>
+</Example>
+
+### Inline Edit
+
+<Example title="Form Element - Inline Edit">
+
+  <CodeView>
+    <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+      <span className="slds-form-element__label">Status</span>
+      <div className="slds-form-element__control">
+        <span className="slds-form-element__static">
+          In Progress
+        </span>
+        <ButtonIcon
+          iconClassName="slds-button__icon_hint"
+          symbol="edit"
+          assistiveText="Edit: Status"
+          title="Edit: Status"
+        />
+      </div>
+    </div>
+  </CodeView>
+
+</Example>
+
+### Condensed view
+
+By default, the overall form element takes up 54px of vertical space. If you require a more condensed view of the form element, applying the class `slds-form-element_small` to the `slds-form-element` element will reduce the overall height to 45px.
+
+<Example title="Form Element - Condensed">
+
+  <CodeView>
+    <div className="slds-form-element slds-form-element_small">
+      <span className="slds-form-element__label">Status</span>
+      <div className="slds-form-element__control">
+        <span className="slds-form-element__static">
+          In Progress
+        </span>
+      </div>
+    </div>
+  </CodeView>
+
+</Example>
+
+### Feedback
+
+A form element provides two types of feedback, a required form element and a form element with an error.
+
+#### Required
+
+When a form element is required, an `<abbr>` should be injected before the `<input>` with the class `slds-required`.
+
+<Example title="Form Element - Required">
+
+  <CodeView>
+    <FormElement label="Form Label" inputId="form-element-03" required>
+      <Input id="form-element-03" />
+    </FormElement>
+  </CodeView>
+
+</Example>
+
+#### Error
+
+If an error has occured while submitting a form, the form element with an error should provide feedback.
+
+<Blockquote type="a11y" header="Accessibility requirement">
+  When a form element displayed feedback notifying the user of an error, the error string should be linked to the element by adding <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code> and point to the error message ID.
+</Blockquote>
+
+<Example title="Form Element - Error">
+
+  <CodeView>
+    <FormElement
+      className="slds-has-error"
+      label="Form Label"
+      inputId="form-element-04"
+      errorId="form-error-01"
+      required
+      message="This field is required"
+      >
+      <Input id="form-element-04" required aria-describedby="form-error-01" />
+    </FormElement>
+  </CodeView>
+
+</Example>
+
+## Usage Examples
+
+### Record Detail
+
+A record detail is a series of rows created by `slds-grid`. Inside of each row contains up to 2 inline-editable form element.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Due to the nature of how the record details form is composed, we need to notify screen readers that this is a list by adding <code className="doc">role="list"</code> to the <code className="doc">slds-form</code> element. Every column inside of each row should get <code className="doc">role="listitem"</code> to identify itself as items of the list.
+</Blockquote>
+
+#### View Mode
+
+<Example title="Form Element - Record Detail - View Mode">
+
+<CodeView>
+  <div className="slds-form" role="list">
+    <div className="slds-grid slds-gutters_small">
+      <div className="slds-col slds-has-flexi-truncate" role="listitem">
+        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <span className="slds-form-element__label">Assigned to</span>
+          <div className="slds-form-element__control">
+            <span className="slds-form-element__static slds-border_bottom">
+              <span className="slds-media slds-media_small">
+                <span className="slds-media__figure">
+                  <Avatar className="slds-avatar_x-small slds-avatar_circle">
+                    <img
+                    alt="Person name"
+                    src="/assets/images/avatar1.jpg"
+                    title="User avatar"
+                    />
+                  </Avatar>
+                </span>
+                <span className="slds-media__body">
+                  <a href="javascript:void(0);">Jack Rogers</a>
+                </span>
+              </span>
+            </span>
+            <ButtonIcon
+              iconClassName="slds-button__icon_hint"
+              symbol="edit"
+              assistiveText="Edit: Assigned to"
+              title="Edit: Assigned to"
+            />
+        </div>
+        </div>
+      </div>
+      <div className="slds-col slds-has-flexi-truncate" role="listitem">
+        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <span className="slds-form-element__label">Team Name</span>
+          <div className="slds-form-element__control">
+            <span className="slds-form-element__static slds-border_bottom">
+              <a href="javascript:void(0);">Salesforce Design System</a>
+            </span>
+            <ButtonIcon
+              iconClassName="slds-button__icon_hint"
+              symbol="edit"
+              assistiveText="Edit: Team Name"
+              title="Edit: Team Name"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="slds-grid slds-gutters_small">
+      <div className="slds-col slds-has-flexi-truncate" role="listitem">
+        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <div className="slds-form-element__control">
+            <span className="slds-form-element__static slds-border_bottom">
+              <Checkbox
+                className="slds-checkbox_stacked"
+                label="Security Assessment Required?"
+                disabled
+              />
+            </span>
+            <ButtonIcon
+              iconClassName="slds-button__icon_hint"
+              symbol="edit"
+              assistiveText="Edit: Security Assessment Required?"
+              title="Edit: Security Assessment Required?"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="slds-col slds-has-flexi-truncate" role="listitem">
+        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <span className="slds-form-element__label">Status</span>
+          <div className="slds-form-element__control">
+            <span className="slds-form-element__static slds-border_bottom">
+              In Progress
+            </span>
+            <ButtonIcon
+              iconClassName="slds-button__icon_hint"
+              symbol="edit"
+              assistiveText="Edit: Status"
+              title="Edit: Status"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="slds-grid slds-gutters_small">
+      <div className="slds-col slds-has-flexi-truncate" role="listitem">
+        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <span className="slds-form-element__label">Description</span>
+          <div className="slds-form-element__control">
+            <div className="slds-form-element__static slds-border_bottom slds-text-longform">
+              <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.</p>
+              <p>
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br />
+                <a href="javascript:void(0);">www.getslds.com</a>
+              </p>
+            </div>
+            <ButtonIcon
+              iconClassName="slds-button__icon_hint"
+              symbol="edit"
+              assistiveText="Edit: Description"
+              title="Edit: Description"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</CodeView>
+
+</Example>
+
+#### Edit Mode
+
+<Example title="Form Element - Record Detail - Edit Mode">
+
+  <CodeView>
+    <div className="slds-form" role="list">
+      <div className="slds-grid slds-gutters_small">
+        <div className="slds-col slds-has-flexi-truncate" role="listitem">
+          <FormElement
+            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            label="Assigned to"
+            inputId="assigned-to"
+          >
+            <Input id="assigned-to" readOnly defaultValue="Jack Rogers" />
+          </FormElement>
+        </div>
+        <div className="slds-col slds-has-flexi-truncate" role="listitem">
+          <FormElement
+            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            label="Team Name"
+            inputId="team-name"
+          >
+            <Input id="team-name" defaultValue="Salesforce Design System" />
+          </FormElement>
+        </div>
+      </div>
+      <div className="slds-grid slds-gutters_small">
+        <div className="slds-col slds-has-flexi-truncate" role="listitem">
+          <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+            <div className="slds-form-element__control">
+              <Checkbox
+                className="slds-checkbox_stacked"
+                label="Security Assessment Required?"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="slds-col slds-has-flexi-truncate" role="listitem">
+          <FormElement
+            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            label="Status"
+            inputId="status"
+          >
+            <Input id="status" defaultValue="In Progress" />
+          </FormElement>
+        </div>
+      </div>
+      <div className="slds-grid slds-gutters_small">
+        <div className="slds-col slds-has-flexi-truncate" role="listitem">
+          <FormElement
+            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            label="Description"
+            inputId="description"
+          >
+            <Textarea className="slds-textarea" id="description" defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod." />
+          </FormElement>
+        </div>
+      </div>
+    </div>
+  </CodeView>
+
+</Example>

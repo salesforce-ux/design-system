@@ -179,6 +179,30 @@ export let states = [
         </FormElementControl>
       </FormElement>
     )
+  },
+  {
+    id: 'static-tightened',
+    label: 'Static - Tightened',
+    element: (
+      <div>
+        <FormElement className="slds-form-element_small slds-form-element_edit">
+          <span className="slds-form-element__label">Input Label</span>
+          <FormElementControl>
+            <span className="slds-form-element__static slds-border_bottom">
+              Read Only
+            </span>
+          </FormElementControl>
+        </FormElement>
+        <FormElement className="slds-form-element_small slds-form-element_edit">
+          <span className="slds-form-element__label">Input Label</span>
+          <FormElementControl>
+            <span className="slds-form-element__static slds-border_bottom">
+              Read Only
+            </span>
+          </FormElementControl>
+        </FormElement>
+      </div>
+    )
   }
 ];
 

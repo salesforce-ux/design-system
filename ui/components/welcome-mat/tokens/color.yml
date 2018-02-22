@@ -1,0 +1,42 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  type: color
+  category: color
+  cssProperties:
+  - 'color'
+  - 'background*'
+  - 'border*'
+  - box-shadow
+
+imports:
+
+- ../../../../design-tokens/color-palettes.yml
+- ../../../../design-tokens/force-base/aliases/color.yml
+props:
+  WELCOME_MAT_TEXT_COLOR_INFO:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Text color for the Info section
+
+  WELCOME_MAT_BACKGROUND_IMAGE_INFO:
+    type: string
+    value: '/assets/images/welcome-mat/bg-info@2x.png'
+    comment: Background Image Path for the Welcome Mat Info section
+
+  WELCOME_MAT_BACKGROUND_COLOR_INFO:
+    value: '#CAE6F1'
+    comment: Background overflow color for the Welcome Mat Info section
+
+  WELCOME_MAT_COLOR_BACKGROUND_PROGRESS_BAR:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Progress Bar background is white
+
+  WELCOME_MAT_COLOR_ACTION_SHADOW:
+    value: 'rgba(0,0,0,0.05)'
+    comment: Box Shadow declaration
+
+  WELCOME_MAT_COLOR_ICON_COMPLETE:
+    value: '#A7B9D1'
+    comment: Completed icon color for the Welcome Mat Boxes

@@ -9,23 +9,31 @@ import _ from '../../../shared/helpers';
 // Partial(s)
 /// ///////////////////////////////////////////
 
-export const ProgressBar = props => (
-  <div
-    className={classNames('slds-progress-bar', props.className)}
-    aria-valuemin="0"
-    aria-valuemax="100"
-    aria-valuenow={props.value}
-    aria-labelledby={props['aria-labelledby']}
-    role="progressbar"
-  >
-    <span
-      className="slds-progress-bar__value"
-      style={{ width: `${props.value}%` }}
+export const ProgressBar = props => {
+  let progressBarStyle = props.isVertical
+    ? { height: `${props.value}%` }
+    : { width: `${props.value}%` };
+  return (
+    <div
+      className={classNames(
+        'slds-progress-bar',
+        { 'slds-progress-bar_vertical': props.isVertical },
+        props.className
+      )}
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow={props.value}
+      aria-labelledby={props['aria-labelledby']}
+      role="progressbar"
     >
-      <span className="slds-assistive-text">Progress: {`${props.value}%`}</span>
-    </span>
-  </div>
-);
+      <span className="slds-progress-bar__value" style={progressBarStyle}>
+        <span className="slds-assistive-text">
+          Progress: {`${props.value}%`}
+        </span>
+      </span>
+    </div>
+  );
+};
 
 export const ProgressBarDescriptive = props => {
   const labelUniqueId = _.uniqueId('progress-bar-label-id-');

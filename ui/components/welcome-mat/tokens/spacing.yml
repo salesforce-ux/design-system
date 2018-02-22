@@ -1,0 +1,20 @@
+global:
+  scope: component
+  category: spacing
+  type: size
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+
+props:
+  WELCOME_MAT_SPACING_INFO:
+    value: '7.75rem'
+    comment: Bottom spacing (safe area) for background image

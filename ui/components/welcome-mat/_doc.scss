@@ -1,0 +1,18 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Welcome Mat component should be used to display a series of unordered items that
+ * a user can click to learn about a thematic topic. Welcome Mat tiles may trigger walkthroughs,
+ * modals, or take users to specific URLs.
+ *
+ * The Welcome Mat consists of two sections, the informational left pane and the actionable right pane.
+ * The left pane should be used to educate users as to the theme of the content displayed in the right pane.
+ *
+ * @summary Welcome Mat component
+ *
+ * @base
+ * @name welcome-mat
+ * @selector .slds-welcome-mat
+ * @support dev-ready
+ */

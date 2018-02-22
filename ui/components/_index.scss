@@ -135,6 +135,9 @@
   // Global Navigation
   'global-navigation/navigation-bar/index',
 
+  // Buider Header
+  'builder-header/base/index',
+
   // Publishers
   'publishers/base/index',
   'publishers/comment/index',
@@ -170,6 +173,7 @@
   // Progress Indicator
   'progress-bar/base/index',
   'progress-indicator/base/index',
+  'progress-indicator/vertical/index',
   'progress-ring/base/index',
 
   // Rich Text Editor
@@ -235,4 +239,8 @@
   'regions/base/index',
 
   // Vertical Tabs
-  'vertical-tabs/base/index';
+  'vertical-tabs/base/index',
+
+  // Welcome Mat
+  'welcome-mat/base/index',
+  'welcome-mat/trailhead-connected/index';

@@ -1,0 +1,58 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Trailhead Connected variant should be used when users can achieve
+ * a badge in Trailhead for completing all steps in the current Welcome Mat.
+ *
+ * Only Trailhead Connected Mats may have the Trailhead font for the header.
+ *
+ * @name trailhead-connected
+ * @selector .slds-welcome-mat_trailhead
+ * @restrict .slds-welcome-mat
+ * @variant
+ */
+
+/**
+ * @summary Badge container for Welcome Mat Trailhead Progress Info.
+ * Overrides properties for the check icon, specific for this variant.
+ *
+ * @selector .slds-welcome-mat__info-badge-container
+ * @restrict .slds-welcome-mat__info-progress div
+ */
+.slds-welcome-mat__info-badge-container {
+  display: inline-block;
+  position: relative;
+
+  .slds-icon-action-check {
+    border-width: 0;
+    top: 50%;
+    right: 0%;
+    transform: translate3d(50%, -50%, 0);
+    display: none;
+  }
+}
+
+/**
+ * @summary Badge for the Trailhead Progress Info.
+ *
+ * @selector .slds-welcome-mat__info-badge
+ * @restrict .slds-welcome-mat__info-badge-container img
+ */
+.slds-welcome-mat__info-badge {
+  margin-bottom: $spacing-x-small;
+}
+
+/**
+ * @summary Modifier for Completed progress. Shows completed checkmark.
+ *
+ * @selector .slds-welcome-mat__info-progress_complete
+ * @restrict .slds-welcome-mat__info-progress
+ * @modifier
+ */
+.slds-welcome-mat__info-progress_complete {
+
+  .slds-icon-action-check {
+    display: flex;
+  }
+}

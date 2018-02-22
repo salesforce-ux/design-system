@@ -1,0 +1,160 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Container that fixes the builder header to the top of the viewport, contains builder header element
+ *
+ * @name base
+ * @selector .slds-builder-header_container
+ * @restrict div
+ * @variant
+ */
+.slds-builder-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sticky;
+}
+
+/**
+ * @summary Creates builder specific global header
+ * @selector .slds-builder-header
+ * @restrict .slds-builder-header_container header
+ */
+.slds-builder-header {
+  position: relative;
+  display: flex;
+  height: $height-header;
+  background: $color-background-alt-inverse;
+  color: $color-text-inverse;
+}
+
+/**
+ * @summary Direct child descendant item of the builder header
+ * @selector .slds-builder-header__item
+ * @restrict .slds-builder-header div, .slds-builder-header nav
+ */
+.slds-builder-header__item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  + .slds-builder-header__item {
+    border-left: $border-width-thin solid currentColor;
+  }
+}
+
+/**
+ * @summary Label inside of a header item
+ * @selector .slds-builder-header__item-label
+ * @restrict .slds-builder-header__item span, .slds-builder-header__item div, .slds-builder-header__item h1
+ */
+.slds-builder-header__item-action,
+.slds-builder-header__item-label {
+  color: currentColor;
+  padding: 0 $spacing-medium;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0%;
+  height: 100%;
+}
+
+/**
+ * @summary Action or label inside of a header item
+ * @selector .slds-builder-header__item-action
+ * @restrict .slds-builder-header__item a, .slds-builder-header__item button
+ */
+.slds-builder-header__item-action {
+  transition: all 150ms linear; // stylelint-disable declaration-property-value-blacklist
+
+  &:hover,
+  &:focus {
+    color: $color-gray-7;
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: underline;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+/**
+ * @summary Container around builder header's nav region
+ * @selector .slds-builder-header__nav
+ * @restrict .slds-builder-header nav
+ */
+.slds-builder-header__nav,
+.slds-builder-header__utilities {
+  align-items: stretch;
+}
+
+/**
+ * @summary List containing navigation items of a builder header
+ * @selector .slds-builder-header__nav-list
+ * @restrict .slds-builder-header__nav ul
+ */
+.slds-builder-header__nav-list {
+  display: flex;
+}
+
+/**
+ * @summary Container around builder header's utiltity region containing the back and help links
+ * @selector .slds-builder-header__utilities
+ * @restrict .slds-builder-header div
+ */
+.slds-builder-header__utilities {
+  margin-left: auto;
+}
+
+/**
+ * @summary Items of the builder headers nav
+ * @selector .slds-builder-header__nav-item
+ * @restrict .slds-builder-header__nav li
+ */
+.slds-builder-header__nav-item,
+.slds-builder-header__utilities-item {
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+
+  + .slds-builder-header__nav-item,
+  + .slds-builder-header__utilities-item {
+    border-left: $border-width-thin solid currentColor;
+  }
+}
+
+/**
+ * @summary Builder header toolbar
+ * @selector .slds-builder-toolbar
+ * @restrict .slds-builder-header_container div
+ */
+.slds-builder-toolbar {
+  display: flex;
+  padding: $spacing-x-small $spacing-medium;
+  background: $color-background-alt;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Region of Builder header toolbar that contains the document actions
+ * @selector .slds-builder-toolbar__actions
+ * @restrict .slds-builder-toolbar div
+ */
+.slds-builder-toolbar__actions {
+  margin-left: auto;
+}
+
+/**
+ * @summary Region containing button icon groups of Builder header toolbar
+ * @selector .slds-builder-toolbar__item-group
+ * @restrict .slds-builder-toolbar div
+ */
+.slds-builder-toolbar__item-group + .slds-builder-toolbar__item-group {
+  margin-left: $spacing-xx-small;
+}

@@ -85,6 +85,75 @@
     .slds-form-element__static {
       width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
     }
+
+    .slds-button_icon {
+      vertical-align: bottom;
+    }
+  }
+}
+
+
+/**
+ * Fixed text that sits to the left or right of an input
+ *
+ * @selector .slds-form-element__addon
+ * @restrict .slds-form-element span
+ */
+.slds-form-element__addon {
+  display: inline-block;
+  margin: 0 $spacing-x-small;
+  align-self: center;
+}
+
+/**
+ * Read-only components are used to display immutable data within a form
+ *
+ * @summary Initializes read-only form element
+ *
+ * @selector .slds-form-element__static
+ * @restrict .slds-form-element span, .slds-form-element div
+ */
+.slds-form-element__static {
+  display: inline-block;
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
+  min-height: calc(#{$line-height-button} + 2px); // For IE
+  font-size: $input-static-font-size;
+  font-weight: $input-static-font-weight;
+  color: $input-static-color;
+
+  &.slds-text-longform *:last-child {
+    margin-bottom: 0;
+  }
+
+  /**
+   * Inline Edit on static form element
+   *
+   * @selector .slds-form-element__static_edit
+   * @restrict .slds-form-element__static
+   */
+  &--edit {
+    width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
+  }
+}
+
+/**
+ * @summary Reduce vertical height of a form element
+ * @selector .slds-form-element_small
+ * @restrict .slds-form-element
+ * @modifier
+ */
+.slds-form-element_small {
+
+  .slds-form-element__label {
+    padding-top: 4px;
+    margin-bottom: 0;
+  }
+
+  .slds-form-element__static {
+    padding-top: 0;
+    padding-bottom: 1px;
+    min-height: calc(1.25rem + 2px);
   }
 }
 

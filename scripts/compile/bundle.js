@@ -70,18 +70,15 @@ const configs = chunkedConfigs.map(cfgs =>
 
 // watch :: (I.Map, Path, WatchOptions) -> Task Error Stats
 const watch = (options = {}) =>
-  configs.chain(
-    cfgs =>
-      new Task((reject, resolve) =>
-        webpack(cfgs.toJS()).watch(options, (err, stats) => {
-          if (err) return reject(err);
-          if (stats.hasErrors()) {
-            const errors = stats.toJson().errors.join('\n\n');
-            console.log(errors);
-          }
-          resolve(stats);
-        })
-      )
+  new Task((reject, resolve) =>
+    webpack(umd.toJS()).watch(options, (err, stats) => {
+      if (err) return reject(err);
+      if (stats.hasErrors()) {
+        const errors = stats.toJson().errors.join('\n\n');
+        console.log(errors);
+      }
+      resolve(stats);
+    })
   );
 
 // compile :: (I.Map, Path) -> Task Error Stats

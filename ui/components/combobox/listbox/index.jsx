@@ -127,6 +127,15 @@ const EntityOption = props => (
         )}
       </span>
     )}
+    {props.rightIcon && (
+      <UtilityIcon
+        className="slds-icon_x-small slds-icon-text-default"
+        containerClassName="slds-align-middle"
+        symbol={props.rightIcon.toLowerCase()}
+        title={props.rightIconAssistiveText}
+        assistiveText={props.rightIconAssistiveText}
+      />
+    )}
   </ListboxOption>
 );
 
@@ -176,12 +185,22 @@ export const Option = props => (
       props.className
     )}
   >
-    {!props.label && (
+    {!props.label &&
+      !props.rightIcon && (
+        <span className="slds-media__figure">
+          <SvgIcon
+            className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+            sprite="utility"
+            symbol="check"
+          />
+        </span>
+      )}
+    {props.rightIcon && (
       <span className="slds-media__figure">
         <SvgIcon
-          className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
           sprite="utility"
-          symbol="check"
+          symbol={props.rightIcon}
         />
       </span>
     )}
@@ -192,7 +211,9 @@ export const Option = props => (
     ) : (
       <span className="slds-media__body">
         <span
-          className="slds-truncate"
+          className={classNames('slds-truncate', {
+            'slds-m-bottom_xxx-small': props.plainMeta
+          })}
           title={
             props.term
               ? `${props.beforeTerm}${props.term}${props.afterTerm}`
@@ -212,6 +233,11 @@ export const Option = props => (
             props.name
           )}
         </span>
+        {props.plainMeta && (
+          <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
+            {props.plainMeta}
+          </span>
+        )}
       </span>
     )}
   </ListboxOption>
@@ -240,6 +266,8 @@ class Listbox extends Component {
           term={option.term}
           beforeTerm={option.beforeTerm}
           afterTerm={option.afterTerm}
+          rightIcon={option.rightIcon}
+          rightIconAssistiveText={option.rightIconAssistiveText}
         />
       </ListboxItem>
     );
@@ -259,6 +287,8 @@ class Listbox extends Component {
           term={option.term}
           beforeTerm={option.beforeTerm}
           afterTerm={option.afterTerm}
+          plainMeta={option.plainMeta}
+          rightIcon={option.rightIcon}
         />
       </ListboxItem>
     );
@@ -322,6 +352,7 @@ export class ListboxGroup extends Component {
           entityLocation={option.entityLocation}
           term={option.term}
           label={option.label}
+          rightIcon={option.rightIcon}
         />
       </ListboxItem>
     );

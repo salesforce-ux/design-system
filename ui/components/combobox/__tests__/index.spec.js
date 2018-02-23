@@ -585,6 +585,66 @@ describe('render combobox', () => {
         hasFocus
       />
     ));
+  it('renders different styles of options in the listbox', () =>
+    matchesMarkupAndStyle(
+      <Combobox
+        id={comboboxId}
+        aria-controls={listboxId}
+        readonly
+        value="Accounts"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        listbox={
+          <Listbox
+            id={listboxId}
+            snapshot={Snapshot.PlainStylingOptions}
+            type="entity"
+            count={4}
+            visualSelection
+          />
+        }
+        isOpen
+        hasFocus
+      />
+    ));
+  it('renders different styles of options in the listbox with drill in', () =>
+    matchesMarkupAndStyle(
+      <Combobox
+        id={comboboxId}
+        aria-controls={listboxId}
+        readonly
+        value="Accounts"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        listbox={
+          <Listbox
+            id={listboxId}
+            snapshot={Snapshot.EntityStylingOptions}
+            type="entity"
+            count={3}
+            visualSelection
+          />
+        }
+        isOpen
+        hasFocus
+      />
+    ));
   it('renders autocomplete combobox', () =>
     matchesMarkupAndStyle(
       <Combobox

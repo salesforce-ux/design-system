@@ -160,6 +160,22 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
   - The `ul` element in this case has `role="group"` with an `aria-label` that matches the visible label
   - Display the group label visually, but due to the way a `listbox` works it can only be marked as `role="presentation"`, as a `listbox` can only have `option` children. This allows us to communicate the group label visually and programmatically to a screen reader
 
+### Styling choices for options
+
+The options in the `listbox` can have a left icon and/or metatext.
+
+<Example title="Combobox - Styling Options">
+  <CodeView style={{position: 'relative', maxWidth: '20rem', height: '12rem'}}>
+    <Listbox
+      id="listbox-id-2"
+      snapshot={Snapshot.PlainStylingOptions}
+      type="plain"
+      count={4}
+      visualSelection
+    />
+  </CodeView>
+</Example>
+
 ### Handling focus
 
 When a combobox is clicked or focused, it is common for the options to be displayed at the same time. When you leave the combobox it is also common that the options are hidden.
@@ -493,6 +509,22 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
     />
   </CodeView>
 
+</Example>
+
+### Drill In for Autocomplete
+
+The options in the autocomplete `listbox` can have a right icon to indicate an option that drills in for more options.
+
+<Example title="Combobox - Autocomplete DrillIn Styling">
+  <CodeView style={{position: 'relative', maxWidth: '20rem', height: '10rem'}}>
+    <Listbox
+      id="listbox-id-3"
+      snapshot={Snapshot.EntityStylingOptions}
+      type="entity"
+      count={3}
+      visualSelection
+    />
+  </CodeView>
 </Example>
 
 ### Keyboard interaction

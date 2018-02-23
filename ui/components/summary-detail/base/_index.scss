@@ -1,0 +1,63 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @summary Initializes a summary detail
+ *
+ * @name base
+ * @selector .slds-summary-detail
+ * @restrict div
+ * @variant
+ */
+.slds-summary-detail {
+  display: flex;
+  align-items: flex-start;
+
+  /**
+   * @summary Styles the position of the toggle icon
+   *
+   * @selector .slds-summary-detail__content
+   * @restrict .slds-summary-detail div
+   */
+  .slds-summary-detail__action-icon {
+    transform: rotate(-90deg);
+  }
+
+  /**
+   * @summary Styles the visibility of the detail content
+   *
+   * @selector .slds-summary-detail__content
+   * @restrict .slds-summary-detail div
+   */
+  .slds-summary-detail__content {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+}
+
+
+/**
+ * Toggle visibility of the detail section + rotate icon
+ *
+ * @selector .slds-is-open
+ * @restrict .slds-summary-detail
+ * @modifier
+ */
+.slds-summary-detail.slds-is-open {
+
+  .slds-summary-detail__action-icon {
+    transform: rotate(0deg);
+    transform-origin: 45%;
+  }
+
+  .slds-summary-detail__content {
+    padding-top: $spacing-small;
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+}

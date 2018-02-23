@@ -62,6 +62,28 @@
   }
 
   /**
+   * @summary Modifier for number input with increment and decrement buttons
+   *
+   * @selector .slds-input_counter
+   * @restrict .slds-input, input
+   * @modifier
+   */
+  &_counter {
+    text-align: center;
+    padding: 0 $spacing-xx-large;
+
+    &[type='number'] {
+      appearance: textfield;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  /**
    * Used to apply an input size to another element thats a non input
    * Because sometimes I need elements the same height as inputs
    *
@@ -286,4 +308,28 @@
     fill: $color-text-error;
     color: $color-text-error;
   }
+}
+
+/**
+ * @summary Positions decrement button within counter input field
+ *
+ * @selector .slds-input__button_decrement
+ * @restrict button
+ */
+.slds-input__button_decrement {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.75rem;
+}
+
+/**
+ * @summary Positions increment button within counter input field
+ *
+ * @selector .slds-input__button_increment
+ * @restrict button
+ */
+.slds-input__button_increment {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.75rem;
 }

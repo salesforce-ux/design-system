@@ -3,6 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
+import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 import { SpinnerContainer, Spinner } from '../../spinners/base/example';
 
@@ -368,6 +369,37 @@ export let examples = [
           </div>
         </div>
       </div>
+    )
+  },
+  {
+    id: 'counter',
+    label: 'Counter',
+    element: (
+      <FormElement className="slds-text-align_center">
+        <ButtonIcon
+          className="slds-button_icon-small slds-input__button_decrement"
+          symbol="error"
+          assistiveText={'Decrement counter'}
+          title={'Decrement counter'}
+        />
+        <FormElementLabel id="user-count-01" className="slds-m-right_none">
+          Input Label
+        </FormElementLabel>
+        <FormElementControl>
+          <Input
+            className="slds-input_counter"
+            id="user-count-01"
+            type="number"
+            placeholder={1}
+          />
+        </FormElementControl>
+        <ButtonIcon
+          className="slds-button_icon-small slds-input__button_increment"
+          symbol="new"
+          assistiveText={'Increment counter'}
+          title={'Increment counter'}
+        />
+      </FormElement>
     )
   }
 ];

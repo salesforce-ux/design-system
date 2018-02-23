@@ -157,6 +157,8 @@ gulp.task('lint', [
   'lint:js',
   'lint:js:test',
   'lint:html',
+  'lint:vnu',
+  'lint:validate',
   'lint:tokens'
 ]);
 

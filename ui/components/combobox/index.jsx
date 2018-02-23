@@ -42,7 +42,8 @@ const ComboboxContainer = props => (
     className={classNames(
       'slds-combobox_container',
       props.comboboxPosition && `slds-combobox-addon_${props.comboboxPosition}`,
-      props.hasSelection && 'slds-has-selection'
+      props.hasSelection && 'slds-has-selection',
+      props.className
     )}
   >
     {props.children}
@@ -170,6 +171,7 @@ export default class Combobox extends Component {
       id,
       label,
       hideLabel,
+      className,
       formClassName,
       hasSelection,
       isOpen,
@@ -199,7 +201,7 @@ export default class Combobox extends Component {
         hideLabel={hideLabel}
         className={formClassName}
       >
-        <ComboboxContainer hasSelection={hasSelection}>
+        <ComboboxContainer className={className} hasSelection={hasSelection}>
           <ComboboxFormElement
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
@@ -234,7 +236,7 @@ export default class Combobox extends Component {
 }
 
 Combobox.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   label: PropTypes.string,
   hideLabel: PropTypes.bool,
   formClassName: PropTypes.string,
@@ -348,7 +350,7 @@ export class ComboboxGroup extends Component {
 }
 
 ComboboxGroup.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   label: PropTypes.string,
   hideLabel: PropTypes.bool,
   formClassName: PropTypes.string,

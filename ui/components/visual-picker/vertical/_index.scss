@@ -22,11 +22,15 @@
 
   + .slds-visual-picker_vertical {
     margin-left: 0;
-    margin-top: $spacing-large;
+    margin-top: $spacing-medium;
   }
 
   .slds-visual-picker__figure,
   .slds-visual-picker__body {
     width: $size-large;
+  }
+
+  input:focus ~ label .slds-visual-picker__text .slds-text-heading_medium {
+    text-decoration: underline;
   }
 }

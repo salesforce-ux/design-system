@@ -3,82 +3,24 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { Listbox, ListboxItem, Option } from '../base/example';
+import ButtonIcon from '../../button-icons/';
+import Listbox, { ListboxItem, Option } from '../listbox/';
 import { UtilityIcon } from '../../icons/base/example';
-import ObjectData from './data';
+import * as Snapshot from './data';
 import Combobox from '../';
 import _ from '../../../shared/helpers';
 
-const comboboxId = _.uniqueId('objectswitcher-combobox-id-');
-const listboxId = _.uniqueId('objectswitcher-listbox-id-');
-
-/**
- * Object item
- */
-const ObjectListItem = props => (
-  <ListboxItem key={props.index}>
-    <Option
-      id={props.index}
-      title={props.name}
-      selected={props.selected}
-      focused={props.focused}
-    />
-  </ListboxItem>
-);
-
-/**
- * Object List
- */
-const ObjectList = props => (
-  <Listbox
-    id={listboxId}
-    aria-label="Suggested for you"
-    className="slds-dropdown slds-dropdown_x-small slds-dropdown_left slds-dropdown_length-5"
-    vertical
-  >
-    <li role="presentation" className="slds-listbox__item">
-      <div
-        className="slds-media slds-listbox__option slds-listbox__option_plain"
-        role="presentation"
-        id="object0"
-      >
-        <h3
-          className="slds-text-title_caps slds-truncate"
-          role="presentation"
-          title="Suggested for you"
-        >
-          Suggested for you
-        </h3>
-      </div>
-    </li>
-    {props.children}
-  </Listbox>
-);
+const listboxId01 = 'objectswitcher-listbox-id-01';
+const listboxId02 = 'objectswitcher-listbox-id-02';
 
 class ObjectSwitcher extends Component {
-  constructor() {
-    super();
-    this.renderObjectListboxItems = this.renderObjectListboxItems.bind(this);
-  }
-
-  renderObjectListboxItems(key) {
-    const object = ObjectData[key];
-    return (
-      <ObjectListItem
-        key={key}
-        index={key}
-        name={object.name}
-        selected={object.selected}
-        focused={object.focused}
-      />
-    );
-  }
   render() {
     const {
       id,
       value,
       isOpen,
       hasFocus,
+      addonPosition,
       comboboxAriaControls,
       hasInteractions
     } = this.props;
@@ -86,16 +28,13 @@ class ObjectSwitcher extends Component {
       <div
         className={classNames(
           'slds-combobox_object-switcher',
-          this.props.addonPosition &&
-            `slds-combobox-addon_${this.props.addonPosition}`
+          addonPosition && `slds-combobox-addon_${addonPosition}`
         )}
       >
         <Combobox
-          id={comboboxId}
-          aria-controls={listboxId}
+          id={id}
+          aria-controls={listboxId01}
           comboboxAriaControls={comboboxAriaControls}
-          inputIcon="right"
-          inputIconRightSymbol="down"
           label="Filter Search by:"
           hideLabel
           inputIconPosition="right"
@@ -104,14 +43,81 @@ class ObjectSwitcher extends Component {
           rightInputIcon={
             <UtilityIcon
               symbol="down"
-              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
               containerClassName="slds-input__icon slds-input__icon_right"
             />
           }
           listbox={
-            <ObjectList>
-              {Object.keys(ObjectData).map(this.renderObjectListboxItems)}
-            </ObjectList>
+            <Listbox
+              className="slds-dropdown_x-small slds-dropdown_left"
+              aria-label="Suggested for you"
+              id={listboxId01}
+              snapshot={Snapshot.Options}
+              type="plain"
+              count={8}
+            />
+          }
+          isOpen={isOpen}
+          hasFocus={hasFocus}
+          hasInteractions={hasInteractions}
+        />
+      </div>
+    );
+  }
+}
+
+export class IconObjectSwitcher extends Component {
+  render() {
+    const {
+      id,
+      value,
+      isOpen,
+      hasFocus,
+      filteredSymbol,
+      addonPosition,
+      comboboxAriaControls,
+      hasInteractions
+    } = this.props;
+
+    return (
+      <div
+        className={classNames(
+          'slds-combobox_object-switcher',
+          addonPosition && `slds-combobox-addon_${addonPosition}`
+        )}
+      >
+        <Combobox
+          id={id}
+          className="slds-has-icon-only"
+          aria-controls={listboxId02}
+          comboboxAriaControls={comboboxAriaControls}
+          label="Filter Search by:"
+          hideLabel
+          inputIconPosition="left-right"
+          placeholder=" "
+          value={value}
+          leftInputIcon={
+            <UtilityIcon
+              symbol={filteredSymbol}
+              className="slds-icon slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_medium slds-input__icon_left"
+            />
+          }
+          rightInputIcon={
+            <UtilityIcon
+              symbol="down"
+              className="slds-icon slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_x-small slds-input__icon_right"
+            />
+          }
+          listbox={
+            <Listbox
+              className="slds-dropdown_x-small slds-dropdown_left"
+              id={listboxId02}
+              snapshot={Snapshot.BuilderOptions}
+              type="plain"
+              count={4}
+            />
           }
           isOpen={isOpen}
           hasFocus={hasFocus}

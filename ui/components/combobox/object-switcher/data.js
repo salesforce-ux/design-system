@@ -1,4 +1,8 @@
-const objects = {
+export const Options = {
+  object0: {
+    name: 'Suggested for you',
+    label: true
+  },
   object1: {
     name: 'Accounts',
     selected: true,
@@ -36,4 +40,22 @@ const objects = {
   }
 };
 
-export default objects;
+export const BuilderOptions = {
+  object1: {
+    name: 'Apex',
+    icon: 'apex',
+    selected: true
+  },
+  object2: {
+    name: 'Decisions',
+    icon: 'signpost'
+  },
+  object3: {
+    name: 'Rules',
+    icon: 'rules'
+  },
+  object4: {
+    name: 'Snippets',
+    icon: 'snippet'
+  }
+};

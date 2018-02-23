@@ -396,3 +396,41 @@ export const PlainOptionsTypeahead = {
     afterTerm: 'ortunity Pipeline'
   }
 };
+
+export const PlainStylingOptions = {
+  option1: {
+    name: 'Edge Communications'
+  },
+  option2: {
+    name: 'Alexandria Textiles Corp of America',
+    icon: 'anchor'
+  },
+  option3: {
+    name: 'Express Logistics and Transport',
+    meta: 'Durham, NC'
+  },
+  option4: {
+    name: 'Alexandria Textiles Corp of America',
+    meta: 'Alexandria, VA',
+    icon: 'anchor'
+  }
+};
+
+export const EntityStylingOptions = {
+  option1: {
+    name: 'Edge Communications'
+  },
+  option2: {
+    name: 'Express Logistics and Transport',
+    entityMeta: true,
+    entityLocation: 'Durham, NC'
+  },
+  option3: {
+    name: 'Alexandria Textiles Corp of America',
+    entityMeta: true,
+    entityType: 'Account',
+    entityLocation: 'Alexandria, VA',
+    rightIcon: 'chevronright',
+    rightIconAssistiveText: 'Has further options'
+  }
+};

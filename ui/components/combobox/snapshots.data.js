@@ -403,16 +403,16 @@ export const PlainStylingOptions = {
   },
   option2: {
     name: 'Alexandria Textiles Corp of America',
-    rightIcon: 'anchor'
+    icon: 'anchor'
   },
   option3: {
     name: 'Express Logistics and Transport',
-    plainMeta: 'Durham, NC'
+    meta: 'Durham, NC'
   },
   option4: {
     name: 'Alexandria Textiles Corp of America',
-    plainMeta: 'Alexandria, VA',
-    rightIcon: 'anchor'
+    meta: 'Alexandria, VA',
+    icon: 'anchor'
   }
 };
 

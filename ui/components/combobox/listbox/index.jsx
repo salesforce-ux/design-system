@@ -25,7 +25,7 @@ export const ListboxWrapper = props => (
 /**
  * Listbox List
  */
-const ListboxList = props => (
+export const ListboxList = props => (
   <ul
     className={classNames('slds-listbox', {
       'slds-listbox_vertical': props.vertical,
@@ -42,7 +42,7 @@ const ListboxList = props => (
 /**
  * Listbox Item
  */
-const ListboxItem = props => (
+export const ListboxItem = props => (
   <li
     role="presentation"
     className={classNames('slds-listbox__item', props.className)}
@@ -54,7 +54,7 @@ const ListboxItem = props => (
 /**
  * Listbox Option
  */
-const ListboxOption = props => (
+export const ListboxOption = props => (
   <div
     aria-selected={props.focused ? 'true' : null}
     id={props.id || 'please-provide-a-unique-id'}
@@ -76,7 +76,7 @@ const ListboxOption = props => (
 /**
  * Entity Option
  */
-const EntityOption = props => (
+export const EntityOption = props => (
   <ListboxOption
     type={!props.label ? 'entity' : 'plain'}
     id={props.id}
@@ -142,7 +142,7 @@ const EntityOption = props => (
 /**
  * Typeahead term option
  */
-const TypeaheadTermOption = props => (
+export const TypeaheadTermOption = props => (
   <ListboxOption
     type="entity"
     id="option0"
@@ -177,30 +177,26 @@ export const Option = props => (
     label={props.label}
     focused={props.focused}
     className={classNames(
-      'slds-media_small slds-media_center',
+      'slds-media_small',
       {
         'slds-is-selected': props.selected,
-        'slds-has-focus': props.focused
+        'slds-has-focus': props.focused,
+        'slds-listbox__option_has-meta': props.meta
       },
       props.className
     )}
   >
-    {!props.label &&
-      !props.rightIcon && (
-        <span className="slds-media__figure">
-          <SvgIcon
-            className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
-            sprite="utility"
-            symbol="check"
-          />
-        </span>
-      )}
-    {props.rightIcon && (
+    {!props.label && (
       <span className="slds-media__figure">
         <SvgIcon
-          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          className={classNames(
+            'slds-icon slds-icon_x-small',
+            props.icon
+              ? 'slds-icon-text-default'
+              : 'slds-listbox__icon-selected'
+          )}
           sprite="utility"
-          symbol={props.rightIcon}
+          symbol={props.icon || 'check'}
         />
       </span>
     )}
@@ -233,10 +229,8 @@ export const Option = props => (
             props.name
           )}
         </span>
-        {props.plainMeta && (
-          <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
-            {props.plainMeta}
-          </span>
+        {props.meta && (
+          <span className="slds-listbox__option-meta">{props.meta}</span>
         )}
       </span>
     )}
@@ -285,21 +279,32 @@ class Listbox extends Component {
           tabIndex={option.tabIndex}
           visualSelection={this.props.visualSelection}
           term={option.term}
+          label={option.label}
           beforeTerm={option.beforeTerm}
           afterTerm={option.afterTerm}
-          plainMeta={option.plainMeta}
-          rightIcon={option.rightIcon}
+          icon={option.icon}
+          meta={option.meta}
         />
       </ListboxItem>
     );
   }
 
   render() {
-    const { id, term, type, snapshot, count = 1 } = this.props;
+    const {
+      id,
+      term,
+      type,
+      snapshot,
+      count = 1,
+      className = 'slds-dropdown_fluid'
+    } = this.props;
     return (
       <ListboxWrapper
         id={id}
-        className="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
+        className={classNames(
+          'slds-dropdown slds-dropdown_length-5',
+          className
+        )}
       >
         <ListboxList vertical aria-label={this.props['aria-label']}>
           {term && type === 'entity' ? (
@@ -325,7 +330,9 @@ Listbox.propTypes = {
   term: PropTypes.string,
   type: PropTypes.oneOf(['entity', 'plain']).isRequired,
   snapshot: PropTypes.object.isRequired,
-  count: PropTypes.number
+  count: PropTypes.number,
+  meta: PropTypes.string,
+  icon: PropTypes.string
 };
 
 export default Listbox;

@@ -25,11 +25,37 @@
     display: block;
   }
 
+  /**
+   * @summary Apply when a combobox has a selection
+   * @selector .slds-has-selection
+   * @restrict .slds-combobox_container
+   */
   &.slds-has-selection {
 
     .slds-combobox__input-value,
     .slds-combobox__input-value:focus {
       box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+    }
+  }
+
+  /**
+   * @summary Icon only variant of a combobox
+   * @selector .slds-has-icon-only
+   * @restrict .slds-combobox_container
+   */
+  &.slds-has-icon-only {
+
+    .slds-combobox__input,
+    .slds-combobox__input:focus,
+    .slds-combobox__input.slds-has-focus {
+      width: 0;
+      pointer-events: auto;
+      padding: 0 ($spacing-large + $spacing-xx-small);
+    }
+
+    .slds-input__icon {
+      z-index: 2;
+      pointer-events: none;
     }
   }
 }
@@ -315,11 +341,11 @@
 /**
  * The metadata or secondary text of an entity listbox
  *
- * @selector .slds-listbox__option-meta_entity
+ * @selector .slds-listbox__option-meta
  * @restrict .slds-listbox__option span
  */
-.slds-listbox__option-meta_entity,
-.slds-listbox__option-meta--entity {
+.slds-listbox__option-meta,
+.slds-listbox__option-meta {
   display: block;
   margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
   color: $color-text-label;
@@ -363,6 +389,7 @@
    * @selector .slds-has-focus
    * @restrict .slds-combobox__input
    */
+  &:focus,
   &.slds-has-focus {
     border-color: $color-border-input-active;
     box-shadow: $shadow-button-focus;
@@ -385,7 +412,8 @@
     flex: 1 1 auto;
   }
 
-  .slds-combobox__input {
+  .slds-combobox__input,
+  .slds-combobox_object-switcher__button {
     border-radius: 0;
     margin-left: -1px;
     margin-right: -1px;

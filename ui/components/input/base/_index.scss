@@ -95,7 +95,7 @@
   position: relative;
 
   /**
-   * Hook for .slds-input-has-icon
+   * @summary Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
    * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
@@ -113,10 +113,45 @@
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
       fill: $color-text-input-icon;
     }
+
+    .slds-icon {
+      width: inherit;
+      height: inherit;
+    }
   }
 
   /**
-   * Positions .slds-input__icon to the left of the text input
+   * @summary Medium size modifier for input icon
+   *
+   * @selector .slds-input__icon_medium
+   * @restrict .slds-input__icon
+   */
+  .slds-input__icon_medium {
+    @include square($square-icon-medium-content);
+  }
+
+  /**
+   * @summary Small size modifier for input icon
+   *
+   * @selector .slds-input__icon_small
+   * @restrict .slds-input__icon
+   */
+  .slds-input__icon_small {
+    @include square($square-icon-small-content);
+  }
+
+  /**
+   * @summary X-small size modifier for input icon
+   *
+   * @selector .slds-input__icon_x-small
+   * @restrict .slds-input__icon
+   */
+  .slds-input__icon_x-small {
+    @include square($square-icon-x-small-content);
+  }
+
+  /**
+   * @summary Positions .slds-input__icon to the left of the text input
    *
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
@@ -136,7 +171,7 @@
   }
 
   /**
-   * Positions .slds-input__icon to the right of the text input
+   * @summary Positions .slds-input__icon to the right of the text input
    *
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
@@ -156,7 +191,7 @@
   }
 
   /**
-   * Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
+   * @summary Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
    *
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
@@ -164,7 +199,7 @@
   &_left-right,
   &--left-right {
     /**
-     * Hook for .slds-input-has-icon--left-right
+     * @summary Hook for .slds-input-has-icon--left-right
      *
      * @selector .slds-input__icon_left
      * @restrict .slds-input__icon
@@ -175,7 +210,7 @@
     }
 
     /**
-     * Hook for .slds-input-has-icon_left-right
+     * @summary Hook for .slds-input-has-icon_left-right
      *
      * @selector .slds-input__icon_right
      * @restrict .slds-input__icon
@@ -194,7 +229,7 @@
 }
 
 /**
- * Positions two items (icons and/or spinners) on one side or the other of the input
+ * @summary Positions two items (icons and/or spinners) on one side or the other of the input
  *
  * @selector .slds-input__icon-group
  * @restrict .slds-input-has-icon div
@@ -206,7 +241,7 @@
 }
 
 /**
- * Positions the close icon and spinner on the right side of the input while searching
+ * @summary Positions the close icon and spinner on the right side of the input while searching
  *
  * @selector .slds-input__icon-group_right
  * @restrict .slds-input__icon-group

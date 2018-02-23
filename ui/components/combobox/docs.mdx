@@ -3,7 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import Example from '../../../shared/components/Example';
 import Combobox, {ComboboxGroup} from './';
-import ObjectSwitcher from './object-switcher/';
+import ObjectSwitcher, {IconObjectSwitcher} from './object-switcher/';
 import Listbox, { ListboxGroup, ListboxWrapper, Option } from './listbox/';
 import ListboxOfSelections from './listbox-of-pills/';
 import ButtonIcon from '../button-icons/';
@@ -171,7 +171,6 @@ The options in the `listbox` can have a left icon and/or metatext.
       snapshot={Snapshot.PlainStylingOptions}
       type="plain"
       count={4}
-      visualSelection
     />
   </CodeView>
 </Example>
@@ -1027,7 +1026,38 @@ The containing element should receive the class `slds-combobox_object-switcher` 
     comboboxID="primary-combobox-id-7"
     autocomplete
     listbox={<Listbox id="listbox-id-26" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-7" /> }
+    addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-7" />}
+    addonPosition="start"
+    comboboxPosition="end"
+    inputIconPosition="right"
+    rightInputIcon={
+      <UtilityIcon
+      symbol="search"
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+      containerClassName="slds-input__icon slds-input__icon_right"
+      />
+    }
+    />
+  </CodeView>
+
+</Example>
+
+#### Icon variant
+
+<Blockquote type="a11y" header="Accessibility Note">
+  When a selection is made, the currently selected items should be prepended with a <code className="doc">&lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;</code> to inform screen readers of its current selection.
+</Blockquote>
+
+<Example title="Combobox - Grouped - Scoping icon variant">
+
+  <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
+    <ComboboxGroup
+    id={_.uniqueId('combobox-id-')}
+    aria-controls="listbox-id-27"
+    comboboxID="primary-combobox-id-8"
+    autocomplete
+    listbox={<Listbox id="listbox-id-27" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+    addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-8" />}
     addonPosition="start"
     comboboxPosition="end"
     inputIconPosition="right"

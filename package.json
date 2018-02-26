@@ -27,7 +27,7 @@
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
-    "@salesforce-ux/design-system-previewer": "2.2.8",
+    "@salesforce-ux/design-system-previewer": "3.0.0",
     "@salesforce-ux/icons": "9.2.0",
     "@salesforce-ux/instant-vrt": "1.1.8",
     "async": "2.3.0",
@@ -51,7 +51,8 @@
     "cssstats": "3.0.0",
     "data.either": "1.5.0",
     "del": "2.2.2",
-    "enzyme": "2.9.1",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "eslint": "3.19.0",
     "eslint-config-prettier": "2.3.0",
     "eslint-config-standard": "10.2.0",
@@ -101,6 +102,7 @@
     "lint-staged": "4.0.4",
     "lodash": "4.17.4",
     "lodash-inflection": "1.5.0",
+    "lodash.get": "4.4.2",
     "lodash.isarray": "4.0.0",
     "lodash.omit": "4.5.0",
     "lodash.range": "3.2.0",
@@ -111,9 +113,7 @@
     "lodash.uniqueid": "4.0.1",
     "lodash.upperfirst": "4.3.1",
     "markdown-it": "8.3.1",
-    "mdx-loader": "1.0.0-beta.3",
-    "mdxc": "1.0.0-beta.6",
-    "mkdirp": "0.5.1",
+    "mdxc": "1.0.0",
     "mocha": "3.2.0",
     "moment": "2.18.1",
     "no-case": "2.3.1",
@@ -125,9 +125,8 @@
     "prop-types": "15.6.0",
     "puppeteer": "0.10.1",
     "raw-loader": "0.5.1",
-    "react": "15.6.2",
-    "react-addons-test-utils": "15.6.2",
-    "react-dom": "15.6.2",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "react-test-renderer": "16.2.0",
     "rimraf": "2.6.1",
     "run-sequence": "1.2.2",
@@ -146,10 +145,10 @@
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
     "touch": "3.1.0",
-    "uglify-es": "3.0.15",
+    "uglifyjs-webpack-plugin": "1.2.0",
     "uuid": "3.0.1",
     "vnu-jar": "17.11.1",
-    "webpack": "2.5.0",
+    "webpack": "3.11.0",
     "webpack-node-externals": "1.5.4",
     "webpack-runtime-compiler": "0.0.1",
     "yargs": "8.0.1"
@@ -167,24 +166,22 @@
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "greenkeeper": {
-    "ignore": [
-      "theo",
-      "webpack"
-    ]
+    "ignore": ["theo", "webpack"]
   },
   "scripts": {
     "build": "gulp build",
     "build-prod": "gulp build",
     "build-server": "babel-node scripts/npm/build-server.js",
     "build-travis": "babel-node scripts/npm/build-travis.js",
-    "dist": "babel-node scripts/dist.js",
+    "dist": "NODE_ENV=production babel-node scripts/dist.js",
     "gulp": "gulp",
     "lint": "gulp lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
-    "previewer-dev": "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
+    "previewer-dev":
+      "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
     "stats": "gulp stylestats",
-    "test:compile-integration": "webpack --config test/docs/webpack.config.js scripts/compile/docs.js",
+    "test:compile-integration": "webpack --config test/docs/webpack.config.js",
     "test": "node jest.local.js",
     "test:travis": "node jest.travis.js",
     "travis": "node scripts/npm/build-travis.js",
@@ -192,10 +189,7 @@
     "writeUI": "babel-node scripts/npm/write-ui.js"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "*.{js,jsx,json}": ["prettier --single-quote --write", "git add"]
   },
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",

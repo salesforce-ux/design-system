@@ -97,7 +97,8 @@ gulp.task('lint:html', ['generate:wrappedexamples'], () => {
           'preserveAspectRatio',
           'filterUnits',
           'gradientTransform',
-          'stdDeviation'
+          'stdDeviation',
+          'autoComplete'
         ],
         'attr-no-duplication': true,
         'attr-unsafe-chars': true,

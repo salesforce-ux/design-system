@@ -4,16 +4,23 @@
 /* global jasmine */
 /* eslint-env jest */
 
+global.requestAnimationFrame = cb => setTimeout(cb, 0);
+
+const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
 const childProcess = require('child_process');
 const express = require('express');
-const path = require('path');
+const enzyme = require('enzyme');
+const EnzymeAdapter = require('enzyme-adapter-react-16');
 const openport = require('openport');
+const path = require('path');
 const puppeteer = require('puppeteer');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
-const { assertMatchesDOM } = require('@salesforce-ux/instant-vrt/matcher');
+
 const { beautify } = require('./shared/utils/beautify');
-const { renderWithBetterError } = require('./shared/utils/render');
+const { renderWithBetterError } = require('./shared/utils/react');
+
+enzyme.configure({ adapter: new EnzymeAdapter() });
 
 const getMarkupAndStyle = selector => `
   (function() {
@@ -114,7 +121,7 @@ module.exports = (dirname, port) => {
       const renderedMarkup =
         typeof element === 'string'
           ? element
-          : renderWithBetterError(
+          : renderWithBetterError(ReactDOM)(
               element,
               `${CURRENT_TEST_NAME} failed on ${element}`
             );

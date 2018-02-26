@@ -3,42 +3,50 @@
 
 /* eslint-env jest */
 
-import path from 'path';
-import fs from 'fs';
+import fs from 'fs-extra';
 import { sync as glob } from 'glob';
-
+import path from 'path';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 
-import createHelpers from '../../jest.setup';
+import { getDoc, CodeBlock, CodeView, Example } from '../../.generated/docs';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname, 6868);
-const { Docs } = require('../../.generated/docs.js');
-const { beautify } = require('../../shared/utils/beautify.js');
-const { renderWithBetterError } = require('../../shared/utils/render.js');
-const mkdirp = require('../../shared/utils/mkdirp.js');
-
-// Render each to fill allexample cache in the example component
-glob('ui/**/docs.mdx').forEach(filepath => {
-  const component = Docs.req(filepath.replace(/^ui/, '.'));
-  renderWithBetterError(
-    component.default(),
-    `-----${filepath} failed to compile`
-  );
-});
+import { beautify } from '../../shared/utils/beautify';
+import { flattenElement, mapElement } from '../../shared/utils/react';
 
 const placeInExampleFolderForLinting = example => {
   const filename = `${example.title.replace(/\W/g, '_')}.html`;
   const filepath = path.resolve(__dirname, '../../', '.generated', 'examples');
-  mkdirp(filepath);
-  fs.writeFileSync(
+  fs.outputFileSync(
     path.join(filepath, filename),
-    beautify(ReactDOM.renderToStaticMarkup(example.component))
+    beautify(ReactDOM.renderToStaticMarkup(example.element))
   );
 };
 
+glob('**/docs.mdx', {
+  cwd: path.resolve(__dirname, '../../ui')
+}).forEach(filepath => {
+  const { getElement } = getDoc(`./${filepath}`);
+  const examples = flattenElement(getElement())
+    .filter(e => e.type === Example)
+    .map(e => {
+      return {
+        title: e.props.title,
+        element: mapElement(e.props.children, e => {
+          const fragment = React.createElement.apply(
+            React,
+            [React.Fragment, null].concat(
+              React.Children.toArray(e.props.children)
+            )
+          );
+          if (e.type === CodeBlock) return fragment;
+          if (e.type === CodeView) return fragment;
+          return e;
+        })
+      };
+    })
+    .forEach(placeInExampleFolderForLinting);
+});
+
 // jest needs a test.
 it('generates mdx files and writes examples for linting', () => {});
-
-const allExamples = Docs.allExamples.default.getExamples();
-allExamples.forEach(placeInExampleFolderForLinting);

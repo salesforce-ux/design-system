@@ -14,7 +14,7 @@ const Crumb = props => (
 Crumb.propTypes = { href: PropTypes.string };
 
 const BreadCrumbs = props => (
-  <nav {...props} role="navigation" aria-label="Breadcrumbs">
+  <nav role="navigation" aria-label="Breadcrumbs">
     <ol
       className={classNames(
         'slds-breadcrumb slds-list_horizontal slds-wrap',

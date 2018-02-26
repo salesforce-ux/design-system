@@ -313,7 +313,6 @@ export const ActionOverflow = props => (
     triggerIcon={
       <ButtonIcon
         className="slds-button_icon-border-filled slds-button_icon-x-small"
-        sprite="utility"
         symbol="down"
         assistiveText="Show More"
         aria-haspopup="true"

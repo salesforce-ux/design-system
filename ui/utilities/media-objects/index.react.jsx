@@ -42,14 +42,14 @@ class Component extends React.Component {
 }
 
 Component.displayName = 'MediaObject';
-Component.PropTypes = {
+Component.propTypes = {
   figureLeft: PropTypes.node,
   figureLeftClassName: PropTypes.string,
   figureRight: PropTypes.node,
   figureRightClassName: PropTypes.string,
   figureCenter: PropTypes.node,
   figureCenterClassName: PropTypes.string,
-  flavor: PropTypes.oneOf(['center', 'small', 'stacked'])
+  flavor: PropTypes.oneOf(['center', 'small', 'stacked', 'responsive'])
 };
 
 export default Component;

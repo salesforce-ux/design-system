@@ -36,19 +36,33 @@ You are able to navigate between panels but interacting with the `slds-carousel_
 
 <Example title="carousel-toggle-panels">
   <CodeBlock toggleCode={false}>
-    <div className="slds-carousel__panels" style={{transform:'translateX(-100%)'}}>
-      <div id="content-id-01" class="slds-carousel__panel" aria-hidden="false" role="tabpanel" aria-labelledby="indicator-id-01" tabindex="-1">
-        ...
+    <React.Fragment>
+      <div className="slds-carousel__panels" style={{transform:'translateX(-100%)'}}>
+        <div id="content-id-01" className="slds-carousel__panel" aria-hidden="false" role="tabpanel" aria-labelledby="indicator-id-01" tabIndex="-1">
+          ...
+        </div>
+        <div id="content-id-02" className="slds-carousel__panel" aria-hidden="true" role="tabpanel" aria-labelledby="indicator-id-02" tabIndex="0">
+          ...
+        </div>
       </div>
-      <div id="content-id-02" class="slds-carousel__panel" aria-hidden="true" role="tabpanel" aria-labelledby="indicator-id-02" tabindex="0">
-        ...
-      </div>
-    </div>
+      <ul className="slds-carousel__indicators" role="tablist">
+        <li className="slds-carousel__indicator" role="presentation">
+          <a id="indicator-id-01" className="slds-carousel__indicator-action" href="javascript:void(0);" role="tab" tabIndex="-1" aria-selected="false" aria-controls="content-id-01" title="Visit App Exchange tab">
+            ...
+          </a>
+        </li>
+        <li className="slds-carousel__indicator" role="presentation">
+          <a id="indicator-id-02" className="slds-carousel__indicator-action slds-is-active" href="javascript:void(0);" role="tab" tabIndex="0" aria-selected="true" aria-controls="content-id-02" title="Click to Customize tab">
+            ...
+          </a>
+        </li>
+      </ul>
+    </React.Fragment>
   </CodeBlock>
 </Example>
 
 <Blockquote header="Accessibility" type="a11y">
-  A panel becomes visible by toggling the <code class="doc">aria-hidden</code> attribute from <code class="doc">false</code> to <code class="doc">true</code> on the <code class="doc">slds-carousel__panel</code> element. When a panel becomes active, the `tabindex` of the other non-visible panels should be set to -1 while the active panel remains at 0.
+  A panel becomes visible by toggling the <code className="doc">aria-hidden</code> attribute from <code className="doc">false</code> to <code className="doc">true</code> on the <code className="doc">slds-carousel__panel</code> element. When a panel becomes active, the `tabindex` of the other non-visible panels should be set to -1 while the active panel remains at 0.
 </Blockquote>
 
 When a panel becomes active, apply an inline style to `slds-carousel__panel` to move the panels left to right. We do this by updating the location of the panel on its Y axis using transforms. The first panel should be `transform: translateX(0%)` but when any precedding panel becomes active it can be subtracted by 100%, moving 100% of each panel to the left. For example, panel 1 would be visible at `transform: translateX(0%)`, while panel 3 would be visible at `transform: translateX(-200%)`.
@@ -60,7 +74,7 @@ When making the `slds-carousel__panel` active, the indicator should be updated w
 If the Carousel is set to auto-play, a pause button is required to be first in the HTML before the tab set.
 
 <Blockquote header="Accessibility" type="a11y">
-  When that pause button is interacted with, the <code class="doc">aria-pressed</code> role needs to be toggled to <code class="doc">true</code>.
+  When that pause button is interacted with, the <code className="doc">aria-pressed</code> role needs to be toggled to <code className="doc">true</code>.
 </Blockquote>
 
 <Example title="carousel-autoplay">

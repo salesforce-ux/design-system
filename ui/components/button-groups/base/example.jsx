@@ -231,7 +231,7 @@ export let examples = [
         <ButtonIcon
           className="slds-button_icon-more"
           hasDropdown
-          assitiveText="More Actions"
+          assistiveText="More Actions"
           title="More Actions"
         />
       </ButtonGroup>
@@ -259,7 +259,7 @@ export let examples = [
         <ButtonIcon
           className="slds-button_icon-more"
           hasDropdown
-          assitiveText="More Actions"
+          assistiveText="More Actions"
           title="More Actions"
         />
       </ButtonGroup>

@@ -13,7 +13,6 @@ const { Crumb } = BreadCrumbs;
 const moreIcon = (
   <ButtonIcon
     className="slds-button_icon-border-filled slds-button_icon-x-small"
-    sprite="utility"
     symbol="threedots"
     assistiveText="Show More"
     aria-haspopup="true"

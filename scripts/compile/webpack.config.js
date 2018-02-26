@@ -3,6 +3,8 @@
 
 const I = require('immutable');
 const path = require('path');
+const webpack = require('webpack');
+
 const paths = require('../helpers/paths');
 
 module.exports = I.fromJS({
@@ -44,13 +46,7 @@ module.exports = I.fromJS({
             loader: 'babel-loader'
           },
           {
-            loader: './scripts/compile/mdx-post-loader'
-          },
-          {
-            loader: 'mdx-loader',
-            options: {
-              unwrapped: false
-            }
+            loader: './scripts/compile/mdx-loader.js'
           }
         ]
       }
@@ -63,5 +59,5 @@ module.exports = I.fromJS({
       lodash: ''
     }
   },
-  plugins: []
+  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])]
 });

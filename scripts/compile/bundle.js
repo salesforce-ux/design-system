@@ -6,14 +6,15 @@ const I = require('immutable-ext');
 const webpack = require('webpack');
 const fs = require('fs');
 const path = require('path');
-const paths = require('../helpers/paths');
 const _ = require('lodash');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const toTask = require('futurize').futurize(Task);
 const writeFile = toTask(fs.writeFile);
 
+const paths = require('../helpers/paths');
+
 const { FOLDERNAME, entry, manifest } = require('./entry');
-const Minify = require('./minify');
 const webpackConfig = require('./webpack.config');
 
 const externals = {
@@ -35,9 +36,8 @@ const chunked = prefix =>
         '_'
       )}`
     )
-    .set(
-      'plugins',
-      I.List.of(
+    .update('plugins', plugins =>
+      plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
           name: `${prefix}/common.js`,
           minChunks: 2
@@ -69,18 +69,15 @@ const configs = chunkedConfigs.map(cfgs =>
 
 // watch :: (I.Map, Path, WatchOptions) -> Task Error Stats
 const watch = (options = {}) =>
-  configs.chain(
-    cfgs =>
-      new Task((reject, resolve) =>
-        webpack(cfgs.toJS()).watch(options, (err, stats) => {
-          if (err) return reject(err);
-          if (stats.hasErrors()) {
-            const errors = stats.toJson().errors.join('\n\n');
-            console.log(errors);
-          }
-          resolve(stats);
-        })
-      )
+  new Task((reject, resolve) =>
+    webpack(umd.toJS()).watch(options, (err, stats) => {
+      if (err) return reject(err);
+      if (stats.hasErrors()) {
+        const errors = stats.toJson().errors.join('\n\n');
+        console.log(errors);
+      }
+      resolve(stats);
+    })
   );
 
 // compile :: (I.Map, Path) -> Task Error Stats
@@ -113,9 +110,7 @@ const compileLibs = () =>
   configs
     .map(cfgs =>
       cfgs.map(cfg =>
-        cfg.update('plugins', plugins =>
-          (plugins || I.List()).push(new Minify())
-        )
+        cfg.update('plugins', plugins => plugins.push(new UglifyJsPlugin()))
       )
     )
     .chain(compile);

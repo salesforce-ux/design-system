@@ -72,7 +72,7 @@ describe('Welcome Mat Content', () => {
 
   it('shows the correct progress bar progress', () => {
     expect(example.find('.slds-progress-bar__value').attr('style')).toBe(
-      `width:${completePercent}%;`
+      `width:${completePercent}%`
     );
   });
 });

@@ -3,11 +3,11 @@
 
 /* eslint-env jest */
 
-const { entry, manifest } = require('../entry');
+const { chunkedEntry, manifest } = require('../helpers');
 
 it('creates an entry', () => {
   expect.assertions(1);
-  entry.fork(
+  chunkedEntry.fork(
     e => {
       throw e;
     },

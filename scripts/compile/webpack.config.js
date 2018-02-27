@@ -8,10 +8,7 @@ const webpack = require('webpack');
 const paths = require('../helpers/paths');
 
 module.exports = I.fromJS({
-  output: {
-    path: paths.dist,
-    publicPath: '/assets/scripts/bundle/'
-  },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -43,7 +40,12 @@ module.exports = I.fromJS({
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ['es2015', 'react'],
+              plugins: ['transform-object-rest-spread']
+            }
           },
           {
             loader: './scripts/compile/mdx-loader.js'
@@ -52,12 +54,18 @@ module.exports = I.fromJS({
       }
     ]
   },
+  optimization: {},
+  output: {
+    globalObject: 'this',
+    path: paths.dist,
+    publicPath: '/assets/scripts/bundle/'
+  },
+  plugins: [],
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
       // This is intentional. A detailed error will be thrown (see bundle.js)
       lodash: ''
     }
-  },
-  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])]
+  }
 });

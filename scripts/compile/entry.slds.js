@@ -5,12 +5,14 @@ const r = require.context(
   true,
   /(components|utilities).*?(example\.jsx|docs\.mdx)$/
 );
+
 const I = require('immutable');
 const Either = require('data.either');
 
-const createInstance = require('../lib');
 const ui = require('../../.dist/ui.json');
-let SLDS = createInstance(I.fromJS(ui));
+const createInstance = require('../lib');
+
+const SLDS = createInstance(I.fromJS(ui));
 
 const examplePath = (component, variant, isUtility) =>
   isUtility

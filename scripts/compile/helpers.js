@@ -40,14 +40,14 @@ const chunkedShowcaseEntry = (ui, fixFilePath) => {
   );
 };
 
-const entry = ui().map(ui =>
+const chunkedEntry = ui().map(ui =>
   I.Map({
     [`${FOLDERNAME}/chunked/showcase`]: chunkedShowcaseEntry,
     [`${FOLDERNAME}/chunked/docs`]: chunkedDocsEntry
   }).map((createEntry, prefix) => createEntry(ui, webpackPath(prefix)))
 );
 
-const manifest = entry.map(entryMap =>
+const manifest = chunkedEntry.map(entryMap =>
   entryMap.reduce(
     (manifest, entries, prefix) =>
       manifest
@@ -62,4 +62,4 @@ const manifest = entry.map(entryMap =>
   )
 );
 
-module.exports = { FOLDERNAME, entry, manifest };
+module.exports = { FOLDERNAME, chunkedEntry, manifest };

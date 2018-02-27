@@ -3,7 +3,8 @@
 exports[`doesn't change configs 1`] = `
 Array [
   Object {
-    "entry": "./scripts/compile/slds.js",
+    "entry": "./scripts/compile/entry.slds.js",
+    "mode": "production",
     "module": Object {
       "rules": Array [
         Object {
@@ -45,6 +46,16 @@ Array [
           "use": Array [
             Object {
               "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
             },
             Object {
               "loader": "./scripts/compile/mdx-loader.js",
@@ -53,8 +64,10 @@ Array [
         },
       ],
     },
+    "optimization": Object {},
     "output": Object {
       "filename": "__internal/slds.umd.js",
+      "globalObject": "this",
       "library": "SLDS",
       "libraryTarget": "umd",
       "publicPath": "/assets/scripts/bundle/",
@@ -86,6 +99,7 @@ Array [
       "react": "React",
       "react-dom": "ReactDOM",
     },
+    "mode": "production",
     "module": Object {
       "rules": Array [
         Object {
@@ -127,6 +141,16 @@ Array [
           "use": Array [
             Object {
               "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
             },
             Object {
               "loader": "./scripts/compile/mdx-loader.js",
@@ -135,8 +159,16 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "chunks": "all",
+        "minChunks": 2,
+        "name": "__internal/chunked/showcase/common.js",
+      },
+    },
     "output": Object {
       "filename": "[name]",
+      "globalObject": "this",
       "jsonpFunction": "webpackJsonpSLDS___internal_chunked_showcase",
       "library": Array [
         "SLDS",
@@ -164,6 +196,7 @@ Array [
       "react": "React",
       "react-dom": "ReactDOM",
     },
+    "mode": "production",
     "module": Object {
       "rules": Array [
         Object {
@@ -205,6 +238,16 @@ Array [
           "use": Array [
             Object {
               "loader": "babel-loader",
+              "options": Object {
+                "babelrc": false,
+                "plugins": Array [
+                  "transform-object-rest-spread",
+                ],
+                "presets": Array [
+                  "es2015",
+                  "react",
+                ],
+              },
             },
             Object {
               "loader": "./scripts/compile/mdx-loader.js",
@@ -213,8 +256,16 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "chunks": "all",
+        "minChunks": 2,
+        "name": "__internal/chunked/docs/common.js",
+      },
+    },
     "output": Object {
       "filename": "[name]",
+      "globalObject": "this",
       "jsonpFunction": "webpackJsonpSLDS___internal_chunked_docs",
       "library": Array [
         "SLDS",

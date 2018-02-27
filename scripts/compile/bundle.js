@@ -2,19 +2,18 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const Task = require('data.task');
-const I = require('immutable-ext');
-const webpack = require('webpack');
 const fs = require('fs');
-const path = require('path');
+const I = require('immutable-ext');
 const _ = require('lodash');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 const toTask = require('futurize').futurize(Task);
 const writeFile = toTask(fs.writeFile);
 
 const paths = require('../helpers/paths');
 
-const { FOLDERNAME, entry, manifest } = require('./entry');
+const { FOLDERNAME, chunkedEntry, manifest } = require('./helpers');
 const webpackConfig = require('./webpack.config');
 
 const externals = {
@@ -24,7 +23,7 @@ const externals = {
 };
 
 // chunked :: Task Error I.Map
-const chunked = prefix =>
+const createChunkedConfig = prefix =>
   webpackConfig
     .set('externals', externals)
     .setIn(['output', 'library'], ['SLDS', '[name]'])
@@ -36,34 +35,36 @@ const chunked = prefix =>
         '_'
       )}`
     )
-    .update('plugins', plugins =>
-      plugins.push(
-        new webpack.optimize.CommonsChunkPlugin({
-          name: `${prefix}/common.js`,
-          minChunks: 2
-        })
-      )
-    );
+    .setIn(['optimization', 'splitChunks'], {
+      chunks: 'all',
+      name: `${prefix}/common.js`,
+      minChunks: 2
+    });
 
 // chunkedConfigs :: Task Error (I.List WebpackCfg)
-const chunkedConfigs = entry.map(entryMap =>
-  entryMap.map((entry, prefix) => chunked(prefix).set('entry', entry)).toList()
+const chunkedConfigs = chunkedEntry.map(entryMap =>
+  entryMap
+    .map((entry, prefix) => createChunkedConfig(prefix).set('entry', entry))
+    .toList()
 );
 
 // umd :: WebpackCfg
 const umd = webpackConfig
-  .set('entry', './scripts/compile/slds.js')
+  .set('entry', './scripts/compile/entry.slds.js')
   .setIn(['output', 'library'], 'SLDS')
   .setIn(['output', 'libraryTarget'], 'umd')
   .setIn(['output', 'filename'], `${FOLDERNAME}/slds.umd.js`);
 
 // Task Error (List WebpackCfg)
-const configs = chunkedConfigs.map(cfgs =>
-  cfgs
+// const configs = Task.of(I.List.of(umd));
+const configs = chunkedConfigs.map(configs =>
+  configs
     .unshift(umd)
     .filter(
-      c =>
-        I.Map.isMap(c.get('entry')) ? c.get('entry').count() : c.has('entry')
+      config =>
+        I.Map.isMap(config.get('entry'))
+          ? config.get('entry').count()
+          : config.has('entry')
     )
 );
 
@@ -106,14 +107,7 @@ const compile = configs =>
     });
   });
 
-const compileLibs = () =>
-  configs
-    .map(cfgs =>
-      cfgs.map(cfg =>
-        cfg.update('plugins', plugins => plugins.push(new UglifyJsPlugin()))
-      )
-    )
-    .chain(compile);
+const compileLibrary = () => configs.chain(compile);
 
 const writeManifest = () =>
   manifest
@@ -122,8 +116,8 @@ const writeManifest = () =>
       writeFile(path.join(paths.dist, 'manifest.json'), contents)
     );
 
-// createLibrary :: Path -> Task Error (List Stats)
-const createLibrary = () => compileLibs().chain(writeManifest);
+// createLibrary :: () -> Task Error (List Stats)
+const createLibrary = () => compileLibrary().chain(writeManifest);
 
 module.exports = {
   configs,

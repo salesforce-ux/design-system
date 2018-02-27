@@ -99,6 +99,16 @@
  */
 .slds-rich-text-editor.slds-has-error {
   border: $border-width-thick solid $color-border-error;
+
+  .slds-input {
+    box-shadow: none;
+  }
+
+  .slds-form-element__help {
+    background: $color-background-alt;
+    margin-top: 0;
+    border-radius: $border-radius-medium;
+  }
 }
 
 /**

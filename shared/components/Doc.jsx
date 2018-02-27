@@ -51,16 +51,19 @@ export const tags = [
 export const factories = tags.reduce(
   (factories, type) =>
     Object.assign({}, factories, {
-      [type]: (props, children) =>
-        React.createElement(
+      [type]: (props, ...children) => {
+        if (/h[1-6]/.test(type)) {
+          children.push(createAnchor(type, props.id));
+        }
+        return React.createElement(
           type,
           {
             ...props,
             className: cx('doc', props.className)
           },
-          ...React.Children.toArray(children),
-          /h[1-6]/.test(type) ? createAnchor(type, props.id) : null
-        )
+          ...children
+        );
+      }
     }),
   {}
 );

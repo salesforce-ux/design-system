@@ -4,6 +4,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: path.resolve(__dirname, '../../scripts/compile/entry.docs'),
   output: {
     path: path.join(__dirname, '../../.generated'),

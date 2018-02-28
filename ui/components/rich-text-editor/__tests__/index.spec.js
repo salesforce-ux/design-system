@@ -19,6 +19,31 @@ import {
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
+const RteOutput = props => (
+  <div className="slds-rich-text-editor__output slds-grid">
+    <div
+      aria-describedby={props['aria-describedby']}
+      aria-label="Compose text"
+      contentEditable={!props.disabled ? 'true' : null}
+      suppressContentEditableWarning
+      className="slds-rich-text-area__content slds-grow"
+    >
+      <ol>
+        <li>Outer List</li>
+        <li>
+          Outer List
+          <ol>
+            <li>Inner List</li>
+            <li>Inner List</li>
+          </ol>
+        </li>
+        <li>Outer List</li>
+        <li>Outer List</li>
+      </ol>
+    </div>
+  </div>
+);
+
 it('renders an RTE toolbar in a narrow space', () =>
   matchesMarkupAndStyle(
     <div className="slds-region_narrow">
@@ -37,3 +62,6 @@ it('renders an RTE toolbar in a narrow space', () =>
       </RichTextEditor>
     </div>
   ));
+
+it('renders a RTE output with indentation', () =>
+  matchesMarkupAndStyle(<RteOutput />));

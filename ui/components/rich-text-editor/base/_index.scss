@@ -177,137 +177,6 @@
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
   }
-}
-
-.slds-rich-text-editor__textarea,
-.slds-rich-text-editor__output {
-  line-height: $line-height-text;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: manual;
-
-  h1 {
-    font-size: $font-size-heading-large;
-  }
-
-  h2 {
-    font-size: $font-size-heading-medium;
-    font-weight: $font-weight-bold;
-  }
-
-  h3 {
-    font-size: $font-size-heading-medium;
-  }
-
-  h4 {
-    font-size: $font-size-heading-small;
-    font-weight: $font-weight-bold;
-  }
-
-  h5 {
-    font-size: $font-size-heading-small;
-  }
-
-  h6 {
-    font-size: $font-size-heading-x-small;
-    font-weight: $font-weight-bold;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  ol,
-  dl,
-  img {
-    margin-bottom: $spacing-small;
-  }
-
-  blockquote {
-    margin: $spacing-x-large $spacing-large;
-  }
-
-  ul {
-    @include list-has-bullets;
-
-    ul {
-      list-style: circle;
-
-      ul {
-        list-style: square;
-      }
-    }
-
-    ol {
-      @include list-has-numbers;
-    }
-  }
-
-  ol {
-    @include list-has-numbers;
-
-    ol {
-      list-style: lower-alpha;
-
-      ol {
-        list-style: lower-roman;
-      }
-    }
-
-    ul {
-      @include list-has-bullets;
-    }
-  }
-
-  dd {
-    margin-left: 2.5rem;
-  }
-
-  abbr[title],
-  acronym[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
-  }
-
-  table {
-    width: auto;
-
-    caption {
-      text-align: center;
-    }
-  }
-
-  th,
-  td {
-    padding: $spacing-x-small;
-  }
-
-  .sans-serif {
-    font-family: sans-serif;
-  }
-
-  .courier {
-    font-family: courier;
-  }
-
-  .verdana {
-    font-family: verdana;
-  }
-
-  .tahoma {
-    font-family: tahoma;
-  }
-
-  .garamond {
-    font-family: garamond;
-  }
-
-  .serif {
-    font-family: serif;
-  }
 
   p,
   ol,
@@ -678,5 +547,136 @@
 
   li.ql-indent-9.ql-direction-rtl.ql-align-right {
     padding-right: 28.5em;
+  }
+}
+
+.slds-rich-text-editor__textarea,
+.slds-rich-text-editor__output {
+  line-height: $line-height-text;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: manual;
+
+  h1 {
+    font-size: $font-size-heading-large;
+  }
+
+  h2 {
+    font-size: $font-size-heading-medium;
+    font-weight: $font-weight-bold;
+  }
+
+  h3 {
+    font-size: $font-size-heading-medium;
+  }
+
+  h4 {
+    font-size: $font-size-heading-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h5 {
+    font-size: $font-size-heading-small;
+  }
+
+  h6 {
+    font-size: $font-size-heading-x-small;
+    font-weight: $font-weight-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  dl,
+  img {
+    margin-bottom: $spacing-small;
+  }
+
+  blockquote {
+    margin: $spacing-x-large $spacing-large;
+  }
+
+  ul {
+    @include list-has-bullets;
+
+    ul {
+      list-style: circle;
+
+      ul {
+        list-style: square;
+      }
+    }
+
+    ol {
+      @include list-has-numbers;
+    }
+  }
+
+  ol {
+    @include list-has-numbers;
+
+    ol {
+      list-style: lower-alpha;
+
+      ol {
+        list-style: lower-roman;
+      }
+    }
+
+    ul {
+      @include list-has-bullets;
+    }
+  }
+
+  dd {
+    margin-left: 2.5rem;
+  }
+
+  abbr[title],
+  acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  table {
+    width: auto;
+
+    caption {
+      text-align: center;
+    }
+  }
+
+  th,
+  td {
+    padding: $spacing-x-small;
+  }
+
+  .sans-serif {
+    font-family: sans-serif;
+  }
+
+  .courier {
+    font-family: courier;
+  }
+
+  .verdana {
+    font-family: verdana;
+  }
+
+  .tahoma {
+    font-family: tahoma;
+  }
+
+  .garamond {
+    font-family: garamond;
+  }
+
+  .serif {
+    font-family: serif;
   }
 }

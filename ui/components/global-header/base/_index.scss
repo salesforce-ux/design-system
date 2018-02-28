@@ -20,8 +20,9 @@
   // Position for when assistive text becomes into focus
   .slds-assistive-text_focus,
   .slds-assistive-text--focus {
-    background: $brand-header;
     top: 0;
+    color: $brand-header-contrast;
+    background: $brand-header;
   }
 }
 

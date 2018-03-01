@@ -42,7 +42,7 @@ const runExtraScripts = () => {
   );
 };
 
-const publishBuild = () => exec('NODE_ENV=production npm run build-server');
+const publishBuild = () => exec('NODE_ENV=production npm run build:publish');
 
 // PR's have this message as well as the "after merge button" commit
 const isMerge = () => process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge/g);

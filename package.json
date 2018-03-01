@@ -166,9 +166,8 @@
   },
   "scripts": {
     "build": "npm run gulp -- build",
-    "build-prod": "npm run gulp -- build",
-    "build-server": "babel-node scripts/npm/build-server.js",
-    "build-travis": "babel-node scripts/npm/build-travis.js",
+    "build:publish": "npm run gulp -- build:publish",
+    "build:travis": "babel-node scripts/npm/build-travis.js",
     "dist": "NODE_ENV=production babel-node scripts/dist.js",
     "gulp": "babel-node ./node_modules/.bin/gulp",
     "lint": "npm run gulp -- lint",

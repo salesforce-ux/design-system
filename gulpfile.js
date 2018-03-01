@@ -14,7 +14,9 @@ import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
 
 import ui from './scripts/ui';
+
 import paths from './scripts/helpers/paths';
+import publishBuild from './scripts/helpers/publish';
 
 const getComponents = key =>
   yargs.args.components
@@ -132,4 +134,13 @@ gulp.task('styles', ['generate:tokens:sass'], done => {
 
 gulp.task('build', done => {
   runSequence('clean', ['generate:tokens:all'], 'styles', done);
+});
+
+gulp.task('build:publish', done => {
+  if (!process.env.BUILD_SERVER_HOST_NEW) return done();
+  publishBuild((err, res) => {
+    if (err) return done(err);
+    console.log('Successfully published build', res);
+    done();
+  });
 });

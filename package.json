@@ -30,6 +30,7 @@
     "@salesforce-ux/design-system-previewer": "3.0.0",
     "@salesforce-ux/icons": "9.2.0",
     "@salesforce-ux/instant-vrt": "1.1.8",
+    "@std/esm": "0.23.2",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "axe-core": "2.4.2",
@@ -163,9 +164,6 @@
     "type": "git",
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
-  "greenkeeper": {
-    "ignore": ["theo", "webpack"]
-  },
   "scripts": {
     "build": "gulp build",
     "build-prod": "gulp build",
@@ -176,8 +174,7 @@
     "lint": "gulp lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
-    "previewer-dev":
-      "export SLDS_PREVIEWER=development; babel-node scripts/previewer",
+    "previewer-dev": "SLDS_PREVIEWER=development babel-node scripts/previewer",
     "stats": "gulp stylestats",
     "test:compile-integration": "webpack --config test/docs/webpack.config.js",
     "test": "node jest.local.js",
@@ -199,5 +196,6 @@
       "<rootDir>/node_modules/",
       "<rootDir>/shared/vendor/prism/"
     ]
-  }
+  },
+  "@std/esm": { "cjs": true, "esm": "js" }
 }

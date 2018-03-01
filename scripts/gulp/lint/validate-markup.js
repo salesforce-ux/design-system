@@ -1,17 +1,16 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const _ = require('lodash');
-const through = require('through2');
-const path = require('path');
-const {
-  createValidator
-} = require('@salesforce-ux/design-system-markup/server');
-const createParser = require('@salesforce-ux/design-system-parser');
+import { createValidator } from '@salesforce-ux/design-system-markup/server';
+import createParser from '@salesforce-ux/design-system-parser';
 
-const getComments = require('../ui/comments');
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import _ from 'lodash';
+import path from 'path';
+import through from 'through2';
+
+import getComments from '../../ui/comments';
 
 const renderMessage = result =>
   `${result.selector} not applied to ${result.restrict}`;
@@ -83,4 +82,4 @@ const validate = () =>
     )
     .map(runValidations);
 
-module.exports = { validate };
+export default validate;

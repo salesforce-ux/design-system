@@ -1,38 +1,29 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const I = require('immutable');
-const Task = require('data.task');
-const insert = require('gulp-insert');
-const through = require('through2');
-const React = require('react');
-const ReactDOM = require('react-dom/server');
-const showcase = require('../ui/showcase');
+import { toList } from '@salesforce-ux/design-system-previewer/lib/tree';
+import Task from 'data.task';
+import Immutable from 'immutable';
+import glob from 'glob';
+import gulp from 'gulp';
+import gulpInsert from 'gulp-insert';
+import gulpUtil from 'gulp-util';
+import path from 'path';
+import React from 'react';
+import ReactDOM from 'react-dom/server';
+import through from 'through2';
 
-const { ui } = require('../ui');
-const createInstance = require('../lib');
-const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
-const paths = require('../helpers/paths');
-const path = require('path');
-const { beautify: prettyHTML } = require('../../shared/utils/beautify');
-const glob = require('glob');
+import { beautify as prettyHTML } from '../../../shared/utils/beautify';
 
-gulp.task('generate:wrappedexamples', ['generate:examples'], () =>
-  gulp
-    .src(`${paths.generated}/examples/*.html`)
-    .pipe(
-      insert.wrap(
-        '<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../assets/styles/index.css" /></head><body>',
-        '</body></html>'
-      )
-    )
-    .pipe(gulp.dest(paths.html))
-);
+import createInstance from '../../lib';
+import paths from '../../helpers/paths';
+import showcase from '../../ui/showcase';
+import { ui } from '../../ui';
 
 const getFileName = (component, variant, item) =>
-  I.List.of(component.get('id'), variant.get('id'), item.get('id')).join('_');
+  Immutable.List
+    .of(component.get('id'), variant.get('id'), item.get('id'))
+    .join('_');
 
 const getWrappedElement = item =>
   item.get('Context')
@@ -47,7 +38,7 @@ const render = item =>
 const transform = stream => (file, encoding, callback) => {
   const json = JSON.parse(String(file.contents));
   stream.write(
-    new gutil.File({
+    new gulpUtil.File({
       path: `${path.basename(file.path, 'json')}html`,
       contents: Buffer.from(json.snapshot.html)
     })
@@ -55,7 +46,18 @@ const transform = stream => (file, encoding, callback) => {
   callback();
 };
 
-gulp.task('generate:examples', () => {
+export const wrapped = () =>
+  gulp
+    .src(`${paths.generated}/examples/*.html`)
+    .pipe(
+      gulpInsert.wrap(
+        '<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../assets/styles/index.css" /></head><body>',
+        '</body></html>'
+      )
+    )
+    .pipe(gulp.dest(paths.html));
+
+export const unwrapped = () => {
   const stream = through.obj();
   ui()
     .chain(uiJSON =>
@@ -67,7 +69,7 @@ gulp.task('generate:examples', () => {
               showcase(variant.get('showcasePath'), true).map(section =>
                 section.get('items').map(i =>
                   stream.write(
-                    new gutil.File({
+                    new gulpInsert.File({
                       path: `${getFileName(comp, variant, i)}.html`,
                       contents: Buffer.from(render(i))
                     })
@@ -86,4 +88,4 @@ gulp.task('generate:examples', () => {
     );
 
   return stream.pipe(gulp.dest(`${paths.generated}/examples`));
-});
+};

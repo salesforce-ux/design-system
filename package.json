@@ -165,23 +165,22 @@
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "scripts": {
-    "build": "gulp build",
-    "build-prod": "gulp build",
+    "build": "npm run gulp -- build",
+    "build-prod": "npm run gulp -- build",
     "build-server": "babel-node scripts/npm/build-server.js",
     "build-travis": "babel-node scripts/npm/build-travis.js",
     "dist": "NODE_ENV=production babel-node scripts/dist.js",
-    "gulp": "gulp",
-    "lint": "gulp lint",
+    "gulp": "babel-node ./node_modules/.bin/gulp",
+    "lint": "npm run gulp -- lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",
     "previewer-dev": "SLDS_PREVIEWER=development babel-node scripts/previewer",
-    "stats": "gulp stylestats",
+    "stats": "npm run gulp -- stylestats",
     "test:compile-integration": "webpack --config test/docs/webpack.config.js",
     "test": "node jest.local.js",
     "test:travis": "node jest.travis.js",
     "travis": "node scripts/npm/build-travis.js",
-    "precommit": "lint-staged",
-    "writeUI": "babel-node scripts/npm/write-ui.js"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,json}": ["prettier --single-quote --write", "git add"]

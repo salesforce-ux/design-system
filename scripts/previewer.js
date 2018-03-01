@@ -46,7 +46,7 @@ const listen = () =>
 
     // Annotations
     sassWatcher.on('change', event => {
-      exec('npm run writeUI', () => emit('bundle'));
+      exec('npm run gulp -- generate:ui', () => emit('bundle'));
     });
 
     // CSS

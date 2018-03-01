@@ -13,6 +13,7 @@ import * as tokens from './scripts/gulp/generate/tokens';
 import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
 
+import ui from './scripts/ui';
 import paths from './scripts/helpers/paths';
 
 const getComponents = key =>
@@ -60,6 +61,14 @@ gulp.task(
   ['generate:tokens:components:imports'],
   tokens.all
 );
+
+// /////////////////////////////////////////////////////////
+// UI
+// /////////////////////////////////////////////////////////
+
+gulp.task('generate:ui', done => {
+  ui.writeToDist().fork(done, result => done(null, result));
+});
 
 // /////////////////////////////////////////////////////////
 // Lint

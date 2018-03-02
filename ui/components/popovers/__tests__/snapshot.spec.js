@@ -6,7 +6,7 @@ import { Header, Footer } from '../walkthrough/example';
 import { EinsteinHeader } from '../../einstein-header/base';
 import { FeedbackHeader, FeedbackFooter } from '../error/example';
 
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname, 8080);
 const headingUniqueId = 'dialog-heading-id-01';

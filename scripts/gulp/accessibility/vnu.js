@@ -4,10 +4,10 @@
 import { exec } from 'child_process';
 import fs from 'fs';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import _ from 'lodash';
 import through from 'through2';
 import jar from 'vnu-jar/vnu-jar';
+import Vinyl from 'vinyl';
 
 // where to write. Normally we'd move control to the caller, but this
 // the pattern for all other gulp scripts
@@ -84,7 +84,7 @@ export default paths => {
     }
     const contents = JSON.stringify(report(vnuOutput), null, 2);
     stream.write(
-      new gutil.File({
+      new Vinyl({
         path: 'vnu_report.json',
         contents: Buffer.from(contents)
       })

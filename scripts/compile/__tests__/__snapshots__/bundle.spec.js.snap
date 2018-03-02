@@ -1,288 +1,470 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`doesn't change configs 1`] = `
-Array [
-  Object {
-    "entry": "./scripts/compile/entry.slds.js",
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+"[
+  {
+    \\"entry\\": \\"./scripts/compile/entry.slds.js\\",
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
         },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
             },
-            Object {
-              "loader": "raw-loader",
+            {
+              \\"loader\\": \\"raw-loader\\"
             },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
         },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
             },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
-      ],
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
     },
-    "optimization": Object {},
-    "output": Object {
-      "filename": "__internal/slds.umd.js",
-      "globalObject": "this",
-      "library": "SLDS",
-      "libraryTarget": "umd",
-      "publicPath": "/assets/scripts/bundle/",
+    \\"optimization\\": {
     },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
+    \\"output\\": {
+      \\"filename\\": \\"__internal/slds.umd.js\\",
+      \\"globalObject\\": \\"this\\",
+      \\"library\\": \\"SLDS\\",
+      \\"libraryTarget\\": \\"umd\\",
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
+    },
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
   },
-  Object {
-    "entry": Object {
-      "__internal/chunked/showcase/ui/components/buttons/base/example.jsx.js": "./ui/components/buttons/base/example.jsx",
-      "__internal/chunked/showcase/ui/components/buttons/stateful/example.jsx.js": "./ui/components/buttons/stateful/example.jsx",
-      "__internal/chunked/showcase/ui/components/buttons/with-icon/example.jsx.js": "./ui/components/buttons/with-icon/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js": "./ui/components/data-tables/advanced/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js": "./ui/components/data-tables/base/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js": "./ui/components/data-tables/inline-edit/example.jsx",
-      "__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js": "./ui/utilities/alignment/example.jsx",
-      "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js": "./ui/utilities/floats/example.jsx",
+  {
+    \\"entry\\": {
+      \\"__internal/chunked/showcase/ui/components/accordion/base/example.jsx.js\\": \\"./ui/components/accordion/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/activity-timeline/base/example.jsx.js\\": \\"./ui/components/activity-timeline/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/alert/base/example.jsx.js\\": \\"./ui/components/alert/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/app-launcher/base/example.jsx.js\\": \\"./ui/components/app-launcher/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/avatar/base/example.jsx.js\\": \\"./ui/components/avatar/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/badges/base/example.jsx.js\\": \\"./ui/components/badges/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/breadcrumbs/base/example.jsx.js\\": \\"./ui/components/breadcrumbs/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/builder-header/base/example.jsx.js\\": \\"./ui/components/builder-header/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-groups/base/example.jsx.js\\": \\"./ui/components/button-groups/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/base/example.jsx.js\\": \\"./ui/components/button-icons/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/bordered-filled-container/example.jsx.js\\": \\"./ui/components/button-icons/bordered-filled-container/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/bordered-inverse/example.jsx.js\\": \\"./ui/components/button-icons/bordered-inverse/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/bordered-transparent-container/example.jsx.js\\": \\"./ui/components/button-icons/bordered-transparent-container/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/brand/example.jsx.js\\": \\"./ui/components/button-icons/brand/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/inverse/example.jsx.js\\": \\"./ui/components/button-icons/inverse/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/stateful/example.jsx.js\\": \\"./ui/components/button-icons/stateful/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/button-icons/transparent-container/example.jsx.js\\": \\"./ui/components/button-icons/transparent-container/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/buttons/base/example.jsx.js\\": \\"./ui/components/buttons/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/buttons/stateful/example.jsx.js\\": \\"./ui/components/buttons/stateful/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/cards/base/example.jsx.js\\": \\"./ui/components/cards/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/cards/einstein/example.jsx.js\\": \\"./ui/components/cards/einstein/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/carousel/base/example.jsx.js\\": \\"./ui/components/carousel/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/chat/base/example.jsx.js\\": \\"./ui/components/chat/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/chat/past/example.jsx.js\\": \\"./ui/components/chat/past/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/checkbox-button-group/base/example.jsx.js\\": \\"./ui/components/checkbox-button-group/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/checkbox-button/base/example.jsx.js\\": \\"./ui/components/checkbox-button/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/checkbox-toggle/base/example.jsx.js\\": \\"./ui/components/checkbox-toggle/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/checkbox/base/example.jsx.js\\": \\"./ui/components/checkbox/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/color-picker/base/example.jsx.js\\": \\"./ui/components/color-picker/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/color-picker/custom-only/example.jsx.js\\": \\"./ui/components/color-picker/custom-only/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/color-picker/predefined-only/example.jsx.js\\": \\"./ui/components/color-picker/predefined-only/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/color-picker/swatches-only/example.jsx.js\\": \\"./ui/components/color-picker/swatches-only/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/combobox/base/example.jsx.js\\": \\"./ui/components/combobox/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/combobox/inline-listbox/example.jsx.js\\": \\"./ui/components/combobox/inline-listbox/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/combobox/multi-entity/example.jsx.js\\": \\"./ui/components/combobox/multi-entity/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/combobox/readonly/example.jsx.js\\": \\"./ui/components/combobox/readonly/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js\\": \\"./ui/components/data-tables/advanced/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js\\": \\"./ui/components/data-tables/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js\\": \\"./ui/components/data-tables/inline-edit/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/data-tables/responsive/example.jsx.js\\": \\"./ui/components/data-tables/responsive/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/datepickers/base/example.jsx.js\\": \\"./ui/components/datepickers/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/datepickers/range/example.jsx.js\\": \\"./ui/components/datepickers/range/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/datetime-picker/base/example.jsx.js\\": \\"./ui/components/datetime-picker/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/docked-composer/base/example.jsx.js\\": \\"./ui/components/docked-composer/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/docked-form-footer/base/example.jsx.js\\": \\"./ui/components/docked-form-footer/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/docked-utility-bar/base/example.jsx.js\\": \\"./ui/components/docked-utility-bar/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dueling-picklist/base/example.jsx.js\\": \\"./ui/components/dueling-picklist/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/ellie/example.jsx.js\\": \\"./ui/components/dynamic-icons/ellie/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/eq/example.jsx.js\\": \\"./ui/components/dynamic-icons/eq/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/global-action-help/example.jsx.js\\": \\"./ui/components/dynamic-icons/global-action-help/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/score/example.jsx.js\\": \\"./ui/components/dynamic-icons/score/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/strength/example.jsx.js\\": \\"./ui/components/dynamic-icons/strength/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/trend/example.jsx.js\\": \\"./ui/components/dynamic-icons/trend/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/typing/example.jsx.js\\": \\"./ui/components/dynamic-icons/typing/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-icons/waffle/example.jsx.js\\": \\"./ui/components/dynamic-icons/waffle/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/dynamic-menu/base/example.jsx.js\\": \\"./ui/components/dynamic-menu/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/expandable-section/base/example.jsx.js\\": \\"./ui/components/expandable-section/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/feeds/base/example.jsx.js\\": \\"./ui/components/feeds/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/feeds/post/example.jsx.js\\": \\"./ui/components/feeds/post/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/file-selector/base/example.jsx.js\\": \\"./ui/components/file-selector/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/file-selector/image/example.jsx.js\\": \\"./ui/components/file-selector/image/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/file-selector/integrated/example.jsx.js\\": \\"./ui/components/file-selector/integrated/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/files/base/example.jsx.js\\": \\"./ui/components/files/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/form-element/base/example.jsx.js\\": \\"./ui/components/form-element/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/form-layout/base/example.jsx.js\\": \\"./ui/components/form-layout/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/form-layout/compound/example.jsx.js\\": \\"./ui/components/form-layout/compound/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/global-header/base/example.jsx.js\\": \\"./ui/components/global-header/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/global-navigation/navigation-bar/example.jsx.js\\": \\"./ui/components/global-navigation/navigation-bar/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/global-navigation/navigation-tab-bar/example.jsx.js\\": \\"./ui/components/global-navigation/navigation-tab-bar/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/icons/action/example.jsx.js\\": \\"./ui/components/icons/action/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/icons/base/example.jsx.js\\": \\"./ui/components/icons/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/icons/custom/example.jsx.js\\": \\"./ui/components/icons/custom/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/icons/doctype/example.jsx.js\\": \\"./ui/components/icons/doctype/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/icons/standard/example.jsx.js\\": \\"./ui/components/icons/standard/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/illustration/base/example.jsx.js\\": \\"./ui/components/illustration/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/input/base/example.jsx.js\\": \\"./ui/components/input/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/list-builder/base/example.jsx.js\\": \\"./ui/components/list-builder/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/lookups/base/example.jsx.js\\": \\"./ui/components/lookups/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/lookups/multi-entity/example.jsx.js\\": \\"./ui/components/lookups/multi-entity/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/map/base/example.jsx.js\\": \\"./ui/components/map/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/menus/dropdown/example.jsx.js\\": \\"./ui/components/menus/dropdown/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/menus/submenu/example.jsx.js\\": \\"./ui/components/menus/submenu/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/modals/base/example.jsx.js\\": \\"./ui/components/modals/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/notifications/base/example.jsx.js\\": \\"./ui/components/notifications/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/page-headers/base/example.jsx.js\\": \\"./ui/components/page-headers/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/page-headers/object-home/example.jsx.js\\": \\"./ui/components/page-headers/object-home/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/page-headers/record-home-vertical/example.jsx.js\\": \\"./ui/components/page-headers/record-home-vertical/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/page-headers/record-home/example.jsx.js\\": \\"./ui/components/page-headers/record-home/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/panels/base/example.jsx.js\\": \\"./ui/components/panels/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/panels/filtering/example.jsx.js\\": \\"./ui/components/panels/filtering/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/path/base/example.jsx.js\\": \\"./ui/components/path/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/picklist/base/example.jsx.js\\": \\"./ui/components/picklist/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/pills/base/example.jsx.js\\": \\"./ui/components/pills/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/pills/listbox-of-pill-options/example.jsx.js\\": \\"./ui/components/pills/listbox-of-pill-options/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/base/example.jsx.js\\": \\"./ui/components/popovers/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/error/example.jsx.js\\": \\"./ui/components/popovers/error/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/feature/example.jsx.js\\": \\"./ui/components/popovers/feature/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/panels/example.jsx.js\\": \\"./ui/components/popovers/panels/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/walkthrough/example.jsx.js\\": \\"./ui/components/popovers/walkthrough/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/popovers/warning/example.jsx.js\\": \\"./ui/components/popovers/warning/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/progress-bar/base/example.jsx.js\\": \\"./ui/components/progress-bar/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/progress-indicator/base/example.jsx.js\\": \\"./ui/components/progress-indicator/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/progress-indicator/vertical/example.jsx.js\\": \\"./ui/components/progress-indicator/vertical/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/progress-ring/base/example.jsx.js\\": \\"./ui/components/progress-ring/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/prompt/base/example.jsx.js\\": \\"./ui/components/prompt/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/publishers/base/example.jsx.js\\": \\"./ui/components/publishers/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/publishers/comment/example.jsx.js\\": \\"./ui/components/publishers/comment/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/radio-button-group/base/example.jsx.js\\": \\"./ui/components/radio-button-group/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/radio-group/base/example.jsx.js\\": \\"./ui/components/radio-group/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/rich-text-editor/base/example.jsx.js\\": \\"./ui/components/rich-text-editor/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/scoped-notifications/base/example.jsx.js\\": \\"./ui/components/scoped-notifications/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/scoped-tabs/base/example.jsx.js\\": \\"./ui/components/scoped-tabs/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/select/base/example.jsx.js\\": \\"./ui/components/select/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/slider/base/example.jsx.js\\": \\"./ui/components/slider/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/spinners/base/example.jsx.js\\": \\"./ui/components/spinners/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/split-view/base/example.jsx.js\\": \\"./ui/components/split-view/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/summary-detail/base/example.jsx.js\\": \\"./ui/components/summary-detail/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/tabs/base/example.jsx.js\\": \\"./ui/components/tabs/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/tabs/sub-tabs/example.jsx.js\\": \\"./ui/components/tabs/sub-tabs/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/textarea/base/example.jsx.js\\": \\"./ui/components/textarea/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/tiles/base/example.jsx.js\\": \\"./ui/components/tiles/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/timepicker/base/example.jsx.js\\": \\"./ui/components/timepicker/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/toast/base/example.jsx.js\\": \\"./ui/components/toast/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/tooltips/base/example.jsx.js\\": \\"./ui/components/tooltips/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/trees/base/example.jsx.js\\": \\"./ui/components/trees/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/trees/grid/example.jsx.js\\": \\"./ui/components/trees/grid/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/vertical-navigation/list/example.jsx.js\\": \\"./ui/components/vertical-navigation/list/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/vertical-navigation/radio-group/example.jsx.js\\": \\"./ui/components/vertical-navigation/radio-group/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/vertical-tabs/base/example.jsx.js\\": \\"./ui/components/vertical-tabs/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/visual-picker/coverable-content/example.jsx.js\\": \\"./ui/components/visual-picker/coverable-content/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/visual-picker/link/example.jsx.js\\": \\"./ui/components/visual-picker/link/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/visual-picker/non-coverable-content/example.jsx.js\\": \\"./ui/components/visual-picker/non-coverable-content/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/visual-picker/vertical/example.jsx.js\\": \\"./ui/components/visual-picker/vertical/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/walkthrough/header/example.jsx.js\\": \\"./ui/components/walkthrough/header/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/welcome-mat/base/example.jsx.js\\": \\"./ui/components/welcome-mat/base/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/components/welcome-mat/trailhead-connected/example.jsx.js\\": \\"./ui/components/welcome-mat/trailhead-connected/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js\\": \\"./ui/utilities/alignment/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/borders/example.jsx.js\\": \\"./ui/utilities/borders/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/box/example.jsx.js\\": \\"./ui/utilities/box/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/description-list/example.jsx.js\\": \\"./ui/utilities/description-list/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/floats/example.jsx.js\\": \\"./ui/utilities/floats/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/grid/example.jsx.js\\": \\"./ui/utilities/grid/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/horizontal-list/example.jsx.js\\": \\"./ui/utilities/horizontal-list/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/hyphenation/example.jsx.js\\": \\"./ui/utilities/hyphenation/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/interactions/example.jsx.js\\": \\"./ui/utilities/interactions/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/margin/example.jsx.js\\": \\"./ui/utilities/margin/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/media-objects/example.jsx.js\\": \\"./ui/utilities/media-objects/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/name-value-list/example.jsx.js\\": \\"./ui/utilities/name-value-list/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/padding/example.jsx.js\\": \\"./ui/utilities/padding/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/position/example.jsx.js\\": \\"./ui/utilities/position/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/scrollable/example.jsx.js\\": \\"./ui/utilities/scrollable/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/sizing/example.jsx.js\\": \\"./ui/utilities/sizing/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/text/example.jsx.js\\": \\"./ui/utilities/text/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/themes/example.jsx.js\\": \\"./ui/utilities/themes/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/truncation/example.jsx.js\\": \\"./ui/utilities/truncation/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/vertical-list/example.jsx.js\\": \\"./ui/utilities/vertical-list/example.jsx\\",
+      \\"__internal/chunked/showcase/ui/utilities/visibility/example.jsx.js\\": \\"./ui/utilities/visibility/example.jsx\\"
     },
-    "externals": Object {
-      "js-beautify": "JSBeautify",
-      "react": "React",
-      "react-dom": "ReactDOM",
+    \\"externals\\": {
+      \\"js-beautify\\": \\"JSBeautify\\",
+      \\"react\\": \\"React\\",
+      \\"react-dom\\": \\"ReactDOM\\"
     },
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
         },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
             },
-            Object {
-              "loader": "raw-loader",
+            {
+              \\"loader\\": \\"raw-loader\\"
             },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
         },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
             },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
+    },
+    \\"optimization\\": {
+      \\"splitChunks\\": {
+        \\"chunks\\": \\"all\\",
+        \\"minChunks\\": 2,
+        \\"name\\": \\"__internal/chunked/showcase/common.js\\"
+      }
+    },
+    \\"output\\": {
+      \\"filename\\": \\"[name]\\",
+      \\"globalObject\\": \\"this\\",
+      \\"jsonpFunction\\": \\"webpackJsonpSLDS___internal_chunked_showcase\\",
+      \\"library\\": [
+        \\"SLDS\\",
+        \\"[name]\\"
       ],
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
     },
-    "optimization": Object {
-      "splitChunks": Object {
-        "chunks": "all",
-        "minChunks": 2,
-        "name": "__internal/chunked/showcase/common.js",
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-    },
-    "output": Object {
-      "filename": "[name]",
-      "globalObject": "this",
-      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_showcase",
-      "library": Array [
-        "SLDS",
-        "[name]",
-      ],
-      "publicPath": "/assets/scripts/bundle/",
-    },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
-      },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
   },
-  Object {
-    "entry": Object {
-      "__internal/chunked/docs/ui/components/buttons/docs.mdx.js": "./ui/components/buttons/docs.mdx",
+  {
+    \\"entry\\": {
+      \\"__internal/chunked/docs/ui/components/alert/docs.mdx.js\\": \\"./ui/components/alert/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/badges/docs.mdx.js\\": \\"./ui/components/badges/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/brand-band/docs.mdx.js\\": \\"./ui/components/brand-band/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/carousel/docs.mdx.js\\": \\"./ui/components/carousel/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/chat/docs.mdx.js\\": \\"./ui/components/chat/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/combobox/docs.mdx.js\\": \\"./ui/components/combobox/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/dueling-picklist/docs.mdx.js\\": \\"./ui/components/dueling-picklist/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/form-element/docs.mdx.js\\": \\"./ui/components/form-element/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/global-header/docs.mdx.js\\": \\"./ui/components/global-header/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/illustration/docs.mdx.js\\": \\"./ui/components/illustration/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/menus/docs.mdx.js\\": \\"./ui/components/menus/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/panels/docs.mdx.js\\": \\"./ui/components/panels/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/progress-indicator/docs.mdx.js\\": \\"./ui/components/progress-indicator/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/tabs/docs.mdx.js\\": \\"./ui/components/tabs/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/components/welcome-mat/docs.mdx.js\\": \\"./ui/components/welcome-mat/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/utilities/grid/docs.mdx.js\\": \\"./ui/utilities/grid/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/utilities/layout/docs.mdx.js\\": \\"./ui/utilities/layout/docs.mdx\\",
+      \\"__internal/chunked/docs/ui/utilities/margin/docs.mdx.js\\": \\"./ui/utilities/margin/docs.mdx\\"
     },
-    "externals": Object {
-      "js-beautify": "JSBeautify",
-      "react": "React",
-      "react-dom": "ReactDOM",
+    \\"externals\\": {
+      \\"js-beautify\\": \\"JSBeautify\\",
+      \\"react\\": \\"React\\",
+      \\"react-dom\\": \\"ReactDOM\\"
     },
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
         },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
             },
-            Object {
-              "loader": "raw-loader",
+            {
+              \\"loader\\": \\"raw-loader\\"
             },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
         },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
             },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
+    },
+    \\"optimization\\": {
+      \\"splitChunks\\": {
+        \\"chunks\\": \\"all\\",
+        \\"minChunks\\": 2,
+        \\"name\\": \\"__internal/chunked/docs/common.js\\"
+      }
+    },
+    \\"output\\": {
+      \\"filename\\": \\"[name]\\",
+      \\"globalObject\\": \\"this\\",
+      \\"jsonpFunction\\": \\"webpackJsonpSLDS___internal_chunked_docs\\",
+      \\"library\\": [
+        \\"SLDS\\",
+        \\"[name]\\"
       ],
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
     },
-    "optimization": Object {
-      "splitChunks": Object {
-        "chunks": "all",
-        "minChunks": 2,
-        "name": "__internal/chunked/docs/common.js",
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-    },
-    "output": Object {
-      "filename": "[name]",
-      "globalObject": "this",
-      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_docs",
-      "library": Array [
-        "SLDS",
-        "[name]",
-      ],
-      "publicPath": "/assets/scripts/bundle/",
-    },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
-      },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
-  },
-]
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
+  }
+]"
 `;

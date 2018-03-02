@@ -5,10 +5,10 @@ import { createValidator } from '@salesforce-ux/design-system-markup/server';
 import createParser from '@salesforce-ux/design-system-parser';
 
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import _ from 'lodash';
 import path from 'path';
 import through from 'through2';
+import Vinyl from 'vinyl';
 
 import getComments from '../../ui/comments';
 
@@ -57,7 +57,7 @@ const report = validate => {
     const json = JSON.stringify(report, null, 2);
     printToConsole(json, 'Full info in .reports/validate.json');
     this.push(
-      new gutil.File({
+      new Vinyl({
         path: 'validations.json',
         contents: Buffer.from(json)
       })

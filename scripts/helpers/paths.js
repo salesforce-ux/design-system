@@ -5,21 +5,34 @@
 
 const path = require('path');
 
-const root =
-  process.env.NODE_ENV === 'test'
-    ? path.resolve(__dirname, '../../', '__fixtures__')
-    : path.resolve(__dirname, '../../');
-const app_modules = path.resolve(root, 'app_modules');
-const node_modules = path.resolve(root, 'node_modules');
+const root = path.resolve(__dirname, '../../');
+const rootPath = path.resolve.bind(path, root);
+
+const node_modules = rootPath('node_modules');
+
+const watchPaths = {
+  css: [rootPath('assets/**/*.css')],
+  sass: [rootPath('ui/**/*.scss'), rootPath('design-tokens/*.yml')],
+  js: [
+    rootPath('app_modules/**/*.{js,jsx}'),
+    rootPath('ui/**/*.{js,jsx}'),
+    rootPath('site/**/*.{js,jsx}')
+  ],
+  tokens: [
+    rootPath('ui/**/tokens/*.yml'),
+    rootPath('design-tokens/**/*.yml'),
+    '!' + rootPath('design-tokens/components.yml')
+  ]
+};
 
 module.exports = {
   root,
-  app_modules,
+  rootPath,
   node_modules,
 
-  assets: path.resolve(root, 'assets'),
-  ui: path.resolve(root, 'ui'),
-  designTokens: path.resolve(root, 'design-tokens'),
+  assets: rootPath('assets'),
+  ui: rootPath('ui'),
+  designTokens: rootPath('design-tokens'),
 
   icons: path.resolve(
     node_modules,
@@ -27,12 +40,14 @@ module.exports = {
   ),
   uiKit: path.resolve(node_modules, '@salesforce-ux/design-system-ui-kit'),
 
-  dist: path.resolve(root, '.dist'),
-  build: path.resolve(root, '.build'),
-  generated: path.resolve(root, '.generated'),
-  html: path.resolve(root, '.html'),
-  tmp: path.resolve(root, '.tmp'),
-  test: path.resolve(root, '.test'),
-  logs: path.resolve(root, '.logs'),
-  reports: path.resolve(root, '.reports')
+  dist: rootPath('.dist'),
+  build: rootPath('.build'),
+  generated: rootPath('.generated'),
+  html: rootPath('.html'),
+  tmp: rootPath('.tmp'),
+  test: rootPath('.test'),
+  logs: rootPath('.logs'),
+  reports: rootPath('.reports'),
+
+  watch: watchPaths
 };

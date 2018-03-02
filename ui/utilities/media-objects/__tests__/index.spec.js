@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import MediaObject from '../index.react';
 import { Avatar } from '../../../components/avatar/base/example';
 

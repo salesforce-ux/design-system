@@ -48,7 +48,7 @@ module.exports = I.fromJS({
             }
           },
           {
-            loader: './scripts/compile/mdx-loader.js'
+            loader: path.resolve(paths.root, 'scripts/compile/mdx-loader.js')
           }
         ]
       }

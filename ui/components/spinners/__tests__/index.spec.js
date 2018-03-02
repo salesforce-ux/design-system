@@ -3,7 +3,7 @@ import React from 'react';
 
 import Spinner from '../index.react';
 
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

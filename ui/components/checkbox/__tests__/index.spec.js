@@ -13,7 +13,7 @@ import {
   Indeterminate,
   Required
 } from '../base/example';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

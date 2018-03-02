@@ -7,11 +7,11 @@ import Immutable from 'immutable';
 import glob from 'glob';
 import gulp from 'gulp';
 import gulpInsert from 'gulp-insert';
-import gulpUtil from 'gulp-util';
 import path from 'path';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import through from 'through2';
+import Vinyl from 'vinyl';
 
 import { beautify as prettyHTML } from '../../../shared/utils/beautify';
 
@@ -38,7 +38,7 @@ const render = item =>
 const transform = stream => (file, encoding, callback) => {
   const json = JSON.parse(String(file.contents));
   stream.write(
-    new gulpUtil.File({
+    new Vinyl({
       path: `${path.basename(file.path, 'json')}html`,
       contents: Buffer.from(json.snapshot.html)
     })
@@ -57,6 +57,8 @@ export const wrapped = () =>
     )
     .pipe(gulp.dest(paths.html));
 
+export { default as unwrappedDocs } from './examples.docs';
+
 export const unwrapped = () => {
   const stream = through.obj();
   ui()
@@ -69,7 +71,7 @@ export const unwrapped = () => {
               showcase(variant.get('showcasePath'), true).map(section =>
                 section.get('items').map(i =>
                   stream.write(
-                    new gulpInsert.File({
+                    new Vinyl({
                       path: `${getFileName(comp, variant, i)}.html`,
                       contents: Buffer.from(render(i))
                     })
@@ -86,6 +88,5 @@ export const unwrapped = () => {
       },
       () => stream.end()
     );
-
   return stream.pipe(gulp.dest(`${paths.generated}/examples`));
 };

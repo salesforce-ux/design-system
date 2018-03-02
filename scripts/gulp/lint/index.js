@@ -3,7 +3,6 @@
 
 import gulp from 'gulp';
 import cache from 'gulp-cached';
-import gutil from 'gulp-util';
 import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import stylelint from 'gulp-stylelint';

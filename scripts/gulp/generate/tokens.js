@@ -8,6 +8,7 @@ import gulpUtil from 'gulp-util';
 import _ from 'lodash';
 import path from 'path';
 import through from 'through2';
+import Vinyl from 'vinyl';
 
 import paths from '../../helpers/paths';
 
@@ -83,7 +84,7 @@ export const componentsImports = () =>
             `${prev}\n- ${path.relative(paths.designTokens, filepath)}`,
           '# File generated automatically, do not edit manually\nimports:'
         );
-        const file = new gulpUtil.File({
+        const file = new Vinyl({
           path: 'components.yml',
           contents: Buffer.from(componentTokenImports)
         });
@@ -91,25 +92,3 @@ export const componentsImports = () =>
       })
     )
     .pipe(gulp.dest(paths.designTokens));
-
-// gulp.task('generate:tokens:components:imports', done =>
-//   gulp
-//     .src(path.resolve(paths.ui, 'components/**/tokens/**/*.yml'))
-//     .pipe(gulpUtil.buffer())
-//     .pipe(
-//       through.obj((files, enc, next) => {
-//         const filepaths = files.map(file => file.path).sort();
-//         const componentTokenImports = filepaths.reduce(
-//           (prev, filepath) =>
-//             `${prev}\n- ${path.relative(paths.designTokens, filepath)}`,
-//           '# File generated automatically, do not edit manually\nimports:'
-//         );
-//         const file = new gulpUtil.File({
-//           path: 'components.yml',
-//           contents: Buffer.from(componentTokenImports)
-//         });
-//         next(null, file);
-//       })
-//     )
-//     .pipe(gulp.dest(paths.designTokens))
-// );

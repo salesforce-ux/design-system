@@ -14,7 +14,7 @@ import {
 } from '../';
 import { DoctypeIcon } from '../../icons/doctype/example';
 
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

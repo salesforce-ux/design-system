@@ -3,12 +3,26 @@
 
 /* eslint-env jest */
 
-const { ui } = require('../');
 const I = require('immutable');
-const createInstance = require('../../lib.js');
-const showcase = require('../../ui/showcase.js');
+const path = require('path');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
+
+const paths = require('../../helpers/paths');
+const createInstance = require('../../lib.js');
+const showcase = require('../../ui/showcase.js');
+const { ui } = require('../');
+
+const __paths = Object.assign({}, paths);
+
+beforeAll(() => {
+  paths.root = path.resolve(__paths.root, '__fixtures__');
+  paths.ui = path.resolve(__paths.root, '__fixtures__/ui');
+});
+
+afterAll(() => {
+  Object.assign(paths, __paths);
+});
 
 describe('scripts/lib.js', () => {
   let uiJson, SLDS;

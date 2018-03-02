@@ -3,7 +3,7 @@ import React from 'react';
 
 import { TypingIcon } from '../typing/example';
 
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

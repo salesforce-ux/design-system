@@ -3,7 +3,21 @@
 
 /* eslint-env jest */
 
+const path = require('path');
+
+const paths = require('../../helpers/paths');
 const { ui } = require('../');
+
+const __paths = Object.assign({}, paths);
+
+beforeAll(() => {
+  paths.root = path.resolve(__paths.root, '__fixtures__');
+  paths.ui = path.resolve(__paths.root, '__fixtures__/ui');
+});
+
+afterAll(() => {
+  Object.assign(paths, __paths);
+});
 
 describe('scripts/ui.js', () => {
   describe('ui', () => {

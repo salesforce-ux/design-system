@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import WelcomeMat from '../';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname, 8081);

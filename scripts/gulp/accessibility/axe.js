@@ -4,7 +4,7 @@
 import gulp from 'gulp';
 import gulpAxe from 'gulp-axe-webdriver';
 
-export const axe = (paths, done) =>
+export default (paths, done) =>
   gulpAxe(
     {
       folderOutputReport: '.reports',

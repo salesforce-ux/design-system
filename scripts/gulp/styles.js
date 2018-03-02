@@ -18,7 +18,7 @@ const toKB = n => (n / 1024).toFixed(2);
 export const stylestats = done => {
   const localFile = 'assets/styles/slds.css';
   const remoteFile =
-    'https://www.lightningdesignsystem.com/assets/styles/slds.css';
+    'https://www.lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.css';
 
   const localStats = new StyleStats(localFile, '.stylestatsrc');
   const remoteStats = new StyleStats(remoteFile, '.stylestatsrc');

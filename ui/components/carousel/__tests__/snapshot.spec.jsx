@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import Carousel from '../';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

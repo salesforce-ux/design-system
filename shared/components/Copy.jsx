@@ -64,7 +64,7 @@ class Copy extends React.PureComponent {
       >
         <SvgIcon
           sprite="utility"
-          symbol={copied ? 'check' : 'copy'}
+          symbol={copied ? 'check' : 'copy_to_clipboard'}
           className="slds-button__icon"
         />
         <span aria-live="polite" className="slds-assistive-text">

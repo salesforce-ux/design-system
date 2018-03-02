@@ -14,7 +14,9 @@ import Bundle from '../bundle';
 it("doesn't change configs", () => {
   expect.assertions(1);
   Bundle.configs
-    .map(configs => configs.map(config => config.delete('plugins')))
+    .map(configs =>
+      configs.map(config => config.delete('entry').delete('plugins'))
+    )
     .fork(
       e => {
         throw e;

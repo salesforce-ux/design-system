@@ -26,9 +26,9 @@ export const lintExamples = done => {
       echo 'VRT RESULTS:' &&
       echo $R;
       if [ -z $R ]; then
-          npm run gulp -- lint:examples --components NONE_CHANGED
+          npm run gulp -- travis:lint:examples --components NONE_CHANGED
       else
-          npm run gulp -- lint:examples --components $(echo $R)
+          npm run gulp -- travis:lint:examples --components $(echo $R)
       fi
     `,
     {

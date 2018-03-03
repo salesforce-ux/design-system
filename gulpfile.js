@@ -172,6 +172,8 @@ export const watch = () =>
 // Travis
 // /////////////////////////////////////////////////////////
 
+gulp.task('travis:lint:examples', gulp.parallel(vnu, lint.markup, a11y));
+
 gulp.task('travis', done => {
   if (!travis.shouldPushToBuildServer()) return done();
   return gulp.series(

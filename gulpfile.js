@@ -27,6 +27,14 @@ const getComponents = key => {
 };
 
 // /////////////////////////////////////////////////////////
+// Gulp
+// /////////////////////////////////////////////////////////
+
+Object.keys(travis).forEach(key => {
+  travis[key].displayName = `travis:${key}`;
+});
+
+// /////////////////////////////////////////////////////////
 // Clean
 // /////////////////////////////////////////////////////////
 
@@ -84,7 +92,7 @@ gulp.task('lint:a11y', gulp.series('generate:examples:wrapped', a11y));
 // gulp lint:vnu
 // gulp lint:vnu --components path
 // gulp lint:vnu --components path,tabs,data-tables
-gulp.task('lint:vnu', () => gulp.series('generate:examples:wrapped', vnu));
+gulp.task('lint:vnu', gulp.series('generate:examples:wrapped', vnu));
 
 gulp.task('lint:sass', lint.sass);
 gulp.task('lint:spaces', lint.spaces);

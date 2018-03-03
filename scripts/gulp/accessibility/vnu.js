@@ -89,6 +89,7 @@ export default paths => {
         contents: Buffer.from(contents)
       })
     );
+    stream.end();
   });
   return stream.pipe(gulp.dest('.reports/'));
 };

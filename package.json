@@ -37,13 +37,14 @@
     "babel-cli": "6.23.0",
     "babel-core": "6.24.0",
     "babel-eslint": "7.2.1",
-    "babel-jest": "22.0.6",
+    "babel-jest": "22.4.1",
     "babel-loader": "7.1.3",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.23.0",
     "babel-register": "6.24.0",
+    "body-parser": "1.18.2",
     "chai": "3.5.0",
     "cheerio": "0.22.0",
     "classnames": "2.2.5",
@@ -98,7 +99,8 @@
     "husky": "0.14.3",
     "immutable": "3.8.1",
     "invariant": "2.2.2",
-    "jest": "22.0.6",
+    "isomorphic-fetch": "2.2.1",
+    "jest": "22.4.2",
     "js-beautify": "1.6.12",
     "js-yaml": "3.8.3",
     "json-stable-stringify": "1.0.1",
@@ -186,6 +188,7 @@
   "jest": {
     "testRegex": "(/__tests__/.*(test|spec))\\.jsx?$",
     "globalSetup": "./jest.setup.global.js",
+    "globalTeardown": "./jest.teardown.global.js",
     "setupTestFrameworkScriptFile": "./jest.setup.js",
     "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/shared/vendor/prism/"

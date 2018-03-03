@@ -19,12 +19,12 @@ import * as styles from './scripts/gulp/styles';
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
 
-const getComponents = key =>
-  argv.components
-    ? String(argv.components)
-        .split(',')
-        .map(comp => `.html/${comp}*.html`)
-    : ['.html/*.html'];
+const getComponents = key => {
+  if (!argv.components) return ['.html/*.html'];
+  const components = String(argv.components).split(',');
+  if (!components.length) return components;
+  return components.map(comp => `.html/${comp}*.html`);
+};
 
 // /////////////////////////////////////////////////////////
 // Clean
@@ -109,7 +109,7 @@ gulp.task(
   'lint:examples',
   gulp.series(
     'generate:examples:wrapped',
-    gulp.parallel(vnu, lint.markup, a11y)
+    gulp.parallel(vnu, a11y, lint.markup, lint.html)
   )
 );
 
@@ -120,9 +120,7 @@ gulp.task(
     'lint:spaces',
     'lint:javascript',
     'lint:javascript:test',
-    'lint:html',
-    'lint:tokens',
-    'lint:examples'
+    'lint:tokens'
   )
 );
 
@@ -172,16 +170,17 @@ export const watch = () =>
 // Travis
 // /////////////////////////////////////////////////////////
 
-gulp.task('travis:lint:examples', gulp.parallel(vnu, lint.markup, a11y));
-
 gulp.task('travis', done => {
   if (!travis.shouldPushToBuildServer()) return done();
   return gulp.series(
     'build',
-    travis.jest,
     'lint',
+    travis.jest,
+    'generate:examples:wrapped',
     travis.createSnapshots,
     travis.lintExamples,
     travis.publishBuild
   )(done);
 });
+
+gulp.task('travis:lint:examples', gulp.parallel(vnu, lint.markup, a11y));

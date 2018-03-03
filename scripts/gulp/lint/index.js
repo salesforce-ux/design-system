@@ -111,7 +111,7 @@ export const html = () =>
     )
     .pipe(htmlhint.failReporter());
 
-export const markup = () => validateMarkup().fork(console.error, x => x);
+export const markup = done => validateMarkup().fork(console.error, done);
 
 export const tokensYml = () =>
   gulp

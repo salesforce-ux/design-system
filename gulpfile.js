@@ -84,10 +84,10 @@ const a11y = done => {
 
 const vnu = () => accessibility.vnu(getComponents());
 
-// gulp a11y
-// gulp a11y --components path
-// gulp a11y --components path,tabs,data-tables
-gulp.task('lint:a11y', gulp.series('generate:examples:wrapped', a11y));
+// gulp lint:a11y
+// gulp lint:a11y --components path
+// gulp lint:a11y --components path,tabs,data-tables
+gulp.task('a11y', gulp.series('generate:examples:wrapped', a11y));
 
 // gulp lint:vnu
 // gulp lint:vnu --components path

@@ -6,7 +6,7 @@
 import { expect } from 'chai';
 
 describe('package.json', () => {
-  const dependencies = require('../../package.json').devDependencies;
+  const dependencies = require('../package.json').devDependencies;
   const trustedDependencies = [
     '@salesforce-ux/build-server-api',
     'stylelint-config-slds'

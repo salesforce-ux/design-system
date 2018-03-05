@@ -14,7 +14,7 @@ import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../snapshots.data';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

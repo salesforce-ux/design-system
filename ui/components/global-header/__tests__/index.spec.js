@@ -3,11 +3,11 @@
 /* eslint-env jest */
 
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import { GlobalHeaderDeprecated } from '../base/example';
 import GlobalHeader from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname, 8888);
+const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('render global header', () => {
   it('renders the deprecated global header', () => {

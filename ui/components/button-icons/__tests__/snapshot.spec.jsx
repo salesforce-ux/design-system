@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import ButtonIcon from '../';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import { render, mount } from 'enzyme';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);

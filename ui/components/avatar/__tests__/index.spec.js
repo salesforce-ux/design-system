@@ -3,7 +3,7 @@ import React from 'react';
 import { Avatar } from '../base/example';
 import { StandardIcon } from '../../icons/standard/example';
 
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

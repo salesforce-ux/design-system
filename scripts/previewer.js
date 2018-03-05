@@ -1,25 +1,23 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const _ = require('lodash');
-const paths = require('./helpers/paths');
-const path = require('path');
-const gulp = require('gulp');
-const exec = require('child_process').exec;
-const Task = require('data.task');
-const I = require('immutable');
-const { writeToDist } = require('./ui');
+import { exec } from 'child_process';
+import Task from 'data.task';
+import I from 'immutable';
+import _ from 'lodash';
+import gulp from 'gulp';
+import path from 'path';
+
+import '../gulpfile';
+
+import Bundle from './compile/bundle';
+import paths from './helpers/paths';
+import { writeToDist } from './ui';
 
 const createPreviewer =
   process.env.SLDS_PREVIEWER === 'development'
     ? require('../../design-system-previewer')
     : require('@salesforce-ux/design-system-previewer');
-
-const { watchPaths } = require('./watch');
-
-const Bundle = require('./compile/bundle');
-
-require('./gulp/styles');
 
 const previewer = createPreviewer({
   // where are your static assets
@@ -36,31 +34,31 @@ const previewer = createPreviewer({
 
 const listen = () =>
   previewer.listen(3003, ({ server, emit }) => {
+    const emitReady = _.once(() => emit('ready'));
+    const emitStyles = done => {
+      emit('styles');
+      done();
+    };
+
     // Sass
     const sassWatcher = gulp.watch(
-      watchPaths.sass,
-      ['styles:sass'] // This will trigger watchPaths.css
+      paths.watch.sass,
+      gulp.series('styles:sass', emitStyles)
     );
 
-    gulp.watch(watchPaths.tokens, ['styles:framework']);
+    // Tokens
+    gulp.watch(paths.watch.tokens, gulp.series('styles', emitStyles));
 
     // Annotations
     sassWatcher.on('change', event => {
-      exec('npm run writeUI', () => emit('bundle'));
+      writeToDist().fork(console.error, () => {
+        emit('bundle');
+      });
     });
 
-    // CSS
-    gulp.watch(watchPaths.css, event => {
-      emit('styles');
-    });
+    gulp.series('styles')();
 
-    gulp.start('styles:framework');
-
-    const emitReady = _.once(() => {
-      emit('ready');
-    });
-
-    // JS
+    // Webpack
     Bundle.watch().fork(
       e => {
         throw e;

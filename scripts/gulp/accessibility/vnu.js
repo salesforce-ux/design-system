@@ -1,19 +1,16 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const fs = require('fs');
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const argv = require('yargs').argv;
-const through = require('through2');
-const exec = require('child_process').exec;
-const _ = require('lodash');
-const jar = require('vnu-jar/vnu-jar');
+import { exec } from 'child_process';
+import fs from 'fs';
+import gulp from 'gulp';
+import _ from 'lodash';
+import through from 'through2';
+import jar from 'vnu-jar/vnu-jar';
+import Vinyl from 'vinyl';
 
 // where to write. Normally we'd move control to the caller, but this
 // the pattern for all other gulp scripts
-const FILEPATH = '.reports/';
-const FILENAME = 'vnu_report.json';
 const IGNORE = [
   /(.*)_JAVA_OPTIONS(.*)/i, // "Travis outputs this to make this interesting"
   /(.*)role=gridcell(.*)must be contained in, or owned by, an element with(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
@@ -71,18 +68,10 @@ const report = output =>
     )
     .value();
 
-const parseComponentArgument = () =>
-  (argv.components && argv.components.split(',')) || '*';
-
-const getComponentsToTest = () =>
-  String(parseComponentArgument())
-    .split(',')
-    .map(x => `.html/${x}*.html`)
-    .join(' ');
-
-const createVnuReport = stream => {
+export default paths => {
+  const stream = through.obj();
   // eslint-disable-next-line handle-callback-err
-  lint(getComponentsToTest(), {}, (err, output) => {
+  lint(paths, {}, (err, output) => {
     const vnuOutput = String(output)
       .split('\n')
       .filter(line => !IGNORE.some(ignore => line.match(ignore)))
@@ -95,19 +84,12 @@ const createVnuReport = stream => {
     }
     const contents = JSON.stringify(report(vnuOutput), null, 2);
     stream.write(
-      new gutil.File({
-        path: FILENAME,
+      new Vinyl({
+        path: 'vnu_report.json',
         contents: Buffer.from(contents)
       })
     );
+    stream.end();
   });
+  return stream.pipe(gulp.dest('.reports/'));
 };
-
-// gulp lint:vnu
-// gulp lint:vnu --components path
-// gulp lint:vnu --components path,tabs,data-tables
-gulp.task('lint:vnu', ['generate:wrappedexamples'], () => {
-  const stream = through.obj();
-  createVnuReport(stream);
-  return stream.pipe(gulp.dest(FILEPATH));
-});

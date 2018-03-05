@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { Accordion, AccordionSection } from '../base/example';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';

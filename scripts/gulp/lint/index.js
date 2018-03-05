@@ -1,19 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const gulp = require('gulp');
-const cache = require('gulp-cached');
-const gutil = require('gulp-util');
-const lintspaces = require('gulp-lintspaces');
-const eslint = require('gulp-eslint');
-const stylelint = require('gulp-stylelint');
-const htmlhint = require('gulp-htmlhint');
-const tokenlint = require('./plugins/lint-tokens');
-const yamlValidate = require('gulp-yaml-validate');
-const { validate } = require('./validate');
-const vnu = require('./vnu');
+import gulp from 'gulp';
+import cache from 'gulp-cached';
+import lintspaces from 'gulp-lintspaces';
+import eslint from 'gulp-eslint';
+import stylelint from 'gulp-stylelint';
+import htmlhint from 'gulp-htmlhint';
+import yamlValidate from 'gulp-yaml-validate';
 
-gulp.task('lint:sass', () =>
+import tokenlint from '../plugins/lint-tokens';
+
+import validateMarkup from './validate-markup';
+
+export const sass = () =>
   gulp
     .src(['site/assets/styles/**/*.scss', 'ui/**/*.scss'])
     .pipe(cache('stylelint'))
@@ -27,10 +27,9 @@ gulp.task('lint:sass', () =>
         ],
         failAfterError: true
       })
-    )
-);
+    );
 
-gulp.task('lint:spaces', () =>
+export const spaces = () =>
   gulp
     .src([
       '*.{js,json,md,yml,txt}',
@@ -52,40 +51,32 @@ gulp.task('lint:spaces', () =>
         ]
       })
     )
-    .pipe(lintspaces.reporter({ breakOnWarning: true }))
-);
+    .pipe(lintspaces.reporter({ breakOnWarning: true }));
 
-function lintjs(files, options) {
-  return () => {
-    return gulp
-      .src(files)
-      .pipe(cache('lintjs'))
-      .pipe(eslint(options))
-      .pipe(eslint.format('codeframe'))
-      .pipe(eslint.failAfterError());
-  };
-}
+export const javascript = (files, options) =>
+  gulp
+    .src([
+      '*.js',
+      'shared/**/*.{js,jsx}',
+      'site/**/*.{js,jsx}',
+      'ui/**/*.{js,jsx}',
+      '!**/*.spec.{js,jsx}'
+    ])
+    .pipe(cache('lintjs'))
+    .pipe(eslint())
+    .pipe(eslint.format('codeframe'))
+    .pipe(eslint.failAfterError());
 
-gulp.task(
-  'lint:js',
-  lintjs([
-    '*.js',
-    'shared/**/*.{js,jsx}',
-    'site/**/*.{js,jsx}',
-    'ui/**/*.{js,jsx}',
-    '!**/*.spec.{js,jsx}'
-  ])
-);
+export const javascriptTest = () =>
+  gulp
+    .src(['test/**/*.{js,jsx}', '**/*.spec.{js,jsx}'])
+    .pipe(cache('lintjs'))
+    .pipe(eslint({ env: { mocha: true } }))
+    .pipe(eslint.format('codeframe'))
+    .pipe(eslint.failAfterError());
 
-gulp.task(
-  'lint:js:test',
-  lintjs(['test/**/*.{js,jsx}', '**/*.spec.{js,jsx}'], { env: { mocha: true } })
-);
-
-// This task lints pre-built assets (not the JSX templates),
-// So you typically have to run `npm run build` before linting HTML files.
-gulp.task('lint:html', ['generate:wrappedexamples'], () => {
-  return gulp
+export const html = () =>
+  gulp
     .src('.html/*.html')
     .pipe(
       htmlhint({
@@ -119,15 +110,16 @@ gulp.task('lint:html', ['generate:wrappedexamples'], () => {
       })
     )
     .pipe(htmlhint.failReporter());
-});
 
-gulp.task('lint:tokens:yaml', () =>
+export const markup = done =>
+  validateMarkup().fork(console.error, () => done());
+
+export const tokensYml = () =>
   gulp
     .src(['./ui/components/**/tokens/*.yml', './design-tokens/aliases/*.yml'])
-    .pipe(yamlValidate())
-);
+    .pipe(yamlValidate());
 
-gulp.task('lint:tokens:components', () =>
+export const tokensComponents = () =>
   gulp
     .src([
       './ui/components/**/tokens/*.yml',
@@ -135,35 +127,10 @@ gulp.task('lint:tokens:components', () =>
       '!./ui/components/**/tokens/force-font-commons.yml' // fonts
     ])
     .pipe(tokenlint())
-    .pipe(tokenlint.report('verbose'))
-);
+    .pipe(tokenlint.report('verbose'));
 
-gulp.task('lint:tokens:aliases', () =>
+export const tokensAliases = () =>
   gulp
     .src(['./design-tokens/aliases/*.yml'])
     .pipe(tokenlint({ prefix: false }))
-    .pipe(tokenlint.report('verbose'))
-);
-
-gulp.task('lint:tokens', [
-  'lint:tokens:yaml',
-  'lint:tokens:components',
-  'lint:tokens:aliases'
-]);
-
-gulp.task('lint', [
-  'lint:sass',
-  'lint:spaces',
-  'lint:js',
-  'lint:js:test',
-  'lint:html',
-  'lint:vnu',
-  'lint:validate',
-  'lint:tokens'
-]);
-
-gulp.task('lint:examples', ['lint:vnu', 'lint:validate', 'a11y']);
-
-gulp.task('lint:validate', ['generate:wrappedexamples'], () =>
-  validate().fork(console.error, x => x)
-);
+    .pipe(tokenlint.report('verbose'));

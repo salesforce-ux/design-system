@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import { BreadcrumbsBase, BreadcrumbsWithOverflow } from '../base/example';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);

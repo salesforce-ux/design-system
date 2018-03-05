@@ -1,15 +1,16 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const async = require('async');
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const path = require('path');
-const theo = require('gulp-theo');
-const through = require('through2');
-const _ = require('lodash');
+import async from 'async';
+import gulp from 'gulp';
+import gulpTheo from 'gulp-theo';
+import gulpUtil from 'gulp-util';
+import _ from 'lodash';
+import path from 'path';
+import through from 'through2';
+import Vinyl from 'vinyl';
 
-const paths = require('../helpers/paths');
+import paths from '../../helpers/paths';
 
 // Some transforms are commented out because the use cases are lacking
 let formatTransforms = _({
@@ -34,58 +35,47 @@ let formatTransforms = _({
   .flatten()
   .value();
 
-gulp.task(
-  'generate:tokens:all',
-  ['generate:tokens:components:imports'],
-  done => {
-    const convert = ({ name, transform }, done) =>
-      gulp
-        .src(path.resolve(paths.designTokens, '*.yml'))
-        .pipe(
-          theo.plugin({
-            transform: { type: transform },
-            format: { type: name }
-          })
-        )
-        .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
-        .on('finish', done);
-    async.each(formatTransforms, convert, done);
-  }
-);
+export const all = done => {
+  const convert = ({ name, transform }, done) =>
+    gulp
+      .src(path.resolve(paths.designTokens, '*.yml'))
+      .pipe(
+        gulpTheo.plugin({
+          transform: { type: transform },
+          format: { type: name }
+        })
+      )
+      .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
+      .on('finish', done);
+  async.each(formatTransforms, convert, done);
+};
 
-gulp.task('generate:tokens:sass:default', () =>
+export const sassDefault = () =>
   gulp
     .src(path.resolve(paths.designTokens, '*.yml'))
     .pipe(
-      theo.plugin({
+      gulpTheo.plugin({
         transform: { type: 'web' },
         format: { type: 'default.scss' }
       })
     )
-    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
-);
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')));
 
-gulp.task('generate:tokens:sass:map', () =>
+export const sassMap = () =>
   gulp
     .src(path.resolve(paths.designTokens, '*.yml'))
     .pipe(
-      theo.plugin({
+      gulpTheo.plugin({
         transform: { type: 'web' },
         format: { type: 'map.scss' }
       })
     )
-    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
-);
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')));
 
-gulp.task('generate:tokens:sass', [
-  'generate:tokens:sass:default',
-  'generate:tokens:sass:map'
-]);
-
-gulp.task('generate:tokens:components:imports', done =>
+export const componentsImports = () =>
   gulp
     .src(path.resolve(paths.ui, 'components/**/tokens/**/*.yml'))
-    .pipe(gutil.buffer())
+    .pipe(gulpUtil.buffer())
     .pipe(
       through.obj((files, enc, next) => {
         const filepaths = files.map(file => file.path).sort();
@@ -94,12 +84,11 @@ gulp.task('generate:tokens:components:imports', done =>
             `${prev}\n- ${path.relative(paths.designTokens, filepath)}`,
           '# File generated automatically, do not edit manually\nimports:'
         );
-        const file = new gutil.File({
+        const file = new Vinyl({
           path: 'components.yml',
           contents: Buffer.from(componentTokenImports)
         });
         next(null, file);
       })
     )
-    .pipe(gulp.dest(paths.designTokens))
-);
+    .pipe(gulp.dest(paths.designTokens));

@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import { Progress as BaseProgress, Step as BaseStep } from '../base/example';
 import {
   Progress as VerticalProgress,

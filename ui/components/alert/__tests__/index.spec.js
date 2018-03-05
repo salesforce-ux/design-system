@@ -2,7 +2,7 @@
 import React from 'react';
 import { Alert } from '../base/example';
 import { UtilityIcon } from '../../icons/base/example';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import { LightBadge, InverseBadge, Badge } from '../';
 import { UtilityIcon } from '../../icons/base/example';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 it('renders a default badge', () =>

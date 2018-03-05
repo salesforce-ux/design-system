@@ -7,7 +7,7 @@ before_install:
 install:
   - npm install
 script:
-  - npm run build-travis
+  - npm run gulp -- travis
 cache:
   directories:
     - node_modules

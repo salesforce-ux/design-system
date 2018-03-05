@@ -1,288 +1,290 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`doesn't change configs 1`] = `
-Array [
-  Object {
-    "entry": "./scripts/compile/entry.slds.js",
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+"[
+  {
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
         },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
             },
-            Object {
-              "loader": "raw-loader",
+            {
+              \\"loader\\": \\"raw-loader\\"
             },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
         },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
                 ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
             },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
-      ],
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
     },
-    "optimization": Object {},
-    "output": Object {
-      "filename": "__internal/slds.umd.js",
-      "globalObject": "this",
-      "library": "SLDS",
-      "libraryTarget": "umd",
-      "publicPath": "/assets/scripts/bundle/",
+    \\"optimization\\": {
     },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
+    \\"output\\": {
+      \\"filename\\": \\"__internal/slds.umd.js\\",
+      \\"globalObject\\": \\"this\\",
+      \\"library\\": \\"SLDS\\",
+      \\"libraryTarget\\": \\"umd\\",
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
+    },
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
   },
-  Object {
-    "entry": Object {
-      "__internal/chunked/showcase/ui/components/buttons/base/example.jsx.js": "./ui/components/buttons/base/example.jsx",
-      "__internal/chunked/showcase/ui/components/buttons/stateful/example.jsx.js": "./ui/components/buttons/stateful/example.jsx",
-      "__internal/chunked/showcase/ui/components/buttons/with-icon/example.jsx.js": "./ui/components/buttons/with-icon/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js": "./ui/components/data-tables/advanced/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js": "./ui/components/data-tables/base/example.jsx",
-      "__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js": "./ui/components/data-tables/inline-edit/example.jsx",
-      "__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js": "./ui/utilities/alignment/example.jsx",
-      "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js": "./ui/utilities/floats/example.jsx",
+  {
+    \\"externals\\": {
+      \\"js-beautify\\": \\"JSBeautify\\",
+      \\"react\\": \\"React\\",
+      \\"react-dom\\": \\"ReactDOM\\"
     },
-    "externals": Object {
-      "js-beautify": "JSBeautify",
-      "react": "React",
-      "react-dom": "ReactDOM",
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
+                ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
+            },
+            {
+              \\"loader\\": \\"raw-loader\\"
+            },
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
+        },
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
+                ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            },
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
     },
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
-                ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "raw-loader",
-            },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
-        },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
-                ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
+    \\"optimization\\": {
+      \\"splitChunks\\": {
+        \\"chunks\\": \\"all\\",
+        \\"minChunks\\": 2,
+        \\"name\\": \\"__internal/chunked/showcase/common.js\\"
+      }
+    },
+    \\"output\\": {
+      \\"filename\\": \\"[name]\\",
+      \\"globalObject\\": \\"this\\",
+      \\"jsonpFunction\\": \\"webpackJsonpSLDS___internal_chunked_showcase\\",
+      \\"library\\": [
+        \\"SLDS\\",
+        \\"[name]\\"
       ],
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
     },
-    "optimization": Object {
-      "splitChunks": Object {
-        "chunks": "all",
-        "minChunks": 2,
-        "name": "__internal/chunked/showcase/common.js",
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-    },
-    "output": Object {
-      "filename": "[name]",
-      "globalObject": "this",
-      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_showcase",
-      "library": Array [
-        "SLDS",
-        "[name]",
-      ],
-      "publicPath": "/assets/scripts/bundle/",
-    },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
-      },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
   },
-  Object {
-    "entry": Object {
-      "__internal/chunked/docs/ui/components/buttons/docs.mdx.js": "./ui/components/buttons/docs.mdx",
+  {
+    \\"externals\\": {
+      \\"js-beautify\\": \\"JSBeautify\\",
+      \\"react\\": \\"React\\",
+      \\"react-dom\\": \\"ReactDOM\\"
     },
-    "externals": Object {
-      "js-beautify": "JSBeautify",
-      "react": "React",
-      "react-dom": "ReactDOM",
+    \\"mode\\": \\"production\\",
+    \\"module\\": {
+      \\"rules\\": [
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
+                ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"style-loader\\"
+            },
+            {
+              \\"loader\\": \\"raw-loader\\"
+            },
+            {
+              \\"loader\\": \\"sass-loader\\"
+            }
+          ]
+        },
+        {
+          \\"exclude\\": {
+          },
+          \\"test\\": {
+          },
+          \\"use\\": [
+            {
+              \\"loader\\": \\"babel-loader\\",
+              \\"options\\": {
+                \\"babelrc\\": false,
+                \\"plugins\\": [
+                  \\"transform-object-rest-spread\\"
+                ],
+                \\"presets\\": [
+                  \\"es2015\\",
+                  \\"react\\"
+                ]
+              }
+            },
+            {
+              \\"loader\\": \\"/scripts/compile/mdx-loader.js\\"
+            }
+          ]
+        }
+      ]
     },
-    "mode": "production",
-    "module": Object {
-      "rules": Array [
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.jsx\\?\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
-                ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "test": /\\\\\\.scss\\$/,
-          "use": Array [
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "raw-loader",
-            },
-            Object {
-              "loader": "sass-loader",
-            },
-          ],
-        },
-        Object {
-          "exclude": /node_modules/,
-          "test": /\\\\\\.mdx\\$/,
-          "use": Array [
-            Object {
-              "loader": "babel-loader",
-              "options": Object {
-                "babelrc": false,
-                "plugins": Array [
-                  "transform-object-rest-spread",
-                ],
-                "presets": Array [
-                  "es2015",
-                  "react",
-                ],
-              },
-            },
-            Object {
-              "loader": "./scripts/compile/mdx-loader.js",
-            },
-          ],
-        },
+    \\"optimization\\": {
+      \\"splitChunks\\": {
+        \\"chunks\\": \\"all\\",
+        \\"minChunks\\": 2,
+        \\"name\\": \\"__internal/chunked/docs/common.js\\"
+      }
+    },
+    \\"output\\": {
+      \\"filename\\": \\"[name]\\",
+      \\"globalObject\\": \\"this\\",
+      \\"jsonpFunction\\": \\"webpackJsonpSLDS___internal_chunked_docs\\",
+      \\"library\\": [
+        \\"SLDS\\",
+        \\"[name]\\"
       ],
+      \\"path\\": \\"/.dist\\",
+      \\"publicPath\\": \\"/assets/scripts/bundle/\\"
     },
-    "optimization": Object {
-      "splitChunks": Object {
-        "chunks": "all",
-        "minChunks": 2,
-        "name": "__internal/chunked/docs/common.js",
+    \\"resolve\\": {
+      \\"alias\\": {
+        \\"lodash\\": \\"\\"
       },
-    },
-    "output": Object {
-      "filename": "[name]",
-      "globalObject": "this",
-      "jsonpFunction": "webpackJsonpSLDS___internal_chunked_docs",
-      "library": Array [
-        "SLDS",
-        "[name]",
-      ],
-      "publicPath": "/assets/scripts/bundle/",
-    },
-    "plugins": null,
-    "resolve": Object {
-      "alias": Object {
-        "lodash": "",
-      },
-      "extensions": Array [
-        ".js",
-        ".jsx",
-      ],
-    },
-  },
-]
+      \\"extensions\\": [
+        \\".js\\",
+        \\".jsx\\"
+      ]
+    }
+  }
+]"
 `;

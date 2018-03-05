@@ -3,7 +3,7 @@
 
 const Task = require('data.task');
 const gulp = require('gulp');
-const gulpfile = require('gulp-file');
+const gulpFile = require('gulp-file');
 const path = require('path');
 const paths = require('../helpers/paths');
 const fs = require('fs');
@@ -84,11 +84,11 @@ const writeToDist = () =>
     .map(x => JSON.stringify(x, null, 2))
     .chain(
       json =>
-        new Task((rej, res) =>
-          gulpfile('ui.json', json, { src: true })
+        new Task((reject, resolve) =>
+          gulpFile('ui.json', json, { src: true })
             .pipe(gulp.dest(paths.dist))
-            .on('finish', res)
-            .on('error', rej)
+            .on('finish', resolve)
+            .on('error', reject)
         )
     );
 

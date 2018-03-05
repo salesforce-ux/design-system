@@ -3,10 +3,10 @@
 /* eslint-env jest */
 
 import React from 'react';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 import WelcomeMat from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname, 8081);
+const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('Welcome Mat Snapshots', () => {
   it('renders a welcome mat', () => matchesMarkupAndStyle(<WelcomeMat />));

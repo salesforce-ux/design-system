@@ -12,7 +12,7 @@ import {
   PackageTwo,
   PackageThree
 } from '../non-coverable-content/example';
-import createHelpers from '../../../../jest.setup';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

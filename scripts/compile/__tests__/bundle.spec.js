@@ -3,21 +3,31 @@
 
 /* eslint-env jest */
 
-const Task = require('data.task');
-const Bundle = require('../bundle');
+import Task from 'data.task';
+import stringify from 'json-stable-stringify';
+import { escapeRegExp } from 'lodash';
+import path from 'path';
+
+import paths from '../../helpers/paths';
+import Bundle from '../bundle';
 
 it("doesn't change configs", () => {
   expect.assertions(1);
   Bundle.configs
-    .map(cfgs =>
-      cfgs.map(c => c.set('plugins', null).deleteIn(['output', 'path']))
+    .map(configs =>
+      configs.map(config => config.delete('entry').delete('plugins'))
     )
     .fork(
       e => {
         throw e;
       },
-      cfgs => {
-        expect(cfgs.toJS()).toMatchSnapshot();
+      configs => {
+        expect(
+          stringify(configs, { space: 2 }).replace(
+            new RegExp(escapeRegExp(paths.root), 'g'),
+            ''
+          )
+        ).toMatchSnapshot();
       }
     );
 });

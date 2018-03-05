@@ -391,3 +391,5 @@ props:
     value: '#EC94ED'
   LIVE_CHAT_VISITOR:
     value: '#F68960'
+  READ_RECEIPTS:
+    value: '#62B7ED'

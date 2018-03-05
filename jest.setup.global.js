@@ -11,6 +11,9 @@ import { argv } from 'yargs';
 
 import { watch } from './gulpfile';
 
+// Needed for Jest workers
+process.env.JEST_UPDATE_SNAPSHOTS = argv.u === true;
+
 const startServer = port =>
   new Promise((resolve, reject) => {
     const server = app

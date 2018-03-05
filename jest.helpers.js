@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom/server';
 import { beautify } from './shared/utils/beautify';
 import { renderWithBetterError } from './shared/utils/react';
 
-export default (dirname, port) => {
+export default (directory, port) => {
   let CURRENT_TEST_NAME;
 
   jasmine.getEnv().addReporter({
@@ -42,7 +42,13 @@ export default (dirname, port) => {
       )
         .then(res => res.json())
         .then(diff => ({ html: beautify(renderedMarkup), style: diff.style }));
-      assertMatchesDOM(dirname, CURRENT_TEST_NAME, markupAndStyle);
+      assertMatchesDOM({
+        directory,
+        dom: markupAndStyle,
+        name: CURRENT_TEST_NAME,
+        // Set in "jest.setup.global.js"
+        update: process.env.JEST_UPDATE_SNAPSHOTS === 'true'
+      });
     }
   };
 };

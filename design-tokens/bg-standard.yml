@@ -389,3 +389,5 @@ props:
     value: '#FF9A3C'
   KNOWLEDGE:
     value: '#EC94ED'
+  LIVE_CHAT_VISITOR:
+    value: '#F68960'

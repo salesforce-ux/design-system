@@ -89,7 +89,7 @@
  * @modifier
  */
 .slds-hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 /**
@@ -100,7 +100,7 @@
  * @modifier
  */
 .slds-visible {
-  visibility: visible; // @TODO - This may need !important;
+  visibility: visible !important;
 }
 
 /**
@@ -111,7 +111,7 @@
  * @modifier
  */
 .slds-hide {
-  display: none;
+  display: none !important;
 }
 
 /**
@@ -122,7 +122,7 @@
  * @modifier
  */
 .slds-show {
-  display: block;
+  display: block !important;
 }
 
 /**

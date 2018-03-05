@@ -178,7 +178,7 @@
     "previewer-dev": "SLDS_PREVIEWER=development babel-node scripts/previewer",
     "stats": "npm run gulp -- stylestats",
     "pretest": "npm run gulp -- build",
-    "test": "npm run jest",
+    "test": "node -r @std/esm ./node_modules/.bin/jest",
     "jest": "node -r @std/esm ./node_modules/.bin/jest",
     "precommit": "lint-staged"
   },

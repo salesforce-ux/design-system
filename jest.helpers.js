@@ -5,12 +5,8 @@
 /* eslint-env jest */
 
 import { assertMatchesDOM } from '@salesforce-ux/instant-vrt/matcher';
-import childProcess from 'child_process';
-import express from 'express';
 import fetch from 'isomorphic-fetch';
 import path from 'path';
-import puppeteer from 'puppeteer';
-import React from 'react';
 import ReactDOM from 'react-dom/server';
 
 import { beautify } from './shared/utils/beautify';

@@ -103,46 +103,37 @@ For more information see the [Full annotation docs](https://github.com/salesforc
 
 ## Tasks
 
-Install [gulp](http://gulpjs.com/) globally:
-
-```bash
-npm install --global gulp
-```
-
 ### `npm start`
 
 Start the Lightning Design System preview app.
 
-### `gulp lint`
+### `npm run gulp -- lint`
 
 Lint the code base for syntax and stylistic errors.
 
 ```bash
 # Lint indentation, Sass, JavaScript files
-gulp lint
+npm run gulp -- lint
 
-# Lint languages independently
-gulp lint:sass
-gulp lint:js
-gulp lint:js:test
-gulp lint:spaces
-gulp lint:html
+# Lint languagesindependently
+npm run gulp -- lint:sass
+npm run gulp -- lint:javascript
+npm run gulp -- lint:javascript:test
+npm run gulp -- lint:spaces
+npm run gulp -- lint:html
 
 # HTML5 validation
-gulp lint:vnu
+npm run gulp -- lint:vnu
 # HTML5 validation on comma separated component names
-gulp lint:vnu --components button, path, trees
-```
+npm run gulp -- lint:vnu --components button, path, trees
 
-### `gulp a11y`
+# a11y validation
+npm run gulp -- lint:a11y
+# a11y validation on comma separated component names
+npm run gulp -- lint:a11y --components button, path, trees
 
-Run aXe Core against the components for Accessibility issues
-
-```bash
-# All components
-gulp a11y
-# Comma separated list of components
-gulp a11y --components button, path, trees
+# Lint examples using vnu, aXe, slds validation, and HTML5 validation
+npm run gulp -- lint:examples
 ```
 
 ### Compilation
@@ -151,17 +142,17 @@ gulp a11y --components button, path, trees
 
 Generate the Lightning Design System into the `.dist` directory.
 
-### `gulp styles`
+### `npm run gulp -- styles`
 
 Compile Sass to CSS into `.assets/styles`.
 
-### `gulp clean`
+### `npm run gulp -- clean`
 
 Delete temporary build and local files.
 
 ### Stats
 
-`npm run stats`: Useful stats about the project's deliverables.
+`npm run gulp -- styles:stats`: Useful stats about the project's deliverables.
 
 ### Tests
 

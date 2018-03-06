@@ -16,6 +16,10 @@ module.exports = I.fromJS({
         exclude: /node_modules/,
         use: [
           {
+            loader: 'thread-loader',
+            options: {}
+          },
+          {
             loader: 'babel-loader',
             options: {
               babelrc: false,
@@ -39,6 +43,10 @@ module.exports = I.fromJS({
         test: /\.mdx$/,
         exclude: /node_modules/,
         use: [
+          {
+            loader: 'thread-loader',
+            options: {}
+          },
           {
             loader: 'babel-loader',
             options: {

@@ -13,6 +13,11 @@ exports[`doesn't change configs 1`] = `
           },
           \\"use\\": [
             {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
+            {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {
                 \\"babelrc\\": false,
@@ -48,6 +53,11 @@ exports[`doesn't change configs 1`] = `
           \\"test\\": {
           },
           \\"use\\": [
+            {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
             {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {
@@ -104,6 +114,11 @@ exports[`doesn't change configs 1`] = `
           },
           \\"use\\": [
             {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
+            {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {
                 \\"babelrc\\": false,
@@ -139,6 +154,11 @@ exports[`doesn't change configs 1`] = `
           \\"test\\": {
           },
           \\"use\\": [
+            {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
             {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {
@@ -203,6 +223,11 @@ exports[`doesn't change configs 1`] = `
           },
           \\"use\\": [
             {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
+            {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {
                 \\"babelrc\\": false,
@@ -238,6 +263,11 @@ exports[`doesn't change configs 1`] = `
           \\"test\\": {
           },
           \\"use\\": [
+            {
+              \\"loader\\": \\"thread-loader\\",
+              \\"options\\": {
+              }
+            },
             {
               \\"loader\\": \\"babel-loader\\",
               \\"options\\": {

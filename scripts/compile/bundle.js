@@ -109,12 +109,13 @@ const compile = configs =>
 
 const compileLibrary = () => configs.chain(compile);
 
-const writeManifest = () =>
+const writeManifest = stats =>
   manifest
     .map(m => JSON.stringify(m, null, 2))
     .chain(contents =>
       writeFile(path.join(paths.dist, 'manifest.json'), contents)
-    );
+    )
+    .map(() => stats);
 
 // createLibrary :: () -> Task Error (List Stats)
 const createLibrary = () => compileLibrary().chain(writeManifest);

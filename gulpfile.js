@@ -84,11 +84,11 @@ gulp.task(
 // Lint
 // /////////////////////////////////////////////////////////
 
-const a11y = done => {
+const a11y = withName('a11y')(done => {
   accessibility.axe(getComponents(), done);
-};
+});
 
-const vnu = () => accessibility.vnu(getComponents());
+const vnu = withName('vnu')(() => accessibility.vnu(getComponents()));
 
 // gulp lint:a11y
 // gulp lint:a11y --components path
@@ -129,12 +129,7 @@ gulp.task(
   'lint:examples',
   gulp.series(
     'generate:examples:wrapped',
-    gulp.parallel(
-      withName('vnu')(vnu),
-      withName('a11y')(a11y),
-      'lint:markup',
-      'lint:html'
-    )
+    gulp.parallel(vnu, a11y, 'lint:markup', 'lint:html')
   )
 );
 
@@ -213,10 +208,5 @@ gulp.task('travis', done => {
 
 gulp.task(
   'travis:lint:examples',
-  gulp.parallel(
-    withName('vnu')(vnu),
-    withName('a11y')(a11y),
-    'lint:markup',
-    'lint:html'
-  )
+  gulp.parallel(vnu, a11y, 'lint:markup', 'lint:html')
 );

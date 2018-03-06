@@ -146,6 +146,7 @@
     "stylestats": "7.0.1",
     "temp": "0.8.3",
     "theo": "6.0.0-beta.2",
+    "thread-loader": "1.1.5",
     "through2": "2.0.3",
     "tinycolor2": "1.4.1",
     "touch": "3.1.0",

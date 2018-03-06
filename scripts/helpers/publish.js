@@ -79,7 +79,6 @@ const prepare = done => {
       done =>
         async.series(
           [
-            async.apply(execute, 'npm run dist'),
             async.apply(execute, `cp -a ${paths.dist}/. ${paths.build}/dist`),
             async.apply(execute, `rm -rf ${paths.build}/dist/*.zip`)
           ],

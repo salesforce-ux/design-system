@@ -7,10 +7,10 @@ import glob from 'glob';
 import gulp from 'gulp';
 import path from 'path';
 import touch from 'touch';
-import webpack from 'webpack';
 import { argv } from 'yargs';
 
 import * as accessibility from './scripts/gulp/accessibility';
+import * as dist from './scripts/gulp/dist';
 import * as examples from './scripts/gulp/generate/examples';
 import * as tokens from './scripts/gulp/generate/tokens';
 import * as lint from './scripts/gulp/lint';
@@ -184,6 +184,42 @@ export const watch = () =>
   });
 
 // /////////////////////////////////////////////////////////
+// Dist
+// /////////////////////////////////////////////////////////
+
+gulp.task(
+  'dist',
+  gulp.series(
+    dist.cleanBefore,
+    gulp.parallel(
+      dist.copyRoot,
+      dist.copySass,
+      dist.copySassLicense,
+      dist.copyIcons,
+      dist.copyIconsMeta,
+      dist.copyFonts,
+      dist.copyFontsLicense,
+      dist.copyImages,
+      dist.copyImagesLicense,
+      dist.copySwatches,
+      dist.copyDesignTokens,
+      dist.copyComponentDesignTokens
+    ),
+    dist.sass,
+    dist.minifyCss,
+    gulp.parallel(
+      dist.versionBlock,
+      dist.versionInline,
+      dist.buildInfo,
+      dist.writeUI,
+      dist.writeLibrary,
+      dist.packageJson
+    ),
+    dist.cleanAfter
+  )
+);
+
+// /////////////////////////////////////////////////////////
 // Travis
 // /////////////////////////////////////////////////////////
 
@@ -196,6 +232,7 @@ gulp.task('travis', done => {
     'generate:examples:wrapped',
     withName('travis:snapshots')(travis.createSnapshots),
     withName('travis:lint:examples')(travis.lintExamples),
+    'dist',
     withName('travis:publish')(travis.publishBuild)
   )(done);
 });

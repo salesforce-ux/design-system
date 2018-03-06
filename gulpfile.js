@@ -190,32 +190,32 @@ export const watch = () =>
 gulp.task(
   'dist',
   gulp.series(
-    dist.cleanBefore,
+    withName('dist:clean:before')(dist.cleanBefore),
     gulp.parallel(
-      dist.copyRoot,
-      dist.copySass,
-      dist.copySassLicense,
-      dist.copyIcons,
-      dist.copyIconsMeta,
-      dist.copyFonts,
-      dist.copyFontsLicense,
-      dist.copyImages,
-      dist.copyImagesLicense,
-      dist.copySwatches,
-      dist.copyDesignTokens,
-      dist.copyComponentDesignTokens
+      withName('dist:copyRoot')(dist.copyRoot),
+      withName('dist:copySass')(dist.copySass),
+      withName('dist:copySassLicense')(dist.copySassLicense),
+      withName('dist:copyIcons')(dist.copyIcons),
+      withName('dist:copyIconsMeta')(dist.copyIconsMeta),
+      withName('dist:copyFonts')(dist.copyFonts),
+      withName('dist:copyFontsLicense')(dist.copyFontsLicense),
+      withName('dist:copyImages')(dist.copyImages),
+      withName('dist:copyImagesLicense')(dist.copyImagesLicense),
+      withName('dist:copySwatches')(dist.copySwatches),
+      withName('dist:copyDesignTokens')(dist.copyDesignTokens),
+      withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
     ),
-    dist.sass,
-    dist.minifyCss,
+    withName('dist:sass')(dist.sass),
+    withName('dist:minifyCss')(dist.minifyCss),
     gulp.parallel(
-      dist.versionBlock,
-      dist.versionInline,
-      dist.buildInfo,
-      dist.writeUI,
-      dist.writeLibrary,
-      dist.packageJson
+      withName('dist:versionBlock')(dist.versionBlock),
+      withName('dist:versionInline')(dist.versionInline),
+      withName('dist:buildInfo')(dist.buildInfo),
+      withName('dist:writeUI')(dist.writeUI),
+      withName('dist:writeLibrary')(dist.writeLibrary),
+      withName('dist:packageJson')(dist.packageJson)
     ),
-    dist.cleanAfter
+    withName('dist:clean:after')(dist.cleanAfter)
   )
 );
 

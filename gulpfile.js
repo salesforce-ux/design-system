@@ -30,9 +30,11 @@ const getComponents = key => {
 // Gulp
 // /////////////////////////////////////////////////////////
 
-Object.keys(travis).forEach(key => {
-  travis[key].displayName = `travis:${key}`;
-});
+const withName = name => fn => {
+  const f = (...args) => fn(...args);
+  f.displayName = name;
+  return f;
+};
 
 // /////////////////////////////////////////////////////////
 // Clean
@@ -55,7 +57,11 @@ gulp.task('clean', () =>
 
 gulp.task(
   'generate:examples:wrapped',
-  gulp.series(examples.unwrapped, examples.unwrappedDocs, examples.wrapped)
+  gulp.series(
+    withName('examples:unwrapped')(examples.unwrapped),
+    withName('examples:unwrapped:docs')(examples.unwrappedDocs),
+    withName('examples:wrapped')(examples.wrapped)
+  )
 );
 
 // /////////////////////////////////////////////////////////
@@ -87,12 +93,18 @@ const vnu = () => accessibility.vnu(getComponents());
 // gulp lint:a11y
 // gulp lint:a11y --components path
 // gulp lint:a11y --components path,tabs,data-tables
-gulp.task('a11y', gulp.series('generate:examples:wrapped', a11y));
+gulp.task(
+  'lint:a11y',
+  gulp.series('generate:examples:wrapped', withName('a11y')(a11y))
+);
 
 // gulp lint:vnu
 // gulp lint:vnu --components path
 // gulp lint:vnu --components path,tabs,data-tables
-gulp.task('lint:vnu', gulp.series('generate:examples:wrapped', vnu));
+gulp.task(
+  'lint:vnu',
+  gulp.series('generate:examples:wrapped', withName('vnu')(vnu))
+);
 
 gulp.task('lint:sass', lint.sass);
 gulp.task('lint:spaces', lint.spaces);
@@ -117,7 +129,12 @@ gulp.task(
   'lint:examples',
   gulp.series(
     'generate:examples:wrapped',
-    gulp.parallel(vnu, a11y, lint.markup, lint.html)
+    gulp.parallel(
+      withName('vnu')(vnu),
+      withName('a11y')(a11y),
+      'lint:markup',
+      'lint:html'
+    )
   )
 );
 
@@ -145,7 +162,10 @@ gulp.task(
     gulp.parallel('styles:sass', 'styles:test')
   )
 );
-gulp.task('styles:stats', gulp.series('styles', styles.stylestats));
+gulp.task(
+  'styles:stats',
+  gulp.series('styles', withName('stylestats')(styles.stylestats))
+);
 
 // /////////////////////////////////////////////////////////
 // Build
@@ -183,12 +203,20 @@ gulp.task('travis', done => {
   return gulp.series(
     'build',
     'lint',
-    travis.jest,
+    withName('travis:jest')(travis.jest),
     'generate:examples:wrapped',
-    travis.createSnapshots,
-    travis.lintExamples,
-    travis.publishBuild
+    withName('travis:snapshots')(travis.createSnapshots),
+    withName('travis:lint:examples')(travis.lintExamples),
+    withName('travis:publish')(travis.publishBuild)
   )(done);
 });
 
-gulp.task('travis:lint:examples', gulp.parallel(vnu, lint.markup, a11y));
+gulp.task(
+  'travis:lint:examples',
+  gulp.parallel(
+    withName('vnu')(vnu),
+    withName('a11y')(a11y),
+    'lint:markup',
+    'lint:html'
+  )
+);

@@ -428,5 +428,26 @@ export let states = [
         />
       </FormElement>
     )
+  },
+  {
+    id: 'datepicker-with-error',
+    label: 'Date Picker has Error',
+    element: (
+      <FormElement
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-error"
+        label="Date"
+        inputId={dateInputId}
+        inputIcon="right"
+        dropdown={<DatePicker todayActive />}
+      >
+        <Input id={dateInputId} placeholder=" " />
+        <ButtonIcon
+          className="slds-input__icon slds-input__icon_right"
+          symbol="event"
+          assistiveText="Select a date"
+          title="Select a date"
+        />
+      </FormElement>
+    )
   }
 ];

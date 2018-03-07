@@ -119,6 +119,11 @@
   }
 }
 
+.slds-has-error .slds-datepicker__filter .slds-select {
+  border: $border-width-thin solid $color-border-input;
+  box-shadow: none;
+}
+
 /**
  * @summary Indicates days that are in previous/next months
  *

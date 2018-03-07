@@ -89,6 +89,15 @@
 }
 
 /**
+* @summary Actionable element within card footer
+* @selector .slds-card__footer-action
+* @restrict .slds-card__footer a
+*/
+.slds-card__footer-action {
+  display: block;
+}
+
+/**
  * Use class if card consumes any form of a tile
  *
  * @selector .slds-card__tile

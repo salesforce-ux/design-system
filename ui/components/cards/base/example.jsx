@@ -214,7 +214,7 @@ export let examples = [
           </table>
         </CardBody>
         <CardFooter>
-          <a href="javascript:void(0);">
+          <a className="slds-card__footer-action" href="javascript:void(0);">
             View All <span className="slds-assistive-text">entity type</span>
           </a>
         </CardFooter>
@@ -276,7 +276,7 @@ export let examples = [
           </ul>
         </CardBody>
         <CardFooter>
-          <a href="javascript:void(0);">
+          <a className="slds-card__footer-action" href="javascript:void(0);">
             View All <span className="slds-assistive-text">entity type</span>
           </a>
         </CardFooter>
@@ -303,7 +303,10 @@ export let examples = [
               </p>
             </CardBody>
             <CardFooter>
-              <a href="javascript:void(0);">
+              <a
+                className="slds-card__footer-action"
+                href="javascript:void(0);"
+              >
                 View All{' '}
                 <span className="slds-assistive-text">entity type</span>
               </a>
@@ -320,7 +323,10 @@ export let examples = [
               </p>
             </CardBody>
             <CardFooter>
-              <a href="javascript:void(0);">
+              <a
+                className="slds-card__footer-action"
+                href="javascript:void(0);"
+              >
                 View All{' '}
                 <span className="slds-assistive-text">entity type</span>
               </a>
@@ -337,7 +343,10 @@ export let examples = [
               </p>
             </CardBody>
             <CardFooter>
-              <a href="javascript:void(0);">
+              <a
+                className="slds-card__footer-action"
+                href="javascript:void(0);"
+              >
                 View All{' '}
                 <span className="slds-assistive-text">entity type</span>
               </a>
@@ -354,7 +363,10 @@ export let examples = [
               </p>
             </CardBody>
             <CardFooter>
-              <a href="javascript:void(0);">
+              <a
+                className="slds-card__footer-action"
+                href="javascript:void(0);"
+              >
                 View All{' '}
                 <span className="slds-assistive-text">entity type</span>
               </a>
@@ -362,7 +374,7 @@ export let examples = [
           </Card>
         </CardBody>
         <CardFooter>
-          <a href="javascript:void(0);">
+          <a className="slds-card__footer-action" href="javascript:void(0);">
             View All <span className="slds-assistive-text">entity type</span>
           </a>
         </CardFooter>
@@ -390,7 +402,7 @@ export let examples = [
             </p>
           </CardBody>
           <CardFooter>
-            <a href="javascript:void(0);">
+            <a className="slds-card__footer-action" href="javascript:void(0);">
               View All <span className="slds-assistive-text">entity type</span>
             </a>
           </CardFooter>
@@ -406,7 +418,7 @@ export let examples = [
             </p>
           </CardBody>
           <CardFooter>
-            <a href="javascript:void(0);">
+            <a className="slds-card__footer-action" href="javascript:void(0);">
               View All <span className="slds-assistive-text">entity type</span>
             </a>
           </CardFooter>
@@ -422,7 +434,7 @@ export let examples = [
             </p>
           </CardBody>
           <CardFooter>
-            <a href="javascript:void(0);">
+            <a className="slds-card__footer-action" href="javascript:void(0);">
               View All <span className="slds-assistive-text">entity type</span>
             </a>
           </CardFooter>
@@ -438,7 +450,7 @@ export let examples = [
             </p>
           </CardBody>
           <CardFooter>
-            <a href="javascript:void(0);">
+            <a className="slds-card__footer-action" href="javascript:void(0);">
               View All <span className="slds-assistive-text">entity type</span>
             </a>
           </CardFooter>

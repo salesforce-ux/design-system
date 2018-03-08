@@ -17,7 +17,9 @@ module.exports = I.fromJS({
         use: [
           {
             loader: 'thread-loader',
-            options: {}
+            options: {
+              workerNodeArgs: ['--max-old-space-size=1024']
+            }
           },
           {
             loader: 'babel-loader',
@@ -45,7 +47,9 @@ module.exports = I.fromJS({
         use: [
           {
             loader: 'thread-loader',
-            options: {}
+            options: {
+              workerNodeArgs: ['--max-old-space-size=1024']
+            }
           },
           {
             loader: 'babel-loader',

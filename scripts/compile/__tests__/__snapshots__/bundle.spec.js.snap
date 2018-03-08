@@ -15,6 +15,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {
@@ -56,6 +59,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {
@@ -116,6 +122,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {
@@ -157,6 +166,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {
@@ -225,6 +237,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {
@@ -266,6 +281,9 @@ exports[`doesn't change configs 1`] = `
             {
               \\"loader\\": \\"thread-loader\\",
               \\"options\\": {
+                \\"workerNodeArgs\\": [
+                  \\"--max-old-space-size=1024\\"
+                ]
               }
             },
             {

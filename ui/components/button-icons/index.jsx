@@ -40,8 +40,9 @@ class ButtonIcon extends Component {
     } else if (theme === 'inverse') {
       variant = 'slds-button_icon-inverse';
 
-      if (size) {
+      if (size === 'medium') {
         variant = 'slds-button_icon-border-inverse';
+        size = null;
       }
       /**
      * Brand

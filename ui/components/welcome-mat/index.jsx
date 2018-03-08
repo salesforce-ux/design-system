@@ -11,6 +11,37 @@ import { Modal, ModalHeader, ModalContent } from '../modals/base/example';
 import WelcomeMatTile from './WelcomeMatTile';
 import WelcomeMatContent from './WelcomeMatContent';
 
+export const sampleTiles = () => [
+  {
+    symbol: 'animal_and_nature',
+    title: 'Welcome to Salesforce!',
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+  },
+  {
+    symbol: 'call',
+    title: 'Learn About OpenCTI',
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+  },
+  {
+    symbol: 'upload',
+    title: 'Power Up the Utility Bar',
+    description:
+      'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
+  },
+  {
+    symbol: 'magicwand',
+    title: 'Customize your view',
+    description:
+      "Tailor your cases to your team's workflow with custom list views."
+  },
+  {
+    symbol: 'knowledge_base',
+    title: 'Share the Knowledge',
+    description:
+      "Harness your team's collective know-how with our powerful knowledge base."
+  }
+];
+
 class WelcomeMat extends Component {
   renderTiles(isCompleted) {
     const { tiles } = this.props;
@@ -78,36 +109,7 @@ WelcomeMat.propTypes = {
 };
 
 WelcomeMat.defaultProps = {
-  tiles: [
-    {
-      symbol: 'animal_and_nature',
-      title: 'Welcome to Salesforce!',
-      description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
-    },
-    {
-      symbol: 'call',
-      title: 'Learn About OpenCTI',
-      description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
-    },
-    {
-      symbol: 'upload',
-      title: 'Power Up the Utility Bar',
-      description:
-        'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
-    },
-    {
-      symbol: 'magicwand',
-      title: 'Customize your view',
-      description:
-        "Tailor your cases to your team's workflow with custom list views."
-    },
-    {
-      symbol: 'knowledge_base',
-      title: 'Share the Knowledge',
-      description:
-        "Harness your team's collective know-how with our powerful knowledge base."
-    }
-  ],
+  tiles: sampleTiles(),
   content: ({ complete, total, labelId }) => (
     <WelcomeMatContent complete={complete} total={total} labelId={labelId} />
   )

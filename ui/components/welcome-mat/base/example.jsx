@@ -2,18 +2,18 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import WelcomeMat from '../';
+import WelcomeMat, { sampleTiles } from '../';
 import WelcomeMatContent from '../WelcomeMatContent';
 
-const sampleTiles = WelcomeMat.defaultProps.tiles;
+const tiles = sampleTiles();
 
 let completedTiles = [
-  Object.assign({}, sampleTiles[0], { completed: true }),
-  Object.assign({}, sampleTiles[1], { completed: true }),
-  ...sampleTiles.slice(2)
+  Object.assign({}, tiles[0], { completed: true }),
+  Object.assign({}, tiles[1], { completed: true }),
+  ...tiles.slice(2)
 ];
 
-const doubleTiles = [...completedTiles].concat(sampleTiles.slice(2));
+const doubleTiles = [...completedTiles].concat(tiles.slice(2));
 
 export const Context = props => (
   <div className="demo-only" style={{ height: '800px' }}>

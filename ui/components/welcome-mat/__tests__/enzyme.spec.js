@@ -6,23 +6,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, render } from 'enzyme';
 
-import WelcomeMat from '../';
+import WelcomeMat, { sampleTiles } from '../';
 import WelcomeMatTile from '../WelcomeMatTile';
 import WelcomeMatContent from '../WelcomeMatContent';
 import WelcomeMatContentTrailhead from '../WelcomeMatContentTrailhead';
+
+const tiles = sampleTiles();
+const twoTilesCompleted = [
+  Object.assign({}, tiles[0], { completed: true }),
+  Object.assign({}, tiles[1], { completed: true }),
+  ...tiles.slice(2)
+];
 
 describe('Welcome Mat', () => {
   it('renders without crashing', () => {
     ReactDOM.render(<WelcomeMat />, document.createElement('div'));
   });
 
-  it('correctly renders the desired amount of completed steps', () => {
-    const completeCount = 3;
-    const rendered = render(<WelcomeMat complete={completeCount} />);
-
-    expect(rendered.find('.slds-welcome-mat__tile_complete')).toHaveLength(
-      completeCount
-    );
+  it('correctly renders with completed steps', () => {
+    const rendered = render(<WelcomeMat tiles={twoTilesCompleted} />);
+    expect(rendered.find('.slds-welcome-mat__tile_complete')).toHaveLength(2);
   });
 });
 
@@ -45,7 +48,7 @@ describe('Welcome Mat Tile', () => {
   });
 
   it('correctly applies completed prop', () => {
-    const rendered = shallow(<WelcomeMatTile completed />);
+    const rendered = shallow(<WelcomeMatTile tile={twoTilesCompleted[0]} />);
     expect(rendered.find('.slds-welcome-mat__tile_complete').exists()).toBe(
       true
     );

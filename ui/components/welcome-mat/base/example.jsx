@@ -6,13 +6,11 @@ import WelcomeMat, { sampleTiles } from '../';
 import WelcomeMatContent from '../WelcomeMatContent';
 
 const tiles = sampleTiles();
-
-let completedTiles = [
+const completedTiles = [
   Object.assign({}, tiles[0], { completed: true }),
   Object.assign({}, tiles[1], { completed: true }),
   ...tiles.slice(2)
 ];
-
 const doubleTiles = [...completedTiles].concat(tiles.slice(2));
 
 export const Context = props => (
@@ -46,7 +44,7 @@ export let examples = [
             total={total}
             labelId={labelId}
             description={
-              <div>
+              <React.Fragment>
                 <p>
                   Integer nibh libero, pulvinar sed libero et, rhoncus convallis
                   purus. Sed faucibus nibh vel arcu vestibulum, nec commodo
@@ -64,7 +62,7 @@ export let examples = [
                   hendrerit vulputate, sem elit luctus metus, sit amet vehicula
                   justo ex at sem.
                 </p>
-              </div>
+              </React.Fragment>
             }
           />
         )}

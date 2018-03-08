@@ -11,7 +11,7 @@ class WelcomeMatContent extends React.Component {
     const completePercent = complete / total * 100;
 
     return (
-      <div>
+      <React.Fragment>
         <h2 id={labelId} className="slds-welcome-mat__info-title">
           Empower Your Agents with Service Cloud
         </h2>
@@ -28,7 +28,7 @@ class WelcomeMatContent extends React.Component {
           value={completePercent}
           className="slds-progress-bar_circular"
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

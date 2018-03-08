@@ -24,7 +24,7 @@ class WelcomeMatContentTrailhead extends React.Component {
     );
 
     return (
-      <div>
+      <React.Fragment>
         <h2 id={labelId} className="slds-welcome-mat__info-title">
           Hey there, Trailblazer!
         </h2>
@@ -70,7 +70,7 @@ class WelcomeMatContentTrailhead extends React.Component {
             className="slds-progress-bar_circular"
           />
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }

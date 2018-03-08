@@ -13,7 +13,7 @@ props:
   WELCOME_MAT_WIDTH:
     value: '52.0625rem'
     comment: Welcome Mat Width
-  
+
   WELCOME_MAT_MIN_HEIGHT:
     value: '25rem'
     comment: Min height for Overlay

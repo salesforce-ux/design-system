@@ -211,10 +211,10 @@ gulp.task(
       withName('dist:versionBlock')(dist.versionBlock),
       withName('dist:versionInline')(dist.versionInline),
       withName('dist:buildInfo')(dist.buildInfo),
-      withName('dist:writeUI')(dist.writeUI),
-      withName('dist:writeLibrary')(dist.writeLibrary),
       withName('dist:packageJson')(dist.packageJson)
     ),
+    withName('dist:writeUI')(dist.writeUI),
+    withName('dist:writeLibrary')(dist.writeLibrary),
     withName('dist:clean:after')(dist.cleanAfter)
   )
 );

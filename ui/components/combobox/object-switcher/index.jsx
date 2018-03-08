@@ -99,15 +99,15 @@ export class IconObjectSwitcher extends Component {
           leftInputIcon={
             <UtilityIcon
               symbol={filteredSymbol}
-              className="slds-icon slds-icon-text-default"
-              containerClassName="slds-input__icon slds-input__icon_medium slds-input__icon_left"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_left"
             />
           }
           rightInputIcon={
             <UtilityIcon
               symbol="down"
-              className="slds-icon slds-icon-text-default"
-              containerClassName="slds-input__icon slds-input__icon_x-small slds-input__icon_right"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_right"
             />
           }
           listbox={

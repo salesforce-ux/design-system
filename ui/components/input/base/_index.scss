@@ -135,41 +135,6 @@
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
       fill: $color-text-input-icon;
     }
-
-    .slds-icon {
-      width: inherit;
-      height: inherit;
-    }
-  }
-
-  /**
-   * @summary Medium size modifier for input icon
-   *
-   * @selector .slds-input__icon_medium
-   * @restrict .slds-input__icon
-   */
-  .slds-input__icon_medium {
-    @include square($square-icon-medium-content);
-  }
-
-  /**
-   * @summary Small size modifier for input icon
-   *
-   * @selector .slds-input__icon_small
-   * @restrict .slds-input__icon
-   */
-  .slds-input__icon_small {
-    @include square($square-icon-small-content);
-  }
-
-  /**
-   * @summary X-small size modifier for input icon
-   *
-   * @selector .slds-input__icon_x-small
-   * @restrict .slds-input__icon
-   */
-  .slds-input__icon_x-small {
-    @include square($square-icon-x-small-content);
   }
 
   /**

@@ -575,12 +575,11 @@ To remove the selected option, simply clear the text `input`.
     autocomplete
     inputIconPosition="right"
     rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
+      <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="clear"
+      title="Clear the text input"
+      assistiveText="Clear the text input"
       />
     }
     listbox={<Listbox id="listbox-unique-id-03" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}

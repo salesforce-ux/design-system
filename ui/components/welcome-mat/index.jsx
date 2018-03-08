@@ -46,11 +46,13 @@ class WelcomeMat extends Component {
           aria-describedby={welcomeMatDescipId}
         >
           <div className="slds-welcome-mat__info slds-size_1-of-2">
-            {content({
-              complete: this.completeTileCount(),
-              count: this.totalTileCount(),
-              labelId: welcomeMatLabelId
-            })}
+            <div className="slds-welcome-mat__info-content">
+              {content({
+                complete: this.completeTileCount(),
+                total: this.totalTileCount(),
+                labelId: welcomeMatLabelId
+              })}
+            </div>
           </div>
 
           <div className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
@@ -72,7 +74,7 @@ WelcomeMat.propTypes = {
       completed: PropTypes.bool
     })
   ).isRequired,
-  content: PropTypes.element.isRequired
+  content: PropTypes.func.isRequired
 };
 
 WelcomeMat.defaultProps = {
@@ -106,8 +108,8 @@ WelcomeMat.defaultProps = {
         "Harness your team's collective know-how with our powerful knowledge base."
     }
   ],
-  content: ({ complete, count, labelId }) => (
-    <WelcomeMatContent complete={complete} count={count} labelId={labelId} />
+  content: ({ complete, total, labelId }) => (
+    <WelcomeMatContent complete={complete} total={total} labelId={labelId} />
   )
 };
 

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import WelcomeMat from '../';
+import WelcomeMatContent from '../WelcomeMatContent';
 
 const sampleTiles = WelcomeMat.defaultProps.tiles;
 
@@ -14,14 +15,14 @@ let completedTiles = [
 
 const doubleTiles = [...completedTiles].concat(sampleTiles.slice(2));
 
-export default <WelcomeMat />;
-
 export const Context = props => (
   <div className="demo-only" style={{ height: '800px' }}>
     {props.children}
     <div className="slds-backdrop slds-backdrop_open" />
   </div>
 );
+
+export default <WelcomeMat />;
 
 export let examples = [
   {
@@ -33,5 +34,41 @@ export let examples = [
     id: 'with-overflowing-tiles',
     label: 'With Overflowing Tiles',
     element: <WelcomeMat tiles={doubleTiles} />
+  },
+  {
+    id: 'with-overflowing-description',
+    label: 'With Overflowing Description',
+    element: (
+      <WelcomeMat
+        content={({ complete, total, labelId }) => (
+          <WelcomeMatContent
+            complete={complete}
+            total={total}
+            labelId={labelId}
+            description={
+              <div>
+                <p>
+                  Integer nibh libero, pulvinar sed libero et, rhoncus convallis
+                  purus. Sed faucibus nibh vel arcu vestibulum, nec commodo
+                  sapien tincidunt. In dignissim faucibus ipsum, nec placerat
+                  dui pulvinar a mi nec lectus feugiat vel arcu rhoncus
+                  convallis, nibh libero.
+                </p>
+                <p>
+                  Sed vestibulum dui ac diam suscipit vehicula. Nam vestibulum
+                  mi nec lectus feugiat euismod. Phasellus in suscipit est.
+                </p>
+                <p>
+                  Morbi facilisis aliquet dapibus. Morbi ac leo viverra, cursus
+                  nibh eget, ultrices mauris. Integer pharetra, lorem ac
+                  hendrerit vulputate, sem elit luctus metus, sit amet vehicula
+                  justo ex at sem.
+                </p>
+              </div>
+            }
+          />
+        )}
+      />
+    )
   }
 ];

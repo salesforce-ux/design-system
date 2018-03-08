@@ -42,10 +42,21 @@
 }
 
 /**
+ * @summary Content container for the whole Welcome Mat
+ *
+ * @selector .slds-welcome-mat__content
+ * @restrict .slds-welcome-mat .slds-modal__content
+ */
+.slds-welcome-mat__content {
+  min-height: 600px;
+  max-height: 90%;
+}
+
+/**
  * @summary Container element for the informational side of the Welcome Mat
  *
  * @selector .slds-welcome-mat__info
- * @restrict .slds-welcome-mat div
+ * @restrict .slds-welcome-mat__content div
  */
 .slds-welcome-mat__info {
   display: flex;
@@ -98,10 +109,11 @@
  * @summary Container element for the Actions side of the Welcome Mat.
  *
  * @selector .slds-welcome-mat__tiles
- * @restrict .slds-welcome-mat div
+ * @restrict .slds-welcome-mat__content div
  */
 .slds-welcome-mat__tiles {
   background: $color-background;
+  overflow: auto;
 }
 
 /**

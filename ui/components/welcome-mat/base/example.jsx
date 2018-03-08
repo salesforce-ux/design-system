@@ -4,12 +4,34 @@
 import React from 'react';
 import WelcomeMat from '../';
 
+const sampleTiles = WelcomeMat.defaultProps.tiles;
+
+let completedTiles = [
+  Object.assign({}, sampleTiles[0], { completed: true }),
+  Object.assign({}, sampleTiles[1], { completed: true }),
+  ...sampleTiles.slice(2)
+];
+
+const doubleTiles = [...completedTiles].concat(sampleTiles.slice(2));
+
 export default <WelcomeMat />;
 
-export let states = [
+export const Context = props => (
+  <div className="demo-only" style={{ height: '800px' }}>
+    {props.children}
+    <div className="slds-backdrop slds-backdrop_open" />
+  </div>
+);
+
+export let examples = [
   {
     id: 'with-completed-tiles',
     label: 'With Completed Tiles',
-    element: <WelcomeMat complete={3} />
+    element: <WelcomeMat tiles={completedTiles} />
+  },
+  {
+    id: 'with-overflowing-tiles',
+    label: 'With Overflowing Tiles',
+    element: <WelcomeMat tiles={doubleTiles} />
   }
 ];

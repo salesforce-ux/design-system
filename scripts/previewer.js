@@ -5,6 +5,7 @@ import { exec } from 'child_process';
 import Task from 'data.task';
 import I from 'immutable';
 import _ from 'lodash';
+import ms from 'ms';
 import gulp from 'gulp';
 import path from 'path';
 
@@ -64,6 +65,11 @@ const listen = () =>
         throw e;
       },
       stats => {
+        console.log(
+          `[previewer]: recompiled bundle in ${ms(
+            stats.endTime - stats.startTime
+          )}`
+        );
         emit('bundle');
         emitReady();
       }

@@ -17,7 +17,7 @@ import packageJSON from '../../package.json';
 
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
-import releaseNotes from '../npm/release-notes';
+import releaseNotes from './release-notes';
 import ui from '../ui';
 
 const distPath = path.resolve.bind(path, paths.dist);

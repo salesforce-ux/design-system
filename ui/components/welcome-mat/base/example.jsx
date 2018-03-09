@@ -34,10 +34,11 @@ export let examples = [
     element: <WelcomeMat tiles={doubleTiles} />
   },
   {
-    id: 'with-overflowing-description',
-    label: 'With Overflowing Description',
+    id: 'with-overflowing-tiles-and-long-description',
+    label: 'With Overflowing Tiles and Long Description',
     element: (
       <WelcomeMat
+        tiles={doubleTiles}
         content={({ complete, total, labelId }) => (
           <WelcomeMatContent
             complete={complete}

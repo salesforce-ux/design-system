@@ -7,6 +7,9 @@ const webpack = require('webpack');
 
 const paths = require('../helpers/paths');
 
+const disableThreadLoaderOnTravis = use =>
+  process.env.TRAVIS ? use.loader !== 'thread-loader' : true;
+
 module.exports = I.fromJS({
   mode: 'production',
   module: {
@@ -29,7 +32,7 @@ module.exports = I.fromJS({
               plugins: ['transform-object-rest-spread']
             }
           }
-        ]
+        ].filter(disableThreadLoaderOnTravis)
       },
       {
         test: /\.scss$/,
@@ -62,7 +65,7 @@ module.exports = I.fromJS({
           {
             loader: path.resolve(paths.root, 'scripts/compile/mdx-loader.js')
           }
-        ]
+        ].filter(disableThreadLoaderOnTravis)
       }
     ]
   },

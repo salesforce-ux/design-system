@@ -375,7 +375,14 @@ export let RteClearFormatting = props => (
 );
 
 export let RteTextarea = props => (
-  <div className="slds-rich-text-editor__textarea slds-grid">
+  <div
+    className={classNames(
+      props.text
+        ? 'slds-rich-text-editor__output'
+        : 'slds-rich-text-editor__textarea',
+      'slds-grid'
+    )}
+  >
     {props.text ? (
       <div
         aria-describedby={props['aria-describedby']}
@@ -420,8 +427,32 @@ let TextInputExample = props => (
       labore et dolore magna aliqua.
     </p>
     <ul>
-      <li>Unordered list item</li>
-      <li>Unordered list item</li>
+      <li>
+        Unordered list item
+        <ul>
+          <li>
+            Nested Unordered list item
+            <ol>
+              <li>Nested Ordered list item</li>
+              <li>Nested Ordered list item</li>
+            </ol>
+          </li>
+          <li>
+            Nested Unordered list item
+            <ul>
+              <li>Nested Unordered list item</li>
+              <li>Nested Unordered list item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Unordered list item
+        <ol>
+          <li>Nested Ordered list item</li>
+          <li>Nested Ordered list item</li>
+        </ol>
+      </li>
       <li>Unordered list item</li>
     </ul>
     <h3>Heading - h3</h3>
@@ -430,9 +461,61 @@ let TextInputExample = props => (
       tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <ol>
+      <li>
+        Ordered list item
+        <ul>
+          <li>
+            Nested Unordered list item
+            <ol>
+              <li>Nested Ordered list item</li>
+              <li>Nested Ordered list item</li>
+            </ol>
+          </li>
+          <li>
+            Nested Unordered list item
+            <ul>
+              <li>Nested Unordered list item</li>
+              <li>Nested Unordered list item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Ordered list item
+        <ol>
+          <li>
+            Nested Ordered list item
+            <ol>
+              <li>
+                Nested Ordered list item
+                <ol>
+                  <li>Nested Ordered list item</li>
+                  <li>Nested Ordered list item</li>
+                </ol>
+              </li>
+              <li>Nested Ordered list item</li>
+            </ol>
+          </li>
+          <li>Nested Ordered list item</li>
+        </ol>
+      </li>
       <li>Ordered list item</li>
-      <li>Ordered list item</li>
-      <li>Ordered list item</li>
+    </ol>
+    <ul>
+      <li>
+        <div>List Item with div</div>
+      </li>
+      <li>
+        <div>List Item with div</div>
+      </li>
+    </ul>
+    <ol>
+      <li>
+        <div>List Item with div</div>
+      </li>
+      <li>
+        <div>List Item with div</div>
+      </li>
     </ol>
     <h4>Heading - h4</h4>
     <p>

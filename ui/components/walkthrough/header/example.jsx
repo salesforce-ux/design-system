@@ -33,7 +33,11 @@ let Header = props => (
         </button>
         <Menu className="slds-dropdown_inverse slds-dropdown_left">
           <MenuList>
-            <MenuItem tabIndex="0" className="slds-is-selected">
+            <MenuItem
+              tabIndex="0"
+              className="slds-is-selected"
+              title="Completed: Conquer Your Cases"
+            >
               <SvgIcon
                 className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
                 sprite="utility"
@@ -42,7 +46,7 @@ let Header = props => (
               <span className="slds-assistive-text">Completed:</span> Conquer
               Your Cases
             </MenuItem>
-            <MenuItem>
+            <MenuItem title="Automate For Speed">
               <SvgIcon
                 className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
                 sprite="utility"
@@ -50,7 +54,7 @@ let Header = props => (
               />
               Automate For Speed
             </MenuItem>
-            <MenuItem>
+            <MenuItem title="Share Your Knowledge">
               <SvgIcon
                 className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
                 sprite="utility"
@@ -58,7 +62,7 @@ let Header = props => (
               />
               Share Your Knowledge
             </MenuItem>
-            <MenuItem>
+            <MenuItem title="Finish it up in a Flash">
               <SvgIcon
                 className="slds-icon slds-icon_selected slds-icon_x-small slds-m-right_x-small"
                 sprite="utility"
@@ -67,7 +71,7 @@ let Header = props => (
               Finish it up in a Flash
             </MenuItem>
             <li className="slds-has-divider_top-space" role="separator" />
-            <MenuItem>
+            <MenuItem title="Import Contacts and Accounts">
               <SvgIcon
                 className="slds-icon slds-icon_x-small slds-m-right_x-small"
                 sprite="utility"

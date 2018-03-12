@@ -207,7 +207,7 @@ export let ComposerOverflowMenu = props => (
     <Menu className="slds-dropdown_left slds-dropdown_bottom slds-dropdown_medium slds-nubbin_bottom-left">
       <MenuList className="slds-dropdown_length-with-icon-7">
         {_.times(composers.length, i => (
-          <MenuItem key={i}>
+          <MenuItem key={i} title={composers[i].title}>
             <span
               className={
                 'slds-icon_container slds-icon-standard-' +

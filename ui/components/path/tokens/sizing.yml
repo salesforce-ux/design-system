@@ -17,3 +17,6 @@ props:
   HEIGHT_SALES_PATH:
     value: 2rem
     comment: Height of Salespath
+  PATH_BUTTON_WIDTH_FIXED:
+    value: 13rem
+    comment: Width of action button to right

@@ -470,6 +470,7 @@
   flex-shrink: 0;
   margin-right: $spacing-small;
   border-radius: $border-radius-pill;
+  min-width: $path-button-width-fixed;
 }
 
 /**

@@ -3,6 +3,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.5.3] - March 13, 2018**
+
+## Fix
+
+- Remove Quill styles from the Rich Text Editor output class to fix properly nested lists.
+
 ## **Release [2.5.2] - February 8, 2018**
 
 ## Fix

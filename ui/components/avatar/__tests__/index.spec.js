@@ -30,6 +30,18 @@ it('renders a avatar fallback with user initials', () =>
     </Avatar>
   ));
 
+it('renders an inversed avatar fallback with user initials', () =>
+  matchesMarkupAndStyle(
+    <Avatar className="slds-avatar_circle">
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="person name"
+      >
+        AB
+      </abbr>
+    </Avatar>
+  ));
+
 it('renders a avatar fallback with user icon', () =>
   matchesMarkupAndStyle(
     <Avatar className="slds-avatar_circle">

@@ -148,7 +148,7 @@ const ChatMessageAction = props => (
 export const ChatAvatar = props => (
   <Avatar className="slds-avatar_circle slds-chat-avatar">
     <abbr
-      className="slds-avatar__initials slds-chat-avatar__intials"
+      className="slds-avatar__initials slds-avatar__initials_inverse"
       title={props.name}
     >
       {props.initials}

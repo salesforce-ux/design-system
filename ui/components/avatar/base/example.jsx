@@ -76,5 +76,19 @@ export let examples = [
         <StandardIcon />
       </Avatar>
     )
+  },
+  {
+    id: 'fallback-user-initials-inverse',
+    label: 'Fallback - User Initials Inversed',
+    element: (
+      <Avatar className="slds-avatar_circle">
+        <abbr
+          className="slds-avatar__initials slds-avatar__initials_inverse"
+          title="person name"
+        >
+          AB
+        </abbr>
+      </Avatar>
+    )
   }
 ];

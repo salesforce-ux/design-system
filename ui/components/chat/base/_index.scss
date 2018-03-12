@@ -149,14 +149,18 @@
  *
  * @selector .slds-chat-avatar__intials
  * @restrict .slds-chat-avatar .slds-avatar__initials
+ * @deprecated
  */
-.slds-chat-avatar__intials {
-  background-color: $chat-message-color-background-inbound;
-  color: $color-text-weak;
+@include deprecate('4.0.0', 'Use slds-avatar__initials_inverse instead') {
 
-  // combat abbr override styling in avatar
-  &.slds-chat-avatar__intials:hover {
+  .slds-chat-avatar__intials {
+    background-color: $chat-message-color-background-inbound;
     color: $color-text-weak;
+
+    // combat abbr override styling in avatar
+    &.slds-chat-avatar__intials:hover {
+      color: $color-text-weak;
+    }
   }
 }
 

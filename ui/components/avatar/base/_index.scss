@@ -133,6 +133,7 @@
 .slds-avatar__initials {
   @include absolute-center;
   height: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
 
   &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .slds-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
     cursor: default;
@@ -142,5 +143,22 @@
   &:hover {
     color: $color-text-inverse;
     cursor: default;
+  }
+}
+
+/**
+ * @summary Used for initials that are dark text on light background
+ *
+ * @selector .slds-avatar__initials_inverse
+ * @restrict .slds-avatar__initials
+ */
+.slds-avatar__initials_inverse {
+  background-color: $color-background;
+  color: $color-text-weak;
+  text-shadow: none;
+
+  // combat abbr override styling in avatar
+  &:hover {
+    color: $color-text-weak;
   }
 }

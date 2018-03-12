@@ -71,7 +71,7 @@ export const javascriptTest = () =>
   gulp
     .src(['test/**/*.{js,jsx}', '**/*.spec.{js,jsx}'])
     .pipe(cache('lintjs'))
-    .pipe(eslint({ env: { mocha: true } }))
+    .pipe(eslint())
     .pipe(eslint.format('codeframe'))
     .pipe(eslint.failAfterError());
 

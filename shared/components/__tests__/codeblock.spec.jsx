@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import sinon from 'sinon';
 import CodeBlock, { ToggleButton } from '../CodeBlock';
 import Copy from '../Copy';
 

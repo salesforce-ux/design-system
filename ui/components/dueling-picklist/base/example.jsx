@@ -68,6 +68,11 @@ export let states = [
     element: <MultiSelect dataSet={DefaultSnapShot} noReorder />
   },
   {
+    id: 'responsive-no-reordering-dueling-picklist',
+    label: 'Responsive No Reordering',
+    element: <MultiSelect dataSet={DefaultSnapShot} noReorder isResponsive />
+  },
+  {
     id: 'view-mode-dueling-picklist',
     label: 'View Mode',
     element: <MultiSelectViewMode />

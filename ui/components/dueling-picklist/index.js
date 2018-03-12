@@ -25,6 +25,7 @@ export const MultiSelect = props => {
       </div>
       <SelectionGroup
         disabled={props.disabled}
+        isResponsive={props.isResponsive}
         group={props.dataSet.selectionGroups[0]}
       />
       <MoveButtons
@@ -35,6 +36,7 @@ export const MultiSelect = props => {
       />
       <SelectionGroup
         disabled={props.disabled}
+        isResponsive={props.isResponsive}
         group={props.dataSet.selectionGroups[1]}
       />
       {!props.noReorder && (
@@ -99,7 +101,11 @@ const MoveButtons = props => {
 const SelectionGroup = props => {
   const groupLabelID = _.uniqueId('label-');
   return (
-    <div className="slds-dueling-list__column">
+    <div
+      className={classNames('slds-dueling-list__column', {
+        'slds-dueling-list__column_responsive': props.isResponsive
+      })}
+    >
       <span className="slds-form-element__label" id={groupLabelID}>
         {props.group.label}
       </span>
@@ -700,7 +706,7 @@ export const CountriesSnapshot = {
           isGrabbed: false
         },
         {
-          text: 'Turkish',
+          text: 'Tobagonian Creole English',
           tabIndex: -1,
           isSelected: false,
           isGrabbed: false
@@ -760,7 +766,7 @@ export const SelectedCountriesSnapshot = {
           isGrabbed: false
         },
         {
-          text: 'Turkish',
+          text: 'Tobagonian Creole English',
           tabIndex: -1,
           isSelected: false,
           isGrabbed: false
@@ -820,7 +826,7 @@ export const MultipleSelectedCountriesSnapshot = {
           isGrabbed: false
         },
         {
-          text: 'Turkish',
+          text: 'Tobagonian Creole English',
           tabIndex: -1,
           isSelected: false,
           isGrabbed: false
@@ -868,7 +874,7 @@ export const DroppedCountriesSnapshot = {
           isGrabbed: false
         },
         {
-          text: 'Turkish',
+          text: 'Tobagonian Creole English',
           tabIndex: -1,
           isSelected: false,
           isGrabbed: false

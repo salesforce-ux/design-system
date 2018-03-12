@@ -49,5 +49,15 @@ it('renders a dueling picklist with a dropped option', () =>
 it('renders a dueling picklist with an option that was moved to another list', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={MovedInSnapShot} />));
 
+it('renders a responsive dueling picklist', () =>
+  matchesMarkupAndStyle(
+    <MultiSelect dataSet={DefaultSnapShot} isResponsive />
+  ));
+
+it('renders a responsive non-reorderable dueling picklist', () =>
+  matchesMarkupAndStyle(
+    <MultiSelect dataSet={DefaultSnapShot} noReorder isResponsive />
+  ));
+
 it('renders a view mode of dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelectViewMode />));

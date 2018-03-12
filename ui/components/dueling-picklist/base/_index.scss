@@ -36,6 +36,24 @@
 }
 
 /**
+ * @summary Changes the layout of the dueling picklist to be responsive
+ *
+ * @selector .slds-dueling-list__column_responsive
+ * @restrict .slds-dueling-list__column
+ */
+.slds-dueling-list__column_responsive {
+  flex: 0 1 $size-small;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-width: $size-xx-small;
+
+  .slds-dueling-list__options {
+    width: auto;
+    max-width: $size-small;
+  }
+}
+
+/**
  * @summary Bounding visual container for listbox of options
  *
  * @selector .slds-dueling-list__options

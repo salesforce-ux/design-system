@@ -43,6 +43,15 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
   - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
     - `up` and `down` arrows move the selected items _within_ the current list
 
+## Responsive
+
+To make the dueling picklist responsive or use it within narrow regions, apply the class `slds-dueling-picklist__column_responsive` to the `<div>`s with class `slds-dueling-picklist__column` that contain options (not the columns that only contain buttons). Any items longer than the space available will truncate with ellipses.
+
+<Example title="Dueling Picklist">
+  <CodeView>
+    <MultiSelect dataSet={CountriesSnapshot} noReorder isResponsive />
+  </CodeView>
+</Example>
 
 ## Edit Mode
 

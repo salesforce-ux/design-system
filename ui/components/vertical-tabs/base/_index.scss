@@ -64,6 +64,10 @@
     color: $color-text-action-label-active;
     text-decoration: none;
   }
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 /**

@@ -81,7 +81,7 @@ export const Overflowing = props => (
         </a>
         <Menu className="slds-dropdown_right">
           <MenuList className="slds-dropdown_length-with-icon-10">
-            <MenuItem>
+            <MenuItem title="Accounts">
               <SvgIcon
                 className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small"
                 sprite="standard"
@@ -89,7 +89,7 @@ export const Overflowing = props => (
               />
               Accounts
             </MenuItem>
-            <MenuItem>
+            <MenuItem title="Approvals">
               <SvgIcon
                 className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small"
                 sprite="standard"
@@ -97,7 +97,7 @@ export const Overflowing = props => (
               />
               Approvals
             </MenuItem>
-            <MenuItem>
+            <MenuItem title="Lead">
               <SvgIcon
                 className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small"
                 sprite="standard"
@@ -116,7 +116,7 @@ export const TabsWithCards = props => (
   <Tabs className="slds-tabs_card" selectedIndex={0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       <Card>
-        <CardHeader symbol="contact" actions>
+        <CardHeader symbol="contact" title="Card Header" actions>
           <span className="slds-text-heading_small">Card Header</span>
         </CardHeader>
         <CardBody className="slds-card__body_inner">
@@ -128,7 +128,7 @@ export const TabsWithCards = props => (
         <CardFooter>Card Footer</CardFooter>
       </Card>
       <Card>
-        <CardHeader symbol="contact" actions>
+        <CardHeader symbol="contact" title="Card Header" actions>
           <span className="slds-text-heading_small">Card Header</span>
         </CardHeader>
         <CardBody className="slds-card__body_inner">
@@ -140,7 +140,7 @@ export const TabsWithCards = props => (
         <CardFooter>Card Footer</CardFooter>
       </Card>
       <Card className="slds-card_boundary">
-        <CardHeader symbol="contact" actions>
+        <CardHeader symbol="contact" title="Card Header" actions>
           <span className="slds-text-heading_small">Card Header</span>
         </CardHeader>
         <CardBody className="slds-card__body_inner">

@@ -17,7 +17,7 @@ import _ from '../../../shared/helpers';
 const contextDropdown = (
   <Menu className="slds-dropdown_right">
     <MenuList>
-      <MenuItem>
+      <MenuItem title="Main action">
         <SvgIcon
           className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
           sprite="utility"

@@ -29,7 +29,7 @@ const ActionsDropdown = (
       <li className="slds-dropdown__header" role="separator">
         <span className="slds-text-title_caps">Create</span>
       </li>
-      <MenuItem tabIndex="0">
+      <MenuItem tabIndex="0" title="New Note">
         <SvgIcon
           className="slds-icon slds-icon_small slds-icon-standard-note slds-m-right_x-small"
           sprite="standard"
@@ -37,7 +37,7 @@ const ActionsDropdown = (
         />{' '}
         New Note
       </MenuItem>
-      <MenuItem>
+      <MenuItem title="Log a Call">
         <SvgIcon
           className="slds-icon slds-icon_small slds-icon-standard-log-a-call slds-m-right_x-small"
           sprite="standard"
@@ -45,7 +45,7 @@ const ActionsDropdown = (
         />{' '}
         Log a Call
       </MenuItem>
-      <MenuItem>
+      <MenuItem title="New Event">
         <SvgIcon
           className="slds-icon slds-icon_small slds-icon-standard-event slds-m-right_x-small"
           sprite="standard"

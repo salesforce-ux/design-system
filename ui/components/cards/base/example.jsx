@@ -79,7 +79,7 @@ export let CardHeader = props => (
           <a
             href="javascript:void(0);"
             className="slds-card__header-link slds-truncate"
-            title={props.children}
+            title={props.title || 'Card Header'}
           >
             {props.children}
           </a>
@@ -126,7 +126,7 @@ export let CardFooter = props => (
 
 export default (
   <Card>
-    <CardHeader symbol="contact" actions>
+    <CardHeader symbol="contact" title="Card Header" actions>
       <span className="slds-text-heading_small">Card Header</span>
     </CardHeader>
     <CardBody className="slds-card__body_inner">
@@ -142,7 +142,7 @@ export let states = [
     label: 'Empty',
     element: (
       <Card>
-        <CardHeader symbol="contact" actions>
+        <CardHeader symbol="contact" title="Card Header" actions>
           <span className="slds-text-heading_small">Card Header</span>
         </CardHeader>
         <CardBody />
@@ -158,7 +158,7 @@ export let examples = [
     label: 'With data-table',
     element: (
       <Card>
-        <CardHeader symbol="contact" actions>
+        <CardHeader symbol="contact" title="Contacts (1)" actions>
           <span className="slds-text-heading_small">Contacts (1)</span>
         </CardHeader>
         <CardBody>
@@ -226,7 +226,7 @@ export let examples = [
     label: 'With tiles',
     element: (
       <Card>
-        <CardHeader actions symbol="contact">
+        <CardHeader actions title="Contacts (3)" symbol="contact">
           <span className="slds-text-heading_small">Contacts (3)</span>
         </CardHeader>
         <CardBody>
@@ -288,12 +288,12 @@ export let examples = [
     label: 'Nested cards',
     element: (
       <Card>
-        <CardHeader actions symbol="contact">
+        <CardHeader actions symbol="contact" title="Outer Card Header">
           <span className="slds-text-heading_small">Outer Card Header</span>
         </CardHeader>
         <CardBody className="slds-card__body_inner">
           <Card>
-            <CardHeader actions symbol="contact">
+            <CardHeader actions symbol="contact" title="Card Header">
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
@@ -313,7 +313,7 @@ export let examples = [
             </CardFooter>
           </Card>
           <Card>
-            <CardHeader actions symbol="contact">
+            <CardHeader actions symbol="contact" title="Card Header">
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
@@ -333,7 +333,7 @@ export let examples = [
             </CardFooter>
           </Card>
           <Card className="slds-card_boundary">
-            <CardHeader actions symbol="contact">
+            <CardHeader actions symbol="contact" title="Card Header">
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
@@ -353,7 +353,7 @@ export let examples = [
             </CardFooter>
           </Card>
           <Card className="slds-card_boundary">
-            <CardHeader actions symbol="contact">
+            <CardHeader actions symbol="contact" title="Card Header">
               <span className="slds-text-heading_small">Card Header</span>
             </CardHeader>
             <CardBody className="slds-card__body_inner">
@@ -392,7 +392,7 @@ export let examples = [
           </h2>
         </header>
         <Card>
-          <CardHeader actions symbol="contact">
+          <CardHeader actions symbol="contact" title="Card Header">
             <span className="slds-text-heading_small">Card Header</span>
           </CardHeader>
           <CardBody className="slds-card__body_inner">
@@ -408,7 +408,7 @@ export let examples = [
           </CardFooter>
         </Card>
         <Card>
-          <CardHeader actions symbol="contact">
+          <CardHeader actions symbol="contact" title="Card Header">
             <span className="slds-text-heading_small">Card Header</span>
           </CardHeader>
           <CardBody className="slds-card__body_inner">
@@ -424,7 +424,7 @@ export let examples = [
           </CardFooter>
         </Card>
         <Card className="slds-card_boundary">
-          <CardHeader actions symbol="contact">
+          <CardHeader actions symbol="contact" title="Card Header">
             <span className="slds-text-heading_small">Card Header</span>
           </CardHeader>
           <CardBody className="slds-card__body_inner">
@@ -440,7 +440,7 @@ export let examples = [
           </CardFooter>
         </Card>
         <Card className="slds-card_boundary">
-          <CardHeader actions symbol="contact">
+          <CardHeader actions symbol="contact" title="Card Header">
             <span className="slds-text-heading_small">Card Header</span>
           </CardHeader>
           <CardBody className="slds-card__body_inner">

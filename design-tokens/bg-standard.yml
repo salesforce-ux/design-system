@@ -393,3 +393,16 @@ props:
     value: '#F68960'
   READ_RECEIPTS:
     value: '#4BC076'
+  RETAIL_BANKING:
+    value: '#00D2BE'
+  WEALTH_MANAGEMENT:
+    value: '#00D2BE'
+  INSURANCE:
+    value: '#00D2BE'
+  RETAIL_BANKING_CONSOLE:
+    value: '#00AFA0'
+  WEALTH_MANAGEMENT_CONSOLE:
+    value: '#00AFA0'
+  INSURANCE_CONSOLE:
+    value: '#00AFA0'
+    

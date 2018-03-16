@@ -210,7 +210,6 @@
 
       &:before {
         content: '\2022';
-        font-size: 1.4em;
         vertical-align: middle;
         display: inline-block;
         line-height: normal;
@@ -606,6 +605,7 @@
 
     ul {
       list-style: circle;
+      margin-bottom: 0;
 
       ul {
         list-style: square;
@@ -614,6 +614,7 @@
 
     ol {
       @include list-has-numbers;
+      margin-bottom: 0;
     }
   }
 
@@ -622,6 +623,7 @@
 
     ol {
       list-style: lower-alpha;
+      margin-bottom: 0;
 
       ol {
         list-style: lower-roman;
@@ -630,6 +632,7 @@
 
     ul {
       @include list-has-bullets;
+      margin-bottom: 0;
     }
   }
 

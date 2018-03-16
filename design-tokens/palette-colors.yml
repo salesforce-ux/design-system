@@ -94,6 +94,15 @@ props:
   BRAND_HEADER:
     value: "#ffffff"
     comment: "Background color a branded app header"
+  BRAND_HEADER_CONTRAST_WEAK:
+    value: "#919191"
+    comment: "Weak contrast ratio, useful for iconography"
+  BRAND_HEADER_CONTRAST_WEAK_ACTIVE:
+    value: "#818181"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_WEAK"
+  BRAND_HEADER_CONTRAST_WEAK_DISABLED:
+    value: "rgba(166,166,166,0.25)"
+    comment: "Disabled state of BRAND_HEADER_CONTRAST_WEAK"
   BRAND_HEADER_ICON:
     value: "#919191"
     comment: "Icons of BRAND_HEADER that is accessible with BRAND_HEADER"
@@ -104,7 +113,7 @@ props:
     value: "rgba(145,145,145,0.25)"
     comment: "Disabled state of BRAND_HEADER_ICON"
   BRAND_HEADER_CONTRAST:
-    value: "#ff000"
+    value: "#5e5e5e"
     comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
   BRAND_HEADER_CONTRAST_ACTIVE:
     value: "#505050"
@@ -116,7 +125,7 @@ props:
     value: "#eeeeee"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
   BRAND_HEADER_CONTRAST_COOL:
-    value: "#0B6493"
+    value: "#005583"
     comment: "Variant of BRAND_HEADER_CONTRAST that provides a cool color"
   BRAND_HEADER_CONTRAST_COOL_ACTIVE:
     value: "#005583"

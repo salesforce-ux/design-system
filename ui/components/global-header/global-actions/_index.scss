@@ -21,7 +21,7 @@
   margin-right: $spacing-xx-small;
 
   .slds-button_icon {
-    color: $brand-header-icon;
+    color: $brand-header-contrast-weak;
   }
 }
 
@@ -35,7 +35,7 @@
 
   &:hover:not(:disabled),
   &:focus {
-    color: $brand-header-icon-active;
+    color: $brand-header-contrast-weak-active;
   }
 
   &:active {
@@ -64,7 +64,7 @@
  * @restrict .slds-global-actions__item-action
  */
 .slds-global-actions__avatar {
-  box-shadow: $brand-header-icon-active 0 0 0 0;
+  box-shadow: $brand-header-contrast-weak-active 0 0 0 0;
   border-radius: $border-radius-circle;
   border: 0;
   margin-left: $spacing-x-small;
@@ -72,7 +72,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: $brand-header-icon-active 0 0 0 2px;
+    box-shadow: $brand-header-contrast-weak-active 0 0 0 2px;
   }
 }
 
@@ -92,7 +92,7 @@
  * @restrict .slds-global-actions__favorites button
  */
 .slds-global-actions__favorites-action {
-  border-color: $brand-header-icon;
+  border-color: $brand-header-contrast-weak;
 
   &:hover {
     border-color: $brand-header-contrast;
@@ -125,8 +125,8 @@
 
   &:disabled,
   &.slds-is-disabled {
-    color: $brand-header-icon-disabled;
-    border-color: $brand-header-icon-disabled;
+    color: $brand-header-contrast-weak-disabled;
+    border-color: $brand-header-contrast-weak-disabled;
   }
 }
 
@@ -139,7 +139,7 @@
   width: auto;
   padding-left: $spacing-xxx-small;
   padding-right: $spacing-xxx-small;
-  border-color: $brand-header-icon;
+  border-color: $brand-header-contrast-weak;
 
   &:hover {
     border-color: $brand-header-contrast;
@@ -170,12 +170,12 @@
  */
 .slds-global-actions__task {
   @include square(1.25rem);
-  background: $brand-header-icon;
+  background: $brand-header-contrast-weak;
   position: relative;
   top: -1px;
 
   &:hover {
-    background: $brand-header-icon-active;
+    background: $brand-header-contrast-weak-active;
   }
 
   &:active {

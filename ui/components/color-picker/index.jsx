@@ -81,7 +81,6 @@ export const ColorPickerSummary = props => {
 
       <Button
         className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-        aria-haspopup
         title="Choose Color"
       >
         <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />

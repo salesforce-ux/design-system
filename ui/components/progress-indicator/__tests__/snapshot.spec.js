@@ -62,9 +62,36 @@ describe('Vertical Progress Indicator', () => {
       </VerticalProgress>
     ));
 
+  it('renders a vertical progress indicator with some progress', () =>
+    matchesMarkupAndStyle(
+      <VerticalProgress value="50">
+        <VerticalStep done>Step 1</VerticalStep>
+        <VerticalStep active>Step 2</VerticalStep>
+        <VerticalStep>Step 2</VerticalStep>
+      </VerticalProgress>
+    ));
+
+  it('renders a vertical progress indicator with borders', () =>
+    matchesMarkupAndStyle(
+      <VerticalProgress value="50" hasBorders>
+        <VerticalStep done>Step 1</VerticalStep>
+        <VerticalStep active>Step 2</VerticalStep>
+        <VerticalStep>Step 2</VerticalStep>
+      </VerticalProgress>
+    ));
+
+  it('renders a vertical progress indicator with green bar', () =>
+    matchesMarkupAndStyle(
+      <VerticalProgress value="50" hasSuccessBar>
+        <VerticalStep done>Step 1</VerticalStep>
+        <VerticalStep active>Step 2</VerticalStep>
+        <VerticalStep>Step 2</VerticalStep>
+      </VerticalProgress>
+    ));
+
   it('renders a vertical step with green success check', () =>
     matchesMarkupAndStyle(
-      <VerticalStep done is Success>
+      <VerticalStep done hasSuccessMarker>
         Step 1
       </VerticalStep>
     ));

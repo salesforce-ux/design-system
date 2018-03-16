@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Badge } from '../../badges';
-import { ButtonIcon } from '../../button-icons';
+import ButtonIcon from '../../button-icons';
 
 /* -----------------------------------------------------------------------------
     Variables
@@ -41,17 +41,15 @@ export const SummaryDetailTitle = props => (
 );
 
 export const SummaryDetailAction = props => (
-  <button
+  <ButtonIcon
+    className={classNames('slds-m-right_x-small', props.className)}
+    iconClassName="slds-summary-detail__action-icon"
+    symbol="switch"
+    title={`Toggle details for ${props.summaryTitle}`}
+    assistiveText={`Toggle details for ${props.summaryTitle}`}
     aria-controls={props.referenceId}
     aria-expanded={props.isOpen ? 'true' : 'false'}
-    className="slds-button slds-button_icon slds-m-right_x-small slds-m-top_xxx-small"
-  >
-    <SvgIcon
-      className="slds-summary-detail__action-icon slds-button__icon"
-      sprite="utility"
-      symbol="switch"
-    />
-  </button>
+  />
 );
 
 /* -----------------------------------------------------------------------------
@@ -66,7 +64,11 @@ export const Context = props => (
 
 export default (
   <SummaryDetail className="slds-is-open">
-    <SummaryDetailAction referenceId={referenceId} isOpen />
+    <SummaryDetailAction
+      referenceId={referenceId}
+      isOpen
+      summaryTitle="Summary Title"
+    />
     <div>
       <SummaryDetailTitle>
         <h3
@@ -89,7 +91,10 @@ export let examples = [
     label: 'Closed with Complex title',
     element: (
       <SummaryDetail>
-        <SummaryDetailAction referenceId={referenceId} />
+        <SummaryDetailAction
+          referenceId={referenceId}
+          summaryTitle="Summary Title"
+        />
         <div>
           <SummaryDetailTitle>
             <div className="slds-grid">
@@ -115,7 +120,11 @@ export let examples = [
     label: 'Open with Complex title',
     element: (
       <SummaryDetail className="slds-is-open">
-        <SummaryDetailAction referenceId={referenceId} isOpen />
+        <SummaryDetailAction
+          referenceId={referenceId}
+          isOpen
+          summaryTitle="Summary Title"
+        />
         <div>
           <SummaryDetailTitle>
             <div className="slds-grid">
@@ -144,7 +153,10 @@ export let states = [
     label: 'Closed',
     element: (
       <SummaryDetail>
-        <SummaryDetailAction referenceId={referenceId} />
+        <SummaryDetailAction
+          referenceId={referenceId}
+          summaryTitle="Summary Title"
+        />
         <div>
           <SummaryDetailTitle>
             <h3

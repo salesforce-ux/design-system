@@ -26,7 +26,12 @@ export const ProgressBar = props => {
       aria-labelledby={props['aria-labelledby']}
       role="progressbar"
     >
-      <span className="slds-progress-bar__value" style={progressBarStyle}>
+      <span
+        className={classNames('slds-progress-bar__value', {
+          'slds-progress-bar__value_success': props.isSuccess
+        })}
+        style={progressBarStyle}
+      >
         <span className="slds-assistive-text">
           Progress: {`${props.value}%`}
         </span>
@@ -39,15 +44,22 @@ export const ProgressBarDescriptive = props => {
   const labelUniqueId = _.uniqueId('progress-bar-label-id-');
 
   return (
-    <div className={classNames(props.className)}>
+    <div className={props.className}>
       <div
-        className="slds-grid slds-grid_align-spread slds-text-color_weak slds-p-bottom_x-small"
+        className="slds-grid slds-grid_align-spread slds-p-bottom_x-small"
         id={labelUniqueId}
       >
         <span>{props.label}</span>
-        <span aria-hidden="true">{`${props.value}%`}</span>
+        <span aria-hidden="true">
+          <strong>{`${props.value}% Complete`}</strong>
+        </span>
       </div>
-      <ProgressBar value={props.value} aria-labelledby={labelUniqueId} />
+      <ProgressBar
+        className={classNames(props.barClassName)}
+        value={props.value}
+        aria-labelledby={labelUniqueId}
+        isSuccess={props.isSuccess}
+      />
     </div>
   );
 };

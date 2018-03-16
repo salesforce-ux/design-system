@@ -8,37 +8,78 @@
  * @variant
  */
 .slds-progress_vertical {
-  float: left;
-  height: 100%;
-
-  .slds-progress__item.slds-is-active {
-    font-weight: $font-weight-bold;
-  }
-
-  .slds-progress-bar {
-    top: 0;
-    margin-top: 0;
-    margin-left: calc(#{$spacing-x-small} - #{$progress-bar-height} / 2);
-  }
+  max-width: none;
 
   .slds-progress__list {
-    flex-direction: column;
-    height: 100%;
-    align-items: left;
+    display: block;
   }
 
   .slds-progress__item {
+    position: relative;
+    display: flex;
     align-self: left;
     align-items: center;
+    padding: 0;
 
-    &:last-child {
-      align-items: flex-end;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      width: 2px;
+      background-color: $progress-bar-color-background;
     }
+
+    &:before {
+      top: 0;
+      bottom: 50%;
+    }
+
+    &:after {
+      top: 50%;
+      bottom: 0;
+    }
+
+    &:first-child:before,
+    &:last-child:after {
+      display: none;
+    }
+
+    &.slds-is-completed:before,
+    &.slds-is-completed:after,
+    &.slds-is-active:before,
+    &.slds-has-error:before {
+      background-color: $progress-bar-color-background-fill;
+    }
+  }
+
+  /**
+   * @summary Support content in line with progress marker
+   *
+   * @selector .slds-progress__item_content
+   * @restrict .slds-progress__item div
+   */
+  .slds-progress__item_content {
+    flex: 1;
+    align-items: center;
+    margin-top: $spacing-medium;
+    padding-bottom: $spacing-medium;
+  }
+
+  /**
+   * @summary Add borders between progress items
+   *
+   * @selector .slds-progress__list-bordered
+   * @restrict .slds-progress__list
+   */
+  .slds-progress__list-bordered .slds-progress__item:not(:last-child) .slds-progress__item_content {
+    border-bottom: 1px $color-border-separator-alt solid;
   }
 
   .slds-progress__marker {
     margin-right: $spacing-medium;
     min-width: $square-icon-utility-small;
+    z-index: 5;
   }
 
   .slds-progress__marker_icon {
@@ -72,6 +113,26 @@
 
     svg {
       fill: $color-text-error;
+    }
+  }
+}
+
+/**
+ * @summary Creates a green bar for the vertical variant
+ *
+ * @selector .slds-progress_success
+ * @restrict .slds-progress_vertical
+ */
+.slds-progress_success {
+
+  .slds-progress__item {
+
+    &.slds-is-completed:before,
+    &.slds-is-completed:after,
+    &.slds-is-active:before,
+    &.slds-has-error:before {
+      opacity: 0.3;
+      background-color: $progress-bar-color-background-fill-success;
     }
   }
 }

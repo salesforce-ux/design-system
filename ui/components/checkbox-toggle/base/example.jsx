@@ -3,16 +3,11 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
-
-let Demo = props => (
-  <div className="demo-only slds-size_1-of-2" {...props}>
-    {props.children}
-  </div>
-);
 
 let Fieldset = props => (
   <fieldset className={classNames('form--element', props.className)}>
@@ -41,24 +36,28 @@ export let Label = props => (
 );
 
 export let FauxLabel = props => (
-  <span className="slds-form-element__label slds-m-bottom_none">
+  <span
+    className={classNames('slds-form-element__label', 'slds-m-bottom_none', {
+      'slds-assistive-text': props.isBare
+    })}
+  >
     {props.children}
   </span>
 );
 
 export let Checkbox = props => (
   <input
-    name="checkbox"
+    name={props.uniqueId}
     type="checkbox"
     disabled={props.disabled}
     defaultChecked={props.checked}
-    aria-describedby="toggle-desc"
+    aria-describedby={props.uniqueId}
   />
 );
 
 export let Toggle = props => (
   <span
-    id="toggle-desc"
+    id={props.uniqueId}
     className={classNames('slds-checkbox_faux_container', props.className)}
     aria-live="assertive"
   >
@@ -75,41 +74,60 @@ export let Toggle = props => (
 /// ////////////////////////////////////////
 // State Constructor(s)
 /// ////////////////////////////////////////
-export let CheckboxToggle = props => (
-  <Demo>
-    <LabelWrapper>
-      <Label>
-        <FauxLabel>Toggle Label</FauxLabel>
-        <Checkbox />
-        <Toggle />
-      </Label>
-    </LabelWrapper>
-  </Demo>
+
+export const Context = props => (
+  <div className="demo-only slds-size_1-of-2" {...props}>
+    {props.children}
+  </div>
 );
 
-export let CheckboxToggleChecked = props => (
-  <Demo>
-    <LabelWrapper>
-      <Label>
-        <FauxLabel>Toggle Label</FauxLabel>
-        <Checkbox checked />
-        <Toggle />
-      </Label>
-    </LabelWrapper>
-  </Demo>
-);
+export let CheckboxToggle = props => {
+  const uniqueId = _.uniqueId('checkbox-toggle-');
 
-export let CheckboxToggleDisabled = props => (
-  <Demo>
+  return (
+    <LabelWrapper>
+      <Label>
+        <FauxLabel isBare={props.isBare}>
+          {props.title || 'Toggle Label'}
+        </FauxLabel>
+        <Checkbox
+          uniqueId={uniqueId}
+          checked={props.checked}
+          disabled={props.disabled}
+        />
+        <Toggle uniqueId={uniqueId} />
+      </Label>
+    </LabelWrapper>
+  );
+};
+
+export let CheckboxToggleChecked = props => {
+  const uniqueId = _.uniqueId('checkbox-toggle-');
+
+  return (
     <LabelWrapper>
       <Label>
         <FauxLabel>Toggle Label</FauxLabel>
-        <Checkbox disabled />
-        <Toggle />
+        <Checkbox uniqueId={uniqueId} checked />
+        <Toggle uniqueId={uniqueId} />
       </Label>
     </LabelWrapper>
-  </Demo>
-);
+  );
+};
+
+export let CheckboxToggleDisabled = props => {
+  const uniqueId = _.uniqueId('checkbox-toggle-');
+
+  return (
+    <LabelWrapper>
+      <Label>
+        <FauxLabel>Toggle Label</FauxLabel>
+        <Checkbox uniqueId={uniqueId} disabled />
+        <Toggle uniqueId={uniqueId} />
+      </Label>
+    </LabelWrapper>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export

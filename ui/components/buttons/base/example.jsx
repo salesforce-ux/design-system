@@ -5,14 +5,19 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-export let Button = props => (
-  <button
-    className={classNames('slds-button', props.className)}
-    disabled={props.disabled}
-  >
-    {props.children}
-  </button>
-);
+export let Button = props => {
+  const { className, disabled, ...rest } = props;
+
+  return (
+    <button
+      className={classNames('slds-button', className)}
+      disabled={disabled}
+      {...rest}
+    >
+      {props.children}
+    </button>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export

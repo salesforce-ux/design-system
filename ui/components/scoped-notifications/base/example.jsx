@@ -10,7 +10,7 @@ import classNames from 'classnames';
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let ScopedNoti = props => (
+export const ScopedNoti = props => (
   <div
     className={classNames(
       'slds-scoped-notification slds-media slds-media_center',

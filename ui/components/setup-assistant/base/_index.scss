@@ -1,0 +1,86 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Setup Assistant component
+ *
+ * @name base
+ * @selector .slds-setup-assistant
+ * @restrict ol
+ * @variant
+ */
+.slds-setup-assistant {
+  padding: $spacing-medium;
+}
+
+/**
+ * @summary Creates a Setup Assistant list item
+ *
+ * @selector .slds-setup-assistant__item
+ * @restrict .slds-setup-assistant li
+ */
+.slds-setup-assistant__item {
+  border-bottom: 1px $color-border-separator-alt solid;
+  padding: $spacing-x-large 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+/**
+ * @summary Creates a Setup Assistant step
+ *
+ * @selector .slds-setup-assistant__step
+ * @restrict .slds-setup-assistant article
+ */
+
+/**
+ * @summary Setup Assistant step's summary portion
+ *
+ * @selector .slds-setup-assistant__step-summary
+ * @restrict .slds-setup-assistant__step div, .slds-setup-assistant__step .slds-summary_detail__title div
+ */
+.slds-setup-assistant__step-summary {
+
+  .slds-progress-ring_large {
+    top: 1px;
+  }
+}
+
+
+/**
+ * @summary Add a right margin to Setup Assistant step's summary content
+ *
+ * @selector .slds-setup-assistant__step-summary-content
+ * @restrict .slds-setup-assistant__step-summary div
+ */
+.slds-setup-assistant__step-summary-content {
+  margin-right: $spacing-xx-large;
+}
+
+/**
+ * @summary Add bottom padding to Setup Assistant step's summary title
+ *
+ * @selector .slds-setup-assistant__step-summary-title
+ * @restrict .slds-setup-assistant__step-summary h3
+ */
+.slds-setup-assistant__step-summary-title {
+  padding-bottom: $spacing-x-small;
+  font-weight: $font-weight-bold;
+}
+
+/**
+ * @summary Add left padding before Setup Assistant step's detail portion
+ *
+ * @selector .slds-setup-assistant__step-detail
+ * @restrict .slds-setup-assistant__step div
+ */
+.slds-setup-assistant__step-detail {
+  padding-left: $square-icon-large-content + $spacing-small;
+}

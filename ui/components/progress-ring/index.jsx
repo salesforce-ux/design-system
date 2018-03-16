@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import _ from '../../shared/helpers';
 
 class ProgressRing extends Component {
   getCoordinatesForPercent(percent) {
@@ -15,17 +16,26 @@ class ProgressRing extends Component {
   }
 
   render() {
-    const { percent, isWarning, isComplete, isExpired } = this.props;
+    const {
+      percent,
+      isWarning,
+      isComplete,
+      isExpired,
+      isActiveStep,
+      className
+    } = this.props;
     const { x, y } = this.getCoordinatesForPercent(percent);
     const isLong = percent > 50 ? 1 : 0;
     let stateClass;
+    const uniqueId = _.uniqueId('slds-progress-ring-path-');
 
     if (isWarning) stateClass = 'slds-progress-ring_warning';
     if (isExpired) stateClass = 'slds-progress-ring_expired';
     if (isComplete) stateClass = 'slds-progress-ring_complete';
+    if (isActiveStep) stateClass = 'slds-progress-ring_active-step';
 
     return (
-      <div className={classNames('slds-progress-ring', stateClass)}>
+      <div className={classNames('slds-progress-ring', stateClass, className)}>
         <div
           className="slds-progress-ring__progress"
           role="progressbar"
@@ -36,7 +46,7 @@ class ProgressRing extends Component {
           <svg viewBox="-1 -1 2 2">
             <path
               className="slds-progress-ring__path"
-              id="slds-progress-ring-path"
+              id={uniqueId}
               d={`M 1 0 A 1 1 0 ${isLong} 1 ${x} ${y} L 0 0`}
             />
           </svg>

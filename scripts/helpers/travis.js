@@ -69,7 +69,8 @@ export const publishBuild = done => {
 };
 
 // PR's have this message as well as the "after merge button" commit
-export const isMerge = () => process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge/g);
+export const isMerge = () =>
+  process.env.TRAVIS_COMMIT_MESSAGE.match(/^Merge|\(\#\d+\)/g);
 export const isTag = () => !!process.env.TRAVIS_TAG;
 export const shouldPushToBuildServer = () =>
   (isMerge() || isTag()) && process.env.BUILD_SERVER_HOST_NEW;

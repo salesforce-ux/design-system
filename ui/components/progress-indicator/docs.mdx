@@ -183,7 +183,7 @@ To display a vertical progress indicator, the `<div>` with class `.slds-progress
 </Blockquote>
 
 <Example title="Progress Indicator Vertical">
-  <CodeView style={{height: '200px'}}>
+  <CodeView>
     <VerticalProgress value="25">
       <VerticalStep done>Step 1</VerticalStep>
       <VerticalStep active>Step 2</VerticalStep>
@@ -198,7 +198,7 @@ To display a vertical progress indicator, the `<div>` with class `.slds-progress
 To create a green completed step, the `.slds-progress__item` element should also receive the `.slds-is-completed` class. In addition, the `<span>` with class `.slds-progress__marker_icon` should also get the class `slds-progress__marker_icon-success`.
 
 <Example title="Progress Indicator Vertical Success">
-  <CodeView style={{height: '200px'}}>
+  <CodeView>
     <VerticalProgress value="25">
       <VerticalStep done hasSuccessMarker>Step 1</VerticalStep>
       <VerticalStep active>Step 2</VerticalStep>
@@ -213,7 +213,7 @@ To create a green completed step, the `.slds-progress__item` element should also
 When an error has occurred on a step, the `<div>` with class `.slds-progress__item` should also get the class `.slds-has-error`.
 
 <Example title="Progress Indicator Vertical Success">
-  <CodeView style={{height: '200px'}}>
+  <CodeView>
     <VerticalProgress value="25">
       <VerticalStep done>Step 1</VerticalStep>
       <VerticalStep error>Step 2</VerticalStep>
@@ -229,7 +229,7 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 The vertical progress indicator also supports multiline step descriptions.
 
 <Example title="Progress Indicator Vertical">
-  <CodeView style={{height: '200px', minWidth: '500px'}}>
+  <CodeView>
     <VerticalProgress value="25">
       <VerticalStep done>Step 1</VerticalStep>
       <VerticalStep active>Step 2</VerticalStep>

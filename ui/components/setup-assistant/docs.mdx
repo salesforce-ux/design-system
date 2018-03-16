@@ -26,7 +26,7 @@ Actions in the assistant launch LSF (Lightning Setup Flow) or link to configurat
 Basic list of learning and task links that do not require progress tracking and do not have sequential steps.
 
 <Example title="Setup Assistant Base">
-  <CodeView style={{height: '800px'}}>
+  <CodeView>
     <SetupAssistant isBase/>
   </CodeView>
 </Example>
@@ -36,7 +36,7 @@ Basic list of learning and task links that do not require progress tracking and 
 List of learning and task links with a recommended sequence that require progress tracking. Depending on the platform, completion checking will be through an API or a link click. The progress markers use the [Progress Ring](../progress-ring) component.
 
 <Example title="Setup Assistant Base steps with Progress">
-  <CodeView style={{height: '850px'}}>
+  <CodeView>
     <SetupAssistant isBase stepsHaveProgress/>
   </CodeView>
 </Example>
@@ -52,7 +52,7 @@ Clicking on the icon toggle or the primary step's title will open and close that
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
-  <CodeView style={{height: '1150px'}}>
+  <CodeView>
     <SetupAssistant stepsAreExpandable/>
   </CodeView>
 </Example>
@@ -66,7 +66,7 @@ If the steps have associated progress, a header is added to the card containing 
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
-  <CodeView style={{height: '1250px'}}>
+  <CodeView>
     <FullSetupAssistantCard>
       <SetupAssistant stepsAreExpandable/>
     </FullSetupAssistantCard>

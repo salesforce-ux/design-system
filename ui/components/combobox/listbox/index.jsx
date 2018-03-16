@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
-
+import { Spinner } from '../../spinners/base/example';
 /**
  * Listbox
  */
@@ -295,6 +295,7 @@ class Listbox extends Component {
       term,
       type,
       snapshot,
+      loading,
       count = 1,
       className = 'slds-dropdown_fluid'
     } = this.props;
@@ -319,6 +320,13 @@ class Listbox extends Component {
             : Object.keys(snapshot)
                 .slice(0, count)
                 .map(this.renderPlainOptions)}
+          {loading && (
+            <ListboxItem>
+              <div className="slds-align_absolute-center slds-p-top_medium">
+                <Spinner className="slds-spinner_x-small slds-spinner_inline" />
+              </div>
+            </ListboxItem>
+          )}
         </ListboxList>
       </ListboxWrapper>
     );

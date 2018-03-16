@@ -43,6 +43,15 @@
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.slds-spinner_inline {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+}
+
 .slds-spinner,
 .slds-spinner__dot-a,
 .slds-spinner__dot-b {
@@ -210,6 +219,10 @@
 .slds-spinner--xx-small {
   width: 0.5rem;
 
+  &.slds-spinner_inline {
+    height: 0.5rem;
+  }
+
   &.slds-spinner:before,
   &.slds-spinner:after,
   .slds-spinner__dot-a:before,
@@ -283,6 +296,10 @@
 .slds-spinner_x-small,
 .slds-spinner--x-small {
   width: 1rem;
+
+  &.slds-spinner_inline {
+    height: 1rem;
+  }
 
   &.slds-spinner:before,
   &.slds-spinner:after,
@@ -358,6 +375,10 @@
 .slds-spinner--small {
   width: 1.25rem;
 
+  &.slds-spinner_inline {
+    height: 1.25rem;
+  }
+
   &.slds-spinner:before,
   &.slds-spinner:after,
   .slds-spinner__dot-a:before,
@@ -432,6 +453,10 @@
 .slds-spinner--medium {
   width: 2rem;
 
+  &.slds-spinner_inline {
+    height: 2rem;
+  }
+
   &.slds-spinner:before,
   &.slds-spinner:after,
   .slds-spinner__dot-a:before,
@@ -505,6 +530,10 @@
 .slds-spinner_large,
 .slds-spinner--large {
   width: 2.75rem;
+
+  &.slds-spinner_inline {
+    height: 2.75rem;
+  }
 
   &.slds-spinner:before,
   &.slds-spinner:after,

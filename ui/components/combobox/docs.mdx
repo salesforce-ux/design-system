@@ -114,6 +114,45 @@ To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds
 - Every `option` has `aria-selected="false"` by default
 - Disabled `option`s should have `aria-disabled="true"` applied
 
+#### Loading more options
+
+If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/)  injected into it.
+
+For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropiate amount of space for the spinner to be visible.
+
+<Example title="Combobox - Loading Options">
+  <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
+    <Combobox
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-222"
+      readonly
+      value="Accounts"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={
+        <Listbox
+          id="listbox-id-222"
+          snapshot={Snapshot.ObjectOptions}
+          type="plain"
+          count={3}
+          visualSelection
+          loading
+        />
+      }
+      isOpen
+      hasFocus
+    />
+  </CodeView>
+</Example>
+
 ### Grouped options
 
 Options within a `listbox` can be grouped together under meaningful headings. This is useful if you wish to create separation between 2 or more sets of options within a single `listbox`.

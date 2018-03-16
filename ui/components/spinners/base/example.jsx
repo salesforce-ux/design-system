@@ -43,6 +43,17 @@ export default (
 
 export let examples = [
   {
+    id: 'inlined',
+    label: 'Inlined',
+    description:
+      'A container is not required to use the spinner. Here, it is placed on a dark background to illustrate there is nothing there. The spinner will position itself to the closest positioned parent. So if you want it to spin over a single component, the class <code>.slds-is-relative</code> can be added to the parent.',
+    element: (
+      <div className="slds-align_absolute-center" style={{ height: '4rem' }}>
+        <Spinner className="slds-spinner_medium slds-spinner_inline" />
+      </div>
+    )
+  },
+  {
     id: 'without-container',
     label: 'Without Container',
     description:

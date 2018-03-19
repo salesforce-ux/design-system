@@ -82,5 +82,5 @@
  * @restrict .slds-setup-assistant__step div
  */
 .slds-setup-assistant__step-detail {
-  padding-left: $square-icon-large-content + $spacing-small;
+  padding-left: ($square-icon-large-content + $spacing-small);
 }

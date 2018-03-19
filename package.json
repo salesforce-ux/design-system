@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "3.1.0",
-    "@salesforce-ux/icons": "9.5.0",
+    "@salesforce-ux/icons": "9.7.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@std/esm": "0.23.2",
     "async": "2.3.0",

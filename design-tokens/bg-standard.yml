@@ -405,4 +405,5 @@ props:
     value: '#00AFA0'
   INSURANCE_CONSOLE:
     value: '#00AFA0'
-    
+  INDIVIDUAL:
+    value: '#3C97DD'

@@ -364,15 +364,21 @@
  */
 .slds-combobox_object-switcher {
   flex-shrink: 0;
+  font-size: $font-size-text-x-small;
 
   .slds-combobox__input {
-    width: 120px;
+    width: 132px;
     transition: width 80ms linear;
 
     &:focus,
     &.slds-has-focus {
-      width: 150px;
+      width: 160px;
     }
+  }
+
+  .slds-icon {
+    width: $square-icon-small-content;
+    height: $square-icon-small-content;
   }
 }
 

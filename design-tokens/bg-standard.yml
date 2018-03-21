@@ -407,3 +407,5 @@ props:
     value: '#00AFA0'
   INDIVIDUAL:
     value: '#3C97DD'
+  LOGGING:
+    value: '#00A1DF'

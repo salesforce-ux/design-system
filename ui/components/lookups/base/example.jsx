@@ -2,62 +2,48 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  EntityOption
-} from '../../combobox/base/example';
-
-/* -----------------------------------------------------------------------------
-    Variables
------------------------------------------------------------------------------ */
-
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
-
-/* -----------------------------------------------------------------------------
-    Private
------------------------------------------------------------------------------ */
-
-const ListboxDropdown = props => (
-  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
-    <ListboxItem>
-      <EntityOption
-        id={listboxOptionId01}
-        entityTitle="Acme"
-        entityMeta
-        focused={props.focused}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
-        id={listboxOptionId02}
-        entityTitle="Salesforce.com, Inc."
-        entityMeta
-      />
-    </ListboxItem>
-  </Listbox>
-);
-
-/* -----------------------------------------------------------------------------
-    Exports
------------------------------------------------------------------------------ */
+import Combobox, { ComboboxGroup } from '../../combobox/';
+import Listbox, {
+  ListboxGroup,
+  ListboxWrapper,
+  Option
+} from '../../combobox/listbox/';
+import ListboxOfSelections from '../../combobox/listbox-of-pills/';
+import ButtonIcon from '../../button-icons/';
+import { UtilityIcon } from '../../icons/base/example';
+import { StandardIcon } from '../../icons/standard/example';
+import * as Snapshot from '../../combobox/snapshots.data';
 
 // Demo wrapper
 export const Context = props => (
-  <div style={{ height: '10rem' }}>{props.children}</div>
+  <div style={{ height: '15rem' }}>{props.children}</div>
 );
 
 // Default
 export default (
-  <ComboboxContainer
-    className="slds-combobox-lookup"
-    selectedOptionsInline
-    inputIcon="right"
-    inputIconRightSymbol="search"
+  <Combobox
+    id="combobox-id-1"
+    aria-controls="listbox-id-1"
     autocomplete
-    listbox={<ListboxDropdown />}
+    inputIconPosition="right"
+    rightInputIcon={
+      <UtilityIcon
+        symbol="search"
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+        containerClassName="slds-input__icon slds-input__icon_right"
+        assistiveText={false}
+        title="Search"
+      />
+    }
+    listbox={
+      <Listbox
+        id="listbox-id-1"
+        snapshot={Snapshot.EntityOptions}
+        type="entity"
+        count={3}
+      />
+    }
+    hasInteractions
   />
 );
 
@@ -67,14 +53,30 @@ export let states = [
     id: 'focused',
     label: 'Focused',
     element: (
-      <ComboboxContainer
-        selectedOptionsInline
-        containerClassName="slds-has-input-focus"
-        isOpen
+      <Combobox
+        id="combobox-id-2"
+        aria-controls="listbox-id-2"
         autocomplete
-        inputIcon="right"
-        inputIconRightSymbol="search"
-        listbox={<ListboxDropdown />}
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title="Search"
+          />
+        }
+        listbox={
+          <Listbox
+            id="listbox-id-2"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={3}
+          />
+        }
+        isOpen
+        hasFocus
       />
     )
   },
@@ -82,14 +84,63 @@ export let states = [
     id: 'open-item-focused',
     label: 'Open - Item Focused',
     element: (
-      <ComboboxContainer
-        selectedOptionsInline
-        isOpen
+      <Combobox
+        id="combobox-id-3"
+        aria-controls="listbox-id-3"
         autocomplete
-        inputIcon="right"
-        inputIconRightSymbol="search"
-        listbox={<ListboxDropdown focused />}
-        aria-activedescendant={listboxOptionId01}
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title="Search"
+          />
+        }
+        listbox={
+          <Listbox
+            id="listbox-id-3"
+            snapshot={Snapshot.EntityOptionsFocused}
+            type="entity"
+            count={3}
+          />
+        }
+        aria-activedescendant="option0"
+        isOpen
+        hasFocus
+      />
+    )
+  },
+  {
+    id: 'displaying-options-based-on-input',
+    label: 'Displaying options based on user input',
+    element: (
+      <Combobox
+        id="combobox-id-4"
+        aria-controls="listbox-id-4"
+        autocomplete
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+          />
+        }
+        value="salesforce"
+        listbox={
+          <Listbox
+            id="listbox-id-4"
+            snapshot={Snapshot.EntityOptionsTypeahead}
+            term="salesforce"
+            type="entity"
+            count={4}
+          />
+        }
+        aria-activedescendant="option1"
+        isOpen
+        hasFocus
       />
     )
   },
@@ -97,17 +148,36 @@ export let states = [
     id: 'closed-option-selected',
     label: 'Option Selected',
     element: (
-      <ComboboxContainer
-        selectedOptionsInline
-        autocomplete
-        readonly
-        inputIcon="both"
-        inputIconLeftSprite="standard"
-        inputIconLeftSymbol="account"
-        inputButtonIcon
-        inputIconRightSymbol="close"
+      <Combobox
+        id="combobox-id-5"
+        aria-controls="listbox-id-5"
+        inputIconPosition="left-right"
+        leftInputIcon={
+          <StandardIcon
+            symbol="account"
+            className="slds-icon_small"
+            containerClassName="slds-combobox__input-entity-icon"
+          />
+        }
+        rightInputIcon={
+          <ButtonIcon
+            className="slds-input__icon slds-input__icon_right"
+            symbol="close"
+            title="Remove selected option"
+            assistiveText="Remove selected option"
+          />
+        }
+        listbox={
+          <Listbox
+            id="listbox-id-5"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={2}
+          />
+        }
+        hasSelection
         value="Salesforce.com, Inc."
-        listbox={<ListboxDropdown />}
+        readonly
       />
     )
   }

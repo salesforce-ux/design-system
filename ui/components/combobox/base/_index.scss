@@ -405,10 +405,8 @@
 /**
  * @summary Container for a combobox group
  *
- * @name combobox-group
  * @selector .slds-combobox-group
  * @restrict div
- * @variant
  */
 .slds-combobox-group {
   display: flex;
@@ -466,8 +464,7 @@
 /**
  * @summary The container of pill selections found inside of a combobox group
  * @selector .slds-listbox_selection-group
- * @restrict .slds-listbox
- * @modifier
+ * @restrict .slds-combobox-group ~ div
  */
 .slds-listbox_selection-group {
   padding: 0;
@@ -479,7 +476,6 @@
    * @summary Expanded state of a selection group
    * @selector .slds-is-expanded
    * @restrict .slds-listbox_selection-group
-   * @modifier
    */
   &.slds-is-expanded {
     height: auto;
@@ -509,9 +505,8 @@
 
 /**
  * @summary The first combobox in the combobox group
- * @selector .sldss-combobox-addon_start
+ * @selector .slds-combobox-addon_start
  * @restrict .slds-combobox-group div
- * @modifier
  */
 .slds-combobox-addon_start .slds-combobox__input {
   border-top-right-radius: 0;
@@ -522,9 +517,8 @@
 
 /**
  * @summary The last combobox in the combobox group
- * @selector .sldss-combobox-addon_end
+ * @selector .slds-combobox-addon_end
  * @restrict .slds-combobox-group div
- * @modifier
  */
 .slds-combobox-addon_end .slds-combobox__input {
   border-top-right-radius: 4px;

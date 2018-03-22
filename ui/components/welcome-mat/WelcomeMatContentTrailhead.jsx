@@ -19,19 +19,20 @@ class WelcomeMatContentTrailhead extends React.Component {
       <p>Cha-ching! You earned the badge.</p>
     ) : (
       <p>
-        {complete} of {total} modules completed
+        {complete}/{total} units completed
       </p>
     );
 
     return (
       <React.Fragment>
         <h2 id={labelId} className="slds-welcome-mat__info-title">
-          Hey there, Trailblazer!
+          The Lightning Experience is here!
         </h2>
         <p className="slds-welcome-mat__info-description slds-text-longform">
-          Your 30-day trial is under way. Learn how easy it is to use and set up
-          Lightning Service Desk. You'll be your company's service expert by the
-          time you're done!
+          Welcome to Lightning Experience, the modern, beautiful user experience
+          from Salesforce. With a sales-and service-centric mindset, we focused
+          on reinventing the desktop environment to better support your business
+          processes.
         </p>
 
         <div
@@ -55,7 +56,7 @@ class WelcomeMatContentTrailhead extends React.Component {
             />
           </div>
           <p>
-            <strong>Essentials Explorer</strong>
+            <strong>Lightning Explorer</strong>
           </p>
           {badgeProgressMessage}
         </div>

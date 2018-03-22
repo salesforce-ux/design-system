@@ -69,7 +69,7 @@ describe('Welcome Mat Content', () => {
 
   it('correctly implements completed count props', () => {
     expect(example.find('strong').html()).toBe(
-      `${complete}/${total} Walkthroughs completed`
+      `${complete}/${total} units completed`
     );
   });
 
@@ -94,7 +94,7 @@ describe('Welcome Mat Trailhead Content', () => {
   });
 
   it('shows the correct initial progress', () => {
-    const initialText = ['Essentials Explorer', '0 of 5 modules completed'];
+    const initialText = ['Lightning Explorer', '0/5 units completed'];
 
     shallowNew.find('.slds-welcome-mat__info-progress p').forEach((p, pi) => {
       expect(p.text()).toBe(initialText[pi]);
@@ -103,7 +103,7 @@ describe('Welcome Mat Trailhead Content', () => {
 
   it('shows the correct completed message', () => {
     const completedText = [
-      'Essentials Explorer',
+      'Lightning Explorer',
       'Cha-ching! You earned the badge.'
     ];
 

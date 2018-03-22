@@ -13,7 +13,7 @@ class WelcomeMatContent extends React.Component {
     return (
       <React.Fragment>
         <h2 id={labelId} className="slds-welcome-mat__info-title">
-          Empower Your Agents with Service Cloud
+          The Lightning Experience is here!
         </h2>
         <div className="slds-welcome-mat__info-description slds-text-longform">
           {description}
@@ -22,7 +22,7 @@ class WelcomeMatContent extends React.Component {
         <div className="slds-welcome-mat__info-progress">
           <p>
             <strong>
-              {complete}/{total} Walkthroughs completed
+              {complete}/{total} units completed
             </strong>
           </p>
         </div>
@@ -48,9 +48,10 @@ WelcomeMatContent.defaultProps = {
   labelId: 'welcome-mat-label-1',
   description: (
     <p>
-      Your 30-day trial is under way. Learn how easy it is to use and set up
-      Lightning Service Desk. You'll be your company's service expert by the
-      time you're done!
+      Welcome to Lightning Experience, the modern, beautiful user experience
+      from Salesforce. With a sales-and service-centric mindset, we focused on
+      reinventing the desktop environment to better support your business
+      processes.
     </p>
   )
 };

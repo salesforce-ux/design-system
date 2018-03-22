@@ -89,7 +89,8 @@ const ComboboxFormElement = props => (
  * Combobox Input
  */
 const ComboboxInput = props => {
-  const hasInputIcon = props.leftInputIcon || props.rightInputIcon;
+  const hasInputIcon =
+    props.leftInputIcon || props.rightInputIcon || props.showCloseButton;
 
   return (
     <div
@@ -284,6 +285,7 @@ export class ComboboxGroup extends Component {
       label,
       hideLabel,
       formClassName,
+      inputContainerClassName,
       addon,
       addonPosition,
       comboboxPosition,
@@ -322,6 +324,7 @@ export class ComboboxGroup extends Component {
             >
               <ComboboxInput
                 id={id}
+                className={inputContainerClassName}
                 toggleFocus={this.toggleFocus}
                 onFocus={hasFocus}
                 placeholder={placeholder}

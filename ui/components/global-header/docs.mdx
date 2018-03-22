@@ -6,7 +6,12 @@ import GlobalHeader, { Logo } from './';
 import GlobalActions, {Favorites,Task,Help,Setup,Notifications,Avatar} from './global-actions/';
 import GlobalNotifications from './notifications/';
 import GlobalFavorites from './favorites/';
-import GlobalSearch from './search/';
+import {ComboboxGroup} from '../combobox/';
+import ObjectSwitcher from '../combobox/object-switcher/';
+import Listbox from '../combobox/listbox/';
+import { UtilityIcon } from '../icons/base/example';
+import * as Snapshot from './search/data';
+import _ from '../../shared/helpers';
 import style from './docs/index.scss';
 
 <div className="lead doc">
@@ -14,8 +19,44 @@ import style from './docs/index.scss';
 </div>
 
 <Example title="base global header">
-  <CodeView style={{ position: 'relative', height: '3.125rem' }}>
-    <GlobalHeader />
+  <CodeView style={{ position: 'relative', height: '21.25rem' }}>
+    <GlobalHeader
+      globalSearch={
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls="search-listbox-id-1"
+          comboboxID="primary-search-combobox-id-1"
+          autocomplete
+          inputContainerClassName="slds-global-search__form-element"
+          label="Search Salesforce"
+          hideLabel
+          placeholder="Search Salesforce"
+          listbox={
+            <Listbox
+              id="search-listbox-id-1"
+              aria-label="Recent Items"
+              snapshot={Snapshot.SearchResults}
+              type="entity"
+              count={6}
+            />
+          }
+          addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-search-combobox-id-1" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="left"
+          leftInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_left"
+              title={false}
+              assistiveText={false}
+            />
+          }
+          hasInteractions
+        />
+      }
+    />
   </CodeView>
 </Example>
 
@@ -82,21 +123,132 @@ The global search component is used for application wide search. The form elemen
 ### Default
 <Example title="Global Header Search Default State">
   <CodeView style={{ position: 'relative', height: '3.5rem' }}>
-    <GlobalHeader />
+    <GlobalHeader
+      globalSearch={
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls="search-listbox-id-2"
+          comboboxID="primary-search-combobox-id-2"
+          autocomplete
+          inputContainerClassName="slds-global-search__form-element"
+          label="Search Salesforce"
+          hideLabel
+          placeholder="Search Salesforce"
+          listbox={
+            <Listbox
+              id="search-listbox-id-2"
+              aria-label="Recent Items"
+              snapshot={Snapshot.SearchResults}
+              type="entity"
+              count={6}
+            />
+          }
+          addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-2" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="left"
+          leftInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_left"
+              title={false}
+              assistiveText={false}
+            />
+          }
+        />
+      }
+    />
   </CodeView>
 </Example>
 
 ### Focused and expanded
 <Example title="Global Header Search Expanded State">
   <CodeView style={{ position: 'relative', height: '21rem' }}>
-    <GlobalHeader expanded />
+    <GlobalHeader
+      globalSearch={
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls="search-listbox-id-3"
+          comboboxID="primary-search-combobox-id-3"
+          autocomplete
+          inputContainerClassName="slds-global-search__form-element"
+          label="Search Salesforce"
+          hideLabel
+          placeholder="Search Salesforce"
+          listbox={
+            <Listbox
+              id="search-listbox-id-3"
+              aria-label="Recent Items"
+              snapshot={Snapshot.SearchResults}
+              type="entity"
+              count={6}
+            />
+          }
+          addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-3" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="left"
+          leftInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_left"
+              title={false}
+              assistiveText={false}
+            />
+          }
+          hasFocus
+          isOpen
+        />
+      }
+    />
   </CodeView>
 </Example>
 
 ### Active and typing
 <Example title="Global Header Search Active State">
   <CodeView style={{ position: 'relative', height: '21rem' }}>
-    <GlobalHeader expanded searchingFor="IBM" />
+    <GlobalHeader
+      globalSearch={
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls="search-listbox-id-4"
+          comboboxID="primary-search-combobox-id-4"
+          autocomplete
+          inputContainerClassName="slds-global-search__form-element"
+          label="Search Salesforce"
+          hideLabel
+          placeholder="Search Salesforce"
+          value="salesforce"
+          listbox={
+            <Listbox
+              id="search-listbox-id-4"
+              term="salesforce"
+              snapshot={Snapshot.SearchResultsTypeahead}
+              type="entity"
+              count={6}
+            />
+          }
+          aria-activedescendant="option0"
+          addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-4" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="left"
+          leftInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_xx-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_left"
+              title={false}
+              assistiveText={false}
+            />
+          }
+          hasFocus
+          isOpen
+        />
+      }
+    />
   </CodeView>
 </Example>
 
@@ -158,7 +310,7 @@ If the favorites action needs to become disabled, apply the `disabled` attribute
 
 #### Favorites popover
 
-The favorites popover is invoked when a user clicks on the dropdown arrow action icon inside of the favorites button group. The favorites popover is implemented as a Popover component, please refer to the accessibility guidelines on the Popover component page for implementation guidance.
+The favorites popover is invoked when a user clicks on the dropdown arrow action icon inside of the favorites button group. The favorites popover is implemented as a [Popover - Dynamic Menu Variant](/components/dynamic-menu/) component, please refer to the accessibility guidelines on the Popover component page for implementation guidance.
 
 <CodeView
   style={{

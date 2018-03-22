@@ -917,6 +917,31 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
 </Example>
 
+### User input (Typeahead) - Loading
+
+<Example title="Combobox - Grouped - User input - Loading">
+
+  <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
+    <ComboboxGroup
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-21"
+      comboboxID="primary-combobox-id-2"
+      autocomplete
+      listbox={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      value="salesforce"
+      isOpen
+      showCloseButton
+      isLoading
+      hasFocus
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="group-right"
+    />
+  </CodeView>
+
+</Example>
+
 ### Selecting options
 
 <Example title="Combobox - Grouped - Selecting options">
@@ -1086,6 +1111,33 @@ The containing element should receive the class `slds-combobox_object-switcher` 
   When a selection is made, the currently selected items should be prepended with a <code className="doc">&lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;</code> to inform screen readers of its current selection.
 </Blockquote>
 
+##### Blurred
+<Example title="Combobox - Grouped - Scoping icon variant - Blurred">
+
+  <CodeView style={{maxWidth: '40rem'}}>
+    <ComboboxGroup
+    id={_.uniqueId('combobox-id-')}
+    aria-controls="listbox-id-28"
+    comboboxID="primary-combobox-id-9"
+    autocomplete
+    listbox={<Listbox id="listbox-id-28" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+    addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" comboboxAriaControls="primary-combobox-id-9" />}
+    addonPosition="start"
+    comboboxPosition="end"
+    inputIconPosition="right"
+    rightInputIcon={
+      <UtilityIcon
+      symbol="search"
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+      containerClassName="slds-input__icon slds-input__icon_right"
+      />
+    }
+    />
+  </CodeView>
+
+</Example>
+
+##### Focused
 <Example title="Combobox - Grouped - Scoping icon variant">
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>

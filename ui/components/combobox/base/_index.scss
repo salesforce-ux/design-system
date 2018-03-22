@@ -50,7 +50,6 @@
     .slds-combobox__input.slds-has-focus {
       width: 0;
       pointer-events: auto;
-      padding: 0 ($spacing-large + $spacing-xx-small);
     }
 
     .slds-input__icon {
@@ -374,6 +373,10 @@
     &.slds-has-focus {
       width: 160px;
     }
+  }
+
+  .slds-input__icon {
+    margin-top: (($square-icon-small-content / 2) * -1);
   }
 
   .slds-icon {

@@ -55,8 +55,17 @@
    */
   &__item_search,
   &__item--search {
-    flex: 0 1 rem(440px);
+    flex: 0 1 rem(600px);
     padding: 0;
+  }
+
+  /**
+   * Primary combobox that contains the search input, handles sizing
+   *
+   * @selector .slds-global-search__form-element div
+   * @restrict .slds-global-header__item_search
+   */
+  .slds-global-search__form-element {
 
     .slds-input {
       padding-left: ($spacing-large * 2);
@@ -65,6 +74,10 @@
     .slds-input__icon_left,
     .slds-input__icon--left {
       left: ($spacing-medium + $spacing-xx-small);
+    }
+
+    .slds-icon {
+      fill: $color-text-input-icon;
     }
   }
 

@@ -3,49 +3,49 @@ export const EntityOptions = {
     name: 'Burlington Textiles Corp of America',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Burlington, NC'
+    entityField: 'Burlington, NC'
   },
   option2: {
     name: 'Dickenson plc',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Lawrence, KS'
+    entityField: 'Lawrence, KS'
   },
   option3: {
     name: 'Edge Communications',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Austin, TX'
+    entityField: 'Austin, TX'
   },
   option4: {
     name: 'Express Logistics and Transport',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Portland, OR'
+    entityField: 'Portland, OR'
   },
   option5: {
     name: 'GenePoint',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Mountain View, CA'
+    entityField: 'Mountain View, CA'
   },
   option6: {
     name: 'Grand Hotels & Resorts Ltd',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Chicago, IL'
+    entityField: 'Chicago, IL'
   },
   option7: {
     name: 'Pyramid Construction Inc.',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Paris'
+    entityField: 'Paris'
   },
   option8: {
     name: 'United Oil & Gas Corp.',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'New York, NY'
+    entityField: 'New York, NY'
   }
 };
 
@@ -54,7 +54,7 @@ export const EntityOptionsFocused = {
     name: 'Burlington Textiles Corp of America',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Burlington, NC',
+    entityField: 'Burlington, NC',
     focused: true,
     tabIndex: 0
   },
@@ -62,43 +62,43 @@ export const EntityOptionsFocused = {
     name: 'Dickenson plc',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Lawrence, KS'
+    entityField: 'Lawrence, KS'
   },
   option3: {
     name: 'Edge Communications',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Austin, TX'
+    entityField: 'Austin, TX'
   },
   option4: {
     name: 'Express Logistics and Transport',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Portland, OR'
+    entityField: 'Portland, OR'
   },
   option5: {
     name: 'GenePoint',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Mountain View, CA'
+    entityField: 'Mountain View, CA'
   },
   option6: {
     name: 'Grand Hotels & Resorts Ltd',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Chicago, IL'
+    entityField: 'Chicago, IL'
   },
   option7: {
     name: 'Pyramid Construction Inc.',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Paris'
+    entityField: 'Paris'
   },
   option8: {
     name: 'United Oil & Gas Corp.',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'New York, NY'
+    entityField: 'New York, NY'
   }
 };
 
@@ -109,7 +109,7 @@ export const EntityOptionsTypeahead = {
     afterTerm: '.com',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'San Francisco, CA'
+    entityField: 'San Francisco, CA'
   },
   option2: {
     term: 'Salesforce',
@@ -117,7 +117,7 @@ export const EntityOptionsTypeahead = {
     afterTerm: '.org',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'New York, NY'
+    entityField: 'New York, NY'
   },
   option3: {
     term: 'Salesforce',
@@ -125,7 +125,7 @@ export const EntityOptionsTypeahead = {
     afterTerm: 'HQ',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'San Francisco, CA'
+    entityField: 'San Francisco, CA'
   }
 };
 
@@ -423,13 +423,13 @@ export const EntityStylingOptions = {
   option2: {
     name: 'Express Logistics and Transport',
     entityMeta: true,
-    entityLocation: 'Durham, NC'
+    entityField: 'Durham, NC'
   },
   option3: {
     name: 'Alexandria Textiles Corp of America',
     entityMeta: true,
     entityType: 'Account',
-    entityLocation: 'Alexandria, VA',
+    entityField: 'Alexandria, VA',
     rightIcon: 'chevronright',
     rightIconAssistiveText: 'Has further options'
   }

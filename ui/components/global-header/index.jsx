@@ -3,7 +3,6 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import GlobalSearch from './search/';
 import GlobalActions from './global-actions/';
 
 const SkipLink = [
@@ -72,10 +71,7 @@ class GlobalHeader extends Component {
             <Logo />
           </div>
           <div className="slds-global-header__item slds-global-header__item_search">
-            <GlobalSearch
-              expanded={this.props.expanded}
-              value={this.props.searchingFor}
-            />
+            {this.props.globalSearch}
           </div>
           <div className="slds-global-header__item">
             <GlobalActions

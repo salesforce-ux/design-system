@@ -1,71 +1,63 @@
 export const SearchResults = {
-  item1: {
-    icon: 'opportunity',
+  option0: {
+    name: 'Recent Items',
+    label: true
+  },
+  option1: {
     name: 'Salesforce - 1,000 Licenses',
-    object: 'Opportunity',
-    field: 'Propecting'
+    entityMeta: true,
+    entityType: 'Opportunity',
+    entityField: 'Propecting'
   },
-  item2: {
-    icon: 'contact',
+  option2: {
     name: 'Art Vandelay',
-    object: 'Contact',
-    field: 'avandelay@vandelay.com'
+    entityMeta: true,
+    entityType: 'Contact',
+    entityField: 'avandelay@vandelay.com'
   },
-  item3: {
-    icon: 'account',
+  option3: {
     name: 'Vandelay Industries',
-    object: 'Account',
-    field: 'San Francisco'
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'San Francisco'
   },
-  item4: {
-    icon: 'event',
+  option4: {
     name: 'Salesforce UK 2016 Events',
-    object: 'General Ledger',
-    field: '$20,000'
+    entityMeta: true,
+    entityType: 'Event',
+    entityField: '$20,000'
   },
-  item5: {
-    icon: 'lead',
+  option5: {
     name: 'H.E. Pennypacker',
-    object: 'Lead',
-    field: 'Nursing'
+    entityMeta: true,
+    entityType: 'Lead',
+    entityField: 'Nursing'
   }
 };
 
-export const TypeaheadSearchResults = {
-  item0: {
-    advanced: true,
-    name: 'in Salesforce',
-    iconSet: 'utility',
-    icon: 'search'
+export const SearchResultsTypeahead = {
+  option1: {
+    term: 'Salesforce',
+    beforeTerm: '',
+    afterTerm: '.com',
+    entityMeta: true,
+    entityType: 'Account',
+    entityLocation: 'San Francisco, CA'
   },
-  item1: {
-    icon: 'opportunity',
-    name: '- 1ys/100k',
-    object: 'Opportunity',
-    field: 'Proposal/Quote'
+  option2: {
+    term: 'Salesforce',
+    beforeTerm: '',
+    afterTerm: '.org',
+    entityMeta: true,
+    entityType: 'Account',
+    entityLocation: 'New York, NY'
   },
-  item2: {
-    icon: 'account',
-    name: '',
-    object: 'Account',
-    field: 'Menlo Park'
-  },
-  item3: {
-    icon: 'account',
-    name: ' Watson',
-    object: 'Account',
-    field: 'Menlo Park'
-  },
-  item4: {
-    icon: 'opportunity',
-    name: '- 200 Service Licenses',
-    object: 'Opportunity',
-    field: 'Close-Won'
-  },
-  item5: {
-    icon: 'contact',
-    name: '- Art Vandelay ',
-    object: 'User',
-    field: 'Latex Salesman'
+  option3: {
+    term: 'Salesforce',
+    beforeTerm: '',
+    afterTerm: 'HQ',
+    entityMeta: true,
+    entityType: 'Account',
+    entityLocation: 'San Francisco, CA'
   }
 };

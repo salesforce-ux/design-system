@@ -7,6 +7,12 @@ import ButtonIcon from '../../button-icons/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import classNames from 'classnames';
 import GlobalHeader from '../';
+import { ComboboxGroup } from '../../combobox/';
+import ObjectSwitcher from '../../combobox/object-switcher/';
+import Listbox from '../../combobox/listbox/';
+import { UtilityIcon } from '../../icons/base/example';
+import * as Snapshot from '../search/data';
+import _ from '../../../shared/helpers';
 
 /**
  * Deprecated Global Header - Keep for testing
@@ -502,7 +508,54 @@ export const Context = props => (
   </div>
 );
 
-export default <GlobalHeader />;
+export default (
+  <GlobalHeader
+    globalSearch={
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="search-listbox-id-1"
+        comboboxID="primary-search-combobox-id-1"
+        autocomplete
+        inputContainerClassName="slds-global-search__form-element"
+        label="Search Salesforce"
+        hideLabel
+        placeholder="Search Salesforce"
+        listbox={
+          <Listbox
+            id="search-listbox-id-1"
+            aria-label="Recent Items"
+            snapshot={Snapshot.SearchResults}
+            type="entity"
+            count={6}
+          />
+        }
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('objectswitcher-combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            hasInteractions
+            comboboxAriaControls="primary-search-combobox-id-1"
+            listboxId={_.uniqueId('objectswitcher-listbox-id-')}
+          />
+        }
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="left"
+        leftInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_xx-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_left"
+            title={false}
+            assistiveText={false}
+          />
+        }
+        hasInteractions
+      />
+    }
+  />
+);
 
 export let states = [
   {

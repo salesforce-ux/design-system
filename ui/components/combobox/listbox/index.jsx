@@ -122,7 +122,7 @@ export const EntityOption = props => (
         {props.entityMeta && (
           <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
             {props.entityType || 'Account'} &bull;{' '}
-            {props.entityLocation || ' San Francisco'}
+            {props.entityField || ' San Francisco'}
           </span>
         )}
       </span>
@@ -254,9 +254,10 @@ class Listbox extends Component {
           selected={option.selected}
           focused={option.focused}
           name={option.name}
+          label={option.label}
           entityMeta={option.entityMeta}
           entityType={option.entityType}
-          entityLocation={option.entityLocation}
+          entityField={option.entityField}
           term={option.term}
           beforeTerm={option.beforeTerm}
           afterTerm={option.afterTerm}
@@ -303,7 +304,10 @@ class Listbox extends Component {
       <ListboxWrapper
         id={id}
         className={classNames(
-          'slds-dropdown slds-dropdown_length-5',
+          'slds-dropdown',
+          type === 'entity'
+            ? 'slds-dropdown_length-with-icon-7'
+            : 'slds-dropdown_length-5',
           className
         )}
       >

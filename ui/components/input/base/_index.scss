@@ -130,7 +130,7 @@
     line-height: 1;
     border: 0; // Re-aligns icons to center
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
@@ -212,6 +212,15 @@
     .slds-input_bare,
     .slds-input--bare {
       padding: 0 $spacing-x-large;
+    }
+  }
+
+  &_group-right {
+
+    .slds-input,
+    .slds-input_bare,
+    .slds-input--bare {
+      padding-right: ($spacing-xx-large + $spacing-xx-small);
     }
   }
 }

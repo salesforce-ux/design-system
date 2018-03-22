@@ -22,7 +22,8 @@ class ObjectSwitcher extends Component {
       hasFocus,
       addonPosition,
       comboboxAriaControls,
-      hasInteractions
+      hasInteractions,
+      listboxId
     } = this.props;
     return (
       <div
@@ -33,7 +34,7 @@ class ObjectSwitcher extends Component {
       >
         <Combobox
           id={id}
-          aria-controls={listboxId01}
+          aria-controls={listboxId || listboxId01}
           comboboxAriaControls={comboboxAriaControls}
           label="Filter Search by:"
           hideLabel
@@ -45,13 +46,15 @@ class ObjectSwitcher extends Component {
               symbol="down"
               className="slds-icon slds-icon_xx-small slds-icon-text-default"
               containerClassName="slds-input__icon slds-input__icon_right"
+              title={false}
+              assistiveText={false}
             />
           }
           listbox={
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
               aria-label="Suggested for you"
-              id={listboxId01}
+              id={listboxId || listboxId01}
               snapshot={Snapshot.Options}
               type="plain"
               count={8}

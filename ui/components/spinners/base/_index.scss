@@ -40,6 +40,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: ($z-index-spinner + 1);
   transform: translate(-50%, -50%) rotate(90deg);
 }
 

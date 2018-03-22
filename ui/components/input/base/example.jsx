@@ -273,7 +273,7 @@ export let examples = [
     element: (
       <FormElement>
         <FormElementLabel>Input Label</FormElementLabel>
-        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right">
+        <FormElementControl className="slds-input-has-icon slds-input-has-icon_left-right slds-input-has-icon_group-right">
           <SvgIcon
             className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
             sprite="utility"

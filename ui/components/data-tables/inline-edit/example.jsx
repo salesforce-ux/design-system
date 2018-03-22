@@ -322,6 +322,35 @@ export let states = [
     )
   },
   {
+    id: 'row-selected-with-edited-cell',
+    label: 'Row Selected with an Edited Cell',
+    element: (
+      <Container>
+        <Table isEditable style={{ width: '66.75rem' }}>
+          <Thead
+            actionableMode
+            columns={columns}
+            hasErrorColumn
+            mainColumnWidth="8.75rem"
+          />
+          <tbody>
+            {_.times(rows.length, i => (
+              <InlineEditTr
+                key={i}
+                index={i + 1}
+                className={i === 0 ? 'slds-is-selected' : null}
+                {...rows[i]}
+                rowSelected={i === 0 ? true : null}
+                actionableMode
+                showEditedCell
+              />
+            ))}
+          </tbody>
+        </Table>
+      </Container>
+    )
+  },
+  {
     id: 'row-error',
     label: 'Error - Row level on save (Actionable mode)',
     element: (
@@ -353,6 +382,37 @@ export let states = [
     script: `
       document.getElementById('button-01').focus()
     `
+  },
+  {
+    id: 'row-error-and-selected',
+    label:
+      'Error - Row level on save (Actionable mode) with entire row selected',
+    element: (
+      <Container>
+        <Table isEditable style={{ width: '66.75rem' }}>
+          <Thead
+            actionableMode
+            columns={columns}
+            hasErrorColumn
+            mainColumnWidth="8.75rem"
+          />
+          <tbody>
+            {_.times(rows.length, i => (
+              <InlineEditTr
+                key={i}
+                index={i + 1}
+                className={i === 0 ? 'slds-is-selected' : null}
+                {...rows[i]}
+                rowSelected={i === 0 ? true : null}
+                actionableMode
+                showCellError
+                showRowError
+              />
+            ))}
+          </tbody>
+        </Table>
+      </Container>
+    )
   },
   {
     id: 'row-error-focused',

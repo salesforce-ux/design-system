@@ -573,7 +573,7 @@ export const ErrorTd = props => (
         }
       )}
       id={'error-0' + props.index}
-      symbol="ban"
+      symbol="error"
       tabIndex={props.actionableMode && props.hasError ? null : '-1'}
       title={`Item ${props.index} has errors`}
     />

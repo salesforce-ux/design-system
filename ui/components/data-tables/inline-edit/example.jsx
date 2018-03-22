@@ -390,7 +390,7 @@ export let states = [
               <FeedbackHeader
                 headingId={headingUniqueId}
                 title="Resolve error"
-                symbol="ban"
+                symbol="error"
               />
             }
             style={{

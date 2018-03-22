@@ -45,7 +45,7 @@ it('renders a error alert', () =>
         containerClassName="slds-m-right_x-small"
         className="slds-icon_x-small"
         assistiveText={false}
-        symbol="ban"
+        symbol="error"
       />
       <h2>
         Your browser is currently not supported. Your Salesforce may be

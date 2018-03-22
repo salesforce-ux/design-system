@@ -37,7 +37,7 @@ let IntegratedFileSelector = props => (
           <SvgIcon
             className="slds-file-selector__body-icon slds-icon slds-icon-text-default"
             sprite="utility"
-            symbol="ban"
+            symbol="error"
           />
         ) : (
           <SvgIcon
@@ -47,11 +47,9 @@ let IntegratedFileSelector = props => (
           />
         )}
         <span className="slds-file-selector__text slds-file-selector__text_integrated slds-text-heading_medium slds-text-align_center">
-          {props.draggoverError ? (
-            'Too many files selected. Attach up to 1 file.'
-          ) : (
-            'Drop Files'
-          )}
+          {props.draggoverError
+            ? 'Too many files selected. Attach up to 1 file.'
+            : 'Drop Files'}
         </span>
       </label>
     </div>

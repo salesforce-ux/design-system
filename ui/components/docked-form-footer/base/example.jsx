@@ -35,7 +35,7 @@ export let states = [
           assistiveText="Resolve error"
           className="slds-button_icon slds-button_icon-error"
           iconClassName="slds-button__icon_large"
-          symbol="ban"
+          symbol="error"
           title="Resolve error"
         />
         <button type="button" className="slds-button slds-button_neutral">
@@ -56,7 +56,7 @@ export let states = [
           assistiveText="Resolve error"
           className="slds-button_icon slds-button_icon-error"
           iconClassName="slds-button__icon_large"
-          symbol="ban"
+          symbol="error"
           title="Resolve error"
         />
         <button type="button" className="slds-button slds-button_neutral">
@@ -72,7 +72,7 @@ export let states = [
             <FeedbackHeader
               headingId={headingUniqueId}
               title="Resolve error"
-              symbol="ban"
+              symbol="error"
             />
           }
           closeButton

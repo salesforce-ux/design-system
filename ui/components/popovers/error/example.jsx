@@ -4,6 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
+import { UtilityIcon } from '../../icons/base/example';
 import { Popover } from '../base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
@@ -15,17 +16,14 @@ export const FeedbackHeader = props => (
     <div className="slds-media slds-media_center slds-has-flexi-truncate ">
       {props.symbol ? (
         <div className="slds-media__figure">
-          <span
-            className={'slds-icon_container slds-icon-utility-' + props.symbol}
-          >
-            <SvgIcon
-              className={classNames('slds-icon slds-icon_x-small', {
-                'slds-icon-text-default': props.iconDefault
-              })}
-              sprite="utility"
-              symbol={props.symbol}
-            />
-          </span>
+          <UtilityIcon
+            className={classNames('slds-icon_x-small', {
+              'slds-icon-text-default': props.iconDefault
+            })}
+            symbol={props.symbol}
+            title={false}
+            assistiveText={false}
+          />
         </div>
       ) : null}
       <div className="slds-media__body">
@@ -59,7 +57,7 @@ export default (
       <FeedbackHeader
         headingId={headingUniqueId}
         title="Resolve error"
-        symbol="ban"
+        symbol="error"
       />
     }
     closeButton
@@ -87,7 +85,7 @@ export let examples = [
           <FeedbackHeader
             headingId={headingUniqueId}
             title="Resolve error"
-            symbol="ban"
+            symbol="error"
           />
         }
         footer={<FeedbackFooter />}

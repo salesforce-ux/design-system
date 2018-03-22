@@ -378,7 +378,7 @@ export let examples = [
       <FormElement className="slds-text-align_center">
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_decrement"
-          symbol="error"
+          symbol="ban"
           assistiveText={'Decrement counter'}
           title={'Decrement counter'}
         />

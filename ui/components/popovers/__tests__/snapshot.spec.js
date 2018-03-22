@@ -110,7 +110,7 @@ it('renders an error popover', () =>
       className="slds-popover_error slds-nubbin_bottom-left"
       headingId={headingUniqueId}
       header={
-        <FeedbackHeader title="Resolve the following errors" symbol="ban" />
+        <FeedbackHeader title="Resolve the following errors" symbol="error" />
       }
       closeButton
       inverse
@@ -131,7 +131,7 @@ it('renders an error popover with footer', () =>
       className="slds-popover_error slds-nubbin_bottom-left"
       headingId={headingUniqueId}
       header={
-        <FeedbackHeader title="Resolve the following errors" symbol="ban" />
+        <FeedbackHeader title="Resolve the following errors" symbol="error" />
       }
       footer={<FeedbackFooter />}
       closeButton

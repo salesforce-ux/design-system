@@ -28,7 +28,7 @@ class WelcomeMatContentTrailhead extends React.Component {
         <h2 id={labelId} className="slds-welcome-mat__info-title">
           Hey there, Trailblazer!
         </h2>
-        <p className="slds-welcome-mat__info-description">
+        <p className="slds-welcome-mat__info-description slds-text-longform">
           Your 30-day trial is under way. Learn how easy it is to use and set up
           Lightning Service Desk. You'll be your company's service expert by the
           time you're done!

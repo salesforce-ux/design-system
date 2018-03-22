@@ -15,7 +15,9 @@ class WelcomeMatContent extends React.Component {
         <h2 id={labelId} className="slds-welcome-mat__info-title">
           Empower Your Agents with Service Cloud
         </h2>
-        <div className="slds-welcome-mat__info-description">{description}</div>
+        <div className="slds-welcome-mat__info-description slds-text-longform">
+          {description}
+        </div>
 
         <div className="slds-welcome-mat__info-progress">
           <p>

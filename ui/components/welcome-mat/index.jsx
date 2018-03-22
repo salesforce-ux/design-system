@@ -15,12 +15,12 @@ export const sampleTiles = () => [
   {
     symbol: 'animal_and_nature',
     title: 'Welcome to Salesforce!',
-    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.'
   },
   {
     symbol: 'call',
     title: 'Learn About OpenCTI',
-    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.'
   },
   {
     symbol: 'upload',

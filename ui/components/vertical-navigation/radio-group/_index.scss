@@ -36,7 +36,7 @@
 
     &:checked + .slds-nav-vertical__action {
 
-      background-color: $brand-primary-transparent;
+      background-color: $brand-primary-transparent_10;
 
       &:before {
         content: '';
@@ -54,7 +54,7 @@
 .slds-nav-vertical_shade {
 
   .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
-    background-color: $brand-primary-transparent;
+    background-color: $brand-primary-transparent_10;
     border-color: $color-border;
   }
 }

@@ -92,7 +92,7 @@
 
   &:hover,
   &:focus {
-    background: $brand-primary-transparent;
+    background: $brand-primary-transparent_10;
     color: inherit;
   }
 
@@ -102,7 +102,7 @@
    * @modifier
    */
   &.slds-is-active {
-    background: $brand-primary-transparent;
+    background: $brand-primary-transparent_10;
     color: inherit;
 
     &:after {

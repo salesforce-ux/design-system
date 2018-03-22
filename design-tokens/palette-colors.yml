@@ -52,6 +52,12 @@ props:
   BRAND_PRIMARY_TRANSPARENT:
     value: "rgba(21,137,238,0.1)"
     comment: "Transparent value of BRAND_PRIMARY"
+  BRAND_PRIMARY_TRANSPARENT_10:
+    value: "rgba(21,137,238,0.1)"
+    comment: "Transparent value of BRAND_PRIMARY at 10%"
+  BRAND_PRIMARY_TRANSPARENT_40:
+    value: "rgba(21,137,238,0.4)"
+    comment: "Transparent value of BRAND_PRIMARY at 40%"
   BRAND_LIGHT:
     value: "#f4f6fe"
     comment: "Light variant of BRAND that is accessible with dark colors"

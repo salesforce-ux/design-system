@@ -46,8 +46,8 @@ class ObjectSwitcher extends Component {
               symbol="down"
               className="slds-icon slds-icon_xx-small slds-icon-text-default"
               containerClassName="slds-input__icon slds-input__icon_right"
-              title={false}
               assistiveText={false}
+              title={false}
             />
           }
           listbox={
@@ -104,6 +104,8 @@ export class IconObjectSwitcher extends Component {
               symbol={filteredSymbol}
               className="slds-icon slds-icon_x-small slds-icon-text-default"
               containerClassName="slds-input__icon slds-input__icon_left"
+              assistiveText={filteredSymbol}
+              title={filteredSymbol}
             />
           }
           rightInputIcon={
@@ -111,6 +113,8 @@ export class IconObjectSwitcher extends Component {
               symbol="down"
               className="slds-icon slds-icon_xx-small slds-icon-text-default"
               containerClassName="slds-input__icon slds-input__icon_right"
+              assistiveText={false}
+              title={false}
             />
           }
           listbox={

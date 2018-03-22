@@ -99,6 +99,8 @@ export const EntityOption = props => (
           symbol={
             (props.entityType && props.entityType.toLowerCase()) || 'account'
           }
+          assistiveText={false}
+          title={false}
         />
       </span>
     )}
@@ -157,6 +159,8 @@ export const TypeaheadTermOption = props => (
       <UtilityIcon
         className="slds-icon_x-small slds-icon-text-default"
         symbol="search"
+        assistiveText="Search for term: "
+        title="Search for term: "
       />
     </span>
     <span className="slds-media__body">

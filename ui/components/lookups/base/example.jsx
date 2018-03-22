@@ -32,7 +32,7 @@ export default (
         className="slds-icon slds-icon_x-small slds-icon-text-default"
         containerClassName="slds-input__icon slds-input__icon_right"
         assistiveText={false}
-        title="Search"
+        title={false}
       />
     }
     listbox={
@@ -64,7 +64,7 @@ export let states = [
             className="slds-icon slds-icon_x-small slds-icon-text-default"
             containerClassName="slds-input__icon slds-input__icon_right"
             assistiveText={false}
-            title="Search"
+            title={false}
           />
         }
         listbox={
@@ -95,7 +95,7 @@ export let states = [
             className="slds-icon slds-icon_x-small slds-icon-text-default"
             containerClassName="slds-input__icon slds-input__icon_right"
             assistiveText={false}
-            title="Search"
+            title={false}
           />
         }
         listbox={
@@ -126,6 +126,8 @@ export let states = [
             symbol="search"
             className="slds-icon slds-icon_x-small slds-icon-text-default"
             containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
           />
         }
         value="salesforce"
@@ -157,6 +159,8 @@ export let states = [
             symbol="account"
             className="slds-icon_small"
             containerClassName="slds-combobox__input-entity-icon"
+            assistiveText="Account"
+            title="Account"
           />
         }
         rightInputIcon={

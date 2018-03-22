@@ -37,9 +37,9 @@ A Base Combobox is a readonly text `input` that allows a user to select an optio
         />
       }
       listbox={<Listbox id="listbox-id-1" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
-    hasInteractions
-  />
-</CodeView>
+      hasInteractions
+    />
+  </CodeView>
 </Example>
 
 ### Combobox markup
@@ -171,16 +171,16 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
           containerClassName="slds-input__icon slds-input__icon_right"
           assistiveText={false}
           title={false}
-          />
-        }
-        listbox={
-          <ListboxWrapper id="listbox-id-3" className="slds-dropdown slds-dropdown_fluid">
-            <ListboxGroup
+        />
+      }
+      listbox={
+        <ListboxWrapper id="listbox-id-3" className="slds-dropdown slds-dropdown_fluid">
+          <ListboxGroup
             aria-label="Group One"
             snapshot={Snapshot.PlainOptionsGroupOne}
             count={3}
-            />
-            <ListboxGroup
+          />
+          <ListboxGroup
             aria-label="Group Two"
             snapshot={Snapshot.PlainOptionsGroupTwo}
             count={3}
@@ -228,23 +228,23 @@ When an option from the `listbox` is "in focus", user focus never leaves the `in
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-4"
-    readonly
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="down"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title={false}
-      />
-    }
-    listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
-    aria-activedescendant="option1"
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-4"
+      readonly
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      aria-activedescendant="option1"
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -274,29 +274,29 @@ Upon selection the Combobox collapses, only showing the `input` field. The value
   <div className="docs-codeblock-example">
     <div style={{maxWidth: '40rem'}}>
       <Combobox
-      id={_.uniqueId('combobox-id-')}
-      aria-controls="listbox-id-5"
-      readonly
-      value="Accounts"
-      inputIconPosition="right"
-      rightInputIcon={
-        <UtilityIcon
-        symbol="down"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
-        />
-      }
-      listbox={
-        <Listbox
-        id="listbox-id-5"
-        snapshot={Snapshot.ObjectOptionsSingleSelection}
-        type="plain"
-        count={8}
-        visualSelection
-        />
-      }
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-5"
+        readonly
+        value="Accounts"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        listbox={
+          <Listbox
+            id="listbox-id-5"
+            snapshot={Snapshot.ObjectOptionsSingleSelection}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
       />
     </div>
   </div>
@@ -311,32 +311,32 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-6"
-    readonly
-    value="Accounts"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="down"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title={false}
-      />
-    }
-    listbox={
-      <Listbox
-      id="listbox-id-6"
-      snapshot={Snapshot.ObjectOptionsSingleSelection}
-      type="plain"
-      count={8}
-      visualSelection
-      />
-    }
-    aria-activedescendant="option1"
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-6"
+      readonly
+      value="Accounts"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={
+        <Listbox
+          id="listbox-id-6"
+          snapshot={Snapshot.ObjectOptionsSingleSelection}
+          type="plain"
+          count={8}
+          visualSelection
+        />
+      }
+      aria-activedescendant="option1"
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -369,31 +369,31 @@ When more than one option has been selected, the value of the `input` should be 
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-7"
-    readonly
-    value="2 Options Selected"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="down"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title={false}
-      />
-    }
-    listbox={
-      <Listbox
-      id="listbox-id-7"
-      snapshot={Snapshot.ObjectOptionsMultiSelection}
-      type="plain"
-      count={8}
-      visualSelection
-      />
-    }
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-7"
+      readonly
+      value="2 Options Selected"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={
+        <Listbox
+          id="listbox-id-7"
+          snapshot={Snapshot.ObjectOptionsMultiSelection}
+          type="plain"
+          count={8}
+          visualSelection
+        />
+      }
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -407,35 +407,35 @@ The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) is pos
 
   <CodeView style={{maxWidth: '40rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-8"
-    readonly
-    value="2 Options Selected"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="down"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title={false}
-      />
-    }
-    listbox={
-      <Listbox
-      id="listbox-id-8"
-      snapshot={Snapshot.ObjectOptionsMultiSelection}
-      type="plain"
-      count={8}
-      visualSelection
-      />
-    }
-    listboxOfSelections={
-      <ListboxOfSelections
-      snapshot={Snapshot.ObjectOptionsSelected}
-      count={2}
-      />
-    }
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-8"
+      readonly
+      value="2 Options Selected"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={
+        <Listbox
+          id="listbox-id-8"
+          snapshot={Snapshot.ObjectOptionsMultiSelection}
+          type="plain"
+          count={8}
+          visualSelection
+        />
+      }
+      listboxOfSelections={
+        <ListboxOfSelections
+          snapshot={Snapshot.ObjectOptionsSelected}
+          count={2}
+        />
+      }
     />
   </CodeView>
 
@@ -461,21 +461,21 @@ If no option matches, the user can complete the value of the combobox by finishi
 
   <CodeView style={{maxWidth: '40rem', height: '12rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-9"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
-      />
-    }
-    listbox={<Listbox id="listbox-id-9" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
-    hasInteractions
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-9"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-9" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      hasInteractions
     />
   </CodeView>
 
@@ -491,22 +491,22 @@ When a user stops interacting with the Combobox, or selects an option, the Combo
 
   <CodeView style={{maxWidth: '40rem', height: '12rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-10"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
-      />
-    }
-    listbox={<Listbox id="listbox-id-10" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-10"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-10" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -526,24 +526,24 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
 
   <CodeView style={{maxWidth: '40rem', height: '12rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-11"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
-      />
-    }
-    value="opp"
-    listbox={<Listbox id="listbox-id-11" snapshot={Snapshot.PlainOptionsTypeahead} term="opp" type="plain" count={4} />}
-    aria-activedescendant="option1"
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-11"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      value="opp"
+      listbox={<Listbox id="listbox-id-11" snapshot={Snapshot.PlainOptionsTypeahead} term="opp" type="plain" count={4} />}
+      aria-activedescendant="option1"
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -575,23 +575,23 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
   <CodeView style={{maxWidth: '40rem', height: '12rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-12"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
-      />
-    }
-    listbox={<Listbox id="listbox-id-12" snapshot={Snapshot.PlainOptionsFocused} type="plain" count={3} />}
-    aria-activedescendant="option1"
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-12"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-12" snapshot={Snapshot.PlainOptionsFocused} type="plain" count={3} />}
+      aria-activedescendant="option1"
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -609,20 +609,20 @@ To remove the selected option, simply clear the text `input`.
 
   <CodeView style={{maxWidth: '40rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-unique-id-03"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <ButtonIcon
-      className="slds-input__icon slds-input__icon_right"
-      symbol="clear"
-      title="Clear the text input"
-      assistiveText="Clear the text input"
-      />
-    }
-    listbox={<Listbox id="listbox-unique-id-03" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
-    value="GenePoint"
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-unique-id-03"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <ButtonIcon
+          className="slds-input__icon slds-input__icon_right"
+          symbol="clear"
+          title="Clear the text input"
+          assistiveText="Clear the text input"
+        />
+      }
+      listbox={<Listbox id="listbox-unique-id-03" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      value="GenePoint"
     />
   </CodeView>
 
@@ -636,22 +636,22 @@ Multiple selection is much the same as the Base Combobox. A list of selected opt
 
   <CodeView style={{maxWidth: '40rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-13"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      assistiveText={false}
-      title="Search"
-      />
-    }
-    listbox={<Listbox id="listbox-id-13" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.PlainOptionsSelected} count={2} />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-13"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-13" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.PlainOptionsSelected} count={2} />}
     />
   </CodeView>
 
@@ -671,19 +671,21 @@ An Entity Autocomplete Combobox or Lookup, is used to search for and select Sale
 
   <CodeView style={{maxWidth: '40rem', height: '10rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-14"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    listbox={<Listbox id="listbox-id-14" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    hasInteractions
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-14"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-14" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      hasInteractions
     />
   </CodeView>
 
@@ -699,20 +701,22 @@ The options now have extra information about them, such as the type of entity an
 
   <CodeView style={{maxWidth: '40rem', height: '10rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-15"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    listbox={<Listbox id="listbox-id-15" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-15"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-15" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -736,6 +740,8 @@ In the resultant displayed options, we highlight the matched term by bolding it 
           symbol="search"
           className="slds-icon slds-icon_x-small slds-icon-text-default"
           containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
         />
       }
       value="salesforce"
@@ -757,21 +763,23 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
   <CodeView style={{maxWidth: '40rem', height: '10rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-17"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    listbox={<Listbox id="listbox-id-17" snapshot={Snapshot.EntityOptionsFocused} type="entity" count={2} />}
-    aria-activedescendant="option1"
-    isOpen
-    hasFocus
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-17"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-17" snapshot={Snapshot.EntityOptionsFocused} type="entity" count={2} />}
+      aria-activedescendant="option1"
+      isOpen
+      hasFocus
     />
   </CodeView>
 
@@ -793,28 +801,30 @@ To remove the selected option, simply press the `Delete` key when focused inside
 
   <CodeView style={{maxWidth: '40rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-18"
-    inputIconPosition="left-right"
-    leftInputIcon={
-      <StandardIcon
-      symbol="account"
-      className="slds-icon_small"
-      containerClassName="slds-combobox__input-entity-icon"
-      />
-    }
-    rightInputIcon={
-      <ButtonIcon
-      className="slds-input__icon slds-input__icon_right"
-      symbol="close"
-      title="Remove selected option"
-      assistiveText="Remove selected option"
-      />
-    }
-    listbox={<Listbox id="listbox-id-18" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    hasSelection
-    value="Salesforce.com, Inc."
-    readonly
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-18"
+      inputIconPosition="left-right"
+      leftInputIcon={
+        <StandardIcon
+          symbol="account"
+          className="slds-icon_small"
+          containerClassName="slds-combobox__input-entity-icon"
+          assistiveText="Account"
+          title="Account"
+        />
+      }
+      rightInputIcon={
+        <ButtonIcon
+          className="slds-input__icon slds-input__icon_right"
+          symbol="close"
+          title="Remove selected option"
+          assistiveText="Remove selected option"
+        />
+      }
+      listbox={<Listbox id="listbox-id-18" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      hasSelection
+      value="Salesforce.com, Inc."
+      readonly
     />
   </CodeView>
 
@@ -828,20 +838,22 @@ Multiple selection is handled the same as the Base and Autocomplete Combobox, a 
 
   <CodeView style={{maxWidth: '40rem'}}>
     <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-19"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    listbox={<Listbox id="listbox-id-19" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-19"
+      autocomplete
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-19" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
     />
   </CodeView>
 
@@ -865,23 +877,25 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-20"
-    comboboxID="primary-combobox-id-1"
-    autocomplete
-    listbox={<Listbox id="listbox-id-20" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-    addon={<ObjectSwitcher value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-combobox-id-1" />}
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasInteractions
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-20"
+      comboboxID="primary-combobox-id-1"
+      autocomplete
+      listbox={<Listbox id="listbox-id-20" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      addon={<ObjectSwitcher value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-combobox-id-1" />}
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      hasInteractions
     />
   </CodeView>
 
@@ -893,25 +907,27 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-21"
-    comboboxID="primary-combobox-id-2"
-    autocomplete
-    listbox={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
-    value="salesforce"
-    isOpen
-    hasFocus
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-21"
+      comboboxID="primary-combobox-id-2"
+      autocomplete
+      listbox={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      value="salesforce"
+      isOpen
+      hasFocus
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
     />
   </CodeView>
 
@@ -948,25 +964,27 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
   <CodeView style={{maxWidth: '40rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-22"
-    comboboxID="primary-combobox-id-3"
-    autocomplete
-    listbox={<Listbox id="listbox-id-22" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-    hasFocus
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-3" /> }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-22"
+      comboboxID="primary-combobox-id-3"
+      autocomplete
+      listbox={<Listbox id="listbox-id-22" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      hasFocus
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-3" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
     />
   </CodeView>
 
@@ -978,26 +996,28 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-23"
-    comboboxID="primary-combobox-id-4"
-    autocomplete
-    listbox={<Listbox id="listbox-id-23" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-    isOpen
-    hasFocus
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-4" /> }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-23"
+      comboboxID="primary-combobox-id-4"
+      autocomplete
+      listbox={<Listbox id="listbox-id-23" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      isOpen
+      hasFocus
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-4" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
     />
   </CodeView>
 
@@ -1017,24 +1037,26 @@ By default, the `slds-listbox_selection-group` is collapsed.
 
   <CodeView style={{maxWidth: '40rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-24"
-    comboboxID="primary-combobox-id-5"
-    autocomplete
-    listbox={<Listbox id="listbox-id-24" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-5" /> }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={8} />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-24"
+      comboboxID="primary-combobox-id-5"
+      autocomplete
+      listbox={<Listbox id="listbox-id-24" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-5" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={8} />}
     />
   </CodeView>
 
@@ -1048,25 +1070,27 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
 
   <CodeView style={{maxWidth: '40rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-25"
-    comboboxID="primary-combobox-id-6"
-    autocomplete
-    listbox={<Listbox id="listbox-id-25" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-    hasFocus
-    addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-6" /> }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasSelection
-    listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={8} isExpanded />}
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-25"
+      comboboxID="primary-combobox-id-6"
+      autocomplete
+      listbox={<Listbox id="listbox-id-25" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      hasFocus
+      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-6" /> }
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      hasSelection
+      listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={8} isExpanded />}
     />
   </CodeView>
 
@@ -1084,22 +1108,24 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-26"
-    comboboxID="primary-combobox-id-7"
-    autocomplete
-    listbox={<Listbox id="listbox-id-26" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-7" />}
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-26"
+      comboboxID="primary-combobox-id-7"
+      autocomplete
+      listbox={<Listbox id="listbox-id-26" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-7" />}
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
     />
   </CodeView>
 
@@ -1116,22 +1142,24 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
   <CodeView style={{maxWidth: '40rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-28"
-    comboboxID="primary-combobox-id-9"
-    autocomplete
-    listbox={<Listbox id="listbox-id-28" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" comboboxAriaControls="primary-combobox-id-9" />}
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-28"
+      comboboxID="primary-combobox-id-9"
+      autocomplete
+      listbox={<Listbox id="listbox-id-28" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" comboboxAriaControls="primary-combobox-id-9" />}
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
     />
   </CodeView>
 
@@ -1142,22 +1170,24 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-27"
-    comboboxID="primary-combobox-id-8"
-    autocomplete
-    listbox={<Listbox id="listbox-id-27" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
-    addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-8" />}
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-      symbol="search"
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-27"
+      comboboxID="primary-combobox-id-8"
+      autocomplete
+      listbox={<Listbox id="listbox-id-27" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-8" />}
+      addonPosition="start"
+      comboboxPosition="end"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
     />
   </CodeView>
 

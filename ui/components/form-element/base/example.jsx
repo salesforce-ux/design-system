@@ -14,7 +14,7 @@ const inputLabel = 'Form Element Label';
 const inputId = 'input-unique-id';
 const errorId = 'error-message-unique-id';
 
-export let FormElement = props => {
+export const FormElement = props => {
   const {
     className,
     formControlClassName,

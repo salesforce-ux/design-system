@@ -82,6 +82,7 @@
  *
  * @selector .slds-form_inline
  * @restrict .slds-form
+ * @modifier
  */
 .slds-form_inline,
 .slds-form--inline {
@@ -114,4 +115,14 @@
       margin-bottom: 0;
     }
   }
+}
+
+/**
+ * @summary Aligns the legend properly when there is an info tooltip
+ *
+ * @selector .slds-form-element__legend_has-tooltip
+ * @restrict .slds-form-element__legend
+ */
+.slds-form-element__legend_has-tooltip {
+  float: left;
 }

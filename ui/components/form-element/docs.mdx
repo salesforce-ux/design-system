@@ -4,14 +4,18 @@ import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import ButtonIcon from '../button-icons/';
 import {FormElement} from './base/example';
-import {Input} from '../input/base/example';
-import {Checkbox} from '../checkbox/base/example';
-import {Textarea} from '../textarea/base/example';
-import {Avatar} from '../avatar/base/example';
+import { Input } from '../input/base/example';
+import { Checkbox } from '../checkbox/base/example';
+import { Textarea } from '../textarea/base/example';
+import { Avatar } from '../avatar/base/example';
+import { Form } from '../form-layout/base/example';
+import { CompoundForm } from '../form-layout/compound/example';
 
 <div className="lead doc">
   An HTML form element contains a HTML label and element
 </div>
+
+There are many types of form elements, including [inputs](/input), [text areas](/textarea), [checkboxes](/checkbox), and [radio buttons](/radio-group). Visit the individual component pages for in-depth details of specific states and visuals.
 
 ## Structuring a form element
 
@@ -32,7 +36,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
 A form label should use the `<label>` element with the class `slds-form-element__label`.
 
 <Blockquote type="a11y" header="Accessibility requirement">
-  It is required to have the <code className="doc">for</code> attr applied the the label that points to the ID of the form element, <code className="doc"><input id="unique-id"></code>.
+  Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -110,11 +114,13 @@ By default, the overall form element takes up 54px of vertical space. If you req
 
 ### Feedback
 
-A form element provides two types of feedback, a required form element and a form element with an error.
+A form element can have various methods of feedback, such as a required denotation or an inline error message.
 
 #### Required
 
-When a form element is required, an `<abbr>` should be injected before the `<input>` with the class `slds-required`.
+When a form element is required, an `<abbr>` should be injected before the `<input>` and within the `<label>` and have the class `slds-required`.
+
+The `<input>` element should also have the HTML attribute required or required="". Similarily, if it is disabled, it should have the disabled or disabled="" attribute. Do not use true/false values inside the required or disabled because the mere presence of these attributes signifies the field is required or disabled.
 
 <Example title="Form Element - Required">
 
@@ -128,10 +134,10 @@ When a form element is required, an `<abbr>` should be injected before the `<inp
 
 #### Error
 
-If an error has occured while submitting a form, the form element with an error should provide feedback.
+If an error has occured while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">`. Then, the error message for the user is placed in a `<span>` with the `slds-form-element__help` class.
 
 <Blockquote type="a11y" header="Accessibility requirement">
-  When a form element displayed feedback notifying the user of an error, the error string should be linked to the element by adding <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code> and point to the error message ID.
+  When a form element displays feedback notifying the user of an error, the error string should be linked to the element by adding the <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code>. The `aria-describedby` attribute must reference the id of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
 </Blockquote>
 
 <Example title="Form Element - Error">
@@ -140,15 +146,51 @@ If an error has occured while submitting a form, the form element with an error 
     <FormElement
       className="slds-has-error"
       label="Form Label"
-      inputId="form-element-04"
+      inputId="form-element-05"
       errorId="form-error-01"
       required
       message="This field is required"
       >
-      <Input id="form-element-04" required aria-describedby="form-error-01" />
+      <Input id="form-element-05" required aria-describedby="form-error-01" />
     </FormElement>
   </CodeView>
 
+</Example>
+
+## Layout
+
+Layout helper classes are available through the following class names: `slds-form_stacked` and `slds-form_horizontal`. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
+
+### Stacked
+
+To vertically stack `<label>` and `<input>` pairs, place `slds-form--stacked` on the wrapper of the form for optimal spacing.
+
+<Example title="Form Layout - Stacked">
+  <CodeView>
+    <Form/>
+  </CodeView>
+</Example>
+
+### Horizontal
+
+To horizontally align a `<label>` and `<input>`, use the `slds-form--horizontal` class on the wrapper around the form. A `slds-form-element__label` takes up 33% of the width, and the `slds-form-element__control` uses the remaining 66%.
+
+<Example title="Form Layout - Horizontal">
+  <CodeView>
+    <Form className="slds-form_horizontal"/>
+  </CodeView>
+</Example>
+
+### Compound
+
+<Blockquote type="note" header="Implementation Note">
+  To use field level help with a `<legend>` (as opposed to a `<label>`), the `<legend>` and the `<div>` with the help icon must be siblings. Additionally, you'll need to add the class `slds-form-element__legend_has-tooltip` to the `<legend>`. Only add this class when your `<legend>` has adjacent field level help, otherwise you'll experience unexpected layouts.
+</Blockquote>
+
+<Example title="Form Layout - Compound">
+  <CodeView>
+    <CompoundForm/>
+  </CodeView>
 </Example>
 
 ## Usage Examples

@@ -316,6 +316,21 @@ export let examples = [
     )
   },
   {
+    id: 'inline-help',
+    label: 'Inline Help',
+    element: (
+      <FormElement>
+        <FormElementLabel labelID="inline-text-label">
+          Input Label
+        </FormElementLabel>
+        <FormElementControl>
+          <Input aria-labelledby="inline-text-label" />
+          <div className="slds-form-element__help">ex: (415)111-2222</div>
+        </FormElementControl>
+      </FormElement>
+    )
+  },
+  {
     id: 'field-level-help',
     label: 'Field level help',
     element: (

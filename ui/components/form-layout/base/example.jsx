@@ -13,7 +13,7 @@ const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';
 const inputId03 = 'input-id-03';
 
-let Form = props => (
+export const Form = props => (
   <div className={classNames('slds-form', props.className)}>
     <FormElement label="Text Input" inputId={inputId01}>
       <Input id={inputId01} />

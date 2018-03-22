@@ -19,7 +19,7 @@ class WelcomeMatContentTrailhead extends React.Component {
       <p>Cha-ching! You earned the badge.</p>
     ) : (
       <p>
-        {complete} of {total} units completed
+        {complete}/{total} units completed
       </p>
     );
 

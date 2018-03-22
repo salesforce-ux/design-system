@@ -94,7 +94,7 @@ describe('Welcome Mat Trailhead Content', () => {
   });
 
   it('shows the correct initial progress', () => {
-    const initialText = ['Lightning Explorer', '0 of 5 units completed'];
+    const initialText = ['Lightning Explorer', '0/5 units completed'];
 
     shallowNew.find('.slds-welcome-mat__info-progress p').forEach((p, pi) => {
       expect(p.text()).toBe(initialText[pi]);

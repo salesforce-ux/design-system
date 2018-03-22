@@ -14,6 +14,14 @@ props:
     value: '52.0625rem'
     comment: Welcome Mat Width
 
+  WELCOME_MAT_MIN_HEIGHT:
+    value: '25rem'
+    comment: Min height for Overlay
+
+  WELCOME_MAT_MAX_HEIGHT:
+    value: '37.5rem'
+    comment: Max height for Overlay
+
   WELCOME_MAT_WIDTH_PROGRESS_BAR:
     value: '12.5rem'
     comment: Welcome Mat Progress Bar width

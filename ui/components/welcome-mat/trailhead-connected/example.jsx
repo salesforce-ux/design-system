@@ -3,13 +3,48 @@
 
 import React from 'react';
 import WelcomeMat from '../';
+import WelcomeMatContentTrailhead from '../WelcomeMatContentTrailhead';
+import WelcomeMatContent from '../WelcomeMatContent';
 
-export default <WelcomeMat trailhead />;
+const completeTiles = [];
+WelcomeMat.defaultProps.tiles.forEach(tile => {
+  completeTiles.push(Object.assign({}, tile, { completed: true }));
+});
 
-export let states = [
+export const Context = props => (
+  <div className="demo-only" style={{ height: '800px' }}>
+    {props.children}
+    <div className="slds-backdrop slds-backdrop_open" />
+  </div>
+);
+
+export default (
+  <WelcomeMat
+    content={({ complete, total, labelId }) => (
+      <WelcomeMatContentTrailhead
+        complete={complete}
+        total={total}
+        labelId={labelId}
+      />
+    )}
+  />
+);
+
+export let examples = [
   {
     id: 'trailhead-complete',
     label: 'Trailhead Complete',
-    element: <WelcomeMat trailhead complete={5} />
+    element: (
+      <WelcomeMat
+        tiles={completeTiles}
+        content={({ complete, total, labelId }) => (
+          <WelcomeMatContentTrailhead
+            complete={complete}
+            total={total}
+            labelId={labelId}
+          />
+        )}
+      />
+    )
   }
 ];

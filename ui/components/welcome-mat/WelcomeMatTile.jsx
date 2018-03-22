@@ -11,7 +11,8 @@ import { ActionIcon } from '../icons/action/example';
 
 class WelcomeMatTile extends React.Component {
   render() {
-    const { tile, completed } = this.props;
+    const { tile } = this.props;
+    const completed = tile.completed;
     const className = classNames('slds-welcome-mat__tile', {
       'slds-welcome-mat__tile_complete': completed
     });
@@ -45,17 +46,16 @@ class WelcomeMatTile extends React.Component {
 }
 
 WelcomeMatTile.propTypes = {
-  tile: PropTypes.object.isRequired,
-  completed: PropTypes.bool.isRequired
+  tile: PropTypes.object.isRequired
 };
 
 WelcomeMatTile.defaultProps = {
   tile: {
     symbol: 'animal_and_nature',
     title: 'Welcome to Salesforce!',
-    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.'
-  },
-  completed: false
+    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.',
+    completed: false
+  }
 };
 
 export default WelcomeMatTile;

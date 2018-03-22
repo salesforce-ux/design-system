@@ -42,17 +42,26 @@
 }
 
 /**
+ * @summary Content container for the whole Welcome Mat
+ *
+ * @selector .slds-welcome-mat__content
+ * @restrict .slds-welcome-mat .slds-modal__content
+ */
+.slds-welcome-mat__content {
+  min-height: $welcome-mat-min-height;
+  max-height: $welcome-mat-max-height;
+}
+
+/**
  * @summary Container element for the informational side of the Welcome Mat
  *
  * @selector .slds-welcome-mat__info
- * @restrict .slds-welcome-mat div
+ * @restrict .slds-welcome-mat__content div
  */
 .slds-welcome-mat__info {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 $spacing-xx-large $welcome-mat-spacing-info;
-  text-align: center;
+  overflow: auto;
+  padding: $spacing-medium $spacing-xx-large $welcome-mat-spacing-info;
   color: $welcome-mat-text-color-info;
   background-image: url($welcome-mat-background-image-info);
   background-position: bottom center;
@@ -62,10 +71,21 @@
 }
 
 /**
+ * @summary Content container for the informational side of the Welcome Mat. Centers in container space.
+ *
+ * @selector .slds-welcome-mat__info-content
+ * @restrict .slds-welcome-mat__info div
+ */
+.slds-welcome-mat__info-content {
+  margin: auto;
+  text-align: center;
+}
+
+/**
  * @summary Title element for the informational side of the Welcome Mat
  *
  * @selector .slds-welcome-mat__info-title
- * @restrict .slds-welcome-mat__info h2
+ * @restrict .slds-welcome-mat__info-content h2
  */
 .slds-welcome-mat__info-title {
   margin-bottom: $spacing-large;
@@ -75,10 +95,10 @@
 }
 
 /**
- * @summary Description element for the informational side of the Welcome Mat
+ * @summary Description container for the informational side of the Welcome Mat
  *
  * @selector .slds-welcome-mat__info-description
- * @restrict .slds-welcome-mat__info p
+ * @restrict .slds-welcome-mat__info-content div
  */
 .slds-welcome-mat__info-description {
   margin-bottom: $spacing-large;
@@ -88,7 +108,7 @@
  * @summary Text description of walkthrough progress
  *
  * @selector .slds-welcome-mat__info-progress
- * @restrict .slds-welcome-mat__info div
+ * @restrict .slds-welcome-mat__info-content div
  */
 .slds-welcome-mat__info-progress {
   margin-bottom: $spacing-medium;
@@ -98,10 +118,11 @@
  * @summary Container element for the Actions side of the Welcome Mat.
  *
  * @selector .slds-welcome-mat__tiles
- * @restrict .slds-welcome-mat div
+ * @restrict .slds-welcome-mat__content div
  */
 .slds-welcome-mat__tiles {
   background: $color-background;
+  overflow: auto;
 }
 
 /**

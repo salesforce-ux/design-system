@@ -1,4 +1,5 @@
-import WelcomeMat from './';
+import WelcomeMat, { examples as baseExamples, Context } from './base/example';
+import WelcomeMatTrailhead, { examples as trailheadExamples } from './trailhead-connected/example';
 import Example from '../../../shared/components/Example';
 import CodeView from '../../../shared/components/CodeView';
 
@@ -8,7 +9,9 @@ import CodeView from '../../../shared/components/CodeView';
 
 <Example title="Welcome Mat Base">
   <CodeView>
-    <WelcomeMat />
+    <Context>
+      {WelcomeMat}
+    </Context>
   </CodeView>
 </Example>
 
@@ -27,7 +30,9 @@ As tiles are completed, they move to the bottom of the list, and get a modifier 
 
 <Example title="Welcome Mat Partially Completed Steps">
   <CodeView>
-    <WelcomeMat complete={2} />
+    <Context>
+      {baseExamples[0].element}
+    </Context>
   </CodeView>
 </Example>
 
@@ -39,7 +44,9 @@ Only Trailhead connected mats may have the Trailhead font for the header.
 
 <Example title="Welcome Mat Trailhead">
   <CodeView>
-    <WelcomeMat trailhead complete={1} />
+    <Context>
+      {WelcomeMatTrailhead}
+    </Context>
   </CodeView>
 </Example>
 
@@ -53,6 +60,8 @@ Additionally, the progress indicator should be replaced with a button to view th
 
 <Example title="Welcome Mat Trailhead Complete">
   <CodeView>
-    <WelcomeMat trailhead complete={5} />
+    <Context>
+      {trailheadExamples[0].element}
+    </Context>
   </CodeView>
 </Example>

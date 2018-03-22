@@ -7,19 +7,17 @@ import { ProgressBar } from '../progress-bar/base/example';
 
 class WelcomeMatContent extends React.Component {
   render() {
-    const { complete, total, labelId } = this.props;
+    const { complete, total, labelId, description } = this.props;
     const completePercent = complete / total * 100;
 
     return (
-      <div>
+      <React.Fragment>
         <h2 id={labelId} className="slds-welcome-mat__info-title">
           Empower Your Agents with Service Cloud
         </h2>
-        <p className="slds-welcome-mat__info-description">
-          Your 30-day trial is under way. Learn how easy it is to use and set up
-          Lightning Service Desk. You'll be your company's service expert by the
-          time you're done!
-        </p>
+        <div className="slds-welcome-mat__info-description slds-text-longform">
+          {description}
+        </div>
 
         <div className="slds-welcome-mat__info-progress">
           <p>
@@ -32,7 +30,7 @@ class WelcomeMatContent extends React.Component {
           value={completePercent}
           className="slds-progress-bar_circular"
         />
-      </div>
+      </React.Fragment>
     );
   }
 }
@@ -40,13 +38,21 @@ class WelcomeMatContent extends React.Component {
 WelcomeMatContent.propTypes = {
   complete: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  labelId: PropTypes.string.isRequired
+  labelId: PropTypes.string.isRequired,
+  description: PropTypes.element.isRequired
 };
 
 WelcomeMatContent.defaultProps = {
   complete: 0,
   total: 5,
-  labelId: 'welcome-mat-label-1'
+  labelId: 'welcome-mat-label-1',
+  description: (
+    <p>
+      Your 30-day trial is under way. Learn how easy it is to use and set up
+      Lightning Service Desk. You'll be your company's service expert by the
+      time you're done!
+    </p>
+  )
 };
 
 export default WelcomeMatContent;

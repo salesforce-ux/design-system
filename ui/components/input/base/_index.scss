@@ -129,6 +129,7 @@
     margin-top: (($square-icon-medium-content-alt / 2) * -1);
     line-height: 1;
     border: 0; // Re-aligns icons to center
+    pointer-events: none;
     z-index: 1;
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */

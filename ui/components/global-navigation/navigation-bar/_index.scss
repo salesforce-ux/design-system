@@ -87,7 +87,7 @@
     &.slds-is-active {
       outline: 0;
       border-radius: 0;
-      background-color: $brand-primary-transparent_10;
+      background-color: $brand-primary-transparent-10;
       text-decoration: none;
       cursor: pointer;
     }
@@ -119,7 +119,7 @@
         }
 
         100% {
-          background-color: $brand-primary-transparent_10;
+          background-color: $brand-primary-transparent-10;
         }
       }
 
@@ -156,7 +156,7 @@
       }
 
       &:hover {
-        border-bottom-color: $brand-primary-transparent_10;
+        border-bottom-color: $brand-primary-transparent-10;
       }
     }
 
@@ -178,7 +178,7 @@
 
     // Enforce background on items that have a notification
     &.slds-has-notification {
-      background: $brand-primary-transparent_10;
+      background: $brand-primary-transparent-10;
     }
 
     /**

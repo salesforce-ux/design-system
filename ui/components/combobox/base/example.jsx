@@ -338,6 +338,8 @@ export let EntityOption = props => (
       <StandardIcon
         className="slds-icon_small"
         symbol={props.entityType || 'account'}
+        title={false}
+        assistiveText={false}
       />
     </span>
     <span className="slds-media__body">

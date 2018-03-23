@@ -13,14 +13,18 @@ export let StandardIcon = props => {
         'slds-icon_container slds-icon-standard-' + symbol,
         props.containerClassName
       )}
-      title={props.title || 'Description of icon when needed'}
+      title={
+        props.title !== false
+          ? props.title || 'Description of icon when needed'
+          : null
+      }
     >
       <SvgIcon
         className={classNames('slds-icon', props.className)}
         sprite="standard"
         symbol={symbol}
       />
-      {props.assistiveText != false ? (
+      {props.assistiveText !== false ? (
         <span className="slds-assistive-text">
           {props.assistiveText || 'Description of icon when needed'}
         </span>

@@ -97,6 +97,12 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
   }
 }
 
+/**
+ * @selector .slds-icon_xx-small
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ */
 .slds-icon_xx-small,
 .slds-icon--xx-small {
   @include square($square-icon-xx-small-content);

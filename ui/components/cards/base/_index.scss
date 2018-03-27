@@ -107,7 +107,8 @@
   margin-top: $spacing-x-small;
 }
 
-.slds-region__pinned-left {
+.slds-region__pinned-left,
+.slds-region__pinned-right {
 
   .slds-card,
   .slds-card-wrapper,

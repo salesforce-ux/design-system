@@ -1,0 +1,123 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use .slds-dropdown-trigger--hover instead') {
+
+  .slds-dropdown-trigger {
+
+    .slds-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Please use slds-nubbin-{position} instead') {
+
+  .slds-dropdown {
+
+    &_nubbin-top,
+    &--nubbin-top {
+      @include nubbin(top, 'before');
+      @include nubbin(top);
+      margin-top: ($square-tooltip-nubbin / 2);
+
+      &:before {
+        background: $color-background-alt;
+      }
+
+      &:after {
+        background: $color-background-alt;
+        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+        z-index: -1;
+      }
+
+      &.slds-dropdown_left,
+      &.slds-dropdown--left {
+        left: ($spacing-medium * -1);
+
+        &:before,
+        &:after {
+          left: $spacing-large;
+          margin-left: 0;
+        }
+      }
+
+      &.slds-dropdown_right,
+      &.slds-dropdown--right {
+        right: ($spacing-medium * -1);
+
+        &:before,
+        &:after {
+          left: auto;
+          right: $spacing-large;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Icon should be used in the html to create space') {
+
+  .slds-dropdown__item {
+
+    .slds-has-icon {
+      position: relative;
+
+      &_left > a,
+      &--left > a,
+      &_left > span,
+      &--left > span {
+        padding-left: $spacing-x-large;
+      }
+
+      &_right > a,
+      &--right > a,
+      &_right > span,
+      &--right > span {
+        padding-right: $spacing-x-large;
+      }
+
+      &_left-right > a,
+      &--left-right > a,
+      &_left-right > span,
+      &--left-right > span {
+        padding: {
+          left: $spacing-x-large;
+          right: $spacing-x-large;
+        }
+      }
+
+      .slds-icon {
+        @include square($square-icon-medium-content);
+        position: absolute;
+        top: 50%;
+        margin-top: (($square-icon-medium-content / 2) * -1);
+        fill: $color-text-icon-default;
+
+        &_left,
+        &--left {
+          left: $spacing-small;
+        }
+
+        &_right,
+        &--right {
+          right: $spacing-small;
+        }
+      }
+    }
+  }
+}

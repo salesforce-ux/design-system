@@ -1,0 +1,10 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use a text-align--center utility class instead for empty card') {
+
+  .slds-card_empty .slds-card__body,
+  .slds-card--empty .slds-card__body {
+    text-align: center;
+  }
+}

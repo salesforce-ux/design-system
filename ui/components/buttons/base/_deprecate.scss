@@ -1,0 +1,12 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @selector .slds-button-space-left
+ * @deprecated
+ */
+.slds-button-space-left {
+  @include deprecate('4.0.0', 'Use spacing utilities instead') {
+    margin-left: $spacing-xx-small;
+  }
+}

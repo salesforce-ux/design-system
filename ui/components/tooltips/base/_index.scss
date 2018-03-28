@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * The tooltip should be positioned with JavaScript.
  *
@@ -79,17 +81,4 @@
 .slds-slide-from-left-to-right {
   transform: translateX(-5%);
   will-change: transform;
-}
-
-// Done-zo -- DON'T USE
-.slds-tooltip {
-  @include deprecate('4.0.0') {
-    @include popover($color: $color-background-inverse);
-
-    &__body {
-      padding: $spacing-x-small $spacing-small;
-      font-size: $font-size-small;
-      color: $color-text-inverse;
-    }
-  }
 }

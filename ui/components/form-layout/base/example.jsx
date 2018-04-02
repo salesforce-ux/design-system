@@ -45,8 +45,6 @@ export const Form = props => (
   </div>
 );
 
-export default <Form className="slds-form_stacked" />;
-
 export let states = [
   {
     id: 'horizontal',

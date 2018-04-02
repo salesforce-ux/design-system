@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
 * The base card is used primarily on desktop within a &ldquo;wide&rdquo; column
 * or &ldquo;main content area&rdquo;, which uses two-thirds of the viewport.
@@ -78,14 +80,6 @@
     font-size: $font-size-text-small;
     border-top: $border-width-thin solid $card-footer-color-border;
   }
-
-  @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
-
-    .slds-card_empty .slds-card__body,
-    .slds-card--empty .slds-card__body {
-      text-align: center;
-    }
-  }
 }
 
 /**
@@ -107,7 +101,8 @@
   margin-top: $spacing-x-small;
 }
 
-.slds-region__pinned-left {
+.slds-region__pinned-left,
+.slds-region__pinned-right {
 
   .slds-card,
   .slds-card-wrapper,

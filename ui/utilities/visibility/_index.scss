@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /* stylelint-disable declaration-no-important */
 
 /**
@@ -56,13 +58,6 @@
   overflow: hidden;
 }
 
-.slds-collapsed {
-  @include deprecate('4.0.0') {
-    height: 0;
-    overflow: hidden;
-  }
-}
-
 /**
  * @summary Shows the elements inside the parent
  *
@@ -72,13 +67,6 @@
 .slds-is-expanded {
   height: auto;
   overflow: visible;
-}
-
-.slds-expanded {
-  @include deprecate('4.0.0') {
-    height: auto;
-    overflow: visible;
-  }
 }
 
 /**

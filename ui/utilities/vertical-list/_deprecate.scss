@@ -1,0 +1,52 @@
+
+// Deprecate for directional dividers
+@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+
+  .slds-list_vertical.slds-has-dividers > .slds-list__item,
+  .slds-list--vertical.slds-has-dividers > .slds-list__item {
+    @include box($padding: $spacing-x-small, $border-radius: null, $borders: bottom);
+    @include list-has-hovers;
+    @include list-has-selections;
+  }
+}
+
+// Deprecate for has-dividers--around instead
+@include deprecate('4.0.0', 'Use has-dividers--around instead') {
+
+  .slds-has-cards {
+
+    > .slds-list__item {
+      @include border(around, $border-radius-medium);
+
+      + .slds-list__item {
+        margin-top: $spacing-x-small;
+      }
+    }
+
+    &_space,
+    &--space {
+
+      > .slds-list__item {
+        @include border(around, $border-radius-medium);
+        padding: $spacing-small;
+
+        @include mq-small-min {
+          padding: $spacing-x-small;
+        }
+
+        + .slds-list__item {
+          margin-top: $spacing-x-small;
+        }
+      }
+    }
+  }
+}
+
+@include deprecate('4.0.0', 'Spacing comes from divider position now') {
+
+  .slds-has-divider {
+    margin-top: $spacing-x-small;
+    padding-top: $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+}

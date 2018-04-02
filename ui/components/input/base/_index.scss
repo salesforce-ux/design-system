@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Initializes text input
  *
@@ -129,13 +131,16 @@
     margin-top: (($square-icon-medium-content-alt / 2) * -1);
     line-height: 1;
     border: 0; // Re-aligns icons to center
-    pointer-events: none;
     z-index: 2;
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
       fill: $color-text-input-icon;
     }
+  }
+
+  .slds-input__icon:not(button) {
+    pointer-events: none;
   }
 
   /**

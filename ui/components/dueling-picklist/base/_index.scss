@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 // Anything [class*='slds-picklist'] is deprecated and should not be used
+@import 'deprecate';
 
 /**
  * A dueling picklist inherits styles from the listbox component
@@ -118,46 +119,6 @@
       &:focus {
         background-color: transparent;
       }
-    }
-  }
-}
-
-@include deprecate('4.0.0', 'Use slds-listbox__item instead of slds-picklist__item') {
-
-  .slds-picklist_draggable,
-  .slds-picklist--draggable {
-    display: flex;
-
-    .slds-button {
-      margin: $spacing-xx-small;
-
-      &:first-of-type {
-        margin-top: $spacing-large;
-      }
-    }
-  }
-
-  .slds-picklist__item {
-    position: relative;
-    line-height: $line-height-text;
-
-    > a,
-    > span {
-      display: block;
-      padding: $spacing-x-small $spacing-small;
-
-      &:hover {
-        background-color: $color-background-row-hover;
-        cursor: pointer;
-      }
-
-      &:active {
-        background-color: $color-background-row-active;
-      }
-    }
-
-    &[aria-selected="true"] {
-      background-color: $color-background-row-active;
     }
   }
 }

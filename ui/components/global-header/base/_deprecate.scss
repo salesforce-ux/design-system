@@ -1,0 +1,149 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate("4.0","Use the new global actions component") {
+
+  .slds-global-header {
+    /**
+    * Button icons on the global header
+    *
+    * @selector .slds-global-header__button_icon
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
+    &__button_icon,
+    &__button--icon {
+      margin: 0 $spacing-xx-small;
+      color: $brand-header-contrast-weak;
+
+      .slds-icon {
+        fill: $brand-header-contrast-weak; // backwards compatible for old implementations
+      }
+
+      &:hover:not(:disabled),
+      &:focus {
+        color: $brand-header-contrast-weak-active;
+      }
+
+      &:hover:not(:disabled) .slds-icon,
+      &:focus .slds-icon {
+        fill: $brand-header-contrast-weak-active; // backwards compatible for old implementations
+      }
+    }
+
+    /**
+    * Button icon specifically for global actions
+    *
+    * @selector .slds-global-header__button_icon-actions
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
+    &__button_icon-actions,
+    &__button--icon-actions {
+      background: $brand-header-contrast-weak;
+      border-radius: $border-radius-medium;
+      color: $brand-header;
+
+      &:hover,
+      &:focus {
+        background-color: $brand-header-contrast-weak-active;
+        color: $brand-header;
+      }
+
+      .slds-button__icon {
+        @include square(1rem);
+      }
+    }
+
+    /**
+    * Button icon specifically for global actions
+    *
+    * @selector .slds-global-header__button_icon-favorites
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
+    &__button_icon-favorites,
+    &__button--icon-favorites {
+      color: $color-text-icon-inverse;
+
+      .slds-icon,
+      .slds-button__icon {
+        color: $brand-header;
+        stroke: $brand-header-contrast-weak;
+        stroke-width: $border-stroke-width-thick;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
+
+      &:hover .slds-icon,
+      &:hover .slds-button__icon,
+      &:focus .slds-icon,
+      &:focus .slds-button__icon {
+        color: $brand-header;
+        stroke: $brand-header-contrast-weak-active;
+      }
+
+      /**
+      * Selected state for favorites button
+      *
+      * @selector .slds-is-selected
+      * @restrict .slds-global-header__button_icon-favorites
+      * @deprecated
+      * @group stateful
+      */
+      &.slds-is-selected {
+
+        .slds-icon,
+        .slds-button__icon {
+          color: $brand-header;
+          stroke: $brand-accessible;
+          stroke-width: $border-stroke-width-thin;
+          fill: $brand-header;
+        }
+
+        &:hover .slds-icon,
+        &:hover .slds-button__icon,
+        &:focus .slds-icon,
+        &:focus .slds-button__icon {
+          color: $brand-header;
+          stroke: $brand-accessible-active;
+          fill: $brand-header;
+        }
+
+        &:active .slds-icon,
+        &:active .slds-button__icon {
+          color: $brand-header;
+          stroke: $brand-accessible-active;
+          fill: $brand-header;
+        }
+      }
+
+      /**
+      * Disabled state for favorites button
+      *
+      * @selector .slds-is-disabled
+      * @restrict .slds-global-header__button_icon-favorites
+      * @deprecated
+      */
+      &.slds-is-disabled .slds-icon,
+      &.slds-is-disabled .slds-button__icon,
+      &:disabled .slds-icon,
+      &:disabled .slds-button__icon {
+        stroke: $brand-header-contrast-weak-disabled;
+      }
+    }
+
+    /**
+    * Deal with sizing for global header icons
+    *
+    * @selector .global-header__icon
+    * @restrict .slds-global-header__item svg
+    * @deprecated
+    */
+    &__icon,
+    &__icon .slds-icon,
+    &__icon .slds-button__icon {
+      @include square($square-icon-global-identity-icon);
+    }
+  }
+}

@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Causes items of a list to display horizontally
  *
@@ -44,13 +46,4 @@
 .slds-has-dividers_right > .slds-item,
 .slds-has-dividers--right > .slds-item {
   @include dot-separator(right);
-}
-
-// Deprecate in 0.15.0
-@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
-
-  .slds-list_horizontal.slds-has-dividers > .slds-list__item,
-  .slds-list--horizontal.slds-has-dividers > .slds-list__item {
-    @include dot-separator;
-  }
 }

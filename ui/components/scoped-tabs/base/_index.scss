@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * A scoped tabset style has a closed container with a defined border. Initialize
  * a scoped tab set by applying the `.slds-tab_scoped` class to the containing
@@ -31,59 +33,6 @@
     background-color: $color-contrast-primary;
     border: $border-width-thin solid $color-border-button-default;
     border-radius: $border-radius-medium $border-radius-medium 0 0;
-  }
-
-  @include deprecate('4.0.0') {
-
-    .slds-tabs__item {
-      position: relative;
-      margin-bottom: ($border-width-thin * -1);
-
-      + .slds-tabs__item {
-        margin-left: ($border-width-thin * -1);
-      }
-
-      &:first-child > a {
-        border-left: 0;
-        border-radius: $border-radius-medium 0 0 0;
-      }
-
-      > a {
-        @include tabs-link;
-        height: $line-height-tab;
-        line-height: $line-height-tab;
-        padding: 0 $spacing-large;
-        color: $color-text-weak;
-        background-clip: padding-box;
-        border-left: $border-width-thin solid transparent;
-        border-right: $border-width-thin solid transparent;
-
-        &:hover,
-        &:focus {
-          text-decoration: none;
-          color: $color-text-link-hover;
-          border-color: $color-border;
-        }
-      }
-      // scss-lint:disable SelectorDepth
-      .slds-active > a {
-        background-color: $color-background-alt;
-        color: $color-text-link;
-        border-color: $color-border;
-
-        &:focus {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    > .slds-tabs__content {
-      background-color: $color-background-alt;
-      border: $border-width-thin solid $color-border-button-default;
-      border-top: 0;
-      border-radius: 0 0 $border-radius-medium $border-radius-medium;
-      padding: $spacing-medium;
-    }
   }
 }
 

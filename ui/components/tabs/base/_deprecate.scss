@@ -1,0 +1,51 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Please use slds-tabs_default__item instead') {
+
+  .slds-tabs_default,
+  .slds-tabs--default {
+
+    .slds-tabs__item {
+
+      + .slds-tabs__item {
+        @include mq-medium-min {
+          margin-left: $spacing-large;
+        }
+      }
+
+      > a {
+        @include tabs-link;
+        height: $line-height-tab;
+        line-height: $line-height-tab;
+        border-bottom: $border-width-thick solid transparent;
+        padding: 0 $spacing-x-small;
+        color: $color-text-action-label;
+
+        @include mq-medium-min {
+          padding: 0 $spacing-medium;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-color: $color-border-tab-selected;
+          color: $color-text-action-label-active;
+        }
+      }
+
+      &.slds-active a {
+        border-color: $brand-primary;
+        color: $color-text-action-label-active;
+
+        &:focus {
+          color: $color-text-tab-label-selected;
+        }
+      }
+    }
+
+    > .slds-tabs__content {
+      @include tabs-content;
+    }
+  }
+}

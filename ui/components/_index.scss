@@ -105,7 +105,7 @@
   'menus/submenu/index',
 
   // Picklist
-  'picklist/base/index',
+  'picklist/base/deprecate',
 
   // Combobox
   'combobox/doc',
@@ -166,8 +166,8 @@
   'pills/base/index',
 
   // Process
-  'process/wizard/index',
-  'path-simple/base/index', // keep till deprecation
+  'process/wizard/deprecate',
+  'path-simple/base/deprecate', // keep till deprecation
   'path/base/index',
 
   // Progress Indicator
@@ -206,7 +206,7 @@
   'toast/base/index',
   'scoped-notifications/base/index',
   'notifications/base/index',
-  'toast/modal-toast/index', // keep until deprecation
+  'toast/modal-toast/deprecate', // keep until deprecation
   'walkthrough/header/index',
 
   // Lookup

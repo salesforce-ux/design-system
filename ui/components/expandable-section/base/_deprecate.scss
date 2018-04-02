@@ -1,0 +1,37 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use .slds-section__title instead') {
+
+  .slds-section-title {
+    font-size: $font-size-large;
+
+    > a {
+      display: inline-block;
+      color: $color-text-default;
+
+      &:hover,
+      &:focus {
+        color: $color-text-link-hover;
+      }
+
+      &:focus {
+        box-shadow: $shadow-button-focus;
+      }
+
+      &:active {
+        color: $color-text-default;
+      }
+    }
+
+    .slds-icon {
+      @include square($square-icon-medium-content);
+      fill: currentColor;
+    }
+
+    .slds-section-group_is-closed .slds-icon,
+    .slds-section-group--is-closed .slds-icon {
+      transform: rotate(-90deg);
+    }
+  }
+}

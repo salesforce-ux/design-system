@@ -1,0 +1,77 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Do not use slds-navigation-list--vertical anymore, please use newer version slds-nav-vertical') {
+
+  .slds-navigation-list-vertical,
+  .slds-navigation-list--vertical {
+    /**
+     * Active item in vertical navigation list
+     *
+     * @selector .slds-is-active
+     * @restrict .slds-navigation-list-vertical li
+     * @modifier
+     */
+    .slds-is-active {
+      color: $color-text-default;
+
+      .slds-navigation-list-vertical__action,
+      .slds-navigation-list--vertical__action {
+        background-color: $brand-primary-transparent-10;
+        border-color: $color-border;
+        border-left-color: $brand-primary;
+
+        &:focus {
+          border-left-width: $spacing-x-small;
+          color: $brand-accessible-active;
+        }
+      }
+    }
+  }
+
+  /**
+   * Vertical Navigation on tinted background
+   *
+   * @selector .slds-navigation-list-vertical_shade
+   * @restrict .slds-navigation-list-vertical
+   * @modifier
+   * @group theme
+   */
+  .slds-navigation-list-vertical_shade,
+  .slds-navigation-list-vertical--shade,
+  .slds-navigation-list--vertical-inverse { // <= bad legacy
+
+    .slds-is-active .slds-navigation-list-vertical__action,
+    .slds-is-active .slds-navigation-list--vertical__action {
+      background-color: $color-background-alt;
+    }
+  }
+
+  /**
+   * Actionable item inside a vertical navigation list
+   *
+   * @selector .slds-navigation-list-vertical__action
+   * @restrict .slds-navigation-list-vertical a
+   * @required
+   */
+  .slds-navigation-list-vertical__action,
+  .slds-navigation-list--vertical__action {
+    display: block;
+    border: {
+      left: $spacing-xx-small solid transparent;
+      top: $border-width-thin solid transparent;
+      bottom: $border-width-thin solid transparent;
+    }
+    padding: $spacing-x-small $spacing-large;
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: $color-background-row-hover;
+    }
+
+    &:active {
+      background-color: $color-background-row-active;
+    }
+  }
+}

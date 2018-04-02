@@ -1,0 +1,16 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-form_compound,
+.slds-form--compound {
+  @include deprecate('4.0.0', 'Please use slds-form-element__row instead') {
+
+    .slds-form-element__control {
+      position: relative;
+
+      + .slds-form-element__control {
+        padding-left: $spacing-x-small;
+      }
+    }
+  }
+}

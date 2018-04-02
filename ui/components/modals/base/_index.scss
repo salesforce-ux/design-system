@@ -277,13 +277,6 @@
   }
 }
 
-// old class
-.slds-modal-backdrop {
-  @include deprecate('4.0.0') {
-    @include backdrop;
-  }
-}
-
 /**
  * Creates the shaded backdrop used behind the modal.
  *

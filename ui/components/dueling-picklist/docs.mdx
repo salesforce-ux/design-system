@@ -53,6 +53,30 @@ To make the dueling picklist responsive or use it within narrow regions, apply t
   </CodeView>
 </Example>
 
+<Blockquote header="Adjusting Height" type="note">
+  To adjust the height of the listboxes, set the height using an inline style on _both_ of the `<div>`s with class `slds-dueling-picklist__column`. If you are setting it based on a maximum number of items being shown before scrolling, you can set `height = (2.25rem * numItems) + 1rem`.
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-dueling-list">
+    <div className="slds-dueling-list__column">
+      <span className="slds-form-element__label" id="label-1">Available Languages</span>
+      <div className="slds-dueling-list__options" style={{height: '10rem'}}>
+        {...}
+      </div>
+    </div>
+    <div className="slds-dueling-list__column">
+      {...}
+    </div>
+    <div className="slds-dueling-list__column">
+      <span className="slds-form-element__label" id="label-2">Selected Languages</span>
+      <div className="slds-dueling-list__options" style={{height: '10rem'}}>
+        {...}
+      </div>
+    </div>
+  </div>
+</CodeBlock>
+
 ## Edit Mode
 
 If the user needs to select multiple options for a field, like a list of languages supported, then use a dueling picklist without the re-order arrows on the right.

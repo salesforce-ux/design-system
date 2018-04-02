@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Creates a form that consists of multiple form groups
  *
@@ -9,7 +11,6 @@
  * @restrict .slds-form
  * @variant
  */
-
 .slds-form_compound,
 .slds-form--compound {
 
@@ -23,17 +24,6 @@
 
     .slds-form-element + .slds-form-element {
       padding-left: $spacing-x-small;
-    }
-  }
-
-  @include deprecate('4.0.0') {
-
-    .slds-form-element__control {
-      position: relative;
-
-      + .slds-form-element__control {
-        padding-left: $spacing-x-small;
-      }
     }
   }
 }

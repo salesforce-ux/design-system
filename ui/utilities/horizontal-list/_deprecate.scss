@@ -1,0 +1,10 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Use has-dividers--{position} helpers instead') {
+
+  .slds-list_horizontal.slds-has-dividers > .slds-list__item,
+  .slds-list--horizontal.slds-has-dividers > .slds-list__item {
+    @include dot-separator;
+  }
+}

@@ -1,0 +1,12 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-input-has-icon {
+
+  .slds-input__icon {
+    /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
+    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+      fill: $color-text-input-icon;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * Intializes docked composer container window
  *
@@ -190,31 +192,6 @@
       bottom: {
         left-radius: 0;
         right-radius: 0;
-      }
-    }
-  }
-
-  @include deprecate('4.0.0', 'Use docked-composer--overflow__button instead') {
-
-    &_overflow__pill,
-    &--overflow__pill {
-      display: flex;
-      padding: 0 $spacing-small;
-      height: inherit;
-      white-space: nowrap;
-      border-bottom-left-radius: $border-radius-medium;
-      border-bottom-right-radius: $border-radius-medium;
-
-      &:hover,
-      &:focus {
-        color: $color-text-inverse;
-        text-decoration: none;
-      }
-
-      .slds-text-body_small,
-      .slds-text-body--small {
-        color: $color-text-inverse;
-        margin-left: $spacing-x-small;
       }
     }
   }

@@ -8,7 +8,7 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   SPLIT_VIEW_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_2}'

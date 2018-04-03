@@ -8,7 +8,7 @@ global:
   cssProperties:
   - 'border*'
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   COLOR_PICKER_SLIDER_THUMB_BORDER_COLOR:
     value: "{!PALETTE_GRAY_10}"

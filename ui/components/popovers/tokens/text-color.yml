@@ -5,7 +5,7 @@ global:
   cssProperties:
   - color
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   POPOVER_COLOR_TEXT:
     value: '{!PALETTE_COOL_GRAY_5}'

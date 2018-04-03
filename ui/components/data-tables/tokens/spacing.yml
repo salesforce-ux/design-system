@@ -15,7 +15,7 @@ global:
   - '*height'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/spacing.yml"
+- "../../../../design-tokens/aliases/spacing.yml"
 props:
   TABLE_CELL_SPACING:
     value: '{!SPACING_X_SMALL}'

@@ -12,7 +12,7 @@ global:
 imports:
 - ../force-base/aliases/color.yml
 - ./aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: 'rgb(253,253,253)'

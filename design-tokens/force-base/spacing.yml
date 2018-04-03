@@ -19,7 +19,7 @@ global:
   - stroke
   - stroke-width
 imports:
-- ./aliases/spacing.yml
+- ../aliases/spacing.yml
 props:
   BORDER_WIDTH_THIN:
     value: 1px
@@ -29,24 +29,6 @@ props:
     value: 1px
   BORDER_STROKE_WIDTH_THICK:
     value: 2px
-  SPACING_NONE:
-    value: '{!SPACING_NONE}'
-  SPACING_XXX_SMALL:
-    value: '{!SPACING_XXX_SMALL}'
-  SPACING_XX_SMALL:
-    value: '{!SPACING_XX_SMALL}'
-  SPACING_X_SMALL:
-    value: '{!SPACING_X_SMALL}'
-  SPACING_SMALL:
-    value: '{!SPACING_SMALL}'
-  SPACING_MEDIUM:
-    value: '{!SPACING_MEDIUM}'
-  SPACING_LARGE:
-    value: '{!SPACING_LARGE}'
-  SPACING_X_LARGE:
-    value: '{!SPACING_X_LARGE}'
-  SPACING_XX_LARGE:
-    value: '{!SPACING_XX_LARGE}'
   COMPONENT_SPACING_MARGIN:
     value: '0'
   COMPONENT_SPACING_PADDING:

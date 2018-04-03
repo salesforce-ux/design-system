@@ -15,7 +15,7 @@ global:
   - '*height'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/spacing.yml"
+- "../../../../design-tokens/aliases/spacing.yml"
 props:
   ## Card defaults
   CARD_SPACING_MARGIN:

@@ -9,7 +9,7 @@ global:
 imports:
 - ../force-base/aliases/color.yml
 - ../force-base/aliases/offset.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   ## STATIC SHADOWS
   SHADOW_HARD_PRIMARY:

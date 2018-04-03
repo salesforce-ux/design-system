@@ -3,7 +3,7 @@
 
 imports:
 - ./force-base/aliases/color.yml
-- ./force-base/spacing.yml
+- ./aliases/spacing.yml
 props:
   FONT_FAMILY_BODY:
     value: "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"

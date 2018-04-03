@@ -10,7 +10,7 @@ global:
   - 'fill'
 imports:
 - ./aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   FILL_BRAND:
     value: '{!SCIENCE_BLUE}'

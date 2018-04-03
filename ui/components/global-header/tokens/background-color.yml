@@ -5,7 +5,7 @@ global:
   cssProperties:
   - 'background*'
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   GLOBAL_HEADER_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_1}'

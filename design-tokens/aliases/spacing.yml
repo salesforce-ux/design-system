@@ -2,7 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 aliases:
-  SPACING_NONE: '0' # Needs to be quoted or will be interpreted as 'false'
+  SPACING_NONE: '0'
   SPACING_XXX_SMALL: '0.125rem'
   SPACING_XX_SMALL: '0.25rem'
   SPACING_X_SMALL: '0.5rem'

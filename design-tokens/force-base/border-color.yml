@@ -9,7 +9,7 @@ global:
   - box-shadow
 imports:
 - ./aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   ## DEFAULTS FROM SALESFORCE-SKIN
   COLOR_BORDER_PRIMARY:

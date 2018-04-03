@@ -9,7 +9,7 @@ global:
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   BUTTON_COLOR_BACKGROUND_PRIMARY:
     value: "{!WHITE_PRIMARY}"

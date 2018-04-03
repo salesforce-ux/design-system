@@ -9,7 +9,7 @@ global:
   - box-shadow
 imports:
 - ../force-base/aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 - ./aliases/color.yml
 props:
   ## DEFAULT

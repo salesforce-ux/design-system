@@ -9,7 +9,7 @@ global:
   - fill
 imports:
 - ./aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   ## DEFAULT
   COLOR_TEXT_PRIMARY:

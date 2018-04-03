@@ -9,7 +9,7 @@ global:
 imports:
 - ./aliases/color.yml
 - ./aliases/offset.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   ## STATIC SHADOWS DEFAULTS FROM SALESFORCE-SKIN
   SHADOW_HARD_PRIMARY:

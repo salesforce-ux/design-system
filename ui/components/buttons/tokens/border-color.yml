@@ -10,7 +10,7 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/salesforce-skin/aliases/color.yml"
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   BUTTON_COLOR_BORDER_PRIMARY:
     value: '{!GRAY_BORDER_PRIMARY}'

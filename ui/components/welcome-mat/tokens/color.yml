@@ -10,10 +10,8 @@ global:
   - 'background*'
   - 'border*'
   - box-shadow
-
 imports:
-
-- ../../../../design-tokens/color-palettes.yml
+- ../../../../design-tokens/aliases/color-palettes.yml
 - ../../../../design-tokens/force-base/aliases/color.yml
 props:
   WELCOME_MAT_TEXT_COLOR_INFO:

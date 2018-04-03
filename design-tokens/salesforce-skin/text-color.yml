@@ -10,7 +10,7 @@ global:
 imports:
 - ../force-base/aliases/color.yml
 - ./aliases/color.yml
-- ../color-palettes.yml
+- ../aliases/color-palettes.yml
 props:
   ## GLOBALS
   COLOR_TEXT_DEFAULT:

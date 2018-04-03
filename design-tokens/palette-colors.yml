@@ -4,7 +4,7 @@ global:
   category: color
 
 imports:
-- ./color-palettes.yml
+- ./aliases/color-palettes.yml
 
 props:
   COLOR_GRAY_1:

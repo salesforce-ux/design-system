@@ -17,7 +17,7 @@ global:
   - '*height'
   - box-shadow
 imports:
-- "../force-base/aliases/spacing.yml"
+- ../aliases/spacing.yml
 props:
   ## GLOBALS
   COMPONENT_SPACING_MARGIN:

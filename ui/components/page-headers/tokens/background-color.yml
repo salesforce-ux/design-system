@@ -7,7 +7,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   ## Defaults for when brand band is turned OFF!
   ## Overridden in force-trailhead

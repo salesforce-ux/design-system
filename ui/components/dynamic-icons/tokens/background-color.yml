@@ -7,7 +7,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   COLOR_BACKGROUND_ICON_WAFFLE:
     value: '{!PALETTE_GRAY_9}'

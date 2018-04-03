@@ -11,7 +11,7 @@ global:
   - 'fill'
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
-- "../../../../design-tokens/color-palettes.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   GLOBAL_ACTION_FILL_HOVER:
     value: '{!SCIENCE_BLUE}'

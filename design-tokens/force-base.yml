@@ -2,6 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
+- ./spacing.yml
 - ./force-base/spacing.yml
 - ./force-base/sizing.yml
 - ./force-base/fill.yml

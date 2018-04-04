@@ -4,6 +4,7 @@ import React from 'react';
 import {
   MultiSelect,
   DefaultSnapShot,
+  GroupLabelSnapShot,
   LockedSnapShot,
   DisabledSnapShot,
   SelectedSnapShot,
@@ -21,6 +22,9 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 it('renders a default dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} />));
+
+it('renders a dueling picklist with a group label', () =>
+  matchesMarkupAndStyle(<MultiSelect dataSet={GroupLabelSnapShot} />));
 
 it('renders a default dueling picklist with no reordering', () =>
   matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} noReorder />));

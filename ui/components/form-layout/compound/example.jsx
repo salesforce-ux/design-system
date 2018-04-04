@@ -105,5 +105,3 @@ export const CompoundForm = props => (
     </div>
   </div>
 );
-
-export default <CompoundForm />;

@@ -19,6 +19,7 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 const listboxOptionId03 = 'listbox-option-unique-id-03';
 const listboxOptionId04 = 'listbox-option-unique-id-04';
+const richTextEditorLabelId01 = 'rich-text-editor-unique-id-01';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -35,14 +36,20 @@ export let Demo = props => (
 );
 
 export let RichTextEditor = props => (
-  <div
-    {...props}
-    className={classNames(
-      'slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap',
-      props.className
+  <div className="slds-form-element">
+    {props.label && (
+      <span id={props.labelId} className="slds-form-element__label">
+        {props.label}
+      </span>
     )}
-  >
-    {props.children}
+    <div
+      className={classNames(
+        'slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap',
+        props.className
+      )}
+    >
+      {props.children}
+    </div>
   </div>
 );
 
@@ -386,7 +393,8 @@ export let RteTextarea = props => (
     {props.text ? (
       <div
         aria-describedby={props['aria-describedby']}
-        aria-label="Compose text"
+        aria-label={!props.labelId ? 'Compose text' : null}
+        aria-labelledby={props.labelId}
         contentEditable={!props.disabled ? 'true' : null}
         suppressContentEditableWarning
         className="slds-rich-text-area__content slds-grow"
@@ -396,7 +404,8 @@ export let RteTextarea = props => (
     ) : (
       <div
         aria-describedby={props['aria-describedby']}
-        aria-label="Compose text"
+        aria-label={!props.labelId ? 'Compose text' : null}
+        aria-labelledby={props.labelId}
         contentEditable={!props.disabled ? 'true' : null}
         suppressContentEditableWarning
         className="slds-rich-text-area__content slds-text-color_weak slds-grow"
@@ -717,6 +726,28 @@ export let examples = [
             <RteFormatBody />
             <RteClearFormatting />
           </RteToolbar>
+        </RichTextEditor>
+      </Demo>
+    )
+  },
+  {
+    id: 'with-label',
+    label: 'With a Label',
+    element: (
+      <Demo>
+        <RichTextEditor
+          label="Details and Steps to Reproduce"
+          labelId={richTextEditorLabelId01}
+        >
+          <RteToolbar>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbar>
+          <RteTextarea
+            placeholder="Compose text..."
+            labelId={richTextEditorLabelId01}
+          />
         </RichTextEditor>
       </Demo>
     )

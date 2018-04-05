@@ -2,7 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import { MultiSelect, MultiSelectViewMode, DefaultSnapShot, LockedSnapShot, DisabledSnapShot, SelectedSnapShot, MultiSelectedSnapShot, GrabbedSnapShot, MovedInSnapShot, DroppedSnapShot, MoveToSnapShot, CountriesSnapshot, SelectedCountriesSnapshot, MultipleSelectedCountriesSnapshot, DroppedCountriesSnapshot } from './';
+import { MultiSelect, MultiSelectViewMode, DefaultSnapShot, GroupLabelSnapShot, LockedSnapShot, DisabledSnapShot, SelectedSnapShot, MultiSelectedSnapShot, GrabbedSnapShot, MovedInSnapShot, DroppedSnapShot, MoveToSnapShot, CountriesSnapshot, SelectedCountriesSnapshot, MultipleSelectedCountriesSnapshot, DroppedCountriesSnapshot } from './';
 import { DoctypeIcon } from '../icons/doctype/example';
 
 <div className="doc lead">
@@ -43,11 +43,25 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
   - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
     - `up` and `down` arrows move the selected items _within_ the current list
 
+## Showing a Group Label
+
+A Dueling Picklist has the option to display a group label, similar to using a `fieldset` and `legend` on grouped form controls. To achieve this, wrap the Dueling Picklist in an `slds-form-element` and add a `div` with the same class names that are applied to a `legend` element in a fieldset, `slds-form-element__label slds-form-element__legend slds-text-title_caps`.
+
+<Blockquote header="Labeling the group" type="a11y">
+  It is important that the `slds-form-element` `<div>` has the `role="group"` attribute applied, along with `aria-labelledby`, whose value is the ID of the visible group label.
+</Blockquote>
+
+<Example title="Dueling Picklist With Group Label">
+  <CodeView>
+    <MultiSelect dataSet={GroupLabelSnapShot} />
+  </CodeView>
+</Example>
+
 ## Responsive
 
 To make the dueling picklist responsive or use it within narrow regions, apply the class `slds-dueling-picklist__column_responsive` to the `<div>`s with class `slds-dueling-picklist__column` that contain options (not the columns that only contain buttons). Any items longer than the space available will truncate with ellipses.
 
-<Example title="Dueling Picklist">
+<Example title="Dueling Picklist Responsive">
   <CodeView>
     <MultiSelect dataSet={CountriesSnapshot} noReorder isResponsive />
   </CodeView>

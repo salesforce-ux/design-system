@@ -108,7 +108,7 @@ export let examples = [
             <SvgIcon
               className="slds-icon slds-icon-text-error"
               sprite="utility"
-              symbol="warning"
+              symbol="error"
             />
             <span className="slds-assistive-text">Warning</span>
           </span>

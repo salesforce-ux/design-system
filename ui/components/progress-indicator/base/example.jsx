@@ -46,7 +46,7 @@ export let Step = props => (
     ) : props.error ? (
       <ButtonIcon
         className="slds-button_icon slds-progress__marker slds-progress__marker_icon"
-        symbol="warning"
+        symbol="error"
         aria-describedby={props['aria-describedby']}
         assistiveText={props.error ? props.children + ' - Error' : null}
         title={props.error ? props.children + ' - Error' : null}

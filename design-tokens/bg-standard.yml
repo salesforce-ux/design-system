@@ -409,3 +409,9 @@ props:
     value: '#3C97DD'
   LOGGING:
     value: '#00A1DF'
+  CONTACT_REQUEST:
+    value: '#FB8954'
+  PROPOSITION:
+    value: '#3C97DD'
+  STRATEGY:
+    value: '#4BC071'

@@ -75,7 +75,8 @@
     color: $brand-accessible-active;
   }
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     color: $color-text-button-default-disabled;
 
     * {
@@ -90,7 +91,8 @@
   &:hover,
   &:focus,
   &:active,
-  &[disabled] {
+  &[disabled],
+  &:disabled {
 
     .slds-button__icon {
       fill: currentColor;
@@ -153,7 +155,8 @@ a.slds-button--inverse:focus {
   @include button;
   @include button-base;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background-color: $color-background-button-default-disabled;
     cursor: default;
   }
@@ -172,7 +175,8 @@ a.slds-button--inverse:focus {
   @include button;
   @include button-brand;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background: $brand-disabled;
     border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
@@ -192,7 +196,8 @@ a.slds-button--inverse:focus {
   @include button-base;
   border-color: $brand-accessible;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background: $brand-disabled;
     border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
@@ -213,7 +218,8 @@ a.slds-button--inverse:focus {
   background-color: $color-background-button-inverse;
   border-color: $button-color-border-primary;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background-color: $color-background-button-inverse-disabled;
     border-color: $color-border-button-inverse-disabled;
   }
@@ -240,7 +246,8 @@ a.slds-button--inverse:focus {
     @include focus-inverse;
   }
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     // Make sure disabled buttons don't inherit hover states
     color: $color-text-button-inverse-disabled;
   }
@@ -259,7 +266,8 @@ a.slds-button--inverse:focus {
   @include button;
   @include button-destructive;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background: $color-background-button-brand-disabled;
     border-color: $color-border-button-brand-disabled;
     color: $color-text-button-brand-disabled;

@@ -76,7 +76,8 @@
   background-color: $color-background-button-inverse;
   border-color: $button-color-border-primary;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background-color: $color-background-button-inverse-disabled;
     border-color: $color-border-button-inverse-disabled;
   }
@@ -90,7 +91,8 @@
 .slds-button_icon-brand {
   @include button-brand;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     background: $brand-disabled;
     border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
@@ -107,7 +109,8 @@
 .slds-button--icon-border-filled {
   background-color: $button-color-background-primary;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     border-color: $button-color-border-primary;
     background-color: $color-background-button-default-disabled;
   }
@@ -137,7 +140,8 @@
     color: $color-text-link-inverse-active;
   }
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     color: $color-text-link-inverse-disabled;
   }
 }
@@ -230,7 +234,8 @@
     fill: $brand-accessible-active;
   }
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     cursor: default;
 
     .slds-button__icon {

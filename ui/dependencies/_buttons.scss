@@ -17,7 +17,8 @@
   border: $border-width-thin solid $color-border-primary;
   transition: border 0.15s linear;
 
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     color: $color-text-button-default-disabled;
   }
 }

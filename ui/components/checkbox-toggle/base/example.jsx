@@ -48,6 +48,7 @@ export let FauxLabel = props => (
 export let Checkbox = props => (
   <input
     name={props.uniqueId}
+    value={props.uniqueId}
     type="checkbox"
     disabled={props.disabled}
     defaultChecked={props.checked}

@@ -3,30 +3,18 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import {
+  FormElement,
+  SimpleFormElementWrapper,
+  FormElementControl
+} from '../../form-element/';
 
+const textareaLabel = 'Textarea Label';
 const textareaId = 'textarea-id-01';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
-
-export let FormElement = props => (
-  <div className={classNames('slds-form-element', props.className)}>
-    {props.children}
-  </div>
-);
-
-export let FormElementLabel = props => (
-  <label className="slds-form-element__label" htmlFor={textareaId}>
-    {props.children}
-  </label>
-);
-
-export let FormElementControl = props => (
-  <div className={classNames('slds-form-element__control', props.className)}>
-    {props.children}
-  </div>
-);
 
 export let Textarea = props => (
   <textarea
@@ -42,11 +30,8 @@ export let Textarea = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <FormElement>
-    <FormElementLabel>Textarea Label</FormElementLabel>
-    <FormElementControl>
-      <Textarea />
-    </FormElementControl>
+  <FormElement labelContent={textareaLabel} inputId={textareaId}>
+    <Textarea id={textareaId} />
   </FormElement>
 );
 
@@ -55,11 +40,8 @@ export let states = [
     id: 'disabled',
     label: 'Disabled',
     element: (
-      <FormElement>
-        <FormElementLabel>Textarea Label</FormElementLabel>
-        <FormElementControl>
-          <Textarea disabled />
-        </FormElementControl>
+      <FormElement labelContent={textareaLabel} inputId={textareaId}>
+        <Textarea id={textareaId} disabled />
       </FormElement>
     )
   },
@@ -67,16 +49,8 @@ export let states = [
     id: 'required',
     label: 'Required',
     element: (
-      <FormElement>
-        <FormElementLabel>
-          <abbr className="slds-required" title="required">
-            *
-          </abbr>{' '}
-          Textarea Label
-        </FormElementLabel>
-        <FormElementControl>
-          <Textarea required />
-        </FormElementControl>
+      <FormElement labelContent={textareaLabel} inputId={textareaId} isRequired>
+        <Textarea id={textareaId} required />
       </FormElement>
     )
   },
@@ -84,19 +58,15 @@ export let states = [
     id: 'error',
     label: 'Error',
     element: (
-      <FormElement className="slds-has-error">
-        <FormElementLabel>
-          <abbr className="slds-required" title="required">
-            *
-          </abbr>{' '}
-          Textarea Label
-        </FormElementLabel>
-        <FormElementControl>
-          <Textarea required aria-describedby="error-01" />
-        </FormElementControl>
-        <div className="slds-form-element__help" id="error-01">
-          This field is required
-        </div>
+      <FormElement
+        formElementClassName="slds-has-error"
+        labelContent={textareaLabel}
+        inputId={textareaId}
+        isRequired
+        errorId="error-01"
+        inlineMessage="This field is required"
+      >
+        <Textarea id={textareaId} required aria-describedby="error-01" />
       </FormElement>
     )
   },
@@ -104,7 +74,7 @@ export let states = [
     id: 'read-only',
     label: 'Read only',
     element: (
-      <FormElement>
+      <SimpleFormElementWrapper>
         <span className="slds-form-element__label">Textarea Label</span>
         <FormElementControl className="slds-border_bottom">
           <div className="slds-form-element__static">
@@ -119,7 +89,7 @@ export let states = [
             </p>
           </div>
         </FormElementControl>
-      </FormElement>
+      </SimpleFormElementWrapper>
     )
   }
 ];

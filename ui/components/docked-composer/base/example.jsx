@@ -19,7 +19,7 @@ import {
   RteTextarea,
   RteClearFormatting
 } from '../../rich-text-editor/base/example';
-import { FormElement } from '../../form-element/base/example';
+import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 import {
   ComboboxContainer,
@@ -1005,8 +1005,8 @@ export let examples = [
               autocomplete
             />
             <FormElement
-              label="Enter subject"
-              hideLabel
+              labelContent="Enter subject"
+              hasHiddenLabel
               inputId="input-subject-01"
             >
               <Input

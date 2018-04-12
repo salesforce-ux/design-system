@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { FormElementControl } from '../../radio-group/base/example';
+import { FormElementControl } from '../../form-element/';
 import { Fieldset, Legend } from '../../radio-group/base/example';
 
 /// ////////////////////////////////////////

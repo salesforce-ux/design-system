@@ -5,7 +5,7 @@ import ButtonIcon from '../button-icons/';
 import { GlobalHeader } from '../global-header/base/example';
 import { ContextBar } from '../global-navigation/navigation-bar/example';
 import { ContextTabBar, ContextTab, ContextTabPanel } from '../global-navigation/navigation-tab-bar/example';
-import { FormElement } from '../form-element/base/example';
+import { FormElement } from '../form-element';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Radio } from '../radio-group/base/example';
@@ -331,10 +331,10 @@ This page is for informational purposes only.
 ## Datepicker
 <div style={{ height: '380px' }}>
   <FormElement
-    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-    label="Date"
+    formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    labelContent="Date"
     inputId="date-input-id"
-    inputIcon="right"
+    hasRightIcon
     dropdown={<DatePicker todayActive dateSelected="single" dateRange="week-4" />}
   >
     <Input id="date-input-id" placeholder=" " />
@@ -348,10 +348,10 @@ This page is for informational purposes only.
 </div>
 <div style={{ height: '380px' }}>
   <FormElement
-    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-    label="Date"
+    formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    labelContent="Date"
     inputId="date-input-id"
-    inputIcon="right"
+    hasRightIcon
     dropdown={
       <DatePicker
         todayActiveInRange

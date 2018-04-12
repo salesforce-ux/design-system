@@ -10,7 +10,7 @@ import SvgIcon from '../../shared/svg-icon';
 import { Button } from '../buttons/base/example';
 import Tabs from '../tabs/index.react';
 import { Popover } from '../popovers/base/example';
-import { FormElement } from '../form-element/base/example';
+import { FormElement } from '../form-element';
 import { Input } from '../input/base/example';
 
 const swatchColors = [
@@ -95,7 +95,7 @@ export const ColorPickerSummary = props => {
       </Button>
 
       <FormElement
-        className={classNames('slds-color-picker__summary-input', {
+        formElementClassName={classNames('slds-color-picker__summary-input', {
           'slds-has-error': hasSummaryError
         })}
       >
@@ -198,10 +198,13 @@ const ColorPickerCustom = props => {
 
       <div className="slds-color-picker__custom-inputs">
         <FormElement
-          label="Hex"
-          className={classNames('slds-color-picker__input-custom-hex', {
-            'slds-has-error': hasCustomError
-          })}
+          labelContent="Hex"
+          formElementClassName={classNames(
+            'slds-color-picker__input-custom-hex',
+            {
+              'slds-has-error': hasCustomError
+            }
+          )}
           inputId={hexInputId}
         >
           <Input
@@ -211,15 +214,24 @@ const ColorPickerCustom = props => {
           />
         </FormElement>
 
-        <FormElement label={<abbr title="Red">R</abbr>} inputId={rInputId}>
+        <FormElement
+          labelContent={<abbr title="Red">R</abbr>}
+          inputId={rInputId}
+        >
           <Input defaultValue="86" id={rInputId} />
         </FormElement>
 
-        <FormElement label={<abbr title="Green">G</abbr>} inputId={gInputId}>
+        <FormElement
+          labelContent={<abbr title="Green">G</abbr>}
+          inputId={gInputId}
+        >
           <Input defaultValue="121" id={gInputId} />
         </FormElement>
 
-        <FormElement label={<abbr title="blue">B</abbr>} inputId={bInputId}>
+        <FormElement
+          labelContent={<abbr title="blue">B</abbr>}
+          inputId={bInputId}
+        >
           <Input defaultValue="192" id={bInputId} />
         </FormElement>
       </div>

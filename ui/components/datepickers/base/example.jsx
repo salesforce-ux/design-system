@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { Select } from '../../select/base/example';
-import { FormElement } from '../../form-element/base/example';
+import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 
 /* -----------------------------------------------------------------------------
@@ -389,10 +389,10 @@ export const Context = props => (
 
 export default (
   <FormElement
-    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-    label="Date"
+    formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    labelContent="Date"
     inputId={dateInputId}
-    inputIcon="right"
+    hasRightIcon
     dropdown={<DatePicker todayActive />}
   >
     <Input id={dateInputId} placeholder=" " />
@@ -411,10 +411,10 @@ export let states = [
     label: 'Date selected',
     element: (
       <FormElement
-        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        label="Date"
+        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        labelContent="Date"
         inputId={dateInputId}
-        inputIcon="right"
+        hasRightIcon
         dropdown={
           <DatePicker todayActive dateSelected="single" dateRange="week-4" />
         }
@@ -434,10 +434,10 @@ export let states = [
     label: 'Date Picker has Error',
     element: (
       <FormElement
-        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-error"
-        label="Date"
+        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-error"
+        labelContent="Date"
         inputId={dateInputId}
-        inputIcon="right"
+        hasRightIcon
         dropdown={<DatePicker todayActive />}
       >
         <Input id={dateInputId} placeholder=" " />

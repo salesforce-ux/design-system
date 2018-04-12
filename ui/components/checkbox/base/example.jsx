@@ -4,6 +4,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
+import { FormElement, FormElementControl } from '../../form-element';
+
+const checkboxLabel = 'Checkbox Label';
+const errorId = 'error_01';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -25,24 +29,6 @@ let Legend = props => (
   <legend className="slds-form-element__legend slds-form-element__label">
     {props.children}
   </legend>
-);
-
-export let FormElement = props => (
-  <div className={classNames('slds-form-element', props.className)}>
-    {props.children}
-  </div>
-);
-
-let FormElementLabel = props => (
-  <label className="slds-form-element__label" htmlFor={props.id}>
-    Checkbox Label
-  </label>
-);
-
-export let FormElementControl = props => (
-  <div className={classNames('slds-form-element__control', props.className)}>
-    {props.children}
-  </div>
 );
 
 export let Checkbox = props => {
@@ -86,47 +72,40 @@ export let Checkbox = props => {
 
 export let Indeterminate = props => (
   <FormElement>
-    <FormElementControl>
-      <Checkbox
-        id="checkbox-indeterminate-01"
-        label="Indeterminate Checkbox Label"
-      />
-    </FormElementControl>
+    <Checkbox
+      id="checkbox-indeterminate-01"
+      label="Indeterminate Checkbox Label"
+    />
   </FormElement>
 );
 
 export let Required = props => (
   <FormElement>
-    <FormElementControl>
-      <Checkbox label="Checkbox Label">
-        <abbr className="slds-required" title="required">
-          *
-        </abbr>
-      </Checkbox>
-    </FormElementControl>
+    <Checkbox label={checkboxLabel}>
+      <abbr className="slds-required" title="required">
+        *
+      </abbr>
+    </Checkbox>
   </FormElement>
 );
 
 export let ErrorState = props => (
-  <FormElement className="slds-has-error">
-    <FormElementControl>
-      <Checkbox label="Checkbox Label" errorId="error_01">
-        <abbr className="slds-required" title="required">
-          *
-        </abbr>
-      </Checkbox>
-    </FormElementControl>
-    <div id="error_01" className="slds-form-element__help">
-      This field is required
-    </div>
+  <FormElement
+    formElementClassName="slds-has-error"
+    inlineMessage="This field is required"
+    errorId={errorId}
+  >
+    <Checkbox label={checkboxLabel} errorId="error_01">
+      <abbr className="slds-required" title="required">
+        *
+      </abbr>
+    </Checkbox>
   </FormElement>
 );
 
 export let Disabled = props => (
   <FormElement>
-    <FormElementControl>
-      <Checkbox label="Checkbox Label" disabled />
-    </FormElementControl>
+    <Checkbox label={checkboxLabel} disabled />
   </FormElement>
 );
 
@@ -134,8 +113,8 @@ export let Group = props => (
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
     <FormElementControl>
-      <Checkbox label="Checkbox Label" checked />
-      <Checkbox label="Checkbox Label" />
+      <Checkbox label={checkboxLabel} checked />
+      <Checkbox label={checkboxLabel} />
     </FormElementControl>
   </Fieldset>
 );
@@ -149,8 +128,8 @@ export let GroupRequired = props => (
       Checkbox Group Label
     </Legend>
     <FormElementControl>
-      <Checkbox label="Checkbox Label" checked />
-      <Checkbox label="Checkbox Label" />
+      <Checkbox label={checkboxLabel} checked />
+      <Checkbox label={checkboxLabel} />
     </FormElementControl>
   </Fieldset>
 );
@@ -164,10 +143,10 @@ export let GroupError = props => (
       Checkbox Group Label
     </Legend>
     <FormElementControl>
-      <Checkbox errorId="error_01" label="Checkbox Label" checked />
-      <Checkbox errorId="error_01" label="Checkbox Label" />
+      <Checkbox errorId={errorId} label={checkboxLabel} checked />
+      <Checkbox errorId={errorId} label={checkboxLabel} />
     </FormElementControl>
-    <div id="error_01" className="slds-form-element__help">
+    <div id={errorId} className="slds-form-element__help">
       This field is required
     </div>
   </Fieldset>
@@ -177,8 +156,8 @@ export let GroupDisabled = props => (
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
     <FormElementControl>
-      <Checkbox label="Checkbox Label" disabled />
-      <Checkbox label="Checkbox Label" disabled />
+      <Checkbox label={checkboxLabel} disabled />
+      <Checkbox label={checkboxLabel} disabled />
     </FormElementControl>
   </Fieldset>
 );
@@ -189,9 +168,7 @@ export let GroupDisabled = props => (
 
 export default (
   <FormElement>
-    <FormElementControl>
-      <Checkbox label="Checkbox Label" checked />
-    </FormElementControl>
+    <Checkbox label={checkboxLabel} checked />
   </FormElement>
 );
 
@@ -248,13 +225,11 @@ export let examples = [
     label: 'Stacked',
     element: (
       <FormElement>
-        <FormElementControl>
-          <Checkbox
-            className="slds-checkbox_stacked"
-            label="Checkbox Label"
-            checked
-          />
-        </FormElementControl>
+        <Checkbox
+          className="slds-checkbox_stacked"
+          label={checkboxLabel}
+          checked
+        />
       </FormElement>
     )
   }

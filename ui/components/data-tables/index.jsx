@@ -6,12 +6,8 @@ import ButtonIcon from '../button-icons/';
 import { StandardIcon } from '../icons/standard/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Tooltip } from '../tooltips/base/example';
-import {
-  FormElement,
-  FormElementControl,
-  FormElementLabel,
-  Input
-} from '../input/base/example';
+import { Input } from '../input/base/example';
+import { FormElement } from '../form-element';
 import MediaObject from '../../utilities/media-objects/index.react';
 import { Ellie } from '../dynamic-icons/ellie/example';
 import { Score } from '../dynamic-icons/score/example';
@@ -1047,18 +1043,17 @@ export const ProductItemDetailsTd = props => (
 */
 export const ProductQuantityTd = props => (
   <AdvancedDataTableTd>
-    <FormElement>
-      <FormElementLabel className="slds-assistive-text" id={props.inputId}>
-        {props.labelText}
-      </FormElementLabel>
-      <FormElementControl>
-        <Input
-          id={props.inputId}
-          defaultValue={props.quantity}
-          placeholder=" "
-          className="slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
-        />
-      </FormElementControl>
+    <FormElement
+      labelContent={props.labelText}
+      inputId={props.inputId}
+      labelClassName="slds-assistive-text"
+    >
+      <Input
+        id={props.inputId}
+        defaultValue={props.quantity}
+        placeholder=" "
+        className="slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+      />
     </FormElement>
   </AdvancedDataTableTd>
 );

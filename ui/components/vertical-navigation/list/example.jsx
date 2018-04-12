@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { UtilityIcon } from '../../icons/base/example.jsx';
-import { FormElement } from '../../form-element/base/example';
+import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -431,11 +431,11 @@ export let examples = [
       <div className="demo-only" style={{ width: '320px' }}>
         <NavVertical>
           <FormElement
-            className="slds-p-horizontal_large"
-            label="Filter navigation items"
+            formElementClassName="slds-p-horizontal_large"
+            labelContent="Filter navigation items"
             inputId={inputId01}
-            inputIcon="left"
-            hideLabel
+            hasLeftIcon
+            hasHiddenLabel
           >
             <SvgIcon
               className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"

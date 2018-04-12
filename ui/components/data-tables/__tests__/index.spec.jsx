@@ -34,7 +34,11 @@ it('renders a product details cell', () =>
 
 it('renders a product quantity cell', () =>
   matchesMarkupAndStyle(
-    <ProductQuantityTd quantity={productRows[0].quantity} />
+    <ProductQuantityTd
+      quantity={productRows[0].quantity}
+      inputId="product-quantity-text-input-id-0"
+      labelText={`${productRows[0].productName} quantity`}
+    />
   ));
 
 it('renders a product price cell', () =>

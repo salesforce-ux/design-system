@@ -6,6 +6,7 @@ import ButtonIcon from '../../button-icons/';
 import { Checkbox } from '../../checkbox/base/example';
 import { Select } from '../../select/base/example';
 import { Pill, PillContainer } from '../../pills/base/example';
+import { FormElement } from '../../form-element';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
@@ -120,15 +121,6 @@ export let FormElementStatic = props => (
       ) : null}
     </div>
   </li>
-);
-
-let FormElement = props => (
-  <div className="slds-form-element">
-    <label className="slds-form-element__label" htmlFor={props.id}>
-      {props.label}
-    </label>
-    <div className="slds-form-element__control">{props.children}</div>
-  </div>
 );
 
 let Lookup = props => (
@@ -252,14 +244,14 @@ let IsEditing = props => (
             Task Information
           </h3>
           <div>
-            <FormElement label="Subject" id="text-input-01">
+            <FormElement labelContent="Subject" inputId="text-input-01">
               <input
                 className="slds-input"
                 id="text-input-01"
                 defaultValue="Follow up on '15 Contract"
               />
             </FormElement>
-            <FormElement label="Due Date" id="date-input-01">
+            <FormElement labelContent="Due Date" inputId="date-input-01">
               <input
                 className="slds-input"
                 id="date-input-01"
@@ -308,7 +300,7 @@ let IsEditing = props => (
                 </Pill>
               </PillContainer>
             </Lookup>
-            <FormElement label="Comments" id="text-input-05">
+            <FormElement labelContent="Comments" inputId="text-input-05">
               <textarea
                 className="slds-textarea"
                 id="text-input-05"
@@ -322,13 +314,13 @@ let IsEditing = props => (
             Additional Information
           </h3>
           <div>
-            <FormElement label="Status" id="non-text-input-01">
+            <FormElement labelContent="Status" inputId="non-text-input-01">
               <Select id="non-text-input-01">
                 <option>Not Started</option>
                 <option>Prospecting</option>
               </Select>
             </FormElement>
-            <FormElement label="Priority" id="non-text-input-02">
+            <FormElement labelContent="Priority" inputId="non-text-input-02">
               <Select id="non-text-input-02">
                 <option>Normal</option>
                 <option>Low</option>

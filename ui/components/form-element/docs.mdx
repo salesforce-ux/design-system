@@ -3,7 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import ButtonIcon from '../button-icons/';
-import {FormElement} from './base/example';
+import { FormElement } from './';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Textarea } from '../textarea/base/example';
@@ -25,7 +25,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
 
 <Example title="Form Element - Base">
   <CodeView>
-    <FormElement label="Form Label" inputId="form-element-01">
+    <FormElement labelContent="Form Label" inputId="form-element-01">
       <Input id="form-element-01" />
     </FormElement>
   </CodeView>
@@ -125,7 +125,7 @@ The `<input>` element should also have the HTML attribute required or required="
 <Example title="Form Element - Required">
 
   <CodeView>
-    <FormElement label="Form Label" inputId="form-element-03" required>
+    <FormElement labelContent="Form Label" inputId="form-element-03" isRequired>
       <Input id="form-element-03" />
     </FormElement>
   </CodeView>
@@ -144,13 +144,13 @@ If an error has occured while submitting a form, the form element with an error 
 
   <CodeView>
     <FormElement
-      className="slds-has-error"
-      label="Form Label"
+      formElementClassName="slds-has-error"
+      labelContent="Form Label"
       inputId="form-element-05"
       errorId="form-error-01"
-      required
-      message="This field is required"
-      >
+      isRequired
+      inlineMessage="This field is required"
+    >
       <Input id="form-element-05" required aria-describedby="form-error-01" />
     </FormElement>
   </CodeView>
@@ -329,8 +329,8 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
       <div className="slds-grid slds-gutters_small">
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
-            label="Assigned to"
+            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            labelContent="Assigned to"
             inputId="assigned-to"
           >
             <Input id="assigned-to" readOnly defaultValue="Jack Rogers" />
@@ -338,8 +338,8 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
-            label="Team Name"
+            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            labelContent="Team Name"
             inputId="team-name"
           >
             <Input id="team-name" defaultValue="Salesforce Design System" />
@@ -359,8 +359,8 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
-            label="Status"
+            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            labelContent="Status"
             inputId="status"
           >
             <Input id="status" defaultValue="In Progress" />
@@ -370,8 +370,8 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
       <div className="slds-grid slds-gutters_small">
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            className="slds-form-element_small slds-form-element_edit slds-hint-parent"
-            label="Description"
+            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            labelContent="Description"
             inputId="description"
           >
             <Textarea className="slds-textarea" id="description" defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod." />

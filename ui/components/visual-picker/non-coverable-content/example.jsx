@@ -5,11 +5,8 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
-import {
-  Fieldset,
-  Legend,
-  FormElementControl
-} from '../../radio-group/base/example';
+import { Fieldset, Legend } from '../../radio-group/base/example';
+import { FormElementControl } from '../../form-element';
 import { VisualPicker } from '../coverable-content/example';
 import { UtilityIcon } from '../../icons/base/example';
 

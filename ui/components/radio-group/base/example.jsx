@@ -4,6 +4,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
+import { FormElementControl } from '../../form-element/';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -24,12 +25,6 @@ export let Legend = props => (
   >
     {props.children}
   </legend>
-);
-
-export let FormElementControl = props => (
-  <div className={classNames('slds-form-element__control', props.className)}>
-    {props.children}
-  </div>
 );
 
 export let Radio = props => {

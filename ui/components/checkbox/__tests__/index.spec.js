@@ -4,8 +4,6 @@ import {
   Checkbox,
   Disabled,
   ErrorState,
-  FormElement,
-  FormElementControl,
   Group,
   GroupRequired,
   GroupError,
@@ -13,6 +11,7 @@ import {
   Indeterminate,
   Required
 } from '../base/example';
+import { FormElement } from '../../form-element';
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
@@ -20,9 +19,7 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 it('renders a default checkbox', () =>
   matchesMarkupAndStyle(
     <FormElement>
-      <FormElementControl>
-        <Checkbox label="Checkbox Label" checked />
-      </FormElementControl>
+      <Checkbox label="Checkbox Label" checked />
     </FormElement>
   ));
 
@@ -50,12 +47,10 @@ it('renders a disabled checkbox group', () =>
 it('renders a stacked checkbox', () =>
   matchesMarkupAndStyle(
     <FormElement>
-      <FormElementControl>
-        <Checkbox
-          className="slds-checkbox_stacked"
-          label="Checkbox Label"
-          checked
-        />
-      </FormElementControl>
+      <Checkbox
+        className="slds-checkbox_stacked"
+        label="Checkbox Label"
+        checked
+      />
     </FormElement>
   ));

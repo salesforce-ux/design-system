@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { FormElement } from '../../form-element/base/example';
+import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Radio } from '../../radio-group/base/example';
@@ -15,10 +15,10 @@ const inputId03 = 'input-id-03';
 
 export const Form = props => (
   <div className={classNames('slds-form', props.className)}>
-    <FormElement label="Text Input" inputId={inputId01}>
+    <FormElement labelContent="Text Input" inputId={inputId01}>
       <Input id={inputId01} />
     </FormElement>
-    <FormElement label="Textarea Label" inputId={inputId02}>
+    <FormElement labelContent="Textarea Label" inputId={inputId02}>
       <Textarea id={inputId02} />
     </FormElement>
     <fieldset className="slds-form-element">

@@ -11,7 +11,7 @@ import {
 import { DatePicker } from '../../datepickers/base/example';
 import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
-import { FormElement } from '../../form-element/base/example';
+import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 
 /* -----------------------------------------------------------------------------
@@ -102,10 +102,10 @@ export default (
       <div className="slds-form-element__group">
         <div className="slds-form-element__row">
           <FormElement
-            className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-            label="Date"
+            formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+            labelContent="Date"
             inputId={dateInputId}
-            inputIcon="right"
+            hasRightIcon
             dropdown={<DatePicker todayActive />}
           >
             <Input id={dateInputId} placeholder=" " />
@@ -143,10 +143,10 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-                label="Date"
+                formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+                labelContent="Date"
                 inputId={dateInputId}
-                inputIcon="right"
+                hasRightIcon
                 dropdown={
                   <DatePicker
                     todayActive
@@ -193,10 +193,10 @@ export let states = [
           <div className="slds-form-element__group">
             <div className="slds-form-element__row">
               <FormElement
-                className="slds-dropdown-trigger slds-dropdown-trigger_click"
-                label="Date"
+                formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click"
+                labelContent="Date"
                 inputId={dateInputId}
-                inputIcon="right"
+                hasRightIcon
                 dropdown={
                   <DatePicker
                     todayActive

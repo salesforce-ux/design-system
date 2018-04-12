@@ -1,10 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
-import {
-  Fieldset,
-  Legend,
-  FormElementControl
-} from '../../radio-group/base/example';
+import { Fieldset, Legend } from '../../radio-group/base/example';
+import { FormElementControl } from '../../form-element';
 import { VisualPicker } from '../coverable-content/example';
 import {
   VisualPickerMediaObject,

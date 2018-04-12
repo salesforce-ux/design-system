@@ -4,7 +4,7 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import { FormElement } from '../base/example';
+import { FormElement } from '../';
 import { Input } from '../../input/base/example';
 import ButtonIcon from '../../button-icons/';
 
@@ -13,25 +13,25 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 describe('Form Element', () => {
   it('renders base form element with input', () =>
     matchesMarkupAndStyle(
-      <FormElement label="Form label" inputId="input-1">
+      <FormElement labelContent="Form label" inputId="input-1">
         <Input id="input-1" />
       </FormElement>
     ));
   it('renders base required form element with input', () =>
     matchesMarkupAndStyle(
-      <FormElement label="Form label" inputId="input-1" required>
+      <FormElement labelContent="Form label" inputId="input-1" isRequired>
         <Input id="input-1" required />
       </FormElement>
     ));
   it('renders base errored form element with input', () =>
     matchesMarkupAndStyle(
       <FormElement
-        className="slds-has-error"
-        label="Form label"
+        formElementClassName="slds-has-error"
+        labelContent="Form label"
         inputId="input-1"
         errorId="error-1"
-        required
-        message="This field is required"
+        isRequired
+        inlineMessage="This field is required"
       >
         <Input id="input-1" required aria-describedby="error-1" />
       </FormElement>

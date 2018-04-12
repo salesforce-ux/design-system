@@ -62,9 +62,7 @@ class WelcomeMatContentTrailhead extends React.Component {
         </div>
 
         {isComplete ? (
-          <Button className="slds-button slds-button_brand">
-            View on your Trailblazer Profile
-          </Button>
+          <Button isBrand>View on your Trailblazer Profile</Button>
         ) : (
           <ProgressBar
             value={completePercent}

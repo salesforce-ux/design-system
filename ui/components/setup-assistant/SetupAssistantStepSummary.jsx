@@ -28,7 +28,7 @@ class SetupAssistantStepSummary extends React.Component {
     const stepAction =
       action &&
       (action.type == 'button' ? (
-        <Button className="slds-button_outline-brand">{action.title}</Button>
+        <Button isOutlineBrand>{action.title}</Button>
       ) : action.type == 'toggle' ? (
         <CheckboxToggle title={action.title} isBare checked={action.checked} />
       ) : (

@@ -6,11 +6,32 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 export let Button = props => {
-  const { className, disabled, ...rest } = props;
+  const {
+    className,
+    disabled,
+    isBrand,
+    isNeutral,
+    isOutlineBrand,
+    isInverse,
+    isDestructive,
+    isSuccess,
+    ...rest
+  } = props;
 
   return (
     <button
-      className={classNames('slds-button', className)}
+      className={classNames(
+        'slds-button',
+        {
+          'slds-button_brand': isBrand,
+          'slds-button_neutral': isNeutral,
+          'slds-button_outline-brand': isOutlineBrand,
+          'slds-button_inverse': isInverse,
+          'slds-button_destructive': isDestructive,
+          'slds-button_success': isSuccess
+        },
+        className
+      )}
       disabled={disabled}
       {...rest}
     >
@@ -38,7 +59,7 @@ export let examples = [
     id: 'with-icon-left',
     label: 'With left icon',
     element: (
-      <Button className="slds-button_neutral">
+      <Button isNeutral>
         <SvgIcon
           className="slds-button__icon slds-button__icon_left"
           sprite="utility"
@@ -52,7 +73,7 @@ export let examples = [
     id: 'with-icon-right',
     label: 'With right icon',
     element: (
-      <Button className="slds-button_neutral">
+      <Button isNeutral>
         Button Neutral
         <SvgIcon
           className="slds-button__icon slds-button__icon_right"

@@ -11,12 +11,12 @@
   // declared in another ".default" file, they need to be imported in reverse
   // order because Sass will always take the first "!default" value
   // https://www.sassmeister.com/gist/07188758b2c6ba3c408efa3d6eac8574
-  '../design-tokens/dist/salesforce-skin.map',
   '../design-tokens/dist/salesforce-skin.default',
   '../design-tokens/dist/s1-base-large.default',
   '../design-tokens/dist/s1-base.default',
   '../design-tokens/dist/force-base.default',
   '../design-tokens/dist/force-base.map',
+  '../design-tokens/dist/spacing.map',
   '../design-tokens/dist/bg-actions.default',
   '../design-tokens/dist/bg-actions.map',
   '../design-tokens/dist/bg-custom.default',

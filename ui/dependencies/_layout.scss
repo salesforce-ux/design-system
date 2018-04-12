@@ -212,7 +212,7 @@
     $prop-prefix: 'p';
   }
 
-  @each $token, $size in $force-base-map {
+  @each $token, $size in $spacing-map {
     // Analyze tokens from map
     $token-string: inspect($token);
     // Remove component specific spacing tokens

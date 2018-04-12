@@ -46,8 +46,8 @@
    * @notes Only the record home page header contains this detail area
    */
   &-row {
-    margin: $spacing-small #{-$spacing-medium} #{-$spacing-medium};
-    padding: $page-header-spacing-row;
+    margin: $var-spacing-vertical-small #{-$var-spacing-horizontal-medium} #{-$var-spacing-horizontal-medium};
+    padding: $var-spacing-horizontal-medium;
     border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
     background-color: $page-header-color-background-alt;
     position: relative;
@@ -63,8 +63,8 @@
    */
   &-block {
     padding: {
-      right: $spacing-x-large;
-      left: $spacing-x-large;
+      right: $var-spacing-horizontal-x-large;
+      left: $var-spacing-horizontal-x-large;
     }
     max-width: 25%;
 

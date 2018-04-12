@@ -90,7 +90,7 @@
     }
 
     .slds-section__content {
-      padding-top: $spacing-small;
+      padding-top: $spacing-x-small;
       overflow: visible;
       visibility: visible;
       opacity: 1;
@@ -102,6 +102,6 @@
 .slds-section-title_divider,
 .slds-section-title--divider {
   @include text-heading--label;
-  padding: $spacing-small $spacing-medium;
+  padding: $spacing-x-small $spacing-medium;
   background: $color-background;
 }

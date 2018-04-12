@@ -54,10 +54,7 @@ export let RecordHome = props => (
     </div>
     <ul className="slds-grid slds-page-header__detail-row">
       <li className="slds-page-header__detail-block">
-        <p
-          className="slds-text-title slds-truncate slds-m-bottom_xx-small"
-          title="Field 1"
-        >
+        <p className="slds-text-title slds-truncate" title="Field 1">
           Field 1
         </p>
         <p
@@ -68,10 +65,7 @@ export let RecordHome = props => (
         </p>
       </li>
       <li className="slds-page-header__detail-block">
-        <p
-          className="slds-text-title slds-truncate slds-m-bottom_xx-small"
-          title="Field2 (3)"
-        >
+        <p className="slds-text-title slds-truncate" title="Field2 (3)">
           Field 2 (3)
           <ButtonIcon
             className="slds-button_icon"
@@ -85,19 +79,13 @@ export let RecordHome = props => (
         <p className="slds-text-body_regular">Multiple Values</p>
       </li>
       <li className="slds-page-header__detail-block">
-        <p
-          className="slds-text-title slds-truncate slds-m-bottom_xx-small"
-          title="Field 3"
-        >
+        <p className="slds-text-title slds-truncate" title="Field 3">
           Field 3
         </p>
         <a href="javascript:void(0);">Hyperlink</a>
       </li>
       <li className="slds-page-header__detail-block">
-        <p
-          className="slds-text-title slds-truncate slds-m-bottom_xx-small"
-          title="Field 4"
-        >
+        <p className="slds-text-title slds-truncate" title="Field 4">
           Field 4
         </p>
         <p title="Description (2-line truncation—must use JS to truncate).">

@@ -7,7 +7,7 @@
 // circumstances. It can also be used to combine several cards into a one
 // card look. This class does not react to the .slds-card_boundary.
 .slds-card-wrapper {
-  padding: $card-wrapper-spacing;
+  padding: $var-spacing-medium;
   background: $card-color-background;
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
@@ -59,7 +59,7 @@
  */
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card {
-  padding: $card-wrapper-spacing; // Use card tokens to keep this tab style looking like a card
+  padding: $var-spacing-medium; // Use card tokens to keep this tab style looking like a card
   box-shadow: $card-shadow;
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
@@ -91,16 +91,16 @@
     border-radius: $border-radius-medium;
 
     .slds-card__header {
-      padding: $card-header-padding;
+      padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
     }
 
     .slds-card__body_inner,
     .slds-card__body--inner {
-      padding: $card-body-padding;
+      padding: 0 $var-spacing-vertical-medium;
     }
 
     .slds-card__footer {
-      padding: $card-footer-padding;
+      padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
     }
   }
 }

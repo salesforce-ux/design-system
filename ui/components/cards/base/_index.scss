@@ -28,12 +28,12 @@
 
   // Adds spacing between cards
   + .slds-card {
-    margin-top: $card-spacing-margin;
+    margin-top: $var-spacing-vertical-medium;
   }
 
   &__body_inner,
   &__body--inner {
-    padding: $card-body-padding;
+    padding: 0 $var-spacing-vertical-medium;
   }
 
   /**
@@ -43,8 +43,8 @@
    * @restrict .slds-card div
    */
   &__header {
-    padding: $card-header-padding;
-    margin: $card-header-margin;
+    padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
+    margin: 0 0 $var-spacing-vertical-small;
   }
 
   &__header-link {
@@ -59,7 +59,7 @@
    * @restrict .slds-card div
    */
   &__body {
-    margin-bottom: $spacing-small;
+    margin-bottom: $var-spacing-vertical-small;
   }
 
   &__body:empty,
@@ -74,8 +74,8 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    padding: $card-footer-padding;
-    margin-top: $card-footer-margin;
+    padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
+    margin-top: $var-spacing-vertical-small;
     text-align: $card-footer-text-align;
     font-size: $font-size-text-small;
     border-top: $border-width-thin solid $card-footer-color-border;
@@ -98,7 +98,7 @@
  * @restrict .slds-tile
  */
 .slds-card__tile {
-  margin-top: $spacing-x-small;
+  margin-top: $var-spacing-vertical-small;
 }
 
 .slds-region__pinned-left,

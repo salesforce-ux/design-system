@@ -22,7 +22,10 @@ imports:
 props:
   PAGE_HEADER_SPACING_MARGIN:
     value: '0'
+    deprecated: true
   PAGE_HEADER_SPACING_PADDING:
     value: '{!SPACING_MEDIUM}'
+    deprecated: true
   PAGE_HEADER_SPACING_ROW:
     value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'
+    deprecated: true

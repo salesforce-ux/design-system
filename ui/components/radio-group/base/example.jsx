@@ -35,6 +35,7 @@ export let Radio = props => {
       <input
         type="radio"
         id={props.id ? props.id : uniqueId}
+        value={props.id ? props.id : uniqueId}
         name={props.name || 'options'}
         disabled={props.disabled}
         defaultChecked={props.checked}

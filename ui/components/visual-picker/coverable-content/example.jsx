@@ -37,6 +37,7 @@ export let VisualPicker = props => {
       <input
         type={props.type}
         id={uniqueId}
+        value={uniqueId}
         name="options"
         defaultChecked={props.checked}
         disabled={props.disabled}

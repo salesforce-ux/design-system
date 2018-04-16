@@ -250,8 +250,8 @@ const ColorPickerCustom = props => {
  */
 const ColorPickerFooter = () => (
   <div className="slds-color-picker__selector-footer">
-    <Button className="slds-button_neutral">Cancel</Button>
-    <Button className="slds-button_brand">Done</Button>
+    <Button isNeutral>Cancel</Button>
+    <Button isBrand>Done</Button>
   </div>
 );
 

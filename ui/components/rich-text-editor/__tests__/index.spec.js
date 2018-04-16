@@ -19,29 +19,19 @@ import {
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
-const RteOutput = props => (
-  <div className="slds-rich-text-editor__output slds-grid">
-    <div
-      aria-describedby={props['aria-describedby']}
-      aria-label="Compose text"
-      contentEditable={!props.disabled ? 'true' : null}
-      suppressContentEditableWarning
-      className="slds-rich-text-area__content slds-grow"
-    >
+const IndentedOutputText = props => (
+  <ol>
+    <li>Outer List</li>
+    <li>
+      Outer List
       <ol>
-        <li>Outer List</li>
-        <li>
-          Outer List
-          <ol>
-            <li>Inner List</li>
-            <li>Inner List</li>
-          </ol>
-        </li>
-        <li>Outer List</li>
-        <li>Outer List</li>
+        <li>Inner List</li>
+        <li>Inner List</li>
       </ol>
-    </div>
-  </div>
+    </li>
+    <li>Outer List</li>
+    <li>Outer List</li>
+  </ol>
 );
 
 it('renders an RTE toolbar in a narrow space', () =>
@@ -64,4 +54,27 @@ it('renders an RTE toolbar in a narrow space', () =>
   ));
 
 it('renders a RTE output with indentation', () =>
-  matchesMarkupAndStyle(<RteOutput />));
+  matchesMarkupAndStyle(<RteTextarea text={<IndentedOutputText />} />));
+
+it('renders a RTE textarea with aria-label when no label is present', () =>
+  matchesMarkupAndStyle(<RteTextarea placeholder="Compose text..." />));
+
+it('renders a RTE textarea with aria-labelledby', () =>
+  matchesMarkupAndStyle(
+    <RteTextarea placeholder="Compose text..." labelId="rte-label-id-01" />
+  ));
+
+it('renders a RTE editor with a label', () =>
+  matchesMarkupAndStyle(
+    <RichTextEditor
+      label="Details and Steps to Reproduce"
+      labelId="rte-label-id-02"
+    >
+      <RteToolbar>
+        <RteFormatText tabIndexSetting="0" />
+        <RteFormatBody />
+        <RteClearFormatting />
+      </RteToolbar>
+      <RteTextarea placeholder="Compose text..." labelId="rte-label-id-02" />
+    </RichTextEditor>
+  ));

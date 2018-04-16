@@ -38,7 +38,7 @@ export let NavVerticalItemRadio = props => (
       defaultChecked={props.checked}
       type="radio"
       id={props.id}
-      value="on"
+      value={props.id}
       name="example"
     />
     <label className="slds-nav-vertical__action" htmlFor={props.id}>

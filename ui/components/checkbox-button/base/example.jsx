@@ -19,6 +19,7 @@ export let CheckboxAddButton = props => {
         className="slds-assistive-text"
         type="checkbox"
         id={uniqueId}
+        value={uniqueId}
         disabled={props.disabled}
         defaultChecked={props.checked}
         tabIndex={props.tabIndex}

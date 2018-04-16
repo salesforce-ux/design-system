@@ -228,7 +228,7 @@ export const DescriptionCard = props => (
       </div>
     )}
     {props.footerButtons && (
-      <Button className="slds-button_neutral slds-m-top_small">
+      <Button isNeutral className="slds-m-top_small">
         <SvgIcon
           className="slds-button__icon slds-button__icon_left"
           sprite="utility"

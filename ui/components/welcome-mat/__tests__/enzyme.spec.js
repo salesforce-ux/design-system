@@ -4,7 +4,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, render } from 'enzyme';
+import { shallow, render, mount } from 'enzyme';
 
 import WelcomeMat, { sampleTiles } from '../';
 import WelcomeMatTile from '../WelcomeMatTile';
@@ -85,6 +85,7 @@ describe('Welcome Mat Trailhead Content', () => {
   const shallowComplete = shallow(
     <WelcomeMatContentTrailhead complete={5} total={5} />
   );
+  const wrapper = mount(<WelcomeMatContentTrailhead complete={5} total={5} />);
 
   it('renders without crashing', () => {
     ReactDOM.render(
@@ -114,7 +115,8 @@ describe('Welcome Mat Trailhead Content', () => {
       });
   });
 
-  it('renders a button when complete', () => {
-    expect(shallowComplete.find('.slds-button').exists()).toBe(true);
+  it('renders a brand button when complete', () => {
+    expect(wrapper.find('.slds-button').exists()).toBe(true);
+    expect(wrapper.find('.slds-button_brand').exists()).toBe(true);
   });
 });

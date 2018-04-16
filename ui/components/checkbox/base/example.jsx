@@ -41,6 +41,7 @@ export let Checkbox = props => {
         type="checkbox"
         name={props.name || 'options'}
         id={props.id ? props.id : uniqueId}
+        value={props.id ? props.id : uniqueId}
         disabled={props.disabled}
         defaultChecked={props.checked}
         aria-describedby={props.errorId}

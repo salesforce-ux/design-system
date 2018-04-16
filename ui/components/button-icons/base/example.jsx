@@ -13,7 +13,7 @@ export let states = [
     element: (
       <ButtonIcon
         feedback="error"
-        symbol="warning"
+        symbol="error"
         title="Error"
         assistiveText="Error"
       />

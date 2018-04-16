@@ -22,6 +22,7 @@ export let RadioButton = props => (
       name="radio"
       type="radio"
       id={props.id}
+      value={props.id}
       disabled={props.disabled}
       aria-describedby={props.errorId}
       defaultChecked={props.checked}

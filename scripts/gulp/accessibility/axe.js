@@ -15,7 +15,8 @@ export default (paths, done) =>
           bypass: { enabled: false }
         }
       },
-      exclude: '#GoogleMapID, table[role="treegrid"] tr[aria-posinset]',
+      exclude:
+        '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials',
       urls: paths,
       showOnlyViolations: true
     },

@@ -45,9 +45,7 @@ const sampleSubSteps = [
 
 const renderStepAction = action => {
   if (action && action.type === 'button')
-    return (
-      <Button className="slds-button_outline-brand">{action.title}</Button>
-    );
+    return <Button isOutlineBrand>{action.title}</Button>;
   else if (action.type === 'toggle')
     return (
       <CheckboxToggle title={action.title} isBare checked={action.checked} />

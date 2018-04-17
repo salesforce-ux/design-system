@@ -1,0 +1,256 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import { Button } from './base/example';
+import { StatefulButton } from './stateful/example';
+import SvgIcon from '../../shared/svg-icon';
+
+
+<div className="doc lead">
+  Buttons are clickable items used to perform an action.
+</div>
+
+Buttons should be used in situations where users might need to:
+
+- submit a form
+- begin a new task
+- trigger a new UI element to appear on the page
+- specify a new or next step in a process
+
+<Example title="Button All Examples">
+  <CodeView>
+    <React.Fragment>
+      <Button>
+        Button Base
+      </Button>
+      <Button isNeutral>
+        Button Neutral
+      </Button>
+      <Button isBrand>
+        Button Brand
+      </Button>
+      <Button isOutlineBrand>
+        Button Outline Brand
+      </Button>
+      <Button isDestructive>
+        Button Destructive
+      </Button>
+      <Button isSuccess>
+        Button Success
+      </Button>
+    </React.Fragment>
+  </CodeView>
+</Example>
+
+## Button vs. Link
+
+The HTML elements for buttons and links describe a very specific type of action that is going to be taken when they are used. It is important you know when to use which, as the distinction matters:
+
+- Use a **link** when you’re **navigating to another place**, such as: a "view all" page, "Jane Chen" profile, a page "skip link" etc.
+- Use **buttons** when you are **performing an action**, such as: "submit," "merge," "create new," "upload," etc.
+  - An action is almost **always** on the same page
+
+<Blockquote type="a11y" header="Accessibility Rule of Thumb">
+  If pressing a Button results in a new URL, or the resultant UI makes sense as "a new browser tab", that's probably always a link `<a>`. Everything else is a `<button>`.
+</Blockquote>
+
+### Accessibility
+
+The distinction is important to screen reader users to know what's going to happen next. Will I navigate somewhere or will something happen on the page? So it's important to choose the right HTML element for the job.
+
+If you absolutely cannot use a `<button />` element for an action and instead need to use an `<a />`, you are required to do 2 things:
+
+- Add `role="button"` attribute to the `<a />` to make the element announce itself as a `button` element.
+- Add a JavaScript event handler for when the user presses the space key.  This is because a `button` element will respond by default to both the enter and space keys being pressed, but an `<a />` element will not.
+
+Finally, color alone does not suffice when conveying the meaning of buttons. Ensure that the text you use in the button matches the meaning you are trying to convey via color. For example, if you use the destructive button to point out a potential warning, make sure the text communicates the same message.
+
+## Variations
+
+### Base
+
+The base `slds-button` looks like a plain text link. It removes all the styling of the native button.
+
+The base and neutral buttons are used most frequently and can be used multiple times per feature. Use these buttons when the actions are of secondary importance to the content surrounding it, such as in the actions ribbon in a page header.
+
+<Example title="Button Base">
+  <CodeView toggleCode={false}>
+    <Button>Button</Button>
+  </CodeView>
+</Example>
+
+### Neutral
+
+Add the `slds-button_neutral` class to create a neutral button.
+
+<Example title="Button Neutral">
+  <CodeView toggleCode={false}>
+    <Button isNeutral>Button</Button>
+  </CodeView>
+</Example>
+
+### Brand
+
+To create the brand button, add the `slds-button_brand` class to the `slds-button` class. The brand color tokens can be overridden for theme specific usage.
+
+The Brand button generally should only be used once per component screen at any one time. It is used for when there is an action that is clearly more important than the other actions and you need to draw attention to it. An example is when you have a “Save” and “Cancel” button. The “Save” is the primary action.
+
+Not all features need to have primary actions, sometimes the actions are secondary to the content and are all of equal importance.
+
+<Example title="Button Brand">
+  <CodeView toggleCode={false}>
+    <Button isBrand>Button</Button>
+  </CodeView>
+</Example>
+
+### Outline Brand
+
+To create the outline brand button, add the `slds-button_outline-brand` class to the `slds-button` class. The brand color tokens can be overridden for theme specific usage.
+
+<Example title="Button Outline Brand">
+  <CodeView toggleCode={false}>
+    <Button isOutlineBrand>Button</Button>
+  </CodeView>
+</Example>
+
+### Inverse
+
+Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class to the `slds-button` class.
+
+<Example title="Button Inverse">
+  <CodeView style={{ backgroundColor: '#16325c', padding: '1rem' }} toggleCode={false}>
+    <Button isInverse>Button</Button>
+  </CodeView>
+</Example>
+
+### Destructive
+
+To create the destructive button, add the `slds-button_destructive` class to the `slds-button` class.
+
+This button is used to indicate a destructive action to the user, like permanently erasing data.
+
+<Example title="Button Destructive">
+  <CodeView toggleCode={false}>
+    <Button isDestructive>Button</Button>
+  </CodeView>
+</Example>
+
+### Success
+
+To create the success button, add the `slds-button_success` class to the `slds-button` class.
+
+<Example title="Button Success">
+  <CodeView toggleCode={false}>
+    <Button isSuccess>Button</Button>
+  </CodeView>
+</Example>
+
+## Disabled
+
+Use a disabled attribute when a button can’t be clicked. To create a disabled button, append the `disabled` attribute to the button.
+
+<Example title="Button Disabled Examples">
+  <CodeView>
+    <div>
+      <Button disabled>
+        Button Base
+      </Button>
+      <Button isNeutral disabled>
+        Button Neutral
+      </Button>
+      <Button isBrand disabled>
+        Button Brand
+      </Button>
+      <Button isOutlineBrand disabled>
+        Button Outline Brand
+      </Button>
+      <Button isDestructive disabled>
+        Button Destructive
+      </Button>
+      <Button isSuccess disabled>
+        Button Success
+      </Button>
+    </div>
+  </CodeView>
+</Example>
+
+## With Icons
+
+The SVG, element, or icon inside the button receives the `slds-button__icon` class. You can position the icon on the left or the right using `slds-button__icon_left` or `slds-button__icon_right`, which applies the correct amount of space between the icon and the text.
+
+### Left Icon
+
+<Example title="Button Left Icon">
+  <CodeView>
+    <Button isNeutral>
+      <SvgIcon
+        className="slds-button__icon slds-button__icon_left"
+        sprite="utility"
+        symbol="download"
+      />
+      Button Neutral
+    </Button>
+  </CodeView>
+</Example>
+
+### Right Icon
+
+<Example title="Button Right Icon">
+  <CodeView>
+    <Button isNeutral>
+      Button Neutral
+      <SvgIcon
+        className="slds-button__icon slds-button__icon_right"
+        sprite="utility"
+        symbol="download"
+      />
+    </Button>
+  </CodeView>
+</Example>
+
+## Stateful
+
+Stateful buttons have two binary states. Like a toggle, they can be on or off.
+
+The stateful button requires the `slds-button_stateful` class and the `slds-button_neutral` class in addition to the `slds-button` class. Stateful buttons are only used with the neutral variation.
+
+The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `slds-button__icon_stateful` class as well as the `slds-button__icon_left` class setting the icon on the left.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Be sure to include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+</Blockquote>
+
+<Blockquote type="note" header="JavaScript Requirement">
+  When the user clicks the button, use JavaScript to toggle the class from <code className="doc">slds-not-selected</code> to <code className="doc">slds-is-selected-clicked</code>. As soon as focus leaves the button, use JavaScript to toggle the class from <code className="doc">slds-is-selected-clicked</code> to <code className="doc">slds-is-selected</code>.
+</Blockquote>
+
+### Not Selected
+
+Stateful button uses the class `slds-not-selected` in its initial state.
+
+<Example title="Button Stateful Not Selected">
+  <CodeView>
+    <StatefulButton isNotSelected />
+  </CodeView>
+</Example>
+
+### Selected and Focused
+
+When selected and still focused, stateful button uses the class `slds-is-selected-clicked`.
+
+<Example title="Button Stateful Selected and Clicked">
+  <CodeView>
+    <StatefulButton isSelectedClicked />
+  </CodeView>
+</Example>
+
+### Selected with Hover State
+
+Once selected and blurred (user moved focus away from the button), stateful button uses the class `slds-is-selected`.
+
+<Example title="Button Stateful Selected">
+  <CodeView>
+    <StatefulButton isSelected />
+  </CodeView>
+</Example>

@@ -35,7 +35,7 @@ export let RecordHome = props => (
         </div>
       </div>
       <div className="slds-col slds-no-flex slds-grid slds-align-top">
-        <StatefulButton className="slds-button_neutral slds-not-selected" />
+        <StatefulButton isNotSelected isNeutral />
         <div className="slds-button-group" role="group">
           <button className="slds-button slds-button_neutral">Edit</button>
           <button className="slds-button slds-button_neutral">Delete</button>

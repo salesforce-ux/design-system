@@ -4,44 +4,58 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
+import { Button } from '../base/example';
 
-export let StatefulButton = props => (
-  <button
-    className={classNames('slds-button slds-button_stateful', props.className)}
-    disabled={props.disabled}
-    aria-live="assertive"
-  >
-    <span className="slds-text-not-selected">
-      <SvgIcon
-        className="slds-button__icon_stateful slds-button__icon_left"
-        sprite="utility"
-        symbol="add"
-      />
-      Follow
-    </span>
-    <span className="slds-text-selected">
-      <SvgIcon
-        className="slds-button__icon_stateful slds-button__icon_left"
-        sprite="utility"
-        symbol="check"
-      />
-      Following
-    </span>
-    <span className="slds-text-selected-focus">
-      <SvgIcon
-        className="slds-button__icon_stateful slds-button__icon_left"
-        sprite="utility"
-        symbol="close"
-      />
-      Unfollow
-    </span>
-  </button>
-);
+export let StatefulButton = props => {
+  const {
+    className,
+    disabled,
+    isNotSelected,
+    isSelected,
+    isSelectedClicked
+  } = props;
+
+  return (
+    <Button
+      className={classNames('slds-button_stateful', className, {
+        'slds-not-selected': isNotSelected,
+        'slds-is-selected': isSelected,
+        'slds-is-selected-clicked': isSelectedClicked
+      })}
+      disabled={disabled}
+      aria-live="assertive"
+      isNeutral
+    >
+      <span className="slds-text-not-selected">
+        <SvgIcon
+          className="slds-button__icon_stateful slds-button__icon_left"
+          sprite="utility"
+          symbol="add"
+        />
+        Follow
+      </span>
+      <span className="slds-text-selected">
+        <SvgIcon
+          className="slds-button__icon_stateful slds-button__icon_left"
+          sprite="utility"
+          symbol="check"
+        />
+        Following
+      </span>
+      <span className="slds-text-selected-focus">
+        <SvgIcon
+          className="slds-button__icon_stateful slds-button__icon_left"
+          sprite="utility"
+          symbol="close"
+        />
+        Unfollow
+      </span>
+    </Button>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <StatefulButton className="slds-button_neutral slds-not-selected" />
-);
+export default <StatefulButton isNeutral isNotSelected />;

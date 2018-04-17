@@ -30,6 +30,7 @@ export let Checkbox = props => (
       disabled={props.disabled}
       defaultChecked={props.checked}
       id={props.id}
+      value={props.id}
       name="checkbox"
       type="checkbox"
     />

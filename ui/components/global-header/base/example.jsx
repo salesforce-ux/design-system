@@ -559,6 +559,11 @@ export default (
 
 export let states = [
   {
+    id: 'deprecated-default',
+    label: 'Deprecated Default',
+    element: <GlobalHeaderDeprecated />
+  },
+  {
     id: 'favorites-selected',
     label: 'Favorites selected',
     element: <GlobalHeaderDeprecated favoritesSelected />

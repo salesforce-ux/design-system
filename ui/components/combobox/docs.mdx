@@ -61,9 +61,9 @@ A Base Combobox is a readonly text `input` that allows a user to select an optio
 
 ### Displaying options
 
-To display the `listbox` of options in a Combobox, it is most common that the user will click and place their focus inside the text `input` and the options will display instantly. Optionally, you can choose to not display the `listbox` immediately and wait for user input by means of typing a letter or pressing the down arrow key in the `input` field, before displaying the options.
-
 To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds-dropdown-trigger` element.
+
+It is most common to expand the `listbox` of options when a user clicks on the Combobox. For a more detailed description of interaction behaviors, see the [Interaction](#Interaction) section.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When toggling visibility of the Combobox, the <code className="doc">aria-expanded</code> attribute needs to be toggled to <code className="doc">true</code>. Set it to <code className="doc">false</code> again when the options are hidden.
@@ -214,17 +214,87 @@ The options in the `listbox` can have a left icon and/or metatext.
   </CodeView>
 </Example>
 
-### Handling focus
+### Interaction
 
-When a combobox is clicked or focused, it is common for the options to be displayed at the same time. When you leave the combobox it is also common that the options are hidden.
+At its most basic, the `listbox` of options should be displayed when a user interacts with the Combobox. When the user leaves the combobox the options are hidden. However, there are some differences when interacting with a Combobox with a mouse versus with a keyboard.
 
-When an option from the `listbox` is "in focus", user focus never leaves the `input` field, we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
+#### Expanding the Combobox
+
+A mouse or pointer device user can click on a Combobox and the `listbox` will display automatically whilst focus is placed inside the Combobox input field.
+
+<Example title="Combobox - Handling focus">
+
+  <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
+    <Combobox
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-4"
+      readonly
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
+      isOpen
+      hasFocus
+    />
+  </CodeView>
+
+</Example>
+
+If using a keyboard, placing focus into the Combobox input field _will not_ display the `listbox` of options automatically.
+
+<Example title="Combobox - Handling focus with a keyboard">
+
+  <CodeView style={{maxWidth: '40rem', height: '5rem'}}>
+    <Combobox
+      id={_.uniqueId('combobox-id-')}
+      aria-controls="listbox-id-4"
+      readonly
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      hasFocus
+    />
+  </CodeView>
+
+</Example>
+
+After focusing inside the Combobox with the keyboard, pressing the `Down` or `Enter` key will expand the collapsed Combobox and display the `listbox` options. Be sure to update `aria-expanded` to be true. This will also highlight the first option in the listbox.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Update <code className="doc">aria-expanded</code> to "true" when the Combobox is expanded.
+</Blockquote>
+
+#### Highlighting an option
+
+To Highlight an option in the `Listbox` use the `Up` and `Down` arrow keys to cycle through all the available options in the list.
+
+- Each press of the arrow key **must** update the `input` value to reflect the currently selected option
+- It is common to loop the selected option to the first option when you get to the last option in the list. Similarly, loop to the last option when you reach the first option.
+
+When an option from the `listbox` is "in focus", user focus never leaves the `input` field, since we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the <code className="doc">input</code> needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>. When no option is highlighted, <code className="doc">aria-activedescendant</code> must be removed.
 </Blockquote>
 
-<Example title="Combobox - Handling focus">
+By typing the first letter of an option name, the first matching option will highlight. When the letter doesn't match an option, highlighting doesn't move.
+
+<Example title="Combobox - Highlighting an option">
 
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <Combobox
@@ -250,18 +320,15 @@ When an option from the `listbox` is "in focus", user focus never leaves the `in
 
 </Example>
 
-### Keyboard interaction
+#### Collapsing the Combobox
 
-To use a combobox with your keyboard, you must first place focus inside the `input`. From here:
+To collapse the Combobox the user should be able to press the `Escape` key on their keyboard or click anywhere outside of the Combobox.
 
-- If the Combobox is collapsed, use the `down` arrow key to expand it, updating `aria-expanded` to `true`
-- Use the `Escape` key to collapse the Combobox, updating `aria-expanded` to `false`
-- Use `up` or `down` arrow keys to cycle through the options, updating `aria-activedescendant` and setting `aria-selected="true"` on the next option with each key press
-  - Each press of the arrow key **must** update the `input` value to reflect the currently selected option
-  - It is common to loop the selected option to the first option when you get to the last option in the list. Similarly, loop to the last option when you reach to the first option.
-- By typing the first letter of an option name, the first matching option will highlight, updating `aria-activedescendant` and setting `aria-selected="true"` on the option
-  - When the letter doesn't match an option, highlighting don't move
-- `Enter` will select the highlighted option
+Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Update <code className="doc">aria-expanded</code> to "false" when the Combobox is collapsed.
+</Blockquote>
 
 ### Selecting an option
 
@@ -483,7 +550,7 @@ If no option matches, the user can complete the value of the combobox by finishi
 
 ### Displaying options
 
-Displaying options happens just like a base Combobox, by placing user focus inside the Combobox text `input`.
+Displaying options for the Autocomplete Combobox happens just like the base Combobox, except there is no difference between mouse and keyboard users when interacting with the Combobox for the first time. Clicking or placing focus on the Combobox text `input` will automatically expand the Combobox and display the options.
 
 When a user stops interacting with the Combobox, or selects an option, the Combobox collapses and hides the options.
 
@@ -1027,7 +1094,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
 When a user is not focused on any element inside of the combobox group, the pill container should become collapsed to reduce vertical space.
 
-The combobox group element needs the class `slds-has-selection` when a selection has been made. The pill selections are found inside of another [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) located after the combobox group. It requires the class `slds-listbox_selection-group` to provide appropriate styling for the expanding and collapsing behavior of this region.
+The combobox group element needs the class `slds-has-selection` when a selection has been made. The pill selections are found inside of a [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) located after the combobox group. It requires the class `slds-listbox_selection-group` to provide appropriate styling for the expanding and collapsing behavior of this region.
 
 #### Collapsed
 
@@ -1064,7 +1131,7 @@ By default, the `slds-listbox_selection-group` is collapsed.
 
 #### Expanded
 
-When a user focuses on _any_ element inside of the combobox group, the class `slds-is-expanded` should be applied to the `slds-listbox_selection-group`. The selection group should remain opened until the user removes focus from the combobox group.
+When a user focuses on _any_ element inside of the combobox group, the class `slds-is-expanded` should be applied to the `slds-listbox_selection-group`. The selection group should remain open until the user moves away from any element inside the combobox group.
 
 <Example title="Combobox - Grouped - Expanded pills">
 
@@ -1095,6 +1162,8 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
   </CodeView>
 
 </Example>
+
+For mouse users, clicking on the "+{x} more" text would expand the selection group and place the user's focus on the first pill inside the Listbox of Pills.
 
 ### Scoping results
 

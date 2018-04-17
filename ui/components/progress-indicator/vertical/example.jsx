@@ -70,7 +70,7 @@ export let Step = props => {
             'slds-progress__marker_icon',
             { 'slds-progress__marker_icon-success': done && hasSuccessMarker }
           )}
-          symbol={done ? 'success' : 'warning'}
+          symbol={done ? 'success' : 'error'}
           aria-describedby={props['aria-describedby']}
           assistiveText={done ? 'Complete' : 'Error'}
           title={done ? 'Complete' : 'Error'}

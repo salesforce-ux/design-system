@@ -106,7 +106,7 @@ export let states = [
             count={3}
           />
         }
-        aria-activedescendant="option0"
+        aria-activedescendant="option1"
         isOpen
         hasFocus
       />

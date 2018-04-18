@@ -608,7 +608,6 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
       }
       value="opp"
       listbox={<Listbox id="listbox-id-11" snapshot={Snapshot.PlainOptionsTypeahead} term="opp" type="plain" count={4} />}
-      aria-activedescendant="option1"
       isOpen
       hasFocus
     />
@@ -813,7 +812,7 @@ In the resultant displayed options, we highlight the matched term by bolding it 
       }
       value="salesforce"
       listbox={<Listbox id="listbox-id-16" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
-      aria-activedescendant="option1"
+      aria-activedescendant="option0"
       isOpen
       hasFocus
     />
@@ -949,7 +948,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       comboboxID="primary-combobox-id-1"
       autocomplete
       listbox={<Listbox id="listbox-id-20" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-      addon={<ObjectSwitcher value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-combobox-id-1" />}
+      addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-combobox-id-1" />}
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -975,6 +974,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
       id={_.uniqueId('combobox-id-')}
+      aria-activedescendant="option0"
       aria-controls="listbox-id-21"
       comboboxID="primary-combobox-id-2"
       autocomplete
@@ -982,7 +982,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       value="salesforce"
       isOpen
       hasFocus
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -1007,6 +1007,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   <CodeView style={{maxWidth: '40rem', height: '15rem'}}>
     <ComboboxGroup
       id={_.uniqueId('combobox-id-')}
+      aria-activedescendant="option0"
       aria-controls="listbox-id-21"
       comboboxID="primary-combobox-id-2"
       autocomplete
@@ -1016,7 +1017,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       showCloseButton
       isLoading
       hasFocus
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-2" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="group-right"
@@ -1037,7 +1038,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       autocomplete
       listbox={<Listbox id="listbox-id-22" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
       hasFocus
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-3" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-3" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -1070,7 +1071,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       listbox={<Listbox id="listbox-id-23" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
       isOpen
       hasFocus
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-4" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-4" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -1109,7 +1110,7 @@ By default, the `slds-listbox_selection-group` is collapsed.
       comboboxID="primary-combobox-id-5"
       autocomplete
       listbox={<Listbox id="listbox-id-24" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-5" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-5" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -1143,7 +1144,7 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
       autocomplete
       listbox={<Listbox id="listbox-id-25" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
       hasFocus
-      addon={ <ObjectSwitcher value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-6" /> }
+      addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-6" /> }
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"

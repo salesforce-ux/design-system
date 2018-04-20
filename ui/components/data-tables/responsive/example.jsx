@@ -11,6 +11,8 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
+const checkboxRadioGroupHeaderId = 'check-group-header';
+
 let Table = props => (
   <table
     className={classNames('slds-table slds-table_bordered', props.className)}
@@ -22,7 +24,7 @@ let Table = props => (
 let HeadRowData = props => (
   <tr className="slds-text-title_caps">
     <th className="slds-cell-shrink" scope="col">
-      <span className="slds-assistive-text" id="check-group-header">
+      <span className="slds-assistive-text" id={checkboxRadioGroupHeaderId}>
         Choose a row to select
       </span>
       <Checkbox
@@ -30,7 +32,7 @@ let HeadRowData = props => (
         labelId={'check-button-label-all'}
         id={'checkbox-all'}
         label={'Select all'}
-        groupId="check-group-header"
+        groupId={checkboxRadioGroupHeaderId}
         checked={props.checked}
       />
     </th>
@@ -130,7 +132,7 @@ let RowData = props => (
         labelId={`check-button-label-0${props.index}`}
         id={`checkbox-0${props.index}`}
         label={`Select item ${props.index}`}
-        groupId="check-group-header"
+        groupId={checkboxRadioGroupHeaderId}
         checked={props.checked}
       />
     </td>

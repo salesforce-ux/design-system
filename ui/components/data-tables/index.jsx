@@ -18,6 +18,8 @@ import { Score } from '../dynamic-icons/score/example';
 import SvgIcon from '../../shared/svg-icon';
 import { Radio } from '../radio-group/base/example';
 
+const checkboxRadioGroupHeaderId = 'check-group-header';
+
 export const InlineEditTableContainer = props => (
   <div className="slds-table_edit_container slds-is-relative">
     {props.children}
@@ -51,18 +53,18 @@ export const AdvancedDataTable = props => (
 /**
  * @name Thead - thead block for advanced, inline, and product edit grids
  * @param {*} props
+ * @prop {array} columnHeaderIcons - List of column names->icon name blocks which show an icon
  * @prop {array} columns - Grid columns
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
- * @prop {array} columnHeaderIcons - List of column names->icon name blocks which show an icon
  * @prop {boolean} hasErrorColumn - Specifies whether the grid has a errors column
  * @prop {boolean} hasFocus - Specifies whether a cell in the thead is in user focus
- * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
  * @prop {boolean} hasMenus - Specifies whether the cells in the thead have a menu button
+ * @prop {boolean} hasNoSelectability - Specifies whether the thead should not contain a "select all" checkbox
+ * @prop {boolean} isSingleSelect - Specifies if the row selection uses radio buttons
  * @prop {boolean} selectAll - Specifies whether the select all checkbox is marked
  * @prop {string} mainColumnWidth - Specifies width of main columns
  * @prop {string} singleColumnWidth - Specifies width of a specific column
  * @prop {string} sortDirection - Specifies the sort direction of a specific column
- * @prop {string} isSingleSelect - Specifies if the row selection uses radio buttons
  */
 export const Thead = props => {
   const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
@@ -274,7 +276,7 @@ export let Th = props => {
  */
 export const SelectAllTh = props => (
   <th style={props.style} className={props.className} scope="col">
-    <span id="check-group-header" className="slds-assistive-text">
+    <span id={checkboxRadioGroupHeaderId} className="slds-assistive-text">
       Choose a row
     </span>
     <div className="slds-th__action slds-th__action_form">
@@ -284,7 +286,7 @@ export const SelectAllTh = props => (
         label="Select All"
         hideLabel
         checked={props.checked ? true : null}
-        groupId="check-group-header"
+        groupId={checkboxRadioGroupHeaderId}
       />
     </div>
   </th>
@@ -333,6 +335,7 @@ export const ErrorsTh = props => (
  * @prop {boolean} actionableMode - Specifies whether the grid is in actionable or navigation mode
  * @prop {boolean} hasFocus - Specifies whether a specific cell is in focus
  * @prop {boolean} hasScore - Specifies whether a row has a score cell
+ * @prop {boolean} isSingleSelect - Specifies whether to use a radio button for selection or not
  * @prop {boolean} rowSelected
  * @prop {integer} index - Row index in the Grid
  * @prop {string} accountName
@@ -345,7 +348,6 @@ export const ErrorsTh = props => (
  * @prop {string} contact
  * @prop {string} recordName
  * @prop {string} stage
- * @prop {string} isSingleSelect - Specifies whether to use a radio button for selection or not
  */
 export const AdvancedDataTableTr = props => (
   <AdvancedDataTableTrElement
@@ -480,11 +482,11 @@ export const AdvancedDataTableBodyTh = props => {
  * @prop {boolean} checked - Set checked on the cell checkbox
  * @prop {boolean} hasFocus - Determines whether the cell is in user focus
  * @prop {boolean} isEditable - Determines whether the cell is editable
+ * @prop {boolean} isSingleSelect - Specifies whether to use a radio button for selection or not
  * @prop {integer} cellTabIndex - Set tabindex on the cell
- * @prop {integer} inputTabIndex - Set tabindex on the checkbox
  * @prop {integer} index - Grid row index
+ * @prop {integer} inputTabIndex - Set tabindex on the checkbox
  * @prop {string} className
- * @prop {string} isSingleSelect - common id of radio group
  */
 export const SelectRowTd = props => (
   <AdvancedDataTableTd
@@ -510,7 +512,7 @@ export const SelectRowTd = props => (
         labelId={`check-button-label-0${props.index}`}
         id={`checkbox-0${props.index}`}
         label={`Select item ${props.index}`}
-        groupId="check-group-header"
+        groupId={checkboxRadioGroupHeaderId}
         tabIndex={props.inputTabIndex}
       />
     )}

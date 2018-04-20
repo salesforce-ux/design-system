@@ -5,6 +5,7 @@ import React from 'react';
 import SvgIcon from '../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
+import { SimpleFormElementWrapper, FormElementControl } from '../form-element';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -12,8 +13,7 @@ import _ from '../../shared/helpers';
 
 export const MultiSelect = props => {
   const GroupedMultiSelect = () => (
-    <div
-      className="slds-form-element"
+    <SimpleFormElementWrapper
       role="group"
       aria-labelledby="picklist-group-label"
     >
@@ -24,7 +24,7 @@ export const MultiSelect = props => {
         {props.dataSet.groupLabel}
       </div>
       <BaseMultiSelect dataSet={props.dataSet} />
-    </div>
+    </SimpleFormElementWrapper>
   );
 
   const BaseMultiSelect = () => (
@@ -70,14 +70,14 @@ export const MultiSelect = props => {
 export const MultiSelectViewMode = props => {
   return (
     <div className="slds-dueling-list">
-      <div className="slds-form-element">
+      <SimpleFormElementWrapper>
         <span className="slds-form-element__label">Selected Languages</span>
-        <div className="slds-form-element__control">
+        <FormElementControl>
           <span className="slds-form-element__static">
             Arabic, Chinese, English, German
           </span>
-        </div>
-      </div>
+        </FormElementControl>
+      </SimpleFormElementWrapper>
     </div>
   );
 };

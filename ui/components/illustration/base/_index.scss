@@ -44,7 +44,15 @@
       width: 100%;
       max-width: 600px;
       max-height: 400px;
-      margin-bottom: $spacing-medium;
+      margin-bottom: $spacing-xx-large;
+    }
+
+    .slds-illustration__header {
+      margin-bottom: $spacing-large;
+    }
+
+    p {
+      margin-bottom: $spacing-xx-large;
     }
   }
 

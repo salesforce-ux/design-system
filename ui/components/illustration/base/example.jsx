@@ -29,7 +29,12 @@ import {
 } from '../misc';
 
 export const Illustration = props => (
-  <div className="slds-illustration slds-illustration_small">
+  <div
+    className={classNames(
+      'slds-illustration',
+      props.large ? 'slds-illustration_large' : 'slds-illustration_small'
+    )}
+  >
     {props.children}
   </div>
 );

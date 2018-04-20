@@ -58,6 +58,20 @@ Illustrations can include message body text below the heading to further communi
   </Illustration>
 </CodeView>
 
+## Large Illustrations
+
+The base illustration component is typically used within smaller components and has a `max-width` of `300px` and a `max-height` of `200px`. However, there are some cases where it can be used in a larger context.
+
+For these situations, utilize the modifier `.slds-illustration_large`. This will increase the `max-width` of the image to `600px` and the `max-height` to `400px`.
+
+<CodeView>
+  <Illustration large>
+    <FishingDeals />
+    <h3 className="slds-illustration__header slds-text-heading_medium">Lorem ipsum dolor</h3>
+    <p className="slds-text-body_regular">Lorem ipsum dolor sit amet, consectetur</p>
+  </Illustration>
+</CodeView>
+
 ## Informational
 
 Common Scenarios:

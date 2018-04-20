@@ -25,7 +25,8 @@ class Grid extends Component {
       <div
         className={classNames(
           'simple-grid',
-          this.props.small && 'simple-grid_small'
+          this.props.small && 'simple-grid_small',
+          this.props.bareGrid && 'simple-grid_bare-columns'
         )}
       >
         <CodeView>

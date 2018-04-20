@@ -102,6 +102,7 @@ export let states = [
         inputIconRightSymbol="search"
         objectSwitcherInline
         autocomplete
+        listbox={<ListboxDropdown />}
         objectSwitcher
       >
         <ListboxPills className="slds-p-top_xxx-small">

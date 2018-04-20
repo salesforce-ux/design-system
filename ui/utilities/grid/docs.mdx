@@ -362,6 +362,40 @@ If you want your columns to grow from the end of the horizontal axis, apply the 
   </Grid>
 </Example>
 
+### Content alignment with bump
+
+To "bump" a single or multiple grid items, apply the class `slds-col_bump-{direction}`, with `{direction}` being either left, right, top or bottom, to a grid item.
+
+**Bump Left**
+
+In the example below, applying the left bump class to item 5 bumps items 1 through 4 to the left.
+
+<Example title="Grid Content Alignment Bump Left">
+  <Grid bareGrid>
+    <div><span>1</span></div>
+    <div><span>2</span></div>
+    <div><span>3</span></div>
+    <div><span>4</span></div>
+    <div className="slds-col_bump-left"><span>5</span></div>
+    <div><span>6</span></div>
+  </Grid>
+</Example>
+
+**Bump Right**
+
+In the example below, applying the right bump class to item 5 bumps item 6 to the right.
+
+<Example title="Grid Content Alignment Bump Right">
+  <Grid bareGrid>
+    <div><span>1</span></div>
+    <div><span>2</span></div>
+    <div><span>3</span></div>
+    <div><span>4</span></div>
+    <div className="slds-col_bump-right"><span>5</span></div>
+    <div><span>6</span></div>
+  </Grid>
+</Example>
+
 ### Reversed
 
 There may be times you find yourself in a situation to reverse the visual flow of your columns, you can do this both horizontally and vertically. To reverse the horizontal flow, add the class `slds-grid_reverse` to the `slds-grid` container. To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the `slds-grid` container.
@@ -452,7 +486,7 @@ To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the 
 
 To specify the vertical placement of grid items on the cross axis, you can apply `slds-align-top`, `slds-align-middle`, and `slds-align-bottom` to a `slds-col` element.
 
-<Example title="Grid Vertical Align inidividual">
+<Example title="Grid Vertical Align individual">
   <Grid style={{height: '200px'}}>
     <Column className="slds-align-top">1</Column>
     <Column className="slds-align-middle">2</Column>

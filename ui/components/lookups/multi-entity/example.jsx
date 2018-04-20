@@ -13,6 +13,7 @@ import ListboxOfSelections from '../../combobox/listbox-of-pills/';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
+import _ from '../../../shared/helpers';
 import * as Snapshot from '../../combobox/snapshots.data';
 
 /* -----------------------------------------------------------------------------
@@ -41,6 +42,7 @@ export default (
     }
     addon={
       <ObjectSwitcher
+        id={_.uniqueId('combobox-id-')}
         value="Accounts"
         addonPosition="start"
         hasInteractions
@@ -82,6 +84,7 @@ export let states = [
         }
         addon={
           <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
             hasInteractions
@@ -123,6 +126,7 @@ export let states = [
         aria-activedescendant="option1"
         addon={
           <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
             hasInteractions
@@ -164,6 +168,7 @@ export let states = [
         hasFocus
         addon={
           <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-3"
@@ -207,6 +212,7 @@ export let states = [
         hasFocus
         addon={
           <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-4"

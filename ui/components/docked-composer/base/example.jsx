@@ -230,6 +230,14 @@ export let ComposerOverflowMenu = props => (
   </div>
 );
 
+const ComboboxListbox = props => (
+  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical id={props.id}>
+    <ListboxItem>
+      <EntityOption id={props.listboxOptionId} entityTitle="Acme" entityMeta />
+    </ListboxItem>
+  </Listbox>
+);
+
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
@@ -427,6 +435,13 @@ export let examples = [
                   inputIconRightSymbol="search"
                   objectSwitcher
                   objectSwitcherInline
+                  aria-controls="listbox-id-01"
+                  listbox={
+                    <ComboboxListbox
+                      id="listbox-id-01"
+                      listboxOptionId="listbox-option-id-1"
+                    />
+                  }
                 />
                 <ComboboxContainer
                   formClassName="slds-size_1-of-2"
@@ -437,6 +452,13 @@ export let examples = [
                   inputIconRightSymbol="search"
                   objectSwitcher
                   objectSwitcherInline
+                  aria-controls="listbox-id-02"
+                  listbox={
+                    <ComboboxListbox
+                      id="listbox-id-02"
+                      listboxOptionId="listbox-option-id-2"
+                    />
+                  }
                 />
               </div>
             </div>
@@ -936,6 +958,13 @@ export let examples = [
                   inputIconRightSymbol="search"
                   objectSwitcher
                   objectSwitcherInline
+                  aria-controls="listbox-id-01"
+                  listbox={
+                    <ComboboxListbox
+                      id="listbox-id-01"
+                      listboxOptionId="listbox-option-id-1"
+                    />
+                  }
                 />
                 <ComboboxContainer
                   formClassName="slds-size_1-of-2"
@@ -946,6 +975,13 @@ export let examples = [
                   inputIconRightSymbol="search"
                   objectSwitcher
                   objectSwitcherInline
+                  aria-controls="listbox-id-02"
+                  listbox={
+                    <ComboboxListbox
+                      id="listbox-id-02"
+                      listboxOptionId="listbox-option-id-2"
+                    />
+                  }
                 />
               </div>
             </div>
@@ -973,6 +1009,13 @@ export let examples = [
               label="To"
               placeholder=" "
               autocomplete
+              aria-controls="listbox-id-01"
+              listbox={
+                <ComboboxListbox
+                  id="listbox-id-01"
+                  listboxOptionId="listbox-option-id-1"
+                />
+              }
             >
               <ListboxPills>
                 <ListboxPillsItem>
@@ -995,6 +1038,13 @@ export let examples = [
               label="Bcc"
               placeholder=" "
               autocomplete
+              aria-controls="listbox-id-02"
+              listbox={
+                <ComboboxListbox
+                  id="listbox-id-02"
+                  listboxOptionId="listbox-option-id-2"
+                />
+              }
             />
             <ComboboxContainer
               id="recipients-cc"
@@ -1003,6 +1053,13 @@ export let examples = [
               label="Cc"
               placeholder=" "
               autocomplete
+              aria-controls="listbox-id-03"
+              listbox={
+                <ComboboxListbox
+                  id="listbox-id-03"
+                  listboxOptionId="listbox-option-id-3"
+                />
+              }
             />
             <FormElement
               labelContent="Enter subject"

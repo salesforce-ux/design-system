@@ -86,19 +86,14 @@ it('renders a product table', () =>
 it('renders an advanced data table with radio group', () =>
   matchesMarkupAndStyle(
     <AdvancedDataTable>
-      <Thead
-        columns={columns}
-        hasNoSelectability
-        radioGroupId="radio-group-header"
-        label="Choose a Row to Select"
-      />
+      <Thead columns={columns} isSingleSelect />
       <tbody>
         {_.times(rows.length, i => (
           <AdvancedDataTableTr
             key={i}
             index={i + 1}
             {...rows[i]}
-            radioGroupId="radio-group-header"
+            isSingleSelect
           />
         ))}
       </tbody>

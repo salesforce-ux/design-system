@@ -42,8 +42,8 @@ export let Radio = props => {
         tabIndex={props.tabIndex}
         aria-describedby={props.errorId}
         aria-labelledby={
-          props.labelId && props.radioGroupId
-            ? props.labelId + ' ' + props.radioGroupId
+          props.labelId && props.groupId
+            ? props.labelId + ' ' + props.groupId
             : null
         }
       />

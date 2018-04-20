@@ -345,19 +345,14 @@ export let examples = [
     label: 'Radio Group',
     element: (
       <Table>
-        <Thead
-          columns={columns}
-          hasNoSelectability
-          radioGroupId={radioGroupCommonId}
-          label="Choose a Row to Select"
-        />
+        <Thead columns={columns} isSingleSelect />
         <tbody>
           {_.times(rows.length, i => (
             <AdvancedDataTableTr
               key={i}
               index={i + 1}
               {...rows[i]}
-              radioGroupId={radioGroupCommonId}
+              isSingleSelect
             />
           ))}
         </tbody>

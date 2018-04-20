@@ -3,6 +3,13 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+
+## **Release [2.5.4] - April 20, 2018**
+
+## Fix
+
+- Reordered Quill styles to apply indentation styles to the Rich Text Editor output class.
+
 ## **Release [2.5.3] - March 13, 2018**
 
 ## Fix

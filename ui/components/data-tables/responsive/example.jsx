@@ -4,11 +4,14 @@
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
+import { Checkbox } from '../../checkbox/base/example';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
+
+const checkboxRadioGroupHeaderId = 'check-group-header';
 
 let Table = props => (
   <table
@@ -18,23 +21,20 @@ let Table = props => (
   </table>
 );
 
-let Checkbox = props => (
-  <label className="slds-checkbox">
-    <input
-      type="checkbox"
-      name="options"
-      disabled={props.disabled}
-      defaultChecked={props.checked}
-    />
-    <span className="slds-checkbox_faux" />
-    <span className="slds-assistive-text">{props.label}</span>
-  </label>
-);
-
 let HeadRowData = props => (
   <tr className="slds-text-title_caps">
     <th className="slds-cell-shrink" scope="col">
-      <Checkbox label="Select All" checked={props.checked} />
+      <span className="slds-assistive-text" id={checkboxRadioGroupHeaderId}>
+        Choose a row to select
+      </span>
+      <Checkbox
+        hideLabel
+        labelId={'check-button-label-all'}
+        id={'checkbox-all'}
+        label={'Select all'}
+        groupId={checkboxRadioGroupHeaderId}
+        checked={props.checked}
+      />
     </th>
     <th scope="col">
       <div className="slds-truncate" title="Close Date">
@@ -127,7 +127,14 @@ let HeadRowData = props => (
 let RowData = props => (
   <tr className="slds-hint-parent">
     <td className="slds-cell-shrink" data-label="Select Row">
-      <Checkbox label="Select Row" checked={props.checked} />
+      <Checkbox
+        hideLabel
+        labelId={`check-button-label-0${props.index}`}
+        id={`checkbox-0${props.index}`}
+        label={`Select item ${props.index}`}
+        groupId={checkboxRadioGroupHeaderId}
+        checked={props.checked}
+      />
     </td>
     <th scope="row" data-label="Opportunity Name">
       <div className="slds-truncate" title={props.title}>
@@ -187,8 +194,8 @@ let Overflow = props => (
         <HeadRowData />
       </thead>
       <tbody>
-        <RowData title="Cloudhub" />
-        <RowData title="Cloudhub + Anypoint Connectors" />
+        <RowData index="1" title="Cloudhub" />
+        <RowData index="2" title="Cloudhub + Anypoint Connectors" />
       </tbody>
     </Table>
   </div>
@@ -200,8 +207,8 @@ let Stacked = props => (
       <HeadRowData />
     </thead>
     <tbody>
-      <RowData title="Cloudhub" />
-      <RowData title="Cloudhub + Anypoint Connectors" />
+      <RowData index="1" title="Cloudhub" />
+      <RowData index="2" title="Cloudhub + Anypoint Connectors" />
     </tbody>
   </Table>
 );
@@ -212,8 +219,8 @@ let Horizontal = props => (
       <HeadRowData />
     </thead>
     <tbody>
-      <RowData title="Cloudhub" />
-      <RowData title="Cloudhub + Anypoint Connectors" />
+      <RowData index="1" title="Cloudhub" />
+      <RowData index="2" title="Cloudhub + Anypoint Connectors" />
     </tbody>
   </Table>
 );

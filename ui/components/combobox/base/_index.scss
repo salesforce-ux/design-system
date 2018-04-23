@@ -363,15 +363,16 @@
  */
 .slds-combobox_object-switcher {
   flex-shrink: 0;
-  font-size: $font-size-text-x-small;
 
   .slds-combobox__input {
-    width: 132px;
+    width: rem(120px);
     transition: width 80ms linear;
+    font-size: $font-size-text-x-small;
+    color: $color-text-placeholder;
 
     &:focus,
     &.slds-has-focus {
-      width: 160px;
+      width: rem(160px);
     }
   }
 

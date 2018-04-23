@@ -58,6 +58,7 @@
   &__item_search,
   &__item--search {
     flex: 0 1 rem(600px);
+    min-width: rem(600px);
     padding: 0;
   }
 

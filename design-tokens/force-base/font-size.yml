@@ -37,36 +37,48 @@ props:
   FONT_SIZE_TEXT_XX_SMALL:
     value: '{!FONT_SIZE_1}'
     comment: Extra extra small text.
+    deprecated: true
   FONT_SIZE_TEXT_X_SMALL:
     value: '{!FONT_SIZE_2}'
     comment: Extra small body text.
+    deprecated: true
   FONT_SIZE_TEXT_SMALL:
     value: '{!FONT_SIZE_3}'
     comment: Small body text.
+    deprecated: true
   FONT_SIZE_TEXT_MEDIUM:
     value: '{!FONT_SIZE_5}'
     comment: Medium body text.
+    deprecated: true
   FONT_SIZE_TEXT_LARGE:
     value: '{!FONT_SIZE_6}'
     comment: Large body text.
+    deprecated: true
   FONT_SIZE_TEXT_X_LARGE:
     value: '{!FONT_SIZE_7}'
     comment: Extra large body text.
+    deprecated: true
   FONT_SIZE_HEADING_XX_SMALL:
     value: '{!FONT_SIZE_1}'
     comment: Extra Extra small headings.
+    deprecated: true
   FONT_SIZE_HEADING_X_SMALL:
     value: '{!FONT_SIZE_2}'
     comment: Extra small headings.
+    deprecated: true
   FONT_SIZE_HEADING_SMALL:
     value: '{!FONT_SIZE_4}'
     comment: Small headings.
+    deprecated: true
   FONT_SIZE_HEADING_MEDIUM:
     value: '{!FONT_SIZE_6}'
     comment: Medium headings.
+    deprecated: true
   FONT_SIZE_HEADING_LARGE:
     value: '{!FONT_SIZE_8}'
     comment: Large headings.
+    deprecated: true
   FONT_SIZE_HEADING_X_LARGE:
     value: '{!FONT_SIZE_9}'
     comment: Extra large headings.
+    deprecated: true

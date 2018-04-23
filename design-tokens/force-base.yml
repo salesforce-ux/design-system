@@ -3,6 +3,7 @@
 
 imports:
 - ./spacing.yml
+- ./font-size.yml
 - ./force-base/spacing.yml
 - ./force-base/sizing.yml
 - ./force-base/fill.yml

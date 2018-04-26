@@ -131,11 +131,12 @@
     &[disabled]:checked ~ .slds-radio--faux,
     &[disabled]:checked + .slds-radio_button__label,
     &[disabled]:checked + .slds-radio--button__label {
+      background-color: $brand-disabled;
+      color: $color-text-button-brand-disabled;
 
       &:hover,
       &:focus {
-        background-color: $color-background-button-default-disabled;
-        color: $color-text-button-default-disabled;
+        cursor: default;
       }
     }
   }

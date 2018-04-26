@@ -32,6 +32,10 @@
  * `<abbr class="required" title="required">*</abbr>` added to the DOM for
  * visual indication that the radio group is required.
  *
+ * When disabling a radio button, either the entire group must be disabled or
+ * if only some radio buttons are disabled, then the checked radio button cannot
+ * be disabled.
+ *
  * @summary A select list that can have a single entry checked at any one time.
  *
  * @base

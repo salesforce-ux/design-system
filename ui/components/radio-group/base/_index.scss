@@ -86,6 +86,10 @@
       + .slds-radio__label .slds-radio--faux {
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
+
+        &:after {
+          background: $color-gray-9;
+        }
       }
     }
   }

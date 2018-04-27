@@ -4,77 +4,77 @@
 /**
  * Adds .125rem margin to the side specified
  *
- * @selector .slds-m-*_xxx-small
+ * @selector .slds-m-*_xxx-small, .slds-var-m-*_xxx-small
  * @modifier
  */
 
 /**
  * Adds .25rem margin to the side specified
  *
- * @selector .slds-m-*_xx-small
+ * @selector .slds-m-*_xx-small, .slds-var-m-*_xx-small
  * @modifier
  */
 
 /**
  * Adds .5rem margin to the side specified
  *
- * @selector .slds-m-*_x-small
+ * @selector .slds-m-*_x-small, .slds-var-m-*_x-small
  * @modifier
  */
 
 /**
  * Adds .75rem margin to the side specified
  *
- * @selector .slds-m-*_small
+ * @selector .slds-m-*_small, .slds-var-m-*_small
  * @modifier
  */
 
 /**
  * Adds 1rem margin to the side specified
  *
- * @selector .slds-m-*_medium
+ * @selector .slds-m-*_medium, .slds-var-m-*_medium
  * @modifier
  */
 
 /**
  * Adds 1.5rem margin to the side specified
  *
- * @selector .slds-m-*_large
+ * @selector .slds-m-*_large, .slds-var-m-*_large
  * @modifier
  */
 
 /**
  * Adds 2rem margin to the side specified
  *
- * @selector .slds-m-*_x-large
+ * @selector .slds-m-*_x-large, .slds-var-m-*_x-large
  * @modifier
  */
 
 /**
  * Adds 3rem margin to the side specified
  *
- * @selector .slds-m-*_xx-large
+ * @selector .slds-m-*_xx-large, .slds-var-m-*_xx-large
  * @modifier
  */
 
 /**
  * Adds the specified margin to both top and bottom
  *
- * @selector .slds-m-*-vertical_*
+ * @selector .slds-m-*-vertical_*, .slds-var-m-*-vertical_*
  * @modifier
  */
 
 /**
  * Adds the specified margin to both sides
  *
- * @selector .slds-m-*-horizontal_*
+ * @selector .slds-m-*-horizontal_*, .slds-var-m-*-horizontal_*
  * @modifier
  */
 
 /**
  * Adds the specified margin all the way around the element
  *
- * @selector .slds-m-*-around_*
+ * @selector .slds-m-*-around_*, .slds-var-m-*-around_*
  * @modifier
  */
 @include spacing(margin);
@@ -82,4 +82,254 @@
 .slds-m-bottom_none,
 .slds-m-bottom--none {
   margin-bottom: 0;
+}
+
+// Since we can create and store variable references when iterating through a map,
+// we'll need to manually create every variable spacing token =(
+
+// Top
+.slds-var-m-top_xxx-small {
+  margin-top: $var-spacing-xxx-small;
+}
+
+.slds-var-m-top_xx-small {
+  margin-top: $var-spacing-xx-small;
+}
+
+.slds-var-m-top_x-small {
+  margin-top: $var-spacing-x-small;
+}
+
+.slds-var-m-top_small {
+  margin-top: $var-spacing-small;
+}
+
+.slds-var-m-top_medium {
+  margin-top: $var-spacing-medium;
+}
+
+.slds-var-m-top_large {
+  margin-top: $var-spacing-large;
+}
+
+.slds-var-m-top_x-large {
+  margin-top: $var-spacing-x-large;
+}
+
+.slds-var-m-top_xx-large {
+  margin-top: $var-spacing-xx-large;
+}
+
+// Right
+.slds-var-m-right_xxx-small {
+  margin-right: $var-spacing-xxx-small;
+}
+
+.slds-var-m-right_xx-small {
+  margin-right: $var-spacing-xx-small;
+}
+
+.slds-var-m-right_x-small {
+  margin-right: $var-spacing-x-small;
+}
+
+.slds-var-m-right_small {
+  margin-right: $var-spacing-small;
+}
+
+.slds-var-m-right_medium {
+  margin-right: $var-spacing-medium;
+}
+
+.slds-var-m-right_large {
+  margin-right: $var-spacing-large;
+}
+
+.slds-var-m-right_x-large {
+  margin-right: $var-spacing-x-large;
+}
+
+.slds-var-m-right_xx-large {
+  margin-right: $var-spacing-xx-large;
+}
+
+// Bottom
+.slds-var-m-bottom_xxx-small {
+  margin-bottom: $var-spacing-xxx-small;
+}
+
+.slds-var-m-bottom_xx-small {
+  margin-bottom: $var-spacing-xx-small;
+}
+
+.slds-var-m-bottom_x-small {
+  margin-bottom: $var-spacing-x-small;
+}
+
+.slds-var-m-bottom_small {
+  margin-bottom: $var-spacing-small;
+}
+
+.slds-var-m-bottom_medium {
+  margin-bottom: $var-spacing-medium;
+}
+
+.slds-var-m-bottom_large {
+  margin-bottom: $var-spacing-large;
+}
+
+.slds-var-m-bottom_x-large {
+  margin-bottom: $var-spacing-x-large;
+}
+
+.slds-var-m-bottom_xx-large {
+  margin-bottom: $var-spacing-xx-large;
+}
+
+// Left
+.slds-var-m-left_xxx-small {
+  margin-left: $var-spacing-xxx-small;
+}
+
+.slds-var-m-left_xx-small {
+  margin-left: $var-spacing-xx-small;
+}
+
+.slds-var-m-left_x-small {
+  margin-left: $var-spacing-x-small;
+}
+
+.slds-var-m-left_small {
+  margin-left: $var-spacing-small;
+}
+
+.slds-var-m-left_medium {
+  margin-left: $var-spacing-medium;
+}
+
+.slds-var-m-left_large {
+  margin-left: $var-spacing-large;
+}
+
+.slds-var-m-left_x-large {
+  margin-left: $var-spacing-x-large;
+}
+
+.slds-var-m-left_xx-large {
+  margin-left: $var-spacing-xx-large;
+}
+
+// Horizontal
+.slds-var-m-horizontal_xxx-small {
+  margin-left: $var-spacing-xxx-small;
+  margin-right: $var-spacing-xxx-small;
+}
+
+.slds-var-m-horizontal_xx-small {
+  margin-left: $var-spacing-xx-small;
+  margin-right: $var-spacing-xx-small;
+}
+
+.slds-var-m-horizontal_x-small {
+  margin-left: $var-spacing-x-small;
+  margin-right: $var-spacing-x-small;
+}
+
+.slds-var-m-horizontal_small {
+  margin-left: $var-spacing-small;
+  margin-right: $var-spacing-small;
+}
+
+.slds-var-m-horizontal_medium {
+  margin-left: $var-spacing-medium;
+  margin-right: $var-spacing-medium;
+}
+
+.slds-var-m-horizontal_large {
+  margin-left: $var-spacing-large;
+  margin-right: $var-spacing-large;
+}
+
+.slds-var-m-horizontal_x-large {
+  margin-left: $var-spacing-x-large;
+  margin-right: $var-spacing-x-large;
+}
+
+.slds-var-m-horizontal_xx-large {
+  margin-left: $var-spacing-xx-large;
+  margin-right: $var-spacing-xx-large;
+}
+
+// Vertical
+.slds-var-m-vertical_xxx-small {
+  margin-top: $var-spacing-xxx-small;
+  margin-bottom: $var-spacing-xxx-small;
+}
+
+.slds-var-m-vertical_xx-small {
+  margin-top: $var-spacing-xx-small;
+  margin-bottom: $var-spacing-xx-small;
+}
+
+.slds-var-m-vertical_x-small {
+  margin-top: $var-spacing-x-small;
+  margin-bottom: $var-spacing-x-small;
+}
+
+.slds-var-m-vertical_small {
+  margin-top: $var-spacing-small;
+  margin-bottom: $var-spacing-small;
+}
+
+.slds-var-m-vertical_medium {
+  margin-top: $var-spacing-medium;
+  margin-bottom: $var-spacing-medium;
+}
+
+.slds-var-m-vertical_large {
+  margin-top: $var-spacing-large;
+  margin-bottom: $var-spacing-large;
+}
+
+.slds-var-m-vertical_x-large {
+  margin-top: $var-spacing-x-large;
+  margin-bottom: $var-spacing-x-large;
+}
+
+.slds-var-m-vertical_xx-large {
+  margin-top: $var-spacing-xx-large;
+  margin-bottom: $var-spacing-xx-large;
+}
+
+// Around
+.slds-var-m-around_xxx-small {
+  margin: $var-spacing-xxx-small;
+}
+
+.slds-var-m-around_xx-small {
+  margin: $var-spacing-xx-small;
+}
+
+.slds-var-m-around_x-small {
+  margin: $var-spacing-x-small;
+}
+
+.slds-var-m-around_small {
+  margin: $var-spacing-small;
+}
+
+.slds-var-m-around_medium {
+  margin: $var-spacing-medium;
+}
+
+.slds-var-m-around_large {
+  margin: $var-spacing-large;
+}
+
+.slds-var-m-around_x-large {
+  margin: $var-spacing-x-large;
+}
+
+.slds-var-m-around_xx-large {
+  margin: $var-spacing-xx-large;
 }

@@ -11,7 +11,7 @@ import _ from '../../shared/helpers';
 /// ////////////////////////////////////////
 
 export const MultiSelect = props => {
-  const GroupedMultiSelect = () => (
+  return (
     <div
       className="slds-form-element"
       role="group"
@@ -21,49 +21,40 @@ export const MultiSelect = props => {
         id="picklist-group-label"
         className="slds-form-element__label slds-form-element__legend slds-text-title_caps"
       >
-        {props.dataSet.groupLabel}
+        Select Options
       </div>
-      <BaseMultiSelect dataSet={props.dataSet} />
+      <div className="slds-dueling-list">
+        <div
+          className="slds-assistive-text"
+          id="drag-live-region"
+          aria-live="assertive"
+        >
+          {props.dataSet.liveRegionText}
+        </div>
+        <div className="slds-assistive-text" id="option-drag-label">
+          {props.dataSet.optionDragLabel}
+        </div>
+        <SelectionGroup
+          disabled={props.disabled}
+          isResponsive={props.isResponsive}
+          group={props.dataSet.selectionGroups[0]}
+        />
+        <MoveButtons
+          direction="horizontal"
+          targetA={props.dataSet.selectionGroups[0].label}
+          targetB={props.dataSet.selectionGroups[1].label}
+          disabled={props.disabled}
+        />
+        <SelectionGroup
+          disabled={props.disabled}
+          isResponsive={props.isResponsive}
+          group={props.dataSet.selectionGroups[1]}
+        />
+        {!props.noReorder && (
+          <MoveButtons disabled={props.disabled} direction="vertical" />
+        )}
+      </div>
     </div>
-  );
-
-  const BaseMultiSelect = () => (
-    <div className="slds-dueling-list">
-      <div
-        className="slds-assistive-text"
-        id="drag-live-region"
-        aria-live="assertive"
-      >
-        {props.dataSet.liveRegionText}
-      </div>
-      <div className="slds-assistive-text" id="option-drag-label">
-        {props.dataSet.optionDragLabel}
-      </div>
-      <SelectionGroup
-        disabled={props.disabled}
-        isResponsive={props.isResponsive}
-        group={props.dataSet.selectionGroups[0]}
-      />
-      <MoveButtons
-        direction="horizontal"
-        targetA={props.dataSet.selectionGroups[0].label}
-        targetB={props.dataSet.selectionGroups[1].label}
-        disabled={props.disabled}
-      />
-      <SelectionGroup
-        disabled={props.disabled}
-        isResponsive={props.isResponsive}
-        group={props.dataSet.selectionGroups[1]}
-      />
-      {!props.noReorder && (
-        <MoveButtons disabled={props.disabled} direction="vertical" />
-      )}
-    </div>
-  );
-  return props.dataSet.groupLabel ? (
-    <GroupedMultiSelect />
-  ) : (
-    <BaseMultiSelect />
   );
 };
 
@@ -209,61 +200,6 @@ const Option = props => (
 /// ////////////////////////////////////////
 
 export const DefaultSnapShot = {
-  liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
-  selectionGroups: [
-    {
-      label: 'First Category',
-      options: [
-        {
-          text: 'Option 1',
-          tabIndex: 0,
-          isSelected: false,
-          isGrabbed: false
-        },
-        {
-          text: 'Option 2',
-          tabIndex: -1,
-          isSelected: false,
-          isGrabbed: false
-        },
-        {
-          text: 'Option 3',
-          tabIndex: -1,
-          isSelected: false,
-          isGrabbed: false
-        },
-        {
-          text: 'Option 6',
-          tabIndex: -1,
-          isSelected: false,
-          isGrabbed: false
-        }
-      ]
-    },
-    {
-      label: 'Second Category',
-      options: [
-        {
-          text: 'Option 4',
-          tabIndex: 0,
-          isSelected: false,
-          isGrabbed: false
-        },
-        {
-          text: 'Option 5',
-          tabIndex: -1,
-          isSelected: false,
-          isGrabbed: false
-        }
-      ]
-    }
-  ]
-};
-
-export const GroupLabelSnapShot = {
-  groupLabel: 'Select an option',
   liveRegionText: '',
   optionDragLabel:
     'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',

@@ -11,6 +11,8 @@ import {
   SectionTitleAction
 } from '../../expandable-section/base/example';
 import { Avatar } from '../../avatar/base/example';
+import { ButtonIconStateful } from '../../button-icons/stateful/example';
+import { Tooltip } from '../../tooltips/base/example';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -66,9 +68,6 @@ export let AppLauncherModal = props => (
           >
             {props.dragDropLiveRegion}
           </div>
-          <div className="slds-assistive-text" id={props.dragDropId}>
-            {props.dragDropInstructions}
-          </div>
           <ul className="slds-grid slds-grid_pull-padded slds-wrap">
             {props.appTiles.map((tile, i) => {
               return (
@@ -77,18 +76,15 @@ export let AppLauncherModal = props => (
                   key={i}
                 >
                   <AppLauncherTile
-                    draggable
                     figureClass={tile.figureClass}
                     grabbed={tile.grabbed}
                     objectInitials={tile.initials}
-                    referenceId={tile.dragDropId}
-                  >
-                    <span className="slds-text-link">{tile.label}</span>
-                    <p>
-                      {tile.description}
-                      <span className="slds-text-link">More</span>
-                    </p>
-                  </AppLauncherTile>
+                    label={tile.label}
+                    description={tile.description}
+                    hasTooltip={tile.hasTooltip}
+                    tooltipText={tile.tooltipText}
+                    index={i}
+                  />
                 </li>
               );
             })}
@@ -128,64 +124,59 @@ export let AppLauncherModal = props => (
 );
 
 export const AppLauncherTile = props => (
-  <a
-    aria-describedby={props.draggable ? props.referenceId : null}
-    draggable={props.draggable}
-    href="javascript:void(0);"
+  <div
+    draggable
     className={classNames(
-      'slds-app-launcher__tile slds-text-link_reset',
+      'slds-app-launcher__tile slds-text-link_reset slds-is-draggable',
       props.className,
       {
-        'slds-is-draggable': props.draggable,
-        'slds-app-launcher__tile_small': props.flavor === 'small',
         'slds-is-grabbed': props.grabbed
       }
     )}
   >
-    <div
-      className={classNames('slds-app-launcher__tile-figure', {
-        'slds-app-launcher__tile-figure_small': props.flavor === 'small'
-      })}
-    >
-      {props.symbol ? (
-        <SvgIcon
-          className={
-            'slds-icon slds-icon-standard-' + props.symbol + ' slds-icon_large'
-          }
-          sprite="standard"
-          symbol={props.symbol}
-        />
-      ) : (
-        <Avatar className="slds-avatar_large">
-          <abbr
-            className={classNames('slds-avatar__initials', props.figureClass)}
-            title="company name"
-          >
-            {props.objectInitials}
-          </abbr>
-        </Avatar>
-      )}
-      {props.draggable ? (
-        <span
-          className="slds-icon_container"
-          title="Drag item to a new location"
+    <div className="slds-app-launcher__tile-figure">
+      <Avatar className="slds-avatar_large">
+        <abbr
+          className={classNames('slds-avatar__initials', props.figureClass)}
+          title={props.label}
         >
-          <SvgIcon
-            className="slds-icon slds-icon_x-small slds-icon-text-default"
-            sprite="utility"
-            symbol="rows"
-          />
-        </span>
-      ) : null}
+          {props.objectInitials}
+        </abbr>
+      </Avatar>
+      <div className="slds-m-top_xxx-small">
+        <ButtonIconStateful
+          aria-pressed={props.grabbed ? 'true' : 'false'}
+          assistiveText="Reorder"
+          selected={props.grabbed}
+          symbol="rows"
+          title="Reorder"
+        />
+      </div>
     </div>
-    <div
-      className={classNames('slds-app-launcher__tile-body', {
-        'slds-app-launcher__tile-body_small': props.flavor === 'small'
-      })}
-    >
-      {props.children}
+    <div className="slds-app-launcher__tile-body">
+      <a href="javascript:void(0);">{props.label}</a>
+      <p>
+        {props.description} {' '}
+        {props.hasTooltip && (
+          <button
+            aria-describedby={`help-${props.index}`}
+            className="slds-button slds-button_reset slds-text-link"
+          >
+            More
+          </button>
+        )}
+      </p>
+      <Tooltip
+        className={classNames('slds-nubbin_top', {
+          'slds-hide': !props.tooltipText
+        })}
+        id={`help-${props.index}`}
+        style={{ position: 'absolute', top: '100px', left: '165px' }}
+      >
+        {props.tooltipText}
+      </Tooltip>
     </div>
-  </a>
+  </div>
 );
 
 /// ///////////////////////////////////////////
@@ -195,8 +186,6 @@ export const AppLauncherTile = props => (
 /*
  * DragDropId relates app launcher tile anchor aria-describedby to the div that holds the instructions for drag & drop
  */
-export const dragDropId = 'drag-instructions';
-
 export const itemTiles = [
   { label: 'Accounts', symbol: 'account' },
   { label: 'Announcements', symbol: 'announcement' },
@@ -232,8 +221,9 @@ export const searchItemTiles = [
  */
 export const appTiles = [
   {
-    description: 'The primary internal Salesforce org. Used to run our...',
-    dragDropId: dragDropId,
+    description:
+      'The primary internal Salesforce org. Used to run our online sales business...',
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-27',
     grabbed: false,
     initials: 'SC',
@@ -241,7 +231,7 @@ export const appTiles = [
   },
   {
     description: 'Salesforce Marketing Cloud lets businesses of any size...',
-    dragDropId: dragDropId,
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-59',
     grabbed: false,
     initials: 'MC',
@@ -249,7 +239,7 @@ export const appTiles = [
   },
   {
     description: 'Community for managing employee benefits and time off.',
-    dragDropId: dragDropId,
+    hasTooltip: false,
     figureClass: 'slds-icon-custom-10',
     grabbed: false,
     initials: 'HR',
@@ -257,7 +247,7 @@ export const appTiles = [
   },
   {
     description: 'Manage your finances across multiple financial platforms...',
-    dragDropId: dragDropId,
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-6',
     grabbed: false,
     initials: 'MM',
@@ -266,7 +256,7 @@ export const appTiles = [
   {
     description:
       'The key to call center and contact center management is more...',
-    dragDropId: dragDropId,
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-91',
     grabbed: false,
     initials: 'CC',
@@ -275,7 +265,7 @@ export const appTiles = [
   {
     description:
       'Areas of Focus are used to track customer support for your...',
-    dragDropId: dragDropId,
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-50',
     grabbed: false,
     initials: 'CS',
@@ -286,7 +276,7 @@ export const appTiles = [
 export const appTilesSearch = [
   {
     description: 'The primary internal Salesforce org. Used to run our...',
-    dragDropId: dragDropId,
+    hasTooltip: true,
     figureClass: 'slds-icon-custom-27',
     grabbed: false,
     initials: 'SC',
@@ -317,8 +307,6 @@ export default (
   <div className="demo-only" style={{ height: '800px' }}>
     <AppLauncherModal
       appTiles={appTiles}
-      dragDropId={dragDropId}
-      dragDropInstructions="Press space bar to move this app within the list."
       dragDropLiveRegion=""
       itemTiles={itemTiles}
     />
@@ -334,8 +322,6 @@ export let states = [
       <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesGrabbed}
-          dragDropId={dragDropId}
-          dragDropInstructions=""
           dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
           grabbed
           itemTiles={itemTiles}
@@ -351,8 +337,6 @@ export let states = [
       <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesMoved}
-          dragDropId={dragDropId}
-          dragDropInstructions=""
           dragDropLiveRegion="Sales Cloud: new position 3 of 6."
           itemTiles={itemTiles}
         />
@@ -367,8 +351,6 @@ export let states = [
       <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesDropped}
-          dragDropId={dragDropId}
-          dragDropInstructions="Press space bar to move this app within the list."
           dragDropLiveRegion="Sales Cloud: final position 4 of 6."
           itemTiles={itemTiles}
         />
@@ -383,8 +365,6 @@ export let states = [
       <div className="demo-only" style={{ height: '800px' }}>
         <AppLauncherModal
           appTiles={appTilesSearch}
-          dragDropId={dragDropId}
-          dragDropInstructions="Press space bar to move this app within the list."
           dragDropLiveRegion=""
           itemTiles={searchItemTiles}
           searchTerm="sales"

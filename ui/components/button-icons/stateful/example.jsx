@@ -4,15 +4,26 @@
 import React from 'react';
 import ButtonIcon from '../';
 
+export const ButtonIconStateful = props => (
+  <ButtonIcon
+    aria-pressed={props['aria-pressed']}
+    assistiveText={props.assistiveText}
+    selected={props.selected}
+    symbol={props.symbol}
+    theme={props.theme}
+    title={props.title}
+  />
+);
+
 /**
  * Default
  */
 export default (
-  <ButtonIcon
-    theme="neutral"
+  <ButtonIconStateful
     aria-pressed="false"
-    symbol="like"
     assistiveText="Like"
+    symbol="like"
+    theme="neutral"
     title="Like"
   />
 );
@@ -25,12 +36,12 @@ export let states = [
     id: 'button-icon-stateful-selected',
     label: 'Selected',
     element: (
-      <ButtonIcon
-        theme="neutral"
+      <ButtonIconStateful
         aria-pressed="true"
+        assistiveText="Like"
         selected
         symbol="like"
-        assistiveText="Like"
+        theme="neutral"
         title="Like"
       />
     )

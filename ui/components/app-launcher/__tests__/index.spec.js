@@ -7,6 +7,7 @@ import {
   appTilesDropped,
   appTilesSearch,
   AppLauncherModal,
+  AppLauncherTile,
   dragDropId,
   itemTiles,
   searchItemTiles
@@ -28,6 +29,19 @@ it('renders a default app launcher', () =>
       />
       <div className="slds-backdrop slds-backdrop_open" />
     </div>
+  ));
+
+it('renders an app tile with a tooltip', () =>
+  matchesMarkupAndStyle(
+    <AppLauncherTile
+      figureClass="slds-icon-custom-27"
+      objectInitials="SC"
+      label="Sales Cloud"
+      description="The primary internal Salesforce org. Used to run our online sales business..."
+      hasTooltip
+      tooltipText="The primary internal Salesforce org. Used to run our online sales business and manage accounts."
+      index="x"
+    />
   ));
 
 it('renders a grabbed app launcher', () =>

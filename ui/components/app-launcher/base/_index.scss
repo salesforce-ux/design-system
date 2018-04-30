@@ -36,7 +36,7 @@
   /**
    * @summary Tile cards that contains the app information, the icon and description
    * @selector .slds-app-launcher__tile
-   * @restrict .slds-app-launcher a
+   * @restrict .slds-app-launcher div
    */
   &__tile {
     display: flex;

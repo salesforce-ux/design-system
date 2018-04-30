@@ -12,8 +12,12 @@ global:
   - left
   - 'margin*'
   - 'padding*'
+  - 'border*'
   - '*width'
   - '*height'
+  - box-shadow
+  - stroke
+  - stroke-width
 
 imports:
 - ./aliases/spacing.yml

@@ -79,11 +79,6 @@
  */
 @include spacing(margin);
 
-.slds-m-bottom_none,
-.slds-m-bottom--none {
-  margin-bottom: 0;
-}
-
 // Since we can create and store variable references when iterating through a map,
 // we'll need to manually create every variable spacing token =(
 

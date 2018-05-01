@@ -20,7 +20,7 @@
    * Creates label styles for our form elements
    *
    * @selector .slds-form-element__label
-   * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, [class*='slds-checkbox'] span, [class*='slds-radio'] span, span
+   * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, .slds-form-element div, [class*='slds-checkbox'] span, [class*='slds-radio'] span
    */
   &__label {
     display: inline-block;

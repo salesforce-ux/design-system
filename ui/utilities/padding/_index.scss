@@ -77,7 +77,6 @@
  * @selector .slds-p-*-around_*, .slds-var-p-*-around_*
  * @modifier
  */
-@include spacing(padding);
 
 /**
  * @summary Global padding that can be applied to any element
@@ -89,10 +88,57 @@
   padding: $component-spacing-padding;
 }
 
+// stylelint-disable declaration-no-important
 // Since we can create and store variable references when iterating through a map,
 // we'll need to manually create every variable spacing token =(
 
 // Top
+.slds-p-top_none,
+.slds-p-top--none {
+  padding-top: 0 !important;
+}
+
+.slds-p-top_xxx-small,
+.slds-p-top--xxx-small {
+  padding-top: $spacing-xxx-small;
+}
+
+.slds-p-top_xx-small,
+.slds-p-top--xx-small {
+  padding-top: $spacing-xx-small;
+}
+
+.slds-p-top_x-small,
+.slds-p-top--x-small {
+  padding-top: $spacing-x-small;
+}
+
+.slds-p-top_small,
+.slds-p-top--small {
+  padding-top: $spacing-small;
+}
+
+.slds-p-top_medium,
+.slds-p-top--medium {
+  padding-top: $spacing-medium;
+}
+
+.slds-p-top_large,
+.slds-p-top--large {
+  padding-top: $spacing-large;
+}
+
+.slds-p-top_x-large,
+.slds-p-top--x-large {
+  padding-top: $spacing-x-large;
+}
+
+.slds-p-top_xx-large,
+.slds-p-top--xx-large {
+  padding-top: $spacing-xx-large;
+}
+
+// Variables
 .slds-var-p-top_xxx-small {
   padding-top: $var-spacing-xxx-small;
 }
@@ -126,6 +172,54 @@
 }
 
 // Right
+
+// Constant
+.slds-p-right_none,
+.slds-p-right--none {
+  padding-right: 0 !important;
+}
+
+.slds-p-right_xxx-small,
+.slds-p-right--xxx-small {
+  padding-right: $spacing-xxx-small;
+}
+
+.slds-p-right_xx-small,
+.slds-p-right--xx-small {
+  padding-right: $spacing-xx-small;
+}
+
+.slds-p-right_x-small,
+.slds-p-right--x-small {
+  padding-right: $spacing-x-small;
+}
+
+.slds-p-right_small,
+.slds-p-right--small {
+  padding-right: $spacing-small;
+}
+
+.slds-p-right_medium,
+.slds-p-right--medium {
+  padding-right: $spacing-medium;
+}
+
+.slds-p-right_large,
+.slds-p-right--large {
+  padding-right: $spacing-large;
+}
+
+.slds-p-right_x-large,
+.slds-p-right--x-large {
+  padding-right: $spacing-x-large;
+}
+
+.slds-p-right_xx-large,
+.slds-p-right--xx-large {
+  padding-right: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-right_xxx-small {
   padding-right: $var-spacing-xxx-small;
 }
@@ -159,6 +253,54 @@
 }
 
 // Bottom
+
+// Constant
+.slds-p-bottom_none,
+.slds-p-bottom--none {
+  padding-bottom: 0 !important;
+}
+
+.slds-p-bottom_xxx-small,
+.slds-p-bottom--xxx-small {
+  padding-bottom: $spacing-xxx-small;
+}
+
+.slds-p-bottom_xx-small,
+.slds-p-bottom--xx-small {
+  padding-bottom: $spacing-xx-small;
+}
+
+.slds-p-bottom_x-small,
+.slds-p-bottom--x-small {
+  padding-bottom: $spacing-x-small;
+}
+
+.slds-p-bottom_small,
+.slds-p-bottom--small {
+  padding-bottom: $spacing-small;
+}
+
+.slds-p-bottom_medium,
+.slds-p-bottom--medium {
+  padding-bottom: $spacing-medium;
+}
+
+.slds-p-bottom_large,
+.slds-p-bottom--large {
+  padding-bottom: $spacing-large;
+}
+
+.slds-p-bottom_x-large,
+.slds-p-bottom--x-large {
+  padding-bottom: $spacing-x-large;
+}
+
+.slds-p-bottom_xx-large,
+.slds-p-bottom--xx-large {
+  padding-bottom: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-bottom_xxx-small {
   padding-bottom: $var-spacing-xxx-small;
 }
@@ -192,6 +334,54 @@
 }
 
 // Left
+
+// Constant
+.slds-p-left_none,
+.slds-p-left--none {
+  padding-left: 0 !important;
+}
+
+.slds-p-left_xxx-small,
+.slds-p-left--xxx-small {
+  padding-left: $spacing-xxx-small;
+}
+
+.slds-p-left_xx-small,
+.slds-p-left--xx-small {
+  padding-left: $spacing-xx-small;
+}
+
+.slds-p-left_x-small,
+.slds-p-left--x-small {
+  padding-left: $spacing-x-small;
+}
+
+.slds-p-left_small,
+.slds-p-left--small {
+  padding-left: $spacing-small;
+}
+
+.slds-p-left_medium,
+.slds-p-left--medium {
+  padding-left: $spacing-medium;
+}
+
+.slds-p-left_large,
+.slds-p-left--large {
+  padding-left: $spacing-large;
+}
+
+.slds-p-left_x-large,
+.slds-p-left--x-large {
+  padding-left: $spacing-x-large;
+}
+
+.slds-p-left_xx-large,
+.slds-p-left--xx-large {
+  padding-left: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-left_xxx-small {
   padding-left: $var-spacing-xxx-small;
 }
@@ -225,6 +415,63 @@
 }
 
 // Horizontal
+
+// Constant
+.slds-p-horizontal_none,
+.slds-p-horizontal--none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.slds-p-horizontal_xxx-small,
+.slds-p-horizontal--xxx-small {
+  padding-left: $spacing-xxx-small;
+  padding-right: $spacing-xxx-small;
+}
+
+.slds-p-horizontal_xx-small,
+.slds-p-horizontal--xx-small {
+  padding-left: $spacing-xx-small;
+  padding-right: $spacing-xx-small;
+}
+
+.slds-p-horizontal_x-small,
+.slds-p-horizontal--x-small {
+  padding-left: $spacing-x-small;
+  padding-right: $spacing-x-small;
+}
+
+.slds-p-horizontal_small,
+.slds-p-horizontal--small {
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+}
+
+.slds-p-horizontal_medium,
+.slds-p-horizontal--medium {
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+}
+
+.slds-p-horizontal_large,
+.slds-p-horizontal--large {
+  padding-left: $spacing-large;
+  padding-right: $spacing-large;
+}
+
+.slds-p-horizontal_x-large,
+.slds-p-horizontal--x-large {
+  padding-left: $spacing-x-large;
+  padding-right: $spacing-x-large;
+}
+
+.slds-p-horizontal_xx-large,
+.slds-p-horizontal--xx-large {
+  padding-left: $spacing-xx-large;
+  padding-right: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-horizontal_xxx-small {
   padding-left: $var-spacing-xxx-small;
   padding-right: $var-spacing-xxx-small;
@@ -266,6 +513,63 @@
 }
 
 // Vertical
+
+// Constant
+.slds-p-vertical_none,
+.slds-p-vertical--none {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.slds-p-vertical_xxx-small,
+.slds-p-vertical--xxx-small {
+  padding-top: $spacing-xxx-small;
+  padding-bottom: $spacing-xxx-small;
+}
+
+.slds-p-vertical_xx-small,
+.slds-p-vertical--xx-small {
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
+}
+
+.slds-p-vertical_x-small,
+.slds-p-vertical--x-small {
+  padding-top: $spacing-x-small;
+  padding-bottom: $spacing-x-small;
+}
+
+.slds-p-vertical_small,
+.slds-p-vertical--small {
+  padding-top: $spacing-small;
+  padding-bottom: $spacing-small;
+}
+
+.slds-p-vertical_medium,
+.slds-p-vertical--medium {
+  padding-top: $spacing-medium;
+  padding-bottom: $spacing-medium;
+}
+
+.slds-p-vertical_large,
+.slds-p-vertical--large {
+  padding-top: $spacing-large;
+  padding-bottom: $spacing-large;
+}
+
+.slds-p-vertical_x-large,
+.slds-p-vertical--x-large {
+  padding-top: $spacing-x-large;
+  padding-bottom: $spacing-x-large;
+}
+
+.slds-p-vertical_xx-large,
+.slds-p-vertical--xx-large {
+  padding-top: $spacing-xx-large;
+  padding-bottom: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-vertical_xxx-small {
   padding-top: $var-spacing-xxx-small;
   padding-bottom: $var-spacing-xxx-small;
@@ -307,6 +611,54 @@
 }
 
 // Around
+
+// Constant
+.slds-p-around_none,
+.slds-p-around--none {
+  padding: 0 !important;
+}
+
+.slds-p-around_xxx-small,
+.slds-p-around--xxx-small {
+  padding: $spacing-xxx-small;
+}
+
+.slds-p-around_xx-small,
+.slds-p-around--xx-small {
+  padding: $spacing-xx-small;
+}
+
+.slds-p-around_x-small,
+.slds-p-around--x-small {
+  padding: $spacing-x-small;
+}
+
+.slds-p-around_small,
+.slds-p-around--small {
+  padding: $spacing-small;
+}
+
+.slds-p-around_medium,
+.slds-p-around--medium {
+  padding: $spacing-medium;
+}
+
+.slds-p-around_large,
+.slds-p-around--large {
+  padding: $spacing-large;
+}
+
+.slds-p-around_x-large,
+.slds-p-around--x-large {
+  padding: $spacing-x-large;
+}
+
+.slds-p-around_xx-large,
+.slds-p-around--xx-large {
+  padding: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-p-around_xxx-small {
   margin: $var-spacing-xxx-small;
 }

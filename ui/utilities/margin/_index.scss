@@ -77,12 +77,60 @@
  * @selector .slds-m-*-around_*, .slds-var-m-*-around_*
  * @modifier
  */
-@include spacing(margin);
 
+// stylelint-disable declaration-no-important
 // Since we can create and store variable references when iterating through a map,
-// we'll need to manually create every variable spacing token =(
+// we'll need to manually create every spacing token =(
 
 // Top
+
+// Constant
+.slds-m-top_none,
+.slds-m-top--none {
+  margin-top: 0 !important;
+}
+
+.slds-m-top_xxx-small,
+.slds-m-top--xxx-small {
+  margin-top: $spacing-xxx-small;
+}
+
+.slds-m-top_xx-small,
+.slds-m-top--xx-small {
+  margin-top: $spacing-xx-small;
+}
+
+.slds-m-top_x-small,
+.slds-m-top--x-small {
+  margin-top: $spacing-x-small;
+}
+
+.slds-m-top_small,
+.slds-m-top--small {
+  margin-top: $spacing-small;
+}
+
+.slds-m-top_medium,
+.slds-m-top--medium {
+  margin-top: $spacing-medium;
+}
+
+.slds-m-top_large,
+.slds-m-top--large {
+  margin-top: $spacing-large;
+}
+
+.slds-m-top_x-large,
+.slds-m-top--x-large {
+  margin-top: $spacing-x-large;
+}
+
+.slds-m-top_xx-large,
+.slds-m-top--xx-large {
+  margin-top: $spacing-xx-large;
+}
+
+// Variables
 .slds-var-m-top_xxx-small {
   margin-top: $var-spacing-xxx-small;
 }
@@ -116,6 +164,54 @@
 }
 
 // Right
+
+// Constant
+.slds-m-right_none,
+.slds-m-right--none {
+  margin-right: 0 !important;
+}
+
+.slds-m-right_xxx-small,
+.slds-m-right--xxx-small {
+  margin-right: $spacing-xxx-small;
+}
+
+.slds-m-right_xx-small,
+.slds-m-right--xx-small {
+  margin-right: $spacing-xx-small;
+}
+
+.slds-m-right_x-small,
+.slds-m-right--x-small {
+  margin-right: $spacing-x-small;
+}
+
+.slds-m-right_small,
+.slds-m-right--small {
+  margin-right: $spacing-small;
+}
+
+.slds-m-right_medium,
+.slds-m-right--medium {
+  margin-right: $spacing-medium;
+}
+
+.slds-m-right_large,
+.slds-m-right--large {
+  margin-right: $spacing-large;
+}
+
+.slds-m-right_x-large,
+.slds-m-right--x-large {
+  margin-right: $spacing-x-large;
+}
+
+.slds-m-right_xx-large,
+.slds-m-right--xx-large {
+  margin-right: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-m-right_xxx-small {
   margin-right: $var-spacing-xxx-small;
 }
@@ -149,6 +245,54 @@
 }
 
 // Bottom
+
+// Constant
+.slds-m-bottom_none,
+.slds-m-bottom--none {
+  margin-bottom: 0 !important;
+}
+
+.slds-m-bottom_xxx-small,
+.slds-m-bottom--xxx-small {
+  margin-bottom: $spacing-xxx-small;
+}
+
+.slds-m-bottom_xx-small,
+.slds-m-bottom--xx-small {
+  margin-bottom: $spacing-xx-small;
+}
+
+.slds-m-bottom_x-small,
+.slds-m-bottom--x-small {
+  margin-bottom: $spacing-x-small;
+}
+
+.slds-m-bottom_small,
+.slds-m-bottom--small {
+  margin-bottom: $spacing-small;
+}
+
+.slds-m-bottom_medium,
+.slds-m-bottom--medium {
+  margin-bottom: $spacing-medium;
+}
+
+.slds-m-bottom_large,
+.slds-m-bottom--large {
+  margin-bottom: $spacing-large;
+}
+
+.slds-m-bottom_x-large,
+.slds-m-bottom--x-large {
+  margin-bottom: $spacing-x-large;
+}
+
+.slds-m-bottom_xx-large,
+.slds-m-bottom--xx-large {
+  margin-bottom: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-m-bottom_xxx-small {
   margin-bottom: $var-spacing-xxx-small;
 }
@@ -182,6 +326,55 @@
 }
 
 // Left
+
+// Constant
+.slds-m-left_none,
+.slds-m-left--none {
+  margin-left: 0 !important;
+}
+
+.slds-m-left_xxx-small,
+.slds-m-left--xxx-small {
+  margin-left: $spacing-xxx-small;
+}
+
+.slds-m-left_xx-small,
+.slds-m-left--xx-small {
+  margin-left: $spacing-xx-small;
+}
+
+.slds-m-left_x-small,
+.slds-m-left--x-small {
+  margin-left: $spacing-x-small;
+}
+
+.slds-m-left_small,
+.slds-m-left--small {
+  margin-left: $spacing-small;
+}
+
+.slds-m-left_medium,
+.slds-m-left--medium {
+  margin-left: $spacing-medium;
+}
+
+.slds-m-left_large,
+.slds-m-left--large {
+  margin-left: $spacing-large;
+}
+
+.slds-m-left_x-large,
+.slds-m-left--x-large {
+  margin-left: $spacing-x-large;
+}
+
+.slds-m-left_xx-large,
+.slds-m-left--xx-large {
+  margin-left: $spacing-xx-large;
+}
+
+// Variable
+
 .slds-var-m-left_xxx-small {
   margin-left: $var-spacing-xxx-small;
 }
@@ -215,6 +408,63 @@
 }
 
 // Horizontal
+
+// Constant
+.slds-m-horizontal_none,
+.slds-m-horizontal--none {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.slds-m-horizontal_xxx-small,
+.slds-m-horizontal--xxx-small {
+  margin-left: $spacing-xxx-small;
+  margin-right: $spacing-xxx-small;
+}
+
+.slds-m-horizontal_xx-small,
+.slds-m-horizontal--xx-small {
+  margin-left: $spacing-xx-small;
+  margin-right: $spacing-xx-small;
+}
+
+.slds-m-horizontal_x-small,
+.slds-m-horizontal--x-small {
+  margin-left: $spacing-x-small;
+  margin-right: $spacing-x-small;
+}
+
+.slds-m-horizontal_small,
+.slds-m-horizontal--small {
+  margin-left: $spacing-small;
+  margin-right: $spacing-small;
+}
+
+.slds-m-horizontal_medium,
+.slds-m-horizontal--medium {
+  margin-left: $spacing-medium;
+  margin-right: $spacing-medium;
+}
+
+.slds-m-horizontal_large,
+.slds-m-horizontal--large {
+  margin-left: $spacing-large;
+  margin-right: $spacing-large;
+}
+
+.slds-m-horizontal_x-large,
+.slds-m-horizontal--x-large {
+  margin-left: $spacing-x-large;
+  margin-right: $spacing-x-large;
+}
+
+.slds-m-horizontal_xx-large,
+.slds-m-horizontal--xx-large {
+  margin-left: $spacing-xx-large;
+  margin-right: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-m-horizontal_xxx-small {
   margin-left: $var-spacing-xxx-small;
   margin-right: $var-spacing-xxx-small;
@@ -256,6 +506,63 @@
 }
 
 // Vertical
+
+// Constant
+.slds-m-vertical_none,
+.slds-m-vertical--none {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.slds-m-vertical_xxx-small,
+.slds-m-vertical--xxx-small {
+  margin-top: $spacing-xxx-small;
+  margin-bottom: $spacing-xxx-small;
+}
+
+.slds-m-vertical_xx-small,
+.slds-m-vertical--xx-small {
+  margin-top: $spacing-xx-small;
+  margin-bottom: $spacing-xx-small;
+}
+
+.slds-m-vertical_x-small,
+.slds-m-vertical--x-small {
+  margin-top: $spacing-x-small;
+  margin-bottom: $spacing-x-small;
+}
+
+.slds-m-vertical_small,
+.slds-m-vertical--small {
+  margin-top: $spacing-small;
+  margin-bottom: $spacing-small;
+}
+
+.slds-m-vertical_medium,
+.slds-m-vertical--medium {
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+}
+
+.slds-m-vertical_large,
+.slds-m-vertical--large {
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-large;
+}
+
+.slds-m-vertical_x-large,
+.slds-m-vertical--x-large {
+  margin-top: $spacing-x-large;
+  margin-bottom: $spacing-x-large;
+}
+
+.slds-m-vertical_xx-large,
+.slds-m-vertical--xx-large {
+  margin-top: $spacing-xx-large;
+  margin-bottom: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-m-vertical_xxx-small {
   margin-top: $var-spacing-xxx-small;
   margin-bottom: $var-spacing-xxx-small;
@@ -297,6 +604,54 @@
 }
 
 // Around
+
+// Constant
+.slds-m-around_none,
+.slds-m-around--none {
+  margin: 0 !important;
+}
+
+.slds-m-around_xxx-small,
+.slds-m-around--xxx-small {
+  margin: $spacing-xxx-small;
+}
+
+.slds-m-around_xx-small,
+.slds-m-around--xx-small {
+  margin: $spacing-xx-small;
+}
+
+.slds-m-around_x-small,
+.slds-m-around--x-small {
+  margin: $spacing-x-small;
+}
+
+.slds-m-around_small,
+.slds-m-around--small {
+  margin: $spacing-small;
+}
+
+.slds-m-around_medium,
+.slds-m-around--medium {
+  margin: $spacing-medium;
+}
+
+.slds-m-around_large,
+.slds-m-around--large {
+  margin: $spacing-large;
+}
+
+.slds-m-around_x-large,
+.slds-m-around--x-large {
+  margin: $spacing-x-large;
+}
+
+.slds-m-around_xx-large,
+.slds-m-around--xx-large {
+  margin: $spacing-xx-large;
+}
+
+// Variable
 .slds-var-m-around_xxx-small {
   margin: $var-spacing-xxx-small;
 }

@@ -5,7 +5,6 @@ import React from 'react';
 import {
   MultiSelect,
   DefaultSnapShot,
-  GroupLabelSnapShot,
   LockedSnapShot,
   DisabledSnapShot,
   SelectedSnapShot,
@@ -23,11 +22,6 @@ import {
 export default <MultiSelect dataSet={DefaultSnapShot} />;
 
 export let states = [
-  {
-    id: 'group-label-dueling-picklist',
-    label: 'Group Label',
-    element: <MultiSelect dataSet={GroupLabelSnapShot} />
-  },
   {
     id: 'required-dueling-picklist',
     label: 'Locked',

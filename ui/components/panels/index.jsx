@@ -18,7 +18,7 @@ export const Container = props => {
         props.docked && `slds-panel_docked slds-panel_docked-${props.docked}`,
         props.invoke === 'drill-in' && 'slds-is-directional',
         props.drawer && 'slds-panel_drawer',
-        props.isVisible ? 'slds-panel_slide-in' : 'slds-panel_slide-out',
+        props.isVisible && 'slds-is-open',
         props.className
       )}
       aria-hidden={!props.isVisible}

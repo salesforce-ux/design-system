@@ -415,3 +415,15 @@ props:
     value: '#3C97DD'
   STRATEGY:
     value: '#4BC071'
+  SNIPPET:
+    value: '#A094ED'
+  BRAND:
+    value: '#7E8BE4'
+  KANBAN:
+    value: '#3C97DD'
+  SMS:
+    value: '#88C651'
+  TRAILHEAD:
+    value: '#4B8B44'
+  IOT_CONTEXT:
+    value: '#2A739E'

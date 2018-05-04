@@ -9,7 +9,7 @@ May the 4th be with you!
 ## Big Impact
 
 **[Component Blueprints](https://lightningdesignsystem.com/components/overview)**
-- Renamed our 'Components' to 'Component Blueprints' to create distiction between our SLDS Components and ([Lightning Components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref.htm)). We define our 'Component Blueprints' as 'Framework agnostic, accessible HTML and CSS used to create components in conjunction with our implementation guidelines'.
+- Renamed our 'Components' to 'Component Blueprints' to create distinction between our SLDS Components and ([Lightning Components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref.htm)). We define our 'Component Blueprints' as 'Framework agnostic, accessible HTML and CSS used to create components in conjunction with our implementation guidelines'. For more details, check out the glossary we added to our [FAQ page](/faq).
 
 **[Form Layout](https://lightningdesignsystem.com/components/form-element/#Layout)**
 - Merged Form Layout into Form Element ([f3c5b48](https://github.com/salesforce-ux/design-system/commit/f3c5b48))

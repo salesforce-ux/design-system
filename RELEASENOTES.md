@@ -3,6 +3,214 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.6.0] - May 4, 2018**
+May the 4th be with you!
+
+## Big Impact
+
+**[Component Blueprints](https://lightningdesignsystem.com/components/overview)**
+- Renamed our 'Components' to 'Component Blueprints' to create distinction between our SLDS Components and ([Lightning Components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref.htm)). We define our 'Component Blueprints' as 'Framework agnostic, accessible HTML and CSS used to create components in conjunction with our implementation guidelines'. For more details, check out the glossary we added to our [FAQ page](/faq).
+
+**[Form Layout](https://lightningdesignsystem.com/components/form-element/#Layout)**
+- Merged Form Layout into Form Element ([f3c5b48](https://github.com/salesforce-ux/design-system/commit/f3c5b48))
+
+**[Icon](https://lightningdesignsystem.com/icons/#utility)**
+- Addressed 2 issues with the usage of *Warning* and *Error* icons. ([cd98ab6](https://github.com/salesforce-ux/design-system/commit/cd98ab6))
+    1) Research showed that the ban icon best represented an error for our users, so we switched the error and ban icons. The new error icon is the circle with a diagonal slash through it
+    2) We also realized that we used the same icon for both error and warning states in many components, so we updated components that were using the warning icon in red as an error state to use the new error icon.
+
+**[Lookup](https://lightningdesignsystem.com/components/lookups/)**
+- Deprecated `slds-lookup` and replaced with `slds-combobox` and `slds-combobox-group` ([2dbe619](https://github.com/salesforce-ux/design-system/commit/2dbe619))
+
+**[Walkthrough -> Trial Bar](https://lightningdesignsystem.com/components/trial-bar/)**
+- Renamed our Walkthrough component to Trial Bar ([fe8cfc1](https://github.com/salesforce-ux/design-system/commit/fe8cfc1))
+
+## New components:
+
+**[Builder Header](https://lightningdesignsystem.com/components/builder-header/)**
+- Created new Builder Header component ([3b6f741](https://github.com/salesforce-ux/design-system/commit/3b6f741))
+
+**[Illustration](https://lightningdesignsystem.com/components/illustration/)**
+- Created new component for Empty States and other Illustrations ([a1824e0](https://github.com/salesforce-ux/design-system/commit/a1824e0))
+
+**[Setup Assistant](https://lightningdesignsystem.com/components/setup-assistant/)**
+- Created new Setup Assistant component ([26be78c](https://github.com/salesforce-ux/design-system/commit/26be78c))
+
+**[Summary Detail](https://lightningdesignsystem.com/components/summary-detail/)**
+- Created new Summary Detail component ([245492e](https://github.com/salesforce-ux/design-system/commit/245492e))
+
+**[Welcome Mat](https://lightningdesignsystem.com/components/welcome-mat/)**
+- Created new Welcome Mat component ([5d2d818](https://github.com/salesforce-ux/design-system/commit/5d2d818))
+
+## Documentation Updates
+
+**[Button](https://lightningdesignsystem.com/components/buttons/#Disabled)**
+- Updated examples to show disabled states of all variants ([013b16d](https://github.com/salesforce-ux/design-system/commit/013b16d))
+
+**[Combobox](https://lightningdesignsystem.com/components/combobox/)**
+- Updated examples and documentation for Base, Autocomplete, Entity Autocomplete, and Grouped comboboxes ([6c79edd](https://github.com/salesforce-ux/design-system/commit/6c79edd))
+- Added an example to show [listbox styling options](https://lightningdesignsystem.com/components/combobox/#Styling-choices-for-options) ([3d4af71](https://github.com/salesforce-ux/design-system/commit/3d4af71))
+- Updated mouse and keyboard interaction documentation ([04bde0c](https://github.com/salesforce-ux/design-system/commit/04bde0c))
+
+**[Dueling Picklist](https://lightningdesignsystem.com/components/dueling-picklist/#Group-Label)**
+- Added an example detailing how to add a group label to a dueling picklist ([b5e0083](https://github.com/salesforce-ux/design-system/commit/b5e0083))
+
+**[Form Element](https://lightningdesignsystem.com/components/form-element/#Record-Detail)**
+- Added an example to show Record Detail ([73989b0](https://github.com/salesforce-ux/design-system/commit/73989b0))
+
+**[Global Header](https://lightningdesignsystem.com/components/global-header/#Notifications)**
+- Updated documentation to show animated examples ([399da9c](https://github.com/salesforce-ux/design-system/commit/399da9c))
+
+**[Grid](https://lightningdesignsystem.com/utilities/grid/#Content-alignment-with-bump)**
+- Added examples and documentation for `slds-col-bump_*` classes ([a095cba](https://github.com/salesforce-ux/design-system/commit/a095cba))
+
+**[Icon](https://lightningdesignsystem.com/components/icons/#Current-Color)**
+- Added an example that uses `slds-current-color` ([2ef3489](https://github.com/salesforce-ux/design-system/commit/2ef3489))
+
+**[Rich Text Editor](https://lightningdesignsystem.com/components/rich-text-editor/)**
+- Updated examples to properly wrap the Rich Text Editor in `slds-form-element` ([b6df0b0](https://github.com/salesforce-ux/design-system/commit/b6df0b0))
+
+## Features
+
+**[Button](https://lightningdesignsystem.com/components/buttons/#Outline-Brand)**
+- Added `slds-button_outline-brand` modifier ([0dec41e](https://github.com/salesforce-ux/design-system/commit/0dec41e))
+
+**[Chat](https://lightningdesignsystem.com/components/chat/#Delivery-Status-Messages)**
+- Added support for delivery failure and unsupported type messages ([14aa268](https://github.com/salesforce-ux/design-system/commit/14aa268))
+
+**[Combobox](https://lightningdesignsystem.com/components/combobox/#Grouped-Comboboxes-(Cross-entity-Polymorphic))**
+- Introduced grouped comboboxes with text and icon variants ([6c79edd](https://github.com/salesforce-ux/design-system/commit/6c79edd))
+
+**[Dueling Picklist](https://lightningdesignsystem.com/components/dueling-picklist/#Edit-Mode)**
+- Updated docs to add non-reorderable and view mode variants of dueling picklist to be used for multiple selection ([c336057](https://github.com/salesforce-ux/design-system/commit/c336057))
+- Added `slds-is-grabbed` class
+- Added `slds-dueling-picklist__column_responsive` to add [responsiveness](https://lightningdesignsystem.com/components/dueling-picklist/#Responsive) ([4000150](https://github.com/salesforce-ux/design-system/commit/4000150))
+
+**[Global Header](https://lightningdesignsystem.com/components/global-header/)**
+- Added support for branded skip links ([789aa99](https://github.com/salesforce-ux/design-system/commit/789aa99))
+
+**[Input](https://lightningdesignsystem.com/components/input/?example=counter&variant=base)**
+- Added counter variant ([0b20b85](https://github.com/salesforce-ux/design-system/commit/0b20b85))
+
+**[Panel](https://lightningdesignsystem.com/components/panels/)**
+- Added docked panel variant ([e88713e](https://github.com/salesforce-ux/design-system/commit/e88713e))
+
+**[Popover](https://lightningdesignsystem.com/components/popovers/)**
+- Added warning and error variants ([60a628d](https://github.com/salesforce-ux/design-system/commit/60a628d))
+
+**[Progress Bar](https://lightningdesignsystem.com/components/progress-bar/?example=progress-bar-descriptive&variant=base)**
+- Added an example of descriptive progress bar with label and progress percentage above bar ([dbd0db1](https://github.com/salesforce-ux/design-system/commit/dbd0db1))
+
+**[Progress Indicator](https://lightningdesignsystem.com/components/progress-indicator/)**
+- Added new vertical variant ([118b520](https://github.com/salesforce-ux/design-system/commit/118b520))
+- Added `slds-progress__marker_icon-success` to indicate completed stage
+
+**[Progress Ring](https://lightningdesignsystem.com/components/progress-ring/)**
+- Added `slds-progress-ring_large` modifier to make a 32x32px ring ([26be78c](https://github.com/salesforce-ux/design-system/commit/26be78c))
+- Added `slds-progress-ring_active-step` modifier to change color of progress ring
+
+**[Spinner](https://lightningdesignsystem.com/components/spinners/?example=inlined&variant=base)**
+- Added new inline spinner variant ([c05738f](https://github.com/salesforce-ux/design-system/commit/c05738f))
+
+**[Tabs](https://lightningdesignsystem.com/components/tabs/#On-Mobile)**
+- Added new mobile stacked variant ([9d7b861](https://github.com/salesforce-ux/design-system/commit/9d7b861))
+
+**[Text](https://lightningdesignsystem.com/utilities/text/?example=text-font-monospace&variant=text)**
+- Added new monospace font-family ([7a41fd6](https://github.com/salesforce-ux/design-system/commit/7a41fd6))
+
+## Fixes
+
+**[Avatar](https://lightningdesignsystem.com/components/avatar/?example=fallback-user-initials&variant=base)**
+- Added text shadow to `slds-avatar__initials` for better contrast ([3f43dfa](https://github.com/salesforce-ux/design-system/commit/3f43dfa))
+- Added `slds-avatar__initials_inverse` for dark text initials on a light background
+
+**[Button Group](https://lightningdesignsystem.com/components/button-groups/?example=button-group-more-open&variant=base)**
+- Added `slds-dropdown_actions` to button group overflow dropdown ([8ab08fe](https://github.com/salesforce-ux/design-system/commit/8ab08fe))
+
+**[Button Icon](https://lightningdesignsystem.com/components/button-icons/?variant=bordered-inverse)**
+- Added selected stying to border inverse variant ([2624d4f](https://github.com/salesforce-ux/design-system/commit/2624d4f))
+
+**[Card](https://lightningdesignsystem.com/components/cards/?example=related-list-table&variant=base)**
+- Added `slds-card__footer-action` to have footer link take up full width of card ([89c6a28](https://github.com/salesforce-ux/design-system/commit/89c6a28))
+
+**[Chat](https://lightningdesignsystem.com/components/chat/#Sneak-peek)**
+- Changed `slds-chat-message__text-sneak-peak` to `slds-chat-message__text-sneak-peek` ([cdaabbf](https://github.com/salesforce-ux/design-system/commit/cdaabbf))
+
+**[Checkbox](https://lightningdesignsystem.com/components/checkbox/)**
+- Updated examples to have unique `value` attributes ([cdf72cd](https://github.com/salesforce-ux/design-system/commit/cdf72cd))
+
+**[Compound Form](https://lightningdesignsystem.com/components/form-element/#Compound)**
+- Fixed layout overflow bug ([#530](https://github.com/salesforce-ux/design-system/issues/530))
+
+**[Data Table](https://lightningdesignsystem.com/components/data-tables/?state=row-error-and-selected&variant=inline-edit)**
+- Adjusted styling for edited and error cells when row is selected ([9ed087a](https://github.com/salesforce-ux/design-system/commit/9ed087a))
+- Updated checkboxes and radio groups in Data Tables to be grouped with a common label by using `aria-labelledby` and hidden group label in the column header ([f8f8801](https://github.com/salesforce-ux/design-system/commit/f8f8801))
+
+**[Datepicker](https://lightningdesignsystem.com/components/datepickers/?state=datepicker-with-error&variant=base)**
+- Prevented error border from applying to nested select component ([0fa0165](https://github.com/salesforce-ux/design-system/commit/0fa0165))
+
+**[Dueling Picklist](https://lightningdesignsystem.com/components/dueling-picklist/)**
+- Updated all examples to include a group label and form-element wrapper ([8d1a1b4](https://github.com/salesforce-ux/design-system/commit/8d1a1b4))
+
+**[Form Element](https://lightningdesignsystem.com/components/form-element/#Compound)**
+- Added `slds-form-element__legend_has-tooltip` modifier to allow for tooltip icon next to legend ([f3c5b48](https://github.com/salesforce-ux/design-system/commit/f3c5b48))
+
+**[Global Header](https://lightningdesignsystem.com/components/global-header/)**
+- Updated colors of global [actions](https://lightningdesignsystem.com/components/global-header/#Global-Actions-Bar) ([58d68e1](https://github.com/salesforce-ux/design-system/commit/58d68e1))
+- Updated search to use [new combobox group](https://lightningdesignsystem.com/components/global-header/#Global-Search) ([9bddfde](https://github.com/salesforce-ux/design-system/commit/9bddfde))
+
+**[Input](https://lightningdesignsystem.com/components/input/)**
+- Removed red box shadow from required inputs in firefox ([069a3c8](https://github.com/salesforce-ux/design-system/commit/069a3c8))
+- Used `aria-labelledby` instead of `aria-describedby` for associating the prepended and appended fixed text to the input ([25d51d7](https://github.com/salesforce-ux/design-system/commit/25d51d7))
+- Reordered `slds-input:required` styles to prevent overrides ([ba3ac5b](https://github.com/salesforce-ux/design-system/commit/ba3ac5b))
+- Removed pointer event when icon is located on top of an input ([84b650b](https://github.com/salesforce-ux/design-system/commit/84b650b))
+- Added `slds-input-has-icon_group-right` to fix spacing issues for [multiple icons on the right](https://lightningdesignsystem.com/components/input/?example=double-icon-spinner&variant=base) ([9bddfde](https://github.com/salesforce-ux/design-system/commit/9bddfde))
+
+**[Modal](https://lightningdesignsystem.com/components/modals/?modifiers=.slds-fade-in-open&modifiers=.slds-modal_medium&variant=base)**
+- Changed width of medium modal to 70% ([b2d9e1b](https://github.com/salesforce-ux/design-system/commit/b2d9e1b))
+
+**[Path](https://lightningdesignsystem.com/components/path/)**
+- Added focus styling for completed stages ([f197b4a](https://github.com/salesforce-ux/design-system/commit/f197b4a))
+- Reordered `slds-is-active` and `slds-is-complete` to prevent overrides
+- Added min-width to action button ([1b8e6b8](https://github.com/salesforce-ux/design-system/commit/1b8e6b8))
+
+**[Radio Group](https://lightningdesignsystem.com/components/radio-group/) and [Radio Button Group](https://lightningdesignsystem.com/components/radio-button-group/)**
+- Updated examples to have unique `value` attributes ([cdf72cd](https://github.com/salesforce-ux/design-system/commit/cdf72cd))
+
+**[Rich Text Editor](https://lightningdesignsystem.com/components/rich-text-editor/?state=error&variant=base)**
+- Added white background to error message with `slds-form-element__help` modifier ([8033c22](https://github.com/salesforce-ux/design-system/commit/8033c22))
+- Removed margin-bottom from `slds-rich-text-editor__spacing-wrapper` and added it to `slds-rich-text-editor__select` ([bf907ed](https://github.com/salesforce-ux/design-system/commit/bf907ed))
+
+**[Trees](https://lightningdesignsystem.com/components/trees/?state=metatext&variant=base)**
+- Added missing assistive text span for tree branch with metatext ([a407e58](https://github.com/salesforce-ux/design-system/commit/a407e58))
+
+**Utilities**
+- Added `!important` to [visibility utilities](https://lightningdesignsystem.com/utilities/visibility/?example=hidden-visible&variant=visibility) `slds-hide` and `slds-hidden` ([16bf902](https://github.com/salesforce-ux/design-system/commit/16bf902))
+- Fixed error in Grid documentation around [width and ordering class prefixes](https://latest-214.lightningdesignsystem.com/utilities/grid/#Responsive-Layout-Options) ([f6a66d9](https://github.com/salesforce-ux/design-system/commit/f6a66d9))
+
+**[Vertical Tabs](https://lightningdesignsystem.com/components/vertical-tabs/)**
+- Removed outline when link has focus ([72fcd6f](https://github.com/salesforce-ux/design-system/commit/72fcd6f))
+
+**[Visual Picker](https://lightningdesignsystem.com/components/visual-picker/)**
+- Added focus styling ([cbd07e9](https://github.com/salesforce-ux/design-system/commit/cbd07e9))
+
+## Tokens
+
+**[Text](https://lightningdesignsystem.com/design-tokens/#category-text-color)**
+- Changed value of `$color-text-success`([97d13bb](https://github.com/salesforce-ux/design-system/commit/97d13bb))
+- Changed value of `$color-text-link`([9bc8b0d](https://github.com/salesforce-ux/design-system/commit/9bc8b0d))
+
+## **Release [2.5.4] - April 19, 2018**
+
+## Fix
+
+- Reordered Quill styles to apply indentation styles to the Rich Text Editor output class ([0bbf51c](https://github.com/salesforce-ux/design-system/commit/0bbf51c))
+
+## **Release [2.5.3] - March 13, 2018**
+
+## Fix
+
+- Remove Quill styles from the Rich Text Editor output class to fix properly nested lists ([296afb3](https://github.com/salesforce-ux/design-system/commit/296afb3))
 ## **Release [2.5.2] - February 8, 2018**
 
 ## Fix

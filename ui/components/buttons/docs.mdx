@@ -120,7 +120,9 @@ Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class 
 
 <Example title="Button Inverse">
   <CodeView style={{ backgroundColor: '#16325c', padding: '1rem' }} toggleCode={false}>
-    <Button isInverse>Button</Button>
+    <div style={{ backgroundColor: '#16325c' }}>
+      <Button isInverse>Button</Button>
+    </div>
   </CodeView>
 </Example>
 
@@ -152,7 +154,7 @@ Use a disabled attribute when a button can’t be clicked. To create a disabled 
 
 <Example title="Button Disabled Examples">
   <CodeView>
-    <div>
+    <React.Fragment>
       <Button disabled>
         Button Base
       </Button>
@@ -171,7 +173,7 @@ Use a disabled attribute when a button can’t be clicked. To create a disabled 
       <Button isSuccess disabled>
         Button Success
       </Button>
-    </div>
+    </React.Fragment>
   </CodeView>
 </Example>
 

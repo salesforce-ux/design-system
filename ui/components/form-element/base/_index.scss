@@ -135,26 +135,6 @@
 }
 
 /**
- * @summary Reduce vertical height of a form element
- * @selector .slds-form-element_small
- * @restrict .slds-form-element
- * @modifier
- */
-.slds-form-element_small {
-
-  .slds-form-element__label {
-    padding-top: 4px;
-    margin-bottom: 0;
-  }
-
-  .slds-form-element__static {
-    padding-top: 0;
-    padding-bottom: 1px;
-    min-height: calc(1.25rem + 2px);
-  }
-}
-
-/**
  * Required Star
  *
  * @selector .slds-required

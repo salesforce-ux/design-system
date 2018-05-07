@@ -90,12 +90,11 @@
  * @modifier
  */
 .slds-panel_docked {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  position: relative;
   min-width: $size-small;
   height: 100%;
   border-radius: 0;
+  display: none;
   transition: transform 300ms ease;
 
   /**
@@ -107,16 +106,15 @@
     text-align: center;
     width: 100%;
   }
-}
 
-/**
- * @summary Modifier that changes the display of a panel to dock but reflow the panel
- * @selector .slds-panel_drawer
- * @restrict .slds-panel_docked
- * @modifier
- */
-.slds-panel_drawer {
-  position: relative;
+  /**
+   * @summary Toggles visibility of panel
+   * @selector .slds-is-open
+   * @restrict .slds-panel_docked
+   */
+  &.slds-is-open {
+    display: block;
+  }
 }
 
 /**
@@ -126,7 +124,6 @@
  * @modifier
  */
 .slds-panel_docked-left {
-  left: 0;
   box-shadow: $panel-docked-left-shadow;
 
   /**
@@ -148,37 +145,11 @@
  * @modifier
  */
 .slds-panel_docked-right {
-  right: 0;
+  margin-left: auto;
   box-shadow: $panel-docked-right-shadow;
 
   &.slds-is-directional .slds-panel__close {
     right: $spacing-small;
     left: auto;
   }
-}
-
-.slds-panel_drawer.slds-panel_slide-in {
-  display: block;
-}
-
-.slds-panel_drawer.slds-panel_slide-out {
-  display: none;
-}
-
-/**
- * @summary Animates the panel back into the canvas
- * @selector .slds-panel_slide-in
- * @restrict .slds-panel
- */
-.slds-panel.slds-panel_slide-in {
-  transform: translate3d(0, 0, 0);
-}
-
-/**
- * @summary Animates the panel off the canvas
- * @selector .slds-panel_slide-out
- * @restrict .slds-panel
- */
-.slds-panel.slds-panel_slide-out {
-  transform: translate3d(-120%, 0, 0);
 }

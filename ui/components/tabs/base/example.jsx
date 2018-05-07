@@ -7,12 +7,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
 import { MobileStacked, AdjacentMobileStacked } from '../mobile-stack/example';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter
-} from '../../cards/base/example';
+import Card, { CardHeader, CardBody, CardFooter } from '../../cards/';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -116,34 +111,53 @@ export const TabsWithCards = props => (
   <Tabs className="slds-tabs_card" selectedIndex={0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       <Card>
-        <CardHeader symbol="contact" title="Card Header" actions>
-          <span className="slds-text-heading_small">Card Header</span>
-        </CardHeader>
-        <CardBody className="slds-card__body_inner">
+        <CardHeader
+          symbol="contact"
+          title="Card Header"
+          href="javascript:void(0);"
+          action={
+            <button className="slds-button slds-button_neutral">New</button>
+          }
+        />
+        <CardBody hasPadding>
           This is a card inside an <code className="doc">
             .slds-tabs_card
           </code>{' '}
           to show how styling is removed when cards are nested inside.
         </CardBody>
-        <CardFooter>Card Footer</CardFooter>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Contacts</span>
+        </CardFooter>
       </Card>
       <Card>
-        <CardHeader symbol="contact" title="Card Header" actions>
-          <span className="slds-text-heading_small">Card Header</span>
-        </CardHeader>
-        <CardBody className="slds-card__body_inner">
+        <CardHeader
+          symbol="contact"
+          title="Card Header"
+          href="javascript:void(0);"
+          action={
+            <button className="slds-button slds-button_neutral">New</button>
+          }
+        />
+        <CardBody hasPadding>
           This is a card inside an <code className="doc">
             .slds-tabs_card
           </code>{' '}
           to show how styling is removed when cards are nested inside.
         </CardBody>
-        <CardFooter>Card Footer</CardFooter>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Contacts</span>
+        </CardFooter>
       </Card>
-      <Card className="slds-card_boundary">
-        <CardHeader symbol="contact" title="Card Header" actions>
-          <span className="slds-text-heading_small">Card Header</span>
-        </CardHeader>
-        <CardBody className="slds-card__body_inner">
+      <Card hasCardBoundary>
+        <CardHeader
+          symbol="contact"
+          title="Card Header"
+          href="javascript:void(0);"
+          action={
+            <button className="slds-button slds-button_neutral">New</button>
+          }
+        />
+        <CardBody hasPadding>
           This is a card inside an <code className="doc">
             .slds-tabs_card
           </code>{' '}
@@ -151,7 +165,9 @@ export const TabsWithCards = props => (
           <code className="doc">.slds-card_boundary</code> adds a rounded border
           when desired.
         </CardBody>
-        <CardFooter>Card Footer</CardFooter>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Contacts</span>
+        </CardFooter>
       </Card>
     </Tabs.Item>
     <Tabs.Item title="Item Two" id="tab-default-2">

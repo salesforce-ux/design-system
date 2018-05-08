@@ -6,12 +6,7 @@ import Truncate from '../../../shared/truncate/index.react';
 import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter
-} from '../../cards/base/example';
+import Card from '../../cards/';
 import SvgIcon from '../../../shared/svg-icon';
 import Heading from '../../heading/index.react';
 import classNames from 'classnames';
@@ -144,9 +139,9 @@ export let examples = [
     id: 'card',
     label: 'Inside a card',
     element: (
-      <div className="slds-card">
+      <Card>
         <ObjectHome />
-      </div>
+      </Card>
     )
   },
   {

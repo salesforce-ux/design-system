@@ -16,7 +16,6 @@ module.exports = I.fromJS({
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: 'thread-loader',
@@ -46,7 +45,6 @@ module.exports = I.fromJS({
       },
       {
         test: /\.mdx$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: 'thread-loader',

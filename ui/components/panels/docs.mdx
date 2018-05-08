@@ -12,14 +12,14 @@ import SvgIcon from '../../shared/svg-icon';
 
 ## Base Panel
 
-A panel is docked to the left/right side of a viewport and overlays on top of canvas or main content.
+A panel is docked to the left/right side of a viewport and is in the document flow of the canvas or main content.
 
-**Use this variant when:**
+**Use this component when:**
 1. The canvas content extends beyond the boundaries of the viewport, while panning and zooming is supported
 2. It is not important to see canvas content while completing the task in a Panel
 3. The task performed in a Panel is momentary
 
-Toggling visibility of a Panel does not reflow main content.
+Toggling visibility of a Panel does reflow the main content.
 
 The panel should take up 100% of the height of its parent container. In most cases, that would be the viewport or main stage of your application.
 
@@ -169,37 +169,9 @@ The panels come in 5 different sizes:
 
 ## Panel Visibility
 
-<Blockquote type="warning" header="Panel Visibility">
-  The panel requires the class <code className="doc">slds-panel_slide-out</code> when the panel is not visible on the page. When the panel is toggled to be visible, the <code className="doc">slds-panel_slide-out</code> should be replaced with <code className="doc">slds-panel_slide-in</code>.
-</Blockquote>
-
-<Blockquote type="a11y" header="Accessibility Requirement">
-  When a panel slides off the screen, toggle the <code className="doc">aria-hidden</code> attribute from false to true. This allows the panel to be machine readable, while remaining off screen.
-
-  Make sure you remove focus from all focusable elements by toggling their <code className="doc">tabindex</code> to <code className="doc">-1</code> when the panel is off screen.
-</Blockquote>
-
-To see the animation differences of the panels, click the filter button in the following examples.
-
-### Overlay Content
-
-A docked panel will overlay the content of the page by default.
-
-<Blockquote type="warning" header="Animation Note">
-  The docked panel that overlays the content is animated by toggling the classes <code className="doc">slds-panel_slide-out</code> and <code className="doc">slds-panel_slide-in</code>.
-</Blockquote>
-
-<Example title="Panel base - Overlay">
-  <PanelPlayground />
-</Example>
-
 ### Open as a drawer
 
-<Blockquote type="warning" header="Animation note">
-  The docked panel that acts like a drawer <strong>does not animate</strong> when toggling the classes <code className="doc">slds-panel_slide-out</code> and <code className="doc">slds-panel_slide-in</code>.
-</Blockquote>
-
-A panel can cause reflow by being in the flow of the layout rather than overlayed on top of the content. To achieve this, simply add the class `slds-panel_drawer` to the `slds-panel_docked` element.
+A panel causes reflow by being in the flow of the layout rather than overlayed on top of the content. To achieve this, simply toggle the class `slds-is-open` to the `slds-panel_docked` element.
 
 <Example title="Panel base - Drawer">
   <PanelPlayground drawer />

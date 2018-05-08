@@ -15,7 +15,7 @@ import { CompoundForm } from '../form-layout/compound/example';
   An HTML form element contains a HTML label and element
 </div>
 
-There are many types of form elements, including [inputs](/input), [text areas](/textarea), [checkboxes](/checkbox), and [radio buttons](/radio-group). Visit the individual component pages for in-depth details of specific states and visuals.
+There are many types of form elements, including [inputs](/components/input), [text areas](/components/textarea), [checkboxes](/components/checkbox), and [radio buttons](/components/radio-group). Visit the individual component pages for in-depth details of specific states and visuals.
 
 ## Structuring a form element
 
@@ -59,7 +59,7 @@ A form might require it to be in a read only state at any particular time. Each 
 
 <Example title="Form Element - Readonly">
   <CodeView>
-    <div className="slds-form-element slds-form-element_small">
+    <div className="slds-form-element">
       <span className="slds-form-element__label">Status</span>
       <div className="slds-form-element__control">
         <span className="slds-form-element__static">
@@ -75,7 +75,7 @@ A form might require it to be in a read only state at any particular time. Each 
 <Example title="Form Element - Inline Edit">
 
   <CodeView>
-    <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+    <div className="slds-form-element slds-form-element_edit slds-hint-parent">
       <span className="slds-form-element__label">Status</span>
       <div className="slds-form-element__control">
         <span className="slds-form-element__static">
@@ -87,25 +87,6 @@ A form might require it to be in a read only state at any particular time. Each 
           assistiveText="Edit: Status"
           title="Edit: Status"
         />
-      </div>
-    </div>
-  </CodeView>
-
-</Example>
-
-### Condensed view
-
-By default, the overall form element takes up 54px of vertical space. If you require a more condensed view of the form element, applying the class `slds-form-element_small` to the `slds-form-element` element will reduce the overall height to 45px.
-
-<Example title="Form Element - Condensed">
-
-  <CodeView>
-    <div className="slds-form-element slds-form-element_small">
-      <span className="slds-form-element__label">Status</span>
-      <div className="slds-form-element__control">
-        <span className="slds-form-element__static">
-          In Progress
-        </span>
       </div>
     </div>
   </CodeView>
@@ -211,7 +192,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
   <div className="slds-form" role="list">
     <div className="slds-grid slds-gutters_small">
       <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
           <span className="slds-form-element__label">Assigned to</span>
           <div className="slds-form-element__control">
             <span className="slds-form-element__static slds-border_bottom">
@@ -240,7 +221,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
       </div>
       <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
           <span className="slds-form-element__label">Team Name</span>
           <div className="slds-form-element__control">
             <span className="slds-form-element__static slds-border_bottom">
@@ -258,7 +239,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
     </div>
     <div className="slds-grid slds-gutters_small">
       <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
           <div className="slds-form-element__control">
             <span className="slds-form-element__static slds-border_bottom">
               <Checkbox
@@ -277,7 +258,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
       </div>
       <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
           <span className="slds-form-element__label">Status</span>
           <div className="slds-form-element__control">
             <span className="slds-form-element__static slds-border_bottom">
@@ -295,7 +276,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
     </div>
     <div className="slds-grid slds-gutters_small">
       <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
           <span className="slds-form-element__label">Description</span>
           <div className="slds-form-element__control">
             <div className="slds-form-element__static slds-border_bottom slds-text-longform">
@@ -329,7 +310,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
       <div className="slds-grid slds-gutters_small">
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            formElementClassName="slds-form-element_edit slds-hint-parent"
             labelContent="Assigned to"
             inputId="assigned-to"
           >
@@ -338,7 +319,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            formElementClassName="slds-form-element_edit slds-hint-parent"
             labelContent="Team Name"
             inputId="team-name"
           >
@@ -348,7 +329,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
       </div>
       <div className="slds-grid slds-gutters_small">
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <div className="slds-form-element slds-form-element_small slds-form-element_edit slds-hint-parent">
+          <div className="slds-form-element slds-form-element_edit slds-hint-parent">
             <div className="slds-form-element__control">
               <Checkbox
                 className="slds-checkbox_stacked"
@@ -359,7 +340,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
         </div>
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            formElementClassName="slds-form-element_edit slds-hint-parent"
             labelContent="Status"
             inputId="status"
           >
@@ -370,7 +351,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
       <div className="slds-grid slds-gutters_small">
         <div className="slds-col slds-has-flexi-truncate" role="listitem">
           <FormElement
-            formElementClassName="slds-form-element_small slds-form-element_edit slds-hint-parent"
+            formElementClassName="slds-form-element_edit slds-hint-parent"
             labelContent="Description"
             inputId="description"
           >

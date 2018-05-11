@@ -468,7 +468,7 @@
 /**
  * @summary The container of pill selections found inside of a combobox group
  * @selector .slds-listbox_selection-group
- * @restrict .slds-combobox-group ~ div
+ * @restrict .slds-combobox-group ~ div, .slds-combobox_container ~ div
  */
 .slds-listbox_selection-group {
   padding: 0;
@@ -494,7 +494,7 @@
   /**
    * @summary Toggle button to show all of the pill selections
    * @selector .slds-listbox-toggle
-   * @restrict .slds-listbox_selection-group
+   * @restrict .slds-listbox_selection-group > span
    */
   .slds-listbox-toggle {
     position: absolute;

@@ -98,7 +98,7 @@
  * @summary Description container for the informational side of the Welcome Mat
  *
  * @selector .slds-welcome-mat__info-description
- * @restrict .slds-welcome-mat__info-content div
+ * @restrict .slds-welcome-mat__info-content p, .slds-welcome-mat__info-content div
  */
 .slds-welcome-mat__info-description {
   margin-bottom: $spacing-large;

@@ -70,9 +70,11 @@ class GlobalHeader extends Component {
           <div className="slds-global-header__item">
             <Logo />
           </div>
-          <div className="slds-global-header__item slds-global-header__item_search">
-            {this.props.globalSearch}
-          </div>
+          {!this.props.playground && (
+            <div className="slds-global-header__item slds-global-header__item_search">
+              {this.props.globalSearch}
+            </div>
+          )}
           <div className="slds-global-header__item">
             <GlobalActions
               toggleFavorite={this.toggleFavorite}

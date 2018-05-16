@@ -241,3 +241,14 @@ gulp.task(
   'travis:lint:examples',
   gulp.parallel(vnu, a11y, 'lint:markup', 'lint:html')
 );
+
+gulp.task(
+  'pr-checks',
+  gulp.series(
+    'build',
+    'lint',
+    withName('travis:jest')(travis.jest),
+    'generate:examples:wrapped',
+    'lint:examples'
+  )
+);

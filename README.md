@@ -125,15 +125,27 @@ npm run gulp -- lint:html
 # HTML5 validation
 npm run gulp -- lint:vnu
 # HTML5 validation on comma separated component names
-npm run gulp -- lint:vnu --components button, path, trees
+npm run gulp -- lint:vnu --components button,path,trees
 
 # a11y validation
 npm run gulp -- lint:a11y
 # a11y validation on comma separated component names
-npm run gulp -- lint:a11y --components button, path, trees
+npm run gulp -- lint:a11y --components button,path,trees
 
 # Lint examples using vnu, aXe, slds validation, and HTML5 validation
 npm run gulp -- lint:examples
+```
+
+### Pull Request Checks
+
+To run all the checks a pull request will run in Travis use the following command.
+
+```bash
+# To run every check against all components
+npm run pr-checks
+
+# To run every check but target certain components for slow checks like aXe and vnu
+npm run pr-checks -- --components button,path,trees
 ```
 
 ### Compilation

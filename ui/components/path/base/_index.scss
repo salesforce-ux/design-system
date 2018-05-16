@@ -530,7 +530,8 @@
 // Layout adjustments for sub section sof expanded tabpanel
 .slds-path__keys,
 .slds-path__guidance {
-  width: 50%;
+  flex: 1;
+  min-width: 50%;
   margin-top: $spacing-medium;
   padding-top: $spacing-x-small;
   padding-right: $spacing-small;

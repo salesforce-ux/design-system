@@ -167,7 +167,8 @@
     "pretest": "npm run gulp -- build",
     "test": "node -r @std/esm ./node_modules/.bin/jest",
     "jest": "node -r @std/esm ./node_modules/.bin/jest",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "pr-checks": "npm run gulp -- pr-checks"
   },
   "lint-staged": {
     "*.{js,jsx,json}": ["prettier --single-quote --write", "git add"]

@@ -24,6 +24,7 @@
 
     .slds-form-element + .slds-form-element {
       padding-left: $spacing-x-small;
+      margin-top: 0;
     }
   }
 }

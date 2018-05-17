@@ -9,16 +9,20 @@ export default (paths, done) =>
     {
       folderOutputReport: '.reports',
       saveOutputIn: 'a11y.json',
-      browser: 'phantomjs',
+      headless: true,
       a11yCheckOptions: {
         rules: {
-          bypass: { enabled: false }
+          bypass: { enabled: false },
+          'landmark-one-main': { enabled: false },
+          region: { enabled: false },
+          'page-has-heading-one': { enabled: false }
         }
       },
       exclude:
         '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved',
       urls: paths,
-      showOnlyViolations: true
+      showOnlyViolations: true,
+      verbose: true
     },
     done
   );

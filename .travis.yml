@@ -1,3 +1,4 @@
+sudo: required
 language: java
 jdk:
   - oraclejdk8
@@ -11,3 +12,5 @@ script:
 cache:
   directories:
     - node_modules
+addons:
+  chrome: stable

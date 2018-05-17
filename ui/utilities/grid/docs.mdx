@@ -111,7 +111,7 @@ A 12 column grid is our most used grid. Here's an overview of all the available 
   </Grid>
 </Example>
 
-Since width classnames are written in a human-friendly way, you may choose to write `slds-size_1-of-2` or `slds-size_6-of-12`, both outcomes are the same.
+Since width class names are written in a human-friendly way, you may choose to write `slds-size_1-of-2` or `slds-size_6-of-12`, both outcomes are the same.
 
 <Example title="Grid Column Width all fraction options">
   <Grid small className="slds-wrap">
@@ -152,7 +152,7 @@ You can easily add padding to your grid by applying `slds-gutters` to the `slds-
 
 In the above example, adding `slds-gutters` will give us our default gutter size of 24px (12px on each side).
 
-<Blockquote>
+<Blockquote type="note">
 The default <code className="doc">slds-gutters</code> is subject to change over time but is a great way to ensure when we upgrade, you upgrade.
 </Blockquote>
 
@@ -161,10 +161,10 @@ You can modify the width of the gutters between each column by using `slds-gutte
 You can also add different gutter widths to your columns by using a spacing utility and adding it to the `slds-col` element (e.g. `slds-p-location_size-*`). The "location" can be __left__, __right__, __top__, __bottom__, __vertical__, __horizontal__ or __around__. The "size" can be __xxx-small__ (2px), __xx-small__ (4px), __x-small__ (8px), __small__ (12px), __medium__ (16px), __large (24px)__, __x-large__ (32px) or __xx-large__ (48px).
 
 <Example title="Grid Column Gutters 2 col utilities">
-<Grid>
-  <Column className="slds-p-horizontal_medium">1</Column>
-  <Column className="slds-p-horizontal_medium">2</Column>
-</Grid>
+  <Grid>
+    <Column className="slds-p-horizontal_medium">1</Column>
+    <Column className="slds-p-horizontal_medium">2</Column>
+  </Grid>
 </Example>
 
 The above example adds gutters of 32px (16px on each side) in between each column.
@@ -175,6 +175,36 @@ You'll notice the 16px space on the left and right of your container created by 
   <Grid className="slds-grid_pull-padded-medium">
     <Column className="slds-p-horizontal_medium">1</Column>
     <Column className="slds-p-horizontal_medium">2</Column>
+  </Grid>
+</Example>
+
+### Direct Columns Only
+
+By default, `slds-gutters` will apply to _any_ column nested within the grid. If you only want **direct** child columns to receive gutters, use the `slds-gutters_direct` class.
+
+You can modify the width of the gutters between each column by using `slds-gutters_direct-x-small` (16px), `slds-gutters_direct-small` (24px), `slds-gutters_direct-medium` (32px), `slds-gutters_direct-large` (48px), and `slds-gutters_direct-x-large` (64px).
+
+<Example title="Grid Direct Column Gutters">
+  <Grid className="slds-gutters_direct">
+    <Column>1</Column>
+      <div className="slds-grid">
+        <Column>Nested Column 1</Column>
+        <Column>Nested Column 2</Column>
+      </div>
+    <Column>3</Column>
+  </Grid>
+</Example>
+
+Below is the same example without using the `slds-gutters_direct` class:
+
+<Example title="Grid All Children Column Gutters">
+  <Grid className="slds-gutters">
+    <Column>1</Column>
+      <div className="slds-grid">
+        <Column>Nested Column 1</Column>
+        <Column>Nested Column 2</Column>
+      </div>
+    <Column>3</Column>
   </Grid>
 </Example>
 

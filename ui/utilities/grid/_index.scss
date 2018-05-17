@@ -209,8 +209,23 @@
 }
 
 /**
- * @summary Apply 48px gutters to each grid column when you add this class to an `slds-grid` element
+ * @summary Apply 32px gutters to each grid column when you add this class to an `slds-grid` element
  * @selector .slds-gutters_x-large
+ * @modifier
+ */
+.slds-gutters_x-large {
+  margin-right: ($spacing-x-large * -1);
+  margin-left: ($spacing-x-large * -1);
+
+  .slds-col {
+    padding-right: $spacing-x-large;
+    padding-left: $spacing-x-large;
+  }
+}
+
+/**
+ * @summary Apply 48px gutters to each grid column when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_xx-large
  * @modifier
  */
 .slds-gutters_xx-large {
@@ -224,18 +239,138 @@
 }
 
 /**
- * @summary Apply 32px gutters to each grid column when you add this class to an `slds-grid` element
- * @selector .slds-gutters_xx-large
+ * @summary Apply 12px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct
  * @modifier
  */
-.slds-gutters_x-large {
+.slds-gutters_direct {
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
+}
+
+.slds-gutters_direct > .slds-col {
+  padding-right: $spacing-small;
+  padding-left: $spacing-small;
+}
+
+/**
+ * @summary Apply 2px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-xxx-small
+ * @modifier
+ */
+.slds-gutters_direct-xxx-small {
+  margin-right: ($spacing-xxx-small * -1);
+  margin-left: ($spacing-xxx-small * -1);
+}
+
+.slds-gutters_direct-xxx-small > .slds-col {
+  padding-right: $spacing-xxx-small;
+  padding-left: $spacing-xxx-small;
+}
+
+/**
+ * @summary Apply 4px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-xx-small
+ * @modifier
+ */
+.slds-gutters_direct-xx-small {
+  margin-right: ($spacing-xx-small * -1);
+  margin-left: ($spacing-xx-small * -1);
+}
+
+.slds-gutters_direct-xx-small > .slds-col {
+  padding-right: $spacing-xx-small;
+  padding-left: $spacing-xx-small;
+}
+
+/**
+ * @summary Apply 8px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-x-small
+ * @modifier
+ */
+.slds-gutters_direct-x-small {
+  margin-right: ($spacing-x-small * -1);
+  margin-left: ($spacing-x-small * -1);
+}
+
+.slds-gutters_direct-x-small > .slds-col {
+  padding-right: $spacing-x-small;
+  padding-left: $spacing-x-small;
+}
+
+/**
+ * @summary Apply 12px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-small
+ * @modifier
+ */
+.slds-gutters_direct-small {
+  margin-right: ($spacing-small * -1);
+  margin-left: ($spacing-small * -1);
+}
+
+.slds-gutters_direct-small > .slds-col {
+  padding-right: $spacing-small;
+  padding-left: $spacing-small;
+}
+
+/**
+ * @summary Apply 16px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-medium
+ * @modifier
+ */
+.slds-gutters_direct-medium {
+  margin-right: ($spacing-medium * -1);
+  margin-left: ($spacing-medium * -1);
+}
+
+.slds-gutters_direct-medium > .slds-col {
+  padding-right: $spacing-medium;
+  padding-left: $spacing-medium;
+}
+
+/**
+ * @summary Apply 24px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-large
+ * @modifier
+ */
+.slds-gutters_direct-large {
+  margin-right: ($spacing-large * -1);
+  margin-left: ($spacing-large * -1);
+}
+
+.slds-gutters_direct-large > .slds-col {
+  padding-right: $spacing-large;
+  padding-left: $spacing-large;
+}
+
+/**
+ * @summary Apply 32px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-x-large
+ * @modifier
+ */
+.slds-gutters_direct-x-large {
   margin-right: ($spacing-x-large * -1);
   margin-left: ($spacing-x-large * -1);
+}
 
-  .slds-col {
-    padding-right: $spacing-x-large;
-    padding-left: $spacing-x-large;
-  }
+.slds-gutters_direct-x-large > .slds-col {
+  padding-right: $spacing-x-large;
+  padding-left: $spacing-x-large;
+}
+
+/**
+ * @summary Apply 48px gutters to only direct column children when you add this class to an `slds-grid` element
+ * @selector .slds-gutters_direct-xx-large
+ * @modifier
+ */
+.slds-gutters_direct-xx-large {
+  margin-right: ($spacing-xx-large * -1);
+  margin-left: ($spacing-xx-large * -1);
+}
+
+.slds-gutters_direct-xx-large > .slds-col {
+  padding-right: $spacing-xx-large;
+  padding-left: $spacing-xx-large;
 }
 
 /**

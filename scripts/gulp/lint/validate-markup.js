@@ -9,6 +9,7 @@ import _ from 'lodash';
 import path from 'path';
 import through from 'through2';
 import Vinyl from 'vinyl';
+import PluginError from 'plugin-error';
 
 import getComments from '../../ui/comments';
 
@@ -56,6 +57,15 @@ const report = validate => {
     const report = renderReport(fullReport, count);
     const json = JSON.stringify(report, null, 2);
     printToConsole(json, 'Full info in .reports/validate.json');
+    if (report.total > 0) {
+      throw new Error(
+        new PluginError(
+          'Style restrictions',
+          `Encountered ${report.total} style restriction errors`,
+          { showStack: false }
+        )
+      );
+    }
     this.push(
       new Vinyl({
         path: 'validations.json',

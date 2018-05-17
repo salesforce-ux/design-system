@@ -6,6 +6,15 @@
 // that doesn't exist in Communities to add a card look in different
 // circumstances. It can also be used to combine several cards into a one
 // card look. This class does not react to the .slds-card_boundary.
+
+/**
+ * @summary Used to combine several cards into a single card look
+ *
+ * @name wrapper
+ * @selector .slds-card-wrapper
+ * @restrict div
+ * @variant
+ */
 .slds-card-wrapper {
   padding: $card-wrapper-spacing;
   background: $card-color-background;
@@ -44,7 +53,12 @@
 .slds-modal,
 .slds-tabs_default,
 .slds-tabs--default {
-
+  /**
+   * @summary Used to bring back the border on a card when needed
+   *
+   * @selector .slds-card_boundary
+   * @restrict .slds-card
+   */
   .slds-card_boundary {
     border: $border-width-thin solid $card-color-border;
     border-radius: $border-radius-medium;

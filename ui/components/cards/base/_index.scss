@@ -25,6 +25,12 @@
     margin-top: $card-spacing-margin;
   }
 
+  /**
+   * @summary Used to add padding to the left and right sides of a card's body content
+   *
+   * @selector .slds-card__body_inner
+   * @restrict .slds-card__body
+   */
   &__body_inner,
   &__body--inner {
     padding: $card-body-padding;
@@ -41,6 +47,12 @@
     margin: $card-header-margin;
   }
 
+  /**
+   * @summary Used to style the header title when it is a link
+   *
+   * @selector .slds-card__header-link
+   * @restrict .slds-card__header a
+   */
   &__header-link {
     color: inherit;
     font-weight: $card-font-weight;

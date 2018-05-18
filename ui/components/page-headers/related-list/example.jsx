@@ -2,12 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import BreadCrumbs, { Crumb } from '../../breadcrumbs/index.react';
+import BreadCrumbs from '../../breadcrumbs/index.react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
+const { Crumb } = BreadCrumbs;
 
 export const RelatedList = props => (
-  <div className="slds-page-header">
+  <div className="slds-page-header slds-page-header_related-list">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <BreadCrumbs className="slds-m-bottom_xx-small">

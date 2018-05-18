@@ -5,18 +5,22 @@ import createHelpers from '../../../../jest.helpers';
 import { PageHeader } from '../base/example';
 import { ObjectHome } from '../object-home/example';
 import { RecordHome } from '../record-home/example';
+import { RelatedList } from '../related-list/example';
 import { RecordHomeVertical } from '../record-home-vertical/example';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('renders a page header', () => {
-  xit('renders base page header', () => matchesMarkupAndStyle(<PageHeader />));
+  it('renders base page header', () => matchesMarkupAndStyle(<PageHeader />));
 
-  xit('renders object home page header', () =>
+  it('renders object home page header', () =>
     matchesMarkupAndStyle(<ObjectHome />));
 
-  xit('renders record home page header', () =>
+  it('renders record home page header', () =>
     matchesMarkupAndStyle(<RecordHome />));
 
-  xit('renders vertical record home page header', () =>
+  it('renders vertical record home page header', () =>
     matchesMarkupAndStyle(<RecordHomeVertical />));
+
+  it('renders related list home page header', () =>
+    matchesMarkupAndStyle(<RelatedList />));
 });

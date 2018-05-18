@@ -3,6 +3,19 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release [2.6.1] - May 18, 2018**
+
+## Fixes
+
+**[Form Element](https://www.lightningdesignsystem.com/components/form-element/#Compound)**
+- Removed margin if compound field is found inside of a stacked form ([0d3e752](https://github.com/salesforce-ux/design-system/commit/0d3e752))
+
+**[Grid](https://www.lightningdesignsystem.com/utilities/grid/)**
+- Adjusted docs to avoid confusion on columns and vertical alignment ([1b17639](https://github.com/salesforce-ux/design-system/commit/1b17639))
+
+**[Tabs](https://www.lightningdesignsystem.com/components/tabs/)**
+- Fixed incorrect link to Vertical Tabs component in Tabs documentation ([#548](https://github.com/salesforce-ux/design-system/issues/548))
+
 ## **Release [2.6.0] - May 4, 2018**
 May the 4th be with you!
 

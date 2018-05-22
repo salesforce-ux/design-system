@@ -99,5 +99,9 @@
 
   &[aria-pressed="true"] {
     background-color: $color-background-row-selected;
+
+    .slds-text-link {
+      color: $color-text-link-primary-active;
+    }
   }
 }

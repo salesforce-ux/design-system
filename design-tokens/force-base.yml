@@ -4,12 +4,12 @@
 imports:
 - ./spacing.yml
 - ./font-size.yml
+- ./line-height.yml
 - ./force-base/spacing.yml
 - ./force-base/sizing.yml
 - ./force-base/fill.yml
 - ./force-base/font-weight.yml
 - ./force-base/font-size.yml
-- ./force-base/line-height.yml
 - ./force-base/font-family.yml
 - ./force-base/border-radius.yml
 - ./force-base/border-color.yml

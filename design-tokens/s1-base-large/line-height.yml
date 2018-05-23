@@ -11,3 +11,6 @@ props:
   LINE_HEIGHT_TEXT:
     value: '1.5'
     comment: Unitless line-heights for reusability
+  VAR_LINE_HEIGHT_TEXT:
+    value: '1.5'
+    comment: Variable unitless line-heights for reusability

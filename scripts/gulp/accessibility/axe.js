@@ -22,7 +22,8 @@ export default (paths, done) =>
         '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved',
       urls: paths,
       showOnlyViolations: true,
-      verbose: true
+      verbose: true,
+      errorOnViolation: true
     },
     done
   );

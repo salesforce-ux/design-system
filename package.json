@@ -68,7 +68,8 @@
     "glob": "7.1.1",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "3.1.1",
-    "gulp-axe-webdriver": "2.1.0",
+    "gulp-axe-webdriver":
+      "git@github.com:SiTaggart/gulp-axe-webdriver.git#feat/error-on-violation",
     "gulp-cached": "1.1.1",
     "gulp-cli": "2.0.1",
     "gulp-concat": "2.6.1",

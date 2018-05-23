@@ -147,6 +147,16 @@
 }
 
 /**
+ * @summary Color of text for destructive actions
+ *
+ * @selector .slds-text-color_destructive
+ * @modifier
+ */
+.slds-text-color_destructive {
+  color: $color-text-destructive;
+}
+
+/**
  * @summary Success color of text
  *
  * @selector .slds-text-color_success

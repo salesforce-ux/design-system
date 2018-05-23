@@ -137,6 +137,13 @@ describe('renders text utilities', () => {
       </div>
     ));
 
+  it('renders destructive text color', () =>
+    matchesMarkupAndStyle(
+      <div className="slds-text-color_destructive">
+        The quick brown fox jumps over the lazy dog.
+      </div>
+    ));
+
   it('renders inversed text color', () =>
     matchesMarkupAndStyle(
       <div style={{ padding: '0.5rem', background: '#16325c' }}>

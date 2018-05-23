@@ -135,6 +135,11 @@ export let examples = [
     element: <Text className="slds-text-color_error" />
   },
   {
+    id: 'text-color-destructive',
+    label: 'Color - Destructive Actions',
+    element: <Text className="slds-text-color_destructive" />
+  },
+  {
     id: 'text-color-inverse',
     label: 'Color - Inverse',
     element: (

@@ -2,8 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Truncate from '../../../shared/truncate/index.react';
-import Heading from '../../heading/index.react';
 import ButtonIcon from '../../button-icons/';
 import MediaObject from '../../../utilities/media-objects/index.react';
 import SvgIcon from '../../../shared/svg-icon';
@@ -25,8 +23,13 @@ export const RecordHomeVertical = props => (
             figureLeft={image}
             className="slds-no-space slds-has-divider_bottom-space"
           >
-            <h1 className="slds-page-header__title slds-align-middle">
-              Record Title
+            <h1 className="slds-align-middle">
+              <span
+                className="slds-page-header__title slds-truncate slds-show"
+                title="Record Title"
+              >
+                Record Title
+              </span>
             </h1>
           </MediaObject>
         </div>

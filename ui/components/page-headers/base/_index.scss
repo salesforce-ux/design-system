@@ -24,11 +24,163 @@
 }
 
 /**
- * Page title (header text).
+ * @summary Used for creating rows in a page header
+ *
+ * @selector .slds-page-header__row
+ * @restrict .slds-page-header div
+ */
+.slds-page-header__row {
+  display: flex;
+}
+
+/**
+ * @summary Used to create rows with gutters in the page header
+ *
+ * @selector .slds-page-header__row_gutters
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__row_gutters {
+  margin-left: ($spacing-medium * -1);
+  margin-right: ($spacing-medium * -1);
+}
+
+/**
+ * @summary Used to create a column containing the page title
+ *
+ * @selector .slds-page-header__col_title
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__col-title {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/**
+ * @summary Used to create a column containing the page actions
+ *
+ * @selector .slds-page-header__col_actions
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__col-actions {
+  align-self: flex-start;
+  flex: none;
+  padding-bottom: $spacing-xx-small;
+  vertical-align: top;
+}
+
+/**
+ * @summary Used to create a column containing the page meta data
+ *
+ * @selector .slds-page-header__col_meta
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__col-meta {
+  align-self: center;
+  flex: 1 1 auto;
+  vertical-align: middle;
+}
+
+/**
+ * @summary Used to create a column containing the page controls
+ *
+ * @selector .slds-page-header__col_controls
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__col-controls {
+  align-self: flex-end;
+  flex: none;
+  vertical-align: bottom;
+}
+
+/**
+ * @summary Used to create a column containing the page record details
+ *
+ * @selector .slds-page-header__col_controls
+ * @restrict .slds-page-header__row
+ */
+.slds-page-header__col-details {
+  flex: 1 1 auto;
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+  max-width: 100%;
+}
+
+/**
+ * @summary Holds all the elements that make up the overall page name
+ *
+ * @selector .slds-page-header__name
+ * @restrict .slds-page-header div
+ */
+
+.slds-page-header__name {
+  display: inline-flex;
+  padding-right: $spacing-x-small;
+  max-width: 100%;
+
+  h1 {
+    line-height: 1;
+  }
+}
+
+/**
+ * @summary Used to contain the page name title
+ *
+ * @selector .slds-page-header__name-title
+ * @restrict .slds-page-header__name div
+ */
+
+.slds-page-header__name-title {
+  @include truncate;
+}
+
+/**
+ * @summary Used to position the list view switcher
+ *
+ * @selector .slds-page-header__name-switcher
+ * @restrict .slds-page-header__name div
+ */
+
+.slds-page-header__name-switcher {
+  align-self: flex-end;
+  margin: 0 0 $spacing-xxx-small $spacing-xxx-small;
+
+  .slds-button__icon {
+    fill: $color-text-default;
+  }
+}
+
+/**
+ * @summary Used to display the meta-text related to the page name
+ *
+ * @selector .slds-page-header__name-meta
+ * @restrict .slds-page-header p
+ */
+
+.slds-page-header__name-meta {
+  @include truncate;
+  font-size: $font-size-small;
+  padding-right: $spacing-x-small;
+}
+
+
+/**
+ * @summary Contains the page header meta text
+ *
+ * @selector .slds-page-header__meta-text
+ * @restrict .slds-page-header p
+ */
+
+.slds-page-header__meta-text {
+  font-size: $font-size-4;
+}
+
+/**
+ * @sumamry Used to display the main page heading title
  *
  * @selector .slds-page-header__title
- * @restrict .slds-page-header h1
+ * @restrict .slds-page-header h1 span
  */
+
 .slds-page-header__title {
   font-size: $var-font-size-8;
   font-weight: $page-header-title-font-weight;
@@ -37,6 +189,28 @@
   .slds-icon {
     fill: currentColor;
   }
+}
+
+/**
+ * @summary Used to create a row of page header controls
+ *
+ * @selector .slds-page-header__controls
+ * @restrict .slds-page-header div
+ */
+
+.slds-page-header__controls {
+  display: flex;
+}
+
+/**
+ * @summary Used to create spacing between each page header control
+ *
+ * @selector .slds-page-header__control
+ * @restrict .slds-page-header div
+ */
+
+.slds-page-header__control {
+  margin-left: $spacing-xx-small;
 }
 
 @import 'blame';

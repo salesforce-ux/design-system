@@ -146,6 +146,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
+ * @summary Changes the icon fill color to match the default state
+ *
  * @selector .slds-icon-text-default
  * @restrict .slds-icon
  * @modifier
@@ -156,6 +158,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
+ * @summary Changes the icon fill color to match the warning state
+ *
  * @selector .slds-icon-text-warning
  * @restrict .slds-icon
  * @modifier
@@ -166,6 +170,20 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 }
 
 /**
+ * @summary Changes the icon fill color to match the success state
+ *
+ * @selector .slds-icon-text-success
+ * @restrict .slds-icon
+ * @modifier
+ * @group color
+ */
+.slds-icon-text-success {
+  fill: $color-text-success;
+}
+
+/**
+ * @summary Changes the icon fill color to match the error state
+ *
  * @selector .slds-icon-text-error
  * @restrict .slds-icon
  * @modifier

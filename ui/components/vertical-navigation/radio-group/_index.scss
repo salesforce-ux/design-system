@@ -9,7 +9,6 @@
  * @variant
  * @release 2.5.0
  */
-
 .slds-nav-vertical__item {
 
   [type="radio"] {
@@ -24,8 +23,7 @@
 
     &:focus + .slds-nav-vertical__action {
       /**
-       * Used for styling the radio button
-       *
+       * @summary Used for styling the radio button
        * @selector .slds-nav-vertical_radio-faux
        * @restrict .slds-nav-vertical__action span
        */

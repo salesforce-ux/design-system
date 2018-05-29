@@ -7,6 +7,7 @@
  *
  * Only Trailhead Connected Mats may have the Trailhead font for the header.
  *
+ * @summary Creates Trailhead Connected Welcome Mat
  * @name trailhead-connected
  * @selector .slds-welcome-mat_trailhead
  * @restrict .slds-welcome-mat
@@ -14,9 +15,7 @@
  */
 
 /**
- * @summary Badge container for Welcome Mat Trailhead Progress Info.
- * Overrides properties for the check icon, specific for this variant.
- *
+ * @summary Badge container for Welcome Mat Trailhead Progress Info. Overrides properties for the check icon, specific for this variant.
  * @selector .slds-welcome-mat__info-badge-container
  * @restrict .slds-welcome-mat__info-progress div
  */
@@ -35,7 +34,6 @@
 
 /**
  * @summary Badge for the Trailhead Progress Info.
- *
  * @selector .slds-welcome-mat__info-badge
  * @restrict .slds-welcome-mat__info-badge-container img
  */
@@ -44,11 +42,12 @@
 }
 
 /**
+ * @name progress-complete
  * @summary Modifier for Completed progress. Shows completed checkmark.
- *
  * @selector .slds-welcome-mat__info-progress_complete
  * @restrict .slds-welcome-mat__info-progress
  * @modifier
+ * @group state
  */
 .slds-welcome-mat__info-progress_complete {
 

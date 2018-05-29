@@ -3,7 +3,6 @@
 
 /**
  * @summary Welcome Mat component
- *
  * @name base
  * @selector .slds-welcome-mat
  * @restrict section
@@ -43,7 +42,6 @@
 
 /**
  * @summary Content container for the whole Welcome Mat
- *
  * @selector .slds-welcome-mat__content
  * @restrict .slds-welcome-mat .slds-modal__content
  */
@@ -54,7 +52,6 @@
 
 /**
  * @summary Container element for the informational side of the Welcome Mat
- *
  * @selector .slds-welcome-mat__info
  * @restrict .slds-welcome-mat__content div
  */
@@ -72,7 +69,6 @@
 
 /**
  * @summary Content container for the informational side of the Welcome Mat. Centers in container space.
- *
  * @selector .slds-welcome-mat__info-content
  * @restrict .slds-welcome-mat__info div
  */
@@ -83,7 +79,6 @@
 
 /**
  * @summary Title element for the informational side of the Welcome Mat
- *
  * @selector .slds-welcome-mat__info-title
  * @restrict .slds-welcome-mat__info-content h2
  */
@@ -96,7 +91,6 @@
 
 /**
  * @summary Description container for the informational side of the Welcome Mat
- *
  * @selector .slds-welcome-mat__info-description
  * @restrict .slds-welcome-mat__info-content p, .slds-welcome-mat__info-content div
  */
@@ -106,7 +100,6 @@
 
 /**
  * @summary Text description of walkthrough progress
- *
  * @selector .slds-welcome-mat__info-progress
  * @restrict .slds-welcome-mat__info-content div
  */
@@ -116,7 +109,6 @@
 
 /**
  * @summary Container element for the Actions side of the Welcome Mat.
- *
  * @selector .slds-welcome-mat__tiles
  * @restrict .slds-welcome-mat__content div
  */
@@ -126,9 +118,7 @@
 }
 
 /**
- * @summary Welcome Mat Tile item. Shows an actionable step a user can take
- * to complete a greater objective. Based on a SLDS Visual Picker.
- *
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take to complete a greater objective. Based on a SLDS Visual Picker.
  * @selector .slds-welcome-mat__tile
  * @restrict .slds-welcome-mat__tiles .slds-box
  */
@@ -149,7 +139,6 @@
 
 /**
  * @summary Title element for Welcome Mat Tile item.
- *
  * @selector .slds-welcome-mat__tile-title
  * @restrict .slds-welcome-mat__tile h3
  */
@@ -159,7 +148,6 @@
 
 /**
  * @summary Description element for Welcome Mat Tile item.
- *
  * @selector .slds-welcome-mat__tile-description
  * @restrict .slds-welcome-mat__tile p
  */
@@ -171,7 +159,6 @@
 
 /**
  * @summary Icon Container for Welcome Mat Tile item.
- *
  * @selector .slds-welcome-mat__tile-icon-container
  * @restrict .slds-welcome-mat__tile div
  */
@@ -180,11 +167,12 @@
 }
 
 /**
+ * @name tile-complete
  * @summary Complete modifier class for Welcome Mat Tile item.
- *
  * @selector .slds-welcome-mat__tile_complete
  * @restrict .slds-welcome-mat__tile
  * @modifier
+ * @group state
  */
 .slds-welcome-mat__tile_complete {
 
@@ -193,12 +181,6 @@
   }
 }
 
-/**
- * @summary Icon Check mark for completed Welcome Mat Tiles.
- *
- * @selector .slds-welcome-mat__icon-check
- * @restrict .slds-welcome-mat__tile-icon-container svg, .slds-welcome-mat__info-badge-container svg
- */
 .slds-welcome-mat .slds-icon-action-check {
   position: absolute;
   bottom: -($welcome-mat-complete-icon-size / 2);

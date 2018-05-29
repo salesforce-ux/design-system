@@ -26,13 +26,15 @@ export let Toast = props => {
       >
         <span className="slds-assistive-text">{type || 'info'}</span>
         {children}
-        <ButtonIcon
-          className="slds-notify__close slds-button_icon-inverse"
-          iconClassName="slds-button__icon_large"
-          symbol="close"
-          assistiveText="Close"
-          title="Close"
-        />
+        <div className="slds-notify__close">
+          <ButtonIcon
+            className="slds-button_icon-inverse"
+            iconClassName="slds-button__icon_large"
+            symbol="close"
+            assistiveText="Close"
+            title="Close"
+          />
+        </div>
       </div>
     </div>
   );

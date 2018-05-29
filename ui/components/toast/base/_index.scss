@@ -2,6 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
+ * @summary Initializes a toast container
+ *
  * @name base
  * @selector .slds-notify_container
  * @restrict div
@@ -19,11 +21,9 @@
 }
 
 /**
- * Initializes toast notification
- *
+ * @summary Initializes toast notification
  * @selector .slds-notify_toast
  * @restrict .slds-notify_container div
- * @required
  */
 .slds-notify_toast,
 .slds-notify--toast {
@@ -41,11 +41,9 @@
   justify-content: flex-start;
 
   /**
-   * Alert close button
-   *
+   * @summary Alert close button
    * @selector .slds-notify__close
-   * @restrict .slds-notify_toast button
-   * @required
+   * @restrict .slds-notify_toast div
    */
   .slds-notify__close {
     float: right;

@@ -74,11 +74,13 @@
 }
 
 /**
+ * @summary Initializes a slds tree
  * @selector .slds-tree
  * @restrict .slds-tree_container ul, table
  */
 .slds-tree {
   /**
+   * @summary Initializes a slds item
    * @selector .slds-tree__item
    * @restrict .slds-tree div, .slds-tree th
    */
@@ -88,11 +90,12 @@
     padding-left: $spacing-medium;
 
     /**
-     * When a branch doesn't have children, apply slds-is-disabled to the button icon
-     *
+     * @name item-disabled
+     * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
      * @selector .slds-is-disabled
      * @restrict .slds-tree__item button
      * @modifier
+     * @group interactions
      */
     .slds-is-disabled {
       visibility: hidden;
@@ -115,12 +118,13 @@
     };
 
     /**
-     * Hover state for a tree item
-     *
+     * @name item-hovered
+     * @summary Hover state for a tree item
      * @selector .slds-is-hovered
      * @restrict .slds-tree__item
      * @notes Class should be applied via Javascript
      * @modifier
+     * @group interactions
      */
     &.slds-is-hovered,
     &:hover {
@@ -130,8 +134,7 @@
   }
 
   /**
-   * The label text of a tree item or tree branch
-   *
+   * @summary The label text of a tree item or tree branch
    * @selector .slds-tree__item-label
    * @restrict .slds-tree__item span
    */
@@ -140,8 +143,7 @@
   }
 
   /**
-   * The meta text or secondary text of a tree item
-   *
+   * @summary The meta text or secondary text of a tree item
    * @selector .slds-tree__item-meta
    * @restrict .slds-tree__item span
    */
@@ -152,8 +154,7 @@
   }
 
   /**
-   * Styles the focus and selected state for any tree item that has role="treeitem"
-   *
+   * @summary Styles the focus and selected state for any tree item that has role="treeitem"
    * @selector [role="treeitem"]
    * @restrict .slds-tree li
    */
@@ -184,12 +185,14 @@
   }
 
   /**
-   * Selected state for a tree item
-   *
+   * @name item-selected
+   * @summary Selected state for a tree item
    * @selector .slds-is-selected
    * @restrict .slds-tree__item
    * @notes Class should be applied via Javascript
    * @modifier
+   * @deprecated
+   * @group interactions
    */
   @include deprecate('5.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
 
@@ -200,11 +203,13 @@
   };
 
   /**
-   * Focus state for a tree item
-   *
+   * @name item-focused
+   * @summary Focus state for a tree item
    * @selector .slds-is-focused
    * @restrict .slds-tree__item
    * @modifier
+   * @deprecated
+   * @group interactions
    */
   @include deprecate('5.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
 

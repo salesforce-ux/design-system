@@ -62,28 +62,44 @@
     }
 
     /**
+     * @name not-selected
      * @summary Non-selected state
      * @selector .slds-is-not-selected
      * @restrict .slds-visual-picker__figure > span
+     * @modifer
+     * @group interactions
      */
     &:checked ~ label .slds-is-not-selected {
       display: none;
     }
 
     /**
+     * @name selected
      * @summary Selected state
      * @selector .slds-is-selected
      * @restrict .slds-visual-picker__figure > span
+     * @modifer
+     * @group interactions
      */
     &:checked ~ label .slds-is-selected {
       display: block;
     }
 
+    /**
+     * @summary Icon within visual picker
+     * @selector .slds-visual-picker__icon
+     * @restrict .slds-visual-picker__figure
+     */
     &:checked ~ label .slds-visual-picker__icon {
       background-color: $color-brand;
       border: $border-width-thin solid $color-border-selection-hover;
     }
 
+    /**
+     * @summary Text within visual picker
+     * @selector .slds-visual-picker__text
+     * @restrict .slds-visual-picker__figure
+     */
     /* stylelint-disable max-nesting-depth */
     &:checked ~ label .slds-visual-picker__text {
       border: $border-width-thin solid $color-border-selection-hover;
@@ -158,6 +174,7 @@
 }
 
 /**
+ * @name medium
  * @summary Size modifier to adjust to the default size of medium
  * @selector .slds-visual-picker_medium
  * @restrict .slds-visual-picker
@@ -177,6 +194,7 @@
 }
 
 /**
+ * @name large
  * @summary Size modifier to adjust to the size of large
  * @selector .slds-visual-picker_large
  * @restrict .slds-visual-picker
@@ -194,7 +212,6 @@
     height: $size-small;
   }
 }
-
 
 /**
  * @summary Text area that sits outside the visual picker

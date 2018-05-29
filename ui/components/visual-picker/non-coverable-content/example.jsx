@@ -120,26 +120,3 @@ export let states = [
     )
   }
 ];
-
-export let examples = [
-  {
-    id: 'link',
-    label: 'Text link',
-    element: (
-      <div className="demo-only" style={{ width: '24rem' }}>
-        <VisualPickerMediaObject symbol="user">
-          <h2
-            className="slds-truncate slds-text-heading_small"
-            title="Share the knowledge"
-          >
-            Share the knowledge
-          </h2>
-          <p className="slds-m-top_small">
-            Harness your team's collective know-how with our powerful knowledge
-            base
-          </p>
-        </VisualPickerMediaObject>
-      </div>
-    )
-  }
-];

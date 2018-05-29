@@ -30,6 +30,8 @@
 }
 
 /**
+ * @name rise
+ * @summary Toggles on tooltip
  * @selector .slds-rise-from-ground
  * @restrict .slds-popover_tooltip
  * @modifier
@@ -47,6 +49,8 @@
 }
 
 /**
+ * @name fall
+ * @summary Toggles off tooltip
  * @selector .slds-fall-into-ground
  * @restrict .slds-popover_tooltip
  * @modifier
@@ -63,21 +67,53 @@
   will-change: transform;
 }
 
+/**
+ * @name bottom-to-top
+ * @summary Slides tooltip from bottom to top
+ * @selector .slds-slide-from-bottom-to-top
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group motion
+ */
 .slds-slide-from-bottom-to-top {
   transform: translateY(10%);
   will-change: transform;
 }
 
+/**
+ * @name top-to-bottom
+ * @summary Slides tooltip from top to bottom
+ * @selector .slds-slide-from-top-to-bottom
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group motion
+ */
 .slds-slide-from-top-to-bottom {
   transform: translateY(-10%);
   will-change: transform;
 }
 
+/**
+ * @name right-to-left
+ * @summary Slides tooltip from right to left
+ * @selector .slds-slide-from-right-to-left
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group motion
+ */
 .slds-slide-from-right-to-left {
   transform: translateX(5%);
   will-change: transform;
 }
 
+/**
+ * @name left-to-right
+ * @summary Slides tooltip from left to right
+ * @selector .slds-slide-from-left-to-right
+ * @restrict .slds-popover_tooltip
+ * @modifier
+ * @group motion
+ */
 .slds-slide-from-left-to-right {
   transform: translateX(-5%);
   will-change: transform;

@@ -167,7 +167,7 @@ export let states = [
         <Legend>Select an app</Legend>
         <FormElementControl>
           <VisualPicker
-            type="checkbox"
+            type="radio"
             icon
             sprite="utility"
             symbol="connected_apps"
@@ -175,7 +175,7 @@ export let states = [
             size="medium"
           />
           <VisualPicker
-            type="checkbox"
+            type="radio"
             disabled
             icon
             sprite="utility"

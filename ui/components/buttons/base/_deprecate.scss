@@ -10,3 +10,19 @@
     margin-left: $spacing-xx-small;
   }
 }
+
+/**
+ * @summary Creates a smaller button style
+ * @selector .slds-button_small
+ * @deprecated
+ */
+.slds-button_small,
+.slds-button--small {
+  @include deprecate('4.0.0', 'Small modifier doesnt do anything anymore since its value are the same as the default size') {
+    line-height: $line-height-button-small;
+    // Force icon-only buttons to be the same
+    // height as small buttons since they're SVG
+    // and line-height has no effect on them
+    min-height: $square-icon-medium-boundary;
+  }
+}

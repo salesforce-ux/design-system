@@ -8,7 +8,7 @@
  *
  * @name base
  * @selector .slds-timeline__item_expandable
- * @restrict .slds-timeline div
+ * @restrict div
  * @variant
  */
 .slds-timeline__item_expandable {
@@ -27,6 +27,7 @@
     margin-left: $border-width-thin;
   }
 
+  // Could be a problem - Use media_small?
   .slds-media__figure {
     margin-right: $spacing-xx-small;
     z-index: 1;
@@ -44,6 +45,11 @@
     margin-right: $spacing-xx-small;
   }
 
+  /**
+   * @summary Changes the layout of actions to become inlined with the title of a timeline item.
+   * @selector .slds-timeline__actions_inline
+   * @restrict .slds-timeline__actions
+   */
   .slds-timeline__actions_inline {
     flex-flow: row nowrap;
     align-items: center;
@@ -58,7 +64,6 @@
 
   /**
    * @summary Class to show and hide details
-   *
    * @selector .slds-timeline__item_details
    * @restrict .slds-timeline__item_expandable article
    */
@@ -70,8 +75,12 @@
   }
 
   /**
+   * @name expand
+   * @summary Toggles the visibility of the timeline item
    * @selector .slds-is-open
    * @restrict .slds-timeline__item_expandable
+   * @modifier
+   * @group visibility
    */
   &.slds-is-open {
 
@@ -90,6 +99,7 @@
 }
 
 /**
+ * @summary Applies line connector for a call timeline item
  * @selector .slds-timeline__item_call
  * @restrict .slds-timeline__item_expandable
  */
@@ -98,6 +108,7 @@
 }
 
 /**
+ * @summary Applies line connector for an email timeline item
  * @selector .slds-timeline__item_email
  * @restrict .slds-timeline__item_expandable
  */
@@ -106,6 +117,7 @@
 }
 
 /**
+ * @summary Applies line connector for an event timeline item
  * @selector .slds-timeline__item_event
  * @restrict .slds-timeline__item_expandable
  */
@@ -114,6 +126,7 @@
 }
 
 /**
+ * @summary Applies line connector for a task timeline item
  * @selector .slds-timeline__item_task
  * @restrict .slds-timeline__item_expandable
  */
@@ -122,6 +135,7 @@
 }
 
 /*
+ * @summary Provides hover feedback on each timeline item
  * @selector .slds-timeline__trigger
  * @restrict .slds-timeline__media_expandable div
  */
@@ -134,21 +148,18 @@
 }
 
 /**
- * Icon associated with timeline item
- *
+ * @summary Icon associated with timeline item
  * @selector .slds-timeline__icon
- * @restrict .slds-timeline__media .slds-media__figure, .slds-timeline__media .slds-icon_container, .slds-timeline__item_expandable .slds-icon_container
+ * @restrict .slds-timeline__item_expandable .slds-icon_container
  */
 .slds-timeline__icon {
   border: $border-width-thick solid #fff;
 }
 
 /**
- * Container for date and action overflow on the right of a timeline item
- *
+ * @summary Container for date and action overflow on the right of a timeline item
  * @selector .slds-timeline__actions
- * @restrict .slds-timeline__item div, .slds-timeline__trigger div
- * @notes This is directly inside the `.slds-media--reverse` > `.slds-media__figure`
+ * @restrict .slds-timeline__trigger div
  */
 .slds-timeline__actions {
   display: flex;
@@ -157,8 +168,7 @@
 }
 
 /**
- * Styles the date inside `.slds-timeline__actions`
- *
+ * @summary Styles the date inside `.slds-timeline__actions`
  * @selector .slds-timeline__date
  * @restrict .slds-timeline__actions p
  */
@@ -170,7 +180,6 @@
 
 /**
  * @summary Icon inside of actionable button within an expandable timeline item
- *
  * @selector .slds-timeline__details-action-icon
  * @restrict .slds-timeline__item_expandable svg
  */

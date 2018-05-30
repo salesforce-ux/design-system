@@ -9,7 +9,6 @@ import { TileMedia } from '../../tiles/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
-import { EinsteinHeader } from '../../einstein-header/base';
 
 const headerActionOverflow = (
   <button
@@ -289,23 +288,6 @@ export const WrappedCards = props => (
   </div>
 );
 
-export const EinsteinCard = props => (
-  <Card>
-    <EinsteinHeader
-      className="slds-card__header"
-      headerTitle="Einstein (10+)"
-      hasLink
-      actions={props.hasActions}
-      symbol={props.hasIcon && 'salesforce1'}
-    />
-    <CardBody hasPadding>Card Body</CardBody>
-    <CardFooter>
-      View All{' '}
-      <span className="slds-assistive-text">Einstein Recommendations</span>
-    </CardFooter>
-  </Card>
-);
-
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
@@ -361,25 +343,5 @@ export let examples = [
     id: 'nested-cards',
     label: 'Nested cards',
     element: <NestedCards />
-  },
-  {
-    id: 'card-wrapper',
-    label: 'Wrapped cards',
-    element: <WrappedCards />
-  },
-  {
-    id: 'einstein-base',
-    label: 'Einstein card',
-    element: <EinsteinCard />
-  },
-  {
-    id: 'einstein-with-icon',
-    label: 'Einstein card - with icon',
-    element: <EinsteinCard hasIcon />
-  },
-  {
-    id: 'einstein-with-icon-and-actions',
-    label: 'Einstein card - with icon and actions',
-    element: <EinsteinCard hasIcon hasActions />
   }
 ];

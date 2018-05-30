@@ -3,7 +3,6 @@
 
 /**
  * @summary Container that fixes the builder header to the top of the viewport, contains builder header element
- *
  * @name base
  * @selector .slds-builder-header_container
  * @restrict div
@@ -130,9 +129,11 @@
 }
 
 /**
+ * @name toolbar
  * @summary Builder header toolbar
  * @selector .slds-builder-toolbar
  * @restrict .slds-builder-header_container div
+ * @variant
  */
 .slds-builder-toolbar {
   display: flex;

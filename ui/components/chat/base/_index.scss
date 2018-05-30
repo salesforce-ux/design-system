@@ -6,7 +6,6 @@
  * It appears in the form of a "Log"
  *
  * @summary Root container of a chat session
- *
  * @name base
  * @selector .slds-chat
  * @restrict section[role="log"]
@@ -21,7 +20,6 @@
  * The chat payload should be displayed in the form of a list. Each item in the list has a number of vertical and horizontal spacing rules based on its type
  *
  * @summary Handles the display of chat items within a list
- *
  * @selector .slds-chat-list
  * @restrict .slds-chat ul
  */
@@ -31,7 +29,6 @@
 
 /**
  * @summary Handles spacing and direction of items in the list
- *
  * @selector .slds-chat-listitem
  * @restrict .slds-chat-list li
  */
@@ -42,7 +39,6 @@
 
 /**
  * @summary Modifier used to style outbound message list items
- *
  * @selector .slds-chat-listitem_outbound
  * @restrict .slds-chat-listitem
  * @modifier
@@ -52,16 +48,16 @@
 }
 
 /**
+ * @name inbound-message
  * @summary Modifier used to style inbound message list items
- *
  * @selector .slds-chat-listitem_inbound
  * @restrict .slds-chat-listitem
  * @modifier
+ * @group dialog
  */
 
 /**
  * @summary Selector to style sibling, same type message list items
- *
  * @selector .slds-chat-listitem_inbound + .slds-chat-listitem_inbound, .slds-chat-listitem_outbound + .slds-chat-listitem_outbound
  */
 .slds-chat-listitem_inbound + .slds-chat-listitem_inbound,
@@ -71,10 +67,8 @@
 
 /**
  * @summary Modifier used for spacing bookend items
- *
  * @selector .slds-chat-listitem_bookend
  * @restrict .slds-chat-listitem
- * @modifier
  */
 .slds-chat-listitem_bookend {
   margin: $spacing-medium 0;
@@ -86,10 +80,8 @@
 
 /**
  * @summary Modifier used for spacing event items
- *
  * @selector .slds-chat-listitem_event
  * @restrict .slds-chat-listitem
- * @modifier
  */
 .slds-chat-listitem_event {
   margin: $spacing-large 0;
@@ -98,15 +90,17 @@
 
 /**
  * @summary Used to style icons with a chat log
- *
  * @selector .slds-chat-icon
  * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container, .slds-chat-message__action .slds-icon_container
  */
 .slds-chat-icon {
   margin-right: $spacing-x-small;
 
-  .slds-icon {
-    fill: $color-text-weak;
+  @include deprecate('4.0', 'Please use slds-icon-text-default modifier for slds-icon') {
+
+    .slds-icon {
+      fill: $color-text-weak;
+    }
   }
 }
 
@@ -114,7 +108,6 @@
  * Chat logs are mainly made up of chat messages between an agent and a customer
  *
  * @summary styles the outter part of a chat message
- *
  * @selector .slds-chat-message
  * @restrict .slds-chat-listitem div
  */
@@ -124,10 +117,8 @@
 
 /**
  * @summary Used for when customer avatars are used in consequtive inbound messages to align the message body with the previous message
- *
  * @selector .slds-chat-message_faux-avatar
  * @restrict .slds-chat-message
- * @modifier
  */
 .slds-chat-message_faux-avatar {
   padding-left: ($spacing-x-large + $spacing-x-small);
@@ -135,7 +126,6 @@
 
 /**
  * @summary Used to style avatars in chat logs
- *
  * @selector .slds-chat-avatar
  * @restrict .slds-chat-message .slds-avatar
  */
@@ -146,7 +136,6 @@
 
 /**
  * @summary Used to style the avatar intials for chat
- *
  * @selector .slds-chat-avatar__intials
  * @restrict .slds-chat-avatar .slds-avatar__initials
  * @deprecated
@@ -166,14 +155,12 @@
 
 /**
  * @summary Used to contain and align chat messages with their avatars
- *
  * @selector .slds-chat-message__body
  * @restrict .slds-chat-message div
  */
 
 /**
  * @summary Used to style the chat text from agent or customer
- *
  * @selector .slds-chat-message__text
  * @restrict .slds-chat-message__body div
  */
@@ -206,10 +193,8 @@
 
 /**
  * @summary Used for any specific inbound text styling
- *
  * @selector .slds-chat-message__text_inbound
  * @restrict .slds-chat-message__text
- * @modifier
  */
 .slds-chat-message__text_inbound {
   background-color: $chat-message-color-background-inbound;
@@ -219,10 +204,8 @@
 
 /**
  * @summary Used for any specific outbound text styling
- *
  * @selector .slds-chat-message__text_outbound
  * @restrict .slds-chat-message__text
- * @modifier
  */
 .slds-chat-message__text_outbound {
   background-color: $chat-message-color-background-outbound;
@@ -230,10 +213,8 @@
 
 /**
  * @summary Used for any specific outbound (from another agent) text styling
- *
  * @selector .slds-chat-message__text_outbound-agent
  * @restrict .slds-chat-message__text
- * @modifier
  */
 .slds-chat-message__text_outbound-agent {
   background-color: $chat-message-color-background-outbound-agent;
@@ -249,11 +230,12 @@
 }
 
 /**
+ * @name unsupported
  * @summary Used for an inbound message that is not a supported message type
- *
  * @selector .slds-chat-message__text_unsupported-type
  * @restrict .slds-chat-message__text
  * @modifier
+ * @group feedback
  */
 .slds-chat-message__text_unsupported-type {
   background-color: $chat-message-color-background-status;
@@ -261,26 +243,35 @@
   border: $color-border-warning $border-width-thin solid;
   color: $color-text-default;
 
-  .slds-chat-icon.slds-icon-utility-warning {
+  @include deprecate('4.0', 'Please use slds-icon-text-warning modifier for slds-icon') {
 
-    .slds-icon {
-      fill: $color-text-warning;
+    .slds-chat-icon.slds-icon-utility-warning {
+
+      .slds-icon {
+        fill: $color-text-warning;
+      }
     }
   }
 }
 
 /**
+ * @name delivery-failure
  * @summary Used for an inbound message that fails to deliver
- *
  * @selector .slds-chat-message__text_delivery-failure
  * @restrict .slds-chat-message__text
  * @modifier
+ * @group feedback
  */
 .slds-chat-message__text_delivery-failure {
   background-color: $chat-message-color-background-status;
   border: $color-border-destructive $border-width-thin solid;
   color: $color-text-default;
 
+  /**
+   * @summary Element that contains feedback for why inbound message failed
+   * @selector .slds-chat-message__text_delivery-failure-reason
+   * @restrict .slds-chat-message__text_delivery-failure [role="alert"]
+   */
   .slds-chat-message__text_delivery-failure-reason {
     display: flex;
     padding: $spacing-x-small $spacing-x-small 0;
@@ -289,17 +280,19 @@
     border-top: $color-border-destructive $border-width-thin solid;
   }
 
-  .slds-chat-icon.slds-icon-utility-error {
+  @include deprecate('4.0', 'Please use slds-icon-text-error modifier for slds-icon') {
 
-    .slds-icon {
-      fill: $color-text-error;
+    .slds-chat-icon.slds-icon-utility-error {
+
+      .slds-icon {
+        fill: $color-text-error;
+      }
     }
   }
 }
 
 /**
  * @summary Used when sneak peek is enabled for customer messages
- *
  * @selector .slds-chat-message__text_sneak-peek
  * @restrict .slds-chat-message__text
  * @modifier
@@ -315,7 +308,6 @@
 
 /**
  * @summary Used to style chat message meta data
- *
  * @selector .slds-chat-message__meta
  * @restrict .slds-chat-message div
  */
@@ -327,7 +319,6 @@
 
 /**
  * @summary Used to style chat message resend action
- *
  * @selector .slds-chat-message__action
  * @restrict .slds-chat-message .slds-button
  */
@@ -347,8 +338,7 @@
 
 
 /**
- * During any chat, certain events can occur which need to be displayed to the user
- *
+ * @summary During any chat, certain events can occur which need to be displayed to the user
  * @selector .slds-chat-event
  * @restrict .slds-chat-listitem div
  */
@@ -364,11 +354,12 @@
   width: 100%;
 
   /**
+    * @name error
     * @summary Modifier to indicate the event was an error
-    *
     * @selector .slds-has-error
     * @restrict .slds-chat-event[role="alert"]
     * @modifier
+    * @group feedback
     */
   &.slds-has-error {
     color: $color-text-error;
@@ -381,7 +372,6 @@
 
 /**
   * @summary Used to style the horizontal rules on an event
-  *
   * @selector .slds-chat-event__rule
   * @restrict .slds-chat-event div
   */
@@ -393,7 +383,6 @@
 
 /**
   * @summary Used for styling the event body text
-  *
   * @selector .slds-chat-event__body
   * @restrict .slds-chat-event div
   */
@@ -405,7 +394,6 @@
 
 /**
   * @summary Used to style any messages from an agent in the event
-  *
   * @selector .slds-chat-event__agent-message
   * @restrict .slds-chat-event div
   */
@@ -422,7 +410,6 @@
  * Chat sessions are started and stopped with bookends to the conversation
  *
  * @summary Used to style a chat bookend
- *
  * @selector .slds-chat-bookend
  * @restrict .slds-chat-listitem div
  */
@@ -439,11 +426,12 @@
 }
 
 /**
+ * @name stop
  * @summary Modifier for bookends which stop a chat session
- *
  * @selector .slds-chat-bookend_stop
  * @restrict .slds-chat-bookend
  * @modifier
+ * @group dialog
  */
 .slds-chat-bookend_stop {
   border-width: $border-width-thin 0 0;

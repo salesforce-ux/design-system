@@ -23,7 +23,7 @@ export let AppLauncherModal = props => (
     className="slds-modal_large slds-app-launcher"
     aria-labelledby="header43"
   >
-    <ModalHeader className="slds-app-launcher__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+    <ModalHeader className="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
       <h2 id="header43" className="slds-text-heading_medium">
         App Launcher
       </h2>

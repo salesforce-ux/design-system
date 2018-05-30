@@ -11,7 +11,11 @@
  */
 .slds-checkbox_add-button,
 .slds-checkbox--add-button {
-
+  /**
+   * @summary Creates a custom styled checkbox
+   * @selector .slds-checkbox_faux
+   * @restrict .slds-checkbox_add-button label
+   */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
     @include square($square-icon-medium-boundary);
@@ -52,7 +56,7 @@
     }
   }
 
-  input[type="checkbox"]:checked {
+  [type="checkbox"]:checked {
 
     ~ .slds-checkbox_faux,
     ~ .slds-checkbox--faux,
@@ -84,7 +88,7 @@
     }
   }
 
-  input[type="checkbox"]:focus {
+  [type="checkbox"]:focus {
 
     ~ .slds-checkbox_faux,
     ~ .slds-checkbox--faux,
@@ -95,7 +99,7 @@
     }
   }
 
-  input[type="checkbox"][disabled] {
+  [type="checkbox"][disabled] {
 
     ~ .slds-checkbox_faux,
     ~ .slds-checkbox--faux,

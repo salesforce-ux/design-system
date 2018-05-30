@@ -6,7 +6,7 @@
  *
  * @selector .slds-timeline__media
  * @restrict .slds-media
- * @support dev-ready
+ * @deprecated
  */
 .slds-timeline__media,
 .slds-media_timeline,
@@ -54,6 +54,7 @@
  * @name call
  * @selector .slds-timeline__media_call
  * @restrict .slds-timeline__media
+ * @deprecated
  */
 .slds-timeline__media_call:before,
 .slds-timeline__media--call:before {
@@ -64,6 +65,7 @@
  * @name email
  * @selector .slds-timeline__media_email
  * @restrict .slds-timeline__media
+ * @deprecated
  */
 .slds-timeline__media_email:before,
 .slds-timeline__media--email:before {
@@ -74,6 +76,7 @@
  * @name event
  * @selector .slds-timeline__media_event
  * @restrict .slds-timeline__media
+ * @deprecated
  */
 .slds-timeline__media_event:before,
 .slds-timeline__media--event:before {
@@ -84,6 +87,7 @@
  * @name task
  * @selector .slds-timeline__media_task
  * @restrict .slds-timeline__media
+ * @deprecated
  */
 .slds-timeline__media_task:before,
 .slds-timeline__media--task:before {

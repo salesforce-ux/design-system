@@ -35,11 +35,12 @@
 }
 
 /**
- * @summary Inverse badge component
- *
+ * @summary Change badge color to a dark with light text
  * @name inverse
  * @selector .slds-badge_inverse
  * @restrict .slds-badge
+ * @modifier
+ * @group color
  */
 .slds-badge_inverse {
   background-color: $badge-color-background-inverse;
@@ -47,11 +48,12 @@
 }
 
 /**
- * @summary Light badge with icon
- *
+ * @summary Change badge color to white with normal text
  * @name lightest
  * @selector .slds-badge_lightest
  * @restrict .slds-badge
+ * @modifier
+ * @group color
  */
 .slds-badge_lightest {
   border: $border-width-thin solid $color-border;

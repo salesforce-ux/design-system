@@ -1,0 +1,92 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Sets styles to search box, things like width and such
+ * @selector .slds-app-launcher__header-search
+ * @restrict .slds-app-launcher div
+ * @deprecated
+ */
+@include deprecate('4.0', 'Use slds-size_large instead of slds-app-launcher__header-search') {
+
+  .slds-app-launcher__header-search {
+    flex: 0 1 $size-large;
+    padding: 0 $spacing-medium;
+  }
+}
+
+/**
+ * @summary Defines the body region of the app launcher modal
+ * @selector .slds-app-launcher__content
+ * @restrict .slds-app-launcher div
+ * @deprecated
+ */
+@include deprecate('4.0', 'Use modal modifier slds-modal_stretch instead of slds-app-launcher__content') {
+
+  .slds-app-launcher__content {
+    flex: 1 1 auto;
+
+    .slds-section__title-action {
+      background: transparent;
+    }
+  }
+}
+
+/**
+ * @summary Tile card that containes the just app icon and title
+ * @selector .slds-app-launcher__tile_small
+ * @restrict .slds-app-launcher__tile
+ * @deprecated
+ */
+@include deprecate('4.0','Small tiles are no longer supported in app launcher') {
+
+  .slds-app-launcher__tile_small,
+  .slds-app-launcher__tile--small {
+    flex-direction: column;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+
+      .slds-app-launcher__tile-figure_small,
+      .slds-app-launcher__tile-figure--small {
+        border-color: $color-border-selection-hover;
+      }
+    }
+  }
+}
+
+/**
+ * @summary App image or icon of a small tile
+ * @selector .slds-app-launcher__tile-figure_small
+ * @restrict .slds-app-launcher__tile-figure
+ * @deprecated
+ */
+@include deprecate('4.0','Small tiles are no longer supported in app launcher') {
+
+  .slds-app-launcher__tile-figure_small,
+  .slds-app-launcher__tile-figure--small {
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+  }
+}
+
+/**
+ * @summary App title, no description
+ * @selector .slds-app-launcher__tile-body_small
+ * @restrict .slds-app-launcher__tile-body
+ * @deprecated
+ */
+@include deprecate('4.0','Small tiles are no longer supported in app launcher') {
+
+  .slds-app-launcher__tile-body_small,
+  .slds-app-launcher__tile-body--small {
+    background: transparent;
+    padding: $spacing-x-small 0;
+    border: 0;
+    border-radius: 0;
+  }
+}

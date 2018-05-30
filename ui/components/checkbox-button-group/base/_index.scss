@@ -19,11 +19,9 @@
 }
 
 /**
- * Initializes checkbox inside a button group
- *
+ * @summary Initializes checkbox inside a button group
  * @selector .slds-checkbox_button
  * @restrict .slds-checkbox_button-group span
- * @required
  */
 .slds-checkbox_button,
 .slds-checkbox--button {
@@ -33,11 +31,9 @@
   background-clip: padding-box;
 
   /**
-   * Creates a custom styled checkbox
-   *
-   * @selector .slds-checkbox_button .slds-checkbox_faux
-   * @restrict .slds-checkbox__label span, .slds-checkbox_button__label span
-   * @required
+   * @summary Creates a custom styled checkbox
+   * @selector .slds-checkbox_faux
+   * @restrict .slds-checkbox_button-group span
    */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
@@ -57,11 +53,9 @@
   }
 
   /**
-   * Creates a custom styled checkbox
-   *
+   * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_button__label
    * @restrict .slds-checkbox_button label
-   * @required
    */
   .slds-checkbox_button__label .slds-checkbox_faux,
   .slds-checkbox--button__label .slds-checkbox--faux,
@@ -96,7 +90,6 @@
     border-radius: 0 $border-radius-medium $border-radius-medium 0;
   }
 
-  // Hide input and style checkbox--faux
   [type="checkbox"] {
     @include square(1px);
     border: 0;

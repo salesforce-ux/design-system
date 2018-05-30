@@ -2,16 +2,15 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- *  Past chat logs are displayed differently for ease of scanning
+ * Past chat logs are displayed differently for ease of scanning
  *
  * @summary Apply when displaying chat logs that appeared in the past
  *
- * @variant
  * @name past
  * @selector .slds-chat_past
- * @restrict section[role="log"]
+ * @restrict .slds-chat
+ * @variant
  */
-
 .slds-chat_past {
 
   .slds-chat-listitem_event {

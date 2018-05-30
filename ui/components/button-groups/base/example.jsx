@@ -49,36 +49,16 @@ export let states = [
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
-        <button className="slds-button slds-button_neutral">Edit</button>
         <button className="slds-button slds-button_neutral" disabled>
-          Save
+          Edit
         </button>
+        <button className="slds-button slds-button_neutral">Save</button>
       </ButtonGroup>
-    )
-  }
-];
-
-export let examples = [
-  {
-    id: 'list',
-    label: 'List',
-    element: (
-      <ButtonGroupList>
-        <li>
-          <button className="slds-button slds-button_neutral">Refresh</button>
-        </li>
-        <li>
-          <button className="slds-button slds-button_neutral">Edit</button>
-        </li>
-        <li>
-          <button className="slds-button slds-button_neutral">Save</button>
-        </li>
-      </ButtonGroupList>
     )
   },
   {
-    id: 'overflow',
-    label: 'Overflow menu icon',
+    id: 'with-overflow',
+    label: 'With Overflow Menu',
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
@@ -89,8 +69,8 @@ export let examples = [
     )
   },
   {
-    id: 'button-group-more-open',
-    label: 'Overflow menu icon - Open',
+    id: 'with-overflow-open',
+    label: 'With Overflow Menu - Open',
     element: (
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
@@ -111,8 +91,8 @@ export let examples = [
     )
   },
   {
-    id: 'button-group-icon-disabled',
-    label: 'Overflow menu icon - Disabled',
+    id: 'with-overflow-disabled',
+    label: 'With Overflow Menu - Disabled',
     element: (
       <ButtonGroup>
         <button className="slds-button slds-button_neutral">Refresh</button>
@@ -130,10 +110,47 @@ export let examples = [
         </div>
       </ButtonGroup>
     )
+  }
+];
+
+export let examples = [
+  {
+    id: 'inverse',
+    label: 'Inverse',
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
+        <ButtonGroup>
+          <button className="slds-button slds-button_inverse">Refresh</button>
+          <button className="slds-button slds-button_inverse">Edit</button>
+          <button className="slds-button slds-button_inverse">Save</button>
+        </ButtonGroup>
+      </div>
+    )
   },
   {
-    id: 'button-group-inverse',
-    label: 'Inverse',
+    id: 'inverse-disabled',
+    label: 'Inverse - Disabled',
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
+        <ButtonGroup>
+          <button className="slds-button slds-button_inverse">Refresh</button>
+          <button className="slds-button slds-button_inverse" disabled>
+            Edit
+          </button>
+          <button className="slds-button slds-button_inverse">Save</button>
+        </ButtonGroup>
+      </div>
+    )
+  },
+  {
+    id: 'inverse-overflow',
+    label: 'Inverse - With Overflow Menu',
     element: (
       <div
         className="demo-only"
@@ -157,35 +174,8 @@ export let examples = [
     )
   },
   {
-    id: 'button-group-inverse-disabled',
-    label: 'Inverse Disabled',
-    element: (
-      <div
-        className="demo-only"
-        style={{ padding: '0.5rem', background: '#16325c' }}
-      >
-        <ButtonGroup>
-          <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse" disabled>
-            Edit
-          </button>
-          <button className="slds-button slds-button_inverse">Save</button>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
-            <ButtonIcon
-              className="slds-button_icon-border-inverse"
-              assistiveText="More Actions"
-              aria-haspopup="true"
-              symbol="down"
-              title="More Actions"
-            />
-          </div>
-        </ButtonGroup>
-      </div>
-    )
-  },
-  {
-    id: 'button-group-icon-inverse-disabled',
-    label: 'Inverse More Icon Disabled',
+    id: 'inverse-overflow-disabled',
+    label: 'Inverse - With Overflow Menu - Disabled',
     element: (
       <div
         className="demo-only"
@@ -211,7 +201,7 @@ export let examples = [
   },
   {
     id: 'button-group-icon',
-    label: 'Icon group',
+    label: 'Button Icon Group',
     element: (
       <ButtonGroup>
         <ButtonIcon
@@ -238,8 +228,37 @@ export let examples = [
     )
   },
   {
+    id: 'button-group-icon-disabled',
+    label: 'Button Icon Group - Disabled',
+    element: (
+      <ButtonGroup>
+        <ButtonIcon
+          className="slds-button_icon-border-filled"
+          symbol="chart"
+          assistiveText="Charts"
+          title="Charts"
+          aria-pressed="false"
+        />
+        <ButtonIcon
+          className="slds-button_icon-border-filled"
+          disabled
+          symbol="filterList"
+          assistiveText="Filter List"
+          title="Filter List"
+          aria-pressed="false"
+        />
+        <ButtonIcon
+          className="slds-button_icon-more"
+          hasDropdown
+          assistiveText="More Actions"
+          title="More Actions"
+        />
+      </ButtonGroup>
+    )
+  },
+  {
     id: 'button-group-icon-selected',
-    label: 'Icon group - Selected',
+    label: 'Button Icon Group - Selected',
     element: (
       <ButtonGroup>
         <ButtonIcon

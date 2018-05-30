@@ -14,15 +14,19 @@
   display: inline-block;
 
   /**
+   * @name stacked
    * @summary stacks label over checkbox
-   *
    * @selector .slds-checkbox_stacked
    * @restrict .slds-checkbox
    * @modifier
    * @group layout
    */
   &.slds-checkbox_stacked {
-
+    /**
+     * @summary Container for faux checkbox element
+     * @selector .slds-checkbox__label
+     * @restrict .slds-checkbox label
+     */
     .slds-checkbox__label {
       display: flex;
       flex-direction: column;
@@ -39,11 +43,9 @@
   }
 
   /**
-   * Creates a custom styled checkbox
-   *
+   * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_faux
-   * @restrict [class*='slds-checkbox'] span, [class*='slds-checkbox'] label
-   * @required
+   * @restrict .slds-checkbox span
    */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
@@ -180,6 +182,7 @@
   }
 }
 
+// What is happening here? - BF
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox_faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox_faux,

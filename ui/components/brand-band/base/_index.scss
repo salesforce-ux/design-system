@@ -48,10 +48,12 @@
   }
 
   /**
+   * @name cover
    * @summary Changes background image to be set to cover rather than contain
    * @selector .slds-brand-band_cover
    * @restrict .slds-brand-band
    * @modifier
+   * @group position
    */
   &.slds-brand-band_cover:before {
     background-repeat: no-repeat;
@@ -59,6 +61,7 @@
   }
 
   /**
+   * @name small
    * @summary Sets height of brand band to
    * @selector .slds-brand-band_small
    * @restrict .slds-brand-band
@@ -78,6 +81,7 @@
   }
 
   /**
+   * @name medium
    * @summary Sets height of brand band to
    * @selector .slds-brand-band_medium
    * @restrict .slds-brand-band
@@ -97,6 +101,7 @@
   }
 
   /**
+   * @name large
    * @summary Sets height of brand band to
    * @selector .slds-brand-band_large
    * @restrict .slds-brand-band
@@ -129,10 +134,12 @@
   }
 
   /**
+   * @name no background
    * @summary Removes image but keeps page background
    * @selector .slds-brand-band_none
    * @restrict .slds-brand-band
    * @modifier
+   * @group visibility
    */
   &.slds-brand-band_none:before {
     height: 0;

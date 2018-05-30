@@ -72,7 +72,7 @@ export const BreadcrumbsWithOverflow = props => (
 export default <BreadcrumbsBase />;
 
 /* export for site examples */
-export let examples = [
+export let states = [
   {
     id: 'overflow-breadcrumbs',
     label: 'Breadcrumbs with Overflow Menu',

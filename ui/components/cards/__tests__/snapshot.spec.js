@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
-import { EinsteinCard } from '../base/example';
+import { EinsteinCard } from '../einstein/example';
 
 import createHelpers from '../../../../jest.helpers';
 

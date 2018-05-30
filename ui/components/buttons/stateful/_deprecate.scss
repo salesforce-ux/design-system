@@ -1,0 +1,15 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Icon modifier for stateful buttons
+ * @selector .slds-button__icon_stateful
+ * @deprecated
+ */
+.slds-button__icon_stateful,
+.slds-button__icon--stateful {
+  @include deprecate('4.0.0', 'Use spacing utilities instead') {
+    @include square($square-icon-small-content);
+    fill: currentColor;
+  }
+}

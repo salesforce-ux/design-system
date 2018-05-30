@@ -76,12 +76,6 @@ export let Toggle = props => (
 // State Constructor(s)
 /// ////////////////////////////////////////
 
-export const Context = props => (
-  <div className="demo-only slds-size_1-of-2" {...props}>
-    {props.children}
-  </div>
-);
-
 export let CheckboxToggle = props => {
   const uniqueId = _.uniqueId('checkbox-toggle-');
 

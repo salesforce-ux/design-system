@@ -13,6 +13,11 @@
 .slds-checkbox--toggle {
   width: 100%;
 
+  /**
+   * @summary Creates a custom styled checkbox
+   * @selector .slds-checkbox_faux
+   * @restrict .slds-checkbox_toggle span
+   */
   .slds-checkbox_faux,
   .slds-checkbox--faux {
     display: block;
@@ -43,7 +48,6 @@
     }
   }
 
-  // Hide input
   [type="checkbox"] {
     @include square(1px);
     border: 0;
@@ -53,16 +57,31 @@
     padding: 0;
     position: absolute;
 
+    /**
+     * @summary Container for faux checkbox element
+     * @selector .slds-checkbox_faux_container
+     * @restrict .slds-checkbox_toggle span
+     */
     + .slds-checkbox_faux_container,
     + .slds-checkbox--faux_container {
       font-size: $font-size-x-small;
       color: $color-text-label;
 
+      /**
+       * @summary Container for text to show when checkbox is toggle off
+       * @selector .slds-checkbox_off
+       * @restrict .slds-checkbox_faux_container span
+       */
       .slds-checkbox_off,
       .slds-checkbox--off {
         display: block;
       }
 
+      /**
+       * @summary Container for text to show when checkbox is toggle on
+       * @selector .slds-checkbox_off
+       * @restrict .slds-checkbox_faux_container span
+       */
       .slds-checkbox_on,
       .slds-checkbox--on {
         display: none;

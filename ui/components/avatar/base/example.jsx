@@ -90,5 +90,20 @@ export let examples = [
         </abbr>
       </Avatar>
     )
+  },
+  {
+    id: 'linked-avatar',
+    label: 'Wrapped in a link',
+    element: (
+      <a href="javascript:void(0);">
+        <Avatar>
+          <img
+            alt="Person name"
+            src="/assets/images/avatar2.jpg"
+            title="User avatar"
+          />
+        </Avatar>
+      </a>
+    )
   }
 ];

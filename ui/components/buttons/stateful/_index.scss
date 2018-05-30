@@ -1,15 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Initiates a stateful button
- *
  * @name stateful
  * @selector .slds-button_stateful
- * @restrict button, a, span
+ * @restrict button
  * @variant
  */
-
 .slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
   border-color: transparent;
@@ -24,13 +24,6 @@
   &:active:not([disabled]) {
     background-color: $color-background-button-default-active;
   }
-}
-
-// Icon modifier for stateful buttons
-.slds-button__icon_stateful,
-.slds-button__icon--stateful {
-  @include square($square-icon-small-content);
-  fill: currentColor;
 }
 
 // Inverse Button
@@ -49,23 +42,36 @@
  * @group interaction
  */
 .slds-not-selected {
-
+  /**
+   * @summary Shown text when button is selected
+   * @selector .slds-text-selected
+   * @restrict .slds-button_stateful span
+   */
   .slds-text-selected {
     display: none;
   }
 
+  /**
+   * @summary Shown text when button is selected and focused
+   * @selector .slds-text-selected-focus
+   * @restrict .slds-button_stateful span
+   */
   .slds-text-selected-focus {
     display: none;
   }
 
+  /**
+   * @summary Shown text when button is not selected - default state
+   * @selector .slds-text-not-selected
+   * @restrict .slds-button_stateful span
+   */
   .slds-text-not-selected {
     display: block;
   }
 }
 
 /**
- * When button is selected and still has focus from click
- *
+ * @summary When button is selected and still has focus from click
  * @selector .slds-is-selected-clicked
  * @restrict .slds-button_stateful
  * @notes This class should be toggled with JavaScript
@@ -91,8 +97,7 @@
 }
 
 /**
- * When button is pressed and selected
- *
+ * @summary When button is pressed and selected
  * @selector .slds-is-selected
  * @restrict .slds-button_stateful
  * @notes This class should be toggled with JavaScript

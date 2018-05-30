@@ -2,26 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 
-// These .slds-card-wrapper classes all give us the ability to add a class
-// that doesn't exist in Communities to add a card look in different
-// circumstances. It can also be used to combine several cards into a one
-// card look. This class does not react to the .slds-card_boundary.
-.slds-card-wrapper {
-  padding: $var-spacing-medium;
-  background: $card-color-background;
-  border: $border-width-thin solid $card-color-border;
-  border-radius: $border-radius-medium;
-  background-clip: padding-box;
-  box-shadow: $card-shadow;
-
-  .slds-card__header,
-  .slds-card__body,
-  .slds-card__footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .slds-card,
 .slds-card-wrapper,
 .slds-modal,
@@ -52,13 +32,14 @@
 }
 
 /**
- * This class allows default tabs to appear to be in a card
- *
- * .slds-tabs_card
- * .slds-tabs_default
+ * @summary This class allows default tabs to appear to be in a card
+ * @selector .slds-tabs_card
+ * @restrict div
+ * @internal
  */
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card {
+  background: $card-color-background;
   padding: $var-spacing-medium; // Use card tokens to keep this tab style looking like a card
   box-shadow: $card-shadow;
   border: $border-width-thin solid $card-color-border;
@@ -81,6 +62,7 @@
     margin-right: 0;
   }
 }
+
 // Restore cards inside .slds-tabs_card as needed
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card,

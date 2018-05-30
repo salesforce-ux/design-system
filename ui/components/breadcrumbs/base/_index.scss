@@ -3,20 +3,16 @@
 
 /**
  * @summary Create breadcrumbs component
- *
  * @name base
  * @selector .slds-breadcrumb
  * @restrict ol
- * @support dev-ready
  * @variant
  */
 .slds-breadcrumb {
   /**
-   * Item of the breadcrumb list
-   *
+   * @summary Item of the breadcrumb list
    * @selector .slds-breadcrumb__item
    * @restrict .slds-breadcrumb li
-   * @required
    */
   .slds-list__item,
   &__item {

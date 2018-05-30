@@ -28,7 +28,7 @@ export let StatefulButton = props => {
     >
       <span className="slds-text-not-selected">
         <SvgIcon
-          className="slds-button__icon_stateful slds-button__icon_left"
+          className="slds-button__icon slds-button__icon_small slds-button__icon_left"
           sprite="utility"
           symbol="add"
         />
@@ -36,7 +36,7 @@ export let StatefulButton = props => {
       </span>
       <span className="slds-text-selected">
         <SvgIcon
-          className="slds-button__icon_stateful slds-button__icon_left"
+          className="slds-button__icon slds-button__icon_small slds-button__icon_left"
           sprite="utility"
           symbol="check"
         />
@@ -44,7 +44,7 @@ export let StatefulButton = props => {
       </span>
       <span className="slds-text-selected-focus">
         <SvgIcon
-          className="slds-button__icon_stateful slds-button__icon_left"
+          className="slds-button__icon slds-button__icon_small slds-button__icon_left"
           sprite="utility"
           symbol="close"
         />

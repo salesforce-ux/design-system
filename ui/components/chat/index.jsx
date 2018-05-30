@@ -194,7 +194,10 @@ export const ChatBookend = props => (
 export const ChatIcon = props => (
   <UtilityIcon
     assistiveText={props.assistiveText || false}
-    className="slds-icon_x-small"
+    className={classNames('slds-icon_x-small slds-icon-text-default', {
+      'slds-icon-text-default': props.symbol === 'error',
+      'slds-icon-text-warning': props.symbol === 'warning'
+    })}
     containerClassName="slds-chat-icon"
     symbol={props.symbol}
     title={props.assistiveText || false}

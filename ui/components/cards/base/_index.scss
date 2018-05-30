@@ -5,7 +5,6 @@
 
 /**
 * @summary Initializes card
-*
 * @name base
 * @selector .slds-card
 * @restrict article, div, section
@@ -24,56 +23,63 @@
   + .slds-card {
     margin-top: $var-spacing-vertical-medium;
   }
+}
 
-  &__body_inner,
-  &__body--inner {
-    padding: 0 $var-spacing-vertical-medium;
-  }
+/**
+ * @summary Apply the same spacing found on the card header to the card body
+ * @selector .slds-card__body_inner
+ * @restrict .slds-card__body
+ */
+.slds-card__body_inner,
+.slds-card__body--inner {
+  padding: 0 $var-spacing-vertical-medium;
+}
 
-  /**
-   * Initializes card header
-   *
-   * @selector .slds-card__header
-   * @restrict .slds-card div
-   */
-  &__header {
-    padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
-    margin: 0 0 $var-spacing-vertical-small;
-  }
+/**
+ * @summary Initializes card header
+ * @selector .slds-card__header
+ * @restrict .slds-card div
+ */
+.slds-card__header {
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
+  margin: 0 0 $var-spacing-vertical-small;
+}
 
-  &__header-link {
-    color: inherit;
-    font-weight: $card-font-weight;
-  }
+/**
+ * @summary Actionable element within the card header title
+ * @selector .slds-card__header-link
+ * @restrict .slds-card__header h2 a
+ */
+.slds-card__header-link {
+  color: inherit;
+  font-weight: $card-font-weight;
+}
 
-  /**
-   * Initializes card body
-   *
-   * @selector .slds-card__body
-   * @restrict .slds-card div
-   */
-  &__body {
-    margin-bottom: $var-spacing-vertical-small;
-  }
+/**
+ * @summary Initializes card body
+ * @selector .slds-card__body
+ * @restrict .slds-card div
+ */
+.slds-card__body {
+  margin-bottom: $var-spacing-vertical-small;
+}
 
-  &__body:empty,
-  &__footer:empty {
-    display: none;
-  }
+.slds-card__body:empty,
+.slds-card__footer:empty {
+  display: none;
+}
 
-  /**
-   * Initializes card footer
-   *
-   * @selector .slds-card__footer
-   * @restrict .slds-card footer
-   */
-  &__footer {
-    padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
-    margin-top: $var-spacing-vertical-small;
-    text-align: $card-footer-text-align;
-    font-size: $font-size-text-small;
-    border-top: $border-width-thin solid $card-footer-color-border;
-  }
+/**
+ * @summary Initializes card footer
+ * @selector .slds-card__footer
+ * @restrict .slds-card footer
+ */
+.slds-card__footer {
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
+  margin-top: $var-spacing-vertical-small;
+  text-align: $card-footer-text-align;
+  font-size: $font-size-text-small;
+  border-top: $border-width-thin solid $card-footer-color-border;
 }
 
 /**
@@ -86,8 +92,7 @@
 }
 
 /**
- * Use class if card consumes any form of a tile
- *
+ * @summary Use class if card consumes any form of a tile
  * @selector .slds-card__tile
  * @restrict .slds-tile
  */
@@ -95,6 +100,7 @@
   margin-top: $var-spacing-vertical-small;
 }
 
+// Internal
 .slds-region__pinned-left,
 .slds-region__pinned-right {
 
@@ -110,6 +116,34 @@
     &:last-child {
       border-bottom: 0;
     }
+  }
+}
+
+// These .slds-card-wrapper classes all give us the ability to add a class
+// that doesn't exist in Communities to add a card look in different
+// circumstances. It can also be used to combine several cards into a one
+// card look. This class does not react to the .slds-card_boundary.
+
+/**
+ * @name wrapper
+ * @summary Removes the card look from nested cards and pulls them to the boundary of the card wrapper, making the nested cards look like they are inside of one card
+ * @selector .slds-card-wrapper
+ * @restrict div
+ * @variant
+ */
+.slds-card-wrapper {
+  padding: $var-spacing-medium;
+  background: $card-color-background;
+  border: $border-width-thin solid $card-color-border;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+  box-shadow: $card-shadow;
+
+  .slds-card__header,
+  .slds-card__body,
+  .slds-card__footer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

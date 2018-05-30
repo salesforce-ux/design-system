@@ -24,12 +24,14 @@ export let Alert = props => {
     >
       <span className="slds-assistive-text">{type || 'info'}</span>
       {children}
-      <ButtonIcon
-        className="slds-notify__close slds-button_icon-inverse"
-        symbol="close"
-        assistiveText="Close"
-        title="Close"
-      />
+      <div className="slds-notify__close">
+        <ButtonIcon
+          className="slds-button_icon-inverse"
+          symbol="close"
+          assistiveText="Close"
+          title="Close"
+        />
+      </div>
     </div>
   );
 };

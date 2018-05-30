@@ -9,11 +9,3 @@ export const Context = props => (
 );
 
 export default <BuilderHeader />;
-
-export let examples = [
-  {
-    id: 'toolbar',
-    label: 'With Toolbar',
-    element: <BuilderHeader showToolbar />
-  }
-];

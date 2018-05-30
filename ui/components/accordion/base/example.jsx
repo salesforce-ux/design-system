@@ -34,7 +34,7 @@ export let AccordionSection = props => (
       <div className={classNames('slds-accordion__summary', props.className)}>
         <h3
           className={classNames(
-            'slds-text-heading_small slds-accordion__summary-heading',
+            'slds-accordion__summary-heading',
             props.className
           )}
         >
@@ -221,7 +221,7 @@ export let states = [
   },
   {
     id: 'styled',
-    label: 'Styled',
+    label: 'Wrapped in Card',
     element: (
       <div className="slds-card">
         <Accordion>

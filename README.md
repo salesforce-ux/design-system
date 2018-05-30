@@ -150,15 +150,15 @@ npm run pr-checks -- --components button,path,trees
 
 ### Compilation
 
-### `npm run build && npm run dist`
+`npm run build && npm run dist`
 
 Generate the Lightning Design System into the `.dist` directory.
 
-### `npm run gulp -- styles`
+`npm run gulp -- styles`
 
 Compile Sass to CSS into `.assets/styles`.
 
-### `npm run gulp -- clean`
+`npm run gulp -- clean`
 
 Delete temporary build and local files.
 

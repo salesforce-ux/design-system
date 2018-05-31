@@ -195,3 +195,31 @@ it('renders a warning popover with footer', () =>
       </p>
     </Popover>
   ));
+
+it('renders a small popover', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-nubbin_left slds-popover_small"
+      closeButton
+      title="Dialog Title"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </Popover>
+  ));
+
+it('renders a large popover', () =>
+  matchesMarkupAndStyle(
+    <Popover
+      className="slds-nubbin_left slds-popover_large"
+      closeButton
+      title="Dialog Title"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </Popover>
+  ));

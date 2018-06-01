@@ -16,10 +16,10 @@ export const Container = props => {
         'slds-panel',
         props.size && `slds-size_${props.size}`,
         props.docked && `slds-panel_docked slds-panel_docked-${props.docked}`,
+        props.isAnimated && 'slds-panel_animated',
         props.invoke === 'drill-in' && 'slds-is-directional',
         props.drawer && 'slds-panel_drawer',
-        props.isVisible && 'slds-is-open',
-        props.className
+        props.isVisible ? 'slds-is-open' : 'slds-hidden'
       )}
       aria-hidden={!props.isVisible}
     >
@@ -59,9 +59,9 @@ export const Header = props => {
               key="panel-header-close-button"
               className="slds-panel__close slds-button_icon-small"
               symbol={closeSymbol}
-              assistiveText="Close Filter Panel"
-              title="Close Filter Panel"
-              onClick={() => props.handleVisibility()}
+              assistiveText={`Collapse ${props.title}`}
+              title={`Collapse ${props.title}`}
+              onClick={props.handleVisibility}
             />
           ]
         : props.customHeader}
@@ -85,7 +85,8 @@ class Panel extends Component {
       isVisible = true,
       handleVisibility,
       customHeader,
-      children
+      children,
+      isAnimated
     } = this.props;
     return (
       <Container
@@ -94,6 +95,7 @@ class Panel extends Component {
         size={size}
         invoke={invoke}
         isVisible={isVisible}
+        isAnimated={isAnimated}
       >
         <Header
           title={title}

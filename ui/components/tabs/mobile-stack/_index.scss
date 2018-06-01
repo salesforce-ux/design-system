@@ -1,29 +1,61 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
- * @summary Initializes a mobile drill-in tabset
+ * @summary Container to hold mobile tabs and their panels
  *
- * @name mobile
- * @selector .slds-tabs_mobile
- * @restrict ul
+ * @name mobile-stack
+ * @selector .slds-tabs-mobile__container
+ * @restrict div
  * @variant
  */
-.slds-tabs_mobile {
+.slds-tabs-mobile__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slds-panel__body {
+
+  .slds-tabs-mobile {
+    margin-left: (-1 * $spacing-small);
+    margin-right: (-1 * $spacing-small);
+  }
+
+  .slds-tabs-mobile:first-child {
+    margin-top: (-1 * $spacing-small);
+
+    .slds-tabs-mobile__item:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+/**
+ * @summary Styles the list of tabs for the mobile tab set
+ *
+ * @selector .slds-tabs-mobile
+ * @restrict .slds-tabs-mobile__container ul
+ */
+.slds-tabs-mobile {
   display: flex;
   flex-direction: column;
 }
 
 /**
  * @summary Styles each list item as a single drill-in tab
- * @selector .slds-tabs_mobile__item
- * @restrict .slds-tabs_mobile li
+ * @selector .slds-tabs-mobile__item
+ * @restrict .slds-tabs-mobile li
  */
-.slds-tabs_mobile__item {
+.slds-tabs-mobile__item {
   display: flex;
   border-top: $border-width-thin solid $color-border;
   height: $square-tappable;
-  align-items: center;
+  align-items: stretch;
+  color: $color-text-tab-label;
+  font-size: $font-size-text-medium;
+  padding: 0 $spacing-small;
 
   &:active {
     background-color: $color-background-row-hover;
@@ -35,46 +67,18 @@
 }
 
 /**
- * @summary Styles the tab title
- * @selector .slds-tabs_mobile__title
- * @restrict .slds-tabs_mobile div
- */
-.slds-tabs_mobile__title {
-  width: 100%;
-  height: 100%;
-  color: $color-text-tab-label;
-  font-size: $font-size-text-medium;
-  padding: 0 $spacing-medium;
-
-  .slds-button:focus {
-    box-shadow: none;
-  }
-}
-
-/**
- * @summary Actionable button inside of tab that would
- * drill into the tab content
+ * @summary Wrapper for adjacent mobile tab sets
  *
- * @selector slds-tabs_mobile__title-action
- * @restrict slds-tabs_mobile__title button
- * @required
+ * @selector .slds-tabs-mobile__group
+ * @restrict div
+ * @variant
  */
-.slds-tabs_mobile__title-action {
-  width: 100%;
-  height: 100%;
-  display: inline-flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: space-between;
+.slds-tabs-mobile__group {
 
-  .slds-button__icon {
-    flex-shrink: 0;
-  }
-}
+  .slds-tabs-mobile__container+.slds-tabs-mobile__container {
 
-.slds-tabs_mobile+.slds-tabs_mobile {
-
-  .slds-tabs_mobile__item:first-child {
-    border-top: 0;
+    .slds-tabs-mobile__item:first-child {
+      border-top: 0;
+    }
   }
 }

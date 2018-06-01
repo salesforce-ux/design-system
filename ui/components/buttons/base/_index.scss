@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @import 'deprecate';
+@import '../mixins/index';
 
 /**
  * @summary This neutralizes all the base styles making it look like a text link
@@ -329,4 +330,25 @@ a.slds-button--inverse:focus {
 .slds-button__icon_right,
 .slds-button__icon--right {
   margin-left: $spacing-x-small;
+}
+
+/**
+ * @summary Creates a button style for full width
+ *
+ * @selector .slds-button_full-width
+ * @restrict .slds-button
+ * @modifier
+ * @group size
+ */
+.slds-button_full-width {
+  @include button-reset;
+  width: 100%;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  &:focus {
+    box-shadow: none;
+  }
 }

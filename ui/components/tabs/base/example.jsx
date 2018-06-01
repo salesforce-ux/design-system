@@ -6,7 +6,6 @@ import Tabs from '../index.react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
-import { MobileStacked, AdjacentMobileStacked } from '../mobile-stack/example';
 import Card, { CardHeader, CardBody, CardFooter } from '../../cards/';
 import classNames from 'classnames';
 
@@ -198,16 +197,6 @@ export let examples = [
     id: 'overflow',
     label: 'Overflowing items',
     element: <Overflowing />
-  },
-  {
-    id: 'mobile',
-    label: 'mobile',
-    element: <MobileStacked />
-  },
-  {
-    id: 'adjacent-mobile',
-    label: 'adjacent-mobile',
-    element: <AdjacentMobileStacked />
   },
   {
     id: 'nested',

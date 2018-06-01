@@ -12,6 +12,7 @@
 .slds-panel {
   background: $color-background-alt;
   border-radius: $border-radius-medium;
+  overflow-y: auto;
 
   /**
    * Contains sub sections of a panel
@@ -95,7 +96,6 @@
   height: 100%;
   border-radius: 0;
   display: none;
-  transition: transform 300ms ease;
 
   /**
    * @summary Title of the header panel
@@ -152,4 +152,25 @@
     right: $spacing-small;
     left: auto;
   }
+}
+
+/**
+ * @summary Modifier that changes the display of a panel to hide out of view and animate in when opened
+ * @selector .slds-panel_animated
+ * @restrict .slds-tabs-mobile__container .slds-panel
+ * @modifier
+ */
+.slds-panel_animated {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate3d(120%, 0, 0);
+  transition: transform 300ms ease;
+}
+
+.slds-panel_animated.slds-is-open {
+  transform: translate3d(0, 0, 0);
 }

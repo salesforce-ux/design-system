@@ -14,6 +14,7 @@ export let Button = props => {
     isInverse,
     isDestructive,
     isSuccess,
+    isFullWidth,
     ...rest
   } = props;
 
@@ -27,7 +28,8 @@ export let Button = props => {
           'slds-button_outline-brand': isOutlineBrand,
           'slds-button_inverse': isInverse,
           'slds-button_destructive': isDestructive,
-          'slds-button_success': isSuccess
+          'slds-button_success': isSuccess,
+          'slds-button_full-width': isFullWidth
         },
         className
       )}

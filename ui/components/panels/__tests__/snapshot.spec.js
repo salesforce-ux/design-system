@@ -162,4 +162,19 @@ describe('render Panel component', () => {
         </Panel>
       </div>
     ));
+  it('render Base Panel animated', () =>
+    matchesMarkupAndStyle(
+      <div
+        style={{
+          backgroundColor: '#fafaf9',
+          position: 'relative',
+          height: '600px',
+          overflow: 'hidden'
+        }}
+      >
+        <Panel isAnimated title="Panel Header" docked="left" invoke="toggle">
+          A panel body accepts any layout or component
+        </Panel>
+      </div>
+    ));
 });

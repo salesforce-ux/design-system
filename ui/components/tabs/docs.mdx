@@ -2,7 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import { MobileStacked, AdjacentMobileStacked } from '../tabs/mobile-stack/example';
+import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './MobileTabs';
 import { BaseTabs, Overflowing, TabsWithNestedScopedTabs, TabsWithCards } from '../tabs/base/example';
 import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
@@ -235,20 +235,60 @@ To style tabs as a card, add the class `slds-tabs_card` to the `<div>` with the 
 
 For mobile, tabs become stacked and act as buttons that drill in to see the tab's content.
 
-<Blockquote header="Expected Interaction" type="note">
-  When clicking a mobile tab button, the entire view changes and is replaced with the "content" of that tab. In addition, a back button appears on the top left of the screen to go back to the view with the tabs.
+Mobile tabs consist of two parts, the tabs, which are represented via buttons, and their associated panels. When clicking on one of the buttons, the associated panel will slide in from right-to-left.
+
+<Blockquote header="Focus Management" type="a11y">
+  When a user selects a tab button, focus should be placed on the back button of the panel that slides into view. When the user clicks the back button, focus should be placed on the button that was just pressed.
 </Blockquote>
 
-<Example title="Tabs on Mobile">
-  <CodeView style={{width: '300px', height: '200px', maxWidth: '100%'}}>
-    <MobileStacked />
+<Example title="Tabs Mobile Base">
+  <CodeView>
+    <MobileTabs/>
   </CodeView>
 </Example>
 
-When there are two or more immediately adjacent tab sets on mobile, the styling adjusts to make them appear as if they're part of one master list.
+### Accessibility
 
-<Example title="Tabs Adjacent on Mobile">
-  <CodeView style={{width: '300px', height: '250px', maxWidth: '100%'}}>
-    <AdjacentMobileStacked />
+  **Visibility**
+
+  - The panels should have `aria-hidden=true` when they are not visible to ensure keyboard and screen reader users cannot access the content.
+  - The tabs should have `aria-hidden=true` when a panel is open to ensure keyboard and screen reader users cannot access the buttons.
+
+  **Focus Management**
+
+  When a user selects a tab button, focus should be placed on the back button of the panel that slides into view. When the user clicks the back button, focus should be placed on the button that was just pressed.
+
+  **Assistive Text**
+
+  The title and assistive text for the panel's back button text should read "Collapse ${heading text}” so it stays contextual to the tab that was clicked on.
+
+### Panel Open
+
+When clicking a tab button, the entire view changes and is replaced with the "content" of that tab inside of a panel. This includes a back button on the top left of the screen to go back to the view with the tabs.
+
+<Example title="Tabs Mobile Drilled-in">
+  <CodeView>
+    <MobileTabs visiblePanelIdx={0} isStatic/>
+  </CodeView>
+</Example>
+
+### Adjacent Tab Sets
+
+When there are two or more immediately adjacent tab sets on mobile, use the `slds-tabs_mobile__group` class to adjust the styling to make them appear as if they're part of one master list. Semantically, they are still two separate lists.
+
+<Example title="Tabs Mobile Adjacent Stacked">
+  <CodeView>
+    <MobileTabGroup>
+      <MobileTabs isStatic/>
+      <MobileTabs isStatic startingIdx={3}/>
+    </MobileTabGroup>
+  </CodeView>
+</Example>
+
+### Nested Tab Sets
+
+<Example title="Tabs Mobile Nested">
+  <CodeView>
+    <NestedMobileStacked/>
   </CodeView>
 </Example>

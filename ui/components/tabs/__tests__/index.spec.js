@@ -9,12 +9,21 @@ import {
   SubtabOverflow
 } from '../../tabs/sub-tabs/example';
 
-import {
-  MobileTab,
-  MobileTabSet,
-  MobileTabTitle,
-  MobileTabTitleAction
-} from '../../tabs/mobile-stack/example';
+import MobileTabs, {
+  MobileTabItem,
+  MobileTabList,
+  MobileTabPanel,
+  MobileTabButton,
+  MobileTabContainer,
+  MobileTabGroup,
+  NestedMobileStacked,
+  DeprecatedMobileTabItem,
+  DeprecatedMobileTabList,
+  DeprecatedMobileTabTitle,
+  DeprecatedMobileTabAction,
+  DeprecatedMobileStacked,
+  DeprecatedAdjacentMobileStacked
+} from '../MobileTabs';
 
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
@@ -199,12 +208,58 @@ describe('Subtabs', () => {
     ));
 });
 describe('Mobile stacked tabs', () => {
-  it('renders a tab', () => matchesMarkupAndStyle(<MobileTab />));
+  it('renders a tab group', () => matchesMarkupAndStyle(<MobileTabGroup />));
 
-  it('renders a tab title', () => matchesMarkupAndStyle(<MobileTabTitle />));
+  it('renders a tab container', () =>
+    matchesMarkupAndStyle(<MobileTabContainer />));
 
-  it('renders a tab title action', () =>
-    matchesMarkupAndStyle(<MobileTabTitleAction summary="List 1 Item One" />));
+  it('renders a tab', () => matchesMarkupAndStyle(<MobileTabItem />));
 
-  it('renders a tabset', () => matchesMarkupAndStyle(<MobileTabSet />));
+  it('renders a tab button', () =>
+    matchesMarkupAndStyle(<MobileTabButton summary="List 1 Item One" />));
+
+  it('renders a hidden tab panel', () =>
+    matchesMarkupAndStyle(<MobileTabPanel title="Item One Panel" />));
+
+  it('renders a visible tab panel', () =>
+    matchesMarkupAndStyle(<MobileTabPanel title="Item One Panel" isVisible />));
+
+  it('renders a tabset', () => matchesMarkupAndStyle(<MobileTabList />));
+
+  it('renders a hidden tabset', () =>
+    matchesMarkupAndStyle(<MobileTabList isHidden />));
+
+  it('renders a mobile tabs demo', () => matchesMarkupAndStyle(<MobileTabs />));
+
+  it('renders a static mobile tabs demo', () =>
+    matchesMarkupAndStyle(<MobileTabs isStatic />));
+
+  it('renders a static mobile tabs demo with a visible panel showing', () =>
+    matchesMarkupAndStyle(<MobileTabs visiblePanelIdx={0} isStatic />));
+
+  it('renders a mobile tabs demo with a visible panel showing', () =>
+    matchesMarkupAndStyle(<MobileTabs visiblePanelIdx={0} />));
+
+  it('renders nested mobile tabs', () =>
+    matchesMarkupAndStyle(<NestedMobileStacked />));
+
+  it('renders a deprecated tab item', () =>
+    matchesMarkupAndStyle(<DeprecatedMobileTabItem />));
+
+  it('renders a deprecated tab list', () =>
+    matchesMarkupAndStyle(<DeprecatedMobileTabList />));
+
+  it('renders a deprecated tab title', () =>
+    matchesMarkupAndStyle(<DeprecatedMobileTabTitle />));
+
+  it('renders a deprecated tab title action', () =>
+    matchesMarkupAndStyle(
+      <DeprecatedMobileTabAction summary="List 1 Item One" />
+    ));
+
+  it('renders a deprecated tab stack', () =>
+    matchesMarkupAndStyle(<DeprecatedMobileStacked />));
+
+  it('renders a deprecated adjacent tab stack', () =>
+    matchesMarkupAndStyle(<DeprecatedAdjacentMobileStacked />));
 });

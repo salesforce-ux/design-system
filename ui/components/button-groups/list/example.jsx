@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '../../buttons/base/example';
 import ButtonIcon from '../../button-icons/';
 import {
@@ -20,6 +21,14 @@ export let ButtonGroupList = props => (
     {props.children}
   </ul>
 );
+ButtonGroupList.propTypes = {
+  children: PropTypes.node
+};
+
+export const ButtonGroupListItem = props => <li>{props.children}</li>;
+ButtonGroupListItem.propTypes = {
+  children: PropTypes.node
+};
 
 /// ////////////////////////////////////////
 // Export
@@ -27,15 +36,15 @@ export let ButtonGroupList = props => (
 
 export default (
   <ButtonGroupList>
-    <li>
+    <ButtonGroupListItem>
       <Button isNeutral>Refresh</Button>
-    </li>
-    <li>
+    </ButtonGroupListItem>
+    <ButtonGroupListItem>
       <Button isNeutral>Edit</Button>
-    </li>
-    <li>
+    </ButtonGroupListItem>
+    <ButtonGroupListItem>
       <Button isNeutral>Save</Button>
-    </li>
+    </ButtonGroupListItem>
   </ButtonGroupList>
 );
 
@@ -45,17 +54,17 @@ export let states = [
     label: 'Disabled',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <Button isNeutral>Refresh</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral>Edit</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral disabled>
             Save
           </Button>
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   },
@@ -64,18 +73,18 @@ export let states = [
     label: 'With Overflow Menu',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <Button isNeutral>Refresh</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral>Edit</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral>Save</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Trigger className="slds-button_last" ariaExpanded="false" />
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   },
@@ -85,16 +94,16 @@ export let states = [
     element: (
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroupList>
-          <li>
+          <ButtonGroupListItem>
             <Button isNeutral>Refresh</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isNeutral>Edit</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isNeutral>Save</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Trigger className="slds-button_last slds-is-open">
               <Menu className="slds-dropdown_right">
                 <MenuList>
@@ -104,7 +113,7 @@ export let states = [
                 </MenuList>
               </Menu>
             </Trigger>
-          </li>
+          </ButtonGroupListItem>
         </ButtonGroupList>
       </div>
     )
@@ -114,16 +123,16 @@ export let states = [
     label: 'With Overflow Menu - Disabled',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <Button isNeutral>Refresh</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral>Edit</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <Button isNeutral>Save</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               className="slds-button_icon-border"
@@ -134,7 +143,7 @@ export let states = [
               title="More Actions"
             />
           </div>
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   }
@@ -150,16 +159,16 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
-          <li>
+          <ButtonGroupListItem>
             <Button isInverse>Refresh</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Edit</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Save</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
                 className="slds-button_icon-border-inverse"
@@ -169,7 +178,7 @@ export let examples = [
                 title="More Actions"
               />
             </div>
-          </li>
+          </ButtonGroupListItem>
         </ButtonGroupList>
       </div>
     )
@@ -183,18 +192,18 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
-          <li>
+          <ButtonGroupListItem>
             <Button isInverse>Refresh</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse disabled>
               Edit
             </Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Save</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
                 className="slds-button_icon-border-inverse"
@@ -204,7 +213,7 @@ export let examples = [
                 title="More Actions"
               />
             </div>
-          </li>
+          </ButtonGroupListItem>
         </ButtonGroupList>
       </div>
     )
@@ -218,16 +227,16 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
-          <li>
+          <ButtonGroupListItem>
             <Button isInverse>Refresh</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Edit</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Save</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
                 className="slds-button_icon-border-inverse"
@@ -237,7 +246,7 @@ export let examples = [
                 title="More Actions"
               />
             </div>
-          </li>
+          </ButtonGroupListItem>
         </ButtonGroupList>
       </div>
     )
@@ -251,16 +260,16 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroupList>
-          <li>
+          <ButtonGroupListItem>
             <Button isInverse>Refresh</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Edit</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <Button isInverse>Save</Button>
-          </li>
-          <li>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
             <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
               <ButtonIcon
                 className="slds-button_icon-border-inverse"
@@ -271,7 +280,7 @@ export let examples = [
                 title="More Actions"
               />
             </div>
-          </li>
+          </ButtonGroupListItem>
         </ButtonGroupList>
       </div>
     )
@@ -281,7 +290,7 @@ export let examples = [
     label: 'Button Icon Group',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled"
             symbol="chart"
@@ -289,8 +298,8 @@ export let examples = [
             title="Charts"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled"
             symbol="filterList"
@@ -298,15 +307,15 @@ export let examples = [
             title="Filter List"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-more"
             hasDropdown
             assistiveText="More Actions"
             title="More Actions"
           />
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   },
@@ -315,7 +324,7 @@ export let examples = [
     label: 'Button Icon Group - Disabled',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled"
             symbol="chart"
@@ -323,8 +332,8 @@ export let examples = [
             title="Charts"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled"
             disabled
@@ -333,15 +342,15 @@ export let examples = [
             title="Filter List"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-more"
             hasDropdown
             assistiveText="More Actions"
             title="More Actions"
           />
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   },
@@ -350,7 +359,7 @@ export let examples = [
     label: 'Button Icon Group - Selected',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled slds-is-selected"
             symbol="chart"
@@ -358,8 +367,8 @@ export let examples = [
             title="Charts"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-border-filled"
             symbol="filterList"
@@ -367,15 +376,15 @@ export let examples = [
             title="Filter List"
             aria-pressed="false"
           />
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <ButtonIcon
             className="slds-button_icon-more"
             hasDropdown
             assistiveText="More Actions"
             title="More Actions"
           />
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   },
@@ -384,10 +393,10 @@ export let examples = [
     label: 'Brand Button With Overflow Menu',
     element: (
       <ButtonGroupList>
-        <li>
+        <ButtonGroupListItem>
           <Button isBrand>Save</Button>
-        </li>
-        <li>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               aria-haspopup="true"
@@ -397,7 +406,7 @@ export let examples = [
               title="More Actions"
             />
           </div>
-        </li>
+        </ButtonGroupListItem>
       </ButtonGroupList>
     )
   }

@@ -14,3 +14,6 @@ it('renders a checked checkbox button', () =>
 
 it('renders a disabled checkbox button', () =>
   matchesMarkupAndStyle(<CheckboxAddButton disabled />));
+
+it('renders a checked and disabled checkbox button', () =>
+  matchesMarkupAndStyle(<CheckboxAddButton checked disabled />));

@@ -116,6 +116,12 @@ export let Disabled = props => (
   </FormElement>
 );
 
+export let CheckedDisabled = props => (
+  <FormElement>
+    <Checkbox label={checkboxLabel} checked disabled />
+  </FormElement>
+);
+
 export let Group = props => (
   <Fieldset>
     <Legend>Checkbox Group Label</Legend>
@@ -203,6 +209,11 @@ export let states = [
     id: 'disabled',
     label: 'Disabled',
     element: <Disabled />
+  },
+  {
+    id: 'checked-and-disabled',
+    label: 'Checked and Disabled',
+    element: <CheckedDisabled />
   }
 ];
 

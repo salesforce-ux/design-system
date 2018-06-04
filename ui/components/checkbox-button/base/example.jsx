@@ -49,5 +49,10 @@ export let states = [
     id: 'checkbox-add-button-disabled',
     label: 'Disabled',
     element: <CheckboxAddButton disabled />
+  },
+  {
+    id: 'checkbox-add-button-checked-and-disabled',
+    label: 'Checked and Disabled',
+    element: <CheckboxAddButton checked disabled />
   }
 ];

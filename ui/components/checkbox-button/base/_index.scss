@@ -71,19 +71,18 @@
       }
 
       &:before {
-        top: rem(-2px);
-        left: rem(7px);
-        width: rem(3px);
-        height: rem(17px);
+        left: rem(5px);
+        width: rem(2px);
+        height: rem(16px);
         transform: rotate(40deg);
       }
 
       &:after {
         top: rem(5px);
         left: rem(-10px);
-        width: rem(10px);
-        height: rem(3px);
-        transform: rotate(36deg);
+        width: rem(9px);
+        height: rem(2px);
+        transform: rotate(40deg);
       }
     }
   }
@@ -108,11 +107,20 @@
       background-color: $color-background-button-brand-disabled;
       border-color: $color-border-button-brand-disabled;
       color: $color-text-button-brand-disabled;
+      cursor: default;
 
       &:before,
       &:after {
-        background: $color-background-alt;
+        background: $color-gray-8;
       }
+    }
+  }
+
+  [type="checkbox"][disabled]:checked {
+
+    ~ .slds-checkbox_faux,
+    + .slds-checkbox_faux {
+      background-color: $color-background-alt;
     }
   }
 }

@@ -9,7 +9,8 @@ import {
   GroupError,
   GroupDisabled,
   Indeterminate,
-  Required
+  Required,
+  CheckedDisabled
 } from '../base/example';
 import { FormElement } from '../../form-element';
 import createHelpers from '../../../../jest.helpers';
@@ -54,3 +55,6 @@ it('renders a stacked checkbox', () =>
       />
     </FormElement>
   ));
+
+it('renders a checked and disabled checkbox', () =>
+  matchesMarkupAndStyle(<CheckedDisabled />));

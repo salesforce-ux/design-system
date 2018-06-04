@@ -89,7 +89,20 @@ export let states = [
         <Legend>Radio Group Label</Legend>
         <FormElementControl>
           <Radio disabled label="Radio Label One" />
-          <Radio disable label="Radio Label Two" />
+          <Radio disabled label="Radio Label Two" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'checked-and-disabled',
+    label: 'Checked and Disabled',
+    element: (
+      <Fieldset>
+        <Legend>Radio Group Label</Legend>
+        <FormElementControl>
+          <Radio checked disabled label="Radio Label One" />
+          <Radio disabled label="Radio Label Two" />
         </FormElementControl>
       </Fieldset>
     )

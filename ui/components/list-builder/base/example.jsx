@@ -159,6 +159,7 @@ let RowData = props => {
         <CheckboxAddButton
           label={checkboxLabel}
           checked={props.checked}
+          disabled={props.disabled}
           tabIndex="-1"
         />
       </td>
@@ -254,7 +255,7 @@ export default (
 export let states = [
   {
     id: 'items-selected',
-    label: 'Items selected',
+    label: 'Items Selected',
     element: (
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal
@@ -279,6 +280,97 @@ export let states = [
                     key={i}
                     index={i + 1}
                     checked={i === 0 ? true : null}
+                    name={rows[i].name}
+                    productCode={rows[i].productCode}
+                    listPrice={rows[i].listPrice}
+                    productFamily={rows[i].productFamily}
+                  />
+                ))}
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter>
+            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_brand">Next</button>
+          </ModalFooter>
+        </Modal>
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
+  },
+  {
+    id: 'items-disabled',
+    label: 'Items Disabled',
+    element: (
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal
+          className="slds-modal_large"
+          aria-labelledby="id-of-modalheader-h2"
+        >
+          <ModalHeader>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+              Add Products
+            </h2>
+            <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
+          </ModalHeader>
+          <ModalContent className="slds-grid slds-nowrap">
+            <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
+              <ProductListHeader
+                selectedFilters={<FilteredItem />}
+                itemsSelected="1"
+              />
+              <ProductList>
+                {_.times(rows.length, i => (
+                  <RowData
+                    key={i}
+                    index={i + 1}
+                    disabled={i % 2 === 0 ? true : null}
+                    name={rows[i].name}
+                    productCode={rows[i].productCode}
+                    listPrice={rows[i].listPrice}
+                    productFamily={rows[i].productFamily}
+                  />
+                ))}
+              </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter>
+            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_brand">Next</button>
+          </ModalFooter>
+        </Modal>
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
+  },
+  {
+    id: 'items-default-selected',
+    label: 'Items Default Selected',
+    element: (
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal
+          className="slds-modal_large"
+          aria-labelledby="id-of-modalheader-h2"
+        >
+          <ModalHeader>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+              Add Products
+            </h2>
+            <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
+          </ModalHeader>
+          <ModalContent className="slds-grid slds-nowrap">
+            <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
+              <ProductListHeader
+                selectedFilters={<FilteredItem />}
+                itemsSelected="1"
+              />
+              <ProductList>
+                {_.times(rows.length, i => (
+                  <RowData
+                    key={i}
+                    index={i + 1}
+                    checked={i % 2 === 1 ? true : null}
+                    disabled={i % 2 === 1 ? true : null}
                     name={rows[i].name}
                     productCode={rows[i].productCode}
                     listPrice={rows[i].listPrice}

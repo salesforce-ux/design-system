@@ -32,7 +32,7 @@ export const CardHeader = props => {
                 className="slds-card__header-link slds-truncate"
                 title={title}
               >
-                <span className="slds-text-heading_small">{title}</span>
+                <span>{title}</span>
               </a>
             ) : (
               <span className="slds-truncate" title={title}>

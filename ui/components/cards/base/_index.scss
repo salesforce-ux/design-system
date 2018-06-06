@@ -46,6 +46,16 @@
 }
 
 /**
+ * @summary Title element within card header
+ * @selector .slds-card__header-title
+ * @restrict .slds-card__header h2
+ */
+.slds-card__header-title {
+  font-size: $var-font-size-5;
+  line-height: $line-height-heading;
+}
+
+/**
  * @summary Actionable element within the card header title
  * @selector .slds-card__header-link
  * @restrict .slds-card__header h2 a

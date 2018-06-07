@@ -6,9 +6,11 @@ global:
   - 'background*'
   - 'border*'
   - box-shadow
+
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
 - "../../../../design-tokens/aliases/color-palettes.yml"
+
 props:
   COLOR_BACKGROUND_PATH_COMPLETE:
     value: '{!EMERALD}'
@@ -17,22 +19,22 @@ props:
     value: '{!SALEM}'
     comment: The hover background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_ACTIVE:
-    value: '{!DEEP_COVE}'
-    comment: The background color for Salespath stages that are active.
+    value: '{!ENDEAVOUR}'
+    comment: The background color for Salespath stages that are the active stage.
   COLOR_BACKGROUND_PATH_ACTIVE_HOVER:
-    value: '{!BISCAY}'
-    comment: The hovered background color for Salespath stages that are complete.
+    value: '{!MIDNIGHT_BLUE}'
+    comment: The hover background color for Salespath stages that are the active stage.
   COLOR_BACKGROUND_PATH_STEP_ACTION_ACTIVE:
     value: '{!DEEP_COVE}'
     comment: The background color for the step action arrow that are the active stage
   COLOR_BACKGROUND_PATH_STEP_ACTION_CURRENT:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!ENDEAVOUR}'
     comment: The background color for the step action arrow that are the current stage
   COLOR_BACKGROUND_PATH_CURRENT:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: The background color for Salespath stages that are the current stage.
   COLOR_BACKGROUND_PATH_CURRENT_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_GRAY_1}'
     comment: The hover background color for Salespath stages that are the current stage.
   COLOR_BACKGROUND_PATH_INCOMPLETE:
     value: '{!PALETTE_GRAY_4}'
@@ -44,11 +46,11 @@ props:
     value: '{!FLUSH_MAHOGANY}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_PATH_WON:
-    value: '{!EMERALD}'
+    value: '{!SALEM}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_GUIDANCE:
     value: '{!PALETTE_GRAY_1}'
     comment: The background color for Salespath guidance coaching section.
   COLOR_BACKGROUND_PATH_EXPANDED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: The background color for the overall Salespath coaching section.

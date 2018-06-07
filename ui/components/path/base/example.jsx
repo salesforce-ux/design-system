@@ -2,11 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import classNames from 'classnames';
+
+import _ from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
 import { FormElementStatic } from '../../panels/detail/example';
 import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
-import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -72,7 +73,7 @@ let Trigger = props => (
 let Triggerup = props => (
   <ButtonIcon
     assistiveText="Collapse Sales Coach Tab Panels"
-    className="slds-button_icon-border-filled slds-path__trigger slds-flip_vertical"
+    className="slds-button_icon-border-filled slds-path__trigger slds-flip_horizontal"
     symbol="chevrondown"
     title="Collapse Sales Coaching Tab Panels"
   />
@@ -180,7 +181,7 @@ let CoachExample1 = props => (
     <div className="slds-path__keys slds-form slds-form_stacked">
       <div className="slds-grid slds-grid_align-spread slds-path__coach-title">
         <h2>Key Fields This Stage</h2>
-        <button className="slds-button slds-button_reset slds-text-body_small">
+        <button className="slds-path__coach-edit slds-button slds-text-body_small">
           Edit
         </button>
       </div>
@@ -226,7 +227,7 @@ let CoachExample2 = props => (
     <div className="slds-path__keys slds-form slds-form_stacked">
       <div className="slds-grid slds-grid_align-spread slds-path__coach-title">
         <h2>Key Fields This Stage</h2>
-        <button className="slds-button slds-button_reset slds-text-body_small">
+        <button className="slds-path__coach-edit slds-button slds-text-body_small">
           Edit
         </button>
       </div>

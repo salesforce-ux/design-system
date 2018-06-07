@@ -248,6 +248,31 @@ a.slds-button--inverse:focus {
 }
 
 /**
+ * @name text-destructive
+ * @summary Creates a neutral button with red text
+ * @selector .slds-button_text-destructive
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_text-destructive {
+  @include button;
+  @include button-base;
+  color: $color-text-destructive;
+
+  &:focus,
+  &:hover {
+    color: $color-text-destructive-hover;
+  }
+
+  &[disabled],
+  &:disabled {
+    color: $color-text-button-default-disabled;
+    background-color: $color-background-button-default-disabled;
+  }
+}
+
+/**
  * @name success
  * @summary Creates a green button style
  * @selector .slds-button_success
@@ -334,7 +359,6 @@ a.slds-button--inverse:focus {
 
 /**
  * @summary Creates a button style for full width
- *
  * @selector .slds-button_full-width
  * @restrict .slds-button
  * @modifier

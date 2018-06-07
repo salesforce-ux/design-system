@@ -251,3 +251,6 @@ props:
   COLOR_TEXT_DESTRUCTIVE:
     value: '{!FLUSH_MAHOGANY}'
     comment: Text color for destructive actions
+  COLOR_TEXT_DESTRUCTIVE_HOVER:
+    value: '{!MEXICAN_RED}'
+    comment: Text color for destructive actions - hover state

@@ -29,6 +29,9 @@ describe('Button ', () => {
   it('renders a desctructive button', () =>
     matchesMarkupAndStyle(<Button isDestructive>Button</Button>));
 
+  it('renders a text destructive button', () =>
+    matchesMarkupAndStyle(<Button isTextDestructive>Button</Button>));
+
   it('renders a success button', () =>
     matchesMarkupAndStyle(<Button isSuccess>Button</Button>));
 });

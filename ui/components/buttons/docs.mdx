@@ -36,6 +36,9 @@ Buttons should be used in situations where users might need to:
       <Button isDestructive>
         Button Destructive
       </Button>
+      <Button isTextDestructive>
+        Button Text Destructive
+      </Button>
       <Button isSuccess>
         Button Success
       </Button>
@@ -138,6 +141,18 @@ This button is used to indicate a destructive action to the user, like permanent
   </CodeView>
 </Example>
 
+### Text Destructive
+
+To create the text destructive button, add the `slds-button_text-destructive` class to the `slds-button` class.
+
+This button is used to indicate a destructive action to the user, like permanently erasing data. Use this version when the [Destructive](#Destructive) button would be too distracting to the experience.
+
+<Example title="Button Text Destructive">
+  <CodeView toggleCode={false}>
+    <Button isTextDestructive>Button</Button>
+  </CodeView>
+</Example>
+
 ### Success
 
 To create the success button, add the `slds-button_success` class to the `slds-button` class.
@@ -169,6 +184,9 @@ Use a disabled attribute when a button can’t be clicked. To create a disabled 
       </Button>
       <Button isDestructive disabled>
         Button Destructive
+      </Button>
+      <Button isTextDestructive disabled>
+        Button Text Destructive
       </Button>
       <Button isSuccess disabled>
         Button Success

@@ -54,6 +54,7 @@ class SetupAssistantStepSummary extends React.Component {
           className="slds-progress-ring_large"
           percent={isActiveStep ? stepProgress.percentage : 0}
           isActiveStep={isActiveStep}
+          isFilling
         >
           {stepProgress.number}
         </ProgressRing>

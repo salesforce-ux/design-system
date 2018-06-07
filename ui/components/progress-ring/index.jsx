@@ -22,12 +22,19 @@ class ProgressRing extends Component {
       isComplete,
       isExpired,
       isActiveStep,
+      isFilling,
       className
     } = this.props;
-    const { x, y } = this.getCoordinatesForPercent(percent);
+    let adjustedPercent = percent;
+    if (isFilling && !isComplete) {
+      adjustedPercent = 100 - percent;
+    }
+    const { x, y } = this.getCoordinatesForPercent(adjustedPercent);
     const isLong = percent > 50 ? 1 : 0;
-    let stateClass;
+    const isSweep = isFilling && !isComplete ? 0 : 1;
     const uniqueId = _.uniqueId('slds-progress-ring-path-');
+
+    let stateClass;
 
     if (isWarning) stateClass = 'slds-progress-ring_warning';
     if (isExpired) stateClass = 'slds-progress-ring_expired';
@@ -47,7 +54,7 @@ class ProgressRing extends Component {
             <path
               className="slds-progress-ring__path"
               id={uniqueId}
-              d={`M 1 0 A 1 1 0 ${isLong} 1 ${x} ${y} L 0 0`}
+              d={`M 1 0 A 1 1 0 ${isLong} ${isSweep} ${x} ${y} L 0 0`}
             />
           </svg>
         </div>
@@ -59,7 +66,12 @@ class ProgressRing extends Component {
 }
 
 ProgressRing.propTypes = {
-  percent: PropTypes.number
+  percent: PropTypes.number,
+  isWarning: PropTypes.bool,
+  isComplete: PropTypes.bool,
+  isExpired: PropTypes.bool,
+  isActiveStep: PropTypes.bool,
+  isFilling: PropTypes.bool
 };
 
 ProgressRing.defaultProps = {

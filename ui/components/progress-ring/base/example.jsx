@@ -10,14 +10,28 @@ export default <ProgressRing percent={100} />;
 export const examples = [
   {
     id: 'progress-ring-partially-drained',
-    label: 'Progress Ring Partially Drained',
+    label: 'Partially Drained',
     element: <ProgressRing percent={88} />
   },
   {
+    id: 'progress-ring-partially-filled',
+    label: 'Partially Filled',
+    element: <ProgressRing percent={40} isFilling />
+  },
+  {
     id: 'progress-ring-warning',
-    label: 'With Warning Icon',
+    label: 'Partially Drained With Warning Icon',
     element: (
       <ProgressRing percent={20} isWarning>
+        <UtilityIcon symbol="warning" title="Warning" assistiveText="Warning" />
+      </ProgressRing>
+    )
+  },
+  {
+    id: 'progress-ring-partially-filled-warning',
+    label: 'Partially Filled with Warning Icon',
+    element: (
+      <ProgressRing percent={75} isFilling isWarning>
         <UtilityIcon symbol="warning" title="Warning" assistiveText="Warning" />
       </ProgressRing>
     )

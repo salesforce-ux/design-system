@@ -169,6 +169,7 @@
   right: 0;
   transform: translate3d(120%, 0, 0);
   transition: transform 300ms ease;
+  z-index: $z-index-modal;
 }
 
 .slds-panel_animated.slds-is-open {

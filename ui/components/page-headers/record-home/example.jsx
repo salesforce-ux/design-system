@@ -2,98 +2,124 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Truncate from '../../../shared/truncate/index.react';
-import Heading from '../../heading/index.react';
 import ButtonIcon from '../../button-icons/';
-import SvgIcon from '../../../shared/svg-icon';
-import { StandardIcon } from '../../icons/standard/example';
+import { Button } from '../../buttons/base/example';
+import {
+  ButtonGroupList,
+  ButtonGroupListItem
+} from '../../button-groups/list/example';
+import { Trigger } from '../../menus/dropdown/example';
 import { StatefulButton } from '../../buttons/stateful/example';
+import {
+  PageHeader,
+  PageHeaderRow,
+  PageHeaderColumn,
+  PageHeaderTitle,
+  PageHeaderControls,
+  PageHeaderControl,
+  PageHeaderDetailList,
+  PageHeaderDetailItem,
+  PageHeaderDetailTitle,
+  PageHeaderDetailBody
+} from '../index';
+
+import RecordHomeDeprecated from './deprecated';
 
 export let RecordHome = props => (
-  <div className="slds-page-header">
-    <div className="slds-grid">
-      <div className="slds-col slds-has-flexi-truncate">
-        <div className="slds-media slds-no-space slds-grow">
-          <div className="slds-media__figure">
-            <StandardIcon symbol="opportunity" assistiveText={false} />
-          </div>
-          <div className="slds-media__body">
-            <nav>
-              <ol className="slds-breadcrumb slds-line-height_reset">
-                <li className="slds-breadcrumb__item">
-                  <span>Opportunities</span>
-                </li>
-              </ol>
-            </nav>
-            <h1
-              className="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"
-              title="Acme - 1,200 Widgets"
-            >
-              Acme - 1,200 Widgets
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div className="slds-col slds-no-flex slds-grid slds-align-top">
-        <StatefulButton isNotSelected isNeutral />
-        <div className="slds-button-group" role="group">
-          <button className="slds-button slds-button_neutral">Edit</button>
-          <button className="slds-button slds-button_neutral">Delete</button>
-          <button className="slds-button slds-button_neutral">Clone</button>
-          <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
-            <ButtonIcon
-              className="slds-button_icon-border-filled"
-              symbol="down"
-              aria-haspopup="true"
-              assistiveText="More Actions"
-              title="More Actions"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <ul className="slds-grid slds-page-header__detail-row">
-      <li className="slds-page-header__detail-block">
-        <p className="slds-text-title slds-truncate" title="Field 1">
-          Field 1
-        </p>
-        <p
-          className="slds-text-body_regular slds-truncate"
-          title="Description that demonstrates truncation with a long text field"
-        >
-          Description that demonstrates truncation with a long text field.
-        </p>
-      </li>
-      <li className="slds-page-header__detail-block">
-        <p className="slds-text-title slds-truncate" title="Field2 (3)">
-          Field 2 (3)
-          <ButtonIcon
-            className="slds-button_icon"
-            iconClassName="slds-button__icon_small"
-            symbol="down"
-            aria-haspopup="true"
-            assistiveText="More Actions"
-            title="More Actions"
-          />
-        </p>
-        <p className="slds-text-body_regular">Multiple Values</p>
-      </li>
-      <li className="slds-page-header__detail-block">
-        <p className="slds-text-title slds-truncate" title="Field 3">
-          Field 3
-        </p>
-        <a href="javascript:void(0);">Hyperlink</a>
-      </li>
-      <li className="slds-page-header__detail-block">
-        <p className="slds-text-title slds-truncate" title="Field 4">
-          Field 4
-        </p>
-        <p title="Description (2-line truncation—must use JS to truncate).">
-          Description (2-line truncati...
-        </p>
-      </li>
-    </ul>
-  </div>
+  <PageHeader>
+    <PageHeaderRow>
+      <PageHeaderColumn type="title">
+        <PageHeaderTitle
+          symbol="opportunity"
+          objectName="Opportunity"
+          titleText="Acme - 1,200 Widgets"
+        />
+      </PageHeaderColumn>
+      <PageHeaderColumn type="actions">
+        <PageHeaderControls>
+          <PageHeaderControl>
+            <StatefulButton isNotSelected isNeutral />
+          </PageHeaderControl>
+          <PageHeaderControl>
+            <ButtonGroupList>
+              <ButtonGroupListItem>
+                <Button isNeutral>Edit</Button>
+              </ButtonGroupListItem>
+              <ButtonGroupListItem>
+                <Button isNeutral>Delete</Button>
+              </ButtonGroupListItem>
+              <ButtonGroupListItem>
+                <Button isNeutral>Clone</Button>
+              </ButtonGroupListItem>
+              <ButtonGroupListItem>
+                <Trigger
+                  triggerIcon={
+                    <ButtonIcon
+                      className="slds-button_icon-border-filled"
+                      symbol="down"
+                      aria-haspopup="true"
+                      assistiveText="More Actions"
+                      title="More Actions"
+                    />
+                  }
+                />
+              </ButtonGroupListItem>
+            </ButtonGroupList>
+          </PageHeaderControl>
+        </PageHeaderControls>
+      </PageHeaderColumn>
+    </PageHeaderRow>
+    <PageHeaderRow hasGutters>
+      <PageHeaderColumn type="details">
+        <PageHeaderDetailList>
+          <PageHeaderDetailItem>
+            <PageHeaderDetailTitle title="Field 1">
+              Field 1
+            </PageHeaderDetailTitle>
+            <PageHeaderDetailBody title="Description that demonstrates truncation with a long text field.">
+              Description that demonstrates truncation with a long text field.
+            </PageHeaderDetailBody>
+          </PageHeaderDetailItem>
+          <PageHeaderDetailItem>
+            <PageHeaderDetailTitle title="Field 2 (3)">
+              Field 2 (3)
+              <Trigger
+                triggerIcon={
+                  <ButtonIcon
+                    className="slds-button_icon"
+                    iconClassName="slds-button__icon_small"
+                    symbol="down"
+                    aria-haspopup="true"
+                    assistiveText="More Actions"
+                    title="More Actions"
+                  />
+                }
+              />
+            </PageHeaderDetailTitle>
+            <PageHeaderDetailBody title="Multiple Values">
+              Multiple Values
+            </PageHeaderDetailBody>
+          </PageHeaderDetailItem>
+          <PageHeaderDetailItem>
+            <PageHeaderDetailTitle title="Field 3">
+              Field 3
+            </PageHeaderDetailTitle>
+            <PageHeaderDetailBody title="Hyperlink">
+              <a href="javascript:void(0);">Hyperlink</a>
+            </PageHeaderDetailBody>
+          </PageHeaderDetailItem>
+          <PageHeaderDetailItem>
+            <PageHeaderDetailTitle title="Field 4">
+              Field 4
+            </PageHeaderDetailTitle>
+            <PageHeaderDetailBody title="Description (2-line truncation—must use JS to truncate).">
+              Description (2-line truncati...
+            </PageHeaderDetailBody>
+          </PageHeaderDetailItem>
+        </PageHeaderDetailList>
+      </PageHeaderColumn>
+    </PageHeaderRow>
+  </PageHeader>
 );
 
 export default <RecordHome />;

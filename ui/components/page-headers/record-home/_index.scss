@@ -37,43 +37,44 @@
  * @required
  */
 
-.slds-page-header__detail {
-  /**
-   * Creates margins around the detail section of record home
-   *
-   * @selector .slds-page-header__detail-row
-   * @restrict .slds-page-header ul
-   * @notes Only the record home page header contains this detail area
-   */
-  &-row {
-    margin: $var-spacing-vertical-small #{-$var-spacing-horizontal-medium} #{-$var-spacing-horizontal-medium};
-    padding: $var-spacing-horizontal-medium;
-    border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
-    background-color: $page-header-color-background-alt;
-    position: relative;
-    z-index: 2;
+/**
+ * Creates margins around the detail section of record home
+ *
+ * @selector .slds-page-header__detail-row
+ * @restrict .slds-page-header ul
+ * @notes Only the record home page header contains this detail area
+ */
+
+.slds-page-header__detail-row {
+  display: flex;
+  margin: $var-spacing-vertical-small #{-$var-spacing-horizontal-medium} #{-$var-spacing-horizontal-medium};
+  padding: $var-spacing-horizontal-medium;
+  border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
+  background-color: $page-header-color-background-alt;
+  position: relative;
+  z-index: 2;
+}
+
+/**
+* Creates margins around the detail section of record home
+*
+* @selector .slds-page-header__detail-block
+* @restrict .slds-page-header__detail-row li
+* @notes Only the record home page header contains this detail area
+*/
+
+.slds-page-header__detail-block {
+  padding: {
+    right: $var-spacing-horizontal-x-large;
+    left: $var-spacing-horizontal-x-large;
+  }
+  max-width: 25%;
+
+  &:first-child {
+    padding-left: 0;
   }
 
-  /**
-   * Creates margins around the detail section of record home
-   *
-   * @selector .slds-page-header__detail-block
-   * @restrict .slds-page-header__detail-row li
-   * @notes Only the record home page header contains this detail area
-   */
-  &-block {
-    padding: {
-      right: $var-spacing-horizontal-x-large;
-      left: $var-spacing-horizontal-x-large;
-    }
-    max-width: 25%;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
+  &:last-child {
+    padding-right: 0;
   }
 }

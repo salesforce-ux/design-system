@@ -11,7 +11,13 @@
  *
  * The static state is for form elements that can’t be modified by the user. It is used for small, non-editable form fields that sit next to inputs and allows the size and height to align. It is not meant for large paragraphs of text.
  *
+ * ##### Pointer Events
  *
+ * In order to have an actionable SVG within the input, like a clear
+ * or increment/decrement button, the icon must be contained within
+ * a button, not an anchor `<a>`, in order for pointer events to work properly.
+ * You can see examples of the correct markup in the [Left Icon & Clear Button example](../input/?example=double-icon&variant=base)
+ * or the [Counter example](../input/?example=increment-decrement-counter&variant=base).
  *
  * #### Accessibility
  *

@@ -237,7 +237,7 @@ You can visually reorder columns independently from their position in the markup
 
 ## Column Nesting
 
-Nesting columns is simple and can add more flexibility in your designs. In a column, you can add a nested grid by creating another `slds-grid` container and as many `slds-col` elements inside of that container as you need..
+Nesting columns is simple and can add more flexibility in your designs. In a column, you can add a nested grid by creating another `slds-grid` container and as many `slds-col` elements inside of that container as you need.
 
 <Example title="Grid Column Nesting">
   <Grid className="slds-wrap">
@@ -249,20 +249,57 @@ Nesting columns is simple and can add more flexibility in your designs. In a col
   </Grid>
 </Example>
 
-## Page Containers
+## Grid Flow
 
-Optionally, you can contain your page content by adding the class `slds-container_width` to a top level element in your page structure.
+Once an `slds-grid` has been set, you can change things like flow. By *default*, a grid flows left to right on the main horizontal axis. You can easily switch your grid to flow top to bottom on a vertical axis by adding `slds-grid_vertical` to the `slds-grid` container.
 
-Containers come in 4 widths, __small__, __medium__, __large__ and __x-large__. They are rendered using `max-width`. This means your content will be a fluid width until it reaches the width the modifier has set on the container.
+### Left to Right
 
-Class|Width
----|---
-`slds-container_small`|480px
-`slds-container_medium`|768px
-`slds-container_large`|1024px
-`slds-container_x-large`|1280px
+The default flow is left to right on the horizontal axis
 
-Additionally, you can center the content of your page by adding `slds-container_center`.
+<Example title="Grid Default Left to Right">
+  <Grid columns="3" />
+</Example>
+
+### Top to Bottom
+
+To switch the grid to flow top to bottom on the vertical axis, add `slds-grid_vertical` to the `slds-grid` container.
+
+<Example title="Grid Vertical Align">
+  <Grid className="slds-grid_vertical">
+    <Column>1</Column>
+    <Column>2</Column>
+    <Column>3</Column>
+  </Grid>
+</Example>
+
+### Reversed
+
+There may be times you find yourself in a situation to reverse the visual flow of your columns. You can do this both horizontally and vertically.
+
+#### Right to Left
+
+To reverse the horizontal flow, add the class `slds-grid_reverse` to the `slds-grid` container.
+
+<Example title="Grid Horizontal Reversed">
+<Grid className="slds-grid_reverse">
+  <Column>1</Column>
+  <Column>2</Column>
+  <Column>3</Column>
+</Grid>
+</Example>
+
+#### Bottom to Top
+
+To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the `slds-grid` container.
+
+<Example title="Grid Vertical Align Reversed">
+  <Grid className="slds-grid_vertical-reverse" style={{height: '200px'}}>
+    <Column>1</Column>
+    <Column>2</Column>
+    <Column>3</Column>
+  </Grid>
+</Example>
 
 ## Creating Responsive Layouts
 
@@ -289,7 +326,7 @@ Below is an overview table outlining the default behavior for columns and how th
   Note: To make sure columns wrap as they exceed a total column count of 12, responsive layouts require <code className="doc">slds-wrap</code> to be added to the <code className="doc">slds-grid</code> container.
 </Blockquote>
 
-### Mobile/Desktop Example
+#### Mobile/Desktop Example
 
 Since we build on the concept of mobile first, let's set a layout for mobile and override for desktop directly in our HTML. We do this by setting a mobile, in this case default widths to our columns and override the layout when we meet the criteria of a desktop viewport size.
 
@@ -302,9 +339,9 @@ Since we build on the concept of mobile first, let's set a layout for mobile and
 
 In the above example, we are setting a stacked layout for mobile/tablet devices and then when our viewport exceeds a width of 1024px we redraw our layout to be a nice two column where the primary content area takes up 8 columns and the secondary content area takes up 4 columns.
 
-### Mobile/Tablet/Desktop Example
+#### Mobile/Tablet/Desktop Example
 
-If our designs need a bit more flexibility, we can accomplish that by establishing different layouts for mobile, tablets and desktops.
+If our designs need a bit more flexibility, we can accomplish that by establishing different layouts for mobile, tablet, and desktop.
 
 <Example title="Grid Responsive 2 col mobile tablet desktop">
 <Grid className="slds-wrap">
@@ -315,7 +352,7 @@ If our designs need a bit more flexibility, we can accomplish that by establishi
 
 In this above example, we are setting our default stacked layout and when our browser exceeds a viewport width of 768px, we adjust the layout for each column to take up 50% or 6 columns of the slds-grid container. Then once we exceed a viewport width of 1024px, we again redraw a layout to be a nice 66% or 8 columns for the primary content area and 33% or 4 columns for the secondary content area.
 
-### Responsive Layout - Column Reordering
+#### Conditional Column Reordering
 
 With flexbox it's easy to reorder your columns visually. Luckily with the SLDS grid system it's easy to reorder visually in a responsive manner! Following the same naming convention as sizing, we'll want to prefix `slds-order` with our breakpoint name and pass in an integer for where you want it visually. The lowest value is the first in order. If no order is defined, standard ordering is applied. This means that a column with no order class will render before `slds-order_1`.
 
@@ -328,11 +365,13 @@ With flexbox it's easy to reorder your columns visually. Luckily with the SLDS g
 
 In the above example, we're setting our first column to be last in the order of 3. Then once your viewport exceeds a width of 1024px, we're changing the visual order of our first column back to 1. Now this seemed rather long winded to move 1 column. Below is an easy way of letting the column know you only want to reorder the first column if it's in a viewport smaller than 480px. This breaks the convention of mobile first and should be used sparingly.
 
-## Horizontal Alignment
+## Alignment
 
 Since the grids are built on flexbox, they allow us to do some interesting things with alignment on both a horizontal axis and vertical axis. You can add an alignment utility to the `slds-grid` container.
 
-### Content centered
+### Horizontal Axis
+
+#### Content centered
 
 If you want your columns to grow from the the center of the horizontal axis, apply the class `slds-grid_align-center`.
 
@@ -344,7 +383,7 @@ If you want your columns to grow from the the center of the horizontal axis, app
   </Grid>
 </Example>
 
-### Setting variable widths based on content
+#### Setting variable widths based on content
 
 Another powerful technique is letting a column shrink to the width of the content inside of it, while explicitly setting widths to other columns. This is achieved by using the `slds-shrink-none` or `slds-grow-none` utility classes or simply removing the `slds-col` class from the column element.
 
@@ -356,7 +395,7 @@ Another powerful technique is letting a column shrink to the width of the conten
 </Grid>
 </Example>
 
-### Content evenly spaced out
+#### Content evenly spaced out
 
 To evenly distribute columns on the horizontal axis with an equal amount of white space separating the columns, apply the class `slds-grid_align-space`.
 
@@ -368,7 +407,7 @@ To evenly distribute columns on the horizontal axis with an equal amount of whit
   </Grid>
 </Example>
 
-### Content evenly spread out from edges
+#### Content evenly spread out from edges
 
 To spread out your columns on the horizontal axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class `slds-grid_align-spread`.
 
@@ -380,7 +419,7 @@ To spread out your columns on the horizontal axis, with the first column startin
   </Grid>
 </Example>
 
-### Content right justified
+#### Content right justified
 
 If you want your columns to grow from the end of the horizontal axis, apply the class `slds-grid_align-end`.
 
@@ -392,7 +431,7 @@ If you want your columns to grow from the end of the horizontal axis, apply the 
   </Grid>
 </Example>
 
-### Content alignment with bump
+#### Content alignment with bump
 
 To "bump" a single or multiple grid items, apply the class `slds-col_bump-{direction}`, with `{direction}` being either left, right, top or bottom, to a grid item.
 
@@ -426,35 +465,13 @@ In the example below, applying the right bump class to item 5 bumps item 6 to th
   </Grid>
 </Example>
 
-### Reversed
+### Vertical Axis
 
-There may be times you find yourself in a situation to reverse the visual flow of your columns, you can do this both horizontally and vertically. To reverse the horizontal flow, add the class `slds-grid_reverse` to the `slds-grid` container. To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the `slds-grid` container.
-
-<Example title="Grid Horizontal Reversed">
-<Grid className="slds-grid_reverse">
-  <Column>1</Column>
-  <Column>2</Column>
-  <Column>3</Column>
-</Grid>
-</Example>
-
-## Vertical Alignment
-
-Once an `slds-grid` has been set, you can change things like flow. By default, a grid flows left to right on the main horizontal axis. You can easily switch your grid to flow top to bottom on a vertical axis by adding `slds-grid_vertical` to the `slds-grid` container.
-
-<Example title="Grid Vertical Align">
-  <Grid className="slds-grid_vertical">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
-
-<Blockquote>
-Note, to vertically align elements on a cross-axis of a `slds-grid` container, the elements need available vertical white space. This is usually achieved by having a height applied to the `slds-grid` container.
+<Blockquote type="note" header="Implementation Note">
+To vertically align elements on a cross-axis of a `slds-grid` container, the elements need available vertical white space. This is usually achieved by having a height applied to the `slds-grid` container.
 </Blockquote>
 
-### Content top
+#### Content top
 
 To align a single row or multi-line rows to the beginning of the cross axis, apply the class `slds-grid_vertical-align-start`.
 
@@ -466,7 +483,7 @@ To align a single row or multi-line rows to the beginning of the cross axis, app
   </Grid>
 </Example>
 
-### Content centered
+#### Content centered
 
 To vertically center align a single row or multi-line rows to the height of a `slds-grid` container, apply the class `slds-grid_vertical-align-center`. When `slds-grid_vertical-align-center` is used in conjunction with `slds-grid_align-center`, the outcome would horizontally and vertically center align your content in the center of the `slds-grid` container.
 
@@ -478,7 +495,7 @@ To vertically center align a single row or multi-line rows to the height of a `s
   </Grid>
 </Example>
 
-### Content bottom
+#### Content bottom
 
 To align a single row or multi-line rows to the end of the cross axis, apply the class `slds-grid_vertical-align-end`.
 
@@ -490,7 +507,7 @@ To align a single row or multi-line rows to the end of the cross axis, apply the
   </Grid>
 </Example>
 
-### Content absolutely centered
+#### Content absolutely centered
 
 <Example title="Grid Vertical Align absolute center">
   <Grid className="slds-grid_vertical-align-center slds-grid_align-center" style={{height: '200px'}}>
@@ -500,19 +517,7 @@ To align a single row or multi-line rows to the end of the cross axis, apply the
   </Grid>
 </Example>
 
-### Reversed
-
-To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the `slds-grid` container.
-
-<Example title="Grid Vertical Align reversed">
-  <Grid className="slds-grid_vertical-reverse" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
-
-### Individual alignment
+#### Individual alignment
 
 To specify the vertical placement of grid items on the cross axis, you can apply `slds-align-top`, `slds-align-middle`, and `slds-align-bottom` to a `slds-col` element.
 
@@ -523,3 +528,18 @@ To specify the vertical placement of grid items on the cross axis, you can apply
     <Column className="slds-align-bottom">3</Column>
   </Grid>
 </Example>
+
+## Page Containers
+
+Optionally, you can contain your page content by adding the class `slds-container_width` to a top level element in your page structure.
+
+Containers come in 4 widths, __small__, __medium__, __large__ and __x-large__. They are rendered using `max-width`. This means your content will be a fluid width until it reaches the width the modifier has set on the container.
+
+Class|Width
+---|---
+`slds-container_small`|480px
+`slds-container_medium`|768px
+`slds-container_large`|1024px
+`slds-container_x-large`|1280px
+
+Additionally, you can center the content of your page by adding `slds-container_center`.

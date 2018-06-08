@@ -24,7 +24,12 @@
 .slds-modal,
 .slds-tabs_default,
 .slds-tabs--default {
-
+  /**
+   * @summary Used to bring back the border on a card when needed
+   *
+   * @selector .slds-card_boundary
+   * @restrict .slds-card
+   */
   .slds-card_boundary {
     border: $border-width-thin solid $card-color-border;
     border-radius: $border-radius-medium;

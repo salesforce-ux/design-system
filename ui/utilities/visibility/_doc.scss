@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary You can specify how to show and hide elements.
+ * @summary Specify the visibility of elements by showing and hiding. It's best practice to swap the hide and show classes rather than use them concurrently, as this will cause issues.
  *
  * @utility
  * @name visibility

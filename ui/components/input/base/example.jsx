@@ -195,7 +195,7 @@ export let examples = [
   },
   {
     id: 'double-icon',
-    label: 'Left & Right Icon',
+    label: 'Left Icon & Clear Button',
     element: (
       <FormElement
         labelContent={inputLabel}
@@ -221,7 +221,7 @@ export let examples = [
   },
   {
     id: 'double-icon-spinner',
-    label: 'Icons with Spinner',
+    label: 'Clear Button with Spinner',
     element: (
       <FormElement
         labelContent={inputLabel}

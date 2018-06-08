@@ -38,8 +38,11 @@ export let examples = [
         <div className="slds-visible">I am visible</div>
       </div>
     ),
-    description:
-      'You can hide an element but reserve the space on the page for when the element is made visible again. To hide the element, use the  `slds-hidden` class. To make it visible again, use the `slds-visible` class.'
+    description: `
+You can hide an element but reserve the space on the page for when the element is made visible again. To hide the element, use the  \`slds-hidden\` class. To make it visible again, use the \`slds-visible\` class.
+
+Note that \`.slds-hidden\` and any of the \`.slds-visible\` utility classes should not be used together at the same time on the same element; doing so will cause your element to remain hidden.
+    `
   },
   {
     id: 'hide-show',
@@ -53,8 +56,11 @@ export let examples = [
         </div>
       </div>
     ),
-    description:
-      'To hide an element and have it not take up space on the page, use the  `.slds-hide` class. You can toggle the state with JavaScript to show the element at a later&nbsp;time. To make the element visible again, use `.slds-show`. If you need to make the hidden element visible again in an inline-block state, use  `.slds-show_inline-block`.'
+    description: `
+To hide any type of element from view and from screen readers, use the \`.slds-hide\` class. Once hidden, you can display the content by using JavaScript to swap \`.slds-hide\` with \`.slds-show\`; This class will set the \`display\` property to \`block\`. If you need to display your hidden element as \`inline\` or \`inline-block\`, you can use the \`.slds-show_inline\` or \`.slds-show_inline-block\` classes, respectively.
+
+Note that \`.slds-hide\` and any of the \`.slds-show-*\` utility classes should not be used together at the same time on the same element; doing so will cause your element to remain hidden.
+    `
   },
   {
     id: 'transition-hide-show',

@@ -47,6 +47,7 @@
      */
     .slds-path__scroller_inner {
       display: flex;
+      width: 100%;
       overflow: hidden;
     }
 
@@ -507,7 +508,7 @@
   margin-right: $spacing-medium;
   border-radius: $border-radius-circle;
   transform: rotate(-90deg);
-  transition: $duration-quickly transform ease-in-out;
+  transition: $duration-slowly transform ease-in-out;
 }
 
 // @TODO: Move to global utility?

@@ -3,7 +3,6 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
 // component imports
@@ -86,10 +85,10 @@ class WelcomeMat extends Component {
             </div>
           </div>
 
-          <div className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
+          <ul className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
             {this.renderTiles(true)}
             {this.renderTiles(false)}
-          </div>
+          </ul>
         </ModalContent>
       </Modal>
     );

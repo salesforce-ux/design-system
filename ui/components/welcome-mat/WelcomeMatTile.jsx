@@ -18,29 +18,32 @@ class WelcomeMatTile extends React.Component {
     });
 
     return (
-      <VisualPickerMediaObject
-        symbol={tile.symbol}
-        className={className}
-        icon={
-          <div className="slds-welcome-mat__tile-icon-container">
-            <UtilityIcon
-              className="slds-icon-text-default"
-              symbol={tile.symbol}
-              title={false}
-              assistiveText={false}
-            />
-            <ActionIcon
-              title="Completed"
-              assistiveText="Completed"
-              className="slds-welcome-mat__icon-check"
-              symbol="check"
-            />
-          </div>
-        }
-      >
-        <h3 className="slds-welcome-mat__tile-title">{tile.title}</h3>
-        <p className="slds-welcome-mat__tile-description">{tile.description}</p>
-      </VisualPickerMediaObject>
+      <li className={className}>
+        <VisualPickerMediaObject
+          symbol={tile.symbol}
+          icon={
+            <div className="slds-welcome-mat__tile-icon-container">
+              <UtilityIcon
+                className="slds-icon-text-default"
+                symbol={tile.symbol}
+                title={false}
+                assistiveText={false}
+              />
+              <ActionIcon
+                title="Completed"
+                assistiveText="Completed"
+                className="slds-welcome-mat__icon-check"
+                symbol="check"
+              />
+            </div>
+          }
+        >
+          <h3 className="slds-welcome-mat__tile-title">{tile.title}</h3>
+          <p className="slds-welcome-mat__tile-description">
+            {tile.description}
+          </p>
+        </VisualPickerMediaObject>
+      </li>
     );
   }
 }

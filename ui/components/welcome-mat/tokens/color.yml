@@ -36,5 +36,5 @@ props:
     comment: Box Shadow declaration
 
   WELCOME_MAT_COLOR_ICON_COMPLETE:
-    value: '#A7B9D1'
+    value: '{!PALETTE_GRAY_6}'
     comment: Completed icon color for the Welcome Mat Boxes

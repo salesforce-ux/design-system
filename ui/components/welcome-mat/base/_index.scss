@@ -15,11 +15,11 @@
     max-width: none;
   }
 
-  .slds-box {
+  .slds-welcome-mat__tile {
     margin: $spacing-medium 0;
   }
 
-  .slds-box:not(.slds-welcome-mat__tile_complete) {
+  .slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete) {
     box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
     background: $color-background-alt;
 
@@ -110,7 +110,7 @@
 /**
  * @summary Container element for the Actions side of the Welcome Mat.
  * @selector .slds-welcome-mat__tiles
- * @restrict .slds-welcome-mat__content div
+ * @restrict .slds-welcome-mat__content ul
  */
 .slds-welcome-mat__tiles {
   background: $color-background;
@@ -120,7 +120,7 @@
 /**
  * @summary Welcome Mat Tile item. Shows an actionable step a user can take to complete a greater objective. Based on a SLDS Visual Picker.
  * @selector .slds-welcome-mat__tile
- * @restrict .slds-welcome-mat__tiles .slds-box
+ * @restrict .slds-welcome-mat__tiles li
  */
 .slds-welcome-mat__tile {
 
@@ -175,6 +175,7 @@
  * @group state
  */
 .slds-welcome-mat__tile_complete {
+  background: transparent;
 
   .slds-icon {
     fill: $welcome-mat-color-icon-complete;

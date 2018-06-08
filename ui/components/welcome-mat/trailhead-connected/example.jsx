@@ -4,7 +4,6 @@
 import React from 'react';
 import WelcomeMat from '../';
 import WelcomeMatContentTrailhead from '../WelcomeMatContentTrailhead';
-import WelcomeMatContent from '../WelcomeMatContent';
 
 const completeTiles = [];
 WelcomeMat.defaultProps.tiles.forEach(tile => {

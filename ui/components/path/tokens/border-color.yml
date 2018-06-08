@@ -5,9 +5,18 @@ global:
   cssProperties:
   - 'border*'
   - box-shadow
+
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
+
 props:
   COLOR_BORDER_PATH_DIVIDER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Used as a separator between dark colors like the stages of salespath.
+  COLOR_BORDER_PATH_CURRENT:
+    value: '{!ENDEAVOUR}'
+    comment: Used as a border color for the active Path step.
+  COLOR_BORDER_PATH_CURRENT_HOVER:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Used as a border color for the current path step on hover.

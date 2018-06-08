@@ -13,6 +13,7 @@ global:
   - 'margin*'
   - 'padding*'
   - transform
+
 props:
   HEIGHT_SALES_PATH:
     value: 2rem
@@ -20,3 +21,6 @@ props:
   PATH_BUTTON_WIDTH_FIXED:
     value: 13rem
     comment: Width of action button to right
+  WIDTH_PATH_BORDER_CURRENT:
+    value: 0.125rem
+    comment: Border width of current stage for path item

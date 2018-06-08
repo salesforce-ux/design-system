@@ -9,9 +9,6 @@
  * @s1 false
  */
 .slds-path {
-  margin-top: 1rem;
-  border: transparent $border-width-thin solid;
-
   /**
    * @summary Indicates the coaching section is expanded
    *
@@ -32,8 +29,7 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
-  position: relative;
-  top: -1rem;
+  padding: 0 $spacing-medium;
 
   /**
    * Indicates the scroller is in the overflow state
@@ -50,26 +46,19 @@
      * @restrict .slds-path__scroller div
      */
     .slds-path__scroller_inner {
+      display: flex;
+      width: 100%;
       overflow: hidden;
     }
 
     .slds-path__scroller-container {
-      position: relative;
-      min-width: 0%;
-      flex-grow: 1;
-      width: calc(100% - 4.75rem);
-      padding-right: 4.75rem;
+      overflow: hidden;
     }
 
     .slds-path__scroll-controls {
-      display: flex;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin-right: $spacing-x-small;
+      display: inline-flex;
+      flex-shrink: 0;
       padding-left: $spacing-x-small;
-      background-color: $color-background-alt;
     }
   }
 }
@@ -81,7 +70,9 @@
  * @restrict .slds-path__track div
  */
 .slds-path__scroller {
-  width: 100%;
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /**
@@ -109,15 +100,56 @@
 /**
  * @summary Creates the container for toggle button and path
  *
- * @selector .slds-path__scroller_container
- * @restrict .slds-path__scroller div
+ * @selector .slds-path__scroller-container
+ * @restrict .slds-path div
  */
 .slds-path__scroller-container {
-  width: 100%;
+  flex: 1;
+  margin-right: $spacing-large;
 }
 
+/**
+ * @summary Container for path actions
+ *
+ * @selector .slds-path__action
+ * @restrict .slds-path div
+ */
 .slds-path__action {
   flex-shrink: 0;
+}
+
+// these mixins exist in order to alias selector assignment in the case
+// where state cannot be applied to the individual path step
+@mixin is-won() {
+
+  .slds-path__link,
+  &:hover .slds-path__link {
+    color: $color-text-inverse;
+    background-color: $color-background-path-won;
+  }
+
+  &:before,
+  &:after,
+  &:hover:before,
+  &:hover:after {
+    background-image: linear-gradient(225deg, $color-background-path-won, $color-background-path-won 40%, transparent 40%);
+  }
+}
+
+@mixin is-lost() {
+
+  .slds-path__link,
+  &:hover .slds-path__link {
+    color: $color-text-inverse;
+    background-color: $color-background-path-lost;
+  }
+
+  &:before,
+  &:after,
+  &:hover:before,
+  &:hover:after {
+    background-image: linear-gradient(225deg, $color-background-path-lost, $color-background-path-lost 40%, transparent 40%);
+  }
 }
 
 /**
@@ -129,7 +161,7 @@
 .slds-path__nav {
   display: flex;
   align-items: flex-start;
-  margin-right: $spacing-small;
+  overflow: hidden;
 
   /**
   * @summary Creates the incomplete stage of the path
@@ -138,35 +170,29 @@
   * @restrict .slds-path__item
   */
   .slds-is-incomplete {
-    background-color: $color-background-path-incomplete;
-
-    &:hover {
-      background-color: $color-background-path-incomplete-hover;
-    }
 
     .slds-path__link {
       color: $color-text-default;
+      background-color: $color-background-path-incomplete;
+    }
+
+    &:before,
+    &:after {
+      background-image: linear-gradient(225deg, $color-background-path-incomplete, $color-background-path-incomplete 40%, transparent 40%);
+    }
+
+    &:hover {
+
+      .slds-path__link {
+        background-color: $color-background-path-incomplete-hover;
+      }
+
+      &:before,
+      &:after {
+        background-image: linear-gradient(225deg, $color-background-path-incomplete-hover, $color-background-path-incomplete-hover 40%, transparent 40%);
+      }
     }
   }
-
-  /**
-   * @summary Creates success stage of the path
-   *
-   * @selector .slds-is-won
-   * @restrict .slds-path__item
-   */
-  .slds-is-active,
-  .slds-is-active.slds-is-won {
-
-    .slds-path__title {
-      transform: rotateX(0deg);
-    }
-
-    .slds-path__stage {
-      transform: rotateX(-180deg);
-    }
-  }
-
 
   /**
    * @summary Creates the completed stage of the path
@@ -175,7 +201,6 @@
    * @restrict .slds-path__item
    */
   .slds-is-complete {
-    background-color: $color-background-path-complete;
 
     .slds-path__stage {
       transform: translateY(-50%) rotateX(0deg);
@@ -187,10 +212,15 @@
 
     .slds-path__link {
       color: $color-text-action-label-active;
+      background-color: $color-background-path-complete;
+    }
+
+    &:before,
+    &:after {
+      background-image: linear-gradient(225deg, $color-background-path-complete, $color-background-path-complete 40%, transparent 40%);
     }
 
     &:hover {
-      background-color: $color-background-path-complete-hover;
 
       .slds-path__stage {
         transform: translateY(-50%) rotateX(-180deg);
@@ -201,44 +231,14 @@
       }
 
       .slds-path__link {
+        background-color: $color-background-path-complete-hover;
         color: $color-text-inverse;
       }
-    }
-  }
 
-  /**
-  * @summary Creates the active stage of the sales path
-  *
-  * @selector .slds-is-active
-  * @restrict .slds-path__item
-  * @notes This class must be placed on the item programatically when the guidance section is activated
-  */
-  .slds-is-active,
-  .slds-is-complete.slds-is-focused {
-    background-color: $color-background-path-active;
-
-    .slds-path__stage {
-      transform: translateY(-50%) rotateX(-180deg);
-    }
-
-    .slds-path__title {
-      transform: rotateX(0deg);
-    }
-
-    .slds-path__link {
-      color: $color-text-inverse;
-    }
-
-    &:hover {
-      background-color: $color-background-path-active-hover;
-
-      + .slds-path__item:before {
-        background-color: $color-background-path-active-hover;
+      &:before,
+      &:after {
+        background-image: linear-gradient(225deg, $color-background-path-complete-hover, $color-background-path-complete-hover 40%, transparent 40%);
       }
-    }
-
-    + .slds-path__item:before {
-      background-color: $color-background-path-active;
     }
   }
 
@@ -249,60 +249,130 @@
    * @restrict .slds-path__item
    */
   .slds-is-current {
-    background-color: $color-background-path-current;
+
+    .slds-path__link {
+      background-color: $color-background-path-current;
+      line-height: ($line-height-salespath - 0.25rem);
+      border-top: $width-path-border-current solid $color-border-path-current;
+      border-bottom: $width-path-border-current solid $color-border-path-current;
+      color: $color-text-path-current;
+    }
+
+    &:before {
+      background-image: linear-gradient(225deg, $color-border-path-current, $color-border-path-current 40%, transparent 40%);
+    }
+
+    &:after {
+      background-image: linear-gradient(225deg, $color-background-path-current, $color-background-path-current 40%, transparent 40%);
+      box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider,
+        inset -0.25rem 0.25rem 0 0 $color-border-path-current;
+    }
+
+    &:first-child .slds-path__link {
+      border-left: $width-path-border-current solid $color-border-path-current;
+    }
+
+    &:last-child .slds-path__link {
+      border-right: $width-path-border-current solid $color-border-path-current;
+    }
 
     &:hover {
-      background-color: $color-background-path-current-hover;
-    }
 
-    + .slds-is-incomplete:before {
-      background-color: $color-background-path-current;
-    }
+      .slds-path__link {
+        border-color: $color-border-path-current-hover;
+      }
 
-    &:hover + .slds-is-incomplete:before {
-      background-color: $color-background-path-current-hover;
+      &:before {
+        background-image: linear-gradient(225deg, $color-border-path-current-hover, $color-border-path-current-hover 40%, transparent 40%);
+      }
+
+      &:after {
+        box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider,
+          inset -0.25rem 0.25rem 0 0 $color-border-path-current-hover;
+      }
     }
   }
 
   /**
-  * @summary Creates lost stage of the path
-  *
-  * @selector .slds-is-lost
-  * @restrict .slds-path__item
-  * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and the opportunity is lost
-  */
-  .slds-is-lost,
-  .slds-is-lost:hover {
-    background-color: $color-background-path-lost;
-  }
+   * @summary Creates the active stage of the sales path
+   *
+   * @selector .slds-is-active
+   * @restrict .slds-path__item
+   * @notes This class must be placed on the item programatically when the guidance section is activated
+   */
+  .slds-is-active {
 
-  // Lets make sure we have the right color when these steps are activated
-  .slds-is-current,
-  .slds-is-lost {
-
-    .slds-path__link {
-      color: $color-text-inverse;
+    .slds-path__stage {
+      transform: translateY(-50%) rotateX(-180deg);
     }
-  }
 
-  .slds-is-won {
-    background-color: $color-background-path-won;
+    .slds-path__title {
+      transform: rotateX(0deg);
+    }
 
     .slds-path__link {
-      color: $color-text-action-label-active;
+      background-color: $color-background-path-active;
+      color: $color-text-inverse;
+      border: 0;
+      line-height: $line-height-salespath;
+    }
+
+    &:before,
+    &:after {
+      background-image: linear-gradient(225deg, $color-background-path-active, $color-background-path-active 40%, transparent 40%);
     }
 
     &:hover {
-      background-color: $color-background-path-won;
 
       .slds-path__link {
-        color: currentColor;
+        background-color: $color-background-path-active-hover;
+      }
+
+      &:before,
+      &:after {
+        background-image: linear-gradient(225deg, $color-background-path-active-hover, $color-background-path-active-hover 40%, transparent 40%);
+      }
+
+      &:after {
+        box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
       }
     }
   }
+
+  /**
+   * @summary Creates lost stage of the path
+   *
+   * @selector .slds-is-lost
+   * @restrict .slds-path__item
+   * @notes This class must be added to the "closed" stage with JS when the Sales Path is complete and the opportunity is lost
+   */
+  .slds-is-lost {
+    @include is-lost();
+  }
+
+  /**
+   * @summary Creates success stage of the path
+   *
+   * @selector .slds-is-won
+   * @restrict .slds-path__item
+   */
+  .slds-is-won {
+    @include is-won();
+  }
 }
 
+// alias selectors for assigning won/lost to the path parent
+.slds-path.slds-is-won .slds-path__item.slds-is-current {
+  @include is-won();
+}
+
+.slds-path.slds-is-lost .slds-path__item.slds-is-current {
+  @include is-lost();
+}
+
+
 // Note: Order matters. Keep the path__item below the above selectors
+
 /**
  * @summary Individual stages of a path
  *
@@ -310,68 +380,58 @@
  * @restrict .slds-path__nav li
  */
 .slds-path__item {
-  overflow: hidden;
   position: relative;
-  flex: 1 1 0%;
+  flex: 1;
   min-width: 5rem;
   text-align: center;
-  perspective: 500px;
   transition:
     transform 0.1s ease-in-out,
     background-color 0.1s linear;
 
-  &:first-child {
+  &:first-child .slds-path__link {
     border-radius: $border-radius-pill 0 0 $border-radius-pill;
   }
 
-  &:last-child {
+  &:last-child .slds-path__link {
     border-radius: 0 $border-radius-pill $border-radius-pill 0;
-    border-right: 0;
+    padding: $spacing-xx-small $spacing-medium $spacing-xx-small ($spacing-medium + $spacing-xx-small);
   }
 
-  &:before {
+  &:first-child:last-child .slds-path__link {
+    border-radius: $border-radius-pill;
+  }
+
+  &:before,
+  &:after {
     content: '';
     display: block;
     position: absolute;
-    top: $border-width-thick;
-    left: (($height-sales-path / 2) * -1);
-    width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
-    height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
-    border: $border-width-thick solid $color-border-path-divider;
-    border-left: 0;
-    border-bottom: 0;
-    background-clip: padding-box;
-    transform: scale3d(0.8, 1.1, 1) rotate(45deg);
-    transition: transform 0.1s ease-in-out, background-color 0.1s linear;
+    top: 0;
+    bottom: 0;
+    width: $height-sales-path;
+    transform: scale(0.74, 1) rotate(45deg);
+    cursor: pointer;
   }
 
-  &:first-child:before {
+  // sets left border for current step (mostly invisible)
+  &:before {
+    left: ((($height-sales-path / 2) + 0.0625rem) * -1);
+    z-index: 9;
+  }
+
+  // sets right arrow for current step (overlaps :before of following element)
+  &:after {
+    right: ((($height-sales-path / 2) - 0.1875rem) * -1);
+    background-size: calc(100% - 0.0625rem);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
+    z-index: 10;
+  }
+
+  &:first-child:before,
+  &:last-child:after {
     display: none;
-  }
-
-  // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
-  + .slds-is-complete:before,
-  + .slds-is-current:before {
-    background-color: $color-background-path-complete;
-  }
-
-  + .slds-is-won:before {
-    background-color: $color-background-path-won;
-  }
-
-  &:hover + .slds-is-complete:before,
-  &:hover + .slds-is-current:before {
-    background-color: $color-background-path-complete-hover;
-  }
-
-  + .slds-is-incomplete:before,
-  + .slds-is-lost:before {
-    background-color: $color-background-path-incomplete;
-  }
-
-  &:hover + .slds-is-incomplete:before,
-  &:hover + .slds-is-lost:before {
-    background-color: $color-background-path-incomplete-hover;
   }
 }
 
@@ -395,6 +455,7 @@
 .slds-path__stage {
   position: absolute;
   top: 50%;
+  // left: 50%;
   left: ($square-icon-medium-content / 2);
   width: 100%;
   transform: translateY(-50%) rotateX(-180deg);
@@ -413,6 +474,7 @@
   position: relative;
   padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
   line-height: $line-height-salespath;
+  height: $height-sales-path;
   text-decoration: none;
   cursor: pointer; // needed in case links have no href & use JS
 
@@ -443,10 +505,10 @@
  * @restrict .slds-path button
  */
 .slds-path__trigger {
-  flex-shrink: 0; // added instead of flex-none
-  margin: 0 $spacing-small;
+  margin-right: $spacing-medium;
   border-radius: $border-radius-circle;
-  transition: $duration-quickly transform ease-in-out;
+  transform: rotate(-90deg);
+  transition: $duration-slowly transform ease-in-out;
 }
 
 // @TODO: Move to global utility?
@@ -467,8 +529,6 @@
  * @restrict .slds-path button
  */
 .slds-path__mark-complete {
-  flex-shrink: 0;
-  margin-right: $spacing-small;
   border-radius: $border-radius-pill;
   min-width: $path-button-width-fixed;
 }
@@ -496,13 +556,11 @@
  * @restrict .slds-path div
  */
 .slds-path__content {
-  position: relative;
-  top: -1rem; // This matches the shift for the top border
+  margin-top: $spacing-x-small;
   padding: 0 $spacing-x-small;
+  border-top: $border-width-thin solid $color-border;
 }
 
-// @TODO: .slds-path__coach
-// Remove align-spread
 
 /**
  * @summary Key field section of expanded tabpanel
@@ -530,7 +588,7 @@
 // Layout adjustments for sub section sof expanded tabpanel
 .slds-path__keys,
 .slds-path__guidance {
-  width: 50%;
+  flex: 1 0 50%;
   margin-top: $spacing-medium;
   padding-top: $spacing-x-small;
   padding-right: $spacing-small;
@@ -553,6 +611,17 @@
 }
 
 /**
+ * @summary The Edit link in Path Coaching
+ *
+ * @selector .slds-path__coach-edit
+ * @restrict .slds-path__coach-title button
+ */
+.slds-path__coach-edit {
+  padding: 0;
+  line-height: inherit;
+}
+
+/**
  * @summary This creates the space at the top of the guidance area
  *
  * @selector .slds-path__guidance-content
@@ -569,7 +638,27 @@
  * @restrict div
  */
 .slds-region_medium {
-  // If overriding styles are needed, they should be placed here
+
+  .slds-path__scroller-container {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .slds-path__track {
+    @include flex-wrap(true);
+  }
+
+  .slds-path__action {
+    flex-grow: 1;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $spacing-medium;
+  }
+
+  .slds-path__stage-name {
+    display: block;
+  }
 }
 
 /**
@@ -580,6 +669,11 @@
  */
 .slds-region_small {
 
+  .slds-path__scroller-container {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
   .slds-path__track,
   .slds-path__coach {
     @include flex-wrap(true);
@@ -587,17 +681,14 @@
 
   .slds-path__stage-name {
     display: block;
-    margin-left: $spacing-small;
+    margin: $spacing-medium 0;
   }
 
   .slds-path__action {
-    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 100%;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    width: 100%;
-    margin-top: $spacing-x-small;
-    padding-right: $spacing-x-small;
-    padding-left: $spacing-x-small;
   }
 
   .slds-path__mark-complete {
@@ -606,7 +697,16 @@
 
   .slds-path__keys,
   .slds-path__guidance {
-    width: 100%;
-    margin-right: 0;
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slds-path__guidance {
+    margin-top: $spacing-x-large;
+  }
+
+  .slds-path__content {
+    border-top: 0;
   }
 }

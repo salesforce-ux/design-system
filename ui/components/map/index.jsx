@@ -2,8 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-import { Avatar } from '../avatar/base/example';
-import ButtonIcon from '../button-icons/';
 import { StandardIcon } from '../icons/standard/example';
 import {
   Modal,
@@ -85,13 +83,6 @@ class Map extends Component {
         aria-describedby={modalContentId}
       >
         <ModalHeader>
-          <ButtonIcon
-            className="slds-modal__close slds-button_icon-inverse"
-            iconClassName="slds-button__icon_large"
-            symbol="close"
-            title="Close"
-            assistiveText="Close"
-          />
           <h2
             id={modalHeadingId}
             className="slds-text-heading_medium slds-hyphenate"
@@ -114,11 +105,15 @@ class Map extends Component {
             )}
             <div className="slds-col">
               <div className="slds-map">
+                {/*
+                  For background, this component blueprint and the actual Lightning component differ in markup. The Lightning component consists of nested iframes that load different HTML files. For our purposes, the markup below works but may require some extra partnering if/when CSS changes are requested.
+
+                  For any external customers, they can replace this iframe with the map of their choice and are not required to have nested iframes.
+                */}
                 {!this.props.hideMap && (
                   <iframe
                     id="GoogleMapID"
                     title="Google Maps iframe"
-                    style={{ border: '0' }}
                     src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
                   />
                 )}

@@ -283,6 +283,7 @@
   top: 50%;
   left: calc(#{$spacing-xx-small} + 1px);
   transform: translateY(-50%);
+  z-index: 2;
 
   .slds-icon {
     @include square($square-icon-x-small-boundary);

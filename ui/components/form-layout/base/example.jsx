@@ -11,10 +11,16 @@ import { Checkbox } from '../../checkbox/base/example';
 
 const inputId01 = 'input-id-01';
 const inputId02 = 'input-id-02';
-const inputId03 = 'input-id-03';
 
 export const Form = props => (
-  <div className={classNames('slds-form', props.className)}>
+  <div
+    className={classNames(
+      'slds-form',
+      { 'slds-form_stacked': props.isStacked },
+      { 'slds-form_horizontal': props.isHorizontal },
+      props.className
+    )}
+  >
     <FormElement labelContent="Text Input" inputId={inputId01}>
       <Input id={inputId01} />
     </FormElement>
@@ -35,7 +41,7 @@ export const Form = props => (
     </fieldset>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">
-        Checkbox Group label
+        Radio Group label
       </legend>
       <div className="slds-form-element__control">
         <Radio label="Lead Generation" name="options" />
@@ -49,6 +55,6 @@ export let states = [
   {
     id: 'horizontal',
     label: 'Horizontal',
-    element: <Form className="slds-form_horizontal" />
+    element: <Form isHorizontal />
   }
 ];

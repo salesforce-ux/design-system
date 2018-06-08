@@ -12,8 +12,11 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 describe('Form Layout', () => {
   xit('renders a base form layout', () => matchesMarkupAndStyle(<Form />));
 
+  xit('renders a base form layout stacked', () =>
+    matchesMarkupAndStyle(<Form isStacked />));
+
   it('renders a base form layout horizontally', () =>
-    matchesMarkupAndStyle(<Form className="slds-form_horizontal" />));
+    matchesMarkupAndStyle(<Form isHorizontal />));
 
   it('renders a compound form layout', () =>
     matchesMarkupAndStyle(<CompoundForm />));

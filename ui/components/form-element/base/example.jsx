@@ -2,14 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
-import { FormElement } from '../';
+import { FormElement, FormElementLabel } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';
-import { Tooltip } from '../../tooltips/base/example';
+import { Form } from '../../form-layout/base/example';
+import { CompoundForm } from '../../form-layout/compound/example';
 
 const inputLabel = 'Form Element Label';
 const defaultInputId = 'input-unique-id';
@@ -129,5 +128,20 @@ export let examples = [
         </FormElement>
       </div>
     )
+  },
+  {
+    id: 'form-layout',
+    label: 'Form Layout',
+    element: <Form isStacked />
+  },
+  {
+    id: 'form-layout-horizontal',
+    label: 'Form Layout - Horizontal',
+    element: <Form isHorizontal />
+  },
+  {
+    id: 'compound-form',
+    label: 'Compound Form',
+    element: <CompoundForm />
   }
 ];

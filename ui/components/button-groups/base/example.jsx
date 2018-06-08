@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { Button } from '../../buttons/base/example';
 import ButtonIcon from '../../button-icons/';
 import {
   Menu,
@@ -36,9 +37,9 @@ export let ButtonGroupList = props => (
 
 export default (
   <ButtonGroup>
-    <button className="slds-button slds-button_neutral">Refresh</button>
-    <button className="slds-button slds-button_neutral">Edit</button>
-    <button className="slds-button slds-button_neutral">Save</button>
+    <Button isNeutral>Refresh</Button>
+    <Button isNeutral>Edit</Button>
+    <Button isNeutral>Save</Button>
   </ButtonGroup>
 );
 
@@ -48,11 +49,11 @@ export let states = [
     label: 'Disabled',
     element: (
       <ButtonGroup>
-        <button className="slds-button slds-button_neutral">Refresh</button>
-        <button className="slds-button slds-button_neutral" disabled>
+        <Button isNeutral>Refresh</Button>
+        <Button isNeutral disabled>
           Edit
-        </button>
-        <button className="slds-button slds-button_neutral">Save</button>
+        </Button>
+        <Button isNeutral>Save</Button>
       </ButtonGroup>
     )
   },
@@ -61,9 +62,9 @@ export let states = [
     label: 'With Overflow Menu',
     element: (
       <ButtonGroup>
-        <button className="slds-button slds-button_neutral">Refresh</button>
-        <button className="slds-button slds-button_neutral">Edit</button>
-        <button className="slds-button slds-button_neutral">Save</button>
+        <Button isNeutral>Refresh</Button>
+        <Button isNeutral>Edit</Button>
+        <Button isNeutral>Save</Button>
         <Trigger className="slds-button_last" ariaExpanded="false" />
       </ButtonGroup>
     )
@@ -74,9 +75,9 @@ export let states = [
     element: (
       <div className="demo-only" style={{ height: '8.75rem' }}>
         <ButtonGroup>
-          <button className="slds-button slds-button_neutral">Refresh</button>
-          <button className="slds-button slds-button_neutral">Edit</button>
-          <button className="slds-button slds-button_neutral">Save</button>
+          <Button isNeutral>Refresh</Button>
+          <Button isNeutral>Edit</Button>
+          <Button isNeutral>Save</Button>
           <Trigger className="slds-button_last slds-is-open">
             <Menu className="slds-dropdown_right slds-dropdown_actions">
               <MenuList>
@@ -95,9 +96,9 @@ export let states = [
     label: 'With Overflow Menu - Disabled',
     element: (
       <ButtonGroup>
-        <button className="slds-button slds-button_neutral">Refresh</button>
-        <button className="slds-button slds-button_neutral">Edit</button>
-        <button className="slds-button slds-button_neutral">Save</button>
+        <Button isNeutral>Refresh</Button>
+        <Button isNeutral>Edit</Button>
+        <Button isNeutral>Save</Button>
         <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
           <ButtonIcon
             aria-haspopup="true"
@@ -123,9 +124,9 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
-          <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse">Edit</button>
-          <button className="slds-button slds-button_inverse">Save</button>
+          <Button isInverse>Refresh</Button>
+          <Button isInverse>Edit</Button>
+          <Button isInverse>Save</Button>
         </ButtonGroup>
       </div>
     )
@@ -139,11 +140,11 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
-          <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse" disabled>
+          <Button isInverse>Refresh</Button>
+          <Button isInverse disabled>
             Edit
-          </button>
-          <button className="slds-button slds-button_inverse">Save</button>
+          </Button>
+          <Button isInverse>Save</Button>
         </ButtonGroup>
       </div>
     )
@@ -157,9 +158,9 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
-          <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse">Edit</button>
-          <button className="slds-button slds-button_inverse">Save</button>
+          <Button isInverse>Refresh</Button>
+          <Button isInverse>Edit</Button>
+          <Button isInverse>Save</Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               className="slds-button_icon-border-inverse"
@@ -182,9 +183,9 @@ export let examples = [
         style={{ padding: '0.5rem', background: '#16325c' }}
       >
         <ButtonGroup>
-          <button className="slds-button slds-button_inverse">Refresh</button>
-          <button className="slds-button slds-button_inverse">Edit</button>
-          <button className="slds-button slds-button_inverse">Save</button>
+          <Button isInverse>Refresh</Button>
+          <Button isInverse>Edit</Button>
+          <Button isInverse>Save</Button>
           <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
             <ButtonIcon
               className="slds-button_icon-border-inverse"
@@ -281,6 +282,24 @@ export let examples = [
           assistiveText="More Actions"
           title="More Actions"
         />
+      </ButtonGroup>
+    )
+  },
+  {
+    id: 'brand-with-overflow',
+    label: 'Brand Button With Overflow Menu',
+    element: (
+      <ButtonGroup>
+        <Button isBrand>Save</Button>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
+          <ButtonIcon
+            aria-haspopup="true"
+            assistiveText="More Actions"
+            className="slds-button_icon-brand"
+            symbol="down"
+            title="More Actions"
+          />
+        </div>
       </ButtonGroup>
     )
   }

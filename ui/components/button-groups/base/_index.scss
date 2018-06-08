@@ -30,6 +30,13 @@
   margin-left: (-1 * $border-width-thin);
 }
 
+// Add space when a brand button is next to a brand icon button dropdown
+.slds-button-group .slds-button_brand + .slds-button_last .slds-button_icon-brand,
+.slds-button-group .slds-button_brand + .slds-button--last .slds-button_icon-brand,
+.slds-button-group-list li:last-child .slds-button_icon-brand {
+  box-shadow: inset 1px 0 0 $button-icon-color-border-primary;
+}
+
 // These selectors must remain in long hand in order to zero out borders that we don't want on last-child buttons
 .slds-button-group-list li:first-child .slds-button,
 .slds-button-group .slds-button:first-child {

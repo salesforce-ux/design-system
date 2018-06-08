@@ -1,0 +1,16 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
+props:
+  BUTTON_ICON_COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_1}'

@@ -1,6 +1,5 @@
 /* eslint-env jest */
 import React from 'react';
-
 import {
   Chat,
   ChatList,
@@ -13,7 +12,6 @@ import {
   ChatIcon
 } from '../';
 import { DoctypeIcon } from '../../icons/doctype/example';
-
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);

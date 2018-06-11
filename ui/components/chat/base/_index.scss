@@ -166,6 +166,7 @@
  */
 .slds-chat-message__text {
   @include break-word;
+  display: inline-block;
   font-size: $font-size-text-small;
   max-width: 420px;
   white-space: pre-line;
@@ -313,7 +314,7 @@
  */
 .slds-chat-message__meta {
   color: $color-text-weak;
-  font-size: $font-size-text-x-small;
+  font-size: $font-size-1;
   margin: $spacing-xxx-small 0 0 $spacing-x-small;
 }
 

@@ -5,8 +5,9 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { Button } from '../../buttons/base/example';
-import { ButtonGroup } from '../base/example';
 import ButtonIcon from '../../button-icons/';
+import { ButtonGroup } from '../base/example';
+import { ButtonGroupRow, ButtonGroupItem } from '../row/example';
 import {
   Menu,
   MenuList,
@@ -43,6 +44,60 @@ it('renders a button group with overflow open', () =>
         </Trigger>
       </ButtonGroup>
     </div>
+  ));
+
+it('renders a row a buttons spaced out', () =>
+  matchesMarkupAndStyle(
+    <ButtonGroupRow>
+      <ButtonGroupItem>
+        <Button isNeutral>Refresh</Button>
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <Button isNeutral>Edit</Button>
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <Button isBrand>Save</Button>
+      </ButtonGroupItem>
+    </ButtonGroupRow>
+  ));
+
+it('renders a row a button icons spaced out', () =>
+  matchesMarkupAndStyle(
+    <ButtonGroupRow>
+      <ButtonGroupItem>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_clicked">
+          <ButtonIcon
+            hasDropdown
+            theme="neutral"
+            assistiveText="More options"
+            title="More Options"
+          />
+        </div>
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <div className="slds-dropdown-trigger slds-dropdown-trigger_clicked">
+          <ButtonIcon
+            hasDropdown
+            theme="neutral"
+            symbol="table"
+            assistiveText="More options"
+            title="More Options"
+          />
+        </div>
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <ButtonIcon symbol="edit" theme="neutral" />
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <ButtonIcon symbol="refresh" theme="neutral" />
+      </ButtonGroupItem>
+      <ButtonGroupItem>
+        <ButtonGroup>
+          <ButtonIcon symbol="chart" theme="neutral" />
+          <ButtonIcon symbol="filter" theme="neutral" />
+        </ButtonGroup>
+      </ButtonGroupItem>
+    </ButtonGroupRow>
   ));
 
 it('renders a single brand button with brand button icon dropdown', () =>

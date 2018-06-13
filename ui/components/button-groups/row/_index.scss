@@ -1,0 +1,27 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates button group container that provides spacing between each button
+ *
+ * @name row
+ * @selector .slds-button-group-row
+ * @restrict div, ul
+ * @variant
+ */
+.slds-button-group-row {
+  display: inline-flex;
+
+  /**
+   * @summary Each item inside of a button group row that needs spacing applied to it
+   * @selector .slds-button-group-item
+   * @restrict .slds-button-group-row li, .slds-button-group-row div
+   */
+  .slds-button-group-item + .slds-button-group-item {
+    margin-left: $spacing-xx-small;
+  }
+
+  .slds-button-group-item .slds-button {
+    margin: 0;
+  }
+}

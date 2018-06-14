@@ -103,7 +103,7 @@ let ErrorIcon = props => (
       Input Label
     </FormElementLabel>
     <FormElementControl className="slds-input-has-icon slds-input-has-icon_left">
-      <SvgIcon className="slds-input__icon" sprite="utility" symbol="warning" />
+      <SvgIcon className="slds-input__icon" sprite="utility" symbol="error" />
       <Input required aria-describedby={props.errorId} />
     </FormElementControl>
     <div id={props.errorId} className="slds-form-element__help">

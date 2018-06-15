@@ -43,6 +43,9 @@ props:
   COLOR_GRAY_12:
     value: "{!PALETTE_GRAY_12}"
     comment: "Gray Color 12"
+  COLOR_GRAY_13:
+    value: "{!PALETTE_GRAY_13}"
+    comment: "Gray Color 13"
   BRAND_PRIMARY:
     value: "#1589ee"
     comment: "Primary brand color"

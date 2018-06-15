@@ -78,3 +78,24 @@ it('renders a RTE editor with a label', () =>
       <RteTextarea placeholder="Compose text..." labelId="rte-label-id-02" />
     </RichTextEditor>
   ));
+
+it('renders a RTE editor with an error', () =>
+  matchesMarkupAndStyle(
+    <RichTextEditor className="slds-has-error">
+      <RteToolbar>
+        <RteFormatText tabIndexSetting="0" />
+        <RteFormatBody />
+        <RteClearFormatting />
+      </RteToolbar>
+      <RteTextarea
+        placeholder="Compose text..."
+        aria-describedby="rte-error-01"
+      />
+      <div
+        id="rte-error-01"
+        className="slds-form-element__help slds-p-around_small"
+      >
+        This field is required
+      </div>
+    </RichTextEditor>
+  ));

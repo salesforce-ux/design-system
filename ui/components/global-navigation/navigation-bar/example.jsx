@@ -8,6 +8,7 @@ import ButtonIcon from '../../button-icons/';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
+import GlobalNavigation from '../';
 
 /* -----------------------------------------------------------------------------
     Elements
@@ -77,7 +78,12 @@ export let ContextBar = props => (
             </span>
           </a>
         </li>
-        <li className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+        <li
+          className={classNames(
+            'slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click',
+            props.hasNavMenuOpen && 'slds-is-open'
+          )}
+        >
           <a
             href="javascript:void(0);"
             className="slds-context-bar__label-action"
@@ -94,6 +100,7 @@ export let ContextBar = props => (
               aria-haspopup="true"
               assistiveText="Open menu item submenu"
               title="Open menu item submenu"
+              onClick={() => props.isInteractive && props.toggleNavMenu()}
             />
           </div>
           {!props.hideDropdown ? contextDropdown : null}
@@ -122,7 +129,7 @@ export const Context = props => (
   <div style={{ height: '16rem' }}>{props.children}</div>
 );
 
-export default <ContextBar itemActive />;
+export default <GlobalNavigation />;
 
 export let states = [
   {
@@ -157,5 +164,10 @@ export let states = [
         ))}
       </ContextBar>
     )
+  },
+  {
+    id: 'item-menu-open',
+    label: 'Item Menu Open',
+    element: <GlobalNavigation hasNavMenuOpen />
   }
 ];

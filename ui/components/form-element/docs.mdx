@@ -10,6 +10,8 @@ import { Textarea } from '../textarea/base/example';
 import { Avatar } from '../avatar/base/example';
 import { Form } from '../form-layout/base/example';
 import { CompoundForm } from '../form-layout/compound/example';
+import RecordDetail from './record-detail/';
+import * as Snapshot from './record-detail/snapshots.data';
 
 <div className="lead doc">
   An HTML form element contains a HTML label and element
@@ -169,7 +171,7 @@ To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` 
 </Blockquote>
 
 <Example title="Form Layout - Compound">
-  <CodeView>
+  <CodeView style={{maxWidth:'400px'}}>
     <CompoundForm/>
   </CodeView>
 </Example>
@@ -186,180 +188,45 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
 
 #### View Mode
 
+When in view/readonly mode, it is *required* to have the class `slds-form-element_readonly` on the `slds-form-element` element. This class will provide styles for scanability and spacing.
+
+##### Stacked Alignment
 <Example title="Form Element - Record Detail - View Mode">
+  <CodeView>
+    <RecordDetail snapshot={Snapshot.ObjectFieldTypes} isViewMode direction="stacked" />
+  </CodeView>
+</Example>
 
-<CodeView>
-  <div className="slds-form" role="list">
-    <div className="slds-grid slds-gutters_small">
-      <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-          <span className="slds-form-element__label">Assigned to</span>
-          <div className="slds-form-element__control">
-            <span className="slds-form-element__static slds-border_bottom">
-              <span className="slds-media slds-media_small">
-                <span className="slds-media__figure">
-                  <Avatar className="slds-avatar_x-small slds-avatar_circle">
-                    <img
-                    alt="Person name"
-                    src="/assets/images/avatar1.jpg"
-                    title="User avatar"
-                    />
-                  </Avatar>
-                </span>
-                <span className="slds-media__body">
-                  <a href="javascript:void(0);">Jack Rogers</a>
-                </span>
-              </span>
-            </span>
-            <ButtonIcon
-              iconClassName="slds-button__icon_hint"
-              symbol="edit"
-              assistiveText="Edit: Assigned to"
-              title="Edit: Assigned to"
-            />
-        </div>
-        </div>
-      </div>
-      <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-          <span className="slds-form-element__label">Team Name</span>
-          <div className="slds-form-element__control">
-            <span className="slds-form-element__static slds-border_bottom">
-              <a href="javascript:void(0);">Salesforce Design System</a>
-            </span>
-            <ButtonIcon
-              iconClassName="slds-button__icon_hint"
-              symbol="edit"
-              assistiveText="Edit: Team Name"
-              title="Edit: Team Name"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="slds-grid slds-gutters_small">
-      <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-          <div className="slds-form-element__control">
-            <span className="slds-form-element__static slds-border_bottom">
-              <Checkbox
-                className="slds-checkbox_stacked"
-                label="Security Assessment Required?"
-                disabled
-              />
-            </span>
-            <ButtonIcon
-              iconClassName="slds-button__icon_hint"
-              symbol="edit"
-              assistiveText="Edit: Security Assessment Required?"
-              title="Edit: Security Assessment Required?"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-          <span className="slds-form-element__label">Status</span>
-          <div className="slds-form-element__control">
-            <span className="slds-form-element__static slds-border_bottom">
-              In Progress
-            </span>
-            <ButtonIcon
-              iconClassName="slds-button__icon_hint"
-              symbol="edit"
-              assistiveText="Edit: Status"
-              title="Edit: Status"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="slds-grid slds-gutters_small">
-      <div className="slds-col slds-has-flexi-truncate" role="listitem">
-        <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-          <span className="slds-form-element__label">Description</span>
-          <div className="slds-form-element__control">
-            <div className="slds-form-element__static slds-border_bottom slds-text-longform">
-              <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.</p>
-              <p>
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br />
-                <a href="javascript:void(0);">www.getslds.com</a>
-              </p>
-            </div>
-            <ButtonIcon
-              iconClassName="slds-button__icon_hint"
-              symbol="edit"
-              assistiveText="Edit: Description"
-              title="Edit: Description"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</CodeView>
+##### Horizontal Alignment
 
+By adding the class `slds-form_horizontal` to top level `slds-form` element, your form can switch from stacked to left aligned, horizontal labels for reduce vertical space.
+
+<Example title="Form Element - Record Detail - View Mode - Horizontal">
+  <CodeView>
+    <RecordDetail className="slds-form_horizontal" snapshot={Snapshot.ObjectFieldTypes} isViewMode direction="horizontal" />
+  </CodeView>
 </Example>
 
 #### Edit Mode
 
+When a form switches to edit mode, we need to replace all readonly form elements with their semantic field type form element. The structure remains the same:
+
+<CodeBlock toggleCode={false}>
+  <FormElement labelContent="My Label" inputId="unique-form-element-id">...</FormElement>
+</CodeBlock>
+
+The form content found inside of `slds-form-element__control` should be replaced with the appropiate field type of the view/readonly state.
+
+##### Stacked Alignment
 <Example title="Form Element - Record Detail - Edit Mode">
-
   <CodeView>
-    <div className="slds-form" role="list">
-      <div className="slds-grid slds-gutters_small">
-        <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <FormElement
-            formElementClassName="slds-form-element_edit slds-hint-parent"
-            labelContent="Assigned to"
-            inputId="assigned-to"
-          >
-            <Input id="assigned-to" readOnly defaultValue="Jack Rogers" />
-          </FormElement>
-        </div>
-        <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <FormElement
-            formElementClassName="slds-form-element_edit slds-hint-parent"
-            labelContent="Team Name"
-            inputId="team-name"
-          >
-            <Input id="team-name" defaultValue="Salesforce Design System" />
-          </FormElement>
-        </div>
-      </div>
-      <div className="slds-grid slds-gutters_small">
-        <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-            <div className="slds-form-element__control">
-              <Checkbox
-                className="slds-checkbox_stacked"
-                label="Security Assessment Required?"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <FormElement
-            formElementClassName="slds-form-element_edit slds-hint-parent"
-            labelContent="Status"
-            inputId="status"
-          >
-            <Input id="status" defaultValue="In Progress" />
-          </FormElement>
-        </div>
-      </div>
-      <div className="slds-grid slds-gutters_small">
-        <div className="slds-col slds-has-flexi-truncate" role="listitem">
-          <FormElement
-            formElementClassName="slds-form-element_edit slds-hint-parent"
-            labelContent="Description"
-            inputId="description"
-          >
-            <Textarea className="slds-textarea" id="description" defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod." />
-          </FormElement>
-        </div>
-      </div>
-    </div>
+    <RecordDetail snapshot={Snapshot.ObjectFieldTypes} direction="stacked" />
   </CodeView>
+</Example>
 
+##### Horizontal Alignment
+<Example title="Form Element - Record Detail - Edit Mode - Horizontal">
+  <CodeView>
+    <RecordDetail className="slds-form_horizontal" snapshot={Snapshot.ObjectFieldTypes} direction="horizontal" />
+  </CodeView>
 </Example>

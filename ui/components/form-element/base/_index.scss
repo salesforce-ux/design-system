@@ -26,7 +26,8 @@
     display: inline-block;
     color: $color-text-label;
     font-size: $form-label-font-size;
-    margin-right: $spacing-small;
+    margin-right: $spacing-x-small;
+    padding-top: $spacing-xxx-small;
     margin-bottom: $spacing-xxx-small;
 
     &:empty {
@@ -60,6 +61,7 @@
   &__icon {
     display: inline-block;
     position: relative; // Since this container can have a tooltip
+    vertical-align: text-bottom;
   }
 
   /**
@@ -70,7 +72,7 @@
    */
   &__help {
     font-size: $font-size-small;
-    margin-top: $spacing-x-small;
+    margin-top: $spacing-xxx-small;
     display: block;
   }
 
@@ -83,7 +85,9 @@
     }
 
     .slds-button_icon {
-      vertical-align: bottom;
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
 }
@@ -111,9 +115,8 @@
  */
 .slds-form-element__static {
   display: inline-block;
-  padding-top: $spacing-xx-small;
-  padding-bottom: $spacing-xx-small;
-  min-height: calc(#{$line-height-button} + 2px); // For IE
+  padding-bottom: $spacing-xxx-small;
+  min-height: calc(1.25rem + 2px); // For IE
   font-size: $input-static-font-size;
   font-weight: $input-static-font-weight;
   color: $input-static-color;

@@ -20,11 +20,14 @@ export const SimpleFormElementWrapper = props => {
   );
 };
 
-export const FormElementControl = props => (
-  <div className={classNames('slds-form-element__control', props.className)}>
-    {props.children}
-  </div>
-);
+export const FormElementControl = props => {
+  const { className, children } = props;
+  return (
+    <div className={classNames('slds-form-element__control', className)}>
+      {children}
+    </div>
+  );
+};
 
 export const FormElementLabel = props => {
   const {

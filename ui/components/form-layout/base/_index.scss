@@ -8,26 +8,29 @@
  * @variant
  */
 
-/**
- * Vertically aligns form label and control, provides spacing between form elements
- *
- * @selector .slds-form_stacked
- * @restrict .slds-form:not(.slds-form_compound)
- * @modifier
- * @group layout
- */
-.slds-form_stacked .slds-form-element,
-.slds-form--stacked .slds-form-element {
-  display: block;
+// Deal with spacing
+.slds-form .slds-form-element {
+  margin-bottom: $spacing-small;
+}
 
-  + .slds-form-element {
-    @include form-element-vertical-spacing;
+// Read-only/View Mode styles - Required
+.slds-form-element_readonly {
+  border-bottom: $border-width-thin solid $color-border;
+
+  .slds-form-element__control {
+    padding-top: $spacing-xxx-small;
+    padding-bottom: $spacing-xxx-small;
   }
 
-  .slds-checkbox,
-  .slds-radio {
-    display: block;
+  // We want no spacing in read only and allow line-height to handle white-space
+  .slds-form-element__label {
+    margin-bottom: 0;
   }
+}
+
+.slds-form_compound .slds-form-element,
+.slds-form-element.slds-form-element_readonly {
+  margin-bottom: 0;
 }
 
 /**
@@ -38,42 +41,100 @@
  * @modifier
  * @group layout
  */
-.slds-form_horizontal,
-.slds-form--horizontal {
-  @include mq-medium-min {
-    text-align: right;
+
+.slds-form_horizontal {
+
+  // Force form elements to stretch 100% of available space
+  .slds-form-element:not([class*="slds-size"]) {
+    width: 100%;
+    flex-basis: 100%;
   }
 
-  .slds-form-element {
+  @include mq-medium-min {
 
-    > .slds-form-element__legend,
-    > .slds-form-element__label {
-      @include mq-medium-min {
-        float: left;
-        text-align: right;
-        display: inline-block;
-        width: 33%;
-        vertical-align: top;
+    .slds-form-element__label {
+      float: left;
+      width: 33%;
+      padding-top: $spacing-xx-small;
+      padding-right: $spacing-small;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slds-form-element__control {
+      padding-left: 33%;
+    }
+
+    // Since the HTML differs for checkbox and radio groups, adjust the display behavior
+    .slds-checkbox:not(.slds-checkbox_stacked),
+    .slds-radio {
+
+      .slds-form-element__label {
         position: relative;
-        top: (($line-height-button / 2) - ($line-height-text / 2));
-        margin-right: 0;
-        margin-bottom: 0;
+        float: none;
+        width: auto;
       }
     }
 
-    + .slds-form-element {
-      @include form-element-vertical-spacing;
+    // Reset stacked single checkbox
+    .slds-checkbox_stacked {
+      width: 100%;
+
+      .slds-checkbox__label {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    // Reset label and control inside of compound fields
+    .slds-form-element__row .slds-form-element__label,
+    .slds-form-element__row .slds-form-element__control {
+      width: auto;
+      float: none;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 0;
     }
   }
+}
 
+/**
+ * Vertically aligns form label and control, provides spacing between form elements
+ *
+ * @selector .slds-form_stacked
+ * @restrict .slds-form:not(.slds-form_compound)
+ * @modifier
+ * @group layout
+ */
+
+.slds-form_stacked .slds-form-element,
+.slds-form--stacked .slds-form-element,
+.slds-form-element.slds-form-element_stacked {
+  display: block;
+
+  // Force form elements to stretch 100% of available space
+  &:not([class*="slds-size"]) {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  + .slds-form-element {
+    @include form-element-vertical-spacing;
+  }
+
+  .slds-checkbox,
+  .slds-radio {
+    display: block; // Override display: inline-block found on checkbox/radio
+  }
+
+  .slds-form-element__label,
   .slds-form-element__control {
     width: 100%;
-
-    @include mq-medium-min {
-      width: 66%;
-      display: inline-block;
-      text-align: left;
-    }
+    flex-basis: 100%;
+    border-bottom: 0;
+    padding-left: 0;
+    position: relative;
   }
 }
 

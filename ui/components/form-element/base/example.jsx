@@ -2,13 +2,17 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { FormElement, FormElementLabel } from '../';
+import classNames from 'classnames';
+import SvgIcon from '../../../shared/svg-icon';
+import ButtonIcon from '../../button-icons/';
+import { FormElement } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';
-import { Form } from '../../form-layout/base/example';
-import { CompoundForm } from '../../form-layout/compound/example';
+import { Tooltip } from '../../tooltips/base/example';
+import RecordDetail from '../record-detail/';
+import * as Snapshot from '../record-detail/snapshots.data';
 
 const inputLabel = 'Form Element Label';
 const defaultInputId = 'input-unique-id';
@@ -130,18 +134,42 @@ export let examples = [
     )
   },
   {
-    id: 'form-layout',
-    label: 'Form Layout',
-    element: <Form isStacked />
+    id: 'stacked',
+    label: 'Stacked form layout - View Mode',
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+        isViewMode
+      />
+    )
   },
   {
-    id: 'form-layout-horizontal',
-    label: 'Form Layout - Horizontal',
-    element: <Form isHorizontal />
+    id: 'edit-stacked',
+    label: 'Stacked form layout - Edit Mode',
+    element: (
+      <RecordDetail direction="stacked" snapshot={Snapshot.ObjectFieldTypes} />
+    )
   },
   {
-    id: 'compound-form',
-    label: 'Compound Form',
-    element: <CompoundForm />
+    id: 'horizontal',
+    label: 'Horizontal form layout - View Mode',
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypes}
+        isViewMode
+      />
+    )
+  },
+  {
+    id: 'edit-horizontal',
+    label: 'Horizontal form layout - Edit Mode',
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypes}
+      />
+    )
   }
 ];

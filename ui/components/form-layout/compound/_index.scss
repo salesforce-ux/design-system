@@ -8,15 +8,17 @@
  *
  * @name compound
  * @selector .slds-form_compound
- * @restrict .slds-form
+ * @restrict .slds-form, .slds-form-element
  * @variant
  */
 .slds-form_compound,
 .slds-form--compound {
+  width: 100%;
 
   .slds-form-element__row {
     display: flex;
-    margin-bottom: $spacing-x-small;
+    align-items: flex-end;
+    margin-bottom: $spacing-xx-small;
 
     + .slds-form-element__row {
       clear: both;
@@ -26,5 +28,13 @@
       padding-left: $spacing-x-small;
       margin-top: 0;
     }
+  }
+
+  .slds-form-element__legend {
+    font-weight: $font-weight-bold;
+  }
+
+  .slds-form-element__label {
+    padding-top: 0;
   }
 }

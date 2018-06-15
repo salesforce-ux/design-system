@@ -373,93 +373,95 @@ export let examples = [
             </button>
           }
         >
-          <fieldset className="slds-form slds-form_compound">
+          <fieldset className="slds-form-element slds-form_compound">
             <legend className="slds-assistive-text">Log new task</legend>
-            <div className="form-element__group">
-              <div className="slds-form-element__row">
-                <div className="slds-form-element slds-size_1-of-1">
-                  <label
-                    className="slds-form-element__label"
-                    htmlFor="text-input-01"
-                  >
-                    Subject
-                  </label>
-                  <div className="slds-form-element__control">
-                    <input
-                      className="slds-input"
-                      type="text"
-                      id="text-input-01"
-                    />
+            <div className="slds-form-element__control">
+              <div className="slds-form-element__group">
+                <div className="slds-form-element__row">
+                  <div className="slds-form-element slds-size_1-of-1">
+                    <label
+                      className="slds-form-element__label"
+                      htmlFor="text-input-01"
+                    >
+                      Subject
+                    </label>
+                    <div className="slds-form-element__control">
+                      <input
+                        className="slds-input"
+                        type="text"
+                        id="text-input-01"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="slds-form-element__row">
-                <div className="slds-form-element slds-size_1-of-2">
-                  <label
-                    className="slds-form-element__label"
-                    htmlFor="text-input-02"
-                  >
-                    Assigned To
-                  </label>
-                  <div className="slds-form-element__control">
-                    <input
-                      className="slds-input"
-                      type="text"
-                      id="text-input-02"
-                    />
+                <div className="slds-form-element__row">
+                  <div className="slds-form-element slds-size_1-of-2">
+                    <label
+                      className="slds-form-element__label"
+                      htmlFor="text-input-02"
+                    >
+                      Assigned To
+                    </label>
+                    <div className="slds-form-element__control">
+                      <input
+                        className="slds-input"
+                        type="text"
+                        id="text-input-02"
+                      />
+                    </div>
+                  </div>
+                  <div className="slds-form-element slds-size_1-of-2">
+                    <label
+                      className="slds-form-element__label"
+                      htmlFor="text-input-03"
+                    >
+                      Due Dates
+                    </label>
+                    <div className="slds-form-element__control">
+                      <input
+                        className="slds-input"
+                        type="text"
+                        id="text-input-03"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="slds-form-element slds-size_1-of-2">
-                  <label
-                    className="slds-form-element__label"
-                    htmlFor="text-input-03"
-                  >
-                    Due Dates
-                  </label>
-                  <div className="slds-form-element__control">
-                    <input
-                      className="slds-input"
-                      type="text"
-                      id="text-input-03"
-                    />
-                  </div>
+                <div className="slds-form-element__row">
+                  <ComboboxContainer
+                    formClassName="slds-size_1-of-2"
+                    autocomplete
+                    label="Name"
+                    placeholder="Search Leads"
+                    inputIcon="right"
+                    inputIconRightSymbol="search"
+                    objectSwitcher
+                    objectSwitcherInline
+                    aria-controls="listbox-id-01"
+                    listbox={
+                      <ComboboxListbox
+                        id="listbox-id-01"
+                        listboxOptionId="listbox-option-id-1"
+                      />
+                    }
+                  />
+                  <ComboboxContainer
+                    formClassName="slds-size_1-of-2"
+                    autocomplete
+                    label="Name"
+                    placeholder="Search Accounts"
+                    inputIcon="right"
+                    inputIconRightSymbol="search"
+                    objectSwitcher
+                    objectSwitcherInline
+                    aria-controls="listbox-id-02"
+                    listbox={
+                      <ComboboxListbox
+                        id="listbox-id-02"
+                        listboxOptionId="listbox-option-id-2"
+                      />
+                    }
+                  />
                 </div>
-              </div>
-              <div className="slds-form-element__row">
-                <ComboboxContainer
-                  formClassName="slds-size_1-of-2"
-                  autocomplete
-                  label="Name"
-                  placeholder="Search Leads"
-                  inputIcon="right"
-                  inputIconRightSymbol="search"
-                  objectSwitcher
-                  objectSwitcherInline
-                  aria-controls="listbox-id-01"
-                  listbox={
-                    <ComboboxListbox
-                      id="listbox-id-01"
-                      listboxOptionId="listbox-option-id-1"
-                    />
-                  }
-                />
-                <ComboboxContainer
-                  formClassName="slds-size_1-of-2"
-                  autocomplete
-                  label="Name"
-                  placeholder="Search Accounts"
-                  inputIcon="right"
-                  inputIconRightSymbol="search"
-                  objectSwitcher
-                  objectSwitcherInline
-                  aria-controls="listbox-id-02"
-                  listbox={
-                    <ComboboxListbox
-                      id="listbox-id-02"
-                      listboxOptionId="listbox-option-id-2"
-                    />
-                  }
-                />
               </div>
             </div>
           </fieldset>
@@ -912,77 +914,79 @@ export let examples = [
             </button>
           }
         >
-          <fieldset className="slds-form slds-form_compound">
+          <fieldset className="slds-form-element slds-form_compound">
             <legend className="slds-assistive-text">Log a call</legend>
-            <div className="form-element__group">
-              <div className="slds-form-element__row">
-                <div className="slds-form-element slds-size_1-of-1">
-                  <label
-                    className="slds-form-element__label"
-                    htmlFor="text-input-01"
-                  >
-                    Subject
-                  </label>
-                  <div className="slds-form-element__control">
-                    <input
-                      className="slds-input"
-                      type="text"
-                      id="text-input-01"
-                    />
+            <div className="slds-form-element__control">
+              <div className="slds-form-element__group">
+                <div className="slds-form-element__row">
+                  <div className="slds-form-element slds-size_1-of-1">
+                    <label
+                      className="slds-form-element__label"
+                      htmlFor="text-input-01"
+                    >
+                      Subject
+                    </label>
+                    <div className="slds-form-element__control">
+                      <input
+                        className="slds-input"
+                        type="text"
+                        id="text-input-01"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="slds-form-element__row">
-                <div className="slds-form-element slds-size_1-of-1">
-                  <label
-                    className="slds-form-element__label"
-                    htmlFor="textarea-input-01"
-                  >
-                    Comments
-                  </label>
-                  <div className="slds-form-element__control">
-                    <textarea
-                      className="slds-textarea"
-                      id="textarea-input-01"
-                    />
+                <div className="slds-form-element__row">
+                  <div className="slds-form-element slds-size_1-of-1">
+                    <label
+                      className="slds-form-element__label"
+                      htmlFor="textarea-input-01"
+                    >
+                      Comments
+                    </label>
+                    <div className="slds-form-element__control">
+                      <textarea
+                        className="slds-textarea"
+                        id="textarea-input-01"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="slds-form-element__row">
-                <ComboboxContainer
-                  formClassName="slds-size_1-of-2"
-                  autocomplete
-                  label="Name"
-                  placeholder="Search Leads"
-                  inputIcon="right"
-                  inputIconRightSymbol="search"
-                  objectSwitcher
-                  objectSwitcherInline
-                  aria-controls="listbox-id-01"
-                  listbox={
-                    <ComboboxListbox
-                      id="listbox-id-01"
-                      listboxOptionId="listbox-option-id-1"
-                    />
-                  }
-                />
-                <ComboboxContainer
-                  formClassName="slds-size_1-of-2"
-                  autocomplete
-                  label="Name"
-                  placeholder="Search Accounts"
-                  inputIcon="right"
-                  inputIconRightSymbol="search"
-                  objectSwitcher
-                  objectSwitcherInline
-                  aria-controls="listbox-id-02"
-                  listbox={
-                    <ComboboxListbox
-                      id="listbox-id-02"
-                      listboxOptionId="listbox-option-id-2"
-                    />
-                  }
-                />
+                <div className="slds-form-element__row">
+                  <ComboboxContainer
+                    formClassName="slds-size_1-of-2"
+                    autocomplete
+                    label="Name"
+                    placeholder="Search Leads"
+                    inputIcon="right"
+                    inputIconRightSymbol="search"
+                    objectSwitcher
+                    objectSwitcherInline
+                    aria-controls="listbox-id-01"
+                    listbox={
+                      <ComboboxListbox
+                        id="listbox-id-01"
+                        listboxOptionId="listbox-option-id-1"
+                      />
+                    }
+                  />
+                  <ComboboxContainer
+                    formClassName="slds-size_1-of-2"
+                    autocomplete
+                    label="Name"
+                    placeholder="Search Accounts"
+                    inputIcon="right"
+                    inputIconRightSymbol="search"
+                    objectSwitcher
+                    objectSwitcherInline
+                    aria-controls="listbox-id-02"
+                    listbox={
+                      <ComboboxListbox
+                        id="listbox-id-02"
+                        listboxOptionId="listbox-option-id-2"
+                      />
+                    }
+                  />
+                </div>
               </div>
             </div>
           </fieldset>

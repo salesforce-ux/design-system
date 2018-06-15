@@ -192,6 +192,16 @@ export const ObjectOptions = {
   }
 };
 
+export const StackedRecordDetailOptions = {
+  stackedoption1: {
+    name: 'Salesforce Lightning Design System',
+    selected: true
+  },
+  stackedoption2: {
+    name: 'Record Experience'
+  }
+};
+
 export const ObjectOptionsFocused = {
   option1: {
     name: 'Accounts',

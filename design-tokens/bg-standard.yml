@@ -427,3 +427,5 @@ props:
     value: '#4B8B44'
   IOT_CONTEXT:
     value: '#2A739E'
+  WORK_QUEUE:
+    value: '#54698D'

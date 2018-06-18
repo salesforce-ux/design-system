@@ -172,6 +172,13 @@
   z-index: $z-index-modal;
 }
 
+.slds-tabs-mobile__container {
+
+  .slds-panel_animated {
+    position: fixed;
+  }
+}
+
 .slds-panel_animated.slds-is-open {
   transform: translate3d(0, 0, 0);
 }

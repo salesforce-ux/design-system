@@ -104,7 +104,7 @@
   .slds-form-element__help {
     background: $color-background-alt;
     margin-top: 0;
-    border-radius: $border-radius-medium;
+    border-radius: 0 0 $border-radius-small $border-radius-small;
   }
 }
 
@@ -119,7 +119,6 @@
   min-height: $size-xx-small;
   max-height: $size-small;
   padding: $spacing-medium;
-  border-radius: $border-radius-medium;
   background-color: $color-background-input;
 }
 
@@ -137,6 +136,21 @@
  */
 
 .slds-rich-text-editor__textarea {
+
+  &:last-child {
+
+    .slds-rich-text-area__content {
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+    }
+  }
+
+  &:first-child {
+
+    .slds-rich-text-area__content {
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+    }
+  }
+
   // stylelint-disable selector-class-pattern
   .ql-editor {
     white-space: pre-wrap;

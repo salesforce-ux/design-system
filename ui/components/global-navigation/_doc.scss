@@ -50,7 +50,7 @@
  *
  * 1.  `.slds-context-bar__dropdown-trigger` — Add a hoverable zone below the action so that the dropdown doesn’t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar
  * 2.  `.slds-dropdown-trigger` — Globally used utility that notifies the element there is a dropdown menu
- * 3.  `.slds-dropdown-trigger--[interaction]` — Specify which type of interaction the menu should appear with “hover” or “click”. The default pattern requires hover to show the menu besides the App Launcher Waffle icon.
+ * 3.  `.slds-dropdown-trigger_click` — Specifies that an item requires a click to open interaction.
  *
  * If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the `.slds-context-bar__label-action` and `.slds-context-bar__icon-action`. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the `.slds-context-bar__icon-action`.
  *

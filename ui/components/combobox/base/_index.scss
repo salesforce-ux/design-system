@@ -103,9 +103,10 @@
 
 /**
  * Listbox container
- *
+ * @name listbox
  * @selector .slds-listbox
  * @restrict ul
+ * @variant
  */
 .slds-listbox {
   font-size: $font-size-medium;
@@ -181,6 +182,20 @@
 }
 
 /**
+ * @summary Container for listbox option icon
+ * @selector .slds-listbox__option-icon
+ * @restrict .slds-listbox__option span
+ */
+.slds-listbox__option-icon {
+  width: $square-icon-small-boundary;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-icon-default;
+}
+
+/**
  * Creates a vertical listbox
  *
  * @selector .slds-listbox_vertical
@@ -236,11 +251,6 @@
 
   .slds-listbox__option_term {
     padding: $spacing-x-small $spacing-small;
-
-    .slds-media__figure {
-      margin-left: $spacing-xx-small;
-      margin-right: $spacing-small;
-    }
   }
 
   /**
@@ -322,6 +332,10 @@
 
   .slds-listbox__icon-selected {
     opacity: 1;
+  }
+
+  .slds-listbox__option-icon {
+    color: $brand-accessible;
   }
 }
 

@@ -9,4 +9,4 @@ imports:
 - ../../../../design-tokens/aliases/color-palettes.yml
 props:
   INPUT_STATIC_COLOR:
-    value: "{!PALETTE_GRAY_12}"
+    value: "{!PALETTE_GRAY_13}"

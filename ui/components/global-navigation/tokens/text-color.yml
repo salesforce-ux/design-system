@@ -10,7 +10,7 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   COLOR_TEXT_CONTEXT_BAR:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Context bar text color
   COLOR_TEXT_CONTEXT_BAR_INVERSE:
     value: '{!WHITE}'

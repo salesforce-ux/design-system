@@ -93,7 +93,7 @@ export const EntityOption = props => (
     )}
   >
     {!props.label && (
-      <span className="slds-media__figure">
+      <span className="slds-media__figure slds-listbox__option-icon">
         <StandardIcon
           className="slds-icon_small"
           symbol={
@@ -155,7 +155,7 @@ export const TypeaheadTermOption = props => (
       props.focused && 'slds-has-focus'
     )}
   >
-    <span className="slds-media__figure">
+    <span className="slds-media__figure slds-listbox__option-icon">
       <UtilityIcon
         className="slds-icon_x-small slds-icon-text-default"
         symbol="search"
@@ -191,17 +191,14 @@ export const Option = props => (
     )}
   >
     {!props.label && (
-      <span className="slds-media__figure">
-        <SvgIcon
-          className={classNames(
-            'slds-icon slds-icon_x-small',
-            props.icon
-              ? 'slds-icon-text-default'
-              : 'slds-listbox__icon-selected'
-          )}
-          sprite="utility"
-          symbol={props.icon || 'check'}
-        />
+      <span className="slds-media__figure slds-listbox__option-icon">
+        {(props.selected || props.icon) && (
+          <UtilityIcon
+            className="slds-icon_x-small"
+            containerClassName="slds-current-color"
+            symbol={props.icon || 'check'}
+          />
+        )}
       </span>
     )}
     {props.label ? (

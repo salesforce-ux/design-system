@@ -429,3 +429,11 @@ props:
     value: '#2A739E'
   WORK_QUEUE:
     value: '#54698D'
+  QUEUE:
+    value: '#54698D'
+  PORTAL_ROLES:
+    value: '#FB8950'
+  PORTAL_ROLES_AND_SUBORDINATES:
+    value: '#7A9AE6'
+  CUSTOMER_PORTAL_USERS:
+    value: '#3C97DB'

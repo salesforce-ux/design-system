@@ -1,0 +1,106 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+  * The narrow expression is used for in-context logic building, where users are able to
+  * immediately preview the results of their conditional logic,like a list or report.
+  *
+  * @summary Creates a narrow expression
+  * @name filters
+  * @selector .slds-filters
+  * @restrict div
+  * @variant
+  */
+.slds-filters {
+  position: relative;
+}
+
+/**
+ * @summary Filters Header
+ * @selector .slds-filters__header
+ * @restrict .slds-filters div
+ */
+.slds-filters__header {
+  padding: $spacing-x-small $spacing-small;
+}
+
+/**
+ * @summary Filters Body
+ * @selector .slds-filters__body
+ * @restrict .slds-filters div
+ */
+.slds-filters__body {
+  padding: $spacing-x-small $spacing-small;
+}
+
+/**
+ * @summary Filters Footer
+ * @selector .slds-filters__footer
+ * @restrict .slds-filters div
+ */
+.slds-filters__footer {
+  padding: $spacing-x-small $spacing-medium;
+}
+
+/**
+ * @summary Filterable Item
+ * @selector .slds-filters__item
+ * @restrict .slds-filters li div
+ */
+.slds-filters__item {
+  padding: $spacing-small;
+  background: $color-background-button-default;
+  border: $border-width-thin solid $color-border-button-default;
+  border-radius: $border-radius-medium;
+
+  /**
+   * @summary Indicates that a filter is new and hasn't been saved
+   * @selector .slds-is-new
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-is-new {
+    background: $color-background-highlight;
+    color: $color-text-default;
+  }
+
+  /**
+   * @summary Indicates that a filter has an error
+   * @selector .slds-has-error
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-has-error {
+    border-color: $color-border-error;
+  }
+
+  /**
+   * @summary Indicates that a filter is locked
+   * @selector .slds-is-locked
+   * @restrict .slds-filters__item
+   * @modifier
+   */
+  &.slds-is-locked {
+    background: $color-background;
+  }
+
+  + .slds-filters__item {
+    margin-top: $spacing-x-small;
+  }
+
+  &:hover {
+    background: $color-background-button-default-hover;
+  }
+}
+
+/**
+ * @summary Filters Group
+ * @selector .slds-filters__group
+ * @restrict .slds-filters div
+ */
+.slds-filters__group {
+  background: $color-background;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  padding: $spacing-small;
+}

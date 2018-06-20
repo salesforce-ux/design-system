@@ -1,0 +1,17 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+  * The Formula variant allows users to write free-form custom logic by using insertion
+  * comboboxes and/or typing freely.
+  *
+  * @summary Creates a Filter Component
+  * @name formula
+  * @selector .slds-expression_formula__rte
+  * @restrict .slds-expression div
+  * @variant
+  */
+
+.slds-expression_formula__rte {
+  margin-top: $spacing-small;
+}

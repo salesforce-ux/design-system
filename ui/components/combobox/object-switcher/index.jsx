@@ -79,7 +79,8 @@ export class IconObjectSwitcher extends Component {
       filteredSymbol,
       addonPosition,
       comboboxAriaControls,
-      hasInteractions
+      hasInteractions,
+      listboxId
     } = this.props;
 
     return (
@@ -92,7 +93,7 @@ export class IconObjectSwitcher extends Component {
         <Combobox
           id={id}
           className="slds-has-icon-only"
-          aria-controls={listboxId02}
+          aria-controls={listboxId || listboxId02}
           comboboxAriaControls={comboboxAriaControls}
           label="Filter Search by:"
           hideLabel
@@ -120,7 +121,8 @@ export class IconObjectSwitcher extends Component {
           listbox={
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
-              id={listboxId02}
+              id={listboxId || listboxId02}
+              hasUniqueId
               snapshot={Snapshot.BuilderOptions}
               type="plain"
               count={4}

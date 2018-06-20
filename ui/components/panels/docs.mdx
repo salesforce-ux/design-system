@@ -15,9 +15,10 @@ import SvgIcon from '../../shared/svg-icon';
 A panel is docked to the left/right side of a viewport and is in the document flow of the canvas or main content.
 
 **Use this component when:**
-1. The canvas content extends beyond the boundaries of the viewport, while panning and zooming is supported
-2. It is not important to see canvas content while completing the task in a Panel
-3. The task performed in a Panel is momentary
+
+1.  The canvas content extends beyond the boundaries of the viewport, while panning and zooming is supported
+2.  It is not important to see canvas content while completing the task in a Panel
+3.  The task performed in a Panel is momentary
 
 Toggling visibility of a Panel does reflow the main content.
 
@@ -159,13 +160,13 @@ The panel width can be modified by applying a sizing class to the `slds-panel` e
 
 The panels come in 5 different sizes:
 
-|Width|SLDS Class         |
-|-----|-------------------|
-|240px|`slds-size_small`  |
-|320px|`slds-size_medium` |
-|400px|`slds-size_large`  |
-|640px|`slds-size_x-large`|
-|100% |`slds-size_full`   |
+| Width | SLDS Class          |
+| ----- | ------------------- |
+| 240px | `slds-size_small`   |
+| 320px | `slds-size_medium`  |
+| 400px | `slds-size_large`   |
+| 640px | `slds-size_x-large` |
+| 100%  | `slds-size_full`    |
 
 ## Panel Visibility
 
@@ -177,21 +178,23 @@ A panel causes reflow by being in the flow of the layout rather than overlayed o
   <PanelPlayground drawer />
 </Example>
 
-## Filtering Panel
+## Panels for Filtering
 
-A component that uses the base panel component is the Filtering Panel.
+Filtering lists or reports can be done by using a Filtering expressions inside of a Panel. Check out the [Filtering expression](/components/expression/#filtering) component for different states and accessibility requirements.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   Make sure to use assistive text to improve the clarity of what you might be editing, for example, add <code className="doc">&lt;span className="slds-assistive-text"&gt;Edit filter:</span></code> to the button element inside each filterable object.
 </Blockquote>
 
 <CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>
-  <Panel
-    size="medium"
-    title="Filter"
-    docked="right"
-    invoke="toggle"
-  >
+<Panel
+size="medium"
+title="Filter"
+docked="right"
+invoke="toggle"
+
+>
+
     <Filters>
       <ol className="slds-list_vertical slds-list_vertical-space">
         <FilterObject type="Show Me">All Products</FilterObject>
@@ -209,145 +212,6 @@ A component that uses the base panel component is the Filtering Panel.
       </ol>
       <FiltersFooter />
     </Filters>
-  </Panel>
-</CodeView>
 
-### Add a new filter
-
-In the case of filtering, the panel header changes its requirements by adding two actions. The panel header needs to have the class `slds-panel__header_custom` added to `slds-panel__header` to notify the component that it has a custom layout in the header.
-
-<CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>
-  <Panel
-    size="medium"
-    title="Filter"
-    docked="right"
-    invoke="drill-in"
-    customHeader={[
-      <button className="slds-button slds-button_neutral slds-col_bump-right" key="panel-header-button-01">Cancel</button>,
-      <button className="slds-button slds-button_brand" key="panel-header-button-02">Save</button>
-    ]}
-  >
-    <Filters>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Show Me">All Products</FilterObject>
-      </ol>
-      <h3 className="slds-text-body_small slds-m-vertical_x-small">
-        Matching all these filters
-      </h3>
-      <ul className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Created Date" removable>
-          equals THIS WEEK
-        </FilterObject>
-        <FilterObject type="List Price" removable>
-          greater than "500"
-        </FilterObject>
-        <FilterObject className="slds-is-new" removable>
-          New Filter
-        </FilterObject>
-      </ul>
-      <FiltersFooter />
-    </Filters>
-  </Panel>
-</CodeView>
-
-### Filtering with an error
-
-<Blockquote type="a11y" header="Accessibility Requirement">
-  When an error message is displayed to the user, the <code className="doc">&lt;div&gt;</code> containing the error message should have the <code className="doc">role="alert"</code> attribute applied. This will immediately notify the user that an error has occured.
-</Blockquote>
-
-<Blockquote type="a11y" header="Accessibility Requirement">
-  The filter button that has an error is associated to that error with the use of <code className="doc">aria-describedby</code>. The value of <code className="doc">aria-describedby</code> matches the ID given to the element that contains the corresponding error message.
-</Blockquote>
-
-<CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>
-  <Panel
-    size="medium"
-    title="Filter"
-    docked="right"
-    invoke="drill-in"
-    customHeader={[
-      <button className="slds-button slds-button_neutral slds-col_bump-right" key="panel-header-button-01">Cancel</button>,
-      <button className="slds-button slds-button_brand" key="panel-header-button-02">Save</button>
-    ]}
-  >
-    <Filters>
-      <div
-        className="slds-text-color_error slds-m-bottom_x-small"
-        role="alert"
-      >
-        Filters could not be applied. Please fix the validation errors
-        below.
-      </div>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Show Me">All Products</FilterObject>
-      </ol>
-      <h3 className="slds-text-body_small slds-m-vertical_x-small">
-        Matching all these filters
-      </h3>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Created Date" removable>
-          equals THIS WEEK
-        </FilterObject>
-        <FilterObject type="List Price" removable>
-          greater than "500"
-        </FilterObject>
-        <FilterObject
-          className="slds-has-error"
-          type="Stage"
-          errorMessage="Error Message"
-          removable
-        >
-          equals "Red"
-        </FilterObject>
-      </ol>
-      <FiltersFooter />
-    </Filters>
-  </Panel>
-</CodeView>
-
-### Filtering with locked filters
-
-<CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>
-  <Panel
-    size="medium"
-    title="Filter"
-    docked="right"
-    invoke="drill-in"
-    customHeader={[
-      <button className="slds-button slds-button_neutral slds-col_bump-right" key="panel-header-button-01">Cancel</button>,
-      <button className="slds-button slds-button_brand" key="panel-header-button-02">Save</button>
-    ]}
-  >
-    <Filters>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Show Me">All Products</FilterObject>
-      </ol>
-      <h3 className="slds-text-body_small slds-m-vertical_x-small">
-        Matching all these filters
-      </h3>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject type="Created Date" removable>
-          equals THIS WEEK
-        </FilterObject>
-        <FilterObject type="List Price" removable>
-          greater than "500"
-        </FilterObject>
-      </ol>
-      <h3 className="slds-text-body_small slds-m-vertical_x-small slds-grid">
-        Locked Filters
-        <SvgIcon
-          className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_x-small"
-          sprite="utility"
-          symbol="lock"
-        />
-      </h3>
-      <ol className="slds-list_vertical slds-list_vertical-space">
-        <FilterObject className="slds-is-locked" type="Name" disabled>
-          equals "ACME"
-        </FilterObject>
-      </ol>
-      <FiltersFooter />
-    </Filters>
   </Panel>
 </CodeView>

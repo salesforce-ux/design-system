@@ -1,0 +1,18 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Expression components help users declaratively construct logical expressions.
+ * These expressions can be used when querying for a filtered set of records, creating rules
+ * to control when something executes, or any other logic.
+ *
+ * @summary An Expression builder helps users declaratively construct logical expressions.
+ *
+ * @base
+ * @name expression
+ * @selector .slds-expression, .slds-filters
+ * @category experience
+ * @type data-entry, layout
+ * @support dev-ready
+ * @synonyms rule, filter, logic, expression, conditions
+ */

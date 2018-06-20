@@ -34,6 +34,28 @@
 }
 
 /**
+ * @summary Container for Rich Text Editor Toolbar
+ * @selector .slds-rich-text-editor__col
+ * @restrict .slds-rich-text-editor__toolbar div
+ */
+.slds-rich-text-editor__col {
+  align-self: center;
+
+  + .slds-rich-text-editor__col {
+    margin-left: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Container for Rich Text Editor Toolbar
+ * @selector .slds-rich-text-editor__col_grow
+ * @restrict .slds-rich-text-editor__toolbar div
+ */
+.slds-rich-text-editor__col_grow {
+  flex-grow: 1;
+}
+
+/**
  * Container for Rich Text Editor Bottom Toolbar
  *
  * @selector .slds-rich-text-editor__toolbar-bottom

@@ -219,6 +219,10 @@ ol.doc {
   list-style: decimal;
 }
 
+ul.doc > li.doc >  ol.doc {
+  margin-bottom: 0;
+}
+
 table.doc {
   background: #fff;
   border: 1px solid #f2f2f2;

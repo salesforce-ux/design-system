@@ -1,0 +1,91 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates an Expression Component
+ * @name base
+ * @selector .slds-expression
+ * @restrict div
+ * @variant
+ */
+
+/**
+  * @summary Condition options
+  * @selector .slds-expression__options
+  * @restrict .slds-expression div
+  */
+.slds-expression__options {
+  width: $size-small;
+}
+
+/**
+  * @summary Legend for expression row
+  * @selector .slds-expression__legend
+  * @restrict .slds-expression legend
+  */
+.slds-expression__legend {
+  float: left;
+  width: $size-xxx-small;
+  padding-top: calc((#{$line-height-text} * #{$form-label-font-size}) + (#{$height-input} / 4));
+  font-weight: $font-weight-bold;
+
+  /**
+    * @summary Modifies a legend when placed within a expression group
+    * @selector .slds-expression__legend_group
+    * @restrict .slds-expression__legend
+    */
+  &.slds-expression__legend_group {
+    margin-top: 0;
+  }
+}
+
+/**
+  * @summary Defines an expression row
+  * @selector .slds-expression__row
+  * @restrict .slds-expression li
+  */
+.slds-expression__row {
+  margin-top: $spacing-small;
+
+  /**
+    * @summary Modifies a row when placed within a expression group
+    * @selector .slds-expression__row_group
+    * @restrict .slds-expression__row
+    */
+  &.slds-expression__row_group {
+    padding-left: $spacing-xx-large;
+  }
+}
+
+/**
+  * @summary Action buttons for conditional expressions
+  * @selector .slds-expression__buttons
+  * @restrict .slds-expression div
+  */
+.slds-expression__buttons {
+  margin-top: $spacing-small;
+}
+
+/**
+  * @summary Group of conditional expressions
+  * @selector .slds-expression__group
+  * @restrict .slds-expression li
+  */
+.slds-expression__group {
+  background: $color-background;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  padding: $spacing-small;
+  margin-top: $spacing-small;
+}
+
+/**
+  * @summary Section title for expressions
+  * @selector .slds-expression__title
+  * @restrict h2
+  */
+.slds-expression__title {
+  font-size: $font-size-6;
+  font-weight: bold;
+  margin-bottom: $spacing-x-small;
+}

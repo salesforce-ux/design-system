@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Component } from 'react';
 import { ButtonGroupList } from '../../button-groups/list/example';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
@@ -12,6 +12,13 @@ import {
   ListboxItem,
   Option
 } from '../../combobox/base/example';
+import { Listbox as NewListbox } from '../../combobox/listbox';
+import { ComboboxGroup } from '../../combobox/';
+import { IconObjectSwitcher } from '../../combobox/object-switcher/';
+import { UtilityIcon } from '../../icons/base/example';
+import * as Snapshot from '../../combobox/snapshots.data';
+import { FormElement } from '../../form-element';
+import { Input } from '../../input/base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -65,6 +72,110 @@ export let RteToolbar = props => (
     {props.children}
   </div>
 );
+
+export const RteFormula = props => {
+  const listboxId1 = _.uniqueId('listbox-id-');
+  const listboxId2 = _.uniqueId('listbox-id-');
+  const primaryComboboxId1 = _.uniqueId('primary-combobox-id-');
+  const primaryComboboxId2 = _.uniqueId('primary-combobox-id-');
+  const inputLabel = 'Input Label';
+  const inputId = _.uniqueId('text-input-id-');
+
+  return (
+    <React.Fragment>
+      <div className="slds-rich-text-editor__col slds-rich-text-editor__col_grow">
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls={listboxId1}
+          comboboxID={primaryComboboxId1}
+          autocomplete
+          listbox={
+            <NewListbox
+              id={listboxId1}
+              snapshot={Snapshot.EntityOptions}
+              type="entity"
+              count={2}
+              hasUniqueId
+            />
+          }
+          addon={
+            <IconObjectSwitcher
+              id={_.uniqueId('combobox-id-')}
+              listboxId={_.uniqueId('objectswitcher-listbox-id-')}
+              value="Apex"
+              filteredSymbol="apex"
+              addonPosition="start"
+              comboboxAriaControls={primaryComboboxId1}
+            />
+          }
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="right"
+          placeholder="Insert a resource"
+          hideLabel
+          rightInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_right"
+              assistiveText={false}
+              title={false}
+            />
+          }
+        />
+      </div>
+      <div className="slds-rich-text-editor__col slds-rich-text-editor__col_grow">
+        <ComboboxGroup
+          id={_.uniqueId('combobox-id-')}
+          aria-controls={listboxId2}
+          comboboxID={primaryComboboxId2}
+          autocomplete
+          listbox={
+            <NewListbox
+              id={listboxId2}
+              snapshot={Snapshot.EntityOptions}
+              type="entity"
+              count={2}
+              hasUniqueId
+            />
+          }
+          addon={
+            <IconObjectSwitcher
+              id={_.uniqueId('combobox-id-')}
+              listboxId={_.uniqueId('objectswitcher-listbox-id-')}
+              value="Apex"
+              filteredSymbol="apex"
+              addonPosition="start"
+              comboboxAriaControls={primaryComboboxId2}
+            />
+          }
+          addonPosition="start"
+          comboboxPosition="end"
+          inputIconPosition="right"
+          placeholder="Insert a function"
+          hideLabel
+          rightInputIcon={
+            <UtilityIcon
+              symbol="search"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_right"
+              assistiveText={false}
+              title={false}
+            />
+          }
+        />
+      </div>
+      <div className="slds-rich-text-editor__col slds-rich-text-editor__col_grow">
+        <FormElement hasHiddenLabel labelContent={inputLabel} inputId={inputId}>
+          <Input id={inputId} placeholder="Insert operator" />
+        </FormElement>
+      </div>
+      <div className="slds-rich-text-editor__col">
+        <ButtonIcon symbol="help" assistiveText="Help" title="Help" />
+      </div>
+    </React.Fragment>
+  );
+};
 
 const FontFamilyDropdown = props => (
   <Listbox

@@ -1,0 +1,16 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * The Custom Logic variant allows users to manually type their custom logic into an input
+ * field, which references a numbered expression.
+ *
+ * @summary Creates a Custom Logic variant of Filters
+ * @name custom-logic
+ * @selector .slds-expression__custom-logic
+ * @restrict .slds-expression div
+ * @variant
+ */
+.slds-expression__custom-logic {
+  margin-top: $spacing-small;
+}

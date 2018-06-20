@@ -8,6 +8,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { Spinner } from '../../spinners/base/example';
+import _ from '../../../shared/helpers';
 /**
  * Listbox
  */
@@ -238,7 +239,7 @@ export const Option = props => (
   </ListboxOption>
 );
 
-class Listbox extends Component {
+export class Listbox extends Component {
   constructor() {
     super();
     this.renderEntityOptions = this.renderEntityOptions.bind(this);
@@ -246,11 +247,14 @@ class Listbox extends Component {
   }
 
   renderEntityOptions(key) {
+    const uniqueId = this.props.hasUniqueId
+      ? _.uniqueId('listbox-option-id-')
+      : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>
         <EntityOption
-          id={key}
+          id={uniqueId || key}
           tabIndex={option.tabIndex}
           selected={option.selected}
           focused={option.focused}
@@ -270,11 +274,14 @@ class Listbox extends Component {
   }
 
   renderPlainOptions(key) {
+    const uniqueId = this.props.hasUniqueId
+      ? _.uniqueId('listbox-option-id-')
+      : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>
         <Option
-          id={key}
+          id={uniqueId || key}
           name={option.name}
           selected={option.selected}
           focused={option.focused}

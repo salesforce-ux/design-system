@@ -52,6 +52,10 @@ export let FiltersFooter = props => (
   </div>
 );
 
+export const FilterObjectListItem = props => (
+  <li className="slds-item slds-hint-parent">{props.children}</li>
+);
+
 export let FilterObject = props => {
   let ariaDesribedBy;
   if (props.errorMessage) {
@@ -72,7 +76,16 @@ export let FilterObject = props => {
           disabled={props.disabled}
         >
           <span className="slds-assistive-text">Edit filter:</span>
-          {props.type ? (
+          {props.type &&
+            props.operator && (
+              <span className="slds-show">
+                <span>
+                  <strong>{props.operator + ' '}</strong>
+                </span>
+                <span className="slds-text-body_small">{props.type}</span>
+              </span>
+            )}
+          {props.type && !props.operator ? (
             <span className="slds-show slds-text-body_small">{props.type}</span>
           ) : null}
           <span className="slds-show">{props.children}</span>
@@ -81,7 +94,7 @@ export let FilterObject = props => {
           <ButtonIcon
             className="slds-button_icon slds-button_icon-small"
             iconClassName="slds-button__icon_hint"
-            symbol="close"
+            symbol={'delete'}
             assistiveText={
               props.type
                 ? 'Remove filter: ' + props.type + ' ' + props.children

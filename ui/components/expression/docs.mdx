@@ -1,0 +1,384 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import { Expression, ExpressionGroup, ExpressionRow } from './';
+import { Formula } from './formula/example';
+import { ExpressionNarrow, ExpressionNarrowGroup } from './filters/example';
+import { Filters, FilterObject, FilterObjectListItem, FiltersFooter } from '../panels/filtering/example';
+import SvgIcon from '../../shared/svg-icon';
+
+<div className="lead doc">
+  Expression builders help users declaratively construct logical expressions. These expressions can be used when querying for a filtered set of records, creating rules to control when something executes, or any other conditional logic.
+</div>
+
+<Example title="Expression Builder -  Base">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected/>
+  </CodeView>
+</Example>
+
+The variants scale from lightweight e-commerce style filtering to declarative rule building, and even to advanced formula or SOQL/SQL expressions.
+
+We also include size variants to fit a variety of use cases:
+
+- Use the narrow version for in-context expression building, enabling users to preview their results.
+- Use the full width version when expression building is a standalone task, perhaps in a modal.
+
+## Accessibility
+
+### Markup
+
+Each row in the expression builder is a `<fieldset>` and is contained in an `<li>` inside of a `<ul>`.
+
+<CodeBlock toggleCode={false}>
+  <ul>
+    <li className="slds-expression__row">
+      <fieldset>
+        <legend className="slds-expression__legend">
+          <span>AND</span>
+          <span className= "slds-assistive-text">Condition N</span>
+        </legend>
+        <div className="slds-expression__row_inputs">
+        {...}
+        </div>
+      </fieldset>
+    </li>
+  </ul>
+</CodeBlock>
+
+The first child DOM element of the `<fieldset>` should be the `<legend>`, which includes the logic operator, such as "AND" or "OR", and assistive text describing the current rule, such as "Condition 3".
+
+<CodeBlock toggleCode={false}>
+  <legend className="slds-expression__legend"><span>AND</span><span className= "slds-assistive-text">Condition N</span></legend>
+</CodeBlock>
+
+### Focus Management
+
+**Adding**
+
+When clicking `Add Condition`:
+
+- Focus should move to the first combobox in the new rule, labeled "Resource" or something similar
+
+When clicking `Add Group`:
+
+- Focus should move to the mode combobox in the new group, where "All Conditions Are Met For This Group" should be selected by default
+
+**Deleting**
+
+When "deleting" the only row:
+
+- When there is only one row, the delete button is disabled until a Resource is selected.
+- If a Resource has been selected, then clicking the delete button resets to the [Default State](/components/expression/#Default), since there is a one row minimum. This includes:
+  1.  Clear any comboboxes or inputs that have been changed from the default
+  2.  Use Javascript to move focus to the "Resource" combobox input of that same row.
+  3.  Disable the "Operator" and "Value" inputs, as well as the Delete button
+
+When deleting the first row or a middle row:
+
+- Use Javascript to move focus to the first combobox input in the next row, labeled "Resource" or something similar.
+
+When deleting the last row:
+
+- Use Javascript to move focus to the delete button of the prior row.
+
+## Default
+
+By default, the expression builder starts with one condition. The default option for the mode combobox is "All Conditions Are Met". Until a Resource is selected, the Operator and Value fields, as well as the Delete button, are disabled.
+
+The expression builder has a one row minimum requirement. Therefore, clicking the delete button on a single row will only clear any populated values from the inputs.
+
+<Blockquote header="Label Note" type="note">
+  Be sure to show labels above all inputs. By default "Take Action When" is the label for the mode combobox. However, this should be updated based on the product or persona to best match the use case. Similarly, use “Resource”, “Operator”, and “Value” as labels in each row, but, when relevant, replace “Resource” with a more specific label for your use case (e.g. “Field”).
+</Blockquote>
+
+### Initial State
+
+Since the options in the Operator field and the type of component used for the Value field are dependent on the Resource selected, the Operator and Value Fields are disabled in the initial state until a Resource is selected. The Delete button is also disabled until a Resource is selected.
+
+<Example title="Expression Builder - Initial Disabled State">
+  <CodeView>
+    <Expression optionSelected="all" inputIsDisabled buttonIsDisabled/>
+  </CodeView>
+</Example>
+
+### Resource Selected
+
+Once a resource is selected, the values for the Operator field update to correspond with the type of Resource selected. Similarly, the component used for the Value field can be an input, combobox, picklist, or lookup, depending on what Resource was chosen.
+
+<Example title="Expression Builder - Initial State Resource Selected">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected/>
+  </CodeView>
+</Example>
+
+### New Condition Added
+
+<Example title="Expression Builder - Condition Added">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected>
+      <ExpressionRow legendText="AND" assistiveText="Condition 2" inputIsDisabled/>
+    </Expression>
+  </CodeView>
+</Example>
+
+### Error State
+
+<Example title="Expression Builder - Error State">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected>
+      <ExpressionRow legendText="AND" assistiveText="Condition 2" errorMessage="This field is required."/>
+    </Expression>
+  </CodeView>
+</Example>
+
+## All or Any Conditions
+
+When the user selects "All Conditions Are Met" from the mode combobox and adds a second condition, the expression builder will use `AND` logic:
+
+<Example title="Expression Builder - All Conditions">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected>
+      <ExpressionRow legendText="AND" assistiveText="Condition 2" resourceIsSelected/>
+    </Expression>
+  </CodeView>
+</Example>
+
+If the user selects "Any Condition Is Met" from the mode combobox, the expression builder will use `OR` logic:
+
+<Example title="Expression Builder - Any Conditions">
+  <CodeView>
+    <Expression optionSelected="any" resourceIsSelected>
+      <ExpressionRow legendText="OR" assistiveText="Condition 2" resourceIsSelected/>
+    </Expression>
+  </CodeView>
+</Example>
+
+### With an Expression Group
+
+To create more complex expressions, the user can add an expression group to create something like `Condition 1 AND (Condition 2 OR Condition 3)`
+
+**Interaction Details:**
+
+1.  New groups are added when the `Add Group` button is selected
+2.  The only mode combobox options inside of a group are `All` and `Any`
+3.  Only one level of groups is desirable, so there is no `Add Group` button inside of a Group
+    - All logical expressions can be written with one level of nesting, so this maintains the best readability
+4.  Deleting the only rule in a group removes the entire group
+5.  If a group is added but the first, default rule has not been altered, the first rule is replaced by the group
+
+<Blockquote header="Label Note" type="note">
+  The values in the group mode combobox get "for This Group" appended, ex. "All Conditions are Met for This Group"
+</Blockquote>
+
+<Example title="Expression Builder - With Expression Group">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected>
+      <ExpressionGroup
+        legendText="AND"
+        assistiveText="Condition Group 1"
+        optionSelected="group"
+        isGroup
+      >
+        <ExpressionRow assistiveText="Condition 1" isGroup resourceIsSelected/>
+        <ExpressionRow legendText="OR" assistiveText="Condition 2" isGroup inputIsDisabled/>
+      </ExpressionGroup>
+    </Expression>
+  </CodeView>
+</Example>
+
+## Custom Logic
+
+Another option for creating more complex expressions is using the Custom Logic variant. This allows users to manually type their custom logic into an input field, which references the numbered conditions below, like `1 AND 2`.
+
+**Interaction Details:**
+
+- After switching the mode to "Custom Logic", the default custom logic text input should match the previous user selection.
+  1.  For example, if the user was previously using "match Any", the input would default to something like `1 OR 2`
+  2.  If the user had added a group previously, the input should reflect that group as well, something like `1 AND (2 OR 3)`
+  3.  Otherwise, the input defaults to "match All", such as `1 AND 2`
+- New conditions are added to the end of the list, while `AND n` is added to the custom logic input text
+- If a rule is removed, the custom logic should automatically rewrite to maintain intended logic
+
+<Example title="Expression Builder - Custom Logic">
+  <CodeView>
+    <Expression hasCustomLogic customLogicValue="1 AND 2" legendText="1" optionSelected="custom" resourceIsSelected>
+      <ExpressionRow legendText="2" assistiveText="Condition 2" inputIsDisabled/>
+    </Expression>
+  </CodeView>
+</Example>
+
+## Formula Logic
+
+The Formula variant provides the user the most customization for their expressions. Users can write free-form custom logic by using the insertion comboboxes and/or typing freely. By default, the formula variant does not appear with default text.
+
+Users can also validate the syntax to check for errors.
+
+<Example title="Expression Builder - Formula Logic">
+  <CodeView>
+    <Formula optionSelected="formula"/>
+  </CodeView>
+</Example>
+
+## Narrow
+
+Use the narrow variant for in-context expression building, where users are able to immediately preview the results of their conditional logic, like a list or report.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Be sure to use assistive text to improve the clarity of what the user might be editing. For example, add <code className="doc">&lt;span className="slds-assistive-text"&gt;Edit filter:</span></code> to each expression button element.
+</Blockquote>
+
+<Example title="Expression Builder - Narrow Variant">
+  <CodeView>
+    <ExpressionNarrow optionSelected="all"/>
+  </CodeView>
+</Example>
+
+### With an Expression Group
+
+<Example title="Expression Builder - Narrow Variant with Group">
+  <CodeView>
+    <ExpressionNarrow optionSelected="all">
+      <FilterObject operator="AND" type="Status" removable>
+        equals Red
+      </FilterObject>
+      <FilterObjectListItem>
+        <ExpressionNarrowGroup optionSelected="any"/>
+      </FilterObjectListItem>
+    </ExpressionNarrow>
+  </CodeView>
+</Example>
+
+### Filtering
+
+One example of in-context expression building is filtering. To see examples of filtering logic inside of a panel, checkout our [Panel](/components/panels/#Filtering-Panel) documentation
+
+<Example title="Expression Builder - Filtering">
+  <CodeView style={{maxWidth: '320px'}}>
+    <Filters>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Show Me">All Products</FilterObject>
+      </ol>
+      <h3 className="slds-text-body_small slds-m-vertical_x-small">
+        Matching all these filters
+      </h3>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Created Date" removable>
+          equals THIS WEEK
+        </FilterObject>
+        <FilterObject type="List Price" removable>
+          greater than "500"
+        </FilterObject>
+      </ol>
+      <FiltersFooter />
+    </Filters>
+  </CodeView>
+</Example>
+
+#### Adding a new filter
+
+<Example title="Expression Builder - Filtering with new filter">
+  <CodeView style={{maxWidth: '320px'}}>
+    <Filters>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Show Me">All Products</FilterObject>
+      </ol>
+      <h3 className="slds-text-body_small slds-m-vertical_x-small">
+        Matching all these filters
+      </h3>
+      <ul className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Created Date" removable>
+          equals THIS WEEK
+        </FilterObject>
+        <FilterObject type="List Price" removable>
+          greater than "500"
+        </FilterObject>
+        <FilterObject className="slds-is-new" removable>
+          New Filter
+        </FilterObject>
+      </ul>
+      <FiltersFooter />
+    </Filters>
+  </CodeView>
+</Example>
+
+#### With an error
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  When an error message is displayed to the user, the <code className="doc">&lt;div&gt;</code> containing the error message should have the <code className="doc">role="alert"</code> attribute applied. This will immediately notify the user that an error has occurred.
+</Blockquote>
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  The filter button that has an error is associated to that error with the use of <code className="doc">aria-describedby</code>. The value of <code className="doc">aria-describedby</code> matches the ID given to the element that contains the corresponding error message.
+</Blockquote>
+
+<Example title="Expression Builder - Filtering with error">
+  <CodeView style={{maxWidth: '320px'}}>
+    <Filters>
+      <div className="slds-text-color_error slds-m-bottom_x-small" role="alert">
+        Filters could not be applied. Please fix the validation errors below.
+      </div>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Show Me">All Products</FilterObject>
+      </ol>
+      <h3 className="slds-text-body_small slds-m-vertical_x-small">
+        Matching all these filters
+      </h3>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Created Date" removable>
+          equals THIS WEEK
+        </FilterObject>
+        <FilterObject type="List Price" removable>
+          greater than "500"
+        </FilterObject>
+        <FilterObject
+          className="slds-has-error"
+          type="Stage"
+          errorMessage="Error Message"
+          removable
+        >
+          equals "Red"
+        </FilterObject>
+      </ol>
+      <FiltersFooter />
+    </Filters>
+  </CodeView>
+</Example>
+
+#### With locked filters
+
+<Example title="Expression Builder - Filtering with locked filters">
+  <CodeView style={{maxWidth: '320px'}}>
+    <Filters>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Show Me">All Products</FilterObject>
+      </ol>
+      <h3 className="slds-text-body_small slds-m-vertical_x-small">
+        Matching all these filters
+      </h3>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject type="Created Date" removable>
+          equals THIS WEEK
+        </FilterObject>
+        <FilterObject type="List Price" removable>
+          greater than "500"
+        </FilterObject>
+      </ol>
+      <h3 className="slds-text-body_small slds-m-vertical_x-small slds-grid">
+        Locked Filters
+        <SvgIcon
+          className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_x-small"
+          sprite="utility"
+          symbol="lock"
+        />
+      </h3>
+      <ol className="slds-list_vertical slds-list_vertical-space">
+        <FilterObject className="slds-is-locked" type="Name" disabled>
+          equals "ACME"
+        </FilterObject>
+      </ol>
+      <FiltersFooter />
+    </Filters>
+  </CodeView>
+</Example>

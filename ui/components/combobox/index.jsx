@@ -129,6 +129,7 @@ const ComboboxInput = props => {
         onFocus={e => props.toggleFocus(e)}
         onBlur={e => props.toggleFocus(e)}
         autoFocus={props.autoFocus}
+        disabled={props.isDisabled}
       />
       {props.rightInputIcon && props.rightInputIcon}
       {props.showCloseButton && (
@@ -192,7 +193,8 @@ export default class Combobox extends Component {
       staticListbox,
       listboxOfSelections,
       children,
-      comboboxAriaControls
+      comboboxAriaControls,
+      isDisabled
     } = this.props;
 
     return (
@@ -226,6 +228,7 @@ export default class Combobox extends Component {
               autoFocus={autoFocus}
               aria-controls={this.props['aria-controls']}
               aria-activedescendant={this.props['aria-activedescendant']}
+              isDisabled={isDisabled}
             />
             {listbox}
           </ComboboxFormElement>
@@ -257,7 +260,8 @@ Combobox.propTypes = {
   tabIndex: PropTypes.string,
   staticListbox: PropTypes.bool,
   listbox: PropTypes.element,
-  listboxOfSelections: PropTypes.element
+  listboxOfSelections: PropTypes.element,
+  isDisabled: PropTypes.bool
 };
 
 export class ComboboxGroup extends Component {

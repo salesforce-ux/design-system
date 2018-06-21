@@ -31,11 +31,17 @@
  *
  * @variant
  * @name record-home
- * @selector .slds-page-header__detail
- * @restrict .slds-page-header div
+ * @selector .slds-page-header_record-home
+ * @restrict .slds-page-header
  * @support dev-ready
  * @required
  */
+.slds-page-header_record-home {
+
+  .slds-page-header__title {
+    font-size: $var-font-size-8;
+  }
+}
 
 /**
  * Creates margins around the detail section of record home
@@ -44,7 +50,6 @@
  * @restrict .slds-page-header ul
  * @notes Only the record home page header contains this detail area
  */
-
 .slds-page-header__detail-row {
   display: flex;
   margin: $var-spacing-vertical-small #{-$var-spacing-horizontal-medium} #{-$var-spacing-horizontal-medium};

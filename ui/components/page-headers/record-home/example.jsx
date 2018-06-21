@@ -26,7 +26,7 @@ import {
 import RecordHomeDeprecated from './deprecated';
 
 export let RecordHome = props => (
-  <PageHeader>
+  <PageHeader isRecordHome>
     <PageHeaderRow>
       <PageHeaderColumn type="title">
         <PageHeaderTitle

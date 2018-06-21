@@ -25,7 +25,8 @@ export const PageHeader = props => (
   <div
     className={classNames('slds-page-header', {
       'slds-page-header_vertical': props.isVertical,
-      'slds-page-header_related-list': props.isRelatedList
+      'slds-page-header_related-list': props.isRelatedList,
+      'slds-page-header_record-home': props.isRecordHome
     })}
   >
     {props.children}
@@ -34,7 +35,8 @@ export const PageHeader = props => (
 PageHeader.propTypes = {
   children: PropTypes.node,
   isRelatedList: PropTypes.bool,
-  isVertical: PropTypes.bool
+  isVertical: PropTypes.bool,
+  isRecordHome: PropTypes.bool
 };
 
 export const PageHeaderRow = props => (

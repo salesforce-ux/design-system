@@ -8,6 +8,7 @@ import _ from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
 import { FormElementStatic } from '../../panels/detail/example';
 import SvgIcon from '../../../shared/svg-icon';
+import Card, { CardBody } from '../../cards/';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -46,13 +47,15 @@ let Demo = props => (
 );
 
 let Coach = props => (
-  <div
-    className={classNames('slds-path', {
-      'slds-is-expanded': props.isExpanded
-    })}
-  >
-    {props.children}
-  </div>
+  <Card>
+    <div
+      className={classNames('slds-path', {
+        'slds-is-expanded': props.isExpanded
+      })}
+    >
+      {props.children}
+    </div>
+  </Card>
 );
 
 let Path = props => (
@@ -65,7 +68,7 @@ let Trigger = props => (
   <ButtonIcon
     assistiveText="Expand Sales Coach Tab Panels"
     className="slds-button_icon-border-filled slds-path__trigger"
-    symbol="chevrondown"
+    symbol="chevronright"
     title="Expand Sales Coaching Tab Panels"
   />
 );
@@ -73,8 +76,8 @@ let Trigger = props => (
 let Triggerup = props => (
   <ButtonIcon
     assistiveText="Collapse Sales Coach Tab Panels"
-    className="slds-button_icon-border-filled slds-path__trigger slds-flip_horizontal"
-    symbol="chevrondown"
+    className="slds-button_icon-border-filled slds-path__trigger slds-path__trigger_open"
+    symbol="chevronright"
     title="Collapse Sales Coaching Tab Panels"
   />
 );

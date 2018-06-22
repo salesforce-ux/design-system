@@ -16,7 +16,7 @@
    * @restrict .slds-path
    */
   &.slds-is-expanded {
-    padding-bottom: $spacing-small;
+    padding-bottom: $var-spacing-vertical-small;
     border-color: $color-border;
   }
 }
@@ -28,7 +28,10 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
-  padding: $spacing-small;
+  padding-top: $var-spacing-vertical-small;
+  padding-bottom: $var-spacing-vertical-small;
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
 
   /**
    * Indicates the scroller is in the overflow state
@@ -590,7 +593,7 @@
 .slds-path__keys,
 .slds-path__guidance {
   flex: 1 0 50%;
-  margin-top: $spacing-medium;
+  margin-top: $var-spacing-vertical-medium;
   padding-right: $spacing-small;
 }
 
@@ -629,7 +632,7 @@
  * @restrict .slds-path__guidance div
  */
 .slds-path__guidance-content {
-  padding-top: $spacing-x-small;
+  padding-top: $var-spacing-vertical-xx-small;
 }
 
 /**

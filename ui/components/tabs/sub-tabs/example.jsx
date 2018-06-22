@@ -4,6 +4,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
+import { Button } from '../../buttons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import _ from '../../../shared/helpers';
@@ -162,57 +163,58 @@ export const SubtabOverflow = props => (
     className={classNames(
       'slds-tabs_default__item',
       'slds-sub-tabs__item',
-      'slds-dropdown-trigger',
-      'slds-dropdown-trigger_click',
+      'slds-tabs_default__overflow-button',
       {
-        'slds-is-open': props.isOpen,
         'slds-has-notification': props.itemUnread,
         'slds-is-unsaved': props.itemUnsaved
       }
     )}
   >
-    <button
-      className="slds-button slds-tabs_default__link slds-p-horizontal_xx-small"
-      title="More Tab Items"
-      aria-haspopup="true"
+    <div
+      className={classNames(
+        'slds-dropdown-trigger slds-dropdown-trigger_click',
+        props.isOpen && 'slds-is-open'
+      )}
     >
-      {props.itemUnsaved ? <IndicatorUnsaved /> : null}
-      {props.itemUnread ? <IndicatorUnread /> : null}
-      <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
-        More <span className="slds-assistive-text">Tabs</span>
-      </span>
-      <SvgIcon
-        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
-        sprite="utility"
-        symbol="chevrondown"
-      />
-    </button>
-    <Menu className="slds-dropdown_right">
-      <MenuList>
-        <MenuItem className="slds-has-notification" title="Chat - Customer">
-          {props.itemUnsaved ? <IndicatorUnsaved /> : null}
-          {props.itemUnread ? (
-            <span className="slds-indicator_unread" title="New Activity">
-              <span className="slds-assistive-text">New Activity</span>
-            </span>
-          ) : null}
-          <SvgIcon
-            className="slds-icon slds-icon_small slds-icon-text-default"
-            sprite="standard"
-            symbol="live_chat"
-          />
-          <span>Chat - Customer</span>
-        </MenuItem>
-        <MenuItem title="Overflow Tab Item">
-          <SvgIcon
-            className="slds-icon slds-icon_small slds-icon-text-default"
-            sprite="standard"
-            symbol="case"
-          />
-          <span>Overflow Tab Item</span>
-        </MenuItem>
-      </MenuList>
-    </Menu>
+      <Button title="More Tab Items" aria-haspopup="true">
+        {props.itemUnsaved ? <IndicatorUnsaved /> : null}
+        {props.itemUnread ? <IndicatorUnread /> : null}
+        <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
+          More <span className="slds-assistive-text">Tabs</span>
+        </span>
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+          sprite="utility"
+          symbol="chevrondown"
+        />
+      </Button>
+      <Menu className="slds-dropdown_right">
+        <MenuList>
+          <MenuItem className="slds-has-notification" title="Chat - Customer">
+            {props.itemUnsaved ? <IndicatorUnsaved /> : null}
+            {props.itemUnread ? (
+              <span className="slds-indicator_unread" title="New Activity">
+                <span className="slds-assistive-text">New Activity</span>
+              </span>
+            ) : null}
+            <SvgIcon
+              className="slds-icon slds-icon_small slds-icon-text-default"
+              sprite="standard"
+              symbol="live_chat"
+            />
+            <span>Chat - Customer</span>
+          </MenuItem>
+          <MenuItem title="Overflow Tab Item">
+            <SvgIcon
+              className="slds-icon slds-icon_small slds-icon-text-default"
+              sprite="standard"
+              symbol="case"
+            />
+            <span>Overflow Tab Item</span>
+          </MenuItem>
+        </MenuList>
+      </Menu>
+    </div>
   </li>
 );
 

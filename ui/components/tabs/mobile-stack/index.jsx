@@ -4,9 +4,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SvgIcon from '../../shared/svg-icon';
-import Panel from '../panels';
-import { Button } from '../buttons/base/example';
+import SvgIcon from '../../../shared/svg-icon';
+import Panel from '../../panels';
+import { Button } from '../../buttons/base/example';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)

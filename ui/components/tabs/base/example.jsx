@@ -2,21 +2,19 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tabs from '../index.react';
 import SvgIcon from '../../../shared/svg-icon';
+import { StandardIcon } from '../../icons/standard/example';
+import { ButtonMenu } from '../../button-icons/menu/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { Default as ScopedTabs } from '../../scoped-tabs/base/example';
+import { TabsScoped } from '../../scoped-tabs/base/example';
 import Card, { CardHeader, CardBody, CardFooter } from '../../cards/';
-import classNames from 'classnames';
 
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
-
-export const BaseTabs = props => (
-  <Tabs className={props.className} selectedIndex={props.selectedIndex || 0}>
+export const TabsDefault = props => (
+  <Tabs selectedIndex={props.selectedIndex}>
     <Tabs.Item title="Item One" id="tab-default-1">
-      {props.itemOneContent || 'Item One Content'}
+      {props.itemOneContent}
     </Tabs.Item>
     <Tabs.Item title="Item Two" id="tab-default-2">
       Item Two Content
@@ -27,12 +25,22 @@ export const BaseTabs = props => (
   </Tabs>
 );
 
-export const TabsWithNestedScopedTabs = props => (
-  <BaseTabs itemOneContent={<ScopedTabs />} />
+TabsDefault.propTypes = {
+  selectedIndex: PropTypes.number,
+  itemOneContent: PropTypes.node
+};
+
+TabsDefault.defaultProps = {
+  selectedIndex: 0,
+  itemOneContent: 'Item One Content'
+};
+
+export const TabsWithNestedScopedTabs = () => (
+  <TabsDefault itemOneContent={<TabsScoped />} />
 );
 
-export const Overflowing = props => (
-  <div className="demo-only" style={{ height: '10rem' }}>
+export const TabsOverflow = () => (
+  <div className="demo-only" style={{ height: '12rem' }}>
     <Tabs>
       <Tabs.Item title="Item One" id="tab-default-1">
         Item One Content
@@ -55,58 +63,47 @@ export const Overflowing = props => (
       <Tabs.Item title="Item Seven" id="tab-default-7">
         <h2>Item Seven Content</h2>
       </Tabs.Item>
-      <Tabs.ItemOverflow
-        title="More tabs"
-        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-tabs_default__item"
-      >
-        <a
-          className="slds-button slds-tabs_default__link"
-          href="javascript:void(0);"
-          aria-haspopup="true"
-        >
-          <span className="slds-truncate" title="More tabs">
-            More <span className="slds-assistive-text">tabs</span>
-          </span>
-          <SvgIcon
-            className="slds-button__icon slds-button__icon_x-small"
-            sprite="utility"
-            symbol="down"
-          />
-        </a>
-        <Menu className="slds-dropdown_right">
-          <MenuList className="slds-dropdown_length-with-icon-10">
-            <MenuItem title="Accounts">
-              <SvgIcon
-                className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small"
-                sprite="standard"
-                symbol="account"
-              />
-              Accounts
-            </MenuItem>
-            <MenuItem title="Approvals">
-              <SvgIcon
-                className="slds-icon slds-icon_small slds-icon-standard-approval slds-m-right_small"
-                sprite="standard"
-                symbol="approval"
-              />
-              Approvals
-            </MenuItem>
-            <MenuItem title="Lead">
-              <SvgIcon
-                className="slds-icon slds-icon_small slds-icon-standard-lead slds-m-right_small"
-                sprite="standard"
-                symbol="lead"
-              />
-              Lead
-            </MenuItem>
-          </MenuList>
-        </Menu>
+      <Tabs.ItemOverflow title="More Tabs" id="tab-default-8">
+        <ButtonMenu label="More" type="tabs" flavor="default" isOpen>
+          <TabsOverflowMenu />
+        </ButtonMenu>
       </Tabs.ItemOverflow>
     </Tabs>
   </div>
 );
 
-export const TabsWithCards = props => (
+const TabsOverflowMenu = () => (
+  <Menu className="slds-dropdown_right">
+    <MenuList className="slds-dropdown_length-with-icon-10">
+      <MenuItem title="Accounts">
+        <span className="slds-media slds-media_center">
+          <span className="slds-media__figure">
+            <StandardIcon className="slds-icon_small" symbol="account" />
+          </span>
+          <span className="slds-media__body">Accounts</span>
+        </span>
+      </MenuItem>
+      <MenuItem title="Approvals">
+        <span className="slds-media slds-media_center">
+          <span className="slds-media__figure">
+            <StandardIcon className="slds-icon_small" symbol="approval" />
+          </span>
+          <span className="slds-media__body">Approvals</span>
+        </span>
+      </MenuItem>
+      <MenuItem title="Lead">
+        <span className="slds-media slds-media_center">
+          <span className="slds-media__figure">
+            <StandardIcon className="slds-icon_small" symbol="lead" />
+          </span>
+          <span className="slds-media__body">Leads</span>
+        </span>
+      </MenuItem>
+    </MenuList>
+  </Menu>
+);
+
+export const TabsWithCards = () => (
   <Tabs className="slds-tabs_card" selectedIndex={0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       <Card>
@@ -178,30 +175,68 @@ export const TabsWithCards = props => (
   </Tabs>
 );
 
+export const TabsMedium = () => (
+  <Tabs size="medium">
+    <Tabs.Item title="Item One" id="tab-default-1">
+      Item One Content
+    </Tabs.Item>
+    <Tabs.Item title="Item Two" id="tab-default-2">
+      Item Two Content
+    </Tabs.Item>
+    <Tabs.Item title="Item Three" id="tab-default-3">
+      Item Three Content
+    </Tabs.Item>
+  </Tabs>
+);
+
+export const TabsLarge = () => (
+  <Tabs size="large">
+    <Tabs.Item title="Item One" id="tab-default-1">
+      Item One Content
+    </Tabs.Item>
+    <Tabs.Item title="Item Two" id="tab-default-2">
+      Item Two Content
+    </Tabs.Item>
+    <Tabs.Item title="Item Three" id="tab-default-3">
+      Item Three Content
+    </Tabs.Item>
+  </Tabs>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default <BaseTabs />;
+export default <TabsDefault />;
 
 export let states = [
   {
     id: 'selected',
     label: 'Item Two Selected',
-    element: <BaseTabs selectedIndex={1} />
+    element: <TabsDefault selectedIndex={1} />
   }
 ];
 
 export let examples = [
   {
+    id: 'size-medium',
+    label: 'Size - Medium',
+    element: <TabsMedium />
+  },
+  {
+    id: 'size-large',
+    label: 'Size - Large',
+    element: <TabsLarge />
+  },
+  {
     id: 'overflow',
     label: 'Overflowing items',
-    element: <Overflowing />
+    element: <TabsOverflow />
   },
   {
     id: 'nested',
     label: 'With Nested Scoped Tabs',
-    element: <BaseTabs itemOneContent={<ScopedTabs />} />
+    element: <TabsWithNestedScopedTabs />
   },
   {
     id: 'card-look',

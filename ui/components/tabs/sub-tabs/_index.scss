@@ -37,6 +37,10 @@
   &.slds-has-focus {
     text-decoration: underline;
   }
+
+  + .slds-sub-tabs__item {
+    margin-left: 0;
+  }
 }
 
 .slds-has-pinned-regions {

@@ -14,34 +14,31 @@
  * @name base
  * @selector .slds-tabs_scoped
  * @restrict div
- * @required
  * @variant
  */
 .slds-tabs_scoped,
 .slds-tabs--scoped {
   @include tabs;
+}
 
-  /**
-   * Creates the container for the default tabs
-   *
-   * @selector .slds-tabs_scoped__nav
-   * @restrict .slds-tabs_scoped ul
-   * @required
-   */
-  &__nav {
-    @include tabs-nav;
-    background-color: $color-contrast-primary;
-    border: $border-width-thin solid $color-border-button-default;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
-  }
+
+/**
+ * @summary Creates the container for the default tabs
+ * @selector .slds-tabs_scoped__nav
+ * @restrict .slds-tabs_scoped ul
+ */
+.slds-tabs_scoped__nav,
+.slds-tabs--scoped__nav {
+  @include tabs-nav;
+  background-color: $color-contrast-primary;
+  border: $border-width-thin solid $color-border-button-default;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
 }
 
 /**
- * Styles each list item as a single tab
- *
+ * @summary Styles each list item as a single tab
  * @selector .slds-tabs_scoped__item
  * @restrict .slds-tabs_scoped ul li
- * @required
  */
 .slds-tabs_scoped__item,
 .slds-tabs--scoped__item {
@@ -61,11 +58,9 @@
 }
 
 /**
- * Styles each tab content wrapper
- *
+ * @summary Styles each tab content wrapper
  * @selector .slds-tabs_scoped__content
  * @restrict .slds-tabs_scoped div
- * @required
  */
 .slds-tabs_scoped__content,
 .slds-tabs--scoped__content {
@@ -77,11 +72,9 @@
 }
 
 /**
- * Styles each actionable element inside each tab item
- *
+ * @summary Styles each actionable element inside each tab item
  * @selector .slds-tabs_scoped__link
- * @restrict .slds-tabs_scoped__item a
- * @required
+ * @restrict .slds-tabs_scoped__item a, .slds-tabs_scoped__item button
  */
 .slds-tabs_scoped__link,
 .slds-tabs--scoped__link {
@@ -89,39 +82,97 @@
   height: $line-height-tab;
   line-height: $line-height-tab;
   padding: 0 $spacing-medium;
-  color: $color-text-weak;
+  color: $color-text-action-label;
   background-clip: padding-box;
-  border: {
-    left: $border-width-thin solid transparent;
-    right: $border-width-thin solid transparent;
-  }
+  border: 0;
+  border-left: $border-width-thin solid transparent;
+  border-right: $border-width-thin solid transparent;
+  border-radius: 0;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $brand-accessible;
+    color: currentColor;
     border-color: $color-border;
   }
 }
 
 /**
- * Active state for a tab item
- *
+ * @summary List item containing the overflow button menu
+ * @selector .slds-tabs_scoped__overflow-button
+ * @restrict .slds-tabs_scoped__item
+ */
+.slds-tabs_scoped__overflow-button {
+  display: inline-flex;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+
+  .slds-button {
+    line-height: inherit;
+    color: $color-text-action-label;
+    padding: 0 $spacing-medium;
+  }
+}
+
+/**
+ * @name active
+ * @summary Active state for a tab item
  * @selector .slds-is-active
  * @restrict .slds-tabs_scoped__item
  * @notes Required on the `<li>` element that is associated with the active tab panel
  * @modifier
+ * @group visibility
  */
 .slds-active .slds-tabs_scoped__link,
 .slds-active .slds-tabs--scoped__link,
 .slds-is-active .slds-tabs_scoped__link,
 .slds-is-active .slds-tabs--scoped__link {
   background-color: $color-foreground-primary;
-  color: $brand-accessible;
   border-color: $color-border;
   font-weight: $tabs-font-weight;
+  color: $color-text-action-label-active;
 
   &:focus {
     text-decoration: underline;
+  }
+}
+
+/**
+ * @name medium
+ * @summary Medium sized tabs
+ * @selector .slds-tabs_medium
+ * @restrict .slds-tabs_scoped
+ * @modifier
+ * @group size
+ */
+.slds-tabs_medium {
+
+  .slds-tabs_scoped__item {
+    font-size: $var-font-size-5;
+  }
+
+  .slds-tabs_scoped__link {
+    padding-left: $var-spacing-horizontal-large;
+    padding-right: $var-spacing-horizontal-large;
+  }
+}
+
+/**
+ * @name large
+ * @summary Large sized tabs
+ * @selector .slds-tabs_large
+ * @restrict .slds-tabs_scoped
+ * @modifier
+ * @group size
+ */
+.slds-tabs_large {
+
+  .slds-tabs_scoped__item {
+    font-size: $var-font-size-7;
+  }
+
+  .slds-tabs_scoped__link {
+    padding-left: $var-spacing-horizontal-x-large;
+    padding-right: $var-spacing-horizontal-x-large;
   }
 }

@@ -17,16 +17,6 @@
   background-color: $color-foreground-primary;
 
   /**
-   * @summary Creates the container for the default tabs
-   * @selector .slds-tabs_default__nav
-   * @restrict .slds-tabs_default ul
-   */
-  &__nav {
-    @include tabs-nav;
-    border-bottom: $border-width-thick solid $color-border;
-  }
-
-  /**
    * @summary A tab item that has an overflow menu
    * @selector .slds-tabs__item_overflow
    * @restrict .slds-tabs_default__item
@@ -38,6 +28,18 @@
 }
 
 /**
+ * @summary Creates the container for the default tabs
+ * @selector .slds-tabs_default__nav
+ * @restrict .slds-tabs_default ul
+ */
+.slds-tabs_default__nav,
+.slds-tabs--default__nav {
+  @include tabs-nav;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+
+/**
  * @summary Styles each list item as a single tab
  * @selector .slds-tabs_default__item
  * @restrict .slds-tabs_default ul li
@@ -47,9 +49,7 @@
   color: $color-text-action-label;
   position: relative;
   padding: 0 $spacing-small;
-  margin-bottom: ($border-width-thick * -1);
-  text-transform: uppercase;
-  letter-spacing: 0.0625em;
+  margin-bottom: ($border-width-thin * -1);
 
   &:after {
     display: block;
@@ -58,7 +58,14 @@
     left: 0;
     right: 0;
     position: absolute;
-    height: $border-width-thick;
+  }
+
+  &:after {
+    height: 2px;
+  }
+
+  + .slds-tabs_default__item {
+    margin-left: $var-spacing-horizontal-small;
   }
 
   /**
@@ -74,6 +81,7 @@
 
     &:after {
       background-color: $brand-primary;
+      height: 3px;
     }
 
     .slds-tabs_default__link,
@@ -81,12 +89,13 @@
       font-weight: $tabs-font-weight;
 
       &:hover {
-        color: $brand-accessible-active;
+        color: currentColor;
       }
     }
   }
 
   &:hover {
+    background: $brand-primary-transparent-10;
 
     &:after {
       background-color: $brand-primary-active;
@@ -113,6 +122,7 @@
   .slds-tabs_default__link:focus,
   .slds-tabs--default__link:focus {
     box-shadow: none;
+    text-decoration: underline;
   }
 
   /**
@@ -176,11 +186,29 @@
   line-height: $line-height-tab;
   color: currentColor;
   border: 0;
+  text-transform: inherit; // For button menu to inherit the parents text-transform
 
   &:hover,
   &:focus {
     text-decoration: none;
     box-shadow: none;
+    color: currentColor;
+  }
+}
+
+/**
+ * @summary List item containing the overflow button menu
+ * @selector .slds-tabs_default__overflow-button
+ * @restrict .slds-tabs_default__item
+ */
+.slds-tabs_default__overflow-button {
+  display: inline-flex;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+
+  .slds-button {
+    line-height: inherit;
+    color: $color-text-action-label;
   }
 }
 
@@ -192,4 +220,42 @@
 .slds-tabs_default__content,
 .slds-tabs--default__content {
   @include tabs-content;
+}
+
+/**
+ * @name medium
+ * @summary Medium sized tabs
+ * @selector .slds-tabs_medium
+ * @restrict .slds-tabs_default
+ * @modifier
+ * @group size
+ */
+.slds-tabs_medium {
+
+  .slds-tabs_default__item {
+    font-size: $var-font-size-5;
+  }
+
+  .slds-tabs_default__item + .slds-tabs_default__item {
+    margin-left: $var-spacing-horizontal-medium;
+  }
+}
+
+/**
+ * @name large
+ * @summary Large sized tabs
+ * @selector .slds-tabs_large
+ * @restrict .slds-tabs_default
+ * @modifier
+ * @group size
+ */
+.slds-tabs_large {
+
+  .slds-tabs_default__item {
+    font-size: $var-font-size-7;
+  }
+
+  .slds-tabs_default__item + .slds-tabs_default__item {
+    margin-left: $var-spacing-horizontal-large;
+  }
 }

@@ -40,6 +40,7 @@ const ListIcon = (
   />
 );
 
+/* ! deprecate for ButtonIcon/menu/<ButtonMenu /> */
 export let Trigger = props => (
   <div
     className={classNames(

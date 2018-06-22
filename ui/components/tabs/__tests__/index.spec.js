@@ -2,6 +2,14 @@
 import React from 'react';
 
 import {
+  TabsDefault,
+  TabsWithNestedScopedTabs,
+  TabsOverflow,
+  TabsMedium,
+  TabsLarge
+} from '../base/example';
+
+import {
   Subtab,
   Subtabs,
   SubtabList,
@@ -23,7 +31,7 @@ import MobileTabs, {
   DeprecatedMobileTabAction,
   DeprecatedMobileStacked,
   DeprecatedAdjacentMobileStacked
-} from '../MobileTabs';
+} from '../mobile-stack/';
 
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
@@ -31,6 +39,18 @@ import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
+
+describe('Default Tabs', () => {
+  it('renders default tabs', () => matchesMarkupAndStyle(<TabsDefault />));
+  it('renders default tabs with nested scoped tabs', () =>
+    matchesMarkupAndStyle(<TabsWithNestedScopedTabs />));
+  it('renders default tabs with overflowing tab items', () =>
+    matchesMarkupAndStyle(<TabsOverflow />));
+  it('renders medium sized default tabs', () =>
+    matchesMarkupAndStyle(<TabsMedium />));
+  it('renders large sized default tabs', () =>
+    matchesMarkupAndStyle(<TabsLarge />));
+});
 
 describe('Subtabs', () => {
   it('renders subtab with notification and dirty', () =>

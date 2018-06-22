@@ -8,7 +8,7 @@ import MobileTabs, {
   NestedMobileStacked,
   DeprecatedAdjacentMobileStacked,
   DeprecatedMobileStacked
-} from '../MobileTabs';
+} from './';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)

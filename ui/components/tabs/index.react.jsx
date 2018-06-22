@@ -10,9 +10,8 @@ const PT = PropTypes;
 
 class TabContent extends React.Component {
   render() {
-    const { className, current, flavor, ...rest } = this.props;
+    const { current, flavor, ...rest } = this.props;
     const classNameComputed = classNames(
-      className,
       classNames(`slds-tabs_${flavor}__content`, {
         'slds-show': current,
         'slds-hide': !current
@@ -49,17 +48,18 @@ class TabItem extends React.Component {
     });
   }
   renderDefault(tabIndex) {
+    const { flavor, current, id, title, children } = this.props;
     return (
       <a
-        className={`slds-tabs_${this.props.flavor}__link`}
+        className={`slds-tabs_${flavor}__link`}
         href="javascript:void(0);"
         role="tab"
         tabIndex={tabIndex}
-        aria-selected={this.props.current}
-        aria-controls={this.props.id}
-        id={`${this.props.id}__item`}
+        aria-selected={current}
+        aria-controls={id}
+        id={`${id}__item`}
       >
-        {this.props.title}
+        {title}
       </a>
     );
   }
@@ -71,6 +71,7 @@ class TabItem extends React.Component {
       current,
       flavor,
       content,
+      size,
       ...rest
     } = this.props;
     const classNameComputed = classNames(
@@ -94,38 +95,22 @@ TabItem.propTypes = {
   flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
-class TabItemOverflow extends React.Component {
-  render() {
-    const {
-      className,
-      id,
-      role,
-      current,
-      flavor,
-      children,
-      ...rest
-    } = this.props;
-    const classNameComputed = classNames(
-      className,
-      classNames('slds-tabs__item_overflow', {
-        'slds-is-active': current
-      })
-    );
-    const tabIndex = current ? 0 : -1;
-    const contents = React.Children.map(children, function(c, i) {
-      return React.cloneElement(c);
-    });
-    return (
-      <li className={classNameComputed} {...rest} role="presentation">
-        {contents}
-      </li>
-    );
-  }
-}
+export const TabItemOverflow = props => {
+  const { flavor, children, title } = props;
+  return (
+    <li
+      className={`slds-tabs_${flavor}__item slds-tabs_${flavor}__overflow-button`}
+      title={title}
+      role="presentation"
+    >
+      {children}
+    </li>
+  );
+};
 
 TabItemOverflow.propTypes = {
   title: PT.string,
-  content: PT.node,
+  children: PT.node,
   flavor: PT.oneOf(['scoped', 'default', 'path'])
 };
 
@@ -168,8 +153,11 @@ class Tabs extends React.Component {
     });
   }
   render() {
-    const { className, flavor, panel, selectedIndex, ...rest } = this.props;
-    const composedClassName = classNames(className, `slds-tabs_${flavor}`);
+    const { flavor, panel, size, selectedIndex, ...rest } = this.props;
+    const composedClassName = classNames(`slds-tabs_${flavor}`, {
+      'slds-tabs_medium': size === 'medium',
+      'slds-tabs_large': size === 'large'
+    });
     return (
       <div {...rest} className={composedClassName}>
         <ul className={`slds-tabs_${flavor}__nav`} role="tablist">
@@ -183,7 +171,8 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   selectedIndex: PT.number,
-  flavor: PT.oneOf(['scoped', 'default', 'path'])
+  flavor: PT.oneOf(['scoped', 'default', 'path']),
+  size: PT.oneOf(['medium', 'large'])
 };
 
 Tabs.defaultProps = {

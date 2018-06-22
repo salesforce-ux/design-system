@@ -2,8 +2,8 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './MobileTabs';
-import { BaseTabs, Overflowing, TabsWithNestedScopedTabs, TabsWithCards } from '../tabs/base/example';
+import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './mobile-stack/';
+import { TabsDefault, TabsOverflow, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge } from '../tabs/base/example';
 import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
 
@@ -13,7 +13,7 @@ import VerticalTabs from '../vertical-tabs/base/example';
 
 <Example title="Tabs Base">
   <CodeView style={{height: '200px'}}>
-    <BaseTabs />
+    <TabsDefault />
   </CodeView>
 </Example>
 
@@ -57,12 +57,12 @@ The overflow tab style is provided as a tab item type that acts as a menu compon
 
 <Example title="Tabs Overflowing">
   <CodeView style={{height: '200px'}}>
-    <Overflowing />
+    <TabsOverflow />
   </CodeView>
 </Example>
 
 <Blockquote type="note" header="Implementation Guidelines">
-  Initialize a default tab set and in the last tab item of the set, apply the additional classes `slds-dropdown-trigger` and `.slds-tabs__item_overflow`. Include an `<a>` element to contain the tab item label like the other tab items. After the `<a>` element, the `.slds-dropdown` segment of a search overflow menu component is used. The `slds-dropdown__list` element also then requires a `slds-dropdown_length-X` class, where X is the number of items to show in it.
+  The `slds-dropdown__list` element requires a `slds-dropdown_length-with-icon-10` class, where 10 is the maximum number of items that will be visible before having to scroll.
 </Blockquote>
 
 ## With Nested Scoped Tabs
@@ -72,6 +72,26 @@ If nesting tabs within tabs, the second set should be rendered as Scoped Tabs to
 <Example title="Tabs with Nested Scoped Tabs">
   <CodeView style={{height: '200px'}}>
     <TabsWithNestedScopedTabs />
+  </CodeView>
+</Example>
+
+## Size Modifiers
+
+Tabs come with three size modifiers: default, medium, and large. Each size step will gradually increase the typography. Add the modifier class `slds-tabs_medium` or `slds-tabs_large` to the `slds-tabs_default` element.
+
+### Medium
+
+<Example title="Tabs with Medium sizing modifier">
+  <CodeView>
+    <TabsMedium />
+  </CodeView>
+</Example>
+
+### Large
+
+<Example title="Tabs with Large sizing modifier">
+  <CodeView>
+    <TabsLarge />
   </CodeView>
 </Example>
 

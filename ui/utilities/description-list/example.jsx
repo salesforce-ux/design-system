@@ -41,5 +41,37 @@ export let examples = [
         <dd className="slds-dl_horizontal__detail">Second description</dd>
       </dl>
     )
+  },
+  {
+    id: 'inline-narrow',
+    label: 'Inline - Within narrow region',
+    element: (
+      <div className="slds-region_narrow" style={{ width: '360px' }}>
+        <dl className="slds-dl_inline">
+          <dt className="slds-dl_inline__label">First Label:</dt>
+          <dd className="slds-dl_inline__detail">
+            Description for first label
+          </dd>
+          <dt className="slds-dl_inline__label">Second Label:</dt>
+          <dd className="slds-dl_inline__detail">Second description</dd>
+        </dl>
+      </div>
+    )
+  },
+  {
+    id: 'horizontal-narrow',
+    label: 'Horizontal - Within narrow region',
+    element: (
+      <div className="slds-region_narrow" style={{ width: '360px' }}>
+        <dl className="slds-dl_horizontal">
+          <dt className="slds-dl_horizontal__label">First Label:</dt>
+          <dd className="slds-dl_horizontal__detail">
+            Description for first label
+          </dd>
+          <dt className="slds-dl_horizontal__label">Second Label:</dt>
+          <dd className="slds-dl_horizontal__detail">Second description</dd>
+        </dl>
+      </div>
+    )
   }
 ];

@@ -35,4 +35,32 @@ describe('renders description list utilities', () => {
         <dd className="slds-dl_horizontal__detail">Second description</dd>
       </dl>
     ));
+
+  it('renders description list with inline name/value pair in narrow region', () =>
+    matchesMarkupAndStyle(
+      <div className="slds-region_narrow" style={{ width: '360px' }}>
+        <dl className="slds-dl_inline">
+          <dt className="slds-dl_inline__label">First Label:</dt>
+          <dd className="slds-dl_inline__detail">
+            Description for first label
+          </dd>
+          <dt className="slds-dl_inline__label">Second Label:</dt>
+          <dd className="slds-dl_inline__detail">Second description</dd>
+        </dl>
+      </div>
+    ));
+
+  it('renders description list with horizontal name/value pair in narrow region', () =>
+    matchesMarkupAndStyle(
+      <div className="slds-region_narrow" style={{ width: '360px' }}>
+        <dl className="slds-dl_horizontal">
+          <dt className="slds-dl_horizontal__label">First Label:</dt>
+          <dd className="slds-dl_horizontal__detail">
+            Description for first label
+          </dd>
+          <dt className="slds-dl_horizontal__label">Second Label:</dt>
+          <dd className="slds-dl_horizontal__detail">Second description</dd>
+        </dl>
+      </div>
+    ));
 });

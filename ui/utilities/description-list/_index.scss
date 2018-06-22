@@ -3,7 +3,6 @@
 
 /**
  * @summary Causes description list to display horizontally with `dt` followed immediately by the `dd`.
- *
  * @selector .slds-dl_inline
  * @modifier
  */
@@ -11,10 +10,9 @@
 .slds-dl--inline {
   @include clearfix;
 
-  @include mq-medium-min {
+  @include mq-small-min {
     /**
-     * Marks a term
-     *
+     * @summary Marks a term
      * @selector .slds-dl_inline__label
      * @modifier
      */
@@ -24,8 +22,7 @@
     }
 
     /**
-     * Marks a description
-     *
+     * @summary Marks a description
      * @selector .slds-dl_inline__detail
      * @modifier
      */
@@ -36,21 +33,35 @@
   }
 }
 
+.slds-region_narrow {
+
+  .slds-dl_inline__label,
+  .slds-dl_inline__detail {
+    float: left;
+  }
+
+  .slds-dl_inline__label {
+    clear: left;
+  }
+
+  .slds-dl_inline__detail {
+    padding-left: $spacing-xx-small;
+  }
+}
+
 /**
  * @summary Causes description list to display horizontally with `dt` consuming 33% of the space and the `dd` taking up the rest.
- *
  * @selector .slds-dl_horizontal
  * @modifier
  */
 .slds-dl_horizontal,
 .slds-dl--horizontal {
-  @include mq-medium-min {
-    @include flex-wrap(true);
+  @include mq-small-min {
     display: flex;
+    flex-wrap: wrap;
 
     /**
-     * Marks a term
-     *
+     * @summary Marks a term
      * @selector .slds-dl_horizontal__label
      * @modifier
      */
@@ -60,12 +71,28 @@
     }
 
     /**
-     * Marks a description
-     *
+     * @summary Marks a description
      * @selector .slds-dl_horizontal__detail
      * @modifier
      */
     &__detail {
+      width: 70%;
+    }
+  }
+}
+
+.slds-region_narrow {
+
+  .slds-dl_horizontal {
+    display: flex;
+    flex-wrap: wrap;
+
+    .slds-dl_horizontal__label {
+      width: 30%;
+      padding-right: $spacing-small;
+    }
+
+    .slds-dl_horizontal__detail {
       width: 70%;
     }
   }

@@ -2,150 +2,125 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { Avatar } from '../../avatar/base/example';
+import { Button } from '../../buttons/base/example';
+import { StatefulButton } from '../../buttons/stateful/example';
+import {
+  ButtonGroupList,
+  ButtonGroupListItem
+} from '../../button-groups/list/example';
 import ButtonIcon from '../../button-icons/';
-import MediaObject from '../../../utilities/media-objects/index.react';
-import SvgIcon from '../../../shared/svg-icon';
-
-const image = (
-  <div className="slds-icon_container slds-icon-standard-lead">
-    <SvgIcon className="slds-icon" sprite="standard" symbol="lead" />
-    <span className="slds-assistive-text">Lead</span>
-  </div>
-);
+import { Trigger } from '../../menus/dropdown/example';
+import {
+  PageHeader,
+  PageHeaderTitle,
+  PageHeaderControls,
+  PageHeaderDetailList,
+  PageHeaderDetailListItem,
+  PageHeaderDetailTitle,
+  PageHeaderDetailBody
+} from '../index';
 
 export const RecordHomeVertical = props => (
   <div className="demo-only" style={{ width: '300px' }}>
-    <div className="slds-page-header slds-page-header_vertical">
-      <div className="slds-grid slds-grid_vertical">
-        <div>
-          <MediaObject
-            flavor="center"
-            figureLeft={image}
-            className="slds-no-space slds-has-divider_bottom-space"
-          >
-            <h1 className="slds-align-middle">
-              <span
-                className="slds-page-header__title slds-truncate slds-show"
-                title="Record Title"
-              >
-                Record Title
-              </span>
-            </h1>
-          </MediaObject>
-        </div>
-        <div className="slds-has-divider_bottom-space">
-          <button
-            className="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
-            aria-live="assertive"
-          >
-            <span className="slds-text-not-selected">
-              <SvgIcon
-                className="slds-button__icon_stateful slds-button__icon_left"
-                sprite="utility"
-                symbol="add"
-              />Follow
-            </span>
-            <span className="slds-text-selected">
-              <SvgIcon
-                className="slds-button__icon_stateful slds-button__icon_left"
-                sprite="utility"
-                symbol="check"
-              />Following
-            </span>
-            <span className="slds-text-selected-focus">
-              <SvgIcon
-                className="slds-button__icon_stateful slds-button__icon_left"
-                sprite="utility"
-                symbol="close"
-              />Unfollow
-            </span>
-          </button>
-          <div
-            className="slds-button-group slds-m-left_none slds-m-top_x-small"
-            role="group"
-          >
-            <button className="slds-button slds-button_neutral">Convert</button>
-            <button className="slds-button slds-button_neutral">Clone</button>
-            <button className="slds-button slds-button_neutral">Edit</button>
-            <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">
-              <ButtonIcon
-                className="slds-button_icon-border-filled"
-                symbol="down"
-                aria-haspopup="true"
-                assistiveText="More Actions"
-                title="More Actions"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <ul className="slds-list_vertical-space-medium slds-m-left_xx-small">
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">Field 1</div>
-          <div
-            className="slds-text-body_regular"
-            title="Description that demonstrates truncation with a long text field"
-          >
-            Description that demonstrates a long text field and will eventually
-            wrap.
-          </div>
-        </li>
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">Field 2</div>
-          <div className="slds-text-body_regular" title="Hyperlink">
-            <a href="javascript:void(0);">Hyperlink</a>
-          </div>
-        </li>
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">Field 3</div>
-          <div className="slds-truncate" title="Description">
-            Description
-          </div>
-        </li>
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">
-            <button
-              className="slds-button slds-text-link_reset"
+    <PageHeader isVertical>
+      <PageHeaderTitle
+        symbol="opportunity"
+        titleText="Burlington Textile Weaving Plant Generator"
+        isVertical
+      />
+      <PageHeaderControls>
+        <StatefulButton isNeutral isNotSelected />
+        <ButtonGroupList>
+          <ButtonGroupListItem>
+            <Button isNeutral>Edit</Button>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
+            <Button isNeutral>Delete</Button>
+          </ButtonGroupListItem>
+          <ButtonGroupListItem>
+            <ButtonIcon
+              className="slds-button_icon-border-filled"
+              symbol="down"
               aria-haspopup="true"
-            >
-              Field 4 (3)
-              <SvgIcon
-                className="slds-button__icon slds-button__icon_small"
-                sprite="utility"
-                symbol="down"
-              />
-            </button>
-          </div>
-          <div className="slds-text-body_regular">
+              assistiveText="More Actions"
+              title="More Actions"
+            />
+          </ButtonGroupListItem>
+        </ButtonGroupList>
+      </PageHeaderControls>
+      <PageHeaderDetailList>
+        <PageHeaderDetailListItem>
+          <PageHeaderDetailTitle title="Field 1">
+            Account Name
+          </PageHeaderDetailTitle>
+          <PageHeaderDetailBody
+            title="Burlington Textile Weaving Plant Generator"
+            isVertical
+          >
+            <a href="javascript:void(0);">
+              Burlington Textile Weaving Plant Generator
+            </a>
+          </PageHeaderDetailBody>
+        </PageHeaderDetailListItem>
+        <PageHeaderDetailListItem>
+          <PageHeaderDetailTitle title="Address (2)">
+            Address (2)
+            <Trigger
+              triggerIcon={
+                <ButtonIcon
+                  className="slds-button_icon"
+                  iconClassName="slds-button__icon_small"
+                  symbol="down"
+                  aria-haspopup="true"
+                  assistiveText="More Actions"
+                  title="More Actions"
+                />
+              }
+            />
+          </PageHeaderDetailTitle>
+          <PageHeaderDetailBody title="Multiple Values" isVertical>
             <div>1 Market St</div>
             <div>San Francisco, CA 94105</div>
-          </div>
-        </li>
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">Field 5</div>
-          <div className="slds-text-body_regular" title="Description">
-            Description
-          </div>
-        </li>
-        <li className="slds-item">
-          <div className="slds-text-title slds-m-bottom_xx-small">Field 6</div>
-          <div className="slds-text-body_regular" title="Description">
-            Description
-          </div>
-        </li>
-        <li className="slds-item">
-          <div
-            className="slds-text-title slds-truncate slds-m-bottom_xx-small"
-            title="Field 7"
-          >
-            Field 7
-          </div>
-          <div className="slds-text-body_regular" title="Description">
-            Description
-          </div>
-        </li>
-      </ul>
-    </div>
+          </PageHeaderDetailBody>
+        </PageHeaderDetailListItem>
+        <PageHeaderDetailListItem>
+          <PageHeaderDetailTitle title="Close Date">
+            Close Date
+          </PageHeaderDetailTitle>
+          <PageHeaderDetailBody title="11/1/2018" isVertical>
+            11/1/2018
+          </PageHeaderDetailBody>
+        </PageHeaderDetailListItem>
+        <PageHeaderDetailListItem>
+          <PageHeaderDetailTitle title="Opportunity Owner">
+            Opportunity Owner
+          </PageHeaderDetailTitle>
+          <PageHeaderDetailBody title="Hyperlink" isVertical>
+            <div className="slds-media slds-media_small">
+              <div className="slds-media__figure">
+                <Avatar className="slds-avatar_circle slds-avatar_x-small">
+                  <img
+                    alt="Person name"
+                    src="/assets/images/avatar2.jpg"
+                    title="User avatar"
+                  />
+                </Avatar>
+              </div>
+              <div className="slds-media__body">
+                <a href="javascript:void(0);">Jeanette Gomez</a>
+              </div>
+            </div>
+          </PageHeaderDetailBody>
+        </PageHeaderDetailListItem>
+        <PageHeaderDetailListItem>
+          <PageHeaderDetailTitle title="Amount">Amount</PageHeaderDetailTitle>
+          <PageHeaderDetailBody title="$375,000.00" isVertical>
+            $375,000.00
+          </PageHeaderDetailBody>
+        </PageHeaderDetailListItem>
+      </PageHeaderDetailList>
+    </PageHeader>
   </div>
 );
 

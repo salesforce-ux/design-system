@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - '*width'
+  - '*height'
+props:
+  PAGE_HEADER_ICON_SIZE:
+    value: 2.25rem
+    comment: Page header Entity Icon size

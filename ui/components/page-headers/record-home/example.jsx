@@ -17,16 +17,14 @@ import {
   PageHeaderTitle,
   PageHeaderControls,
   PageHeaderControl,
-  PageHeaderDetailList,
+  PageHeaderDetailRow,
   PageHeaderDetailItem,
   PageHeaderDetailTitle,
   PageHeaderDetailBody
 } from '../index';
 
-import RecordHomeDeprecated from './deprecated';
-
-export let RecordHome = props => (
-  <PageHeader isRecordHome>
+export const RecordHome = props => (
+  <PageHeader>
     <PageHeaderRow>
       <PageHeaderColumn type="title">
         <PageHeaderTitle
@@ -71,7 +69,7 @@ export let RecordHome = props => (
     </PageHeaderRow>
     <PageHeaderRow hasGutters>
       <PageHeaderColumn type="details">
-        <PageHeaderDetailList>
+        <PageHeaderDetailRow>
           <PageHeaderDetailItem>
             <PageHeaderDetailTitle title="Field 1">
               Field 1
@@ -116,7 +114,7 @@ export let RecordHome = props => (
               Description (2-line truncati...
             </PageHeaderDetailBody>
           </PageHeaderDetailItem>
-        </PageHeaderDetailList>
+        </PageHeaderDetailRow>
       </PageHeaderColumn>
     </PageHeaderRow>
   </PageHeader>

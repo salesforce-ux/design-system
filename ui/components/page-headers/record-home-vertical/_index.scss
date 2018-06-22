@@ -19,4 +19,30 @@
   padding: $spacing-small;
   background: $color-background-page-header;
   border-bottom: 0;
+
+  .slds-page-header__controls {
+    padding-top: $spacing-x-small;
+    margin-top: $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+}
+
+/**
+ * @summary Vertical list of detail items
+ * @selector .slds-page-header__detail-list
+ * @restrict .slds-page-header_vertical ul
+ */
+.slds-page-header__detail-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/**
+ * @summary List items of vertical detail list
+ * @selector .slds-page-header__detail-item
+ * @restrict .slds-page-header__detail-list li
+ */
+.slds-page-header__detail-item {
+  margin-top: $var-spacing-small;
+  width: 50%;
 }

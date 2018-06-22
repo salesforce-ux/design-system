@@ -90,7 +90,10 @@ export const PageHeaderTitle = props => (
             <span>{props.objectName}</span>
           ) : null}
           <span
-            className="slds-page-header__title slds-truncate slds-show"
+            className={classNames(
+              'slds-page-header__title',
+              !props.isVertical && 'slds-truncate'
+            )}
             title={props.titleText}
           >
             {props.titleText}
@@ -124,7 +127,8 @@ PageHeaderTitle.propTypes = {
   objectName: PropTypes.string,
   hasSwitcher: PropTypes.bool,
   metaText: PropTypes.string,
-  titleText: PropTypes.string.isRequired
+  titleText: PropTypes.string.isRequired,
+  isVertical: PropTypes.bool
 };
 
 export const PageHeaderMetaText = props => (
@@ -148,8 +152,15 @@ PageHeaderControl.propTypes = {
   children: PropTypes.node
 };
 
-export const PageHeaderDetailList = props => (
+export const PageHeaderDetailRow = props => (
   <ul className="slds-page-header__detail-row">{props.children}</ul>
+);
+PageHeaderDetailRow.propTypes = {
+  children: PropTypes.node
+};
+
+export const PageHeaderDetailList = props => (
+  <ul className="slds-page-header__detail-list">{props.children}</ul>
 );
 PageHeaderDetailList.propTypes = {
   children: PropTypes.node
@@ -162,22 +173,37 @@ PageHeaderDetailItem.propTypes = {
   children: PropTypes.node
 };
 
+export const PageHeaderDetailListItem = props => (
+  <li className="slds-page-header__detail-item">{props.children}</li>
+);
+PageHeaderDetailListItem.propTypes = {
+  children: PropTypes.node
+};
+
 export const PageHeaderDetailTitle = props => (
-  <div className="slds-text-title slds-truncate" title={props.title}>
+  <div
+    className={classNames(
+      'slds-text-title',
+      !props.isVertical && 'slds-truncate'
+    )}
+    title={props.title}
+  >
     {props.children}
   </div>
 );
 PageHeaderDetailTitle.propTypes = {
   children: PropTypes.node,
-  title: PropTypes.string
+  title: PropTypes.string,
+  isVertical: PropTypes.bool
 };
 
 export const PageHeaderDetailBody = props => (
-  <p className="slds-text-body_regular slds-truncate" title={props.title}>
+  <p className={!props.isVertical && 'slds-truncate'} title={props.title}>
     {props.children}
   </p>
 );
 PageHeaderDetailBody.propTypes = {
   children: PropTypes.node,
-  title: PropTypes.string
+  title: PropTypes.string,
+  isVertical: PropTypes.bool
 };

@@ -5,10 +5,9 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
-import classNames from 'classnames';
 
-export const ObjectHomeDeprecated = props => (
-  <div className={classNames('slds-page-header', props.className)}>
+export const ObjectHomeDeprecated = () => (
+  <div className="slds-page-header slds-page-header_object-home">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <div className="slds-media slds-no-space slds-grow">

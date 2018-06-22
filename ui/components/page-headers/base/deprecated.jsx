@@ -4,7 +4,7 @@
 import React from 'react';
 import { StandardIcon } from '../../icons/standard/example';
 
-export const PageHeaderDeprecated = props => (
+export const PageHeaderDeprecated = () => (
   <div className="slds-page-header">
     <div className="slds-media">
       <div className="slds-media__figure">

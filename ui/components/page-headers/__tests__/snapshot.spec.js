@@ -10,8 +10,10 @@ import {
   PageHeaderMetaText,
   PageHeaderControls,
   PageHeaderControl,
+  PageHeaderDetailRow,
   PageHeaderDetailList,
   PageHeaderDetailItem,
+  PageHeaderDetailListItem,
   PageHeaderDetailTitle,
   PageHeaderDetailBody
 } from '../index';
@@ -20,10 +22,11 @@ import { PageHeaderDeprecated } from '../base/deprecated';
 import { ObjectHome } from '../object-home/example';
 import { ObjectHomeDeprecated } from '../object-home/deprecated';
 import { RecordHome } from '../record-home/example';
-import RecordHomeDeprecated from '../record-home/deprecated';
+import { RecordHomeDeprecated } from '../record-home/deprecated';
 import { RelatedList } from '../related-list/example';
-import RelatedListDeprecated from '../related-list/deprecated';
+import { RelatedListDeprecated } from '../related-list/deprecated';
 import { RecordHomeVertical } from '../record-home-vertical/example';
+import { RecordHomeVerticalDeprecated } from '../record-home-vertical/deprecated';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('Page Header', () => {
@@ -106,9 +109,7 @@ describe('Page Header', () => {
     matchesMarkupAndStyle(<PageHeaderControl>content</PageHeaderControl>));
 
   it('renders the page header detail container', () =>
-    matchesMarkupAndStyle(
-      <PageHeaderDetailList>content</PageHeaderDetailList>
-    ));
+    matchesMarkupAndStyle(<PageHeaderDetailRow>content</PageHeaderDetailRow>));
 
   it('renders the page header detail block container', () =>
     matchesMarkupAndStyle(
@@ -123,6 +124,16 @@ describe('Page Header', () => {
   it('renders the page header detail body container', () =>
     matchesMarkupAndStyle(
       <PageHeaderDetailBody title="content">content</PageHeaderDetailBody>
+    ));
+
+  it('renders the page header detail vertical list', () =>
+    matchesMarkupAndStyle(
+      <PageHeaderDetailList>content</PageHeaderDetailList>
+    ));
+
+  it('renders the page header detail vertical list item', () =>
+    matchesMarkupAndStyle(
+      <PageHeaderDetailListItem>content</PageHeaderDetailListItem>
     ));
 });
 
@@ -147,6 +158,9 @@ describe('Renders a page header', () => {
 
   it('renders vertical record home page header', () =>
     matchesMarkupAndStyle(<RecordHomeVertical />));
+
+  it('renders deprecated vertical record home page header', () =>
+    matchesMarkupAndStyle(<RecordHomeVerticalDeprecated />));
 
   it('renders related list home page header', () =>
     matchesMarkupAndStyle(<RelatedList />));

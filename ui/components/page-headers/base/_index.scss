@@ -55,6 +55,10 @@
   min-width: 0;
 }
 
+.slds-page-header__icon {
+  @include square($page-header-icon-size);
+}
+
 /**
  * @summary Used to create a column containing the page actions
  *
@@ -130,7 +134,7 @@
  */
 
 .slds-page-header__name-title {
-  @include truncate;
+  min-width: 0;
 }
 
 /**
@@ -185,9 +189,10 @@
   font-size: $font-size-6;
   font-weight: $page-header-title-font-weight;
   line-height: $line-height-heading;
+  display: block;
 
   .slds-icon {
-    fill: currentColor;
+    fill: currentColor; // Legacy support
   }
 }
 

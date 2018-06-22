@@ -20,9 +20,8 @@ import {
   PageHeaderControls,
   PageHeaderControl
 } from '../index';
-import { ObjectHomeDeprecated } from './deprecated';
 
-export let ObjectHome = props => (
+export const ObjectHome = props => (
   <PageHeader>
     <PageHeaderRow>
       <PageHeaderColumn type="title">

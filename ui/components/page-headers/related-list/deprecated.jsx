@@ -3,7 +3,7 @@ import BreadCrumbs from '../../breadcrumbs/index.react';
 import ButtonIcon from '../../button-icons/';
 const { Crumb } = BreadCrumbs;
 
-export default () => (
+export const RelatedListDeprecated = () => (
   <div className="slds-page-header slds-page-header_related-list">
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">

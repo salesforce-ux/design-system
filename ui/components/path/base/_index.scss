@@ -9,8 +9,6 @@
  * @s1 false
  */
 .slds-path {
-  padding: $spacing-small;
-
   /**
    * @summary Indicates the coaching section is expanded
    *
@@ -18,7 +16,7 @@
    * @restrict .slds-path
    */
   &.slds-is-expanded {
-    padding-bottom: $spacing-medium;
+    padding-bottom: $spacing-small;
     border-color: $color-border;
   }
 }
@@ -30,6 +28,8 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
+  padding: $spacing-small;
+
   /**
    * Indicates the scroller is in the overflow state
    *
@@ -310,9 +310,9 @@
     }
 
     .slds-path__link {
-      background-color: $color-background-path-active;
-      color: $color-text-inverse;
       border: 0;
+      color: $color-text-inverse;
+      background-color: $color-background-path-active;
       line-height: $line-height-salespath;
     }
 
@@ -562,11 +562,6 @@
  * @selector .slds-path__content
  * @restrict .slds-path div
  */
-.slds-path__content {
-  margin-top: $spacing-x-small;
-  padding: 0 $spacing-x-small;
-}
-
 
 /**
  * @summary Key field section of expanded tabpanel
@@ -596,7 +591,6 @@
 .slds-path__guidance {
   flex: 1 0 50%;
   margin-top: $spacing-medium;
-  padding-top: $spacing-x-small;
   padding-right: $spacing-small;
 }
 
@@ -623,6 +617,7 @@
  * @restrict .slds-path__coach-title button
  */
 .slds-path__coach-edit {
+  border: 0;
   padding: 0;
   line-height: inherit;
 }
@@ -660,6 +655,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: $spacing-medium;
+    padding-left: ($spacing-small + $square-icon-medium-boundary);
   }
 
   .slds-path__stage-name {
@@ -689,6 +685,10 @@
     @include flex-wrap(true);
   }
 
+  .slds-path__coach {
+    padding: 0 $spacing-small;
+  }
+
   .slds-path__stage-name {
     display: block;
     margin: $spacing-medium 0;
@@ -713,6 +713,6 @@
   }
 
   .slds-path__guidance {
-    margin-top: $spacing-x-large;
+    margin-top: $spacing-medium;
   }
 }

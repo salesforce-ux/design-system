@@ -198,9 +198,12 @@ PageHeaderDetailTitle.propTypes = {
 };
 
 export const PageHeaderDetailBody = props => (
-  <p className={!props.isVertical && 'slds-truncate'} title={props.title}>
+  <div
+    className={!props.isVertical ? 'slds-truncate' : null}
+    title={props.title}
+  >
     {props.children}
-  </p>
+  </div>
 );
 PageHeaderDetailBody.propTypes = {
   children: PropTypes.node,

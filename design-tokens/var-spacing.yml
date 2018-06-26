@@ -51,13 +51,13 @@ props:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable horizontal spacing token for size XX Small'
   VAR_SPACING_HORIZONTAL_X_SMALL:
-    value: '{!SPACING_XXX_SMALL}'
+    value: '{!SPACING_XX_SMALL}'
     comment: 'Variable horizontal spacing token for size X Small'
   VAR_SPACING_HORIZONTAL_SMALL:
-    value: '{!SPACING_XX_SMALL}'
+    value: '{!SPACING_X_SMALL}'
     comment: 'Variable horizontal spacing token for size Small'
   VAR_SPACING_HORIZONTAL_MEDIUM:
-    value: '{!SPACING_X_SMALL}'
+    value: '{!SPACING_SMALL}'
     comment: 'Variable horizontal spacing token for size Medium'
   VAR_SPACING_HORIZONTAL_LARGE:
     value: '{!SPACING_SMALL}'
@@ -76,10 +76,10 @@ props:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable vertical spacing token for size XX Small'
   VAR_SPACING_VERTICAL_X_SMALL:
-    value: '{!SPACING_XXX_SMALL}'
+    value: '{!SPACING_XX_SMALL}'
     comment: 'Variable vertical spacing token for size X Small'
   VAR_SPACING_VERTICAL_SMALL:
-    value: '{!SPACING_XX_SMALL}'
+    value: '{!SPACING_X_SMALL}'
     comment: 'Variable vertical spacing token for size Small'
   VAR_SPACING_VERTICAL_MEDIUM:
     value: '{!SPACING_X_SMALL}'

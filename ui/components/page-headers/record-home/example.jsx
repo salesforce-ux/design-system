@@ -24,7 +24,7 @@ import {
 } from '../index';
 
 export const RecordHome = props => (
-  <PageHeader>
+  <PageHeader isRecordHome>
     <PageHeaderRow>
       <PageHeaderColumn type="title">
         <PageHeaderTitle

@@ -3,7 +3,6 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import _ from '../../shared/helpers';
 import { Avatar } from '../avatar/base/example';
 import { UtilityIcon } from '../icons/base/example';
 import { TypingIcon } from '../dynamic-icons/typing/example';
@@ -46,75 +45,118 @@ export const ChatMessage = props => (
   </div>
 );
 
-export const ChatMessageBody = props => (
-  <div className="slds-chat-message__body">
-    {props.name &&
-      props.timeStamp &&
-      props.isPast && (
-        <ChatMessageTimeStamp
-          isPast
-          name={props.name}
-          timeStamp={props.timeStamp}
-        />
-      )}
-    <div
-      className={classNames('slds-chat-message__text', {
-        'slds-chat-message__text_inbound': props.type === 'inbound',
-        'slds-chat-message__text_outbound': props.type === 'outbound',
-        'slds-chat-message__text_outbound-agent':
-          props.type === 'outbound-agent',
-        'slds-chat-message__text_unsupported-type':
-          props.type === 'unsupported-type',
-        'slds-chat-message__text_delivery-failure':
-          props.type === 'delivery-failure',
-        'slds-chat-message__text_sneak-peek': props.hasSneakPeek
-      })}
-    >
-      {props.isTyping && (
-        <TypingIcon
-          isAnimated
-          isPaused={props.isPaused}
-          assistiveText="Customer is typing"
-          title="Customer is typing"
-        />
-      )}
-      {props.type === 'unsupported-type' && (
-        <ChatIcon symbol="warning" assistiveText="Warning" />
-      )}
-      {props.children && (
+export const ChatMessageBody = props => {
+  const chatTextClasses = {
+    'slds-chat-message__text': !props.messageType,
+    'slds-chat-message__text_inbound':
+      !props.messageType && props.type === 'inbound',
+    'slds-chat-message__text_outbound':
+      !props.messageType && props.type === 'outbound',
+    'slds-chat-message__text_outbound-agent':
+      !props.messageType && props.type === 'outbound-agent',
+    'slds-chat-message__text_unsupported-type':
+      !props.messageType && props.type === 'unsupported-type',
+    'slds-chat-message__text_delivery-failure':
+      !props.messageType && props.type === 'delivery-failure',
+    'slds-chat-message__text_sneak-peek':
+      !props.messageType && props.hasSneakPeek
+  };
+
+  const chatFileClasses = {
+    'slds-chat-message__file': props.messageType === 'file',
+    'slds-chat-message__file_inbound':
+      props.messageType === 'file' && props.type === 'inbound',
+    'slds-chat-message__file_outbound':
+      props.messageType === 'file' && props.type === 'outbound'
+  };
+
+  const chatImageClasses = {
+    'slds-chat-message__image': props.messageType === 'image',
+    'slds-chat-message__image_inbound':
+      props.messageType === 'image' && props.type === 'inbound',
+    'slds-chat-message__image_outbound':
+      props.messageType === 'image' && props.type === 'outbound'
+  };
+
+  const renderChildrenWrapper = () => {
+    if (props.messageType === 'image' || props.messageType === 'file') {
+      return props.children;
+    } else {
+      return (
         <span aria-hidden={props.hasSneakPeek ? 'true' : null}>
           {props.children}
         </span>
-      )}
-      {props.type === 'delivery-failure' && (
-        <ChatMessageDeliveryFailure>
-          {props.deliveryFailureReason}
-        </ChatMessageDeliveryFailure>
-      )}
-    </div>
-    {props.type === 'delivery-failure' ? (
-      <div className="slds-grid slds-grid_align-spread slds-grid_vertical-align-start">
-        {props.name &&
-          props.timeStamp &&
-          !props.isPast && (
-            <ChatMessageTimeStamp
-              name={props.name}
-              timeStamp={props.timeStamp}
-            />
-          )}
+      );
+    }
+  };
+
+  return (
+    <div
+      className={classNames('slds-chat-message__body', {
+        'slds-chat-message__file_loading':
+          props.messageType === 'file' && props.isLoading,
+        'slds-chat-message__image_loading':
+          props.messageType === 'image' && props.isLoading
+      })}
+    >
+      {props.name &&
+        props.timeStamp &&
+        props.isPast && (
+          <ChatMessageTimeStamp
+            isPast
+            name={props.name}
+            timeStamp={props.timeStamp}
+          />
+        )}
+      <div
+        className={classNames(
+          chatTextClasses,
+          chatFileClasses,
+          chatImageClasses
+        )}
+      >
+        {props.isTyping && (
+          <TypingIcon
+            isAnimated
+            isPaused={props.isPaused}
+            assistiveText="Customer is typing"
+            title="Customer is typing"
+          />
+        )}
+        {props.type === 'unsupported-type' && (
+          <ChatIcon symbol="warning" assistiveText="Warning" />
+        )}
+        {props.children && renderChildrenWrapper()}
         {props.type === 'delivery-failure' && (
-          <ChatMessageAction symbol="redo" actionTitle="Resend" />
+          <ChatMessageDeliveryFailure>
+            {props.deliveryFailureReason}
+          </ChatMessageDeliveryFailure>
         )}
       </div>
-    ) : (
-      props.name &&
-      props.timeStamp &&
-      !props.isPast && (
-        <ChatMessageTimeStamp name={props.name} timeStamp={props.timeStamp} />
-      )
-    )}
-  </div>
-);
+      {props.type === 'delivery-failure' ? (
+        <div className="slds-grid slds-grid_align-spread slds-grid_vertical-align-start">
+          {props.name &&
+            props.timeStamp &&
+            !props.isPast && (
+              <ChatMessageTimeStamp
+                name={props.name}
+                timeStamp={props.timeStamp}
+              />
+            )}
+          {props.type === 'delivery-failure' && (
+            <ChatMessageAction symbol="redo" actionTitle="Resend" />
+          )}
+        </div>
+      ) : (
+        props.name &&
+        props.timeStamp &&
+        !props.isPast && (
+          <ChatMessageTimeStamp name={props.name} timeStamp={props.timeStamp} />
+        )
+      )}
+    </div>
+  );
+};
 
 const ChatMessageTimeStamp = props => (
   <div

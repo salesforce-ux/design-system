@@ -13,6 +13,7 @@ import {
   ChatEvent,
   ChatBookend
 } from '../.';
+import { File } from '../../files/base/example';
 import { DoctypeIcon } from '../../icons/doctype/example';
 
 const exampleMultiLineText =
@@ -128,6 +129,66 @@ export const states = [
     )
   },
   {
+    id: 'inbound-with-loading-attachment-no-title',
+    label: 'Inbound With Loading Attachment Without Title',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatMessageBody
+                type="inbound"
+                messageType="image"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+                isLoading
+              >
+                <File
+                  cropClass="slds-file__crop slds-file__crop_4-by-3"
+                  isLoading
+                  loadingClass="slds-spinner_medium"
+                  noCaption
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
+    id: 'inbound-with-loading-attachment-with-title',
+    label: 'Inbound With Loading Attachment With Title',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatMessageBody
+                type="inbound"
+                messageType="file"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+                isLoading
+              >
+                <File
+                  cropClass="slds-file__crop slds-file__crop_4-by-3"
+                  titleClass="slds-file__title_card"
+                  sprite="utility"
+                  symbol="image"
+                  isLoading
+                  loadingClass="slds-spinner_medium"
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
     id: 'outbound',
     label: 'Outbound',
     element: (
@@ -143,7 +204,7 @@ export const states = [
                 Hi Taylor, thank you for contacting Widget Support. Can you
                 please tell me what language you are trying to program on your
                 CloudWidget?{' '}
-                <a href="javascript:void(0)">http://www/cloud.widget</a>
+                <a href="javascript:void(0)">http://www.cloud.widget</a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -480,6 +541,93 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="bookend">
             <ChatBookend type="stop" name="Andy Martinez" timeStamp="5:30 PM" />
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
+    id: 'conversation-with-attachments',
+    label: 'Conversation With Attachments',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatMessageBody
+                type="inbound"
+                messageType="image"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                <File
+                  cropClass="slds-file__figure"
+                  actions
+                  whiteIcons
+                  noCaption
+                  image
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+          <ChatListItem type="outbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="outbound"
+                messageType="image"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                <File
+                  cropClass="slds-file__figure slds-file__figure_portrait"
+                  titleClass="slds-file__title_card"
+                  symbol="image"
+                  title="Image.jpg"
+                  actions
+                  imagePortrait
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatMessageBody
+                type="inbound"
+                messageType="file"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                <File
+                  cropClass="slds-file__crop slds-file__crop_4-by-3"
+                  titleClass="slds-file__title_card"
+                  symbol="pdf"
+                  title="File.pdf"
+                  actions
+                  image
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+          <ChatListItem type="outbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="outbound"
+                messageType="file"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                <File
+                  cropClass="slds-file__crop slds-file__crop_4-by-3"
+                  titleClass="slds-file__title_card"
+                  symbol="pdf"
+                  title="File.pdf"
+                  actions
+                  image
+                />
+              </ChatMessageBody>
+            </ChatMessage>
           </ChatListItem>
         </ChatList>
       </Chat>

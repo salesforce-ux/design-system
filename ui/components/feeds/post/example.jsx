@@ -287,7 +287,7 @@ export let examples = [
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
                     <File
                       className="slds-file_card"
-                      cropClass="slds-file__crop_16-by-9"
+                      cropClass="slds-file__crop slds-file__crop_16-by-9"
                       titleClass="slds-file__title_card"
                       symbol="image"
                       image
@@ -296,7 +296,7 @@ export let examples = [
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-medium-show">
                     <File
                       className="slds-file_card"
-                      cropClass="slds-file__crop_16-by-9"
+                      cropClass="slds-file__crop slds-file__crop_16-by-9"
                       titleClass="slds-file__title_card"
                       symbol="pdf"
                     />
@@ -304,7 +304,7 @@ export let examples = [
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
                     <File
                       className="slds-file_card"
-                      cropClass="slds-file__crop_16-by-9"
+                      cropClass="slds-file__crop slds-file__crop_16-by-9"
                       titleClass="slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
                       title="22+"
                       image

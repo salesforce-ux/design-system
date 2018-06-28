@@ -11,6 +11,7 @@ import {
   ChatBookend,
   ChatIcon
 } from '../';
+import { File } from '../../files/base/example';
 import { DoctypeIcon } from '../../icons/doctype/example';
 import createHelpers from '../../../../jest.helpers';
 
@@ -177,24 +178,6 @@ describe('Chat message body', () => {
       </ChatMessageBody>
     ));
 
-  it('renders an inbound chat message body with an attachment', () =>
-    matchesMarkupAndStyle(
-      <ChatMessageBody
-        type="inbound"
-        name="Taylor Watson-Rice"
-        timeStamp="4:59 PM"
-      >
-        <DoctypeIcon
-          assistiveText="Attachment"
-          className="slds-icon_small"
-          containerClassName="slds-chat-icon"
-          symbol="attachment"
-          title="Attachment"
-        />
-        <a href="#">filename_of_attachment.jpg</a>
-      </ChatMessageBody>
-    ));
-
   it('renders an inbound chat message body with an unsupported message type', () =>
     matchesMarkupAndStyle(
       <ChatMessageBody
@@ -216,6 +199,253 @@ describe('Chat message body', () => {
       >
         It might be the cause of the problem
       </ChatMessageBody>
+    ));
+});
+
+describe('Chat Images and Files', () => {
+  it('renders an inbound chat message body with an attachment', () =>
+    matchesMarkupAndStyle(
+      <ChatMessageBody
+        type="inbound"
+        name="Taylor Watson-Rice"
+        timeStamp="4:59 PM"
+      >
+        <DoctypeIcon
+          assistiveText="Attachment"
+          className="slds-icon_small"
+          containerClassName="slds-chat-icon"
+          symbol="attachment"
+          title="Attachment"
+        />
+        <a href="#">filename_of_attachment.jpg</a>
+      </ChatMessageBody>
+    ));
+
+  it('renders a loading inbound chat message item with image', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+            isLoading
+          >
+            <File isLoading loadingClass="slds-spinner_medium" noCaption />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders a loading inbound chat message item with file', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="file"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+            isLoading
+          >
+            <File
+              cropClass="slds-file__crop slds-file__crop_4-by-3"
+              titleClass="slds-file__title_card"
+              sprite="utility"
+              symbol="image"
+              isLoading
+              loadingClass="slds-spinner_medium"
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an inbound chat message item with image and actions', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure"
+              actions
+              whiteIcons
+              noCaption
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an outbound chat message item with image and actions', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure"
+              actions
+              whiteIcons
+              noCaption
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an inbound chat message item with portrait image and actions', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure slds-file__figure_portrait"
+              actions
+              whiteIcons
+              noCaption
+              imagePortrait
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an inbound chat message item with portrait image and title', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure"
+              titleClass="slds-file__title_card"
+              symbol="image"
+              title="Image.jpg"
+              actions
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an outbound chat message item with portrait image and actions', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure slds-file__figure_portrait"
+              actions
+              whiteIcons
+              noCaption
+              imagePortrait
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an outbound chat message item with portrait image and title', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound"
+            messageType="image"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__figure"
+              titleClass="slds-file__title_card"
+              symbol="image"
+              title="Image.jpg"
+              actions
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an inbound chat message item with file and title', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatMessageBody
+            type="inbound"
+            messageType="file"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__crop slds-file__crop_4-by-3"
+              titleClass="slds-file__title_card"
+              symbol="pdf"
+              title="File.pdf"
+              actions
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+    ));
+
+  it('renders an outbound chat message item with file and title', () =>
+    matchesMarkupAndStyle(
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound"
+            messageType="file"
+            name="Taylor Watson-Rice"
+            timeStamp="4:59 PM"
+          >
+            <File
+              cropClass="slds-file__crop slds-file__crop_4-by-3"
+              titleClass="slds-file__title_card"
+              symbol="pdf"
+              title="File.pdf"
+              actions
+              image
+            />
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
     ));
 });
 

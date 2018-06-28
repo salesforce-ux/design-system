@@ -15,7 +15,6 @@
   margin-bottom: $spacing-small;
 }
 
-
 /**
  * The chat payload should be displayed in the form of a list. Each item in the list has a number of vertical and horizontal spacing rules based on its type
  *
@@ -160,6 +159,16 @@
  */
 
 /**
+ * @summary
+ * @selector .slds-chat-message__image_loading
+ * @restrict .slds-chat-message__body
+ */
+.slds-chat-message__image_loading {
+  width: $size-small;
+  height: rem(180px);
+}
+
+/**
  * @summary Used to style the chat text from agent or customer
  * @selector .slds-chat-message__text
  * @restrict .slds-chat-message__body div
@@ -168,7 +177,7 @@
   @include break-word;
   display: inline-block;
   font-size: $font-size-text-small;
-  max-width: 420px;
+  max-width: rem(420px);
   white-space: pre-line;
 
   a {
@@ -181,15 +190,62 @@
   }
 }
 
+/**
+ * @summary
+ * @selector .slds-chat-message__file
+ * @restrict .slds-chat-message__body div
+ */
+.slds-chat-message__file {
+  width: $size-small;
+}
+
+// For some reason, content from Files is bleeding through the border radius set by .slds-chat-message__image and __file. Because Files in this instance has a different hover behavior than normal, this is ok.
+.slds-chat-message__file,
+.slds-chat-message__image {
+  overflow: hidden;
+
+  // Resets the default File hover behavior and replaces it with a in-Chat-specific behavior
+  .slds-file:hover {
+    box-shadow: none;
+    transition: none;
+  }
+}
+
 .slds-chat-message__text_inbound,
+.slds-chat-message__file_inbound,
+.slds-chat-message__image_inbound,
 .slds-chat-message__text_outbound,
+.slds-chat-message__file_outbound,
+.slds-chat-message__image_outbound,
 .slds-chat-message__text_outbound-agent,
 .slds-chat-message__text_unsupported-type,
 .slds-chat-message__text_delivery-failure {
   border-radius: $border-radius-large $border-radius-large 0;
   color: $color-text-inverse;
   min-height: 2rem;
+}
+
+.slds-chat-message__text_inbound,
+.slds-chat-message__text_outbound,
+.slds-chat-message__text_outbound-agent,
+.slds-chat-message__text_unsupported-type,
+.slds-chat-message__text_delivery-failure {
   padding: $spacing-x-small;
+}
+
+.slds-chat-message__file_inbound,
+.slds-chat-message__image_inbound,
+.slds-chat-message__file_outbound,
+.slds-chat-message__image_outbound {
+  padding: 0;
+  border: $border-width-thin solid $color-border;
+}
+
+.slds-chat-message__file_inbound,
+.slds-chat-message__image_inbound,
+.slds-chat-message__file_outbound,
+.slds-chat-message__image_outbound {
+  color: $color-text-default;
 }
 
 /**
@@ -201,6 +257,26 @@
   background-color: $chat-message-color-background-inbound;
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
   color: $color-text-default;
+}
+
+/**
+ * @summary Used for any specific inbound image styling
+ * @selector .slds-chat-message__image_inbound
+ * @restrict .slds-chat-message__image
+ */
+.slds-chat-message__image_inbound {
+  background-color: $chat-message-color-background-inbound;
+  border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
+}
+
+/**
+ * @summary Used for any specific inbound file styling
+ * @selector .slds-chat-message__file_inbound
+ * @restrict .slds-chat-message__file
+ */
+.slds-chat-message__file_inbound {
+  border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
+  background-color: $color-background-alt;
 }
 
 /**
@@ -378,7 +454,7 @@
   */
 .slds-chat-event__rule {
   border-top: $border-width-thin $color-border solid;
-  height: 1px;
+  height: rem(1px);
   flex-grow: 1;
 }
 

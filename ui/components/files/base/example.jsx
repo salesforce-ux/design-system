@@ -5,6 +5,7 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { ButtonGroup } from '../../button-groups/base/example';
 import ButtonIcon from '../../button-icons/';
+import { Spinner } from '../../spinners/base/example';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
@@ -71,80 +72,112 @@ export let ExternalIcon = props => (
   </div>
 );
 
-export let File = props => (
-  <div className={classNames('slds-file', props.className)}>
-    <figure>
-      <a
-        href="javascript:void(0);"
-        className={classNames('slds-file__crop', props.cropClass)}
-      >
-        {props.overlay ? <div className="slds-file_overlay" /> : null}
-        {props.image ? (
-          <img
-            src="/assets/images/placeholder-img@16x9.jpg"
-            alt="Description of the image"
-          />
-        ) : (
-          <span
-            className="slds-file__icon slds-icon_container"
-            title={props.symbol || 'unknown file type'}
-          >
-            <SvgIcon
-              className={classNames('slds-icon', props.iconType)}
-              sprite={props.sprite || 'doctype'}
-              symbol={props.symbol || 'unknown'}
-            />
-            <span className="slds-assistive-text">
-              {props.title || 'Image Title'}
-            </span>
-          </span>
-        )}
-      </a>
-      {!props.noCaption ? (
-        <figcaption
-          className={classNames('slds-file__title', props.titleClass, {
-            'slds-file-has-actions': props.actions
-          })}
+export let File = props => {
+  // Determines what kind of content to display within the <figure>
+  const renderContent = () => {
+    const {
+      isLoading,
+      loadingClass,
+      image,
+      imagePortrait,
+      symbol,
+      sprite,
+      iconType,
+      title
+    } = props;
+
+    const svgIconClass = classNames('slds-icon', iconType);
+
+    if (isLoading) {
+      return <Spinner className={loadingClass} />;
+    } else if (image) {
+      return (
+        <img
+          src="/assets/images/placeholder-img@16x9.jpg"
+          alt="Description of the image"
+        />
+      );
+    } else if (imagePortrait) {
+      return (
+        <img
+          src="/assets/images/placeholder-img@9x16.jpg"
+          alt="Description of the image"
+        />
+      );
+    } else {
+      return (
+        <span
+          className="slds-file__icon slds-icon_container"
+          title={symbol || 'unknown file type'}
         >
-          <div className="slds-media slds-media_small slds-media_center">
-            <div className="slds-media__figure slds-line-height_reset">
-              {props.symbol ? (
-                <span
-                  className="slds-icon_container"
-                  title={props.symbol || 'unknown file type'}
-                >
-                  <SvgIcon
-                    className="slds-icon slds-icon_x-small"
-                    sprite="doctype"
-                    symbol={props.symbol || 'unknown'}
-                  />
-                  <span className="slds-assistive-text">
-                    {props.symbol || 'unknown file type'}
+          <SvgIcon
+            className={svgIconClass}
+            sprite={sprite || 'doctype'}
+            symbol={symbol || 'unknown'}
+          />
+          <span className="slds-assistive-text">{title || 'Image Title'}</span>
+        </span>
+      );
+    }
+  };
+
+  return (
+    <div className={classNames('slds-file', props.className)}>
+      <figure className={props.cropClass}>
+        {/*
+          aXe is reporting an a11y violation where it says the <a> does not detect any discernible text when using <Spinner>, despite this not being the case (Spinner has "Loading" in .slds-assistive-text). To prevent this from breaking the build, we're excluding `.slds-file figure > a` from aXe linting. Tread carefully.
+        */}
+        <a href="javascript:void(0);">
+          {props.overlay && <div className="slds-file_overlay" />}
+
+          {renderContent()}
+        </a>
+        {!props.noCaption && (
+          <figcaption
+            className={classNames('slds-file__title', props.titleClass, {
+              'slds-file-has-actions': props.actions
+            })}
+          >
+            <div className="slds-media slds-media_small slds-media_center">
+              <div className="slds-media__figure slds-line-height_reset">
+                {props.symbol && (
+                  <span
+                    className="slds-icon_container"
+                    title={props.symbol || 'unknown file type'}
+                  >
+                    <SvgIcon
+                      className="slds-icon slds-icon_x-small"
+                      sprite="doctype"
+                      symbol={props.symbol || 'unknown'}
+                    />
+                    <span className="slds-assistive-text">
+                      {props.symbol || 'unknown file type'}
+                    </span>
                   </span>
+                )}
+              </div>
+              <div className="slds-media__body">
+                <span
+                  className="slds-file__text slds-truncate"
+                  title={props.title || 'Image Title'}
+                >
+                  {props.title || 'Image Title'}
+                  {props.overlay && (
+                    <span className="slds-assistive-text">more files</span>
+                  )}
                 </span>
-              ) : null}
+              </div>
             </div>
-            <div className="slds-media__body">
-              <span
-                className="slds-file__text slds-truncate"
-                title={props.title || 'Image Title'}
-              >
-                {props.title || 'Image Title'}
-                {props.overlay ? (
-                  <span className="slds-assistive-text">more files</span>
-                ) : null}
-              </span>
-            </div>
-          </div>
-        </figcaption>
-      ) : null}
-    </figure>
-    {props.externalSource ? <ExternalIcon /> : null}
-    {props.actions ? (
-      <ActionsConditional scrim={props.scrim} whiteIcons={props.whiteIcons} />
-    ) : null}
-  </div>
-);
+          </figcaption>
+        )}
+      </figure>
+      {props.externalSource && <ExternalIcon />}
+      {props.actions && (
+        <ActionsConditional scrim={props.scrim} whiteIcons={props.whiteIcons} />
+      )}
+    </div>
+  );
+};
 
 export let AttachmentLink = props => (
   <a
@@ -153,12 +186,12 @@ export let AttachmentLink = props => (
   >
     <div className="slds-media__figure slds-medium-show">
       <div className="slds-file slds-size_small">
-        <div className="slds-file__crop slds-file__crop_16-by-9">
+        <figure className="slds-file__crop slds-file__crop_16-by-9">
           <img
             src="/assets/images/placeholder-img@16x9.jpg"
             alt={props.title || 'Image Title'}
           />
-        </div>
+        </figure>
       </div>
     </div>
     <div className="slds-media__body">
@@ -181,6 +214,7 @@ export default (
   <div style={{ width: '20rem' }}>
     <File
       className="slds-file_card"
+      cropClass="slds-file__crop"
       titleClass="slds-file__title_card"
       symbol="pdf"
       title="Proposal.pdf"
@@ -197,6 +231,7 @@ export let examples = [
       <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
+          cropClass="slds-file__crop"
           titleClass="slds-file__title_card"
           symbol="image"
           title="Image Title"
@@ -209,7 +244,13 @@ export let examples = [
     label: 'File with no title',
     element: (
       <div style={{ width: '20rem' }}>
-        <File className="slds-file_card" noCaption symbol="pdf" image />
+        <File
+          className="slds-file_card"
+          cropClass="slds-file__crop"
+          noCaption
+          symbol="pdf"
+          image
+        />
       </div>
     )
   },
@@ -220,6 +261,7 @@ export let examples = [
       <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
+          cropClass="slds-file__crop"
           titleClass="slds-file__title_card"
           symbol="pdf"
           title="Proposal.pdf"
@@ -236,6 +278,7 @@ export let examples = [
       <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
+          cropClass="slds-file__crop"
           symbol="pdf"
           title="Proposal.pdf"
           actions
@@ -254,6 +297,7 @@ export let examples = [
       <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
+          cropClass="slds-file__crop"
           titleClass="slds-file__title_card"
           symbol="pdf"
           title="Proposal.pdf"
@@ -263,30 +307,32 @@ export let examples = [
     )
   },
   {
-    id: 'attachment-file-loading-no-title',
+    id: 'attachment-file-loading-with-title',
     label: 'File in loading state with title',
     element: (
       <div style={{ width: '20rem' }}>
         <File
           className="slds-file_card"
+          cropClass="slds-file__crop"
           titleClass="slds-file__title_card"
-          iconType="slds-file__loading-icon slds-icon_large"
           sprite="utility"
           symbol="image"
+          isLoading
+          loadingClass="slds-spinner_medium"
         />
       </div>
     )
   },
   {
-    id: 'attachment-file-loading',
+    id: 'attachment-file-loading-no-title',
     label: 'File in loading state without title',
     element: (
       <div style={{ width: '20rem' }}>
         <File
-          className="slds-file_card slds-file_center-icon"
-          iconType="slds-file__loading-icon slds-icon_large"
-          sprite="utility"
-          symbol="image"
+          className="slds-file_card"
+          cropClass="slds-file__crop"
+          isLoading
+          loadingClass="slds-spinner_medium"
           noCaption
         />
       </div>
@@ -300,6 +346,7 @@ export let examples = [
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
             className="slds-file_card"
+            cropClass="slds-file__crop"
             titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -309,6 +356,7 @@ export let examples = [
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
             className="slds-file_card"
+            cropClass="slds-file__crop"
             titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -325,6 +373,7 @@ export let examples = [
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
             className="slds-file_card"
+            cropClass="slds-file__crop"
             titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -334,6 +383,7 @@ export let examples = [
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3  slds-medium-show">
           <File
             className="slds-file_card"
+            cropClass="slds-file__crop"
             titleClass="slds-file__title_card"
             symbol="pdf"
             title="Proposal.pdf"
@@ -342,6 +392,7 @@ export let examples = [
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
             className="slds-file_card"
+            cropClass="slds-file__crop"
             titleClass="slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
             title="+22"
             image

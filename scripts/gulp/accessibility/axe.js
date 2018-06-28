@@ -19,7 +19,7 @@ export default (paths, done) =>
         }
       },
       exclude:
-        '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved',
+        '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved, .slds-file figure > a',
       urls: paths,
       showOnlyViolations: true,
       verbose: true,

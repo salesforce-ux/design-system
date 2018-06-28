@@ -3,6 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import {Chat,ChatList,ChatListItem,ChatMessage,ChatMessageBody,ChatAvatar,ChatEvent,ChatBookend} from './';
+import { File } from '../files/base/example';
 import { DoctypeIcon } from '../icons/doctype/example';
 
 <div className="doc lead">
@@ -245,6 +246,152 @@ During a chat an agent can request the customer upload a file attachment to be s
     </Chat>
   </CodeView>
 </Example>
+
+It is also possible to display an image preview when sending a supported file format, such as a JPEG. This is accomplished by using the [File](files/) component within Chat.
+
+<Blockquote
+  header="Contrast"
+  type="a11y"
+>
+  When using actions without a title, it's important to use the <code class="doc">slds-file__title_scrim</code> class in conjunction with <code class="doc">slds-file__title</code> to ensure proper contrast. Without this, it can be difficult for users to see the action icons when the image being sent is predominantly light in color.
+</Blockquote>
+
+<Example title="Chat inbound message with image attachment preview">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody
+              type="inbound"
+              messageType="image"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              <File
+                cropClass="slds-file__figure"
+                actions
+                whiteIcons
+                noCaption
+                image
+                scrim
+              />
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+Non-image file formats are also supported by using the File component.
+
+<Example title="Chat inbound message with PDF attachment preview">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody
+              type="inbound"
+              messageType="file"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              <File
+                cropClass="slds-file__crop slds-file__crop_4-by-3"
+                titleClass="slds-file__title_card"
+                symbol="pdf"
+                title="File.pdf"
+                actions
+                image
+              />
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+Both file and image transfers support messages with and without titles; however, titles are generally not recommended when transferring images.
+
+<Example title="Comparing image transfers with and without titles">
+  <CodeView>
+    <Chat>
+      <ChatList>
+        <ChatListItem type="inbound">
+          <ChatMessage>
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatMessageBody type="inbound" messageType="image">
+              <File
+                cropClass="slds-file__figure"
+                actions
+                whiteIcons
+                noCaption
+                scrim
+                image
+              />
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+        <ChatListItem type="inbound">
+          <ChatMessage hasFauxAvatar>
+            <ChatMessageBody
+              type="inbound"
+              messageType="image"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              <File
+                cropClass="slds-file__figure"
+                titleClass="slds-file__title_card"
+                symbol="image"
+                title="Image.jpg"
+                actions
+                image
+              />
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
+  </CodeView>
+</Example>
+
+When sending or receiving a portrait-orientation image, use the `slds-file__figure_portrait` in conjunction with the `slds-file__figure` class. This will properly display the entire image within the chat message.
+
+<Example title="Chat inbound message with portrait-orientation image attachment preview">
+  <CodeView>
+    <Chat>
+        <ChatList>
+          <ChatListItem type="outbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="outbound"
+                messageType="image"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                <File
+                  cropClass="slds-file__figure slds-file__figure_portrait"
+                  titleClass="slds-file__title_card"
+                  symbol="image"
+                  title="Image.jpg"
+                  actions
+                  imagePortrait
+                />
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+  </CodeView>
+</Example>
+
+
 
 #### Customer is typing
 

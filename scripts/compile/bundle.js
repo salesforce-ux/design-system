@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 const Task = require('data.task');
+const glob = require('glob');
 const fs = require('fs');
 const I = require('immutable-ext');
 const _ = require('lodash');

@@ -24,6 +24,78 @@
   &:focus:hover {
     color: currentColor;
   }
+
+  /**
+   * @name Small Group Image
+   * @summary Uses the small group image as the avatar icon
+   * @selector .slds-avatar_group-image-small
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_group-image-small {
+    background: url($group-default-avatar-small) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Medium Group Image
+   * @summary Uses the medium group image as the avatar icon
+   * @selector .slds-avatar_group-image-medium
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_group-image-medium {
+    background: url($group-default-avatar-medium) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Large Group Image
+   * @summary Uses the large group image as the avatar icon
+   * @selector .slds-avatar_group-image-large
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_group-image-large {
+    background: url($group-default-avatar) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Small User Profile Image
+   * @summary Uses the small user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-small
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_profile-image-small {
+    background: url($user-default-avatar-small) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Medium User Profile Image
+   * @summary Uses the medium user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-medium
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_profile-image-medium {
+    background: url($user-default-avatar-medium) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Large User Profile Image
+   * @summary Uses the large user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-large
+   * @restrict .slds-avatar
+   * @modifier
+   * @group image
+   */
+  &.slds-avatar_profile-image-large {
+    background: url($user-default-avatar) top left / cover no-repeat;
+  }
 }
 
 /**

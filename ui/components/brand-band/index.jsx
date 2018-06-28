@@ -9,12 +9,19 @@ let tokenValue = tokenSet.BRAND_BACKGROUND_PRIMARY;
 
 export const BrandBand = props => (
   <div
-    className={classNames('slds-brand-band', {
-      'slds-brand-band_small': props.size === 'small',
-      'slds-brand-band_medium': props.size === 'medium',
-      'slds-brand-band_large': props.size === 'large',
-      'slds-brand-band_none': props.size === 'none'
-    })}
+    className={classNames(
+      'slds-brand-band',
+      {
+        'slds-brand-band_small': props.size === 'small',
+        'slds-brand-band_medium': props.size === 'medium',
+        'slds-brand-band_large': props.size === 'large',
+        'slds-brand-band_none': props.size === 'none'
+      },
+      {
+        'slds-brand-band_group': props.image === 'group',
+        'slds-brand-band_user': props.image === 'user'
+      }
+    )}
   />
 );
 

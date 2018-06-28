@@ -32,6 +32,24 @@ export default (
 
 export let examples = [
   {
+    id: 'profile-icon',
+    label: 'Profile Avatar Image',
+    element: (
+      <Avatar className="slds-avatar_profile-image-large">
+        <span class="slds-assistive-text">Person name</span>
+      </Avatar>
+    )
+  },
+  {
+    id: 'group-icon',
+    label: 'Group Avatar Image',
+    element: (
+      <Avatar className="slds-avatar_group-image-large">
+        <span class="slds-assistive-text">Group name</span>
+      </Avatar>
+    )
+  },
+  {
     id: 'fallback-user-initials',
     label: 'Fallback - User initials',
     element: (

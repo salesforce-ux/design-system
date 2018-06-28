@@ -145,6 +145,30 @@
     height: 0;
   }
 
+  /**
+   * @name Group background
+   * @summary Uses the group banner image as the page background image
+   * @selector .slds-brand-band_group
+   * @restrict .slds-brand-band
+   * @modifier
+   * @group image
+   */
+  &.slds-brand-band_group:before {
+    background-image: url($banner-group-default-image);
+  }
+
+  /**
+   * @name User profile background
+   * @summary Uses the user profile banner image as the page background image
+   * @selector .slds-brand-band_user
+   * @restrict .slds-brand-band
+   * @modifier
+   * @group image
+   */
+  &.slds-brand-band_user:before {
+    background-image: url($banner-user-default-image);
+  }
+
   // White page for iframes
   .slds-brand-band_blank {
     background: $color-background-alt;

@@ -10,14 +10,14 @@ props:
   BANNER_GROUP_DEFAULT_IMAGE:
     value: ''
   USER_DEFAULT_AVATAR:
-    value: ''
+    value: '/assets/images/profile_avatar_200.png'
   USER_DEFAULT_AVATAR_MEDIUM:
-    value: ''
+    value: '/assets/images/profile_avatar_160.png'
   USER_DEFAULT_AVATAR_SMALL:
-    value: ''
+    value: '/assets/images/profile_avatar_96.png'
   GROUP_DEFAULT_AVATAR:
-    value: ''
+    value: '/assets/images/group_avatar_200.png'
   GROUP_DEFAULT_AVATAR_MEDIUM:
-    value: ''
+    value: '/assets/images/group_avatar_160.png'
   GROUP_DEFAULT_AVATAR_SMALL:
-    value: ''
+    value: '/assets/images/group_avatar_96.png'

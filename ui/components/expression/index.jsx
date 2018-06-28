@@ -9,7 +9,12 @@ import ButtonIcon from '../button-icons/';
 import { Button } from '../buttons/base/example';
 import Combobox from '../combobox/';
 import Listbox from '../combobox/listbox/';
-import { FormElement } from '../form-element';
+import {
+  FormElement,
+  SimpleFormElementWrapper,
+  FormElementSpanFauxLabel,
+  FormElementControl
+} from '../form-element';
 import { Input } from '../input/base/example';
 import * as Snapshot from './snapshots.data';
 import classNames from 'classnames';
@@ -140,7 +145,6 @@ export const ExpressionRow = props => {
   const listboxId2 = _.uniqueId('listbox-id-');
   const inputLabel = 'Value';
   const inputId = _.uniqueId('text-input-id-');
-  const buttonId = _.uniqueId('delete-button-id-');
   const errorId = 'error-message-unique-id';
 
   return (
@@ -239,19 +243,17 @@ export const ExpressionRow = props => {
             </FormElement>
           </ExpressionCol>
           <ExpressionCol doesNotGrow>
-            <FormElement
-              labelContent="Delete"
-              labelClassName="slds-is-visually-empty"
-              inputId={buttonId}
-            >
-              <ButtonIcon
-                id={buttonId}
-                theme="neutral"
-                symbol="delete"
-                disabled={props.buttonIsDisabled}
-                assistiveText={'Delete ' + props.assistiveText}
-              />
-            </FormElement>
+            <SimpleFormElementWrapper>
+              <FormElementSpanFauxLabel>&nbsp;</FormElementSpanFauxLabel>
+              <FormElementControl>
+                <ButtonIcon
+                  theme="neutral"
+                  symbol="delete"
+                  disabled={props.buttonIsDisabled}
+                  assistiveText={'Delete ' + props.assistiveText}
+                />
+              </FormElementControl>
+            </SimpleFormElementWrapper>
           </ExpressionCol>
         </div>
       </fieldset>

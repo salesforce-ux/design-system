@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../shared/svg-icon';
 import { Tooltip } from '../tooltips/base/example';
@@ -59,6 +60,14 @@ export const FormElementLabel = props => {
       {labelContent}
     </label>
   );
+};
+
+export const FormElementSpanFauxLabel = props => {
+  return <span className="slds-form-element__label">{props.children}</span>;
+};
+
+FormElementSpanFauxLabel.propTypes = {
+  children: PropTypes.node
 };
 
 export const FormElementTooltip = props => (

@@ -227,7 +227,7 @@ props:
     value: '{!PALETTE_GRAY_2}'
     comment: Background color for payloads in the feed.
   COLOR_BACKGROUND_POST:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Background color of comment posts in the feed.
   ## UTILITY BAR
   COLOR_BACKGROUND_UTILITY_BAR_HOVER:

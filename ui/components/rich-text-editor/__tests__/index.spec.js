@@ -14,8 +14,10 @@ import {
   RteAlignText,
   RteInsertContent,
   RteClearFormatting,
-  RteTextarea
+  RteTextarea,
+  FontFamilyDropdown
 } from '../base/example';
+import { ComboboxContainer } from '../../combobox/base/example';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
@@ -32,6 +34,22 @@ const IndentedOutputText = props => (
     <li>Outer List</li>
     <li>Outer List</li>
   </ol>
+);
+
+const ComboboxNonReadOnly = props => (
+  <div className="slds-rich-text-editor__select">
+    <ComboboxContainer
+      className="slds-size_x-small"
+      id="font-family"
+      inputIcon="right"
+      inputIconRightSymbol="down"
+      value="Font"
+      label="Choose a Font"
+      hideLabel
+      aria-controls="family-listbox"
+      listbox={<FontFamilyDropdown />}
+    />
+  </div>
 );
 
 it('renders an RTE toolbar in a narrow space', () =>
@@ -97,5 +115,15 @@ it('renders a RTE editor with an error', () =>
       >
         This field is required
       </div>
+    </RichTextEditor>
+  ));
+
+it('renders a RTE editor with an error and non-readonly combobox', () =>
+  matchesMarkupAndStyle(
+    <RichTextEditor className="slds-has-error">
+      <RteToolbar>
+        <RteFormatFont />
+        <ComboboxNonReadOnly />
+      </RteToolbar>
     </RichTextEditor>
   ));

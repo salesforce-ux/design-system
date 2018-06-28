@@ -177,7 +177,7 @@ export const RteFormula = props => {
   );
 };
 
-const FontFamilyDropdown = props => (
+export const FontFamilyDropdown = props => (
   <Listbox
     className="slds-dropdown slds-dropdown_fluid"
     vertical

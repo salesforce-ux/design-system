@@ -120,6 +120,7 @@
   border: $border-width-thick solid $color-border-error;
 
   .slds-input {
+    border-color: $color-border-input;
     box-shadow: none;
   }
 

@@ -8,31 +8,6 @@
  * @variant
  */
 
-// Deal with spacing
-.slds-form .slds-form-element {
-  margin-bottom: $spacing-small;
-}
-
-// Read-only/View Mode styles - Required
-.slds-form-element_readonly {
-  border-bottom: $border-width-thin solid $color-border;
-
-  .slds-form-element__control {
-    padding-top: $spacing-xxx-small;
-    padding-bottom: $spacing-xxx-small;
-  }
-
-  // We want no spacing in read only and allow line-height to handle white-space
-  .slds-form-element__label {
-    margin-bottom: 0;
-  }
-}
-
-.slds-form_compound .slds-form-element,
-.slds-form-element.slds-form-element_readonly {
-  margin-bottom: 0;
-}
-
 /**
  * Horizontally aligns a single form label and control on the same line
  *
@@ -43,6 +18,10 @@
  */
 
 .slds-form_horizontal {
+
+  .slds-form-element {
+    margin-bottom: $spacing-small;
+  }
 
   // Force form elements to stretch 100% of available space
   .slds-form-element:not([class*="slds-size"]) {
@@ -112,6 +91,7 @@
 .slds-form--stacked .slds-form-element,
 .slds-form-element.slds-form-element_stacked {
   display: block;
+  margin-bottom: $spacing-small;
 
   // Force form elements to stretch 100% of available space
   &:not([class*="slds-size"]) {
@@ -186,4 +166,23 @@
  */
 .slds-form-element__legend_has-tooltip {
   float: left;
+}
+
+// Read-only/View Mode styles - Required
+.slds-form-element_readonly {
+  border-bottom: $border-width-thin solid $color-border;
+
+  .slds-form-element__control {
+    padding-bottom: $spacing-xxx-small;
+  }
+
+  // We want no spacing in read only and allow line-height to handle white-space
+  .slds-form-element__label {
+    margin-bottom: 0;
+  }
+}
+
+.slds-form_compound .slds-form-element,
+.slds-form-element.slds-form-element_readonly {
+  margin-bottom: 0;
 }

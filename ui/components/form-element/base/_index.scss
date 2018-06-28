@@ -27,7 +27,7 @@
     color: $color-text-label;
     font-size: $form-label-font-size;
     margin-right: $spacing-x-small;
-    padding-top: $spacing-xxx-small;
+    padding-top: $spacing-xx-small;
     margin-bottom: $spacing-xxx-small;
 
     &:empty {
@@ -115,8 +115,6 @@
  */
 .slds-form-element__static {
   display: inline-block;
-  padding-bottom: $spacing-xxx-small;
-  min-height: calc(1.25rem + 2px); // For IE
   font-size: $input-static-font-size;
   font-weight: $input-static-font-weight;
   color: $input-static-color;

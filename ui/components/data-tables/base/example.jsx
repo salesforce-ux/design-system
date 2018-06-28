@@ -2,22 +2,40 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import { SingleRowData, SingleHeadRowData } from '../index';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Table = props => (
+export const Table = props => (
   <table
     className={classNames(
-      'slds-table slds-table_bordered slds-table_cell-buffer',
+      'slds-table slds-table_bordered',
+      { 'slds-table_header-hidden': props.hasHiddenHeader },
+      { 'slds-table_cell-buffer': props.hasCellBuffer },
       props.className
     )}
+    role={props.role}
   >
     {props.children}
   </table>
 );
+
+Table.propTypes = {
+  className: PropTypes.string,
+  hasHiddenHeader: PropTypes.bool,
+  hasCellBuffer: PropTypes.bool,
+  role: PropTypes.string,
+  children: PropTypes.node
+};
+
+Table.defaultProps = {
+  hasCellBuffer: true
+};
 
 let HeadRowData = props => (
   <tr className="slds-text-title_caps">
@@ -158,6 +176,21 @@ export let states = [
         <tbody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
+        </tbody>
+      </Table>
+    )
+  },
+  {
+    id: 'single-column',
+    label: 'Single Column',
+    element: (
+      <Table>
+        <thead>
+          <SingleHeadRowData />
+        </thead>
+        <tbody>
+          <SingleRowData title="Cloudhub" />
+          <SingleRowData title="Cloudhub + Anypoint Connectors" />
         </tbody>
       </Table>
     )

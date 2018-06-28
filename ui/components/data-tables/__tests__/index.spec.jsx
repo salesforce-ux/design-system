@@ -11,9 +11,12 @@ import {
   ProductQuantityTd,
   ProductPriceTd,
   ProductItemDetailsTd,
-  Table,
-  Thead
+  Thead,
+  SingleHeadRowData,
+  SingleRowData
 } from '../';
+
+import { Table } from '../base/example';
 
 import {
   columnHeaderIcons,
@@ -120,3 +123,29 @@ it('renders a table header hover state', () => {
       .html()
   );
 });
+
+it('renders a table with a single column', () =>
+  matchesMarkupAndStyle(
+    <Table>
+      <thead>
+        <SingleHeadRowData />
+      </thead>
+      <tbody>
+        <SingleRowData title="Cloudhub" />
+        <SingleRowData title="Cloudhub + Anypoint Connectors" />
+      </tbody>
+    </Table>
+  ));
+
+it('renders a table with a hidden header', () =>
+  matchesMarkupAndStyle(
+    <Table hasHiddenHeader>
+      <thead>
+        <SingleHeadRowData />
+      </thead>
+      <tbody>
+        <SingleRowData title="Cloudhub" />
+        <SingleRowData title="Cloudhub + Anypoint Connectors" />
+      </tbody>
+    </Table>
+  ));

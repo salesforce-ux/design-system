@@ -1,11 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import _ from '../../shared/helpers';
 
 import ButtonIcon from '../button-icons/';
-import { StandardIcon } from '../icons/standard/example';
 import { Checkbox } from '../checkbox/base/example';
-import { Tooltip } from '../tooltips/base/example';
 import { Input } from '../input/base/example';
 import { FormElement } from '../form-element';
 import MediaObject from '../../utilities/media-objects/index.react';
@@ -172,7 +171,9 @@ export let Th = props => {
       aria-label={columnName}
       aria-sort={props['aria-sort'] || 'none'}
       className={classNames(
-        'slds-is-sortable slds-is-resizable slds-text-title_caps',
+        'slds-is-sortable',
+        'slds-is-resizable',
+        'slds-text-title_caps',
         props.className
       )}
       scope="col"
@@ -261,6 +262,40 @@ export let Th = props => {
       </div>
     </th>
   );
+};
+
+/**
+ * @name HiddenHeaderTh - Common th cell for use in advanced data grids that have sorting or interaction
+ * @param {*} props
+ * @prop {string} columnName - Display name of the column header
+ */
+export const HiddenHeaderTh = props => {
+  const { columnName, ...rest } = props;
+
+  return (
+    <th
+      {...rest}
+      aria-label={columnName}
+      className={classNames('slds-text-title_caps')}
+      scope="col"
+    >
+      <span
+        key={`th-${props.index}`}
+        className="slds-truncate"
+        title={columnName}
+      >
+        {columnName}
+      </span>
+    </th>
+  );
+};
+
+HiddenHeaderTh.propTypes = {
+  columnName: PropTypes.string.isRequired
+};
+
+HiddenHeaderTh.defaultProps = {
+  columnName: 'Column Name'
 };
 
 /**
@@ -391,7 +426,9 @@ export const AdvancedDataTableTr = props => (
       cellLink="javascript:void(0);"
       cellText={props.contact}
     />
-    <RowActionsTd actionableMode={props.actionableMode} />
+    {!props.hasNoRowActions && (
+      <RowActionsTd actionableMode={props.actionableMode} />
+    )}
   </AdvancedDataTableTrElement>
 );
 
@@ -1071,3 +1108,28 @@ export const AdvancedDataTableTrElement = props => (
     {props.children}
   </tr>
 );
+
+export const SingleHeadRowData = () => (
+  <tr className="slds-text-title_caps">
+    <th scope="col">
+      <div className="slds-truncate" title="Opportunity Name">
+        Opportunity Name
+      </div>
+    </th>
+  </tr>
+);
+
+export const SingleRowData = props => (
+  <tr className={props.className}>
+    <td data-label="Opportunity Name">
+      <div className="slds-truncate" title={props.title}>
+        <a href="javascript:void(0);">{props.title}</a>
+      </div>
+    </td>
+  </tr>
+);
+
+SingleRowData.propTypes = {
+  className: PropTypes.string,
+  title: PropTypes.string
+};

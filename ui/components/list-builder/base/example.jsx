@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Modal,
   ModalHeader,
@@ -15,7 +16,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { Th } from '../../data-tables/';
+import { Th, HiddenHeaderTh } from '../../data-tables/';
 import { PillContainer } from '../../pills/base/example';
 import {
   ListboxPills,
@@ -24,6 +25,7 @@ import {
 } from '../../pills/listbox-of-pill-options/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
+import { Table } from '../../data-tables/base/example';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects
@@ -32,6 +34,7 @@ import _ from '../../../shared/helpers';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
+const singleColumn = ['Product Name'];
 const rows = [
   {
     name: 'Analytics',
@@ -125,9 +128,10 @@ let ProductListHeader = props => (
 
 let ProductList = props => (
   <div className="slds-scrollable slds-grow">
-    <table
+    <Table
       role="grid"
-      className="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none"
+      className="slds-table_fixed-layout slds-table_resizable-cols slds-no-row-hover slds-scrollable_none"
+      hasCellBuffer={false}
     >
       <thead>
         <tr className="slds-line-height_reset">
@@ -138,9 +142,51 @@ let ProductList = props => (
         </tr>
       </thead>
       <tbody>{props.children}</tbody>
-    </table>
+    </Table>
   </div>
 );
+
+let SingleColumnProductList = props => {
+  return (
+    <div className="slds-scrollable slds-grow">
+      <Table
+        role="grid"
+        className="slds-no-row-hover slds-scrollable_none"
+        hasHiddenHeader
+        hasCellBuffer={false}
+      >
+        <thead
+          className={classNames({
+            'slds-assistive-text': props.hasHiddenHeader
+          })}
+        >
+          <tr className="slds-line-height_reset">
+            <th scope="col" style={{ width: '3.75rem' }} />
+            {props.hasHiddenHeader ? (
+              <HiddenHeaderTh
+                key={0}
+                columnName={singleColumn[0]}
+                aria-label={singleColumn[0]}
+              />
+            ) : (
+              <Th
+                key={0}
+                columnName={singleColumn[0]}
+                aria-label={singleColumn[0]}
+              />
+            )}
+          </tr>
+        </thead>
+        <tbody>{props.children}</tbody>
+      </Table>
+    </div>
+  );
+};
+
+SingleColumnProductList.propTypes = {
+  hasHiddenHeader: PropTypes.bool,
+  children: PropTypes.node
+};
 
 let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
@@ -185,6 +231,44 @@ let RowData = props => {
       </td>
     </tr>
   );
+};
+
+let TwoColumnRowData = props => {
+  let checkboxLabel = 'Select item ' + props.index;
+
+  return (
+    <tr
+      className={classNames('slds-hint-parent', props.className)}
+      aria-selected={props.checked}
+    >
+      <td
+        role="gridcell"
+        tabIndex={props.index === 1 ? '0' : '-1'}
+        className="slds-text-align_right"
+        style={{ width: '3.75rem' }}
+      >
+        <CheckboxAddButton
+          label={checkboxLabel}
+          checked={props.checked}
+          disabled={props.disabled}
+          tabIndex="-1"
+        />
+      </td>
+      <td>
+        <div className="slds-truncate" title={props.name}>
+          {props.name}
+        </div>
+      </td>
+    </tr>
+  );
+};
+
+TwoColumnRowData.propTypes = {
+  className: PropTypes.string,
+  index: PropTypes.number,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  name: PropTypes.string
 };
 
 let FilteredItem = props => (
@@ -315,10 +399,7 @@ export let states = [
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
             <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
-              <ProductListHeader
-                selectedFilters={<FilteredItem />}
-                itemsSelected="1"
-              />
+              <ProductListHeader itemsSelected="0" />
               <ProductList>
                 {_.times(rows.length, i => (
                   <RowData
@@ -360,10 +441,7 @@ export let states = [
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
             <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
-              <ProductListHeader
-                selectedFilters={<FilteredItem />}
-                itemsSelected="1"
-              />
+              <ProductListHeader itemsSelected="0" />
               <ProductList>
                 {_.times(rows.length, i => (
                   <RowData
@@ -378,6 +456,40 @@ export let states = [
                   />
                 ))}
               </ProductList>
+            </div>
+          </ModalContent>
+          <ModalFooter>
+            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_brand">Next</button>
+          </ModalFooter>
+        </Modal>
+        <div className="slds-backdrop slds-backdrop_open" />
+      </div>
+    )
+  },
+  {
+    id: 'two-column-with-hidden-header',
+    label: 'Two Column with Hidden Header',
+    element: (
+      <div className="demo-only" style={{ height: '640px' }}>
+        <Modal
+          className="slds-modal_large"
+          aria-labelledby="id-of-modalheader-h2"
+        >
+          <ModalHeader>
+            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+              Add Products
+            </h2>
+            <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
+          </ModalHeader>
+          <ModalContent className="slds-grid slds-nowrap">
+            <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
+              <ProductListHeader itemsSelected="0" />
+              <SingleColumnProductList hasHiddenHeader>
+                {_.times(rows.length, i => (
+                  <TwoColumnRowData key={i} index={i + 1} name={rows[i].name} />
+                ))}
+              </SingleColumnProductList>
             </div>
           </ModalContent>
           <ModalFooter>

@@ -22,7 +22,7 @@ export let Toast = props => {
           className,
           type ? 'slds-theme_' + type : null
         )}
-        role="alert"
+        role="status"
       >
         <span className="slds-assistive-text">{type || 'info'}</span>
         {children}

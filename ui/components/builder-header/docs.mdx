@@ -1,0 +1,35 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Example from '../../../shared/components/Example';
+import Blockquote from '../../../shared/components/Blockquote';
+import BuilderHeader from './index.jsx';
+
+<div className="doc lead">
+  Every builder needs a builder header, which contains basic navigation elements. It also shows the builder type and content name.
+</div>
+
+## Usage
+
+<Blockquote type="note" header="Design Guidelines">
+  To learn more about the Builder pattern in general, check out our <a href="/guidelines/builder">guidelines</a>, which includes a section about how to use the <a href="/guidelines/builder/#Builder-Header">Builder Header</a>.
+</Blockquote>
+
+## Base
+
+<Example title="Base">
+  <CodeView>
+    <div style={{ position: 'relative', height: '100px' }}>
+      <BuilderHeader />
+    </div>
+  </CodeView>
+</Example>
+
+## With A Toolbar
+
+<Example title="Base">
+  <CodeView>
+    <div style={{ position: 'relative', height: '100px' }}>
+      <BuilderHeader showToolbar />
+    </div>
+  </CodeView>
+</Example>

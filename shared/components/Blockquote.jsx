@@ -3,7 +3,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 class Blockquote extends React.Component {
   render() {
@@ -21,7 +20,8 @@ class Blockquote extends React.Component {
 }
 
 Blockquote.propTypes = {
-  type: PropTypes.oneOf(['note', 'a11y', 'warning'])
+  type: PropTypes.oneOf(['note', 'a11y', 'warning']),
+  header: PropTypes.string
 };
 
 Blockquote.defaultProps = {

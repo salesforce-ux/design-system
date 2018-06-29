@@ -1,0 +1,8 @@
+daysUntilStale: 60
+daysUntilClose: 7
+staleLabel: stale
+markComment: >
+  This issue has been automatically marked as stale because it has not had recent activity.
+  It will be closed in 7 days if no further activity occurs. If you still need help with your issue,
+  please comment and we will reply to you shortly. Thank you for your contributions to the Salesforce Lightning Design System.
+closeComment: false

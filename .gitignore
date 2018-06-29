@@ -16,6 +16,7 @@
 !/.sldsrc.defaults.yml
 !/.stylestatsrc
 !/.travis.yml
+!/.github
 
 # Add a .gitkeep file in an empty
 # directory to check it in the repository

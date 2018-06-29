@@ -3,19 +3,23 @@ import Example from '../../../shared/components/Example';
 
 <div className="lead">Adjust whitespace by applying horizontal and vertical margin helpers</div>
 
-The base unit of all our spacing metrics is **4**.
+The base unit of all of our spacing metrics is **4**.
 
 **Before using**
+
 - Most components already come with spacing included. These utility classes are for added convenience in laying out components.
-- Classes prefixed by `.slds-m-` are used for adding **margins**. Classes prefixed in `.slds-p-` are used for adding **padding**
+- Classes prefixed by `slds-m-` are used for adding **margins**. Classes prefixed in `slds-p-` are used for adding [padding](/utilities/padding)
 - The directions available for the spacing classes are `top`, `right`, `bottom`, and `left`.
 - You can use the `vertical` shortcut for both `top` and `bottom`, `horizontal` for both `right` and `left`, and `around` for all sides.
 - Use the `_xxx-small` through `_xx-large` scale to choose the size needed.
-- Where **vertical centering** is required, check out our [/components/utilities/media-objects/#center](centered media object) instead of applying extra `margin` or `padding`.
+- You can also use `none` as the size on any of the directions to enforce zero margin.
+- Where **vertical centering** is required, check out our [centered media object](/utilities/media-objects) instead of applying extra `margin` or `padding`.
 
 ## Location - Top
+
 <Example title="top margins">
   <div>
+    <Margin size="none" position="top" />
     <Margin size="xxx-small" position="top" />
     <Margin size="xx-small" position="top" />
     <Margin size="x-small" position="top" />
@@ -28,8 +32,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Left
+
 <Example title="left margins">
   <div>
+    <Margin size="none" position="left" />
     <Margin size="xxx-small" position="left" />
     <Margin size="xx-small" position="left" />
     <Margin size="x-small" position="left" />
@@ -42,8 +48,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Bottom
+
 <Example title="bottom margins">
   <div>
+    <Margin size="none" position="bottom" />
     <Margin size="xxx-small" position="bottom" />
     <Margin size="xx-small" position="bottom" />
     <Margin size="x-small" position="bottom" />
@@ -56,8 +64,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Right
+
 <Example title="right margins">
   <div>
+    <Margin size="none" position="right" />
     <Margin size="xxx-small" position="right" />
     <Margin size="xx-small" position="right" />
     <Margin size="x-small" position="right" />
@@ -70,8 +80,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Horizontal
+
 <Example title="horizontal margins">
   <div>
+    <Margin size="none" position="horizontal" />
     <Margin size="xxx-small" position="horizontal" />
     <Margin size="xx-small" position="horizontal" />
     <Margin size="x-small" position="horizontal" />
@@ -84,8 +96,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Vertical
+
 <Example title="vertical margins">
   <div>
+    <Margin size="none" position="vertical" />
     <Margin size="xxx-small" position="vertical" />
     <Margin size="xx-small" position="vertical" />
     <Margin size="x-small" position="vertical" />
@@ -98,8 +112,10 @@ The base unit of all our spacing metrics is **4**.
 </Example>
 
 ## Location - Around
+
 <Example title="around margins">
   <div>
+    <Margin size="none" position="around" />
     <Margin size="xxx-small" position="around" />
     <Margin size="xx-small" position="around" />
     <Margin size="x-small" position="around" />

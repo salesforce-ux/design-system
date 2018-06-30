@@ -3,8 +3,7 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import { File } from '../../files/base/example';
-import { AttachmentLink } from '../../files/base/example';
+import { File, AttachmentLink } from '../../files/base/example';
 import { Publisher } from '../../publishers/comment/example';
 import {
   Comment,

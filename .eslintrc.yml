@@ -9,4 +9,3 @@ rules:
   no-useless-escape: ['off']
   no-unused-vars: ['off']
   eqeqeq: ['off']
-  import/no-duplicates: ['off']

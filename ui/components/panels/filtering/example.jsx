@@ -5,9 +5,7 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import { Panel } from '../detail/example';
-import { PanelBody } from '../detail/example';
-import { PanelSection } from '../detail/example';
+import { Panel, PanelBody } from '../detail/example';
 
 /// ////////////////////////////////////////
 // Partial(s)

@@ -4,11 +4,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import _ from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
+import Card from '../../cards/';
 import { FormElementStatic } from '../../panels/detail/example';
 import SvgIcon from '../../../shared/svg-icon';
-import Card, { CardBody } from '../../cards/';
+import { Tooltip } from '../../tooltips/base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -37,16 +37,14 @@ const pathContent7Id = 'path-content-7';
 const pathContent8Id = 'path-content-8';
 const pathContent9Id = 'path-content-9';
 const pathContent10Id = 'path-content-10';
-const pathContent11Id = 'path-content-11';
-const pathContent12Id = 'path-content-12';
 
-let Demo = props => (
+const Demo = props => (
   <div className={classNames('demo-only', props.className)} {...props}>
     {props.children}
   </div>
 );
 
-let Coach = props => (
+const Coach = props => (
   <Card>
     <div
       className={classNames('slds-path', {
@@ -58,13 +56,13 @@ let Coach = props => (
   </Card>
 );
 
-let Path = props => (
+const Path = props => (
   <div className={classNames('slds-grid slds-path__track', props.className)}>
     {props.children}
   </div>
 );
 
-let Trigger = props => (
+const Trigger = props => (
   <ButtonIcon
     assistiveText="Expand Sales Coach Tab Panels"
     className="slds-button_icon-border-filled slds-path__trigger"
@@ -73,7 +71,7 @@ let Trigger = props => (
   />
 );
 
-let Triggerup = props => (
+const Triggerup = props => (
   <ButtonIcon
     assistiveText="Collapse Sales Coach Tab Panels"
     className="slds-button_icon-border-filled slds-path__trigger slds-path__trigger_open"
@@ -82,7 +80,7 @@ let Triggerup = props => (
   />
 );
 
-let Action = props => (
+const Action = props => (
   <button
     className={classNames(
       'slds-button slds-button_brand slds-path__mark-complete',
@@ -93,11 +91,13 @@ let Action = props => (
   </button>
 );
 
-let ListMain = props => {
+const ListMain = props => {
   let ariaOrientation;
+
   if (props.listRole === 'listbox') {
     ariaOrientation = 'horizontal';
   }
+
   return (
     <div
       className={classNames('slds-path__scroller', props.className)}
@@ -132,8 +132,9 @@ let ListMain = props => {
   );
 };
 
-let ListItem = props => {
+const ListItem = props => {
   let ariaExpanded;
+
   if (props.role === 'tab') {
     ariaExpanded = props.ariaExpanded || 'false';
   }
@@ -161,7 +162,7 @@ let ListItem = props => {
   );
 };
 
-let CoachContent = props => {
+const CoachContent = props => {
   const contentClassNames = classNames('slds-path__content', {
     'slds-hide': !props.isActive,
     'slds-show': props.isActive
@@ -179,7 +180,7 @@ let CoachContent = props => {
   );
 };
 
-let CoachExample1 = props => (
+const CoachExample1 = props => (
   <div className="slds-path__coach slds-grid">
     <div className="slds-path__keys slds-form slds-form_stacked">
       <div className="slds-grid slds-grid_align-spread slds-path__coach-title">
@@ -225,7 +226,7 @@ let CoachExample1 = props => (
   </div>
 );
 
-let CoachExample2 = props => (
+const CoachExample2 = props => (
   <div className="slds-path__coach slds-grid">
     <div className="slds-path__keys slds-form slds-form_stacked">
       <div className="slds-grid slds-grid_align-spread slds-path__coach-title">
@@ -265,7 +266,7 @@ let CoachExample2 = props => (
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Default = props => (
+const Default = props => (
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -345,7 +346,7 @@ let Default = props => (
   </Coach>
 );
 
-let PathNoCoachStageSelected = props => (
+const PathNoCoachStageSelected = props => (
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -425,7 +426,162 @@ let PathNoCoachStageSelected = props => (
   </Coach>
 );
 
-let PathCoach = props => (
+class PathWithTooltip extends React.Component {
+  constructor() {
+    super();
+
+    this.updateTooltipOffset = this.updateTooltipOffset.bind(this);
+
+    this.state = {
+      tooltipLeft: 0,
+      tooltipWidth: 142 // hard-set for demo purposes
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateTooltipOffset);
+    this.updateTooltipOffset();
+  }
+
+  updateTooltipOffset() {
+    const { tooltipWidth } = this.state;
+    const stepArrowBuffer = 10; // offsets inset of arrow nubbin on step arrow
+    const tooltipLeft =
+      this.currentTab.offsetLeft +
+      this.currentTab.offsetWidth / 2 -
+      tooltipWidth / 2 +
+      stepArrowBuffer;
+
+    this.setState({
+      tooltipLeft
+    });
+  }
+
+  render() {
+    const { tooltipLeft, tooltipWidth } = this.state;
+
+    return (
+      <Demo style={{ height: '100px' }}>
+        <Coach>
+          <Path>
+            <div className="slds-grid slds-path__scroller-container">
+              <ListMain listRole="listbox">
+                <ListItem
+                  className="slds-is-complete"
+                  id={path1Id}
+                  role="option"
+                >
+                  <span className="slds-path__stage">
+                    <SvgIcon
+                      className="slds-icon slds-icon_x-small"
+                      sprite="utility"
+                      symbol="check"
+                    />
+                    <span className="slds-assistive-text">Stage Complete</span>
+                  </span>
+                  <span className="slds-path__title">Contacted</span>
+                </ListItem>
+                <ListItem
+                  className="slds-is-complete"
+                  id={path2Id}
+                  role="option"
+                >
+                  <span className="slds-path__stage">
+                    <SvgIcon
+                      className="slds-icon slds-icon_x-small"
+                      sprite="utility"
+                      symbol="check"
+                    />
+                    <span className="slds-assistive-text">Stage Complete</span>
+                  </span>
+                  <span className="slds-path__title">Open</span>
+                </ListItem>
+                <li
+                  className="slds-path__item slds-is-current slds-is-active"
+                  role="presentation"
+                  ref={tab => {
+                    this.currentTab = tab;
+                  }}
+                >
+                  <a
+                    aria-selected="true"
+                    className="slds-path__link"
+                    href="javascript:void(0);"
+                    id="path-3"
+                    role="option"
+                    tabIndex="0"
+                    aria-describedby="path-3-tooltip"
+                  >
+                    <span className="slds-path__stage">
+                      <SvgIcon
+                        className="slds-icon slds-icon_x-small"
+                        sprite="utility"
+                        symbol="check"
+                      />
+                      <span className="slds-assistive-text">
+                        Current Stage:
+                      </span>
+                    </span>
+                    <span className="slds-path__title">Unqualified</span>
+                  </a>
+                </li>
+                <ListItem
+                  className="slds-is-incomplete"
+                  id={path4Id}
+                  role="option"
+                >
+                  <span className="slds-path__stage">
+                    <SvgIcon
+                      className="slds-icon slds-icon_x-small"
+                      sprite="utility"
+                      symbol="check"
+                    />
+                  </span>
+                  <span className="slds-path__title">Nurturing</span>
+                </ListItem>
+                <ListItem
+                  className="slds-is-incomplete"
+                  id={path5Id}
+                  role="option"
+                >
+                  <span className="slds-path__stage">
+                    <SvgIcon
+                      className="slds-icon slds-icon_x-small"
+                      sprite="utility"
+                      symbol="check"
+                    />
+                  </span>
+                  <span className="slds-path__title">Closed</span>
+                </ListItem>
+              </ListMain>
+            </div>
+            <div className="slds-grid slds-path__action">
+              <span className="slds-path__stage-name">Stage: Unqualified</span>
+              <Action>
+                <SvgIcon
+                  className="slds-button__icon slds-button__icon_left"
+                  sprite="utility"
+                  symbol="check"
+                />
+                Mark Status as Complete
+              </Action>
+            </div>
+          </Path>
+        </Coach>
+
+        <Tooltip
+          id="path-3-tooltip"
+          className="slds-nubbin_top"
+          style={{ left: `${tooltipLeft}px`, width: `${tooltipWidth}px` }}
+        >
+          3 Days in Unqualified
+        </Tooltip>
+      </Demo>
+    );
+  }
+}
+
+const PathCoach = () => (
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -542,7 +698,7 @@ let PathCoach = props => (
   </Coach>
 );
 
-let PathCoachVisible = props => (
+const PathCoachVisible = () => (
   <Demo>
     <Coach isExpanded>
       <Path>
@@ -666,7 +822,7 @@ let PathCoachVisible = props => (
   </Demo>
 );
 
-export let PathStageSelected = props => (
+export const PathStageSelected = () => (
   <Demo>
     <Coach isExpanded>
       <Path>
@@ -785,7 +941,7 @@ export let PathStageSelected = props => (
   </Demo>
 );
 
-let PathStageLost = props => (
+const PathStageLost = () => (
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -895,7 +1051,7 @@ let PathStageLost = props => (
   </Coach>
 );
 
-let PathStageWon = props => (
+const PathStageWon = () => (
   <Coach>
     <Path>
       <div className="slds-grid slds-path__scroller-container">
@@ -1005,7 +1161,7 @@ let PathStageWon = props => (
   </Coach>
 );
 
-let PathOverflow = props => (
+const PathOverflow = () => (
   <Demo>
     <Coach>
       <Path className="slds-has-overflow">
@@ -1168,7 +1324,7 @@ let PathOverflow = props => (
   </Demo>
 );
 
-let PathMediumCoaching = props => (
+const PathMediumCoaching = () => (
   <Demo className="slds-region_medium" style={{ width: '700px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
@@ -1392,7 +1548,7 @@ let PathMediumCoaching = props => (
   </Demo>
 );
 
-let PathSmallCoaching = props => (
+const PathSmallCoaching = () => (
   <Demo className="slds-region_small" style={{ width: '360px' }}>
     <Coach isExpanded>
       <Path className="slds-has-overflow">
@@ -1622,11 +1778,16 @@ let PathSmallCoaching = props => (
 
 export default <Default />;
 
-export let states = [
+export const states = [
   {
     id: 'later-stage',
     label: 'With Different Stage Selected - without coaching',
     element: <PathNoCoachStageSelected />
+  },
+  {
+    id: 'with-visible-tooltip',
+    label: 'With Visible Tooltip',
+    element: <PathWithTooltip />
   },
   {
     id: 'with-coaching',

@@ -75,8 +75,10 @@ export const MobileTabPanel = props => (
     isAnimated
     docked="left"
     invoke="drill-in"
+    isInvokedByTab
     isVisible={props.isVisible || false}
     handleVisibility={props.hidePanel}
+    hasCenterTitle
   >
     {props.children || 'A panel body accepts any layout or component'}
   </Panel>

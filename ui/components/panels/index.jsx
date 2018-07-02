@@ -17,7 +17,6 @@ export const Container = props => {
         props.size && `slds-size_${props.size}`,
         props.docked && `slds-panel_docked slds-panel_docked-${props.docked}`,
         props.isAnimated && 'slds-panel_animated',
-        props.invoke === 'drill-in' && 'slds-is-directional',
         props.drawer && 'slds-panel_drawer',
         props.isVisible ? 'slds-is-open' : 'slds-hidden'
       )}
@@ -28,43 +27,83 @@ export const Container = props => {
   );
 };
 
+export const HeaderButton = props => (
+  <ButtonIcon
+    key="panel-header-close-button"
+    className={`slds-panel__${props.symbol}`}
+    symbol={props.symbol}
+    size="small"
+    assistiveText={`Collapse ${props.title}`}
+    title={`Collapse ${props.title}`}
+    onClick={props.handleVisibility}
+  />
+);
+
+export const HeaderTitle = props => (
+  <h2
+    className="slds-panel__header-title slds-text-heading_small slds-truncate"
+    key="panel-header-title"
+    title={props.title}
+  >
+    {props.title}
+  </h2>
+);
+
 /**
  * Panel Header
  */
 export const Header = props => {
   let closeSymbol = 'close';
+  let headerContent = (
+    <React.Fragment>
+      <HeaderTitle title={props.title} />
+      <HeaderButton
+        title={props.title}
+        handleVisibility={props.handleVisibility}
+        symbol={closeSymbol}
+      />
+    </React.Fragment>
+  );
   if (props.invoke === 'drill-in') {
-    if (props.docked === 'left') {
-      closeSymbol = 'back';
-    } else if (props.docked === 'right') {
-      closeSymbol = 'forward';
+    if (props.isInvokedByTab) {
+      headerContent = (
+        <React.Fragment>
+          <HeaderButton
+            title={props.title}
+            handleVisibility={props.handleVisibility}
+            symbol={'back'}
+          />
+          <HeaderTitle title={props.title} />
+        </React.Fragment>
+      );
+    } else {
+      headerContent = (
+        <React.Fragment>
+          <HeaderButton
+            title={props.title}
+            handleVisibility={props.handleVisibility}
+            symbol={'back'}
+          />
+          <HeaderTitle title={props.title} />
+          <HeaderButton
+            title={props.title}
+            handleVisibility={props.handleVisibility}
+            symbol={closeSymbol}
+          />
+        </React.Fragment>
+      );
     }
   }
+
   return (
     <div
       className={classNames(
         'slds-panel__header',
+        props.hasCenterTitle && 'slds-panel__header_align-center',
         props.customHeader && 'slds-panel__header_custom'
       )}
     >
-      {!props.customHeader
-        ? [
-            <h2
-              className="slds-panel__header-title slds-text-heading_small"
-              key="panel-header-title"
-            >
-              {props.title}
-            </h2>,
-            <ButtonIcon
-              key="panel-header-close-button"
-              className="slds-panel__close slds-button_icon-small"
-              symbol={closeSymbol}
-              assistiveText={`Collapse ${props.title}`}
-              title={`Collapse ${props.title}`}
-              onClick={props.handleVisibility}
-            />
-          ]
-        : props.customHeader}
+      {props.customHeader ? props.customHeader : headerContent}
     </div>
   );
 };
@@ -86,7 +125,9 @@ class Panel extends Component {
       handleVisibility,
       customHeader,
       children,
-      isAnimated
+      isAnimated,
+      hasCenterTitle,
+      isInvokedByTab
     } = this.props;
     return (
       <Container
@@ -103,6 +144,8 @@ class Panel extends Component {
           invoke={invoke}
           customHeader={customHeader}
           handleVisibility={handleVisibility}
+          hasCenterTitle={hasCenterTitle}
+          isInvokedByTab={isInvokedByTab}
         />
         <Body>{children}</Body>
       </Container>
@@ -113,7 +156,9 @@ class Panel extends Component {
 Panel.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'x-large', 'full']),
   docked: PropTypes.oneOf(['left', 'right', 'bottom']),
-  invoke: PropTypes.oneOf(['drill-in', 'toggle'])
+  invoke: PropTypes.oneOf(['drill-in', 'toggle']),
+  hasCenterTitle: PropTypes.bool,
+  isInvokedByTab: PropTypes.bool
 };
 
 export default Panel;
@@ -137,7 +182,8 @@ export class PanelPlayground extends Component {
       title = 'Panel Header',
       docked = 'left',
       invoke = 'toggle',
-      drawer
+      drawer,
+      hasCenterTitle = false
     } = this.props;
     return (
       <div className="docs-codeblock-example">
@@ -170,6 +216,7 @@ export class PanelPlayground extends Component {
             invoke={invoke}
             drawer={drawer}
             handleVisibility={this.handleVisibility}
+            hasCenterTitle={hasCenterTitle}
           >
             A panel body accepts any layout or component
           </Panel>

@@ -20,7 +20,7 @@ A panel is docked to the left/right side of a viewport and is in the document fl
 2.  It is not important to see canvas content while completing the task in a Panel
 3.  The task performed in a Panel is momentary
 
-Toggling visibility of a Panel does reflow the main content.
+Toggling visibility of a Panel will re-flow the main content.
 
 The panel should take up 100% of the height of its parent container. In most cases, that would be the viewport or main stage of your application.
 
@@ -41,10 +41,10 @@ The panel should take up 100% of the height of its parent container. In most cas
 
 The header is docked to the top of its panel. When the content of the panel body becomes overflowed, the body will provide scrolling while the header remains visible in place.
 
-The header of a left/right docked panel has centered text and one icon that dismisses the panel.
+The header of a left/right docked panel has left-aligned text by default and one icon that dismisses the panel. The header title should truncate when it becomes too long for the panel width by using the `slds-truncate` class on the title.
 
 <Example title="Panel base - header">
-  <CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '45px', overflow: 'hidden' }}>
+  <CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '50px', overflow: 'hidden' }}>
     <Panel
       size="medium"
       title="Panel Header"
@@ -53,6 +53,24 @@ The header of a left/right docked panel has centered text and one icon that dism
     />
   </CodeView>
 </Example>
+
+### Centered Text
+
+To center the header title, add the class `slds-panel__header_align-center` to the `<div>` with class `slds-panel__header`.
+
+<Example title="Panel base - header">
+  <CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '50px', overflow: 'hidden' }}>
+    <Panel
+      size="medium"
+      title="Panel Header"
+      docked="left"
+      invoke="toggle"
+      hasCenterTitle
+    />
+  </CodeView>
+</Example>
+
+### Custom Header
 
 If a panel header requires additional elements outside of a title and close button, The panel header needs to have the class `slds-panel__header_custom` added to `slds-panel__header`. This notifies the component that it has a custom layout in the header.
 
@@ -63,10 +81,6 @@ If a panel header requires additional elements outside of a title and close butt
 The `<h2>` which contains the title of the panel requires the class `slds-panel__header-title`.
 
 ## Invoked via Toggle
-
-<Blockquote type="note" header="Design Note">
-  If the panel is invoked by a toggle, the panel always has a close “X” button icon on the right.
-</Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When toggling the visibility, author must manage user focus by placing the user inside the panel when it opens and returning them to the trigger when it closes.
@@ -106,23 +120,17 @@ The `slds-panel_docked` element can be positioned on the left or right side of a
   </CodeView>
 </Example>
 
-## Invoked via Drill-In Link
+## Drilled-In State
 
 <Blockquote type="note" header="Design Note">
-  If the panel is invoked by a drill-in link, then the panel displays an arrow that faces the direction the panel opened from.
+  If the panel has been drilled into, then the panel displays an arrow facing to the left to indicate the direction the user drilled in from.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When toggling the visibility, author must manage user focus by placing the user inside the panel when it opens and returning them to the trigger when it closes.
+  When the user drills in, the author must manage user focus by keeping the user inside the panel when it drills in and returning them to the drill-in trigger when it the user presses the back arrow.
 </Blockquote>
 
 ### Positioning
-
-Adding `slds-is-directional` in conjunction with `slds-panel_docked-left` or `slds-panel_docked-right` will swap the location of the close button.
-
-<Blockquote type="warning" header="Implementor Note">
-  The symbol of the svg needs to be swapped depending on the position of the panel. If the panel draws out from the left, use the "back" symbol. If the panel draws from the right, use the "forward" symbol.
-</Blockquote>
 
 #### Left side
 
@@ -186,7 +194,7 @@ Filtering lists or reports can be done by using a Filtering expressions inside o
   Make sure to use assistive text to improve the clarity of what you might be editing, for example, add <code className="doc">&lt;span className="slds-assistive-text"&gt;Edit filter:</span></code> to the button element inside each filterable object.
 </Blockquote>
 
-<CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>
+<CodeView style={{backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden'}}>
 <Panel
 size="medium"
 title="Filter"

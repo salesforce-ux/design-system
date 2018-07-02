@@ -49,7 +49,8 @@
 .slds-panel__header {
   display: flex;
   position: relative;
-  padding: $spacing-small $spacing-xx-large;
+  align-items: center;
+  padding: $spacing-small;
   border-bottom: $border-width-thin solid $color-border;
 }
 
@@ -64,15 +65,66 @@
 }
 
 /**
- * @summary Close button of a panel
- * @selector .slds-panel__close
+  * @summary Close button of a panel
+  * @selector .slds-panel__close
+  * @restrict .slds-panel .slds-button
+  */
+.slds-panel__close {
+
+  &:first-child {
+    margin-right: $spacing-x-small;
+  }
+
+  &:last-child {
+    margin-left: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Back button of a panel drilled in
+ * @selector .slds-panel__back
  * @restrict .slds-panel .slds-button
  */
-.slds-panel__close {
-  position: absolute;
-  right: $spacing-small;
-  top: 50%;
-  margin-top: (($square-icon-small-boundary / 2) * -1);
+.slds-panel__back {
+
+  &:first-child {
+    margin-right: $spacing-x-small;
+  }
+
+  &:last-child {
+    margin-left: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Adjusts styling when the title of the header is centered
+ * @selector .slds-panel__header_align-center
+ * @restrict .slds-panel__header
+ * @modifier
+ */
+.slds-panel__header_align-center {
+  padding: $spacing-small $spacing-xx-large;
+
+
+  .slds-panel__header-title {
+    text-align: center;
+  }
+
+  .slds-panel__close {
+    position: absolute;
+    right: $spacing-small;
+    left: auto;
+    top: 50%;
+    margin-top: (($square-icon-small-boundary / 2) * -1);
+  }
+
+  .slds-panel__back {
+    position: absolute;
+    left: $spacing-small;
+    right: auto;
+    top: 50%;
+    margin-top: (($square-icon-small-boundary / 2) * -1);
+  }
 }
 
 /**
@@ -82,6 +134,16 @@
  */
 .slds-panel__body {
   padding: $spacing-small;
+}
+
+/**
+  * @summary Title of the header panel
+  * @selector .slds-panel__header-title
+  * @restrict .slds-panel__header h2
+  */
+.slds-panel__header-title {
+  text-align: start;
+  width: 100%;
 }
 
 /**
@@ -96,16 +158,6 @@
   height: 100%;
   border-radius: 0;
   display: none;
-
-  /**
-   * @summary Title of the header panel
-   * @selector .slds-panel__header-title
-   * @restrict .slds-panel__header h2
-   */
-  .slds-panel__header-title {
-    text-align: center;
-    width: 100%;
-  }
 
   /**
    * @summary Toggles visibility of panel
@@ -125,17 +177,6 @@
  */
 .slds-panel_docked-left {
   box-shadow: $panel-docked-left-shadow;
-
-  /**
-   * @summary Modifier that informs the panel that it was invoked by a drill in link
-   * @selector .slds-is-directional
-   * @restrict .slds-panel_docked
-   * @modifier
-   */
-  &.slds-is-directional .slds-panel__close {
-    left: $spacing-small;
-    right: auto;
-  }
 }
 
 /**
@@ -147,11 +188,6 @@
 .slds-panel_docked-right {
   margin-left: auto;
   box-shadow: $panel-docked-right-shadow;
-
-  &.slds-is-directional .slds-panel__close {
-    right: $spacing-small;
-    left: auto;
-  }
 }
 
 /**

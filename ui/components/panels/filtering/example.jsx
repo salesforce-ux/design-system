@@ -130,8 +130,9 @@ let Default = props => (
               Filter
             </h2>
             <ButtonIcon
-              className="slds-col_bump-left slds-button_icon slds-button_icon-small"
-              symbol="forward"
+              className="slds-col_bump-left"
+              size="small"
+              symbol="close"
               assistiveText="Close Filter Panel"
               title="Close Filter Panel"
             />
@@ -251,8 +252,9 @@ let Locked = props => (
               Filter
             </h2>
             <ButtonIcon
-              className="slds-col_bump-left slds-button_icon slds-button_icon-small"
-              symbol="forward"
+              className="slds-col_bump-left"
+              size="small"
+              symbol="close"
               assistiveText="Close Filter Panel"
               title="Close Filter Panel"
             />

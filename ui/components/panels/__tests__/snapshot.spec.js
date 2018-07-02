@@ -177,4 +177,45 @@ describe('render Panel component', () => {
         </Panel>
       </div>
     ));
+  it('renders Base Panel with centered title text', () =>
+    matchesMarkupAndStyle(
+      <div
+        style={{
+          backgroundColor: '#fafaf9',
+          position: 'relative',
+          height: '600px',
+          overflow: 'hidden'
+        }}
+      >
+        <Panel
+          isAnimated
+          title="Panel Header"
+          docked="left"
+          invoke="toggle"
+          hasCenterTitle
+        >
+          A panel body accepts any layout or component
+        </Panel>
+      </div>
+    ));
+  it('renders Base Panel with long header title', () =>
+    matchesMarkupAndStyle(
+      <div
+        style={{
+          backgroundColor: '#fafaf9',
+          position: 'relative',
+          height: '600px',
+          overflow: 'hidden'
+        }}
+      >
+        <Panel
+          isAnimated
+          title="Panel Header with a really, really long title name"
+          docked="left"
+          invoke="toggle"
+        >
+          A panel body accepts any layout or component
+        </Panel>
+      </div>
+    ));
 });

@@ -4,9 +4,13 @@
 /**
  * #### Accessibility
  *
- * Notifications should contain `role="alert"` on the container to signal to
- * assistive technology that they require the user’s immediate attention. Use a
- * span with `.slds-assistive-text` to let the user know what type of notification it is.
+ * Notifications should contain `role="status"` on the container to signal to
+ * assistive technology that they require the user’s attention. Historically the role of `alert` would be used,
+ * but because you can invoke multiple toasts, assertive alerts would override previous toasts in the screen
+ * reader's speech queue. Role of `status` is a polite live region, which does not clear the queue, reducing the risk
+ * of a toast message being missed.
+ *
+ * Use a span with `slds-assistive-text` to let the user know what type of notification it is.
  *
  * @summary Toast serves as a feedback & confirmation mechanism after the user takes an action.
  *

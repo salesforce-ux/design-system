@@ -195,9 +195,11 @@ export const Option = props => (
       <span className="slds-media__figure slds-listbox__option-icon">
         {(props.selected || props.icon) && (
           <UtilityIcon
+            assistiveText={false}
             className="slds-icon_x-small"
             containerClassName="slds-current-color"
             symbol={props.icon || 'check'}
+            title={false}
           />
         )}
       </span>

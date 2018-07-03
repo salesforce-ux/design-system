@@ -13,8 +13,7 @@ import {
   PostFooterMeta,
   Comments
 } from '../post/example';
-import { File } from '../../files/base/example';
-import { AttachmentLink } from '../../files/base/example';
+import { File, AttachmentLink } from '../../files/base/example';
 
 /// ////////////////////////////////////////
 // Export

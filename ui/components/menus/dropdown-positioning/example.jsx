@@ -3,10 +3,7 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import { Trigger } from '../dropdown/example';
-import { Menu } from '../dropdown/example';
-import { MenuList } from '../dropdown/example';
-import { MenuItem } from '../dropdown/example';
+import { Trigger, Menu, MenuList, MenuItem } from '../dropdown/example';
 
 /// ////////////////////////////////////////
 // Partial(s)

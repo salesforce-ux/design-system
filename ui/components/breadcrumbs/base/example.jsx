@@ -4,10 +4,12 @@
 import React from 'react';
 import BreadCrumbs from '../index.react';
 import ButtonIcon from '../../button-icons/';
-import { Trigger } from '../../menus/dropdown/example';
-import { Menu } from '../../menus/dropdown/example';
-import { MenuList } from '../../menus/dropdown/example';
-import { MenuItem } from '../../menus/dropdown/example';
+import {
+  Trigger,
+  Menu,
+  MenuList,
+  MenuItem
+} from '../../menus/dropdown/example';
 const { Crumb } = BreadCrumbs;
 
 const moreIcon = (

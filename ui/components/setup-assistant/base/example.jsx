@@ -13,8 +13,7 @@ import {
 } from '../../summary-detail/base/example';
 import SetupAssistantStepSummary from '../SetupAssistantStepSummary';
 import SetupAssistantStepDetail from '../SetupAssistantStepDetail';
-import { SetupAssistantList, SetupAssistantStep } from '../';
-import SetupAssistant from '../';
+import SetupAssistant, { SetupAssistantList, SetupAssistantStep } from '../';
 
 const HubStep = props => {
   const { isOpen, title, isActiveStep, stepProgress, duration } = props;

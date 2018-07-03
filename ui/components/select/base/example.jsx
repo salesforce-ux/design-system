@@ -110,3 +110,17 @@ export let states = [
     element: <MultiSelect dataSet={DefaultSnapShot} noReorder />
   }
 ];
+
+/// ///////////////////////////////////////////
+// Deprecated
+/// ///////////////////////////////////////////
+
+export const MultipleDeprecated = props => (
+  <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
+    <Select id={defaultSelectId} multiple>
+      <option>Option One</option>
+      <option>Option Two</option>
+      <option>Option Three</option>
+    </Select>
+  </FormElement>
+);

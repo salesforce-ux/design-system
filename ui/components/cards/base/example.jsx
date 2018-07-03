@@ -2,45 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import ButtonIcon from '../../button-icons/';
 import { TileMedia } from '../../tiles/base/example';
 import { StandardIcon } from '../../icons/standard/example';
-import classNames from 'classnames';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
-
-const headerActionOverflow = (
-  <button
-    className="slds-button slds-button_icon-border-filled slds-button_icon-x-small"
-    aria-haspopup="true"
-  >
-    <SvgIcon className="slds-button__icon" sprite="utility" symbol="down" />
-    <span className="slds-assistive-text">More Options</span>
-  </button>
-);
 
 const headerAction = (
   <button className="slds-button slds-button_neutral">New</button>
-);
-
-const headerSearch = (
-  <div className="slds-input-has-icon slds-input-has-icon_left slds-size_1-of-3">
-    <SvgIcon
-      className="slds-input__icon slds-icon-text-default"
-      sprite="utility"
-      symbol="search"
-    />
-    <label htmlFor="text-input-01" className="slds-assistive-text">
-      Find in List
-    </label>
-    <input
-      id="text-input-01"
-      className="slds-input"
-      type="text"
-      placeholder="Find in List"
-    />
-  </div>
 );
 
 const bodyTable = (

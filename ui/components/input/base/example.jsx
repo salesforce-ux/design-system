@@ -5,7 +5,7 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
-import { SpinnerContainer, Spinner } from '../../spinners/base/example';
+import { Spinner } from '../../spinners/base/example';
 import {
   FormElement,
   SimpleFormElementWrapper,
@@ -37,12 +37,6 @@ export let Input = props => {
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
-
-let Default = props => (
-  <FormElement labelContent={inputLabel} inputId={inputId}>
-    <Input id={inputId} />
-  </FormElement>
-);
 
 let Required = props => (
   <FormElement labelContent={inputLabel} inputId={inputId} isRequired>

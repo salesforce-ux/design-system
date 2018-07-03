@@ -3,7 +3,6 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { Select } from '../../select/base/example';
 import { FormElement } from '../../form-element';
@@ -14,9 +13,6 @@ import { Input } from '../../input/base/example';
 ----------------------------------------------------------------------------- */
 
 const dateInputId = 'date-input-id';
-const dateRangeInputId01 = 'date-input-id-01';
-const dateRangeInputId02 = 'date-input-id-02';
-const timeInputId = 'time-input-id';
 
 /* -----------------------------------------------------------------------------
     Private

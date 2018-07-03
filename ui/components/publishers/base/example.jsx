@@ -9,19 +9,6 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-const image = (
-  <a
-    className="slds-avatar slds-avatar_circle slds-avatar_small"
-    href="javascript:void(0);"
-  >
-    <img
-      alt="Jenna Davis"
-      src="/assets/images/avatar2.jpg"
-      title="Jenna Davis avatar"
-    />
-  </a>
-);
-
 let Publisher = props => (
   <div className={classNames('slds-publisher', props.className)}>
     <label

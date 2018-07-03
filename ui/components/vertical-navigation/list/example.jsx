@@ -12,7 +12,6 @@ const inputId01 = 'input-id-01';
 const sectionId01 = 'entity-header';
 const sectionId02 = 'folder-header';
 const sectionId03 = 'search-results';
-const sectionId04 = 'external-results';
 
 /// ////////////////////////////////////////
 // Partial(s)

@@ -3,7 +3,6 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////

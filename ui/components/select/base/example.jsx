@@ -73,16 +73,6 @@ let Disabled = props => (
   </FormElement>
 );
 
-let Multiple = props => (
-  <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
-    <Select id={defaultSelectId} multiple>
-      <option>Option One</option>
-      <option>Option Two</option>
-      <option>Option Three</option>
-    </Select>
-  </FormElement>
-);
-
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////

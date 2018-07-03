@@ -5,7 +5,6 @@ import createHelpers from '../../../../jest.helpers';
 import {
   PageHeader,
   PageHeaderRow,
-  PageHeaderColumn,
   PageHeaderTitle,
   PageHeaderMetaText,
   PageHeaderControls,

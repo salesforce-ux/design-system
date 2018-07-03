@@ -256,7 +256,6 @@ class MobileTabs extends Component {
   }
 
   render() {
-    const { isStatic } = this.props;
     const { visiblePanelIdx } = this.state;
 
     return (

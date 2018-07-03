@@ -3,10 +3,8 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
 import { Avatar } from '../../avatar/base/example';
 import { Popover } from '../../popovers/base/example';
-import ButtonIcon from '../../button-icons/';
 import NotificationData from './data';
 
 /**

@@ -4,7 +4,6 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import { FileSelector } from '../base/example';
 
 let IntegratedFileSelector = props => (
   <div

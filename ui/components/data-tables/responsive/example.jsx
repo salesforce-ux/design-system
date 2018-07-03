@@ -3,7 +3,6 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import SvgIcon from '../../../shared/svg-icon';
 import { Checkbox } from '../../checkbox/base/example';
 import classNames from 'classnames';
 
@@ -186,20 +185,6 @@ let RowData = props => (
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
-
-let Overflow = props => (
-  <div className="slds-scrollable_x">
-    <Table>
-      <thead>
-        <HeadRowData />
-      </thead>
-      <tbody>
-        <RowData index="1" title="Cloudhub" />
-        <RowData index="2" title="Cloudhub + Anypoint Connectors" />
-      </tbody>
-    </Table>
-  </div>
-);
 
 let Stacked = props => (
   <Table className="slds-max-medium-table_stacked">

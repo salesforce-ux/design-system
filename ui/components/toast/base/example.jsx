@@ -4,7 +4,6 @@
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
-import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -12,7 +11,7 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 export let Toast = props => {
-  const { containerClassName, className, type, children, ...rest } = props;
+  const { containerClassName, className, type, children } = props;
 
   return (
     <div className={classNames('slds-notify_container', containerClassName)}>

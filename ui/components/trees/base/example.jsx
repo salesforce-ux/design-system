@@ -3,7 +3,6 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -64,12 +63,6 @@ let TreeBranch = props => (
       )}
     </span>
   </div>
-);
-
-let Pill = props => (
-  <span className="slds-pill slds-shrink-none slds-align-middle">
-    <span className="slds-pill__label">Label</span>
-  </span>
 );
 
 let AdditionalItems = props => (

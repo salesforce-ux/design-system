@@ -7,11 +7,9 @@ import { FormElement } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
-import { CompoundForm } from '../../form-layout/compound/example';
 import Combobox from '../../combobox/';
 import Listbox from '../../combobox/listbox/';
 import { UtilityIcon } from '../../icons/base/example';
-import _ from '../../../shared/helpers';
 
 export const ObjectFieldTypes = {
   rows: [

@@ -3,7 +3,6 @@
 
 /* eslint-env jest */
 
-const I = require('immutable');
 const path = require('path');
 const React = require('react');
 const ReactDOM = require('react-dom/server');

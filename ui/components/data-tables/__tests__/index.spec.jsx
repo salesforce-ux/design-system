@@ -2,7 +2,7 @@
 import React from 'react';
 
 import _ from '../../../shared/helpers';
-import { render, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import {
   AdvancedDataTable,

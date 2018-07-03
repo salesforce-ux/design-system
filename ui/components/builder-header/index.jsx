@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import SvgIcon from '../../shared/svg-icon';
 import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';

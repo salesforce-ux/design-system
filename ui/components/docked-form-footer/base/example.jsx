@@ -3,7 +3,6 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import SvgIcon from '../../../shared/svg-icon';
 import { Popover } from '../../popovers/base/example';
 import { FeedbackHeader } from '../../popovers/error/example';
 import _ from '../../../shared/helpers';

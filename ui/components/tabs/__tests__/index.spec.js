@@ -33,9 +33,6 @@ import MobileTabs, {
   DeprecatedAdjacentMobileStacked
 } from '../mobile-stack/';
 
-import SvgIcon from '../../../shared/svg-icon';
-import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);

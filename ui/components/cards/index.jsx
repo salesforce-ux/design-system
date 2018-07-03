@@ -70,7 +70,7 @@ export const CardBody = props => {
  * Card Footer
  */
 export const CardFooter = props => {
-  const { className, linkAssistiveText } = props;
+  const { className } = props;
 
   return (
     <footer className={classNames('slds-card__footer', className)}>

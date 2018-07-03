@@ -4,7 +4,6 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import SetupAssistant from '../';
 import SetupAssistantStepSummary from '../SetupAssistantStepSummary';
 import SetupAssistantStepDetail from '../SetupAssistantStepDetail';
 

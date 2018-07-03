@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icons/';
-import ListboxOfSelections from './listbox-of-pills/'; // Change import
 import { Input } from '../input/base/example';
 import { Spinner } from '../spinners/base/example';
 
@@ -192,7 +191,6 @@ export default class Combobox extends Component {
       listbox,
       staticListbox,
       listboxOfSelections,
-      children,
       comboboxAriaControls,
       isDisabled
     } = this.props;
@@ -308,8 +306,7 @@ export class ComboboxGroup extends Component {
       rightInputIcon,
       listboxOfSelections,
       listbox,
-      comboboxID,
-      children
+      comboboxID
     } = this.props;
 
     return (

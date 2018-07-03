@@ -6,7 +6,6 @@
 
 import { assertMatchesDOM } from '@salesforce-ux/instant-vrt/matcher';
 import fetch from 'isomorphic-fetch';
-import path from 'path';
 import ReactDOM from 'react-dom/server';
 
 import { beautify } from './shared/utils/beautify';

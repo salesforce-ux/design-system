@@ -8,12 +8,10 @@ import {
   ListboxPill
 } from '../../pills/listbox-of-pill-options/example';
 import ButtonIcon from '../../button-icons/';
-import { Avatar } from '../../avatar/base/example';
-import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
-import { SpinnerContainer, Spinner } from '../../spinners/base/example';
+import { Spinner } from '../../spinners/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';

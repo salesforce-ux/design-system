@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import { render, mount } from 'enzyme';
+import { mount } from 'enzyme';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('renders box utilities', () => {

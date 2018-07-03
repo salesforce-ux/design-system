@@ -3,12 +3,10 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import ButtonIcon from '../../button-icons/';
-import Listbox, { ListboxItem, Option } from '../listbox/';
+import Listbox from '../listbox/';
 import { UtilityIcon } from '../../icons/base/example';
 import * as Snapshot from './data';
 import Combobox from '../';
-import _ from '../../../shared/helpers';
 
 const listboxId01 = 'objectswitcher-listbox-id-01';
 const listboxId02 = 'objectswitcher-listbox-id-02';

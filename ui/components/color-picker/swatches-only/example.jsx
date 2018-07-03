@@ -2,13 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ColorPicker, { ColorPickerSwatches } from '../';
-import {
-  Menu,
-  MenuList,
-  MenuItem,
-  Trigger
-} from '../../menus/dropdown/example';
+import { ColorPickerSwatches } from '../';
+import { Trigger } from '../../menus/dropdown/example';
 
 export default (
   <Trigger>

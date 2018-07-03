@@ -2,16 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { UtilityIcon } from '../../icons/base/example.jsx';
 import { NavVerticalSection } from '../list/example';
-import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
-const inputId01 = 'input-id-01';
 const sectionId01 = 'entity-header';
-const sectionId02 = 'folder-header';
-const sectionId03 = 'search-results';
-const sectionId04 = 'external-results';
 
 /// ////////////////////////////////////////
 // Partial(s)

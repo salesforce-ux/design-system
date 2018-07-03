@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import CodeView from '../../../../shared/components/CodeView';
-import style from './Grid.scss';
+import './Grid.scss';
 import classNames from 'classnames';
 
 export const Column = props => {

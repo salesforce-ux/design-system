@@ -4,7 +4,7 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import { render, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { UtilityIcon } from '../../icons/base/example';
 import {
   TimelineIcon,
@@ -17,13 +17,7 @@ import {
   TimelineItem,
   DescriptionCard
 } from '../base/example';
-import {
-  ActivityTimelineItemCall,
-  ActivityTimelineItemTask,
-  ActivityTimelineItemEmail,
-  ActivityTimelineItemEvent,
-  BaseExample as StaticExample
-} from '../deprecated/example';
+import { BaseExample as StaticExample } from '../deprecated/example';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

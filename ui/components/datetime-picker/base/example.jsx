@@ -9,7 +9,6 @@ import {
   Option
 } from '../../combobox/base/example';
 import { DatePicker } from '../../datepickers/base/example';
-import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
@@ -19,7 +18,6 @@ import { Input } from '../../input/base/example';
 ----------------------------------------------------------------------------- */
 
 const dateInputId = 'date-input-id';
-const timeInputId = 'time-input-id';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 const listboxOptionId03 = 'listbox-option-unique-id-03';

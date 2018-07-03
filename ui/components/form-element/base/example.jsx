@@ -2,15 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
-import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';
-import { Tooltip } from '../../tooltips/base/example';
 import RecordDetail from '../record-detail/';
 import * as Snapshot from '../record-detail/snapshots.data';
 

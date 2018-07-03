@@ -3,8 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { Tile, TileMedia } from '../base/example';
-import classNames from 'classnames';
+import { Tile } from '../base/example';
 
 /// ////////////////////////////////////////
 // Export

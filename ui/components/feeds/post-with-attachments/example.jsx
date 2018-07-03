@@ -2,16 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
 import {
   Post,
   PostHeader,
   PostContent,
   PostFooter,
   PostFooterActions,
-  PostFooterMeta,
-  Comments
+  PostFooterMeta
 } from '../post/example';
 import { File, AttachmentLink } from '../../files/base/example';
 

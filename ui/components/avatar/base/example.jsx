@@ -36,7 +36,7 @@ export let examples = [
     label: 'Profile Avatar Image',
     element: (
       <Avatar className="slds-avatar_profile-image-large">
-        <span class="slds-assistive-text">Person name</span>
+        <span className="slds-assistive-text">Person name</span>
       </Avatar>
     )
   },
@@ -45,7 +45,7 @@ export let examples = [
     label: 'Group Avatar Image',
     element: (
       <Avatar className="slds-avatar_group-image-large">
-        <span class="slds-assistive-text">Group name</span>
+        <span className="slds-assistive-text">Group name</span>
       </Avatar>
     )
   },

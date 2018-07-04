@@ -30,7 +30,7 @@ export let Select = props => {
   );
 
   const renderWithContainter = () => (
-    <div className="slds-select_container">renderSelect()</div>
+    <div className="slds-select_container">{renderSelect()}</div>
   );
 
   return props.hasNoContainer ? renderSelect() : renderWithContainter();

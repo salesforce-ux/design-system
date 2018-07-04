@@ -10,12 +10,6 @@ import classNames from 'classnames';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Demo = props => (
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>
-);
-
 const TableIcon = (
   <SvgIcon
     className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none"
@@ -141,22 +135,6 @@ export let MenuItem = props => {
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
-
-let Default = props => (
-  <Demo style={{ height: '220px' }}>
-    <Trigger className="slds-is-open">
-      <Menu className="slds-dropdown_left">
-        <MenuList ariaLabel="Show More">
-          <MenuItem tabIndex="0">Menu Item One</MenuItem>
-          <MenuItem>Menu Item Two</MenuItem>
-          <MenuItem>Menu Item Three</MenuItem>
-          <li className="slds-has-divider_top-space" role="separator" />
-          <MenuItem>Menu Item Four</MenuItem>
-        </MenuList>
-      </Menu>
-    </Trigger>
-  </Demo>
-);
 
 export const BaseMenu = props => (
   <Trigger className="slds-is-open">

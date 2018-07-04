@@ -3,10 +3,8 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import ButtonIcon from '../../button-icons/';
 import { Popover } from '../base/example';
 import { Footer } from '../walkthrough/example';
-import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');

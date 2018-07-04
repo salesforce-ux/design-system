@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import { UtilityIcon } from '../icons/base/example';
-import { ActionIcon } from '../icons/action/example';
 import { Button } from '../buttons/base/example';
 import { CheckboxToggle } from '../checkbox-toggle/base/example';
 import ProgressRing from '../progress-ring';

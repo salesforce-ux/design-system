@@ -4,7 +4,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import CodeBlock, { ToggleButton } from '../CodeBlock';
 import Copy from '../Copy';
 

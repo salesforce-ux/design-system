@@ -9,7 +9,6 @@ import {
   ChatListItem,
   ChatMessage,
   ChatMessageBody,
-  ChatAvatar,
   ChatEvent,
   ChatBookend
 } from '../.';

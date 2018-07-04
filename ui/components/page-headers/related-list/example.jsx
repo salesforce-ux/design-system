@@ -10,7 +10,6 @@ import {
   ButtonGroupListItem
 } from '../../button-groups/list/example';
 import { Trigger } from '../../menus/dropdown/example';
-import RelatedListDeprecated from './deprecated';
 import {
   PageHeader,
   PageHeaderRow,

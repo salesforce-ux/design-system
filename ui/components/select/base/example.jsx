@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { MultiSelect, DefaultSnapShot } from '../../dueling-picklist';
 import { FormElement } from '../../form-element';
@@ -14,8 +15,8 @@ const errorId = 'error-01';
 // Partial(s)
 /// ////////////////////////////////////////
 
-export let Select = props => (
-  <div className="slds-select_container">
+export let Select = props => {
+  const renderSelect = () => (
     <select
       aria-describedby={props['aria-describedby']}
       className={classNames('slds-select', props.className)}
@@ -26,8 +27,23 @@ export let Select = props => (
     >
       {props.children}
     </select>
-  </div>
-);
+  );
+
+  const renderWithContainter = () => (
+    <div className="slds-select_container">{renderSelect()}</div>
+  );
+
+  return props.hasNoContainer ? renderSelect() : renderWithContainter();
+};
+Select.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  hasNoContainer: PropTypes.bool,
+  id: PropTypes.string,
+  multiple: PropTypes.bool,
+  required: PropTypes.bool
+};
 
 /// ///////////////////////////////////////////
 // State Constructor(s)
@@ -73,9 +89,9 @@ let Disabled = props => (
   </FormElement>
 );
 
-let Multiple = props => (
+let MultipleNarrow = props => (
   <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
-    <Select id={defaultSelectId} multiple>
+    <Select id={defaultSelectId} hasNoContainer multiple>
       <option>Option One</option>
       <option>Option Two</option>
       <option>Option Three</option>
@@ -100,11 +116,6 @@ export default (
 
 export let states = [
   {
-    id: 'select-required',
-    label: 'Required',
-    element: <Required />
-  },
-  {
     id: 'select-error',
     label: 'Error',
     element: <ErrorState />
@@ -113,10 +124,23 @@ export let states = [
     id: 'select-disabled',
     label: 'Disabled',
     element: <Disabled />
+  }
+];
+
+export let examples = [
+  {
+    id: 'select-required',
+    label: 'Required',
+    element: <Required />
   },
   {
     id: 'select-multiple',
     label: 'Multiple Selection',
     element: <MultiSelect dataSet={DefaultSnapShot} noReorder />
+  },
+  {
+    id: 'select-multiple-narrow',
+    label: 'Multiple Selection Narrow',
+    element: <MultipleNarrow />
   }
 ];

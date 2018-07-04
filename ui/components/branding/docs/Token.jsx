@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import style from './Token.scss';
+import './Token.scss';
 
 export class Tokens extends Component {
   constructor(props) {

@@ -3,7 +3,6 @@
 
 import React from 'react';
 import { DatePicker } from '../base/example';
-import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
@@ -12,7 +11,6 @@ import { Input } from '../../input/base/example';
     Variables
 ----------------------------------------------------------------------------- */
 
-const dateInputId = 'date-input-id';
 const dateRangeInputId01 = 'date-input-id-01';
 const dateRangeInputId02 = 'date-input-id-02';
 

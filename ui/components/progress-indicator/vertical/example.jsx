@@ -3,7 +3,6 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
 import { UtilityIcon } from '../../icons/base/example';
 
 /// ///////////////////////////////////////////
@@ -43,14 +42,7 @@ export let Progress = props => {
 };
 
 export let Step = props => {
-  const {
-    className,
-    active,
-    done,
-    error,
-    hasSuccessMarker,
-    assistiveText
-  } = props;
+  const { className, active, done, error, hasSuccessMarker } = props;
 
   return (
     <li

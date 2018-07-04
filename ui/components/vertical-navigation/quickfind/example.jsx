@@ -10,12 +10,10 @@ import {
 import { FormElement } from '../../form-element';
 import { Input } from '../../input/base/example';
 import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
 
 const inputId01 = 'input-id-01';
 const sectionId01 = 'entity-header';
 const sectionId02 = 'folder-header';
-const sectionId03 = 'all-results';
 
 export default (
   <div className="demo-only" style={{ width: '320px' }}>

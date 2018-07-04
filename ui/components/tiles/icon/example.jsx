@@ -4,7 +4,6 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { TileMedia } from '../base/example';
-import classNames from 'classnames';
 
 const icon = (
   <span className="slds-icon_container" title="description of icon when needed">

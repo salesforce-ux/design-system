@@ -1,7 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import _ from '../../shared/helpers';
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -48,7 +47,7 @@ class TabItem extends React.Component {
     });
   }
   renderDefault(tabIndex) {
-    const { flavor, current, id, title, children } = this.props;
+    const { flavor, current, id, title } = this.props;
     return (
       <a
         className={`slds-tabs_${flavor}__link`}

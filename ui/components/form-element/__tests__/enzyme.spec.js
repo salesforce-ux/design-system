@@ -4,7 +4,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { FormElement } from '../';
 import { Input } from '../../input/base/example';

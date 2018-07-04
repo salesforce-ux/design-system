@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 import { Popover } from '../base/example';
 import { EinsteinHeader } from '../../einstein-header/base';

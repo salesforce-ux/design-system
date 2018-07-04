@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import classNames from 'classnames';
 import { Fieldset, Legend } from '../../radio-group/base/example';
 import { FormElementControl } from '../../form-element';
 import { VisualPicker } from '../coverable-content/example';

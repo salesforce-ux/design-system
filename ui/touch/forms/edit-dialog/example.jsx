@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
 import { FormElement } from '../../../components/form-layout/element/example';
 import { Input } from '../../../components/input/base/example';
 import { Select } from '../../../components/select/base/example';

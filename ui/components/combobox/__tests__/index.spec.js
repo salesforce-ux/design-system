@@ -8,7 +8,7 @@ import {
 } from '../../pills/listbox-of-pill-options/example';
 import Combobox, { ComboboxGroup } from '../';
 import ObjectSwitcher from '../object-switcher/';
-import Listbox, { ListboxGroup, ListboxWrapper, Option } from '../listbox/';
+import Listbox, { ListboxGroup, ListboxWrapper } from '../listbox/';
 import ListboxOfSelections from '../listbox-of-pills/';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
@@ -21,7 +21,6 @@ const { matchesMarkupAndStyle } = createHelpers(__dirname);
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const comboboxId = 'combobox-id-01';
 const listboxId = 'listbox-id-01';
-const scopedComboboxId = 'scoped-combobox-id-01';
 const primaryComboboxId = 'primary-combobox-id-01';
 
 /**

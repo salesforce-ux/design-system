@@ -9,17 +9,6 @@ import _ from '../../../shared/helpers';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Fieldset = props => (
-  <fieldset className={classNames('form--element', props.className)}>
-    <legend className="slds-form-element__legend slds-form-element__label">
-      Share email with
-    </legend>
-    <div className="slds-form-element__control slds-box_border">
-      {props.children}
-    </div>
-  </fieldset>
-);
-
 export let LabelWrapper = props => (
   <div className={classNames('slds-form-element', props.className)}>
     {props.children}

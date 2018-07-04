@@ -7,7 +7,6 @@ import reverse from 'lodash.reverse';
 import startCase from 'lodash.startcase';
 import times from 'lodash.times';
 import truncate from 'lodash.truncate';
-import uniqueIdLodash from 'lodash.uniqueid';
 import upperFirst from 'lodash.upperfirst';
 
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing

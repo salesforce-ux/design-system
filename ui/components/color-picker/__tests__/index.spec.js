@@ -1,12 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import ColorPicker, { ColorPickerSwatches } from '../';
-import {
-  Menu,
-  MenuList,
-  MenuItem,
-  Trigger
-} from '../../menus/dropdown/example';
+import { Trigger } from '../../menus/dropdown/example';
 
 import createHelpers from '../../../../jest.helpers';
 

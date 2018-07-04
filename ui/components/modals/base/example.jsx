@@ -303,5 +303,15 @@ export let examples = [
     id: 'footless',
     label: 'Footer removed',
     element: <Footless />
+  },
+  {
+    id: 'large',
+    label: 'Large',
+    element: <Large />
+  },
+  {
+    id: 'directional',
+    label: 'Directional',
+    element: <Directional />
   }
 ];

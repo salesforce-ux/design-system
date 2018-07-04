@@ -2,13 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Combobox, { ComboboxGroup } from '../../combobox/';
-import Listbox, {
-  ListboxGroup,
-  ListboxWrapper,
-  Option
-} from '../../combobox/listbox/';
-import ListboxOfSelections from '../../combobox/listbox-of-pills/';
+import Combobox from '../../combobox/';
+import Listbox from '../../combobox/listbox/';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';

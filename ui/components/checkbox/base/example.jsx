@@ -13,12 +13,6 @@ const errorId = 'error_01';
 // Partial(s)
 /// ////////////////////////////////////////
 
-let Demo = props => (
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>
-);
-
 let Fieldset = props => (
   <fieldset className={classNames('slds-form-element', props.className)}>
     {props.children}

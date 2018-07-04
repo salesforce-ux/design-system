@@ -4,7 +4,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '../index.react';
-import SvgIcon from '../../../shared/svg-icon';
 import { StandardIcon } from '../../icons/standard/example';
 import { ButtonMenu } from '../../button-icons/menu/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';

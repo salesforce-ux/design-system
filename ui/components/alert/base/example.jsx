@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 export let Alert = props => {
-  const { className, type, children, ...rest } = props;
+  const { className, type, children } = props;
 
   return (
     <div

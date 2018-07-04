@@ -2,8 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { Popover } from '../base/example';
 import classNames from 'classnames';

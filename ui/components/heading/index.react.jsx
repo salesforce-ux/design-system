@@ -6,8 +6,6 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Truncate from '../../shared/truncate/index.react.jsx';
-
 class LabelHeading extends React.Component {
   render() {
     const className = classNames('slds-text-title_caps', this.props.className);

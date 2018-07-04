@@ -6,8 +6,6 @@ import _ from '../../../shared/helpers';
 import {
   AdvancedDataTable as Table,
   Thead,
-  Th,
-  ActionsTh,
   AdvancedDataTableTr,
   ProductDataTableTr
 } from '../';
@@ -15,8 +13,6 @@ import {
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
-
-const radioGroupCommonId = 'radio-group-header';
 
 export const columns = [
   'Name',

@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Avatar } from '../../avatar/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import {
   ComboboxContainer,
@@ -15,7 +14,6 @@ import {
   ListboxPillsItem,
   ListboxPill
 } from '../../pills/listbox-of-pill-options/example';
-import SvgIcon from '../../../shared/svg-icon';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';

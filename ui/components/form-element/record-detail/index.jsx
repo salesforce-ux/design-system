@@ -3,7 +3,6 @@
 
 import React, { Component } from 'react';
 import ButtonIcon from '../../button-icons/';
-import { FormElement } from '../';
 import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';

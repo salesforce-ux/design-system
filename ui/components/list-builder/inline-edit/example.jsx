@@ -10,7 +10,6 @@ import {
   ModalContent,
   ModalFooter
 } from '../../modals/base/example';
-import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)

@@ -2,8 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import Card, { CardHeader, CardBody, CardFooter } from '../';
+import Card, { CardBody, CardFooter } from '../';
 import { EinsteinHeader } from '../../einstein-header/base/';
 
 export const EinsteinCard = props => (

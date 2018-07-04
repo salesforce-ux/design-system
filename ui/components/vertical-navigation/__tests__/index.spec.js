@@ -4,7 +4,7 @@
 
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import { render, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import {
   NavVerticalRadioSet,
   NavVerticalFieldset,

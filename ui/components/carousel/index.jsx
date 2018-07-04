@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import ButtonIcon from '../button-icons/';
 import classNames from 'classnames';
-import _ from '../../shared/helpers';
 
 /**
  * Vars

@@ -4,12 +4,6 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
-import {
-  Section,
-  SectionContent,
-  SectionTitle,
-  SectionTitleAction
-} from '../../expandable-section/base/example';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';

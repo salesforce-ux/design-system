@@ -11,7 +11,6 @@ import {
   GrabbedSnapShot,
   MovedInSnapShot,
   DroppedSnapShot,
-  MoveToSnapShot,
   MultiSelectViewMode
 } from '../';
 

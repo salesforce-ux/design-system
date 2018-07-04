@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from '../base/example';
 import { StatefulButton } from '../stateful/example';
 import createHelpers from '../../../../jest.helpers';
-import { render, mount } from 'enzyme';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 

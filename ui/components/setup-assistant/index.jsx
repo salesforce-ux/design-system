@@ -3,7 +3,6 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import _ from '../../shared/helpers';
 
 import {
   SummaryDetail,
@@ -13,7 +12,6 @@ import {
 } from '../summary-detail/base/example';
 import SetupAssistantStepSummary from './SetupAssistantStepSummary';
 import SetupAssistantStepDetail from './SetupAssistantStepDetail';
-import { Card, CardBody } from '../cards/base/example';
 import { ProgressBarDescriptive } from '../progress-bar/base/example';
 
 const sampleBaseSteps = [

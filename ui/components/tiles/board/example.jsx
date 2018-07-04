@@ -3,7 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { Tile, TileMedia } from '../base/example';
+import { Tile } from '../base/example';
 
 export default (
   <div className="demo-only" style={{ width: '320px' }}>

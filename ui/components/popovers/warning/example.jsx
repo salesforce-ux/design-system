@@ -2,11 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import SvgIcon from '../../../shared/svg-icon';
-import ButtonIcon from '../../button-icons/';
 import { Popover } from '../base/example';
 import { FeedbackHeader, FeedbackFooter } from '../error/example';
-import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');

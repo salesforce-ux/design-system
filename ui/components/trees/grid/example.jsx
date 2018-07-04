@@ -4,7 +4,6 @@
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
-import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
 // State Constructor(s)

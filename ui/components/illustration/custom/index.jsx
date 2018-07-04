@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 export const LakeMountain = props => (
   <svg

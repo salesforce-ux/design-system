@@ -5,7 +5,6 @@ import React from 'react';
 import _ from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
-import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 /// ///////////////////////////////////////////
@@ -17,7 +16,6 @@ let NotificationContainer = props => (
 );
 
 let Notification = props => {
-  const headingUniqueId = _.uniqueId('dialog-heading-id-');
   const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
   return (

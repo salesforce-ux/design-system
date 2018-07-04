@@ -230,7 +230,7 @@ class MobileTabs extends Component {
 
   componentDidMount() {
     if (
-      this.props.visiblePanelIdx != undefined &&
+      this.props.visiblePanelIdx !== undefined &&
       this.state.visiblePanelIdx === -1
     ) {
       this.setState({

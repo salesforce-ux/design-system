@@ -123,7 +123,7 @@ export let ContextTab = props => (
     <div
       className={classNames(
         'slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none',
-        props.actionOverflow == 'true' ? 'slds-is-open' : null
+        props.actionOverflow === 'true' ? 'slds-is-open' : null
       )}
     >
       <ButtonIcon

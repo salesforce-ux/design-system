@@ -7,4 +7,3 @@ extends:
 rules:
   react/jsx-key: ['error']
   no-useless-escape: ['off']
-  eqeqeq: ['off']

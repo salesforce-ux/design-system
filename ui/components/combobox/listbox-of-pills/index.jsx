@@ -42,7 +42,7 @@ class ListboxOfSelections extends Component {
           isExpanded && 'slds-is-expanded'
         )}
       >
-        {count > 2 && isExpanded != true ? (
+        {count > 2 && isExpanded !== true ? (
           <span className="slds-listbox-toggle" aria-hidden>
             <button className="slds-button" tabIndex="-1">
               +6 more

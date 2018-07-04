@@ -253,7 +253,7 @@ export let ComboboxContainer = props => {
                 tabIndex={props.tabIndex}
               />
               {/* If inputIcon is right, show icon here  */}
-              {props.inputIcon === 'right' && props.inputButtonIcon != true ? (
+              {props.inputIcon === 'right' && props.inputButtonIcon !== true ? (
                 <UtilityIcon
                   title={
                     props.inputIconRightSymbol === 'search'

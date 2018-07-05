@@ -1,0 +1,182 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates a drop-zone component for screen building
+ * @name base
+ * @selector .slds-drop-zone
+ * @restrict div
+ * @variant
+ */
+.slds-drop-zone {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: $border-width-thin dotted $color-gray-11;
+    outline: $border-width-thin dotted $color-gray-1;
+  }
+
+  /**
+  * @name drag over
+  * @summary Modifier used to indicate that component may be dropped in container
+  * @selector .slds-drop-zone_drag
+  * @restrict .slds-drop-zone
+  * @modifier
+  * @group interaction
+  */
+  &.slds-drop-zone_drag {
+
+    &:after {
+      border: $border-width-thin solid $color-background-success-dark;
+      outline: 0;
+    }
+  }
+}
+
+/**
+  * @summary Top label of drop zone
+  * @selector .slds-drop-zone__label
+  * @restrict .slds-drop-zone div
+  */
+.slds-drop-zone__label {
+  color: $color-text-inverse;
+  background: $color-background-success-dark;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  padding: $spacing-xx-small $spacing-x-small;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
+  /**
+  * @summary Top of populated label of drop zone
+  * @selector .slds-drop-zone__label_container
+  * @restrict .slds-drop-zone__label
+  */
+  &.slds-drop-zone__label_container {
+    opacity: 0;
+    background: $color-background-brand-primary;
+  }
+}
+
+/**
+  * @summary Button within drop zone label
+  * @selector .slds-drop-zone__label_button
+  * @restrict .slds-drop-zone__label button
+  */
+.slds-drop-zone__label_button {
+
+  border-radius: 0; // to prevent travis error
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+/**
+  * @summary Insertion point of drop zone
+  * @selector .slds-drop-zone_drag__slot
+  * @restrict .slds-drop-zone_drag div
+  */
+.slds-drop-zone_drag__slot {
+  border: $border-width-thin solid $color-gray-1;
+  border-left-width: $border-width-thick;
+  border-right-width: $border-width-thick;
+  background: $color-background-success-dark;
+  width: 100%;
+  height: $drop-zone-slot-height;
+}
+
+/**
+  * @summary Populated region within drop zone
+  * @selector .slds-drop-zone__container
+  * @restrict .slds-drop-zone div
+  */
+.slds-drop-zone__container {
+
+  position: relative;
+  z-index: $z-index-overlay;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /**
+    * @name item-hovered
+    * @summary Hover state for a component within a drop zone
+    * @selector .slds-is-hovered
+    * @restrict .slds-drop-zone div
+    * @notes Class should be applied via Javascript
+    * @modifier
+    * @group interactions
+    */
+  &.slds-is-hovered,
+  &:hover {
+
+    .slds-drop-zone__label_container,
+    .slds-drop-zone__actions {
+      opacity: 1;
+      z-index: $z-index-overlay;
+    }
+
+    &:after {
+      border: $border-width-thin solid $color-border-brand-primary;
+    }
+  }
+
+  &:active {
+
+    &:after {
+      border: $border-width-thick solid $color-border-brand-primary-active;
+    }
+
+    .slds-drop-zone__label {
+      background-color: $color-background-brand-primary-active;
+    }
+  }
+
+  &:focus-within {
+
+    .slds-drop-zone__label_container,
+    .slds-drop-zone__actions {
+      opacity: 1;
+      z-index: $z-index-overlay;
+    }
+
+    outline: none;
+
+    &:after {
+      border: $border-width-thick solid $color-border-brand-primary-focus;
+    }
+
+    .slds-drop-zone__label {
+      background-color: $color-background-brand-primary-focus;
+    }
+  }
+}
+
+/**
+  * @summary Action buttons within drop zone
+  * @selector .slds-drop-zone__actions
+  * @restrict .slds-drop-zone div
+  */
+.slds-drop-zone__actions {
+  opacity: 0;
+  background: $color-background-brand-primary;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

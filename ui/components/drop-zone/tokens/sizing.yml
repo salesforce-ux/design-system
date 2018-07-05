@@ -1,0 +1,10 @@
+global:
+  scope: component
+  category: sizing
+  type: size
+  cssProperties:
+  - '*height'
+  - '*width'
+props:
+  DROP_ZONE_SLOT_HEIGHT:
+    value: '0.25rem'

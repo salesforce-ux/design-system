@@ -1,0 +1,143 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import Example from '../../../shared/components/Example';
+import { DropZone, DropZoneInsertionPoint, DropZoneLabel, DropZoneContainer, DemoComponent, Demo } from './base/example';
+import Card, { CardHeader, CardBody, CardFooter } from '../cards';
+import ButtonIcon from '../button-icons/';
+import { UtilityIcon } from '../icons/base/example';
+import { StandardIcon } from '../icons/standard/example';
+import _ from '../../shared/helpers';
+import helpers from '../../shared/helpers';
+
+<div className="lead doc">
+  Screen building elements that surround areas where components can be placed. Drop Zones visually indicate to users where they may drag and drop components onto a page.
+</div>
+
+## Base Drop Zone
+
+A Base Drop Zone outlines areas within a page where users may drag and drop a component. These create a template to guide users within a screen building experience.
+
+<Example title="Drop Zone - Base">
+  <CodeView toggleCode={false}>
+    <DropZone>
+      <DemoComponent />
+    </DropZone>
+  </CodeView>
+</Example>
+
+## Drag Over Drop Zone
+
+When dragging a component, use the drag over drop zone to indicate to the user where the component will be placed when dropped.
+
+<Example title="Drop Zone - Drag Over">
+  <CodeView>
+    <Demo>
+      <DropZone isDragging>
+        <DropZoneLabel headerText="Content" />
+        <DemoComponent />
+        <DropZoneInsertionPoint />
+        <DemoComponent />
+      </DropZone>
+    </Demo>
+  </CodeView>
+</Example>
+
+### Insertion Point
+
+An insertion point is used to futher communicate to the user the exact slot the component is being placed.
+
+<CodeView toggleCode={false}>
+  <DropZoneInsertionPoint/>
+</CodeView>
+
+The position of this element should be controlled by your implementation.
+
+* **When there are no components in the drop zone**: The insertion point should be placed in the center.
+
+* **When there are components in the drop zone**: The insertion point should be placed before or after components, to indicate where a new component will be placed relative to the ones already in the the drop zone.
+
+## Drop Zone Container
+
+Use a drop zone container to highlight components within a drop zone. This provides a label for the component, as well as Button Icons to perform actions, such as moving the component and deleting the component from the screen.
+
+<Example title="Drop Zone - Container">
+  <CodeView>
+    <DropZone>
+      <DemoComponent />
+      <DropZoneContainer hasActions isHovered>
+        <DemoComponent />
+      </DropZoneContainer>
+    </DropZone>
+  </CodeView>
+</Example>
+
+## Example - Cards
+<Example title="Drop Zone - Cards Example">
+  <CodeView>
+    <Demo>
+      <DropZone>
+        <DropZoneContainer hasActions>
+          <Card className="slds-m-bottom_small">
+            <CardHeader
+              title="Accounts"
+              showIcon
+              symbol="account"
+            />
+            <CardBody hasPadding>
+              Card Body
+            </CardBody>
+            <CardFooter linkTabIndex="-1">
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </DropZoneContainer>
+        <DropZoneContainer hasActions>
+          <Card className="slds-m-top_small">
+            <CardHeader
+              title="Accounts"
+              showIcon
+              symbol="account"
+            />
+            <CardBody hasPadding>
+              Card Body
+            </CardBody>
+            <CardFooter linkTabIndex="-1">
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </DropZoneContainer>
+      </DropZone>
+    </Demo>
+  </CodeView>
+</Example>
+
+## Example - Cards Insertion
+<Example title="Drop Zone - Cards Insert Example">
+  <CodeView>
+    <Demo>
+      <DropZone isDragging>
+        <DropZoneLabel headerText="Content" />
+        <DropZoneContainer hasActions>
+          <Card className="slds-m-bottom_small">
+            <CardHeader title="Accounts" showIcon symbol="account" />
+            <CardBody hasPadding>Card Body</CardBody>
+            <CardFooter linkTabIndex="-1">
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </DropZoneContainer>
+        <DropZoneInsertionPoint />
+        <DropZoneContainer hasActions>
+          <Card className="slds-m-top_small">
+            <CardHeader title="Accounts" showIcon symbol="account" />
+            <CardBody hasPadding>Card Body</CardBody>
+            <CardFooter linkTabIndex="-1">
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </DropZoneContainer>
+      </DropZone>
+    </Demo>
+  </CodeView>
+</Example>

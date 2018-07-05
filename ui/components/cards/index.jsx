@@ -70,12 +70,16 @@ export const CardBody = props => {
  * Card Footer
  */
 export const CardFooter = props => {
-  const { className } = props;
+  const { className, linkTabIndex } = props;
 
   return (
     <footer className={classNames('slds-card__footer', className)}>
       {props.children && (
-        <a className="slds-card__footer-action" href="javascript:void(0);">
+        <a
+          className="slds-card__footer-action"
+          href="javascript:void(0);"
+          tabIndex={linkTabIndex}
+        >
           {props.children}
         </a>
       )}

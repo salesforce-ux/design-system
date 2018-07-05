@@ -6,6 +6,11 @@ import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import { Button } from '../../buttons/base/example';
 import ButtonIcon from '../../button-icons/';
+import {
+  IndicatorUnread,
+  IndicatorContainer,
+  IndicatorUnsaved
+} from '../../global-navigation/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import _ from '../../../shared/helpers';
 
@@ -37,40 +42,27 @@ export const Subtab = props => (
       tabIndex={props.active ? '0' : '-1'}
       title={props.title || 'Subtab Name'}
     >
-      {props.itemUnsaved ? (
-        <abbr
-          className="slds-indicator_unsaved"
-          title="Tab Not Saved"
-          aria-label="Tab Not Saved"
+      <IndicatorContainer>
+        {props.itemUnsaved && <IndicatorUnsaved />}
+        {props.hasNotification && (
+          <IndicatorUnread tabName={props.title} tabType="main" />
+        )}
+      </IndicatorContainer>
+      {props.hasIcon && (
+        <div
+          className="slds-icon_container"
+          title={_.startCase(props.symbol) || 'Case'}
         >
-          *
-        </abbr>
-      ) : null}
-      {props.hasNotification && (
-        <span
-          aria-label="New Activity"
-          className="slds-indicator_unread"
-          role="alert"
-          title="New Activity"
-        >
+          <SvgIcon
+            className="slds-icon slds-icon_small slds-icon-text-default"
+            sprite="standard"
+            symbol={props.symbol || 'case'}
+          />
           <span className="slds-assistive-text">
-            New activity in Tab: {props.title || 'Subtab Name'}
+            {_.startCase(props.symbol) || 'Case'}:
           </span>
-        </span>
+        </div>
       )}
-      <div
-        className="slds-icon_container"
-        title={_.startCase(props.symbol) || 'Case'}
-      >
-        <SvgIcon
-          className="slds-icon slds-icon_small slds-icon-text-default"
-          sprite="standard"
-          symbol={props.symbol || 'case'}
-        />
-        <span className="slds-assistive-text">
-          {_.startCase(props.symbol) || 'Case'}:
-        </span>
-      </div>
       <span
         className={classNames(
           'slds-truncate',
@@ -115,6 +107,10 @@ export const Subtab = props => (
   </li>
 );
 
+Subtab.defaultProps = {
+  hasIcon: true
+};
+
 export const Subtabs = props => (
   <div className="slds-tabs_default slds-sub-tabs">{props.children}</div>
 );
@@ -139,25 +135,6 @@ export const SubtabPanel = props => (
   </div>
 );
 
-const IndicatorUnsaved = props => (
-  <abbr className="slds-indicator_unsaved" title="Tab(s) within menu not saved">
-    *
-  </abbr>
-);
-
-const IndicatorUnread = props => (
-  <span
-    aria-label="New Activity"
-    className="slds-indicator_unread"
-    role="alert"
-    title="New Activity"
-  >
-    <span className="slds-assistive-text">
-      New Tab activity with in More Tabs menu
-    </span>
-  </span>
-);
-
 export const SubtabOverflow = props => (
   <li
     className={classNames(
@@ -177,9 +154,13 @@ export const SubtabOverflow = props => (
       )}
     >
       <Button title="More Tab Items" aria-haspopup="true">
-        {props.itemUnsaved ? <IndicatorUnsaved /> : null}
-        {props.itemUnread ? <IndicatorUnread /> : null}
-        <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
+        <IndicatorContainer>
+          {props.itemUnsaved && (
+            <IndicatorUnsaved title="Tab(s) within menu not saved" />
+          )}
+          {props.itemUnread && <IndicatorUnread tabType="overflow" />}
+        </IndicatorContainer>
+        <span className="slds-truncate" title="More Tabs">
           More <span className="slds-assistive-text">Tabs</span>
         </span>
         <SvgIcon
@@ -191,20 +172,21 @@ export const SubtabOverflow = props => (
       <Menu className="slds-dropdown_right">
         <MenuList>
           <MenuItem className="slds-has-notification" title="Chat - Customer">
-            {props.itemUnsaved ? <IndicatorUnsaved /> : null}
-            {props.itemUnread ? (
-              <span className="slds-indicator_unread" title="New Activity">
-                <span className="slds-assistive-text">New Activity</span>
-              </span>
-            ) : null}
-            <SvgIcon
-              className="slds-icon slds-icon_small slds-icon-text-default"
-              sprite="standard"
-              symbol="live_chat"
-            />
+            <IndicatorContainer>
+              {props.itemUnsaved && <IndicatorUnsaved />}
+              {props.itemUnread && <IndicatorUnread tabType="menuItem" />}
+            </IndicatorContainer>
+            {props.itemHasIcon && (
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="standard"
+                symbol="live_chat"
+              />
+            )}
             <span>Chat - Customer</span>
           </MenuItem>
           <MenuItem title="Overflow Tab Item">
+            <IndicatorContainer />
             <SvgIcon
               className="slds-icon slds-icon_small slds-icon-text-default"
               sprite="standard"
@@ -217,6 +199,10 @@ export const SubtabOverflow = props => (
     </div>
   </li>
 );
+
+SubtabOverflow.defaultProps = {
+  itemHasIcon: true
+};
 
 export const SubTabSet = props => (
   <div className="slds-tabs_default slds-sub-tabs">
@@ -431,6 +417,40 @@ export const OverflowSubtabs = props => (
     </Subtabs>
   </div>
 );
+
+export const OverflowSubtabsWithoutIcons = props => (
+  <div>
+    <Subtabs>
+      <SubtabList>
+        <Subtab
+          title="00071938"
+          tabItemId="subtab-tabitem-01"
+          tabPanelId="subtab-tabpanel-01"
+        />
+        <Subtab
+          title="00071939"
+          tabItemId="subtab-tabitem-02"
+          tabPanelId="subtab-tabpanel-02"
+          hasNotification
+          itemUnsaved
+          hasIcon={false}
+        />
+        <SubtabOverflow
+          isOpen={props.isOpen}
+          itemUnread={props.itemUnread}
+          itemUnsaved={props.itemUnsaved}
+          itemHasIcon={false}
+        />
+      </SubtabList>
+      <SubtabPanel id="subtab-tabpanel-01" tabId="subtab-tabitem-01" isVisible>
+        Item One Content
+      </SubtabPanel>
+      <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+        Item Two Content
+      </SubtabPanel>
+    </Subtabs>
+  </div>
+);
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
@@ -495,5 +515,10 @@ export let states = [
     id: 'unsaved-unread-overflow-tabs-open',
     label: 'Unsaved Unread Overflow Tabs - Open',
     element: <OverflowSubtabs isOpen itemUnread itemUnsaved />
+  },
+  {
+    id: 'unsaved-unread-overflow-tabs-without-icons-open',
+    label: 'Unsaved Unread Overflow Tabs without Icons - Open',
+    element: <OverflowSubtabsWithoutIcons isOpen itemUnread itemUnsaved />
   }
 ];

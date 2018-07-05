@@ -16,6 +16,7 @@ import {
 } from '../../tabs/sub-tabs/example';
 
 import createHelpers from '../../../../jest.helpers';
+import { IndicatorUnread, IndicatorUnsaved, IndicatorContainer } from '..';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
@@ -113,3 +114,63 @@ it('renders an overflowed global-navigation with dropdown, unread, and unsaved',
       </ContextTabPanel>
     </div>
   ));
+
+describe('Navigation Tab Bar', () => {
+  it('renders a context tab', () =>
+    matchesMarkupAndStyle(
+      <ContextTab
+        title="Tab Item 1"
+        tabPanelId="context-tab-panel-2"
+        id="context-tab-id-2"
+      />
+    ));
+  it('renders an unsaved context tab', () =>
+    matchesMarkupAndStyle(
+      <ContextTab
+        title="Tab Item 1"
+        tabPanelId="context-tab-panel-2"
+        id="context-tab-id-2"
+        itemUnsaved
+      />
+    ));
+  it('renders an unread context tab', () =>
+    matchesMarkupAndStyle(
+      <ContextTab
+        title="Tab Item 1"
+        tabPanelId="context-tab-panel-2"
+        id="context-tab-id-2"
+        itemUnread
+      />
+    ));
+  it('renders an overflow tab', () =>
+    matchesMarkupAndStyle(<ContextTabBarOverflow itemUnread itemUnsaved />));
+});
+
+describe('Global Navigation indicators', () => {
+  it('render an unread indicator', () =>
+    matchesMarkupAndStyle(<IndicatorUnread />));
+
+  it('render an unread indicator for more tabs', () =>
+    matchesMarkupAndStyle(<IndicatorUnread tabType="overflow" />));
+
+  it('render an unread indicator for menu tabs', () =>
+    matchesMarkupAndStyle(<IndicatorUnread tabType="menuItem" />));
+
+  it('render an unread indicator for main tabs', () =>
+    matchesMarkupAndStyle(
+      <IndicatorUnread tabType="main" tabName="Tab Item 1" />
+    ));
+
+  it('render an unsaved indicator', () =>
+    matchesMarkupAndStyle(<IndicatorUnsaved title="Tab Item 1" />));
+
+  it('render an indicator container', () =>
+    matchesMarkupAndStyle(<IndicatorContainer />));
+
+  it('render an indicator container with children', () =>
+    matchesMarkupAndStyle(
+      <IndicatorContainer>
+        <IndicatorUnread tabType="overflow" />
+      </IndicatorContainer>
+    ));
+});

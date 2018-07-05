@@ -12,6 +12,7 @@ import {
   SubtabList,
   SubtabPanel
 } from '../../tabs/sub-tabs/example';
+import { IndicatorContainer, IndicatorUnread, IndicatorUnsaved } from '../';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -30,28 +31,6 @@ const ShortCutKey = props => (
   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
     <span className="slds-assistive-text">:</span>
     {props.children}
-  </span>
-);
-
-const IndicatorUnsaved = props => (
-  <abbr
-    className="slds-indicator_unsaved"
-    title={props.title || 'Tab Not Saved'}
-  >
-    *
-  </abbr>
-);
-
-const IndicatorUnread = props => (
-  <span
-    aria-label="New Activity"
-    className="slds-indicator_unread"
-    role="alert"
-    title="New Activity"
-  >
-    <span className="slds-assistive-text">
-      New Tab activity with in More Tabs menu
-    </span>
   </span>
 );
 
@@ -80,36 +59,27 @@ export let ContextTab = props => (
       aria-controls={props.tabPanelId}
       id={props.id}
     >
-      {props.itemUnsaved ? (
-        <abbr className="slds-indicator_unsaved" title="Tab Not Saved">
-          *
-        </abbr>
-      ) : null}
-      {props.itemUnread && (
-        <span
-          aria-label="New Activity"
-          className="slds-indicator_unread"
-          role="alert"
-          title="New Activity"
+      <IndicatorContainer>
+        {props.itemUnsaved && <IndicatorUnsaved title="Tab Not Saved" />}
+        {props.itemUnread && (
+          <IndicatorUnread tabName={props.title} tabType="main" />
+        )}
+      </IndicatorContainer>
+      {props.hasIcon && (
+        <div
+          className="slds-icon_container"
+          title={_.startCase(props.symbol) || 'Case'}
         >
+          <SvgIcon
+            className="slds-icon slds-icon_small slds-icon-text-default"
+            sprite="standard"
+            symbol={props.symbol || 'case'}
+          />
           <span className="slds-assistive-text">
-            New activity in Tab: {props.title || 'Subtab Name'}
+            {_.startCase(props.symbol) || 'Case'}
           </span>
-        </span>
+        </div>
       )}
-      <div
-        className="slds-icon_container"
-        title={_.startCase(props.symbol) || 'Case'}
-      >
-        <SvgIcon
-          className="slds-icon slds-icon_small slds-icon-text-default"
-          sprite="standard"
-          symbol={props.symbol || 'case'}
-        />
-        <span className="slds-assistive-text">
-          {_.startCase(props.symbol) || 'Case'}
-        </span>
-      </div>
       <span
         className={classNames(
           'slds-truncate',
@@ -162,6 +132,10 @@ export let ContextTab = props => (
     ) : null}
   </li>
 );
+
+ContextTab.defaultProps = {
+  hasIcon: true
+};
 
 export let ContextTabPanel = props => (
   <div
@@ -329,9 +303,11 @@ export const ContextTabBarOverflow = props => (
       title="More Tab Items"
       aria-haspopup="true"
     >
-      {props.itemUnsaved ? <IndicatorUnsaved /> : null}
-      {props.itemUnread ? <IndicatorUnread /> : null}
-      <span className="slds-p-left_xx-small slds-truncate" title="More Tabs">
+      <IndicatorContainer>
+        {props.itemUnsaved && <IndicatorUnsaved />}
+        {props.itemUnread && <IndicatorUnread tabType="overflow" />}
+      </IndicatorContainer>
+      <span className="slds-truncate" title="More Tabs">
         More <span className="slds-assistive-text">Tabs</span>
       </span>
       <SvgIcon
@@ -349,22 +325,23 @@ export const ContextTabBarOverflow = props => (
           })}
           title="Chat - Customer"
         >
-          {props.itemUnsaved ? (
-            <IndicatorUnsaved title="Tab(s) within menu not saved" />
-          ) : null}
-          {props.itemUnread ? (
-            <span className="slds-indicator_unread" title="New Activity">
-              <span className="slds-assistive-text">New Activity</span>
-            </span>
-          ) : null}
-          <SvgIcon
-            className="slds-icon slds-icon_small slds-icon-text-default"
-            sprite="standard"
-            symbol="live_chat"
-          />
+          <IndicatorContainer>
+            {props.itemUnsaved && (
+              <IndicatorUnsaved title="Tab(s) within menu not saved" />
+            )}
+            {props.itemUnread && <IndicatorUnread tabType="menuItem" />}
+          </IndicatorContainer>
+          {props.itemHasIcon && (
+            <SvgIcon
+              className="slds-icon slds-icon_small slds-icon-text-default"
+              sprite="standard"
+              symbol="live_chat"
+            />
+          )}
           <span>Chat - Customer</span>
         </MenuItem>
         <MenuItem title="Overflow Tab Item">
+          <IndicatorContainer />
           <SvgIcon
             className="slds-icon slds-icon_small slds-icon-text-default"
             sprite="standard"
@@ -376,6 +353,10 @@ export const ContextTabBarOverflow = props => (
     </Menu>
   </li>
 );
+
+ContextTabBarOverflow.defaultProps = {
+  itemHasIcon: true
+};
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -1068,6 +1049,51 @@ export let states = [
             id={tabId03}
           />
           <ContextTabBarOverflow isOpen itemUnread itemUnsaved />
+        </ContextTabBar>
+        <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
+          Tab Home Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId02} tabId={tabId02}>
+          Tab One Content
+        </ContextTabPanel>
+        <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
+          Tab Two Content
+        </ContextTabPanel>
+      </div>
+    )
+  },
+  {
+    id: 'unread-unsaved-overflow-tabs-without-icon-open',
+    label: 'Unread Unsaved Overflow Tabs without Icon - Open',
+    element: (
+      <div className="demo-only" style={{ height: '8rem' }}>
+        <ContextTabBar>
+          <ContextTab
+            title="Home"
+            symbol="home"
+            tabPanelId={tabPanelId01}
+            id={tabId01}
+            itemActive
+          />
+          <ContextTab
+            title="Tab Item 1"
+            tabPanelId={tabPanelId02}
+            id={tabId02}
+          />
+          <ContextTab
+            title="Tab Item 2"
+            tabPanelId={tabPanelId03}
+            id={tabId03}
+            itemUnread
+            itemUnsaved
+            hasIcon={false}
+          />
+          <ContextTabBarOverflow
+            isOpen
+            itemUnread
+            itemUnsaved
+            itemHasIcon={false}
+          />
         </ContextTabBar>
         <ContextTabPanel show id={tabPanelId01} tabId={tabId01}>
           Tab Home Content

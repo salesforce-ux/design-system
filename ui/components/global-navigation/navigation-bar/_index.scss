@@ -403,7 +403,7 @@
 
     .slds-indicator_unsaved,
     .slds-indicator--unsaved {
-      top: rem(-6px);
+      top: rem(-4px);
     }
   }
 }
@@ -507,5 +507,20 @@
     &:before {
       background: #f59331;
     }
+  }
+}
+
+/**
+ * @summary Used to reserve spacing for tab indicators
+ *
+ * @selector .slds-indicator-container
+ * @restrict .slds-context-bar__item div, .slds-sub-tabs__item div
+ */
+.slds-indicator-container {
+  display: inline;
+  margin-right: $spacing-xx-small;
+
+  &:empty {
+    margin-right: 0;
   }
 }

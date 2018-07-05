@@ -437,3 +437,53 @@ props:
     value: '#7A9AE6'
   CUSTOMER_PORTAL_USERS:
     value: '#3C97DB'
+  SYSTEM_AND_GLOBAL_VARIABLE:
+    value: '#54698D'
+  RECORD_LOOKUP:
+    value: '#EB7092'
+  CHOICE:
+    value: '#54698D'
+  SCREEN:
+    value: '#1589EE'
+  APEX_PLUGIN:
+    value: '#54698D'
+  RECORD_UPDATE:
+    value: '#EB7092'
+  COLLECTION_VARIABLE:
+    value: '#54698D'
+  OUTCOME:
+    value: '#FF9A3C'
+  RECORD_CREATE:
+    value: '#FF9A3C'
+  DYNAMIC_RECORD_CHOICE:
+    value: '#54698D'
+  LOOP:
+    value: '#FF9A3C'
+  TEXT_TEMPLATE:
+    value: '#54698D'
+  ASSIGNMENT:
+    value: '#FF9A3C'
+  APEX:
+    value: '#54698D'
+  CONSTANT:
+    value: '#54698D'
+  RECORD_DELETE:
+    value: '#EB7092'
+  DECISION:
+    value: '#FF9A3C'
+  WAITS:
+    value: '#FF9A3C'
+  VARIABLE:
+    value: '#54698D'
+  STEPS:
+    value: '#54698D'
+  ALL:
+    value: '#54698D'
+  FORMULA:
+    value: '#54698D'
+  SOBJECT_COLLECTION:
+    value: '#54698D'
+  PICKLIST_CHOICE:
+    value: '#54698D'
+  GLOBAL_CONSTANT:
+    value: '#54698D'

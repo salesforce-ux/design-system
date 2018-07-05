@@ -29,7 +29,7 @@ export let VisualPicker = props => {
         'slds-visual-picker',
         {
           'slds-visual-picker_large': props.size === 'large',
-          'slds-visual-picker_medium': props.size == 'medium'
+          'slds-visual-picker_medium': props.size === 'medium'
         },
         props.className
       )}

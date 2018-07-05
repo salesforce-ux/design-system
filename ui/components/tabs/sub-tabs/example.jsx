@@ -85,7 +85,7 @@ export const Subtab = props => (
       <div
         className={classNames(
           'slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none',
-          props.actionOverflow == 'true' ? 'slds-is-open' : null
+          props.actionOverflow === 'true' ? 'slds-is-open' : null
         )}
       >
         <ButtonIcon

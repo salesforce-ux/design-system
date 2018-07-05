@@ -30,14 +30,14 @@ const CoordinatesList = props => (
       {data.map((item, key) => (
         <li className="slds-coordinates__item" key={key}>
           <span className="slds-assistive-text" aria-live="polite">
-            {props.selection == key
+            {parseInt(props.selection, 0) === key
               ? item.title + ' is currently selected'
               : null}
           </span>
           <Coordinate
             title={item.title}
             address={item.address}
-            selected={props.selection == key}
+            selected={parseInt(props.selection, 0) === key}
           />
         </li>
       ))}

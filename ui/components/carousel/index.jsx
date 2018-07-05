@@ -90,7 +90,7 @@ class Carousel extends Component {
       <div className={classNames('slds-carousel', this.props.className)}>
         <div className="slds-carousel__stage">
           {this.props.autoPlay && (
-            <CarouselPlayToggle stop={this.props.autoPlay == 'stop'} />
+            <CarouselPlayToggle stop={this.props.autoPlay === 'stop'} />
           )}
 
           <div
@@ -100,7 +100,7 @@ class Carousel extends Component {
             }}
           >
             <CarouselPanel
-              isActive={this.props.panelActive == '1'}
+              isActive={this.props.panelActive === '1'}
               id={contentId01}
               indicatorId={indicatorId01}
               title="Visit App Exchange"
@@ -108,7 +108,7 @@ class Carousel extends Component {
               src="/assets/images/carousel/carousel-01.jpg"
             />
             <CarouselPanel
-              isActive={this.props.panelActive == '2'}
+              isActive={this.props.panelActive === '2'}
               id={contentId02}
               indicatorId={indicatorId02}
               title="Click to Customize"
@@ -116,7 +116,7 @@ class Carousel extends Component {
               src="/assets/images/carousel/carousel-02.jpg"
             />
             <CarouselPanel
-              isActive={this.props.panelActive == '3'}
+              isActive={this.props.panelActive === '3'}
               id={contentId03}
               indicatorId={indicatorId03}
               title="Download SalesforceA"
@@ -127,19 +127,19 @@ class Carousel extends Component {
 
           <ul className="slds-carousel__indicators" role="tablist">
             <CarouselIndicator
-              isActive={this.props.panelActive == '1'}
+              isActive={this.props.panelActive === '1'}
               id={indicatorId01}
               contentId={contentId01}
               title="Visit App Exchange tab"
             />
             <CarouselIndicator
-              isActive={this.props.panelActive == '2'}
+              isActive={this.props.panelActive === '2'}
               id={indicatorId02}
               contentId={contentId02}
               title="Click to Customize tab"
             />
             <CarouselIndicator
-              isActive={this.props.panelActive == '3'}
+              isActive={this.props.panelActive === '3'}
               id={indicatorId03}
               contentId={contentId03}
               title="Download SalesforceA tab"

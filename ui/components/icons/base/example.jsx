@@ -24,7 +24,7 @@ export let UtilityIcon = props => {
         sprite="utility"
         symbol={symbol}
       />
-      {props.assistiveText != false ? (
+      {props.assistiveText !== false ? (
         <span className="slds-assistive-text">
           {props.assistiveText || 'Description of icon when needed'}
         </span>

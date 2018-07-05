@@ -58,12 +58,12 @@ export const TimelineIcon = props => (
   <div
     className={classNames(
       'slds-icon_container',
-      props.symbol == 'log_a_call'
+      props.symbol === 'log_a_call'
         ? 'slds-icon-standard-log-a-call'
         : 'slds-icon-standard-' + props.symbol,
       props.className
     )}
-    title={props.symbol == 'log_a_call' ? 'call' : props.symbol}
+    title={props.symbol === 'log_a_call' ? 'call' : props.symbol}
   >
     <SvgIcon
       className="slds-icon slds-icon_small"

@@ -4,7 +4,7 @@
 /* eslint-env jest */
 
 const tokenMaps = require('../token-maps');
-const F = tokenMaps._internal;
+const TokenMaps = tokenMaps._internal;
 
 //
 
@@ -30,7 +30,7 @@ describe('addTimeDateStamp', () => {
       'foo'
     ];
 
-    F.addTimeDateStamp(fixture).fork(nothingToDo, result => {
+    TokenMaps.addTimeDateStamp(fixture).fork(nothingToDo, result => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expected));
@@ -59,8 +59,8 @@ describe('combineComponentData', () => {
       data: 'data2\n'
     };
 
-    F.combineComponentData(result, newItem1);
-    F.combineComponentData(result, newItem2);
+    TokenMaps.combineComponentData(result, newItem1);
+    TokenMaps.combineComponentData(result, newItem2);
 
     const resultKeys = Object.keys(result).sort();
 
@@ -73,33 +73,33 @@ describe('combineComponentData', () => {
 
 describe('convertSassTokenToAuraToken', () => {
   it('should convert a token with letters and numbers', () => {
-    const result = F.convertSassTokenToAuraToken('$var-font-size-2');
+    const result = TokenMaps.convertSassTokenToAuraToken('$var-font-size-2');
     expect(result).toBe('varFontSize2');
   });
 
   it('should generate a result that contains only letters and numbers without puntuation', () => {
-    const result = F.convertSassTokenToAuraToken('$var-font-size-2)');
+    const result = TokenMaps.convertSassTokenToAuraToken('$var-font-size-2)');
     expect(result).toMatch(/^[a-zA-Z0-9]+$/);
   });
 });
 
 describe('convertSassTokenToYamlToken', () => {
   it('should convert a token to YAML format', () => {
-    const result = F.convertSassTokenToYamlToken('$var-font-size-2');
+    const result = TokenMaps.convertSassTokenToYamlToken('$var-font-size-2');
     expect(result).toBe('VAR_FONT_SIZE_2');
   });
 });
 
 describe('convertYamlTokenToAuraToken', () => {
   it('should convert a YAML token Aura format', () => {
-    const result = F.convertYamlTokenToAuraToken('VAR_FONT_SIZE_2');
+    const result = TokenMaps.convertYamlTokenToAuraToken('VAR_FONT_SIZE_2');
     expect(result).toBe('varFontSize2');
   });
 });
 
 describe('convertYamlTokenToSassToken', () => {
   it('should convert a YAML token Sass format', () => {
-    const result = F.convertYamlTokenToSassToken('VAR_FONT_SIZE_2');
+    const result = TokenMaps.convertYamlTokenToSassToken('VAR_FONT_SIZE_2');
     expect(result).toBe('$var-font-size-2');
   });
 });
@@ -116,7 +116,7 @@ describe('getComponentNameFromPath', () => {
       '/Users/someUser/code/design-system-internal/ui/components';
     const filePath =
       '/Users/someUser/code/design-system-internal/ui/components/feeds/_doc.scss';
-    const result = F.getComponentNameFromPath(filePath, basePath);
+    const result = TokenMaps.getComponentNameFromPath(filePath, basePath);
 
     expect(result).toBe('feeds');
   });
@@ -126,7 +126,7 @@ describe('getComponentNameFromPath', () => {
       '/Users/someUser/code/design-system-internal/ui/components';
     const filePath =
       '/Users/someUser/code/design-system-internal/ui/components/feeds/post/_index.scss';
-    const result = F.getComponentNameFromPath(filePath, basePath);
+    const result = TokenMaps.getComponentNameFromPath(filePath, basePath);
 
     expect(result).toBe('feeds');
   });
@@ -134,27 +134,29 @@ describe('getComponentNameFromPath', () => {
 
 describe('getSassTokensInValue', () => {
   it('should not return anything for an empty string', () => {
-    const result = F.getSassTokensInValue('');
+    const result = TokenMaps.getSassTokensInValue('');
     expect(result).toHaveLength(0);
   });
 
   it('should not return anything for a string without tokens', () => {
-    const result = F.getSassTokensInValue('no tokens here!');
+    const result = TokenMaps.getSassTokensInValue('no tokens here!');
     expect(result).toHaveLength(0);
   });
 
   it('should return 1 token in a string that has 1 token', () => {
-    const result = F.getSassTokensInValue('$token-number-1 !important');
+    const result = TokenMaps.getSassTokensInValue('$token-number-1 !important');
     expect(result).toHaveLength(1);
     expect(result[0]).toBe('$token-number-1');
   });
 
   it('should ensure the token is just a token', () => {
-    const result = F.getSassTokensInValue('mysteryFunc($token-as-parameter)');
+    const result = TokenMaps.getSassTokensInValue(
+      'mysteryFunc($token-as-parameter)'
+    );
     expect(result).toHaveLength(1);
     expect(result[0]).toBe('$token-as-parameter');
 
-    const result2 = F.getSassTokensInValue(
+    const result2 = TokenMaps.getSassTokensInValue(
       '$--some_variable/$--some_other-variable_2'
     );
     expect(result2).toHaveLength(2);
@@ -165,27 +167,27 @@ describe('getSassTokensInValue', () => {
 
 describe('isSassToken', () => {
   it('should reject empty strings', () => {
-    const result = F.isSassToken('');
+    const result = TokenMaps.isSassToken('');
     expect(result).toBeFalsy();
   });
 
   it('should reject strings without a starting $', () => {
-    const result = F.isSassToken('a-token-without-dollars');
+    const result = TokenMaps.isSassToken('a-token-without-dollars');
     expect(result).toBeFalsy();
   });
 
   it('should reject identifiers starting with a number', () => {
-    const result = F.isSassToken('$42-is-not-the-answer');
+    const result = TokenMaps.isSassToken('$42-is-not-the-answer');
     expect(result).toBeFalsy();
   });
 
   it('should reject identifiers with non-letter/non-number characters', () => {
-    const result = F.isSassToken('$this-has-an-extra-paren)');
+    const result = TokenMaps.isSassToken('$this-has-an-extra-paren)');
     expect(result).toBeFalsy();
   });
 
   it('should allow valid token names', () => {
-    const result = F.isSassToken('$_some-Awesome-Token');
+    const result = TokenMaps.isSassToken('$_some-Awesome-Token');
     expect(result).toBeTruthy();
   });
 });
@@ -291,7 +293,7 @@ describe('parseScssForTokens', () => {
     const expectedCssSelector =
       '.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link';
 
-    F.setTokensMap({
+    TokenMaps.setTokensMap({
       colorBackgroundPathWon: { value: 'value1' },
       colorBorder: { value: 'value2' },
       colorBorderPathDivider: { value: 'value3' },
@@ -300,7 +302,7 @@ describe('parseScssForTokens', () => {
       lineHeightSalespath: { value: 'value6' },
       varSpacingVerticalSmall: { value: 'value7' }
     });
-    F.parseScssForTokens(fixture).then(result => {
+    TokenMaps.parseScssForTokens(fixture).then(result => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expectedTokens));
@@ -343,7 +345,7 @@ describe('removeDataInScss', () => {
       .sort();
     const expectedDataValues = ['still here', 'still here2'];
 
-    F.removeDataInScss(fixture).fork(nothingToDo, result => {
+    TokenMaps.removeDataInScss(fixture).fork(nothingToDo, result => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expectedKeys));
@@ -357,7 +359,7 @@ describe('removeDataInScss', () => {
 
 describe('sanitizePath', () => {
   it('should remove the root path', () => {
-    const result = F.sanitizePath(__dirname);
+    const result = TokenMaps.sanitizePath(__dirname);
 
     expect(result).toBe('/scripts/compile/__tests__');
   });
@@ -382,7 +384,7 @@ describe('sanitizeScss', () => {
       '.otherClass {\n' +
       '  is-it-cool: yes;\n' +
       '}\n';
-    const result = F.sanitizeScss(fixture);
+    const result = TokenMaps.sanitizeScss(fixture);
 
     expect(result).toBe(expected);
   });
@@ -410,7 +412,7 @@ describe('sanitizeScss', () => {
       '.otherClass {\n' +
       '  is-it-cool: yes;\n' +
       '}\n';
-    const result = F.sanitizeScss(fixture);
+    const result = TokenMaps.sanitizeScss(fixture);
 
     expect(result).toBe(expected);
   });
@@ -419,7 +421,7 @@ describe('sanitizeScss', () => {
 describe('sanitizeSelector', () => {
   it('should remove spaces', () => {
     const fixture = '  .slds   .slds-path,\n  .slds  .slds-path__nav ';
-    const result = F.sanitizeSelector(fixture);
+    const result = TokenMaps.sanitizeSelector(fixture);
 
     expect(result).toBe('.slds .slds-path, .slds .slds-path__nav');
   });
@@ -441,7 +443,7 @@ describe('sanitizeRawToken', () => {
         "name": "VAR_LINE_HEIGHT_TEXT"
       }
     }`)['VAR_LINE_HEIGHT_TEXT'];
-    const result = F.sanitizeRawToken(fixture);
+    const result = TokenMaps.sanitizeRawToken(fixture);
 
     expect(result.category).toBe('line-height');
     expect(result.type).toBe('number');
@@ -464,7 +466,9 @@ describe('sanitizeRawToken', () => {
 
 describe('stripSpaces', () => {
   it('should strip spaces at the ends of the string but not in the middle', () => {
-    const result = F.stripSpaces('  \tThis  is a\ntest of    string        ');
+    const result = TokenMaps.stripSpaces(
+      '  \tThis  is a\ntest of    string        '
+    );
     expect(result).toBe('This  is a\ntest of    string');
   });
 });
@@ -503,7 +507,7 @@ describe('uniqConcat', () => {
     ];
 
     let array;
-    itemsToConcat.forEach(item => (array = F.uniqConcat(array, item)));
+    itemsToConcat.forEach(item => (array = TokenMaps.uniqConcat(array, item)));
 
     expect(array).toEqual(expect.arrayContaining(expected));
   });
@@ -513,21 +517,21 @@ describe('validComponentNameFromPath', () => {
   it('should allow a valid name', () => {
     const baseDir = '/a/base/dir';
     const aPath = '/a/base/dir/super-component-3000/base/_index.scss';
-    const result = F.validComponentNameFromPath(aPath, baseDir);
+    const result = TokenMaps.validComponentNameFromPath(aPath, baseDir);
     expect(result).toBeTruthy();
   });
 
   it('should reject names starting with numbers', () => {
     const baseDir = '/a/base/dir';
     const aPath = '/a/base/dir/3000-super-component/base/_index.scss';
-    const result = F.validComponentNameFromPath(aPath, baseDir);
+    const result = TokenMaps.validComponentNameFromPath(aPath, baseDir);
     expect(result).toBeFalsy();
   });
 
   it('should reject names starting with non-alpha', () => {
     const baseDir = '/a/base/dir';
     const aPath = '/a/base/dir/.supersecret/base/_index.scss';
-    const result = F.validComponentNameFromPath(aPath, baseDir);
+    const result = TokenMaps.validComponentNameFromPath(aPath, baseDir);
     expect(result).toBeFalsy();
   });
 });
@@ -535,37 +539,37 @@ describe('validComponentNameFromPath', () => {
 describe('valueContainsSassTokens', () => {
   it('should detect a Sass token starting with a letter', () => {
     const fixture = 'blah blah $foo-bar-blah foo foo';
-    const result = F.valueContainsSassTokens(fixture);
+    const result = TokenMaps.valueContainsSassTokens(fixture);
     expect(result).toBeTruthy();
   });
 
   it('should detect a Sass token starting with dashes', () => {
     const fixture = 'blah blah $--another-token-3 foo foo';
-    const result = F.valueContainsSassTokens(fixture);
+    const result = TokenMaps.valueContainsSassTokens(fixture);
     expect(result).toBeTruthy();
   });
 
   it('should not find a bare $', () => {
     const fixture = 'blah blah $ foo foo';
-    const result = F.valueContainsSassTokens(fixture);
+    const result = TokenMaps.valueContainsSassTokens(fixture);
     expect(result).toBeFalsy();
   });
 
   it('should not find a token beginning with a number', () => {
     const fixture = 'blah blah $3-little-pigs foo foo';
-    const result = F.valueContainsSassTokens(fixture);
+    const result = TokenMaps.valueContainsSassTokens(fixture);
     expect(result).toBeFalsy();
   });
 });
 
 describe('validRawTokensDistFile', () => {
   it('should allow .raw.json files', () => {
-    const result = F.validRawTokensDistFile('/some/path/foo.raw.json');
+    const result = TokenMaps.validRawTokensDistFile('/some/path/foo.raw.json');
     expect(result).toBeTruthy();
   });
 
   it('should disallow other files', () => {
-    const result = F.validRawTokensDistFile('/some/path/foo.json');
+    const result = TokenMaps.validRawTokensDistFile('/some/path/foo.json');
     expect(result).toBeFalsy();
   });
 });

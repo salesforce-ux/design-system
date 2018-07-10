@@ -20,12 +20,12 @@ const packageJson = require('../../package.json');
 
 //
 
-let F = {};
+let TokenMaps = {};
 let tokensMap = {};
 
 //
 
-F.addTimeDateStamp = aMap =>
+TokenMaps.addTimeDateStamp = aMap =>
   new Task((reject, resolve) => {
     resolve(
       Object.assign(aMap, {
@@ -36,54 +36,55 @@ F.addTimeDateStamp = aMap =>
     );
   });
 
-F.combineComponentData = (accumulator, item) => {
+TokenMaps.combineComponentData = (accumulator, item) => {
   const componentName = item.componentName;
   const old = accumulator[componentName] || {};
 
   accumulator[componentName] = Object.assign({}, old, {
     componentName: componentName,
     path: item.path,
-    data: F.stripSpaces((old.data ? old.data + '\n' : '') + item.data)
+    data: TokenMaps.stripSpaces((old.data ? old.data + '\n' : '') + item.data)
   });
 
   return accumulator;
 };
 
-F.convertSassTokenToAuraToken = sassToken => _.camelCase(sassToken);
+TokenMaps.convertSassTokenToAuraToken = sassToken => _.camelCase(sassToken);
 
-F.convertSassTokenToYamlToken = sassToken =>
+TokenMaps.convertSassTokenToYamlToken = sassToken =>
   _.snakeCase(sassToken).toUpperCase();
 
-F.convertYamlTokenToAuraToken = yamlToken => _.camelCase(yamlToken);
+TokenMaps.convertYamlTokenToAuraToken = yamlToken => _.camelCase(yamlToken);
 
-F.convertYamlTokenToSassToken = yamlToken => `$${_.kebabCase(yamlToken)}`;
+TokenMaps.convertYamlTokenToSassToken = yamlToken =>
+  `$${_.kebabCase(yamlToken)}`;
 
-F.createAuraTokensMap = () =>
-  F.loadTokens()
-    .chain(F.addTimeDateStamp)
-    .chain(F.writeAuraTokensMap);
+TokenMaps.createAuraTokensMap = () =>
+  TokenMaps.loadTokens()
+    .chain(TokenMaps.addTimeDateStamp)
+    .chain(TokenMaps.writeAuraTokensMap);
 
-F.createTokenComponentMap = () =>
-  F.loadTokens()
-    .chain(F.loadComponentsScss)
-    .chain(F.parseComponentsScss)
-    .chain(F.removeDataInScss)
-    .chain(F.addTimeDateStamp)
-    .chain(F.writeTokenComponentMap);
+TokenMaps.createTokenComponentMap = () =>
+  TokenMaps.loadTokens()
+    .chain(TokenMaps.loadComponentsScss)
+    .chain(TokenMaps.parseComponentsScss)
+    .chain(TokenMaps.removeDataInScss)
+    .chain(TokenMaps.addTimeDateStamp)
+    .chain(TokenMaps.writeTokenComponentMap);
 
-F.getComponentsPath = () => path.join(paths.ui, 'components');
+TokenMaps.getComponentsPath = () => path.join(paths.ui, 'components');
 
-F.getComponentNameFromPath = (aPath, basePath) =>
+TokenMaps.getComponentNameFromPath = (aPath, basePath) =>
   aPath
     .replace(basePath, '')
     .replace(/^\s*\//, '')
     .replace(/\/.*$/, '');
 
-F.getSassTokensInValue = value =>
+TokenMaps.getSassTokensInValue = value =>
   value
     .replace(/(\$-*[_a-zA-Z][a-zA-Z0-9_-]+)/gm, ' $1 ')
     .split(/\s+/)
-    .filter(F.isSassToken);
+    .filter(TokenMaps.isSassToken);
 
 // Sass' Ruby code states:
 //
@@ -91,43 +92,46 @@ F.getSassTokensInValue = value =>
 //
 // NMSTART  = /[_a-zA-Z]|#{NONASCII}|#{ESCAPE}/
 // NMCHAR   = /[a-zA-Z0-9_-]|#{NONASCII}|#{ESCAPE}/
-F.isSassToken = value => value.match(/^\$-*[_a-zA-Z][a-zA-Z0-9_-]+$/);
+TokenMaps.isSassToken = value => value.match(/^\$-*[_a-zA-Z][a-zA-Z0-9_-]+$/);
 
-F.loadComponentsScss = configs =>
+TokenMaps.loadComponentsScss = configs =>
   new Task((reject, resolve) => {
-    const componentsPath = F.getComponentsPath();
+    const componentsPath = TokenMaps.getComponentsPath();
     const scssComponentsMap = glob
       .sync(path.resolve(componentsPath, '**/*.scss'))
       .sort()
       .filter(scssPath =>
-        F.validComponentNameFromPath(scssPath, componentsPath)
+        TokenMaps.validComponentNameFromPath(scssPath, componentsPath)
       )
       .map(scssPath => ({
-        path: F.sanitizePath(scssPath),
-        componentName: F.getComponentNameFromPath(scssPath, componentsPath),
+        path: TokenMaps.sanitizePath(scssPath),
+        componentName: TokenMaps.getComponentNameFromPath(
+          scssPath,
+          componentsPath
+        ),
         data: fs.readFileSync(scssPath, 'utf-8').toString()
       }))
-      .reduce(F.combineComponentData, {});
+      .reduce(TokenMaps.combineComponentData, {});
 
     resolve(scssComponentsMap);
   });
 
-F.loadTokens = () =>
+TokenMaps.loadTokens = () =>
   new Task((reject, resolve) => {
     const tokensPath = path.join(paths.designTokens, 'dist');
 
     // Update global
     tokensMap = glob
       .sync(path.resolve(tokensPath, '**/*.raw.json'))
-      .filter(tokenPath => F.validRawTokensDistFile(tokenPath))
+      .filter(tokenPath => TokenMaps.validRawTokensDistFile(tokenPath))
       .map(tokenPath => fs.readFileSync(tokenPath, 'utf-8').toString())
       .map(jsonText => JSON.parse(jsonText).props || {})
       .reduce((tokensMap, json) => {
         Object.keys(json).forEach(
           yamlKey =>
             (tokensMap[
-              F.convertYamlTokenToAuraToken(yamlKey)
-            ] = F.sanitizeRawToken(json[yamlKey]))
+              TokenMaps.convertYamlTokenToAuraToken(yamlKey)
+            ] = TokenMaps.sanitizeRawToken(json[yamlKey]))
         );
         return tokensMap;
       }, {});
@@ -135,18 +139,18 @@ F.loadTokens = () =>
     resolve(tokensMap);
   });
 
-F.parseComponentsScss = scssComponentsMap =>
+TokenMaps.parseComponentsScss = scssComponentsMap =>
   new Task((reject, resolve) =>
     Promise.all(
       Object.keys(scssComponentsMap).map(componentName =>
-        F.parseScssForTokens(scssComponentsMap[componentName].data).then(
-          tokens => (scssComponentsMap[componentName].tokens = tokens)
-        )
+        TokenMaps.parseScssForTokens(
+          scssComponentsMap[componentName].data
+        ).then(tokens => (scssComponentsMap[componentName].tokens = tokens))
       )
     ).then(() => resolve(scssComponentsMap))
   );
 
-F.parseScssForTokens = scss =>
+TokenMaps.parseScssForTokens = scss =>
   new Promise((resolve, reject) => {
     let results = {};
     let tkeys = Object.keys(tokensMap);
@@ -155,27 +159,27 @@ F.parseScssForTokens = scss =>
       'postcss-walker',
       options => (root, result) => {
         root.walkRules(rule => {
-          const selector = F.sanitizeSelector(rule.selector);
+          const selector = TokenMaps.sanitizeSelector(rule.selector);
           rule.walkDecls(declaration => {
             const { prop, value } = declaration;
 
-            if (F.valueContainsSassTokens(value)) {
-              F.getSassTokensInValue(value).forEach(sassTokenName => {
-                const auraTokenName = F.convertSassTokenToAuraToken(
+            if (TokenMaps.valueContainsSassTokens(value)) {
+              TokenMaps.getSassTokensInValue(value).forEach(sassTokenName => {
+                const auraTokenName = TokenMaps.convertSassTokenToAuraToken(
                   sassTokenName
                 );
-                const yamlTokenName = F.convertSassTokenToYamlToken(
+                const yamlTokenName = TokenMaps.convertSassTokenToYamlToken(
                   sassTokenName
                 );
 
                 const oldData = results[auraTokenName] || {};
                 results[auraTokenName] = Object.assign({}, oldData, {
                   auraTokenName: auraTokenName,
-                  cssProperties: F.uniqConcat(
+                  cssProperties: TokenMaps.uniqConcat(
                     oldData.cssProperties,
                     prop
                   ).sort(),
-                  cssSelectors: F.uniqConcat(
+                  cssSelectors: TokenMaps.uniqConcat(
                     oldData.cssSelectors,
                     selector
                   ).sort(),
@@ -193,7 +197,7 @@ F.parseScssForTokens = scss =>
       }
     );
 
-    const safeScss = F.sanitizeScss(scss);
+    const safeScss = TokenMaps.sanitizeScss(scss);
     const precssOptions = {
       unresolved: 'ignore'
     };
@@ -204,7 +208,7 @@ F.parseScssForTokens = scss =>
       });
   });
 
-F.removeDataInScss = scssComponentsMap =>
+TokenMaps.removeDataInScss = scssComponentsMap =>
   new Task((reject, resolve) => {
     Object.keys(scssComponentsMap).forEach(componentName => {
       delete scssComponentsMap[componentName].data;
@@ -213,59 +217,61 @@ F.removeDataInScss = scssComponentsMap =>
     resolve(scssComponentsMap);
   });
 
-F.sanitizePath = path => path.replace(paths.root, '');
+TokenMaps.sanitizePath = path => path.replace(paths.root, '');
 
-F.sanitizeRawToken = token => ({
+TokenMaps.sanitizeRawToken = token => ({
   category: token.category,
   comment: token.comment,
   type: token.type,
   cssProperties: token.cssProperties || [],
   value: token.value,
-  auraToken: F.convertYamlTokenToAuraToken(token.name),
-  sassToken: F.convertYamlTokenToSassToken(token.name),
+  auraToken: TokenMaps.convertYamlTokenToAuraToken(token.name),
+  sassToken: TokenMaps.convertYamlTokenToSassToken(token.name),
   yamlToken: token.name
 });
 
-F.sanitizeScss = scss =>
+TokenMaps.sanitizeScss = scss =>
   scss.replace(/\s*\/\/.*$/gm, '').replace(/\s*\/\*(.|\n)*?\*\/\s*/gm, '\n');
 
-F.sanitizeSelector = selector => F.stripSpaces(selector).replace(/\s+/gm, ' ');
+TokenMaps.sanitizeSelector = selector =>
+  TokenMaps.stripSpaces(selector).replace(/\s+/gm, ' ');
 
-F.setTokensMap = newMap => (tokensMap = newMap);
+TokenMaps.setTokensMap = newMap => (tokensMap = newMap);
 
-F.stripSpaces = string =>
+TokenMaps.stripSpaces = string =>
   String(string || '')
     .replace(/^\s+/, '')
     .replace(/\s+$/, '');
 
-F.uniqConcat = (array, value) =>
+TokenMaps.uniqConcat = (array, value) =>
   array ? (array.includes(value) ? array : array.concat([value])) : [value];
 
 // Names should only have valid characters
-F.validComponentNameFromPath = (scssPath, componentsPath) =>
-  F.getComponentNameFromPath(scssPath, componentsPath).match(
+TokenMaps.validComponentNameFromPath = (scssPath, componentsPath) =>
+  TokenMaps.getComponentNameFromPath(scssPath, componentsPath).match(
     /^[a-zA-Z][a-zA-Z0-9_\-]+$/
   );
 
-F.valueContainsSassTokens = value =>
+TokenMaps.valueContainsSassTokens = value =>
   String(value).match(/\$-*[_a-zA-Z][a-zA-Z0-9_-]+/);
 
-F.validRawTokensDistFile = tokenPath => tokenPath.match(/\/[^.]+\.raw\.json+$/);
+TokenMaps.validRawTokensDistFile = tokenPath =>
+  tokenPath.match(/\/[^.]+\.raw\.json+$/);
 
-F.writeAuraTokensMap = allTokens =>
+TokenMaps.writeAuraTokensMap = allTokens =>
   writeFile(
     path.join(paths.dist, 'ui.aura-tokens.json'),
     JSON.stringify(allTokens)
   );
 
-F.writeTokenComponentMap = scssComponentsMap =>
+TokenMaps.writeTokenComponentMap = scssComponentsMap =>
   writeFile(
     path.join(paths.dist, 'ui.component-tokens.json'),
     JSON.stringify(scssComponentsMap)
   );
 
 module.exports = {
-  createAuraTokensMap: F.createAuraTokensMap,
-  createTokenComponentMap: F.createTokenComponentMap,
-  _internal: F
+  createAuraTokensMap: TokenMaps.createAuraTokensMap,
+  createTokenComponentMap: TokenMaps.createTokenComponentMap,
+  _internal: TokenMaps
 };

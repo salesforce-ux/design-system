@@ -64,7 +64,7 @@ IndicatorUnread.propTypes = {
 };
 
 export const IndicatorContainer = props => (
-  <div className="slds-indicator-container">{props.children}</div>
+  <span className="slds-indicator-container">{props.children}</span>
 );
 
 IndicatorContainer.propTypes = {

@@ -34,14 +34,19 @@ const lint = function(dir, opt, cb) {
     opt
   );
 
+  let filesToValidate = '';
+  dir.forEach(file => {
+    filesToValidate += file + ' ';
+  });
+
   // Set options
   Object.keys(options).forEach(key => {
     let val = options[key];
     if (key === 'format' && val !== 'gnu') vnu += '--format ' + val + ' ';
     if (val === true) vnu += ' --' + key + ' ';
   });
-  console.log(vnu, dir);
-  const child = exec(`${vnu} ${dir}`, { maxBuffer: Infinity }, e =>
+  console.log(vnu, filesToValidate);
+  const child = exec(`${vnu} ${filesToValidate}`, { maxBuffer: Infinity }, e =>
     cb(e, output)
   );
 

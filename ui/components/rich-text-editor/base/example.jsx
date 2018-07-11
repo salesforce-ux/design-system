@@ -78,7 +78,6 @@ export const RteFormula = props => {
   const listboxId2 = _.uniqueId('listbox-id-');
   const primaryComboboxId1 = _.uniqueId('primary-combobox-id-');
   const primaryComboboxId2 = _.uniqueId('primary-combobox-id-');
-  const inputLabel = 'Input Label';
   const inputId = _.uniqueId('text-input-id-');
 
   return (
@@ -103,6 +102,7 @@ export const RteFormula = props => {
               id={_.uniqueId('combobox-id-')}
               listboxId={_.uniqueId('objectswitcher-listbox-id-')}
               value="Apex"
+              label="Filter resources by:"
               filteredSymbol="apex"
               addonPosition="start"
               comboboxAriaControls={primaryComboboxId1}
@@ -113,6 +113,7 @@ export const RteFormula = props => {
           inputIconPosition="right"
           placeholder="Insert a resource"
           hideLabel
+          label="Insert a Resource"
           rightInputIcon={
             <UtilityIcon
               symbol="search"
@@ -144,6 +145,7 @@ export const RteFormula = props => {
               id={_.uniqueId('combobox-id-')}
               listboxId={_.uniqueId('objectswitcher-listbox-id-')}
               value="Apex"
+              label="Filter functions by:"
               filteredSymbol="apex"
               addonPosition="start"
               comboboxAriaControls={primaryComboboxId2}
@@ -154,6 +156,7 @@ export const RteFormula = props => {
           inputIconPosition="right"
           placeholder="Insert a function"
           hideLabel
+          label="Insert a function"
           rightInputIcon={
             <UtilityIcon
               symbol="search"
@@ -166,7 +169,11 @@ export const RteFormula = props => {
         />
       </div>
       <div className="slds-rich-text-editor__col slds-rich-text-editor__col_grow">
-        <FormElement hasHiddenLabel labelContent={inputLabel} inputId={inputId}>
+        <FormElement
+          hasHiddenLabel
+          labelContent={'Insert operator'}
+          inputId={inputId}
+        >
           <Input id={inputId} placeholder="Insert operator" />
         </FormElement>
       </div>
@@ -515,7 +522,7 @@ export let RteTextarea = props => (
     ) : (
       <div
         aria-describedby={props['aria-describedby']}
-        aria-label={!props.labelId ? 'Compose text' : null}
+        aria-label={!props.labelId ? props.label || 'Compose text' : null}
         aria-labelledby={props.labelId}
         contentEditable={!props.disabled ? 'true' : null}
         suppressContentEditableWarning
@@ -904,7 +911,7 @@ export let examples = [
             <RteClearFormatting />
           </RteToolbar>
 
-          <RteTextarea placeholder="Compose Email..." />
+          <RteTextarea label="Compose email" placeholder="Compose Email..." />
         </RichTextEditor>
       </Demo>
     )
@@ -925,7 +932,7 @@ export let examples = [
             <RteClearFormatting />
           </RteToolbar>
 
-          <RteTextarea placeholder="Compose Email..." />
+          <RteTextarea label="Compose email" placeholder="Compose Email..." />
         </RichTextEditor>
       </Demo>
     )
@@ -945,7 +952,7 @@ export let examples = [
             <RteClearFormatting />
           </RteToolbar>
 
-          <RteTextarea placeholder="Post to feed..." />
+          <RteTextarea label="Post to feed" placeholder="Post to feed..." />
         </RichTextEditor>
       </Demo>
     )
@@ -962,7 +969,7 @@ export let examples = [
             <RteInsertContent />
             <RteClearFormatting />
           </RteToolbar>
-          <RteTextarea placeholder="Compose Note..." />
+          <RteTextarea label="Compose note" placeholder="Compose Note..." />
         </RichTextEditor>
       </Demo>
     )

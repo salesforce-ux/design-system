@@ -20,7 +20,7 @@ export const Formula = props => (
         <RteToolbar>
           <RteFormula />
         </RteToolbar>
-        <RteTextarea placeholder="Compose text..." />
+        <RteTextarea label="Compose formula" placeholder="Compose formula..." />
       </RichTextEditor>
     </div>
     <div className="slds-m-top_small">

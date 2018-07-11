@@ -78,7 +78,8 @@ export class IconObjectSwitcher extends Component {
       addonPosition,
       comboboxAriaControls,
       hasInteractions,
-      listboxId
+      listboxId,
+      label
     } = this.props;
 
     return (
@@ -93,7 +94,7 @@ export class IconObjectSwitcher extends Component {
           className="slds-has-icon-only"
           aria-controls={listboxId || listboxId02}
           comboboxAriaControls={comboboxAriaControls}
-          label="Filter Search by:"
+          label={label || 'Filter Search by:'}
           hideLabel
           inputIconPosition="left-right"
           placeholder=" "

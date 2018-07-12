@@ -15,93 +15,93 @@
 .slds-popover {
   @include popover($shadow: $shadow-drop-down);
   border: $border-width-thin solid $color-border;
+}
 
-  /**
-   * @summary Applies syles for primary content area of popover
-   * @selector .slds-popover__body
-   * @restrict .slds-popover div
-   */
-  &__body,
-  &__header,
-  &__footer {
-    position: relative;
-    padding: $spacing-x-small $spacing-small;
-  }
+/**
+ * @summary Applies syles for primary content area of popover
+ * @selector .slds-popover__body
+ * @restrict .slds-popover div
+ */
+.slds-popover__body,
+.slds-popover__header,
+.slds-popover__footer {
+  position: relative;
+  padding: $spacing-x-small $spacing-small;
+  word-wrap: break-word;
+}
 
-  /**
-   * @summary Applies styles for top area of popover
-   * @selector .slds-popover__header
-   * @restrict .slds-popover header, .slds-popover div
-   */
-  &__header {
-    border-bottom: $border-width-thin solid $color-border;
-  }
+/**
+ * @summary Applies styles for top area of popover
+ * @selector .slds-popover__header
+ * @restrict .slds-popover header, .slds-popover div
+ */
+.slds-popover__header {
+  border-bottom: $border-width-thin solid $color-border;
+}
 
-  /**
-   * @summary Applies styles for footer area of popover
-   * @selector .slds-popover__footer
-   * @restrict .slds-popover footer
-   */
-  &__footer {
-    border-top: $border-width-thin solid $color-border;
-  }
+/**
+ * @summary Applies styles for footer area of popover
+ * @selector .slds-popover__footer
+ * @restrict .slds-popover footer
+ */
+.slds-popover__footer {
+  border-top: $border-width-thin solid $color-border;
+}
 
-  /**
-   * @summary Close button within a popover
-   * @selector .slds-popover__close
-   * @restrict .slds-popover button
-   */
-  &__close {
-    position: relative;
-    margin: $spacing-xx-small;
-    z-index: ($z-index-dialog + 1);
-  }
+/**
+  * @summary Close button within a popover
+  * @selector .slds-popover__close
+  * @restrict .slds-popover button
+  */
+.slds-popover__close {
+  position: relative;
+  margin: $spacing-xx-small;
+  z-index: ($z-index-dialog + 1);
+}
 
-  /**
-   * @summary Width modifier for popover - small
-   * @selector .slds-popover_small
-   * @restrict .slds-popover
-   * @modifier
-   * @group width
-   */
-  &_small,
-  &--small {
-    max-width: $size-small;
-  }
+/**
+  * @summary Width modifier for popover - small
+  * @selector .slds-popover_small
+  * @restrict .slds-popover
+  * @modifier
+  * @group width
+  */
+.slds-popover_small,
+.slds-popover--small {
+  max-width: $size-small;
+}
 
-  /**
-   * @summary Width modifier for popover - medium
-   * @selector .slds-popover_medium
-   * @restrict .slds-popover
-   * @modifier
-   * @group width
-   */
-  &_medium,
-  &--medium {
-    min-width: $size-medium;
-  }
+/**
+  * @summary Width modifier for popover - medium
+  * @selector .slds-popover_medium
+  * @restrict .slds-popover
+  * @modifier
+  * @group width
+  */
+.slds-popover_medium,
+.slds-popover--medium {
+  min-width: $size-medium;
+}
 
-  /**
-   * @summary Width modifier for popover - large
-   * @selector .slds-popover_large
-   * @restrict .slds-popover
-   * @modifier
-   * @group width
-   */
-  &_large,
-  &--large {
-    min-width: $size-large;
-    max-width: $max-width-action-overflow-menu;
-  }
+/**
+  * @summary Width modifier for popover - large
+  * @selector .slds-popover_large
+  * @restrict .slds-popover
+  * @modifier
+  * @group width
+  */
+.slds-popover_large,
+.slds-popover--large {
+  min-width: $size-large;
+  max-width: $max-width-action-overflow-menu;
+}
 
-  // Remove border if theme modifier is applied
-  &[class*="theme_"],
-  &[class*="theme--"] {
-    border: 0;
-  }
+// Remove border if theme modifier is applied
+.slds-popover[class*="theme_"],
+.slds-popover[class*="theme--"] {
+  border: 0;
+}
 
-  *:last-child {
-
-    margin-bottom: 0;
-  }
+.slds-popover *:last-child {
+  margin-bottom: 0;
 }

@@ -454,7 +454,7 @@ props:
   OUTCOME:
     value: '#FF9A3C'
   RECORD_CREATE:
-    value: '#FF9A3C'
+    value: '#EB7092'
   DYNAMIC_RECORD_CHOICE:
     value: '#54698D'
   LOOP:
@@ -487,3 +487,49 @@ props:
     value: '#54698D'
   GLOBAL_CONSTANT:
     value: '#54698D'
+  MULTI_PICKLIST:
+    value: '#969492'
+  CURRENCY:
+    value: '#969492'
+  TEXT:
+    value: '#969492'
+  DATE_TIME:
+    value: '#969492'
+  SOBJECT:
+    value: '#969492'
+  PASSWORD:
+    value: '#969492'
+  DATE_INPUT:
+    value: '#969492'
+  CURRENCY_INPUT:
+    value: '#969492'
+  TEXTAREA:
+    value: '#969492'
+  TEXTBOX:
+    value: '#969492'
+  DISPLAY_RICH_TEXT:
+    value: '#969492'
+  DISPLAY_TEXT:
+    value: '#969492'
+  MULTI_SELECT_CHECKBOX:
+    value: '#969492'
+  LIGHTNING_COMPONENT:
+    value: '#969492'
+  NUMBER_INPUT:
+    value: '#969492'
+  RADIO_BUTTON:
+    value: '#969492'
+  PICKLIST_TYPE:
+    value: '#969492'
+  WORK_TYPE_GROUP:
+    value: '#0079BC'
+  WORK_CAPACITY_USAGE:
+    value: '#0079BC'
+  WORK_CAPACITY_LIMIT:
+    value: '#0079BC'
+  SERVICE_APPOINTMENT_CAPACITY_USAGE:
+    value: '#0079BC'
+  LIGHTNING_USAGE:
+    value: '#7E8BE4'
+  BOT_TRAINING:
+    value: '#5876A3'

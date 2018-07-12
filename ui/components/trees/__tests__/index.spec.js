@@ -2,37 +2,46 @@
 import React from 'react';
 
 import {
-  TreeGrid,
-  ExpandedRow,
-  DefaultRows,
-  DeepNestingRows
-} from '../grid/example';
+  TreeGrid as DeprecatedTreeGrid,
+  ExpandedRow as DeprecatedExpandedRow,
+  DefaultRows as DeprecatedDefaultRows,
+  DeepNestingRows as DeprecatedNestingRows
+} from '../__deprecated__/grid_2_6_0';
 import { BaseTree } from '../base/example';
 
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
 
-it('renders a default Treegrid', () =>
-  matchesMarkupAndStyle(
-    <TreeGrid>
-      <DefaultRows />
-    </TreeGrid>
-  ));
+describe('tree', () => {
+  it('renders a base Tree with metatext', () =>
+    matchesMarkupAndStyle(<BaseTree hasMetatext />));
+});
 
-it('renders an expanded Treegrid', () =>
-  matchesMarkupAndStyle(
-    <TreeGrid>
-      <DefaultRows isExpanded additionalItem={<ExpandedRow />} />
-    </TreeGrid>
-  ));
+describe('treegrid', () => {});
 
-it('renders a base Tree with metatext', () =>
-  matchesMarkupAndStyle(<BaseTree hasMetatext />));
+describe('deprected treegrid', () => {
+  it('renders a default DeprecatedTreeGrid', () =>
+    matchesMarkupAndStyle(
+      <DeprecatedTreeGrid>
+        <DeprecatedDefaultRows />
+      </DeprecatedTreeGrid>
+    ));
 
-it('renders a deeply nested Treegrid', () =>
-  matchesMarkupAndStyle(
-    <TreeGrid>
-      <DeepNestingRows />
-    </TreeGrid>
-  ));
+  it('renders an expanded DeprecatedTreeGrid', () =>
+    matchesMarkupAndStyle(
+      <DeprecatedTreeGrid>
+        <DeprecatedDefaultRows
+          isExpanded
+          additionalItem={<DeprecatedExpandedRow />}
+        />
+      </DeprecatedTreeGrid>
+    ));
+
+  it('renders a deeply nested DeprecatedTreeGrid', () =>
+    matchesMarkupAndStyle(
+      <DeprecatedTreeGrid>
+        <DeprecatedNestingRows />
+      </DeprecatedTreeGrid>
+    ));
+});

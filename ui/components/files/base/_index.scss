@@ -16,10 +16,62 @@
   display: block;
   position: relative;
 
-  &:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
-    transition: box-shadow 0.2s ease-in-out;
+  /**
+   * A decorator class that prevents hover styles from being applied to Files in loading state
+   *
+   * @selector .slds-file__loading
+   * @restrict .slds-file, .slds-image
+   */
+
+  // Hover state
+  &:not(.slds-file__loading):hover:before,
+  &:not(.slds-file__loading):hover:after {
+    position: absolute;
+    z-index: $z-index-overlay;
+    cursor: pointer;
+    content: '';
   }
+
+  // Adds overlay background to Files
+  &:not(.slds-file__loading):hover:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-background-image-overlay;
+  }
+
+  // Adds and vertically centers "preview" icon via base64
+  &:not(.slds-file__loading):hover:after {
+    top: 50%;
+    left: 50%;
+    width: $square-icon-large-content;
+    height: $square-icon-large-content;
+    /* stylelint-disable scss/operator-no-unspaced */
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJtNTEuOCAyNS4xYy00LjctOS41LTE0LjUtMTYuMS0yNS44LTE2LjFzLTIxLjEgNi42LTI1LjggMTYuMWMtMC4zIDAuNi0wLjMgMS4zIDAgMS44IDQuNyA5LjUgMTQuNSAxNi4xIDI1LjggMTYuMXMyMS4xLTYuNiAyNS44LTE2LjFjMC4zLTAuNiAwLjMtMS4yIDAtMS44eiBtLTI1LjggMTEuOWMtNi4xIDAtMTEtNC45LTExLTExczQuOS0xMSAxMS0xMSAxMSA0LjkgMTEgMTEtNC45IDExLTExIDExeiBtMC0xOGMtMy45IDAtNyAzLjEtNyA3czMuMSA3IDcgNyA3LTMuMSA3LTctMy4xLTctNy03eiI+PC9wYXRoPjwvZz48L3N2Zz4=);
+    /* stylelint-enable scss/operator-no-unspaced */
+    background-size: contain;
+    transform: translate(-50%, -50%);
+  }
+
+  // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
+  &:not(.slds-file__loading):hover .slds-file__title,
+  &:not(.slds-file__loading):hover .slds-file__actions-menu {
+    z-index: $z-index-overlay;
+  }
+
+  /**
+   * A decorator class that allows the hover icon to be positioned properly when File has a title
+   *
+   * @selector .slds-has-title
+   * @restrict .slds-file, .slds-image
+   */
+
+  // When a title card is present, take its height into account when centering the "preview" icon
+  &.slds-has-title:hover:after {
+    transform: translate(-50%, calc(-50% - (#{$square-icon-large-content} / 2)));
+  }
+
 
   &:focus {
     border: $border-width-thin solid $color-border-brand-dark;
@@ -97,7 +149,8 @@
   }
 
   /**
-   * @summary Figure element that contains the image of a File
+   * Figure element that contains the image of a File
+   *
    * @selector .slds-file__figure
    * @restrict .slds-file figure
    */
@@ -110,7 +163,8 @@
   }
 
   /**
-   * @summary Modifying class if the image in a figure is in portrait orientation
+   * Modifying class if the image in a figure is in portrait orientation
+   *
    * @selector .slds-file__figure_portrait
    * @restrict .slds-file__figure
    */

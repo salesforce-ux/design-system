@@ -11,7 +11,7 @@ import {
   ChatBookend,
   ChatIcon
 } from '../';
-import { File } from '../../files/base/example';
+import { File } from '../../files';
 import { DoctypeIcon } from '../../icons/doctype/example';
 import createHelpers from '../../../../jest.helpers';
 
@@ -233,7 +233,7 @@ describe('Chat Images and Files', () => {
             timeStamp="4:59 PM"
             isLoading
           >
-            <File isLoading loadingClass="slds-spinner_medium" noCaption />
+            <File has4x3Crop isLoading noCaption />
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -252,12 +252,11 @@ describe('Chat Images and Files', () => {
             isLoading
           >
             <File
-              cropClass="slds-file__crop slds-file__crop_4-by-3"
-              titleClass="slds-file__title_card"
+              has4x3Crop
+              hasTitleCard
               sprite="utility"
               symbol="image"
               isLoading
-              loadingClass="slds-spinner_medium"
             />
           </ChatMessageBody>
         </ChatMessage>
@@ -275,13 +274,7 @@ describe('Chat Images and Files', () => {
             name="Taylor Watson-Rice"
             timeStamp="4:59 PM"
           >
-            <File
-              cropClass="slds-file__figure"
-              actions
-              whiteIcons
-              noCaption
-              image
-            />
+            <File hasActions hasWhiteIcons noCaption hasImage />
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -297,13 +290,7 @@ describe('Chat Images and Files', () => {
             name="Taylor Watson-Rice"
             timeStamp="4:59 PM"
           >
-            <File
-              cropClass="slds-file__figure"
-              actions
-              whiteIcons
-              noCaption
-              image
-            />
+            <File hasActions hasWhiteIcons noCaption hasImage />
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -320,13 +307,7 @@ describe('Chat Images and Files', () => {
             name="Taylor Watson-Rice"
             timeStamp="4:59 PM"
           >
-            <File
-              cropClass="slds-file__figure slds-file__figure_portrait"
-              actions
-              whiteIcons
-              noCaption
-              imagePortrait
-            />
+            <File hasActions hasWhiteIcons noCaption hasImagePortrait />
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -344,12 +325,11 @@ describe('Chat Images and Files', () => {
             timeStamp="4:59 PM"
           >
             <File
-              cropClass="slds-file__figure"
-              titleClass="slds-file__title_card"
+              hasTitleCard
               symbol="image"
               title="Image.jpg"
-              actions
-              image
+              hasActions
+              hasImage
             />
           </ChatMessageBody>
         </ChatMessage>
@@ -366,13 +346,7 @@ describe('Chat Images and Files', () => {
             name="Taylor Watson-Rice"
             timeStamp="4:59 PM"
           >
-            <File
-              cropClass="slds-file__figure slds-file__figure_portrait"
-              actions
-              whiteIcons
-              noCaption
-              imagePortrait
-            />
+            <File hasActions hasWhiteIcons noCaption hasImagePortrait />
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -389,12 +363,11 @@ describe('Chat Images and Files', () => {
             timeStamp="4:59 PM"
           >
             <File
-              cropClass="slds-file__figure"
-              titleClass="slds-file__title_card"
+              hasTitleCard
               symbol="image"
               title="Image.jpg"
-              actions
-              image
+              hasActions
+              hasImage
             />
           </ChatMessageBody>
         </ChatMessage>
@@ -413,12 +386,12 @@ describe('Chat Images and Files', () => {
             timeStamp="4:59 PM"
           >
             <File
-              cropClass="slds-file__crop slds-file__crop_4-by-3"
-              titleClass="slds-file__title_card"
+              has4x3Crop
+              hasTitleCard
               symbol="pdf"
               title="File.pdf"
-              actions
-              image
+              hasActions
+              hasImage
             />
           </ChatMessageBody>
         </ChatMessage>
@@ -436,12 +409,12 @@ describe('Chat Images and Files', () => {
             timeStamp="4:59 PM"
           >
             <File
-              cropClass="slds-file__crop slds-file__crop_4-by-3"
-              titleClass="slds-file__title_card"
+              has4x3Crop
+              hasTitleCard
               symbol="pdf"
               title="File.pdf"
-              actions
-              image
+              hasActions
+              hasImage
             />
           </ChatMessageBody>
         </ChatMessage>

@@ -13,7 +13,7 @@ import {
   ChatEvent,
   ChatBookend
 } from '../.';
-import { File } from '../../files/base/example';
+import { File } from '../../files';
 import { DoctypeIcon } from '../../icons/doctype/example';
 
 const exampleMultiLineText =
@@ -144,12 +144,7 @@ export const states = [
                 timeStamp="4:59 PM"
                 isLoading
               >
-                <File
-                  cropClass="slds-file__crop slds-file__crop_4-by-3"
-                  isLoading
-                  loadingClass="slds-spinner_medium"
-                  noCaption
-                />
+                <File has4x3Crop isLoading noCaption />
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -174,12 +169,11 @@ export const states = [
                 isLoading
               >
                 <File
-                  cropClass="slds-file__crop slds-file__crop_4-by-3"
-                  titleClass="slds-file__title_card"
+                  has4x3Crop
+                  hasTitleCard
                   sprite="utility"
                   symbol="image"
                   isLoading
-                  loadingClass="slds-spinner_medium"
                 />
               </ChatMessageBody>
             </ChatMessage>
@@ -561,13 +555,7 @@ export const examples = [
                 name="Taylor Watson-Rice"
                 timeStamp="4:59 PM"
               >
-                <File
-                  cropClass="slds-file__figure"
-                  actions
-                  whiteIcons
-                  noCaption
-                  image
-                />
+                <File hasActions hasWhiteIcons noCaption hasImage />
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -580,12 +568,11 @@ export const examples = [
                 timeStamp="4:59 PM"
               >
                 <File
-                  cropClass="slds-file__figure slds-file__figure_portrait"
-                  titleClass="slds-file__title_card"
+                  hasTitleCard
                   symbol="image"
                   title="Image.jpg"
-                  actions
-                  imagePortrait
+                  hasActions
+                  hasImagePortrait
                 />
               </ChatMessageBody>
             </ChatMessage>
@@ -600,12 +587,12 @@ export const examples = [
                 timeStamp="4:59 PM"
               >
                 <File
-                  cropClass="slds-file__crop slds-file__crop_4-by-3"
-                  titleClass="slds-file__title_card"
+                  has4x3Crop
+                  hasTitleCard
                   symbol="pdf"
                   title="File.pdf"
-                  actions
-                  image
+                  hasActions
+                  hasImage
                 />
               </ChatMessageBody>
             </ChatMessage>
@@ -619,12 +606,12 @@ export const examples = [
                 timeStamp="4:59 PM"
               >
                 <File
-                  cropClass="slds-file__crop slds-file__crop_4-by-3"
-                  titleClass="slds-file__title_card"
+                  has4x3Crop
+                  hasTitleCard
                   symbol="pdf"
                   title="File.pdf"
-                  actions
-                  image
+                  hasActions
+                  hasImage
                 />
               </ChatMessageBody>
             </ChatMessage>

@@ -3,7 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import {Chat,ChatList,ChatListItem,ChatMessage,ChatMessageBody,ChatAvatar,ChatEvent,ChatBookend} from './';
-import { File } from '../files/base/example';
+import { File } from '../files';
 import { DoctypeIcon } from '../icons/doctype/example';
 
 <div className="doc lead">
@@ -270,12 +270,11 @@ It is also possible to display an image preview when sending a supported file fo
               timeStamp="4:59 PM"
             >
               <File
-                cropClass="slds-file__figure"
-                actions
-                whiteIcons
+                hasActions
+                hasWhiteIcons
                 noCaption
-                image
-                scrim
+                hasImage
+                hasScrim
               />
             </ChatMessageBody>
           </ChatMessage>
@@ -301,12 +300,12 @@ Non-image file formats are also supported by using the File component.
               timeStamp="4:59 PM"
             >
               <File
-                cropClass="slds-file__crop slds-file__crop_4-by-3"
-                titleClass="slds-file__title_card"
+                has4x3Crop
+                hasTitleCard
                 symbol="pdf"
                 title="File.pdf"
-                actions
-                image
+                hasActions
+                hasImage
               />
             </ChatMessageBody>
           </ChatMessage>
@@ -327,12 +326,11 @@ Both file and image transfers support messages with and without titles; however,
             <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
             <ChatMessageBody type="inbound" messageType="image">
               <File
-                cropClass="slds-file__figure"
-                actions
-                whiteIcons
+                hasActions
+                hasWhiteIcons
                 noCaption
-                scrim
-                image
+                hasScrim
+                hasImage
               />
             </ChatMessageBody>
           </ChatMessage>
@@ -346,12 +344,11 @@ Both file and image transfers support messages with and without titles; however,
               timeStamp="4:59 PM"
             >
               <File
-                cropClass="slds-file__figure"
-                titleClass="slds-file__title_card"
+                hasTitleCard
                 symbol="image"
                 title="Image.jpg"
-                actions
-                image
+                hasActions
+                hasImage
               />
             </ChatMessageBody>
           </ChatMessage>
@@ -376,12 +373,11 @@ When sending or receiving a portrait-orientation image, use the `slds-file__figu
                 timeStamp="4:59 PM"
               >
                 <File
-                  cropClass="slds-file__figure slds-file__figure_portrait"
-                  titleClass="slds-file__title_card"
+                  hasTitleCard
                   symbol="image"
                   title="Image.jpg"
-                  actions
-                  imagePortrait
+                  hasActions
+                  hasImagePortrait
                 />
               </ChatMessageBody>
             </ChatMessage>

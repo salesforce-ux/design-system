@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import { File, AttachmentLink } from '../base/example';
+import { File, AttachmentLink } from '../';
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
@@ -17,11 +17,12 @@ describe('File Component', () => {
     matchesMarkupAndStyle(
       <div style={demoStyles}>
         <File
-          className="slds-file_card"
-          titleClass="slds-file__title_card"
+          isCard
+          hasCrop
+          hasTitleCard
           symbol="pdf"
           title="Proposal.pdf"
-          image
+          hasImage
         />
       </div>
     ));
@@ -29,19 +30,14 @@ describe('File Component', () => {
   it('renders icon (no image) with title', () =>
     matchesMarkupAndStyle(
       <div style={demoStyles}>
-        <File
-          className="slds-file_card"
-          titleClass="slds-file__title_card"
-          symbol="image"
-          title="Image Title"
-        />
+        <File isCard hasCrop hasTitleCard symbol="image" title="Image Title" />
       </div>
     ));
 
   it('renders image with no title', () =>
     matchesMarkupAndStyle(
       <div style={demoStyles}>
-        <File className="slds-file_card" noCaption symbol="pdf" image />
+        <File isCard hasCrop noCaption symbol="pdf" hasImage />
       </div>
     ));
 
@@ -49,12 +45,13 @@ describe('File Component', () => {
     matchesMarkupAndStyle(
       <div style={demoStyles}>
         <File
-          className="slds-file_card"
-          titleClass="slds-file__title_card"
+          isCard
+          hasCrop
+          hasTitleCard
           symbol="pdf"
           title="Proposal.pdf"
-          actions
-          image
+          hasActions
+          hasImage
         />
       </div>
     ));
@@ -63,14 +60,15 @@ describe('File Component', () => {
     matchesMarkupAndStyle(
       <div style={demoStyles}>
         <File
-          className="slds-file_card"
+          isCard
+          hasCrop
           symbol="pdf"
           title="Proposal.pdf"
-          actions
-          whiteIcons
-          scrim
+          hasActions
+          hasWhiteIcons
+          hasScrim
           noCaption
-          image
+          hasImage
         />
       </div>
     ));
@@ -79,11 +77,12 @@ describe('File Component', () => {
     matchesMarkupAndStyle(
       <div style={demoStyles}>
         <File
-          className="slds-file_card"
-          titleClass="slds-file__title_card"
+          isCard
+          hasCrop
+          hasTitleCard
           symbol="pdf"
           title="Proposal.pdf"
-          externalSource
+          isExternalSource
         />
       </div>
     ));
@@ -92,12 +91,12 @@ describe('File Component', () => {
     matchesMarkupAndStyle(
       <div style={demoStyles}>
         <File
-          className="slds-file_card"
-          titleClass="slds-file__title_card"
+          isCard
+          hasCrop
+          hasTitleCard
           sprite="utility"
           symbol="image"
           isLoading
-          loadingClass="slds-spinner_medium"
         />
       </div>
     ));
@@ -105,12 +104,7 @@ describe('File Component', () => {
   it('renders file in loding state without title', () =>
     matchesMarkupAndStyle(
       <div style={demoStyles}>
-        <File
-          className="slds-file_card"
-          isLoading
-          loadingClass="slds-spinner_medium"
-          noCaption
-        />
+        <File isCard hasCrop isLoading noCaption />
       </div>
     ));
 
@@ -119,20 +113,16 @@ describe('File Component', () => {
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file_card"
-            titleClass="slds-file__title_card"
+            isCard
+            hasCrop
+            hasTitleCard
             symbol="pdf"
             title="Proposal.pdf"
-            image
+            hasImage
           />
         </li>
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
-          <File
-            className="slds-file_card"
-            titleClass="slds-file__title_card"
-            symbol="pdf"
-            title="Proposal.pdf"
-          />
+          <File isCard hasCrop hasTitleCard symbol="pdf" title="Proposal.pdf" />
         </li>
       </ul>
     ));
@@ -142,29 +132,19 @@ describe('File Component', () => {
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
-            className="slds-file_card"
-            titleClass="slds-file__title_card"
+            isCard
+            hasCrop
+            hasTitleCard
             symbol="pdf"
             title="Proposal.pdf"
-            image
+            hasImage
           />
         </li>
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3  slds-medium-show">
-          <File
-            className="slds-file_card"
-            titleClass="slds-file__title_card"
-            symbol="pdf"
-            title="Proposal.pdf"
-          />
+          <File isCard hasCrop hasTitleCard symbol="pdf" title="Proposal.pdf" />
         </li>
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
-          <File
-            className="slds-file_card"
-            titleClass="slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
-            title="+22"
-            image
-            overlay
-          />
+          <File isCard hasCrop title="+22" hasImage hasOverlay />
         </li>
       </ul>
     ));

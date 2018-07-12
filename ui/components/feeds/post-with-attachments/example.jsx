@@ -10,7 +10,7 @@ import {
   PostFooterActions,
   PostFooterMeta
 } from '../post/example';
-import { File, AttachmentLink } from '../../files/base/example';
+import { File, AttachmentLink } from '../../files';
 
 /// ////////////////////////////////////////
 // Export
@@ -73,30 +73,18 @@ export let states = [
                 <ul className="slds-grid slds-grid_pull-padded">
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
                     <File
-                      className="slds-file_card"
-                      cropClass="slds-file__crop slds-file__crop_16-by-9"
-                      titleClass="slds-file__title_card"
+                      isCard
+                      has16x9Crop
+                      hasTitleCard
                       symbol="image"
-                      image
+                      hasImage
                     />
                   </li>
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-medium-show">
-                    <File
-                      className="slds-file_card"
-                      cropClass="slds-file__crop slds-file__crop_16-by-9"
-                      titleClass="slds-file__title_card"
-                      symbol="pdf"
-                    />
+                    <File isCard has16x9Crop hasTitleCard symbol="pdf" />
                   </li>
                   <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
-                    <File
-                      className="slds-file_card"
-                      cropClass="slds-file__crop slds-file__crop_16-by-9"
-                      titleClass="slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
-                      title="22+"
-                      image
-                      overlay
-                    />
+                    <File isCard has16x9Crop title="22+" hasImage hasOverlay />
                   </li>
                 </ul>
               </div>

@@ -45,7 +45,7 @@
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card {
   background: $card-color-background;
-  padding: $var-spacing-medium; // Use card tokens to keep this tab style looking like a card
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium; // Use card tokens to keep this tab style looking like a card
   box-shadow: $card-shadow;
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
@@ -83,7 +83,7 @@
 
     .slds-card__body_inner,
     .slds-card__body--inner {
-      padding: 0 $var-spacing-vertical-medium;
+      padding: 0 $var-spacing-horizontal-medium;
     }
 
     .slds-card__footer {

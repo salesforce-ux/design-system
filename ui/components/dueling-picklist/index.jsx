@@ -5,7 +5,12 @@ import React from 'react';
 import SvgIcon from '../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
-import { SimpleFormElementWrapper, FormElementControl } from '../form-element';
+import PropTypes from 'prop-types';
+import {
+  FormElementTooltip,
+  SimpleFormElementWrapper,
+  FormElementControl
+} from '../form-element';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -13,50 +18,59 @@ import { SimpleFormElementWrapper, FormElementControl } from '../form-element';
 
 export const MultiSelect = props => {
   return (
-    <div
-      className="slds-form-element"
+    <SimpleFormElementWrapper
       role="group"
       aria-labelledby="picklist-group-label"
     >
-      <div
-        id="picklist-group-label"
-        className="slds-form-element__label slds-form-element__legend slds-text-title_caps"
-      >
+      <MultiSelectLabel isRequired={props.isRequired}>
         Select Options
-      </div>
-      <div className="slds-dueling-list">
-        <div
-          className="slds-assistive-text"
-          id="drag-live-region"
-          aria-live="assertive"
-        >
-          {props.dataSet.liveRegionText}
+      </MultiSelectLabel>
+      {props.hasTooltip && <FormElementTooltip />}
+      <FormElementControl>
+        <div className="slds-dueling-list">
+          <div
+            className="slds-assistive-text"
+            id="drag-live-region"
+            aria-live="assertive"
+          >
+            {props.dataSet.liveRegionText}
+          </div>
+          <div className="slds-assistive-text" id="option-drag-label">
+            {props.dataSet.optionDragLabel}
+          </div>
+          <SelectionGroup
+            disabled={props.disabled}
+            isResponsive={props.isResponsive}
+            group={props.dataSet.selectionGroups[0]}
+          />
+          <MoveButtons
+            direction="horizontal"
+            targetA={props.dataSet.selectionGroups[0].label}
+            targetB={props.dataSet.selectionGroups[1].label}
+            disabled={props.disabled}
+          />
+          <SelectionGroup
+            disabled={props.disabled}
+            isResponsive={props.isResponsive}
+            group={props.dataSet.selectionGroups[1]}
+          />
+          {!props.noReorder && (
+            <MoveButtons disabled={props.disabled} direction="vertical" />
+          )}
         </div>
-        <div className="slds-assistive-text" id="option-drag-label">
-          {props.dataSet.optionDragLabel}
-        </div>
-        <SelectionGroup
-          disabled={props.disabled}
-          isResponsive={props.isResponsive}
-          group={props.dataSet.selectionGroups[0]}
-        />
-        <MoveButtons
-          direction="horizontal"
-          targetA={props.dataSet.selectionGroups[0].label}
-          targetB={props.dataSet.selectionGroups[1].label}
-          disabled={props.disabled}
-        />
-        <SelectionGroup
-          disabled={props.disabled}
-          isResponsive={props.isResponsive}
-          group={props.dataSet.selectionGroups[1]}
-        />
-        {!props.noReorder && (
-          <MoveButtons disabled={props.disabled} direction="vertical" />
-        )}
-      </div>
-    </div>
+      </FormElementControl>
+    </SimpleFormElementWrapper>
   );
+};
+
+MultiSelect.propTypes = {
+  isRequired: PropTypes.bool,
+  hasTooltip: PropTypes.bool,
+  noReorder: PropTypes.bool,
+  disabled: PropTypes.bool,
+  isResponsive: PropTypes.bool,
+  dataSet: PropTypes.object,
+  children: PropTypes.node
 };
 
 export const MultiSelectViewMode = props => {
@@ -72,6 +86,29 @@ export const MultiSelectViewMode = props => {
       </SimpleFormElementWrapper>
     </div>
   );
+};
+
+const MultiSelectLabel = props => {
+  const { isRequired, children } = props;
+
+  return (
+    <span
+      id="picklist-group-label"
+      className="slds-form-element__label slds-form-element__legend"
+    >
+      {isRequired && (
+        <abbr className="slds-required" title="required">
+          * {' '}
+        </abbr>
+      )}
+      {children}
+    </span>
+  );
+};
+
+MultiSelectLabel.propTypes = {
+  isRequired: PropTypes.bool,
+  children: PropTypes.node
 };
 
 const MoveButtons = props => {
@@ -195,6 +232,16 @@ const Option = props => (
     </div>
   </li>
 );
+
+export const Demo = props => (
+  <div className="demo-only" style={{ paddingTop: '3rem' }}>
+    {props.children}
+  </div>
+);
+
+Demo.propTypes = {
+  children: PropTypes.node
+};
 
 /// ////////////////////////////////////////
 // States

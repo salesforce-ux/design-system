@@ -100,6 +100,17 @@
   letter-spacing: 0.0625rem;
 }
 
+/**
+ * @summary Bold 14px heading
+ * @selector .slds-text-title_bold
+ * @notes Usually labels small content areas like form and listbox
+ * @modifier
+ */
+.slds-text-title_bold {
+  font-size: $font-size-4;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-reset;
+}
 
 /**
  * @summary Resets line-height to browser default

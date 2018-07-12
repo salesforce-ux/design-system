@@ -13,8 +13,10 @@ import {
   MovedInSnapShot,
   DroppedSnapShot,
   MoveToSnapShot,
-  MultiSelectViewMode
+  MultiSelectViewMode,
+  Demo
 } from '../';
+
 /// ////////////////////////////////////////
 // Examples
 /// ////////////////////////////////////////
@@ -76,5 +78,28 @@ export let states = [
     id: 'view-mode-dueling-picklist',
     label: 'View Mode',
     element: <MultiSelectViewMode />
+  },
+  {
+    id: 'required-dueling-picklist',
+    label: 'Required',
+    element: <MultiSelect dataSet={DefaultSnapShot} isRequired />
+  },
+  {
+    id: 'with-tooltip',
+    label: 'With Tooltip',
+    element: (
+      <Demo>
+        <MultiSelect dataSet={DefaultSnapShot} hasTooltip />
+      </Demo>
+    )
+  },
+  {
+    id: 'required-dueling-picklist-with-tooltip',
+    label: 'Required With Tooltip',
+    element: (
+      <Demo>
+        <MultiSelect dataSet={DefaultSnapShot} isRequired hasTooltip />
+      </Demo>
+    )
   }
 ];

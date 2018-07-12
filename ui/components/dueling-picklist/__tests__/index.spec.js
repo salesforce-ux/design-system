@@ -60,3 +60,14 @@ it('renders a responsive non-reorderable dueling picklist', () =>
 
 it('renders a view mode of dueling picklist', () =>
   matchesMarkupAndStyle(<MultiSelectViewMode />));
+
+it('renders a required dueling picklist', () =>
+  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} isRequired />));
+
+it('renders a dueling picklist with tooltip', () =>
+  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} hasTooltip />));
+
+it('renders a required dueling picklist with tooltip', () =>
+  matchesMarkupAndStyle(
+    <MultiSelect dataSet={DefaultSnapShot} isRequired hasTooltip />
+  ));

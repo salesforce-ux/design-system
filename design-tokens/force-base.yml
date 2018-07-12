@@ -5,6 +5,7 @@ imports:
 - ./spacing.yml
 - ./font-size.yml
 - ./line-height.yml
+- ./sizing.yml
 - ./force-base/spacing.yml
 - ./force-base/sizing.yml
 - ./force-base/fill.yml

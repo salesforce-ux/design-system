@@ -16,3 +16,7 @@
   width: $square-icon-x-small-content;
   height: $square-icon-x-small-content;
 }
+
+.slds-visual-picker input[disabled] ~ label .slds-visual-picker__text-check {
+  opacity: 0;
+}

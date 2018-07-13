@@ -123,23 +123,19 @@
       cursor: not-allowed;
       user-select: none;
 
-      ~ label .slds-icon {
-        opacity: 0.5;
-      }
-
       ~ label .slds-visual-picker__body,
       ~ label .slds-visual-picker__text {
         color: $color-text-input-disabled;
       }
 
       ~ label .slds-visual-picker__figure {
-        border: $border-width-thin solid $color-border;
+        border-color: $color-border-input-disabled;
+        background-color: $color-background-input-disabled;
         box-shadow: none;
 
         &:hover {
           cursor: not-allowed;
           user-select: none;
-          border: $border-width-thin solid $color-border;
           box-shadow: none;
         }
       }

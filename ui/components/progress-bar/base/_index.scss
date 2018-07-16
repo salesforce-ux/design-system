@@ -22,7 +22,7 @@
    * @selector .slds-progress-bar_x-small
    * @restrict .slds-progress-bar
    * @modifier
-   * @group height
+   * @group thickness
    */
   &_x-small,
   &--x-small {
@@ -35,7 +35,7 @@
    * @selector .slds-progress-bar_small
    * @restrict .slds-progress-bar
    * @modifier
-   * @group height
+   * @group thickness
    */
   &_small,
   &--small {
@@ -48,7 +48,7 @@
    * @selector .slds-progress-bar_medium
    * @restrict .slds-progress-bar
    * @modifier
-   * @group height
+   * @group thickness
    */
   &_medium,
   &--medium {
@@ -61,7 +61,7 @@
    * @selector .slds-progress-bar_large
    * @restrict .slds-progress-bar
    * @modifier
-   * @group height
+   * @group thickness
    */
   &_large,
   &--large {
@@ -108,32 +108,4 @@
  */
 .slds-progress-bar__value_success {
   background: $progress-bar-color-background-fill-success;
-}
-
-/**
- * @summary Create a vertical progress bar
- *
- * @selector .slds-progress-bar_vertical
- * @restrict .slds-progress-bar
- * @modifier
- */
-.slds-progress-bar_vertical {
-  height: 100%;
-  width: ($progress-bar-height * 4);
-
-  &.slds-progress-bar_x-small {
-    width: $progress-bar-height;
-  }
-
-  &.slds-progress-bar_small {
-    width: ($progress-bar-height * 2);
-  }
-
-  &.slds-progress-bar_medium {
-    width: ($progress-bar-height * 4);
-  }
-
-  &.slds-progress-bar_large {
-    width: ($progress-bar-height * 6);
-  }
 }

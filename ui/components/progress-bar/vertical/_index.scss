@@ -1,0 +1,31 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Create a vertical progress bar
+ *
+ * @name vertical
+ * @selector .slds-progress-bar_vertical
+ * @restrict .slds-progress-bar
+ * @variant
+ */
+.slds-progress-bar_vertical {
+  height: 100%;
+  width: ($progress-bar-height * 4);
+
+  &.slds-progress-bar_x-small {
+    width: $progress-bar-height;
+  }
+
+  &.slds-progress-bar_small {
+    width: ($progress-bar-height * 2);
+  }
+
+  &.slds-progress-bar_medium {
+    width: ($progress-bar-height * 4);
+  }
+
+  &.slds-progress-bar_large {
+    width: ($progress-bar-height * 6);
+  }
+}

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ProgressBar } from '../progress-bar/base/example';
+import { ProgressBar } from '../progress-bar';
 
 class WelcomeMatContent extends React.Component {
   render() {

@@ -5,9 +5,9 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { ProgressBar } from '../progress-bar/base/example';
 import { Button } from '../buttons/base/example';
 import { ActionIcon } from '../icons/action/example';
+import { ProgressBar } from '../progress-bar';
 
 class WelcomeMatContentTrailhead extends React.Component {
   render() {

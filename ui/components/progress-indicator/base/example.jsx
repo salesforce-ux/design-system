@@ -5,13 +5,13 @@ import React from 'react';
 import classNames from 'classnames';
 import ButtonIcon from '../../button-icons/';
 import { Tooltip } from '../../tooltips/base/example';
-import { ProgressBar } from '../../progress-bar/base/example';
 import {
   Modal,
   ModalHeader,
   ModalContent,
   ModalFooter
 } from '../../modals/base/example';
+import { ProgressBar } from '../../progress-bar';
 
 /// ///////////////////////////////////////////
 // Partial(s)

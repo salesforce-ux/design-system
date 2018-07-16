@@ -82,7 +82,7 @@
    * Set crop boundaries to a file component, set to 16:9 by default
    *
    * @selector .slds-file__crop
-   * @restrict .slds-file figure
+   * @restrict .slds-file a, .slds-file figure
    */
   &__crop {
     display: block;
@@ -141,18 +141,18 @@
     &--4-by-3 {
       padding-top: 75%;
     }
+  }
 
-    // When a spinner is used with .slds-file__title_card, this attempts to visually center the spinner
-    :not(:only-child) .slds-spinner {
-      top: 45%; // magic number
-    }
+  // When a spinner is used with .slds-file__title_card, this attempts to visually center the spinner
+  :not(:only-child) .slds-spinner {
+    top: 45%; // magic number
   }
 
   /**
    * Figure element that contains the image of a File
    *
    * @selector .slds-file__figure
-   * @restrict .slds-file figure
+   * @restrict .slds-file a, .slds-file figure
    */
   &__figure {
     display: block;
@@ -166,7 +166,7 @@
    * Modifying class if the image in a figure is in portrait orientation
    *
    * @selector .slds-file__figure_portrait
-   * @restrict .slds-file__figure
+   * @restrict .slds-file a, .slds-file figure
    */
   // This is used to properly constrain portrait images. Without this, portrait images larger than 240px tall will overflow its container.
   .slds-file__figure_portrait img {

@@ -192,11 +192,11 @@ export class File extends Component {
           'slds-has-title': hasTitle
         })}
       >
-        <figure className={figureClasses}>
+        <figure>
           {/*
             aXe is reporting an a11y violation where it says the <a> does not detect any discernible text when using <Spinner>, despite this not being the case (Spinner has "Loading" in .slds-assistive-text). To prevent this from breaking the build, we're excluding `.slds-file figure > a` from aXe linting. Tread carefully.
           */}
-          <a href="javascript:void(0);">
+          <a href="javascript:void(0);" className={figureClasses}>
             {hasOverlay && <div className="slds-file_overlay" />}
 
             {this.renderContent()}

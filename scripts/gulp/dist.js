@@ -15,6 +15,10 @@ import path from 'path';
 
 import packageJSON from '../../package.json';
 
+import {
+  createAuraTokensMap,
+  createTokenComponentMap
+} from '../compile/token-maps';
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
 import releaseNotes from './release-notes';
@@ -189,6 +193,10 @@ export const writeUI = done => ui.writeToDist().fork(done, () => done());
 
 export const writeLibrary = done =>
   createLibrary().fork(e => done(e), stats => done(null, stats));
+
+export const writeAuraTokensMap = done => createAuraTokensMap();
+
+export const writeTokenComponentMap = done => createTokenComponentMap();
 
 export const packageJson = () => {
   const a = Immutable.fromJS(packageJSON);

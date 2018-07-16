@@ -122,6 +122,9 @@
     "openport": "0.0.4",
     "plugin-error": "1.0.1",
     "postcss": "5.2.16",
+    "postcss-nested-props": "2.0.0",
+    "postcss-scss": "1.0.6",
+    "precss": "3.1.2",
     "prettier": "1.7.2",
     "prop-types": "15.6.0",
     "puppeteer": "0.10.1",
@@ -170,7 +173,9 @@
     "test": "node -r @std/esm ./node_modules/.bin/jest",
     "jest": "node -r @std/esm ./node_modules/.bin/jest",
     "precommit": "lint-staged",
-    "pr-checks": "npm run gulp -- pr-checks"
+    "pr-checks": "npm run gulp -- pr-checks",
+    "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
+    "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap"
   },
   "lint-staged": {
     "*.{js,jsx,json}": ["prettier --single-quote --write", "git add"]
@@ -191,5 +196,6 @@
   "@std/esm": {
     "cjs": true,
     "esm": "js"
-  }
+  },
+  "dependencies": {}
 }

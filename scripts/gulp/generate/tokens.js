@@ -24,7 +24,8 @@ let formatTransforms = _({
     'aura.tokens'
   ],
   ios: ['ios.json'],
-  android: ['android.xml']
+  android: ['android.xml'],
+  raw: ['raw.json']
 })
   .map((formats, transform) =>
     formats.map(name => ({

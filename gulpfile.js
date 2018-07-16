@@ -79,6 +79,13 @@ gulp.task(
   gulp.series('generate:tokens:components:imports', tokens.all)
 );
 
+gulp.task('generate:tokenComponentMap', done => {
+  dist.writeTokenComponentMap().fork(e => done(e), () => done());
+});
+gulp.task('generate:auraTokensMap', done => {
+  dist.writeAuraTokensMap().fork(e => done(e), () => done());
+});
+
 // /////////////////////////////////////////////////////////
 // Lint
 // /////////////////////////////////////////////////////////
@@ -214,6 +221,12 @@ gulp.task(
     ),
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:writeLibrary')(dist.writeLibrary),
+    withName('dist:writeTokenComponentMap')(done =>
+      dist.writeTokenComponentMap().fork(done, () => done())
+    ),
+    withName('dist:writeAuraTokensMap')(done =>
+      dist.writeAuraTokensMap().fork(done, () => done())
+    ),
     withName('dist:clean:after')(dist.cleanAfter)
   )
 );

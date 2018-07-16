@@ -188,7 +188,7 @@ export class File extends Component {
       <div
         className={classNames('slds-file', {
           'slds-file_card': isCard,
-          'slds-file__loading': isLoading,
+          'slds-file_loading': isLoading,
           'slds-has-title': hasTitle
         })}
       >

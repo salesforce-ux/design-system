@@ -19,13 +19,13 @@
   /**
    * A decorator class that prevents hover styles from being applied to Files in loading state
    *
-   * @selector .slds-file__loading
+   * @selector .slds-file_loading
    * @restrict .slds-file, .slds-image
    */
 
   // Hover state
-  &:not(.slds-file__loading):hover:before,
-  &:not(.slds-file__loading):hover:after {
+  &:not(.slds-file_loading):hover:before,
+  &:not(.slds-file_loading):hover:after {
     position: absolute;
     z-index: $z-index-overlay;
     cursor: pointer;
@@ -33,7 +33,7 @@
   }
 
   // Adds overlay background to Files
-  &:not(.slds-file__loading):hover:before {
+  &:not(.slds-file_loading):hover:before {
     top: 0;
     right: 0;
     bottom: 0;
@@ -42,7 +42,7 @@
   }
 
   // Adds and vertically centers "preview" icon via base64
-  &:not(.slds-file__loading):hover:after {
+  &:not(.slds-file_loading):hover:after {
     top: 50%;
     left: 50%;
     width: $square-icon-large-content;
@@ -55,8 +55,8 @@
   }
 
   // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
-  &:not(.slds-file__loading):hover .slds-file__title,
-  &:not(.slds-file__loading):hover .slds-file__actions-menu {
+  &:not(.slds-file_loading):hover .slds-file__title,
+  &:not(.slds-file_loading):hover .slds-file__actions-menu {
     z-index: $z-index-overlay;
   }
 

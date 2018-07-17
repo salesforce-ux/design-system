@@ -8,10 +8,6 @@ import SvgIcon from '../../../shared/svg-icon';
 import Panel from '../../panels';
 import { Button } from '../../buttons/base/example';
 
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
-
 export const MobileTabGroup = props => (
   <div className="slds-tabs-mobile__group">{props.children}</div>
 );
@@ -136,88 +132,6 @@ export const NestedMobileStacked = props => (
   </MobileTabContainer>
 );
 
-// Deprecated examples to use for VRT
-export const DeprecatedMobileTabList = props => (
-  <ul className={classNames('slds-tabs_mobile')}>{props.children}</ul>
-);
-
-export const DeprecatedMobileTabItem = props => (
-  <li className={classNames('slds-tabs_mobile__item')}>{props.children}</li>
-);
-
-export const DeprecatedMobileTabTitle = props => (
-  <div className={classNames('slds-tabs_mobile__title', props.className)}>
-    {props.children}
-  </div>
-);
-
-export const DeprecatedMobileTabAction = props => (
-  <button className="slds-tabs_mobile__title-action slds-button slds-button_reset">
-    <span className="slds-truncate" title={props.summary}>
-      {props.summary}
-    </span>
-    <SvgIcon
-      className="slds-icon slds-icon_x-small slds-icon-text-default"
-      sprite="utility"
-      symbol="chevronright"
-    />
-  </button>
-);
-
-export const DeprecatedMobileStacked = props => (
-  <DeprecatedMobileTabList>
-    <DeprecatedMobileTabItem>
-      <DeprecatedMobileTabTitle>
-        <DeprecatedMobileTabAction summary="Item One" />
-      </DeprecatedMobileTabTitle>
-    </DeprecatedMobileTabItem>
-    <DeprecatedMobileTabItem>
-      <DeprecatedMobileTabTitle>
-        <DeprecatedMobileTabAction summary="Item Two" />
-      </DeprecatedMobileTabTitle>
-    </DeprecatedMobileTabItem>
-    <DeprecatedMobileTabItem>
-      <DeprecatedMobileTabTitle>
-        <DeprecatedMobileTabAction summary="Item Three" />
-      </DeprecatedMobileTabTitle>
-    </DeprecatedMobileTabItem>
-  </DeprecatedMobileTabList>
-);
-
-export const DeprecatedAdjacentMobileStacked = props => (
-  <div>
-    <DeprecatedMobileTabList>
-      <DeprecatedMobileTabItem>
-        <DeprecatedMobileTabTitle>
-          <DeprecatedMobileTabAction summary="List 1 Item One" />
-        </DeprecatedMobileTabTitle>
-      </DeprecatedMobileTabItem>
-      <DeprecatedMobileTabItem>
-        <DeprecatedMobileTabTitle>
-          <DeprecatedMobileTabAction summary="List 1 Item Two" />
-        </DeprecatedMobileTabTitle>
-      </DeprecatedMobileTabItem>
-    </DeprecatedMobileTabList>
-    <DeprecatedMobileTabList>
-      <DeprecatedMobileTabItem>
-        <DeprecatedMobileTabTitle>
-          <DeprecatedMobileTabAction summary="List 2 Item One" />
-        </DeprecatedMobileTabTitle>
-      </DeprecatedMobileTabItem>
-      <DeprecatedMobileTabItem>
-        <DeprecatedMobileTabTitle>
-          <DeprecatedMobileTabAction summary="List 2 Item Two with A Really Long Name" />
-        </DeprecatedMobileTabTitle>
-      </DeprecatedMobileTabItem>
-      <DeprecatedMobileTabItem>
-        <DeprecatedMobileTabTitle>
-          <DeprecatedMobileTabAction summary="List 2 Item Three" />
-        </DeprecatedMobileTabTitle>
-      </DeprecatedMobileTabItem>
-    </DeprecatedMobileTabList>
-  </div>
-);
-
 class MobileTabs extends Component {
   constructor(props) {
     super(props);
@@ -306,3 +220,85 @@ MobileTabs.propTypes = {
 };
 
 export default MobileTabs;
+
+// Deprecated examples to use for VRT
+export const DeprecatedMobileTabList = props => (
+  <ul className={classNames('slds-tabs_mobile')}>{props.children}</ul>
+);
+
+export const DeprecatedMobileTabItem = props => (
+  <li className={classNames('slds-tabs_mobile__item')}>{props.children}</li>
+);
+
+export const DeprecatedMobileTabTitle = props => (
+  <div className={classNames('slds-tabs_mobile__title', props.className)}>
+    {props.children}
+  </div>
+);
+
+export const DeprecatedMobileTabAction = props => (
+  <button className="slds-tabs_mobile__title-action slds-button slds-button_reset">
+    <span className="slds-truncate" title={props.summary}>
+      {props.summary}
+    </span>
+    <SvgIcon
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+      sprite="utility"
+      symbol="chevronright"
+    />
+  </button>
+);
+
+export const DeprecatedMobileStacked = props => (
+  <DeprecatedMobileTabList>
+    <DeprecatedMobileTabItem>
+      <DeprecatedMobileTabTitle>
+        <DeprecatedMobileTabAction summary="Item One" />
+      </DeprecatedMobileTabTitle>
+    </DeprecatedMobileTabItem>
+    <DeprecatedMobileTabItem>
+      <DeprecatedMobileTabTitle>
+        <DeprecatedMobileTabAction summary="Item Two" />
+      </DeprecatedMobileTabTitle>
+    </DeprecatedMobileTabItem>
+    <DeprecatedMobileTabItem>
+      <DeprecatedMobileTabTitle>
+        <DeprecatedMobileTabAction summary="Item Three" />
+      </DeprecatedMobileTabTitle>
+    </DeprecatedMobileTabItem>
+  </DeprecatedMobileTabList>
+);
+
+export const DeprecatedAdjacentMobileStacked = props => (
+  <div>
+    <DeprecatedMobileTabList>
+      <DeprecatedMobileTabItem>
+        <DeprecatedMobileTabTitle>
+          <DeprecatedMobileTabAction summary="List 1 Item One" />
+        </DeprecatedMobileTabTitle>
+      </DeprecatedMobileTabItem>
+      <DeprecatedMobileTabItem>
+        <DeprecatedMobileTabTitle>
+          <DeprecatedMobileTabAction summary="List 1 Item Two" />
+        </DeprecatedMobileTabTitle>
+      </DeprecatedMobileTabItem>
+    </DeprecatedMobileTabList>
+    <DeprecatedMobileTabList>
+      <DeprecatedMobileTabItem>
+        <DeprecatedMobileTabTitle>
+          <DeprecatedMobileTabAction summary="List 2 Item One" />
+        </DeprecatedMobileTabTitle>
+      </DeprecatedMobileTabItem>
+      <DeprecatedMobileTabItem>
+        <DeprecatedMobileTabTitle>
+          <DeprecatedMobileTabAction summary="List 2 Item Two with A Really Long Name" />
+        </DeprecatedMobileTabTitle>
+      </DeprecatedMobileTabItem>
+      <DeprecatedMobileTabItem>
+        <DeprecatedMobileTabTitle>
+          <DeprecatedMobileTabAction summary="List 2 Item Three" />
+        </DeprecatedMobileTabTitle>
+      </DeprecatedMobileTabItem>
+    </DeprecatedMobileTabList>
+  </div>
+);

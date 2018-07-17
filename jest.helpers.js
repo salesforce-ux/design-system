@@ -7,6 +7,7 @@
 import { assertMatchesDOM } from '@salesforce-ux/instant-vrt/matcher';
 import fetch from 'isomorphic-fetch';
 import ReactDOM from 'react-dom/server';
+import renderer from 'react-test-renderer';
 
 import { beautify } from './shared/utils/beautify';
 import { renderWithBetterError } from './shared/utils/react';
@@ -21,6 +22,11 @@ export default (directory, port) => {
   });
 
   return {
+    matchesMarkup: reactElement => {
+      // https://jestjs.io/docs/en/snapshot-testing#snapshot-testing-with-jest
+      const dom = renderer.create(reactElement).toJSON();
+      expect(dom).toMatchSnapshot();
+    },
     matchesMarkupAndStyle: async element => {
       const renderedMarkup =
         typeof element === 'string'

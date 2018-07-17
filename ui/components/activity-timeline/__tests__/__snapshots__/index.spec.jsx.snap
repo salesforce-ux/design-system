@@ -1,0 +1,2308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Timeline Expandable renders a collapsed timeline media figure 1`] = `
+<div
+  className="slds-media__figure"
+>
+  <button
+    aria-controls="event-figure"
+    aria-expanded="false"
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon"
+    id={undefined}
+    title="Toggle details for undefined"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-timeline__details-action-icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Toggle details for undefined
+    </span>
+  </button>
+  <div
+    className="slds-icon_container slds-icon-standard-event slds-timeline__icon"
+    title="event"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a full expanded details section with footer buttons 1`] = `
+<article
+  aria-hidden={false}
+  className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+  id="test-id"
+>
+  <ul
+    className="slds-list_horizontal slds-wrap"
+  >
+    <li
+      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+    >
+      <span
+        className="slds-text-title slds-p-bottom_x-small"
+      >
+        Name
+      </span>
+      <span
+        className="slds-text-body_medium slds-truncate"
+        title="Lei Chan"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          Lei Chan
+        </a>
+      </span>
+    </li>
+    <li
+      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+    >
+      <span
+        className="slds-text-title slds-p-bottom_x-small"
+      >
+        Related To
+      </span>
+      <span
+        className="slds-text-body_medium slds-truncate"
+        title="Tesla Cloudhub + Anypoint Connectors"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          Tesla Cloudhub + Anypoint Connectors
+        </a>
+      </span>
+    </li>
+  </ul>
+  <div>
+    <span
+      className="slds-text-title"
+    >
+      Description
+    </span>
+    <p
+      className="slds-p-top_x-small"
+    >
+      Hi folks, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it is truncated.
+    </p>
+  </div>
+  <button
+    className="slds-button slds-button_neutral slds-m-top_small"
+    disabled={undefined}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+      />
+    </svg>
+    Public Sharing
+  </button>
+</article>
+`;
+
+exports[`Activity Timeline Expandable renders a full expanded details section without footer buttons 1`] = `
+<article
+  aria-hidden={false}
+  className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+  id="test-id"
+>
+  <ul
+    className="slds-list_horizontal slds-wrap"
+  >
+    <li
+      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+    >
+      <span
+        className="slds-text-title slds-p-bottom_x-small"
+      >
+        Name
+      </span>
+      <span
+        className="slds-text-body_medium slds-truncate"
+        title="Lei Chan"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          Lei Chan
+        </a>
+      </span>
+    </li>
+    <li
+      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+    >
+      <span
+        className="slds-text-title slds-p-bottom_x-small"
+      >
+        Related To
+      </span>
+      <span
+        className="slds-text-body_medium slds-truncate"
+        title="Tesla Cloudhub + Anypoint Connectors"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          Tesla Cloudhub + Anypoint Connectors
+        </a>
+      </span>
+    </li>
+  </ul>
+  <div>
+    <span
+      className="slds-text-title"
+    >
+      Description
+    </span>
+    <p
+      className="slds-p-top_x-small"
+    >
+      Hi folks, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it is truncated.
+    </p>
+  </div>
+</article>
+`;
+
+exports[`Activity Timeline Expandable renders a hover state 1`] = `"<div class=\\"slds-grid slds-grid_align-spread slds-timeline__trigger\\"><div class=\\"slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space\\"><h3 class=\\"slds-truncate\\" title=\\"Mobile conversation on Monday\\"><a href=\\"javascript:void(0);\\"><strong>Mobile conversation on Monday</strong></a></h3></div><div class=\\"slds-timeline__actions slds-timeline__actions_inline\\"><p class=\\"slds-timeline__date\\">10:00am | 3/23/17</p><button class=\\"slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small\\" aria-haspopup=\\"true\\" title=\\"More Options for this item\\"><svg class=\\"slds-button__icon\\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#down\\"></use></svg><span class=\\"slds-assistive-text\\">More Options for this item</span></button></div></div>"`;
+
+exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
+<div
+  className="slds-timeline__item_expandable slds-timeline__item_call"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    log_a_call
+  </span>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <button
+        aria-controls="call-item"
+        aria-expanded={undefined}
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Toggle details for Mobile conversation on Monday"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-timeline__details-action-icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Toggle details for Mobile conversation on Monday
+        </span>
+      </button>
+      <div
+        className="slds-icon_container slds-icon-standard-log-a-call slds-timeline__icon"
+        title="call"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#log_a_call"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <div
+        className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+        >
+          <h3
+            className="slds-truncate"
+            title="Mobile conversation on Monday"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              <strong>
+                Mobile conversation on Monday
+              </strong>
+            </a>
+          </h3>
+        </div>
+        <div
+          className="slds-timeline__actions slds-timeline__actions_inline"
+        >
+          <p
+            className="slds-timeline__date"
+          >
+            10:00am | 3/23/17
+          </p>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            id={undefined}
+            title="More Options for this item"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options for this item
+            </span>
+          </button>
+        </div>
+      </div>
+      <p
+        className="slds-m-horizontal_xx-small"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          You
+        </a>
+         
+        logged a call with
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Adam Chan
+        </a>
+         
+      </p>
+      <article
+        aria-hidden={false}
+        className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
+        id="call-item"
+      >
+        <ul
+          className="slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Name
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Adam Chan"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Adam Chan
+              </a>
+            </span>
+          </li>
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Related To
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Tesla Cloudhub + Anypoint Connectors"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Tesla Cloudhub + Anypoint Connectors
+              </a>
+            </span>
+          </li>
+        </ul>
+        <div>
+          <span
+            className="slds-text-title"
+          >
+            Description
+          </span>
+          <p
+            className="slds-p-top_x-small"
+          >
+            Adam seemed interested in closing this deal quickly! Let’s move.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
+<div
+  className="slds-timeline__item_expandable slds-timeline__item_task"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    task
+  </span>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <button
+        aria-controls="call-item"
+        aria-expanded={undefined}
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Toggle details for Mobile conversation on Monday"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-timeline__details-action-icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Toggle details for Mobile conversation on Monday
+        </span>
+      </button>
+      <div
+        className="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+        title="task"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <div
+        className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+        >
+          <span
+            className="slds-checkbox"
+          >
+            <input
+              aria-describedby={undefined}
+              aria-labelledby={null}
+              defaultChecked={undefined}
+              disabled={undefined}
+              id="checkbox-2"
+              name="options"
+              tabIndex={undefined}
+              type="checkbox"
+              value="checkbox-2"
+            />
+            <label
+              className="slds-checkbox__label"
+              htmlFor="checkbox-2"
+              id={undefined}
+            >
+              <span
+                className="slds-checkbox_faux"
+              />
+              <span
+                className="slds-form-element__label slds-assistive-text"
+              >
+                Mark Mobile conversation on Monday complete
+              </span>
+            </label>
+          </span>
+          <h3
+            className="slds-truncate"
+            title="Mobile conversation on Monday"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              <strong>
+                Mobile conversation on Monday
+              </strong>
+            </a>
+          </h3>
+        </div>
+        <div
+          className="slds-timeline__actions slds-timeline__actions_inline"
+        >
+          <p
+            className="slds-timeline__date"
+          >
+            10:00am | 3/23/17
+          </p>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            id={undefined}
+            title="More Options for this item"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options for this item
+            </span>
+          </button>
+        </div>
+      </div>
+      <p
+        className="slds-m-horizontal_xx-small"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          You
+        </a>
+         
+        created a task with
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Adam Chan
+        </a>
+         
+      </p>
+      <article
+        aria-hidden={false}
+        className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
+        id="call-item"
+      >
+        <ul
+          className="slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Name
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Adam Chan"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Adam Chan
+              </a>
+            </span>
+          </li>
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Related To
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Tesla Cloudhub + Anypoint Connectors"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Tesla Cloudhub + Anypoint Connectors
+              </a>
+            </span>
+          </li>
+        </ul>
+        <div>
+          <span
+            className="slds-text-title"
+          >
+            Description
+          </span>
+          <p
+            className="slds-p-top_x-small"
+          >
+            Adam seemed interested in closing this deal quickly! Let’s move.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline icon 1`] = `
+<div
+  className="slds-icon_container slds-icon-standard-email"
+  title="email"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_small"
+  >
+    <use
+      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#email"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item 1`] = `
+<div
+  className="slds-timeline__item_expandable slds-timeline__item_call"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    log_a_call
+  </span>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <button
+        aria-controls="call-item"
+        aria-expanded={undefined}
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Toggle details for Mobile conversation on Monday"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-timeline__details-action-icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Toggle details for Mobile conversation on Monday
+        </span>
+      </button>
+      <div
+        className="slds-icon_container slds-icon-standard-log-a-call slds-timeline__icon"
+        title="call"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#log_a_call"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <div
+        className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+        >
+          <h3
+            className="slds-truncate"
+            title="Mobile conversation on Monday"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              <strong>
+                Mobile conversation on Monday
+              </strong>
+            </a>
+          </h3>
+        </div>
+        <div
+          className="slds-timeline__actions slds-timeline__actions_inline"
+        >
+          <p
+            className="slds-timeline__date"
+          >
+            10:00am | 3/23/17
+          </p>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            id={undefined}
+            title="More Options for this item"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options for this item
+            </span>
+          </button>
+        </div>
+      </div>
+      <p
+        className="slds-m-horizontal_xx-small"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          You
+        </a>
+         
+        logged a call with
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Adam Chan
+        </a>
+         
+      </p>
+      <article
+        aria-hidden={false}
+        className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
+        id="call-item"
+      >
+        <ul
+          className="slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Name
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Adam Chan"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Adam Chan
+              </a>
+            </span>
+          </li>
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Related To
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Tesla Cloudhub + Anypoint Connectors"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Tesla Cloudhub + Anypoint Connectors
+              </a>
+            </span>
+          </li>
+        </ul>
+        <div>
+          <span
+            className="slds-text-title"
+          >
+            Description
+          </span>
+          <p
+            className="slds-p-top_x-small"
+          >
+            Adam seemed interested in closing this deal quickly! Let’s move.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item error 1`] = `
+<div
+  className="slds-grid slds-text-color_error slds-m-top_x-small slds-m-horizontal_xx-small"
+  id={undefined}
+>
+  <span
+    className="slds-icon_container slds-icon-utility-error"
+    title="Error Occurred"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon-text-error slds-icon_x-small slds-m-right_xx-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Error Occurred
+    </span>
+  </span>
+  <p>
+    There was an error loading the details
+  </p>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item trigger with a task checkbox 1`] = `
+<div
+  className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+>
+  <div
+    className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+  >
+    <span
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby={null}
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-1"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-1"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-1"
+        id={undefined}
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Mark Send EBC Follow Up Details complete
+        </span>
+      </label>
+    </span>
+    <h3
+      className="slds-truncate"
+      title="Send EBC Follow Up Details"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        <strong>
+          Send EBC Follow Up Details
+        </strong>
+      </a>
+    </h3>
+  </div>
+  <div
+    className="slds-timeline__actions slds-timeline__actions_inline"
+  >
+    <p
+      className="slds-timeline__date"
+    >
+      Feb 24
+    </p>
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      title="More Options for this item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More Options for this item
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item trigger with icons 1`] = `
+<div
+  className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+>
+  <div
+    className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+  >
+    <h3
+      className="slds-truncate"
+      title="EBC Follow Up Details"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        <strong>
+          EBC Follow Up Details
+        </strong>
+      </a>
+    </h3>
+    <div
+      className="slds-no-flex"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-groups"
+        title="Group email"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#groups"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Group email
+        </span>
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-attach"
+        title="Has attachments"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#attach"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Has attachments
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    className="slds-timeline__actions slds-timeline__actions_inline"
+  >
+    <p
+      className="slds-timeline__date"
+    >
+      Feb 24
+    </p>
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      title="More Options for this item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More Options for this item
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item trigger with no icons 1`] = `
+<div
+  className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+>
+  <div
+    className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+  >
+    <h3
+      className="slds-truncate"
+      title="EBC Follow Up Details"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        <strong>
+          EBC Follow Up Details
+        </strong>
+      </a>
+    </h3>
+  </div>
+  <div
+    className="slds-timeline__actions slds-timeline__actions_inline"
+  >
+    <p
+      className="slds-timeline__date"
+    >
+      Feb 24
+    </p>
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      title="More Options for this item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More Options for this item
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
+<div
+  className="slds-timeline__item_expandable slds-timeline__item_task"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    task
+  </span>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <button
+        aria-controls="call-item"
+        aria-expanded={undefined}
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Toggle details for Mobile conversation on Monday"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-timeline__details-action-icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Toggle details for Mobile conversation on Monday
+        </span>
+      </button>
+      <div
+        className="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+        title="task"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <div
+        className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+        >
+          <span
+            className="slds-checkbox"
+          >
+            <input
+              aria-describedby={undefined}
+              aria-labelledby={null}
+              defaultChecked={undefined}
+              disabled={undefined}
+              id="checkbox-3"
+              name="options"
+              tabIndex={undefined}
+              type="checkbox"
+              value="checkbox-3"
+            />
+            <label
+              className="slds-checkbox__label"
+              htmlFor="checkbox-3"
+              id={undefined}
+            >
+              <span
+                className="slds-checkbox_faux"
+              />
+              <span
+                className="slds-form-element__label slds-assistive-text"
+              >
+                Mark Mobile conversation on Monday complete
+              </span>
+            </label>
+          </span>
+          <h3
+            className="slds-truncate"
+            title="Mobile conversation on Monday"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              <strong>
+                Mobile conversation on Monday
+              </strong>
+            </a>
+          </h3>
+          <div
+            className="slds-no-flex"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-groups"
+              title="Group email"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#groups"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Group email
+              </span>
+            </span>
+            <span
+              className="slds-icon_container slds-icon-utility-attach"
+              title="Has attachments"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#attach"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Has attachments
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          className="slds-timeline__actions slds-timeline__actions_inline"
+        >
+          <p
+            className="slds-timeline__date"
+          >
+            10:00am | 3/23/17
+          </p>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            id={undefined}
+            title="More Options for this item"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options for this item
+            </span>
+          </button>
+        </div>
+      </div>
+      <p
+        className="slds-m-horizontal_xx-small"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          You
+        </a>
+         
+        created a task with
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Adam Chan
+        </a>
+         
+      </p>
+      <article
+        aria-hidden={false}
+        className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
+        id="call-item"
+      >
+        <ul
+          className="slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Name
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Adam Chan"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Adam Chan
+              </a>
+            </span>
+          </li>
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Related To
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Tesla Cloudhub + Anypoint Connectors"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Tesla Cloudhub + Anypoint Connectors
+              </a>
+            </span>
+          </li>
+        </ul>
+        <div>
+          <span
+            className="slds-text-title"
+          >
+            Description
+          </span>
+          <p
+            className="slds-p-top_x-small"
+          >
+            Adam seemed interested in closing this deal quickly! Let’s move.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
+<div
+  className="slds-media__body"
+>
+  <div
+    className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+    >
+      <h3
+        className="slds-truncate"
+        title="EBC Follow Up Details"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          <strong>
+            EBC Follow Up Details
+          </strong>
+        </a>
+      </h3>
+    </div>
+    <div
+      className="slds-timeline__actions slds-timeline__actions_inline"
+    >
+      <p
+        className="slds-timeline__date"
+      >
+        Feb 24
+      </p>
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        title="More Options for this item"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More Options for this item
+        </span>
+      </button>
+    </div>
+  </div>
+  <p
+    className="slds-m-horizontal_xx-small"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      You
+    </a>
+     
+    created a task with
+     
+    <a
+      href="javascript:void(0);"
+    >
+      Charlie Gomez
+    </a>
+     
+  </p>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders an empty details section 1`] = `
+<article
+  aria-hidden={false}
+  className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
+  id="test1"
+/>
+`;
+
+exports[`Activity Timeline Expandable renders an expanded empty details section 1`] = `
+<article
+  aria-hidden={false}
+  className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+  id="test1"
+/>
+`;
+
+exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
+<div
+  className="slds-timeline__item_expandable slds-timeline__item_call slds-is-open"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    log_a_call
+  </span>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <button
+        aria-controls="call-item"
+        aria-expanded="true"
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Toggle details for Mobile conversation on Monday"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-timeline__details-action-icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Toggle details for Mobile conversation on Monday
+        </span>
+      </button>
+      <div
+        className="slds-icon_container slds-icon-standard-log-a-call slds-timeline__icon"
+        title="call"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#log_a_call"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <div
+        className="slds-grid slds-grid_align-spread slds-timeline__trigger"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
+        >
+          <h3
+            className="slds-truncate"
+            title="Mobile conversation on Monday"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              <strong>
+                Mobile conversation on Monday
+              </strong>
+            </a>
+          </h3>
+        </div>
+        <div
+          className="slds-timeline__actions slds-timeline__actions_inline"
+        >
+          <p
+            className="slds-timeline__date"
+          >
+            10:00am | 3/23/17
+          </p>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            id={undefined}
+            title="More Options for this item"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options for this item
+            </span>
+          </button>
+        </div>
+      </div>
+      <p
+        className="slds-m-horizontal_xx-small"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          You
+        </a>
+         
+        logged a call with
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Adam Chan
+        </a>
+         
+      </p>
+      <article
+        aria-hidden={false}
+        className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+        id="call-item"
+      >
+        <ul
+          className="slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Name
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Adam Chan"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Adam Chan
+              </a>
+            </span>
+          </li>
+          <li
+            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+          >
+            <span
+              className="slds-text-title slds-p-bottom_x-small"
+            >
+              Related To
+            </span>
+            <span
+              className="slds-text-body_medium slds-truncate"
+              title="Tesla Cloudhub + Anypoint Connectors"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Tesla Cloudhub + Anypoint Connectors
+              </a>
+            </span>
+          </li>
+        </ul>
+        <div>
+          <span
+            className="slds-text-title"
+          >
+            Description
+          </span>
+          <p
+            className="slds-p-top_x-small"
+          >
+            Adam seemed interested in closing this deal quickly! Let’s move.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders an expanded timeline media figure 1`] = `
+<div
+  className="slds-media__figure"
+>
+  <button
+    aria-controls="event-figure"
+    aria-expanded="true"
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon"
+    id={undefined}
+    title="Toggle details for undefined"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-timeline__details-action-icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Toggle details for undefined
+    </span>
+  </button>
+  <div
+    className="slds-icon_container slds-icon-standard-event slds-timeline__icon"
+    title="event"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders simple timeline subtext 1`] = `
+<p
+  className="slds-m-horizontal_xx-small"
+>
+  <a
+    href="javascript:void(0);"
+  >
+    You
+  </a>
+   
+  created a task with
+   
+  <a
+    href="javascript:void(0);"
+  >
+    Charlie Gomez
+  </a>
+   
+</p>
+`;
+
+exports[`Activity Timeline Expandable renders the deprecated combined timeline 1`] = `
+<ul
+  className="slds-timeline"
+>
+  <li>
+    <div
+      className="slds-timeline__item"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Task
+      </span>
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-media slds-timeline__media slds-timeline__media_task"
+          >
+            <div
+              className="slds-media__figure slds-timeline__icon"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-task"
+                title="task"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <div
+                className="slds-media"
+              >
+                <div
+                  className="slds-media__figure"
+                >
+                  <span
+                    className="slds-checkbox"
+                  >
+                    <input
+                      aria-describedby={undefined}
+                      aria-labelledby={null}
+                      defaultChecked={undefined}
+                      disabled={undefined}
+                      id="checkbox-4"
+                      name="options"
+                      tabIndex={undefined}
+                      type="checkbox"
+                      value="checkbox-4"
+                    />
+                    <label
+                      className="slds-checkbox__label"
+                      htmlFor="checkbox-4"
+                      id={undefined}
+                    >
+                      <span
+                        className="slds-checkbox_faux"
+                      />
+                      <span
+                        className="slds-form-element__label slds-assistive-text"
+                      >
+                        mark-complete
+                      </span>
+                    </label>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <h3
+                    className="slds-truncate"
+                    title="Review proposals for EBC deck with larger team and have marketing review this"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Review proposals for EBC deck with larger team and have marketing review this
+                    </a>
+                  </h3>
+                  <ul
+                    className="slds-list_horizontal slds-wrap"
+                  >
+                    <li
+                      className="slds-m-right_large"
+                    >
+                      <span
+                        className="slds-text-title"
+                      >
+                        Contact:
+                      </span>
+                      <span
+                        className="slds-text-body_small"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                        >
+                          Lei Chan
+                        </a>
+                      </span>
+                    </li>
+                    <li
+                      className="slds-m-right_large"
+                    >
+                      <span
+                        className="slds-text-title"
+                      >
+                        Assigned to:
+                      </span>
+                      <span
+                        className="slds-text-body_small"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                        >
+                          Betty Mason
+                        </a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        >
+          <div
+            className="slds-timeline__actions"
+          >
+            <p
+              className="slds-timeline__date"
+            >
+              Feb 24
+            </p>
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              id={undefined}
+              title="More Options for Task, Review proposals"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Options for Task, Review proposals
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="slds-timeline__item"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Event
+      </span>
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-media slds-timeline__media slds-timeline__media_event"
+          >
+            <div
+              className="slds-media__figure slds-timeline__icon"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-event"
+                title="event"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h3
+                className="slds-truncate"
+                title="Company One — EBC Meeting"
+              >
+                <a
+                  href="javascript:void(0);"
+                >
+                  Company One — EBC Meeting
+                </a>
+              </h3>
+              <p
+                className="slds-truncate"
+                title="Let’s get together to review the theater’s layout and facilities. We’ll also discuss potential things that truncate at a certain width."
+              >
+                Let’s get together to review the theater’s layout and facilities. We’ll also discuss potential things that truncate at a certain width.
+              </p>
+              <ul
+                className="slds-list_horizontal slds-wrap"
+              >
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    Time:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Feb 23, 2015 11:00am–12:00pm
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    Location:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      300 Pike St, San Francisco CA
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    Name:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Lei Chan
+                    </a>
+                    ,
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Jason Dewar
+                    </a>
+                    ,
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Gwen Jones
+                    </a>
+                     and
+                     
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Pete Schaffer
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        >
+          <div
+            className="slds-timeline__actions"
+          >
+            <p
+              className="slds-timeline__date"
+            >
+              Feb 24
+            </p>
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              id={undefined}
+              title="More Options for Event, Company One"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Options for Event, Company One
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="slds-timeline__item"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Call
+      </span>
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-media slds-timeline__media slds-timeline__media_call"
+          >
+            <div
+              className="slds-media__figure slds-timeline__icon"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-log-a-call"
+                title="call"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#log_a_call"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h3
+                className="slds-truncate"
+                title="Mobile conversation on Monday"
+              >
+                <a
+                  href="javascript:void(0);"
+                >
+                  Mobile conversation on Monday
+                </a>
+              </h3>
+              <p
+                className="slds-truncate"
+                title="Lei seemed interested in closing this deal quickly! Let’s move."
+              >
+                Lei seemed interested in closing this deal quickly! Let’s move.
+              </p>
+              <ul
+                className="slds-list_horizontal slds-wrap"
+              >
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    Name:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Lei Chan
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    Assigned to:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Betty Mason
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        >
+          <div
+            className="slds-timeline__actions"
+          >
+            <p
+              className="slds-timeline__date"
+            >
+              Feb 24
+            </p>
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              id={undefined}
+              title="More Options for Call, Mobile conversation"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Options for Call, Mobile conversation
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="slds-timeline__item"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Email
+      </span>
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-media slds-timeline__media slds-timeline__media_email"
+          >
+            <div
+              className="slds-media__figure slds-timeline__icon"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-email"
+                title="email"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#email"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h3
+                className="slds-truncate"
+                title="Mobile conversation on Monday"
+              >
+                <a
+                  href="javascript:void(0);"
+                >
+                  Mobile conversation on Monday
+                </a>
+              </h3>
+              <p
+                className="slds-truncate"
+                title="Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it’s truncated."
+              >
+                Hi guys, Thanks for meeting with the team today and going through the proposals we saw. This goes on until it’s truncated.
+              </p>
+              <ul
+                className="slds-list_horizontal slds-wrap"
+              >
+                <li
+                  className="slds-truncate_container_50 slds-m-right_large slds-grid"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    To:
+                  </span>
+                  <span
+                    className="slds-text-body_small slds-m-left_xx-small slds-truncate"
+                    title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+                    </a>
+                  </span>
+                  <span
+                    className="slds-no-flex slds-text-body_small"
+                  >
+                     
+                    + 44 more
+                  </span>
+                </li>
+                <li
+                  className="slds-m-right_large"
+                >
+                  <span
+                    className="slds-text-title"
+                  >
+                    From:
+                  </span>
+                  <span
+                    className="slds-text-body_small"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Jason Dewar
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        >
+          <div
+            className="slds-timeline__actions"
+          >
+            <p
+              className="slds-timeline__date"
+            >
+              Feb 24
+            </p>
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              id={undefined}
+              title="More Options for Email, Mobile conversation"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Options for Email, Mobile conversation
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Activity Timeline Expandable renders timeline actions 1`] = `
+<div
+  className="slds-timeline__actions"
+>
+  <p
+    className="slds-timeline__date"
+  >
+    9:00am | 2/24/2017
+  </p>
+  <button
+    aria-haspopup="true"
+    className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+    id={undefined}
+    title="More Options for Call, Mobile conversation"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      More Options for Call, Mobile conversation
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Activity Timeline Expandable renders timeline subtext with extra text at the end 1`] = `
+<p
+  className="slds-m-horizontal_xx-small"
+>
+  <a
+    href="javascript:void(0);"
+  >
+    You
+  </a>
+   
+  created a task with
+   
+  <a
+    href="javascript:void(0);"
+  >
+    Charlie Gomez
+  </a>
+   
+  and 4 others
+</p>
+`;

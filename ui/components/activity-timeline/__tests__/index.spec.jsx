@@ -19,7 +19,7 @@ import {
 } from '../base/example';
 import { BaseExample as StaticExample } from '../deprecated/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const emailIcons = [
   <UtilityIcon
@@ -53,7 +53,7 @@ describe('Activity Timeline Expandable', () => {
         }}
       />
     );
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       wrapper
         .find('.slds-timeline__trigger')
         .at(0)
@@ -63,20 +63,20 @@ describe('Activity Timeline Expandable', () => {
   });
 
   it('renders a timeline icon', () =>
-    matchesMarkupAndStyle(<TimelineIcon symbol="email" />));
+    matchesMarkup(<TimelineIcon symbol="email" />));
 
   it('renders a collapsed timeline media figure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineMediaFigure id="event-figure" type="event" isExpanded="false" />
     ));
 
   it('renders an expanded timeline media figure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineMediaFigure id="event-figure" type="event" isExpanded="true" />
     ));
 
   it('renders a timeline media body', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineMediaBody>
         <TimelineTrigger type="email" title="EBC Follow Up Details" />
         <TimelineSubtext
@@ -90,12 +90,12 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a timeline item trigger with no icons', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineTrigger type="email" title="EBC Follow Up Details" />
     ));
 
   it('renders a timeline item trigger with icons', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineTrigger
         type="email"
         title="EBC Follow Up Details"
@@ -104,12 +104,12 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a timeline item trigger with a task checkbox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineTrigger type="task" title="Send EBC Follow Up Details" />
     ));
 
   it('renders simple timeline subtext', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineSubtext
         subtext={{
           you: 'You',
@@ -120,7 +120,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders timeline subtext with extra text at the end', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineSubtext
         subtext={{
           you: 'You',
@@ -131,11 +131,10 @@ describe('Activity Timeline Expandable', () => {
       />
     ));
 
-  it('renders a timeline item error', () =>
-    matchesMarkupAndStyle(<TimelineError />));
+  it('renders a timeline item error', () => matchesMarkup(<TimelineError />));
 
   it('renders timeline actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineActions
         date="9:00am | 2/24/2017"
         title="More Options for Call, Mobile conversation"
@@ -144,7 +143,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a timeline item', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineItem
         id="call-item"
         type="log_a_call"
@@ -169,7 +168,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a task timeline item', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineItem
         id="call-item"
         type="task"
@@ -194,7 +193,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a timeline item with icons', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineItem
         id="call-item"
         type="task"
@@ -220,7 +219,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a narrow timeline item', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineItem
         id="call-item"
         type="log_a_call"
@@ -246,7 +245,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders an expanded timeline item', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TimelineItem
         id="call-item"
         type="log_a_call"
@@ -272,13 +271,13 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders an empty details section', () =>
-    matchesMarkupAndStyle(<DescriptionCard id="test1" />));
+    matchesMarkup(<DescriptionCard id="test1" />));
 
   it('renders an expanded empty details section', () =>
-    matchesMarkupAndStyle(<DescriptionCard id="test1" isExpanded="true" />));
+    matchesMarkup(<DescriptionCard id="test1" isExpanded="true" />));
 
   it('renders a full expanded details section without footer buttons', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <DescriptionCard
         id="test-id"
         isExpanded="true"
@@ -297,7 +296,7 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders a full expanded details section with footer buttons', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <DescriptionCard
         id="test-id"
         isExpanded="true"
@@ -317,5 +316,5 @@ describe('Activity Timeline Expandable', () => {
     ));
 
   it('renders the deprecated combined timeline', () =>
-    matchesMarkupAndStyle(<StaticExample />));
+    matchesMarkup(<StaticExample />));
 });

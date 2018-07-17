@@ -9,10 +9,10 @@ const referenceId03 = 'accordion-details-03';
 const referenceId04 = 'accordion-details-04';
 const referenceId05 = 'accordion-details-05';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a base accordion', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
@@ -39,7 +39,7 @@ it('renders a base accordion', () =>
   ));
 
 it('renders an accordion with section one open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
@@ -66,7 +66,7 @@ it('renders an accordion with section one open', () =>
   ));
 
 it('renders an accordion with section two open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
@@ -93,7 +93,7 @@ it('renders an accordion with section two open', () =>
   ));
 
 it('renders an accordion with section three open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
@@ -120,7 +120,7 @@ it('renders an accordion with section three open', () =>
   ));
 
 it('renders an accordion with multiple sections open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
@@ -147,7 +147,7 @@ it('renders an accordion with multiple sections open', () =>
   ));
 
 it('renders a styled accordion', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-card">
       <Accordion>
         <AccordionSection
@@ -176,7 +176,7 @@ it('renders a styled accordion', () =>
   ));
 
 it('renders a nested accordion', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Accordion>
       <AccordionSection
         summary="Accordion summary"

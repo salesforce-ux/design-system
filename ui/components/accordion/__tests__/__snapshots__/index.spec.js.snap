@@ -1,0 +1,1460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a base accordion 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`renders a nested accordion 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        <ul
+          className="slds-accordion"
+        >
+          <li
+            className="slds-accordion__list-item"
+          >
+            <section
+              className="slds-accordion__section slds-is-open"
+            >
+              <div
+                className="slds-accordion__summary"
+              >
+                <h3
+                  className="slds-accordion__summary-heading"
+                >
+                  <button
+                    aria-controls="accordion-details-04"
+                    aria-expanded={true}
+                    className="slds-button slds-button_reset slds-accordion__summary-action"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                      />
+                    </svg>
+                    <span
+                      className="slds-truncate"
+                      title="Nested accordion summary"
+                    >
+                      Nested accordion summary
+                    </span>
+                  </button>
+                </h3>
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    More Options
+                  </span>
+                </button>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slds-accordion__content"
+                id="accordion-details-04"
+              >
+                Accordion details - A
+              </div>
+            </section>
+          </li>
+          <li
+            className="slds-accordion__list-item"
+          >
+            <section
+              className="slds-accordion__section"
+            >
+              <div
+                className="slds-accordion__summary"
+              >
+                <h3
+                  className="slds-accordion__summary-heading"
+                >
+                  <button
+                    aria-controls="accordion-details-05"
+                    aria-expanded={false}
+                    className="slds-button slds-button_reset slds-accordion__summary-action"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                      />
+                    </svg>
+                    <span
+                      className="slds-truncate"
+                      title="Nested accordion summary"
+                    >
+                      Nested accordion summary
+                    </span>
+                  </button>
+                </h3>
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    More Options
+                  </span>
+                </button>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slds-accordion__content"
+                id="accordion-details-05"
+              >
+                Accordion details - B
+              </div>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`renders a styled accordion 1`] = `
+<div
+  className="slds-card"
+>
+  <ul
+    className="slds-accordion"
+  >
+    <li
+      className="slds-accordion__list-item"
+    >
+      <section
+        className="slds-accordion__section slds-is-open"
+      >
+        <div
+          className="slds-accordion__summary"
+        >
+          <h3
+            className="slds-accordion__summary-heading"
+          >
+            <button
+              aria-controls="accordion-details-01"
+              aria-expanded={true}
+              className="slds-button slds-button_reset slds-accordion__summary-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="Accordion summary"
+              >
+                Accordion summary
+              </span>
+            </button>
+          </h3>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options
+            </span>
+          </button>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slds-accordion__content"
+          id="accordion-details-01"
+        >
+          Accordion details - A
+        </div>
+      </section>
+    </li>
+    <li
+      className="slds-accordion__list-item"
+    >
+      <section
+        className="slds-accordion__section"
+      >
+        <div
+          className="slds-accordion__summary"
+        >
+          <h3
+            className="slds-accordion__summary-heading"
+          >
+            <button
+              aria-controls="accordion-details-02"
+              aria-expanded={false}
+              className="slds-button slds-button_reset slds-accordion__summary-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="Accordion summary"
+              >
+                Accordion summary
+              </span>
+            </button>
+          </h3>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options
+            </span>
+          </button>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slds-accordion__content"
+          id="accordion-details-02"
+        >
+          Accordion details - B
+        </div>
+      </section>
+    </li>
+    <li
+      className="slds-accordion__list-item"
+    >
+      <section
+        className="slds-accordion__section"
+      >
+        <div
+          className="slds-accordion__summary"
+        >
+          <h3
+            className="slds-accordion__summary-heading"
+          >
+            <button
+              aria-controls="accordion-details-03"
+              aria-expanded={false}
+              className="slds-button slds-button_reset slds-accordion__summary-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="Accordion summary"
+              >
+                Accordion summary
+              </span>
+            </button>
+          </h3>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Options
+            </span>
+          </button>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slds-accordion__content"
+          id="accordion-details-03"
+        >
+          Accordion details - C
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders an accordion with multiple sections open 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`renders an accordion with section one open 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`renders an accordion with section three open 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`renders an accordion with section two open 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={false}
+        className="slds-accordion__content"
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Options
+          </span>
+        </button>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slds-accordion__content"
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;

@@ -69,7 +69,7 @@
  * @notes Contains elements such as the list filter, view switcher and refresh button
  */
 .slds-split-view__header {
-  padding: $spacing-medium $spacing-medium $spacing-x-small $spacing-large;
+  padding: $var-spacing-vertical-medium $var-spacing-horizontal-medium $spacing-x-small $var-spacing-horizontal-large;
 }
 
 /**
@@ -130,7 +130,7 @@
  */
 .slds-split-view__list-item-action {
   color: currentColor;
-  padding: $spacing-small $spacing-medium $spacing-small $spacing-large;
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium $var-spacing-vertical-small $var-spacing-horizontal-large;
 
   &:hover,
   &:focus {

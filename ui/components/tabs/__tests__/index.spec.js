@@ -35,23 +35,21 @@ import MobileTabs, {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
 
 describe('Default Tabs', () => {
-  it('renders default tabs', () => matchesMarkupAndStyle(<TabsDefault />));
+  it('renders default tabs', () => matchesMarkup(<TabsDefault />));
   it('renders default tabs with nested scoped tabs', () =>
-    matchesMarkupAndStyle(<TabsWithNestedScopedTabs />));
+    matchesMarkup(<TabsWithNestedScopedTabs />));
   it('renders default tabs with overflowing tab items', () =>
-    matchesMarkupAndStyle(<TabsOverflow />));
-  it('renders medium sized default tabs', () =>
-    matchesMarkupAndStyle(<TabsMedium />));
-  it('renders large sized default tabs', () =>
-    matchesMarkupAndStyle(<TabsLarge />));
+    matchesMarkup(<TabsOverflow />));
+  it('renders medium sized default tabs', () => matchesMarkup(<TabsMedium />));
+  it('renders large sized default tabs', () => matchesMarkup(<TabsLarge />));
 });
 
 describe('Subtabs', () => {
   it('renders subtab with notification and dirty', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-tabs_default slds-sub-tabs">
         <ul className="slds-tabs_default__nav" role="tablist">
           <Subtab

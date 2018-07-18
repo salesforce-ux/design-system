@@ -18,10 +18,10 @@ import {
 import createHelpers from '../../../../jest.helpers';
 import { IndicatorUnread, IndicatorUnsaved, IndicatorContainer } from '..';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
 
 it('renders a global-navigation with sub-tabs', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '8rem' }}>
       <ContextTabBar>
         <ContextTab

@@ -5,21 +5,18 @@ import { Trigger } from '../../menus/dropdown/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
 
-it('renders a default base color picker', () =>
-  matchesMarkupAndStyle(<ColorPicker />));
+it('renders a default base color picker', () => matchesMarkup(<ColorPicker />));
 
 it('renders a base color picker with summary error', () =>
-  matchesMarkupAndStyle(<ColorPicker hasSummaryError />));
+  matchesMarkup(<ColorPicker hasSummaryError />));
 
 it('renders a base color picker with custom tab selected', () =>
-  matchesMarkupAndStyle(<ColorPicker isOpen selectedTabIndex={1} />));
+  matchesMarkup(<ColorPicker isOpen selectedTabIndex={1} />));
 
 it('renders a base color picker with custom tab selected in error state', () =>
-  matchesMarkupAndStyle(
-    <ColorPicker isOpen hasCustomError selectedTabIndex={1} />
-  ));
+  matchesMarkup(<ColorPicker isOpen hasCustomError selectedTabIndex={1} />));
 
 it('renders a custom only color picker', () =>
   matchesMarkupAndStyle(<ColorPicker hasPredefined={false} />));

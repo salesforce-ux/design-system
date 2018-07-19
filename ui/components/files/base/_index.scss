@@ -29,6 +29,7 @@
     position: absolute;
     z-index: $z-index-overlay;
     cursor: pointer;
+    pointer-events: none;
     content: '';
   }
 

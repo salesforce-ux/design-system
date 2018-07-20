@@ -4,8 +4,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
-import { FormElement, FormElementControl } from '../../form-element';
-
+import {
+  FormElement,
+  FormElementControl,
+  FormElementTooltip
+} from '../../form-element';
 const checkboxLabel = 'Checkbox Label';
 const errorId = 'error_01';
 
@@ -29,7 +32,7 @@ export let Checkbox = props => {
   const uniqueId = _.uniqueId('checkbox-');
 
   return (
-    <span className={classNames('slds-checkbox', props.className)}>
+    <div className={classNames('slds-checkbox', props.className)}>
       {props.children}
       <input
         type="checkbox"
@@ -59,11 +62,19 @@ export let Checkbox = props => {
               props.hideLabel ? 'slds-assistive-text' : null
             )}
           >
+            {props.isRequired && (
+              <abbr className="slds-required" title="required">
+                * {' '}
+              </abbr>
+            )}
             {props.label}
           </span>
         )}
       </label>
-    </span>
+      {props.hasTooltip && (
+        <FormElementTooltip showTooltip={props.showTooltip} />
+      )}
+    </div>
   );
 };
 
@@ -92,7 +103,7 @@ export let Required = props => (
 
 export let ErrorState = props => (
   <FormElement
-    formElementClassName="slds-has-error"
+    hasError
     inlineMessage="This field is required"
     errorId={errorId}
   >
@@ -180,15 +191,6 @@ export default (
 );
 
 export let states = [
-  {
-    id: 'indeterminate',
-    label: 'Indeterminate',
-    element: <Indeterminate />,
-    script: `
-      var checkbox = document.getElementById('checkbox-indeterminate-01')
-      checkbox.indeterminate = true
-    `
-  },
   {
     id: 'required',
     label: 'Required',

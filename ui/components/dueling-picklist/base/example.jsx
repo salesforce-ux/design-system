@@ -89,7 +89,7 @@ export let states = [
     label: 'With Tooltip',
     element: (
       <Demo>
-        <MultiSelect dataSet={DefaultSnapShot} hasTooltip />
+        <MultiSelect dataSet={DefaultSnapShot} hasTooltip showTooltip />
       </Demo>
     )
   },
@@ -98,7 +98,12 @@ export let states = [
     label: 'Required With Tooltip',
     element: (
       <Demo>
-        <MultiSelect dataSet={DefaultSnapShot} isRequired hasTooltip />
+        <MultiSelect
+          dataSet={DefaultSnapShot}
+          isRequired
+          hasTooltip
+          showTooltip
+        />
       </Demo>
     )
   }

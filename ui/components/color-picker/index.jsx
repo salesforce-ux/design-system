@@ -95,9 +95,8 @@ export const ColorPickerSummary = props => {
       </Button>
 
       <FormElement
-        formElementClassName={classNames('slds-color-picker__summary-input', {
-          'slds-has-error': hasSummaryError
-        })}
+        formElementClassName="slds-color-picker__summary-input"
+        hasError={hasSummaryError}
       >
         <Input
           id="color-picker-summary-input"
@@ -199,12 +198,8 @@ const ColorPickerCustom = props => {
       <div className="slds-color-picker__custom-inputs">
         <FormElement
           labelContent="Hex"
-          formElementClassName={classNames(
-            'slds-color-picker__input-custom-hex',
-            {
-              'slds-has-error': hasCustomError
-            }
-          )}
+          formElementClassName="slds-color-picker__input-custom-hex"
+          hasError={hasCustomError}
           inputId={hexInputId}
         >
           <Input

@@ -3,7 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import ButtonIcon from '../button-icons/';
-import { FormElement } from './';
+import { FormElement, Fieldset } from './';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Textarea } from '../textarea/base/example';
@@ -127,7 +127,7 @@ If an error has occured while submitting a form, the form element with an error 
 
   <CodeView>
     <FormElement
-      formElementClassName="slds-has-error"
+      hasError
       labelContent="Form Label"
       inputId="form-element-05"
       errorId="form-error-01"
@@ -166,13 +166,9 @@ To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` 
 
 ### Compound
 
-<Blockquote type="note" header="Implementation Note">
-  To use field level help with a `<legend>` (as opposed to a `<label>`), the `<legend>` and the `<div>` with the help icon must be siblings. Additionally, you'll need to add the class `slds-form-element__legend_has-tooltip` to the `<legend>`. Only add this class when your `<legend>` has adjacent field level help, otherwise you'll experience unexpected layouts.
-</Blockquote>
-
 <Example title="Form Layout - Compound">
   <CodeView style={{maxWidth:'400px'}}>
-    <CompoundForm/>
+    <CompoundForm hasTooltip />
   </CodeView>
 </Example>
 

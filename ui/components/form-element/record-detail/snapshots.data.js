@@ -3,10 +3,12 @@
 
 import React from 'react';
 import ButtonIcon from '../../button-icons/';
-import { FormElement } from '../';
+import { FormElement, Fieldset } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
+import { CheckboxStandalone } from '../../checkbox/';
+import { MultiSelect, DefaultSnapShot } from '../../dueling-picklist/';
 import Combobox from '../../combobox/';
 import Listbox from '../../combobox/listbox/';
 import { UtilityIcon } from '../../icons/base/example';
@@ -20,16 +22,20 @@ export const ObjectFieldTypes = {
           label: 'Assigned To',
           value: 'Jack Rogers',
           avatar: '/assets/images/avatar1.jpg',
+          isRequired: true,
           link: true,
           component: (
             <FormElement
               inputId="form-element-id-01"
               labelContent="Assigned To"
+              isRequired
+              isEditing
             >
               <Input
                 id="form-element-id-01"
                 readOnly
                 defaultValue="Jack Rogers"
+                required
               />
             </FormElement>
           )
@@ -75,10 +81,13 @@ export const ObjectFieldTypes = {
           label: 'Security Assessment Required?',
           value: 'False',
           component: (
-            <Checkbox
-              className="slds-checkbox_stacked"
-              label="Security Assessment Required?"
-            />
+            <FormElement
+              labelContent="Security Assessment Required?"
+              inputId="checkbox-id-01"
+              isEditing
+            >
+              <CheckboxStandalone id="checkbox-id-01" />
+            </FormElement>
           )
         },
         {
@@ -123,22 +132,17 @@ export const ObjectFieldTypes = {
           label: 'Personalization Settings',
           value: 'Disable end user personalization',
           component: (
-            <fieldset className="slds-form-element">
-              <legend className="slds-form-element__legend slds-form-element__label">
-                App Personalization Settings
-              </legend>
-              <div className="slds-form-element__control">
-                <Checkbox
-                  label="Disable end user personalization"
-                  name="default"
-                  checked
-                />
-                <Checkbox
-                  label="Don't automatically create temporary tabs"
-                  name="default"
-                />
-              </div>
-            </fieldset>
+            <Fieldset label="App Personalization Settings" isEditing>
+              <Checkbox
+                label="Disable end user personalization"
+                name="default"
+                checked
+              />
+              <Checkbox
+                label="Don't automatically create temporary tabs"
+                name="default"
+              />
+            </Fieldset>
           )
         },
         {
@@ -154,10 +158,13 @@ export const ObjectFieldTypes = {
           type: 'text',
           label: 'SLA Serial Number',
           value: '5367',
+          hasTooltip: true,
           component: (
             <FormElement
               labelContent="SLA Serial Number"
               inputId="form-element-id-02"
+              hasTooltip
+              isEditing
             >
               <Input id="form-element-id-02" defaultValue="5367" />
             </FormElement>
@@ -189,67 +196,118 @@ export const ObjectFieldTypes = {
     {
       fields: [
         {
+          type: 'location',
+          label: 'Location',
+          value: '10.283, 54.293',
+          component: (
+            <Fieldset label="Location" isEditing hasCompoundFields>
+              <div className="slds-form-element__group">
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_1-of-2"
+                    labelContent="Longitude"
+                    inputId="location-longitude-01"
+                  >
+                    <Input id="location-longitude-01" defaultValue="10.283" />
+                  </FormElement>
+                  <FormElement
+                    formElementClassName="slds-size_1-of-2"
+                    labelContent="Latitude"
+                    inputId="location-latitude-01"
+                  >
+                    <Input id="location-latitude-01" defaultValue="54.293" />
+                  </FormElement>
+                </div>
+              </div>
+            </Fieldset>
+          )
+        },
+        {
+          type: 'multiselect',
+          label: 'Selected Languages',
+          value: 'Arabic, Chinese, English, German',
+          component: <MultiSelect dataSet={DefaultSnapShot} isResponsive />
+        }
+      ]
+    },
+    {
+      fields: [
+        {
           type: 'address',
           label: 'Billing Address',
           value: ['525 S. Lexington Ave', 'Burlington, NC 27215', 'USA'],
           link: true,
+          isRequired: true,
+          hasTooltip: true,
           component: (
-            <fieldset className="slds-form-element slds-form_compound">
-              <legend className="slds-form-element__legend slds-form-element__label">
-                Billing Address
-              </legend>
-              <div className="slds-form-element__control">
-                <div className="slds-form-element__group">
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_1-of-1"
-                      labelContent="Street"
-                      inputId="form-element-id-04"
-                    >
-                      <Textarea
-                        id="form-element-id-04"
-                        defaultValue="525 S. Lexington Ave"
-                      />
-                    </FormElement>
-                  </div>
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_4-of-6"
-                      labelContent="City"
-                      inputId="form-element-id-05"
-                    >
-                      <Input
-                        id="form-element-id-05"
-                        defaultValue="Burlington"
-                      />
-                    </FormElement>
-                    <FormElement
-                      formElementClassName="slds-size_2-of-6"
-                      labelContent="State/Province"
-                      inputId="form-element-id-06"
-                    >
-                      <Input id="form-element-id-06" defaultValue="NC" />
-                    </FormElement>
-                  </div>
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_4-of-6"
-                      labelContent="Zip/Postal Code"
-                      inputId="form-element-id-07"
-                    >
-                      <Input id="form-element-id-07" defaultValue="27215" />
-                    </FormElement>
-                    <FormElement
-                      formElementClassName="slds-size_2-of-6"
-                      labelContent="Country"
-                      inputId="form-element-id-08"
-                    >
-                      <Input id="form-element-id-08" defaultValue="USA" />
-                    </FormElement>
-                  </div>
+            <Fieldset
+              label="Billing Address"
+              isRequired
+              isEditing
+              isStacked
+              hasTooltip
+              hasCompoundFields
+            >
+              <div className="slds-form-element__group">
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_1-of-1"
+                    labelContent="Billing Street"
+                    inputId="form-element-id-04"
+                  >
+                    <Textarea
+                      id="form-element-id-04"
+                      defaultValue="525 S. Lexington Ave"
+                      required
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_4-of-6"
+                    labelContent="Billing City"
+                    inputId="form-element-id-05"
+                  >
+                    <Input
+                      id="form-element-id-05"
+                      defaultValue="Burlington"
+                      required
+                    />
+                  </FormElement>
+                  <FormElement
+                    formElementClassName="slds-size_2-of-6"
+                    labelContent="Billing State/Province"
+                    inputId="form-element-id-06"
+                  >
+                    <Input id="form-element-id-06" defaultValue="NC" required />
+                  </FormElement>
+                </div>
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_4-of-6"
+                    labelContent="Billing Zip/Postal Code"
+                    inputId="form-element-id-07"
+                  >
+                    <Input
+                      id="form-element-id-07"
+                      defaultValue="27215"
+                      required
+                    />
+                  </FormElement>
+                  <FormElement
+                    formElementClassName="slds-size_2-of-6"
+                    labelContent="Billing Country"
+                    inputId="form-element-id-08"
+                  >
+                    <Input
+                      id="form-element-id-08"
+                      defaultValue="USA"
+                      required
+                    />
+                  </FormElement>
                 </div>
               </div>
-            </fieldset>
+            </Fieldset>
           )
         },
         {
@@ -258,59 +316,59 @@ export const ObjectFieldTypes = {
           value: ['312 Constitution Place', 'Austin, TX 78767', 'USA'],
           link: true,
           component: (
-            <fieldset className="slds-form-element slds-form_compound">
-              <legend className="slds-form-element__legend slds-form-element__label">
-                Shipping Address
-              </legend>
-              <div className="slds-form-element__control">
-                <div className="slds-form-element__group">
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_1-of-1"
-                      labelContent="Street"
-                      inputId="form-element-id-09"
-                    >
-                      <Textarea
-                        id="form-element-id-09"
-                        defaultValue="312 Constitution Place"
-                      />
-                    </FormElement>
-                  </div>
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_4-of-6"
-                      labelContent="City"
-                      inputId="form-element-id-10"
-                    >
-                      <Input id="form-element-id-10" defaultValue="Austin" />
-                    </FormElement>
-                    <FormElement
-                      formElementClassName="slds-size_2-of-6"
-                      labelContent="State/Province"
-                      inputId="form-element-id-11"
-                    >
-                      <Input id="form-element-id-11" defaultValue="TX" />
-                    </FormElement>
-                  </div>
-                  <div className="slds-form-element__row">
-                    <FormElement
-                      formElementClassName="slds-size_4-of-6"
-                      labelContent="Zip/Postal Code"
-                      inputId="form-element-id-12"
-                    >
-                      <Input id="form-element-id-12" defaultValue="78767" />
-                    </FormElement>
-                    <FormElement
-                      formElementClassName="slds-size_2-of-6"
-                      labelContent="Country"
-                      inputId="form-element-id-13"
-                    >
-                      <Input id="form-element-id-13" defaultValue="USA" />
-                    </FormElement>
-                  </div>
+            <Fieldset
+              label="Shipping Address"
+              isEditing
+              isStacked
+              hasCompoundFields
+            >
+              <div className="slds-form-element__group">
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_1-of-1"
+                    labelContent="Shipping Street"
+                    inputId="form-element-id-09"
+                  >
+                    <Textarea
+                      id="form-element-id-09"
+                      defaultValue="312 Constitution Place"
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_4-of-6"
+                    labelContent="Shipping City"
+                    inputId="form-element-id-10"
+                  >
+                    <Input id="form-element-id-10" defaultValue="Austin" />
+                  </FormElement>
+                  <FormElement
+                    formElementClassName="slds-size_2-of-6"
+                    labelContent="Shipping State/Province"
+                    inputId="form-element-id-11"
+                  >
+                    <Input id="form-element-id-11" defaultValue="TX" />
+                  </FormElement>
+                </div>
+                <div className="slds-form-element__row">
+                  <FormElement
+                    formElementClassName="slds-size_4-of-6"
+                    labelContent="Shipping Zip/Postal Code"
+                    inputId="form-element-id-12"
+                  >
+                    <Input id="form-element-id-12" defaultValue="78767" />
+                  </FormElement>
+                  <FormElement
+                    formElementClassName="slds-size_2-of-6"
+                    labelContent="Shipping Country"
+                    inputId="form-element-id-13"
+                  >
+                    <Input id="form-element-id-13" defaultValue="USA" />
+                  </FormElement>
                 </div>
               </div>
-            </fieldset>
+            </Fieldset>
           )
         }
       ]
@@ -325,9 +383,10 @@ export const ObjectFieldTypes = {
           ],
           component: (
             <FormElement
-              formElementClassName="slds-form-element_stacked"
               labelContent="Description"
               inputId="form-element-id-14"
+              isStacked
+              isEditing
             >
               <Textarea
                 id="form-element-id-14"

@@ -4,30 +4,65 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SvgIcon from '../../shared/svg-icon';
+import ButtonIcon from '../button-icons/';
 import { Tooltip } from '../tooltips/base/example';
 
 export const SimpleFormElementWrapper = props => {
-  const { className, role, children, ...rest } = props;
+  const {
+    isEditable,
+    isViewMode,
+    hasHint,
+    hasError,
+    isStacked,
+    isEditing,
+    role,
+    className,
+    children,
+    ...rest
+  } = props;
+  let formElementClassNames = classNames(
+    'slds-form-element',
+    {
+      'slds-form-element_edit': isEditable,
+      'slds-form-element_readonly': isViewMode,
+      'slds-form-element_stacked': isStacked,
+      'slds-hint-parent': hasHint,
+      'slds-has-error': hasError,
+      'slds-is-editing': isEditing
+    },
+    className
+  );
 
   return (
-    <div
-      className={classNames('slds-form-element', className)}
-      role={role}
-      {...rest}
-    >
+    <div className={formElementClassNames} role={role} {...rest}>
       {children}
     </div>
   );
 };
 
+SimpleFormElementWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  role: PropTypes.string,
+  isEditable: PropTypes.bool,
+  isViewMode: PropTypes.bool,
+  isStacked: PropTypes.bool,
+  hasHint: PropTypes.bool,
+  hasError: PropTypes.bool
+};
+
 export const FormElementControl = props => {
   const { className, children } = props;
+
   return (
     <div className={classNames('slds-form-element__control', className)}>
       {children}
     </div>
   );
+};
+
+FormElementControl.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 export const FormElementLabel = props => {
@@ -44,65 +79,186 @@ export const FormElementLabel = props => {
     <label
       className={classNames(
         'slds-form-element__label',
-        {
-          'slds-assistive-text': hasHiddenLabel
-        },
+        hasHiddenLabel && 'slds-assistive-text',
         labelClassName
       )}
       htmlFor={inputId}
       id={labelId}
     >
-      {isRequired ? (
+      {isRequired && (
         <abbr className="slds-required" title="required">
           * {' '}
         </abbr>
-      ) : null}
+      )}
       {labelContent}
     </label>
   );
 };
 
+FormElementLabel.propTypes = {
+  labelId: PropTypes.string,
+  inputId: PropTypes.string,
+  labelContent: PropTypes.node,
+  labelClassName: PropTypes.string,
+  hasHiddenLabel: PropTypes.bool,
+  isRequired: PropTypes.bool
+};
+
 export const FormElementSpanFauxLabel = props => {
-  return <span className="slds-form-element__label">{props.children}</span>;
+  const { isRequired, children } = props;
+
+  return (
+    <span className="slds-form-element__label">
+      {isRequired && (
+        <abbr className="slds-required" title="required">
+          * {' '}
+        </abbr>
+      )}
+      {children}
+    </span>
+  );
 };
 
 FormElementSpanFauxLabel.propTypes = {
+  children: PropTypes.node,
+  isRequired: PropTypes.bool
+};
+
+export const FormElementTooltip = props => {
+  const { showTooltip } = props;
+
+  return (
+    <div className="slds-form-element__icon">
+      <ButtonIcon
+        aria-describedby={showTooltip && 'help'}
+        symbol="info"
+        assistiveText="Help"
+      />
+      {showTooltip && (
+        <Tooltip
+          className="slds-nubbin_bottom-left"
+          id="help"
+          style={{
+            position: 'absolute',
+            top: '-45px',
+            left: '-15px',
+            width: '170px'
+          }}
+        >
+          Some helpful information
+        </Tooltip>
+      )}
+    </div>
+  );
+};
+
+FormElementTooltip.propTypes = {
+  showTooltip: PropTypes.bool
+};
+
+export const FormElementHelpMessage = props => {
+  const { errorId, children } = props;
+
+  return (
+    <div className="slds-form-element__help" id={errorId}>
+      {children}
+    </div>
+  );
+};
+
+FormElementHelpMessage.propTypes = {
+  errorId: PropTypes.string,
   children: PropTypes.node
 };
 
-export const FormElementTooltip = props => (
-  <div className="slds-form-element__icon">
-    <button aria-describedby="help" className="slds-button slds-button_icon">
-      <SvgIcon
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        sprite="utility"
-        symbol="info"
-      />
-      <span className="slds-assistive-text">Help</span>
-    </button>
-    <Tooltip
-      className="slds-nubbin_bottom-left"
-      id="help"
-      style={{
-        position: 'absolute',
-        top: '-45px',
-        left: '-15px',
-        width: '170px'
-      }}
-    >
-      Some helpful information
-    </Tooltip>
-  </div>
-);
+export const FormElementStatic = props => {
+  const { isLongform, children } = props;
 
-export const FormElementHelpMessage = props => (
-  <div
-    className={classNames('slds-form-element__help', props.className)}
-    id={props.errorId}
-  >
-    {props.children}
-  </div>
-);
+  return (
+    <div
+      className={classNames(
+        'slds-form-element__static',
+        isLongform && 'slds-text-longform'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+FormElementStatic.propTypes = {
+  isLongform: PropTypes.bool,
+  children: PropTypes.node
+};
+
+export const FieldsetWrapper = props => {
+  const {
+    id,
+    hasCompoundFields,
+    hasError,
+    isRequired,
+    isEditing,
+    isStacked,
+    children
+  } = props;
+
+  return (
+    <fieldset
+      id={id}
+      className={classNames('slds-form-element', {
+        'slds-form_compound': hasCompoundFields,
+        'slds-has-error': hasError,
+        'slds-is-required': isRequired,
+        'slds-is-editing': isEditing,
+        'slds-form-element_stacked': isStacked
+      })}
+    >
+      {children}
+    </fieldset>
+  );
+};
+
+FieldsetWrapper.propTypes = {
+  id: PropTypes.string,
+  hasCompoundFields: PropTypes.bool,
+  children: PropTypes.node,
+  hasError: PropTypes.bool,
+  isRequired: PropTypes.bool
+};
+
+export const Legend = props => {
+  const { isRequired, hasTooltip, hasHiddenLabel, children } = props;
+
+  return (
+    <React.Fragment>
+      <legend
+        className={classNames(
+          'slds-form-element__legend slds-form-element__label',
+          hasHiddenLabel && 'slds-assistive-text'
+        )}
+      >
+        {isRequired && (
+          <abbr className="slds-required" title="required">
+            * {' '}
+          </abbr>
+        )}
+        {children}
+      </legend>
+      {hasTooltip && (
+        <div className="slds-form-element__icon">
+          <ButtonIcon symbol="info" assistiveText="Help" />
+        </div>
+      )}
+    </React.Fragment>
+  );
+};
+
+Legend.propTypes = {
+  children: PropTypes.node.isRequired,
+  isRequired: PropTypes.bool,
+  hasHiddenLabel: PropTypes.bool,
+  hasTooltip: PropTypes.bool
+};
 
 /**
 * Generic Form Element
@@ -123,13 +279,18 @@ export const FormElementHelpMessage = props => (
 * @prop {string}  inlineMessage - Message placed under the input, either inline help or error message
 * @prop {string}  role - Role of the Form Element Wrapper
 * @prop {object}  dropdown - Content shown as a dropdown of the Form Element
-* @prop {object}  children - Contents of the Form Element
 */
 export const FormElement = props => {
   const {
     formElementClassName,
     formControlClassName,
     isRequired,
+    isEditable,
+    isViewMode,
+    isStacked,
+    isEditing,
+    hasHint,
+    hasError,
     labelId,
     labelClassName,
     labelContent,
@@ -140,6 +301,7 @@ export const FormElement = props => {
     hasRightIconGroup,
     errorId,
     hasTooltip,
+    showTooltip,
     inlineMessage,
     role,
     dropdown,
@@ -164,20 +326,34 @@ export const FormElement = props => {
   return (
     <SimpleFormElementWrapper
       {...rest}
-      className={formElementClassName}
+      className={classNames(formElementClassName)}
+      hasError={hasError}
+      hasHint={hasHint}
+      isViewMode={isViewMode}
+      isEditable={isEditable}
+      isStacked={isStacked}
+      isEditing={isEditing}
       role={role}
     >
-      {labelContent && (
-        <FormElementLabel
-          isRequired={isRequired}
-          labelContent={labelContent}
-          hasHiddenLabel={hasHiddenLabel}
-          labelId={labelId}
-          labelClassName={labelClassName}
-          inputId={inputId}
-        />
-      )}
-      {hasTooltip && <FormElementTooltip />}
+      {labelContent &&
+        (isViewMode ? (
+          <FormElementSpanFauxLabel
+            isRequired={isRequired}
+            hasTooltip={hasTooltip}
+          >
+            {labelContent}
+          </FormElementSpanFauxLabel>
+        ) : (
+          <FormElementLabel
+            isRequired={isRequired}
+            labelContent={labelContent}
+            hasHiddenLabel={hasHiddenLabel}
+            labelId={labelId}
+            labelClassName={labelClassName}
+            inputId={inputId}
+          />
+        ))}
+      {hasTooltip && <FormElementTooltip showTooltip={showTooltip} />}
       <FormElementControl
         className={classNames(inputIconPositionClasses, formControlClassName)}
       >
@@ -188,7 +364,76 @@ export const FormElement = props => {
           {inlineMessage}
         </FormElementHelpMessage>
       )}
-      {dropdown || null}
+      {dropdown}
     </SimpleFormElementWrapper>
   );
+};
+
+FormElement.propTypes = {
+  children: PropTypes.node.isRequired,
+  labelId: PropTypes.string,
+  inputId: PropTypes.string,
+  errorId: PropTypes.string,
+  labelContent: PropTypes.node,
+  isRequired: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  hasHiddenLabel: PropTypes.bool,
+  hasLeftIcon: PropTypes.bool,
+  hasRightIcon: PropTypes.bool,
+  hasRightIconGroup: PropTypes.bool,
+  hasTooltip: PropTypes.bool,
+  hasError: PropTypes.bool,
+  showTooltip: PropTypes.bool,
+  dropdown: PropTypes.node,
+  inlineMessage: PropTypes.string,
+  formElementClassName: PropTypes.string,
+  formControlClassName: PropTypes.string
+};
+
+export const Fieldset = props => {
+  const {
+    id,
+    label,
+    isRequired,
+    isEditing,
+    isStacked,
+    hasError,
+    hasCompoundFields,
+    hasTooltip,
+    hasHiddenLabel,
+    children
+  } = props;
+
+  return (
+    <FieldsetWrapper
+      id={id}
+      isRequired={isRequired}
+      isEditing={isEditing}
+      isStacked={isStacked}
+      hasError={hasError}
+      hasCompoundFields={hasCompoundFields}
+    >
+      <Legend
+        isRequired={isRequired}
+        hasTooltip={hasTooltip}
+        hasHiddenLabel={hasHiddenLabel}
+      >
+        {label}
+      </Legend>
+      <FormElementControl>{children}</FormElementControl>
+    </FieldsetWrapper>
+  );
+};
+
+Fieldset.propTypes = {
+  id: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
+  isRequired: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  isStacked: PropTypes.bool,
+  hasHiddenLabel: PropTypes.bool,
+  hasCompoundFields: PropTypes.bool,
+  hasTooltip: PropTypes.bool,
+  hasError: PropTypes.bool
 };

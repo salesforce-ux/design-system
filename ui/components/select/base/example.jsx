@@ -62,7 +62,7 @@ let Required = props => (
 
 let ErrorState = props => (
   <FormElement
-    formElementClassName="slds-has-error"
+    hasError
     labelContent={selectLabel}
     inputId={defaultSelectId}
     errorId={errorId}

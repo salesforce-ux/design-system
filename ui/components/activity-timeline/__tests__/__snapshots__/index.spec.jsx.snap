@@ -430,7 +430,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
         <div
           className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
         >
-          <span
+          <div
             className="slds-checkbox"
           >
             <input
@@ -458,7 +458,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
                 Mark Mobile conversation on Monday complete
               </span>
             </label>
-          </span>
+          </div>
           <h3
             className="slds-truncate"
             title="Mobile conversation on Monday"
@@ -823,7 +823,7 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
   <div
     className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
   >
-    <span
+    <div
       className="slds-checkbox"
     >
       <input
@@ -851,7 +851,7 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
           Mark Send EBC Follow Up Details complete
         </span>
       </label>
-    </span>
+    </div>
     <h3
       className="slds-truncate"
       title="Send EBC Follow Up Details"
@@ -1101,7 +1101,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
         <div
           className="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space"
         >
-          <span
+          <div
             className="slds-checkbox"
           >
             <input
@@ -1129,7 +1129,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
                 Mark Mobile conversation on Monday complete
               </span>
             </label>
-          </span>
+          </div>
           <h3
             className="slds-truncate"
             title="Mobile conversation on Monday"
@@ -1683,7 +1683,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                 <div
                   className="slds-media__figure"
                 >
-                  <span
+                  <div
                     className="slds-checkbox"
                   >
                     <input
@@ -1711,7 +1711,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                         mark-complete
                       </span>
                     </label>
-                  </span>
+                  </div>
                 </div>
                 <div
                   className="slds-media__body"

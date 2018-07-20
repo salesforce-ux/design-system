@@ -59,7 +59,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
           className="slds-input"
           defaultValue="#5679C0"
           id="color-picker-summary-input"
-          placeholder="Placeholder Text"
+          placeholder={undefined}
           readOnly={undefined}
           type="text"
         />
@@ -987,7 +987,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
                     className="slds-input"
                     defaultValue="#5679C0"
                     id="color-picker-input-hex-3"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -1015,7 +1015,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
                     className="slds-input"
                     defaultValue="86"
                     id="color-picker-input-r-3"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -1043,7 +1043,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
                     className="slds-input"
                     defaultValue="121"
                     id="color-picker-input-g-3"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -1071,7 +1071,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
                     className="slds-input"
                     defaultValue="192"
                     id="color-picker-input-b-3"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -1165,7 +1165,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
           className="slds-input"
           defaultValue="#5679C0"
           id="color-picker-summary-input"
-          placeholder="Placeholder Text"
+          placeholder={undefined}
           readOnly={undefined}
           type="text"
         />
@@ -2075,7 +2075,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
               className="slds-color-picker__custom-inputs"
             >
               <div
-                className="slds-form-element slds-color-picker__input-custom-hex slds-has-error"
+                className="slds-form-element slds-has-error slds-color-picker__input-custom-hex"
                 role={undefined}
               >
                 <label
@@ -2093,7 +2093,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
                     className="slds-input"
                     defaultValue="#5679C0"
                     id="color-picker-input-hex-4"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -2121,7 +2121,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
                     className="slds-input"
                     defaultValue="86"
                     id="color-picker-input-r-4"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -2149,7 +2149,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
                     className="slds-input"
                     defaultValue="121"
                     id="color-picker-input-g-4"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -2177,7 +2177,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
                     className="slds-input"
                     defaultValue="192"
                     id="color-picker-input-b-4"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -2266,7 +2266,7 @@ exports[`renders a base color picker with summary error 1`] = `
       </span>
     </button>
     <div
-      className="slds-form-element slds-color-picker__summary-input slds-has-error"
+      className="slds-form-element slds-has-error slds-color-picker__summary-input"
       role={undefined}
     >
       <div
@@ -2277,7 +2277,7 @@ exports[`renders a base color picker with summary error 1`] = `
           className="slds-input"
           defaultValue="#5679C0"
           id="color-picker-summary-input"
-          placeholder="Placeholder Text"
+          placeholder={undefined}
           readOnly={undefined}
           type="text"
         />
@@ -3211,7 +3211,7 @@ exports[`renders a base color picker with summary error 1`] = `
                     className="slds-input"
                     defaultValue="#5679C0"
                     id="color-picker-input-hex-2"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -3239,7 +3239,7 @@ exports[`renders a base color picker with summary error 1`] = `
                     className="slds-input"
                     defaultValue="86"
                     id="color-picker-input-r-2"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -3267,7 +3267,7 @@ exports[`renders a base color picker with summary error 1`] = `
                     className="slds-input"
                     defaultValue="121"
                     id="color-picker-input-g-2"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -3295,7 +3295,7 @@ exports[`renders a base color picker with summary error 1`] = `
                     className="slds-input"
                     defaultValue="192"
                     id="color-picker-input-b-2"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -3389,7 +3389,7 @@ exports[`renders a default base color picker 1`] = `
           className="slds-input"
           defaultValue="#5679C0"
           id="color-picker-summary-input"
-          placeholder="Placeholder Text"
+          placeholder={undefined}
           readOnly={undefined}
           type="text"
         />
@@ -4317,7 +4317,7 @@ exports[`renders a default base color picker 1`] = `
                     className="slds-input"
                     defaultValue="#5679C0"
                     id="color-picker-input-hex-1"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -4345,7 +4345,7 @@ exports[`renders a default base color picker 1`] = `
                     className="slds-input"
                     defaultValue="86"
                     id="color-picker-input-r-1"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -4373,7 +4373,7 @@ exports[`renders a default base color picker 1`] = `
                     className="slds-input"
                     defaultValue="121"
                     id="color-picker-input-g-1"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />
@@ -4401,7 +4401,7 @@ exports[`renders a default base color picker 1`] = `
                     className="slds-input"
                     defaultValue="192"
                     id="color-picker-input-b-1"
-                    placeholder="Placeholder Text"
+                    placeholder={undefined}
                     readOnly={undefined}
                     type="text"
                   />

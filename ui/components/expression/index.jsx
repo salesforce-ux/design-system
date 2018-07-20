@@ -227,9 +227,7 @@ export const ExpressionRow = props => {
           </ExpressionCol>
           <ExpressionCol>
             <FormElement
-              formElementClassName={classNames({
-                'slds-has-error': props.errorMessage
-              })}
+              hasError={props.hasError}
               labelContent={inputLabel}
               inputId={inputId}
               errorId={props.errorMessage && errorId}

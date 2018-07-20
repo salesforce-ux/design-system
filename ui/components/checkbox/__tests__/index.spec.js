@@ -1,60 +1,57 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 /* eslint-env jest */
+
 import React from 'react';
-import {
-  Checkbox,
-  Disabled,
-  ErrorState,
-  Group,
-  GroupRequired,
-  GroupError,
-  GroupDisabled,
-  Indeterminate,
-  Required,
-  CheckedDisabled
-} from '../base/example';
-import { FormElement } from '../../form-element';
 import createHelpers from '../../../../jest.helpers';
+import { Checkbox } from '../base/example';
+import { CheckboxPrimitive, CheckboxStandalone } from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
-it('renders a default checkbox', () =>
-  matchesMarkupAndStyle(
-    <FormElement>
-      <Checkbox label="Checkbox Label" checked />
-    </FormElement>
-  ));
+describe('Checkbox', () => {
+  it('renders checkbox', () => matchesMarkup(<Checkbox />));
+  it('renders checkbox with a label', () =>
+    matchesMarkup(<Checkbox label="label" />));
+  it('renders checkbox with a hidden label', () =>
+    matchesMarkup(<Checkbox label="label" hideLabel />));
+  it('renders checkbox with required asterisk', () =>
+    matchesMarkup(<Checkbox isRequired />));
+  it('renders checkbox that is disabled', () =>
+    matchesMarkup(<Checkbox disabled />));
+  it('renders checkbox with help text icon', () =>
+    matchesMarkup(<Checkbox hasTooltip />));
+});
 
-it('renders an indeterminate checkbox', () =>
-  matchesMarkupAndStyle(<Indeterminate />));
+describe('Checkbox Primitive', () => {
+  it('renders primitive checkbox', () => matchesMarkup(<CheckboxPrimitive />));
+  it('renders primitive checkbox with an ID', () =>
+    matchesMarkup(<CheckboxPrimitive id="checkbox-id" />));
+  it('renders primitive checkbox with a name', () =>
+    matchesMarkup(<CheckboxPrimitive name="checkbox-name" />));
+  it('renders primitive checkbox with a value', () =>
+    matchesMarkup(<CheckboxPrimitive value="checkbox-value" />));
+  it('renders primitive checkbox that is disabled', () =>
+    matchesMarkup(<CheckboxPrimitive isDisabled />));
+  it('renders primitive checkbox that is required', () =>
+    matchesMarkup(<CheckboxPrimitive isRequired />));
+  it('renders primitive checkbox with an aria-describedby error ID', () =>
+    matchesMarkup(<CheckboxPrimitive errorId="error-id" />));
+});
 
-it('renders a required checkbox', () => matchesMarkupAndStyle(<Required />));
-
-it('renders an error state checkbox', () =>
-  matchesMarkupAndStyle(<ErrorState />));
-
-it('renders a disabled checkbox', () => matchesMarkupAndStyle(<Disabled />));
-
-it('renders a checkbox group', () => matchesMarkupAndStyle(<Group />));
-
-it('renders a required checkbox group', () =>
-  matchesMarkupAndStyle(<GroupRequired />));
-
-it('renders a checkbox group with error', () =>
-  matchesMarkupAndStyle(<GroupError />));
-
-it('renders a disabled checkbox group', () =>
-  matchesMarkupAndStyle(<GroupDisabled />));
-
-it('renders a stacked checkbox', () =>
-  matchesMarkupAndStyle(
-    <FormElement>
-      <Checkbox
-        className="slds-checkbox_stacked"
-        label="Checkbox Label"
-        checked
-      />
-    </FormElement>
-  ));
-
-it('renders a checked and disabled checkbox', () =>
-  matchesMarkupAndStyle(<CheckedDisabled />));
+describe('Standalone Checkbox', () => {
+  it('renders standalone checkbox', () =>
+    matchesMarkup(<CheckboxStandalone />));
+  it('renders primitive checkbox with an ID', () =>
+    matchesMarkup(<CheckboxStandalone id="checkbox-id" />));
+  it('renders primitive checkbox with a name', () =>
+    matchesMarkup(<CheckboxStandalone name="checkbox-name" />));
+  it('renders primitive checkbox with a value', () =>
+    matchesMarkup(<CheckboxStandalone value="checkbox-value" />));
+  it('renders primitive checkbox that is disabled', () =>
+    matchesMarkup(<CheckboxStandalone isDisabled />));
+  it('renders primitive checkbox that is required', () =>
+    matchesMarkup(<CheckboxStandalone isRequired />));
+  it('renders primitive checkbox with an aria-describedby error ID', () =>
+    matchesMarkup(<CheckboxStandalone errorId="error-id" />));
+});

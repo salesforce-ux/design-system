@@ -59,7 +59,7 @@ export let states = [
     label: 'Error',
     element: (
       <FormElement
-        formElementClassName="slds-has-error"
+        hasError
         labelContent={textareaLabel}
         inputId={textareaId}
         isRequired

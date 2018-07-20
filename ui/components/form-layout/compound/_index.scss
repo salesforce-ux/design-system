@@ -28,13 +28,9 @@
       padding-left: $spacing-x-small;
       margin-top: 0;
     }
-  }
 
-  .slds-form-element__legend {
-    font-weight: $font-weight-bold;
-  }
-
-  .slds-form-element__label {
-    padding-top: 0;
+    .slds-form-element__label {
+      padding-top: 0;
+    }
   }
 }

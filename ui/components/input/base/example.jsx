@@ -27,7 +27,7 @@ export let Input = props => {
       id={props.id || inputId}
       className={classNames('slds-input', props.className)}
       type={props.type || 'text'}
-      placeholder={props.placeholder || 'Placeholder Text'}
+      placeholder={props.placeholder}
       readOnly={props['readOnly']}
       defaultValue={props.defaultValue}
     />
@@ -46,7 +46,7 @@ let Required = props => (
 
 let ErrorState = props => (
   <FormElement
-    formElementClassName="slds-has-error"
+    hasError
     labelContent={inputLabel}
     inputId={inputId}
     errorId={props.errorId}
@@ -59,7 +59,7 @@ let ErrorState = props => (
 
 let ErrorIcon = props => (
   <FormElement
-    formElementClassName="slds-has-error"
+    hasError
     labelContent={inputLabel}
     inputId={inputId}
     hasLeftIcon
@@ -130,30 +130,6 @@ export let states = [
           <span className="slds-form-element__static">Read Only</span>
         </FormElementControl>
       </SimpleFormElementWrapper>
-    )
-  },
-  {
-    id: 'static-tightened',
-    label: 'Static - Tightened',
-    element: (
-      <div>
-        <SimpleFormElementWrapper className="slds-form-element_small slds-form-element_edit">
-          <span className="slds-form-element__label">Input Label</span>
-          <FormElementControl>
-            <span className="slds-form-element__static slds-border_bottom">
-              Read Only
-            </span>
-          </FormElementControl>
-        </SimpleFormElementWrapper>
-        <SimpleFormElementWrapper className="slds-form-element_small slds-form-element_edit">
-          <span className="slds-form-element__label">Input Label</span>
-          <FormElementControl>
-            <span className="slds-form-element__static slds-border_bottom">
-              Read Only
-            </span>
-          </FormElementControl>
-        </SimpleFormElementWrapper>
-      </div>
     )
   }
 ];
@@ -290,7 +266,12 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <FormElement labelContent={inputLabel} inputId={inputId} hasTooltip>
+        <FormElement
+          labelContent={inputLabel}
+          inputId={inputId}
+          hasTooltip
+          showTooltip
+        >
           <Input id={inputId} />
         </FormElement>
       </div>

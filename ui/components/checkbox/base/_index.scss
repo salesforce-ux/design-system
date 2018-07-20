@@ -6,12 +6,13 @@
  *
  * @name base
  * @selector .slds-checkbox
- * @restrict span, label
+ * @restrict span, label, div
  * @required
  * @variant
  */
 .slds-checkbox {
   display: inline-block;
+  position: relative;
 
   /**
    * @name stacked
@@ -40,6 +41,10 @@
     .slds-checkbox_faux {
       order: 1;
       margin-bottom: 1px;
+    }
+
+    .slds-required {
+      float: left;
     }
   }
 
@@ -74,6 +79,7 @@
     overflow: hidden;
     padding: 0;
     position: absolute;
+    pointer-events: auto;
 
     &:checked + .slds-checkbox_faux,
     &:checked + .slds-checkbox--faux,

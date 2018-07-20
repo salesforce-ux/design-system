@@ -193,11 +193,7 @@ export let examples = [
     id: 'error',
     label: 'Error',
     element: (
-      <FormElement
-        formElementClassName="slds-has-error"
-        labelContent={<SliderLabel />}
-        inputId={sliderId}
-      >
+      <FormElement hasError labelContent={<SliderLabel />} inputId={sliderId}>
         <Slider
           aria-describedby="error-message"
           className="slds-size_large"

@@ -17,8 +17,7 @@
   }
 
   /**
-   * Creates label styles for our form elements
-   *
+   * @summary Creates label styles for our form elements
    * @selector .slds-form-element__label
    * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, .slds-form-element div, [class*='slds-checkbox'] span, [class*='slds-radio'] span
    */
@@ -42,9 +41,10 @@
    * @restrict .slds-form-element div
    */
   &__control {
+    // This clear:left is due to the label of the form element being set to float: left since we don't know if the help-text icon is present in the DOM. Since legend elements can only be floated to modifiy layout to accomodate the help-text icon, we need to make sure the control stacks below the label by default
+    clear: left;
 
-    // Force radios and checkboxes to be on own line when there
-    // are multiples in a group
+    // Force radios and checkboxes to be on own line when there are multiples in a group
     .slds-radio,
     .slds-checkbox {
       display: block;
@@ -61,7 +61,14 @@
   &__icon {
     display: inline-block;
     position: relative; // Since this container can have a tooltip
-    vertical-align: text-bottom;
+    padding-top: $spacing-xx-small;
+    vertical-align: top;
+    line-height: $line-height-reset;
+    z-index: 1; // Helps ensure the help-text icon is clickable in all implementations
+
+    .slds-button_icon {
+      position: relative; // Resetting position since the edit button icon to invoke inline-edit is set to position: absolute
+    }
   }
 
   /**
@@ -83,19 +90,40 @@
     .slds-form-element__static {
       width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
     }
-
-    .slds-button_icon {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
   }
 }
 
+/**
+ * @summary When a form element is in view mode, we modify some styling
+ * @selector .slds-form-element_readonly
+ * @restrict .slds-form-element
+ */
+.slds-form-element_readonly {
+  border-bottom: $border-width-thin solid $color-border;
+
+  .slds-form-element__control {
+    padding-top: $spacing-xxx-small;
+    padding-bottom: $spacing-xxx-small;
+  }
+
+  // We want no spacing in read only and allow line-height to handle white-space
+  .slds-form-element__label {
+    margin-bottom: 0;
+  }
+}
 
 /**
- * Fixed text that sits to the left or right of an input
- *
+ * @summary The form element label when applied to a legend element
+ * @selector .slds-form-element__legend
+ * @restrict .slds-form-element legend, .slds-form-element span
+ */
+.slds-form-element__legend {
+  font-weight: $font-weight-bold;
+  float: left; // Required to be float: left to accommodate for help-text icon
+}
+
+/**
+ * @summary Fixed text that sits to the left or right of an input
  * @selector .slds-form-element__addon
  * @restrict .slds-form-element span
  */
@@ -109,7 +137,6 @@
  * Read-only components are used to display immutable data within a form
  *
  * @summary Initializes read-only form element
- *
  * @selector .slds-form-element__static
  * @restrict .slds-form-element span, .slds-form-element div
  */
@@ -135,8 +162,7 @@
 }
 
 /**
- * Required Star
- *
+ * @summary Required asterisk
  * @selector .slds-required
  * @restrict .slds-form-element abbr, abbr
  */
@@ -146,8 +172,7 @@
 }
 
 /**
- * Error styles for form element
- *
+ * @summary Error styles for form element
  * @selector .slds-has-error
  * @restrict .slds-form-element
  * @modifier

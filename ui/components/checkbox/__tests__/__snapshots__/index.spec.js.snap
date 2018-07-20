@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Primitive renders primitive checkbox 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={undefined}
+  id={undefined}
+  name="label"
+  required={undefined}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox that is disabled 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={true}
+  id={undefined}
+  name="label"
+  required={undefined}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox that is required 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={undefined}
+  id={undefined}
+  name="label"
+  required={true}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox with a name 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={undefined}
+  id={undefined}
+  name="checkbox-name"
+  required={undefined}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox with a value 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={undefined}
+  id={undefined}
+  name="label"
+  required={undefined}
+  type="checkbox"
+  value="checkbox-value"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox with an ID 1`] = `
+<input
+  aria-describedby={undefined}
+  defaultChecked={undefined}
+  disabled={undefined}
+  id="checkbox-id"
+  name="label"
+  required={undefined}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox Primitive renders primitive checkbox with an aria-describedby error ID 1`] = `
+<input
+  aria-describedby="error-id"
+  defaultChecked={undefined}
+  disabled={undefined}
+  id={undefined}
+  name="label"
+  required={undefined}
+  type="checkbox"
+  value="option"
+/>
+`;
+
+exports[`Checkbox renders checkbox 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-1"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-1"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-1"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders checkbox that is disabled 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={true}
+    id="checkbox-5"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-5"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-5"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders checkbox with a hidden label 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-3"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-3"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-3"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders checkbox with a label 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-2"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-2"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-2"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+    <span
+      className="slds-form-element__label"
+    >
+      label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders checkbox with help text icon 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-6"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-6"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-6"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+  </label>
+  <div
+    className="slds-form-element__icon"
+  >
+    <button
+      aria-describedby={undefined}
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon"
+      id={undefined}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Help
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Checkbox renders checkbox with required asterisk 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby={null}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-4"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-4"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-4"
+    id={undefined}
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+  </label>
+</div>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox that is disabled 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={true}
+    id={undefined}
+    name="label"
+    required={undefined}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox that is required 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id={undefined}
+    name="label"
+    required={true}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox with a name 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id={undefined}
+    name="checkbox-name"
+    required={undefined}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox with a value 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id={undefined}
+    name="label"
+    required={undefined}
+    type="checkbox"
+    value="checkbox-value"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox with an ID 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-id"
+    name="label"
+    required={undefined}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders primitive checkbox with an aria-describedby error ID 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby="error-id"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id={undefined}
+    name="label"
+    required={undefined}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;
+
+exports[`Standalone Checkbox renders standalone checkbox 1`] = `
+<span
+  className="slds-checkbox slds-checkbox_standalone"
+>
+  <input
+    aria-describedby={undefined}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id={undefined}
+    name="label"
+    required={undefined}
+    type="checkbox"
+    value="option"
+  />
+  <span
+    className="slds-checkbox_faux"
+  />
+</span>
+`;

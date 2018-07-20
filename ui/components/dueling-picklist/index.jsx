@@ -25,7 +25,9 @@ export const MultiSelect = props => {
       <MultiSelectLabel isRequired={props.isRequired}>
         Select Options
       </MultiSelectLabel>
-      {props.hasTooltip && <FormElementTooltip />}
+      {props.hasTooltip && (
+        <FormElementTooltip showTooltip={props.showTooltip} />
+      )}
       <FormElementControl>
         <div className="slds-dueling-list">
           <div
@@ -66,6 +68,7 @@ export const MultiSelect = props => {
 MultiSelect.propTypes = {
   isRequired: PropTypes.bool,
   hasTooltip: PropTypes.bool,
+  showTooltip: PropTypes.bool,
   noReorder: PropTypes.bool,
   disabled: PropTypes.bool,
   isResponsive: PropTypes.bool,

@@ -16,7 +16,6 @@
  * @modifier
  * @group layout
  */
-
 .slds-form_horizontal {
 
   .slds-form-element {
@@ -31,9 +30,12 @@
 
   @include mq-medium-min {
 
-    .slds-form-element__label {
+    // We are to targeting :first-child here due to some issues related to lightning-form-components
+    // Will remove once adoption is better
+    .slds-form-element__label:first-child {
       float: left;
-      width: 33%;
+      max-width: calc(33% - #{$square-icon-utility-medium}); // Removing the width of the icon for when the help-text icon is present
+      flex-basis: calc(33% - #{$square-icon-utility-medium}); // Some form element controls are set to display:flex
       padding-top: $spacing-xx-small;
       padding-right: $spacing-small;
       margin: 0;
@@ -43,6 +45,15 @@
 
     .slds-form-element__control {
       padding-left: 33%;
+      clear: none; // Reset clear: left when switching to horizontal form layout
+
+      .slds-form-element__control {
+        padding-left: 0; // Remove left padding on nested form controls, due to issues related to lightning-form components
+      }
+    }
+
+    .slds-dueling-list {
+      clear: none; // Remove backward compatible support
     }
 
     // Since the HTML differs for checkbox and radio groups, adjust the display behavior
@@ -68,19 +79,26 @@
 
     // Reset label and control inside of compound fields
     .slds-form-element__row .slds-form-element__label,
-    .slds-form-element__row .slds-form-element__control {
+    .slds-form-element__row .slds-form-element__control,
+    .slds-dueling-list__column .slds-form-element__label {
       width: auto;
+      max-width: 100%;
+      flex-basis: auto;
       float: none;
       position: relative;
       padding-left: 0;
       margin-bottom: 0;
     }
+
+    // Help-text icon needs to float adjacent to label
+    .slds-form-element__icon {
+      float: left;
+    }
   }
 }
 
 /**
- * Vertically aligns form label and control, provides spacing between form elements
- *
+ * @summary Vertically aligns form label and control, provides spacing between form elements
  * @selector .slds-form_stacked
  * @restrict .slds-form:not(.slds-form_compound)
  * @modifier
@@ -99,10 +117,6 @@
     flex-basis: 100%;
   }
 
-  + .slds-form-element {
-    @include form-element-vertical-spacing;
-  }
-
   .slds-checkbox,
   .slds-radio {
     display: block; // Override display: inline-block found on checkbox/radio
@@ -110,17 +124,20 @@
 
   .slds-form-element__label,
   .slds-form-element__control {
-    width: 100%;
-    flex-basis: 100%;
     border-bottom: 0;
     padding-left: 0;
     position: relative;
   }
+
+  .slds-form-element__control {
+    width: 100%;
+    flex-basis: 100%;
+    clear: left;
+  }
 }
 
 /**
- * Horizontally align multiple form elements on the same axis
- *
+ * @summary Horizontally align multiple form elements on the same axis
  * @selector .slds-form_inline
  * @restrict .slds-form
  * @modifier
@@ -163,25 +180,14 @@
  *
  * @selector .slds-form-element__legend_has-tooltip
  * @restrict .slds-form-element__legend
+ * @deprecated
  */
 .slds-form-element__legend_has-tooltip {
   float: left;
 }
 
-// Read-only/View Mode styles - Required
-.slds-form-element_readonly {
-  border-bottom: $border-width-thin solid $color-border;
-
-  .slds-form-element__control {
-    padding-bottom: $spacing-xxx-small;
-  }
-
-  // We want no spacing in read only and allow line-height to handle white-space
-  .slds-form-element__label {
-    margin-bottom: 0;
-  }
-}
-
+// Need to reset margin when form element is found on readonly or compound field
+// This is an ask from the designer to reduce vertical space for these elements
 .slds-form_compound .slds-form-element,
 .slds-form-element.slds-form-element_readonly {
   margin-bottom: 0;

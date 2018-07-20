@@ -68,7 +68,7 @@ describe('Expression Row', () => {
     matchesMarkupAndStyle(<ExpressionRow resourceIsSelected />));
   xit('renders the default row with an error', () =>
     matchesMarkupAndStyle(
-      <ExpressionRow errorMessage="This field is required" />
+      <ExpressionRow errorMessage="This field is required" hasError />
     ));
 });
 

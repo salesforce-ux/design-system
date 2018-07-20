@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Element renders form element as a fieldset 1`] = `
+<fieldset
+  className="slds-form-element"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element as a fieldset with compound field classname 1`] = `
+<fieldset
+  className="slds-form-element slds-form_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element as a fieldset with error classname 1`] = `
+<fieldset
+  className="slds-form-element slds-has-error"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element as a fieldset with help text icon 1`] = `
+<fieldset
+  className="slds-form-element"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__icon"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon"
+      id={undefined}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Help
+      </span>
+    </button>
+  </div>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element as a fieldset with hidden legend 1`] = `
+<fieldset
+  className="slds-form-element"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label slds-assistive-text"
+  >
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element as a fieldset with required asterisk 1`] = `
+<fieldset
+  className="slds-form-element slds-is-required"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      * 
+       
+    </abbr>
+    Fieldset legend
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Form Element renders form element control 1`] = `
+<div
+  className="slds-form-element__control"
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element control with classname 1`] = `
+<div
+  className="slds-form-element__control slds-foo"
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element fieldset legend 1`] = `
+<legend
+  className="slds-form-element__legend slds-form-element__label"
+>
+  content
+</legend>
+`;
+
+exports[`Form Element renders form element fieldset legend that is visually hidden 1`] = `
+<legend
+  className="slds-form-element__legend slds-form-element__label slds-assistive-text"
+>
+  content
+</legend>
+`;
+
+exports[`Form Element renders form element fieldset legend with help text icon 1`] = `
+Array [
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    content
+  </legend>,
+  <div
+    className="slds-form-element__icon"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon"
+      id={undefined}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Help
+      </span>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Form Element renders form element fieldset legend with required asterisk 1`] = `
+<legend
+  className="slds-form-element__legend slds-form-element__label"
+>
+  <abbr
+    className="slds-required"
+    title="required"
+  >
+    * 
+     
+  </abbr>
+  content
+</legend>
+`;
+
+exports[`Form Element renders form element fieldset wrapper 1`] = `
+<fieldset
+  className="slds-form-element"
+  id={undefined}
+>
+  content
+</fieldset>
+`;
+
+exports[`Form Element renders form element fieldset wrapper with compound fields 1`] = `
+<fieldset
+  className="slds-form-element slds-form_compound"
+  id={undefined}
+>
+  content
+</fieldset>
+`;
+
+exports[`Form Element renders form element fieldset wrapper with error classname 1`] = `
+<fieldset
+  className="slds-form-element slds-has-error"
+  id={undefined}
+>
+  content
+</fieldset>
+`;
+
+exports[`Form Element renders form element fieldset wrapper with required classname 1`] = `
+<fieldset
+  className="slds-form-element slds-is-required"
+  id={undefined}
+>
+  content
+</fieldset>
+`;
+
+exports[`Form Element renders form element help text icon 1`] = `
+<div
+  className="slds-form-element__icon"
+>
+  <button
+    aria-describedby={undefined}
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon"
+    id={undefined}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Help
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Form Element renders form element help text icon with a tooltip 1`] = `
+<div
+  className="slds-form-element__icon"
+>
+  <button
+    aria-describedby="help"
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon"
+    id={undefined}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Help
+    </span>
+  </button>
+  <div
+    className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+    id="help"
+    role="tooltip"
+    style={
+      Object {
+        "left": "-15px",
+        "position": "absolute",
+        "top": "-45px",
+        "width": "170px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body"
+    >
+      Some helpful information
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Form Element renders form element inline help message 1`] = `
+<div
+  className="slds-form-element__help"
+  id={undefined}
+/>
+`;
+
+exports[`Form Element renders form element inline help message with ID 1`] = `
+<div
+  className="slds-form-element__help"
+  id="error-id"
+/>
+`;
+
+exports[`Form Element renders form element label 1`] = `
+<label
+  className="slds-form-element__label"
+  htmlFor={undefined}
+  id={undefined}
+>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label as a span element 1`] = `
+<span
+  className="slds-form-element__label"
+>
+  content
+</span>
+`;
+
+exports[`Form Element renders form element label with hidden label 1`] = `
+<label
+  className="slds-form-element__label slds-assistive-text"
+  htmlFor={undefined}
+  id={undefined}
+>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label with input ID 1`] = `
+<label
+  className="slds-form-element__label"
+  htmlFor="input-id"
+  id={undefined}
+>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label with label ID 1`] = `
+<label
+  className="slds-form-element__label"
+  htmlFor={undefined}
+  id="label-id"
+>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label with label classname 1`] = `
+<label
+  className="slds-form-element__label slds-foo"
+  htmlFor={undefined}
+  id={undefined}
+>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label with required asterisk 1`] = `
+<label
+  className="slds-form-element__label"
+  htmlFor={undefined}
+  id={undefined}
+>
+  <abbr
+    className="slds-required"
+    title="required"
+  >
+    * 
+     
+  </abbr>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element label with required asterisk 2`] = `
+<label
+  className="slds-form-element__label"
+  htmlFor={undefined}
+  id={undefined}
+>
+  <abbr
+    className="slds-required"
+    title="required"
+  >
+    * 
+     
+  </abbr>
+  Form label
+</label>
+`;
+
+exports[`Form Element renders form element with static/view only longform value 1`] = `
+<div
+  className="slds-form-element__static slds-text-longform"
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element with static/view only value 1`] = `
+<div
+  className="slds-form-element__static"
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element wrapper 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element wrapper with error classname 1`] = `
+<div
+  className="slds-form-element slds-has-error"
+  role={undefined}
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element wrapper with hint classname 1`] = `
+<div
+  className="slds-form-element slds-hint-parent"
+  role={undefined}
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element wrapper with inline edit classname 1`] = `
+<div
+  className="slds-form-element slds-form-element_edit"
+  role={undefined}
+>
+  content
+</div>
+`;
+
+exports[`Form Element renders form element wrapper with view mode classname 1`] = `
+<div
+  className="slds-form-element slds-form-element_readonly"
+  role={undefined}
+>
+  content
+</div>
+`;

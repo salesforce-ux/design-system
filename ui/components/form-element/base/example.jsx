@@ -2,11 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { FormElement } from '../';
+import { FormElement, Fieldset } from '../';
 import { Input } from '../../input/base/example';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';
+import { CompoundForm } from '../../form-layout/compound/example';
 import RecordDetail from '../record-detail/';
 import * as Snapshot from '../record-detail/snapshots.data';
 
@@ -39,11 +40,11 @@ export let states = [
     label: 'Error',
     element: (
       <FormElement
-        formElementClassName="slds-has-error"
         labelContent={inputLabel}
         inputId={defaultInputId}
         errorId={errorId}
         isRequired
+        hasError
         inlineMessage="This field is required"
       >
         <Input id={defaultInputId} required aria-describedby={errorId} />
@@ -81,18 +82,91 @@ export let examples = [
     )
   },
   {
+    id: 'checkbox-required',
+    label: 'Checkbox - Required',
+    element: (
+      <FormElement>
+        <Checkbox label="Checkbox Label" isRequired />
+      </FormElement>
+    )
+  },
+  {
+    id: 'checkbox-required-help-text',
+    label: 'Checkbox - Required with help text icon',
+    element: (
+      <FormElement>
+        <Checkbox label="Checkbox Label" isRequired hasTooltip />
+      </FormElement>
+    )
+  },
+  {
+    id: 'checkbox-group',
+    label: 'Checkbox',
+    element: (
+      <Fieldset label="Form Element Legend">
+        <Checkbox label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" />
+      </Fieldset>
+    )
+  },
+  {
+    id: 'checkbox-group-required',
+    label: 'Checkbox',
+    element: (
+      <Fieldset label="Form Element Legend" isRequired>
+        <Checkbox label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" />
+      </Fieldset>
+    )
+  },
+  {
+    id: 'checkbox-group-required-help-text',
+    label: 'Checkbox',
+    element: (
+      <Fieldset
+        id="fieldset-with-help-text"
+        label="Form Element Legend"
+        isRequired
+        hasTooltip
+      >
+        <Checkbox label="Checkbox Label" />
+        <Checkbox label="Checkbox Label" />
+      </Fieldset>
+    )
+  },
+  {
     id: 'radio-group',
     label: 'Radio Group',
     element: (
-      <fieldset className="slds-form-element">
-        <legend className="slds-form-element__legend slds-form-element__label">
-          Form Element Label
-        </legend>
-        <div className="slds-form-element__control">
-          <Radio checked label="Radio Label One" />
-          <Radio label="Radio Label Two" />
-        </div>
-      </fieldset>
+      <Fieldset label="Form Element Label">
+        <Radio checked label="Radio Label One" />
+        <Radio label="Radio Label Two" />
+      </Fieldset>
+    )
+  },
+  {
+    id: 'radio-group-required',
+    label: 'Radio Group - Required',
+    element: (
+      <Fieldset label="Form Element Label" isRequired>
+        <Radio checked label="Radio Label One" />
+        <Radio label="Radio Label Two" />
+      </Fieldset>
+    )
+  },
+  {
+    id: 'radio-group-required-help-text',
+    label: 'Radio Group - Required with help text icon',
+    element: (
+      <Fieldset
+        id="fieldset-with-help-text"
+        label="Form Element Label"
+        isRequired
+        hasTooltip
+      >
+        <Radio checked label="Radio Label One" />
+        <Radio label="Radio Label Two" />
+      </Fieldset>
     )
   },
   {
@@ -114,7 +188,6 @@ export let examples = [
     element: (
       <div
         style={{
-          paddingLeft: '2rem',
           paddingTop: '3rem',
           position: 'relative'
         }}
@@ -123,11 +196,48 @@ export let examples = [
           labelContent={inputLabel}
           inputId={defaultInputId}
           hasTooltip
+          showTooltip
         >
           <Input id={defaultInputId} />
         </FormElement>
       </div>
     )
+  },
+  {
+    id: 'required-tooltip-help',
+    label: 'Required - Tooltip Help',
+    element: (
+      <div
+        style={{
+          paddingTop: '3rem',
+          position: 'relative'
+        }}
+      >
+        <FormElement
+          labelContent={inputLabel}
+          inputId={defaultInputId}
+          hasTooltip
+          isRequired
+        >
+          <Input id={defaultInputId} required />
+        </FormElement>
+      </div>
+    )
+  },
+  {
+    id: 'compound-field',
+    label: 'Compound Form Layout',
+    element: <CompoundForm />
+  },
+  {
+    id: 'compound-field-required',
+    label: 'Required - Compound Form Layout',
+    element: <CompoundForm />
+  },
+  {
+    id: 'compound-field-required-tooltip-help',
+    label: 'Required with Tooltip Help - Compound Form Layout',
+    element: <CompoundForm />
   },
   {
     id: 'stacked',

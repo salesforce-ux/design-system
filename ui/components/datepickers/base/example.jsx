@@ -430,7 +430,8 @@ export let states = [
     label: 'Date Picker has Error',
     element: (
       <FormElement
-        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-error"
+        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        hasError
         labelContent="Date"
         inputId={dateInputId}
         hasRightIcon

@@ -55,6 +55,7 @@ export let examples = [
           legendText="AND"
           assistiveText="Condition 2"
           errorMessage="Input has error"
+          hasError
         />
       </Expression>
     )

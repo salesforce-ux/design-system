@@ -18,7 +18,7 @@ export default (paths, done) =>
         }
       },
       exclude:
-        '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved, .slds-file figure > a, .slds-drop-zone__label_button.slds-button_reset > span:not(:hover):not(.slds-is-hovered):not(:focus-within)',
+        '#GoogleMapID, table[role="treegrid"] tr[aria-posinset], abbr.slds-avatar__initials, abbr.slds-indicator_unsaved, .slds-file figure > a, .slds-drop-zone__label_button.slds-button_reset > span:not(:hover):not(.slds-is-hovered):not(:focus-within), #fieldset-with-help-text',
       urls: paths,
       showOnlyViolations: true,
       verbose: true,

@@ -7,20 +7,19 @@ import createHelpers from '../../../../jest.helpers';
 import { Form } from '../base/example';
 import { CompoundForm } from '../compound/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Form Layout', () => {
-  xit('renders a base form layout', () => matchesMarkupAndStyle(<Form />));
+  xit('renders a base form layout', () => matchesMarkup(<Form />));
 
   xit('renders a base form layout stacked', () =>
-    matchesMarkupAndStyle(<Form isStacked />));
+    matchesMarkup(<Form isStacked />));
 
   it('renders a base form layout horizontally', () =>
-    matchesMarkupAndStyle(<Form isHorizontal />));
+    matchesMarkup(<Form isHorizontal />));
 
-  it('renders a compound form layout', () =>
-    matchesMarkupAndStyle(<CompoundForm />));
+  it('renders a compound form layout', () => matchesMarkup(<CompoundForm />));
 
   it('renders a compound form layout with a tooltip', () =>
-    matchesMarkupAndStyle(<CompoundForm tooltip />));
+    matchesMarkup(<CompoundForm tooltip />));
 });

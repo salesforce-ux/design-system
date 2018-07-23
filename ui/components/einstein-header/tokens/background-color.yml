@@ -15,4 +15,4 @@ props:
     type: string
   EINSTEIN_HEADER_BACKGROUND_COLOR:
     value: '#95CBFC'
-    commnet: Background color for Einstein header
+    comment: Background color for Einstein header

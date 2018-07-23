@@ -77,10 +77,6 @@
     position: absolute;
   }
 
-  + .slds-tabs_default__item {
-    margin-left: $var-spacing-horizontal-small;
-  }
-
   /**
    * @summary Active state for a tab item
    * @selector .slds-is-active
@@ -247,10 +243,6 @@
   .slds-tabs_default__item {
     font-size: $var-font-size-5;
   }
-
-  .slds-tabs_default__item + .slds-tabs_default__item {
-    margin-left: $var-spacing-horizontal-medium;
-  }
 }
 
 /**
@@ -265,9 +257,5 @@
 
   .slds-tabs_default__item {
     font-size: $var-font-size-7;
-  }
-
-  .slds-tabs_default__item + .slds-tabs_default__item {
-    margin-left: $var-spacing-horizontal-large;
   }
 }

@@ -103,7 +103,7 @@ export let examples = [
     )
   },
   {
-    id: 'required-help-text-icon',
+    id: 'required-help-text-icon-tooltip',
     label: 'Required with Help text icon, showing tooltip',
     element: (
       <div style={{ paddingTop: '3rem' }}>

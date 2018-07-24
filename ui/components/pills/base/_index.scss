@@ -14,6 +14,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  line-height: $line-height-text;
   max-width: 100%; // Required to make the container shrink when truncated
   padding: $spacing-xxx-small;
   border: $border-width-thin solid $color-border;

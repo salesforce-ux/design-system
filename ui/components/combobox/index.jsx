@@ -252,7 +252,12 @@ Combobox.propTypes = {
   isLoading: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   inputContainerClassName: PropTypes.string,
-  inputIconPosition: PropTypes.oneOf(['left', 'right', 'left-right']),
+  inputIconPosition: PropTypes.oneOf([
+    'left',
+    'right',
+    'left-right',
+    'group-right'
+  ]),
   leftInputIcon: PropTypes.element,
   rightInputIcon: PropTypes.element,
   tabIndex: PropTypes.string,
@@ -371,7 +376,12 @@ ComboboxGroup.propTypes = {
   isLoading: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   inputContainerClassName: PropTypes.string,
-  inputIconPosition: PropTypes.oneOf(['left', 'right', 'left-right']),
+  inputIconPosition: PropTypes.oneOf([
+    'left',
+    'right',
+    'left-right',
+    'group-right'
+  ]),
   leftInputIcon: PropTypes.element,
   rightInputIcon: PropTypes.element,
   tabIndex: PropTypes.string,

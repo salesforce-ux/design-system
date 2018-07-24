@@ -419,9 +419,10 @@
 
 /**
  * @summary Container for a combobox group
- *
+ * @name grouped
  * @selector .slds-combobox-group
  * @restrict div
+ * @variant
  */
 .slds-combobox-group {
   display: flex;
@@ -482,6 +483,7 @@
  * @restrict .slds-combobox-group ~ div, .slds-combobox_container ~ div
  */
 .slds-listbox_selection-group {
+  position: relative;
   padding: 0;
   padding-right: 3.75rem;
   height: calc(#{$height-input} + #{$border-width-thin});

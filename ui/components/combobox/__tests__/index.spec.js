@@ -16,7 +16,7 @@ import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const comboboxId = 'combobox-id-01';
@@ -453,7 +453,7 @@ describe('render deprecated combobox', () => {
  */
 describe('render combobox', () => {
   it('render base combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -483,7 +483,7 @@ describe('render combobox', () => {
       />
     ));
   it('render single selection in an open combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -514,7 +514,7 @@ describe('render combobox', () => {
       />
     ));
   it('render multiple selections in a closed combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -548,7 +548,7 @@ describe('render combobox', () => {
       />
     ));
   it('renders groups in a listbox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -585,7 +585,7 @@ describe('render combobox', () => {
       />
     ));
   it('renders different styles of options in the listbox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -615,7 +615,7 @@ describe('render combobox', () => {
       />
     ));
   it('renders different styles of options in the listbox with drill in', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -645,7 +645,7 @@ describe('render combobox', () => {
       />
     ));
   it('renders autocomplete combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -673,7 +673,7 @@ describe('render combobox', () => {
       />
     ));
   it('render combobox with displaying options based on user input', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -704,7 +704,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete combobox with single selection', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -731,7 +731,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete combobox with mutliple selections', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -764,7 +764,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete entity combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -790,7 +790,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete entity combobox displaying options based on user input', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -819,7 +819,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete entity combobox with single selection', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -854,7 +854,7 @@ describe('render combobox', () => {
       />
     ));
   it('render autocomplete entity combobox with mutliple selections', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
@@ -882,7 +882,7 @@ describe('render combobox', () => {
       />
     ));
   it('render grouped combobox', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ComboboxGroup
         id={comboboxId}
         aria-controls={listboxId}
@@ -919,7 +919,7 @@ describe('render combobox', () => {
       />
     ));
   it('render grouped combobox displaying options based on user input', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ComboboxGroup
         id={comboboxId}
         aria-controls={listboxId}
@@ -957,7 +957,7 @@ describe('render combobox', () => {
       />
     ));
   it('render grouped combobox with selections made in collapsed state', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ComboboxGroup
         id={comboboxId}
         aria-controls={listboxId}
@@ -995,7 +995,7 @@ describe('render combobox', () => {
       />
     ));
   it('render grouped combobox with selections made in expanded state', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ComboboxGroup
         id={comboboxId}
         aria-controls={listboxId}

@@ -9,7 +9,6 @@
  * @variant
  */
 .slds-carousel {
-  display: flex;
   position: relative;
 }
 
@@ -33,6 +32,7 @@
 .slds-carousel__panels {
   display: flex;
   transition: transform 250ms ease-in;
+  min-height: 0%;
 }
 
 /**

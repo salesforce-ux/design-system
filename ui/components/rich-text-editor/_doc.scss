@@ -12,6 +12,9 @@
  * outside of the container. To adjust the widths of the dropdowns, apply the class
  * `slds-region_narrow` to the outermost `div` of the rich text editor.
  *
+ * A label may be used to further describe the purpose of a Rich Text Editor. To add a label, place a
+ * `<span>` element with the class `slds-form-element__label`, right before the `slds-form-element__control`
+ * element.
  *
  * #### Accessibility
  *

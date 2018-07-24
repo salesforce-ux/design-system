@@ -105,10 +105,10 @@ FormElementLabel.propTypes = {
 };
 
 export const FormElementSpanFauxLabel = props => {
-  const { isRequired, children } = props;
+  const { isRequired, children, labelId } = props;
 
   return (
-    <span className="slds-form-element__label">
+    <span id={labelId} className="slds-form-element__label">
       {isRequired && (
         <abbr className="slds-required" title="required">
           * {' '}
@@ -121,7 +121,8 @@ export const FormElementSpanFauxLabel = props => {
 
 FormElementSpanFauxLabel.propTypes = {
   children: PropTypes.node,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
+  labelId: PropTypes.string
 };
 
 export const FormElementTooltip = props => {
@@ -291,6 +292,7 @@ export const FormElement = props => {
     isEditing,
     hasHint,
     hasError,
+    hasFauxLabel,
     labelId,
     labelClassName,
     labelContent,
@@ -336,10 +338,11 @@ export const FormElement = props => {
       role={role}
     >
       {labelContent &&
-        (isViewMode ? (
+        (isViewMode || hasFauxLabel ? (
           <FormElementSpanFauxLabel
             isRequired={isRequired}
             hasTooltip={hasTooltip}
+            labelId={labelId}
           >
             {labelContent}
           </FormElementSpanFauxLabel>
@@ -383,6 +386,7 @@ FormElement.propTypes = {
   hasRightIconGroup: PropTypes.bool,
   hasTooltip: PropTypes.bool,
   hasError: PropTypes.bool,
+  hasFauxLabel: PropTypes.bool,
   showTooltip: PropTypes.bool,
   dropdown: PropTypes.node,
   inlineMessage: PropTypes.string,

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { ButtonGroupList } from '../../button-groups/list/example';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
@@ -43,12 +44,14 @@ export let Demo = props => (
 );
 
 export let RichTextEditor = props => (
-  <div className="slds-form-element">
-    {props.label && (
-      <span id={props.labelId} className="slds-form-element__label">
-        {props.label}
-      </span>
-    )}
+  <FormElement
+    labelId={props.labelId}
+    labelContent={props.label}
+    inlineMessage={props.inlineMessage}
+    hasError={props.hasError}
+    errorId={props.errorId}
+    hasFauxLabel
+  >
     <div
       className={classNames(
         'slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap',
@@ -57,8 +60,17 @@ export let RichTextEditor = props => (
     >
       {props.children}
     </div>
-  </div>
+  </FormElement>
 );
+
+RichTextEditor.propTypes = {
+  children: PropTypes.node.isRequired,
+  errorId: PropTypes.string,
+  hasError: PropTypes.bool,
+  inlineMessage: PropTypes.string,
+  labelContent: PropTypes.string,
+  labelId: PropTypes.string
+};
 
 export let RteToolbar = props => (
   <div
@@ -769,7 +781,12 @@ export let states = [
     label: 'Error',
     element: (
       <Demo>
-        <RichTextEditor className="slds-has-error">
+        <RichTextEditor
+          className="slds-has-error"
+          inlineMessage="This field is required"
+          hasError
+          errorId="rte-error-01"
+        >
           <RteToolbar>
             <RteFormatText tabIndexSetting="0" />
             <RteFormatBody />
@@ -779,37 +796,6 @@ export let states = [
             placeholder="Compose text..."
             aria-describedby="rte-error-01"
           />
-          <div
-            id="rte-error-01"
-            className="slds-form-element__help slds-p-around_small"
-          >
-            This field is required
-          </div>
-        </RichTextEditor>
-      </Demo>
-    )
-  },
-  {
-    id: 'error-on-dark-bg',
-    label: 'Error on Dark Background',
-    element: (
-      <Demo style={{ background: 'lightblue', padding: '1rem' }}>
-        <RichTextEditor className="slds-has-error">
-          <RteToolbar>
-            <RteFormatText tabIndexSetting="0" />
-            <RteFormatBody />
-            <RteClearFormatting />
-          </RteToolbar>
-          <RteTextarea
-            placeholder="Compose text..."
-            aria-describedby="rte-error-01"
-          />
-          <div
-            id="rte-error-01"
-            className="slds-form-element__help slds-p-around_small"
-          >
-            This field is required
-          </div>
         </RichTextEditor>
       </Demo>
     )

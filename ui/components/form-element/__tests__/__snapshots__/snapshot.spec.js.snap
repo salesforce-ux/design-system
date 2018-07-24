@@ -354,6 +354,7 @@ exports[`Form Element renders form element label 1`] = `
 exports[`Form Element renders form element label as a span element 1`] = `
 <span
   className="slds-form-element__label"
+  id={undefined}
 >
   content
 </span>

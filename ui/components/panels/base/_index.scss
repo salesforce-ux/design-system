@@ -96,6 +96,11 @@
   }
 }
 
+.slds-panel__close,
+.slds-panel__back {
+  flex-shrink: 0;
+}
+
 /**
  * @summary Adjusts styling when the title of the header is centered
  * @selector .slds-panel__header_align-center

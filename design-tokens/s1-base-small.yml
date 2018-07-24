@@ -6,3 +6,4 @@ imports:
   - ./s1-base-small/box-shadow.yml
   - ./s1-base-small/font-size.yml
   - ./s1-base-small/font-weight.yml
+  - ./s1-base-small/sizing.yml

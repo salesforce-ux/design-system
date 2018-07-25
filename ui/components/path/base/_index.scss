@@ -123,38 +123,26 @@
 // these mixins exist in order to alias selector assignment in the case
 // where state cannot be applied to the individual path step
 @mixin is-won() {
-
-  .slds-path__link,
-  &:hover .slds-path__link {
-    border: 0;
-    line-height: $line-height-salespath;
-    color: $color-text-inverse;
-    background-color: $color-background-path-won;
-  }
+  background: $color-background-path-won;
 
   &:before,
   &:after,
+  &:hover,
   &:hover:before,
   &:hover:after {
-    background-image: linear-gradient(225deg, $color-background-path-won, $color-background-path-won 1.125rem, transparent 1.125rem);
+    background: $color-background-path-won;
   }
 }
 
 @mixin is-lost() {
-
-  .slds-path__link,
-  &:hover .slds-path__link {
-    border: 0;
-    line-height: $line-height-salespath;
-    color: $color-text-inverse;
-    background-color: $color-background-path-lost;
-  }
+  background: $color-background-path-lost;
 
   &:before,
   &:after,
+  &:hover,
   &:hover:before,
   &:hover:after {
-    background-image: linear-gradient(225deg, $color-background-path-lost, $color-background-path-lost 1.125rem, transparent 1.125rem);
+    background: $color-background-path-lost;
   }
 }
 
@@ -176,26 +164,23 @@
   * @restrict .slds-path__item
   */
   .slds-is-incomplete {
-
-    .slds-path__link {
-      color: $color-text-default;
-      background-color: $color-background-path-incomplete;
-    }
+    background: $color-background-path-incomplete;
 
     &:before,
     &:after {
-      background-image: linear-gradient(225deg, $color-background-path-incomplete, $color-background-path-incomplete 1.125rem, transparent 1.125rem);
+      background: $color-background-path-incomplete;
+    }
+
+    .slds-path__link {
+      color: $color-text-default;
     }
 
     &:hover {
-
-      .slds-path__link {
-        background-color: $color-background-path-incomplete-hover;
-      }
+      background: $color-background-path-incomplete-hover;
 
       &:before,
       &:after {
-        background-image: linear-gradient(225deg, $color-background-path-incomplete-hover, $color-background-path-incomplete-hover 1.125rem, transparent 1.125rem);
+        background: $color-background-path-incomplete-hover;
       }
     }
   }
@@ -207,9 +192,15 @@
    * @restrict .slds-path__item
    */
   .slds-is-complete {
+    background: $color-background-path-complete;
+
+    &:before,
+    &:after {
+      background: $color-background-path-complete;
+    }
 
     .slds-path__stage {
-      transform: translateY(-50%) rotateX(0deg);
+      transform: translate(-50%, -50%) rotateX(0deg);
     }
 
     .slds-path__title {
@@ -217,33 +208,23 @@
     }
 
     .slds-path__link {
-      color: $color-text-action-label-active;
-      background-color: $color-background-path-complete;
-    }
-
-    &:before,
-    &:after {
-      background-image: linear-gradient(225deg, $color-background-path-complete, $color-background-path-complete 1.125rem, transparent 1.125rem);
+      color: $color-text-inverse;
     }
 
     &:hover {
+      background: $color-background-path-complete-hover;
+
+      &:before,
+      &:after {
+        background: $color-background-path-complete-hover;
+      }
 
       .slds-path__stage {
-        transform: translateY(-50%) rotateX(-180deg);
+        transform: translate(-50%, -50%) rotateX(-180deg);
       }
 
       .slds-path__title {
         transform: rotateX(0deg);
-      }
-
-      .slds-path__link {
-        background-color: $color-background-path-complete-hover;
-        color: $color-text-inverse;
-      }
-
-      &:before,
-      &:after {
-        background-image: linear-gradient(225deg, $color-background-path-complete-hover, $color-background-path-complete-hover 1.125rem, transparent 1.125rem);
       }
     }
   }
@@ -255,42 +236,75 @@
    * @restrict .slds-path__item
    */
   .slds-is-current {
+    background-color: $color-background-path-current;
 
-    .slds-path__link {
+    &:before,
+    &:after {
       background-color: $color-background-path-current;
-      line-height: ($line-height-salespath - 0.25rem);
-      border-top: $width-path-border-current solid $color-border-path-current;
-      border-bottom: $width-path-border-current solid $color-border-path-current;
-      color: $color-text-path-current;
+      background-image:
+        linear-gradient(90deg, $color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem),
+        linear-gradient(90deg, $color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem),
+        linear-gradient($color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem);
+      background-repeat: no-repeat;
+      background-size:
+        0.125rem 100%,
+        0.125rem 100%,
+        100% 0.125rem;
     }
 
     &:before {
-      background-image: linear-gradient(225deg, $color-border-path-current, $color-border-path-current 1.125rem, transparent 1.125rem);
+      background-position:
+        top left,
+        top right,
+        top left;
     }
 
     &:after {
-      background-image: linear-gradient(225deg, $color-background-path-current, $color-background-path-current 1.125rem, transparent 1.125rem);
-      box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider,
-        inset -0.25rem 0.25rem 0 0 $color-border-path-current;
+      background-position:
+        top left,
+        top right,
+        bottom left;
     }
 
-    &:first-child .slds-path__link {
-      border-left: $width-path-border-current solid $color-border-path-current;
+    &:first-child {
+      border: 2px solid $color-border-path-current;
+      border-right: 0;
+
+      &:before,
+      &:after {
+        background-image: linear-gradient(90deg, $color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem);
+      }
+
+      &:before {
+        top: rem(-2px);
+      }
+
+      &:after {
+        bottom: rem(-2px);
+      }
+
+      &:hover:before,
+      &:hover:after {
+        background-image: linear-gradient(90deg, $color-border-path-current-hover, $color-border-path-current-hover 0.125rem, transparent 0.125rem);
+      }
+    }
+
+    .slds-path__link {
+      color: $color-text-path-current;
     }
 
     &:hover {
 
-      .slds-path__link {
-        border-color: $color-border-path-current-hover;
-      }
-
-      &:before {
-        background-image: linear-gradient(225deg, $color-border-path-current-hover, $color-border-path-current-hover 1.125rem, transparent 1.125rem);
-      }
-
+      &:before,
       &:after {
-        box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider,
-          inset -0.25rem 0.25rem 0 0 $color-border-path-current-hover;
+        background-image:
+          linear-gradient(90deg, $color-border-path-current-hover, $color-border-path-current-hover 0.125rem, transparent 0.125rem),
+          linear-gradient(90deg, $color-border-path-current-hover, $color-border-path-current-hover 0.125rem, transparent 0.125rem),
+          linear-gradient($color-border-path-current-hover, $color-border-path-current-hover 0.125rem, transparent 0.125rem);
+      }
+
+      .slds-path__link {
+        color: $color-text-path-current-hover;
       }
     }
   }
@@ -303,6 +317,24 @@
    * @notes This class must be placed on the item programatically when the guidance section is activated
    */
   .slds-is-active {
+    background: $color-background-path-active;
+
+    &:before,
+    &:after {
+      background: $color-background-path-active;
+    }
+
+    &:first-child {
+      border: 0;
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
 
     .slds-path__stage {
       transform: translateY(-50%) rotateX(-180deg);
@@ -313,34 +345,19 @@
     }
 
     .slds-path__link {
-      border: 0;
       color: $color-text-inverse;
-      background-color: $color-background-path-active;
-      line-height: $line-height-salespath;
-    }
-
-    &:before,
-    &:after {
-      background-image: linear-gradient(225deg, $color-background-path-active, $color-background-path-active 1.125rem, transparent 1.125rem);
-    }
-
-    &:after {
-      box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
     }
 
     &:hover {
-
-      .slds-path__link {
-        background-color: $color-background-path-active-hover;
-      }
+      background: $color-background-path-active-hover;
 
       &:before,
       &:after {
-        background-image: linear-gradient(225deg, $color-background-path-active-hover, $color-background-path-active-hover 1.125rem, transparent 1.125rem);
+        background: $color-background-path-active-hover;
       }
 
-      &:after {
-        box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
+      .slds-path__link {
+        color: $color-text-inverse;
       }
     }
   }
@@ -388,56 +405,58 @@
 .slds-path__item {
   position: relative;
   flex: 1;
+  margin-left: rem(6px);
+  margin-right: rem(7px);
   min-width: 5rem;
   text-align: center;
-  transition:
-    transform 0.1s ease-in-out,
-    background-color 0.1s linear;
-
-  &:first-child .slds-path__link {
-    border-radius: $border-radius-pill 0 0 $border-radius-pill;
-  }
-
-  &:last-child .slds-path__link {
-    border-radius: 0 $border-radius-pill $border-radius-pill 0;
-    padding: $spacing-xx-small $spacing-medium $spacing-xx-small ($spacing-medium + $spacing-xx-small);
-  }
-
-  &:first-child:last-child .slds-path__link {
-    border-radius: $border-radius-pill;
-  }
 
   &:before,
   &:after {
     content: '';
-    display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: $height-sales-path;
-    transform: scale(0.74, 1) rotate(45deg);
+    left: rem(-4px);
+    right: rem(-5px);
     cursor: pointer;
   }
 
-  // sets left border for current step (mostly invisible)
   &:before {
-    left: ((($height-sales-path / 2) + 0.0625rem) * -1);
-    z-index: 9;
+    top: 0;
+    height: calc((#{$height-sales-path} / 2) + 0.0625rem);
+    transform: skew(28deg) translate3d(0, 0, 0);
   }
 
-  // sets right arrow for current step (overlaps :before of following element)
   &:after {
-    right: ((($height-sales-path / 2) - 0.1875rem) * -1);
-    background-size: calc(100% - 0.125rem) calc(100% - 0.125rem);
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
-    z-index: 10;
+    bottom: 0;
+    height: ($height-sales-path / 2);
+    transform: skew(-30deg) translate3d(0, 0, 0);
   }
 
-  &:first-child:before,
-  &:last-child:after {
-    display: none;
+  &:first-child {
+    margin-left: 0;
+    border-top-left-radius: $height-sales-path;
+    border-bottom-left-radius: $height-sales-path;
+    padding-left: rem(10px);
+
+    &:before,
+    &:after {
+      left: rem(18px);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+    border-top-right-radius: $height-sales-path;
+    border-bottom-right-radius: $height-sales-path;
+    padding-right: rem(10px);
+
+    .slds-path__link {
+      padding-left: $spacing-xx-small;
+    }
+
+    &:before,
+    &:after {
+      right: rem(10px);
+    }
   }
 }
 
@@ -461,10 +480,8 @@
 .slds-path__stage {
   position: absolute;
   top: 50%;
-  // left: 50%;
-  left: ($square-icon-medium-content / 2);
-  width: 100%;
-  transform: translateY(-50%) rotateX(-180deg);
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(-180deg);
 }
 
 
@@ -475,14 +492,15 @@
  * @restrict .slds-path__item a
  */
 .slds-path__link {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
-  padding: $spacing-xx-small $spacing-xx-small $spacing-xx-small ($spacing-medium + $spacing-xx-small);
-  line-height: $line-height-salespath;
+  align-items: center;
   height: $height-sales-path;
+  padding: $spacing-x-small $spacing-xx-small $spacing-x-small $spacing-x-small;
   text-decoration: none;
-  cursor: pointer; // needed in case links have no href & use JS
+  z-index: 5;
+  cursor: pointer;
 
   &:hover {
     text-decoration: none;

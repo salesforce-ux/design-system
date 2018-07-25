@@ -445,12 +445,10 @@ class PathWithTooltip extends React.Component {
 
   updateTooltipOffset() {
     const { tooltipWidth } = this.state;
-    const stepArrowBuffer = 10; // offsets inset of arrow nubbin on step arrow
     const tooltipLeft =
       this.currentTab.offsetLeft +
       this.currentTab.offsetWidth / 2 -
-      tooltipWidth / 2 +
-      stepArrowBuffer;
+      tooltipWidth / 2;
 
     this.setState({
       tooltipLeft

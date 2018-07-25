@@ -17,7 +17,7 @@ global:
 props:
   HEIGHT_SALES_PATH:
     value: 2rem
-    comment: Height of Salespath
+    comment: Height of Path
   PATH_BUTTON_WIDTH_FIXED:
     value: 13rem
     comment: Width of action button to right

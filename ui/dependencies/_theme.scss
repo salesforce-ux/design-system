@@ -95,12 +95,18 @@
 
   #{$link-selector} {
     color: currentColor;
+    border: $border-width-thin solid transparent;
+    border-radius: $border-radius-medium;
 
     &:hover,
     &:focus {
-      color: $color-text-link-inverse-hover;
       text-decoration: none;
       outline: 0;
+    }
+
+    &:focus {
+      box-shadow: $shadow-link-focus-inverse;
+      border: $border-width-thin solid $color-border-link-focus-inverse;
     }
 
     &:active {

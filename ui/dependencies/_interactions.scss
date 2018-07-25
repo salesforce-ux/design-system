@@ -9,6 +9,7 @@
 @mixin focus-inverse {
   outline: none;
   box-shadow: $shadow-button-focus-inverse;
+  border: $border-width-thin solid $color-border-button-focus-inverse;
 }
 
 

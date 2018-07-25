@@ -47,7 +47,11 @@ props:
     comment: Custom glow for focus states on UI elements with explicit containers.
   SHADOW_BUTTON_FOCUS_INVERSE:
     value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
-    comment: Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.
+    comment: Custom glow for focus states on UI button elements with explicit containers on dark or vibrantly colored backgrounds.
+  ## LINKS
+  SHADOW_LINK_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
+    comment: Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.
   ## GLOBAL HEADER
   SHADOW_HEADER:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'

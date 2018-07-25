@@ -97,7 +97,7 @@ export let examples = [
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-              <a>Learn more</a>
+              <a href="javascript:void(0);">Learn more</a>
             </p>
           </div>
         </div>

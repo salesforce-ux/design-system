@@ -148,6 +148,10 @@ props:
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Border color for disabled inverse button.
+  COLOR_BORDER_BUTTON_FOCUS_INVERSE:
+    value: '{!PALETTE_COOL_GRAY_4}'
+  COLOR_BORDER_LINK_FOCUS_INVERSE:
+    value: '{!PALETTE_COOL_GRAY_4}'
   COLOR_BORDER_INPUT:
     value: '{!PALETTE_COOL_GRAY_5}'
     comment: Border color on form elements.

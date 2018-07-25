@@ -190,6 +190,8 @@ props:
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
     value: '{!WHITE_TRANSPARENT_15}'
     comment: Border color for disabled inverse button.
+  COLOR_BORDER_BUTTON_FOCUS_INVERSE:
+    value: '{!PALETTE_GRAY_4}'
   ## TABS
   COLOR_BORDER_TAB_SELECTED:
     value: '{!SCIENCE_BLUE}'
@@ -207,3 +209,6 @@ props:
     value: '{!PALETTE_GRAY_5}'
   CARD_FOOTER_COLOR_BORDER:
     value: '{!PALETTE_GRAY_5}'
+  ## LINK
+  COLOR_BORDER_LINK_FOCUS_INVERSE:
+    value: '{!PALETTE_GRAY_4}'

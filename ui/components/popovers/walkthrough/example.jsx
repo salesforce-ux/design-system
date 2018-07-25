@@ -223,5 +223,41 @@ export let examples = [
         </div>
       </Popover>
     )
+  },
+  {
+    id: 'action-popover-with-link',
+    label: 'Action Popover - With Link',
+    element: (
+      <Popover
+        className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
+        headingId={headingUniqueId}
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__figure">
+            <span
+              className="slds-icon_container"
+              title="description of icon when needed"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="utility"
+                symbol="touch_action"
+              />
+              <span className="slds-assistive-text">Description of icon</span>
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <h2 id={headingUniqueId} className="slds-text-heading_small">
+              Title
+            </h2>
+            <p>Text that describes the action</p>
+            <a href="javascript:void(0);">Take Action</a>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
+          </div>
+        </div>
+      </Popover>
+    )
   }
 ];

@@ -130,7 +130,6 @@
   .slds-tabs_default__link:focus,
   .slds-tabs--default__link:focus {
     box-shadow: none;
-    text-decoration: underline;
   }
 
   /**
@@ -202,6 +201,10 @@
     box-shadow: none;
     color: currentColor;
   }
+
+  &[tabindex="0"]:focus {
+    text-decoration: underline;
+  }
 }
 
 /**
@@ -217,6 +220,11 @@
   .slds-button {
     line-height: inherit;
     color: $color-text-action-label;
+    box-shadow: none;
+
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 

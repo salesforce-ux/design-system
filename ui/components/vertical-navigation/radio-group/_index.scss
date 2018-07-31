@@ -10,6 +10,7 @@
  * @release 2.5.0
  */
 .slds-nav-vertical__item {
+  display: block;
 
   [type="radio"] {
     width: 1px;
@@ -33,18 +34,9 @@
     }
 
     &:checked + .slds-nav-vertical__action {
-
-      background-color: $brand-primary-transparent-10;
-
-      &:before {
-        content: '';
-        width: 4px;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        background: $brand-primary;
-      }
+      font-weight: bold;
+      background-color: $color-background-selection;
+      box-shadow: inset rem(4px) 0 0 $brand-primary;
     }
   }
 }
@@ -52,7 +44,6 @@
 .slds-nav-vertical_shade {
 
   .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
-    background-color: $brand-primary-transparent-10;
     border-color: $color-border;
   }
 }

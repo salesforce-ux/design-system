@@ -39,19 +39,7 @@
  */
 .slds-nav-vertical_shade {
 
-  .slds-nav-vertical__action {
-
-    &:hover {
-      background-color: $vertical-navigation-color-background-shade-row-hover;
-    }
-
-    &:active {
-      background-color: $vertical-navigation-color-background-shade-row-active;
-    }
-  }
-
   .slds-is-active .slds-nav-vertical__action {
-    background-color: $color-background-alt;
     border-color: $color-border;
   }
 }
@@ -82,14 +70,22 @@
 .slds-nav-vertical__item {
   position: relative;
 
-  &.slds-is-active:before {
-    content: '';
-    width: 4px;
-    left: 0;
-    top: 0;
-    bottom: 0;
+  &:before {
     position: absolute;
-    background: $brand-primary;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $color-background-selection;
+    transform: scaleX(0);
+    transform-origin: 0 center;
+    transition: background 0.3s, transform 0.3s;
+    content: '';
+  }
+
+  &:hover:before,
+  &.slds-is-active:before {
+    transform: scaleX(1);
   }
 }
 
@@ -99,15 +95,19 @@
  * @restrict .slds-nav-vertical a, .slds-nav-vertical button, .slds-nav-vertical label
  */
 .slds-nav-vertical__action {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   padding: $spacing-x-small $spacing-large;
+  color: $color-text-default;
   border-top: $border-width-thin solid transparent;
   border-bottom: $border-width-thin solid transparent;
   border-radius: 0;
+  box-shadow: inset 0 0 0 $brand-primary;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
 
-  &,
   &:active,
   &:hover,
   &:focus {
@@ -115,22 +115,13 @@
   }
 
   &:hover {
-    background-color: $color-background-row-hover;
     text-decoration: none;
+    box-shadow: inset rem(2px) 0 0 $brand-primary;
   }
 
   &:focus {
     outline: 0;
-    box-shadow: none;
     text-decoration: underline;
-  }
-
-  &:active {
-    background-color: $color-background-row-active;
-
-    &:focus {
-      text-decoration: none;
-    }
   }
 }
 
@@ -145,6 +136,7 @@
 .slds-nav-vertical__item.slds-is-active {
 
   .slds-nav-vertical__action {
-    background-color: $brand-primary-transparent-10;
+    font-weight: bold;
+    box-shadow: inset rem(4px) 0 0 $brand-primary;
   }
 }

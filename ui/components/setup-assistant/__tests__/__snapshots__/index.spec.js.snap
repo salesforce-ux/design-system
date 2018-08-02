@@ -1,0 +1,750 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Setup Assistant  renders a base setup assistant step 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-setup-assistant__step-summary-content slds-media__body"
+    >
+      <h3
+        className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+      >
+        Configure user settings for this org
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div
+      className="slds-media__figure slds-media__figure_reverse"
+    />
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a complete setup assistant step 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_complete slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={100}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              id="slds-progress-ring-path-4"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-check"
+            title="Complete"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Complete
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            Configure user settings for this org
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a setup assistant step with a duration 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-setup-assistant__step-summary-content slds-media__body"
+    >
+      <h3
+        className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+      >
+        Configure user settings for this org
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div
+      className="slds-media__figure slds-media__figure_reverse"
+    >
+      <p
+        className="slds-text-align_right slds-text-color_weak"
+      >
+        5 mins
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a setup assistant step with a link action and duration 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-setup-assistant__step-summary-content slds-media__body"
+    >
+      <h3
+        className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+      >
+        Configure user settings for this org
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div
+      className="slds-media__figure slds-media__figure_reverse"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Add Users
+      </a>
+      <p
+        className="slds-text-align_right slds-text-color_weak slds-p-top_medium"
+      >
+        5 mins
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a setup assistant step with the title as a button 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_complete slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={100}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              id="slds-progress-ring-path-5"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-check"
+            title="Complete"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Complete
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            <button
+              aria-controls="test-detail-action-1"
+              aria-expanded="false"
+              className="slds-button slds-button_reset"
+              disabled={undefined}
+            >
+              Configure user settings for this org
+            </button>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a setup assistant step with title button and aria expanded true 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_complete slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={100}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              id="slds-progress-ring-path-6"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-check"
+            title="Complete"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Complete
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            <button
+              aria-controls="test-detail-action-1"
+              aria-expanded="true"
+              className="slds-button slds-button_reset"
+              disabled={undefined}
+            >
+              Configure user settings for this org
+            </button>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders a step detail 1`] = `
+<div
+  className="slds-setup-assistant__step-detail"
+>
+  <div
+    className="slds-progress slds-progress_vertical slds-progress_success"
+    style={undefined}
+  >
+    <ol
+      className="slds-progress__list slds-progress__list-bordered"
+    >
+      <li
+        className="slds-progress__item slds-is-completed"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+          title="Complete"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon slds-icon_xx-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Complete
+          </span>
+        </span>
+        <div
+          className="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div
+            className="slds-size_3-of-4"
+          >
+            Turn on Lightning for all users.
+          </div>
+          <div
+            className="slds-grid slds-grid_align-end slds-size_1-of-4"
+          >
+            <div
+              className="slds-form-element"
+            >
+              <label
+                className="slds-checkbox_toggle slds-grid"
+                htmlFor={undefined}
+              >
+                <span
+                  className="slds-form-element__label slds-m-bottom_none slds-assistive-text"
+                >
+                  Turn on Lightning for all users
+                </span>
+                <input
+                  aria-describedby="checkbox-toggle-1"
+                  defaultChecked={true}
+                  disabled={undefined}
+                  name="checkbox-toggle-1"
+                  type="checkbox"
+                  value="checkbox-toggle-1"
+                />
+                <span
+                  aria-live="assertive"
+                  className="slds-checkbox_faux_container"
+                  id="checkbox-toggle-1"
+                >
+                  <span
+                    className="slds-checkbox_faux"
+                  />
+                  <span
+                    className="slds-checkbox_on"
+                  >
+                    Enabled
+                  </span>
+                  <span
+                    className="slds-checkbox_off"
+                  >
+                    Disabled
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="slds-progress__item slds-is-active"
+      >
+        <div
+          aria-describedby={undefined}
+          className="slds-progress__marker"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Active
+          </span>
+        </div>
+        <div
+          className="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div
+            className="slds-size_3-of-4"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div
+            className="slds-grid slds-grid_align-end slds-size_1-of-4"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              View in Trailhead
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        className="slds-progress__item"
+      >
+        <div
+          aria-describedby={undefined}
+          className="slds-progress__marker"
+        />
+        <div
+          className="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div
+            className="slds-size_3-of-4"
+          >
+            Lorem ipsum dolor sit amet, lorem ipsum dolor.
+          </div>
+          <div
+            className="slds-grid slds-grid_align-end slds-size_1-of-4"
+          >
+            <button
+              className="slds-button slds-button_outline-brand"
+              disabled={undefined}
+            >
+              Add Users
+            </button>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <div
+      aria-labelledby={undefined}
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="50"
+      role="progressbar"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        50%
+      </span>
+    </div>
+  </div>
+  <div
+    className="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light"
+    role="status"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-info"
+        title="information"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          information
+        </span>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <p>
+        It looks as if duplicates exist for this lead.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          View Duplicates.
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders an in-progess setup assistant step 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_active-step slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={55}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 1 0 -0.9510565162951535 0.3090169943749475 L 0 0"
+              id="slds-progress-ring-path-2"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            Configure user settings for this org
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders an in-progess setup assistant step with progress ring percentage 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_active-step slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={33}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 0 0 -0.48175367410171527 -0.8763066800438636 L 0 0"
+              id="slds-progress-ring-path-3"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            Configure user settings for this org
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Setup Assistant  renders an incomplete setup assistant step 1`] = `
+<div
+  className="slds-setup-assistant__step-summary"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <div
+        className="slds-progress-ring slds-progress-ring_large"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={0}
+          className="slds-progress-ring__progress"
+          role="progressbar"
+        >
+          <svg
+            viewBox="-1 -1 2 2"
+          >
+            <path
+              className="slds-progress-ring__path"
+              d="M 1 0 A 1 1 0 0 0 1 -2.4492935982947064e-16 L 0 0"
+              id="slds-progress-ring-path-1"
+            />
+          </svg>
+        </div>
+        <div
+          className="slds-progress-ring__content"
+        >
+          3
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-m-top_x-small"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-setup-assistant__step-summary-content slds-media__body"
+        >
+          <h3
+            className="slds-setup-assistant__step-summary-title slds-text-heading_small"
+          >
+            Configure user settings for this org
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          className="slds-media__figure slds-media__figure_reverse"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Progress Bar renders a base progress bar 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="25"
+  className="slds-progress-bar"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "width": "25%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      25%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Progress Bar renders a descriptive progress bar 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className="slds-grid slds-grid_align-spread slds-p-bottom_x-small"
+    id="progress-bar-label-id-1"
+  >
+    <span>
+      Descriptive Progress
+    </span>
+    <span
+      aria-hidden="true"
+    >
+      <strong>
+        75% Complete
+      </strong>
+    </span>
+  </div>
+  <div
+    aria-labelledby="progress-bar-label-id-1"
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="75"
+    className="slds-progress-bar"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "75%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        75%
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Base Progress Bar renders a progress bar at 0 percent 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="0"
+  className="slds-progress-bar"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "width": "0%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      0%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Progress Bar renders a progress bar at 100 percent 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="100"
+  className="slds-progress-bar"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      100%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Progress Bar renders a progress bar with rounded ends 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="100"
+  className="slds-progress-bar slds-progress-bar_circular"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      100%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Vertical Progress Bar renders a vertical progress bar 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="25"
+  className="slds-progress-bar slds-progress-bar_vertical"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "height": "25%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      25%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Vertical Progress Bar renders a vertical progress bar at 0 percent 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="0"
+  className="slds-progress-bar slds-progress-bar_vertical"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "height": "0%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      0%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Vertical Progress Bar renders a vertical progress bar at 100 percent 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="100"
+  className="slds-progress-bar slds-progress-bar_vertical"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      100%
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Vertical Progress Bar renders a vertical progress bar with rounded ends 1`] = `
+<div
+  aria-labelledby={undefined}
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow="100"
+  className="slds-progress-bar slds-progress-bar_vertical slds-progress-bar_circular"
+  role="progressbar"
+>
+  <span
+    className="slds-progress-bar__value"
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      100%
+    </span>
+  </span>
+</div>
+`;

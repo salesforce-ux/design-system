@@ -35,7 +35,7 @@ import MobileTabs, {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Default Tabs', () => {
   it('renders default tabs', () => matchesMarkup(<TabsDefault />));
@@ -87,7 +87,7 @@ describe('Subtabs', () => {
     ));
 
   it('renders overflowed subtab', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
@@ -121,7 +121,7 @@ describe('Subtabs', () => {
     ));
 
   it('renders overflowed subtab with notification', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
@@ -155,7 +155,7 @@ describe('Subtabs', () => {
     ));
 
   it('renders dirty overflowed subtab', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
@@ -189,7 +189,7 @@ describe('Subtabs', () => {
     ));
 
   it('renders dirty overflowed subtab with notification', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
@@ -223,58 +223,55 @@ describe('Subtabs', () => {
     ));
 });
 describe('Mobile stacked tabs', () => {
-  it('renders a tab group', () => matchesMarkupAndStyle(<MobileTabGroup />));
+  it('renders a tab group', () => matchesMarkup(<MobileTabGroup />));
 
-  it('renders a tab container', () =>
-    matchesMarkupAndStyle(<MobileTabContainer />));
+  it('renders a tab container', () => matchesMarkup(<MobileTabContainer />));
 
-  it('renders a tab', () => matchesMarkupAndStyle(<MobileTabItem />));
+  it('renders a tab', () => matchesMarkup(<MobileTabItem />));
 
   it('renders a tab button', () =>
-    matchesMarkupAndStyle(<MobileTabButton summary="List 1 Item One" />));
+    matchesMarkup(<MobileTabButton summary="List 1 Item One" />));
 
   it('renders a hidden tab panel', () =>
-    matchesMarkupAndStyle(<MobileTabPanel title="Item One Panel" />));
+    matchesMarkup(<MobileTabPanel title="Item One Panel" />));
 
   it('renders a visible tab panel', () =>
-    matchesMarkupAndStyle(<MobileTabPanel title="Item One Panel" isVisible />));
+    matchesMarkup(<MobileTabPanel title="Item One Panel" isVisible />));
 
-  it('renders a tabset', () => matchesMarkupAndStyle(<MobileTabList />));
+  it('renders a tabset', () => matchesMarkup(<MobileTabList />));
 
   it('renders a hidden tabset', () =>
-    matchesMarkupAndStyle(<MobileTabList isHidden />));
+    matchesMarkup(<MobileTabList isHidden />));
 
-  it('renders a mobile tabs demo', () => matchesMarkupAndStyle(<MobileTabs />));
+  it('renders a mobile tabs demo', () => matchesMarkup(<MobileTabs />));
 
   it('renders a static mobile tabs demo', () =>
-    matchesMarkupAndStyle(<MobileTabs isStatic />));
+    matchesMarkup(<MobileTabs isStatic />));
 
   it('renders a static mobile tabs demo with a visible panel showing', () =>
-    matchesMarkupAndStyle(<MobileTabs visiblePanelIdx={0} isStatic />));
+    matchesMarkup(<MobileTabs visiblePanelIdx={0} isStatic />));
 
   it('renders a mobile tabs demo with a visible panel showing', () =>
-    matchesMarkupAndStyle(<MobileTabs visiblePanelIdx={0} />));
+    matchesMarkup(<MobileTabs visiblePanelIdx={0} />));
 
   it('renders nested mobile tabs', () =>
-    matchesMarkupAndStyle(<NestedMobileStacked />));
+    matchesMarkup(<NestedMobileStacked />));
 
   it('renders a deprecated tab item', () =>
-    matchesMarkupAndStyle(<DeprecatedMobileTabItem />));
+    matchesMarkup(<DeprecatedMobileTabItem />));
 
   it('renders a deprecated tab list', () =>
-    matchesMarkupAndStyle(<DeprecatedMobileTabList />));
+    matchesMarkup(<DeprecatedMobileTabList />));
 
   it('renders a deprecated tab title', () =>
-    matchesMarkupAndStyle(<DeprecatedMobileTabTitle />));
+    matchesMarkup(<DeprecatedMobileTabTitle />));
 
   it('renders a deprecated tab title action', () =>
-    matchesMarkupAndStyle(
-      <DeprecatedMobileTabAction summary="List 1 Item One" />
-    ));
+    matchesMarkup(<DeprecatedMobileTabAction summary="List 1 Item One" />));
 
   it('renders a deprecated tab stack', () =>
-    matchesMarkupAndStyle(<DeprecatedMobileStacked />));
+    matchesMarkup(<DeprecatedMobileStacked />));
 
   it('renders a deprecated adjacent tab stack', () =>
-    matchesMarkupAndStyle(<DeprecatedAdjacentMobileStacked />));
+    matchesMarkup(<DeprecatedAdjacentMobileStacked />));
 });

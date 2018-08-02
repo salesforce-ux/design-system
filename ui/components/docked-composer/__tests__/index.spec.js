@@ -10,13 +10,13 @@ import { Modal, ModalContent } from '../../modals/base/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const dialogHeadingId = 'dialog-heading-id-1';
 const dialogBodyId = 'dialog-content-id-1';
 
 it('renders a docked composer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <DockedComposerPanel className="slds-is-open" footer={<Footer />}>
         <div className="slds-align_absolute-center">
@@ -27,7 +27,7 @@ it('renders a docked composer', () =>
   ));
 
 it('renders a docked composer with single composer open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <DockedComposerPanel className="slds-is-open" footer={<Footer />}>
         <div className="slds-align_absolute-center">
@@ -38,7 +38,7 @@ it('renders a docked composer with single composer open', () =>
   ));
 
 it('renders a focused docked composer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <DockedComposerPanel
         className="slds-is-open slds-has-focus"
@@ -52,7 +52,7 @@ it('renders a focused docked composer', () =>
   ));
 
 it('renders a closed docked composer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <DockedComposerPanel dialogClosed footer={<Footer />}>
         <div className="slds-align_absolute-center">
@@ -63,7 +63,7 @@ it('renders a closed docked composer', () =>
   ));
 
 it('renders a closed and focused docked composer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <DockedComposerPanel
         className="slds-has-focus"
@@ -78,7 +78,7 @@ it('renders a closed and focused docked composer', () =>
   ));
 
 it('renders a docked composer with popout', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div>
       <Modal
         className="slds-docked-composer-modal"
@@ -98,7 +98,7 @@ it('renders a docked composer with popout', () =>
   ));
 
 it('renders a docked composer with multiple composer overflow', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-docked_container">
       <ComposerOverflowMenu />
       <DockedComposerPanel className="slds-is-open" footer={<Footer />}>

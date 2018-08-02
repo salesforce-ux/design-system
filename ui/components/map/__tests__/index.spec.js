@@ -3,29 +3,29 @@ import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import Map from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 /**
  * Variant Snapshots
  */
-xit('renders a map component modal', () =>
-  matchesMarkupAndStyle(
+it('renders a map component modal', () =>
+  matchesMarkup(
     <div style={{ height: '900px' }}>
       <Map heading="Address: 1 Market St, San Francisco, CA 94105" hideMap />
       <div className="slds-backdrop slds-backdrop_open" />
     </div>
   ));
 
-xit('renders a map component modal with footer', () =>
-  matchesMarkupAndStyle(
+it('renders a map component modal with footer', () =>
+  matchesMarkup(
     <div style={{ height: '900px' }}>
       <Map heading={"Geo Code: 37°48'08.3\"N 122°15'55.2W"} footer hideMap />
       <div className="slds-backdrop slds-backdrop_open" />
     </div>
   ));
 
-xit('renders a map component modal with coordinates panel', () =>
-  matchesMarkupAndStyle(
+it('renders a map component modal with coordinates panel', () =>
+  matchesMarkup(
     <div style={{ height: '900px' }}>
       <Map
         heading="Favorite Solar Companies (2)"
@@ -37,8 +37,8 @@ xit('renders a map component modal with coordinates panel', () =>
     </div>
   ));
 
-xit('renders a map component modal with first coordinate selected', () =>
-  matchesMarkupAndStyle(
+it('renders a map component modal with first coordinate selected', () =>
+  matchesMarkup(
     <div style={{ height: '900px' }}>
       <Map
         heading="Favorite Solar Companies (2)"
@@ -51,8 +51,8 @@ xit('renders a map component modal with first coordinate selected', () =>
     </div>
   ));
 
-xit('renders a map component modal with second coordinate selected', () =>
-  matchesMarkupAndStyle(
+it('renders a map component modal with second coordinate selected', () =>
+  matchesMarkup(
     <div style={{ height: '900px' }}>
       <Map
         heading="Favorite Solar Companies (2)"

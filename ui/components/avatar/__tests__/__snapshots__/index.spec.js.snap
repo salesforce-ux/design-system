@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a avatar fallback with entity icon 1`] = `
+<span
+  className="slds-avatar"
+>
+  <span
+    className="slds-icon_container slds-icon-standard-account"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon"
+    >
+      <use
+        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Description of icon when needed
+    </span>
+  </span>
+</span>
+`;
+
+exports[`renders a avatar fallback with entity initials 1`] = `
+<span
+  className="slds-avatar"
+>
+  <abbr
+    className="slds-avatar__initials slds-icon-standard-account"
+    title="company name"
+  >
+    Ac
+  </abbr>
+</span>
+`;
+
+exports[`renders a avatar fallback with user icon 1`] = `
+<span
+  className="slds-avatar slds-avatar_circle"
+>
+  <span
+    className="slds-icon_container slds-icon-standard-user"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon"
+    >
+      <use
+        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#user"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Description of icon when needed
+    </span>
+  </span>
+</span>
+`;
+
+exports[`renders a avatar fallback with user initials 1`] = `
+<span
+  className="slds-avatar slds-avatar_circle"
+>
+  <abbr
+    className="slds-avatar__initials slds-icon-standard-user"
+    title="person name"
+  >
+    AB
+  </abbr>
+</span>
+`;
+
+exports[`renders a default avatar launcher 1`] = `
+<span
+  className="slds-avatar"
+>
+  <img
+    alt="Person name"
+    src="/assets/images/avatar2.jpg"
+    title="User avatar"
+  />
+</span>
+`;
+
+exports[`renders an inversed avatar fallback with user initials 1`] = `
+<span
+  className="slds-avatar slds-avatar_circle"
+>
+  <abbr
+    className="slds-avatar__initials slds-avatar__initials_inverse"
+    title="person name"
+  >
+    AB
+  </abbr>
+</span>
+`;

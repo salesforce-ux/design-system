@@ -8,13 +8,13 @@ import { FeedbackHeader, FeedbackFooter } from '../error/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 const headingUniqueId = 'dialog-heading-id-01';
 
 // These tests are temporarily skipped. They fail on Travis since we're using tokens to bring in image paths.
 // Travis is using a different port from our snapshot tests, which causes them to fail.
-xit('renders a walkthrough popover', () =>
-  matchesMarkupAndStyle(
+it('renders a walkthrough popover', () =>
+  matchesMarkup(
     <Popover
       className="slds-popover_walkthrough slds-nubbin_left"
       headingId={headingUniqueId}
@@ -30,8 +30,8 @@ xit('renders a walkthrough popover', () =>
     </Popover>
   ));
 
-xit('renders an action popover', () =>
-  matchesMarkupAndStyle(
+it('renders an action popover', () =>
+  matchesMarkup(
     <Popover
       className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
       headingId={headingUniqueId}
@@ -62,8 +62,8 @@ xit('renders an action popover', () =>
     </Popover>
   ));
 
-xit('renders a feature popover', () =>
-  matchesMarkupAndStyle(
+it('renders a feature popover', () =>
+  matchesMarkup(
     <Popover
       className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
       headingId={headingUniqueId}
@@ -81,8 +81,8 @@ xit('renders a feature popover', () =>
     </Popover>
   ));
 
-xit('renders an einstein popover', () =>
-  matchesMarkupAndStyle(
+it('renders an einstein popover', () =>
+  matchesMarkup(
     <Popover
       className="slds-nubbin_left slds-popover_einstein"
       title="Dialog Title"
@@ -105,7 +105,7 @@ xit('renders an einstein popover', () =>
   ));
 
 it('renders an error popover', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-popover_error slds-nubbin_bottom-left"
       headingId={headingUniqueId}
@@ -126,7 +126,7 @@ it('renders an error popover', () =>
   ));
 
 it('renders an error popover with footer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-popover_error slds-nubbin_bottom-left"
       headingId={headingUniqueId}
@@ -148,7 +148,7 @@ it('renders an error popover with footer', () =>
   ));
 
 it('renders a warning popover', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-popover_warning slds-nubbin_bottom-left"
       headingId={headingUniqueId}
@@ -172,7 +172,7 @@ it('renders a warning popover', () =>
   ));
 
 it('renders a warning popover with footer', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-popover_warning slds-nubbin_bottom-left"
       headingId={headingUniqueId}
@@ -197,7 +197,7 @@ it('renders a warning popover with footer', () =>
   ));
 
 it('renders a small popover', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-nubbin_left slds-popover_small"
       closeButton
@@ -211,7 +211,7 @@ it('renders a small popover', () =>
   ));
 
 it('renders a large popover', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Popover
       className="slds-nubbin_left slds-popover_large"
       closeButton

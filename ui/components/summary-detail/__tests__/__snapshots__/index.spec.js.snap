@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary-Detail renders a closed summary-detail action 1`] = `
+<button
+  aria-controls="test-id-4"
+  aria-expanded="false"
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-m-right_x-small"
+  id={undefined}
+  title="Toggle details for Summary Title"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-summary-detail__action-icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Toggle details for Summary Title
+  </span>
+</button>
+`;
+
+exports[`Summary-Detail renders an open summary-detail action 1`] = `
+<button
+  aria-controls="test-id-3"
+  aria-expanded="true"
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-m-right_x-small"
+  id={undefined}
+  title="Toggle details for Summary Title"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-summary-detail__action-icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Toggle details for Summary Title
+  </span>
+</button>
+`;
+
+exports[`Summary-Detail renders the detail content when closed 1`] = `
+<div
+  aria-hidden="true"
+  className="slds-summary-detail__content"
+  id="test-id-1"
+>
+  Lorem ipsum content
+</div>
+`;
+
+exports[`Summary-Detail renders the detail content when open 1`] = `
+<div
+  aria-hidden="false"
+  className="slds-summary-detail__content"
+  id="test-id-2"
+>
+  Lorem ipsum content
+</div>
+`;
+
+exports[`Summary-Detail renders the summary title 1`] = `
+<div
+  className="slds-summary-detail__title"
+>
+  <h3>
+    Summary Title
+  </h3>
+</div>
+`;

@@ -26,63 +26,57 @@ import { RelatedList } from '../related-list/example';
 import { RelatedListDeprecated } from '../related-list/deprecated';
 import { RecordHomeVertical } from '../record-home-vertical/example';
 import { RecordHomeVerticalDeprecated } from '../record-home-vertical/deprecated';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Page Header', () => {
   it('renders the page header', () =>
-    matchesMarkupAndStyle(<PageHeader>content</PageHeader>));
+    matchesMarkup(<PageHeader>content</PageHeader>));
 
   it('renders the page header in vertical orientation', () =>
-    matchesMarkupAndStyle(
-      <PageHeader orientation="vertical">content</PageHeader>
-    ));
+    matchesMarkup(<PageHeader orientation="vertical">content</PageHeader>));
 
   it('renders the page header with related list modifier', () =>
-    matchesMarkupAndStyle(<PageHeader isRelatedList>content</PageHeader>));
+    matchesMarkup(<PageHeader isRelatedList>content</PageHeader>));
 
   it('renders the page header row', () =>
-    matchesMarkupAndStyle(<PageHeaderRow>content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow>content</PageHeaderRow>));
 
   it('renders the page header row with gutters', () =>
-    matchesMarkupAndStyle(<PageHeaderRow hasGutters>content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow hasGutters>content</PageHeaderRow>));
 
   it('renders the page header column', () =>
-    matchesMarkupAndStyle(<PageHeaderRow>content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow>content</PageHeaderRow>));
 
   it('renders the page header column with title modifier', () =>
-    matchesMarkupAndStyle(<PageHeaderRow type="title">content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow type="title">content</PageHeaderRow>));
 
   it('renders the page header column with actions modifier', () =>
-    matchesMarkupAndStyle(
-      <PageHeaderRow type="actions">content</PageHeaderRow>
-    ));
+    matchesMarkup(<PageHeaderRow type="actions">content</PageHeaderRow>));
 
   it('renders the page header column with meta modifier', () =>
-    matchesMarkupAndStyle(<PageHeaderRow type="meta">content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow type="meta">content</PageHeaderRow>));
 
   it('renders the page header column with controls modifier', () =>
-    matchesMarkupAndStyle(<PageHeaderRow type="type">content</PageHeaderRow>));
+    matchesMarkup(<PageHeaderRow type="type">content</PageHeaderRow>));
 
   it('renders the page header title', () =>
-    matchesMarkupAndStyle(<PageHeaderTitle titleText="Page Title" />));
+    matchesMarkup(<PageHeaderTitle titleText="Page Title" />));
 
   it('renders the page header title with an icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderTitle titleText="Page Title" symbol="opportunity" />
     ));
 
   it('renders the page header title with an object name', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderTitle titleText="Page Title" objectName="Opportunity" />
     ));
 
   it('renders the page header title with a list view switcher', () =>
-    matchesMarkupAndStyle(
-      <PageHeaderTitle titleText="Page Title" hasSwitcher />
-    ));
+    matchesMarkup(<PageHeaderTitle titleText="Page Title" hasSwitcher />));
 
   it('renders the page header title with meta-text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderTitle
         titleText="Page Title"
         metaText="Mark Jaeckal &bull; Unlimited Customer &bull; 11/13/15"
@@ -90,7 +84,7 @@ describe('Page Header', () => {
     ));
 
   it('renders the page header title with only meta text if meta text and object name are both supplied', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderTitle
         titleText="Page Title"
         metaText="Mark Jaeckal &bull; Unlimited Customer &bull; 11/13/15"
@@ -99,71 +93,64 @@ describe('Page Header', () => {
     ));
 
   it('renders the page header meta-text', () =>
-    matchesMarkupAndStyle(<PageHeaderMetaText>content</PageHeaderMetaText>));
+    matchesMarkup(<PageHeaderMetaText>content</PageHeaderMetaText>));
 
   it('renders the page header controls container', () =>
-    matchesMarkupAndStyle(<PageHeaderControls>content</PageHeaderControls>));
+    matchesMarkup(<PageHeaderControls>content</PageHeaderControls>));
 
   it('renders the page header control container', () =>
-    matchesMarkupAndStyle(<PageHeaderControl>content</PageHeaderControl>));
+    matchesMarkup(<PageHeaderControl>content</PageHeaderControl>));
 
   it('renders the page header detail container', () =>
-    matchesMarkupAndStyle(<PageHeaderDetailRow>content</PageHeaderDetailRow>));
+    matchesMarkup(<PageHeaderDetailRow>content</PageHeaderDetailRow>));
 
   it('renders the page header detail block container', () =>
-    matchesMarkupAndStyle(
-      <PageHeaderDetailItem>content</PageHeaderDetailItem>
-    ));
+    matchesMarkup(<PageHeaderDetailItem>content</PageHeaderDetailItem>));
 
   it('renders the page header detail title container', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderDetailTitle title="content">content</PageHeaderDetailTitle>
     ));
 
   it('renders the page header detail body container', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderDetailBody title="content">content</PageHeaderDetailBody>
     ));
 
   it('renders the page header detail vertical list', () =>
-    matchesMarkupAndStyle(
-      <PageHeaderDetailList>content</PageHeaderDetailList>
-    ));
+    matchesMarkup(<PageHeaderDetailList>content</PageHeaderDetailList>));
 
   it('renders the page header detail vertical list item', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <PageHeaderDetailListItem>content</PageHeaderDetailListItem>
     ));
 });
 
 describe('Renders a page header', () => {
-  it('renders base page header', () =>
-    matchesMarkupAndStyle(<PageHeaderBase />));
+  it('renders base page header', () => matchesMarkup(<PageHeaderBase />));
 
   it('renders deprecated base page header', () =>
-    matchesMarkupAndStyle(<PageHeaderDeprecated />));
+    matchesMarkup(<PageHeaderDeprecated />));
 
-  it('renders object home page header', () =>
-    matchesMarkupAndStyle(<ObjectHome />));
+  it('renders object home page header', () => matchesMarkup(<ObjectHome />));
 
   it('renders deprecated object home page header', () =>
-    matchesMarkupAndStyle(<ObjectHomeDeprecated />));
+    matchesMarkup(<ObjectHomeDeprecated />));
 
-  it('renders record home page header', () =>
-    matchesMarkupAndStyle(<RecordHome />));
+  it('renders record home page header', () => matchesMarkup(<RecordHome />));
 
   it('renders deprecated record home page header', () =>
-    matchesMarkupAndStyle(<RecordHomeDeprecated />));
+    matchesMarkup(<RecordHomeDeprecated />));
 
   it('renders vertical record home page header', () =>
-    matchesMarkupAndStyle(<RecordHomeVertical />));
+    matchesMarkup(<RecordHomeVertical />));
 
   it('renders deprecated vertical record home page header', () =>
-    matchesMarkupAndStyle(<RecordHomeVerticalDeprecated />));
+    matchesMarkup(<RecordHomeVerticalDeprecated />));
 
   it('renders related list home page header', () =>
-    matchesMarkupAndStyle(<RelatedList />));
+    matchesMarkup(<RelatedList />));
 
   it('renders deprecated related list home page header', () =>
-    matchesMarkupAndStyle(<RelatedListDeprecated />));
+    matchesMarkup(<RelatedListDeprecated />));
 });

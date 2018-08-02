@@ -1,0 +1,578 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render builder header render base builder header 1`] = `
+<div
+  className="slds-builder-header_container"
+>
+  <header
+    className="slds-builder-header"
+  >
+    <div
+      className="slds-builder-header__item"
+    >
+      <div
+        className="slds-builder-header__item-label slds-media slds-media_center"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-builder slds-current-color"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#builder"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          App Name
+        </div>
+      </div>
+    </div>
+    <nav
+      className="slds-builder-header__item slds-builder-header__nav"
+    >
+      <ul
+        className="slds-builder-header__nav-list"
+      >
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <a
+            className="slds-builder-header__item-action slds-media slds-media_center"
+            href="javascript:void(0);"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-settings slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Link"
+              >
+                Link
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+            title="Click to open menu"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-page slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#page"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Dropdown"
+              >
+                Dropdown
+              </span>
+              <span
+                className="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div
+      className="slds-builder-header__item"
+    >
+      <h1
+        className="slds-builder-header__item-label"
+      >
+        Page Type
+      </h1>
+    </div>
+    <div
+      className="slds-builder-header__item slds-builder-header__utilities"
+    >
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-back slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#back"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Back
+          </div>
+        </a>
+      </div>
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-help slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#help"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Help
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`render builder header render base builder header with toolbar 1`] = `
+<div
+  className="slds-builder-header_container"
+>
+  <header
+    className="slds-builder-header"
+  >
+    <div
+      className="slds-builder-header__item"
+    >
+      <div
+        className="slds-builder-header__item-label slds-media slds-media_center"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-builder slds-current-color"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#builder"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          App Name
+        </div>
+      </div>
+    </div>
+    <nav
+      className="slds-builder-header__item slds-builder-header__nav"
+    >
+      <ul
+        className="slds-builder-header__nav-list"
+      >
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <a
+            className="slds-builder-header__item-action slds-media slds-media_center"
+            href="javascript:void(0);"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-settings slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Link"
+              >
+                Link
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+            title="Click to open menu"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-page slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#page"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Dropdown"
+              >
+                Dropdown
+              </span>
+              <span
+                className="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div
+      className="slds-builder-header__item"
+    >
+      <h1
+        className="slds-builder-header__item-label"
+      >
+        Page Type
+      </h1>
+    </div>
+    <div
+      className="slds-builder-header__item slds-builder-header__utilities"
+    >
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-back slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#back"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Back
+          </div>
+        </a>
+      </div>
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-help slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#help"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Help
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div
+    className="slds-builder-toolbar"
+    role="toolbar"
+  >
+    <div
+      aria-label="Canvas Actions"
+      className="slds-builder-toolbar__item-group"
+    >
+      <div
+        className="slds-button-group"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          tabIndex="0"
+          title="Undo"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#undo"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Undo
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          tabIndex="-1"
+          title="Redo"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#redo"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Redo
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-label="Edit actions"
+      className="slds-builder-toolbar__item-group"
+    >
+      <div
+        className="slds-button-group"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          tabIndex="-1"
+          title="Cut"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#cut"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Cut
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          tabIndex="-1"
+          title="Copy"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#copy"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Copy
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          tabIndex="-1"
+          title="Paste"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#paste"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Paste
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-label="Document actions"
+      className="slds-builder-toolbar__actions"
+    >
+      <button
+        className="slds-button slds-button_neutral"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_left"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+          />
+        </svg>
+         
+        Run
+      </button>
+      <button
+        className="slds-button slds-button_neutral"
+      >
+        Save As
+      </button>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -3,11 +3,11 @@ import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import Panel from '../';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('render Panel component', () => {
   it('render Base Panel', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -22,7 +22,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel with left position drill in', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -42,7 +42,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel with right position drill in', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -62,7 +62,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel drawer', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -83,7 +83,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel small size', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -98,7 +98,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel medium size', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -113,7 +113,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel large size', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -128,7 +128,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel x-large size', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -148,7 +148,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel full size', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -163,7 +163,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('render Base Panel animated', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -178,7 +178,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('renders Base Panel with centered title text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',
@@ -199,7 +199,7 @@ describe('render Panel component', () => {
       </div>
     ));
   it('renders Base Panel with long header title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         style={{
           backgroundColor: '#fafaf9',

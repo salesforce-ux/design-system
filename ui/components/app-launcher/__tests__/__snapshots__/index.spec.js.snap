@@ -1,0 +1,3453 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a default app launcher 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "800px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="header43"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium"
+          id="header43"
+        >
+          App Launcher
+        </h2>
+        <div
+          className="slds-app-launcher__header-search"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="app-launcher-search"
+            >
+              Find an app
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-input__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+              <input
+                className="slds-input"
+                defaultValue={undefined}
+                id="app-launcher-search"
+                placeholder="Find an app"
+                type="search"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          App Exchange
+        </button>
+      </header>
+      <div
+        className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="appsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Apps"
+              >
+                All Apps
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="appsContent"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              
+            </div>
+            <ul
+              className="slds-grid slds-grid_pull-padded slds-wrap"
+            >
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-27"
+                        title="Sales Cloud"
+                      >
+                        SC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Sales Cloud
+                    </a>
+                    <p>
+                      The primary internal Salesforce org. Used to run our online sales business...
+                       
+                       
+                      <button
+                        aria-describedby="help-0"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-0"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-59"
+                        title="Marketing Cloud"
+                      >
+                        MC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Marketing Cloud
+                    </a>
+                    <p>
+                      Salesforce Marketing Cloud lets businesses of any size...
+                       
+                       
+                      <button
+                        aria-describedby="help-1"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-1"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-10"
+                        title="HR Concierge"
+                      >
+                        HR
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      HR Concierge
+                    </a>
+                    <p>
+                      Community for managing employee benefits and time off.
+                       
+                       
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-2"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-6"
+                        title="My Money"
+                      >
+                        MM
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      My Money
+                    </a>
+                    <p>
+                      Manage your finances across multiple financial platforms...
+                       
+                       
+                      <button
+                        aria-describedby="help-3"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-3"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-91"
+                        title="Call Center"
+                      >
+                        CC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Call Center
+                    </a>
+                    <p>
+                      The key to call center and contact center management is more...
+                       
+                       
+                      <button
+                        aria-describedby="help-4"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-4"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-50"
+                        title="Customer Support Communitiy"
+                      >
+                        CS
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Customer Support Communitiy
+                    </a>
+                    <p>
+                      Areas of Focus are used to track customer support for your...
+                       
+                       
+                      <button
+                        aria-describedby="help-5"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-5"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="itemsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Items"
+              >
+                All Items
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="itemsContent"
+          >
+            <ul
+              className="slds-grid slds-wrap"
+            >
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Accounts"
+                >
+                  Accounts
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Announcements"
+                >
+                  Announcements
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Approvals"
+                >
+                  Approvals
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Campaigns"
+                >
+                  Campaigns
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Cases"
+                >
+                  Cases
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Coaching"
+                >
+                  Coaching
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Contacts"
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a dropped app launcher 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "800px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="header43"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium"
+          id="header43"
+        >
+          App Launcher
+        </h2>
+        <div
+          className="slds-app-launcher__header-search"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="app-launcher-search"
+            >
+              Find an app
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-input__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+              <input
+                className="slds-input"
+                defaultValue={undefined}
+                id="app-launcher-search"
+                placeholder="Find an app"
+                type="search"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          App Exchange
+        </button>
+      </header>
+      <div
+        className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="appsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Apps"
+              >
+                All Apps
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="appsContent"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              Sales Cloud: final position 4 of 6.
+            </div>
+            <ul
+              className="slds-grid slds-grid_pull-padded slds-wrap"
+            >
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-59"
+                        title="Marketing Cloud"
+                      >
+                        MC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Marketing Cloud
+                    </a>
+                    <p>
+                      Salesforce Marketing Cloud lets businesses of any size...
+                       
+                       
+                      <button
+                        aria-describedby="help-0"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-0"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-10"
+                        title="HR Concierge"
+                      >
+                        HR
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      HR Concierge
+                    </a>
+                    <p>
+                      Community for managing employee benefits and time off.
+                       
+                       
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-1"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-6"
+                        title="My Money"
+                      >
+                        MM
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      My Money
+                    </a>
+                    <p>
+                      Manage your finances across multiple financial platforms...
+                       
+                       
+                      <button
+                        aria-describedby="help-2"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-2"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-27"
+                        title="Sales Cloud"
+                      >
+                        SC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Sales Cloud
+                    </a>
+                    <p>
+                      The primary internal Salesforce org. Used to run our online sales business...
+                       
+                       
+                      <button
+                        aria-describedby="help-3"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-3"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-91"
+                        title="Call Center"
+                      >
+                        CC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Call Center
+                    </a>
+                    <p>
+                      The key to call center and contact center management is more...
+                       
+                       
+                      <button
+                        aria-describedby="help-4"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-4"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-50"
+                        title="Customer Support Communitiy"
+                      >
+                        CS
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Customer Support Communitiy
+                    </a>
+                    <p>
+                      Areas of Focus are used to track customer support for your...
+                       
+                       
+                      <button
+                        aria-describedby="help-5"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-5"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="itemsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Items"
+              >
+                All Items
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="itemsContent"
+          >
+            <ul
+              className="slds-grid slds-wrap"
+            >
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Accounts"
+                >
+                  Accounts
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Announcements"
+                >
+                  Announcements
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Approvals"
+                >
+                  Approvals
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Campaigns"
+                >
+                  Campaigns
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Cases"
+                >
+                  Cases
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Coaching"
+                >
+                  Coaching
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Contacts"
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a grabbed app launcher 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "800px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="header43"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium"
+          id="header43"
+        >
+          App Launcher
+        </h2>
+        <div
+          className="slds-app-launcher__header-search"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="app-launcher-search"
+            >
+              Find an app
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-input__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+              <input
+                className="slds-input"
+                defaultValue={undefined}
+                id="app-launcher-search"
+                placeholder="Find an app"
+                type="search"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          App Exchange
+        </button>
+      </header>
+      <div
+        className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="appsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Apps"
+              >
+                All Apps
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="appsContent"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app
+            </div>
+            <ul
+              className="slds-grid slds-grid_pull-padded slds-wrap"
+            >
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable slds-is-grabbed"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-27"
+                        title="Sales Cloud"
+                      >
+                        SC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="true"
+                        className="slds-button slds-button_icon slds-is-selected"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Sales Cloud
+                    </a>
+                    <p>
+                      The primary internal Salesforce org. Used to run our online sales business...
+                       
+                       
+                      <button
+                        aria-describedby="help-0"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-0"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-59"
+                        title="Marketing Cloud"
+                      >
+                        MC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Marketing Cloud
+                    </a>
+                    <p>
+                      Salesforce Marketing Cloud lets businesses of any size...
+                       
+                       
+                      <button
+                        aria-describedby="help-1"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-1"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-10"
+                        title="HR Concierge"
+                      >
+                        HR
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      HR Concierge
+                    </a>
+                    <p>
+                      Community for managing employee benefits and time off.
+                       
+                       
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-2"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-6"
+                        title="My Money"
+                      >
+                        MM
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      My Money
+                    </a>
+                    <p>
+                      Manage your finances across multiple financial platforms...
+                       
+                       
+                      <button
+                        aria-describedby="help-3"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-3"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-91"
+                        title="Call Center"
+                      >
+                        CC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Call Center
+                    </a>
+                    <p>
+                      The key to call center and contact center management is more...
+                       
+                       
+                      <button
+                        aria-describedby="help-4"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-4"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-50"
+                        title="Customer Support Communitiy"
+                      >
+                        CS
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Customer Support Communitiy
+                    </a>
+                    <p>
+                      Areas of Focus are used to track customer support for your...
+                       
+                       
+                      <button
+                        aria-describedby="help-5"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-5"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="itemsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Items"
+              >
+                All Items
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="itemsContent"
+          >
+            <ul
+              className="slds-grid slds-wrap"
+            >
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Accounts"
+                >
+                  Accounts
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Announcements"
+                >
+                  Announcements
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Approvals"
+                >
+                  Approvals
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Campaigns"
+                >
+                  Campaigns
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Cases"
+                >
+                  Cases
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Coaching"
+                >
+                  Coaching
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Contacts"
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a moved app launcher 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "800px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="header43"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium"
+          id="header43"
+        >
+          App Launcher
+        </h2>
+        <div
+          className="slds-app-launcher__header-search"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="app-launcher-search"
+            >
+              Find an app
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-input__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+              <input
+                className="slds-input"
+                defaultValue={undefined}
+                id="app-launcher-search"
+                placeholder="Find an app"
+                type="search"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          App Exchange
+        </button>
+      </header>
+      <div
+        className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="appsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Apps"
+              >
+                All Apps
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="appsContent"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              Sales Cloud: new position 3 of 6.
+            </div>
+            <ul
+              className="slds-grid slds-grid_pull-padded slds-wrap"
+            >
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-59"
+                        title="Marketing Cloud"
+                      >
+                        MC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Marketing Cloud
+                    </a>
+                    <p>
+                      Salesforce Marketing Cloud lets businesses of any size...
+                       
+                       
+                      <button
+                        aria-describedby="help-0"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-0"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-10"
+                        title="HR Concierge"
+                      >
+                        HR
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      HR Concierge
+                    </a>
+                    <p>
+                      Community for managing employee benefits and time off.
+                       
+                       
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-1"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable slds-is-grabbed"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-27"
+                        title="Sales Cloud"
+                      >
+                        SC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="true"
+                        className="slds-button slds-button_icon slds-is-selected"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Sales Cloud
+                    </a>
+                    <p>
+                      The primary internal Salesforce org. Used to run our online sales business...
+                       
+                       
+                      <button
+                        aria-describedby="help-2"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-2"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-6"
+                        title="My Money"
+                      >
+                        MM
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      My Money
+                    </a>
+                    <p>
+                      Manage your finances across multiple financial platforms...
+                       
+                       
+                      <button
+                        aria-describedby="help-3"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-3"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-91"
+                        title="Call Center"
+                      >
+                        CC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Call Center
+                    </a>
+                    <p>
+                      The key to call center and contact center management is more...
+                       
+                       
+                      <button
+                        aria-describedby="help-4"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-4"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-50"
+                        title="Customer Support Communitiy"
+                      >
+                        CS
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      Customer Support Communitiy
+                    </a>
+                    <p>
+                      Areas of Focus are used to track customer support for your...
+                       
+                       
+                      <button
+                        aria-describedby="help-5"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-5"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="itemsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Items"
+              >
+                All Items
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="itemsContent"
+          >
+            <ul
+              className="slds-grid slds-wrap"
+            >
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Accounts"
+                >
+                  Accounts
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Announcements"
+                >
+                  Announcements
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Approvals"
+                >
+                  Approvals
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Campaigns"
+                >
+                  Campaigns
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Cases"
+                >
+                  Cases
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Coaching"
+                >
+                  Coaching
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title="Contacts"
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a search app launcher 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "800px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="header43"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium"
+          id="header43"
+        >
+          App Launcher
+        </h2>
+        <div
+          className="slds-app-launcher__header-search"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="app-launcher-search"
+            >
+              Find an app
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-input__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+              <input
+                className="slds-input"
+                defaultValue="sales"
+                id="app-launcher-search"
+                placeholder="Find an app"
+                type="search"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          App Exchange
+        </button>
+      </header>
+      <div
+        className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="appsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Apps"
+              >
+                All Apps
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="appsContent"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              
+            </div>
+            <ul
+              className="slds-grid slds-grid_pull-padded slds-wrap"
+            >
+              <li
+                className="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-3"
+              >
+                <div
+                  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+                  draggable={true}
+                >
+                  <div
+                    className="slds-app-launcher__tile-figure"
+                  >
+                    <span
+                      className="slds-avatar slds-avatar_large"
+                    >
+                      <abbr
+                        className="slds-avatar__initials slds-icon-custom-27"
+                        title={
+                          <span>
+                            <mark>
+                              Sales
+                            </mark>
+                             Cloud
+                          </span>
+                        }
+                      >
+                        SC
+                      </abbr>
+                    </span>
+                    <div
+                      className="slds-m-top_xxx-small"
+                    >
+                      <button
+                        aria-haspopup={undefined}
+                        aria-pressed="false"
+                        className="slds-button slds-button_icon"
+                        id={undefined}
+                        title="Reorder"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="slds-button__icon"
+                        >
+                          <use
+                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+                          />
+                        </svg>
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          Reorder
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="slds-app-launcher__tile-body"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                    >
+                      <span>
+                        <mark>
+                          Sales
+                        </mark>
+                         Cloud
+                      </span>
+                    </a>
+                    <p>
+                      The primary internal Salesforce org. Used to run our...
+                       
+                       
+                      <button
+                        aria-describedby="help-0"
+                        className="slds-button slds-button_reset slds-text-link"
+                      >
+                        More
+                      </button>
+                    </p>
+                    <div
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      id="help-0"
+                      role="tooltip"
+                      style={
+                        Object {
+                          "left": "165px",
+                          "position": "absolute",
+                          "top": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="slds-popover__body"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="slds-section slds-is-open"
+        >
+          <h3
+            className="slds-section__title"
+          >
+            <button
+              aria-controls="itemsContent"
+              aria-expanded="true"
+              className="slds-button slds-section__title-action"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                />
+              </svg>
+              <span
+                className="slds-truncate"
+                title="All Items"
+              >
+                All Items
+              </span>
+            </button>
+          </h3>
+          <div
+            aria-hidden="false"
+            className="slds-section__content"
+            id="itemsContent"
+          >
+            <ul
+              className="slds-grid slds-wrap"
+            >
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title={
+                    <span>
+                      <mark>
+                        Sales
+                      </mark>
+                       Invoices
+                    </span>
+                  }
+                >
+                  <span>
+                    <mark>
+                      Sales
+                    </mark>
+                     Invoices
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-col_padded slds-p-vertical_xx-small slds-size_1-of-5"
+              >
+                <a
+                  className="slds-truncate"
+                  href="javascript:void(0);"
+                  title={
+                    <span>
+                      <mark>
+                        Sales
+                      </mark>
+                       Objects
+                    </span>
+                  }
+                >
+                  <span>
+                    <mark>
+                      Sales
+                    </mark>
+                     Objects
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders an app tile with a tooltip 1`] = `
+<div
+  className="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"
+  draggable={true}
+>
+  <div
+    className="slds-app-launcher__tile-figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <abbr
+        className="slds-avatar__initials slds-icon-custom-27"
+        title="Sales Cloud"
+      >
+        SC
+      </abbr>
+    </span>
+    <div
+      className="slds-m-top_xxx-small"
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-pressed="false"
+        className="slds-button slds-button_icon"
+        id={undefined}
+        title="Reorder"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#rows"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Reorder
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="slds-app-launcher__tile-body"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      Sales Cloud
+    </a>
+    <p>
+      The primary internal Salesforce org. Used to run our online sales business...
+       
+       
+      <button
+        aria-describedby="help-x"
+        className="slds-button slds-button_reset slds-text-link"
+      >
+        More
+      </button>
+    </p>
+    <div
+      className="slds-popover slds-popover_tooltip slds-nubbin_top"
+      id="help-x"
+      role="tooltip"
+      style={
+        Object {
+          "left": "165px",
+          "position": "absolute",
+          "top": "100px",
+        }
+      }
+    >
+      <div
+        className="slds-popover__body"
+      >
+        The primary internal Salesforce org. Used to run our online sales business and manage accounts.
+      </div>
+    </div>
+  </div>
+</div>
+`;

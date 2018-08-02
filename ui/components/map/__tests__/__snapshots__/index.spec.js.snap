@@ -1,0 +1,739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a map component modal 1`] = `
+<div
+  style={
+    Object {
+      "height": "900px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-01"
+    aria-labelledby="modal-heading-id-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_medium"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium slds-hyphenate"
+          id="modal-heading-id-01"
+        >
+          Address: 1 Market St, San Francisco, CA 94105
+        </h2>
+      </header>
+      <div
+        className="slds-modal__content"
+        id="modal-content-id-01"
+      >
+        <div
+          className="slds-grid"
+        >
+          <div
+            className="slds-col"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a map component modal with coordinates panel 1`] = `
+<div
+  style={
+    Object {
+      "height": "900px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-01"
+    aria-labelledby="modal-heading-id-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_medium"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium slds-hyphenate"
+          id="modal-heading-id-01"
+        >
+          Favorite Solar Companies (2)
+        </h2>
+      </header>
+      <div
+        className="slds-modal__content"
+        id="modal-content-id-01"
+      >
+        <div
+          className="slds-grid slds-has-coordinates"
+        >
+          <div
+            className="slds-coordinates slds-size_small slds-medium-size_medium"
+          >
+            <div
+              className="slds-coordinates__header"
+            >
+              <h2
+                className="slds-coordinates__title"
+              >
+                Favorite Solar Companies (2)
+              </h2>
+            </div>
+            <ul
+              className="slds-coordinates__list"
+            >
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      Borrego Solar
+                    </span>
+                    <span>
+                      5189 22nd Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      CivisSolar, Inc
+                    </span>
+                    <span>
+                      809 16th Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="slds-col"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+        </div>
+      </div>
+      <footer
+        className="slds-modal__footer"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Open in Google Maps
+        </button>
+      </footer>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a map component modal with first coordinate selected 1`] = `
+<div
+  style={
+    Object {
+      "height": "900px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-01"
+    aria-labelledby="modal-heading-id-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_medium"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium slds-hyphenate"
+          id="modal-heading-id-01"
+        >
+          Favorite Solar Companies (2)
+        </h2>
+      </header>
+      <div
+        className="slds-modal__content"
+        id="modal-content-id-01"
+      >
+        <div
+          className="slds-grid slds-has-coordinates"
+        >
+          <div
+            className="slds-coordinates slds-size_small slds-medium-size_medium"
+          >
+            <div
+              className="slds-coordinates__header"
+            >
+              <h2
+                className="slds-coordinates__title"
+              >
+                Favorite Solar Companies (2)
+              </h2>
+            </div>
+            <ul
+              className="slds-coordinates__list"
+            >
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                >
+                  Borrego Solar is currently selected
+                </span>
+                <button
+                  aria-pressed={true}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      Borrego Solar
+                    </span>
+                    <span>
+                      5189 22nd Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      CivisSolar, Inc
+                    </span>
+                    <span>
+                      809 16th Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="slds-col"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+        </div>
+      </div>
+      <footer
+        className="slds-modal__footer"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Open in Google Maps
+        </button>
+      </footer>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a map component modal with footer 1`] = `
+<div
+  style={
+    Object {
+      "height": "900px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-01"
+    aria-labelledby="modal-heading-id-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_medium"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium slds-hyphenate"
+          id="modal-heading-id-01"
+        >
+          Geo Code: 37°48'08.3"N 122°15'55.2W
+        </h2>
+      </header>
+      <div
+        className="slds-modal__content"
+        id="modal-content-id-01"
+      >
+        <div
+          className="slds-grid"
+        >
+          <div
+            className="slds-col"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+        </div>
+      </div>
+      <footer
+        className="slds-modal__footer"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Open in Google Maps
+        </button>
+      </footer>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a map component modal with second coordinate selected 1`] = `
+<div
+  style={
+    Object {
+      "height": "900px",
+    }
+  }
+>
+  <section
+    aria-describedby="modal-content-id-01"
+    aria-labelledby="modal-heading-id-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-modal_medium"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <header
+        className="slds-modal__header"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h2
+          className="slds-text-heading_medium slds-hyphenate"
+          id="modal-heading-id-01"
+        >
+          Favorite Solar Companies (2)
+        </h2>
+      </header>
+      <div
+        className="slds-modal__content"
+        id="modal-content-id-01"
+      >
+        <div
+          className="slds-grid slds-has-coordinates"
+        >
+          <div
+            className="slds-coordinates slds-size_small slds-medium-size_medium"
+          >
+            <div
+              className="slds-coordinates__header"
+            >
+              <h2
+                className="slds-coordinates__title"
+              >
+                Favorite Solar Companies (2)
+              </h2>
+            </div>
+            <ul
+              className="slds-coordinates__list"
+            >
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      Borrego Solar
+                    </span>
+                    <span>
+                      5189 22nd Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                >
+                  CivisSolar, Inc is currently selected
+                </span>
+                <button
+                  aria-pressed={true}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      CivisSolar, Inc
+                    </span>
+                    <span>
+                      809 16th Street, Oakland, CA 94607
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="slds-col"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+        </div>
+      </div>
+      <footer
+        className="slds-modal__footer"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Open in Google Maps
+        </button>
+      </footer>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;

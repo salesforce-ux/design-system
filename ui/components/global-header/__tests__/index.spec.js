@@ -8,33 +8,33 @@ import GlobalHeader from '../';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Global Header', () => {
   it('renders a deprecated global header', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated />);
+    return matchesMarkup(<GlobalHeaderDeprecated />);
   });
   it('renders a deprecated global header with favorites selected', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated favoritesSelected />);
+    return matchesMarkup(<GlobalHeaderDeprecated favoritesSelected />);
   });
   it('renders a deprecated global header with favorites disabled', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated favoritesDisabled />);
+    return matchesMarkup(<GlobalHeaderDeprecated favoritesDisabled />);
   });
   it('renders a deprecated global header with actions menu showing', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated actions />);
+    return matchesMarkup(<GlobalHeaderDeprecated actions />);
   });
   it('renders a deprecated global header with setup menu showing', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated setup />);
+    return matchesMarkup(<GlobalHeaderDeprecated setup />);
   });
   it('renders a deprecated global header with search expanded', () => {
-    return matchesMarkupAndStyle(<GlobalHeaderDeprecated expanded />);
+    return matchesMarkup(<GlobalHeaderDeprecated expanded />);
   });
   it('renders a deprecated global header with search expanded and with search term', () => {
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       <GlobalHeaderDeprecated expanded searchingFor="ibm" />
     );
   });
   it('renders a global header', () => {
-    return matchesMarkupAndStyle(<GlobalHeader />);
+    return matchesMarkup(<GlobalHeader />);
   });
 });

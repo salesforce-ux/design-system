@@ -8,14 +8,12 @@ import {
   TabsLarge
 } from '../base/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Scoped Tabs', () => {
-  it('render scoped tabs', () => matchesMarkupAndStyle(<TabsScoped />));
+  it('render scoped tabs', () => matchesMarkup(<TabsScoped />));
   it('render scoped tabs with overflowing items', () =>
-    matchesMarkupAndStyle(<TabsOverflowing />));
-  it('renders medium sized scoped tabs', () =>
-    matchesMarkupAndStyle(<TabsMedium />));
-  it('render large sized scoped tabs', () =>
-    matchesMarkupAndStyle(<TabsLarge />));
+    matchesMarkup(<TabsOverflowing />));
+  it('renders medium sized scoped tabs', () => matchesMarkup(<TabsMedium />));
+  it('render large sized scoped tabs', () => matchesMarkup(<TabsLarge />));
 });

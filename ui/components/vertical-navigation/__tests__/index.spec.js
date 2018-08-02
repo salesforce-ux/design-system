@@ -11,12 +11,12 @@ import {
   NavVerticalItemRadio
 } from '../radio-group/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Vertical Nav Radio Group', () => {
   it('renders a focus state', () => {
     const wrapper = mount(<NavVerticalRadioSet />);
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       wrapper
         .find('.slds-nav-vertical__item')
         .at(0)
@@ -27,7 +27,7 @@ describe('Vertical Nav Radio Group', () => {
 
   it('renders a hover state', () => {
     const wrapper = mount(<NavVerticalRadioSet />);
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       wrapper
         .find('.slds-nav-vertical__item')
         .at(0)
@@ -37,27 +37,27 @@ describe('Vertical Nav Radio Group', () => {
   });
 
   it('renders a radio button', () =>
-    matchesMarkupAndStyle(<NavVerticalItemRadio id="test1" />));
+    matchesMarkup(<NavVerticalItemRadio id="test1" />));
 
   it('renders a checked radio button', () =>
-    matchesMarkupAndStyle(<NavVerticalItemRadio id="test1" checked />));
+    matchesMarkup(<NavVerticalItemRadio id="test1" checked />));
 
   it('renders a fieldset', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <NavVerticalFieldset>
         <NavVerticalItemRadio id="test1">test1</NavVerticalItemRadio>
       </NavVerticalFieldset>
     ));
 
   it('renders a shaded fieldset', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <NavVerticalFieldset shaded>
         <NavVerticalItemRadio id="test1">test1</NavVerticalItemRadio>
       </NavVerticalFieldset>
     ));
 
   it('renders a compact fieldset', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <NavVerticalFieldset compact>
         <NavVerticalItemRadio id="test1">test1</NavVerticalItemRadio>
       </NavVerticalFieldset>

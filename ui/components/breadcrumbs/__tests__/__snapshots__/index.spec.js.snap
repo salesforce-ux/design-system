@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a base breadcrumb 1`] = `
+<nav
+  aria-label="Breadcrumbs"
+  role="navigation"
+>
+  <ol
+    className="slds-breadcrumb slds-list_horizontal slds-wrap"
+  >
+    <li
+      className="slds-breadcrumb__item slds-text-title_caps"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Parent Entity
+      </a>
+    </li>
+    <li
+      className="slds-breadcrumb__item slds-text-title_caps"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Parent Record Name
+      </a>
+    </li>
+  </ol>
+</nav>
+`;
+
+exports[`renders a overflow menu as the first breadcrumb 1`] = `
+<nav
+  aria-label="Breadcrumbs"
+  role="navigation"
+>
+  <ol
+    className="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center"
+  >
+    <li
+      className="slds-breadcrumb__item"
+    >
+      <div
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          id={undefined}
+          title="Show More"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Show More
+          </span>
+        </button>
+        <div
+          className="slds-dropdown slds-dropdown_left slds-dropdown_actions"
+          style={undefined}
+        >
+          <ul
+            aria-label={undefined}
+            className="slds-dropdown__list"
+            role="menu"
+          >
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Menu Item One"
+                >
+                  Menu Item One
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Menu Item Two"
+                >
+                  Menu Item Two
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Menu Item Three"
+                >
+                  Menu Item Three
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li
+      className="slds-breadcrumb__item slds-text-title_caps"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Parent Entity
+      </a>
+    </li>
+    <li
+      className="slds-breadcrumb__item slds-text-title_caps"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Parent Record Name
+      </a>
+    </li>
+  </ol>
+</nav>
+`;

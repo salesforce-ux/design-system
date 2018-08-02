@@ -15,10 +15,10 @@ import {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a default app launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
         appTiles={appTiles}
@@ -32,7 +32,7 @@ it('renders a default app launcher', () =>
   ));
 
 it('renders an app tile with a tooltip', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <AppLauncherTile
       figureClass="slds-icon-custom-27"
       objectInitials="SC"
@@ -45,7 +45,7 @@ it('renders an app tile with a tooltip', () =>
   ));
 
 it('renders a grabbed app launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
         appTiles={appTilesGrabbed}
@@ -60,7 +60,7 @@ it('renders a grabbed app launcher', () =>
   ));
 
 it('renders a moved app launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
         appTiles={appTilesMoved}
@@ -74,7 +74,7 @@ it('renders a moved app launcher', () =>
   ));
 
 it('renders a dropped app launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
         appTiles={appTilesDropped}
@@ -88,7 +88,7 @@ it('renders a dropped app launcher', () =>
   ));
 
 it('renders a search app launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '800px' }}>
       <AppLauncherModal
         appTiles={appTilesSearch}

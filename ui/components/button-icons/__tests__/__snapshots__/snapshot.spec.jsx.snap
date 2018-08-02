@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bare button icon renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`bare button icon renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`bare button icon renders hint on hover 1`] = `"<div class=\\"slds-hint-parent\\"><button class=\\"slds-button slds-button_icon\\"><svg class=\\"slds-button__icon slds-button__icon_hint\\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#settings\\"></use></svg><span class=\\"slds-assistive-text\\">Provide description of action</span></button></div>"`;
+
+exports[`brand button icon renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-brand"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`brand button icon renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-brand"
+  disabled={true}
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon on inversed background renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-inverse"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon on inversed background renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-inverse"
+  disabled={true}
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with bordered filled container renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-border-filled"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with bordered filled container renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-border-filled"
+  disabled={true}
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with bordered transparent container renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-border"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with bordered transparent container renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-border"
+  disabled={true}
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with container renders a button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-container"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button icon with container renders a disabled button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  className="slds-button slds-button_icon slds-button_icon-container"
+  disabled={true}
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button menu icon for dropdowns renders a button menu icon 1`] = `
+<button
+  aria-haspopup="true"
+  className="slds-button slds-button_icon slds-button_icon-more"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-button__icon_x-small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;
+
+exports[`button menu icon for dropdowns renders a button menu icon on inversed background 1`] = `
+<button
+  aria-haspopup="true"
+  className="slds-button slds-button_icon slds-button_icon-container-more slds-button_icon-inverse"
+  id={undefined}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+    />
+  </svg>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-button__icon_x-small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Provide description of action
+  </span>
+</button>
+`;

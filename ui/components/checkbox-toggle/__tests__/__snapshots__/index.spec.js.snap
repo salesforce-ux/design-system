@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a checked checkbox toggle 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-checkbox_toggle slds-grid"
+    htmlFor={undefined}
+  >
+    <span
+      className="slds-form-element__label slds-m-bottom_none"
+    >
+      Toggle Label
+    </span>
+    <input
+      aria-describedby="checkbox-toggle-2"
+      defaultChecked={true}
+      disabled={undefined}
+      name="checkbox-toggle-2"
+      type="checkbox"
+      value="checkbox-toggle-2"
+    />
+    <span
+      aria-live="assertive"
+      className="slds-checkbox_faux_container"
+      id="checkbox-toggle-2"
+    >
+      <span
+        className="slds-checkbox_faux"
+      />
+      <span
+        className="slds-checkbox_on"
+      >
+        Enabled
+      </span>
+      <span
+        className="slds-checkbox_off"
+      >
+        Disabled
+      </span>
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders a default checkbox toggle 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-checkbox_toggle slds-grid"
+    htmlFor={undefined}
+  >
+    <span
+      className="slds-form-element__label slds-m-bottom_none"
+    >
+      Toggle Label
+    </span>
+    <input
+      aria-describedby="checkbox-toggle-1"
+      defaultChecked={undefined}
+      disabled={undefined}
+      name="checkbox-toggle-1"
+      type="checkbox"
+      value="checkbox-toggle-1"
+    />
+    <span
+      aria-live="assertive"
+      className="slds-checkbox_faux_container"
+      id="checkbox-toggle-1"
+    >
+      <span
+        className="slds-checkbox_faux"
+      />
+      <span
+        className="slds-checkbox_on"
+      >
+        Enabled
+      </span>
+      <span
+        className="slds-checkbox_off"
+      >
+        Disabled
+      </span>
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders a disabled checkbox toggle 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-checkbox_toggle slds-grid"
+    htmlFor={undefined}
+  >
+    <span
+      className="slds-form-element__label slds-m-bottom_none"
+    >
+      Toggle Label
+    </span>
+    <input
+      aria-describedby="checkbox-toggle-3"
+      defaultChecked={undefined}
+      disabled={true}
+      name="checkbox-toggle-3"
+      type="checkbox"
+      value="checkbox-toggle-3"
+    />
+    <span
+      aria-live="assertive"
+      className="slds-checkbox_faux_container"
+      id="checkbox-toggle-3"
+    >
+      <span
+        className="slds-checkbox_faux"
+      />
+      <span
+        className="slds-checkbox_on"
+      >
+        Enabled
+      </span>
+      <span
+        className="slds-checkbox_off"
+      >
+        Disabled
+      </span>
+    </span>
+  </label>
+</div>
+`;

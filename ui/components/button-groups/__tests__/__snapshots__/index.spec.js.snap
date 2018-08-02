@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a button group with overflow open 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "8.75rem",
+    }
+  }
+>
+  <div
+    className="slds-button-group"
+    role="group"
+  >
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Refresh
+    </button>
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Edit
+    </button>
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Save
+    </button>
+    <div
+      className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last slds-is-open"
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled"
+        id={undefined}
+        title="Show More"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Show More
+        </span>
+      </button>
+      <div
+        className="slds-dropdown slds-dropdown_right slds-dropdown_actions"
+        style={undefined}
+      >
+        <ul
+          aria-label={undefined}
+          className="slds-dropdown__list"
+          role="menu"
+        >
+          <li
+            className="slds-dropdown__item"
+            role="presentation"
+          >
+            <a
+              aria-checked={undefined}
+              href="javascript:void(0);"
+              role="menuitem"
+              tabIndex="0"
+            >
+              <span
+                className="slds-truncate"
+                title="Overflow Item One"
+              >
+                Overflow Item One
+              </span>
+            </a>
+          </li>
+          <li
+            className="slds-dropdown__item"
+            role="presentation"
+          >
+            <a
+              aria-checked={undefined}
+              href="javascript:void(0);"
+              role="menuitem"
+              tabIndex="-1"
+            >
+              <span
+                className="slds-truncate"
+                title="Overflow Item Two"
+              >
+                Overflow Item Two
+              </span>
+            </a>
+          </li>
+          <li
+            className="slds-dropdown__item"
+            role="presentation"
+          >
+            <a
+              aria-checked={undefined}
+              href="javascript:void(0);"
+              role="menuitem"
+              tabIndex="-1"
+            >
+              <span
+                className="slds-truncate"
+                title="Overflow Item Three"
+              >
+                Overflow Item Three
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders a default button group 1`] = `
+<div
+  className="slds-button-group"
+  role="group"
+>
+  <button
+    className="slds-button slds-button_neutral"
+    disabled={undefined}
+  >
+    Refresh
+  </button>
+  <button
+    className="slds-button slds-button_neutral"
+    disabled={undefined}
+  >
+    Edit
+  </button>
+  <button
+    className="slds-button slds-button_neutral"
+    disabled={undefined}
+  >
+    Save
+  </button>
+</div>
+`;
+
+exports[`renders a row a button icons spaced out 1`] = `
+<ul
+  className="slds-button-group-row"
+>
+  <li
+    className="slds-button-group-item"
+  >
+    <div
+      className="slds-dropdown-trigger slds-dropdown-trigger_clicked"
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-more"
+        id={undefined}
+        title="More Options"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More options
+        </span>
+      </button>
+    </div>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <div
+      className="slds-dropdown-trigger slds-dropdown-trigger_clicked"
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-more"
+        id={undefined}
+        title="More Options"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#table"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More options
+        </span>
+      </button>
+    </div>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-border-filled"
+      id={undefined}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Provide description of action
+      </span>
+    </button>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-border-filled"
+      id={undefined}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Provide description of action
+      </span>
+    </button>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <div
+      className="slds-button-group"
+      role="group"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-border-filled"
+        id={undefined}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chart"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Provide description of action
+        </span>
+      </button>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-border-filled"
+        id={undefined}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#filter"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Provide description of action
+        </span>
+      </button>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`renders a row a buttons spaced out 1`] = `
+<ul
+  className="slds-button-group-row"
+>
+  <li
+    className="slds-button-group-item"
+  >
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Refresh
+    </button>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Edit
+    </button>
+  </li>
+  <li
+    className="slds-button-group-item"
+  >
+    <button
+      className="slds-button slds-button_brand"
+      disabled={undefined}
+    >
+      Save
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`renders a single brand button with brand button icon dropdown 1`] = `
+<div
+  className="slds-button-group"
+  role="group"
+>
+  <button
+    className="slds-button slds-button_brand"
+    disabled={undefined}
+  >
+    Save
+  </button>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-brand"
+      id={undefined}
+      title="More Actions"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More Actions
+      </span>
+    </button>
+  </div>
+</div>
+`;

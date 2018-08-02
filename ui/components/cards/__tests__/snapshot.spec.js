@@ -5,24 +5,24 @@ import { EinsteinCard } from '../einstein/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Card Article', () => {
   it('renders a basic card article', () =>
-    matchesMarkupAndStyle(<Card>Anything can go into the card body</Card>));
+    matchesMarkup(<Card>Anything can go into the card body</Card>));
   it('renders a basic card article with boundary', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Card hasCardBoundary>Anything can go into the card body</Card>
     ));
 });
 
 describe('Card Header', () => {
   it('renders a simple card header', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardHeader title="Card Header" href="javascript:void(0);" />
     ));
   it('renders a card header with icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardHeader
         title="Card Header"
         href="javascript:void(0);"
@@ -30,7 +30,7 @@ describe('Card Header', () => {
       />
     ));
   it('renders a card header with action', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardHeader
         title="Card Header"
         href="javascript:void(0);"
@@ -40,7 +40,7 @@ describe('Card Header', () => {
       />
     ));
   it('renders a card header with icon and action', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardHeader
         title="Card Header"
         href="javascript:void(0);"
@@ -53,22 +53,19 @@ describe('Card Header', () => {
 });
 
 describe('Card Body', () => {
-  it('renders an empty card body', () => matchesMarkupAndStyle(<CardBody />));
+  it('renders an empty card body', () => matchesMarkup(<CardBody />));
   it('renders a card body with content', () =>
-    matchesMarkupAndStyle(
-      <CardBody>Anything can go into the card body</CardBody>
-    ));
+    matchesMarkup(<CardBody>Anything can go into the card body</CardBody>));
   it('renders a card body with padding', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardBody hasPadding>Anything can go into the card body</CardBody>
     ));
 });
 
 describe('Card Footer', () => {
-  it('renders an empty card footer', () =>
-    matchesMarkupAndStyle(<CardFooter />));
+  it('renders an empty card footer', () => matchesMarkup(<CardFooter />));
   it('renders a card footer with content', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <CardFooter>
         View All <span className="slds-assistive-text">Accounts</span>
       </CardFooter>
@@ -76,19 +73,18 @@ describe('Card Footer', () => {
 });
 
 describe('Einstein Card', () => {
-  it('renders a base einstein card', () =>
-    matchesMarkupAndStyle(<EinsteinCard />));
+  it('renders a base einstein card', () => matchesMarkup(<EinsteinCard />));
   it('renders an einstein card with icon', () =>
-    matchesMarkupAndStyle(<EinsteinCard hasIcon />));
+    matchesMarkup(<EinsteinCard hasIcon />));
   it('renders an einstein card with actions', () =>
-    matchesMarkupAndStyle(<EinsteinCard hasActions />));
+    matchesMarkup(<EinsteinCard hasActions />));
   it('renders an einstein card with icon and actions', () =>
-    matchesMarkupAndStyle(<EinsteinCard hasIcon hasActions />));
+    matchesMarkup(<EinsteinCard hasIcon hasActions />));
 });
 
 describe('Card', () => {
   it('renders a base card empty', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Card>
         <CardHeader
           title="Card Header"
@@ -100,7 +96,7 @@ describe('Card', () => {
       </Card>
     ));
   it('renders a base card without a footer', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Card>
         <CardHeader
           title="Card Header"
@@ -111,7 +107,7 @@ describe('Card', () => {
       </Card>
     ));
   it('renders a base card with empty footer', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Card>
         <CardHeader
           title="Card Header"
@@ -123,7 +119,7 @@ describe('Card', () => {
       </Card>
     ));
   it('renders a base card with content in footer', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <Card>
         <CardHeader
           title="Card Header"

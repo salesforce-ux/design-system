@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typing icon renders a paused animated typing icon 1`] = `
+<span
+  className="slds-icon-typing slds-is-animated slds-is-paused"
+  title="User typing"
+>
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-assistive-text"
+  >
+    User typing
+  </span>
+</span>
+`;
+
+exports[`Typing icon renders a typing icon 1`] = `
+<span
+  className="slds-icon-typing"
+  title="User typing"
+>
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-assistive-text"
+  >
+    User typing
+  </span>
+</span>
+`;

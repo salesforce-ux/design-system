@@ -8,13 +8,13 @@ import {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
-xit('renders a default checkbox toggle', () =>
-  matchesMarkupAndStyle(<CheckboxToggle />));
+it('renders a default checkbox toggle', () =>
+  matchesMarkup(<CheckboxToggle />));
 
-xit('renders a checked checkbox toggle', () =>
-  matchesMarkupAndStyle(<CheckboxToggleChecked />));
+it('renders a checked checkbox toggle', () =>
+  matchesMarkup(<CheckboxToggleChecked />));
 
-xit('renders a disabled checkbox toggle', () =>
-  matchesMarkupAndStyle(<CheckboxToggleDisabled />));
+it('renders a disabled checkbox toggle', () =>
+  matchesMarkup(<CheckboxToggleDisabled />));

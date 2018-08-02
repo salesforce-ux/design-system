@@ -1,0 +1,2042 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat Icon renders a chat icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+  title={null}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_x-small slds-icon-text-default"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Chat Icon renders a chat icon with assistive text 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-error slds-chat-icon"
+  title={null}
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-default"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Chat Images and Files renders a loading inbound chat message item with file 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body slds-chat-message__file_loading"
+    >
+      <div
+        className="slds-chat-message__file slds-chat-message__file_inbound"
+      >
+        <div
+          className="slds-file slds-file_loading slds-has-title"
+        >
+          <figure>
+            <a
+              className="slds-file__crop slds-file__crop_4-by-3"
+              href="javascript:void(0);"
+            >
+              <div
+                className="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  className="slds-spinner__dot-a"
+                />
+                <div
+                  className="slds-spinner__dot-b"
+                />
+              </div>
+            </a>
+            <figcaption
+              className="slds-file__title slds-file__title_card"
+            >
+              <div
+                className="slds-media slds-media_small slds-media_center"
+              >
+                <div
+                  className="slds-media__figure slds-line-height_reset"
+                >
+                  <span
+                    className="slds-icon_container"
+                    title="image"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+                      />
+                    </svg>
+                    <span
+                      className="slds-assistive-text"
+                    >
+                      image
+                    </span>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-file__text slds-truncate"
+                    title="Image Title"
+                  >
+                    Image Title
+                  </span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders a loading inbound chat message item with image 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body slds-chat-message__image_loading"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_inbound"
+      >
+        <div
+          className="slds-file slds-file_loading"
+        >
+          <figure>
+            <a
+              className="slds-file__crop slds-file__crop_4-by-3"
+              href="javascript:void(0);"
+            >
+              <div
+                className="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  className="slds-spinner__dot-a"
+                />
+                <div
+                  className="slds-spinner__dot-b"
+                />
+              </div>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an inbound chat message body with an attachment 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      <span
+        className="slds-icon_container slds-icon-doctype-attachment slds-chat-icon"
+        title="Attachment"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#attachment"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Attachment
+        </span>
+      </span>
+      <a
+        href="#"
+      >
+        filename_of_attachment.jpg
+      </a>
+    </span>
+  </div>
+  <div
+    aria-label="said Taylor Watson-Rice at 4:59 PM"
+    className="slds-chat-message__meta"
+  >
+    Taylor Watson-Rice
+     • 
+    4:59 PM
+  </div>
+</div>
+`;
+
+exports[`Chat Images and Files renders an inbound chat message item with file and title 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__file slds-chat-message__file_inbound"
+      >
+        <div
+          className="slds-file slds-has-title"
+        >
+          <figure>
+            <a
+              className="slds-file__crop slds-file__crop_4-by-3"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+            <figcaption
+              className="slds-file__title slds-file__title_card slds-file-has-actions"
+            >
+              <div
+                className="slds-media slds-media_small slds-media_center"
+              >
+                <div
+                  className="slds-media__figure slds-line-height_reset"
+                >
+                  <span
+                    className="slds-icon_container"
+                    title="pdf"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                      />
+                    </svg>
+                    <span
+                      className="slds-assistive-text"
+                    >
+                      pdf
+                    </span>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-file__text slds-truncate"
+                    title="File.pdf"
+                  >
+                    File.pdf
+                  </span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an inbound chat message item with image and actions 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_inbound"
+      >
+        <div
+          className="slds-file"
+        >
+          <figure>
+            <a
+              className="slds-file__figure"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an inbound chat message item with portrait image and actions 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_inbound"
+      >
+        <div
+          className="slds-file"
+        >
+          <figure>
+            <a
+              className="slds-file__figure slds-file__figure_portrait"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@9x16.jpg"
+              />
+            </a>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an inbound chat message item with portrait image and title 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <span
+      className="slds-avatar slds-avatar_circle slds-chat-avatar"
+    >
+      <abbr
+        className="slds-avatar__initials slds-avatar__initials_inverse"
+        title="Taylor Watson-Rice"
+      >
+        TW
+      </abbr>
+    </span>
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_inbound"
+      >
+        <div
+          className="slds-file slds-has-title"
+        >
+          <figure>
+            <a
+              className="slds-file__figure"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+            <figcaption
+              className="slds-file__title slds-file__title_card slds-file-has-actions"
+            >
+              <div
+                className="slds-media slds-media_small slds-media_center"
+              >
+                <div
+                  className="slds-media__figure slds-line-height_reset"
+                >
+                  <span
+                    className="slds-icon_container"
+                    title="image"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+                      />
+                    </svg>
+                    <span
+                      className="slds-assistive-text"
+                    >
+                      image
+                    </span>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-file__text slds-truncate"
+                    title="Image.jpg"
+                  >
+                    Image.jpg
+                  </span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an outbound chat message item with file and title 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_outbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__file slds-chat-message__file_outbound"
+      >
+        <div
+          className="slds-file slds-has-title"
+        >
+          <figure>
+            <a
+              className="slds-file__crop slds-file__crop_4-by-3"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+            <figcaption
+              className="slds-file__title slds-file__title_card slds-file-has-actions"
+            >
+              <div
+                className="slds-media slds-media_small slds-media_center"
+              >
+                <div
+                  className="slds-media__figure slds-line-height_reset"
+                >
+                  <span
+                    className="slds-icon_container"
+                    title="pdf"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                      />
+                    </svg>
+                    <span
+                      className="slds-assistive-text"
+                    >
+                      pdf
+                    </span>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-file__text slds-truncate"
+                    title="File.pdf"
+                  >
+                    File.pdf
+                  </span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an outbound chat message item with image and actions 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_outbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_outbound"
+      >
+        <div
+          className="slds-file"
+        >
+          <figure>
+            <a
+              className="slds-file__figure"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an outbound chat message item with portrait image and actions 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_outbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_outbound"
+      >
+        <div
+          className="slds-file"
+        >
+          <figure>
+            <a
+              className="slds-file__figure slds-file__figure_portrait"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@9x16.jpg"
+              />
+            </a>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat Images and Files renders an outbound chat message item with portrait image and title 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_outbound"
+>
+  <div
+    className="slds-chat-message"
+  >
+    <div
+      className="slds-chat-message__body"
+    >
+      <div
+        className="slds-chat-message__image slds-chat-message__image_outbound"
+      >
+        <div
+          className="slds-file slds-has-title"
+        >
+          <figure>
+            <a
+              className="slds-file__figure"
+              href="javascript:void(0);"
+            >
+              <img
+                alt="Description of the image"
+                src="/assets/images/placeholder-img@16x9.jpg"
+              />
+            </a>
+            <figcaption
+              className="slds-file__title slds-file__title_card slds-file-has-actions"
+            >
+              <div
+                className="slds-media slds-media_small slds-media_center"
+              >
+                <div
+                  className="slds-media__figure slds-line-height_reset"
+                >
+                  <span
+                    className="slds-icon_container"
+                    title="image"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+                      />
+                    </svg>
+                    <span
+                      className="slds-assistive-text"
+                    >
+                      image
+                    </span>
+                  </span>
+                </div>
+                <div
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-file__text slds-truncate"
+                    title="Image.jpg"
+                  >
+                    Image.jpg
+                  </span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+          <div
+            className="slds-file__actions-menu"
+          >
+            <div
+              className="slds-button-group"
+              role="group"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="Download"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Download
+                </span>
+              </button>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="said Taylor Watson-Rice at 4:59 PM"
+        className="slds-chat-message__meta"
+      >
+        Taylor Watson-Rice
+         • 
+        4:59 PM
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`Chat avatar renders a chat avatar 1`] = `
+<span
+  className="slds-avatar slds-avatar_circle slds-chat-avatar"
+>
+  <abbr
+    className="slds-avatar__initials slds-avatar__initials_inverse"
+    title="Simon Taggart"
+  >
+    ST
+  </abbr>
+</span>
+`;
+
+exports[`Chat bookend renders a chat start bookend 1`] = `
+<div
+  className="slds-chat-bookend"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-chat slds-chat-icon"
+    title={null}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chat"
+      />
+    </svg>
+  </span>
+  <p>
+    Chat 
+    started
+     by 
+    <b>
+      Simon Taggart
+    </b>
+     
+    • 
+  </p>
+</div>
+`;
+
+exports[`Chat bookend renders a chat start bookend with a timestamp 1`] = `
+<div
+  className="slds-chat-bookend"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-chat slds-chat-icon"
+    title={null}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chat"
+      />
+    </svg>
+  </span>
+  <p>
+    Chat 
+    started
+     by 
+    <b>
+      Simon Taggart
+    </b>
+     
+    • 
+    5:08 PM
+  </p>
+</div>
+`;
+
+exports[`Chat bookend renders a chat stop bookend 1`] = `
+<div
+  className="slds-chat-bookend slds-chat-bookend_stop"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-end_chat slds-chat-icon"
+    title={null}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#end_chat"
+      />
+    </svg>
+  </span>
+  <p>
+    Chat 
+    ended
+     by 
+    <b>
+      Simon Taggart
+    </b>
+     
+    • 
+  </p>
+</div>
+`;
+
+exports[`Chat bookend renders a chat stop bookend with a timestamp 1`] = `
+<div
+  className="slds-chat-bookend slds-chat-bookend_stop"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-end_chat slds-chat-icon"
+    title={null}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#end_chat"
+      />
+    </svg>
+  </span>
+  <p>
+    Chat 
+    ended
+     by 
+    <b>
+      Simon Taggart
+    </b>
+     
+    • 
+    5:08 PM
+  </p>
+</div>
+`;
+
+exports[`Chat container renders a chat container 1`] = `
+<section
+  className="slds-chat"
+  role="log"
+/>
+`;
+
+exports[`Chat container renders a past chat container 1`] = `
+<section
+  className="slds-chat slds-chat_past"
+  role="log"
+/>
+`;
+
+exports[`Chat event renders a basic chat event 1`] = `
+<div
+  className="slds-chat-event"
+  role={undefined}
+>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__body"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+        />
+      </svg>
+    </span>
+    <p>
+      <b>
+        Amber Cann
+      </b>
+       did a thing
+       • 
+    </p>
+  </div>
+  <div
+    className="slds-chat-event__rule"
+  />
+</div>
+`;
+
+exports[`Chat event renders a basic chat event with a message from an agent 1`] = `
+<div
+  className="slds-chat-event"
+  role={undefined}
+>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__body"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+        />
+      </svg>
+    </span>
+    <p>
+      <b>
+        Amber Cann
+      </b>
+       did a thing
+       • 
+      5:09 PM
+    </p>
+  </div>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__agent-message"
+  >
+    Agent message
+  </div>
+</div>
+`;
+
+exports[`Chat event renders a basic chat event with a timestamp 1`] = `
+<div
+  className="slds-chat-event"
+  role={undefined}
+>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__body"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+        />
+      </svg>
+    </span>
+    <p>
+      <b>
+        Amber Cann
+      </b>
+       did a thing
+       • 
+      5:09 PM
+    </p>
+  </div>
+  <div
+    className="slds-chat-event__rule"
+  />
+</div>
+`;
+
+exports[`Chat event renders a errored chat event with a message from an agent 1`] = `
+<div
+  className="slds-chat-event slds-has-error"
+  role="alert"
+>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__body"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+        />
+      </svg>
+    </span>
+    <p>
+      <b>
+        Amber Cann
+      </b>
+       did a thing
+       • 
+      5:09 PM
+    </p>
+  </div>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__agent-message"
+  >
+    Agent message
+  </div>
+</div>
+`;
+
+exports[`Chat event renders a errored chat event with a timestamp 1`] = `
+<div
+  className="slds-chat-event slds-has-error"
+  role="alert"
+>
+  <div
+    className="slds-chat-event__rule"
+  />
+  <div
+    className="slds-chat-event__body"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-priority slds-chat-icon"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#priority"
+        />
+      </svg>
+    </span>
+    <p>
+      <b>
+        Amber Cann
+      </b>
+       did a thing
+       • 
+      5:09 PM
+    </p>
+  </div>
+  <div
+    className="slds-chat-event__rule"
+  />
+</div>
+`;
+
+exports[`Chat list renders a chat list 1`] = `
+<ul
+  className="slds-chat-list"
+/>
+`;
+
+exports[`Chat list renders a chat list item 1`] = `
+<li
+  className="slds-chat-listitem"
+/>
+`;
+
+exports[`Chat list renders a chat list item for bookends 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_bookend"
+/>
+`;
+
+exports[`Chat list renders a chat list item for events 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_event"
+/>
+`;
+
+exports[`Chat list renders a chat list item for inbound messages 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_inbound"
+/>
+`;
+
+exports[`Chat list renders a chat list item for outbound messages 1`] = `
+<li
+  className="slds-chat-listitem slds-chat-listitem_outbound"
+/>
+`;
+
+exports[`Chat list renders two consecutive inbound list items for inbound messages 1`] = `
+<ul
+  className="slds-chat-list"
+>
+  <li
+    className="slds-chat-listitem slds-chat-listitem_inbound"
+  />
+  <li
+    className="slds-chat-listitem slds-chat-listitem_inbound"
+  />
+</ul>
+`;
+
+exports[`Chat list renders two consecutive outbound list items for outbound messages 1`] = `
+<ul
+  className="slds-chat-list"
+>
+  <li
+    className="slds-chat-listitem"
+  />
+  <li
+    className="slds-chat-listitem"
+  />
+</ul>
+`;
+
+exports[`Chat message body renders a chat message body with multiline text 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text"
+  >
+    <span
+      aria-hidden={null}
+    >
+      So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients. 
+ 
+ Have you tried visiting our help site?
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a default chat message body 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a default chat message body with name and timestamp meta data 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    Simon Taggart
+     • 
+    5:09 PM
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a inbound chat message body with a name and timestamp meta data 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    Simon Taggart
+     • 
+    5:09 PM
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a outbound chat message body from another agent, with a name and timestamp meta data 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound-agent"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    Simon Taggart
+     • 
+    5:09 PM
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a outbound chat message body with a name and timestamp meta data 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    Simon Taggart
+     • 
+    5:09 PM
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders a past chat message body, with a name and timestamp meta data 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    <b>
+      Simon Taggart
+    </b>
+     • 
+    5:09 PM
+  </div>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound-agent"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an inbound chat message body 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an inbound chat message body that shows customer is typing 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound"
+  >
+    <span
+      className="slds-icon-typing slds-is-animated slds-is-paused"
+      title="Customer is typing"
+    >
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-assistive-text"
+      >
+        Customer is typing
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an inbound chat message body that shows sneak peak 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound slds-chat-message__text_sneak-peek"
+  >
+    <span
+      className="slds-icon-typing slds-is-animated slds-is-paused"
+      title="Customer is typing"
+    >
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-icon-typing__dot"
+      />
+      <span
+        className="slds-assistive-text"
+      >
+        Customer is typing
+      </span>
+    </span>
+    <span
+      aria-hidden="true"
+    >
+      Message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an inbound chat message body with a link 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    <b>
+      Simon Taggart
+    </b>
+     • 
+    5:09 PM
+  </div>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_inbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      <a
+        href="#"
+      >
+        a link
+      </a>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an inbound chat message body with an unsupported message type 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_unsupported-type"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-warning slds-chat-icon"
+      title="Warning"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-warning"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Warning
+      </span>
+    </span>
+    <span
+      aria-hidden={null}
+    >
+      Message type is not supported
+    </span>
+  </div>
+  <div
+    aria-label="said Ayesha Mazumdar at 4:59 PM"
+    className="slds-chat-message__meta"
+  >
+    Ayesha Mazumdar
+     • 
+    4:59 PM
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an outbound chat message body 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an outbound chat message body with a delivery failure 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_delivery-failure"
+  >
+    <span
+      aria-hidden={null}
+    >
+      It might be the cause of the problem
+    </span>
+    <div
+      className="slds-chat-message__text_delivery-failure-reason"
+      role="alert"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-error slds-chat-icon"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+          />
+        </svg>
+      </span>
+      <span>
+        Message was not delivered because Andy stopped receiving messages.
+      </span>
+    </div>
+  </div>
+  <div
+    className="slds-grid slds-grid_align-spread slds-grid_vertical-align-start"
+  >
+    <div
+      aria-label="said Ayesha Mazumdar at 4:59 PM"
+      className="slds-chat-message__meta"
+    >
+      Ayesha Mazumdar
+       • 
+      4:59 PM
+    </div>
+    <button
+      className="slds-button slds-chat-message__action slds-m-top_xxx-small"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-redo slds-chat-icon"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#redo"
+          />
+        </svg>
+      </span>
+      <span>
+        Resend
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an outbound chat message body with a link 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    aria-label="said Simon Taggart at 5:09 PM"
+    className="slds-chat-message__meta"
+  >
+    <b>
+      Simon Taggart
+    </b>
+     • 
+    5:09 PM
+  </div>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound"
+  >
+    <span
+      aria-hidden={null}
+    >
+      <a
+        href="#"
+      >
+        a link
+      </a>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message body renders an outbound chat message body, by another agent 1`] = `
+<div
+  className="slds-chat-message__body"
+>
+  <div
+    className="slds-chat-message__text slds-chat-message__text_outbound-agent"
+  >
+    <span
+      aria-hidden={null}
+    >
+      message
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Chat message renders a chat message container 1`] = `
+<div
+  className="slds-chat-message"
+/>
+`;
+
+exports[`Chat message renders a chat message container with styles for a faux avatar 1`] = `
+<div
+  className="slds-chat-message slds-chat-message_faux-avatar"
+/>
+`;

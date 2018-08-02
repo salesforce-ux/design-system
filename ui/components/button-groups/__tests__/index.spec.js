@@ -15,10 +15,10 @@ import {
   Trigger
 } from '../../menus/dropdown/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a default button group', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <ButtonGroup>
       <Button isNeutral>Refresh</Button>
       <Button isNeutral>Edit</Button>
@@ -27,7 +27,7 @@ it('renders a default button group', () =>
   ));
 
 it('renders a button group with overflow open', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ height: '8.75rem' }}>
       <ButtonGroup>
         <Button isNeutral>Refresh</Button>
@@ -47,7 +47,7 @@ it('renders a button group with overflow open', () =>
   ));
 
 it('renders a row a buttons spaced out', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <ButtonGroupRow>
       <ButtonGroupItem>
         <Button isNeutral>Refresh</Button>
@@ -62,7 +62,7 @@ it('renders a row a buttons spaced out', () =>
   ));
 
 it('renders a row a button icons spaced out', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <ButtonGroupRow>
       <ButtonGroupItem>
         <div className="slds-dropdown-trigger slds-dropdown-trigger_clicked">
@@ -101,7 +101,7 @@ it('renders a row a button icons spaced out', () =>
   ));
 
 it('renders a single brand button with brand button icon dropdown', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <ButtonGroup>
       <Button isBrand>Save</Button>
       <div className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last">

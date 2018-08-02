@@ -5,10 +5,10 @@ import { StandardIcon } from '../../icons/standard/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a default avatar launcher', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar>
       <img
         alt="Person name"
@@ -19,7 +19,7 @@ it('renders a default avatar launcher', () =>
   ));
 
 it('renders a avatar fallback with user initials', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar className="slds-avatar_circle">
       <abbr
         className="slds-avatar__initials slds-icon-standard-user"
@@ -31,7 +31,7 @@ it('renders a avatar fallback with user initials', () =>
   ));
 
 it('renders an inversed avatar fallback with user initials', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar className="slds-avatar_circle">
       <abbr
         className="slds-avatar__initials slds-avatar__initials_inverse"
@@ -43,14 +43,14 @@ it('renders an inversed avatar fallback with user initials', () =>
   ));
 
 it('renders a avatar fallback with user icon', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar className="slds-avatar_circle">
       <StandardIcon symbol="user" />
     </Avatar>
   ));
 
 it('renders a avatar fallback with entity initials', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar>
       <abbr
         className="slds-avatar__initials slds-icon-standard-account"
@@ -62,7 +62,7 @@ it('renders a avatar fallback with entity initials', () =>
   ));
 
 it('renders a avatar fallback with entity icon', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Avatar>
       <StandardIcon />
     </Avatar>

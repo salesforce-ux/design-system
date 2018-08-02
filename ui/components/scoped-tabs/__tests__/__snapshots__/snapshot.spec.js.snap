@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scoped Tabs render large sized scoped tabs 1`] = `
+<div
+  className="slds-tabs_scoped slds-tabs_large"
+>
+  <ul
+    className="slds-tabs_scoped__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-tabs_scoped__item slds-is-active"
+      role="presentation"
+      title="Item One"
+    >
+      <a
+        aria-controls="tab-scoped-1"
+        aria-selected={true}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-1__item"
+        role="tab"
+        tabIndex={0}
+      >
+        Item One
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Two"
+    >
+      <a
+        aria-controls="tab-scoped-2"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-2__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Two
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Three"
+    >
+      <a
+        aria-controls="tab-scoped-3"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-3__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Three
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab-scoped-1__item"
+    className="slds-tabs_scoped__content slds-show"
+    id="tab-scoped-1"
+    role="tabpanel"
+  >
+    Item One Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-2__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-2"
+    role="tabpanel"
+  >
+    Item Two Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-3__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-3"
+    role="tabpanel"
+  >
+    Item Three Content
+  </div>
+</div>
+`;
+
+exports[`Scoped Tabs render scoped tabs 1`] = `
+<div
+  className="slds-tabs_scoped"
+>
+  <ul
+    className="slds-tabs_scoped__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-tabs_scoped__item slds-is-active"
+      role="presentation"
+      title="Item One"
+    >
+      <a
+        aria-controls="tab-scoped-1"
+        aria-selected={true}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-1__item"
+        role="tab"
+        tabIndex={0}
+      >
+        Item One
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Two"
+    >
+      <a
+        aria-controls="tab-scoped-2"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-2__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Two
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Three"
+    >
+      <a
+        aria-controls="tab-scoped-3"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-3__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Three
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab-scoped-1__item"
+    className="slds-tabs_scoped__content slds-show"
+    id="tab-scoped-1"
+    role="tabpanel"
+  >
+    Item One Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-2__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-2"
+    role="tabpanel"
+  >
+    Item Two Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-3__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-3"
+    role="tabpanel"
+  >
+    Item Three Content
+  </div>
+</div>
+`;
+
+exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "12rem",
+    }
+  }
+>
+  <div
+    className="slds-tabs_scoped"
+  >
+    <ul
+      className="slds-tabs_scoped__nav"
+      role="tablist"
+    >
+      <li
+        className="slds-tabs_scoped__item slds-is-active"
+        role="presentation"
+        title="Item One"
+      >
+        <a
+          aria-controls="tab-scoped-1"
+          aria-selected={true}
+          className="slds-tabs_scoped__link"
+          href="javascript:void(0);"
+          id="tab-scoped-1__item"
+          role="tab"
+          tabIndex={0}
+        >
+          Item One
+        </a>
+      </li>
+      <li
+        className="slds-tabs_scoped__item"
+        role="presentation"
+        title="Item Two"
+      >
+        <a
+          aria-controls="tab-scoped-2"
+          aria-selected={false}
+          className="slds-tabs_scoped__link"
+          href="javascript:void(0);"
+          id="tab-scoped-2__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          Item Two
+        </a>
+      </li>
+      <li
+        className="slds-tabs_scoped__item"
+        role="presentation"
+        title="Item Three"
+      >
+        <a
+          aria-controls="tab-scoped-3"
+          aria-selected={false}
+          className="slds-tabs_scoped__link"
+          href="javascript:void(0);"
+          id="tab-scoped-3__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          Item Three
+        </a>
+      </li>
+      <li
+        className="slds-tabs_scoped__item slds-tabs_scoped__overflow-button"
+        role="presentation"
+        title="More Tabs"
+      >
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        >
+          <button
+            aria-haspopup={true}
+            className="slds-button"
+            disabled={undefined}
+          >
+            More
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_x-small slds-button__icon_right"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_right"
+            style={undefined}
+          >
+            <ul
+              aria-label={undefined}
+              className="slds-dropdown__list slds-dropdown_length-with-icon-10"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Item Four"
+                  >
+                    Item Four
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Item Five"
+                  >
+                    Item Five
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Item Six"
+                  >
+                    Item Six
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tab-scoped-1__item"
+      className="slds-tabs_scoped__content slds-show"
+      id="tab-scoped-1"
+      role="tabpanel"
+    >
+      Item One Content
+    </div>
+    <div
+      aria-labelledby="tab-scoped-2__item"
+      className="slds-tabs_scoped__content slds-hide"
+      id="tab-scoped-2"
+      role="tabpanel"
+    >
+      Item Two Content
+    </div>
+    <div
+      aria-labelledby="tab-scoped-3__item"
+      className="slds-tabs_scoped__content slds-hide"
+      id="tab-scoped-3"
+      role="tabpanel"
+    >
+      Item Three Content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Scoped Tabs renders medium sized scoped tabs 1`] = `
+<div
+  className="slds-tabs_scoped slds-tabs_medium"
+>
+  <ul
+    className="slds-tabs_scoped__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-tabs_scoped__item slds-is-active"
+      role="presentation"
+      title="Item One"
+    >
+      <a
+        aria-controls="tab-scoped-1"
+        aria-selected={true}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-1__item"
+        role="tab"
+        tabIndex={0}
+      >
+        Item One
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Two"
+    >
+      <a
+        aria-controls="tab-scoped-2"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-2__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Two
+      </a>
+    </li>
+    <li
+      className="slds-tabs_scoped__item"
+      role="presentation"
+      title="Item Three"
+    >
+      <a
+        aria-controls="tab-scoped-3"
+        aria-selected={false}
+        className="slds-tabs_scoped__link"
+        href="javascript:void(0);"
+        id="tab-scoped-3__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Three
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab-scoped-1__item"
+    className="slds-tabs_scoped__content slds-show"
+    id="tab-scoped-1"
+    role="tabpanel"
+  >
+    Item One Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-2__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-2"
+    role="tabpanel"
+  >
+    Item Two Content
+  </div>
+  <div
+    aria-labelledby="tab-scoped-3__item"
+    className="slds-tabs_scoped__content slds-hide"
+    id="tab-scoped-3"
+    role="tabpanel"
+  >
+    Item Three Content
+  </div>
+</div>
+`;

@@ -6,11 +6,10 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import BuilderHeader from '../';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('render builder header', () => {
-  it('render base builder header', () =>
-    matchesMarkupAndStyle(<BuilderHeader />));
+  it('render base builder header', () => matchesMarkup(<BuilderHeader />));
   it('render base builder header with toolbar', () =>
-    matchesMarkupAndStyle(<BuilderHeader showToolbar />));
+    matchesMarkup(<BuilderHeader showToolbar />));
 });

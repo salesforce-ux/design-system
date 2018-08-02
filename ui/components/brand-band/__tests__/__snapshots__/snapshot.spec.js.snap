@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render brand band renders brand band with no image 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(250, 250, 249)",
+      "minHeight": "20rem",
+      "position": "relative",
+      "zIndex": "1",
+    }
+  }
+>
+  <div
+    className="slds-brand-band slds-brand-band_none"
+  />
+</div>
+`;
+
+exports[`render brand band renders large brand band 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(250, 250, 249)",
+      "minHeight": "20rem",
+      "position": "relative",
+      "zIndex": "1",
+    }
+  }
+>
+  <div
+    className="slds-brand-band slds-brand-band_large"
+  />
+</div>
+`;
+
+exports[`render brand band renders medium brand band 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(250, 250, 249)",
+      "minHeight": "20rem",
+      "position": "relative",
+      "zIndex": "1",
+    }
+  }
+>
+  <div
+    className="slds-brand-band slds-brand-band_medium"
+  />
+</div>
+`;
+
+exports[`render brand band renders small brand band 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(250, 250, 249)",
+      "minHeight": "20rem",
+      "position": "relative",
+      "zIndex": "1",
+    }
+  }
+>
+  <div
+    className="slds-brand-band slds-brand-band_small"
+  />
+</div>
+`;

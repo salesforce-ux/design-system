@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button  renders a base button 1`] = `
+<button
+  className="slds-button"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a brand button 1`] = `
+<button
+  className="slds-button slds-button_brand"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a desctructive button 1`] = `
+<button
+  className="slds-button slds-button_destructive"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a disabled base button 1`] = `
+<button
+  className="slds-button"
+  disabled={true}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a neutral button 1`] = `
+<button
+  className="slds-button slds-button_neutral"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a success button 1`] = `
+<button
+  className="slds-button slds-button_success"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a text destructive button 1`] = `
+<button
+  className="slds-button slds-button_text-destructive"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders an inverse button 1`] = `
+<button
+  className="slds-button slds-button_inverse"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders an outline brand button 1`] = `
+<button
+  className="slds-button slds-button_outline-brand"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Stateful Button  renders a not-selected stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+  disabled={undefined}
+>
+  <span
+    className="slds-text-not-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+  <span
+    className="slds-text-selected-focus"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    Unfollow
+  </span>
+</button>
+`;
+
+exports[`Stateful Button  renders a selected and focused stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_stateful slds-is-selected-clicked"
+  disabled={undefined}
+>
+  <span
+    className="slds-text-not-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+  <span
+    className="slds-text-selected-focus"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    Unfollow
+  </span>
+</button>
+`;
+
+exports[`Stateful Button  renders a selected stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_stateful slds-is-selected"
+  disabled={undefined}
+>
+  <span
+    className="slds-text-not-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-selected"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+  <span
+    className="slds-text-selected-focus"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    Unfollow
+  </span>
+</button>
+`;

@@ -4,10 +4,10 @@ import { Alert } from '../base/example';
 import { UtilityIcon } from '../../icons/base/example';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a base alert', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Alert type="info">
       <UtilityIcon
         containerClassName="slds-m-right_x-small"
@@ -23,7 +23,7 @@ it('renders a base alert', () =>
   ));
 
 it('renders a warning alert', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Alert type="warning">
       <UtilityIcon
         containerClassName="slds-m-right_x-small"
@@ -39,7 +39,7 @@ it('renders a warning alert', () =>
   ));
 
 it('renders a error alert', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Alert type="error">
       <UtilityIcon
         containerClassName="slds-m-right_x-small"
@@ -55,7 +55,7 @@ it('renders a error alert', () =>
   ));
 
 it('renders a offline alert', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Alert type="offline">
       <UtilityIcon
         containerClassName="slds-m-right_x-small"

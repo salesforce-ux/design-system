@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a base alert 1`] = `
+<div
+  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info"
+  role="alert"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    info
+  </span>
+  <span
+    className="slds-icon_container slds-icon-utility-user slds-m-right_x-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#user"
+      />
+    </svg>
+  </span>
+  <h2>
+    Logged in as John Smith (johnsmith@acme.com).
+     
+    <a
+      href="javascript:void(0);"
+    >
+      Log out
+    </a>
+  </h2>
+  <div
+    className="slds-notify__close"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse"
+      id={undefined}
+      title="Close"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders a error alert 1`] = `
+<div
+  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error"
+  role="alert"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    error
+  </span>
+  <span
+    className="slds-icon_container slds-icon-utility-error slds-m-right_x-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+  </span>
+  <h2>
+    Your browser is currently not supported. Your Salesforce may be degraded. 
+    <a
+      href="javascript:void(0);"
+    >
+      More Information
+    </a>
+  </h2>
+  <div
+    className="slds-notify__close"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse"
+      id={undefined}
+      title="Close"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders a offline alert 1`] = `
+<div
+  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_offline"
+  role="alert"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    offline
+  </span>
+  <span
+    className="slds-icon_container slds-icon-utility-offline slds-m-right_x-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#offline"
+      />
+    </svg>
+  </span>
+  <h2>
+    You are in offline mode.
+     
+    <a
+      href="javascript:void(0);"
+    >
+      More Information
+    </a>
+  </h2>
+  <div
+    className="slds-notify__close"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse"
+      id={undefined}
+      title="Close"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders a warning alert 1`] = `
+<div
+  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning"
+  role="alert"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    warning
+  </span>
+  <span
+    className="slds-icon_container slds-icon-utility-warning slds-m-right_x-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+      />
+    </svg>
+  </span>
+  <h2>
+    Your browser is outdated. Your Salesforce experience may be degraded.
+     
+    <a
+      href="javascript:void(0);"
+    >
+      More Information
+    </a>
+  </h2>
+  <div
+    className="slds-notify__close"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse"
+      id={undefined}
+      title="Close"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close
+      </span>
+    </button>
+  </div>
+</div>
+`;

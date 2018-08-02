@@ -1,5 +1,152 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Form Element Composition renders form element with input 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="input-1"
+    id={undefined}
+  >
+    Form label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      defaultValue={undefined}
+      id="input-1"
+      placeholder={undefined}
+      readOnly={undefined}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Form Element Composition renders form element with input that has an error 1`] = `
+<div
+  className="slds-form-element slds-has-error"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="input-1"
+    id={undefined}
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      * 
+       
+    </abbr>
+    Form label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      aria-describedby="error-1"
+      className="slds-input"
+      defaultValue={undefined}
+      id="input-1"
+      placeholder={undefined}
+      readOnly={undefined}
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="slds-form-element__help"
+    id="error-1"
+  >
+    This field is required
+  </div>
+</div>
+`;
+
+exports[`Form Element Composition renders form element with input that is required 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="input-1"
+    id={undefined}
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      * 
+       
+    </abbr>
+    Form label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      defaultValue={undefined}
+      id="input-1"
+      placeholder={undefined}
+      readOnly={undefined}
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Form Element Composition renders inline editable form element in view mode 1`] = `
+<div
+  className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+  role={undefined}
+>
+  <span
+    className="slds-form-element__label"
+    id={undefined}
+  >
+    Status
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-form-element__static"
+    >
+      In Progress
+    </div>
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon"
+      id={undefined}
+      title="Edit: Status"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Edit: Status
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Form Element renders form element as a fieldset 1`] = `
 <fieldset
   className="slds-form-element"

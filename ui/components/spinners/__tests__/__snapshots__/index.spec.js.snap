@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders delayed spinner 1`] = `
+<div
+  className="slds-spinner_container"
+>
+  <div
+    className="slds-spinner slds-spinner_delayed slds-spinner_medium"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Loading
+    </span>
+    <div
+      className="slds-spinner__dot-a"
+    />
+    <div
+      className="slds-spinner__dot-b"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders spinner 1`] = `
+<div
+  className="slds-spinner_container"
+>
+  <div
+    className="slds-spinner slds-spinner_medium"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Loading
+    </span>
+    <div
+      className="slds-spinner__dot-a"
+    />
+    <div
+      className="slds-spinner__dot-b"
+    />
+  </div>
+</div>
+`;

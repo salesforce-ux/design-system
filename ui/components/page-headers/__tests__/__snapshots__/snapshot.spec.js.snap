@@ -1,0 +1,2679 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page Header renders the page header 1`] = `
+<div
+  className="slds-page-header"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header column 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header column with actions modifier 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header column with controls modifier 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header column with meta modifier 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header column with title modifier 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header control container 1`] = `
+<div
+  className="slds-page-header__control"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header controls container 1`] = `
+<div
+  className="slds-page-header__controls"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header detail block container 1`] = `
+<li
+  className="slds-page-header__detail-block"
+>
+  content
+</li>
+`;
+
+exports[`Page Header renders the page header detail body container 1`] = `
+<div
+  className="slds-truncate"
+  title="content"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header detail container 1`] = `
+<ul
+  className="slds-page-header__detail-row"
+>
+  content
+</ul>
+`;
+
+exports[`Page Header renders the page header detail title container 1`] = `
+<div
+  className="slds-text-title slds-truncate"
+  title="content"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header detail vertical list 1`] = `
+<ul
+  className="slds-page-header__detail-list"
+>
+  content
+</ul>
+`;
+
+exports[`Page Header renders the page header detail vertical list item 1`] = `
+<li
+  className="slds-page-header__detail-item"
+>
+  content
+</li>
+`;
+
+exports[`Page Header renders the page header in vertical orientation 1`] = `
+<div
+  className="slds-page-header"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header meta-text 1`] = `
+<p
+  className="slds-page-header__meta-text"
+>
+  content
+</p>
+`;
+
+exports[`Page Header renders the page header row 1`] = `
+<div
+  className="slds-page-header__row"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header row with gutters 1`] = `
+<div
+  className="slds-page-header__row slds-page-header__row_gutters"
+>
+  content
+</div>
+`;
+
+exports[`Page Header renders the page header title 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header title with a list view switcher 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+      <div
+        className="slds-page-header__name-switcher"
+      >
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-small"
+            id={undefined}
+            title="Switch list view"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Switch list view
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header title with an icon 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-icon_container slds-icon-standard-opportunity"
+      title="opportunity"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-page-header__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        opportunity
+      </span>
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header title with an object name 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span>
+            Opportunity
+          </span>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header title with meta-text 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+    </div>
+    <p
+      className="slds-page-header__name-meta"
+    >
+      Mark Jaeckal • Unlimited Customer • 11/13/15
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header title with only meta text if meta text and object name are both supplied 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-page-header__name"
+    >
+      <div
+        className="slds-page-header__name-title"
+      >
+        <h1>
+          <span
+            className="slds-page-header__title slds-truncate"
+            title="Page Title"
+          >
+            Page Title
+          </span>
+        </h1>
+      </div>
+    </div>
+    <p
+      className="slds-page-header__name-meta"
+    >
+      Mark Jaeckal • Unlimited Customer • 11/13/15
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Page Header renders the page header with related list modifier 1`] = `
+<div
+  className="slds-page-header slds-page-header_related-list"
+>
+  content
+</div>
+`;
+
+exports[`Renders a page header renders base page header 1`] = `
+<div
+  className="slds-page-header"
+>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-title"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title="opportunity"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-page-header__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              opportunity
+            </span>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-page-header__name"
+          >
+            <div
+              className="slds-page-header__name-title"
+            >
+              <h1>
+                <span
+                  className="slds-page-header__title slds-truncate"
+                  title="Rohde Corp - 80,000 Widgets"
+                >
+                  Rohde Corp - 80,000 Widgets
+                </span>
+              </h1>
+            </div>
+          </div>
+          <p
+            className="slds-page-header__name-meta"
+          >
+            Mark Jaeckal • Unlimited Customer • 11/13/15
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders deprecated base page header 1`] = `
+<div
+  className="slds-page-header"
+>
+  <div
+    className="slds-media"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-standard-opportunity"
+        title="Description of icon when needed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-page-header__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <h1
+        className="slds-page-header__title slds-truncate slds-align-middle"
+        title="Rohde Corp - 80,000 Widgets"
+      >
+        Rohde Corp - 80,000 Widgets
+      </h1>
+      <p
+        className="slds-text-body_small slds-line-height_reset"
+      >
+        Mark Jaeckal • Unlimited Customer • 11/13/15
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders deprecated object home page header 1`] = `
+<div
+  className="slds-page-header slds-page-header_object-home"
+>
+  <div
+    className="slds-grid"
+  >
+    <div
+      className="slds-col slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media slds-no-space slds-grow"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <nav>
+            <ol
+              className="slds-breadcrumb slds-line-height_reset"
+            >
+              <li
+                className="slds-breadcrumb__item"
+              >
+                <span>
+                  Opportunities
+                </span>
+              </li>
+            </ol>
+          </nav>
+          <h1
+            className="slds-page-header__title slds-p-right_x-small"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_reset slds-type-focus slds-truncate"
+              title=""
+            >
+              <span
+                className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Recently Viewed"
+                >
+                  Recently Viewed
+                </span>
+                <span
+                  className="slds-icon_container slds-icon-utility-down"
+                  title="Description of icon when needed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon--x-small slds-m-left_xx-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Description of icon when needed
+                  </span>
+                </span>
+              </span>
+            </button>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small"
+    >
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          New
+        </button>
+        <div
+          className="slds-button_last"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-grid"
+  >
+    <div
+      className="slds-col slds-align-middle"
+    >
+      <p
+        className="slds-text-body_small"
+      >
+        10 items • Updated 13 minutes ago
+      </p>
+    </div>
+    <div
+      className="slds-col slds-no-flex slds-grid slds-align-bottom"
+    >
+      <div
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-more"
+          id={undefined}
+          title="List View Controls"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+            />
+          </svg>
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            List View Controls
+          </span>
+        </button>
+      </div>
+      <div
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-more"
+          id={undefined}
+          title="Change view"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Change view
+          </span>
+        </button>
+      </div>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-m-left_xx-small slds-button_icon-border-filled"
+        id={undefined}
+        title="Edit List"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit List
+        </span>
+      </button>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-m-left_xx-small slds-button_icon-border-filled"
+        id={undefined}
+        title="Refresh"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Refresh
+        </span>
+      </button>
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Charts"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chart"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Charts
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Filters"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#filterList"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Filters
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders deprecated record home page header 1`] = `
+<div
+  className="slds-page-header"
+>
+  <div
+    className="slds-grid"
+  >
+    <div
+      className="slds-col slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media slds-no-space slds-grow"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <nav>
+            <ol
+              className="slds-breadcrumb slds-line-height_reset"
+            >
+              <li
+                className="slds-breadcrumb__item"
+              >
+                <span>
+                  Opportunities
+                </span>
+              </li>
+            </ol>
+          </nav>
+          <h1
+            className="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"
+            title="Acme - 1,200 Widgets"
+          >
+            Acme - 1,200 Widgets
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-col slds-no-flex slds-grid slds-align-top"
+    >
+      <button
+        aria-live="assertive"
+        className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        disabled={undefined}
+      >
+        <span
+          className="slds-text-not-selected"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          Follow
+        </span>
+        <span
+          className="slds-text-selected"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+          Following
+        </span>
+        <span
+          className="slds-text-selected-focus"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          Unfollow
+        </span>
+      </button>
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          Edit
+        </button>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          Delete
+        </button>
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          Clone
+        </button>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul
+    className="slds-grid slds-page-header__detail-row"
+  >
+    <li
+      className="slds-page-header__detail-block"
+    >
+      <p
+        className="slds-text-title slds-truncate"
+        title="Field 1"
+      >
+        Field 1
+      </p>
+      <p
+        className="slds-text-body_regular slds-truncate"
+        title="Description that demonstrates truncation with a long text field"
+      >
+        Description that demonstrates truncation with a long text field.
+      </p>
+    </li>
+    <li
+      className="slds-page-header__detail-block"
+    >
+      <p
+        className="slds-text-title slds-truncate"
+        title="Field2 (3)"
+      >
+        Field 2 (3)
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="More Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Actions
+          </span>
+        </button>
+      </p>
+      <p
+        className="slds-text-body_regular"
+      >
+        Multiple Values
+      </p>
+    </li>
+    <li
+      className="slds-page-header__detail-block"
+    >
+      <p
+        className="slds-text-title slds-truncate"
+        title="Field 3"
+      >
+        Field 3
+      </p>
+      <a
+        href="javascript:void(0);"
+      >
+        Hyperlink
+      </a>
+    </li>
+    <li
+      className="slds-page-header__detail-block"
+    >
+      <p
+        className="slds-text-title slds-truncate"
+        title="Field 4"
+      >
+        Field 4
+      </p>
+      <p
+        title="Description (2-line truncation—must use JS to truncate)."
+      >
+        Description (2-line truncati...
+      </p>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Renders a page header renders deprecated related list home page header 1`] = `
+<div
+  className="slds-page-header slds-page-header_related-list"
+>
+  <div
+    className="slds-grid"
+  >
+    <div
+      className="slds-col slds-has-flexi-truncate"
+    >
+      <nav
+        aria-label="Breadcrumbs"
+        role="navigation"
+      >
+        <ol
+          className="slds-breadcrumb slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-breadcrumb__item"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Accounts
+            </a>
+          </li>
+          <li
+            className="slds-breadcrumb__item"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Company One
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <h1
+        className="slds-page-header__title slds-truncate"
+        title="Contacts (will truncate)"
+      >
+        Contacts (will truncate)
+      </h1>
+    </div>
+    <div
+      className="slds-col slds-no-flex slds-grid slds-align-top"
+    >
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          Add Contact
+        </button>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-grid"
+  >
+    <div
+      className="slds-col slds-align-bottom"
+    >
+      <p
+        className="slds-text-body_small"
+      >
+        10 items • sorted by name
+      </p>
+    </div>
+    <div
+      className="slds-col slds-no-flex slds-grid slds-align-bottom"
+    >
+      <div
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-more"
+          id={undefined}
+          title="Change view"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Change view
+          </span>
+        </button>
+      </div>
+      <div
+        className="slds-button-group slds-m-left_xx-small"
+        role="group"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          title="Chart"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chart"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Chart
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon-border"
+          id={undefined}
+          title="Filter List"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#filterList"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Filter List
+          </span>
+        </button>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-more"
+            id={undefined}
+            title="Sort"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#sort"
+              />
+            </svg>
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Sort
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders deprecated vertical record home page header 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div
+    className="slds-page-header slds-page-header_vertical"
+  >
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div>
+        <div
+          className="slds-media slds-no-space slds-has-divider_bottom-space slds-media_center"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <div
+              className="slds-icon_container slds-icon-standard-lead"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Lead
+              </span>
+            </div>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <h1
+              className="slds-align-middle"
+            >
+              <span
+                className="slds-page-header__title slds-truncate slds-show"
+                title="Record Title"
+              >
+                Record Title
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-has-divider_bottom-space"
+      >
+        <button
+          aria-live="assertive"
+          className="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+        >
+          <span
+            className="slds-text-not-selected"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon_stateful slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Follow
+          </span>
+          <span
+            className="slds-text-selected"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon_stateful slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+            Following
+          </span>
+          <span
+            className="slds-text-selected-focus"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon_stateful slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+            Unfollow
+          </span>
+        </button>
+        <div
+          className="slds-button-group slds-m-left_none slds-m-top_x-small"
+          role="group"
+        >
+          <button
+            className="slds-button slds-button_neutral"
+          >
+            Convert
+          </button>
+          <button
+            className="slds-button slds-button_neutral"
+          >
+            Clone
+          </button>
+          <button
+            className="slds-button slds-button_neutral"
+          >
+            Edit
+          </button>
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              id={undefined}
+              title="More Actions"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Actions
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-list_vertical-space-medium slds-m-left_xx-small"
+    >
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          Field 1
+        </div>
+        <div
+          className="slds-text-body_regular"
+          title="Description that demonstrates truncation with a long text field"
+        >
+          Description that demonstrates a long text field and will eventually wrap.
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          Field 2
+        </div>
+        <div
+          className="slds-text-body_regular"
+          title="Hyperlink"
+        >
+          <a
+            href="javascript:void(0);"
+          >
+            Hyperlink
+          </a>
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          Field 3
+        </div>
+        <div
+          className="slds-truncate"
+          title="Description"
+        >
+          Description
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-text-link_reset"
+          >
+            Field 4 (3)
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="slds-text-body_regular"
+        >
+          <div>
+            1 Market St
+          </div>
+          <div>
+            San Francisco, CA 94105
+          </div>
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          Field 5
+        </div>
+        <div
+          className="slds-text-body_regular"
+          title="Description"
+        >
+          Description
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-m-bottom_xx-small"
+        >
+          Field 6
+        </div>
+        <div
+          className="slds-text-body_regular"
+          title="Description"
+        >
+          Description
+        </div>
+      </li>
+      <li
+        className="slds-item"
+      >
+        <div
+          className="slds-text-title slds-truncate slds-m-bottom_xx-small"
+          title="Field 7"
+        >
+          Field 7
+        </div>
+        <div
+          className="slds-text-body_regular"
+          title="Description"
+        >
+          Description
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders object home page header 1`] = `
+<div
+  className="slds-page-header"
+>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-title"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-page-header__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-page-header__name"
+          >
+            <div
+              className="slds-page-header__name-title"
+            >
+              <h1>
+                <span>
+                  Opportunities
+                </span>
+                <span
+                  className="slds-page-header__title slds-truncate"
+                  title="Recently Viewed"
+                >
+                  Recently Viewed
+                </span>
+              </h1>
+            </div>
+            <div
+              className="slds-page-header__name-switcher"
+            >
+              <div
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-small"
+                  id={undefined}
+                  title="Switch list view"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon slds-icon_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Switch list view
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-page-header__col-actions"
+    >
+      <div
+        className="slds-page-header__controls"
+      >
+        <div
+          className="slds-page-header__control"
+        >
+          <ul
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                className="slds-button slds-button_neutral"
+                disabled={undefined}
+              >
+                New
+              </button>
+            </li>
+            <li>
+              <div
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  id={undefined}
+                  title="More Actions"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    More Actions
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-meta"
+    >
+      <p
+        className="slds-page-header__meta-text"
+      >
+        10 items • Updated 13 minutes ago
+      </p>
+    </div>
+    <div
+      className="slds-page-header__col-controls"
+    >
+      <div
+        className="slds-page-header__controls"
+      >
+        <div
+          className="slds-page-header__control"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-more"
+              id={undefined}
+              title="List View Controls"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                List View Controls
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-more"
+              id={undefined}
+              title="Change view"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#table"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Change view
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="Edit List"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit List
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="Refresh List"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Refresh List
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <ul
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                id={undefined}
+                title="Charts"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chart"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Charts
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                id={undefined}
+                title="Filters"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#filterList"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Filters
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders record home page header 1`] = `
+<div
+  className="slds-page-header slds-page-header_record-home"
+>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-title"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-page-header__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-page-header__name"
+          >
+            <div
+              className="slds-page-header__name-title"
+            >
+              <h1>
+                <span>
+                  Opportunity
+                </span>
+                <span
+                  className="slds-page-header__title slds-truncate"
+                  title="Acme - 1,200 Widgets"
+                >
+                  Acme - 1,200 Widgets
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-page-header__col-actions"
+    >
+      <div
+        className="slds-page-header__controls"
+      >
+        <div
+          className="slds-page-header__control"
+        >
+          <button
+            aria-live="assertive"
+            className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+            disabled={undefined}
+          >
+            <span
+              className="slds-text-not-selected"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                />
+              </svg>
+              Follow
+            </span>
+            <span
+              className="slds-text-selected"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+              Following
+            </span>
+            <span
+              className="slds-text-selected-focus"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                />
+              </svg>
+              Unfollow
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <ul
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                className="slds-button slds-button_neutral"
+                disabled={undefined}
+              >
+                Edit
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_neutral"
+                disabled={undefined}
+              >
+                Delete
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_neutral"
+                disabled={undefined}
+              >
+                Clone
+              </button>
+            </li>
+            <li>
+              <div
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  id={undefined}
+                  title="More Actions"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    More Actions
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-page-header__row slds-page-header__row_gutters"
+  >
+    <div
+      className="slds-page-header__col-details"
+    >
+      <ul
+        className="slds-page-header__detail-row"
+      >
+        <li
+          className="slds-page-header__detail-block"
+        >
+          <div
+            className="slds-text-title slds-truncate"
+            title="Field 1"
+          >
+            Field 1
+          </div>
+          <div
+            className="slds-truncate"
+            title="Description that demonstrates truncation with a long text field."
+          >
+            Description that demonstrates truncation with a long text field.
+          </div>
+        </li>
+        <li
+          className="slds-page-header__detail-block"
+        >
+          <div
+            className="slds-text-title slds-truncate"
+            title="Field 2 (3)"
+          >
+            Field 2 (3)
+            <div
+              className="slds-dropdown-trigger slds-dropdown-trigger_click"
+            >
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon"
+                id={undefined}
+                title="More Actions"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon slds-button__icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  More Actions
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            className="slds-truncate"
+            title="Multiple Values"
+          >
+            Multiple Values
+          </div>
+        </li>
+        <li
+          className="slds-page-header__detail-block"
+        >
+          <div
+            className="slds-text-title slds-truncate"
+            title="Field 3"
+          >
+            Field 3
+          </div>
+          <div
+            className="slds-truncate"
+            title="Hyperlink"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Hyperlink
+            </a>
+          </div>
+        </li>
+        <li
+          className="slds-page-header__detail-block"
+        >
+          <div
+            className="slds-text-title slds-truncate"
+            title="Field 4"
+          >
+            Field 4
+          </div>
+          <div
+            className="slds-truncate"
+            title="Description (2-line truncation—must use JS to truncate)."
+          >
+            Description (2-line truncati...
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders related list home page header 1`] = `
+<div
+  className="slds-page-header slds-page-header_related-list"
+>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-title"
+    >
+      <nav
+        aria-label="Breadcrumbs"
+        role="navigation"
+      >
+        <ol
+          className="slds-breadcrumb slds-list_horizontal slds-wrap"
+        >
+          <li
+            className="slds-breadcrumb__item"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Accounts
+            </a>
+          </li>
+          <li
+            className="slds-breadcrumb__item"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Company One
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-page-header__name"
+          >
+            <div
+              className="slds-page-header__name-title"
+            >
+              <h1>
+                <span
+                  className="slds-page-header__title slds-truncate"
+                  title="Contacts (will truncate)"
+                >
+                  Contacts (will truncate)
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-page-header__col-actions"
+    >
+      <div
+        className="slds-page-header__controls"
+      >
+        <div
+          className="slds-page-header__control"
+        >
+          <ul
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                className="slds-button slds-button_neutral"
+                disabled={undefined}
+              >
+                Add Contact
+              </button>
+            </li>
+            <li>
+              <div
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  id={undefined}
+                  title="More Actions"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    More Actions
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-page-header__row"
+  >
+    <div
+      className="slds-page-header__col-meta"
+    >
+      <p
+        className="slds-page-header__meta-text"
+      >
+        10 items • sorted by name
+      </p>
+    </div>
+    <div
+      className="slds-page-header__col-controls"
+    >
+      <div
+        className="slds-page-header__controls"
+      >
+        <div
+          className="slds-page-header__control"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-more"
+              id={undefined}
+              title="Change view"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#table"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Change view
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="slds-page-header__control"
+        >
+          <ul
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon-border"
+                id={undefined}
+                title="Chart"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chart"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Chart
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon-border"
+                id={undefined}
+                title="Filter List"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#filterList"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Filter List
+                </span>
+              </button>
+            </li>
+            <li>
+              <div
+                className="slds-dropdown-trigger slds-dropdown-trigger_click"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_icon slds-button_icon-more"
+                  id={undefined}
+                  title="Sort List"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#sort"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon slds-button__icon_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Sort List
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders a page header renders vertical record home page header 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div
+    className="slds-page-header slds-page-header_vertical"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-opportunity"
+          title="opportunity"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-page-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            opportunity
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <div
+          className="slds-page-header__name"
+        >
+          <div
+            className="slds-page-header__name-title"
+          >
+            <h1>
+              <span
+                className="slds-page-header__title"
+                title="Burlington Textile Weaving Plant Generator"
+              >
+                Burlington Textile Weaving Plant Generator
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-page-header__controls"
+    >
+      <button
+        aria-live="assertive"
+        className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        disabled={undefined}
+      >
+        <span
+          className="slds-text-not-selected"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          Follow
+        </span>
+        <span
+          className="slds-text-selected"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+          Following
+        </span>
+        <span
+          className="slds-text-selected-focus"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          Unfollow
+        </span>
+      </button>
+      <ul
+        className="slds-button-group-list"
+      >
+        <li>
+          <button
+            className="slds-button slds-button_neutral"
+            disabled={undefined}
+          >
+            Edit
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_neutral"
+            disabled={undefined}
+          >
+            Delete
+          </button>
+        </li>
+        <li>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            id={undefined}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <ul
+      className="slds-page-header__detail-list"
+    >
+      <li
+        className="slds-page-header__detail-item"
+      >
+        <div
+          className="slds-text-title slds-truncate"
+          title="Field 1"
+        >
+          Account Name
+        </div>
+        <div
+          className={null}
+          title="Burlington Textile Weaving Plant Generator"
+        >
+          <a
+            href="javascript:void(0);"
+          >
+            Burlington Textile Weaving Plant Generator
+          </a>
+        </div>
+      </li>
+      <li
+        className="slds-page-header__detail-item"
+      >
+        <div
+          className="slds-text-title slds-truncate"
+          title="Address (2)"
+        >
+          Address (2)
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon"
+              id={undefined}
+              title="More Actions"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                More Actions
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className={null}
+          title="Multiple Values"
+        >
+          <div>
+            1 Market St
+          </div>
+          <div>
+            San Francisco, CA 94105
+          </div>
+        </div>
+      </li>
+      <li
+        className="slds-page-header__detail-item"
+      >
+        <div
+          className="slds-text-title slds-truncate"
+          title="Close Date"
+        >
+          Close Date
+        </div>
+        <div
+          className={null}
+          title="11/1/2018"
+        >
+          11/1/2018
+        </div>
+      </li>
+      <li
+        className="slds-page-header__detail-item"
+      >
+        <div
+          className="slds-text-title slds-truncate"
+          title="Opportunity Owner"
+        >
+          Opportunity Owner
+        </div>
+        <div
+          className={null}
+          title="Hyperlink"
+        >
+          <div
+            className="slds-media slds-media_small"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-avatar slds-avatar_circle slds-avatar_x-small"
+              >
+                <img
+                  alt="Person name"
+                  src="/assets/images/avatar2.jpg"
+                  title="User avatar"
+                />
+              </span>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <a
+                href="javascript:void(0);"
+              >
+                Jeanette Gomez
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="slds-page-header__detail-item"
+      >
+        <div
+          className="slds-text-title slds-truncate"
+          title="Amount"
+        >
+          Amount
+        </div>
+        <div
+          className={null}
+          title="$375,000.00"
+        >
+          $375,000.00
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,620 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Progress Indicator renders a base progress indicator 1`] = `
+<div
+  className="slds-progress"
+>
+  <ol
+    className="slds-progress__list"
+  >
+    <li
+      className="slds-progress__item slds-is-active"
+    >
+      <button
+        aria-describedby={undefined}
+        className="slds-button slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Step 1
+           
+          - Active
+        </span>
+      </button>
+    </li>
+    <li
+      className="slds-progress__item"
+    >
+      <button
+        aria-describedby={undefined}
+        className="slds-button slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Step 2
+           
+        </span>
+      </button>
+    </li>
+  </ol>
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={undefined}
+    className="slds-progress-bar slds-progress-bar_x-small"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "undefined%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        undefined%
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Base Progress Indicator renders a base step 1`] = `
+<li
+  className="slds-progress__item"
+>
+  <button
+    aria-describedby={undefined}
+    className="slds-button slds-progress__marker"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Step 1
+       
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Progress Indicator renders a done base step 1`] = `
+<li
+  className="slds-progress__item slds-is-completed"
+>
+  <button
+    aria-describedby={undefined}
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    id={undefined}
+    title="Step 1 - Completed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Step 1 - Completed
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Progress Indicator renders an active base step 1`] = `
+<li
+  className="slds-progress__item slds-is-active"
+>
+  <button
+    aria-describedby={undefined}
+    className="slds-button slds-progress__marker"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Step 1
+       
+      - Active
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Progress Indicator renders an active base step with aria-describedby 1`] = `
+<li
+  className="slds-progress__item slds-is-active"
+>
+  <button
+    aria-describedby="step-1-tooltip"
+    className="slds-button slds-progress__marker"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Step 1
+       
+      - Active
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Progress Indicator renders an error base step 1`] = `
+<li
+  className="slds-progress__item slds-has-error"
+>
+  <button
+    aria-describedby={undefined}
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    id={undefined}
+    title="Step 1 - Error"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Step 1 - Error
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Vertical Progress Indicator renders a done vertical step 1`] = `
+<li
+  className="slds-progress__item slds-is-completed"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+    title="Complete"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon slds-icon_xx-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Complete
+    </span>
+  </span>
+  <div
+    className="slds-progress__item_content slds-grid slds-grid_align-spread"
+  >
+    Step 1
+  </div>
+</li>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] = `
+<div
+  className="slds-progress slds-progress_vertical"
+  style={undefined}
+>
+  <ol
+    className="slds-progress__list"
+  >
+    <li
+      className="slds-progress__item slds-is-active"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Active
+        </span>
+      </div>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 1
+      </div>
+    </li>
+    <li
+      className="slds-progress__item"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      />
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+  </ol>
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    role="progressbar"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      0%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical progress indicator with borders 1`] = `
+<div
+  className="slds-progress slds-progress_vertical"
+  style={undefined}
+>
+  <ol
+    className="slds-progress__list slds-progress__list-bordered"
+  >
+    <li
+      className="slds-progress__item slds-is-completed"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+        title="Complete"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Complete
+        </span>
+      </span>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 1
+      </div>
+    </li>
+    <li
+      className="slds-progress__item slds-is-active"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Active
+        </span>
+      </div>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+    <li
+      className="slds-progress__item"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      />
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+  </ol>
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="50"
+    role="progressbar"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical progress indicator with green bar 1`] = `
+<div
+  className="slds-progress slds-progress_vertical slds-progress_success"
+  style={undefined}
+>
+  <ol
+    className="slds-progress__list"
+  >
+    <li
+      className="slds-progress__item slds-is-completed"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+        title="Complete"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Complete
+        </span>
+      </span>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 1
+      </div>
+    </li>
+    <li
+      className="slds-progress__item slds-is-active"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Active
+        </span>
+      </div>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+    <li
+      className="slds-progress__item"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      />
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+  </ol>
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="50"
+    role="progressbar"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical progress indicator with some progress 1`] = `
+<div
+  className="slds-progress slds-progress_vertical"
+  style={undefined}
+>
+  <ol
+    className="slds-progress__list"
+  >
+    <li
+      className="slds-progress__item slds-is-completed"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+        title="Complete"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Complete
+        </span>
+      </span>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 1
+      </div>
+    </li>
+    <li
+      className="slds-progress__item slds-is-active"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Active
+        </span>
+      </div>
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+    <li
+      className="slds-progress__item"
+    >
+      <div
+        aria-describedby={undefined}
+        className="slds-progress__marker"
+      />
+      <div
+        className="slds-progress__item_content slds-grid slds-grid_align-spread"
+      >
+        Step 2
+      </div>
+    </li>
+  </ol>
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="50"
+    role="progressbar"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Progress: 
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical step 1`] = `
+<li
+  className="slds-progress__item"
+>
+  <div
+    aria-describedby={undefined}
+    className="slds-progress__marker"
+  />
+  <div
+    className="slds-progress__item_content slds-grid slds-grid_align-spread"
+  >
+    Step 1
+  </div>
+</li>
+`;
+
+exports[`Vertical Progress Indicator renders a vertical step with green success check 1`] = `
+<li
+  className="slds-progress__item slds-is-completed"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success"
+    title="Complete"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon slds-icon_xx-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Complete
+    </span>
+  </span>
+  <div
+    className="slds-progress__item_content slds-grid slds-grid_align-spread"
+  >
+    Step 1
+  </div>
+</li>
+`;
+
+exports[`Vertical Progress Indicator renders an active vertical step 1`] = `
+<li
+  className="slds-progress__item slds-is-active"
+>
+  <div
+    aria-describedby={undefined}
+    className="slds-progress__marker"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Active
+    </span>
+  </div>
+  <div
+    className="slds-progress__item_content slds-grid slds-grid_align-spread"
+  >
+    Step 1
+  </div>
+</li>
+`;
+
+exports[`Vertical Progress Indicator renders an error vertical step 1`] = `
+<li
+  className="slds-progress__item slds-has-error"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-error slds-progress__marker slds-progress__marker_icon"
+    title="Error"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon slds-icon_xx-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Error
+    </span>
+  </span>
+  <div
+    className="slds-progress__item_content slds-grid slds-grid_align-spread"
+  >
+    Step 1
+  </div>
+</li>
+`;

@@ -20,7 +20,7 @@ import {
 import { Input } from '../../input/base/example';
 import ButtonIcon from '../../button-icons/';
 
-const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Form Element', () => {
   it('renders form element wrapper', () =>
@@ -141,19 +141,19 @@ describe('Form Element', () => {
 
 describe('Form Element Composition', () => {
   it('renders form element with input', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <FormElement labelContent="Form label" inputId="input-1">
         <Input id="input-1" />
       </FormElement>
     ));
   it('renders form element with input that is required', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <FormElement labelContent="Form label" inputId="input-1" isRequired>
         <Input id="input-1" required />
       </FormElement>
     ));
   it('renders form element with input that has an error', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <FormElement
         labelContent="Form label"
         inputId="input-1"
@@ -166,7 +166,7 @@ describe('Form Element Composition', () => {
       </FormElement>
     ));
   it('renders inline editable form element in view mode', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <FormElement isViewMode labelContent="Status" isEditable hasHint>
         <FormElementStatic>In Progress</FormElementStatic>
         <ButtonIcon

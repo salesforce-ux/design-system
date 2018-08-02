@@ -11,25 +11,22 @@ import {
   DropZoneLabel
 } from '../base/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Drop Zone Base', () => {
-  it('renders the default drop zone', () =>
-    matchesMarkupAndStyle(<DropZone />));
+  it('renders the default drop zone', () => matchesMarkup(<DropZone />));
   it('renders drop zone when dragging', () =>
-    matchesMarkupAndStyle(<DropZone isDragging />));
+    matchesMarkup(<DropZone isDragging />));
   it('renders the insertion point', () =>
-    matchesMarkupAndStyle(<DropZoneInsertionPoint />));
+    matchesMarkup(<DropZoneInsertionPoint />));
   it('renders the container', () =>
-    matchesMarkupAndStyle(<DropZoneContainer hasActions />));
+    matchesMarkup(<DropZoneContainer hasActions />));
   it('renders container when hovered', () =>
-    matchesMarkupAndStyle(<DropZoneContainer isHovered />));
+    matchesMarkup(<DropZoneContainer isHovered />));
   it('renders container with no actions', () =>
-    matchesMarkupAndStyle(<DropZoneContainer />));
+    matchesMarkup(<DropZoneContainer />));
   it('renders the label', () =>
-    matchesMarkupAndStyle(<DropZoneLabel headerText="Content" />));
+    matchesMarkup(<DropZoneLabel headerText="Content" />));
   it('renders the container label', () =>
-    matchesMarkupAndStyle(
-      <DropZoneLabel isContainer headerText="Component Name" />
-    ));
+    matchesMarkup(<DropZoneLabel isContainer headerText="Component Name" />));
 });

@@ -3,20 +3,18 @@ import React from 'react';
 import { LightBadge, InverseBadge, Badge } from '../';
 import { UtilityIcon } from '../../icons/base/example';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
-it('renders a default badge', () =>
-  matchesMarkupAndStyle(<Badge>Lovely badge</Badge>));
+it('renders a default badge', () => matchesMarkup(<Badge>Lovely badge</Badge>));
 
 it('renders an inverse badge', () =>
-  matchesMarkupAndStyle(<InverseBadge>Lovely badge</InverseBadge>));
+  matchesMarkup(<InverseBadge>Lovely badge</InverseBadge>));
 
 describe('renders a light badge', () => {
-  it('renders badge', () =>
-    matchesMarkupAndStyle(<LightBadge>Light</LightBadge>));
+  it('renders badge', () => matchesMarkup(<LightBadge>Light</LightBadge>));
 
   it('renders badge with left icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <LightBadge>
         <UtilityIcon
           containerClassName="slds-m-right_xx-small"
@@ -29,7 +27,7 @@ describe('renders a light badge', () => {
     ));
 
   it('renders badge with right icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <LightBadge>
         <UtilityIcon
           containerClassName="slds-m-right_xx-small"
@@ -41,8 +39,8 @@ describe('renders a light badge', () => {
       </LightBadge>
     ));
 
-  xit('renders badge with icon only', () =>
-    matchesMarkupAndStyle(
+  it('renders badge with icon only', () =>
+    matchesMarkup(
       <LightBadge>
         <UtilityIcon
           className="slds-icon_xx-small slds-icon-text-default"

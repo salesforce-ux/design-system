@@ -4,16 +4,16 @@ import { CheckboxAddButton } from '../base/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a default checkbox button', () =>
-  matchesMarkupAndStyle(<CheckboxAddButton />));
+  matchesMarkup(<CheckboxAddButton />));
 
 it('renders a checked checkbox button', () =>
-  matchesMarkupAndStyle(<CheckboxAddButton checked />));
+  matchesMarkup(<CheckboxAddButton checked />));
 
 it('renders a disabled checkbox button', () =>
-  matchesMarkupAndStyle(<CheckboxAddButton disabled />));
+  matchesMarkup(<CheckboxAddButton disabled />));
 
 it('renders a checked and disabled checkbox button', () =>
-  matchesMarkupAndStyle(<CheckboxAddButton checked disabled />));
+  matchesMarkup(<CheckboxAddButton checked disabled />));

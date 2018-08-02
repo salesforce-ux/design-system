@@ -1,0 +1,952 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File Component renders a link attachment 1`] = `
+<a
+  className="slds-media slds-box slds-grow slds-text-link_reset"
+  href="javascript:void(0);"
+>
+  <div
+    className="slds-media__figure slds-medium-show"
+  >
+    <div
+      className="slds-file slds-size_small"
+    >
+      <figure
+        className="slds-file__crop slds-file__crop_16-by-9"
+      >
+        <img
+          alt="Description of the image"
+          src="/assets/images/placeholder-img@16x9.jpg"
+        />
+      </figure>
+    </div>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <h3
+      className="slds-text-heading_small"
+    >
+      Maui By Air The Best Way Around The Island
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+    </p>
+    <span
+      className="slds-text-body_small"
+    >
+      Maui By Air The Best Way Around The Island
+    </span>
+  </div>
+</a>
+`;
+
+exports[`File Component renders base component 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-has-title"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <img
+          alt="Description of the image"
+          src="/assets/images/placeholder-img@16x9.jpg"
+        />
+      </a>
+      <figcaption
+        className="slds-file__title slds-file__title_card"
+      >
+        <div
+          className="slds-media slds-media_small slds-media_center"
+        >
+          <div
+            className="slds-media__figure slds-line-height_reset"
+          >
+            <span
+              className="slds-icon_container"
+              title="pdf"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                pdf
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <span
+              className="slds-file__text slds-truncate"
+              title="Proposal.pdf"
+            >
+              Proposal.pdf
+            </span>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`File Component renders fewer than 3 file attachments 1`] = `
+<ul
+  className="slds-grid slds-grid_pull-padded"
+>
+  <li
+    className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3"
+  >
+    <div
+      className="slds-file slds-file_card slds-has-title"
+    >
+      <figure>
+        <a
+          className="slds-file__crop"
+          href="javascript:void(0);"
+        >
+          <img
+            alt="Description of the image"
+            src="/assets/images/placeholder-img@16x9.jpg"
+          />
+        </a>
+        <figcaption
+          className="slds-file__title slds-file__title_card"
+        >
+          <div
+            className="slds-media slds-media_small slds-media_center"
+          >
+            <div
+              className="slds-media__figure slds-line-height_reset"
+            >
+              <span
+                className="slds-icon_container"
+                title="pdf"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  pdf
+                </span>
+              </span>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <span
+                className="slds-file__text slds-truncate"
+                title="Proposal.pdf"
+              >
+                Proposal.pdf
+              </span>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </li>
+  <li
+    className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3"
+  >
+    <div
+      className="slds-file slds-file_card slds-has-title"
+    >
+      <figure>
+        <a
+          className="slds-file__crop"
+          href="javascript:void(0);"
+        >
+          <span
+            className="slds-file__icon slds-icon_container"
+            title="pdf"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Proposal.pdf
+            </span>
+          </span>
+        </a>
+        <figcaption
+          className="slds-file__title slds-file__title_card"
+        >
+          <div
+            className="slds-media slds-media_small slds-media_center"
+          >
+            <div
+              className="slds-media__figure slds-line-height_reset"
+            >
+              <span
+                className="slds-icon_container"
+                title="pdf"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  pdf
+                </span>
+              </span>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <span
+                className="slds-file__text slds-truncate"
+                title="Proposal.pdf"
+              >
+                Proposal.pdf
+              </span>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`File Component renders file in loading state with title 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-file_loading slds-has-title"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <div
+          className="slds-spinner slds-spinner_medium"
+          role="status"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Loading
+          </span>
+          <div
+            className="slds-spinner__dot-a"
+          />
+          <div
+            className="slds-spinner__dot-b"
+          />
+        </div>
+      </a>
+      <figcaption
+        className="slds-file__title slds-file__title_card"
+      >
+        <div
+          className="slds-media slds-media_small slds-media_center"
+        >
+          <div
+            className="slds-media__figure slds-line-height_reset"
+          >
+            <span
+              className="slds-icon_container"
+              title="image"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                image
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <span
+              className="slds-file__text slds-truncate"
+              title="Image Title"
+            >
+              Image Title
+            </span>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`File Component renders file in loding state without title 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-file_loading"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <div
+          className="slds-spinner slds-spinner_medium"
+          role="status"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Loading
+          </span>
+          <div
+            className="slds-spinner__dot-a"
+          />
+          <div
+            className="slds-spinner__dot-b"
+          />
+        </div>
+      </a>
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`File Component renders file with external icon 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-has-title"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <span
+          className="slds-file__icon slds-icon_container"
+          title="pdf"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon"
+          >
+            <use
+              xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Proposal.pdf
+          </span>
+        </span>
+      </a>
+      <figcaption
+        className="slds-file__title slds-file__title_card"
+      >
+        <div
+          className="slds-media slds-media_small slds-media_center"
+        >
+          <div
+            className="slds-media__figure slds-line-height_reset"
+          >
+            <span
+              className="slds-icon_container"
+              title="pdf"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                pdf
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <span
+              className="slds-file__text slds-truncate"
+              title="Proposal.pdf"
+            >
+              Proposal.pdf
+            </span>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+    <div
+      className="slds-file__external-icon"
+    >
+      <span
+        className="slds-file__icon slds-icon_container"
+        title="salesforce1"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Data provided by: salesforce1
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Component renders icon (no image) with title 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-has-title"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <span
+          className="slds-file__icon slds-icon_container"
+          title="image"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon"
+          >
+            <use
+              xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Image Title
+          </span>
+        </span>
+      </a>
+      <figcaption
+        className="slds-file__title slds-file__title_card"
+      >
+        <div
+          className="slds-media slds-media_small slds-media_center"
+        >
+          <div
+            className="slds-media__figure slds-line-height_reset"
+          >
+            <span
+              className="slds-icon_container"
+              title="image"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#image"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                image
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <span
+              className="slds-file__text slds-truncate"
+              title="Image Title"
+            >
+              Image Title
+            </span>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`File Component renders image with actions and no title 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <img
+          alt="Description of the image"
+          src="/assets/images/placeholder-img@16x9.jpg"
+        />
+      </a>
+    </figure>
+    <div
+      className="slds-file__title slds-file__title_scrim"
+    >
+      <div
+        className="slds-file__actions-menu"
+      >
+        <div
+          className="slds-button-group"
+          role="group"
+        >
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+            id={undefined}
+            title="Download"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Download
+            </span>
+          </button>
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+            id={undefined}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Component renders image with no title 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <img
+          alt="Description of the image"
+          src="/assets/images/placeholder-img@16x9.jpg"
+        />
+      </a>
+    </figure>
+  </div>
+</div>
+`;
+
+exports[`File Component renders image with title and actions 1`] = `
+<div
+  style={
+    Object {
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-file slds-file_card slds-has-title"
+  >
+    <figure>
+      <a
+        className="slds-file__crop"
+        href="javascript:void(0);"
+      >
+        <img
+          alt="Description of the image"
+          src="/assets/images/placeholder-img@16x9.jpg"
+        />
+      </a>
+      <figcaption
+        className="slds-file__title slds-file__title_card slds-file-has-actions"
+      >
+        <div
+          className="slds-media slds-media_small slds-media_center"
+        >
+          <div
+            className="slds-media__figure slds-line-height_reset"
+          >
+            <span
+              className="slds-icon_container"
+              title="pdf"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                pdf
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <span
+              className="slds-file__text slds-truncate"
+              title="Proposal.pdf"
+            >
+              Proposal.pdf
+            </span>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+    <div
+      className="slds-file__actions-menu"
+    >
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+          id={undefined}
+          title="Download"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#download"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Download
+          </span>
+        </button>
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+          id={undefined}
+          title="More Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More Actions
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Component renders more than 3 file attachments 1`] = `
+<ul
+  className="slds-grid slds-grid_pull-padded"
+>
+  <li
+    className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3"
+  >
+    <div
+      className="slds-file slds-file_card slds-has-title"
+    >
+      <figure>
+        <a
+          className="slds-file__crop"
+          href="javascript:void(0);"
+        >
+          <img
+            alt="Description of the image"
+            src="/assets/images/placeholder-img@16x9.jpg"
+          />
+        </a>
+        <figcaption
+          className="slds-file__title slds-file__title_card"
+        >
+          <div
+            className="slds-media slds-media_small slds-media_center"
+          >
+            <div
+              className="slds-media__figure slds-line-height_reset"
+            >
+              <span
+                className="slds-icon_container"
+                title="pdf"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  pdf
+                </span>
+              </span>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <span
+                className="slds-file__text slds-truncate"
+                title="Proposal.pdf"
+              >
+                Proposal.pdf
+              </span>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </li>
+  <li
+    className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3  slds-medium-show"
+  >
+    <div
+      className="slds-file slds-file_card slds-has-title"
+    >
+      <figure>
+        <a
+          className="slds-file__crop"
+          href="javascript:void(0);"
+        >
+          <span
+            className="slds-file__icon slds-icon_container"
+            title="pdf"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon"
+            >
+              <use
+                xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Proposal.pdf
+            </span>
+          </span>
+        </a>
+        <figcaption
+          className="slds-file__title slds-file__title_card"
+        >
+          <div
+            className="slds-media slds-media_small slds-media_center"
+          >
+            <div
+              className="slds-media__figure slds-line-height_reset"
+            >
+              <span
+                className="slds-icon_container"
+                title="pdf"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  pdf
+                </span>
+              </span>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <span
+                className="slds-file__text slds-truncate"
+                title="Proposal.pdf"
+              >
+                Proposal.pdf
+              </span>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </li>
+  <li
+    className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3"
+  >
+    <div
+      className="slds-file slds-file_card"
+    >
+      <figure>
+        <a
+          className="slds-file__crop"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-file_overlay"
+          />
+          <img
+            alt="Description of the image"
+            src="/assets/images/placeholder-img@16x9.jpg"
+          />
+        </a>
+        <figcaption
+          className="slds-file__title slds-file__title_overlay slds-align_absolute-center slds-text-heading_large"
+        >
+          <div
+            className="slds-media slds-media_small slds-media_center"
+          >
+            <div
+              className="slds-media__figure slds-line-height_reset"
+            />
+            <div
+              className="slds-media__body"
+            >
+              <span
+                className="slds-file__text slds-truncate"
+                title="+22"
+              >
+                +22
+                <span
+                  className="slds-assistive-text"
+                >
+                  more files
+                </span>
+              </span>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </li>
+</ul>
+`;

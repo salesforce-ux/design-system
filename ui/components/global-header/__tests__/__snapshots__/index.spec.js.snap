@@ -1,0 +1,3387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Global Header renders a deprecated global header 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with actions menu showing 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small slds-is-open"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+        <div
+          className="slds-dropdown slds-dropdown_right slds-nubbin_top-right"
+          style={undefined}
+        >
+          <ul
+            aria-label={undefined}
+            className="slds-dropdown__list"
+            role="menu"
+          >
+            <li
+              className="slds-dropdown__header"
+              role="separator"
+            >
+              <span
+                className="slds-text-title_caps"
+              >
+                Create
+              </span>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="slds-truncate"
+                  title="New Note"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-note slds-m-right_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#note"
+                    />
+                  </svg>
+                   
+                  New Note
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Log a Call"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-log-a-call slds-m-right_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#log_a_call"
+                    />
+                  </svg>
+                   
+                  Log a Call
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title="New Event"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-event slds-m-right_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+                    />
+                  </svg>
+                   
+                  New Event
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with favorites disabled 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites slds-is-disabled"
+          disabled={true}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={true}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with favorites selected 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites slds-is-selected"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with search expanded 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup slds-is-open"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with search expanded and with search term 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup slds-is-open"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant="option-00"
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue="ibm"
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+          <button
+            className="slds-input__icon slds-input__icon_right slds-button slds-button_icon"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Clear the current search term
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            className="slds-lookup__list"
+            role="presentation"
+          >
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-lookup__item-action_label slds-text-body_small slds-has-focus"
+                id="option-00"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                  />
+                </svg>
+                <span
+                  className="slds-truncate"
+                  title="'ibm' in Salesforce"
+                >
+                  "ibm" in Salesforce
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    <mark>
+                      IBM
+                    </mark>
+                     - 1yr/100k
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Proposal/Quote
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    <mark>
+                      IBM
+                    </mark>
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • Menlo Park
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    <mark>
+                      IBM
+                    </mark>
+                     Watson
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • Menlo Park
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    200 Service Licenses - 
+                    <mark>
+                      IBM
+                    </mark>
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Close-Won
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay (
+                    <mark>
+                      IBM
+                    </mark>
+                    )
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    User • Latex Salesman
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a deprecated global header with setup menu showing 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        className="slds-form-element slds-lookup"
+        role="combobox"
+      >
+        <label
+          className="slds-assistive-text"
+          htmlFor="global-search-01"
+        >
+          Search Salesforce
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-input__icon slds-input__icon_left"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+            />
+          </svg>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls="global-search-list-01"
+            autoComplete="off"
+            className="slds-input slds-lookup__search-input"
+            defaultValue={undefined}
+            id="global-search-01"
+            placeholder="Search Salesforce"
+            role="textbox"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-lookup__menu"
+          id="global-search-list-01"
+          role="listbox"
+        >
+          <ul
+            aria-label="Recent Items"
+            className="slds-lookup__list"
+            role="group"
+          >
+            <li
+              role="presentation"
+            >
+              <h3
+                className="slds-lookup__item_label slds-text-body_small"
+                role="presentation"
+              >
+                Recent Items
+              </h3>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-01"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-opportunity slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce - 1,000 Licenses
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Opportunity • Prospecting
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-02"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-contact slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Art Vandelay
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Contact • avandelay@vandelay.com
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-03"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-account slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Vandelary Industries
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Account • San Francisco
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-04"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-custom-8 slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/custom-sprite/svg/symbols.svg#custom8"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    Salesforce UK 2016 Events
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    General Ledger • $20,000
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li
+              role="presentation"
+            >
+              <span
+                className="slds-lookup__item-action slds-media"
+                id="option-05"
+                role="option"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon-standard-lead slds-icon_small slds-media__figure"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-lookup__result-text"
+                  >
+                    H.E. Pennypacker
+                  </span>
+                  <span
+                    className="slds-lookup__result-meta slds-text-body_small"
+                  >
+                    Lead • Nursing
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="slds-global-header__item slds-grid slds-grid_vertical-align-center"
+    >
+      <li
+        className="slds-grid"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          disabled={undefined}
+          id={undefined}
+          title="Toggle Favorites"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Toggle Favorite
+          </span>
+        </button>
+        <span
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            disabled={undefined}
+            id={undefined}
+            title="View Favorites"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              View Favorites
+            </span>
+          </button>
+        </span>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          id={undefined}
+          title="Global Actions"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Global Actions
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Help and Training"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Help and Training
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Setup"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Setup
+          </span>
+        </button>
+        <div
+          className="slds-dropdown slds-dropdown_right slds-nubbin_top-right"
+          style={undefined}
+        >
+          <ul
+            aria-label={undefined}
+            className="slds-dropdown__list"
+            role="menu"
+          >
+            <li
+              className="slds-dropdown__header"
+              role="separator"
+            >
+              <span
+                className="slds-text-title_caps"
+              >
+                Setup
+              </span>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="slds-truncate"
+                  title="Setup Home"
+                >
+                  Setup Home
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          id={undefined}
+          title="Notifications"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-global-header__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Notifications
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small slds-is-open"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button"
+          title="person name"
+        >
+          <span
+            className="slds-avatar slds-avatar_circle slds-avatar_medium"
+          >
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
+
+exports[`Global Header renders a global header 1`] = `
+<header
+  className="slds-global-header_container"
+>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Navigation
+  </a>
+  <a
+    className="slds-assistive-text slds-assistive-text_focus"
+    href="javascript:void(0);"
+  >
+    Skip to Main Content
+  </a>
+  <div
+    className="slds-global-header slds-grid slds-grid_align-spread"
+  >
+    <div
+      className="slds-global-header__item"
+    >
+      <div
+        className="slds-global-header__logo"
+      />
+    </div>
+    <div
+      className="slds-global-header__item slds-global-header__item_search"
+    />
+    <div
+      className="slds-global-header__item"
+    >
+      <ul
+        className="slds-global-actions"
+      >
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <div
+              className="slds-button-group"
+            >
+              <button
+                aria-haspopup={undefined}
+                aria-pressed="false"
+                className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
+                disabled={undefined}
+                id={undefined}
+                onClick={[Function]}
+                title="Toggle Favorites"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Toggle Favorite
+                </span>
+              </button>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+                id={undefined}
+                title="View Favorites"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon slds-button__icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  View Favorites
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+              id={undefined}
+              title="Global Actions"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Global Actions
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+              id={undefined}
+              title="Help and Training"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-global-header__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#question"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Help and Training
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+              id={undefined}
+              title="Setup"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-global-header__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Setup
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-atomic="true"
+              aria-haspopup={undefined}
+              aria-live="assertive"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+              id={undefined}
+              title="no new notifications"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-global-header__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                no new notifications
+              </span>
+            </button>
+            <span
+              aria-hidden="true"
+              className="slds-notification-badge"
+            >
+              0
+            </span>
+          </div>
+        </li>
+        <li
+          className="slds-global-actions__item"
+        >
+          <div
+            className="slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-global-actions__avatar slds-global-actions__item-action"
+              title="person name"
+            >
+              <span
+                className="slds-avatar slds-avatar_circle slds-avatar_medium"
+              >
+                <img
+                  alt="Person name"
+                  src="/assets/images/avatar2.jpg"
+                  title="User avatar"
+                />
+              </span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+`;

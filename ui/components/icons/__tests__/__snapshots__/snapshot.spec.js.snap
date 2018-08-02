@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Action renders an x-small action icon 1`] = `
+<span
+  className="slds-icon_container slds-icon_container_circle slds-icon-action-description"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_x-small"
+  >
+    <use
+      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#description"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Icon Action renders an xx-small action icon 1`] = `
+<span
+  className="slds-icon_container slds-icon_container_circle slds-icon-action-description"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_xx-small"
+  >
+    <use
+      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#description"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;

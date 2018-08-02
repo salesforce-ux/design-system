@@ -1,0 +1,1005 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a carousel, auto-play disabled 1`] = `
+<div
+  className="slds-carousel"
+>
+  <div
+    className="slds-carousel__stage"
+  >
+    <span
+      className="slds-carousel__autoplay"
+    >
+      <button
+        aria-controls={undefined}
+        aria-haspopup={undefined}
+        aria-pressed={true}
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        disabled={undefined}
+        id={undefined}
+        title="Stop auto-play"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Stop auto-play
+        </span>
+      </button>
+    </span>
+    <div
+      className="slds-carousel__panels"
+      style={
+        Object {
+          "transform": "translateX(-0%)",
+        }
+      }
+    >
+      <div
+        aria-hidden="false"
+        aria-labelledby="indicator-id-01"
+        className="slds-carousel__panel"
+        id="content-id-01"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="0"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Visit App Exchange"
+              src="/assets/images/carousel/carousel-01.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Visit App Exchange
+            </h2>
+            <p>
+              Extend Salesforce with the #1 business marketplace.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-02"
+        className="slds-carousel__panel"
+        id="content-id-02"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Click to Customize"
+              src="/assets/images/carousel/carousel-02.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Click to Customize
+            </h2>
+            <p>
+              Use the Object Manager to add fields, build layouts, and more.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-03"
+        className="slds-carousel__panel"
+        id="content-id-03"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Download SalesforceA"
+              src="/assets/images/carousel/carousel-03.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Download SalesforceA
+            </h2>
+            <p>
+              Get the mobile app that's just for Salesforce admins.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ul
+      className="slds-carousel__indicators"
+      role="tablist"
+    >
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-01"
+          aria-selected="true"
+          className="slds-carousel__indicator-action slds-is-active"
+          href="javascript:void(0);"
+          id="indicator-id-01"
+          role="tab"
+          tabIndex="0"
+          title="Visit App Exchange tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Visit App Exchange tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-02"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-02"
+          role="tab"
+          tabIndex="-1"
+          title="Click to Customize tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Click to Customize tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-03"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-03"
+          role="tab"
+          tabIndex="-1"
+          title="Download SalesforceA tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Download SalesforceA tab
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders a carousel, auto-play enabled 1`] = `
+<div
+  className="slds-carousel"
+>
+  <div
+    className="slds-carousel__stage"
+  >
+    <span
+      className="slds-carousel__autoplay"
+    >
+      <button
+        aria-controls={undefined}
+        aria-haspopup={undefined}
+        aria-pressed={false}
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        disabled={undefined}
+        id={undefined}
+        title="Stop auto-play"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#pause"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Stop auto-play
+        </span>
+      </button>
+    </span>
+    <div
+      className="slds-carousel__panels"
+      style={
+        Object {
+          "transform": "translateX(-0%)",
+        }
+      }
+    >
+      <div
+        aria-hidden="false"
+        aria-labelledby="indicator-id-01"
+        className="slds-carousel__panel"
+        id="content-id-01"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="0"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Visit App Exchange"
+              src="/assets/images/carousel/carousel-01.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Visit App Exchange
+            </h2>
+            <p>
+              Extend Salesforce with the #1 business marketplace.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-02"
+        className="slds-carousel__panel"
+        id="content-id-02"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Click to Customize"
+              src="/assets/images/carousel/carousel-02.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Click to Customize
+            </h2>
+            <p>
+              Use the Object Manager to add fields, build layouts, and more.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-03"
+        className="slds-carousel__panel"
+        id="content-id-03"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Download SalesforceA"
+              src="/assets/images/carousel/carousel-03.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Download SalesforceA
+            </h2>
+            <p>
+              Get the mobile app that's just for Salesforce admins.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ul
+      className="slds-carousel__indicators"
+      role="tablist"
+    >
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-01"
+          aria-selected="true"
+          className="slds-carousel__indicator-action slds-is-active"
+          href="javascript:void(0);"
+          id="indicator-id-01"
+          role="tab"
+          tabIndex="0"
+          title="Visit App Exchange tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Visit App Exchange tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-02"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-02"
+          role="tab"
+          tabIndex="-1"
+          title="Click to Customize tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Click to Customize tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-03"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-03"
+          role="tab"
+          tabIndex="-1"
+          title="Download SalesforceA tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Download SalesforceA tab
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders a carousel, first tab active 1`] = `
+<div
+  className="slds-carousel"
+>
+  <div
+    className="slds-carousel__stage"
+  >
+    <div
+      className="slds-carousel__panels"
+      style={
+        Object {
+          "transform": "translateX(-0%)",
+        }
+      }
+    >
+      <div
+        aria-hidden="false"
+        aria-labelledby="indicator-id-01"
+        className="slds-carousel__panel"
+        id="content-id-01"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="0"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Visit App Exchange"
+              src="/assets/images/carousel/carousel-01.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Visit App Exchange
+            </h2>
+            <p>
+              Extend Salesforce with the #1 business marketplace.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-02"
+        className="slds-carousel__panel"
+        id="content-id-02"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Click to Customize"
+              src="/assets/images/carousel/carousel-02.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Click to Customize
+            </h2>
+            <p>
+              Use the Object Manager to add fields, build layouts, and more.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-03"
+        className="slds-carousel__panel"
+        id="content-id-03"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Download SalesforceA"
+              src="/assets/images/carousel/carousel-03.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Download SalesforceA
+            </h2>
+            <p>
+              Get the mobile app that's just for Salesforce admins.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ul
+      className="slds-carousel__indicators"
+      role="tablist"
+    >
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-01"
+          aria-selected="true"
+          className="slds-carousel__indicator-action slds-is-active"
+          href="javascript:void(0);"
+          id="indicator-id-01"
+          role="tab"
+          tabIndex="0"
+          title="Visit App Exchange tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Visit App Exchange tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-02"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-02"
+          role="tab"
+          tabIndex="-1"
+          title="Click to Customize tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Click to Customize tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-03"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-03"
+          role="tab"
+          tabIndex="-1"
+          title="Download SalesforceA tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Download SalesforceA tab
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders a carousel, second tab active 1`] = `
+<div
+  className="slds-carousel"
+>
+  <div
+    className="slds-carousel__stage"
+  >
+    <div
+      className="slds-carousel__panels"
+      style={
+        Object {
+          "transform": "translateX(-100%)",
+        }
+      }
+    >
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-01"
+        className="slds-carousel__panel"
+        id="content-id-01"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Visit App Exchange"
+              src="/assets/images/carousel/carousel-01.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Visit App Exchange
+            </h2>
+            <p>
+              Extend Salesforce with the #1 business marketplace.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="false"
+        aria-labelledby="indicator-id-02"
+        className="slds-carousel__panel"
+        id="content-id-02"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="0"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Click to Customize"
+              src="/assets/images/carousel/carousel-02.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Click to Customize
+            </h2>
+            <p>
+              Use the Object Manager to add fields, build layouts, and more.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-03"
+        className="slds-carousel__panel"
+        id="content-id-03"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Download SalesforceA"
+              src="/assets/images/carousel/carousel-03.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Download SalesforceA
+            </h2>
+            <p>
+              Get the mobile app that's just for Salesforce admins.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ul
+      className="slds-carousel__indicators"
+      role="tablist"
+    >
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-01"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-01"
+          role="tab"
+          tabIndex="-1"
+          title="Visit App Exchange tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Visit App Exchange tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-02"
+          aria-selected="true"
+          className="slds-carousel__indicator-action slds-is-active"
+          href="javascript:void(0);"
+          id="indicator-id-02"
+          role="tab"
+          tabIndex="0"
+          title="Click to Customize tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Click to Customize tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-03"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-03"
+          role="tab"
+          tabIndex="-1"
+          title="Download SalesforceA tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Download SalesforceA tab
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders a carousel, third tab active 1`] = `
+<div
+  className="slds-carousel"
+>
+  <div
+    className="slds-carousel__stage"
+  >
+    <div
+      className="slds-carousel__panels"
+      style={
+        Object {
+          "transform": "translateX(-200%)",
+        }
+      }
+    >
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-01"
+        className="slds-carousel__panel"
+        id="content-id-01"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Visit App Exchange"
+              src="/assets/images/carousel/carousel-01.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Visit App Exchange
+            </h2>
+            <p>
+              Extend Salesforce with the #1 business marketplace.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="indicator-id-02"
+        className="slds-carousel__panel"
+        id="content-id-02"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Click to Customize"
+              src="/assets/images/carousel/carousel-02.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Click to Customize
+            </h2>
+            <p>
+              Use the Object Manager to add fields, build layouts, and more.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden="false"
+        aria-labelledby="indicator-id-03"
+        className="slds-carousel__panel"
+        id="content-id-03"
+        role="tabpanel"
+      >
+        <a
+          className="slds-carousel__panel-action slds-text-link_reset"
+          href="javascript:void(0);"
+          tabIndex="0"
+        >
+          <div
+            className="slds-carousel__image"
+          >
+            <img
+              alt="Download SalesforceA"
+              src="/assets/images/carousel/carousel-03.jpg"
+            />
+          </div>
+          <div
+            className="slds-carousel__content"
+          >
+            <h2
+              className="slds-carousel__content-title"
+            >
+              Download SalesforceA
+            </h2>
+            <p>
+              Get the mobile app that's just for Salesforce admins.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ul
+      className="slds-carousel__indicators"
+      role="tablist"
+    >
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-01"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-01"
+          role="tab"
+          tabIndex="-1"
+          title="Visit App Exchange tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Visit App Exchange tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-02"
+          aria-selected="false"
+          className="slds-carousel__indicator-action"
+          href="javascript:void(0);"
+          id="indicator-id-02"
+          role="tab"
+          tabIndex="-1"
+          title="Click to Customize tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Click to Customize tab
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-carousel__indicator"
+        role="presentation"
+      >
+        <a
+          aria-controls="content-id-03"
+          aria-selected="true"
+          className="slds-carousel__indicator-action slds-is-active"
+          href="javascript:void(0);"
+          id="indicator-id-03"
+          role="tab"
+          tabIndex="0"
+          title="Download SalesforceA tab"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Download SalesforceA tab
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

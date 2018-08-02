@@ -11,10 +11,10 @@ import {
 } from '../non-coverable-content/example';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 xit('renders a vertical visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select an option</Legend>
       <FormElementControl>
@@ -56,7 +56,7 @@ xit('renders a vertical visual picker', () =>
   ));
 
 xit('renders a disabled vertical visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select an option</Legend>
       <FormElementControl>
@@ -102,7 +102,7 @@ xit('renders a disabled vertical visual picker', () =>
   ));
 
 xit('renders a coverable content visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select an app</Legend>
       <FormElementControl>
@@ -127,7 +127,7 @@ xit('renders a coverable content visual picker', () =>
   ));
 
 xit('renders a disabled coverable content visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select an app</Legend>
       <FormElementControl>
@@ -153,7 +153,7 @@ xit('renders a disabled coverable content visual picker', () =>
   ));
 
 xit('renders a coverable content visual picker with checkbox group', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Add the following object(s)</Legend>
       <FormElementControl>
@@ -186,7 +186,7 @@ xit('renders a coverable content visual picker with checkbox group', () =>
   ));
 
 xit('renders a non-coverable content visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select a plan</Legend>
       <FormElementControl>
@@ -213,7 +213,7 @@ xit('renders a non-coverable content visual picker', () =>
   ));
 
 xit('renders a disabled non-coverable content visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <Legend>Select a plan</Legend>
       <FormElementControl>
@@ -240,7 +240,7 @@ xit('renders a disabled non-coverable content visual picker', () =>
   ));
 
 xit('renders a link visual picker', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="demo-only" style={{ width: '24rem' }}>
       <VisualPickerMediaObject symbol="user">
         <h2

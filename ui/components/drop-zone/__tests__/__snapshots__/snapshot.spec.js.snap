@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drop Zone Base renders container when hovered 1`] = `
+<div
+  className="slds-drop-zone__container slds-is-hovered"
+  tabIndex="-1"
+>
+  <div
+    className="slds-drop-zone__label slds-drop-zone__label_container"
+  >
+    <div
+      className="slds-media slds-media_center"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-connected_apps slds-current-color"
+          title={null}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2>
+          <button
+            className="slds-drop-zone__label_button slds-button_reset"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: 
+            </span>
+            <span>
+              Component Name
+            </span>
+          </button>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drop Zone Base renders container with no actions 1`] = `
+<div
+  className="slds-drop-zone__container"
+  tabIndex="-1"
+>
+  <div
+    className="slds-drop-zone__label slds-drop-zone__label_container"
+  >
+    <div
+      className="slds-media slds-media_center"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-connected_apps slds-current-color"
+          title={null}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2>
+          <button
+            className="slds-drop-zone__label_button slds-button_reset"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: 
+            </span>
+            <span>
+              Component Name
+            </span>
+          </button>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drop Zone Base renders drop zone when dragging 1`] = `
+<div
+  className="slds-drop-zone slds-drop-zone_drag"
+/>
+`;
+
+exports[`Drop Zone Base renders the container 1`] = `
+<div
+  className="slds-drop-zone__container"
+  tabIndex="-1"
+>
+  <div
+    className="slds-drop-zone__label slds-drop-zone__label_container"
+  >
+    <div
+      className="slds-media slds-media_center"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-connected_apps slds-current-color"
+          title={null}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2>
+          <button
+            className="slds-drop-zone__label_button slds-button_reset"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: 
+            </span>
+            <span>
+              Component Name
+            </span>
+          </button>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-drop-zone__actions"
+  >
+    <div
+      className="slds-button-group"
+      role="group"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small"
+        id={undefined}
+        title="Move"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#move"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Move
+        </span>
+      </button>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drop Zone Base renders the container label 1`] = `
+<div
+  className="slds-drop-zone__label slds-drop-zone__label_container"
+>
+  <div
+    className="slds-media slds-media_center"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-connected_apps slds-current-color"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <h2>
+        <button
+          className="slds-drop-zone__label_button slds-button_reset"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Edit: 
+          </span>
+          <span>
+            Component Name
+          </span>
+        </button>
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drop Zone Base renders the default drop zone 1`] = `
+<div
+  className="slds-drop-zone"
+/>
+`;
+
+exports[`Drop Zone Base renders the insertion point 1`] = `
+<div
+  className="slds-drop-zone_drag__slot"
+/>
+`;
+
+exports[`Drop Zone Base renders the label 1`] = `
+<div
+  className="slds-drop-zone__label"
+>
+  <div
+    className="slds-media slds-media_center"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-builder slds-current-color"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#builder"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <h2>
+        Content
+      </h2>
+    </div>
+  </div>
+</div>
+`;

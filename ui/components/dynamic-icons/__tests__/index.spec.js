@@ -5,21 +5,21 @@ import { TypingIcon } from '../typing/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Typing icon', () => {
   it('renders a typing icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TypingIcon title="User typing" assistiveText="User typing" />
     ));
 
   xit('renders an animated typing icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TypingIcon isAnimated title="User typing" assistiveText="User typing" />
     ));
 
   it('renders a paused animated typing icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TypingIcon
         isAnimated
         isPaused

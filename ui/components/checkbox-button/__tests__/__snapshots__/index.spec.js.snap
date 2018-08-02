@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a checked and disabled checkbox button 1`] = `
+<div
+  className="slds-checkbox_add-button"
+>
+  <input
+    className="slds-assistive-text"
+    defaultChecked={true}
+    disabled={true}
+    id="add-checkbox-4"
+    tabIndex={undefined}
+    type="checkbox"
+    value="add-checkbox-4"
+  />
+  <label
+    className="slds-checkbox_faux"
+    htmlFor="add-checkbox-4"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Add product
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders a checked checkbox button 1`] = `
+<div
+  className="slds-checkbox_add-button"
+>
+  <input
+    className="slds-assistive-text"
+    defaultChecked={true}
+    disabled={undefined}
+    id="add-checkbox-2"
+    tabIndex={undefined}
+    type="checkbox"
+    value="add-checkbox-2"
+  />
+  <label
+    className="slds-checkbox_faux"
+    htmlFor="add-checkbox-2"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Add product
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders a default checkbox button 1`] = `
+<div
+  className="slds-checkbox_add-button"
+>
+  <input
+    className="slds-assistive-text"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="add-checkbox-1"
+    tabIndex={undefined}
+    type="checkbox"
+    value="add-checkbox-1"
+  />
+  <label
+    className="slds-checkbox_faux"
+    htmlFor="add-checkbox-1"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Add product
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders a disabled checkbox button 1`] = `
+<div
+  className="slds-checkbox_add-button"
+>
+  <input
+    className="slds-assistive-text"
+    defaultChecked={undefined}
+    disabled={true}
+    id="add-checkbox-3"
+    tabIndex={undefined}
+    type="checkbox"
+    value="add-checkbox-3"
+  />
+  <label
+    className="slds-checkbox_faux"
+    htmlFor="add-checkbox-3"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Add product
+    </span>
+  </label>
+</div>
+`;

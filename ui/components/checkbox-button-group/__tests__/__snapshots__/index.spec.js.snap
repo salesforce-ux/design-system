@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a default checkbox button group 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Scheduled Day(s)
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-checkbox_button-group"
+    >
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="monday"
+          name="checkbox"
+          type="checkbox"
+          value="monday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="monday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Mon
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="tuesday"
+          name="checkbox"
+          type="checkbox"
+          value="tuesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="tuesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Tue
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="wednesday"
+          name="checkbox"
+          type="checkbox"
+          value="wednesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="wednesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Wed
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="thursday"
+          name="checkbox"
+          type="checkbox"
+          value="thursday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="thursday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Thu
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="friday"
+          name="checkbox"
+          type="checkbox"
+          value="friday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="friday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Fri
+          </span>
+        </label>
+      </span>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a default checkbox button group with error 1`] = `
+<fieldset
+  className="slds-form-element slds-has-error"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Scheduled Day(s)
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-checkbox_button-group"
+    >
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby="error_01"
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="monday"
+          name="checkbox"
+          type="checkbox"
+          value="monday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="monday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Mon
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby="error_01"
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="tuesday"
+          name="checkbox"
+          type="checkbox"
+          value="tuesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="tuesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Tue
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby="error_01"
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="wednesday"
+          name="checkbox"
+          type="checkbox"
+          value="wednesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="wednesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Wed
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby="error_01"
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="thursday"
+          name="checkbox"
+          type="checkbox"
+          value="thursday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="thursday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Thu
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby="error_01"
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="friday"
+          name="checkbox"
+          type="checkbox"
+          value="friday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="friday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Fri
+          </span>
+        </label>
+      </span>
+    </div>
+    <div
+      className="slds-form-element__help"
+      id="error_01"
+    >
+      This field is required
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a disabled checkbox button group 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Scheduled Day(s)
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-checkbox_button-group"
+    >
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled="true"
+          id="monday"
+          name="checkbox"
+          type="checkbox"
+          value="monday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="monday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Mon
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled="true"
+          id="tuesday"
+          name="checkbox"
+          type="checkbox"
+          value="tuesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="tuesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Tue
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled="true"
+          id="wednesday"
+          name="checkbox"
+          type="checkbox"
+          value="wednesday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="wednesday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Wed
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled="true"
+          id="thursday"
+          name="checkbox"
+          type="checkbox"
+          value="thursday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="thursday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Thu
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-button slds-checkbox_button"
+      >
+        <input
+          aria-describedby={undefined}
+          defaultChecked={undefined}
+          disabled="true"
+          id="friday"
+          name="checkbox"
+          type="checkbox"
+          value="friday"
+        />
+        <label
+          className="slds-checkbox_button__label"
+          htmlFor="friday"
+        >
+          <span
+            className="slds-checkbox_faux"
+          >
+            Fri
+          </span>
+        </label>
+      </span>
+    </div>
+  </div>
+</fieldset>
+`;

@@ -15,31 +15,30 @@ import { File } from '../../files';
 import { DoctypeIcon } from '../../icons/doctype/example';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Chat container', () => {
-  it('renders a chat container', () => matchesMarkupAndStyle(<Chat />));
+  it('renders a chat container', () => matchesMarkup(<Chat />));
 
-  it('renders a past chat container', () =>
-    matchesMarkupAndStyle(<Chat isPast />));
+  it('renders a past chat container', () => matchesMarkup(<Chat isPast />));
 });
 
 describe('Chat list', () => {
-  it('renders a chat list', () => matchesMarkupAndStyle(<ChatList />));
+  it('renders a chat list', () => matchesMarkup(<ChatList />));
 
-  it('renders a chat list item', () => matchesMarkupAndStyle(<ChatListItem />));
+  it('renders a chat list item', () => matchesMarkup(<ChatListItem />));
 
   it('renders a chat list item for bookends', () =>
-    matchesMarkupAndStyle(<ChatListItem type="bookend" />));
+    matchesMarkup(<ChatListItem type="bookend" />));
 
   it('renders a chat list item for events', () =>
-    matchesMarkupAndStyle(<ChatListItem type="event" />));
+    matchesMarkup(<ChatListItem type="event" />));
 
   it('renders a chat list item for inbound messages', () =>
-    matchesMarkupAndStyle(<ChatListItem type="inbound" />));
+    matchesMarkup(<ChatListItem type="inbound" />));
 
   it('renders two consecutive inbound list items for inbound messages', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatList>
         <ChatListItem type="inbound" />
         <ChatListItem type="inbound" />
@@ -47,10 +46,10 @@ describe('Chat list', () => {
     ));
 
   it('renders a chat list item for outbound messages', () =>
-    matchesMarkupAndStyle(<ChatListItem type="outbound" />));
+    matchesMarkup(<ChatListItem type="outbound" />));
 
   it('renders two consecutive outbound list items for outbound messages', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatList>
         <ChatListItem type="bound" />
         <ChatListItem type="bound" />
@@ -60,59 +59,54 @@ describe('Chat list', () => {
 
 describe('Chat avatar', () => {
   it('renders a chat avatar', () =>
-    matchesMarkupAndStyle(<ChatAvatar name="Simon Taggart" initials="ST" />));
+    matchesMarkup(<ChatAvatar name="Simon Taggart" initials="ST" />));
 });
 
 describe('Chat message', () => {
-  it('renders a chat message container', () =>
-    matchesMarkupAndStyle(<ChatMessage />));
+  it('renders a chat message container', () => matchesMarkup(<ChatMessage />));
 
   it('renders a chat message container with styles for a faux avatar', () =>
-    matchesMarkupAndStyle(<ChatMessage hasFauxAvatar />));
+    matchesMarkup(<ChatMessage hasFauxAvatar />));
 });
 
 describe('Chat message body', () => {
   it('renders a default chat message body', () =>
-    matchesMarkupAndStyle(<ChatMessageBody>message</ChatMessageBody>));
+    matchesMarkup(<ChatMessageBody>message</ChatMessageBody>));
 
   it('renders an inbound chat message body', () =>
-    matchesMarkupAndStyle(
-      <ChatMessageBody type="inbound">message</ChatMessageBody>
-    ));
+    matchesMarkup(<ChatMessageBody type="inbound">message</ChatMessageBody>));
 
   it('renders an outbound chat message body', () =>
-    matchesMarkupAndStyle(
-      <ChatMessageBody type="outbound">message</ChatMessageBody>
-    ));
+    matchesMarkup(<ChatMessageBody type="outbound">message</ChatMessageBody>));
 
   it('renders an outbound chat message body, by another agent', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody type="outbound-agent">message</ChatMessageBody>
     ));
 
   it('renders a default chat message body with name and timestamp meta data', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody name="Simon Taggart" timeStamp="5:09 PM">
         message
       </ChatMessageBody>
     ));
 
   it('renders a inbound chat message body with a name and timestamp meta data', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody type="inbound" name="Simon Taggart" timeStamp="5:09 PM">
         message
       </ChatMessageBody>
     ));
 
   it('renders a outbound chat message body with a name and timestamp meta data', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody type="outbound" name="Simon Taggart" timeStamp="5:09 PM">
         message
       </ChatMessageBody>
     ));
 
   it('renders a outbound chat message body from another agent, with a name and timestamp meta data', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         type="outbound-agent"
         name="Simon Taggart"
@@ -123,7 +117,7 @@ describe('Chat message body', () => {
     ));
 
   it('renders a past chat message body, with a name and timestamp meta data', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         isPast
         type="outbound-agent"
@@ -135,7 +129,7 @@ describe('Chat message body', () => {
     ));
 
   it('renders an inbound chat message body with a link', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         isPast
         type="inbound"
@@ -147,7 +141,7 @@ describe('Chat message body', () => {
     ));
 
   it('renders an outbound chat message body with a link', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         isPast
         type="outbound"
@@ -161,25 +155,23 @@ describe('Chat message body', () => {
   it('renders a chat message body with multiline text', () => {
     const exampleMultiLineText =
       'So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients. \n \n Have you tried visiting our help site?';
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       <ChatMessageBody>{exampleMultiLineText}</ChatMessageBody>
     );
   });
 
   it('renders an inbound chat message body that shows customer is typing', () =>
-    matchesMarkupAndStyle(
-      <ChatMessageBody type="inbound" isTyping isPaused />
-    ));
+    matchesMarkup(<ChatMessageBody type="inbound" isTyping isPaused />));
 
   it('renders an inbound chat message body that shows sneak peak', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody type="inbound" hasSneakPeek isTyping isPaused>
         Message
       </ChatMessageBody>
     ));
 
   it('renders an inbound chat message body with an unsupported message type', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         type="unsupported-type"
         name="Ayesha Mazumdar"
@@ -190,7 +182,7 @@ describe('Chat message body', () => {
     ));
 
   it('renders an outbound chat message body with a delivery failure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         type="delivery-failure"
         deliveryFailureReason="Message was not delivered because Andy stopped receiving messages."
@@ -204,7 +196,7 @@ describe('Chat message body', () => {
 
 describe('Chat Images and Files', () => {
   it('renders an inbound chat message body with an attachment', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatMessageBody
         type="inbound"
         name="Taylor Watson-Rice"
@@ -222,7 +214,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders a loading inbound chat message item with image', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -240,7 +232,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders a loading inbound chat message item with file', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -264,7 +256,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an inbound chat message item with image and actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -281,7 +273,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an outbound chat message item with image and actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody
@@ -297,7 +289,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an inbound chat message item with portrait image and actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -314,7 +306,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an inbound chat message item with portrait image and title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -337,7 +329,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an outbound chat message item with portrait image and actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody
@@ -353,7 +345,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an outbound chat message item with portrait image and title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody
@@ -375,7 +367,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an inbound chat message item with file and title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="inbound">
         <ChatMessage>
           <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
@@ -399,7 +391,7 @@ describe('Chat Images and Files', () => {
     ));
 
   it('renders an outbound chat message item with file and title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody
@@ -424,31 +416,29 @@ describe('Chat Images and Files', () => {
 
 describe('Chat Icon', () => {
   it('renders a chat icon', () =>
-    matchesMarkupAndStyle(<ChatIcon symbol="priority" />));
+    matchesMarkup(<ChatIcon symbol="priority" />));
 
   it('renders a chat icon with assistive text', () =>
-    matchesMarkupAndStyle(
-      <ChatIcon symbol="error" iconAssistiveText="warning" />
-    ));
+    matchesMarkup(<ChatIcon symbol="error" iconAssistiveText="warning" />));
 });
 
 describe('Chat event', () => {
   it('renders a basic chat event', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatEvent symbol="priority">
         <b>Amber Cann</b> did a thing
       </ChatEvent>
     ));
 
   it('renders a basic chat event with a timestamp', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatEvent symbol="priority" timeStamp="5:09 PM">
         <b>Amber Cann</b> did a thing
       </ChatEvent>
     ));
 
   it('renders a basic chat event with a message from an agent', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatEvent
         symbol="priority"
         timeStamp="5:09 PM"
@@ -459,14 +449,14 @@ describe('Chat event', () => {
     ));
 
   it('renders a errored chat event with a timestamp', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatEvent hasError symbol="priority" timeStamp="5:09 PM">
         <b>Amber Cann</b> did a thing
       </ChatEvent>
     ));
 
   it('renders a errored chat event with a message from an agent', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatEvent
         hasError
         symbol="priority"
@@ -480,18 +470,18 @@ describe('Chat event', () => {
 
 describe('Chat bookend', () => {
   it('renders a chat start bookend', () =>
-    matchesMarkupAndStyle(<ChatBookend type="start" name="Simon Taggart" />));
+    matchesMarkup(<ChatBookend type="start" name="Simon Taggart" />));
 
   it('renders a chat start bookend with a timestamp', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatBookend type="start" name="Simon Taggart" timeStamp="5:08 PM" />
     ));
 
   it('renders a chat stop bookend', () =>
-    matchesMarkupAndStyle(<ChatBookend type="stop" name="Simon Taggart" />));
+    matchesMarkup(<ChatBookend type="stop" name="Simon Taggart" />));
 
   it('renders a chat stop bookend with a timestamp', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ChatBookend type="stop" name="Simon Taggart" timeStamp="5:08 PM" />
     ));
 });

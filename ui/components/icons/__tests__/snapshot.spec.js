@@ -5,11 +5,11 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { ActionIcon } from '../action/example';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Icon Action', () => {
   it('renders an x-small action icon', () =>
-    matchesMarkupAndStyle(<ActionIcon className="slds-icon_x-small" />));
+    matchesMarkup(<ActionIcon className="slds-icon_x-small" />));
   it('renders an xx-small action icon', () =>
-    matchesMarkupAndStyle(<ActionIcon className="slds-icon_xx-small" />));
+    matchesMarkup(<ActionIcon className="slds-icon_xx-small" />));
 });

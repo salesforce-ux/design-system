@@ -6,7 +6,7 @@ import React from 'react';
 import { File, AttachmentLink } from '../';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const demoStyles = {
   width: '20rem'
@@ -14,7 +14,7 @@ const demoStyles = {
 
 describe('File Component', () => {
   it('renders base component', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File
           isCard
@@ -28,21 +28,21 @@ describe('File Component', () => {
     ));
 
   it('renders icon (no image) with title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File isCard hasCrop hasTitleCard symbol="image" title="Image Title" />
       </div>
     ));
 
   it('renders image with no title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File isCard hasCrop noCaption symbol="pdf" hasImage />
       </div>
     ));
 
   it('renders image with title and actions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File
           isCard
@@ -57,7 +57,7 @@ describe('File Component', () => {
     ));
 
   it('renders image with actions and no title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File
           isCard
@@ -74,7 +74,7 @@ describe('File Component', () => {
     ));
 
   it('renders file with external icon', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File
           isCard
@@ -88,7 +88,7 @@ describe('File Component', () => {
     ));
 
   it('renders file in loading state with title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File
           isCard
@@ -102,14 +102,14 @@ describe('File Component', () => {
     ));
 
   it('renders file in loding state without title', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={demoStyles}>
         <File isCard hasCrop isLoading noCaption />
       </div>
     ));
 
   it('renders fewer than 3 file attachments', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
@@ -128,7 +128,7 @@ describe('File Component', () => {
     ));
 
   it('renders more than 3 file attachments', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
           <File
@@ -149,8 +149,8 @@ describe('File Component', () => {
       </ul>
     ));
 
-  xit('renders a link attachment', () =>
-    matchesMarkupAndStyle(
+  it('renders a link attachment', () =>
+    matchesMarkup(
       <AttachmentLink
         articleTitle="Maui By Air The Best Way Around The Island"
         articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."

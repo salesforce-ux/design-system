@@ -22,70 +22,68 @@ import {
   ExpressionNarrowFooter
 } from '../filters/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Expression Base', () => {
-  xit('renders the default expression', () =>
-    matchesMarkupAndStyle(<Expression />));
+  xit('renders the default expression', () => matchesMarkup(<Expression />));
   xit('renders the disabled initial state', () =>
-    matchesMarkupAndStyle(<Expression inputIsDisabled buttonIsDisabled />));
+    matchesMarkup(<Expression inputIsDisabled buttonIsDisabled />));
   xit('renders with custom logic', () =>
-    matchesMarkupAndStyle(<Expression hasCustomLogic />));
+    matchesMarkup(<Expression hasCustomLogic />));
   xit('renders with legend text', () =>
-    matchesMarkupAndStyle(<Expression legendText="1" />));
+    matchesMarkup(<Expression legendText="1" />));
   xit('renders with any option selected', () =>
-    matchesMarkupAndStyle(<Expression optionSelected="any" />));
+    matchesMarkup(<Expression optionSelected="any" />));
   xit('renders with all option selected', () =>
-    matchesMarkupAndStyle(<Expression optionSelected="all" />));
+    matchesMarkup(<Expression optionSelected="all" />));
   xit('renders with custom option selected', () =>
-    matchesMarkupAndStyle(<Expression optionSelected="custom" />));
+    matchesMarkup(<Expression optionSelected="custom" />));
   xit('renders with always option selected', () =>
-    matchesMarkupAndStyle(<Expression optionSelected="always" />));
+    matchesMarkup(<Expression optionSelected="always" />));
   xit('renders with formula option selected', () =>
-    matchesMarkupAndStyle(<Expression optionSelected="formula" />));
+    matchesMarkup(<Expression optionSelected="formula" />));
   xit('renders with a resource selected', () =>
-    matchesMarkupAndStyle(<Expression resourceIsSelected />));
+    matchesMarkup(<Expression resourceIsSelected />));
   xit('renders with a custom logic value', () =>
-    matchesMarkupAndStyle(<Expression customLogicValue="1 OR 2 OR 3" />));
+    matchesMarkup(<Expression customLogicValue="1 OR 2 OR 3" />));
 });
 
 describe('Expression Row', () => {
-  xit('renders the default row', () =>
-    matchesMarkupAndStyle(<ExpressionRow />));
+  xit('renders the default row', () => matchesMarkup(<ExpressionRow />));
   xit('renders the default row with legend text and sassistive text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ExpressionRow legendText="AND" assistiveText="Condition 1" />
     ));
   xit('renders the default row in a group', () =>
-    matchesMarkupAndStyle(<ExpressionRow isGroup />));
+    matchesMarkup(<ExpressionRow isGroup />));
   xit('renders the default row with input disabled', () =>
-    matchesMarkupAndStyle(<ExpressionRow inputIsDisabled />));
+    matchesMarkup(<ExpressionRow inputIsDisabled />));
   xit('renders the default row with button disabled', () =>
-    matchesMarkupAndStyle(<ExpressionRow buttonIsDisabled />));
+    matchesMarkup(<ExpressionRow buttonIsDisabled />));
   xit('renders the default row with inputs and button disabled', () =>
-    matchesMarkupAndStyle(<ExpressionRow inputIsDisabled buttonIsDisabled />));
+    matchesMarkup(<ExpressionRow inputIsDisabled buttonIsDisabled />));
   xit('renders the default row with a resource selected', () =>
-    matchesMarkupAndStyle(<ExpressionRow resourceIsSelected />));
+    matchesMarkup(<ExpressionRow resourceIsSelected />));
   xit('renders the default row with an error', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ExpressionRow errorMessage="This field is required" hasError />
     ));
 });
 
 describe('Expression Options', () => {
   xit('renders the default expression options', () =>
-    matchesMarkupAndStyle(<ExpressionOptions />));
+    matchesMarkup(<ExpressionOptions />));
   xit('renders the default expression options with a label', () =>
-    matchesMarkupAndStyle(<ExpressionOptions label="When" />));
+    matchesMarkup(<ExpressionOptions label="When" />));
   xit('renders the default expression options in a filter', () =>
-    matchesMarkupAndStyle(<ExpressionOptions isInFilter />));
+    matchesMarkup(<ExpressionOptions isInFilter />));
   xit('renders the default expression options with an option selected', () =>
-    matchesMarkupAndStyle(<ExpressionOptions optionSelected="all" />));
+    matchesMarkup(<ExpressionOptions optionSelected="all" />));
 });
 
 describe('Expression List', () => {
   xit('renders the default expression list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ExpressionList>
         <ExpressionRow legendText="AND" assistiveText="Condition 1" />
       </ExpressionList>
@@ -94,36 +92,36 @@ describe('Expression List', () => {
 
 describe('Expression Legend', () => {
   xit('renders the default expression legend', () =>
-    matchesMarkupAndStyle(<ExpressionLegend />));
+    matchesMarkup(<ExpressionLegend />));
   xit('renders the default expression legend for a group', () =>
-    matchesMarkupAndStyle(<ExpressionLegend isGroup />));
+    matchesMarkup(<ExpressionLegend isGroup />));
   xit('renders the default expression legend with custom text', () =>
-    matchesMarkupAndStyle(<ExpressionLegend legendText="OR" />));
+    matchesMarkup(<ExpressionLegend legendText="OR" />));
   xit('renders the default expression legend with assistive text', () =>
-    matchesMarkupAndStyle(<ExpressionLegend assistiveText="Condition 2" />));
+    matchesMarkup(<ExpressionLegend assistiveText="Condition 2" />));
 });
 
 describe('Expression Group', () => {
   xit('renders the default expression group', () =>
-    matchesMarkupAndStyle(<ExpressionGroup />));
+    matchesMarkup(<ExpressionGroup />));
   xit('renders the default expression group with legend text and assistive text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ExpressionGroup legendText="AND" assistiveText="Condition 1" />
     ));
   xit('renders the default expression group with any option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="any" />));
+    matchesMarkup(<ExpressionGroup optionSelected="any" />));
   xit('renders the default expression group with all option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="all" />));
+    matchesMarkup(<ExpressionGroup optionSelected="all" />));
   xit('renders the default expression group with always option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="always" />));
+    matchesMarkup(<ExpressionGroup optionSelected="always" />));
   xit('renders the default expression group with custom option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="custom" />));
+    matchesMarkup(<ExpressionGroup optionSelected="custom" />));
   xit('renders the default expression group with formula option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="formula" />));
+    matchesMarkup(<ExpressionGroup optionSelected="formula" />));
   xit('renders the default expression group with group option selected', () =>
-    matchesMarkupAndStyle(<ExpressionGroup optionSelected="group" />));
+    matchesMarkup(<ExpressionGroup optionSelected="group" />));
   xit('renders the default expression group with a row', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ExpressionGroup>
         <ExpressionRow legendText="AND" assistiveText="Condition 1" />
       </ExpressionGroup>
@@ -132,49 +130,49 @@ describe('Expression Group', () => {
 
 describe('Expression Custom', () => {
   xit('renders the default expression custom', () =>
-    matchesMarkupAndStyle(<ExpressionCustom />));
+    matchesMarkup(<ExpressionCustom />));
   xit('renders the default expression custom with a default value', () =>
-    matchesMarkupAndStyle(<ExpressionCustom defaultValue="1 and 2" />));
+    matchesMarkup(<ExpressionCustom defaultValue="1 and 2" />));
 });
 
 describe('Expression Column', () => {
   xit('renders the default expression column', () =>
-    matchesMarkupAndStyle(<ExpressionCol />));
+    matchesMarkup(<ExpressionCol />));
   xit('renders the default expression column that does not grow', () =>
-    matchesMarkupAndStyle(<ExpressionCol doesNotGrow />));
+    matchesMarkup(<ExpressionCol doesNotGrow />));
 });
 
 describe('Expression Buttons', () => {
   xit('renders the default expression buttons', () =>
-    matchesMarkupAndStyle(<ExpressionButtons />));
+    matchesMarkup(<ExpressionButtons />));
   xit('renders the default expression buttons in a group', () =>
-    matchesMarkupAndStyle(<ExpressionButtons isGroup />));
+    matchesMarkup(<ExpressionButtons isGroup />));
 });
 
 describe('Expression Formula', () => {
   xit('renders the default expression formula variant', () =>
-    matchesMarkupAndStyle(<Formula />));
+    matchesMarkup(<Formula />));
   xit('renders the default expression formula with an option selected', () =>
-    matchesMarkupAndStyle(<Formula optionSelected="formula" />));
+    matchesMarkup(<Formula optionSelected="formula" />));
 });
 
 describe('Expression Narrow', () => {
   xit('renders the default expression narrow variant', () =>
-    matchesMarkupAndStyle(<ExpressionNarrow />));
+    matchesMarkup(<ExpressionNarrow />));
   xit('renders the default expression narrow with option selected', () =>
-    matchesMarkupAndStyle(<ExpressionNarrow optionSelected="all" />));
+    matchesMarkup(<ExpressionNarrow optionSelected="all" />));
 });
 
 describe('Expression Narrow Group', () => {
   xit('renders the default expression narrow group', () =>
-    matchesMarkupAndStyle(<ExpressionNarrowGroup />));
+    matchesMarkup(<ExpressionNarrowGroup />));
   xit('renders the default expression narrow with option selected', () =>
-    matchesMarkupAndStyle(<ExpressionNarrowGroup optionSelected="any" />));
+    matchesMarkup(<ExpressionNarrowGroup optionSelected="any" />));
 });
 
 describe('Expression Narrow Footer', () => {
   xit('renders the default expression narrow footer', () =>
-    matchesMarkupAndStyle(<ExpressionNarrowFooter />));
+    matchesMarkup(<ExpressionNarrowFooter />));
   xit('renders the default expression narrow footer with a group', () =>
-    matchesMarkupAndStyle(<ExpressionNarrowFooter hasGroup />));
+    matchesMarkup(<ExpressionNarrowFooter hasGroup />));
 });

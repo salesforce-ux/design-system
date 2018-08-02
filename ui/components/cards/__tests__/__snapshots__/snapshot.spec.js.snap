@@ -1,0 +1,888 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Article renders a basic card article 1`] = `
+<article
+  className="slds-card"
+>
+  Anything can go into the card body
+</article>
+`;
+
+exports[`Card Article renders a basic card article with boundary 1`] = `
+<article
+  className="slds-card slds-card_boundary"
+>
+  Anything can go into the card body
+</article>
+`;
+
+exports[`Card Body renders a card body with content 1`] = `
+<div
+  className="slds-card__body"
+>
+  Anything can go into the card body
+</div>
+`;
+
+exports[`Card Body renders a card body with padding 1`] = `
+<div
+  className="slds-card__body slds-card__body_inner"
+>
+  Anything can go into the card body
+</div>
+`;
+
+exports[`Card Body renders an empty card body 1`] = `
+<div
+  className="slds-card__body"
+/>
+`;
+
+exports[`Card Footer renders a card footer with content 1`] = `
+<footer
+  className="slds-card__footer"
+>
+  <a
+    className="slds-card__footer-action"
+    href="javascript:void(0);"
+    tabIndex={undefined}
+  >
+    View All 
+    <span
+      className="slds-assistive-text"
+    >
+      Accounts
+    </span>
+  </a>
+</footer>
+`;
+
+exports[`Card Footer renders an empty card footer 1`] = `
+<footer
+  className="slds-card__footer"
+/>
+`;
+
+exports[`Card Header renders a card header with action 1`] = `
+<div
+  className="slds-card__header slds-grid"
+>
+  <header
+    className="slds-media slds-media_center slds-has-flexi-truncate"
+  >
+    <div
+      className="slds-media__body"
+    >
+      <h2
+        className="slds-card__header-title"
+      >
+        <a
+          className="slds-card__header-link slds-truncate"
+          href="javascript:void(0);"
+          title="Card Header"
+        >
+          <span>
+            Card Header
+          </span>
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-no-flex"
+    >
+      <button
+        className="slds-button slds-button_neutral"
+      >
+        New
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Card Header renders a card header with icon 1`] = `
+<div
+  className="slds-card__header slds-grid"
+>
+  <header
+    className="slds-media slds-media_center slds-has-flexi-truncate"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-standard-contact"
+        title="contact"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          contact
+        </span>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <h2
+        className="slds-card__header-title"
+      >
+        <a
+          className="slds-card__header-link slds-truncate"
+          href="javascript:void(0);"
+          title="Card Header"
+        >
+          <span>
+            Card Header
+          </span>
+        </a>
+      </h2>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Card Header renders a card header with icon and action 1`] = `
+<div
+  className="slds-card__header slds-grid"
+>
+  <header
+    className="slds-media slds-media_center slds-has-flexi-truncate"
+  >
+    <div
+      className="slds-media__figure"
+    >
+      <span
+        className="slds-icon_container slds-icon-standard-contact"
+        title="contact"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          contact
+        </span>
+      </span>
+    </div>
+    <div
+      className="slds-media__body"
+    >
+      <h2
+        className="slds-card__header-title"
+      >
+        <a
+          className="slds-card__header-link slds-truncate"
+          href="javascript:void(0);"
+          title="Card Header"
+        >
+          <span>
+            Card Header
+          </span>
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-no-flex"
+    >
+      <button
+        className="slds-button slds-button_neutral"
+      >
+        New
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Card Header renders a simple card header 1`] = `
+<div
+  className="slds-card__header slds-grid"
+>
+  <header
+    className="slds-media slds-media_center slds-has-flexi-truncate"
+  >
+    <div
+      className="slds-media__body"
+    >
+      <h2
+        className="slds-card__header-title"
+      >
+        <a
+          className="slds-card__header-link slds-truncate"
+          href="javascript:void(0);"
+          title="Card Header"
+        >
+          <span>
+            Card Header
+          </span>
+        </a>
+      </h2>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Card renders a base card empty 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-card__header slds-grid"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-contact"
+          title="contact"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            contact
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-card__header-title"
+        >
+          <a
+            className="slds-card__header-link slds-truncate"
+            href="javascript:void(0);"
+            title="Card Header"
+          >
+            <span>
+              Card Header
+            </span>
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="slds-card__body"
+  />
+  <footer
+    className="slds-card__footer"
+  />
+</article>
+`;
+
+exports[`Card renders a base card with content in footer 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-card__header slds-grid"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-contact"
+          title="contact"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            contact
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-card__header-title"
+        >
+          <a
+            className="slds-card__header-link slds-truncate"
+            href="javascript:void(0);"
+            title="Card Header"
+          >
+            <span>
+              Card Header
+            </span>
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="slds-card__body"
+  >
+    Anything can go into the card body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All 
+      <span
+        className="slds-assistive-text"
+      >
+        Contacts
+      </span>
+    </a>
+  </footer>
+</article>
+`;
+
+exports[`Card renders a base card with empty footer 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-card__header slds-grid"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-contact"
+          title="contact"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            contact
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-card__header-title"
+        >
+          <a
+            className="slds-card__header-link slds-truncate"
+            href="javascript:void(0);"
+            title="Card Header"
+          >
+            <span>
+              Card Header
+            </span>
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="slds-card__body"
+  >
+    Anything can go into the card body
+  </div>
+  <footer
+    className="slds-card__footer"
+  />
+</article>
+`;
+
+exports[`Card renders a base card without a footer 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-card__header slds-grid"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-contact"
+          title="contact"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            contact
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-card__header-title"
+        >
+          <a
+            className="slds-card__header-link slds-truncate"
+            href="javascript:void(0);"
+            title="Card Header"
+          >
+            <span>
+              Card Header
+            </span>
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="slds-card__body"
+  >
+    Anything can go into the card body
+  </div>
+</article>
+`;
+
+exports[`Einstein Card renders a base einstein card 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-grid slds-einstein-header slds-card__header"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id={undefined}
+            title="Einstein (10+)"
+          >
+            <a
+              className="slds-card__header-link"
+              href="javascript:void(0);"
+              title="Einstein (10+)"
+            >
+              <span
+                className="slds-text-heading_small"
+              >
+                Einstein (10+)
+              </span>
+            </a>
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"
+      />
+    </header>
+  </div>
+  <div
+    className="slds-card__body slds-card__body_inner"
+  >
+    Card Body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All
+       
+      <span
+        className="slds-assistive-text"
+      >
+        Einstein Recommendations
+      </span>
+    </a>
+  </footer>
+</article>
+`;
+
+exports[`Einstein Card renders an einstein card with actions 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-grid slds-einstein-header slds-card__header"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id={undefined}
+            title="Einstein (10+)"
+          >
+            <a
+              className="slds-card__header-link"
+              href="javascript:void(0);"
+              title="Einstein (10+)"
+            >
+              <span
+                className="slds-text-heading_small"
+              >
+                Einstein (10+)
+              </span>
+            </a>
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"
+      />
+    </header>
+    <div
+      className="slds-einstein-header__actions"
+    >
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Email"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#email"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Email
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Edit"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Edit
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-card__body slds-card__body_inner"
+  >
+    Card Body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All
+       
+      <span
+        className="slds-assistive-text"
+      >
+        Einstein Recommendations
+      </span>
+    </a>
+  </footer>
+</article>
+`;
+
+exports[`Einstein Card renders an einstein card with icon 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-grid slds-einstein-header slds-card__header"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-salesforce1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id={undefined}
+            title="Einstein (10+)"
+          >
+            <a
+              className="slds-card__header-link"
+              href="javascript:void(0);"
+              title="Einstein (10+)"
+            >
+              <span
+                className="slds-text-heading_small"
+              >
+                Einstein (10+)
+              </span>
+            </a>
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"
+      />
+    </header>
+  </div>
+  <div
+    className="slds-card__body slds-card__body_inner"
+  >
+    Card Body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All
+       
+      <span
+        className="slds-assistive-text"
+      >
+        Einstein Recommendations
+      </span>
+    </a>
+  </footer>
+</article>
+`;
+
+exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-grid slds-einstein-header slds-card__header"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-salesforce1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id={undefined}
+            title="Einstein (10+)"
+          >
+            <a
+              className="slds-card__header-link"
+              href="javascript:void(0);"
+              title="Einstein (10+)"
+            >
+              <span
+                className="slds-text-heading_small"
+              >
+                Einstein (10+)
+              </span>
+            </a>
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"
+      />
+    </header>
+    <div
+      className="slds-einstein-header__actions"
+    >
+      <div
+        className="slds-button-group"
+        role="group"
+      >
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Email"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#email"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Email
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          aria-pressed="false"
+          className="slds-button slds-button_icon slds-button_icon-border-filled"
+          id={undefined}
+          title="Edit"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Edit
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-card__body slds-card__body_inner"
+  >
+    Card Body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All
+       
+      <span
+        className="slds-assistive-text"
+      >
+        Einstein Recommendations
+      </span>
+    </a>
+  </footer>
+</article>
+`;

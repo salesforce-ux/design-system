@@ -7,17 +7,17 @@ import createHelpers from '../../../../jest.helpers';
 import SetupAssistantStepSummary from '../SetupAssistantStepSummary';
 import SetupAssistantStepDetail from '../SetupAssistantStepDetail';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Setup Assistant ', () => {
   it('renders a base setup assistant step', () =>
-    matchesMarkupAndStyle(<SetupAssistantStepSummary />));
+    matchesMarkup(<SetupAssistantStepSummary />));
 
   it('renders a setup assistant step with a duration', () =>
-    matchesMarkupAndStyle(<SetupAssistantStepSummary duration="5 mins" />));
+    matchesMarkup(<SetupAssistantStepSummary duration="5 mins" />));
 
   it('renders a setup assistant step with a link action and duration', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         action={{ type: 'link', title: 'Add Users' }}
         duration="5 mins"
@@ -25,14 +25,14 @@ describe('Setup Assistant ', () => {
     ));
 
   it('renders an incomplete setup assistant step', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: false, number: '3' }}
       />
     ));
 
   it('renders an in-progess setup assistant step', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: false, number: '2' }}
         isActiveStep
@@ -40,7 +40,7 @@ describe('Setup Assistant ', () => {
     ));
 
   it('renders an in-progess setup assistant step with progress ring percentage', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: false, number: '2', percentage: 33 }}
         isActiveStep
@@ -48,14 +48,14 @@ describe('Setup Assistant ', () => {
     ));
 
   it('renders a complete setup assistant step', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: true, number: '1' }}
       />
     ));
 
   it('renders a setup assistant step with the title as a button', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: true, number: '1' }}
         referenceId="test-detail-action-1"
@@ -63,7 +63,7 @@ describe('Setup Assistant ', () => {
     ));
 
   it('renders a setup assistant step with title button and aria expanded true', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <SetupAssistantStepSummary
         stepProgress={{ isComplete: true, number: '1' }}
         referenceId="test-detail-action-1"
@@ -71,6 +71,6 @@ describe('Setup Assistant ', () => {
       />
     ));
 
-  xit('renders a step detail', () =>
-    matchesMarkupAndStyle(<SetupAssistantStepDetail />));
+  it('renders a step detail', () =>
+    matchesMarkup(<SetupAssistantStepDetail />));
 });

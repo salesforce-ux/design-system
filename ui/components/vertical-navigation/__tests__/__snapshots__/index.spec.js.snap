@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vertical Nav Radio Group renders a checked radio button 1`] = `
+<span
+  className="slds-nav-vertical__item"
+>
+  <input
+    defaultChecked={true}
+    id="test1"
+    name="example"
+    type="radio"
+    value="test1"
+  />
+  <label
+    className="slds-nav-vertical__action"
+    htmlFor="test1"
+  >
+    <span
+      className="slds-nav-vertical_radio-faux"
+    />
+  </label>
+</span>
+`;
+
+exports[`Vertical Nav Radio Group renders a compact fieldset 1`] = `
+<fieldset
+  className="slds-nav-vertical slds-nav-vertical_compact"
+>
+  <legend
+    className="slds-nav-vertical__title slds-text-title_caps"
+  >
+    Reports
+  </legend>
+  <span
+    className="slds-nav-vertical__item"
+  >
+    <input
+      defaultChecked={undefined}
+      id="test1"
+      name="example"
+      type="radio"
+      value="test1"
+    />
+    <label
+      className="slds-nav-vertical__action"
+      htmlFor="test1"
+    >
+      <span
+        className="slds-nav-vertical_radio-faux"
+      >
+        test1
+      </span>
+    </label>
+  </span>
+</fieldset>
+`;
+
+exports[`Vertical Nav Radio Group renders a fieldset 1`] = `
+<fieldset
+  className="slds-nav-vertical"
+>
+  <legend
+    className="slds-nav-vertical__title slds-text-title_caps"
+  >
+    Reports
+  </legend>
+  <span
+    className="slds-nav-vertical__item"
+  >
+    <input
+      defaultChecked={undefined}
+      id="test1"
+      name="example"
+      type="radio"
+      value="test1"
+    />
+    <label
+      className="slds-nav-vertical__action"
+      htmlFor="test1"
+    >
+      <span
+        className="slds-nav-vertical_radio-faux"
+      >
+        test1
+      </span>
+    </label>
+  </span>
+</fieldset>
+`;
+
+exports[`Vertical Nav Radio Group renders a focus state 1`] = `"<span class=\\"slds-nav-vertical__item\\"><input type=\\"radio\\" id=\\"recent\\" value=\\"recent\\" name=\\"example\\"><label class=\\"slds-nav-vertical__action\\" for=\\"recent\\"><span class=\\"slds-nav-vertical_radio-faux\\">Recent</span></label></span>"`;
+
+exports[`Vertical Nav Radio Group renders a hover state 1`] = `"<span class=\\"slds-nav-vertical__item\\"><input type=\\"radio\\" id=\\"recent\\" value=\\"recent\\" name=\\"example\\"><label class=\\"slds-nav-vertical__action\\" for=\\"recent\\"><span class=\\"slds-nav-vertical_radio-faux\\">Recent</span></label></span>"`;
+
+exports[`Vertical Nav Radio Group renders a radio button 1`] = `
+<span
+  className="slds-nav-vertical__item"
+>
+  <input
+    defaultChecked={undefined}
+    id="test1"
+    name="example"
+    type="radio"
+    value="test1"
+  />
+  <label
+    className="slds-nav-vertical__action"
+    htmlFor="test1"
+  >
+    <span
+      className="slds-nav-vertical_radio-faux"
+    />
+  </label>
+</span>
+`;
+
+exports[`Vertical Nav Radio Group renders a shaded fieldset 1`] = `
+<fieldset
+  className="slds-nav-vertical slds-nav-vertical_shade"
+>
+  <legend
+    className="slds-nav-vertical__title slds-text-title_caps"
+  >
+    Reports
+  </legend>
+  <span
+    className="slds-nav-vertical__item"
+  >
+    <input
+      defaultChecked={undefined}
+      id="test1"
+      name="example"
+      type="radio"
+      value="test1"
+    />
+    <label
+      className="slds-nav-vertical__action"
+      htmlFor="test1"
+    >
+      <span
+        className="slds-nav-vertical_radio-faux"
+      >
+        test1
+      </span>
+    </label>
+  </span>
+</fieldset>
+`;

@@ -1,0 +1,1147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a closed and focused docked composer 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-has-focus slds-is-closed"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Minimized
+          </span>
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`renders a closed docked composer 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-is-closed"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Minimized
+          </span>
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`renders a docked composer 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-is-open"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`renders a docked composer with multiple composer overflow 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <div
+    className="slds-docked-composer slds-docked-composer_overflow"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-docked-composer_overflow__button"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#standard_objects"
+        />
+      </svg>
+      <span
+        className="slds-text-body_small slds-m-left_xx-small"
+      >
+        3
+         
+        <span
+          className="slds-assistive-text"
+        >
+          other docked composer panels
+        </span>
+      </span>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_left slds-dropdown_bottom slds-dropdown_medium slds-nubbin_bottom-left"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list slds-dropdown_length-with-icon-7"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Agenda for next week"
+            >
+              <span
+                className="slds-icon_container slds-icon-standard-email slds-m-right_x-small"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#email"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  email
+                </span>
+              </span>
+              Agenda for next week
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Lei Chan"
+            >
+              <span
+                className="slds-icon_container slds-icon-standard-call slds-m-right_x-small"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  call
+                </span>
+              </span>
+              Lei Chan
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="August 14 Meeting Notes"
+            >
+              <span
+                className="slds-icon_container slds-icon-standard-task slds-m-right_x-small"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  task
+                </span>
+              </span>
+              August 14 Meeting Notes
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-is-open"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`renders a docked composer with popout 1`] = `
+<div>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open slds-docked-composer-modal"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <div
+        className="slds-modal__content"
+        id="modal-content-id"
+      >
+        <section
+          aria-describedby={null}
+          aria-labelledby={null}
+          className="slds-docked-composer slds-grid slds-grid_vertical"
+          role={null}
+        >
+          <header
+            aria-live="assertive"
+            className="slds-docked-composer__header slds-grid slds-shrink-none"
+          >
+            <div
+              className="slds-media slds-media_center slds-no-space"
+            >
+              <div
+                className="slds-media__figure slds-m-right_x-small"
+              >
+                <span
+                  className="slds-icon_container"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="slds-media__body"
+              >
+                <h2
+                  className="slds-truncate"
+                  id="dialog-heading-id-1"
+                  title="Header"
+                >
+                  Header
+                </h2>
+              </div>
+            </div>
+            <div
+              className="slds-col_bump-left slds-shrink-none"
+            >
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon"
+                id={undefined}
+                title="Minimize window"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Minimize Composer Panel
+                </span>
+              </button>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon"
+                id={undefined}
+                title="Expand Composer"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Expand Composer Panel
+                </span>
+              </button>
+              <button
+                aria-haspopup={undefined}
+                className="slds-button slds-button_icon slds-button_icon"
+                id={undefined}
+                title="Close"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Close Composer Panel
+                </span>
+              </button>
+            </div>
+          </header>
+          <div
+            className="slds-docked-composer__body"
+            id="dialog-content-id-1"
+          >
+            <div
+              className="slds-align_absolute-center"
+            >
+              Docked Composer Panel Body 
+              <br />
+               This area consumes the feature
+            </div>
+          </div>
+          <footer
+            className="slds-docked-composer__footer slds-shrink-none"
+          >
+            <div
+              className="slds-col_bump-left slds-text-align_right"
+            >
+              <button
+                className="slds-button slds-button_brand"
+              >
+                Action
+              </button>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </section>
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />
+</div>
+`;
+
+exports[`renders a docked composer with single composer open 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-is-open"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`renders a focused docked composer 1`] = `
+<div
+  className="slds-docked_container"
+>
+  <section
+    aria-describedby="dialog-content-id-1"
+    aria-labelledby="dialog-heading-id-1"
+    className="slds-docked-composer slds-grid slds-grid_vertical slds-is-open slds-has-focus"
+    role="dialog"
+  >
+    <header
+      aria-live="assertive"
+      className="slds-docked-composer__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center slds-no-space"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            className="slds-truncate"
+            id="dialog-heading-id-1"
+            title="Header"
+          >
+            Header
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Minimize window"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Minimize Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Expand Composer"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Composer Panel
+          </span>
+        </button>
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Composer Panel
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="slds-docked-composer__body"
+      id="dialog-content-id-1"
+    >
+      <div
+        className="slds-align_absolute-center"
+      >
+        Docked Composer Panel Body 
+        <br />
+         This area consumes the feature
+      </div>
+    </div>
+    <footer
+      className="slds-docked-composer__footer slds-shrink-none"
+    >
+      <div
+        className="slds-col_bump-left slds-text-align_right"
+      >
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Action
+        </button>
+      </div>
+    </footer>
+  </section>
+</div>
+`;

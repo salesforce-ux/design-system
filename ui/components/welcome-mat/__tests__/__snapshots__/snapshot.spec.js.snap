@@ -1,0 +1,1099 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Mat Content renders a default welcome mat content 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <div
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    <p>
+      Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+    </p>
+  </div>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <p>
+      <strong>
+        0
+        /
+        5
+         units completed
+      </strong>
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Content renders a welcome mat content with 2 complete units 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <div
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    <p>
+      Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+    </p>
+  </div>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <p>
+      <strong>
+        2
+        /
+        5
+         units completed
+      </strong>
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={40}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        40%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Content renders a welcome mat content with 3 total units 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <div
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    <p>
+      Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+    </p>
+  </div>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <p>
+      <strong>
+        0
+        /
+        3
+         units completed
+      </strong>
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Content renders a welcome mat content with a label and description 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-test-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <div
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    <p>
+      This is a test welcome mat
+    </p>
+  </div>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <p>
+      <strong>
+        0
+        /
+        5
+         units completed
+      </strong>
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Snapshots renders a welcome mat 1`] = `
+<section
+  aria-describedby="welcome-mat-1-content"
+  aria-labelledby="welcome-mat-1-label"
+  aria-modal="true"
+  className="slds-modal slds-fade-in-open slds-welcome-mat"
+  role="dialog"
+  tabIndex="-1"
+>
+  <div
+    className="slds-modal__container"
+  >
+    <header
+      className="slds-modal__header slds-modal__header_empty"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </header>
+    <div
+      className="slds-modal__content slds-welcome-mat__content slds-grid"
+      id="welcome-mat-1-content"
+    >
+      <div
+        className="slds-welcome-mat__info slds-size_1-of-2"
+      >
+        <div
+          className="slds-welcome-mat__info-content"
+        >
+          <h2
+            className="slds-welcome-mat__info-title"
+            id="welcome-mat-1-label"
+          >
+            The Lightning Experience is here!
+          </h2>
+          <div
+            className="slds-welcome-mat__info-description slds-text-longform"
+          >
+            <p>
+              Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+            </p>
+          </div>
+          <div
+            className="slds-welcome-mat__info-progress"
+          >
+            <p>
+              <strong>
+                0
+                /
+                5
+                 units completed
+              </strong>
+            </p>
+          </div>
+          <div
+            aria-labelledby={undefined}
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0}
+            className="slds-progress-bar slds-progress-bar_circular"
+            role="progressbar"
+          >
+            <span
+              className="slds-progress-bar__value"
+              style={
+                Object {
+                  "width": "0%",
+                }
+              }
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                Progress: 
+                0%
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <ul
+        className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium"
+      >
+        <li
+          className="slds-welcome-mat__tile"
+        >
+          <a
+            className="slds-box slds-box_link slds-box_x-small slds-media"
+            href="javascript:void(0);"
+          >
+            <div
+              className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+            >
+              <div
+                className="slds-welcome-mat__tile-icon-container"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-animal_and_nature"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#animal_and_nature"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+                  title="Completed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-welcome-mat__icon-check"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Completed
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body slds-border_left slds-p-around_small"
+            >
+              <h3
+                className="slds-welcome-mat__tile-title"
+              >
+                Welcome to Salesforce!
+              </h3>
+              <p
+                className="slds-welcome-mat__tile-description"
+              >
+                Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-welcome-mat__tile"
+        >
+          <a
+            className="slds-box slds-box_link slds-box_x-small slds-media"
+            href="javascript:void(0);"
+          >
+            <div
+              className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+            >
+              <div
+                className="slds-welcome-mat__tile-icon-container"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-call"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#call"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+                  title="Completed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-welcome-mat__icon-check"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Completed
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body slds-border_left slds-p-around_small"
+            >
+              <h3
+                className="slds-welcome-mat__tile-title"
+              >
+                Learn About OpenCTI
+              </h3>
+              <p
+                className="slds-welcome-mat__tile-description"
+              >
+                Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-welcome-mat__tile"
+        >
+          <a
+            className="slds-box slds-box_link slds-box_x-small slds-media"
+            href="javascript:void(0);"
+          >
+            <div
+              className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+            >
+              <div
+                className="slds-welcome-mat__tile-icon-container"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-upload"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+                  title="Completed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-welcome-mat__icon-check"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Completed
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body slds-border_left slds-p-around_small"
+            >
+              <h3
+                className="slds-welcome-mat__tile-title"
+              >
+                Power Up the Utility Bar
+              </h3>
+              <p
+                className="slds-welcome-mat__tile-description"
+              >
+                Tap into case history or share notes with fellow agents—it all happens on the utility bar.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-welcome-mat__tile"
+        >
+          <a
+            className="slds-box slds-box_link slds-box_x-small slds-media"
+            href="javascript:void(0);"
+          >
+            <div
+              className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+            >
+              <div
+                className="slds-welcome-mat__tile-icon-container"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-magicwand"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#magicwand"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+                  title="Completed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-welcome-mat__icon-check"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Completed
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body slds-border_left slds-p-around_small"
+            >
+              <h3
+                className="slds-welcome-mat__tile-title"
+              >
+                Customize your view
+              </h3>
+              <p
+                className="slds-welcome-mat__tile-description"
+              >
+                Tailor your cases to your team's workflow with custom list views.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-welcome-mat__tile"
+        >
+          <a
+            className="slds-box slds-box_link slds-box_x-small slds-media"
+            href="javascript:void(0);"
+          >
+            <div
+              className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+            >
+              <div
+                className="slds-welcome-mat__tile-icon-container"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-knowledge_base"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#knowledge_base"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+                  title="Completed"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-welcome-mat__icon-check"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Completed
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body slds-border_left slds-p-around_small"
+            >
+              <h3
+                className="slds-welcome-mat__tile-title"
+              >
+                Share the Knowledge
+              </h3>
+              <p
+                className="slds-welcome-mat__tile-description"
+              >
+                Harness your team's collective know-how with our powerful knowledge base.
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Welcome Mat Tiles renders a complete tile 1`] = `
+<li
+  className="slds-welcome-mat__tile slds-welcome-mat__tile_complete"
+>
+  <a
+    className="slds-box slds-box_link slds-box_x-small slds-media"
+    href="javascript:void(0);"
+  >
+    <div
+      className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+    >
+      <div
+        className="slds-welcome-mat__tile-icon-container"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-animal_and_nature"
+          title={null}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#animal_and_nature"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+          title="Completed"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-welcome-mat__icon-check"
+          >
+            <use
+              xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Completed
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-border_left slds-p-around_small"
+    >
+      <h3
+        className="slds-welcome-mat__tile-title"
+      >
+        Welcome to this Test!
+      </h3>
+      <p
+        className="slds-welcome-mat__tile-description"
+      >
+        This is a test description
+      </p>
+    </div>
+  </a>
+</li>
+`;
+
+exports[`Welcome Mat Tiles renders a default tile 1`] = `
+<li
+  className="slds-welcome-mat__tile"
+>
+  <a
+    className="slds-box slds-box_link slds-box_x-small slds-media"
+    href="javascript:void(0);"
+  >
+    <div
+      className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+    >
+      <div
+        className="slds-welcome-mat__tile-icon-container"
+      >
+        <span
+          className="slds-icon_container slds-icon-utility-animal_and_nature"
+          title={null}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#animal_and_nature"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+          title="Completed"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-welcome-mat__icon-check"
+          >
+            <use
+              xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Completed
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="slds-media__body slds-border_left slds-p-around_small"
+    >
+      <h3
+        className="slds-welcome-mat__tile-title"
+      >
+        Welcome to Salesforce!
+      </h3>
+      <p
+        className="slds-welcome-mat__tile-description"
+      >
+        Lorem ipsum dolor sit amet, lorem ipsum dolor.
+      </p>
+    </div>
+  </a>
+</li>
+`;
+
+exports[`Welcome Mat Trailhead Content renders a default trailhead content 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <p
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+  </p>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <div
+      className="slds-welcome-mat__info-badge-container"
+    >
+      <img
+        alt=""
+        className="slds-welcome-mat__info-badge"
+        height="50"
+        src="/assets/images/welcome-mat/trailhead_badge@2x.png"
+        width="50"
+      />
+      <span
+        className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+        title="Completed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-welcome-mat__icon-check slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Completed
+        </span>
+      </span>
+    </div>
+    <p>
+      <strong>
+        Lightning Explorer
+      </strong>
+    </p>
+    <p>
+      0
+      /
+      5
+       units completed
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Trailhead Content renders a trailhead content with 2 complete units 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <p
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+  </p>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <div
+      className="slds-welcome-mat__info-badge-container"
+    >
+      <img
+        alt=""
+        className="slds-welcome-mat__info-badge"
+        height="50"
+        src="/assets/images/welcome-mat/trailhead_badge@2x.png"
+        width="50"
+      />
+      <span
+        className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+        title="Completed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-welcome-mat__icon-check slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Completed
+        </span>
+      </span>
+    </div>
+    <p>
+      <strong>
+        Lightning Explorer
+      </strong>
+    </p>
+    <p>
+      2
+      /
+      5
+       units completed
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={40}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        40%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Trailhead Content renders a trailhead content with 3 total units 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-label-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <p
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+  </p>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <div
+      className="slds-welcome-mat__info-badge-container"
+    >
+      <img
+        alt=""
+        className="slds-welcome-mat__info-badge"
+        height="50"
+        src="/assets/images/welcome-mat/trailhead_badge@2x.png"
+        width="50"
+      />
+      <span
+        className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+        title="Completed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-welcome-mat__icon-check slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Completed
+        </span>
+      </span>
+    </div>
+    <p>
+      <strong>
+        Lightning Explorer
+      </strong>
+    </p>
+    <p>
+      0
+      /
+      3
+       units completed
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;
+
+exports[`Welcome Mat Trailhead Content renders a trailhead content with a label id 1`] = `
+Array [
+  <h2
+    className="slds-welcome-mat__info-title"
+    id="welcome-mat-test-1"
+  >
+    The Lightning Experience is here!
+  </h2>,
+  <p
+    className="slds-welcome-mat__info-description slds-text-longform"
+  >
+    Welcome to Lightning Experience, the modern, beautiful user experience from Salesforce. With a sales-and service-centric mindset, we focused on reinventing the desktop environment to better support your business processes.
+  </p>,
+  <div
+    className="slds-welcome-mat__info-progress"
+  >
+    <div
+      className="slds-welcome-mat__info-badge-container"
+    >
+      <img
+        alt=""
+        className="slds-welcome-mat__info-badge"
+        height="50"
+        src="/assets/images/welcome-mat/trailhead_badge@2x.png"
+        width="50"
+      />
+      <span
+        className="slds-icon_container slds-icon_container_circle slds-icon-action-check"
+        title="Completed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-welcome-mat__icon-check slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Completed
+        </span>
+      </span>
+    </div>
+    <p>
+      <strong>
+        Lightning Explorer
+      </strong>
+    </p>
+    <p>
+      0
+      /
+      5
+       units completed
+    </p>
+  </div>,
+  <div
+    aria-labelledby={undefined}
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={0}
+    className="slds-progress-bar slds-progress-bar_circular"
+    role="progressbar"
+  >
+    <span
+      className="slds-progress-bar__value"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        Progress: 
+        0%
+      </span>
+    </span>
+  </div>,
+]
+`;

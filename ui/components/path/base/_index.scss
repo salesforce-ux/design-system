@@ -661,6 +661,10 @@
  */
 .slds-region_medium {
 
+  .slds-path_has-coaching .slds-path__action {
+    padding-left: ($spacing-small + $square-icon-medium-boundary);
+  }
+
   .slds-path__scroller-container {
     flex-basis: 100%;
   }
@@ -676,7 +680,6 @@
     align-items: center;
     margin-top: $spacing-medium;
     margin-left: 0;
-    padding-left: ($spacing-small + $square-icon-medium-boundary);
   }
 
   .slds-path__stage-name {

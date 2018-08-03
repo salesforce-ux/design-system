@@ -48,7 +48,8 @@ const Coach = props => (
   <Card>
     <div
       className={classNames('slds-path', {
-        'slds-is-expanded': props.isExpanded
+        'slds-is-expanded': props.isExpanded,
+        'slds-path_has-coaching': props.isExpanded
       })}
     >
       {props.children}

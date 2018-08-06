@@ -1,0 +1,96 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+  deprecated: true
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
+props:
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_COOL_GRAY_1}'
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_COOL_GRAY_2}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!PALETTE_COOL_GRAY_1}'
+  COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_HOVER:
+    value: '{!ENDEAVOUR}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_FOCUS:
+    value: '{!ENDEAVOUR}'
+  COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_COOL_GRAY_1}'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+  COLOR_BACKGROUND_ALT_2:
+    value: '{!PALETTE_COOL_GRAY_3}'
+    comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+  COLOR_BACKGROUND_BROWSER:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: 'Secondary top bar background color (child browser, file preview, etc.)'
+  COLOR_BACKGROUND_CHROME_MOBILE:
+    value: '{!SCIENCE_BLUE}'
+    comment: Background color for default mobile chrome (ex. global header)
+  COLOR_BACKGROUND_CHROME_DESKTOP:
+    value: '{!WHITE}'
+    comment: Background color for default desktop chrome (ex. global header)
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Notifications badge background color.
+  COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
+    value: '{!DEEP_COVE}'
+    comment: Stage left org switcher dropdown arrow background color.
+  COLOR_BACKGROUND_PAYLOAD:
+    value: '{!PALETTE_COOL_GRAY_2}'
+    comment: Background color for payloads in the feed.
+  COLOR_BACKGROUND_UTILITY_BAR_HOVER:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Hover color for utility bar item.
+  COLOR_BACKGROUND_UTILITY_BAR_ACTIVE:
+    value: '{!AZURE}'
+    comment: Active color for utility bar item.
+  COLOR_BACKGROUND_SHADE_DARK:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    specificity: builders
+    comment: Used as gray background in conjunction with Shade when more contrast is desired.
+  COLOR_BACKGROUND_TEMP_MODAL:
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
+  COLOR_BACKGROUND_TEMP_MODAL_TINT:
+    value: '{!REGENT_GREY_TRANSPARENT_80}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+  COLOR_BACKGROUND_TEMP_MODAL_TINT_ALT:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+  COLOR_BACKGROUND_TOGGLE_ACTIVE:
+    value: '{!SCIENCE_BLUE}'
+    comment: Active toggle background color.
+  COLOR_BACKGROUND_TOGGLE_ACTIVE_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Hovered active toggle background color.
+  COLOR_BACKGROUND_INPUT_CHECKBOX:
+    value: '{!WHITE}'
+    comment: Default checkboxes
+  COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
+    value: '{!AZURE}'
+    comment: Selected checkboxes
+  COLOR_BACKGROUND_INPUT_SEARCH:
+    value: '{!BLACK_TRANSPARENT_16}'
+    comment: Background color for search input fields.
+  COLOR_BACKGROUND_ERROR_ALT:
+    value: '{!DEEP_BLUSH}'
+    comment: Alternative color for UI elements related to errors.

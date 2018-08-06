@@ -1,0 +1,74 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+  - text-shadow
+  deprecated: true
+imports:
+- ../../../aliases/color-palettes.yml
+props:
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_DARK instead.'
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: 'rgba(253,253,253,0)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
+    value: 'rgba(253,253,253,0)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_DARK_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+  ## BACKGROUNDS
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_3}'
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_1}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!PALETTE_GRAY_3}'
+  COLOR_BACKGROUND_ALT_2:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+  COLOR_BACKGROUND_SHADE_DARK:
+    value: '{!PALETTE_GRAY_5}'
+    specificity: builders
+    comment: Used as gray background in conjunction with Shade when more contrast is desired.
+  COLOR_BACKGROUND_BROWSER:
+    value: '{!PALETTE_GRAY_9}'
+    comment: 'Secondary top bar background color (child browser, file preview, etc.)'
+  ## MODAL BACKDROPS
+  COLOR_BACKGROUND_TEMP_MODAL:
+    value: '{!PALETTE_GRAY_8}'
+    comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
+  COLOR_BACKGROUND_TEMP_MODAL_TINT:
+    value: '{!PALETTE_DARK_GRAY_TRANSPARENT_60}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+  ## FEEDBACK
+  COLOR_BACKGROUND_OFFLINE:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Color for UI elements related to the offline state.
+  ## FEED
+  COLOR_BACKGROUND_PAYLOAD:
+    value: '{!PALETTE_GRAY_2}'
+    comment: Background color for payloads in the feed.
+  ## UTILITY BAR
+  COLOR_BACKGROUND_UTILITY_BAR_HOVER:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Hover color for utility bar item.
+  ## ACTION BAR
+  COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Background for utility icons that live in the action bar on mobile.
+  ## PAGE HEADERS
+  COLOR_BACKGROUND_ANCHOR:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.

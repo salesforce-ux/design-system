@@ -1,0 +1,18 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: radius
+  cssProperties:
+  - 'border-radius'
+  theme: true
+imports:
+- ../../aliases/border-radius.yml
+props:
+  ## PAGE HEADER
+  PAGE_HEADER_BORDER_RADIUS:
+    value: '{!BORDER_RADIUS_MEDIUM}'
+  ## TABLES
+  TABLE_BORDER_RADIUS:
+    value: '0 0 {!BORDER_RADIUS_MEDIUM} {!BORDER_RADIUS_MEDIUM}'

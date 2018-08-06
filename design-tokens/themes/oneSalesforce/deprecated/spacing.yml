@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - 'margin*'
+  - 'padding*'
+  deprecated: true
+imports:
+- ../../../aliases/spacing.yml
+props:
+  ## CARD
+  CARD_SPACING_MARGIN:
+    value: '{!SPACING_SMALL}'
+  CARD_FOOTER_PADDING:
+    value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'

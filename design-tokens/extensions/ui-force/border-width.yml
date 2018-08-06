@@ -1,0 +1,24 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: border-style
+  type: size
+  cssProperties:
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+  - stroke
+  - stroke-width
+imports:
+- ../../aliases/border-width.yml
+props:
+  BORDER_WIDTH_THIN:
+    value: '{!BORDER_WIDTH_THIN}'
+  BORDER_WIDTH_THICK:
+    value: '{!BORDER_WIDTH_THICK}'
+  BORDER_STROKE_WIDTH_THIN:
+    value: '{!BORDER_WIDTH_THIN}'
+  BORDER_STROKE_WIDTH_THICK:
+    value: '{!BORDER_WIDTH_THICK}'

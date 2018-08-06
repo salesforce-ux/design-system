@@ -1,0 +1,36 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+  deprecated: true
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
+props:
+  COLOR_BORDER_BRAND_PRIMARY:
+    value: '{!AZURE}'
+  COLOR_BORDER_BRAND_PRIMARY_HOVER:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BORDER_BRAND_PRIMARY_FOCUS:
+    value: '{!SCIENCE_BLUE}'
+  COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+  COLOR_BORDER_HINT:
+    value: '{!SAN_JUAN}'
+    specificity: builders
+    comment: Used to delineate the boundary of a specific region. Specific to builders.
+  COLOR_STROKE_DISABLED:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    cssProperties:
+    - stroke
+    comment: Disabled stroke color.
+  COLOR_STROKE_HEADER_BUTTON:
+    value: '{!PALETTE_COOL_GRAY_7}'
+    cssProperties:
+    - stroke
+    comment: Stroke color for our global header buttons.

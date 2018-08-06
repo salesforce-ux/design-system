@@ -1,0 +1,9 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+  BORDER_RADIUS_SMALL: "0.125rem"
+  BORDER_RADIUS_MEDIUM: "0.25rem"
+  BORDER_RADIUS_LARGE: "0.5rem"
+  BORDER_RADIUS_CIRCLE: "50%"
+  BORDER_RADIUS_PILL: "15rem"

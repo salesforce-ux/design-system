@@ -6,7 +6,7 @@ global:
   - color
 
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/aliases/colors.yml"
 - "../../../../design-tokens/aliases/color-palettes.yml"
 
 props:

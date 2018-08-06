@@ -1,0 +1,16 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  cssProperties:
+  - 'margin*'
+  - 'padding*'
+imports:
+- ../../aliases/spacing.yml
+props:
+  COMPONENT_SPACING_MARGIN:
+    value: '0'
+  COMPONENT_SPACING_PADDING:
+    value: '{!SPACING_MEDIUM}'

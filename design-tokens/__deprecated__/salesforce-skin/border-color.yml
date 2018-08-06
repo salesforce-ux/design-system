@@ -1,0 +1,102 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- ../../aliases/colors.yml
+- ../../aliases/color-palettes.yml
+props:
+  ## DEFAULT
+  COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_5}'
+  COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+    cssProperties:
+    - 'border*'
+    - box-shadow
+    - 'background*'
+    comment: Default border color for UI elements.
+  COLOR_BORDER_SEPARATOR:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Lightest separator color - used as default separator on white backgrounds.
+  COLOR_BORDER_SEPARATOR_ALT:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Medium separator color - used as default separator on light gray backgrounds.
+  COLOR_BORDER_SEPARATOR_ALT_2:
+    value: '{!PALETTE_GRAY_6}'
+    comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
+  ## STROKES
+  COLOR_STROKE_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Our product brand blue.
+    deprecated: true
+  COLOR_STROKE_BRAND_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Hover stroke color for our product brand blue.
+    deprecated: true
+  COLOR_STROKE_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    cssProperties:
+    - stroke
+    comment: Active stroke color for our product brand blue.
+    deprecated: true
+  COLOR_STROKE_DISABLED:
+    value: '{!PALETTE_GRAY_4}'
+    cssProperties:
+    - stroke
+    comment: Disabled stroke color.
+    deprecated: true
+  COLOR_STROKE_HEADER_BUTTON:
+    value: '{!PALETTE_GRAY_7}'
+    cssProperties:
+    - stroke
+    comment: Stroke color for our global header buttons.
+    deprecated: true
+  ## FEEDBACK
+  COLOR_BORDER_INFO:
+    value: '{!PALETTE_GRAY_9}'
+    comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BORDER_OFFLINE:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Border color for UI elements related to the offline state.
+  ## SELECTION
+  COLOR_BORDER_SELECTION_ACTIVE:
+    value: '{!PALETTE_GRAY_3}'
+    specificity: builders
+    comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.
+  ## INPUT
+  COLOR_BORDER_INPUT:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Border color on form elements.
+  COLOR_BORDER_INPUT_DISABLED:
+    value: '{!PALETTE_GRAY_6}'
+    comment: Border color on disabled form elements.
+  ## NOTIFICATION
+  COLOR_BORDER_REMINDER:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Border color on notification reminders.
+  ## BUTTON
+  BUTTON_COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_5}'
+  COLOR_BORDER_BUTTON_DEFAULT:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Border color for default secondary button
+  ## PAGE HEADERS
+  PAGE_HEADER_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  PAGE_HEADER_JOINED_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  ## CARDS
+  CARD_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'
+  CARD_FOOTER_COLOR_BORDER:
+    value: '{!PALETTE_GRAY_5}'

@@ -9,7 +9,7 @@ global:
   - font
   - font-size
 imports:
-- "../../../../design-tokens/force-base/aliases/font-size.yml"
+- "../../../../design-tokens/aliases/font-size.yml"
 props:
   INPUT_STATIC_FONT_SIZE:
     value: '{!FONT_SIZE_3}'

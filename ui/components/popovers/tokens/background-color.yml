@@ -8,7 +8,7 @@ global:
   - box-shadow
   - text-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/aliases/colors.yml"
 props:
   POPOVER_WALKTHROUGH_COLOR_BACKGROUND:
     value: '{!DEEP_COVE}'

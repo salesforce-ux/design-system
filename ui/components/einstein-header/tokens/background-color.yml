@@ -5,7 +5,7 @@ global:
   cssProperties:
   - 'background*'
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/aliases/colors.yml"
 props:
   EINSTEIN_HEADER_BACKGROUND:
     value: '/assets/images/einstein-headers/einstein-header-background.svg'

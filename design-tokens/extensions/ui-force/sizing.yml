@@ -1,0 +1,23 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  HEIGHT_PILL:
+    value: 1.625rem
+    comment: Minimum height of a pill.

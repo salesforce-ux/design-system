@@ -8,8 +8,6 @@ global:
   cssProperties:
   - '*width'
   - '*height'
-imports:
-- "../../../../design-tokens/force-base/sizing.yml"
 props:
   GLOBAL_ACTION_ICON_SIZE:
     value: '1.5rem'

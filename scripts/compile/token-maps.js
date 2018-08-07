@@ -7,6 +7,9 @@ const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
 
+import scssParserAura from 'scss-parser-aura';
+import scssParserAuraPlugins from 'scss-parser-aura/plugins';
+
 const paths = require('../helpers/paths');
 const precss = require('precss');
 const postcss = require('postcss');
@@ -20,10 +23,23 @@ const packageJson = require('../../package.json');
 
 //
 
-let TokenMaps = {};
-let tokensMap = {};
+const jsonDir = path.join(paths.dist, 'design-tokens', 'dist', '**', '*.json');
+
+const getTokenNames = _.memoize(jsonDir =>
+  _(glob.sync(jsonDir))
+    .map(p => fs.readFileSync(p, 'utf-8'))
+    .map(json => JSON.parse(json))
+    .flatMap(obj => Object.keys(obj))
+    .filter(key => !key.match(/[a-z]/))
+    .map(key => _.kebabCase(key))
+    .uniq()
+    .value()
+);
 
 //
+
+let TokenMaps = {};
+let tokensMap = {};
 
 TokenMaps.addTimeDateStamp = aMap =>
   new Task((reject, resolve) => {
@@ -72,7 +88,10 @@ TokenMaps.createTokenComponentMap = () =>
     .chain(TokenMaps.addTimeDateStamp)
     .chain(TokenMaps.writeTokenComponentMap);
 
-TokenMaps.getComponentsPath = () => path.join(paths.ui, 'components');
+TokenMaps.createUtilityPropertiesMap = () =>
+  TokenMaps.parseScssTokenPreserved(TokenMaps.getUtilitiesScssPath())
+    .chain(TokenMaps.mapSelectorsToProps)
+    .chain(TokenMaps.writeUtilityPropertiesMap);
 
 TokenMaps.getComponentNameFromPath = (aPath, basePath) =>
   aPath
@@ -80,11 +99,20 @@ TokenMaps.getComponentNameFromPath = (aPath, basePath) =>
     .replace(/^\s*\//, '')
     .replace(/\/.*$/, '');
 
+TokenMaps.getComponentsPath = () => path.join(paths.ui, 'components');
+
 TokenMaps.getSassTokensInValue = value =>
   value
     .replace(/(\$-*[_a-zA-Z][a-zA-Z0-9_-]+)/gm, ' $1 ')
     .split(/\s+/)
     .filter(TokenMaps.isSassToken);
+
+TokenMaps.getTokenNames = getTokenNames;
+
+TokenMaps.getUtilitiesPath = () => path.join(paths.ui, 'utilities');
+
+TokenMaps.getUtilitiesScssPath = () =>
+  path.resolve(TokenMaps.getUtilitiesPath(), 'index-with-dependencies.scss');
 
 // Sass' Ruby code states:
 //
@@ -139,6 +167,48 @@ TokenMaps.loadTokens = () =>
     resolve(tokensMap);
   });
 
+TokenMaps.mapSelectorsToProps = css =>
+  new Task((reject, resolve) => {
+    let cssSelectorsWithDeclarations = {};
+
+    const addPropValueWithUniqueHash = (selector, prop, value, uniqueHash) => {
+      if (
+        !cssSelectorsWithDeclarations[selector].find(
+          x => x._hash === uniqueHash
+        )
+      ) {
+        cssSelectorsWithDeclarations[selector].push({
+          property: prop,
+          value: value,
+          _hash: uniqueHash
+        });
+      }
+    };
+
+    const ensureSelectorIsArray = selector =>
+      (cssSelectorsWithDeclarations[selector] =
+        cssSelectorsWithDeclarations[selector] || []);
+
+    const removeUniqueHashes = selectorHash => {
+      Object.keys(selectorHash).forEach(selector => {
+        selectorHash[selector].forEach(declaration => {
+          delete declaration._hash;
+        });
+      });
+    };
+
+    //
+
+    TokenMaps.walkCss(css, (selector, rule, declaration, root) => {
+      const { prop, value } = declaration;
+      ensureSelectorIsArray(selector);
+      addPropValueWithUniqueHash(selector, prop, value, `${prop}`);
+    }).then(ignoredResult => {
+      removeUniqueHashes(cssSelectorsWithDeclarations);
+      resolve(cssSelectorsWithDeclarations);
+    });
+  });
+
 TokenMaps.parseComponentsScss = scssComponentsMap =>
   new Task((reject, resolve) =>
     Promise.all(
@@ -153,59 +223,65 @@ TokenMaps.parseComponentsScss = scssComponentsMap =>
 TokenMaps.parseScssForTokens = scss =>
   new Promise((resolve, reject) => {
     let results = {};
-    let tkeys = Object.keys(tokensMap);
-
-    const walker = postcss.plugin(
-      'postcss-walker',
-      options => (root, result) => {
-        root.walkRules(rule => {
-          const selector = TokenMaps.sanitizeSelector(rule.selector);
-          rule.walkDecls(declaration => {
-            const { prop, value } = declaration;
-
-            if (TokenMaps.valueContainsSassTokens(value)) {
-              TokenMaps.getSassTokensInValue(value).forEach(sassTokenName => {
-                const auraTokenName = TokenMaps.convertSassTokenToAuraToken(
-                  sassTokenName
-                );
-                const yamlTokenName = TokenMaps.convertSassTokenToYamlToken(
-                  sassTokenName
-                );
-
-                const oldData = results[auraTokenName] || {};
-                results[auraTokenName] = Object.assign({}, oldData, {
-                  auraTokenName: auraTokenName,
-                  cssProperties: TokenMaps.uniqConcat(
-                    oldData.cssProperties,
-                    prop
-                  ).sort(),
-                  cssSelectors: TokenMaps.uniqConcat(
-                    oldData.cssSelectors,
-                    selector
-                  ).sort(),
-                  sassTokenName: sassTokenName,
-                  value:
-                    tokensMap[auraTokenName] && tokensMap[auraTokenName].value,
-                  yamlTokenName: yamlTokenName
-                });
-              });
-            }
-          });
-        });
-
-        result = root;
-      }
-    );
 
     const safeScss = TokenMaps.sanitizeScss(scss);
     const precssOptions = {
       unresolved: 'ignore'
     };
-    postcss([postcssNestedProps, precss(precssOptions), walker])
-      .process(safeScss, { parser: postcssScss })
-      .then(result => {
-        resolve(results);
-      });
+    TokenMaps.walkScss(
+      safeScss,
+      precssOptions,
+      (selector, rule, declaration, root) => {
+        const { prop, value } = declaration;
+
+        if (TokenMaps.valueContainsSassTokens(value)) {
+          TokenMaps.getSassTokensInValue(value).forEach(sassTokenName => {
+            const auraTokenName = TokenMaps.convertSassTokenToAuraToken(
+              sassTokenName
+            );
+            const yamlTokenName = TokenMaps.convertSassTokenToYamlToken(
+              sassTokenName
+            );
+
+            const oldData = results[auraTokenName] || {};
+            results[auraTokenName] = Object.assign({}, oldData, {
+              auraTokenName: auraTokenName,
+              cssProperties: TokenMaps.uniqConcat(
+                oldData.cssProperties,
+                prop
+              ).sort(),
+              cssSelectors: TokenMaps.uniqConcat(
+                oldData.cssSelectors,
+                selector
+              ).sort(),
+              sassTokenName: sassTokenName,
+              value: tokensMap[auraTokenName] && tokensMap[auraTokenName].value,
+              yamlTokenName: yamlTokenName
+            });
+          });
+        }
+      }
+    ).then(ignoredResult => {
+      resolve(results);
+    });
+  });
+
+TokenMaps.parseScssTokenPreserved = scssFilePath =>
+  new Task((reject, resolve) => {
+    const result = scssParserAura({
+      entry: scssFilePath,
+      getTokens: () => TokenMaps.getTokenNames(jsonDir),
+      plugins: {
+        sass: [
+          scssParserAuraPlugins.mixin,
+          scssParserAuraPlugins.operations,
+          scssParserAuraPlugins.value
+        ]
+      },
+      info: {},
+      transform: x => '___TOKEN___' + x.replace(/"|\+/gi, '') + '___END___'
+    }).cssTokenized.replace(/___TOKEN___(.*?)___END___/g, '$$$1');
+    resolve(result);
   });
 
 TokenMaps.removeDataInScss = scssComponentsMap =>
@@ -231,17 +307,26 @@ TokenMaps.sanitizeRawToken = token => ({
 });
 
 TokenMaps.sanitizeScss = scss =>
-  scss.replace(/\s*\/\/.*$/gm, '').replace(/\s*\/\*(.|\n)*?\*\/\s*/gm, '\n');
+  scss
+    .toString()
+    .replace(/(\/\*)(.|\n)+?(\*\/)/gm, '') // Replace multiline comments
+    .split('\n') // Break into lines
+    .map(
+      line =>
+        line
+          .replace(/\/\/.*$/, '') // Remove slash comments
+          .trim()
+          .replace(/\s+/, ' ') // Compress spaces
+    )
+    .filter(line => line && line.length) // Remove blank lines
+    .join('\n');
 
 TokenMaps.sanitizeSelector = selector =>
   TokenMaps.stripSpaces(selector).replace(/\s+/gm, ' ');
 
 TokenMaps.setTokensMap = newMap => (tokensMap = newMap);
 
-TokenMaps.stripSpaces = string =>
-  String(string || '')
-    .replace(/^\s+/, '')
-    .replace(/\s+$/, '');
+TokenMaps.stripSpaces = string => String(string || '').trim();
 
 TokenMaps.uniqConcat = (array, value) =>
   array ? (array.includes(value) ? array : array.concat([value])) : [value];
@@ -252,11 +337,78 @@ TokenMaps.validComponentNameFromPath = (scssPath, componentsPath) =>
     /^[a-zA-Z][a-zA-Z0-9_\-]+$/
   );
 
+TokenMaps.validRawTokensDistFile = tokenPath =>
+  tokenPath.match(/\/[^.]+\.raw\.json+$/);
+
 TokenMaps.valueContainsSassTokens = value =>
   String(value).match(/\$-*[_a-zA-Z][a-zA-Z0-9_-]+/);
 
-TokenMaps.validRawTokensDistFile = tokenPath =>
-  tokenPath.match(/\/[^.]+\.raw\.json+$/);
+TokenMaps.walkCss = (css, ruleDeclarationVisitor) =>
+  new Promise((resolve, reject) => {
+    const walker = postcss.plugin(
+      'postcss-walker',
+      options => (root, result) => {
+        root.walkRules(rule => {
+          const selector = TokenMaps.sanitizeSelector(rule.selector);
+          rule.walkDecls(declaration => {
+            ruleDeclarationVisitor(selector, rule, declaration, root);
+          });
+        });
+
+        result = root;
+      }
+    );
+
+    postcss([walker])
+      .process(css, { from: undefined })
+      .then(resolve);
+  });
+
+// @param scss: Sass code to parse
+// @param precssOptions: options to the preCss parser
+// @param ruleDeclarationVisitor: called at every declaration and will
+//     receive the following:
+//
+//     TokenMaps.parseScss(someScss, (selector, rule, declaration, root) => { /* ...process... */});
+//
+// @param prePlugins: if not null, prepends PostCSS plugins
+// @param processOptions: if not null, adds to PostCSS options to process()
+TokenMaps.walkScss = (
+  scss,
+  precssOptions,
+  ruleDeclarationVisitor,
+  prePlugins,
+  processOptions
+) =>
+  new Promise((resolve, reject) => {
+    const walker = postcss.plugin(
+      'postcss-walker',
+      options => (root, result) => {
+        root.walkRules(rule => {
+          const selector = TokenMaps.sanitizeSelector(rule.selector);
+          rule.walkDecls(declaration => {
+            ruleDeclarationVisitor(selector, rule, declaration, root);
+          });
+        });
+
+        result = root;
+      }
+    );
+
+    let plugins = [postcssNestedProps, precss(precssOptions), walker];
+    if (prePlugins && prePlugins.length > 0) {
+      plugins = [].concat(prePlugins).concat(plugins);
+    }
+
+    let options = { parser: postcssScss, from: undefined };
+    if (processOptions) {
+      options = Object.assign({}, options, processOptions);
+    }
+
+    postcss(plugins)
+      .process(scss, options)
+      .then(resolve);
+  });
 
 TokenMaps.writeAuraTokensMap = allTokens =>
   writeFile(
@@ -270,8 +422,15 @@ TokenMaps.writeTokenComponentMap = scssComponentsMap =>
     JSON.stringify(scssComponentsMap)
   );
 
+TokenMaps.writeUtilityPropertiesMap = utilityDeclarationsMap =>
+  writeFile(
+    path.join(paths.dist, 'ui.utility-props.json'),
+    JSON.stringify(utilityDeclarationsMap)
+  );
+
 module.exports = {
   createAuraTokensMap: TokenMaps.createAuraTokensMap,
   createTokenComponentMap: TokenMaps.createTokenComponentMap,
+  createUtilityPropertiesMap: TokenMaps.createUtilityPropertiesMap,
   _internal: TokenMaps
 };

@@ -37,6 +37,7 @@ design-tokens/components.yml
 
 # Ignore modules
 /node_modules
+/shared/vendor/scss-parser-aura/node_modules
 
 # Ignore assets
 /_slds/images/themes/oneSalesforce

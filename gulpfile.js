@@ -79,11 +79,14 @@ gulp.task(
   gulp.series('generate:tokens:components:imports', tokens.all)
 );
 
+gulp.task('generate:auraTokensMap', done => {
+  dist.writeAuraTokensMap().fork(e => done(e), () => done());
+});
 gulp.task('generate:tokenComponentMap', done => {
   dist.writeTokenComponentMap().fork(e => done(e), () => done());
 });
-gulp.task('generate:auraTokensMap', done => {
-  dist.writeAuraTokensMap().fork(e => done(e), () => done());
+gulp.task('generate:utilityDeclarationsMap', done => {
+  dist.writeUtilityDeclarationsMap().fork(e => done(e), () => done());
 });
 
 // /////////////////////////////////////////////////////////
@@ -229,6 +232,9 @@ gulp.task(
     ),
     withName('dist:writeAuraTokensMap')(done =>
       dist.writeAuraTokensMap().fork(done, () => done())
+    ),
+    withName('dist:writeUtilityDeclarationsMap')(done =>
+      dist.writeUtilityDeclarationsMap().fork(done, () => done())
     ),
     withName('dist:clean:after')(dist.cleanAfter)
   )

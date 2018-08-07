@@ -1,0 +1,26 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+$this-is-a-token: "TOKEN1";
+$this-is-another-token: TOKEN2;
+$ghi: 123 + 456;
+
+.aSelector {
+  padding: 10;
+  margin: 11;
+  font-size: $this-is-a-token;
+  border: 12;
+}
+
+.bSelector {
+  padding: 20;
+  margin: 21;
+  background: $this-is-another-token;
+
+  .cSelector {
+    line-height: 22;
+    something-else: abc def $ghi jkl;
+  }
+
+  border: 23;
+}

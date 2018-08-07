@@ -17,7 +17,8 @@ import packageJSON from '../../package.json';
 
 import {
   createAuraTokensMap,
-  createTokenComponentMap
+  createTokenComponentMap,
+  createUtilityPropertiesMap
 } from '../compile/token-maps';
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
@@ -197,6 +198,8 @@ export const writeLibrary = done =>
 export const writeAuraTokensMap = done => createAuraTokensMap();
 
 export const writeTokenComponentMap = done => createTokenComponentMap();
+
+export const writeUtilityDeclarationsMap = done => createUtilityPropertiesMap();
 
 export const packageJson = () => {
   const a = Immutable.fromJS(packageJSON);

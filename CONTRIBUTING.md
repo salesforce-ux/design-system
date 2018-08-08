@@ -57,8 +57,6 @@ Salesforce has a very large ecosystem and the design system has a lot of touch-p
 
 Before starting your project, please open a new issue or point to a related issue with discussions for whatever you are adding. That way, we can also offer suggestions or let you know if there is already an effort in progress.
 
-If you are changing CSS, please adhere to the SASS coding conventions [found here](https://github.com/salesforce-ux/design-system-internal/wiki/Sass-Styleguide). This will help expedite the review process as well as keeping code quality high.
-
 Following these steps is the best way to get your work included into the project:
 
 1. Fork the project, clone your fork, and configure the remotes:
@@ -69,7 +67,7 @@ git clone https://github.com/<your-username>/design-system.git
 cd design-system
 # Assign the original repo to a remote called "upstream"
 git remote add upstream https://github.com/salesforce-ux/design-system.git
-```    
+```
 2. Make sure you have the latest changes from the upstream:
 ```sh
 git checkout master
@@ -109,11 +107,9 @@ It runs at the designated url on startup and is the primary means of viewing you
 
 You can choose the component, variant, and modifiers to preview as well as background color and screen size. It also previews the sass docs.
 
-Everything in the design system is driven by [annotations](https://github.com/salesforce-ux/design-system-internal#annotations) and the previewer is no different. **To see any work in the previewer, you must add annotations to your code.**
-
 ## Annotations
 
-Annotations are the metadata that describe the entire system.
+Annotations are the metadata that describe the entire system. **To see any work in the previewer, you must add annotations to your code.**
 
 The most intriguing part is the `@selector/@restrict` pair. Each CSS selector should have a corresponding selector describing where it can be applied. Both are normal CSS selectors that will behave like a DOM query.
 
@@ -140,9 +136,9 @@ In this example we can see that `.slds-button_brand` must be applied to a `.slds
 
 It's important to know that `slds-button_brand` will only be associated to the button component via this `@restrict`chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
 
-For a more complex example, see: https://github.com/salesforce-ux/design-system-internal/blob/summer-17/ui/components/combobox/base/_index.scss
+For a more complex example, see: https://github.com/salesforce-ux/design-system/blob/master/ui/components/combobox/base/_index.scss
 
-While there is a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
+While there are a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
 
 * `@base`: creates a new component
 * `@variant`: a component implementation with corresponding markup
@@ -176,8 +172,6 @@ ui/
 ```
 
 All other selectors which are not `@base/@variant/@modifier` are considered child elements of a component.
-
-For more information see the [Full annotation docs](https://github.com/salesforce-ux/design-system-internal/wiki/Documentation-Styleguide)
 
 ## Component Documentation
 

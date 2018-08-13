@@ -108,6 +108,11 @@
     transform-origin: 60% 40%;
   }
 
+  /**
+   * @summary Selected/clicked state on favorites button
+   * @selector .slds-is-selected
+   * @restrict .slds-global-actions__favorites-action
+   */
   &.slds-is-selected {
     background-color: $brand-header-contrast-cool;
     border-color: $brand-header-contrast-cool;
@@ -123,6 +128,11 @@
     }
   }
 
+  /**
+   * @summary Disabled state on favorites button
+   * @selector .slds-is-disabled
+   * @restrict .slds-global-actions__favorites-action
+   */
   &:disabled,
   &.slds-is-disabled {
     color: $brand-header-contrast-weak-disabled;

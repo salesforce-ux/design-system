@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../../button-icons/';
 import GlobalNotifications from '../notifications/';
@@ -43,6 +44,12 @@ export const Favorites = props => (
   </div>
 );
 
+Favorites.propTypes = {
+  favoritesDisabled: PropTypes.bool,
+  favoritesClicked: PropTypes.bool,
+  showFavoritesPopup: PropTypes.bool
+};
+
 /**
  * Task Action
  */
@@ -64,10 +71,14 @@ export const Task = props => (
   </div>
 );
 
+Task.propTypes = {
+  showTaskMenu: PropTypes.bool
+};
+
 /**
  * Help & Training
  */
-export const Help = props => (
+export const Help = () => (
   <div className="slds-dropdown-trigger slds-dropdown-trigger_click">
     <ButtonIcon
       className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
@@ -83,7 +94,7 @@ export const Help = props => (
 /**
  * Setup
  */
-export const Setup = props => (
+export const Setup = () => (
   <div className="slds-dropdown-trigger slds-dropdown-trigger_click">
     <ButtonIcon
       className="slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
@@ -140,10 +151,15 @@ export const Notifications = props => {
   );
 };
 
+Notifications.propTypes = {
+  notificationCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  showNotificationPopup: PropTypes.bool
+};
+
 /**
  * Avatar
  */
-export const Avatar = props => (
+export const Avatar = () => (
   <div className="slds-dropdown-trigger slds-dropdown-trigger_click">
     <button
       className="slds-button slds-global-actions__avatar slds-global-actions__item-action"
@@ -206,5 +222,15 @@ class GlobalActions extends React.Component {
     );
   }
 }
+
+GlobalActions.propTypes = {
+  favoritesClicked: PropTypes.bool,
+  favoritesDisabled: PropTypes.bool,
+  showFavoritesPopup: PropTypes.bool,
+  showNotification: PropTypes.bool,
+  notificationCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  showNotificationPopup: PropTypes.bool,
+  showTaskMenu: PropTypes.bool
+};
 
 export default GlobalActions;

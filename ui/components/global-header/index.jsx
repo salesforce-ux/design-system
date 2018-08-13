@@ -5,22 +5,22 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import GlobalActions from './global-actions/';
 
-const SkipLink = [
-  <a
-    href="javascript:void(0);"
-    className="slds-assistive-text slds-assistive-text_focus"
-    key="1"
-  >
-    Skip to Navigation
-  </a>,
-  <a
-    href="javascript:void(0);"
-    className="slds-assistive-text slds-assistive-text_focus"
-    key="2"
-  >
-    Skip to Main Content
-  </a>
-];
+export const SkipLink = () => (
+  <React.Fragment>
+    <a
+      href="javascript:void(0);"
+      className="slds-assistive-text slds-assistive-text_focus"
+    >
+      Skip to Navigation
+    </a>
+    <a
+      href="javascript:void(0);"
+      className="slds-assistive-text slds-assistive-text_focus"
+    >
+      Skip to Main Content
+    </a>
+  </React.Fragment>
+);
 
 export const Logo = () => <div className="slds-global-header__logo" />;
 
@@ -65,7 +65,7 @@ class GlobalHeader extends Component {
           this.props.className
         )}
       >
-        {SkipLink}
+        <SkipLink />
         <div className="slds-global-header slds-grid slds-grid_align-spread">
           <div className="slds-global-header__item">
             <Logo />

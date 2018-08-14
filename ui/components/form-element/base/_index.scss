@@ -141,10 +141,12 @@
  * @restrict .slds-form-element span, .slds-form-element div
  */
 .slds-form-element__static {
+  @include break-word;
   display: inline-block;
   font-size: $input-static-font-size;
   font-weight: $input-static-font-weight;
   color: $input-static-color;
+  width: 100%;
 
   &.slds-text-longform *:last-child {
     margin-bottom: 0;

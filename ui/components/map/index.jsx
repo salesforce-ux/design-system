@@ -21,8 +21,8 @@ const modalContentId = 'modal-content-id-01';
 /**
  * Coordinates List Sub Component
  */
-const CoordinatesList = props => (
-  <div className="slds-coordinates slds-size_small slds-medium-size_medium">
+export const CoordinatesList = props => (
+  <div className="slds-coordinates">
     <div className="slds-coordinates__header">
       <h2 className="slds-coordinates__title">{props.heading}</h2>
     </div>
@@ -48,7 +48,7 @@ const CoordinatesList = props => (
 /**
  * Coordinate Item Sub Component
  */
-const Coordinate = props => (
+export const Coordinate = props => (
   <button
     className="slds-coordinates__item-action slds-button_reset slds-media"
     aria-pressed={props.selected}
@@ -66,7 +66,7 @@ const Coordinate = props => (
 /**
  * Map Footer Sub Component
  */
-const MapFooter = props => (
+const MapFooter = () => (
   <ModalFooter>
     <button className="slds-button slds-button_brand">
       Open in Google Maps
@@ -74,8 +74,55 @@ const MapFooter = props => (
   </ModalFooter>
 );
 
+/**
+ * Map
+ */
+export const GoogleMap = props => {
+  return (
+    <div className="slds-map">
+      {/*
+        For background, this component blueprint and the actual Lightning component differ in markup. The Lightning component consists of nested iframes that load different HTML files. For our purposes, the markup below works but may require some extra partnering if/when CSS changes are requested.
+
+        For any external customers, they can replace this iframe with the map of their choice and are not required to have nested iframes.
+      */}
+      {!props.hideMap && (
+        <iframe
+          id="GoogleMapID"
+          title="Google Maps iframe"
+          src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        />
+      )}
+    </div>
+  );
+};
+
+export const MapContainer = props => {
+  return (
+    <div
+      className={classNames(
+        'slds-grid',
+        props.multipleCoordinates && 'slds-has-coordinates'
+      )}
+    >
+      {props.multipleCoordinates && (
+        <CoordinatesList heading={props.heading} selection={props.selection} />
+      )}
+      <div className="slds-map_container">
+        <GoogleMap hideMap={props.hideMap} />
+      </div>
+    </div>
+  );
+};
+
 class Map extends Component {
   render() {
+    const {
+      heading,
+      multipleCoordinates,
+      selection,
+      hideMap,
+      footer
+    } = this.props;
     return (
       <Modal
         className="slds-modal_medium"
@@ -87,41 +134,18 @@ class Map extends Component {
             id={modalHeadingId}
             className="slds-text-heading_medium slds-hyphenate"
           >
-            {this.props.heading}
+            {heading}
           </h2>
         </ModalHeader>
         <ModalContent id={modalContentId}>
-          <div
-            className={classNames(
-              'slds-grid',
-              this.props.multipleCoordinates && 'slds-has-coordinates'
-            )}
-          >
-            {this.props.multipleCoordinates && (
-              <CoordinatesList
-                heading={this.props.heading}
-                selection={this.props.selection}
-              />
-            )}
-            <div className="slds-col">
-              <div className="slds-map">
-                {/*
-                  For background, this component blueprint and the actual Lightning component differ in markup. The Lightning component consists of nested iframes that load different HTML files. For our purposes, the markup below works but may require some extra partnering if/when CSS changes are requested.
-
-                  For any external customers, they can replace this iframe with the map of their choice and are not required to have nested iframes.
-                */}
-                {!this.props.hideMap && (
-                  <iframe
-                    id="GoogleMapID"
-                    title="Google Maps iframe"
-                    src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
-                  />
-                )}
-              </div>
-            </div>
-          </div>
+          <MapContainer
+            multipleCoordinates={multipleCoordinates}
+            heading={heading}
+            selection={selection}
+            hideMap={hideMap}
+          />
         </ModalContent>
-        {this.props.footer && <MapFooter />}
+        {footer && <MapFooter />}
       </Modal>
     );
   }

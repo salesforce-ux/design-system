@@ -3,6 +3,10 @@
 
 imports:
 - ./deprecated/base.yml
+- ./background-color.yml
+- ./border-color.yml
+- ./border-radius.yml
+- ./box-shadow.yml
 - ./font-family.yml
 - ./font-size.yml
 - ./font-weight.yml
@@ -12,4 +16,5 @@ imports:
 - ./palette-colors.yml
 - ./sizing.yml
 - ./spacing.yml
+- ./text-color.yml
 - ./z-index.yml

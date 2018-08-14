@@ -7,9 +7,8 @@ global:
   cssProperties:
   - 'margin*'
   - 'padding*'
-  theme: true
 imports:
-- ../../aliases/spacing.yml
+- ../../../aliases/spacing.yml
 props:
   ## GLOBALS
   COMPONENT_SPACING_MARGIN:

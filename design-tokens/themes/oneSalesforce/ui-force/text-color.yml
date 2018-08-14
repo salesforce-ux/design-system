@@ -7,33 +7,16 @@ global:
   cssProperties:
   - color
   - fill
-  theme: true
 imports:
-- ../../aliases/colors.yml
-- ../../aliases/color-palettes.yml
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
 props:
-  ## GLOBALS
-  COLOR_TEXT_DEFAULT:
-    value: '{!PALETTE_GRAY_13}'
-    comment: Body text color
-  COLOR_TEXT_PRIMARY:
-    value: '{!PALETTE_GRAY_13}'
-    comment: Primary body text color
   COLOR_TEXT_SECONDARY:
     value: '{!PALETTE_GRAY_11}'
     comment: Secondary body text color
   COLOR_TEXT_TERTIARY:
     value: '{!PALETTE_GRAY_8}'
     comment: Tertiary body text color
-  COLOR_TEXT_WEAK:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
-  COLOR_TEXT_INVERSE:
-    value: '{!PALETTE_GRAY_1}'
-    comment: Inverse text color for dark backgrounds
-  COLOR_TEXT_INVERSE_WEAK:
-    value: '{!PALETTE_GRAY_7}'
-    comment: Weak inverse text color for dark backgrounds
   COLOR_TEXT_INVERSE_ACTIVE:
     value: '{!MALIBU}'
     comment: Active state on a standalone link on a dark background.
@@ -65,16 +48,6 @@ props:
   COLOR_TEXT_ICON_INVERSE_ACTIVE:
     value: '{!PALETTE_GRAY_1}'
     comment: Icon color on dark background - active state
-  ## LABELS
-  COLOR_TEXT_LABEL:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Text color for field labels.
-  COLOR_TEXT_ACTION_LABEL:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Action label text color
-  COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!PALETTE_GRAY_13}'
-    comment: Action label active text color
   ## INPUT
   COLOR_TEXT_INPUT_DISABLED:
     value: '{!PALETTE_GRAY_11}'
@@ -82,10 +55,6 @@ props:
   COLOR_TEXT_INPUT_ICON:
     value: '{!PALETTE_GRAY_7}'
     comment: Input icon
-  ## LINKS
-  COLOR_TEXT_LINK:
-    value: '{!SANTORINI}'
-    comment: Link text (508)
   ## TABS
   COLOR_TEXT_TAB_LABEL_DISABLED:
     value: '{!PALETTE_GRAY_4}'
@@ -94,13 +63,6 @@ props:
   COLOR_TEXT_TOGGLE_DISABLED:
     value: '{!PALETTE_GRAY_5}'
     comment: Color for disabled toggles
-  ## PLACEHOLDERS
-  COLOR_TEXT_PLACEHOLDER:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Input placeholder text.
-  COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!PALETTE_GRAY_4}'
-    comment: Input placeholder text on dark backgrounds.
   ## BUTTONS
   COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
     value: '{!PALETTE_GRAY_5}'

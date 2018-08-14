@@ -6,9 +6,8 @@ global:
   type: font-size
   cssProperties:
   - font-size
-  theme: true
 imports:
-- ../../aliases/font-size.yml
+- ../../../aliases/font-size.yml
 props:
   ## LABELS
   FORM_LABEL_FONT_SIZE:

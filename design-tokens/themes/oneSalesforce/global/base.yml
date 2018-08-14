@@ -2,13 +2,6 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ./deprecated/base.yml
 - ./background-color.yml
 - ./border-color.yml
-- ./border-width.yml
-- ./box-shadow.yml
-- ./duration.yml
-- ./image-paths.yml
-- ./sizing.yml
-- ./spacing.yml
 - ./text-color.yml

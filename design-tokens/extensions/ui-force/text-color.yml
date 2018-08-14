@@ -71,9 +71,11 @@ props:
   COLOR_TEXT_INVERSE_ACTIVE:
     value: '{!MALIBU}'
     comment: Active state on a standalone link on a dark background.
+    deprecated: true
   COLOR_TEXT_INVERSE_HOVER:
     value: '{!PALETTE_COOL_GRAY_7}'
     comment: Hover state on a standalone link on a dark background.
+    deprecated: true
   COLOR_TEXT_LINK:
     value: '{!SCIENCE_BLUE}'
     comment: Link text (508)
@@ -134,9 +136,11 @@ props:
   COLOR_TEXT_ICON_BRAND:
     value: '{!SCIENCE_BLUE}'
     comment: Color for non-interactive icons that represent a selected item in a list
+    deprecated: true
   COLOR_TEXT_ICON_UTILITY:
     value: '{!PALETTE_COOL_GRAY_7}'
     comment: Color for interactive utility icons
+    deprecated: true
   COLOR_TEXT_TOGGLE_DISABLED:
     value: '{!PALETTE_COOL_GRAY_5}'
     comment: Color for disabled toggles

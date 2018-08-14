@@ -4,7 +4,6 @@
 global:
   category: utility
   type: string
-  theme: true
 props:
   ## BANNERS
   BRAND_BAND_DEFAULT_IMAGE:

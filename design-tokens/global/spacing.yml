@@ -18,7 +18,8 @@ global:
   - box-shadow
   - stroke
   - stroke-width
-
+  release: 1.0.0
+  access: global
 imports:
 - ../aliases/spacing.yml
 
@@ -55,74 +56,98 @@ props:
   VAR_SPACING_XXX_SMALL:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable spacing token for size XXX Small'
+    release: 2.7.0
   VAR_SPACING_XX_SMALL:
     value: '{!SPACING_XX_SMALL}'
     comment: 'Variable spacing token for size XX Small'
+    release: 2.7.0
   VAR_SPACING_X_SMALL:
     value: '{!SPACING_X_SMALL}'
     comment: 'Variable spacing token for size X Small'
+    release: 2.7.0
   VAR_SPACING_SMALL:
     value: '{!SPACING_SMALL}'
     comment: 'Variable spacing token for size Small'
+    release: 2.7.0
   VAR_SPACING_MEDIUM:
     value: '{!SPACING_MEDIUM}'
     comment: 'Variable spacing token for size Medium'
+    release: 2.7.0
   VAR_SPACING_LARGE:
     value: '{!SPACING_LARGE}'
     comment: 'Variable spacing token for size Large'
+    release: 2.7.0
   VAR_SPACING_X_LARGE:
     value: '{!SPACING_X_LARGE}'
     comment: 'Variable spacing token for size X Large'
+    release: 2.7.0
   VAR_SPACING_XX_LARGE:
     value: '{!SPACING_XX_LARGE}'
     comment: 'Variable spacing token for size XX Large'
+    release: 2.7.0
 
   VAR_SPACING_HORIZONTAL_XXX_SMALL:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable horizontal spacing token for size XXX Small'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_XX_SMALL:
     value: '{!SPACING_XX_SMALL}'
     comment: 'Variable horizontal spacing token for size XX Small'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_X_SMALL:
     value: '{!SPACING_X_SMALL}'
     comment: 'Variable horizontal spacing token for size X Small'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_SMALL:
     value: '{!SPACING_SMALL}'
     comment: 'Variable horizontal spacing token for size Small'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_MEDIUM:
     value: '{!SPACING_MEDIUM}'
     comment: 'Variable horizontal spacing token for size Medium'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_LARGE:
     value: '{!SPACING_LARGE}'
     comment: 'Variable horizontal spacing token for size Large'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_X_LARGE:
     value: '{!SPACING_X_LARGE}'
     comment: 'Variable horizontal spacing token for size X Large'
+    release: 2.7.0
   VAR_SPACING_HORIZONTAL_XX_LARGE:
     value: '{!SPACING_XX_LARGE}'
     comment: 'Variable horizontal spacing token for size XX Large'
+    release: 2.7.0
 
   VAR_SPACING_VERTICAL_XXX_SMALL:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable vertical spacing token for size XXX Small'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_XX_SMALL:
     value: '{!SPACING_XX_SMALL}'
     comment: 'Variable vertical spacing token for size XX Small'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_X_SMALL:
     value: '{!SPACING_X_SMALL}'
     comment: 'Variable vertical spacing token for size X Small'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_SMALL:
     value: '{!SPACING_SMALL}'
     comment: 'Variable vertical spacing token for size Small'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_MEDIUM:
     value: '{!SPACING_MEDIUM}'
     comment: 'Variable vertical spacing token for size Medium'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_LARGE:
     value: '{!SPACING_LARGE}'
     comment: 'Variable vertical spacing token for size Large'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_X_LARGE:
     value: '{!SPACING_X_LARGE}'
     comment: 'Variable vertical spacing token for size X Large'
+    release: 2.7.0
   VAR_SPACING_VERTICAL_XX_LARGE:
     value: '{!SPACING_XX_LARGE}'
     comment: 'Variable vertical spacing token for size XX Large'
+    release: 2.7.0

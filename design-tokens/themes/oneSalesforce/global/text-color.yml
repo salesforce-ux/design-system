@@ -1,0 +1,58 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
+props:
+  COLOR_TEXT_PRIMARY:
+    value: '{!PALETTE_GRAY_13}'
+    comment: Primary body text color
+  COLOR_TEXT_DEFAULT:
+    value: '{!PALETTE_GRAY_13}'
+    comment: Body text color
+    access: global
+  COLOR_TEXT_ICON_DEFAULT:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Default icon color.
+    access: global
+  COLOR_TEXT_WEAK:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
+    access: global
+  COLOR_TEXT_INVERSE:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Inverse text color for dark backgrounds
+    access: global
+  COLOR_TEXT_INVERSE_WEAK:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Weak inverse text color for dark backgrounds
+    access: global
+  COLOR_TEXT_LABEL:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Text color for field labels.
+  COLOR_TEXT_ACTION_LABEL:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Action label text color
+    access: global
+  COLOR_TEXT_ACTION_LABEL_ACTIVE:
+    value: '{!PALETTE_GRAY_13}'
+    comment: Action label active text color
+    access: global
+  COLOR_TEXT_LINK:
+    value: '{!SANTORINI}'
+    comment: Link text (508)
+    access: global
+  COLOR_TEXT_PLACEHOLDER:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Input placeholder text.
+    access: global
+  COLOR_TEXT_PLACEHOLDER_INVERSE:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Input placeholder text on dark backgrounds.

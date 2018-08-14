@@ -16,42 +16,13 @@ props:
     value: '{!PALETTE_COOL_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_2}'
-  COLOR_BACKGROUND:
-    value: '{!PALETTE_COOL_GRAY_2}'
-    comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_COOL_GRAY_1}'
     comment: Second default background color for the app.
   COLOR_BACKGROUND_ALT_INVERSE:
     value: '{!BISCAY}'
     comment: Alternative background color for dark portions of the app.
-  COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_COOL_GRAY_2}'
-    comment: Used as the background color for the hover state on rows or items on list-like components.
-  COLOR_BACKGROUND_ROW_ACTIVE:
-    value: '{!PALETTE_COOL_GRAY_3}'
-    comment: Used as the background color for the active state on rows or items on list-like components.
-  COLOR_BACKGROUND_ROW_SELECTED:
-    value: '{!PALETTE_COOL_GRAY_4}'
-    comment: Used as the background color for selected rows or items on list-like components.
-  COLOR_BACKGROUND_ROW_NEW:
-    value: '{!SNOWY_MINT}'
-    comment: Used as the background color for the new state on rows or items on list-like components.
-  COLOR_BACKGROUND_INVERSE:
-    value: '{!DEEP_COVE}'
-    comment: Default background color for dark portions of the app (like Stage Left or tooltips).
-  COLOR_BACKGROUND_CUSTOMER:
-    value: '{!TANGERINE}'
-    comment: Background color for UI elements related to the concept of an external user or customer.
-  COLOR_BACKGROUND_HIGHLIGHT:
-    value: '{!LEMON_CHIFFON}'
-    comment: Background color for highlighting UI elements.
-  COLOR_BACKGROUND_HIGHLIGHT_SEARCH:
-    value: '{!GORSE}'
-    comment: Background color for highlighting text in search results.
-  COLOR_BACKGROUND_SELECTION:
-    value: '{!PATTEN_BLUE}'
-    comment: Background color for text selected with a mouse.
+
   COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Background for utility icons that live in the action bar on mobile.
@@ -96,9 +67,7 @@ props:
   COLOR_BACKGROUND_STENCIL_ALT:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
-  COLOR_BACKGROUND_BACKDROP:
-    value: '{!WHITE_TRANSPARENT_75}'
-    comment: The color of the mask overlay that appears when you enter a modal state.
+
   COLOR_BACKGROUND_BACKDROP_TINT:
     value: '{!PALETTE_COOL_GRAY_2}'
     comment: The color of the mask overlay that provides user feedback on interaction.
@@ -108,15 +77,7 @@ props:
   COLOR_BACKGROUND_SCROLLBAR_TRACK:
     value: '{!PALETTE_COOL_GRAY_6}'
     comment: The background color of an internal scrollbar track.
-  COLOR_BRAND:
-    value: '{!AZURE}'
-    comment: Our product brand blue.
-  COLOR_BRAND_DARK:
-    value: '{!SCIENCE_BLUE}'
-    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
-  COLOR_BRAND_DARKER:
-    value: '{!ENDEAVOUR}'
-    comment: 'Our product brand blue, darkened even further.'
+
   COLOR_BACKGROUND_TOGGLE:
     value: '{!PALETTE_COOL_GRAY_7}'
     comment: Toggle background color.
@@ -153,33 +114,7 @@ props:
   COLOR_BACKGROUND_IMAGE_OVERLAY:
     value: '{!BLACK_TRANSPARENT_40}'
     comment: Color of mask overlay that sits on top of an image when text is present.
-  COLOR_BACKGROUND_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
-    comment: Color for UI elements related to destructive actions.
-  COLOR_BACKGROUND_DESTRUCTIVE_HOVER:
-    value: '{!TABASCO}'
-    comment: Hover color for UI elements related to destructive actions.
-  COLOR_BACKGROUND_DESTRUCTIVE_ACTIVE:
-    value: '{!MAROON}'
-    comment: Active color for UI elements related to destructive actions.
-  COLOR_BACKGROUND_INFO:
-    value: '{!PALETTE_COOL_GRAY_9}'
-    comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
-  COLOR_BACKGROUND_ERROR:
-    value: '{!VALENCIA}'
-    comment: Color for UI elements related to errors.
-  COLOR_BACKGROUND_ERROR_DARK:
-    value: '{!FLUSH_MAHOGANY}'
-    comment: Dark color for UI elements related to errors. Accessible with white text.
-  COLOR_BACKGROUND_OFFLINE:
-    value: '{!PALETTE_COOL_GRAY_11}'
-    comment: Color for UI elements related to the offline state.
-  COLOR_BACKGROUND_SUCCESS:
-    value: '{!EMERALD}'
-    comment: Color for UI elements that have to do with success.
-  COLOR_BACKGROUND_SUCCESS_DARK:
-    value: '{!SALEM}'
-    comment: Dark color for UI elements that have to do with success. Accessible with white text.
+
   COLOR_BACKGROUND_TOAST:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Background color for toast messaging.

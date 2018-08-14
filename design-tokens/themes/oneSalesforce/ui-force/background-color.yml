@@ -9,10 +9,9 @@ global:
   - 'border*'
   - box-shadow
   - text-shadow
-  theme: true
 imports:
-- ../../aliases/colors.yml
-- ../../aliases/color-palettes.yml
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
 props:
   ## BACKGROUNDS
   COLOR_CONTRAST_PRIMARY:

@@ -7,41 +7,12 @@ global:
   cssProperties:
   - 'border*'
   - box-shadow
-  theme: true
 imports:
-- ../../aliases/color-palettes.yml
+- ../../../aliases/color-palettes.yml
 props:
   ## DEFAULT
   COLOR_BORDER_PRIMARY:
     value: '{!PALETTE_GRAY_5}'
-  COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
-    cssProperties:
-    - 'border*'
-    - box-shadow
-    - 'background*'
-    comment: Default border color for UI elements.
-  COLOR_BORDER_SEPARATOR:
-    value: '{!PALETTE_GRAY_3}'
-    comment: Lightest separator color - used as default separator on white backgrounds.
-  COLOR_BORDER_SEPARATOR_ALT:
-    value: '{!PALETTE_GRAY_5}'
-    comment: Medium separator color - used as default separator on light gray backgrounds.
-  COLOR_BORDER_SEPARATOR_ALT_2:
-    value: '{!PALETTE_GRAY_6}'
-    comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
-  ## FEEDBACK
-  COLOR_BORDER_INFO:
-    value: '{!PALETTE_GRAY_9}'
-    comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
-  COLOR_BORDER_OFFLINE:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Border color for UI elements related to the offline state.
-  ## SELECTION
-  COLOR_BORDER_SELECTION_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
-    specificity: builders
-    comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.
   ## INPUT
   COLOR_BORDER_INPUT:
     value: '{!PALETTE_GRAY_5}'

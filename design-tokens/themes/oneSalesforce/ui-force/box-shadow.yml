@@ -6,10 +6,9 @@ global:
   category: shadow
   cssProperties:
   - box-shadow
-  theme: true
 imports:
-- ../../aliases/color-palettes.yml
-- ../../aliases/offset.yml
+- ../../../aliases/color-palettes.yml
+- ../../../aliases/offset.yml
 props:
   SHADOW_BUTTON_FOCUS_INVERSE:
     value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'

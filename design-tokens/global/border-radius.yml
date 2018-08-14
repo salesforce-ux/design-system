@@ -7,17 +7,22 @@ global:
   cssProperties:
   - 'border-radius'
 imports:
-- ../../aliases/border-radius.yml
+- ../aliases/border-radius.yml
 props:
   BORDER_RADIUS_SMALL:
     value: '{!BORDER_RADIUS_SMALL}'
+    access: global
   BORDER_RADIUS_MEDIUM:
     value: '{!BORDER_RADIUS_MEDIUM}'
     comment: 'Icons in lists, record home icon, unbound input elements'
+    access: global
   BORDER_RADIUS_LARGE:
     value: '{!BORDER_RADIUS_LARGE}'
+    access: global
   BORDER_RADIUS_PILL:
     value: '{!BORDER_RADIUS_PILL}'
+    access: global
   BORDER_RADIUS_CIRCLE:
     value: '{!BORDER_RADIUS_CIRCLE}'
     comment: 'Circle for global use, action icon bgd shape'
+    access: global

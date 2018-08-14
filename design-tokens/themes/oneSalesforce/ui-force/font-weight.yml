@@ -7,9 +7,8 @@ global:
   cssProperties:
   - font
   - font-weight
-  theme: true
 imports:
-- ../../aliases/font-weight.yml
+- ../../../aliases/font-weight.yml
 props:
   ## INPUTS
   INPUT_STATIC_FONT_WEIGHT:

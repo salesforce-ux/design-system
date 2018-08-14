@@ -6,7 +6,6 @@ global:
   type: text-align
   cssProperties:
   - text-align
-  theme: true
 props:
   ## CARDS
   CARD_FOOTER_TEXT_ALIGN:

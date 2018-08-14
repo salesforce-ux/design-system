@@ -47,7 +47,6 @@
 .slds-slider__range {
   appearance: none;
   width: 100%;
-  margin: ($slider-handle-size / 2) 0;
   background: transparent;
   border-radius: $border-radius-small;
 
@@ -77,8 +76,6 @@
   // IE/Edge
   &::-ms-track {
     @include range-track;
-    width: 100%;
-    background: transparent;
     border-color: transparent;
     color: transparent;
     cursor: pointer;
@@ -86,6 +83,7 @@
 
   &::-ms-thumb {
     @include range-thumb;
+    margin-top: calc(#{$slider-track-height} / 4);
   }
 
   &:focus::-webkit-slider-thumb {

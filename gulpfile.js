@@ -134,6 +134,11 @@ gulp.task(
 );
 
 gulp.task(
+  'lint:restrictions',
+  gulp.series('generate:examples:wrapped', 'lint:markup')
+);
+
+gulp.task(
   'lint',
   gulp.parallel(
     'lint:sass',

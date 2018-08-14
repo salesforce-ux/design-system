@@ -64,7 +64,7 @@ export let examples = [
           symbol="pdf"
           title="Proposal.pdf"
           hasActions
-          hasWhiteIcons
+          iconColor="white"
           hasScrim
           noCaption
           hasImage

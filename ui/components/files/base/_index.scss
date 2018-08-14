@@ -55,6 +55,15 @@
     transform: translate(-50%, -50%);
   }
 
+  // Remove hover state for devices with any available input mechanism can hover over elements
+  @media (any-hover:none) {
+
+    &:not(.slds-file_loading):hover:before,
+    &:not(.slds-file_loading):hover:after {
+      display: none;
+    }
+  }
+
   // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
   &:not(.slds-file_loading):hover .slds-file__title,
   &:not(.slds-file_loading):hover .slds-file__actions-menu {

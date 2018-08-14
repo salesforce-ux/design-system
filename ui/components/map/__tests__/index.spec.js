@@ -1,9 +1,19 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import Map from '../';
+import Map, { MapContainer } from '../';
 
 const { matchesMarkup } = createHelpers(__dirname);
+
+describe('Map Container', () => {
+  it('renders map container', () => matchesMarkup(<MapContainer />));
+  it('renders map container with coordinates', () =>
+    matchesMarkup(<MapContainer multipleCoordinates />));
+  it('renders map container with selected coordinate', () =>
+    matchesMarkup(<MapContainer selection="1" />));
+  it('renders map container with heading text', () =>
+    matchesMarkup(<MapContainer heading="map heading" />));
+});
 
 /**
  * Variant Snapshots

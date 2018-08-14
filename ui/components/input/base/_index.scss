@@ -273,10 +273,6 @@
   display: flex;
 }
 
-.slds-input:required {
-  box-shadow: none;
-}
-
 .slds-input:required:focus {
   box-shadow: $shadow-button-focus;
 }

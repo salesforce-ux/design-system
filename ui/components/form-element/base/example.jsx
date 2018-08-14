@@ -247,6 +247,19 @@ export let examples = [
         direction="stacked"
         snapshot={Snapshot.ObjectFieldTypes}
         isViewMode
+        hasInlineEdit
+      />
+    )
+  },
+  {
+    id: 'stacked-single-column',
+    label: 'Stacked form layout - 1 column - Read Only Mode',
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
+        isViewMode
+        isSingleColumn
       />
     )
   },
@@ -265,6 +278,7 @@ export let examples = [
         direction="horizontal"
         snapshot={Snapshot.ObjectFieldTypes}
         isViewMode
+        hasInlineEdit
       />
     )
   },

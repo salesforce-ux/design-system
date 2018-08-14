@@ -2,14 +2,24 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary Base variant
+ * @summary Map container
  * @name base
- * @selector .slds-map
+ * @selector .slds-map_container
  * @restrict div
  * @variant
  */
+.slds-map_container {
+  flex: 3 1 auto;
+}
+
+/**
+ * @summary 3rd party map element found inside of the map container
+ * @selector .slds-map
+ * @restrict .slds-map_container div
+ */
 .slds-map {
   position: relative;
+  min-width: rem(380px); // Width of the preview panel
   width: 100%;
 
   &:before {
@@ -36,7 +46,9 @@
  * @selector .slds-has-coordinates
  */
 .slds-has-coordinates {
-  max-height: 660px;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: rem(660px);
 
   .slds-map:before {
     padding-top: 75%;
@@ -50,6 +62,7 @@
  */
 .slds-coordinates {
   overflow: auto;
+  flex: 1 1 auto;
 }
 
 /**

@@ -10,15 +10,13 @@ import ButtonIcon from '../button-icons/';
 import { Spinner } from '../spinners/base/example';
 
 /**
- * ActionsMenu - controls the display of white or black-colored icons in the title card
- * whiteIcons - triggers white icons to be used (default: black icons, used with a title)
+ * ActionsMenu - controls the display of action icons in the title card
+ * iconColor - sets the color of the action icons
  */
-const ActionsMenu = ({ whiteIcons }) => {
+const ActionsMenu = props => {
   const buttonIconClassNames = classNames(
     'slds-button_icon slds-button_icon-x-small',
-    {
-      'slds-button_icon-inverse': whiteIcons
-    }
+    props.iconColor === 'white' && 'slds-button_icon-inverse'
   );
 
   return (
@@ -43,29 +41,27 @@ const ActionsMenu = ({ whiteIcons }) => {
 };
 
 ActionsMenu.propTypes = {
-  whiteIcons: PropTypes.bool
+  iconColor: PropTypes.oneOf(['white', 'black'])
 };
 
 /**
  * ActionsConditional - controls the display of a wrapper div for actions
  * scrim - triggers a gradient background behind the action items when used without a title
- * whiteIcons - triggers white icons to be used (default: black icons)
+ * iconColor - sets the color of the action icons
  */
-const ActionsConditional = ({ scrim, whiteIcons }) => {
-  if (scrim) {
-    return (
-      <div className="slds-file__title slds-file__title_scrim">
-        <ActionsMenu whiteIcons={whiteIcons} />
-      </div>
-    );
-  } else {
-    return <ActionsMenu whiteIcons={whiteIcons} />;
-  }
+const ActionsConditional = props => {
+  return props.scrim ? (
+    <div className="slds-file__title slds-file__title_scrim">
+      <ActionsMenu iconColor={props.iconColor} />
+    </div>
+  ) : (
+    <ActionsMenu iconColor={props.iconColor} />
+  );
 };
 
 ActionsConditional.propTypes = {
-  scrim: PropTypes.bool,
-  whiteIcons: PropTypes.bool
+  iconColor: PropTypes.oneOf(['white', 'black']),
+  scrim: PropTypes.bool
 };
 
 /**
@@ -97,33 +93,33 @@ export class File extends Component {
 
     /**
      * State
-     * hasIcon - determines if an icon should be rendered within the title card
      * hasCaption - determines if a title should be rendered
+     * hasIcon - determines if an icon should be rendered within the title card
      * hasTitle - determines if an additional class should be added for hover states on Files with a title card. This does not include Files with the `slds-file__title_overlay` class.
      */
     this.state = {
-      hasIcon: this.props.symbol,
       hasCaption: !this.props.noCaption,
+      hasIcon: this.props.symbol,
       hasTitle: this.props.hasTitleCard && !this.props.hasOverlay
     };
 
-    this.renderContent = this.renderContent.bind(this);
+    this.fileContents = this.fileContents.bind(this);
   }
 
   /**
-   * renderContent - Determines what media to render within a File component
+   * fileContents - Determines what media to render within a File component
    * isLoading - renders Spinner
    * hasImage - renders a landscape-oriented image
    * hasImagePortrait - renders a portrait-oriented image
    * default - renders an icon
    */
-  renderContent() {
+  fileContents() {
     const {
-      isLoading,
       hasImage,
       hasImagePortrait,
-      symbol,
+      isLoading,
       sprite,
+      symbol,
       title
     } = this.props;
 
@@ -155,24 +151,24 @@ export class File extends Component {
 
   render() {
     const {
-      isLoading,
-      isCard,
-      hasCrop,
       has16x9Crop,
-      has4x3Crop,
       has1x1Crop,
+      has4x3Crop,
+      hasActions,
+      hasCrop,
       hasImagePortrait,
       hasOverlay,
-      hasTitleCard,
-      hasActions,
-      symbol,
-      title,
-      isExternalSource,
       hasScrim,
-      hasWhiteIcons
+      hasTitleCard,
+      iconColor,
+      isCard,
+      isExternalSource,
+      isLoading,
+      symbol,
+      title
     } = this.props;
 
-    const { hasIcon, hasCaption, hasTitle } = this.state;
+    const { hasCaption, hasIcon, hasTitle } = this.state;
 
     // If no crop prop is passed, default to `slds-file__figure`
     const figureClasses =
@@ -196,10 +192,14 @@ export class File extends Component {
           {/*
             aXe is reporting an a11y violation where it says the <a> does not detect any discernible text when using <Spinner>, despite this not being the case (Spinner has "Loading" in .slds-assistive-text). To prevent this from breaking the build, we're excluding `.slds-file figure > a` from aXe linting. Tread carefully.
           */}
-          <a href="javascript:void(0);" className={figureClasses}>
+          <a
+            href="javascript:void(0);"
+            className={figureClasses}
+            onClick={e => console.log(e.target)}
+          >
             {hasOverlay && <div className="slds-file_overlay" />}
 
-            {this.renderContent()}
+            {this.fileContents()}
           </a>
           {hasCaption && (
             <figcaption
@@ -236,7 +236,7 @@ export class File extends Component {
         </figure>
         {isExternalSource && <ExternalIcon />}
         {hasActions && (
-          <ActionsConditional scrim={hasScrim} whiteIcons={hasWhiteIcons} />
+          <ActionsConditional scrim={hasScrim} iconColor={iconColor} />
         )}
       </div>
     );
@@ -244,27 +244,28 @@ export class File extends Component {
 }
 
 File.propTypes = {
-  isLoading: PropTypes.bool,
+  has16x9Crop: PropTypes.bool,
+  has1x1Crop: PropTypes.bool,
+  has4x3Crop: PropTypes.bool,
+  hasActions: PropTypes.bool,
+  hasCrop: PropTypes.bool,
   hasImage: PropTypes.bool,
   hasImagePortrait: PropTypes.bool,
-  symbol: PropTypes.string,
-  sprite: PropTypes.string,
-  title: PropTypes.string,
-  isCard: PropTypes.bool,
-  hasCrop: PropTypes.bool,
-  has16x9Crop: PropTypes.bool,
-  has4x3Crop: PropTypes.bool,
-  has1x1Crop: PropTypes.bool,
   hasOverlay: PropTypes.bool,
-  hasTitleCard: PropTypes.bool,
-  hasActions: PropTypes.bool,
-  isExternalSource: PropTypes.bool,
   hasScrim: PropTypes.bool,
-  hasWhiteIcons: PropTypes.bool,
-  noCaption: PropTypes.bool
+  hasTitleCard: PropTypes.bool,
+  iconColor: PropTypes.oneOf(['white', 'black']),
+  isCard: PropTypes.bool,
+  isExternalSource: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  noCaption: PropTypes.bool,
+  sprite: PropTypes.string,
+  symbol: PropTypes.string,
+  title: PropTypes.string
 };
 
 File.defaultProps = {
+  iconColor: 'black',
   sprite: 'doctype',
   title: 'Image Title'
 };
@@ -274,7 +275,7 @@ File.defaultProps = {
  * articleTitle
  * articleDescription
  */
-export const AttachmentLink = ({ articleTitle, articleDescription }) => (
+export const AttachmentLink = props => (
   <a
     href="javascript:void(0);"
     className="slds-media slds-box slds-grow slds-text-link_reset"
@@ -290,19 +291,19 @@ export const AttachmentLink = ({ articleTitle, articleDescription }) => (
       </div>
     </div>
     <div className="slds-media__body">
-      <h3 className="slds-text-heading_small">{articleTitle}</h3>
-      <p>{articleDescription}</p>
-      <span className="slds-text-body_small">{articleTitle}</span>
+      <h3 className="slds-text-heading_small">{props.articleTitle}</h3>
+      <p>{props.articleDescription}</p>
+      <span className="slds-text-body_small">{props.articleTitle}</span>
     </div>
   </a>
 );
 
 AttachmentLink.propTypes = {
-  articleTitle: PropTypes.string,
-  articleDescription: PropTypes.string
+  articleDescription: PropTypes.string,
+  articleTitle: PropTypes.string
 };
 
 AttachmentLink.defaultProps = {
-  articleTitle: 'Article Title',
-  articleDescription: 'Article Description'
+  articleDescription: 'Article Description',
+  articleTitle: 'Article Title'
 };

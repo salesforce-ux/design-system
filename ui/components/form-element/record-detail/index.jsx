@@ -13,7 +13,10 @@ const RecordDetailRow = props => (
 );
 
 const RecordDetailItem = props => (
-  <div className="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+  <div
+    className={classNames('slds-col', 'slds-has-flexi-truncate', 'slds-grid')}
+    role="listitem"
+  >
     {props.children}
   </div>
 );
@@ -27,14 +30,15 @@ const RecordDetailField = props => {
     value,
     avatar,
     link,
-    timestamp
+    timestamp,
+    hasInlineEdit
   } = props;
 
   return (
     <FormElement
       isViewMode
       labelContent={label}
-      isEditable
+      isEditable={hasInlineEdit}
       hasHint
       isRequired={isRequired}
       hasTooltip={hasTooltip}
@@ -69,19 +73,27 @@ const RecordDetailField = props => {
         )}
         {timestamp && <React.Fragment>, {timestamp}</React.Fragment>}
       </FormElementStatic>
-      <ButtonIcon
-        iconClassName="slds-button__icon_hint"
-        symbol="edit"
-        assistiveText={`Edit: ${label}`}
-        title={`Edit: ${label}`}
-      />
+      {hasInlineEdit && (
+        <ButtonIcon
+          iconClassName="slds-button__icon_hint"
+          symbol="edit"
+          assistiveText={`Edit: ${label}`}
+          title={`Edit: ${label}`}
+        />
+      )}
     </FormElement>
   );
 };
 
 class RecordDetail extends Component {
   render() {
-    const { className, snapshot, isViewMode, direction } = this.props;
+    const {
+      className,
+      snapshot,
+      isViewMode,
+      direction,
+      hasInlineEdit
+    } = this.props;
 
     return (
       <div
@@ -103,6 +115,7 @@ class RecordDetail extends Component {
                         avatar={row.fields[field].avatar}
                         link={row.fields[field].link}
                         timestamp={row.fields[field].timestamp}
+                        hasInlineEdit={hasInlineEdit}
                       />
                     )}
                   </RecordDetailItem>

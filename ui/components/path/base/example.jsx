@@ -48,7 +48,8 @@ const Coach = props => (
   <Card>
     <div
       className={classNames('slds-path', {
-        'slds-is-expanded': props.isExpanded
+        'slds-is-expanded': props.isExpanded,
+        'slds-path_has-coaching': props.isExpanded
       })}
     >
       {props.children}
@@ -426,6 +427,79 @@ const PathNoCoachStageSelected = props => (
   </Coach>
 );
 
+const PathDifferentStage = props => (
+  <Coach>
+    <Path>
+      <div className="slds-grid slds-path__scroller-container">
+        <ListMain listRole="listbox">
+          <ListItem className="slds-is-current" id={path1Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+              <span className="slds-assistive-text">Stage Complete</span>
+            </span>
+            <span className="slds-path__title">Contacted</span>
+          </ListItem>
+          <ListItem className="slds-is-active" id={path2Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+              <span className="slds-assistive-text">Stage Complete</span>
+            </span>
+            <span className="slds-path__title">Open</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path3Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+            </span>
+            <span className="slds-path__title">Unqualified</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path4Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+            </span>
+            <span className="slds-path__title">Nurturing</span>
+          </ListItem>
+          <ListItem className="slds-is-incomplete" id={path5Id} role="option">
+            <span className="slds-path__stage">
+              <SvgIcon
+                className="slds-icon slds-icon_x-small"
+                sprite="utility"
+                symbol="check"
+              />
+            </span>
+            <span className="slds-path__title">Closed</span>
+          </ListItem>
+        </ListMain>
+      </div>
+      <div className="slds-grid slds-path__action">
+        <span className="slds-path__stage-name">Stage: Unqualified</span>
+        <Action>
+          <SvgIcon
+            className="slds-button__icon slds-button__icon_left"
+            sprite="utility"
+            symbol="check"
+          />
+          Mark Status as Complete
+        </Action>
+      </div>
+    </Path>
+  </Coach>
+);
 class PathWithTooltip extends React.Component {
   constructor() {
     super();
@@ -1779,8 +1853,13 @@ export default <Default />;
 export const states = [
   {
     id: 'later-stage',
-    label: 'With Different Stage Selected - without coaching',
+    label: 'In a later stage',
     element: <PathNoCoachStageSelected />
+  },
+  {
+    id: 'different-stage-selected',
+    label: 'With different stage selected',
+    element: <PathDifferentStage />
   },
   {
     id: 'with-visible-tooltip',

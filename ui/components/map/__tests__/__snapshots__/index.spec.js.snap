@@ -1,5 +1,194 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Map Container renders map container 1`] = `
+<div
+  className="slds-grid"
+>
+  <div
+    className="slds-map_container"
+  >
+    <div
+      className="slds-map"
+    >
+      <iframe
+        id="GoogleMapID"
+        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        title="Google Maps iframe"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Map Container renders map container with coordinates 1`] = `
+<div
+  className="slds-grid slds-has-coordinates"
+>
+  <div
+    className="slds-coordinates"
+  >
+    <div
+      className="slds-coordinates__header"
+    >
+      <h2
+        className="slds-coordinates__title"
+      />
+    </div>
+    <ul
+      className="slds-coordinates__list"
+    >
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              Borrego Solar
+            </span>
+            <span>
+              5189 22nd Street, Oakland, CA 94607
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              CivisSolar, Inc
+            </span>
+            <span>
+              809 16th Street, Oakland, CA 94607
+            </span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="slds-map_container"
+  >
+    <div
+      className="slds-map"
+    >
+      <iframe
+        id="GoogleMapID"
+        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        title="Google Maps iframe"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Map Container renders map container with heading text 1`] = `
+<div
+  className="slds-grid"
+>
+  <div
+    className="slds-map_container"
+  >
+    <div
+      className="slds-map"
+    >
+      <iframe
+        id="GoogleMapID"
+        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        title="Google Maps iframe"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Map Container renders map container with selected coordinate 1`] = `
+<div
+  className="slds-grid"
+>
+  <div
+    className="slds-map_container"
+  >
+    <div
+      className="slds-map"
+    >
+      <iframe
+        id="GoogleMapID"
+        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        title="Google Maps iframe"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`renders a map component modal 1`] = `
 <div
   style={
@@ -57,7 +246,7 @@ exports[`renders a map component modal 1`] = `
           className="slds-grid"
         >
           <div
-            className="slds-col"
+            className="slds-map_container"
           >
             <div
               className="slds-map"
@@ -130,7 +319,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
+            className="slds-coordinates"
           >
             <div
               className="slds-coordinates__header"
@@ -241,7 +430,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
             </ul>
           </div>
           <div
-            className="slds-col"
+            className="slds-map_container"
           >
             <div
               className="slds-map"
@@ -323,7 +512,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
+            className="slds-coordinates"
           >
             <div
               className="slds-coordinates__header"
@@ -436,7 +625,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
             </ul>
           </div>
           <div
-            className="slds-col"
+            className="slds-map_container"
           >
             <div
               className="slds-map"
@@ -518,7 +707,7 @@ exports[`renders a map component modal with footer 1`] = `
           className="slds-grid"
         >
           <div
-            className="slds-col"
+            className="slds-map_container"
           >
             <div
               className="slds-map"
@@ -600,7 +789,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
+            className="slds-coordinates"
           >
             <div
               className="slds-coordinates__header"
@@ -713,7 +902,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
             </ul>
           </div>
           <div
-            className="slds-col"
+            className="slds-map_container"
           >
             <div
               className="slds-map"

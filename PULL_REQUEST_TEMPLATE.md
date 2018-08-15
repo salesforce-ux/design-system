@@ -10,6 +10,3 @@ Changes proposed in this pull request:
 * [ ] Confirm **Accessibility**
 * [ ] Documentation is up to date
 * [ ] Release notes mention the changes
-
-⚠️ Once this pull request is merged, please merge the code into other development branches:
-[Merge branch 'spring-18' into summer-18](https://github.com/salesforce-ux/design-system-internal/tree/summer-18)

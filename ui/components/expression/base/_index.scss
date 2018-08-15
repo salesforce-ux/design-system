@@ -16,6 +16,10 @@
   */
 .slds-expression__options {
   width: $size-small;
+
+  .slds-form-element__control {
+    clear: none;
+  }
 }
 
 /**

@@ -68,6 +68,10 @@
   @include form-input-container;
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
+  &:required {
+    box-shadow: none;
+  }
+
   &:focus,
   &:active {
     @include form-input-focus;

@@ -58,9 +58,9 @@ In this example we can see that `.slds-button_brand` must be applied to a `.slds
 
 It's important to know that `slds-button_brand` will only be associated to the button component via this `@restrict` chain. Each rule uses its `@restrict` to declare its place in the hierarchy - **it is not the the file that tells us to which component a selector belongs**
 
-For a more complex example, see: https://github.com/salesforce-ux/design-system-internal/blob/summer-17/ui/components/combobox/base/_index.scss
+For a more complex example, see: https://github.com/salesforce-ux/design-system/blob/master/ui/components/combobox/base/_index.scss
 
-While there is a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
+While there are a handful of annotations used throughout the codebase, you'll only need to know a few to get started:
 
 * `@base`: creates a new component
 * `@variant`: a component implementation with corresponding markup
@@ -96,10 +96,6 @@ ui/
 ```
 
 All other selectors which are not `@base/@variant/@modifier` are considered child elements of a component.
-
-For more information see the [Full annotation docs](https://github.com/salesforce-ux/design-system-internal/wiki/Documentation-Styleguide)
-
-
 
 ## Tasks
 

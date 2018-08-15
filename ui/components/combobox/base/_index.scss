@@ -437,10 +437,12 @@
     border-radius: 0;
     margin-left: -1px;
     margin-right: -1px;
+    // fixes Firefox issue where click event wasn't firing on inputs. Pos rel fixes that.
+    position: relative;
+
 
     &:focus,
     &.slds-has-focus {
-      position: relative;
       z-index: 1;
     }
   }

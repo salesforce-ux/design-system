@@ -555,7 +555,7 @@ export const examples = [
                 name="Taylor Watson-Rice"
                 timeStamp="4:59 PM"
               >
-                <File hasActions hasWhiteIcons noCaption hasImage />
+                <File hasActions iconColor="white" noCaption hasImage />
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>

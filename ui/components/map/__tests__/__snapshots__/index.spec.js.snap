@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-=======
 exports[`Map Container renders map container 1`] = `
 <div
   className="slds-grid"
@@ -191,7 +189,6 @@ exports[`Map Container renders map container with selected coordinate 1`] = `
 </div>
 `;
 
->>>>>>> winter-19
 exports[`renders a map component modal 1`] = `
 <div
   style={
@@ -249,11 +246,7 @@ exports[`renders a map component modal 1`] = `
           className="slds-grid"
         >
           <div
-<<<<<<< HEAD
-            className="slds-col"
-=======
             className="slds-map_container"
->>>>>>> winter-19
           >
             <div
               className="slds-map"
@@ -326,11 +319,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-<<<<<<< HEAD
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
-=======
             className="slds-coordinates"
->>>>>>> winter-19
           >
             <div
               className="slds-coordinates__header"
@@ -441,11 +430,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
             </ul>
           </div>
           <div
-<<<<<<< HEAD
-            className="slds-col"
-=======
             className="slds-map_container"
->>>>>>> winter-19
           >
             <div
               className="slds-map"
@@ -527,11 +512,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-<<<<<<< HEAD
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
-=======
             className="slds-coordinates"
->>>>>>> winter-19
           >
             <div
               className="slds-coordinates__header"
@@ -644,11 +625,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
             </ul>
           </div>
           <div
-<<<<<<< HEAD
-            className="slds-col"
-=======
             className="slds-map_container"
->>>>>>> winter-19
           >
             <div
               className="slds-map"
@@ -730,11 +707,7 @@ exports[`renders a map component modal with footer 1`] = `
           className="slds-grid"
         >
           <div
-<<<<<<< HEAD
-            className="slds-col"
-=======
             className="slds-map_container"
->>>>>>> winter-19
           >
             <div
               className="slds-map"
@@ -816,11 +789,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
-<<<<<<< HEAD
-            className="slds-coordinates slds-size_small slds-medium-size_medium"
-=======
             className="slds-coordinates"
->>>>>>> winter-19
           >
             <div
               className="slds-coordinates__header"
@@ -933,11 +902,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
             </ul>
           </div>
           <div
-<<<<<<< HEAD
-            className="slds-col"
-=======
             className="slds-map_container"
->>>>>>> winter-19
           >
             <div
               className="slds-map"

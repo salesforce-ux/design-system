@@ -4,6 +4,7 @@
 global:
   category: media-query
   type: media-query
+  access: global
 props:
   MQ_SMALL:
     value: 'only screen and (max-width: 47.9375em)'

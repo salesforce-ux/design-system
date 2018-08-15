@@ -1,0 +1,106 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+  deprecated: true
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/offset.yml
+- ../../../aliases/color-palettes.yml
+props:
+  SHADOW_HARD_PRIMARY:
+    value: 'none'
+    comment: Hard dropshadow found on general UI elements such as containers
+  SHADOW_SOFT_PRIMARY:
+    value: 'none'
+    comment: Soft dropshadow found on general UI elements such as containers
+  SHADOW_SOFT_PRIMARY_HOVER:
+    value: 'none'
+  SHADOW_SOFT_PRIMARY_ACTIVE:
+    value: 'none'
+  SHADOW_OVERLAY:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
+    comment: Shadow for overlays.
+  SHADOW_BUTTON:
+    value: '{!OFFSET_NONE} 1px 1px {!OFFSET_NONE} {!BLACK_TRANSPARENT_05}'
+    comment: Shadow for buttons.
+  SHADOW_FOCUS_INSET:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!AZURE} inset'
+    comment: Inset shadow for editable grid
+  SHADOW_IMAGE:
+    value: '{!OFFSET_NONE} 1px 1px {!BLACK_TRANSPARENT_16}'
+    comment: Shadow on images.
+  ELEVATION_3_INSET:
+    value: '-{!OFFSET_SMALL}'
+    comment: Deprecated
+    type: number
+  ELEVATION_0:
+    value: '{!OFFSET_NONE}'
+    comment: Deprecated
+    type: number
+  ELEVATION_2:
+    value: '{!OFFSET_X_SMALL}'
+    comment: Deprecated
+    type: number
+  ELEVATION_4:
+    value: '{!OFFSET_MEDIUM}'
+    comment: Deprecated
+    type: number
+  ELEVATION_8:
+    value: '{!OFFSET_LARGE}'
+    comment: Deprecated
+    type: number
+  ELEVATION_16:
+    value: '{!OFFSET_X_LARGE}'
+    comment: Deprecated
+    type: number
+  ELEVATION_32:
+    value: '{!OFFSET_XX_LARGE}'
+    comment: Deprecated
+    type: number
+  ELEVATION_SHADOW_3_BELOW:
+    value: '{!OFFSET_NONE} {!OFFSET_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16} inset'
+    comment: Deprecated
+  ELEVATION_SHADOW_0:
+    value: none
+    comment: Deprecated
+  ELEVATION_SHADOW_2:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_SHADOW_4:
+    value: '{!OFFSET_NONE} {!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_SHADOW_8:
+    value: '{!OFFSET_NONE} {!OFFSET_LARGE}px {!OFFSET_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_SHADOW_16:
+    value: '{!OFFSET_NONE} {!OFFSET_X_LARGE}px {!OFFSET_X_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_SHADOW_32:
+    value: '{!OFFSET_NONE} {!OFFSET_XX_LARGE}px {!OFFSET_XX_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_3_BELOW:
+    value: '{!OFFSET_NONE} -{!OFFSET_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16} inset'
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_0:
+    value: none
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_2:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: 'Deprecated: Use SHADOW_DOCKED'
+  ELEVATION_INVERSE_SHADOW_4:
+    value: '{!OFFSET_NONE} -{!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_8:
+    value: '{!OFFSET_NONE} -{!OFFSET_LARGE}px {!OFFSET_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_16:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_LARGE}px {!OFFSET_X_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated
+  ELEVATION_INVERSE_SHADOW_32:
+    value: '{!OFFSET_NONE} -{!OFFSET_XX_LARGE}px {!OFFSET_XX_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Deprecated

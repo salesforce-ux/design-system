@@ -1,0 +1,26 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font-weight
+  cssProperties:
+  - font
+  - font-weight
+imports:
+- ../../../aliases/font-weight.yml
+props:
+  ## INPUTS
+  INPUT_STATIC_FONT_WEIGHT:
+    value: '{!FONT_WEIGHT_REGULAR}'
+  ## TABS
+  TABS_FONT_WEIGHT:
+    value: '{!FONT_WEIGHT_BOLD}'
+    comment: Use for active tab.
+  ## CARDS
+  CARD_FONT_WEIGHT:
+    value: '{!FONT_WEIGHT_BOLD}'
+    comment: Use for active tab.
+  ## PAGE HEADERS
+  PAGE_HEADER_TITLE_FONT_WEIGHT:
+    value: '{!FONT_WEIGHT_BOLD}'

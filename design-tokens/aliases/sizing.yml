@@ -1,0 +1,22 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+  SIZE_SQUARE_XXX_SMALL: "0.5rem"
+  SIZE_SQUARE_XX_SMALL: "0.75rem"
+  SIZE_SQUARE_X_SMALL: "0.8125rem"
+  SIZE_SQUARE_SMALL: "0.875rem"
+  SIZE_SQUARE_MEDIUM: "1rem"
+  SIZE_SQUARE_LARGE: "1.25rem"
+  SIZE_SQUARE_X_LARGE: "1.5rem"
+  SIZE_SQUARE_XX_LARGE: "2rem"
+  SIZE_SQUARE_XXX_LARGE: "2.25rem"
+
+  SIZE_XXX_SMALL: "3rem"
+  SIZE_XX_SMALL: "6rem"
+  SIZE_X_SMALL: "12rem"
+  SIZE_SMALL: "15rem"
+  SIZE_MEDIUM: "20rem"
+  SIZE_LARGE: "25rem"
+  SIZE_X_LARGE: "40rem"
+  SIZE_XX_LARGE: "60rem"

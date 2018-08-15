@@ -1,0 +1,35 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+  deprecated: true
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
+props:
+  COLOR_TEXT_SECONDARY:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Secondary body text color
+  COLOR_TEXT_TERTIARY:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Tertiary body text color
+  COLOR_TEXT_MODAL:
+    value: '{!WHITE}'
+    comment: Modal header title
+  COLOR_TEXT_MODAL_BUTTON:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Modal header button text color
+  COLOR_TEXT_STAGE_LEFT:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Text in stage left navigation.
+  COLOR_TEXT_TOAST:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Color for text on toast messages.
+  COLOR_TEXT_PILL:
+    value: '{!SCIENCE_BLUE}'
+    comment: Text color for pills.

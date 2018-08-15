@@ -1,0 +1,14 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./background-color.yml
+- ./border-color.yml
+- ./border-radius.yml
+- ./box-shadow.yml
+- ./font-size.yml
+- ./font-weight.yml
+- ./image-paths.yml
+- ./spacing.yml
+- ./text-align.yml
+- ./text-color.yml

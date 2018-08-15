@@ -7,7 +7,7 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/aliases/colors.yml"
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_BADGE:

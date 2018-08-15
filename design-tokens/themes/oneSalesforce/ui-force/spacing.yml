@@ -1,0 +1,24 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  cssProperties:
+  - 'margin*'
+  - 'padding*'
+imports:
+- ../../../aliases/spacing.yml
+props:
+  ## GLOBALS
+  COMPONENT_SPACING_MARGIN:
+    value: '{!SPACING_SMALL}'
+  COMPONENT_SPACING_PADDING:
+    value: '{!SPACING_MEDIUM}'
+  TEMPLATE_GUTTERS:
+    value: '{!SPACING_SMALL}'
+  TEMPLATE_PROFILE_GUTTERS:
+    value: '8rem {!SPACING_SMALL} {!SPACING_SMALL}'
+  ## TABLES
+  TABLE_CELL_SPACING:
+    value: '{!SPACING_XX_SMALL} {!SPACING_X_SMALL}'

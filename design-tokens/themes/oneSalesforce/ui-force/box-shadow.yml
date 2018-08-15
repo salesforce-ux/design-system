@@ -1,0 +1,26 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- ../../../aliases/color-palettes.yml
+- ../../../aliases/offset.yml
+props:
+  SHADOW_BUTTON_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
+    comment: Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.
+  SHADOW_LINK_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
+    comment: Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.
+  ## PAGE HEADERS
+  PAGE_HEADER_SHADOW:
+    value: '0 2px 2px 0 {!BLACK_TRANSPARENT_10}'
+    comment: Hard dropshadow on page header
+  ## CARDS
+  CARD_SHADOW:
+    value: '0 2px 2px 0 {!BLACK_TRANSPARENT_10}'
+    comment: Hard dropshadow found on outer cards

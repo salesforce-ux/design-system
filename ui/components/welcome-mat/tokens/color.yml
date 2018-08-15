@@ -12,7 +12,7 @@ global:
   - box-shadow
 imports:
 - ../../../../design-tokens/aliases/color-palettes.yml
-- ../../../../design-tokens/force-base/aliases/color.yml
+- ../../../../design-tokens/aliases/colors.yml
 props:
   WELCOME_MAT_TEXT_COLOR_INFO:
     value: '{!MIDNIGHT_BLUE}'

@@ -9,7 +9,7 @@ global:
   - font
   - font-size
 imports:
-- "../../../../design-tokens/force-base/aliases/font-size.yml"
+- "../../../../design-tokens/aliases/font-size.yml"
 props:
   ## Default font sizes, these dont change =)
   PAGE_HEADER_TITLE_FONT_SIZE:

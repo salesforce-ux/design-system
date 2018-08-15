@@ -1,0 +1,36 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: time
+  category: time
+  cssProperties:
+  - 'animation*'
+  - 'transition*'
+imports:
+- ../../aliases/duration.yml
+props:
+  DURATION_INSTANTLY:
+    value: '{!DURATION_INSTANTLY}'
+    comment: '0 seconds, 0 frames'
+  DURATION_IMMEDIATELY:
+    value: '{!DURATION_IMMEDIATELY}'
+    comment: '0.05 seconds, 3 frames'
+  DURATION_QUICKLY:
+    value: '{!DURATION_QUICKLY}'
+    comment: '0.1 seconds, 6 frames'
+  DURATION_PROMPTLY:
+    value: '{!DURATION_PROMPTLY}'
+    comment: '0.2 seconds, 12 frames'
+  DURATION_SLOWLY:
+    value: '{!DURATION_SLOWLY}'
+    comment: '0.4 seconds, 24 frames'
+  DURATION_PAUSED:
+    value: '{!DURATION_PAUSED}'
+    comment: '3.2 seconds, 192 frames'
+  DURATION_TOAST_SHORT:
+    value: 4.8s
+    comment: 4.8 seconds
+  DURATION_TOAST_MEDIUM:
+    value: 9.6s
+    comment: 9.6 seconds

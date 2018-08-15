@@ -1,0 +1,69 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+imports:
+- ../../aliases/colors.yml
+- ../../aliases/color-palettes.yml
+props:
+  COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_COOL_GRAY_5}'
+  COLOR_BORDER_TAB_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Border color for a selected tab in a tab group.
+  COLOR_BORDER_TAB_ACTIVE:
+    value: "{!WHITE}"
+    comment: Border color for an active tab.
+  COLOR_BORDER_CANVAS_ELEMENT_SELECTION:
+    value: '{!MALIBU}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected canvas element. Specific to builders.
+  COLOR_BORDER_CANVAS_ELEMENT_SELECTION_HOVER:
+    value: '{!ENDEAVOUR}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
+  COLOR_BORDER_ICON_INVERSE_HINT:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Border color for a button with an icon that has a parent element that has a hover state
+  COLOR_BORDER_ICON_INVERSE_HINT_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Hovered border color for a button with an icon that has a parent element that has a hover state
+  COLOR_BORDER_BUTTON_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Border color for brandable primary button
+  COLOR_BORDER_BUTTON_BRAND_DISABLED:
+    value: '{!TRANSPARENT}'
+    comment: Border color for brandable primary button - disabled state
+  COLOR_BORDER_BUTTON_DEFAULT:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Border color for default secondary button
+  COLOR_BORDER_BUTTON_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Border color for disabled inverse button.
+  COLOR_BORDER_BUTTON_FOCUS_INVERSE:
+    value: '{!PALETTE_COOL_GRAY_4}'
+  COLOR_BORDER_LINK_FOCUS_INVERSE:
+    value: '{!PALETTE_COOL_GRAY_4}'
+  COLOR_BORDER_INPUT:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Border color on form elements.
+  COLOR_BORDER_INPUT_ACTIVE:
+    value: '{!AZURE}'
+    comment: Border color on active form elements.
+  COLOR_BORDER_INPUT_DISABLED:
+    value: '{!PALETTE_COOL_GRAY_6}'
+    comment: Border color on disabled form elements.
+  COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
+    value: '{!WHITE}'
+    comment: The borders to create the checkmark
+  COLOR_BORDER_TOGGLE_CHECKED:
+    value: '{!WHITE}'
+    comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
+  COLOR_BORDER_REMINDER:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Border color on notification reminders.

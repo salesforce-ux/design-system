@@ -1,0 +1,75 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+imports:
+- ../../../aliases/colors.yml
+- ../../../aliases/color-palettes.yml
+props:
+  COLOR_TEXT_SECONDARY:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Secondary body text color
+  COLOR_TEXT_TERTIARY:
+    value: '{!PALETTE_GRAY_8}'
+    comment: Tertiary body text color
+  COLOR_TEXT_INVERSE_ACTIVE:
+    value: '{!MALIBU}'
+    comment: Active state on a standalone link on a dark background.
+  COLOR_TEXT_INVERSE_HOVER:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Hover state on a standalone link on a dark background.
+  ## ICONS
+  COLOR_TEXT_ICON_UTILITY:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Color for interactive utility icons
+  COLOR_TEXT_ICON_DEFAULT:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Default icon color.
+  COLOR_TEXT_ICON_DEFAULT_HINT:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_DEFAULT_DISABLED:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Default icon color - disabled state
+  COLOR_TEXT_ICON_INVERSE:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Icon color on dark background
+  COLOR_TEXT_ICON_INVERSE_HOVER:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Icon color on dark background - hover state
+  COLOR_TEXT_ICON_INVERSE_ACTIVE:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Icon color on dark background - active state
+  ## INPUT
+  COLOR_TEXT_INPUT_DISABLED:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Input disabled text
+  COLOR_TEXT_INPUT_ICON:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Input icon
+  ## TABS
+  COLOR_TEXT_TAB_LABEL_DISABLED:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Color for disabled text in a tab group.
+  ## TOGGLES
+  COLOR_TEXT_TOGGLE_DISABLED:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Color for disabled toggles
+  ## BUTTONS
+  COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Text color for default secondary button - disabled state
+  COLOR_TEXT_BUTTON_DEFAULT_HINT:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_BUTTON_INVERSE:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.

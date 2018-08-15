@@ -1,0 +1,34 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- ../../aliases/colors.yml
+- ../../aliases/offset.yml
+- ../../aliases/color-palettes.yml
+props:
+  SHADOW_ACTION_OVERFLOW_FOOTER:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!PALETTE_COOL_GRAY_2}'
+    comment: Shadow above overflow menu close bar.
+  SHADOW_REMINDER:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_20}'
+    comment: Shadow for notifications that should be elevated above other components but under modals.
+  SHADOW_BUTTON_FOCUS:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!SCIENCE_BLUE}'
+    comment: Custom glow for focus states on UI elements with explicit containers.
+  SHADOW_BUTTON_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_COOL_GRAY_4}'
+    comment: Custom glow for focus states on UI button elements with explicit containers on dark or vibrantly colored backgrounds.
+  SHADOW_LINK_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_COOL_GRAY_4}'
+    comment: Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.
+  SHADOW_INLINE_EDIT:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_16}'
+    comment: Shadow to make inline edit card pop out.
+  SHADOW_DOCKED:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Shadow on elements that are docked to the bottom of the viewport.

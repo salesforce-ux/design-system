@@ -1,0 +1,25 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+  deprecated: true
+imports:
+- ../../../aliases/color-palettes.yml
+props:
+  ## TOASTS
+  COLOR_TEXT_TOAST:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Color for text on toast messages.
+  ## MODALS
+  COLOR_TEXT_MODAL_BUTTON:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Modal header button text color
+  ## STAGE LEFT
+  COLOR_TEXT_STAGE_LEFT:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Text in stage left navigation.

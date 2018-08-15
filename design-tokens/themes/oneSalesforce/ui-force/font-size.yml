@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font-size
+  cssProperties:
+  - font-size
+imports:
+- ../../../aliases/font-size.yml
+props:
+  ## LABELS
+  FORM_LABEL_FONT_SIZE:
+    value: '{!FONT_SIZE_2}'
+  ## INPUTS
+  INPUT_STATIC_FONT_SIZE:
+    value: '{!FONT_SIZE_4}'

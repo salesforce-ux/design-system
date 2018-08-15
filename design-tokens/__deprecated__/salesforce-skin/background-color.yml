@@ -1,0 +1,194 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+  - text-shadow
+imports:
+- ../../aliases/colors.yml
+- ../../aliases/color-palettes.yml
+props:
+  PAGE_COLOR_BACKGROUND_PRIMARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+    deprecated: true
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
+    deprecated: true
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY:
+    value: 'rgb(253,253,253)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_DARK instead.'
+    deprecated: true
+  BRAND_BAND_COLOR_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: 'rgba(253,253,253,0)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+    deprecated: true
+  BRAND_BAND_COLOR_BACKGROUND_SECONDARY_TRANSPARENT:
+    value: 'rgba(253,253,253,0)'
+    comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_DARK_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
+    deprecated: true
+  ## BACKGROUNDS
+  COLOR_BACKGROUND_PRIMARY:
+    value: '{!PALETTE_GRAY_3}'
+    deprecated: true
+  COLOR_BACKGROUND_SECONDARY:
+    value: '{!PALETTE_GRAY_1}'
+    deprecated: true
+  COLOR_CONTRAST_PRIMARY:
+    value: '{!PALETTE_GRAY_3}'
+  COLOR_CONTRAST_SECONDARY:
+    value: '{!PALETTE_GRAY_3}'
+    deprecated: true
+  COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Default background color for the whole app.
+  COLOR_BACKGROUND_ALT_2:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+    deprecate: true
+  COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_GRAY_4}'
+    specificity: builders
+    comment: Used as gray background when more contrast is desired.
+  COLOR_BACKGROUND_SHADE_DARK:
+    value: '{!PALETTE_GRAY_5}'
+    specificity: builders
+    comment: Used as gray background in conjunction with Shade when more contrast is desired.
+    deprecated: true
+  COLOR_BACKGROUND_BROWSER:
+    value: '{!PALETTE_GRAY_9}'
+    comment: 'Secondary top bar background color (child browser, file preview, etc.)'
+    deprecated: true
+  ## TABLE
+  TABLE_COLOR_BACKGROUND_HEADER:
+    value: '{!PALETTE_GRAY_2}'
+  TABLE_COLOR_BACKGROUND_HEADER_HOVER:
+    value: '{!PALETTE_GRAY_1}'
+  ## POPOVERS
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND:
+    value: '#032e61'
+  POPOVER_WALKTHROUGH_HEADER_COLOR_BACKGROUND:
+    value: '#164A85'
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND_ALT:
+    value: '#164A85'
+  POPOVER_WALKTHROUGH_HEADER_IMAGE:
+    value: '/assets/images/popovers/popover-header.png'
+    type: string
+  POPOVER_WALKTHROUGH_ALT_IMAGE:
+    value: '/assets/images/popovers/popover-action.png'
+    type: string
+  POPOVER_WALKTHROUGH_ALT_NUBBIN_COLOR_BACKGROUND:
+    value: '#215ca0'
+  ## ROW INTERACTIONS
+  COLOR_BACKGROUND_ROW_HOVER:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Used as the background color for the hover state on rows or items on list-like components.
+  COLOR_BACKGROUND_ROW_ACTIVE:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Used as the background color for the active state on rows or items on list-like components.
+  COLOR_BACKGROUND_ROW_SELECTED:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Used as the background color for selected rows or items on list-like components.
+  ## MODAL BACKDROPS
+  COLOR_BACKGROUND_TEMP_MODAL:
+    value: '{!PALETTE_GRAY_8}'
+    comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
+    deprecated: true
+  COLOR_BACKGROUND_TEMP_MODAL_TINT:
+    value: '{!PALETTE_DARK_GRAY_TRANSPARENT_60}'
+    comment: The color of the mask overlay that appears when you enter a modal state.
+    deprecated: true
+  COLOR_BACKGROUND_BACKDROP_TINT:
+    value: '{!PALETTE_GRAY_2}'
+    comment: The color of the mask overlay that provides user feedback on interaction.
+  ## FEEDBACK
+  COLOR_BACKGROUND_INFO:
+    value: '{!PALETTE_GRAY_9}'
+    comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BACKGROUND_OFFLINE:
+    value: '{!PALETTE_GRAY_11}'
+    comment: Color for UI elements related to the offline state.
+    deprecated: true
+  ## STENCILS
+  COLOR_BACKGROUND_STENCIL:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Used as background for loading stencils on white background.
+  COLOR_BACKGROUND_STENCIL_ALT:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Used as an alternate background for loading stencils on gray backgrounds.
+  ## SCROLLBAR
+  COLOR_BACKGROUND_SCROLLBAR:
+    value: '{!PALETTE_GRAY_4}'
+    comment: The background color of an internal scrollbar.
+  COLOR_BACKGROUND_SCROLLBAR_TRACK:
+    value: '{!PALETTE_GRAY_6}'
+    comment: The background color of an internal scrollbar track.
+  ## SPINNERS
+  COLOR_BACKGROUND_SPINNER_DOT:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Color of the spinner dot.
+  ## FEED
+  COLOR_BACKGROUND_PAYLOAD:
+    value: '{!PALETTE_GRAY_2}'
+    comment: Background color for payloads in the feed.
+    deprecated: true
+  COLOR_BACKGROUND_POST:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Background color of comment posts in the feed.
+  ## UTILITY BAR
+  COLOR_BACKGROUND_UTILITY_BAR_HOVER:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Hover color for utility bar item.
+    deprecated: true
+  ## ACTION BAR
+  COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Background for utility icons that live in the action bar on mobile.
+    deprecated: true
+  ## TOGGLE
+  COLOR_BACKGROUND_TOGGLE:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Toggle background color.
+  COLOR_BACKGROUND_TOGGLE_DISABLED:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Disabled toggle background color.
+  COLOR_BACKGROUND_TOGGLE_HOVER:
+    value: '{!PALETTE_GRAY_8}'
+    comment: Hovered toggle background color.
+  ## INPUT
+  COLOR_BACKGROUND_INPUT_DISABLED:
+    value: '{!PALETTE_GRAY_4}'
+    comment: Disabled input
+  COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
+    value: '{!PALETTE_GRAY_5}'
+    comment: Disabled checkboxes
+  ## TOAST
+  COLOR_BACKGROUND_TOAST:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Background color for toast messaging.
+  ## NOTIFICATION
+  COLOR_BACKGROUND_NOTIFICATION_NEW:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Background color for a new notification list item.
+  ## COLOR PICKER
+  COLOR_PICKER_SLIDER_THUMB_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_3}'
+  ## PROGRESS INDICATOR
+  PROGRESS_COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_GRAY_3}'
+  PROGRESS_COLOR_BORDER_SHADE:
+    value: '{!PALETTE_GRAY_3}'
+  ## PAGE HEADERS
+  PAGE_HEADER_COLOR_BACKGROUND:
+    value: '{!PALETTE_GRAY_3}'
+    comment: Default Page Header background color
+  COLOR_BACKGROUND_ANCHOR:
+    value: '{!PALETTE_GRAY_3}'
+    deprecated: true
+    comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.

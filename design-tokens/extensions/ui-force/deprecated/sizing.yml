@@ -1,0 +1,33 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+  deprecated: true
+props:
+  SQUARE_ICON_MEDIUM:
+    value: 2.375rem
+    comment: Use squareIconMediumBoundary
+  SQUARE_ICON_SMALL:
+    value: 1rem
+    comment: Small tap target size
+  SQUARE_ICON_XX_SMALL_CONTENT:
+    value: .875rem
+    comment: Very small icons to replace force font with temporary override.
+  SQUARE_ICON_LARGE:
+    value: 3.125rem
+    comment: Large tap target size.

@@ -1,0 +1,10 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+aliases:
+  DURATION_INSTANTLY: "0s"
+  DURATION_IMMEDIATELY: "0.05s"
+  DURATION_QUICKLY: "0.1s"
+  DURATION_PROMPTLY: "0.2s"
+  DURATION_SLOWLY: "0.4s"
+  DURATION_PAUSED: "3.2s"

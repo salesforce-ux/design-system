@@ -156,7 +156,11 @@ export const ExpressionRow = props => {
       <fieldset>
         <ExpressionLegend
           legendText={props.legendText}
-          assistiveText={props.assistiveText}
+          assistiveText={
+            props.isGroup
+              ? props.conditionName + ' of ' + props.groupName
+              : props.conditionName
+          }
         />
         <div className="slds-grid slds-gutters_xx-small">
           <ExpressionCol>
@@ -248,7 +252,22 @@ export const ExpressionRow = props => {
                   theme="neutral"
                   symbol="delete"
                   disabled={props.buttonIsDisabled}
-                  assistiveText={'Delete ' + props.assistiveText}
+                  assistiveText={
+                    props.isGroup
+                      ? 'Delete ' +
+                        props.conditionName +
+                        ' of ' +
+                        props.groupName
+                      : 'Delete ' + props.conditionName
+                  }
+                  title={
+                    props.isGroup
+                      ? 'Delete ' +
+                        props.conditionName +
+                        ' of ' +
+                        props.groupName
+                      : 'Delete ' + props.conditionName
+                  }
                 />
               </FormElementControl>
             </SimpleFormElementWrapper>
@@ -261,8 +280,18 @@ export const ExpressionRow = props => {
 
 ExpressionRow.propTypes = {
   legendText: PropTypes.string,
-  assistiveText: PropTypes.string.isRequired,
+  conditionName: PropTypes.string.isRequired,
   isGroup: PropTypes.bool,
+  groupName: function(props, propName) {
+    if (
+      props['isGroup'] &&
+      (props[propName] === undefined || typeof props[propName] !== 'string')
+    ) {
+      return new Error(
+        "Please provide a string of this row's group name for assistive text."
+      );
+    }
+  },
   inputIsDisabled: PropTypes.bool,
   buttonIsDisabled: PropTypes.bool,
   resourceIsSelected: PropTypes.bool,
@@ -270,7 +299,7 @@ ExpressionRow.propTypes = {
 };
 
 ExpressionRow.defaultProps = {
-  assistiveText: 'Condition 1'
+  conditionName: 'Condition 1'
 };
 
 export const ExpressionGroup = props => (

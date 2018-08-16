@@ -18,8 +18,17 @@ export let examples = [
     element: (
       <Expression optionSelected="all" resourceIsSelected>
         <ExpressionGroup legendText="AND" assistiveText="Condition Group 1">
-          <ExpressionRow assistiveText="Condition 1" isGroup />
-          <ExpressionRow assistiveText="Condition 2" legendText="AND" isGroup />
+          <ExpressionRow
+            conditionName="Condition 1"
+            isGroup
+            groupName="Condition Group 1"
+          />
+          <ExpressionRow
+            conditionName="Condition 2"
+            legendText="AND"
+            isGroup
+            groupName="Condition Group 1"
+          />
         </ExpressionGroup>
       </Expression>
     )
@@ -29,7 +38,7 @@ export let examples = [
     label: 'With Multiple Conditions',
     element: (
       <Expression>
-        <ExpressionRow legendText="AND" assistiveText="Condition 2" />
+        <ExpressionRow legendText="AND" conditionName="Condition 2" />
       </Expression>
     )
   },
@@ -40,7 +49,7 @@ export let examples = [
       <Expression>
         <ExpressionRow
           legendText="AND"
-          assistiveText="Condition 2"
+          conditionName="Condition 2"
           inputIsDisabled
         />
       </Expression>
@@ -53,7 +62,7 @@ export let examples = [
       <Expression>
         <ExpressionRow
           legendText="AND"
-          assistiveText="Condition 2"
+          conditionName="Condition 2"
           errorMessage="Input has error"
           hasError
         />

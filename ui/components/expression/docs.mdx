@@ -118,7 +118,7 @@ Once a resource is selected, the values for the Operator field update to corresp
 <Example title="Expression Builder - Condition Added">
   <CodeView>
     <Expression optionSelected="all" resourceIsSelected>
-      <ExpressionRow legendText="AND" assistiveText="Condition 2" inputIsDisabled/>
+      <ExpressionRow legendText="AND" conditionName="Condition 2" inputIsDisabled/>
     </Expression>
   </CodeView>
 </Example>
@@ -128,7 +128,7 @@ Once a resource is selected, the values for the Operator field update to corresp
 <Example title="Expression Builder - Error State">
   <CodeView>
     <Expression optionSelected="all" resourceIsSelected>
-      <ExpressionRow legendText="AND" assistiveText="Condition 2" errorMessage="This field is required." hasError />
+      <ExpressionRow legendText="AND" conditionName="Condition 2" errorMessage="This field is required." hasError />
     </Expression>
   </CodeView>
 </Example>
@@ -140,7 +140,7 @@ When the user selects "All Conditions Are Met" from the mode combobox and adds a
 <Example title="Expression Builder - All Conditions">
   <CodeView>
     <Expression optionSelected="all" resourceIsSelected>
-      <ExpressionRow legendText="AND" assistiveText="Condition 2" resourceIsSelected/>
+      <ExpressionRow legendText="AND" conditionName="Condition 2" resourceIsSelected/>
     </Expression>
   </CodeView>
 </Example>
@@ -150,7 +150,7 @@ If the user selects "Any Condition Is Met" from the mode combobox, the expressio
 <Example title="Expression Builder - Any Conditions">
   <CodeView>
     <Expression optionSelected="any" resourceIsSelected>
-      <ExpressionRow legendText="OR" assistiveText="Condition 2" resourceIsSelected/>
+      <ExpressionRow legendText="OR" conditionName="Condition 2" resourceIsSelected/>
     </Expression>
   </CodeView>
 </Example>
@@ -181,8 +181,8 @@ To create more complex expressions, the user can add an expression group to crea
         optionSelected="group"
         isGroup
       >
-        <ExpressionRow assistiveText="Condition 1" isGroup resourceIsSelected/>
-        <ExpressionRow legendText="OR" assistiveText="Condition 2" isGroup inputIsDisabled/>
+        <ExpressionRow conditionName="Condition 1" isGroup groupName="Condition Group 1" resourceIsSelected/>
+        <ExpressionRow legendText="OR" conditionName="Condition 2" isGroup groupName="Condition Group 1" inputIsDisabled/>
       </ExpressionGroup>
     </Expression>
   </CodeView>
@@ -204,7 +204,7 @@ Another option for creating more complex expressions is using the Custom Logic v
 <Example title="Expression Builder - Custom Logic">
   <CodeView>
     <Expression hasCustomLogic customLogicValue="1 AND 2" legendText="1" optionSelected="custom" resourceIsSelected>
-      <ExpressionRow legendText="2" assistiveText="Condition 2" inputIsDisabled/>
+      <ExpressionRow legendText="2" conditionName="Condition 2" inputIsDisabled/>
     </Expression>
   </CodeView>
 </Example>

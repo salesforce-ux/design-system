@@ -2,13 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import _ from '../../../shared/helpers';
-import {
-  AdvancedDataTable as Table,
-  Thead,
-  AdvancedDataTableTr,
-  ProductDataTableTr
-} from '../';
+
+import { Ellie } from '../../dynamic-icons/ellie/example';
+import { StandardIcon } from '../../icons/standard/example';
+import { Table, TBody, AdvancedDataTableHead as Thead } from '../';
+import { AdvancedDataTableTr, ProductDataTableTr } from '../advanced/';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -58,6 +56,8 @@ export const rows = [
   }
 ];
 
+const reversedRows = [...rows].reverse();
+
 export const productColumns = ['Product', 'Quantity', 'Date Added', 'Price'];
 
 export const productRows = [
@@ -70,7 +70,7 @@ export const productRows = [
       { label: 'Item No.', value: '1007100' }
     ],
     labelInventory: 'In Stock',
-    quantity: 1,
+    quantity: '1',
     dateAdded: '4/10/17',
     priceOriginal: '$23.00',
     priceDiscount: '$20.00'
@@ -84,7 +84,7 @@ export const productRows = [
       { label: 'Item No.', value: '2800100' }
     ],
     labelInventory: 'In Stock',
-    quantity: 1,
+    quantity: '1',
     dateAdded: '4/10/17',
     priceOriginal: '$52.00',
     priceDiscount: '$40.00'
@@ -105,31 +105,59 @@ export const productRows = [
   }
 ];
 
-const columnHeaderIcons = [['Confidence', 'Ellie']];
-
-export const AdvancedTable = () => (
-  <Table>
-    <Thead columns={columns} />
-    <tbody>
-      {_.times(rows.length, i => (
-        <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
-      ))}
-    </tbody>
-  </Table>
+const AccountNameColumnIcon = (
+  <StandardIcon
+    assistiveText="Account"
+    className="slds-icon_x-small"
+    containerClassName="slds-m-right_xx-small"
+    symbol="account"
+    title="Account"
+  />
 );
+const ConfidenceColumnIcon = (
+  <div className="slds-icon_container slds-m-right_xx-small">
+    <Ellie
+      assistiveText="Einstein calculated"
+      className="slds-is-paused"
+      title="Einstein calculated"
+    />
+  </div>
+);
+
+const columnHeaderIcons = [
+  {
+    column: 'account name',
+    icon: AccountNameColumnIcon
+  },
+  {
+    column: 'confidence',
+    icon: ConfidenceColumnIcon
+  }
+];
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <Table>
+  <Table
+    isBordered
+    isFixedLayout
+    isResizable
+    selectionType="multiple"
+    type="advanced"
+  >
     <Thead columns={columns} />
-    <tbody>
-      {_.times(rows.length, i => (
-        <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+    <TBody>
+      {rows.map((row, i) => (
+        <AdvancedDataTableTr
+          isSelected={false}
+          key={i}
+          index={i + 1}
+          {...row}
+        />
       ))}
-    </tbody>
+    </TBody>
   </Table>
 );
 
@@ -138,13 +166,25 @@ export let states = [
     id: 'cell-focused',
     label: 'Cell Focused',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead columns={columns} />
-        <tbody>
-          {_.times(rows.length, i => (
-            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasFocus />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+              hasFocus
+            />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -152,18 +192,25 @@ export let states = [
     id: 'actionable-mode',
     label: 'Actionable Mode',
     element: (
-      <Table>
-        <Thead columns={columns} actionableMode />
-        <tbody>
-          {_.times(rows.length, i => (
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead actionableMode columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
-              index={i + 1}
-              {...rows[i]}
               actionableMode
+              index={i + 1}
+              isSelected={false}
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -171,20 +218,25 @@ export let states = [
     id: 'row-selected',
     label: 'Row Selected (Actionable mode)',
     element: (
-      <Table>
-        <Thead columns={columns} actionableMode />
-        <tbody>
-          {_.times(rows.length, i => (
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead actionableMode columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
-              index={i + 1}
-              className={i === 1 ? 'slds-is-selected' : null}
-              {...rows[i]}
-              rowSelected={i === 1 ? true : null}
               actionableMode
+              index={i + 1}
+              isSelected={i === 1}
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -192,20 +244,25 @@ export let states = [
     id: 'all-row-selected',
     label: 'All Rows Selected (Actionable mode)',
     element: (
-      <Table>
-        <Thead columns={columns} actionableMode selectAll />
-        <tbody>
-          {_.times(rows.length, i => (
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead actionableMode columns={columns} selectAll />
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
-              index={i + 1}
-              className="slds-is-selected"
-              {...rows[i]}
               actionableMode
-              rowSelected
+              index={i + 1}
+              isSelected
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -213,18 +270,25 @@ export let states = [
     id: 'sorted-column-asc',
     label: 'Sorted Ascending (Actionable mode)',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead columns={columns} actionableMode sortDirection="ascending" />
-        <tbody>
-          {_.times(rows.length, i => (
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
-              index={i + 1}
-              {...rows[i]}
               actionableMode
+              index={i + 1}
+              isSelected={false}
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -232,20 +296,25 @@ export let states = [
     id: 'sorted-column-desc',
     label: 'Sorted Descending (Actionable mode)',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead columns={columns} actionableMode sortDirection="descending" />
-        <tbody>
-          {_.reverse(
-            _.times(rows.length, i => (
-              <AdvancedDataTableTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
-                actionableMode
-              />
-            ))
-          )}
-        </tbody>
+        <TBody>
+          {reversedRows.map((row, i) => (
+            <AdvancedDataTableTr
+              actionableMode
+              index={i + 1}
+              isSelected={false}
+              key={i}
+              {...row}
+            />
+          ))}
+        </TBody>
       </Table>
     )
   },
@@ -253,18 +322,25 @@ export let states = [
     id: 'resized-column',
     label: 'Column Resized (Actionable mode)',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />
-        <tbody>
-          {_.times(rows.length, i => (
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
-              index={i + 1}
-              {...rows[i]}
               actionableMode
+              index={i + 1}
+              isSelected={false}
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   }
@@ -275,17 +351,28 @@ export let examples = [
     id: 'header-icon-menu-button',
     label: 'Header Icon and Menu Button',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead
-          columns={columns}
           columnHeaderIcons={columnHeaderIcons}
+          columns={columns}
           hasMenus
         />
-        <tbody>
-          {_.times(rows.length, i => (
-            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -293,13 +380,24 @@ export let examples = [
     id: 'header-menu-button',
     label: 'Header Menu Button',
     element: (
-      <Table>
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
         <Thead columns={columns} hasMenus />
-        <tbody>
-          {_.times(rows.length, i => (
-            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -307,13 +405,25 @@ export let examples = [
     id: 'cell-icon',
     label: 'Cell Icon',
     element: (
-      <Table>
-        <Thead className="slds-has-button-menu" columns={columns} />
-        <tbody>
-          {_.times(rows.length, i => (
-            <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} hasScores />
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+              hasScores
+            />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -321,18 +431,25 @@ export let examples = [
     id: 'product-listing',
     label: 'Product Listing',
     element: (
-      <Table>
-        <Thead columns={productColumns} actionableMode hasNoSelectability />
-        <tbody>
-          {_.times(productRows.length, i => (
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead columns={productColumns} actionableMode hasNoRowSelection />
+        <TBody>
+          {productRows.map((row, i) => (
             <ProductDataTableTr
+              isSelected={false}
               key={i}
               index={i + 1}
-              {...productRows[i]}
+              {...row}
               actionableMode
             />
           ))}
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -340,18 +457,80 @@ export let examples = [
     id: 'radio-group',
     label: 'Radio Group',
     element: (
-      <Table>
-        <Thead columns={columns} isSingleSelect />
-        <tbody>
-          {_.times(rows.length, i => (
+      <Table isBordered isFixedLayout isResizable type="advanced">
+        <Thead columns={columns} hasSingleRowSelect />
+        <TBody>
+          {rows.map((row, i) => (
             <AdvancedDataTableTr
-              key={i}
+              hasSingleRowSelect
               index={i + 1}
-              {...rows[i]}
-              isSingleSelect
+              key={i}
+              {...row}
             />
           ))}
-        </tbody>
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'data-table-no-borders',
+    label: 'No borders',
+    element: (
+      <Table isFixedLayout isResizable selectionType="multiple" type="advanced">
+        <Thead columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
+          ))}
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'data-table-headless',
+    label: 'Headless',
+    element: (
+      <Table
+        hasHiddenHeader
+        isBordered
+        selectionType="multiple"
+        type="advanced"
+      >
+        <Thead isHidden columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
+          ))}
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'data-table-headless-no-borders',
+    label: 'Headless with no borders',
+    element: (
+      <Table hasHiddenHeader selectionType="multiple" type="advanced">
+        <Thead isHidden columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
+          ))}
+        </TBody>
       </Table>
     )
   }

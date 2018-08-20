@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
-import { LightBadge, InverseBadge, Badge } from '../';
+import { Badge, InverseBadge, LightestBadge } from '../';
 import { UtilityIcon } from '../../icons/base/example';
 import createHelpers from '../../../../jest.helpers';
 const { matchesMarkupAndStyle } = createHelpers(__dirname);
@@ -13,11 +13,11 @@ it('renders an inverse badge', () =>
 
 describe('renders a light badge', () => {
   it('renders badge', () =>
-    matchesMarkupAndStyle(<LightBadge>Light</LightBadge>));
+    matchesMarkupAndStyle(<LightestBadge>Light</LightestBadge>));
 
   it('renders badge with left icon', () =>
     matchesMarkupAndStyle(
-      <LightBadge>
+      <LightestBadge>
         <UtilityIcon
           containerClassName="slds-m-right_xx-small"
           className="slds-icon_xx-small slds-icon-text-default"
@@ -25,12 +25,12 @@ describe('renders a light badge', () => {
           symbol="world"
         />
         Icon on the left
-      </LightBadge>
+      </LightestBadge>
     ));
 
   it('renders badge with right icon', () =>
     matchesMarkupAndStyle(
-      <LightBadge>
+      <LightestBadge>
         <UtilityIcon
           containerClassName="slds-m-right_xx-small"
           className="slds-icon_xx-small slds-icon-text-default"
@@ -38,17 +38,17 @@ describe('renders a light badge', () => {
           symbol="world"
         />
         Icon on the right
-      </LightBadge>
+      </LightestBadge>
     ));
 
   xit('renders badge with icon only', () =>
     matchesMarkupAndStyle(
-      <LightBadge>
+      <LightestBadge>
         <UtilityIcon
           className="slds-icon_xx-small slds-icon-text-default"
           assistiveText="assistive text goes here, do it!"
           symbol="world"
         />
-      </LightBadge>
+      </LightestBadge>
     ));
 });

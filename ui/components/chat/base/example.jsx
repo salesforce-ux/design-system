@@ -422,6 +422,39 @@ export const examples = [
     )
   },
   {
+    id: 'short-text',
+    label: 'Short Text',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatMessageBody
+                type="inbound"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                Hi.
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+          <ChatListItem type="outbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="outbound"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                Hello.
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  },
+  {
     id: 'chat-list',
     label: 'Chat List',
     element: (

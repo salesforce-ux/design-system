@@ -13,6 +13,21 @@ imports:
 props:
   COLOR_BORDER_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_5}'
+  COLOR_STROKE_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Our product brand blue.
+  COLOR_STROKE_BRAND_HOVER:
+    value: '{!SCIENCE_BLUE}'
+    cssProperties:
+    - stroke
+    comment: Hover stroke color for our product brand blue.
+  COLOR_STROKE_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    cssProperties:
+    - stroke
+    comment: Active stroke color for our product brand blue.
   COLOR_BORDER_TAB_SELECTED:
     value: '{!SCIENCE_BLUE}'
     comment: Border color for a selected tab in a tab group.

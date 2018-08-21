@@ -190,7 +190,12 @@ export const RteFormula = props => {
         </FormElement>
       </div>
       <div className="slds-rich-text-editor__col">
-        <ButtonIcon symbol="help" assistiveText="Help" title="Help" />
+        <ButtonIcon
+          symbol="help"
+          assistiveText="Help"
+          title="Help"
+          size="medium"
+        />
       </div>
     </React.Fragment>
   );

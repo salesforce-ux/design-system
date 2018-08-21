@@ -4,4 +4,4 @@
 
 <!-- ## [Unreleased] -->
 
-<!--## [VERSION] - [RELEASE_DATE]-->
+<!-- ## [VERSION] -->

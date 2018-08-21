@@ -29,7 +29,7 @@ props:
     value: "{!STEAM}"
     comment: Brandable primary button - disabled state
   COLOR_BACKGROUND_BUTTON_DEFAULT:
-    value: "{!PALETTE_GRAY_1}"
+    value: "{!WHITE}"
     comment: Default secondary button
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
     value: "{!LINK_WATER}"
@@ -41,7 +41,7 @@ props:
     value: "{!WHITE_LILAC}"
     comment: Default secondary button - active state
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
-    value: "{!PALETTE_GRAY_1}"
+    value: "{!WHITE}"
     comment: Default secondary button - disabled state
   COLOR_BACKGROUND_BUTTON_ICON:
     value: "{!TRANSPARENT}"
@@ -56,7 +56,7 @@ props:
     value: "{!WHITE_LILAC}"
     comment: Background color for icon-only button - active state
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
-    value: "{!PALETTE_GRAY_1}"
+    value: "{!WHITE}"
     comment: Background color for icon-only button - disabled state
   COLOR_BACKGROUND_BUTTON_INVERSE:
     value: "{!TRANSPARENT}"

@@ -6,6 +6,6 @@ import { Expression, ExpressionRow } from '../';
 
 export default (
   <Expression hasCustomLogic customLogicValue="1 OR 2" legendText="1">
-    <ExpressionRow legendText="2" assistiveText="Condition 2" />
+    <ExpressionRow legendText="2" conditionName="Condition 2" />
   </Expression>
 );

@@ -158,6 +158,11 @@
  * @restrict .slds-chat-message div
  */
 
+.slds-chat-message__body {
+  display: flex;
+  flex-direction: column;
+}
+
 /**
  * @summary
  * @selector .slds-chat-message__image_loading
@@ -254,6 +259,7 @@
  * @restrict .slds-chat-message__text
  */
 .slds-chat-message__text_inbound {
+  margin-right: auto;
   background-color: $chat-message-color-background-inbound;
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
   color: $color-text-default;
@@ -285,6 +291,7 @@
  * @restrict .slds-chat-message__text
  */
 .slds-chat-message__text_outbound {
+  margin-left: auto;
   background-color: $chat-message-color-background-outbound;
 }
 

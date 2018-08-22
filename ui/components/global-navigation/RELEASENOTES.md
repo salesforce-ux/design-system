@@ -4,4 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Changed
+
+- Added the `slds-indicator-container` class to be used whenever tabs and menu items have unread or unsaved indicators.
+  - The `slds-indicator_unsaved` abbreviation and/or the `slds-indicator_unsaved` span should always be contained *within* a `<span>` with class `slds-indicator-container`.
+  - This class preserves spacing between the indicators and the tab/menu text when no icon is present by adding a margin-right.
+  - If the indicator container is empty, no margin-right is added.

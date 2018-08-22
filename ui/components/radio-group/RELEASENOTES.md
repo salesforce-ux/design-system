@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+
+- Added an example of a checked-and-disabled radio button.

@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Fixed
+
+- Increased contrast between the icons and the yellow background in warning toasts.

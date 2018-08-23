@@ -13,6 +13,7 @@
 - Extended the documentation for mobile tabs to include panels
   - When drilling into a mobile tab, a panel slides in displaying that tab's content
   - Check out the [Tabs On Mobile](https://lightningdesignsystem.com/components/tabs/#On-Mobile) section for more details
+- Animations and transitions for `:hover` and `slds-is-active` states.
 
 ### Changed
 - Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting

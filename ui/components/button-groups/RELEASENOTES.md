@@ -4,4 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+- Added [Button Group Row component](/components/button-groups/?variant=row) that provides spacing in between each item that contains a button

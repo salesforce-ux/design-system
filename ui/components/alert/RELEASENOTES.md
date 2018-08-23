@@ -4,4 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Changed
+- Changed HTML so the button icon can be slotted into the `slds-notify__close` element

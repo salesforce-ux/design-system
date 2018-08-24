@@ -47,7 +47,7 @@ A form label should use the `<label>` element with the class `slds-form-element_
 
 ### Form Control
 
-A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the stucture of the form element.
+A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the structure of the form element.
 
 <CodeBlock toggleCode={false}>
   <div className="slds-form-element__control">Any form type goes here</div>
@@ -103,7 +103,7 @@ A form element can have various methods of feedback, such as a required denotati
 
 When a form element is required, an `<abbr>` should be injected before the `<input>` and within the `<label>` and have the class `slds-required`.
 
-The `<input>` element should also have the HTML attribute required or required="". Similarily, if it is disabled, it should have the disabled or disabled="" attribute. Do not use true/false values inside the required or disabled because the mere presence of these attributes signifies the field is required or disabled.
+The `<input>` element should also have the HTML attribute required or required="". Similarly, if it is disabled, it should have the disabled or disabled="" attribute. Do not use true/false values inside the required or disabled because the mere presence of these attributes signifies the field is required or disabled.
 
 <Example title="Form Element - Required">
 
@@ -117,7 +117,7 @@ The `<input>` element should also have the HTML attribute required or required="
 
 #### Error
 
-If an error has occured while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">`. Then, the error message for the user is placed in a `<span>` with the `slds-form-element__help` class.
+If an error has occurred while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">`. Then, the error message for the user is placed in a `<span>` with the `slds-form-element__help` class.
 
 <Blockquote type="a11y" header="Accessibility requirement">
   When a form element displays feedback notifying the user of an error, the error string should be linked to the element by adding the <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code>. The `aria-describedby` attribute must reference the id of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
@@ -187,6 +187,7 @@ A record detail is a series of rows created by `slds-grid`. Inside of each row c
 When in view/readonly mode, it is *required* to have the class `slds-form-element_readonly` on the `slds-form-element` element. This class will provide styles for scanability and spacing.
 
 ##### Stacked Alignment
+
 <Example title="Form Element - Record Detail - View Mode">
   <CodeView>
     <RecordDetail snapshot={Snapshot.ObjectFieldTypes} isViewMode hasInlineEdit direction="stacked" />
@@ -211,9 +212,10 @@ When a form switches to edit mode, we need to replace all readonly form elements
   <FormElement labelContent="My Label" inputId="unique-form-element-id">...</FormElement>
 </CodeBlock>
 
-The form content found inside of `slds-form-element__control` should be replaced with the appropiate field type of the view/readonly state.
+The form content found inside of `slds-form-element__control` should be replaced with the appropriate field type of the view/readonly state.
 
 ##### Stacked Alignment
+
 <Example title="Form Element - Record Detail - Edit Mode">
   <CodeView>
     <RecordDetail snapshot={Snapshot.ObjectFieldTypes} direction="stacked" />
@@ -221,6 +223,7 @@ The form content found inside of `slds-form-element__control` should be replaced
 </Example>
 
 ##### Horizontal Alignment
+
 <Example title="Form Element - Record Detail - Edit Mode - Horizontal">
   <CodeView>
     <RecordDetail snapshot={Snapshot.ObjectFieldTypes} direction="horizontal" />

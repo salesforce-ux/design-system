@@ -90,9 +90,7 @@ gulp.task('generate:auraTokensMap', done => {
 // Lint
 // /////////////////////////////////////////////////////////
 
-const a11y = withName('a11y')(done => {
-  accessibility.axe(getComponents(), done);
-});
+const a11y = withName('a11y')(() => accessibility.axe(getComponents()));
 
 const vnu = withName('vnu')(() => accessibility.vnu(getComponents()));
 

@@ -6,6 +6,10 @@
 
 ## 2.7.0
 
+### Added
+
+- Added `slds-page-header_record-home` class to be used within a record home page. This class utilizes variable font tokens to respond to a user's densification setting.
+
 ### Changed
 
 - Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting

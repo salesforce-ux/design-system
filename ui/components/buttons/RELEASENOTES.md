@@ -9,6 +9,7 @@
 ### Added
 
 - `slds-button_text-destructive` modifier option, which is styled as an inverted `slds-button_descructive` button.
+- Added selector for `:disabled` pseudo-class.
 
 ### Deprecated
 

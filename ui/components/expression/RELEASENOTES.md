@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+
+- Added new Expression component to help users declaratively construct logical expressions

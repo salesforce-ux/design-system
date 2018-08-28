@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ButtonIcon from '../';
+import ButtonIcon, { HintParent } from '../';
 
 export default <ButtonIcon />;
 
@@ -31,9 +31,9 @@ export let examples = [
     id: 'hint-hover',
     label: 'Hint on hover',
     element: (
-      <div className="slds-hint-parent">
+      <HintParent>
         <ButtonIcon iconClassName="slds-button__icon_hint" />
-      </div>
+      </HintParent>
     )
   }
 ];

@@ -2,8 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../shared/svg-icon';
 import classNames from 'classnames';
+
+export const HintParent = props => (
+  <div className="slds-hint-parent">{props.children}</div>
+);
 
 class ButtonIcon extends Component {
   render() {
@@ -112,5 +117,12 @@ class ButtonIcon extends Component {
     );
   }
 }
+
+ButtonIcon.propTypes = {
+  id: PropTypes.string,
+  symbol: PropTypes.string,
+  theme: PropTypes.string,
+  assistiveText: PropTypes.string
+};
 
 export default ButtonIcon;

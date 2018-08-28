@@ -1,0 +1,371 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import Example from '../../../shared/components/Example';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import ButtonIcon, { HintParent } from './';
+import * as Base from './base/example';
+import * as BorderedFilled from './bordered-filled-container/example';
+import * as BorderedInverse from './bordered-inverse/example';
+import * as BorderedTransparent from './bordered-transparent-container/example';
+import * as Brand from './brand/example';
+import * as Inverse from './inverse/example';
+import * as Stateful from './stateful/example';
+import * as TransparentContainer from './transparent-container/example';
+import _, { getDisplayElementById } from '../../shared/helpers';
+
+<div className="lead doc">
+  Button icons provide the user with visual iconography that is typically used to invoke an event or action.
+</div>
+
+## Accessibility
+
+<Blockquote type="a11y" header="Accessibility Note">
+  If an icon button doesn’t include a label, use a <code className="doc">title</code> attribute to show on hover for sighted users, and a span with class <code className="doc">slds-assistive-text</code> to describe the button's action for screen readers.
+</Blockquote>
+
+## Variations
+
+### Base
+<CodeView toggleCode={false}>
+  {Base.default}
+</CodeView>
+
+### Brand
+<CodeView toggleCode={false}>
+  {Brand.default}
+</CodeView>
+
+### Inverse
+<CodeView toggleCode={false}>
+  <Inverse.Context>
+    {Inverse.default}
+  </Inverse.Context>
+</CodeView>
+
+### Icon Containers
+
+Icon containers create a button that looks like a plain icon.
+
+For a bare icon with transparent container, add `slds-button_icon-container` to the `<button>`. To add a border, use the `slds-button_icon-border` class instead.
+
+For a neutral themed button icon, with border and a filled background, use the `slds-button_icon-border-filled` class to the `slds-button` class.
+
+Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class to the `slds-button` class.
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Bare - transparent container</strong>
+    <CodeView toggleCode={false}>
+      <TransparentContainer.Context>
+        {TransparentContainer.default}
+      </TransparentContainer.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered - filled container</strong>
+    <CodeView toggleCode={false}>
+      <BorderedFilled.Context>
+        {BorderedFilled.default}
+      </BorderedFilled.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered - transparent container</strong>
+    <CodeView toggleCode={false}>
+      <BorderedTransparent.Context>
+        {BorderedTransparent.default}
+      </BorderedTransparent.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered inverse - transparent container</strong>
+    <CodeView toggleCode={false}>
+      <BorderedInverse.Context>
+        {BorderedInverse.default}
+      </BorderedInverse.Context>
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### Stateful
+
+The stateful button requires the `slds-button_icon-border` class in addition to the `slds-button` class.
+
+The stateful inverse button works just like the stateful button. It requires the `slds-button_icon-border-inverse` class in addition to the `slds-button` class.
+
+<CodeView toggleCode={false}>
+  {Stateful.default}
+</CodeView>
+
+<Blockquote type="a11y" header="Accessibility Note">
+  For accessibility, implement the <a href="http://w3c.github.io/aria-practices/#button">ARIA Toggle Button</a> concept.
+
+  <ul className="slds-list_dotted">
+    <li>Similar to a mute button, the button represents a pressed or unpressed state.</li>
+    <li>Button text doesn't change per state</li>
+    <li><code className="doc">aria-pressed</code> is set to <code className="doc">true</code> or <code className="doc">false</code>, depending on its state</li>
+  </ul>
+</Blockquote>
+
+#### Selected
+
+Stateful icons can be toggled on and off and will retain their state. JavaScript is used to add the `slds-is-selected` class to the button when activated.
+
+<CodeView toggleCode={true}>
+  {getDisplayElementById(Stateful.states, "button-icon-stateful-selected")}
+</CodeView>
+
+## Sizes
+
+### Bare Icon
+The bare variant can be displayed in three other sizes—`large`, `small`, `x-small`—by adding a sizing class on the `<svg>` icon itself.
+
+<CodeBlock toggleCode={false}>
+  <button>
+    <svg className="...slds-button__icon_{size}">
+      ...
+    </svg>
+    ...
+  </button>
+</CodeBlock>
+
+<Example title="Sizes">
+  <CodeView toggleCode={true}>
+    <React.Fragment>
+      <ButtonIcon iconClassName="slds-button__icon_large"/>
+
+      <ButtonIcon iconClassName="slds-button__icon_small"/>
+
+      <ButtonIcon iconClassName="slds-button__icon_x-small"/>
+
+    </React.Fragment>
+  </CodeView>
+</Example>
+
+### Icon Container
+
+Contained variants can be displayed in three smaller sizes—`small`, `x-small`, `xx-small`—by adding a sizing class on the `<button>`.
+
+<CodeBlock toggleCode={false}>
+  <button className="...slds-button_icon-{size}">...</button>
+</CodeBlock>
+
+<Example title="Sizes">
+  <CodeView toggleCode={true}>
+    <React.Fragment>
+      <ButtonIcon className="slds-button_icon-border slds-button_icon-small"/>
+
+      <ButtonIcon className="slds-button_icon-border slds-button_icon-x-small"/>
+
+      <ButtonIcon className="slds-button_icon-border slds-button_icon-xx-small"/>
+    </React.Fragment>
+  </CodeView>
+</Example>
+
+## States
+### Disabled
+
+Use a disabled attribute when a button can’t be clicked.
+
+To create a disabled button, append the `disabled` attribute to the `<button>`.
+
+<CodeBlock toggleCode={false}>
+  <button className="slds-button slds-button_icon ..." disabled>...</button>
+</CodeBlock>
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Base</strong>
+    <CodeView toggleCode={true}>
+      {getDisplayElementById(Base.states, "bare-disabled")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Brand</strong>
+    <CodeView toggleCode={true}>
+      {getDisplayElementById(Brand.states, "disabled")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Transparent container</strong>
+    <CodeView toggleCode={true}>
+      <TransparentContainer.Context>
+        {getDisplayElementById(TransparentContainer.states, "disabled")}
+      </TransparentContainer.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Inverse</strong>
+    <CodeView toggleCode={true}>
+      <Inverse.Context>
+        {getDisplayElementById(Inverse.states, "disabled")}
+      </Inverse.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered filled container</strong>
+    <CodeView toggleCode={true}>
+      <BorderedFilled.Context>
+        {getDisplayElementById(BorderedFilled.states, "disabled")}
+      </BorderedFilled.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered transparent</strong>
+    <CodeView toggleCode={true}>
+      <BorderedTransparent.Context>
+        {getDisplayElementById(BorderedTransparent.states, "disabled")}
+      </BorderedTransparent.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered inverse</strong>
+    <CodeView toggleCode={true}>
+      <BorderedInverse.Context>
+        {getDisplayElementById(BorderedInverse.states, "disabled")}
+      </BorderedInverse.Context>
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### Error
+
+Error button icons are typically used in conjunction with an [error popover](../popovers/?variant=error).
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.states, "error")}
+</CodeView>
+
+## Examples
+### Hint on hover
+
+A parent class, `slds-hint-parent`, must be put on any wrapper, and `slds-button__icon_hint` must be added to the button's `<svg>` so that the child reacts when the parent is hovered.
+
+<CodeBlock toggleCode={false}>
+  <HintParent>
+    <button className="slds-button slds-button_icon">
+      <svg className="slds-button__icon slds-button__icon_hint">
+        ...
+      </svg>
+      ...
+    </button>
+  </HintParent>
+</CodeBlock>
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Base</strong>
+    <CodeView toggleCode={true}>
+      {getDisplayElementById(Base.examples, "hint-hover")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Transparent container</strong>
+    <CodeView toggleCode={true}>
+      <TransparentContainer.Context>
+        {getDisplayElementById(TransparentContainer.examples, "hint-hover")}
+      </TransparentContainer.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered filled container</strong>
+    <CodeView toggleCode={true}>
+      <BorderedFilled.Context>
+        {getDisplayElementById(BorderedFilled.examples, "hint-hover")}
+      </BorderedFilled.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered transparent</strong>
+    <CodeView toggleCode={true}>
+      <BorderedTransparent.Context>
+        {getDisplayElementById(BorderedTransparent.examples, "hint-hover")}
+      </BorderedTransparent.Context>
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+#### Inverse
+
+In the case of inverse, use the `slds-button__icon_inverse-hint` class on the button's `<svg>` instead.
+
+<CodeBlock toggleCode={false}>
+  <HintParent>
+    <button className="slds-button slds-button_icon">
+      <svg className="slds-button__icon slds-button__icon_inverse-hint">
+        ...
+      </svg>
+      ...
+    </button>
+  </HintParent>
+</CodeBlock>
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Inverse</strong>
+    <CodeView toggleCode={true}>
+      <Inverse.Context>
+        {getDisplayElementById(Inverse.examples, "hint-hover")}
+      </Inverse.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered inverse</strong>
+    <CodeView toggleCode={true}>
+      <BorderedInverse.Context>
+        {getDisplayElementById(BorderedInverse.examples, "hint-hover")}
+      </BorderedInverse.Context>
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### With a Dropdown
+
+If the button opens a menu, add `slds-button_icon-more` class to the `<button>` and a `down` icon within the button to indicate the behavior.
+
+<CodeBlock toggleCode={false}>
+  <button className="slds-button slds-button_icon slds-button_icon-container-more">
+    ...
+    <svg className="slds-button__icon slds-button__icon_x-small">
+      <use xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"/>
+    </svg>
+    ...
+  </button>
+</CodeBlock>
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Transparent container</strong>
+    <CodeView toggleCode={true}>
+      <TransparentContainer.Context>
+        {getDisplayElementById(TransparentContainer.examples, "with-dropdown")}
+      </TransparentContainer.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Inverse</strong>
+    <CodeView toggleCode={true}>
+      <Inverse.Context>
+        {getDisplayElementById(Inverse.examples, "with-dropdown")}
+      </Inverse.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered filled container</strong>
+    <CodeView toggleCode={true}>
+      <BorderedFilled.Context>
+        {getDisplayElementById(BorderedFilled.examples, "with-dropdown")}
+      </BorderedFilled.Context>
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Bordered inverse</strong>
+    <CodeView toggleCode={true}>
+      <BorderedInverse.Context>
+        {getDisplayElementById(BorderedFilled.examples, "with-dropdown")}
+      </BorderedInverse.Context>
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>

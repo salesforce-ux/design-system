@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ButtonIcon from '../';
+import ButtonIcon, { HintParent } from '../';
 
 export const Context = props => (
   <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
@@ -37,9 +37,9 @@ export let examples = [
     id: 'hint-hover',
     label: 'Hint on hover',
     element: (
-      <div className="slds-hint-parent">
+      <HintParent>
         <ButtonIcon theme="neutral" iconClassName="slds-button__icon_hint" />
-      </div>
+      </HintParent>
     )
   }
 ];

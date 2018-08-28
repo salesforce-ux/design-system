@@ -80,18 +80,14 @@
    */
   &_warning,
   &--warning {
+    @include warning-links;
+    @include warning-buttons;
     background-color: $color-background-warning;
     color: $color-text-default;
 
     .slds-icon,
     .slds-button__icon {
       fill: $color-gray-10;
-    }
-
-    a:not(.slds-button--neutral),
-    button:not(.slds-button--neutral) {
-      color: $color-text-default;
-      text-decoration: underline;
     }
   }
 

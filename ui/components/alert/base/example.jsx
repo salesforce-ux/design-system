@@ -26,10 +26,13 @@ export let Alert = props => {
       {children}
       <div className="slds-notify__close">
         <ButtonIcon
-          className="slds-button_icon-inverse"
+          className={classNames(
+            type !== 'warning' && 'slds-button_icon-inverse'
+          )}
           symbol="close"
           assistiveText="Close"
           title="Close"
+          size="small"
         />
       </div>
     </div>

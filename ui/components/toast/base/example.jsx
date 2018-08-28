@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import classNames from 'classnames';
@@ -19,11 +20,11 @@ export let Toast = props => {
         className={classNames(
           'slds-notify slds-notify_toast',
           className,
-          type ? 'slds-theme_' + type : null
+          type && 'slds-theme_' + type
         )}
         role="status"
       >
-        <span className="slds-assistive-text">{type || 'info'}</span>
+        <span className="slds-assistive-text">{type}</span>
         {children}
         <div className="slds-notify__close">
           <ButtonIcon
@@ -37,6 +38,17 @@ export let Toast = props => {
       </div>
     </div>
   );
+};
+
+Toast.propTypes = {
+  containerClassName: PropTypes.string,
+  className: PropTypes.string,
+  type: PropTypes.oneOf(['info', 'success', 'warning', 'error']),
+  children: PropTypes.node
+};
+
+Toast.defaultProps = {
+  type: 'info'
 };
 
 /// ///////////////////////////////////////////
@@ -99,7 +111,8 @@ export let states = [
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading_small ">
-              Can’t share file “report-q3.pdf” with the selected users.
+              Can’t share file “report-q3.pdf” with the{' '}
+              <a href="javascript:void(0);">selected users</a>.
             </h2>
           </div>
         </Toast>
@@ -120,8 +133,8 @@ export let states = [
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading_small ">
-              Can’t save lead “Sally Wong” because another lead has the same
-              name.
+              Can’t save lead “Sally Wong” because{' '}
+              <a href="javascript:void(0);">another lead</a> has the same name.
             </h2>
           </div>
         </Toast>
@@ -146,8 +159,9 @@ export let states = [
               Smith.
             </h2>
             <p>
-              Here's some detail of what happened, being very descriptive and
-              transparent.
+              Here's some detail of{' '}
+              <a href="javascript:void(0);">what happened</a>, being very
+              descriptive and transparent.
             </p>
           </div>
         </Toast>
@@ -166,7 +180,10 @@ export let examples = [
           <Toast type="info" containerClassName="slds-is-absolute">
             <div className="slds-notify__content">
               <h2 className="slds-text-heading_small">
-                26 potential duplicate leads were found.
+                26 potential <a href="javascript:void(0);">
+                  duplicate leads
+                </a>{' '}
+                were found.
               </h2>
             </div>
           </Toast>

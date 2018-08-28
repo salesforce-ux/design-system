@@ -64,7 +64,7 @@ exports[`renders a large popover 1`] = `
 >
   <button
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
     id={undefined}
     title="Close dialog"
   >
@@ -105,7 +105,7 @@ exports[`renders a small popover 1`] = `
 >
   <button
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
     id={undefined}
     title="Close dialog"
   >
@@ -210,7 +210,7 @@ exports[`renders a warning popover 1`] = `
 >
   <button
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
     id={undefined}
     title="Close dialog"
   >
@@ -294,7 +294,7 @@ exports[`renders a warning popover with footer 1`] = `
 >
   <button
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
     id={undefined}
     title="Close dialog"
   >

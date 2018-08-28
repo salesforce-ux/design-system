@@ -17,6 +17,7 @@
  */
 
 .slds-popover_warning {
+  @include warning-buttons;
 
   .slds-popover__header {
     background-color: $color-background-warning;
@@ -29,11 +30,6 @@
 
   .slds-popover__close {
     color: currentColor;
-
-    &:focus,
-    &:hover {
-      color: $color-gray-9;
-    }
   }
 
   &.slds-nubbin_top,

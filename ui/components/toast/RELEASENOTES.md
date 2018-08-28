@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.8.0
+
+### Fixed
+
+- Improved the contrast for focus and hover states on links and buttons in toasts

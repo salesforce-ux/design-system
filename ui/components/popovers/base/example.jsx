@@ -32,7 +32,7 @@ export let Popover = props => {
         <ButtonIcon
           className={classNames(
             'slds-button_icon-small slds-float_right slds-popover__close',
-            props.inverse ? 'slds-button_icon-inverse' : 'slds-button_icon'
+            props.inverse && 'slds-button_icon-inverse'
           )}
           symbol="close"
           assistiveText="Close dialog"

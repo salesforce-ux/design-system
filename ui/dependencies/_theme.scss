@@ -44,7 +44,7 @@
 
     &:hover,
     &:focus {
-      color: $color-text-link-inverse-hover;
+      text-decoration: none;
     }
 
     &:active {
@@ -119,6 +119,66 @@
   }
 }
 
+/// Warning links mixin
+///
+/// The warning-links mixin determines how to change links when on a warning background
+///
+@mixin warning-links {
+
+  a {
+    color: $color-text-default; // gray-13
+    text-decoration: underline;
+
+    &:link,
+    &:visited {
+      color: $color-text-default;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px $color-gray-10;
+      border: $border-width-thin solid $color-gray-10;
+    }
+
+    &:active {
+      color: $color-gray-10;
+    }
+
+    &[disabled] {
+      color: $color-gray-10;
+    }
+  }
+}
+
+/// Warning buttons mixin
+///
+/// The warning-buttons mixin determines how to change buttons when on a warning background
+///
+@mixin warning-buttons {
+
+  button {
+    color: $color-gray-10;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-gray-9;
+    }
+
+    &:focus {
+      color: $color-gray-10;
+      box-shadow: 0 0 3px $color-gray-10;
+      border: $border-width-thin solid $color-gray-10;
+    }
+
+    &:active {
+      color: $color-gray-9;
+    }
+  }
+}
 
 // Border Helper
 @mixin border($borders: null, $radius: null) {

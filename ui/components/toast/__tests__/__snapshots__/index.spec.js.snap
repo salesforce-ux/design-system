@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast renders a default toast for info 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_info"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      info
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small"
+      >
+        26 potential duplicate leads were found.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Select Leads to Merge
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders a relative toast 1`] = `
+<div
+  className="slds-notify_container slds-is-relative"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_success"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      success
+    </span>
+    <span
+      className="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+        />
+      </svg>
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small "
+      >
+        Account 
+        <a
+          href="javascript:void(0);"
+        >
+          ACME - 100
+        </a>
+         widgets was created.
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders a success toast 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_success"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      success
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small"
+      >
+        26 potential duplicate leads were found.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Select Leads to Merge
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders a toast with an icon 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_success"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      success
+    </span>
+    <span
+      className="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+        />
+      </svg>
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small "
+      >
+        Account 
+        <a
+          href="javascript:void(0);"
+        >
+          ACME - 100
+        </a>
+         widgets was created.
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders a warning toast 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_warning"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      warning
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small"
+      >
+        26 potential duplicate leads were found.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Select Leads to Merge
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders an error toast 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_error"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      error
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small"
+      >
+        26 potential duplicate leads were found.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Select Leads to Merge
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast renders an info toast 1`] = `
+<div
+  className="slds-notify_container"
+>
+  <div
+    className="slds-notify slds-notify_toast slds-theme_info"
+    role="status"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      info
+    </span>
+    <div
+      className="slds-notify__content"
+    >
+      <h2
+        className="slds-text-heading_small"
+      >
+        26 potential duplicate leads were found.
+         
+        <a
+          href="javascript:void(0);"
+        >
+          Select Leads to Merge
+        </a>
+      </h2>
+    </div>
+    <div
+      className="slds-notify__close"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon-inverse"
+        id={undefined}
+        title="Close"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

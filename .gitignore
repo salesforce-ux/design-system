@@ -17,6 +17,7 @@
 !/.stylestatsrc
 !/.travis.yml
 !/.github
+!/.prettierignore
 
 # Add a .gitkeep file in an empty
 # directory to check it in the repository
@@ -24,9 +25,6 @@
 
 # for vrt
 *snap.json
-
-# nvm 5
-package-lock.json
 
 # Ignore generated styles
 /assets/styles

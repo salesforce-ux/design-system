@@ -12,3 +12,4 @@
 ### Fixed
 - Increased z-index of entity icon when a selection is made to ensure icon is always on top of input field
 - Fixed alignment of dropdown icon in object switcher
+- Click events are no longer prevented on the grouped combobox in Firefox

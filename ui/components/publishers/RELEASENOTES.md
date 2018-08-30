@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Fixed
+
+- Made the publisher label visible to screen readers in the collapsed state of a publisher, by removing the use of `display: none`

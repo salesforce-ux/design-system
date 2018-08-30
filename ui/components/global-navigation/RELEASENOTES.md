@@ -13,3 +13,7 @@
   - The `slds-indicator_unsaved` abbreviation and/or the `slds-indicator_unsaved` span should always be contained *within* a `<span>` with class `slds-indicator-container`.
   - This class preserves spacing between the indicators and the tab/menu text when no icon is present by adding a margin-right.
   - If the indicator container is empty, no margin-right is added.
+
+### Fixed
+
+- HTML validation error on tabbed navigation indicators, swapped a `div` for a `span`

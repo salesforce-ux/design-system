@@ -24,3 +24,5 @@
 
 ### Fixed
 - Updated `slds-tabs-mobile` to have a white background by default, instead of a transparent background.
+- Improved the color contrast of the text of a sub tab when it is in focus
+- HTML validation error on sub tab indicators, swapped a `div` for a `span`

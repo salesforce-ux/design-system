@@ -12,4 +12,5 @@
 
 ### Fixed
 
-- Replaced inline styles from `iframe` and placed them within the component styling.
+- Replaced inline styles from `iframe` and placed them within the component styling
+- Improved the color contrast of links inside of selected items in the locations list

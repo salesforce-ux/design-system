@@ -49,7 +49,9 @@
 .slds-has-coordinates {
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
   max-height: rem(660px);
+  background: $color-background-alt;
 
   .slds-map:before {
     padding-top: 75%;

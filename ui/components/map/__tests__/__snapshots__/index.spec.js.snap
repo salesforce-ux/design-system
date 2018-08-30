@@ -25,6 +25,19 @@ exports[`Map Container renders map container with coordinates 1`] = `
   className="slds-grid slds-has-coordinates"
 >
   <div
+    className="slds-map_container"
+  >
+    <div
+      className="slds-map"
+    >
+      <iframe
+        id="GoogleMapID"
+        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        title="Google Maps iframe"
+      />
+    </div>
+  </div>
+  <div
     className="slds-coordinates"
   >
     <div
@@ -76,10 +89,10 @@ exports[`Map Container renders map container with coordinates 1`] = `
             <span
               className="slds-text-link"
             >
-              Borrego Solar
+              Worldwide Corporate Headquarters
             </span>
             <span>
-              5189 22nd Street, Oakland, CA 94607
+              The Landmark @ One Market, San Francisco, CA
             </span>
           </span>
         </button>
@@ -123,28 +136,344 @@ exports[`Map Container renders map container with coordinates 1`] = `
             <span
               className="slds-text-link"
             >
-              CivisSolar, Inc
+              salesforce.com inc Atlanta
             </span>
             <span>
-              809 16th Street, Oakland, CA 94607
+              950 East Paces Ferry Road NE, Atlanta, GA
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Bellevue
+            </span>
+            <span>
+              929 108th Ave NE, Bellevue, WA
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Boston
+            </span>
+            <span>
+              500 Boylston Street 19th Floor, Boston, MA
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Chicago
+            </span>
+            <span>
+              111 West Illinois Street, Chicago, IL
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Herndon
+            </span>
+            <span>
+              2550 Wasser Terrace, Herndon, VA
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Hillsboro
+            </span>
+            <span>
+              2035 NE Cornelius Pass Road, Hillsboro, OR
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Indy
+            </span>
+            <span>
+              111 Monument Circle, Indianapolis, IN
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        className="slds-coordinates__item"
+      >
+        <span
+          aria-live="polite"
+          className="slds-assistive-text"
+        />
+        <button
+          aria-pressed={false}
+          className="slds-coordinates__item-action slds-button_reset slds-media"
+        >
+          <span
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-account"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </span>
+          <span
+            className="slds-media__body"
+          >
+            <span
+              className="slds-text-link"
+            >
+              salesforce.com inc Irvine
+            </span>
+            <span>
+              300 Spectrum Center Drive, Irvine, CA
             </span>
           </span>
         </button>
       </li>
     </ul>
-  </div>
-  <div
-    className="slds-map_container"
-  >
-    <div
-      className="slds-map"
-    >
-      <iframe
-        id="GoogleMapID"
-        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
-        title="Google Maps iframe"
-      />
-    </div>
   </div>
 </div>
 `;
@@ -319,6 +648,13 @@ exports[`renders a map component modal with coordinates panel 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
+            className="slds-map_container"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+          <div
             className="slds-coordinates"
           >
             <div
@@ -372,10 +708,10 @@ exports[`renders a map component modal with coordinates panel 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      Borrego Solar
+                      Worldwide Corporate Headquarters
                     </span>
                     <span>
-                      5189 22nd Street, Oakland, CA 94607
+                      The Landmark @ One Market, San Francisco, CA
                     </span>
                   </span>
                 </button>
@@ -419,22 +755,344 @@ exports[`renders a map component modal with coordinates panel 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      CivisSolar, Inc
+                      salesforce.com inc Atlanta
                     </span>
                     <span>
-                      809 16th Street, Oakland, CA 94607
+                      950 East Paces Ferry Road NE, Atlanta, GA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Bellevue
+                    </span>
+                    <span>
+                      929 108th Ave NE, Bellevue, WA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Boston
+                    </span>
+                    <span>
+                      500 Boylston Street 19th Floor, Boston, MA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Chicago
+                    </span>
+                    <span>
+                      111 West Illinois Street, Chicago, IL
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Herndon
+                    </span>
+                    <span>
+                      2550 Wasser Terrace, Herndon, VA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Hillsboro
+                    </span>
+                    <span>
+                      2035 NE Cornelius Pass Road, Hillsboro, OR
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Indy
+                    </span>
+                    <span>
+                      111 Monument Circle, Indianapolis, IN
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Irvine
+                    </span>
+                    <span>
+                      300 Spectrum Center Drive, Irvine, CA
                     </span>
                   </span>
                 </button>
               </li>
             </ul>
-          </div>
-          <div
-            className="slds-map_container"
-          >
-            <div
-              className="slds-map"
-            />
           </div>
         </div>
       </div>
@@ -512,6 +1170,13 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
+            className="slds-map_container"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+          <div
             className="slds-coordinates"
           >
             <div
@@ -533,7 +1198,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
                   aria-live="polite"
                   className="slds-assistive-text"
                 >
-                  Borrego Solar is currently selected
+                  Worldwide Corporate Headquarters is currently selected
                 </span>
                 <button
                   aria-pressed={true}
@@ -567,10 +1232,10 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      Borrego Solar
+                      Worldwide Corporate Headquarters
                     </span>
                     <span>
-                      5189 22nd Street, Oakland, CA 94607
+                      The Landmark @ One Market, San Francisco, CA
                     </span>
                   </span>
                 </button>
@@ -614,22 +1279,344 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      CivisSolar, Inc
+                      salesforce.com inc Atlanta
                     </span>
                     <span>
-                      809 16th Street, Oakland, CA 94607
+                      950 East Paces Ferry Road NE, Atlanta, GA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Bellevue
+                    </span>
+                    <span>
+                      929 108th Ave NE, Bellevue, WA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Boston
+                    </span>
+                    <span>
+                      500 Boylston Street 19th Floor, Boston, MA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Chicago
+                    </span>
+                    <span>
+                      111 West Illinois Street, Chicago, IL
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Herndon
+                    </span>
+                    <span>
+                      2550 Wasser Terrace, Herndon, VA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Hillsboro
+                    </span>
+                    <span>
+                      2035 NE Cornelius Pass Road, Hillsboro, OR
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Indy
+                    </span>
+                    <span>
+                      111 Monument Circle, Indianapolis, IN
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Irvine
+                    </span>
+                    <span>
+                      300 Spectrum Center Drive, Irvine, CA
                     </span>
                   </span>
                 </button>
               </li>
             </ul>
-          </div>
-          <div
-            className="slds-map_container"
-          >
-            <div
-              className="slds-map"
-            />
           </div>
         </div>
       </div>
@@ -789,6 +1776,13 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
           className="slds-grid slds-has-coordinates"
         >
           <div
+            className="slds-map_container"
+          >
+            <div
+              className="slds-map"
+            />
+          </div>
+          <div
             className="slds-coordinates"
           >
             <div
@@ -842,10 +1836,10 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      Borrego Solar
+                      Worldwide Corporate Headquarters
                     </span>
                     <span>
-                      5189 22nd Street, Oakland, CA 94607
+                      The Landmark @ One Market, San Francisco, CA
                     </span>
                   </span>
                 </button>
@@ -857,7 +1851,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
                   aria-live="polite"
                   className="slds-assistive-text"
                 >
-                  CivisSolar, Inc is currently selected
+                  salesforce.com inc Atlanta is currently selected
                 </span>
                 <button
                   aria-pressed={true}
@@ -891,22 +1885,344 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
                     <span
                       className="slds-text-link"
                     >
-                      CivisSolar, Inc
+                      salesforce.com inc Atlanta
                     </span>
                     <span>
-                      809 16th Street, Oakland, CA 94607
+                      950 East Paces Ferry Road NE, Atlanta, GA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Bellevue
+                    </span>
+                    <span>
+                      929 108th Ave NE, Bellevue, WA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Boston
+                    </span>
+                    <span>
+                      500 Boylston Street 19th Floor, Boston, MA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Chicago
+                    </span>
+                    <span>
+                      111 West Illinois Street, Chicago, IL
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Herndon
+                    </span>
+                    <span>
+                      2550 Wasser Terrace, Herndon, VA
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Hillsboro
+                    </span>
+                    <span>
+                      2035 NE Cornelius Pass Road, Hillsboro, OR
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Indy
+                    </span>
+                    <span>
+                      111 Monument Circle, Indianapolis, IN
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li
+                className="slds-coordinates__item"
+              >
+                <span
+                  aria-live="polite"
+                  className="slds-assistive-text"
+                />
+                <button
+                  aria-pressed={false}
+                  className="slds-coordinates__item-action slds-button_reset slds-media"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title="Description of icon when needed"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Description of icon when needed
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-text-link"
+                    >
+                      salesforce.com inc Irvine
+                    </span>
+                    <span>
+                      300 Spectrum Center Drive, Irvine, CA
                     </span>
                   </span>
                 </button>
               </li>
             </ul>
-          </div>
-          <div
-            className="slds-map_container"
-          >
-            <div
-              className="slds-map"
-            />
           </div>
         </div>
       </div>

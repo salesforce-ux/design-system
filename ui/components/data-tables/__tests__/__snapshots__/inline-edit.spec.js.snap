@@ -1,0 +1,4692 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inline edit data table row should enable focusing on focusable elements in actionableMode 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="0"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="0"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="0"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="0"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="0"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should render 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should set a focusable cell 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should set a focused cell 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit slds-has-focus"
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should set a locked cell 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should set a selected row and check the checkbox 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={true}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should show a cell edit 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={true}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+    <section
+      aria-describedby="dialog-body-id-1"
+      aria-label={undefined}
+      aria-labelledby={undefined}
+      className="slds-popover slds-popover slds-popover_edit"
+      id={undefined}
+      role="dialog"
+      style={
+        Object {
+          "left": "0.0625rem",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    >
+      <div
+        className="slds-popover__body"
+        id="dialog-body-id-1"
+      >
+        <div
+          className="slds-form-element slds-grid slds-wrap"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby={null}
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              required={undefined}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should show a cell edit with required field 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={true}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+    <section
+      aria-describedby="dialog-body-id-2"
+      aria-label={undefined}
+      aria-labelledby={undefined}
+      className="slds-popover slds-popover slds-popover_edit"
+      id={undefined}
+      role="dialog"
+      style={
+        Object {
+          "left": "0.0625rem",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    >
+      <div
+        className="slds-popover__body"
+        id="dialog-body-id-2"
+      >
+        <div
+          className="slds-form-element slds-grid slds-wrap"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <abbr
+              className="slds-required"
+              title="required"
+            >
+              *
+            </abbr>
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby={null}
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should show a cell edit with required field and an error 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={true}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+    <section
+      aria-describedby="dialog-body-id-3"
+      aria-label={undefined}
+      aria-labelledby={undefined}
+      className="slds-popover slds-popover slds-popover_edit"
+      id={undefined}
+      role="dialog"
+      style={
+        Object {
+          "left": "0.0625rem",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    >
+      <div
+        className="slds-popover__body"
+        id="dialog-body-id-3"
+      >
+        <div
+          className="slds-form-element slds-grid slds-wrap slds-has-error"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <abbr
+              className="slds-required"
+              title="required"
+            >
+              *
+            </abbr>
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby="error-message-01"
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="slds-form-element__help"
+            id="error-message-01"
+          >
+            This field is required
+          </div>
+        </div>
+      </div>
+    </section>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should show a edited cell 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-is-edited"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Inline edit data table row should show an errored cell 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-cell-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden={null}
+      className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
+      id="error-00"
+      tabIndex="-1"
+      title="Item 0 has errors"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Item 0 has errors
+      </span>
+    </button>
+    <span
+      className="slds-row-number slds-text-body_small slds-text-color_weak"
+    />
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-cell-edit"
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <a
+        className="slds-truncate"
+        href="javascript:void(0);"
+        id="link-00"
+        tabIndex="-1"
+        title="Acme"
+      >
+        Acme
+      </a>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Name of Acme
+        </span>
+      </button>
+    </span>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit slds-has-error"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Salesforce"
+      >
+        Salesforce
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Account Name of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Account Name of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="08/20/2028"
+      >
+        08/20/2028
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Close Date of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Close Date of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Open"
+      >
+        Open
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Stage of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Stage of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={true}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="low"
+      >
+        low
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={true}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Confidence of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Confidence of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="$1000"
+      >
+        $1000
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Amount of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Amount of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-grid slds-grid_align-spread"
+    >
+      <span
+        className="slds-truncate"
+        title="Art V"
+      >
+        Art V
+      </span>
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        disabled={undefined}
+        id={undefined}
+        tabIndex="-1"
+        title="Edit Contact of Acme"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Edit Contact of Acme
+        </span>
+      </button>
+    </span>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-cell-edit"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;

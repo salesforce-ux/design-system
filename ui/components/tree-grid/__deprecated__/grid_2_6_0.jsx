@@ -2,12 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
+import ButtonIcon from '../../button-icons';
 
 export const TreeGrid = props => (
   <table
@@ -15,7 +12,9 @@ export const TreeGrid = props => (
     role="treegrid"
     aria-readonly="true"
   >
-    <thead>
+    <thead
+      className={classNames({ 'slds-assistive-text': props.hasHiddenHeader })}
+    >
       <tr className="slds-text-title_caps">
         <th className="slds-cell-buffer_left" scope="col">
           <div className="slds-grid slds-grid_vertical-align-center">
@@ -355,34 +354,3 @@ export const DeepNestingRows = props => (
     />
   </tbody>
 );
-
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
-
-export default (
-  <TreeGrid>
-    <DefaultRows />
-  </TreeGrid>
-);
-
-export let states = [
-  {
-    id: 'expanded',
-    label: 'Expanded',
-    element: (
-      <TreeGrid>
-        <DefaultRows isExpanded additionalItem={<ExpandedRow />} />
-      </TreeGrid>
-    )
-  },
-  {
-    id: 'deep-nesting',
-    label: 'Deeply nested branches',
-    element: (
-      <TreeGrid>
-        <DeepNestingRows />
-      </TreeGrid>
-    )
-  }
-];

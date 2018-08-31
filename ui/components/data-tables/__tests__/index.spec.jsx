@@ -1,151 +1,679 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 /* eslint-env jest */
 import React from 'react';
-
-import _ from '../../../shared/helpers';
-import { mount } from 'enzyme';
-
-import {
-  AdvancedDataTable,
-  AdvancedDataTableTr,
-  ProductDataTableTr,
-  ProductQuantityTd,
-  ProductPriceTd,
-  ProductItemDetailsTd,
-  Thead,
-  SingleHeadRowData,
-  SingleRowData
-} from '../';
-
-import { Table } from '../base/example';
-
-import {
-  columnHeaderIcons,
-  columns,
-  productColumns,
-  productRows,
-  rows
-} from '../advanced/example';
-
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+import {
+  Table,
+  THead,
+  THeadTr,
+  ColumnTh,
+  ColumnHeader,
+  ResizeControl,
+  InteractiveColumnHeader,
+  SelectAllColumnHeader,
+  AdvancedDataTableHead,
+  TBody,
+  TBodyTr,
+  Td,
+  RowTh,
+  SelectRowCell,
+  RowActionsCell,
+  ErrorCell,
+  ReadOnlyCell,
+  EditableCell,
+  EditPopover
+} from '../';
+import { StandardIcon } from '../../icons/standard/example';
 
-const product = productRows[0];
+const { matchesMarkup } = createHelpers(__dirname);
 
-it('renders a product details cell', () =>
-  matchesMarkupAndStyle(<ProductItemDetailsTd {...product} actionableMode />));
+describe('Data table component', () => {
+  it('should render a base table', () => matchesMarkup(<Table type="base" />));
 
-it('renders a product quantity cell', () =>
-  matchesMarkupAndStyle(
-    <ProductQuantityTd
-      quantity={productRows[0].quantity}
-      inputId="product-quantity-text-input-id-0"
-      labelText={`${productRows[0].productName} quantity`}
-    />
-  ));
+  it('should take children', () =>
+    matchesMarkup(
+      <Table type="base">
+        <tr />
+      </Table>
+    ));
 
-it('renders a product price cell', () =>
-  matchesMarkupAndStyle(
-    <ProductPriceTd
-      priceOriginal={product.priceOriginal}
-      priceDiscount={product.priceDiscount}
-    />
-  ));
+  it('should render an advanced table with role grid', () =>
+    matchesMarkup(<Table type="advanced" />));
 
-it('renders a product table header', () =>
-  matchesMarkupAndStyle(
-    <Thead columns={productColumns} actionableMode hasNoSelectability />
-  ));
+  it('should render a treegrid table with role treegrid', () =>
+    matchesMarkup(<Table type="treegrid" />));
 
-it('renders a product table row', () =>
-  matchesMarkupAndStyle(
-    <ProductDataTableTr
-      key={0}
-      index={1}
-      className="slds-test"
-      {...product}
-      actionableMode
-      rowSelected
-    />
-  ));
+  it('should render a advanced table with aria-multiselectable applied', () =>
+    matchesMarkup(<Table selectionType="multiple" type="advanced" />));
 
-it('renders a product table', () =>
-  matchesMarkupAndStyle(
-    <AdvancedDataTable>
-      <Thead columns={productColumns} actionableMode hasNoSelectability />
-      <tbody>
-        {_.times(productRows.length, i => (
-          <ProductDataTableTr
-            key={i}
-            index={i + 1}
-            {...productRows[i]}
-            actionableMode
-          />
-        ))}
-      </tbody>
-    </AdvancedDataTable>
-  ));
+  it('should render a advanced table without aria-multiselectable applied', () =>
+    matchesMarkup(<Table selectionType="single" type="advanced" />));
 
-it('renders an advanced data table with radio group', () =>
-  matchesMarkupAndStyle(
-    <AdvancedDataTable>
-      <Thead columns={columns} isSingleSelect />
-      <tbody>
-        {_.times(rows.length, i => (
-          <AdvancedDataTableTr
-            key={i}
-            index={i + 1}
-            {...rows[i]}
-            isSingleSelect
-          />
-        ))}
-      </tbody>
-    </AdvancedDataTable>
-  ));
+  it('should render a table with cell buffer class', () =>
+    matchesMarkup(<Table hasCellBuffer type="base" />));
 
-it('renders a table header hover state', () => {
-  const wrapper = mount(
-    <AdvancedDataTable>
-      <Thead columns={columns} columnHeaderIcons={columnHeaderIcons} hasMenus />
-      <tbody>
-        {_.times(rows.length, i => (
-          <AdvancedDataTableTr key={i} index={i + 1} {...rows[i]} />
-        ))}
-      </tbody>
-    </AdvancedDataTable>
-  );
+  it('should render a table with hidden header class', () =>
+    matchesMarkup(<Table hasHiddenHeader type="base" />));
 
-  return matchesMarkupAndStyle(
-    wrapper
-      .find('th a.slds-th__action')
-      .at(1)
-      .simulate('mouseEnter')
-      .html()
-  );
+  it('should render a table with no cell focus class', () =>
+    matchesMarkup(<Table hasNoCellFocus type="base" />));
+
+  it('should render a table with no row hover class', () =>
+    matchesMarkup(<Table hasNoRowHover type="base" />));
+
+  it('should render a table with borders', () =>
+    matchesMarkup(<Table isBordered type="base" />));
+
+  it('should render a table with column borders', () =>
+    matchesMarkup(<Table isColBordered type="base" />));
+
+  it('should render a table with editbale class', () =>
+    matchesMarkup(<Table isEditable type="base" />));
+
+  it('should render a table with fixed layout class', () =>
+    matchesMarkup(<Table isFixedLayout type="base" />));
+
+  it('should render a table with resizable class', () =>
+    matchesMarkup(<Table isResizable type="base" />));
+
+  it('should render a table with responsive class', () =>
+    matchesMarkup(<Table isResponsive type="base" />));
+
+  it('should render a table with responsive stacked class', () =>
+    matchesMarkup(<Table isResponsiveStacked type="base" />));
+
+  it('should render a table with striped class', () =>
+    matchesMarkup(<Table isStriped type="base" />));
+
+  it('should render a table with passed styles', () =>
+    matchesMarkup(<Table style={{ width: '10rem' }} type="base" />));
 });
 
-it('renders a table with a single column', () =>
-  matchesMarkupAndStyle(
-    <Table>
-      <thead>
-        <SingleHeadRowData />
-      </thead>
-      <tbody>
-        <SingleRowData title="Cloudhub" />
-        <SingleRowData title="Cloudhub + Anypoint Connectors" />
-      </tbody>
-    </Table>
-  ));
+describe('THead Component', () => {
+  it('should render a thead', () => matchesMarkup(<THead />));
 
-it('renders a table with a hidden header', () =>
-  matchesMarkupAndStyle(
-    <Table hasHiddenHeader>
-      <thead>
-        <SingleHeadRowData />
-      </thead>
-      <tbody>
-        <SingleRowData title="Cloudhub" />
-        <SingleRowData title="Cloudhub + Anypoint Connectors" />
-      </tbody>
-    </Table>
-  ));
+  it('should take children', () =>
+    matchesMarkup(
+      <THead>
+        <tr />
+      </THead>
+    ));
+
+  it('should apply assistive text class when isHidden', () =>
+    matchesMarkup(<THead isHidden />));
+});
+
+describe('THeadTr component', () => {
+  it('should render with children', () =>
+    matchesMarkup(
+      <THeadTr>
+        <td />
+      </THeadTr>
+    ));
+});
+
+describe('ColumnTh component', () => {
+  it('should render with children', () =>
+    matchesMarkup(
+      <ColumnTh>
+        <div />
+      </ColumnTh>
+    ));
+
+  it('should add aria-label when passed', () =>
+    matchesMarkup(<ColumnTh aria-label="foo" />));
+
+  it('should apply has focus class with hasFocus', () =>
+    matchesMarkup(<ColumnTh hasFocus />));
+
+  it('should apply has menu class with hasMenu', () =>
+    matchesMarkup(<ColumnTh hasMenu />));
+
+  it('should apply is resizable class with isResizable', () =>
+    matchesMarkup(<ColumnTh isResizable />));
+
+  it('should apply text align right class with isRightAligned', () =>
+    matchesMarkup(<ColumnTh isRightAligned />));
+
+  it('should apply is sortable class and aria-sort none with isSortable', () =>
+    matchesMarkup(<ColumnTh isSortable />));
+
+  it('should set sort direction of ascending', () =>
+    matchesMarkup(<ColumnTh isSortable sortDirection="ascending" />));
+
+  it('should set sort direction of descending', () =>
+    matchesMarkup(<ColumnTh isSortable sortDirection="descending" />));
+
+  it('should set sort direction of none', () =>
+    matchesMarkup(<ColumnTh isSortable sortDirection="none" />));
+
+  it('should set style attribute when passed', () =>
+    matchesMarkup(<ColumnTh style={{ width: '1rem' }} />));
+});
+
+describe('ColumnHeader component', () => {
+  it('should render with default column name', () =>
+    matchesMarkup(<ColumnHeader />));
+
+  it('should render with set column name and title should match', () =>
+    matchesMarkup(<ColumnHeader columnName="foo" />));
+
+  it('should render with an id when passed', () =>
+    matchesMarkup(<ColumnHeader id="foo" />));
+
+  it('should render with assistive text class with isAssistiveText prop', () =>
+    matchesMarkup(<ColumnHeader isAssistiveText />));
+});
+
+describe('ResizeControl component', () => {
+  it('should render with a label', () =>
+    matchesMarkup(<ResizeControl label="foo" />));
+
+  it('should set a tabindex when tabIndex is passed', () =>
+    matchesMarkup(<ResizeControl label="foo" tabIndex="0" />));
+});
+
+describe('InteractiveColumnHeader component', () => {
+  it('should render the component', () =>
+    matchesMarkup(<InteractiveColumnHeader columnName="Column Name" />));
+
+  it('should set tabindex to 0 on focusable elements when actionableMode', () =>
+    matchesMarkup(
+      <InteractiveColumnHeader actionableMode columnName="Column Name" />
+    ));
+
+  it('should show a action menu when hasMenu is applied', () =>
+    matchesMarkup(
+      <InteractiveColumnHeader columnName="Column Name" hasMenu />
+    ));
+
+  it('should hide the resize controls when isResizable is false', () =>
+    matchesMarkup(
+      <InteractiveColumnHeader columnName="Column Name" isResizable={false} />
+    ));
+
+  it('should hide the sort controls when isSortable is false', () =>
+    matchesMarkup(
+      <InteractiveColumnHeader columnName="Column Name" isSortable={false} />
+    ));
+
+  it('should render the sort direction when supplied', () =>
+    matchesMarkup(
+      <InteractiveColumnHeader
+        columnName="Column Name"
+        sortDirection="ascending"
+      />
+    ));
+
+  it('should render a header icon when supplied', () => {
+    const AccountNameColumnIcon = (
+      <StandardIcon
+        assistiveText={false}
+        className="slds-icon_x-small"
+        containerClassName="slds-m-right_xx-small"
+        symbol="account"
+        title={false}
+      />
+    );
+
+    const columnHeaderIcons = [
+      {
+        column: 'account name',
+        icon: AccountNameColumnIcon
+      }
+    ];
+    return matchesMarkup(
+      <InteractiveColumnHeader
+        columnHeaderIcons={columnHeaderIcons}
+        columnName="account name"
+      />
+    );
+  });
+});
+
+describe('SelectAllColumnHeader component', () => {
+  it('should render the component', () =>
+    matchesMarkup(<SelectAllColumnHeader />));
+
+  it('should make the input have tabindex 0 when actionableMode', () =>
+    matchesMarkup(<SelectAllColumnHeader actionableMode />));
+
+  it('should check the checkbox', () =>
+    matchesMarkup(<SelectAllColumnHeader checked />));
+});
+
+describe('AdvancedDataTableHead component', () => {
+  const columns = ['Name'];
+
+  it('should render', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} />));
+
+  it('should render enable actionable mode', () =>
+    matchesMarkup(<AdvancedDataTableHead actionableMode columns={columns} />));
+
+  it('should render error column header and set select column width', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} hasErrorColumn />));
+
+  it('should hide select column header', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} hasNoRowSelection />
+    ));
+
+  it('should swap the select column to the single select column header', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} hasSingleRowSelect />
+    ));
+
+  it('should should pass hasFocus when supplied to the first column', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} hasFocus />));
+
+  it('should render menus', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} hasMenus />));
+
+  it('should hide row level actions header', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} hasRowLevelActions={false} />
+    ));
+
+  it('should apply hidden class', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} isHidden />));
+
+  it('should remove select all, sort and resize controls if hidden', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead
+        columns={columns}
+        isHidden
+        isResizable
+        isSortable
+      />
+    ));
+
+  it('should hide all the resize controls', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} isResizable={false} />
+    ));
+
+  it('should hide all the sorting controls', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} isSortable={false} />
+    ));
+
+  it('should set a main column width', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} mainColumnWidth="50rem" />
+    ));
+
+  it('should set a single column width', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} singleColumnWidth="5rem" />
+    ));
+
+  it('should check the select all column header', () =>
+    matchesMarkup(<AdvancedDataTableHead columns={columns} selectAll />));
+
+  it('should set sort direction', () =>
+    matchesMarkup(
+      <AdvancedDataTableHead columns={columns} sortDirection="ascending" />
+    ));
+});
+
+describe('TBody component', () => {
+  it('should render with children', () =>
+    matchesMarkup(
+      <TBody>
+        <tr />
+      </TBody>
+    ));
+});
+
+describe('TBodyTr component', () => {
+  it('should render with children', () =>
+    matchesMarkup(
+      <TBodyTr>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-expanded', () =>
+    matchesMarkup(
+      <TBodyTr isExpanded>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-expanded to false', () =>
+    matchesMarkup(
+      <TBodyTr isExpanded={false}>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-selected', () =>
+    matchesMarkup(
+      <TBodyTr isSelected>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-selected to false', () =>
+    matchesMarkup(
+      <TBodyTr isSelected={false}>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should render top aligned', () =>
+    matchesMarkup(
+      <TBodyTr isTopAligned>
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-level', () =>
+    matchesMarkup(
+      <TBodyTr level="1">
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-posinset', () =>
+    matchesMarkup(
+      <TBodyTr positionWithinLevel="2">
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set aria-setsize', () =>
+    matchesMarkup(
+      <TBodyTr numberOfItemsAtLevel="10">
+        <td />
+      </TBodyTr>
+    ));
+
+  it('should set tabindex', () =>
+    matchesMarkup(
+      <TBodyTr tabIndex="0">
+        <td />
+      </TBodyTr>
+    ));
+});
+
+describe('Td component', () => {
+  it('should render with children', () =>
+    matchesMarkup(
+      <Td type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply a supplied data-label', () =>
+    matchesMarkup(
+      <Td data-label="foo" type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the has error class', () =>
+    matchesMarkup(
+      <Td hasError type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the has focus class', () =>
+    matchesMarkup(
+      <Td hasFocus type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the is editable class', () =>
+    matchesMarkup(
+      <Td isEditable type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the is edited class', () =>
+    matchesMarkup(
+      <Td isEdited type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply aria-selected', () =>
+    matchesMarkup(
+      <Td isEditing type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the error cell class', () =>
+    matchesMarkup(
+      <Td isErrorCell type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply aria-readonly', () =>
+    matchesMarkup(
+      <Td isLocked type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the right aligned class', () =>
+    matchesMarkup(
+      <Td isRightAligned type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should apply the cell shrink class', () =>
+    matchesMarkup(
+      <Td isShrunken type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should set style', () =>
+    matchesMarkup(
+      <Td style={{ width: '2rem' }} type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should set tabindex', () =>
+    matchesMarkup(
+      <Td tabIndex="0" type="base">
+        <div />
+      </Td>
+    ));
+
+  it('should set role of gridcell for advanced', () =>
+    matchesMarkup(
+      <Td type="advanced">
+        <div />
+      </Td>
+    ));
+
+  it('should set role of gridcell for treegrid', () =>
+    matchesMarkup(
+      <Td type="advanced">
+        <div />
+      </Td>
+    ));
+});
+
+describe('RowTh component', () => {
+  it('should render', () =>
+    matchesMarkup(
+      <RowTh type="base">
+        <div />
+      </RowTh>
+    ));
+
+  it('should set a data-label', () =>
+    matchesMarkup(
+      <RowTh data-label="foo" type="base">
+        <div />
+      </RowTh>
+    ));
+
+  it('should apply the has focus class', () =>
+    matchesMarkup(
+      <RowTh hasFocus type="base">
+        <div />
+      </RowTh>
+    ));
+
+  it('should apply the cell edit class', () =>
+    matchesMarkup(
+      <RowTh isEditable type="base">
+        <div />
+      </RowTh>
+    ));
+
+  it('should set tabindex', () =>
+    matchesMarkup(
+      <RowTh tabIndex="0" type="base">
+        <div />
+      </RowTh>
+    ));
+
+  it('should apply tree item class', () =>
+    matchesMarkup(
+      <RowTh type="treegrid">
+        <div />
+      </RowTh>
+    ));
+});
+
+describe('SelectRowCell component', () => {
+  it('should render', () => matchesMarkup(<SelectRowCell index={1} />));
+
+  it('should render a radio button', () =>
+    matchesMarkup(<SelectRowCell hasSingleRowSelect index={1} />));
+
+  it('should render a checked checkbox', () =>
+    matchesMarkup(<SelectRowCell checked index={1} />));
+
+  it('should render a checked radio button', () =>
+    matchesMarkup(<SelectRowCell checked hasSingleRowSelect index={1} />));
+
+  it('should set tabindex on a checkbox', () =>
+    matchesMarkup(<SelectRowCell index={1} inputTabIndex="-1" />));
+
+  it('should set tabindex on a radio', () =>
+    matchesMarkup(
+      <SelectRowCell hasSingleRowSelect index={1} inputTabIndex="-1" />
+    ));
+});
+
+describe('RowActionsCell component', () => {
+  it('should render', () =>
+    matchesMarkup(<RowActionsCell rowName="row name" />));
+
+  it('should set tabindex to 0 when in actionable mode', () =>
+    matchesMarkup(<RowActionsCell actionableMode rowName="row name" />));
+});
+
+describe('ErrorCell component', () => {
+  it('should render', () => matchesMarkup(<ErrorCell index={1} />));
+
+  it('should remove aria-hidden and slds-hidden from button when hasError', () =>
+    matchesMarkup(<ErrorCell hasError index={1} />));
+
+  it('should set tabindex on the button to 0 in actionable mode', () =>
+    matchesMarkup(<ErrorCell actionableMode hasError index={1} />));
+});
+
+describe('ReadOnlyCell component', () => {
+  it('should render', () =>
+    matchesMarkup(<ReadOnlyCell cellText="cell text" />));
+
+  it('should set linkable cell text', () =>
+    matchesMarkup(<ReadOnlyCell cellLink="#" cellText="cell text" />));
+
+  it('should set tabindex to 0 on links in actionableMode', () =>
+    matchesMarkup(
+      <ReadOnlyCell actionableMode cellLink="#" cellText="cell text" />
+    ));
+});
+
+describe('EditableCell component', () => {
+  it('should render', () =>
+    matchesMarkup(
+      <EditableCell buttonText="Edit field of cell text" cellText="cell text" />
+    ));
+
+  it('should render a cell text as link', () =>
+    matchesMarkup(
+      <EditableCell
+        buttonText="Edit field of cell text"
+        cellLink="#"
+        cellText="cell text"
+      />
+    ));
+
+  it('should set tabindex to 0 on focusable elements when in actionableMode', () =>
+    matchesMarkup(
+      <EditableCell
+        actionableMode
+        buttonText="Edit field of cell text"
+        cellLink="#"
+        cellText="cell text"
+      />
+    ));
+
+  it('should lock the cell', () =>
+    matchesMarkup(
+      <EditableCell
+        buttonText="Edit field of cell text"
+        cellText="cell text"
+        isLocked
+      />
+    ));
+
+  it('should show editting', () =>
+    matchesMarkup(
+      <EditableCell
+        buttonText="Edit field of cell text"
+        cellText="cell text"
+        showEdit
+      />
+    ));
+
+  it('should show field required in editing', () =>
+    matchesMarkup(
+      <EditableCell
+        buttonText="Edit field of cell text"
+        cellText="cell text"
+        isRequired
+        showEdit
+      />
+    ));
+
+  it('should show an error', () =>
+    matchesMarkup(
+      <EditableCell
+        buttonText="Edit field of cell text"
+        cellText="cell text"
+        hasError
+        showEdit
+      />
+    ));
+});
+
+describe('EditPopover component', () => {
+  it('should render', () => matchesMarkup(<EditPopover />));
+
+  it('should set field required', () =>
+    matchesMarkup(<EditPopover isRequired />));
+
+  it('should show error', () =>
+    matchesMarkup(<EditPopover hasError isRequired />));
+});

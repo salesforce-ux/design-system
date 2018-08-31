@@ -21,6 +21,7 @@
   position: relative;
   min-width: rem(380px); // Width of the preview panel
   width: 100%;
+  max-height: 100%;
 
   &:before {
     content: '';
@@ -48,7 +49,9 @@
 .slds-has-coordinates {
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
   max-height: rem(660px);
+  background: $color-background-alt;
 
   .slds-map:before {
     padding-top: 75%;

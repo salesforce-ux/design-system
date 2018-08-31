@@ -1,1 +1,0 @@
-This tree grid mixes the tree styles with data table styles. The only unique styles are indicated in the Component table below.

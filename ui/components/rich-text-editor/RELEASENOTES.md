@@ -4,4 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Fixed
+
+- Fixed incorrect `border-radius` in text area.
+- Fixed a bug where child input elements were unintentionally affected when the Rich Text Editor was in an error state.
+
+### Changed
+
+- [New markup](https://www.lightningdesignsystem.com/components/rich-text-editor/?state=error&variant=base) that moves the error message outside of Rich Text Editor, and adds a `slds-form-element__control` element to enable left align labels.

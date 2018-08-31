@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+
+- Updated the documentation for vertical progress bars. Now you can actually see it, yay!

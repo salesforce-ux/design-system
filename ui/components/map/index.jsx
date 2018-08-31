@@ -104,12 +104,12 @@ export const MapContainer = props => {
         props.multipleCoordinates && 'slds-has-coordinates'
       )}
     >
-      {props.multipleCoordinates && (
-        <CoordinatesList heading={props.heading} selection={props.selection} />
-      )}
       <div className="slds-map_container">
         <GoogleMap hideMap={props.hideMap} />
       </div>
+      {props.multipleCoordinates && (
+        <CoordinatesList heading={props.heading} selection={props.selection} />
+      )}
     </div>
   );
 };

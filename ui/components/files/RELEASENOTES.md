@@ -21,3 +21,10 @@
 
 - New design treatment for hover state.
   - `box-shadow` and `transition` have been replaced with an overlay and absolutely-centered Preview icon.
+  - This hover state does not appear on devices that do not support `hover` (e.g., mobile). Note that this does effect devices that supports both hover (e.g., touch) and no-hover (e.g., mouse) input devices, such as the Microsoft Surface.
+- New option for loading state.
+  - Added a loading spinner option for Files with and without a title.
+
+### Fixed
+
+- Improved the color contrast of the text placed on top of a file overlay

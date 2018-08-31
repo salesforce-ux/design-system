@@ -1,0 +1,2264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Advanced data table row should make every focusable element focusable when in actionableMode 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="0"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex={null}
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="0"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="0"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="0"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should remove the row actions column 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should render a table row 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should select the row 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={true}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should select the row with a radio button 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={true}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-radio"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="radio-button-label-01 column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="radio-01"
+        name="options"
+        tabIndex="-1"
+        type="radio"
+        value="radio-01"
+      />
+      <label
+        className="slds-radio__label"
+        htmlFor="radio-01"
+        id="radio-button-label-01"
+      >
+        <span
+          className="slds-radio_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </span>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should show amount scores 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <div
+        className="slds-truncate"
+        title="10000"
+      >
+        10000
+      </div>
+      <div
+        className="slds-icon_container slds-m-left_x-small slds-m-right_xx-small"
+      >
+        <span
+          className="slds-icon-score"
+          data-slds-state="negative"
+          title="Description of the icon when needed"
+        >
+          <svg
+            aria-hidden="true"
+            className="slds-icon-score__positive"
+            viewBox="0 0 5 5"
+          >
+            <circle
+              cx="50%"
+              cy="50%"
+              r="1.875"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            className="slds-icon-score__negative"
+            viewBox="0 0 5 5"
+          >
+            <circle
+              cx="50%"
+              cy="50%"
+              r="1.875"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Text alternative when needed
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-truncate"
+        title="Low"
+      >
+        Low
+      </div>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should show record name cell in first row as focusable 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-has-focus"
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Advanced data table row should swap row selection to a radio button 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <span
+      className="slds-radio"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="radio-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="radio-01"
+        name="options"
+        tabIndex="-1"
+        type="radio"
+        value="radio-01"
+      />
+      <label
+        className="slds-radio__label"
+        htmlFor="radio-01"
+        id="radio-button-label-01"
+      >
+        <span
+          className="slds-radio_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </span>
+  </td>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex="0"
+  >
+    <div
+      className="slds-truncate"
+      title="Acme"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Acme
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="salesforce"
+    >
+      salesforce
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="8/20/2018"
+    >
+      8/20/2018
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="closed"
+    >
+      closed
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="low"
+    >
+      low
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="10000"
+    >
+      10000
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Art V"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Art V
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Acme"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Acme
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Product data table price cell should render 1`] = `
+Array [
+  <p>
+    <s>
+      $23.00
+    </s>
+  </p>,
+  <p>
+    $20.00
+  </p>,
+]
+`;
+
+exports[`Product data table product image should render 1`] = `
+<div
+  className="slds-size_xx-small"
+>
+  <img
+    alt="Baseball Cap"
+    src="/assets/images/product1.jpg"
+    title="Baseball Cap"
+  />
+</div>
+`;
+
+exports[`Product data table product items details cell should make focusable elements focusable in actionableMode 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <div
+      className="slds-size_xx-small"
+    >
+      <img
+        alt="Baseball Cap"
+        src="/assets/images/product1.jpg"
+        title="Baseball Cap"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-truncate"
+      title="Baseball Cap"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="0"
+      >
+        Baseball Cap
+      </a>
+    </div>
+    <ul>
+      <li
+        className="slds-truncate"
+        title="Size: 7 3/4"
+      >
+        Size
+        : 
+        <strong>
+          7 3/4
+        </strong>
+      </li>
+      <li
+        className="slds-truncate"
+        title="Color: Blue"
+      >
+        Color
+        : 
+        <strong>
+          Blue
+        </strong>
+      </li>
+      <li
+        className="slds-truncate"
+        title="Item No.: 1007100"
+      >
+        Item No.
+        : 
+        <strong>
+          1007100
+        </strong>
+      </li>
+    </ul>
+    <p
+      className="slds-text-color_success"
+    >
+      In Stock
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Product data table product items details cell should render 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <div
+      className="slds-size_xx-small"
+    >
+      <img
+        alt="Baseball Cap"
+        src="/assets/images/product1.jpg"
+        title="Baseball Cap"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <div
+      className="slds-truncate"
+      title="Baseball Cap"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Baseball Cap
+      </a>
+    </div>
+    <ul>
+      <li
+        className="slds-truncate"
+        title="Size: 7 3/4"
+      >
+        Size
+        : 
+        <strong>
+          7 3/4
+        </strong>
+      </li>
+      <li
+        className="slds-truncate"
+        title="Color: Blue"
+      >
+        Color
+        : 
+        <strong>
+          Blue
+        </strong>
+      </li>
+      <li
+        className="slds-truncate"
+        title="Item No.: 1007100"
+      >
+        Item No.
+        : 
+        <strong>
+          1007100
+        </strong>
+      </li>
+    </ul>
+    <p
+      className="slds-text-color_success"
+    >
+      In Stock
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Product data table product quantity cell should render 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label slds-assistive-text"
+    htmlFor="product-quantity-text-input-id-0"
+    id={undefined}
+  >
+    Baseball Cap quantity
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+      defaultValue={undefined}
+      id="product-quantity-text-input-id-0"
+      placeholder=" "
+      readOnly={undefined}
+      tabIndex="-1"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Product data table product quantity cell should set a quantity 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label slds-assistive-text"
+    htmlFor="product-quantity-text-input-id-0"
+    id={undefined}
+  >
+    Baseball Cap quantity
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+      defaultValue="1"
+      id="product-quantity-text-input-id-0"
+      placeholder=" "
+      readOnly={undefined}
+      tabIndex="-1"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Product data table product quantity cell should set the input focusable in actionableMode 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label slds-assistive-text"
+    htmlFor="product-quantity-text-input-id-0"
+    id={undefined}
+  >
+    Baseball Cap quantity
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+      defaultValue={undefined}
+      id="product-quantity-text-input-id-0"
+      placeholder=" "
+      readOnly={undefined}
+      tabIndex={null}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Product data table row should make focusable elements focusable in actionableMode 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-align-top"
+  tabIndex={undefined}
+>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <div
+          className="slds-size_xx-small"
+        >
+          <img
+            alt="Baseball Cap"
+            src="/assets/images/product1.jpg"
+            title="Baseball Cap"
+          />
+        </div>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <div
+          className="slds-truncate"
+          title="Baseball Cap"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="0"
+          >
+            Baseball Cap
+          </a>
+        </div>
+        <ul>
+          <li
+            className="slds-truncate"
+            title="Size: 7 3/4"
+          >
+            Size
+            : 
+            <strong>
+              7 3/4
+            </strong>
+          </li>
+          <li
+            className="slds-truncate"
+            title="Color: Blue"
+          >
+            Color
+            : 
+            <strong>
+              Blue
+            </strong>
+          </li>
+          <li
+            className="slds-truncate"
+            title="Item No.: 1007100"
+          >
+            Item No.
+            : 
+            <strong>
+              1007100
+            </strong>
+          </li>
+        </ul>
+        <p
+          className="slds-text-color_success"
+        >
+          In Stock
+        </p>
+      </div>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-form-element"
+      role={undefined}
+    >
+      <label
+        className="slds-form-element__label slds-assistive-text"
+        htmlFor="product-quantity-text-input-id-1"
+        id={undefined}
+      >
+        Baseball Cap quantity
+      </label>
+      <div
+        className="slds-form-element__control"
+      >
+        <input
+          className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+          defaultValue="1"
+          id="product-quantity-text-input-id-1"
+          placeholder=" "
+          readOnly={undefined}
+          tabIndex={null}
+          type="text"
+        />
+      </div>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="4/10/17"
+    >
+      4/10/17
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <p>
+      <s>
+        $23.00
+      </s>
+    </p>
+    <p>
+      $20.00
+    </p>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="0"
+      title="More actions for Baseball Cap"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Baseball Cap
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Product data table row should render 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-align-top"
+  tabIndex={undefined}
+>
+  <th
+    className={null}
+    data-label={undefined}
+    scope="row"
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <div
+          className="slds-size_xx-small"
+        >
+          <img
+            alt="Baseball Cap"
+            src="/assets/images/product1.jpg"
+            title="Baseball Cap"
+          />
+        </div>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <div
+          className="slds-truncate"
+          title="Baseball Cap"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Baseball Cap
+          </a>
+        </div>
+        <ul>
+          <li
+            className="slds-truncate"
+            title="Size: 7 3/4"
+          >
+            Size
+            : 
+            <strong>
+              7 3/4
+            </strong>
+          </li>
+          <li
+            className="slds-truncate"
+            title="Color: Blue"
+          >
+            Color
+            : 
+            <strong>
+              Blue
+            </strong>
+          </li>
+          <li
+            className="slds-truncate"
+            title="Item No.: 1007100"
+          >
+            Item No.
+            : 
+            <strong>
+              1007100
+            </strong>
+          </li>
+        </ul>
+        <p
+          className="slds-text-color_success"
+        >
+          In Stock
+        </p>
+      </div>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-form-element"
+      role={undefined}
+    >
+      <label
+        className="slds-form-element__label slds-assistive-text"
+        htmlFor="product-quantity-text-input-id-1"
+        id={undefined}
+      >
+        Baseball Cap quantity
+      </label>
+      <div
+        className="slds-form-element__control"
+      >
+        <input
+          className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
+          defaultValue="1"
+          id="product-quantity-text-input-id-1"
+          placeholder=" "
+          readOnly={undefined}
+          tabIndex="-1"
+          type="text"
+        />
+      </div>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="4/10/17"
+    >
+      4/10/17
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <p>
+      <s>
+        $23.00
+      </s>
+    </p>
+    <p>
+      $20.00
+    </p>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Baseball Cap"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Baseball Cap
+      </span>
+    </button>
+  </td>
+</tr>
+`;

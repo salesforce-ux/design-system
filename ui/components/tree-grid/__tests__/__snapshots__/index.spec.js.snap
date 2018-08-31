@@ -1,0 +1,7067 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`treegrid default rows should remove the selection column 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="3,100"
+      >
+        3,100
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Phoenix, AZ"
+      >
+        Phoenix, AZ
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="10,000"
+      >
+        10,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="San Francisco, CA"
+      >
+        San Francisco, CA
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr />
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="6,000"
+      >
+        6,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="New York, NY"
+      >
+        New York, NY
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="1,234"
+      >
+        1,234
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Paris, France"
+      >
+        Paris, France
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid default rows should render with children 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-011 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-011"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-011"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-011"
+          id="check-button-label-011"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 11
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="3,100"
+      >
+        3,100
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Phoenix, AZ"
+      >
+        Phoenix, AZ
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-012 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-012"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-012"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-012"
+          id="check-button-label-012"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 12
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="10,000"
+      >
+        10,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="San Francisco, CA"
+      >
+        San Francisco, CA
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr />
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-013 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-013"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-013"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-013"
+          id="check-button-label-013"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 13
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="6,000"
+      >
+        6,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="New York, NY"
+      >
+        New York, NY
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-014 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-014"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-014"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-014"
+          id="check-button-label-014"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 14
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="1,234"
+      >
+        1,234
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Paris, France"
+      >
+        Paris, France
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid default rows should show a selected row 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-015 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-015"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-015"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-015"
+          id="check-button-label-015"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 15
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="3,100"
+      >
+        3,100
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Phoenix, AZ"
+      >
+        Phoenix, AZ
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={true}
+    aria-setsize="4"
+    className="slds-hint-parent slds-is-selected"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-016 column-group-header"
+          defaultChecked={true}
+          disabled={undefined}
+          id="checkbox-016"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-016"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-016"
+          id="check-button-label-016"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 16
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="10,000"
+      >
+        10,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="San Francisco, CA"
+      >
+        San Francisco, CA
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr />
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-017 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-017"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-017"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-017"
+          id="check-button-label-017"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 17
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="6,000"
+      >
+        6,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="New York, NY"
+      >
+        New York, NY
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-018 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-018"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-018"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-018"
+          id="check-button-label-018"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 18
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="1,234"
+      >
+        1,234
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Paris, France"
+      >
+        Paris, France
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid default rows should show expanded row 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-019 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-019"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-019"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-019"
+          id="check-button-label-019"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 19
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="3,100"
+      >
+        3,100
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Phoenix, AZ"
+      >
+        Phoenix, AZ
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={true}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-020 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-020"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-020"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-020"
+          id="check-button-label-020"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 20
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Collapse Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Expand Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="10,000"
+      >
+        10,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="San Francisco, CA"
+      >
+        San Francisco, CA
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr />
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-021 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-021"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-021"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-021"
+          id="check-button-label-021"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 21
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="6,000"
+      >
+        6,000
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="John Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          John Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="New York, NY"
+      >
+        New York, NY
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-022 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-022"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-022"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-022"
+          id="check-button-label-022"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 22
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Employees"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="1,234"
+      >
+        1,234
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Phone Number"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="837-555-1212"
+      >
+        837-555-1212
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Account Owner"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Jane Doe"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Jane Doe
+        </a>
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label="Billing City"
+      role="gridcell"
+      style={undefined}
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-truncate"
+        title="Paris, France"
+      >
+        Paris, France
+      </div>
+    </td>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid headless row should hide the selection column 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless row should render 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-06 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-06"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-06"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-06"
+        id="check-button-label-06"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 6
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless row should set expanded to false 1`] = `
+<tr
+  aria-expanded={false}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-08 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-08"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-08"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-08"
+        id="check-button-label-08"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 8
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless row should set expanded to true 1`] = `
+<tr
+  aria-expanded={true}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-07 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-07"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-07"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-07"
+        id="check-button-label-07"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 7
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Collapse foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless row should set selected to false 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={false}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-010 column-group-header"
+        defaultChecked={false}
+        disabled={undefined}
+        id="checkbox-010"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-010"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-010"
+        id="check-button-label-010"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 10
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless row should set selected to true and check the box 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={true}
+  aria-setsize="1"
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-09 column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="checkbox-09"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-09"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-09"
+        id="check-button-label-09"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 9
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse foo
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="foo"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        foo
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for foo"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for foo
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid headless rows should remove the selection column 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={null}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid headless rows should render 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-023 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-023"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-023"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-023"
+          id="check-button-label-023"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 23
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-024 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-024"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-024"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-024"
+          id="check-button-label-024"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 24
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-025 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-025"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-025"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-025"
+          id="check-button-label-025"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 25
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-026 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-026"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-026"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-026"
+          id="check-button-label-026"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 26
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid headless rows should show a selected row 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-027 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-027"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-027"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-027"
+          id="check-button-label-027"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 27
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={true}
+    aria-setsize="4"
+    className="slds-hint-parent slds-is-selected"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-028 column-group-header"
+          defaultChecked={true}
+          disabled={undefined}
+          id="checkbox-028"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-028"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-028"
+          id="check-button-label-028"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 28
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-029 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-029"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-029"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-029"
+          id="check-button-label-029"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 29
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-030 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-030"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-030"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-030"
+          id="check-button-label-030"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 30
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid headless rows should show expanded row 1`] = `
+<tbody>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="1"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex="0"
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-031 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-031"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-031"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-031"
+          id="check-button-label-031"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 31
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rewis Inc
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rewis Inc"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rewis Inc
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rewis Inc"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rewis Inc
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={true}
+    aria-level="1"
+    aria-posinset="2"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-032 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-032"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-032"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-032"
+          id="check-button-label-032"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 32
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Collapse Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Expand Acme Corporation
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Acme Corporation"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Acme Corporation
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Acme Corporation"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Acme Corporation
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={false}
+    aria-level="1"
+    aria-posinset="3"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-033 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-033"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-033"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-033"
+          id="check-button-label-033"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 33
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Rohde Enterprises
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Rohde Enterprises"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Rohde Enterprises
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Rohde Enterprises"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Rohde Enterprises
+        </span>
+      </button>
+    </td>
+  </tr>
+  <tr
+    aria-expanded={undefined}
+    aria-level="1"
+    aria-posinset="4"
+    aria-selected={false}
+    aria-setsize="4"
+    className="slds-hint-parent"
+    tabIndex={null}
+  >
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className="slds-text-align_right"
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby="check-button-label-034 column-group-header"
+          defaultChecked={false}
+          disabled={undefined}
+          id="checkbox-034"
+          name="options"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-034"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-034"
+          id="check-button-label-034"
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label slds-assistive-text"
+          >
+            Select item 34
+          </span>
+        </label>
+      </div>
+    </td>
+    <th
+      className="slds-tree__item"
+      data-label="Account Name"
+      scope="row"
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Collapse Cheese Corp
+        </span>
+      </button>
+      <div
+        className="slds-truncate"
+        title="Cheese Corp"
+      >
+        <a
+          href="javascript:void(0);"
+          tabIndex="-1"
+        >
+          Cheese Corp
+        </a>
+      </div>
+    </th>
+    <td
+      aria-readonly={undefined}
+      aria-selected={undefined}
+      className={null}
+      data-label={undefined}
+      role="gridcell"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+      tabIndex={undefined}
+    >
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="More actions for Cheese Corp"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          More actions for Cheese Corp
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`treegrid row should remove the selection column 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should render 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-00 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-00"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-00"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-00"
+        id="check-button-label-00"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 0
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should select the row and check the box 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={true}
+  aria-setsize="1"
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-04 column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="checkbox-04"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-04"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-04"
+        id="check-button-label-04"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 4
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should set aria-expanded on row  1`] = `
+<tr
+  aria-expanded={true}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-01 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-01"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-01"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-01"
+        id="check-button-label-01"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 1
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Collapse Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should set aria-expanded to false on row  1`] = `
+<tr
+  aria-expanded={false}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-02 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-02"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-02"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-02"
+        id="check-button-label-02"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 2
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should set selection of the row to false 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={false}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex={null}
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-05 column-group-header"
+        defaultChecked={false}
+        disabled={undefined}
+        id="checkbox-05"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-05"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-05"
+        id="check-button-label-05"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 5
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid row should set tabindex on the row 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset="1"
+  aria-selected={undefined}
+  aria-setsize="1"
+  className="slds-hint-parent"
+  tabIndex="0"
+>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className="slds-text-align_right"
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-button-label-03 column-group-header"
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="checkbox-03"
+        name="options"
+        tabIndex={undefined}
+        type="checkbox"
+        value="checkbox-03"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-03"
+        id="check-button-label-03"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select item 3
+        </span>
+      </label>
+    </div>
+  </td>
+  <th
+    className="slds-tree__item"
+    data-label="Account Name"
+    scope="row"
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Collapse Rewis Inc
+      </span>
+    </button>
+    <div
+      className="slds-truncate"
+      title="Rewis Inc"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Rewis Inc
+      </a>
+    </div>
+  </th>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Employees"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="3,100"
+    >
+      3,100
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Phone Number"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="837-555-1212"
+    >
+      837-555-1212
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Account Owner"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Jane Doe"
+    >
+      <a
+        href="javascript:void(0);"
+        tabIndex="-1"
+      >
+        Jane Doe
+      </a>
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label="Billing City"
+    role="gridcell"
+    style={undefined}
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-truncate"
+      title="Phoenix, AZ"
+    >
+      Phoenix, AZ
+    </div>
+  </td>
+  <td
+    aria-readonly={undefined}
+    aria-selected={undefined}
+    className={null}
+    data-label={undefined}
+    role="gridcell"
+    style={
+      Object {
+        "width": "3.25rem",
+      }
+    }
+    tabIndex={undefined}
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="More actions for Rewis Inc"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        More actions for Rewis Inc
+      </span>
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`treegrid treegrid component should add borders 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_bordered slds-table_edit slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should fix the table layout 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_edit slds-table_fixed-layout slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should remove header 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_header-hidden slds-table_edit slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should render 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_edit slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should set aria-multiselectable to true 1`] = `
+<table
+  aria-multiselectable="true"
+  className="slds-table slds-table_edit slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should set resizable 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_edit slds-table_resizable-cols slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+>
+  <tr />
+</table>
+`;

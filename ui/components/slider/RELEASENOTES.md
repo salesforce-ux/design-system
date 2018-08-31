@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Fixed
+
+- Fixed a bug that prevented Slider background from appearing in IE11.

@@ -3,133 +3,95 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
-import { SingleRowData, SingleHeadRowData } from '../index';
+import {
+  Table,
+  THead,
+  THeadTr,
+  ColumnTh,
+  ColumnHeader,
+  TBody,
+  TBodyTr,
+  RowTh,
+  Td,
+  ReadOnlyCell
+} from '../index';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
-export const Table = props => (
-  <table
-    className={classNames(
-      'slds-table slds-table_bordered',
-      { 'slds-table_header-hidden': props.hasHiddenHeader },
-      { 'slds-table_cell-buffer': props.hasCellBuffer },
-      props.className
-    )}
-    role={props.role}
-  >
-    {props.children}
-  </table>
-);
-
-Table.propTypes = {
-  className: PropTypes.string,
-  hasHiddenHeader: PropTypes.bool,
-  hasCellBuffer: PropTypes.bool,
-  role: PropTypes.string,
-  children: PropTypes.node
-};
-
-Table.defaultProps = {
-  hasCellBuffer: true
-};
-
 let HeadRowData = props => (
-  <tr className="slds-text-title_caps">
-    <th scope="col">
-      <div className="slds-truncate" title="Opportunity Name">
-        Opportunity Name
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Account Name">
-        Account Name
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Close Date">
-        Close Date
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Stage">
-        Stage
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Confidence">
-        Confidence
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Amount">
-        Amount
-      </div>
-    </th>
-    <th scope="col">
-      <div className="slds-truncate" title="Contact">
-        Contact
-      </div>
-    </th>
-  </tr>
+  <THeadTr>
+    <ColumnTh>
+      <ColumnHeader columnName="Opportunity Name" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Account Name" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Close Date" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Stage" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Confidence" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Amount" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Contact" />
+    </ColumnTh>
+  </THeadTr>
 );
 
 let RowData = props => (
-  <tr className={props.className}>
-    <th scope="row" data-label="Opportunity Name">
-      <div className="slds-truncate" title={props.title}>
-        <a href="javascript:void(0);">{props.title}</a>
-      </div>
-    </th>
-    <td data-label="Account Name">
-      <div className="slds-truncate" title="Cloudhub">
-        Cloudhub
-      </div>
-    </td>
-    <td data-label="Close Date">
-      <div className="slds-truncate" title="4/14/2015">
-        4/14/2015
-      </div>
-    </td>
-    <td data-label="Prospecting">
-      <div className="slds-truncate" title="Prospecting">
-        Prospecting
-      </div>
-    </td>
-    <td data-label="Confidence">
-      <div className="slds-truncate" title="20%">
-        20%
-      </div>
-    </td>
-    <td data-label="Amount">
-      <div className="slds-truncate" title="$25k">
-        $25k
-      </div>
-    </td>
-    <td data-label="Contact">
-      <div className="slds-truncate" title="jrogers@cloudhub.com">
-        <a href="javascript:void(0);">jrogers@cloudhub.com</a>
-      </div>
-    </td>
-  </tr>
+  <TBodyTr>
+    <RowTh data-label="Opportunity Name">
+      <ReadOnlyCell cellText={props.title} cellLink="javascript:void(0);" />
+    </RowTh>
+    <Td data-label="Account Name" type="base">
+      <ReadOnlyCell cellText="Cloudhub" />
+    </Td>
+    <Td data-label="Close Date" type="base">
+      <ReadOnlyCell cellText="4/14/2015" />
+    </Td>
+    <Td data-label="Prospecting" type="base">
+      <ReadOnlyCell cellText="Prospecting" />
+    </Td>
+    <Td data-label="Confidence" type="base">
+      <ReadOnlyCell cellText="20%" />
+    </Td>
+    <Td data-label="Amount" type="base">
+      <ReadOnlyCell cellText="$25k" />
+    </Td>
+    <Td data-label="Contact" type="base">
+      <ReadOnlyCell
+        cellLink="javascript:void(0);"
+        cellText="jrogers@cloudhub.com"
+      />
+    </Td>
+  </TBodyTr>
 );
+RowData.propTypes = {
+  title: PropTypes.string
+};
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <Table>
-    <thead>
+  <Table isBordered hasCellBuffer type="base">
+    <THead>
       <HeadRowData />
-    </thead>
-    <tbody>
+    </THead>
+    <TBody>
       <RowData title="Cloudhub" />
       <RowData title="Cloudhub + Anypoint Connectors" />
-    </tbody>
+    </TBody>
   </Table>
 );
 
@@ -138,15 +100,15 @@ export let states = [
     id: 'data-table-striped-rows',
     label: 'With striped rows',
     element: (
-      <Table className="slds-table_striped">
-        <thead>
+      <Table isBordered isStriped hasCellBuffer type="base">
+        <THead>
           <HeadRowData />
-        </thead>
-        <tbody>
+        </THead>
+        <TBody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
           <RowData title="Cloudhub" />
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -154,14 +116,14 @@ export let states = [
     id: 'data-table-no-hover',
     label: 'With no row hovers',
     element: (
-      <Table className="slds-no-row-hover">
-        <thead>
+      <Table isBordered hasCellBuffer hasNoRowHover type="base">
+        <THead>
           <HeadRowData />
-        </thead>
-        <tbody>
+        </THead>
+        <TBody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -169,14 +131,14 @@ export let states = [
     id: 'data-table-vertical-borders',
     label: 'With vertical borders',
     element: (
-      <Table className="slds-table_col-bordered">
-        <thead>
+      <Table isBordered isColBordered hasCellBuffer type="base">
+        <THead>
           <HeadRowData />
-        </thead>
-        <tbody>
+        </THead>
+        <TBody>
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
-        </tbody>
+        </TBody>
       </Table>
     )
   },
@@ -184,14 +146,32 @@ export let states = [
     id: 'single-column',
     label: 'Single Column',
     element: (
-      <Table>
-        <thead>
-          <SingleHeadRowData />
-        </thead>
-        <tbody>
-          <SingleRowData title="Cloudhub" />
-          <SingleRowData title="Cloudhub + Anypoint Connectors" />
-        </tbody>
+      <Table isBordered hasCellBuffer type="base">
+        <THead>
+          <THeadTr>
+            <ColumnTh>
+              <ColumnHeader columnName="Opportunity Name" />
+            </ColumnTh>
+          </THeadTr>
+        </THead>
+        <TBody>
+          <TBodyTr>
+            <Td data-label="Opportunity Name" type="base">
+              <ReadOnlyCell
+                cellLink="javascript:void(0);"
+                cellText="Cloudhub"
+              />
+            </Td>
+          </TBodyTr>
+          <TBodyTr>
+            <Td data-label="Opportunity Name" type="base">
+              <ReadOnlyCell
+                cellLink="javascript:void(0);"
+                cellText="Cloudhub + Anypoint Connectors"
+              />
+            </Td>
+          </TBodyTr>
+        </TBody>
       </Table>
     )
   }

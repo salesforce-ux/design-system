@@ -3,12 +3,13 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export class Tokens extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: this.props.open || false
+      open: this.props.open
     };
   }
 
@@ -33,10 +34,20 @@ export class Tokens extends Component {
   }
 }
 
+Tokens.propTypes = {
+  open: PropTypes.bool,
+  text: PropTypes.string,
+  children: PropTypes.node
+};
+
+Tokens.defaultProps = {
+  open: false
+};
+
 class Token extends Component {
   render() {
     let tokenValue;
-    let { token, tokenSet = 'force-base' } = this.props;
+    let { token, tokenSet } = this.props;
     let tokenPath = require(`../../design-tokens/dist/${tokenSet}.json`);
     let set = JSON.stringify(tokenPath);
     JSON.parse(set, (key, value) => {
@@ -75,5 +86,15 @@ class Token extends Component {
     );
   }
 }
+
+Token.propTypes = {
+  token: PropTypes.string,
+  tokenSet: PropTypes.string,
+  grid: PropTypes.bool
+};
+
+Token.defaultProps = {
+  tokenSet: 'force-base'
+};
 
 export default Token;

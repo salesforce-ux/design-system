@@ -87,12 +87,12 @@ A chat consists of an unordered list of possible chat items, wrapped in a `secti
 
 Each `slds-chat-listitem` comes with 4 modifier classes, each one needing to be applied based on the type of chat item you are display in the list item:
 
-| Chat item | Modifier | When to apply
-|---|---|---|
-| [Inbound message](#Inbound-messages) | `.slds-chat-listitem slds-chat-listitem_inbound` | Apply to all list items that contain inbound messages |
-| [Outbound message](#Outbound-messages) | `.slds-chat-listitem slds-chat-listitem_outbound` | Apply to all list items that contain outbound messages |
-| [Chat event](#Displaying-events-during-a-chat-session) | `.slds-chat-listitem slds-chat-listitem_event` | Apply to all list items that contain events |
-| [Chat bookend](#Starting-and-ending-a-chat) | `.slds-chat-listitem slds-chat-listitem_bookend` | Apply to all list items that contain chat log bookends |
+| Chat item                                              | Modifier                                          | When to apply                                          |
+| ------------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------ |
+| [Inbound message](#Inbound-messages)                   | `.slds-chat-listitem slds-chat-listitem_inbound`  | Apply to all list items that contain inbound messages  |
+| [Outbound message](#Outbound-messages)                 | `.slds-chat-listitem slds-chat-listitem_outbound` | Apply to all list items that contain outbound messages |
+| [Chat event](#Displaying-events-during-a-chat-session) | `.slds-chat-listitem slds-chat-listitem_event`    | Apply to all list items that contain events            |
+| [Chat bookend](#Starting-and-ending-a-chat)            | `.slds-chat-listitem slds-chat-listitem_bookend`  | Apply to all list items that contain chat log bookends |
 
 The modifiers are used to apply any specific styling to the type of chat item it represents, including spacing, position and layout.
 
@@ -111,6 +111,7 @@ When each chat session is started or stopped, it is represented with a bookend. 
 </CodeView>
 
 ### Chat stopped bookend
+
 <CodeView>
   <ChatBookend
     type="stop"
@@ -253,7 +254,7 @@ It is also possible to display an image preview when sending a supported file fo
   header="Contrast"
   type="a11y"
 >
-  When using actions without a title, it's important to use the <code class="doc">slds-file__title_scrim</code> class in conjunction with <code class="doc">slds-file__title</code> to ensure proper contrast. Without this, it can be difficult for users to see the action icons when the image being sent is predominantly light in color.
+  When using actions without a title, it's important to use the <code className="doc">slds-file__title_scrim</code> class in conjunction with <code className="doc">slds-file__title</code> to ensure proper contrast. Without this, it can be difficult for users to see the action icons when the image being sent is predominantly light in color.
 </Blockquote>
 
 <Example title="Chat inbound message with image attachment preview">
@@ -387,8 +388,6 @@ When sending or receiving a portrait-orientation image, use the `slds-file__figu
   </CodeView>
 </Example>
 
-
-
 #### Customer is typing
 
 Whilst chatting with customers, agents can see when a customer is typing a response by using the [Dynamic Icon, Typing](/components/dynamic-icons).
@@ -423,7 +422,6 @@ We can take that experience one step further when the sneak peek feature is enab
 >
   When the sneak peek feature is active, we take care to try and reduce the verbosity a screen reader user will encounter. As they will hear the final message once it is typed, we have found it is preferred to use <code className="doc">aria-hidden="true"</code> on the text they are currently typing, to reduce noise.
 </Blockquote>
-
 
 <CodeView>
   <Chat>
@@ -582,9 +580,11 @@ If the agent attempts to send a message that can't be delivered, a message deliv
 ## Displaying events during a chat session
 
 During a chat session a number of events can occur and these are displayed to the agent, with descriptions and sometimes messages.
+
 ### Basic chat event
 
 The basic type of events that can occur include;
+
 - Rasing a flag
 - Lowering a flag
 - A whisper

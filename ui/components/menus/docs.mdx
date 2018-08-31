@@ -29,6 +29,7 @@ The target HTML element and dropdown need to be wrapped in the class `.slds-drop
 </Blockquote>
 
 ## Expected Keyboard Interactions
+
 The main thing that distinguishes menus from other popover blocks is keyboard navigation: elsewhere, users press the Tab key to navigate through actionable items, but in a menu, users press the arrow keys to navigate.
 
 - Arrow keys cycle focus through menu items (you should use JavaScript to disable focus for any disabled items)
@@ -45,8 +46,8 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
-  <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
-    <span class="slds-text-title_caps">Menu Sub Heading</span>
+  <li className="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+    <span className="slds-text-title_caps">Menu Sub Heading</span>
   </li>
 </CodeBlock>
 
@@ -95,12 +96,12 @@ Icons can be included on either the left, right, or both sides of an option.
 ## With Selectable Items
 
 When creating a menu with selectable items:
+
 - All selectable items need the proper role, either `role="menuitemcheckbox"` or `role="menuitemradio"`
 - All selectable items should contain an icon
 - Each icon must have the class `slds-icon_selected` on the `<svg>`
   - This hides icons of non-selected items
 - Items that have been selected need `aria-checked="true"` on the `<a>` element
-
 
 <Blockquote type="a11y" header="Revealing Icons for Selected Items">
   A selected item reveals its icon when the class `slds-is-selected` is applied to the `<li>` and `aria-checked="true"` is applied to its `menuitemcheckbox` or `menuitemradio` child.
@@ -139,7 +140,7 @@ To force overflow scrolling after either 5, 7, or 10 items, add the modifier `sl
 To force overflow scrolling after either 5, 7, or 10 items with icons, add the modifier `slds-dropdown_length-with-icon-*` to the `<div>` with class `slds-dropdown` where the `*` is either 5, 7, or 10.
 
 <CodeView style={{height: '250px'}}>
-    <OverflowMenu isSelectable isSelected='true' className="slds-dropdown_left slds-dropdown_length-with-icon-5" />
+<OverflowMenu isSelectable isSelected='true' className="slds-dropdown_left slds-dropdown_length-with-icon-5" />
 </CodeView>
 
 ## With a Submenu
@@ -152,11 +153,11 @@ Any menu item that opens a submenu must have `aria-haspop="true"` on the `<a>` w
 
 <CodeBlock toggleCode={false}>
   <li className="slds-dropdown__item slds-has-submenu" role="presentation">
-    <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="-1">
+    <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabIndex="-1">
       ...
     </a>
-    <div class="slds-dropdown slds-dropdown_submenu slds-dropdown_submenu-left">
-      <ul class="slds-dropdown__list" role="menu" aria-label="Name of Item that Opened this Menu">
+    <div className="slds-dropdown slds-dropdown_submenu slds-dropdown_submenu-left">
+      <ul className="slds-dropdown__list" role="menu" aria-label="Name of Item that Opened this Menu">
         ...
       </ul>
     </div>
@@ -229,10 +230,10 @@ To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `
   <div className="slds-dropdown slds-dropdown_left slds-dropdown_medium">...</div>
 </CodeBlock>
 
-| Modifier | Example |
-|---|---|
-| `.slds-dropdown_xx-small` <br/> 6rem / 96px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
-| `.slds-dropdown_x-small` <br/> 12rem / 192px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div> |
-| `.slds-dropdown_small` <br/> 15rem / 240px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div> |
-| `.slds-dropdown_medium` <br/> 20rem / 320px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div> |
-| `.slds-dropdown_large` <br/> 25rem / 400px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div> |
+| Modifier                                     | Example                                                                                                                 |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `.slds-dropdown_xx-small` <br/> 6rem / 96px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
+| `.slds-dropdown_x-small` <br/> 12rem / 192px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div>  |
+| `.slds-dropdown_small` <br/> 15rem / 240px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div>    |
+| `.slds-dropdown_medium` <br/> 20rem / 320px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div>   |
+| `.slds-dropdown_large` <br/> 25rem / 400px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    |

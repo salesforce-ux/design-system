@@ -16,16 +16,25 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import { Th, HiddenHeaderTh } from '../../data-tables/';
+import {
+  Table,
+  THead,
+  ColumnTh,
+  THeadTr,
+  InteractiveColumnHeader,
+  ColumnHeader,
+  TBody,
+  TBodyTr,
+  RowTh,
+  Td,
+  ReadOnlyCell
+} from '../../data-tables/';
 import { PillContainer } from '../../pills/base/example';
 import {
   ListboxPills,
   ListboxPillsItem,
   ListboxPill
 } from '../../pills/listbox-of-pill-options/example';
-import classNames from 'classnames';
-import _ from '../../../shared/helpers';
-import { Table } from '../../data-tables/base/example';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects
@@ -128,57 +137,59 @@ let ProductListHeader = props => (
 
 let ProductList = props => (
   <div className="slds-scrollable slds-grow">
-    <Table
-      role="grid"
-      className="slds-table_fixed-layout slds-table_resizable-cols slds-no-row-hover slds-scrollable_none"
-      hasCellBuffer={false}
-    >
-      <thead>
-        <tr className="slds-line-height_reset">
-          <th scope="col" style={{ width: '3.75rem' }} />
-          {_.times(columns.length, i => (
-            <Th key={i} columnName={columns[i]} aria-label={columns[i]} />
-          ))}
-        </tr>
-      </thead>
-      <tbody>{props.children}</tbody>
-    </Table>
+    <div className="slds-scrollable_none">
+      <Table
+        hasNoRowHover
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+      >
+        <THead>
+          <THeadTr>
+            <ColumnTh style={{ width: '3.75rem' }} />
+            {columns.map((column, i) => (
+              <ColumnTh aria-label={column} isSortable isResizable key={i}>
+                <InteractiveColumnHeader columnName={column} />
+              </ColumnTh>
+            ))}
+          </THeadTr>
+        </THead>
+        <TBody>{props.children}</TBody>
+      </Table>
+    </div>
   </div>
 );
 
 let SingleColumnProductList = props => {
   return (
     <div className="slds-scrollable slds-grow">
-      <Table
-        role="grid"
-        className="slds-no-row-hover slds-scrollable_none"
-        hasHiddenHeader
-        hasCellBuffer={false}
-      >
-        <thead
-          className={classNames({
-            'slds-assistive-text': props.hasHiddenHeader
-          })}
+      <div className="slds-scrollable_none">
+        <Table
+          hasHiddenHeader
+          hasNoRowHover
+          isBordered
+          selectionType="multiple"
+          type="advanced"
         >
-          <tr className="slds-line-height_reset">
-            <th scope="col" style={{ width: '3.75rem' }} />
-            {props.hasHiddenHeader ? (
-              <HiddenHeaderTh
-                key={0}
-                columnName={singleColumn[0]}
-                aria-label={singleColumn[0]}
-              />
-            ) : (
-              <Th
-                key={0}
-                columnName={singleColumn[0]}
-                aria-label={singleColumn[0]}
-              />
-            )}
-          </tr>
-        </thead>
-        <tbody>{props.children}</tbody>
-      </Table>
+          <THead isHidden={props.hasHiddenHeader}>
+            <THeadTr>
+              <ColumnTh style={{ width: '3.75rem' }} />
+              {props.hasHiddenHeader ? (
+                <ColumnTh aria-label={singleColumn[0]}>
+                  <ColumnHeader columnName={singleColumn[0]} />
+                </ColumnTh>
+              ) : (
+                <ColumnTh aria-label={singleColumn[0]}>
+                  <InteractiveColumnHeader columnName={singleColumn[0]} />
+                </ColumnTh>
+              )}
+            </THeadTr>
+          </THead>
+          <TBody>{props.children}</TBody>
+        </Table>
+      </div>
     </div>
   );
 };
@@ -192,15 +203,11 @@ let RowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
   return (
-    <tr
-      className={classNames('slds-hint-parent', props.className)}
-      aria-selected={props.checked}
-    >
-      <td
-        role="gridcell"
-        tabIndex={props.index === 1 ? '0' : '-1'}
-        className="slds-text-align_right"
-        style={{ width: '3.75rem' }}
+    <TBodyTr isSelected={props.checked}>
+      <Td
+        isRightAligned
+        tabIndex={props.index === 1 ? '0' : null}
+        type="advanced"
       >
         <CheckboxAddButton
           label={checkboxLabel}
@@ -208,28 +215,20 @@ let RowData = props => {
           disabled={props.disabled}
           tabIndex="-1"
         />
-      </td>
-      <th scope="row">
-        <div className="slds-truncate" title={props.name}>
-          {props.name}
-        </div>
-      </th>
-      <td role="gridcell">
-        <div className="slds-truncate" title={props.productCode}>
-          {props.productCode}
-        </div>
-      </td>
-      <td role="gridcell">
-        <div className="slds-truncate" title={props.listPrice}>
-          {props.listPrice}
-        </div>
-      </td>
-      <td role="gridcell">
-        <div className="slds-truncate" title={props.productFamily}>
-          {props.productFamily}
-        </div>
-      </td>
-    </tr>
+      </Td>
+      <RowTh>
+        <ReadOnlyCell cellText={props.name} />
+      </RowTh>
+      <Td type="advanced">
+        <ReadOnlyCell cellText={props.productCode} />
+      </Td>
+      <Td type="advanced">
+        <ReadOnlyCell cellText={props.listPrice} />
+      </Td>
+      <Td type="advanced">
+        <ReadOnlyCell cellText={props.productFamily} />
+      </Td>
+    </TBodyTr>
   );
 };
 
@@ -237,14 +236,11 @@ let TwoColumnRowData = props => {
   let checkboxLabel = 'Select item ' + props.index;
 
   return (
-    <tr
-      className={classNames('slds-hint-parent', props.className)}
-      aria-selected={props.checked}
-    >
-      <td
-        role="gridcell"
+    <TBodyTr isSelected={props.checked}>
+      <Td
+        isRightAligned
         tabIndex={props.index === 1 ? '0' : '-1'}
-        className="slds-text-align_right"
+        type="advanced"
         style={{ width: '3.75rem' }}
       >
         <CheckboxAddButton
@@ -253,13 +249,11 @@ let TwoColumnRowData = props => {
           disabled={props.disabled}
           tabIndex="-1"
         />
-      </td>
-      <td>
-        <div className="slds-truncate" title={props.name}>
-          {props.name}
-        </div>
-      </td>
-    </tr>
+      </Td>
+      <Td type="advanced">
+        <ReadOnlyCell cellText={props.name} />
+      </Td>
+    </TBodyTr>
   );
 };
 
@@ -314,14 +308,15 @@ export default (
         <div className="slds-grid slds-grid_vertical">
           <ProductListHeader />
           <ProductList>
-            {_.times(rows.length, i => (
+            {rows.map((row, i) => (
               <RowData
+                checked={false}
                 key={i}
                 index={i + 1}
-                name={rows[i].name}
-                productCode={rows[i].productCode}
-                listPrice={rows[i].listPrice}
-                productFamily={rows[i].productFamily}
+                name={row.name}
+                productCode={row.productCode}
+                listPrice={row.listPrice}
+                productFamily={row.productFamily}
               />
             ))}
           </ProductList>
@@ -359,15 +354,15 @@ export let states = [
                 itemsSelected="1"
               />
               <ProductList>
-                {_.times(rows.length, i => (
+                {rows.map((row, i) => (
                   <RowData
                     key={i}
                     index={i + 1}
-                    checked={i === 0 ? true : null}
-                    name={rows[i].name}
-                    productCode={rows[i].productCode}
-                    listPrice={rows[i].listPrice}
-                    productFamily={rows[i].productFamily}
+                    checked={i === 0}
+                    name={row.name}
+                    productCode={row.productCode}
+                    listPrice={row.listPrice}
+                    productFamily={row.productFamily}
                   />
                 ))}
               </ProductList>
@@ -401,15 +396,16 @@ export let states = [
             <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
               <ProductListHeader itemsSelected="0" />
               <ProductList>
-                {_.times(rows.length, i => (
+                {rows.map((row, i) => (
                   <RowData
+                    checked={false}
                     key={i}
                     index={i + 1}
                     disabled={i % 2 === 0 ? true : null}
-                    name={rows[i].name}
-                    productCode={rows[i].productCode}
-                    listPrice={rows[i].listPrice}
-                    productFamily={rows[i].productFamily}
+                    name={row.name}
+                    productCode={row.productCode}
+                    listPrice={row.listPrice}
+                    productFamily={row.productFamily}
                   />
                 ))}
               </ProductList>
@@ -443,16 +439,16 @@ export let states = [
             <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
               <ProductListHeader itemsSelected="0" />
               <ProductList>
-                {_.times(rows.length, i => (
+                {rows.map((row, i) => (
                   <RowData
                     key={i}
                     index={i + 1}
-                    checked={i % 2 === 1 ? true : null}
+                    checked={i % 2 === 1}
                     disabled={i % 2 === 1 ? true : null}
-                    name={rows[i].name}
-                    productCode={rows[i].productCode}
-                    listPrice={rows[i].listPrice}
-                    productFamily={rows[i].productFamily}
+                    name={row.name}
+                    productCode={row.productCode}
+                    listPrice={row.listPrice}
+                    productFamily={row.productFamily}
                   />
                 ))}
               </ProductList>
@@ -486,8 +482,13 @@ export let states = [
             <div className="slds-col slds-grid slds-grid_vertical slds-nowrap">
               <ProductListHeader itemsSelected="0" />
               <SingleColumnProductList hasHiddenHeader>
-                {_.times(rows.length, i => (
-                  <TwoColumnRowData key={i} index={i + 1} name={rows[i].name} />
+                {rows.map((row, i) => (
+                  <TwoColumnRowData
+                    checked={false}
+                    key={i}
+                    index={i + 1}
+                    name={row.name}
+                  />
                 ))}
               </SingleColumnProductList>
             </div>
@@ -524,6 +525,7 @@ export let states = [
               />
               <ProductList>
                 <RowData
+                  checked={false}
                   index={1}
                   name={rows[0].name}
                   productCode={rows[0].productCode}

@@ -6,10 +6,11 @@ import _ from '../../../shared/helpers';
 
 import {
   InlineEditTableContainer as Container,
-  AdvancedDataTable as Table,
-  Thead,
-  InlineEditTr
+  Table,
+  AdvancedDataTableHead as Thead,
+  TBody
 } from '../';
+import { Demo, InlineEditTr } from './';
 
 import { Popover } from '../../popovers/base/example';
 import { FeedbackHeader } from '../../popovers/error/example';
@@ -56,33 +57,36 @@ const rows = [
   }
 ];
 
-let Demo = props => (
-  <div className="demo-only" {...props}>
-    {props.children}
-  </div>
-);
-
-export const InlineEditTable = () => (
+// exported for branding docblocks page which is hidden
+export const InlineEditTableFocusedCell = () => (
   <Container>
-    <Table isEditable style={{ width: '66.75rem' }}>
+    <Table
+      isBordered
+      isEditable
+      isFixedLayout
+      isResizable
+      selectionType="multiple"
+      style={{ width: '66.75rem' }}
+      type="advanced"
+    >
       <Thead
+        actionableMode
         columns={columns}
         hasErrorColumn
         mainColumnWidth="8.75rem"
-        actionableMode
       />
-      <tbody>
-        {_.times(rows.length, i => (
+      <TBody>
+        {rows.map((row, i) => (
           <InlineEditTr
-            key={i}
-            index={i + 1}
-            {...rows[i]}
-            focusableCell="recordName"
-            focusedCell="recordName"
             actionableMode
+            focusedCell={i === 0 ? 'recordName' : null}
+            index={i + 1}
+            isSelected={false}
+            key={i}
+            {...row}
           />
         ))}
-      </tbody>
+      </TBody>
     </Table>
   </Container>
 );
@@ -94,21 +98,27 @@ export const InlineEditTable = () => (
 export default (
   <Container>
     <Table
-      className="slds-no-cell-focus"
+      hasNoCellFocus
+      isBordered
       isEditable
+      isFixedLayout
+      isResizable
+      selectionType="multiple"
       style={{ width: '66.75rem' }}
+      type="advanced"
     >
       <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
-      <tbody>
-        {_.times(rows.length, i => (
+      <TBody>
+        {rows.map((row, i) => (
           <InlineEditTr
-            key={i}
-            index={i + 1}
-            {...rows[i]}
             focusableCell="recordName"
+            index={i + 1}
+            isSelected={false}
+            key={i}
+            {...row}
           />
         ))}
-      </tbody>
+      </TBody>
     </Table>
   </Container>
 );
@@ -117,30 +127,7 @@ export let states = [
   {
     id: 'with-link',
     label: 'Cell focused - Link (Actionable mode)',
-    element: (
-      <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
-          <Thead
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-            actionableMode
-          />
-          <tbody>
-            {_.times(rows.length, i => (
-              <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
-                focusableCell="recordName"
-                focusedCell="recordName"
-                actionableMode
-              />
-            ))}
-          </tbody>
-        </Table>
-      </Container>
-    ),
+    element: <InlineEditTableFocusedCell />,
     script: `
       document.getElementById('link-01').focus()
     `
@@ -150,25 +137,33 @@ export let states = [
     label: 'Cell focused - Checkbox (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
+            actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
-            actionableMode
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
-                focusableCell="selectRow"
-                focusedCell="selectRow"
                 actionableMode
+                focusedCell={i === 0 ? 'selectRow' : null}
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     ),
@@ -181,19 +176,28 @@ export let states = [
     label: 'Cell focused (Navigation mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
+                focusableCell={i === 0 ? 'accountName' : null}
+                focusedCell={i === 0 ? 'accountName' : null}
                 index={i + 1}
-                {...rows[i]}
-                focusableCell="accountName"
-                focusedCell="accountName"
+                isSelected={false}
+                key={i}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )
@@ -203,24 +207,33 @@ export let states = [
     label: 'Cell edit (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
+            actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
-            actionableMode
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
                 actionableMode
-                showEdit
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                showEdit={i === 0}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     ),
@@ -234,25 +247,34 @@ export let states = [
     label: 'Cell edit — Required (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
                 actionableMode
-                showEdit
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                showEdit={i === 0}
                 showEditRequired
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     ),
@@ -266,26 +288,35 @@ export let states = [
     label: 'Cell edit — Error (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
                 actionableMode
-                showEdit
-                showEditRequired
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                showEdit={i === 0}
                 showEditError
+                showEditRequired
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     ),
@@ -299,24 +330,33 @@ export let states = [
     label: 'Cell edited (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
                 actionableMode
-                showEditedCell
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                showEditedCell={i === 0}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )
@@ -326,26 +366,34 @@ export let states = [
     label: 'Row Selected with an Edited Cell',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                className={i === 0 ? 'slds-is-selected' : null}
-                {...rows[i]}
-                rowSelected={i === 0 ? true : null}
                 actionableMode
-                showEditedCell
+                className={i === 0 ? 'slds-is-selected' : null}
+                index={i + 1}
+                isSelected={i === 0}
+                key={i}
+                showEditedCell={i === 0}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )
@@ -355,27 +403,35 @@ export let states = [
     label: 'Error - Row level on save (Actionable mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                {...rows[i]}
                 actionableMode
-                focusableCell="accountName"
-                focusedCell="accountName"
-                showCellError
-                showRowError
+                focusedCell={i === 0 ? 'accountName' : null}
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                showCellError={i === 0}
+                showRowError={i === 0}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     ),
@@ -389,27 +445,35 @@ export let states = [
       'Error - Row level on save (Actionable mode) with entire row selected',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             actionableMode
             columns={columns}
             hasErrorColumn
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                className={i === 0 ? 'slds-is-selected' : null}
-                {...rows[i]}
-                rowSelected={i === 0 ? true : null}
                 actionableMode
-                showCellError
-                showRowError
+                className={i === 0 ? 'slds-is-selected' : null}
+                index={i + 1}
+                isSelected={i === 0}
+                key={i}
+                showCellError={i === 0}
+                showRowError={i === 0}
+                {...row}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )
@@ -420,45 +484,52 @@ export let states = [
     element: (
       <Demo style={{ marginTop: '100px', marginLeft: '10px' }}>
         <Container>
-          <Table isEditable style={{ width: '66.75rem' }}>
+          <Table
+            isBordered
+            isEditable
+            isFixedLayout
+            isResizable
+            selectionType="multiple"
+            style={{ width: '66.75rem' }}
+            type="advanced"
+          >
             <Thead
               actionableMode
               columns={columns}
               hasErrorColumn
               mainColumnWidth="8.75rem"
             />
-            <tbody>
-              {_.times(rows.length, i => (
+            <TBody>
+              {rows.map((row, i) => (
                 <InlineEditTr
-                  key={i}
-                  index={i + 1}
-                  {...rows[i]}
                   actionableMode
-                  focusableCell="error"
-                  focusedCell="error"
-                  showCellError
-                  showRowError
+                  focusedCell={i === 0 ? 'error' : null}
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showCellError={i === 0}
+                  showRowError={i === 0}
+                  {...row}
                 />
               ))}
-            </tbody>
+            </TBody>
           </Table>
           <Popover
             className="slds-popover_error slds-nubbin_bottom-left"
-            headingId={headingUniqueId}
-            popoverId="error-tooltip-01"
+            closeButton
             header={
               <FeedbackHeader
                 headingId={headingUniqueId}
-                title="Resolve error"
                 symbol="error"
+                title="Resolve error"
               />
             }
+            headingId={headingUniqueId}
+            inverse
             style={{
               position: 'absolute',
               top: '-56px'
             }}
-            closeButton
-            inverse
           >
             <p>Company encountered an error</p>
           </Popover>
@@ -474,28 +545,37 @@ export let states = [
     label: 'Header cell focused (Navigation mode)',
     element: (
       <Container>
-        <Table isEditable style={{ width: '66.75rem' }}>
+        <Table
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+        >
           <Thead
             columns={columns}
             hasErrorColumn
             hasFocus
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
                 amount={rows[i].amount}
+                closeDate={rows[i].closeDate}
+                confidence={rows[i].confidence}
                 contact={rows[i].contact}
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                recordName={rows[i].recordName}
+                stage={rows[i].stage}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )
@@ -506,9 +586,14 @@ export let states = [
     element: (
       <Container>
         <Table
-          className="slds-no-cell-focus"
+          hasNoCellFocus
+          isBordered
           isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
           style={{ width: '66.75rem' }}
+          type="advanced"
         >
           <Thead
             columns={columns}
@@ -516,21 +601,22 @@ export let states = [
             hasFocus
             mainColumnWidth="8.75rem"
           />
-          <tbody>
-            {_.times(rows.length, i => (
+          <TBody>
+            {rows.map((row, i) => (
               <InlineEditTr
-                key={i}
-                index={i + 1}
-                recordName={rows[i].recordName}
                 accountName={rows[i].accountName}
-                closeDate={rows[i].closeDate}
-                stage={rows[i].stage}
-                confidence={rows[i].confidence}
                 amount={rows[i].amount}
+                closeDate={rows[i].closeDate}
+                confidence={rows[i].confidence}
                 contact={rows[i].contact}
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                recordName={rows[i].recordName}
+                stage={rows[i].stage}
               />
             ))}
-          </tbody>
+          </TBody>
         </Table>
       </Container>
     )

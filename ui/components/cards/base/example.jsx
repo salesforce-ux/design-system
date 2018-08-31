@@ -5,62 +5,58 @@ import React from 'react';
 import { TileMedia } from '../../tiles/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
+import {
+  Table,
+  THead,
+  THeadTr,
+  ColumnTh,
+  ColumnHeader,
+  TBody,
+  TBodyTr,
+  RowTh,
+  Td,
+  ReadOnlyCell
+} from '../../data-tables/';
 
 const headerAction = (
   <button className="slds-button slds-button_neutral">New</button>
 );
 
 const bodyTable = (
-  <table className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-    <thead>
-      <tr className="slds-text-title_caps">
-        <th scope="col">
-          <div className="slds-truncate" title="Name">
-            Name
-          </div>
-        </th>
-        <th scope="col">
-          <div className="slds-truncate" title="Company">
-            Company
-          </div>
-        </th>
-        <th scope="col">
-          <div className="slds-truncate" title="Title">
-            Title
-          </div>
-        </th>
-        <th scope="col">
-          <div className="slds-truncate" title="Email">
-            Email
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className="slds-hint-parent">
-        <th scope="row">
-          <div className="slds-truncate" title="Adam Choi">
-            <a href="javascript:void(0);">Amy Choi</a>
-          </div>
-        </th>
-        <td>
-          <div className="slds-truncate" title="Company One">
-            Company One
-          </div>
-        </td>
-        <td>
-          <div className="slds-truncate" title="Director of Operations">
-            Director of Operations
-          </div>
-        </td>
-        <td>
-          <div className="slds-truncate" title="adam@company.com">
-            adam@company.com
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <Table isFixedLayout isBordered hasNoRowHover hasCellBuffer type="advanced">
+    <THead>
+      <THeadTr>
+        <ColumnTh>
+          <ColumnHeader columnName="Name" />
+        </ColumnTh>
+        <ColumnTh>
+          <ColumnHeader columnName="Company" />
+        </ColumnTh>
+        <ColumnTh>
+          <ColumnHeader columnName="Title" />
+        </ColumnTh>
+        <ColumnTh>
+          <ColumnHeader columnName="Email" />
+        </ColumnTh>
+      </THeadTr>
+    </THead>
+    <TBody>
+      <TBodyTr>
+        <RowTh>
+          <ReadOnlyCell cellLink="javascript:void(0);" cellText="Amy Choi" />
+        </RowTh>
+        <Td type="advanced">
+          <ReadOnlyCell cellText="Company One" />
+        </Td>
+        <Td type="advanced">
+          <ReadOnlyCell cellText="Director of Operations" />
+        </Td>
+        <Td type="advanced">
+          <ReadOnlyCell cellText="adam@company.com" />
+        </Td>
+      </TBodyTr>
+    </TBody>
+  </Table>
 );
 
 const bodyTiles = (

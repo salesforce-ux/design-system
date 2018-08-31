@@ -1,0 +1,4457 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
+<thead
+  className="slds-assistive-text"
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id="column-group-header"
+        title="Choose a row to select"
+      >
+        Choose a row to select
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <div
+        className="slds-th__action"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should check the select all column header 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={true}
+            disabled={undefined}
+            id="checkbox-14"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-14"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-14"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-20"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should hide all the resize controls 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-10"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-10"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-10"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should hide all the sorting controls 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-11"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-11"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-11"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort={null}
+      className="slds-text-title_caps slds-is-resizable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <div
+        className="slds-th__action"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+        </div>
+      </div>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-17"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should hide row level actions header 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-9"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-9"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-9"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-16"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should hide select column header 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-12"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should remove select all, sort and resize controls if hidden 1`] = `
+<thead
+  className="slds-assistive-text"
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id="column-group-header"
+        title="Choose a row to select"
+      >
+        Choose a row to select
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <div
+        className="slds-th__action"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should render 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-4"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-4"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-4"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-9"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should render enable actionable mode 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-5"
+            name="options"
+            tabIndex="0"
+            type="checkbox"
+            value="checkbox-5"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-5"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-10"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should render error column header and set select column width 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.75rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Errors"
+      >
+        Errors
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "2rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-6"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-6"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-6"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-11"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should render menus 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-8"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-8"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-8"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-has-button-menu slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <button
+        aria-haspopup="true"
+        className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
+        id={undefined}
+        tabIndex="-1"
+        title="Show Name column actions"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Show Name column actions
+        </span>
+      </button>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-15"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should set a main column width 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-12"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-12"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-12"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": "50rem",
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-18"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should set a single column width 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-13"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-13"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-13"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": "5rem",
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-19"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should set sort direction 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-15"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-15"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-15"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="ascending"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <span
+        aria-atomic="true"
+        aria-live="assertive"
+        className="slds-assistive-text"
+      >
+        Sorted 
+        ascending
+      </span>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-21"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should should pass hasFocus when supplied to the first column 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            disabled={undefined}
+            id="checkbox-7"
+            name="options"
+            tabIndex="-1"
+            type="checkbox"
+            value="checkbox-7"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-7"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-has-focus slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-14"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`AdvancedDataTableHead component should swap the select column to the single select column header 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id="column-group-header"
+        title="Choose a row to select"
+      >
+        Choose a row to select
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="javascript:void(0);"
+        role="button"
+        tabIndex="-1"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-13"
+          max="1000"
+          min="20"
+          tabIndex="-1"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label={undefined}
+      aria-sort={null}
+      className="slds-text-title_caps"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        id={undefined}
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`ColumnHeader component should render with an id when passed 1`] = `
+<div
+  className="slds-truncate"
+  id="foo"
+  title="Column Name"
+>
+  Column Name
+</div>
+`;
+
+exports[`ColumnHeader component should render with assistive text class with isAssistiveText prop 1`] = `
+<div
+  className="slds-truncate slds-assistive-text"
+  id={undefined}
+  title="Column Name"
+>
+  Column Name
+</div>
+`;
+
+exports[`ColumnHeader component should render with default column name 1`] = `
+<div
+  className="slds-truncate"
+  id={undefined}
+  title="Column Name"
+>
+  Column Name
+</div>
+`;
+
+exports[`ColumnHeader component should render with set column name and title should match 1`] = `
+<div
+  className="slds-truncate"
+  id={undefined}
+  title="foo"
+>
+  foo
+</div>
+`;
+
+exports[`ColumnTh component should add aria-label when passed 1`] = `
+<th
+  aria-label="foo"
+  aria-sort={null}
+  className="slds-text-title_caps"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should apply has focus class with hasFocus 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps slds-has-focus"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should apply has menu class with hasMenu 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps slds-has-button-menu"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should apply is resizable class with isResizable 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps slds-is-resizable"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should apply is sortable class and aria-sort none with isSortable 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort="none"
+  className="slds-text-title_caps slds-is-sortable"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should apply text align right class with isRightAligned 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps slds-text-align_right"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should render with children 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps"
+  scope="col"
+  style={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`ColumnTh component should set sort direction of ascending 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort="ascending"
+  className="slds-text-title_caps slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should set sort direction of descending 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort="descending"
+  className="slds-text-title_caps slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should set sort direction of none 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort="none"
+  className="slds-text-title_caps slds-is-sortable"
+  scope="col"
+  style={undefined}
+/>
+`;
+
+exports[`ColumnTh component should set style attribute when passed 1`] = `
+<th
+  aria-label={undefined}
+  aria-sort={null}
+  className="slds-text-title_caps"
+  scope="col"
+  style={
+    Object {
+      "width": "1rem",
+    }
+  }
+/>
+`;
+
+exports[`Data table component should render a advanced table with aria-multiselectable applied 1`] = `
+<table
+  aria-multiselectable="true"
+  className="slds-table"
+  role="grid"
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a advanced table without aria-multiselectable applied 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table"
+  role="grid"
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a base table 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with borders 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_bordered"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with cell buffer class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_cell-buffer"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with column borders 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_col-bordered"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with editbale class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_edit"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with fixed layout class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_fixed-layout"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with hidden header class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_header-hidden"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with no cell focus class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-no-cell-focus"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with no row hover class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-no-row-hover"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with passed styles 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table"
+  role={null}
+  style={
+    Object {
+      "width": "10rem",
+    }
+  }
+/>
+`;
+
+exports[`Data table component should render a table with resizable class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_resizable-cols"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with responsive class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-max-medium-table_stacked-horizontal"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with responsive stacked class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-max-medium-table_stacked"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a table with striped class 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-table_striped"
+  role={null}
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render a treegrid table with role treegrid 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table slds-tree slds-table_tree"
+  role="treegrid"
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should render an advanced table with role grid 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table"
+  role="grid"
+  style={undefined}
+/>
+`;
+
+exports[`Data table component should take children 1`] = `
+<table
+  aria-multiselectable={null}
+  className="slds-table"
+  role={null}
+  style={undefined}
+>
+  <tr />
+</table>
+`;
+
+exports[`EditPopover component should render 1`] = `
+<section
+  aria-describedby="dialog-body-id-4"
+  aria-label={undefined}
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover slds-popover_edit"
+  id={undefined}
+  role="dialog"
+  style={
+    Object {
+      "left": "0.0625rem",
+      "position": "absolute",
+      "top": "0",
+    }
+  }
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-4"
+  >
+    <div
+      className="slds-form-element slds-grid slds-wrap"
+    >
+      <label
+        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+        htmlFor="company-01"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Company
+        </span>
+      </label>
+      <div
+        className="slds-form-element__control slds-grow"
+      >
+        <input
+          aria-describedby={null}
+          className="slds-input"
+          defaultValue="Acme Enterprises"
+          id="company-01"
+          required={undefined}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`EditPopover component should set field required 1`] = `
+<section
+  aria-describedby="dialog-body-id-5"
+  aria-label={undefined}
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover slds-popover_edit"
+  id={undefined}
+  role="dialog"
+  style={
+    Object {
+      "left": "0.0625rem",
+      "position": "absolute",
+      "top": "0",
+    }
+  }
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-5"
+  >
+    <div
+      className="slds-form-element slds-grid slds-wrap"
+    >
+      <label
+        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+        htmlFor="company-01"
+      >
+        <abbr
+          className="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        <span
+          className="slds-assistive-text"
+        >
+          Company
+        </span>
+      </label>
+      <div
+        className="slds-form-element__control slds-grow"
+      >
+        <input
+          aria-describedby={null}
+          className="slds-input"
+          defaultValue="Acme Enterprises"
+          id="company-01"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`EditPopover component should show error 1`] = `
+<section
+  aria-describedby="dialog-body-id-6"
+  aria-label={undefined}
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover slds-popover_edit"
+  id={undefined}
+  role="dialog"
+  style={
+    Object {
+      "left": "0.0625rem",
+      "position": "absolute",
+      "top": "0",
+    }
+  }
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-6"
+  >
+    <div
+      className="slds-form-element slds-grid slds-wrap slds-has-error"
+    >
+      <label
+        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+        htmlFor="company-01"
+      >
+        <abbr
+          className="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        <span
+          className="slds-assistive-text"
+        >
+          Company
+        </span>
+      </label>
+      <div
+        className="slds-form-element__control slds-grow"
+      >
+        <input
+          aria-describedby="error-message-01"
+          className="slds-input"
+          defaultValue="Acme Enterprises"
+          id="company-01"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="slds-form-element__help"
+        id="error-message-01"
+      >
+        This field is required
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`EditableCell component should lock the cell 1`] = `
+<span
+  className="slds-grid slds-grid_align-spread"
+>
+  <span
+    className="slds-truncate"
+    title="cell text"
+  >
+    cell text
+  </span>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    disabled={true}
+    id={undefined}
+    tabIndex="-1"
+    title="Edit field of cell text"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_hint slds-button__icon_lock slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Edit field of cell text
+    </span>
+  </button>
+</span>
+`;
+
+exports[`EditableCell component should render 1`] = `
+<span
+  className="slds-grid slds-grid_align-spread"
+>
+  <span
+    className="slds-truncate"
+    title="cell text"
+  >
+    cell text
+  </span>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    disabled={undefined}
+    id={undefined}
+    tabIndex="-1"
+    title="Edit field of cell text"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Edit field of cell text
+    </span>
+  </button>
+</span>
+`;
+
+exports[`EditableCell component should render a cell text as link 1`] = `
+<span
+  className="slds-grid slds-grid_align-spread"
+>
+  <a
+    className="slds-truncate"
+    href="#"
+    id="link-0undefined"
+    tabIndex="-1"
+    title="cell text"
+  >
+    cell text
+  </a>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    disabled={undefined}
+    id={undefined}
+    tabIndex="-1"
+    title="Edit field of cell text"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Edit field of cell text
+    </span>
+  </button>
+</span>
+`;
+
+exports[`EditableCell component should set tabindex to 0 on focusable elements when in actionableMode 1`] = `
+<span
+  className="slds-grid slds-grid_align-spread"
+>
+  <a
+    className="slds-truncate"
+    href="#"
+    id="link-0undefined"
+    tabIndex="0"
+    title="cell text"
+  >
+    cell text
+  </a>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    disabled={undefined}
+    id={undefined}
+    tabIndex="0"
+    title="Edit field of cell text"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Edit field of cell text
+    </span>
+  </button>
+</span>
+`;
+
+exports[`EditableCell component should show an error 1`] = `
+Array [
+  <span
+    className="slds-grid slds-grid_align-spread"
+  >
+    <span
+      className="slds-truncate"
+      title="cell text"
+    >
+      cell text
+    </span>
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      disabled={undefined}
+      id={undefined}
+      tabIndex="-1"
+      title="Edit field of cell text"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Edit field of cell text
+      </span>
+    </button>
+  </span>,
+  <section
+    aria-describedby="dialog-body-id-3"
+    aria-label={undefined}
+    aria-labelledby={undefined}
+    className="slds-popover slds-popover slds-popover_edit"
+    id={undefined}
+    role="dialog"
+    style={
+      Object {
+        "left": "0.0625rem",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body"
+      id="dialog-body-id-3"
+    >
+      <div
+        className="slds-form-element slds-grid slds-wrap slds-has-error"
+      >
+        <label
+          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+          htmlFor="company-01"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Company
+          </span>
+        </label>
+        <div
+          className="slds-form-element__control slds-grow"
+        >
+          <input
+            aria-describedby="error-message-01"
+            className="slds-input"
+            defaultValue="Acme Enterprises"
+            id="company-01"
+            required={undefined}
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-form-element__help"
+          id="error-message-01"
+        >
+          This field is required
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`EditableCell component should show editting 1`] = `
+Array [
+  <span
+    className="slds-grid slds-grid_align-spread"
+  >
+    <span
+      className="slds-truncate"
+      title="cell text"
+    >
+      cell text
+    </span>
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      disabled={undefined}
+      id={undefined}
+      tabIndex="-1"
+      title="Edit field of cell text"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Edit field of cell text
+      </span>
+    </button>
+  </span>,
+  <section
+    aria-describedby="dialog-body-id-1"
+    aria-label={undefined}
+    aria-labelledby={undefined}
+    className="slds-popover slds-popover slds-popover_edit"
+    id={undefined}
+    role="dialog"
+    style={
+      Object {
+        "left": "0.0625rem",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body"
+      id="dialog-body-id-1"
+    >
+      <div
+        className="slds-form-element slds-grid slds-wrap"
+      >
+        <label
+          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+          htmlFor="company-01"
+        >
+          <span
+            className="slds-assistive-text"
+          >
+            Company
+          </span>
+        </label>
+        <div
+          className="slds-form-element__control slds-grow"
+        >
+          <input
+            aria-describedby={null}
+            className="slds-input"
+            defaultValue="Acme Enterprises"
+            id="company-01"
+            required={undefined}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`EditableCell component should show field required in editing 1`] = `
+Array [
+  <span
+    className="slds-grid slds-grid_align-spread"
+  >
+    <span
+      className="slds-truncate"
+      title="cell text"
+    >
+      cell text
+    </span>
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      disabled={undefined}
+      id={undefined}
+      tabIndex="-1"
+      title="Edit field of cell text"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_hint slds-button__icon_edit"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Edit field of cell text
+      </span>
+    </button>
+  </span>,
+  <section
+    aria-describedby="dialog-body-id-2"
+    aria-label={undefined}
+    aria-labelledby={undefined}
+    className="slds-popover slds-popover slds-popover_edit"
+    id={undefined}
+    role="dialog"
+    style={
+      Object {
+        "left": "0.0625rem",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body"
+      id="dialog-body-id-2"
+    >
+      <div
+        className="slds-form-element slds-grid slds-wrap"
+      >
+        <label
+          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+          htmlFor="company-01"
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            *
+          </abbr>
+          <span
+            className="slds-assistive-text"
+          >
+            Company
+          </span>
+        </label>
+        <div
+          className="slds-form-element__control slds-grow"
+        >
+          <input
+            aria-describedby={null}
+            className="slds-input"
+            defaultValue="Acme Enterprises"
+            id="company-01"
+            required={true}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`ErrorCell component should remove aria-hidden and slds-hidden from button when hasError 1`] = `
+Array [
+  <button
+    aria-haspopup={undefined}
+    aria-hidden={null}
+    className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
+    id="error-01"
+    tabIndex="-1"
+    title="Item 1 has errors"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Item 1 has errors
+    </span>
+  </button>,
+  <span
+    className="slds-row-number slds-text-body_small slds-text-color_weak"
+  />,
+]
+`;
+
+exports[`ErrorCell component should render 1`] = `
+Array [
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
+    id="error-01"
+    tabIndex="-1"
+    title="Item 1 has errors"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Item 1 has errors
+    </span>
+  </button>,
+  <span
+    className="slds-row-number slds-text-body_small slds-text-color_weak"
+  />,
+]
+`;
+
+exports[`ErrorCell component should set tabindex on the button to 0 in actionable mode 1`] = `
+Array [
+  <button
+    aria-haspopup={undefined}
+    aria-hidden={null}
+    className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
+    id="error-01"
+    tabIndex="0"
+    title="Item 1 has errors"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Item 1 has errors
+    </span>
+  </button>,
+  <span
+    className="slds-row-number slds-text-body_small slds-text-color_weak"
+  />,
+]
+`;
+
+exports[`InteractiveColumnHeader component should hide the resize controls when isResizable is false 1`] = `
+<a
+  className="slds-th__action slds-text-link_reset"
+  href="javascript:void(0);"
+  role="button"
+  tabIndex="-1"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    Sort by: 
+  </span>
+  <div
+    className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-truncate"
+      title="Column Name"
+    >
+      Column Name
+    </span>
+    <span
+      className="slds-icon_container slds-icon-utility-arrowdown"
+      title={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+        />
+      </svg>
+    </span>
+  </div>
+</a>
+`;
+
+exports[`InteractiveColumnHeader component should hide the sort controls when isSortable is false 1`] = `
+Array [
+  <div
+    className="slds-th__action"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-truncate"
+        title="Column Name"
+      >
+        Column Name
+      </span>
+    </div>
+  </div>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="Column Name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-6"
+      max="1000"
+      min="20"
+      tabIndex="-1"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`InteractiveColumnHeader component should render a header icon when supplied 1`] = `
+Array [
+  <a
+    className="slds-th__action slds-text-link_reset"
+    href="javascript:void(0);"
+    role="button"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Sort by: 
+    </span>
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-icon_container slds-icon-standard-account slds-m-right_xx-small"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+          />
+        </svg>
+      </span>
+      <span
+        className="slds-truncate"
+        title="account name"
+      >
+        account name
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-arrowdown"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="account name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-8"
+      max="1000"
+      min="20"
+      tabIndex="-1"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`InteractiveColumnHeader component should render the component 1`] = `
+Array [
+  <a
+    className="slds-th__action slds-text-link_reset"
+    href="javascript:void(0);"
+    role="button"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Sort by: 
+    </span>
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-truncate"
+        title="Column Name"
+      >
+        Column Name
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-arrowdown"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="Column Name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-3"
+      max="1000"
+      min="20"
+      tabIndex="-1"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`InteractiveColumnHeader component should render the sort direction when supplied 1`] = `
+Array [
+  <a
+    className="slds-th__action slds-text-link_reset"
+    href="javascript:void(0);"
+    role="button"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Sort by: 
+    </span>
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-truncate"
+        title="Column Name"
+      >
+        Column Name
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-arrowdown"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>,
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    className="slds-assistive-text"
+  >
+    Sorted 
+    ascending
+  </span>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="Column Name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-7"
+      max="1000"
+      min="20"
+      tabIndex="-1"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`InteractiveColumnHeader component should set tabindex to 0 on focusable elements when actionableMode 1`] = `
+Array [
+  <a
+    className="slds-th__action slds-text-link_reset"
+    href="javascript:void(0);"
+    role="button"
+    tabIndex="0"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Sort by: 
+    </span>
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-truncate"
+        title="Column Name"
+      >
+        Column Name
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-arrowdown"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="Column Name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-4"
+      max="1000"
+      min="20"
+      tabIndex="0"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`InteractiveColumnHeader component should show a action menu when hasMenu is applied 1`] = `
+Array [
+  <a
+    className="slds-th__action slds-text-link_reset"
+    href="javascript:void(0);"
+    role="button"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      Sort by: 
+    </span>
+    <div
+      className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-truncate"
+        title="Column Name"
+      >
+        Column Name
+      </span>
+      <span
+        className="slds-icon_container slds-icon-utility-arrowdown"
+        title={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>,
+  <button
+    aria-haspopup="true"
+    className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
+    id={undefined}
+    tabIndex="-1"
+    title="Show Column Name column actions"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Column Name column actions
+    </span>
+  </button>,
+  <div
+    className="slds-resizable"
+  >
+    <input
+      aria-label="Column Name column width"
+      className="slds-resizable__input slds-assistive-text"
+      id="cell-resize-handle-5"
+      max="1000"
+      min="20"
+      tabIndex="-1"
+      type="range"
+    />
+    <span
+      className="slds-resizable__handle"
+    >
+      <span
+        className="slds-resizable__divider"
+      />
+    </span>
+  </div>,
+]
+`;
+
+exports[`ReadOnlyCell component should render 1`] = `
+<div
+  className="slds-truncate"
+  title="cell text"
+>
+  cell text
+</div>
+`;
+
+exports[`ReadOnlyCell component should set linkable cell text 1`] = `
+<div
+  className="slds-truncate"
+  title="cell text"
+>
+  <a
+    href="#"
+    tabIndex="-1"
+  >
+    cell text
+  </a>
+</div>
+`;
+
+exports[`ReadOnlyCell component should set tabindex to 0 on links in actionableMode 1`] = `
+<div
+  className="slds-truncate"
+  title="cell text"
+>
+  <a
+    href="#"
+    tabIndex="0"
+  >
+    cell text
+  </a>
+</div>
+`;
+
+exports[`ResizeControl component should render with a label 1`] = `
+<div
+  className="slds-resizable"
+>
+  <input
+    aria-label="foo"
+    className="slds-resizable__input slds-assistive-text"
+    id="cell-resize-handle-1"
+    max="1000"
+    min="20"
+    tabIndex={undefined}
+    type="range"
+  />
+  <span
+    className="slds-resizable__handle"
+  >
+    <span
+      className="slds-resizable__divider"
+    />
+  </span>
+</div>
+`;
+
+exports[`ResizeControl component should set a tabindex when tabIndex is passed 1`] = `
+<div
+  className="slds-resizable"
+>
+  <input
+    aria-label="foo"
+    className="slds-resizable__input slds-assistive-text"
+    id="cell-resize-handle-2"
+    max="1000"
+    min="20"
+    tabIndex="0"
+    type="range"
+  />
+  <span
+    className="slds-resizable__handle"
+  >
+    <span
+      className="slds-resizable__divider"
+    />
+  </span>
+</div>
+`;
+
+exports[`RowActionsCell component should render 1`] = `
+<button
+  aria-haspopup="true"
+  className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+  id={undefined}
+  tabIndex="-1"
+  title="More actions for row name"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    More actions for row name
+  </span>
+</button>
+`;
+
+exports[`RowActionsCell component should set tabindex to 0 when in actionable mode 1`] = `
+<button
+  aria-haspopup="true"
+  className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+  id={undefined}
+  tabIndex="0"
+  title="More actions for row name"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    More actions for row name
+  </span>
+</button>
+`;
+
+exports[`RowTh component should apply the cell edit class 1`] = `
+<th
+  className="slds-cell-edit"
+  data-label={undefined}
+  scope="row"
+  tabIndex={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`RowTh component should apply the has focus class 1`] = `
+<th
+  className="slds-has-focus"
+  data-label={undefined}
+  scope="row"
+  tabIndex={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`RowTh component should apply tree item class 1`] = `
+<th
+  className="slds-tree__item"
+  data-label={undefined}
+  scope="row"
+  tabIndex={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`RowTh component should render 1`] = `
+<th
+  className={null}
+  data-label={undefined}
+  scope="row"
+  tabIndex={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`RowTh component should set a data-label 1`] = `
+<th
+  className={null}
+  data-label="foo"
+  scope="row"
+  tabIndex={undefined}
+>
+  <div />
+</th>
+`;
+
+exports[`RowTh component should set tabindex 1`] = `
+<th
+  className={null}
+  data-label={undefined}
+  scope="row"
+  tabIndex="0"
+>
+  <div />
+</th>
+`;
+
+exports[`SelectAllColumnHeader component should check the checkbox 1`] = `
+Array [
+  <span
+    className="slds-assistive-text"
+    id="column-group-header"
+  >
+    Choose a row
+  </span>,
+  <div
+    className="slds-th__action slds-th__action_form"
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-select-all-label column-group-header"
+        defaultChecked={true}
+        disabled={undefined}
+        id="checkbox-3"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-3"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-3"
+        id="check-select-all-label"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select All
+        </span>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`SelectAllColumnHeader component should make the input have tabindex 0 when actionableMode 1`] = `
+Array [
+  <span
+    className="slds-assistive-text"
+    id="column-group-header"
+  >
+    Choose a row
+  </span>,
+  <div
+    className="slds-th__action slds-th__action_form"
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-select-all-label column-group-header"
+        defaultChecked={null}
+        disabled={undefined}
+        id="checkbox-2"
+        name="options"
+        tabIndex="0"
+        type="checkbox"
+        value="checkbox-2"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-2"
+        id="check-select-all-label"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select All
+        </span>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`SelectAllColumnHeader component should render the component 1`] = `
+Array [
+  <span
+    className="slds-assistive-text"
+    id="column-group-header"
+  >
+    Choose a row
+  </span>,
+  <div
+    className="slds-th__action slds-th__action_form"
+  >
+    <div
+      className="slds-checkbox"
+    >
+      <input
+        aria-describedby={undefined}
+        aria-labelledby="check-select-all-label column-group-header"
+        defaultChecked={null}
+        disabled={undefined}
+        id="checkbox-1"
+        name="options"
+        tabIndex="-1"
+        type="checkbox"
+        value="checkbox-1"
+      />
+      <label
+        className="slds-checkbox__label"
+        htmlFor="checkbox-1"
+        id="check-select-all-label"
+      >
+        <span
+          className="slds-checkbox_faux"
+        />
+        <span
+          className="slds-form-element__label slds-assistive-text"
+        >
+          Select All
+        </span>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`SelectRowCell component should render 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="check-button-label-01 column-group-header"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-01"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-01"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-01"
+    id="check-button-label-01"
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</div>
+`;
+
+exports[`SelectRowCell component should render a checked checkbox 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="check-button-label-01 column-group-header"
+    defaultChecked={true}
+    disabled={undefined}
+    id="checkbox-01"
+    name="options"
+    tabIndex={undefined}
+    type="checkbox"
+    value="checkbox-01"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-01"
+    id="check-button-label-01"
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</div>
+`;
+
+exports[`SelectRowCell component should render a checked radio button 1`] = `
+<span
+  className="slds-radio"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="radio-button-label-01 column-group-header"
+    defaultChecked={true}
+    disabled={undefined}
+    id="radio-01"
+    name="options"
+    tabIndex={undefined}
+    type="radio"
+    value="radio-01"
+  />
+  <label
+    className="slds-radio__label"
+    htmlFor="radio-01"
+    id="radio-button-label-01"
+  >
+    <span
+      className="slds-radio_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</span>
+`;
+
+exports[`SelectRowCell component should render a radio button 1`] = `
+<span
+  className="slds-radio"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="radio-button-label-01 column-group-header"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="radio-01"
+    name="options"
+    tabIndex={undefined}
+    type="radio"
+    value="radio-01"
+  />
+  <label
+    className="slds-radio__label"
+    htmlFor="radio-01"
+    id="radio-button-label-01"
+  >
+    <span
+      className="slds-radio_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</span>
+`;
+
+exports[`SelectRowCell component should set tabindex on a checkbox 1`] = `
+<div
+  className="slds-checkbox"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="check-button-label-01 column-group-header"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-01"
+    name="options"
+    tabIndex="-1"
+    type="checkbox"
+    value="checkbox-01"
+  />
+  <label
+    className="slds-checkbox__label"
+    htmlFor="checkbox-01"
+    id="check-button-label-01"
+  >
+    <span
+      className="slds-checkbox_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</div>
+`;
+
+exports[`SelectRowCell component should set tabindex on a radio 1`] = `
+<span
+  className="slds-radio"
+>
+  <input
+    aria-describedby={undefined}
+    aria-labelledby="radio-button-label-01 column-group-header"
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="radio-01"
+    name="options"
+    tabIndex="-1"
+    type="radio"
+    value="radio-01"
+  />
+  <label
+    className="slds-radio__label"
+    htmlFor="radio-01"
+    id="radio-button-label-01"
+  >
+    <span
+      className="slds-radio_faux"
+    />
+    <span
+      className="slds-form-element__label slds-assistive-text"
+    >
+      Select item 1
+    </span>
+  </label>
+</span>
+`;
+
+exports[`TBody component should render with children 1`] = `
+<tbody>
+  <tr />
+</tbody>
+`;
+
+exports[`TBodyTr component should render top aligned 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-align-top"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should render with children 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-expanded 1`] = `
+<tr
+  aria-expanded={true}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-expanded to false 1`] = `
+<tr
+  aria-expanded={false}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-level 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level="1"
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-posinset 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset="2"
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-selected 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={true}
+  aria-setsize={undefined}
+  className="slds-hint-parent slds-is-selected"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-selected to false 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={false}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set aria-setsize 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize="10"
+  className="slds-hint-parent"
+  tabIndex={undefined}
+>
+  <td />
+</tr>
+`;
+
+exports[`TBodyTr component should set tabindex 1`] = `
+<tr
+  aria-expanded={undefined}
+  aria-level={undefined}
+  aria-posinset={undefined}
+  aria-selected={undefined}
+  aria-setsize={undefined}
+  className="slds-hint-parent"
+  tabIndex="0"
+>
+  <td />
+</tr>
+`;
+
+exports[`THead Component should apply assistive text class when isHidden 1`] = `
+<thead
+  className="slds-assistive-text"
+/>
+`;
+
+exports[`THead Component should render a thead 1`] = `
+<thead
+  className={null}
+/>
+`;
+
+exports[`THead Component should take children 1`] = `
+<thead
+  className={null}
+>
+  <tr />
+</thead>
+`;
+
+exports[`THeadTr component should render with children 1`] = `
+<tr
+  className="slds-line-height_reset"
+>
+  <td />
+</tr>
+`;
+
+exports[`Td component should apply a supplied data-label 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label="foo"
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply aria-readonly 1`] = `
+<td
+  aria-readonly={true}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply aria-selected 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={true}
+  className={null}
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the cell shrink class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-cell-shrink"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the error cell class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-cell-error"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the has error class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-has-error"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the has focus class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-has-focus"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the is editable class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-cell-edit"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the is edited class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-is-edited"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should apply the right aligned class 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className="slds-text-align_right"
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should render with children 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should set role of gridcell for advanced 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role="gridcell"
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should set role of gridcell for treegrid 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role="gridcell"
+  style={undefined}
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should set style 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role={null}
+  style={
+    Object {
+      "width": "2rem",
+    }
+  }
+  tabIndex={undefined}
+>
+  <div />
+</td>
+`;
+
+exports[`Td component should set tabindex 1`] = `
+<td
+  aria-readonly={undefined}
+  aria-selected={undefined}
+  className={null}
+  data-label={undefined}
+  role={null}
+  style={undefined}
+  tabIndex="0"
+>
+  <div />
+</td>
+`;

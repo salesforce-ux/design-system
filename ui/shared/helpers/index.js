@@ -9,6 +9,8 @@ import startCase from 'lodash.startcase';
 import times from 'lodash.times';
 import truncate from 'lodash.truncate';
 import upperFirst from 'lodash.upperfirst';
+import IsDependentOn from './prop-types/is-dependent-on';
+import CannotBeSetWith from './prop-types/cannot-be-set-with';
 
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing
 const uniqueId = (() => {
@@ -66,3 +68,5 @@ export default {
   uniqueId,
   upperFirst
 };
+
+export { IsDependentOn, CannotBeSetWith };

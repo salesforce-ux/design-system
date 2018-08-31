@@ -237,7 +237,8 @@
 
   // Tree (Order matters)
   'trees/base/index',
-  'trees/grid/index',
+  // Tree grid depends on tree
+  'tree-grid/base/index',
 
   // Einstein Headers
   'einstein-header/base/index',

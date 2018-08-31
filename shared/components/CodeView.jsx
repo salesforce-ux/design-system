@@ -29,7 +29,9 @@ class CodeView extends React.Component {
 
 CodeView.propTypes = {
   position: PropTypes.oneOf(['top', 'bottom']),
-  toggleCode: PropTypes.bool
+  toggleCode: PropTypes.bool,
+  style: PropTypes.object,
+  children: PropTypes.node
 };
 
 CodeView.defaultProps = {

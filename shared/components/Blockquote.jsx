@@ -21,7 +21,8 @@ class Blockquote extends React.Component {
 
 Blockquote.propTypes = {
   type: PropTypes.oneOf(['note', 'a11y', 'warning']),
-  header: PropTypes.string
+  header: PropTypes.string,
+  children: PropTypes.node
 };
 
 Blockquote.defaultProps = {

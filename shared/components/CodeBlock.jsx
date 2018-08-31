@@ -94,7 +94,8 @@ class CodeBlock extends Component {
 
 CodeBlock.propTypes = {
   language: PropTypes.string,
-  toggleCode: PropTypes.bool
+  toggleCode: PropTypes.bool,
+  children: PropTypes.node
 };
 
 CodeBlock.defaultProps = {

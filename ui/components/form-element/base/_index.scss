@@ -11,6 +11,7 @@
  */
 .slds-form-element {
   position: relative;
+  min-width: 0;
 
   &__helper {
     font-size: $font-size-small;

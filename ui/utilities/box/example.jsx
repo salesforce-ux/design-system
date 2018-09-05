@@ -24,7 +24,7 @@ export let examples = [
   },
   {
     id: 'x-small',
-    label: 'Size - x-xmall',
+    label: 'Size - x-small',
     element: (
       <div className="slds-box slds-box_x-small">
         <p>This is an extra-small box.</p>

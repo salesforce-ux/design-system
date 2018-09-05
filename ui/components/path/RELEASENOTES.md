@@ -4,4 +4,20 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+
+- Added `slds-path_has-coaching` hook on the `slds-path` container element, to add support for spacing differences between coaching and non-coaching.
+
+### Changed
+
+- Modified the appearance of the Path container.
+- Revised the colors used on the active and curent Path steps, introducing support for borders.
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting.
+- Changed the direction of the coaching arrow to point to the right / down, instead of up / down. To take advantage of this change, remove the `slds-flip_vertical` class on the open state for `slds-path__trigger`, and instead use our new class `slds-path__trigger_open` to set the direction of the open state on the button arrow.
+
+### Fixed
+
+- Fixed text centering issue with first and last Path steps
+- Fixed rotation transition on Path coaching toggle button

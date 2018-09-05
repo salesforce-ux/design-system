@@ -212,13 +212,13 @@ describe('mapSelectorsToProps', () => {
 
         const foo = c['.foo'];
         expect(foo).toHaveLength(3);
-        expect(foo.find(item => item.property == 'padding-left').value).toBe(
+        expect(foo.find(item => item.property === 'padding-left').value).toBe(
           '10px'
         );
 
         const bar = c['.bar'];
         expect(bar).toHaveLength(2);
-        expect(bar.find(item => item.property == 'margin-bottom').value).toBe(
+        expect(bar.find(item => item.property === 'margin-bottom').value).toBe(
           '40px'
         );
 
@@ -637,9 +637,7 @@ describe('walkScss', () => {
       expect(selectors.length).toBe(5);
 
       const mixedInDeclarations =
-        tests[
-          '.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link'
-        ];
+        tests['.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link'];
       expect(mixedInDeclarations).toBeDefined();
       expect(mixedInDeclarations).toHaveLength(4);
 

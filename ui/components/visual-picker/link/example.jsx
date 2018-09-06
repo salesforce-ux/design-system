@@ -12,7 +12,12 @@ import { UtilityIcon } from '../../icons/base/example';
 export let VisualPickerMediaObject = props => {
   const symbol = props.symbol || 'knowledge_base';
   const iconContent = props.icon || (
-    <UtilityIcon className="slds-icon-text-default" symbol={symbol} />
+    <UtilityIcon
+      className="slds-icon-text-default"
+      symbol={symbol}
+      title={false}
+      assistiveText={false}
+    />
   );
 
   return (

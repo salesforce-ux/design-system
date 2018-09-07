@@ -4,4 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.7.0
+
+### Added
+- Added a title and assistive text to most button icon examples

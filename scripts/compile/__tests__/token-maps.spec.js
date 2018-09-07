@@ -3,8 +3,11 @@
 
 /* eslint-env jest */
 
+const path = require('path');
 const tokenMaps = require('../token-maps');
 const TokenMaps = tokenMaps._internal;
+const cssFixture = require('./__fixtures__/css-fixture');
+const complicatedSassFixture = require('./__fixtures__/complicated-sass-fixture');
 
 //
 
@@ -108,7 +111,7 @@ describe('convertYamlTokenToSassToken', () => {
 
 // Skipping test: createTokenComponentMap
 
-// Skipping test: getComponentsPath
+// Skipping test: createUtilityDeclarationsMap
 
 describe('getComponentNameFromPath', () => {
   it('should get component name from a file at the component directory level', () => {
@@ -131,6 +134,8 @@ describe('getComponentNameFromPath', () => {
     expect(result).toBe('feeds');
   });
 });
+
+// Skipping test: getComponentsPath
 
 describe('getSassTokensInValue', () => {
   it('should not return anything for an empty string', () => {
@@ -165,6 +170,8 @@ describe('getSassTokensInValue', () => {
   });
 });
 
+// Skipping test: getUtilitiesPath
+
 describe('isSassToken', () => {
   it('should reject empty strings', () => {
     const result = TokenMaps.isSassToken('');
@@ -196,90 +203,36 @@ describe('isSassToken', () => {
 
 // Skipping test: loadTokens
 
+describe('mapSelectorsToProps', () => {
+  it('should parse CSS and return a map of selectors to arrays of key-values', done => {
+    TokenMaps.mapSelectorsToProps(cssFixture).fork(
+      nothingToDo,
+      cssSelectorsWithDeclarations => {
+        const c = cssSelectorsWithDeclarations;
+
+        const foo = c['.foo'];
+        expect(foo).toHaveLength(3);
+        expect(foo.find(item => item.property === 'padding-left').value).toBe(
+          '10px'
+        );
+
+        const bar = c['.bar'];
+        expect(bar).toHaveLength(2);
+        expect(bar.find(item => item.property === 'margin-bottom').value).toBe(
+          '40px'
+        );
+
+        done();
+      }
+    );
+  });
+});
+
 // Skipping test: parseComponentsScss
 
 describe('parseScssForTokens', () => {
   it('should parse SCSS Sass', done => {
-    const fixture = `
-      // ================================================
-      // NOTE: This is just some complex Sass for testing
-      // ================================================
-
-      // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
-      // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
-      /**
-       * @name base
-       * @selector .slds-path
-       * @restrict div
-       * @variant
-       * @s1 false
-       */
-      .slds-path {
-        /**
-         * @summary Indicates the coaching section is expanded
-         *
-         * @selector .slds-is-expanded
-         * @restrict .slds-path
-         */
-        &.slds-is-expanded {
-          padding-bottom: $var-spacing-vertical-small;
-          border-color: $color-border;
-        }
-      }
-
-      // these mixins exist in order to alias selector assignment in the case
-      // where state cannot be applied to the individual path step
-      @mixin is-won() {
-
-        .slds-path__link,
-        &:hover .slds-path__link {
-          border: 0;
-          line-height: $line-height-salespath;
-          color: $color-text-inverse;
-          background-color: $color-background-path-won;
-        }
-
-        &:before,
-        &:after,
-        &:hover:before,
-        &:hover:after {
-          background-image: linear-gradient(225deg, $color-background-path-won, $color-background-path-won 1.125rem, transparent 1.125rem);
-        }
-      }
-
-      /**
-       * @summary Horizontal list of stages in path component
-       *
-       * @selector .slds-path__nav
-       * @restrict .slds-path__scroller_inner ul
-       */
-      .slds-path__nav {
-        display: flex;
-        align-items: flex-start;
-        overflow: hidden;
-
-        /**
-         * @summary Creates success stage of the path
-         *
-         * @selector .slds-is-won
-         * @restrict .slds-path__item
-         */
-        .slds-is-won {
-          @include is-won();
-        }
-
-        // sets right arrow for current step (overlaps :before of following element)
-        &:after {
-          right: ((($height-sales-path / 2) - 0.1875rem) * -1);
-          background-size: calc(100% - 0.125rem) calc(100% - 0.125rem);
-          background-position: bottom left;
-          background-repeat: no-repeat;
-          box-shadow: inset -0.125rem 0.125rem 0 0 $color-border-path-divider;
-          z-index: 10;
-        }
-      }
-    `;
+    const fixture = complicatedSassFixture;
     const expectedTokens = [
       'colorBackgroundPathWon',
       'colorBorder',
@@ -316,6 +269,38 @@ describe('parseScssForTokens', () => {
 
       done();
     });
+  });
+});
+
+describe('parseScssTokenPreserved', () => {
+  const scssFixturePath = path.resolve(
+    __dirname,
+    './__fixtures__/simple-sass-fixture.scss'
+  );
+
+  it('should preserve only Aura token names', done => {
+    const originalGetTokenNames = TokenMaps.getTokenNames;
+    TokenMaps.getTokenNames = jest
+      .fn()
+      .mockImplementation(() => ['this-is-a-token', 'this-is-another-token']);
+
+    TokenMaps.parseScssTokenPreserved(scssFixturePath).fork(
+      nothingToDo,
+      result => {
+        expect(result).toEqual(
+          expect.stringContaining('font-size: $thisIsAToken;')
+        );
+        expect(result).toEqual(
+          expect.stringContaining('background: $thisIsAnotherToken;')
+        );
+        expect(result).toEqual(
+          expect.stringContaining('something-else: abc def 579 jkl;')
+        );
+
+        TokenMaps.getTokenNames = originalGetTokenNames;
+        done();
+      }
+    );
   });
 });
 
@@ -365,6 +350,34 @@ describe('sanitizePath', () => {
   });
 });
 
+describe('sanitizeRawToken', () => {
+  const fixture = {
+    name: 'THIS_IS_A_YAML_STYLE_TOKEN',
+    category: 'fakeCategory',
+    comment: 'fakeComment',
+    type: 'fakeType',
+    cssPropertiesIsNotDefined: null,
+    value: 'fakeValue',
+    extraValueNotConverted: 12345
+  };
+
+  it('should transform the token object', () => {
+    const result = TokenMaps.sanitizeRawToken(fixture);
+
+    expect(result.name).toBeUndefined();
+    expect(result.category).toBe('fakeCategory');
+    expect(result.comment).toBe('fakeComment');
+    expect(result.type).toBe('fakeType');
+    expect(result.cssProperties).toHaveLength(0);
+    expect(result.value).toBe('fakeValue');
+    expect(result.auraToken).toBe('thisIsAYamlStyleToken');
+    expect(result.sassToken).toBe('$this-is-a-yaml-style-token');
+    expect(result.yamlToken).toBe('THIS_IS_A_YAML_STYLE_TOKEN');
+    expect(result.cssPropertiesIsNotDefined).toBeUndefined();
+    expect(result.extraValueNotConverted).toBeUndefined();
+  });
+});
+
 describe('sanitizeScss', () => {
   it('should remove // comments', () => {
     const fixture =
@@ -379,11 +392,10 @@ describe('sanitizeScss', () => {
       '  is-it-cool: yes;    // This has an end-of-line comment\n' +
       '}\n';
     const expected =
-      '\n' +
       '.anScssClass { abc: 123 }\n' +
       '.otherClass {\n' +
-      '  is-it-cool: yes;\n' +
-      '}\n';
+      'is-it-cool: yes;\n' +
+      '}';
     const result = TokenMaps.sanitizeScss(fixture);
 
     expect(result).toBe(expected);
@@ -406,12 +418,10 @@ describe('sanitizeScss', () => {
       '  is-it-cool: yes;    /* This has an end-of-line comment */\n' +
       '}\n';
     const expected =
-      '\n' +
       '.anScssClass { abc: 123 }\n' +
-      '\n' +
       '.otherClass {\n' +
-      '  is-it-cool: yes;\n' +
-      '}\n';
+      'is-it-cool: yes;\n' +
+      '}';
     const result = TokenMaps.sanitizeScss(fixture);
 
     expect(result).toBe(expected);
@@ -574,6 +584,75 @@ describe('validRawTokensDistFile', () => {
   });
 });
 
+describe('valueContainsSassTokens', () => {
+  it('should detect Sass tokens', () => {
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $this-is-1-token asldkjf')
+    ).toBeTruthy();
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $thisIsAlsoValid asldkjf')
+    ).toBeTruthy();
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $this_too asldkjf')
+    ).toBeTruthy();
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $AndThis asldkjf')
+    ).toBeTruthy();
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $--aaandThis asldkjf')
+    ).toBeTruthy();
+    expect(
+      TokenMaps.valueContainsSassTokens('asdfasdf $_aaaaaand-this-too asldkjf')
+    ).toBeTruthy();
+  });
+
+  it('should not detect invalid Sass token names', () => {
+    expect(
+      TokenMaps.valueContainsSassTokens(
+        'asdfasdf $123-starts-with-a-number asldkjf'
+      )
+    ).toBeFalsy();
+  });
+});
+
+describe('walkScss', () => {
+  it('should visit declarations in SCSS Sass', done => {
+    const fixture = complicatedSassFixture;
+    const precssOptions = {
+      unresolved: 'ignore'
+    };
+
+    const tests = {};
+    TokenMaps.walkScss(
+      fixture,
+      precssOptions,
+      (selector, rule, declaration, root) => {
+        const { prop, value } = declaration;
+        const stringifiedPropValue = `${prop}=${value}`;
+        tests[selector] = tests[selector] || [];
+        tests[selector].push(stringifiedPropValue);
+      }
+    ).then(ignoredResult => {
+      const selectors = Object.keys(tests).sort();
+      expect(selectors.length).toBe(5);
+
+      const mixedInDeclarations =
+        tests['.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link'];
+      expect(mixedInDeclarations).toBeDefined();
+      expect(mixedInDeclarations).toHaveLength(4);
+
+      const sortedDeclarations = mixedInDeclarations.sort();
+      expect(sortedDeclarations[0]).toBe(
+        'background-color=$color-background-path-won'
+      );
+
+      done();
+    });
+  });
+});
+
 // Skipping: writeAuraTokensMap
 
 // Skipping: writeTokenComponentMap
+
+// Skipping: writeUtilityPropertiesMap

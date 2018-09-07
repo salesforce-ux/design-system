@@ -10,13 +10,28 @@ export const Context = props => (
   </div>
 );
 
-export default <ButtonIcon theme="inverse" symbol="search" />;
+export default (
+  <ButtonIcon
+    assistiveText="Search"
+    title="Search"
+    theme="inverse"
+    symbol="search"
+  />
+);
 
 export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
-    element: <ButtonIcon theme="inverse" symbol="search" disabled />
+    element: (
+      <ButtonIcon
+        assistiveText="Search"
+        title="Search"
+        theme="inverse"
+        symbol="search"
+        disabled
+      />
+    )
   }
 ];
 
@@ -42,6 +57,8 @@ export let examples = [
         <ButtonIcon
           theme="inverse"
           iconClassName="slds-button__icon_inverse-hint"
+          assistiveText="More options"
+          title="More Options"
         />
       </div>
     )

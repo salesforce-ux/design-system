@@ -10,14 +10,29 @@ export const Context = props => (
   </div>
 );
 
-export default <ButtonIcon theme="inverse" size="medium" symbol="search" />;
+export default (
+  <ButtonIcon
+    assistiveText="Search"
+    size="medium"
+    symbol="search"
+    theme="inverse"
+    title="Search"
+  />
+);
 
 export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
     element: (
-      <ButtonIcon theme="inverse" size="medium" symbol="search" disabled />
+      <ButtonIcon
+        assistiveText="Search"
+        disabled
+        size="medium"
+        symbol="search"
+        theme="inverse"
+        title="Search"
+      />
     )
   }
 ];
@@ -28,9 +43,9 @@ export let examples = [
     label: 'With dropdown',
     element: (
       <ButtonIcon
+        assistiveText="More options"
         hasDropdown
         theme="neutral"
-        assistiveText="More options"
         title="More Options"
       />
     )
@@ -41,9 +56,11 @@ export let examples = [
     element: (
       <HintParent>
         <ButtonIcon
-          theme="inverse"
-          size="medium"
+          assistiveText="More options"
           iconClassName="slds-button__icon_inverse-hint"
+          size="medium"
+          theme="inverse"
+          title="More Options"
         />
       </HintParent>
     )

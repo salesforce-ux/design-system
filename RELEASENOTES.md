@@ -531,6 +531,23 @@
 ##### Added
 - Added text color utility class, `slds-text-color_destructive`, for destructive actions
 
+## **Release [2.6.2] - June 29, 2018**
+
+## Fixes
+
+**[Cards](https://www.lightningdesignsystem.com/components/cards)**
+- Updated broken links within the Cards docs ([7b48637](https://github.com/salesforce-ux/design-system/commit/7b48637))
+
+**Gulp Script Update**
+- Fix path to gulp.js to resolve build error in Windows ([2a78a47](https://github.com/salesforce-ux/design-system/commit/2a78a47))
+
+**[Input](https://www.lightningdesignsystem.com/components/input)**
+- Updated the Error with Icon example to use the new Error icon ([35d90ba](https://github.com/salesforce-ux/design-system/commit/35d90ba))
+
+**[Margin](https://www.lightningdesignsystem.com/utilities/margin)**
+- Added examples of using "none" on margin utilities ([a3e9eb9](https://github.com/salesforce-ux/design-system/commit/a3e9eb9))
+- Updated broken links within the Margin docs ([26a5eed](https://github.com/salesforce-ux/design-system/commit/26a5eed))
+
 ## **Release [2.6.1] - May 18, 2018**
 
 ## Fixes

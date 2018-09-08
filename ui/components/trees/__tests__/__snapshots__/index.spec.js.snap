@@ -1,0 +1,915 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Tree - Branch Item renders a tree branch item with a label passed in 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item"
+    >
+      Tree Item
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - Branch Item renders a tree branch item with metatext 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item"
+    >
+      Tree Item
+    </span>
+    <span
+      className="slds-tree__item-meta slds-truncate"
+      title="Tree Item Metatext"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        :
+      </span>
+      Tree Item Metatext
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - List Item for Branches renders a tree list item at index 0, with no tabIndex, because the branch has a selected item 1`] = `
+<li
+  aria-expanded={false}
+  aria-label="Test Branch"
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Branch"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Branch
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Branch"
+      >
+        Test Branch
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for Branches renders a tree list item for a branch that is expanded 1`] = `
+<li
+  aria-expanded={true}
+  aria-label="Test Branch"
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Branch"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Branch
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Branch"
+      >
+        Test Branch
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for Branches renders a tree list item for a branch that is selected 1`] = `
+<li
+  aria-expanded={false}
+  aria-label="Test Branch"
+  aria-level={1}
+  aria-selected={true}
+  role="treeitem"
+  tabIndex={0}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Branch"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Branch
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Branch"
+      >
+        Test Branch
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for Branches renders a tree list item for a branch with a custom label and metatext 1`] = `
+<li
+  aria-expanded={false}
+  aria-label="Test Branch: Some Metatext"
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Branch"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Branch
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Branch"
+      >
+        Test Branch
+      </span>
+      <span
+        className="slds-tree__item-meta slds-truncate"
+        title="Some Metatext"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          :
+        </span>
+        Some Metatext
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for Branches renders a tree list item for a branch with the required item label 1`] = `
+<li
+  aria-expanded={false}
+  aria-label="Test Branch"
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Branch"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Branch
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Branch"
+      >
+        Test Branch
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for individual Items renders a default tree list item 1`] = `
+<li
+  aria-expanded={null}
+  aria-label={null}
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Tree Item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Tree Item
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Tree Item"
+      >
+        Tree Item
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for individual Items renders a tree list item that is selected 1`] = `
+<li
+  aria-expanded={null}
+  aria-label={null}
+  aria-level={1}
+  aria-selected={true}
+  role="treeitem"
+  tabIndex={0}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Tree Item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Tree Item
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Tree Item"
+      >
+        Tree Item
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for individual Items renders a tree list item with a custom label 1`] = `
+<li
+  aria-expanded={null}
+  aria-label={null}
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Tree Item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Tree Item
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Tree Item"
+      >
+        Tree Item
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for individual Items renders a tree list item with a custom label and metatext 1`] = `
+<li
+  aria-expanded={null}
+  aria-label={null}
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={undefined}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Test Item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Test Item
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Test Item"
+      >
+        Test Item
+      </span>
+      <span
+        className="slds-tree__item-meta slds-truncate"
+        title="Some Metatext"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          :
+        </span>
+        Some Metatext
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - List Item for individual Items renders a tree list item with tabIndex of 0 1`] = `
+<li
+  aria-expanded={null}
+  aria-label={null}
+  aria-level={1}
+  aria-selected={undefined}
+  role="treeitem"
+  tabIndex={0}
+>
+  <div
+    className="slds-tree__item"
+  >
+    <button
+      aria-haspopup={undefined}
+      aria-hidden="true"
+      className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+      id={undefined}
+      tabIndex="-1"
+      title="Expand Tree Item"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Expand Tree Item
+      </span>
+    </button>
+    <span
+      className="slds-has-flexi-truncate"
+    >
+      <span
+        className="slds-tree__item-label slds-truncate"
+        title="Tree Item"
+      >
+        Tree Item
+      </span>
+    </span>
+  </div>
+</li>
+`;
+
+exports[`Base Tree - Tree Container renders a default tree container 1`] = `
+<div
+  className="slds-tree_container"
+/>
+`;
+
+exports[`Base Tree - Tree Container renders a tree container with children 1`] = `
+<div
+  className="slds-tree_container"
+>
+  <h4
+    className="slds-text-title_caps"
+    id="treeheading"
+  >
+    Tree Group Header
+  </h4>
+</div>
+`;
+
+exports[`Base Tree - Tree Group renders a default tree group 1`] = `
+<ul
+  role="group"
+/>
+`;
+
+exports[`Base Tree - Tree Group renders a tree group with children 1`] = `
+<ul
+  role="group"
+>
+  <li
+    aria-expanded={null}
+    aria-label={null}
+    aria-level={1}
+    aria-selected={undefined}
+    role="treeitem"
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-tree__item"
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Tree Item"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Expand Tree Item
+        </span>
+      </button>
+      <span
+        className="slds-has-flexi-truncate"
+      >
+        <span
+          className="slds-tree__item-label slds-truncate"
+          title="Tree Item"
+        >
+          Tree Item
+        </span>
+      </span>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Base Tree - Tree Header renders a default tree header 1`] = `
+<h4
+  className="slds-text-title_caps"
+  id="treeheading"
+/>
+`;
+
+exports[`Base Tree - Tree Header renders a tree header with children 1`] = `
+<h4
+  className="slds-text-title_caps"
+  id="treeheading"
+>
+  Tree Group Header
+</h4>
+`;
+
+exports[`Base Tree - Tree Item renders a default tree item 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item"
+    >
+      Tree Item
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - Tree Item renders a tree item with a label passed in 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item Label"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item Label
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item Label"
+    >
+      Tree Item Label
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - Tree Item renders a tree item with children 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item"
+    >
+      Tree Item
+    </span>
+  </span>
+  Tree Item Children
+</div>
+`;
+
+exports[`Base Tree - Tree Item renders a tree item with metatext 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand Tree Item"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand Tree Item
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="Tree Item"
+    >
+      Tree Item
+    </span>
+    <span
+      className="slds-tree__item-meta slds-truncate"
+      title="Tree Item Metatext"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        :
+      </span>
+      Tree Item Metatext
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - Tree List renders a default tree list 1`] = `
+<ul
+  aria-labelledby="treeheading"
+  className="slds-tree"
+  role="tree"
+/>
+`;
+
+exports[`Base Tree - Tree List renders a tree list with children 1`] = `
+<ul
+  aria-labelledby="treeheading"
+  className="slds-tree"
+  role="tree"
+>
+  <li
+    aria-expanded={null}
+    aria-label={null}
+    aria-level={1}
+    aria-selected={undefined}
+    role="treeitem"
+    tabIndex={undefined}
+  >
+    <div
+      className="slds-tree__item"
+    >
+      <button
+        aria-haspopup={undefined}
+        aria-hidden="true"
+        className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+        id={undefined}
+        tabIndex="-1"
+        title="Expand Tree Item"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Expand Tree Item
+        </span>
+      </button>
+      <span
+        className="slds-has-flexi-truncate"
+      >
+        <span
+          className="slds-tree__item-label slds-truncate"
+          title="Tree Item"
+        >
+          Tree Item
+        </span>
+      </span>
+    </div>
+  </li>
+</ul>
+`;

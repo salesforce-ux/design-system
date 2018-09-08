@@ -4,12 +4,27 @@
 import React from 'react';
 import ButtonIcon from '../';
 
-export default <ButtonIcon theme="brand" symbol="search" />;
+export default (
+  <ButtonIcon
+    assistiveText="Search"
+    title="Search"
+    theme="brand"
+    symbol="search"
+  />
+);
 
 export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
-    element: <ButtonIcon theme="brand" symbol="search" disabled />
+    element: (
+      <ButtonIcon
+        assistiveText="Search"
+        title="Search"
+        theme="brand"
+        symbol="search"
+        disabled
+      />
+    )
   }
 ];

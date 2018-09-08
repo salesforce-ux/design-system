@@ -4,7 +4,7 @@
 import React from 'react';
 import ButtonIcon, { HintParent } from '../';
 
-export default <ButtonIcon />;
+export default <ButtonIcon assistiveText="Settings" title="Settings" />;
 
 export let states = [
   {
@@ -22,7 +22,7 @@ export let states = [
   {
     id: 'bare-disabled',
     label: 'Disabled',
-    element: <ButtonIcon disabled />
+    element: <ButtonIcon assistiveText="Settings" disabled title="Settings" />
   }
 ];
 
@@ -32,7 +32,11 @@ export let examples = [
     label: 'Hint on hover',
     element: (
       <HintParent>
-        <ButtonIcon iconClassName="slds-button__icon_hint" />
+        <ButtonIcon
+          assistiveText="Settings"
+          iconClassName="slds-button__icon_hint"
+          title="Settings"
+        />
       </HintParent>
     )
   }

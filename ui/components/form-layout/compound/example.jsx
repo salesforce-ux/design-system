@@ -63,7 +63,7 @@ export const CompoundForm = props => {
               <Input id="input-05" defaultValue="MT" />
             </FormElement>
           </div>
-          <div className="slds-form-element__row slds-gutters_xx-small">
+          <div className="slds-form-element__row">
             <FormElement
               formElementClassName="slds-size_4-of-6"
               labelContent="Shipping Zip/Postal Code"

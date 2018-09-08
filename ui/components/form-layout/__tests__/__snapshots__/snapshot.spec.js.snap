@@ -362,7 +362,7 @@ Array [
           </div>
         </div>
         <div
-          className="slds-form-element__row slds-gutters_xx-small"
+          className="slds-form-element__row"
         >
           <div
             className="slds-form-element slds-size_4-of-6"
@@ -587,7 +587,7 @@ Array [
           </div>
         </div>
         <div
-          className="slds-form-element__row slds-gutters_xx-small"
+          className="slds-form-element__row"
         >
           <div
             className="slds-form-element slds-size_4-of-6"

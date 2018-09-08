@@ -23,7 +23,7 @@ export let states = [
   },
   {
     id: 'disabled',
-    label: 'disabled',
+    label: 'Disabled',
     element: (
       <FormElement labelContent="Form Element Label" inputId="checkbox-id-01">
         <CheckboxStandalone id="checkbox-id-01" isDisabled />

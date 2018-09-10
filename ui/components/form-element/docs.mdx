@@ -3,7 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import ButtonIcon from '../button-icons/';
-import { FormElement, Fieldset } from './';
+import { FormElement, FormElementStatic, Fieldset } from './';
 import { Input } from '../input/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Textarea } from '../textarea/base/example';
@@ -35,7 +35,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
 
 ### Form Label
 
-A form label should use the `<label>` element with the class `slds-form-element__label`.
+A form label should use the `<label>` element or `<legend>` element with the class `slds-form-element__label`. Use a `<legend>` when you have a [compound form](/components/form-element/#Compound)
 
 <Blockquote type="a11y" header="Accessibility requirement">
   Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
@@ -55,42 +55,93 @@ A form control is a `div` with the class `slds-form-element__control`. The contr
 
 ## States
 
-### Readonly/Static
+### View Mode/Static
 
-A form might require it to be in a read only state at any particular time. Each element should be replaced with a `<span>` with the class `slds-form-element__static`.
+If a form element requires a view mode or static state, instead of `slds-form-element__label` being a `<label>` element, we want to change the element to a `<span>`. This is because the form is no longer a form but a statically read name and value pair.
+
+The string inside of `slds-form-element__control` needs to be wrapped in a `<div>` as well, with the class `slds-form-element__static` applied to it.
+
+In addition to the structural changes — if the form element is standalone, you can _optionally_ apply `slds-form-element__readonly`. The class will help spacing and separation between other form elements. This class is **_required_** if the form element is in the context of a larger form composition.
 
 <Example title="Form Element - Readonly">
   <CodeView>
-    <div className="slds-form-element">
-      <span className="slds-form-element__label">Status</span>
-      <div className="slds-form-element__control">
-        <span className="slds-form-element__static">
-          In Progress
-        </span>
-      </div>
-    </div>
+    <FormElement
+      labelContent="Status"
+      isViewMode
+    >
+      <FormElementStatic>
+        In Progress
+      </FormElementStatic>
+    </FormElement>
   </CodeView>
 </Example>
 
 ### Inline Edit
 
+If the form element has inline editable capabilities, the form element will **_require_** the class `slds-form-element_edit`. This will apply styles that help handle the structure of the additional elements, such as the button icon to switch the element out of view mode and into edit mode.
+
+In addition, we want to provide an interaction hint by increasing the contrast of the button icon on hover by adding `slds-hint-parent` to the form element. The button icon will also require the class `slds-button__icon_hint`. This will notify the form element that this is the element we want to provide an interaction hint for. For more implementation details, please refer to [Button icon with hint on hover](/components/button-icons/#Hint-on-hover)
+
 <Example title="Form Element - Inline Edit">
 
   <CodeView>
-    <div className="slds-form-element slds-form-element_edit slds-hint-parent">
-      <span className="slds-form-element__label">Status</span>
-      <div className="slds-form-element__control">
-        <span className="slds-form-element__static">
-          In Progress
-        </span>
-        <ButtonIcon
-          iconClassName="slds-button__icon_hint"
-          symbol="edit"
-          assistiveText="Edit: Status"
-          title="Edit: Status"
-        />
-      </div>
-    </div>
+    <FormElement
+      labelContent="Status"
+      isViewMode
+      isEditable
+      hasHint
+    >
+      <FormElementStatic>
+        In Progress
+      </FormElementStatic>
+      <ButtonIcon
+        iconClassName="slds-button__icon_hint"
+        symbol="edit"
+        assistiveText="Edit: Status"
+        title="Edit: Status"
+      />
+    </FormElement>
+  </CodeView>
+
+</Example>
+
+### Help Text Icon
+
+A form element can have help text that will display in a tooltip when hovering or focusing on an icon.
+
+The icon comes in the form of a button icon so it can receive focus when a user tabs through a form with multiple form elements.
+
+The button icon is **_required_** to be wrapped in a `<div>` with the class `slds-form-element__icon` and should be placed outside of the `<label>` element.
+
+<Example title="Form Element - Help Text Icon">
+
+  <CodeView>
+    <FormElement
+      labelContent="Status"
+      inputId="form-element-help-01"
+      hasTooltip
+    >
+      <Input id="form-element-help-01" />
+    </FormElement>
+  </CodeView>
+
+</Example>
+
+#### Showing tooltip
+
+The help text icon uses a tooltip to show the help text information. Please see [Tooltips](/components/tooltips/) for implementation details.
+
+<Example title="Form Element - Help Text Icon - Showing tooltip">
+
+  <CodeView style={{paddingTop:'4rem'}}>
+    <FormElement
+      labelContent="Status"
+      inputId="form-element-help-01"
+      hasTooltip
+      showTooltip
+    >
+      <Input id="form-element-help-01" />
+    </FormElement>
   </CodeView>
 
 </Example>
@@ -109,7 +160,7 @@ The `<input>` element should also have the HTML attribute required or required="
 
   <CodeView>
     <FormElement labelContent="Form Label" inputId="form-element-03" isRequired>
-      <Input id="form-element-03" />
+      <Input id="form-element-03" required />
     </FormElement>
   </CodeView>
 
@@ -117,7 +168,7 @@ The `<input>` element should also have the HTML attribute required or required="
 
 #### Error
 
-If an error has occurred while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">`. Then, the error message for the user is placed in a `<span>` with the `slds-form-element__help` class.
+If an error has occurred while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">` element. Then, the error message for the user is placed in a `<div>` with the `slds-form-element__help` class.
 
 <Blockquote type="a11y" header="Accessibility requirement">
   When a form element displays feedback notifying the user of an error, the error string should be linked to the element by adding the <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code>. The `aria-describedby` attribute must reference the id of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
@@ -142,7 +193,7 @@ If an error has occurred while submitting a form, the form element with an error
 
 ## Layout
 
-Layout helper classes are available through the following class names: `slds-form_stacked` and `slds-form_horizontal`. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
+If your form has more than one form element, you can switch the direction of `slds-form-element__label` and `slds-form-element__control` by applying `slds-form_stacked` for stacked labels and `slds-form_horizontal` for left-aligned labels. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
 
 ### Stacked
 
@@ -156,7 +207,7 @@ To vertically stack `<label>` and `<input>` pairs, place `slds-form_stacked` on 
 
 ### Horizontal
 
-To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` class on the wrapper around the form. A `slds-form-element__label` takes up 33% of the width, and the `slds-form-element__control` uses the remaining 66%.
+To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` class on the wrapper around the form elements. The `slds-form-element__label` takes up 33% of the width, and the `slds-form-element__control` uses the remaining 66%.
 
 <Example title="Form Layout - Horizontal">
   <CodeView>
@@ -166,9 +217,34 @@ To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` 
 
 ### Compound
 
+A compound form is a grouping of several form elements described by a label/title. The compound form should be implemented as a `<fieldset>`, where the label/title is implemented as a `<legend>` element.
+
+The `<fieldset>` **_requires_** the class `slds-form_compound`. This class handles the layout and wrapping of the form elements that are grouped together.
+
+The `<legend>` element **_requires_** the class `slds-form-element__legend`. Legend elements can only accept a limited amount of CSS properties so this class is there to help manage its layout.
+
+<CodeBlock toggleCode={false}>
+  <Fieldset
+    hasCompoundFields
+    label="Fieldset Label"
+  >...</Fieldset>
+</CodeBlock>
+
+#### Rows
+
+Each row of a compound field should be wrapped in a `<div>` with the class `slds-form-element__row`.
+
+#### Fields
+
+Each field inside of a compound row can be explicitly sized by using a sizing class, e.g. `slds-size_1-of-2`.
+
+<CodeBlock toggleCode={false}>
+  <div class="slds-form-element slds-size_1-of-2">...</div>
+</CodeBlock>
+
 <Example title="Form Layout - Compound">
   <CodeView style={{maxWidth:'400px'}}>
-    <CompoundForm hasTooltip />
+    <CompoundForm />
   </CodeView>
 </Example>
 
@@ -196,7 +272,7 @@ When in view/readonly mode, it is *required* to have the class `slds-form-elemen
 
 ##### Horizontal Alignment
 
-By adding the class `slds-form_horizontal` to top level `slds-form` element, your form can switch from stacked to left aligned, horizontal labels for reduce vertical space.
+By adding the class `slds-form_horizontal` to the top level `slds-form` element, your form can switch from stacked to left-aligned, horizontal labels in order to reduce vertical space.
 
 <Example title="Form Element - Record Detail - View Mode - Horizontal">
   <CodeView>

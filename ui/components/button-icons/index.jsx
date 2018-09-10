@@ -122,7 +122,8 @@ ButtonIcon.propTypes = {
   id: PropTypes.string,
   symbol: PropTypes.string,
   theme: PropTypes.string,
-  assistiveText: PropTypes.string
+  assistiveText: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default ButtonIcon;

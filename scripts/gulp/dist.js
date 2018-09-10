@@ -22,7 +22,6 @@ import {
 } from '../compile/token-maps';
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
-import releaseNotes from './release-notes';
 import ui from '../ui';
 
 const distPath = path.resolve.bind(path, paths.dist);
@@ -124,6 +123,14 @@ export const copyComponentDesignTokens = () =>
       cwd: path.resolve(paths.ui)
     })
     .pipe(gulp.dest(distPath('ui')));
+
+export const copyReleaseNotes = () =>
+  gulp
+    .src('components/**/RELEASENOTES.md', {
+      base: path.resolve(paths.ui),
+      cwd: path.resolve(paths.ui)
+    })
+    .pipe(gulp.dest(distPath('__internal/release-notes')));
 
 export const sass = () =>
   gulp

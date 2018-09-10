@@ -50,25 +50,16 @@ export let VisualPicker = props => {
             )}
           >
             <span className="slds-is-selected">
-              <span
-                className="slds-icon_container"
-                title="description of icon when needed"
-              >
+              <span className="slds-icon_container">
                 <SvgIcon
                   className="slds-icon slds-icon_large slds-icon-action-check"
                   sprite="action"
                   symbol="check"
                 />
-                <span className="slds-assistive-text">
-                  Provide description of icon
-                </span>
               </span>
             </span>
             <span className="slds-is-not-selected">
-              <span
-                className="slds-icon_container"
-                title="description of icon when needed"
-              >
+              <span className="slds-icon_container">
                 <SvgIcon
                   className={classNames(
                     'slds-icon slds-icon-' +
@@ -81,9 +72,6 @@ export let VisualPicker = props => {
                   sprite={props.sprite || 'action'}
                   symbol={props.symbol}
                 />
-                <span className="slds-assistive-text">
-                  Provide description of icon
-                </span>
               </span>
             </span>
           </span>

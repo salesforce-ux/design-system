@@ -213,6 +213,7 @@ gulp.task(
       withName('dist:copyFontsLicense')(dist.copyFontsLicense),
       withName('dist:copyImages')(dist.copyImages),
       withName('dist:copyImagesLicense')(dist.copyImagesLicense),
+      withName('dist:copyReleaseNotes')(dist.copyReleaseNotes),
       withName('dist:copySwatches')(dist.copySwatches),
       withName('dist:copyDesignTokens')(dist.copyDesignTokens),
       withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)

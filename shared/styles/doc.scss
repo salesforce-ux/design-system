@@ -91,8 +91,14 @@ h6.doc {
 
   a.doc-anchor {
     color: #706e6b;
-    font-size: inherit;
+    font-size: 1.25rem;
     margin-left: 0.5rem;
+
+    &:hover,
+    &:focus {
+      color: #0070d2;
+      text-decoration: none;
+    }
   }
 }
 

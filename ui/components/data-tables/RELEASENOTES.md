@@ -10,6 +10,12 @@
 
 - Added a hidden header variation of the data table
   - This involves adding the `slds-table_header-hidden` class to the `<table>` and using the `slds-assistive-text` class on the `<thead>` to ensure the table remains accessible
+- Multi select data tables now require `aria-multiselectable="true"` applied to the `table` element for both Advanced and Inline Edit variants.
+- Multi select data tables now require `aria-selected` to be set to `false` on every row that is not selected
+
+### Changed
+
+- Data tables underwent some minor markup changes to help align all the different variants to use common markup patterns. No visual styling or functionality has changed, but you will notice more examples.
 
 ### Fixed
 

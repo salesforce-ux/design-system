@@ -1,8 +1,553 @@
-##### Salesforce Lightning Design System - Release notes
-
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release 2.7.0 - September 7, 2018**
+
+### General
+
+- Redesigned our [Design Tokens page](https://lightningdesignsystem.com/design-tokens/) to include GA vs Internal designations and "New" badges
+- Added Release Notes to individual component pages
+- Improved the accessibility of links on our site
+- Added new design guidelines for [Builders](https://lightningdesignsystem.com/guidelines/builder/) and [Empty States](https://lightningdesignsystem.com/guidelines/empty-state/)
+- Moved [Tree Grid](https://lightningdesignsystem.com/components/tree-grid/) to its own item, instead of being included in Trees
+- Added [variable spacing tokens](https://lightningdesignsystem.com/design-tokens/#category-spacing) to support new Densification settings
+
+### Components
+
+#### [Accordion](https://lightningdesignsystem.com/components/accordion)
+
+##### Removed
+- Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element
+
+#### [Alert](https://lightningdesignsystem.com/components/alert)
+
+##### Changed
+
+- Changed HTML so the button icon can be slotted into the `slds-notify__close` element
+
+##### Fixed
+
+- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden
+
+#### [App Launcher](https://lightningdesignsystem.com/components/app-launcher)
+
+##### Changed
+
+- Updated the tile markup for improved accessibility and added features
+  - Changed the outer element from an `<a/>` to a `<div/>` and removed `aria-describedby`
+  - Replaced the grab handle icon with a stateful icon button, which will now be the keyboard accessilbe drag and drop control. Please [read the new section](https://www.lightningdesignsystem.com/components/app-launcher/#Reordering-tiles-via-drag-and-drop) in the documentation about specific implementation detials
+  - Moved the tile link to the card title since the whole tile is no longer a link
+  - Made the "more" overflow a tooltip trigger
+
+#### [Avatar](https://lightningdesignsystem.com/components/avatar)
+
+##### Changed
+- Changed HTML so the Avatar component can be slotted inside of an `href` vs being the `href` element
+
+#### [Badges](https://lightningdesignsystem.com/components/badges)
+
+##### Fixed
+
+- Nested `inline` and `inline-block` elements now receive the proper vertical alignment.
+
+#### [Builder Header](https://lightningdesignsystem.com/components/builder-header)
+
+##### Added
+
+- Updated design guidelines and design notes.
+
+#### [Button Groups](https://lightningdesignsystem.com/components/button-groups)
+
+##### Added
+
+- A `1px` separator now appears when a brand button and a brand button icon are used within a button group.
+- Added [Button Group Row component](/components/button-groups/?variant=row) that provides spacing in between each item that contains a button
+
+#### [Button Icons](https://lightningdesignsystem.com/components/button-icons)
+
+##### Added
+- Added a title and assistive text to most button icon examples
+
+#### [Buttons](https://lightningdesignsystem.com/components/buttons)
+
+##### Added
+
+- `slds-button_text-destructive` modifier option, which is styled as an inverted `slds-button_descructive` button.
+- Added selector for `:disabled` pseudo-class.
+
+##### Deprecated
+
+- Deprecated the class `slds-button__icon_stateful`, which was located on the svg inside of the button. Use the Button Icon component with a small size modifier instead, `slds-button__icon slds-button__icon_small`.
+
+#### [Cards](https://lightningdesignsystem.com/components/cards)
+
+##### Changed
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+
+#### [Carousel](https://lightningdesignsystem.com/components/carousel)
+
+##### Fixed
+
+- Swapped values for `aria-hidden` on Carousel panels.
+  - In previous versions, the `true` and `false` values for `aria-hidden` were inadvertently reversed—`aria-hidden: true` was placed on open panels, and vice versa. This has now been updated to use the proper values for open and closed panels.
+- Fixed bug that caused Carousel panels to be improperly sized in IE11.
+
+#### [Chat](https://lightningdesignsystem.com/components/chat)
+
+##### Added
+
+- File component (image and file content types) is now natively supported within an inbound and outbound message.
+
+##### Fixed
+
+- Outbound messages that contain a string of text shorter than the `max-width` no longer has unnecessary white space.
+- Removed unnecessary whitespace when sending messages with a small amount of text (.e.g, "Hi there.").
+
+#### [Checkbox](https://lightningdesignsystem.com/components/checkbox)
+
+##### Added
+- Added variant for a checkbox inside of a standard [form element component](/components/checkbox/?variant=form-element)
+
+##### Fixed
+
+- Fixed [issue #556](https://github.com/salesforce-ux/design-system/issues/556) by increasing the font size on checkbox labels to match radio button labels
+
+#### [Checkbox Button](https://lightningdesignsystem.com/components/checkbox-button)
+
+##### Added
+
+- Added an example of a checked-and-disabled checkbox button.
+
+##### Fixed
+
+- Increased the contrast between the plus symbol and background color for the disabled checkbox button.
+
+#### [Combobox](https://lightningdesignsystem.com/components/combobox)
+
+##### Added
+- Added `slds-listbox__option-icon` to be used as a container that maintains the dimensions of an icon when it is removed from the HTML
+
+##### Fixed
+- Increased z-index of entity icon when a selection is made to ensure icon is always on top of input field
+- Fixed alignment of dropdown icon in object switcher
+- Click events are no longer prevented on the grouped combobox in Firefox
+
+#### [Data Tables](https://lightningdesignsystem.com/components/data-tables)
+
+##### Added
+
+- Added a hidden header variation of the data table
+  - This involves adding the `slds-table_header-hidden` class to the `<table>` and using the `slds-assistive-text` class on the `<thead>` to ensure the table remains accessible
+- Multi select data tables now require `aria-multiselectable="true"` applied to the `table` element for both Advanced and Inline Edit variants.
+- Multi select data tables now require `aria-selected` to be set to `false` on every row that is not selected
+
+##### Changed
+
+- Data tables underwent some minor markup changes to help align all the different variants to use common markup patterns. No visual styling or functionality has changed, but you will notice more examples.
+
+##### Fixed
+
+- Improved the color contrast of links inside of selected rows
+
+#### [Drop Zone](https://lightningdesignsystem.com/components/drop-zone)
+
+##### Added
+
+- Added new Drop Zone component to help construct a drag and drop screen building experience
+
+#### [Dueling Picklist](https://lightningdesignsystem.com/components/dueling-picklist)
+
+##### Changed
+
+- Wrapped `slds-dueling-list` element with `slds-form-element__control`.
+- Removed `slds-text-title_caps` from label.
+
+#### [Expandable Section](https://lightningdesignsystem.com/components/expandable-section)
+
+##### Changed
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+
+#### [Expression](https://lightningdesignsystem.com/components/expression)
+
+##### Added
+
+- Added new Expression component to help users declaratively construct logical expressions
+
+#### [Feeds](https://lightningdesignsystem.com/components/feeds)
+
+##### Changed
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+
+#### [File Selector](https://lightningdesignsystem.com/components/file-selector)
+
+##### Changed
+
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+- Reduced height to minimize whitespace
+
+#### [Files](https://lightningdesignsystem.com/components/files)
+
+##### Added
+
+- New class `sld-file_loading` for loading state.
+  - In effort to prevent the hover styles from applying to the loading state, `slds-file_loading` is now added to `slds-file`.
+- Class `slds-has-title` for when Files have a title applied.
+  - `slds-has-title` is now added to `slds-file` to ensure the Preview icon (displayed in hover state) is properly centered.
+  - This class should not be added when `slds-file_overlay` is used.
+- `z-index` to titles and actions for non-loading states.
+  - This is an effort to keep the new hover overlay styles from not covering the title and actions to keep them clickable.
+
+##### Changed
+
+- New design treatment for hover state.
+  - `box-shadow` and `transition` have been replaced with an overlay and absolutely-centered Preview icon.
+  - This hover state does not appear on devices that do not support `hover` (e.g., mobile). Note that this does effect devices that supports both hover (e.g., touch) and no-hover (e.g., mouse) input devices, such as the Microsoft Surface.
+- New option for loading state.
+  - Added a loading spinner option for Files with and without a title.
+
+##### Fixed
+
+- Improved the color contrast of the text placed on top of a file overlay
+
+#### [Form Element](https://lightningdesignsystem.com/components/form-element)
+
+##### Added
+- Left aligned label support for components with help text icon and required asterisk
+- Left aligned label support for `fieldset` and `legend` form elements
+- Added `slds-form-element__readonly` to apply appropiate styling when a form element is in view mode
+
+##### Changed
+- Reduced overall height of all view mode form elements
+- Changed HTML so a compound form's `slds-form-element__group` is wrapped inside of `slds-form-element__control`
+- Changed HTML that moved the required asterisk inside of `legend` element
+- Changed HTML that moved the help text icon to be adjacent to the `legend` element
+- Changed HTML so `slds-form-element__legend` is now required on all `legend` elements
+- Changed HTML so `slds-form-element__control` is now required to wrap all form controls
+
+#### [Global Header](https://lightningdesignsystem.com/components/global-header)
+
+##### Changed
+
+- Changed Salesforce logo image path.
+
+#### [Global Navigation](https://lightningdesignsystem.com/components/global-navigation)
+
+##### Changed
+
+- Overflow menu on navigation item no longer opens on hover.
+- Added the `slds-indicator-container` class to be used whenever tabs and menu items have unread or unsaved indicators.
+  - The `slds-indicator_unsaved` abbreviation and/or the `slds-indicator_unsaved` span should always be contained *within* a `<span>` with class `slds-indicator-container`.
+  - This class preserves spacing between the indicators and the tab/menu text when no icon is present by adding a margin-right.
+  - If the indicator container is empty, no margin-right is added.
+
+##### Fixed
+
+- HTML validation error on tabbed navigation indicators, swapped a `div` for a `span`
+
+#### [Icons](https://lightningdesignsystem.com/components/icons)
+
+##### Added
+
+- Icons can now be filled with the success text color by adding `slds-icon-text-success`.
+
+##### Fixed
+
+- Fixed [issue #228](https://github.com/salesforce-ux/design-system/issues/228), which was causing x-small and xx-small circular icons to appear as ovals. Contribution made by [@geebru](https://github.com/geebru).
+
+#### [Illustration](https://lightningdesignsystem.com/components/illustration)
+
+##### Added
+
+- Added example for large illustrations
+
+#### [List Builder](https://lightningdesignsystem.com/components/list-builder)
+
+##### Added
+
+- Added examples for list builders with disabled items and items selected by default.
+- Added an example of a list builder with a headless table
+
+##### Changed
+
+- List Builder now requires `aria-multiselectable="true"` applied to the `table` element.
+- Each row now requires `aria-selected` to be set to `false` on every row that is not selected
+
+#### [Map](https://lightningdesignsystem.com/components/map)
+
+##### Added
+
+- Added a standalone map example that lives outside of a modal
+
+##### Fixed
+
+- Replaced inline styles from `iframe` and placed them within the component styling
+- Improved the color contrast of links inside of selected items in the locations list
+
+#### [Page Headers](https://lightningdesignsystem.com/components/page-headers)
+
+##### Added
+
+- Added `slds-page-header_record-home` class to be used within a record home page. This class utilizes variable font tokens to respond to a user's densification setting.
+- Made Related Lists Page Header visible, so you can see it. Yay! 🎉
+- Added the following classes:
+    - For layout:
+      - `slds-page-header__row`, `slds-page-header__row_gutters`, `slds-page-header__col-title`, `slds-page-header__col-actions`, `slds-page-header__col-meta`, `slds-page-header__col-controls`, `slds-page-header__col-details`
+    - For the page name:
+      - `slds-page-header__name`, `slds-page-header__name-title`, `slds-page-header__name-switcher`, `slds-page-header__name-meta`, `slds-page-header__meta-text`
+    - For header controls
+      - `slds-page-header__controls`, `slds-page-header__control`,
+    - For record home
+      - `slds-page-header_record-home`
+    - For record home details
+      - `slds-page-header__detail-row`, `slds-page-header__detail-block`
+    - For vertical record home list
+      - `slds-page-header__detail-list`, `slds-page-header__detail-item`
+
+##### Changed
+
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+- Changed dimension of `slds-page-header__icon` to be 36x36
+- Pretty much all of it in a sizable refactor of the markup
+  - Made it easier to componentize the page headers and share code between the different variants
+  - Made page headers less reliant on utility classes
+  - Please see above for added class names
+
+##### Deprecated
+
+- Deprecated page header specific spacing tokens
+  - PAGE_HEADER_SPACING_MARGIN
+  - PAGE_HEADER_SPACING_PADDING
+  - PAGE_HEADER_SPACING_ROW
+
+#### [Panels](https://lightningdesignsystem.com/components/panels)
+
+##### Changed
+
+- Updated panel headers to have left aligned text by default. To center the header title, use the class `slds-panel__header_align-center`.
+- Updated `slds-panel_body` padding to be 0.75rem around instead of 1rem.
+- Updated our documentation to reflect that panels always have a close button, but may also have a back button if panel was invoked by drilling in.
+
+##### Fixed
+
+- Forced panel buttons to keep their square shape by preventing `flex-shrink`.
+
+#### [Path](https://lightningdesignsystem.com/components/path)
+
+##### Added
+
+- Added `slds-path_has-coaching` hook on the `slds-path` container element, to add support for spacing differences between coaching and non-coaching.
+
+##### Changed
+
+- Modified the appearance of the Path container.
+- Revised the colors used on the active and curent Path steps, introducing support for borders.
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting.
+- Changed the direction of the coaching arrow to point to the right / down, instead of up / down. To take advantage of this change, remove the `slds-flip_vertical` class on the open state for `slds-path__trigger`, and instead use our new class `slds-path__trigger_open` to set the direction of the open state on the button arrow.
+
+##### Fixed
+
+- Fixed text centering issue with first and last Path steps
+- Fixed rotation transition on Path coaching toggle button
+
+#### [Popovers](https://lightningdesignsystem.com/components/popovers)
+
+##### Added
+- Added `slds-nubbin_*-corner` modifier classes to place nubbin elements at the corner of a Popover.
+
+##### Fixed
+
+- Fixed a bug where long strings of text would overflow the popover boundary. Popover body, header, and footer now include `word-wrap: break-word`.
+- Increased the contrast for focused links and buttons in our inversed popovers, Walkthrough and Feature.
+- Fixed a bug that allowed `slds-popover_small` to grow larger than its expected width.
+- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden
+
+#### [Progress Bar](https://lightningdesignsystem.com/components/progress-bar)
+
+##### Added
+
+- Updated the documentation for vertical progress bars. Now you can actually see it, yay!
+
+#### [Progress Ring](https://lightningdesignsystem.com/components/progress-ring)
+
+##### Added
+
+- Added an example of a progress ring that fills rather than drains, meaning the colored portion of the ring increases clockwise.
+
+#### [Publishers](https://lightningdesignsystem.com/components/publishers)
+
+##### Fixed
+
+- Made the publisher label visible to screen readers in the collapsed state of a publisher, by removing the use of `display: none`
+
+#### [Radio Group](https://lightningdesignsystem.com/components/radio-group)
+
+##### Added
+
+- Added an example of a checked-and-disabled radio button.
+
+#### [Rich Text Editor](https://lightningdesignsystem.com/components/rich-text-editor)
+
+##### Fixed
+
+- Fixed incorrect `border-radius` in text area.
+- Fixed a bug where child input elements were unintentionally affected when the Rich Text Editor was in an error state.
+
+##### Changed
+
+- [New markup](https://www.lightningdesignsystem.com/components/rich-text-editor/?state=error&variant=base) that moves the error message outside of Rich Text Editor, and adds a `slds-form-element__control` element to enable left align labels.
+
+#### [Scoped Tabs](https://lightningdesignsystem.com/components/scoped-tabs)
+
+##### Added
+- Added `slds-tabs_medium` and `slds-tabs_large` to modify the `font-size` and spacing of the tab items
+- Added `slds-tabs_scoped__overflow-button` to tabs with overflow so the Button Menu component can be slotted inside the tab item
+
+##### Changed
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+- Changed the color of a tab item when a tab is active
+- Changed HTML on [Tabs with Overflow](/components/scoped-tabs/?example=overflowing-items&variant=base) example so a Button Menu component is the trigger for the overflow menu
+
+#### [Setup Assistant](https://lightningdesignsystem.com/components/setup-assistant)
+
+##### Changed
+
+- Updated the setup assistant steps to use the new [filling progress ring](https://lightningdesignsystem.com/components/progress-ring/?example=progress-ring-partially-filled&variant=base).
+
+#### [Slider](https://lightningdesignsystem.com/components/slider)
+
+##### Fixed
+
+- Fixed a bug that prevented Slider background from appearing in IE11.
+
+#### [Split View](https://lightningdesignsystem.com/components/split-view)
+
+##### Changed
+
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+
+#### [Tabs](https://lightningdesignsystem.com/components/tabs)
+
+##### Added
+- Added `slds-tabs_medium` and `slds-tabs_large` to modify the `font-size` and spacing of the tab items
+- Added animation when activating a tab item
+- Added `slds-tabs_default__overflow-button` to tabs with overflow so the Button Menu component can be slotted inside the tab item
+- Extended the documentation for mobile tabs to include panels
+  - When drilling into a mobile tab, a panel slides in displaying that tab's content
+  - Check out the [Tabs On Mobile](https://lightningdesignsystem.com/components/tabs/#On-Mobile) section for more details
+- Animations and transitions for `:hover` and `slds-is-active` states.
+
+##### Changed
+- Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
+- Removed title caps from tab items
+- Removed letter spacing from tab items
+- Increased height of bar when a tab is active
+- Changed HTML on [Tabs with Overflow](/components/scoped-tabs/?example=overflowing-items&variant=base) example so a Button Menu component is the trigger for the overflow menu
+
+##### Fixed
+- Updated `slds-tabs-mobile` to have a white background by default, instead of a transparent background.
+- Improved the color contrast of the text of a sub tab when it is in focus
+- HTML validation error on sub tab indicators, swapped a `div` for a `span`
+
+#### [Textarea](https://lightningdesignsystem.com/components/textarea)
+
+##### Fixed
+
+- Removed `box-shadow` added by Firefox for all required fields.
+  - By default, Firefox was adding a `box-shadow` to all fields marked `required`. This has now been normalized to match the styling in all other browsers.
+
+#### [Toast](https://lightningdesignsystem.com/components/toast)
+
+##### Changed
+
+- Swapped the `role` value of toasts from `alert` to `status`
+
+##### Fixed
+
+- Increased contrast between the icons and the yellow background in warning toasts.
+- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden
+
+#### [Tree Grid](https://lightningdesignsystem.com/components/tree-grid)
+
+##### Added
+
+- Checkboxes in the left most column were added to multi select tree grids
+- Multi select tree grids now require `aria-multiselectable="true"` applied to the `table` element.
+- Multi select tree grids now require `aria-selected` to be set to `false` on every row that is not selected
+- Single select tree grids were added as examples
+- Headless tree grids were added
+- Borderless tree grids were added
+
+##### Changed
+
+- Tree grid now aligns better with the lightning component, which is an extension of [Advanced Data Table](https://www.lightningdesignsystem.com/components/data-tables/?modifiers=.slds-table_bordered&variant=advanced).
+
+#### [Trees](https://lightningdesignsystem.com/components/trees)
+
+##### Changed
+- Removed `aria-selected` from the examples since this is only necessary if the tree supports multi-select
+- Removed `role="application"` from the top level tree
+
+##### Fixed
+- Replaced the `slds-size_1-of-1` surrounding the tree label with `slds-has-flexi-truncate` to prevent the label from overflowing the tree's boundary
+
+#### [Trial Bar](https://lightningdesignsystem.com/components/trial-bar)
+
+##### Fixed
+
+- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden
+
+#### [Visual Picker](https://lightningdesignsystem.com/components/visual-picker)
+
+##### Changed
+
+- Updated disabled visual picker UI to be more apparent and better match established conventions for disabled UI
+
+#### [Welcome Mat](https://lightningdesignsystem.com/components/welcome-mat)
+
+##### Changed
+
+- Updated the semantics of steps in a welcome mat to be list items within an unordered list. Check out the component documentation for the [updated DOM structure](https://lightningdesignsystem.com/components/welcome-mat/)
+
+### Utilities
+
+#### [Description List](https://lightningdesignsystem.com/components/description-list)
+
+##### Changed
+- Changed behavior of media query when `slds-dl_horizontal` and `slds-dl_inline` are located inside of `slds-region_narrow`
+
+#### [Grid](https://lightningdesignsystem.com/components/grid)
+
+##### Added
+
+- Added `slds-gutters_direct` for adding gutters to direct child columns of a grid.
+  - See the [Direct Columns Only](https://lightningdesignsystem.com/utilities/grid/#Direct-Columns-Only) section for more info.
+
+#### Fixed
+
+- Updated `slds-col_bump-bottom` to accurately set margin-bottom, instead of margin-right, to auto.
+
+#### [Text](https://lightningdesignsystem.com/components/text)
+
+##### Added
+- Added text color utility class, `slds-text-color_destructive`, for destructive actions
+
+## **Release [2.6.2] - June 29, 2018**
+
+## Fixes
+
+**[Cards](https://www.lightningdesignsystem.com/components/cards)**
+- Updated broken links within the Cards docs ([7b48637](https://github.com/salesforce-ux/design-system/commit/7b48637))
+
+**Gulp Script Update**
+- Fix path to gulp.js to resolve build error in Windows ([2a78a47](https://github.com/salesforce-ux/design-system/commit/2a78a47))
+
+**[Input](https://www.lightningdesignsystem.com/components/input)**
+- Updated the Error with Icon example to use the new Error icon ([35d90ba](https://github.com/salesforce-ux/design-system/commit/35d90ba))
+
+**[Margin](https://www.lightningdesignsystem.com/utilities/margin)**
+- Added examples of using "none" on margin utilities ([a3e9eb9](https://github.com/salesforce-ux/design-system/commit/a3e9eb9))
+- Updated broken links within the Margin docs ([26a5eed](https://github.com/salesforce-ux/design-system/commit/26a5eed))
+
 ## **Release [2.6.1] - May 18, 2018**
 
 ## Fixes

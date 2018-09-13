@@ -171,12 +171,12 @@ const PathWithCoachingOpen = () => {
         <PathTrack coachingId={coachingId} hasCoaching coachingOpen>
           <PathStep label="Contacted" stepState={['complete']} index={26} />
           <PathStep label="Open" stepState={['complete']} index={27} />
+          <PathStep label="Unqualified" stepState={['current']} index={28} />
           <PathStep
-            label="Unqualified"
-            stepState={['active', 'current']}
-            index={28}
+            label="Nurturing"
+            stepState={['incomplete', 'active']}
+            index={29}
           />
-          <PathStep label="Nurturing" stepState={['incomplete']} index={29} />
           <PathStep label="Closed" stepState={['incomplete']} index={30} />
         </PathTrack>
 
@@ -422,7 +422,7 @@ export const states = [
   },
   {
     id: 'with-coaching',
-    label: 'With Coaching Available',
+    label: 'With coaching available',
     element: <PathWithCoaching />
   },
   {

@@ -1,5 +1,924 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Global Navigation indicators render an indicator container 1`] = `
+<span
+  className="slds-indicator-container"
+/>
+`;
+
+exports[`Global Navigation indicators render an indicator container with children 1`] = `
+<span
+  className="slds-indicator-container"
+>
+  <span
+    aria-label="New Activity"
+    className="slds-indicator_unread"
+    role="alert"
+    title="New Activity"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      New Tab activity within More Tabs menu
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Global Navigation indicators render an unread indicator 1`] = `
+<span
+  aria-label={null}
+  className="slds-indicator_unread"
+  role={null}
+  title="New Activity"
+>
+  <span
+    className="slds-assistive-text"
+  />
+</span>
+`;
+
+exports[`Global Navigation indicators render an unread indicator for main tabs 1`] = `
+<span
+  aria-label="New Activity"
+  className="slds-indicator_unread"
+  role="alert"
+  title="New Activity"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    New activity in Tab: Tab Item 1
+  </span>
+</span>
+`;
+
+exports[`Global Navigation indicators render an unread indicator for menu tabs 1`] = `
+<span
+  aria-label={null}
+  className="slds-indicator_unread"
+  role={null}
+  title="New Activity"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    New Activity
+  </span>
+</span>
+`;
+
+exports[`Global Navigation indicators render an unread indicator for more tabs 1`] = `
+<span
+  aria-label="New Activity"
+  className="slds-indicator_unread"
+  role="alert"
+  title="New Activity"
+>
+  <span
+    className="slds-assistive-text"
+  >
+    New Tab activity within More Tabs menu
+  </span>
+</span>
+`;
+
+exports[`Global Navigation indicators render an unsaved indicator 1`] = `
+<abbr
+  aria-label="Tab Item 1"
+  className="slds-indicator_unsaved"
+  title="Tab Item 1"
+>
+  *
+</abbr>
+`;
+
+exports[`Navigation Tab Bar renders a context tab 1`] = `
+<li
+  className="slds-context-bar__item slds-context-bar__item_tab"
+  role="presentation"
+>
+  <a
+    aria-controls="context-tab-panel-2"
+    aria-selected="false"
+    className="slds-context-bar__label-action"
+    href="javascript:void(0);"
+    id="context-tab-id-2"
+    role="tab"
+    tabIndex="-1"
+    title="Tab Item 1"
+  >
+    <span
+      className="slds-indicator-container"
+    />
+    <div
+      className="slds-icon_container"
+      title="Case"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Case
+      </span>
+    </div>
+    <span
+      className="slds-truncate"
+      title="Tab Item 1"
+    >
+      Tab Item 1
+    </span>
+  </a>
+  <div
+    className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Actions for Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Actions for Tab Item 1
+      </span>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Refresh Tab"
+            >
+              Refresh Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              r
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Open in a new window"
+            >
+              Open in a new window
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              ⇧ + n
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Pin Tab"
+            >
+              Pin Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              p
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Close Tab"
+            >
+              Close Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              w
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Tab Item 1
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
+exports[`Navigation Tab Bar renders an overflow tab 1`] = `
+<li
+  className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-has-notification slds-is-unsaved"
+>
+  <button
+    aria-haspopup="true"
+    className="slds-button slds-context-bar__label-action"
+    title="More Tab Items"
+  >
+    <span
+      className="slds-indicator-container"
+    >
+      <abbr
+        aria-label="Tab Not Saved"
+        className="slds-indicator_unsaved"
+        title="Tab Not Saved"
+      >
+        *
+      </abbr>
+      <span
+        aria-label="New Activity"
+        className="slds-indicator_unread"
+        role="alert"
+        title="New Activity"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          New Tab activity within More Tabs menu
+        </span>
+      </span>
+    </span>
+    <span
+      className="slds-truncate"
+      title="More Tabs"
+    >
+      More 
+      <span
+        className="slds-assistive-text"
+      >
+        Tabs
+      </span>
+    </span>
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+      />
+    </svg>
+  </button>
+  <div
+    className="slds-dropdown slds-dropdown_right"
+    style={undefined}
+  >
+    <ul
+      aria-label={undefined}
+      className="slds-dropdown__list"
+      role="menu"
+    >
+      <li
+        className="slds-dropdown__item slds-has-notification slds-is-unsaved"
+        role="presentation"
+      >
+        <a
+          aria-checked={undefined}
+          href="javascript:void(0);"
+          role="menuitem"
+          tabIndex="-1"
+        >
+          <span
+            className="slds-truncate"
+            title="Chat - Customer"
+          >
+            <span
+              className="slds-indicator-container"
+            >
+              <abbr
+                aria-label="Tab(s) within menu not saved"
+                className="slds-indicator_unsaved"
+                title="Tab(s) within menu not saved"
+              >
+                *
+              </abbr>
+              <span
+                aria-label={null}
+                className="slds-indicator_unread"
+                role={null}
+                title="New Activity"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  New Activity
+                </span>
+              </span>
+            </span>
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+              />
+            </svg>
+            <span>
+              Chat - Customer
+            </span>
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-dropdown__item"
+        role="presentation"
+      >
+        <a
+          aria-checked={undefined}
+          href="javascript:void(0);"
+          role="menuitem"
+          tabIndex="-1"
+        >
+          <span
+            className="slds-truncate"
+            title="Overflow Tab Item"
+          >
+            <span
+              className="slds-indicator-container"
+            />
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+              />
+            </svg>
+            <span>
+              Overflow Tab Item
+            </span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
+`;
+
+exports[`Navigation Tab Bar renders an unread context tab 1`] = `
+<li
+  className="slds-context-bar__item slds-context-bar__item_tab slds-has-notification"
+  role="presentation"
+>
+  <a
+    aria-controls="context-tab-panel-2"
+    aria-selected="false"
+    className="slds-context-bar__label-action"
+    href="javascript:void(0);"
+    id="context-tab-id-2"
+    role="tab"
+    tabIndex="-1"
+    title="Tab Item 1"
+  >
+    <span
+      className="slds-indicator-container"
+    >
+      <span
+        aria-label="New Activity"
+        className="slds-indicator_unread"
+        role="alert"
+        title="New Activity"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          New activity in Tab: Tab Item 1
+        </span>
+      </span>
+    </span>
+    <div
+      className="slds-icon_container"
+      title="Case"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Case
+      </span>
+    </div>
+    <span
+      className="slds-truncate"
+      title="Tab Item 1"
+    >
+      Tab Item 1
+    </span>
+  </a>
+  <div
+    className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Actions for Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Actions for Tab Item 1
+      </span>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Refresh Tab"
+            >
+              Refresh Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              r
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Open in a new window"
+            >
+              Open in a new window
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              ⇧ + n
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Pin Tab"
+            >
+              Pin Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              p
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Close Tab"
+            >
+              Close Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              w
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Tab Item 1
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
+exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
+<li
+  className="slds-context-bar__item slds-context-bar__item_tab slds-is-unsaved"
+  role="presentation"
+>
+  <a
+    aria-controls="context-tab-panel-2"
+    aria-selected="false"
+    className="slds-context-bar__label-action"
+    href="javascript:void(0);"
+    id="context-tab-id-2"
+    role="tab"
+    tabIndex="-1"
+    title="Tab Item 1"
+  >
+    <span
+      className="slds-indicator-container"
+    >
+      <abbr
+        aria-label="Tab Not Saved"
+        className="slds-indicator_unsaved"
+        title="Tab Not Saved"
+      >
+        *
+      </abbr>
+    </span>
+    <div
+      className="slds-icon_container"
+      title="Case"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Case
+      </span>
+    </div>
+    <span
+      className="slds-truncate"
+      title="Tab Item 1"
+    >
+      Tab Item 1
+    </span>
+  </a>
+  <div
+    className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Actions for Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Actions for Tab Item 1
+      </span>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Refresh Tab"
+            >
+              Refresh Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              r
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Open in a new window"
+            >
+              Open in a new window
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              ⇧ + n
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Pin Tab"
+            >
+              Pin Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              p
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Close Tab"
+            >
+              Close Tab
+            </span>
+            <span
+              className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                :
+              </span>
+              w
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Tab Item 1"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Tab Item 1
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
 exports[`renders a global-navigation with sub-tabs 1`] = `
 <div
   className="demo-only"
@@ -1088,6 +2007,1097 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
         Item Two Content
       </div>
     </div>
+  </div>
+  <div
+    aria-labelledby="context-tab-id-2"
+    className="slds-hide"
+    id="context-tab-panel-2"
+    role="tabpanel"
+  >
+    Tab One Content
+  </div>
+  <div
+    aria-labelledby="context-tab-id-3"
+    className="slds-hide"
+    id="context-tab-panel-3"
+    role="tabpanel"
+  >
+    Tab Two Content
+  </div>
+</div>
+`;
+
+exports[`renders an overflowed global-navigation with dropdown, unread, and unsaved 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "8rem",
+    }
+  }
+>
+  <div
+    className="slds-context-bar slds-context-bar_tabs"
+  >
+    <div
+      className="slds-context-bar__primary"
+    >
+      <div
+        className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover"
+      >
+        <div
+          className="slds-context-bar__icon-action"
+        >
+          <button
+            className="slds-button slds-icon-waffle_container slds-context-bar__button"
+            title="Description of the icon when needed"
+          >
+            <span
+              className="slds-icon-waffle"
+            >
+              <span
+                className="slds-r1"
+              />
+              <span
+                className="slds-r2"
+              />
+              <span
+                className="slds-r3"
+              />
+              <span
+                className="slds-r4"
+              />
+              <span
+                className="slds-r5"
+              />
+              <span
+                className="slds-r6"
+              />
+              <span
+                className="slds-r7"
+              />
+              <span
+                className="slds-r8"
+              />
+              <span
+                className="slds-r9"
+              />
+            </span>
+            <span
+              className="slds-assistive-text"
+            >
+              Open App Launcher
+            </span>
+          </button>
+        </div>
+        <span
+          className="slds-context-bar__label-action slds-context-bar__app-name"
+        >
+          <span
+            className="slds-truncate"
+            title="App Name"
+          >
+            App Name
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <a
+          className="slds-context-bar__label-action"
+          href="javascript:void(0);"
+        >
+          <span
+            className="slds-truncate"
+            title="Object"
+          >
+            Object
+          </span>
+        </a>
+        <div
+          className="slds-context-bar__icon-action"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            id={undefined}
+            title="Open object switcher menu"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Open object switcher menu
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-dropdown slds-dropdown_right"
+          style={undefined}
+        >
+          <ul
+            aria-label={undefined}
+            className="slds-dropdown__list"
+            role="menu"
+          >
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title={
+                    Array [
+                      <SvgIcon
+                        className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small"
+                        sprite="standard"
+                        symbol="account"
+                      />,
+                      "Accounts",
+                    ]
+                  }
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                    />
+                  </svg>
+                  Accounts
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title={
+                    Array [
+                      <SvgIcon
+                        className="slds-icon slds-icon_small slds-icon-standard-case slds-m-right_small"
+                        sprite="standard"
+                        symbol="case"
+                      />,
+                      "Cases",
+                    ]
+                  }
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-case slds-m-right_small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                    />
+                  </svg>
+                  Cases
+                </span>
+              </a>
+            </li>
+            <li
+              className="slds-dropdown__item"
+              role="presentation"
+            >
+              <a
+                aria-checked={undefined}
+                href="javascript:void(0);"
+                role="menuitem"
+                tabIndex="-1"
+              >
+                <span
+                  className="slds-truncate"
+                  title={
+                    Array [
+                      <SvgIcon
+                        className="slds-icon slds-icon_small slds-icon-standard-work-order slds-m-right_small"
+                        sprite="standard"
+                        symbol="work_order"
+                      />,
+                      "Insights",
+                    ]
+                  }
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_small slds-icon-standard-work-order slds-m-right_small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#work_order"
+                    />
+                  </svg>
+                  Insights
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        className="slds-context-bar__item slds-dropdown-trigger slds-dropdown-trigger_click"
+      >
+        <div
+          className="slds-context-bar__icon-action"
+        >
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-small"
+            id={undefined}
+            title="Open a New Tab"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Open a New Tab
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-context-bar__secondary"
+    >
+      <div
+        className="slds-context-bar__vertical-divider"
+      />
+      <ul
+        className="slds-grid"
+        role="tablist"
+      >
+        <li
+          className="slds-context-bar__item slds-context-bar__item_tab slds-is-active"
+          role="presentation"
+        >
+          <a
+            aria-controls="context-tab-panel-1"
+            aria-selected="true"
+            className="slds-context-bar__label-action"
+            href="javascript:void(0);"
+            id="context-tab-id-1"
+            role="tab"
+            tabIndex="0"
+            title="Home"
+          >
+            <span
+              className="slds-indicator-container"
+            />
+            <div
+              className="slds-icon_container"
+              title="Home"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#home"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Home
+              </span>
+            </div>
+            <span
+              className="slds-truncate"
+              title="Home"
+            >
+              Home
+            </span>
+          </a>
+          <div
+            className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="0"
+              title="Actions for Home"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Actions for Home
+              </span>
+            </button>
+            <div
+              className="slds-dropdown slds-dropdown_right"
+              style={undefined}
+            >
+              <ul
+                aria-label={undefined}
+                className="slds-dropdown__list"
+                role="menu"
+              >
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Refresh Tab"
+                    >
+                      Refresh Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      r
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Open in a new window"
+                    >
+                      Open in a new window
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      ⇧ + n
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Pin Tab"
+                    >
+                      Pin Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      p
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Close Tab"
+                    >
+                      Close Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      w
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+          >
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="0"
+              title="Close Home"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Close Home
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-context-bar__item slds-context-bar__item_tab"
+          role="presentation"
+        >
+          <a
+            aria-controls="context-tab-panel-2"
+            aria-selected="false"
+            className="slds-context-bar__label-action"
+            href="javascript:void(0);"
+            id="context-tab-id-2"
+            role="tab"
+            tabIndex="-1"
+            title="Tab Item 1"
+          >
+            <span
+              className="slds-indicator-container"
+            />
+            <div
+              className="slds-icon_container"
+              title="Case"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Case
+              </span>
+            </div>
+            <span
+              className="slds-truncate"
+              title="Tab Item 1"
+            >
+              Tab Item 1
+            </span>
+          </a>
+          <div
+            className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="-1"
+              title="Actions for Tab Item 1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Actions for Tab Item 1
+              </span>
+            </button>
+            <div
+              className="slds-dropdown slds-dropdown_right"
+              style={undefined}
+            >
+              <ul
+                aria-label={undefined}
+                className="slds-dropdown__list"
+                role="menu"
+              >
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Refresh Tab"
+                    >
+                      Refresh Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      r
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Open in a new window"
+                    >
+                      Open in a new window
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      ⇧ + n
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Pin Tab"
+                    >
+                      Pin Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      p
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Close Tab"
+                    >
+                      Close Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      w
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+          >
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="-1"
+              title="Close Tab Item 1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Close Tab Item 1
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-context-bar__item slds-context-bar__item_tab"
+          role="presentation"
+        >
+          <a
+            aria-controls="context-tab-panel-3"
+            aria-selected="false"
+            className="slds-context-bar__label-action"
+            href="javascript:void(0);"
+            id="context-tab-id-3"
+            role="tab"
+            tabIndex="-1"
+            title="Tab Item 2"
+          >
+            <span
+              className="slds-indicator-container"
+            />
+            <div
+              className="slds-icon_container"
+              title="Case"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Case
+              </span>
+            </div>
+            <span
+              className="slds-truncate"
+              title="Tab Item 2"
+            >
+              Tab Item 2
+            </span>
+          </a>
+          <div
+            className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none"
+          >
+            <button
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="-1"
+              title="Actions for Tab Item 2"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Actions for Tab Item 2
+              </span>
+            </button>
+            <div
+              className="slds-dropdown slds-dropdown_right"
+              style={undefined}
+            >
+              <ul
+                aria-label={undefined}
+                className="slds-dropdown__list"
+                role="menu"
+              >
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Refresh Tab"
+                    >
+                      Refresh Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      r
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Open in a new window"
+                    >
+                      Open in a new window
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      ⇧ + n
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Pin Tab"
+                    >
+                      Pin Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      p
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="slds-dropdown__item"
+                  role="presentation"
+                >
+                  <a
+                    aria-checked={undefined}
+                    href="javascript:void(0);"
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Close Tab"
+                    >
+                      Close Tab
+                    </span>
+                    <span
+                      className="slds-text-body_small slds-text-color_weak slds-p-left_large"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        :
+                      </span>
+                      w
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
+          >
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              id={undefined}
+              tabIndex="-1"
+              title="Close Tab Item 2"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Close Tab Item 2
+              </span>
+            </button>
+          </div>
+        </li>
+        <li
+          className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-has-notification slds-is-unsaved"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-context-bar__label-action"
+            title="More Tab Items"
+          >
+            <span
+              className="slds-indicator-container"
+            >
+              <abbr
+                aria-label="Tab Not Saved"
+                className="slds-indicator_unsaved"
+                title="Tab Not Saved"
+              >
+                *
+              </abbr>
+              <span
+                aria-label="New Activity"
+                className="slds-indicator_unread"
+                role="alert"
+                title="New Activity"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  New Tab activity within More Tabs menu
+                </span>
+              </span>
+            </span>
+            <span
+              className="slds-truncate"
+              title="More Tabs"
+            >
+              More 
+              <span
+                className="slds-assistive-text"
+              >
+                Tabs
+              </span>
+            </span>
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_right"
+            style={undefined}
+          >
+            <ul
+              aria-label={undefined}
+              className="slds-dropdown__list"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item slds-has-notification slds-is-unsaved"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Chat - Customer"
+                  >
+                    <span
+                      className="slds-indicator-container"
+                    >
+                      <abbr
+                        aria-label="Tab(s) within menu not saved"
+                        className="slds-indicator_unsaved"
+                        title="Tab(s) within menu not saved"
+                      >
+                        *
+                      </abbr>
+                      <span
+                        aria-label={null}
+                        className="slds-indicator_unread"
+                        role={null}
+                        title="New Activity"
+                      >
+                        <span
+                          className="slds-assistive-text"
+                        >
+                          New Activity
+                        </span>
+                      </span>
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                      />
+                    </svg>
+                    <span>
+                      Chat - Customer
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Overflow Tab Item"
+                  >
+                    <span
+                      className="slds-indicator-container"
+                    />
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                      />
+                    </svg>
+                    <span>
+                      Overflow Tab Item
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    aria-labelledby="context-tab-id-1"
+    className="slds-show"
+    id="context-tab-panel-1"
+    role="tabpanel"
+  >
+    Tab Home Content
   </div>
   <div
     aria-labelledby="context-tab-id-2"

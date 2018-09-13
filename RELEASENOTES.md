@@ -1,6 +1,22 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release 2.7.1 - September 9, 2018**
+
+### Components
+
+#### Global Navigation
+
+##### Fixed
+
+- Remove `font-weight: 300` from app title to increase legibility
+
+#### Page Header
+
+##### Changed
+
+- Reduce font-size of `slds-page-header__title` to 18px
+
 ## **Release 2.7.0 - September 7, 2018**
 
 ### General

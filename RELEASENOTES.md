@@ -5,13 +5,13 @@
 
 ### Components
 
-#### Global Navigation
+#### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation/)
 
 ##### Fixed
 
 - Remove `font-weight: 300` from app title to increase legibility
 
-#### Page Header
+#### [Page Header](https://www.lightningdesignsystem.com/components/page-headers/)
 
 ##### Changed
 

@@ -3,5 +3,4 @@
 
 imports:
 - ./deprecated/base.yml
-- ./line-height.yml
 - ./sizing.yml

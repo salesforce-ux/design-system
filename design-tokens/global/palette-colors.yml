@@ -6,7 +6,7 @@ global:
   category: color
   cssProperties:
   - background-color
-  - border-color
+  - 'border*color'
   - box-shadow
   - fill
   - color

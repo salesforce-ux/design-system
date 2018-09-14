@@ -5,7 +5,7 @@ global:
   type: size
   category: radius
   cssProperties:
-  - 'border-radius'
+  - 'border*radius'
 imports:
 - ../../../aliases/border-radius.yml
 props:

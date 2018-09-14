@@ -13,7 +13,7 @@ props:
     comment: Unitless line-heights for reusability
     access: global
   LINE_HEIGHT_TEXT:
-    value: '1.375'
+    value: '1.5'
     comment: Unitless line-heights for reusability
     access: global
   LINE_HEIGHT_RESET:
@@ -25,5 +25,5 @@ props:
     comment: Line heights for tabs
     access: global
   VAR_LINE_HEIGHT_TEXT:
-    value: '1.375'
+    value: '1.5'
     comment: Variable unitless line-heights for reusability

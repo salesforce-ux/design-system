@@ -3,6 +3,11 @@
 # Page Headers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.1
+
+### Changed
+
+- Reduce font-size of `slds-page-header__title` to 18px
 
 ## 2.7.0
 

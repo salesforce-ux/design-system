@@ -7,6 +7,8 @@ global:
   cssProperties:
   - '*width'
   - '*height'
+  - flex
+  - transform
 imports:
 - ../aliases/sizing.yml
 props:

@@ -263,3 +263,10 @@ props:
     - margin-bottom
     - padding-top
     - padding-bottom
+
+  BORDER_WIDTH_THIN:
+    value: 1px
+    access: global
+  BORDER_WIDTH_THICK:
+    value: 2px
+    access: global

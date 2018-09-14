@@ -16,6 +16,10 @@ props:
   COLOR_BORDER:
     value: '{!PALETTE_COOL_GRAY_5}'
     comment: Default border color for UI elements.
+    cssProperties:
+    - 'border*'
+    - box-shadow
+    - 'background*'
     access: global
   COLOR_BORDER_BRAND:
     value: '{!AZURE}'

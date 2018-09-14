@@ -471,8 +471,7 @@
  */
 .slds-context-bar__app-name {
   padding: 0 $spacing-large 0 0;
-  font-size: rem(18px); // @todo tokenize
-  font-weight: $font-weight-light;
+  font-size: $font-size-6;
   line-height: $line-height-heading;
 }
 

@@ -3,6 +3,11 @@
 # Global Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.1
+
+### Fixed
+
+- Remove `font-weight: 300` from app title to increase legibility
 
 ## 2.7.0
 

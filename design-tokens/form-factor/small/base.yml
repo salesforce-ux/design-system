@@ -6,4 +6,5 @@ imports:
 - ./box-shadow.yml
 - ./font-size.yml
 - ./font-weight.yml
+- ./line-height.yml
 - ./sizing.yml

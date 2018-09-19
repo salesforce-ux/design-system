@@ -60,6 +60,10 @@
   flex-grow: 1;
   min-width: 0%;
   height: 100%;
+
+  .slds-media__body {
+    flex-basis: auto;
+  }
 }
 
 /**

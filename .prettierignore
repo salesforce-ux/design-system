@@ -9,4 +9,3 @@ package-lock.json
 /assets
 /design-tokens
 scripts/snap.json
-**/__snapshots__/

@@ -5,9 +5,17 @@ global:
   type: size
   category: sizing
   cssProperties:
+  - font
+  - font-size
   - '*width'
   - '*height'
   - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
   - transform
 imports:
 - ../aliases/sizing.yml
@@ -83,7 +91,6 @@ props:
   SQUARE_ICON_MEDIUM_CONTENT_ALT:
     value: '{!SIZE_SQUARE_SMALL}'
     comment: Alternate medium tap target size
-    access: global
   SQUARE_ICON_SMALL_BOUNDARY:
     value: '{!SIZE_SQUARE_X_LARGE}'
     comment: 'Search Results: Outer colored tile'

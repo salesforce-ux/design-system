@@ -2,4 +2,5 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
+- ./line-height.yml
 - ./sizing.yml

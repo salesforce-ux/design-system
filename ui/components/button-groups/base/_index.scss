@@ -67,6 +67,36 @@
   border-radius: $button-border-radius;
 }
 
+// The following is a temporary fix for style encapsulation
+/**
+ * @summary Explicitly style the first button in a button group
+ * @selector .slds-button_first
+ * @restrict .slds-button
+ */
+.slds-button.slds-button_first.slds-button_first {
+  border-right: 0;
+  border-radius: $button-border-radius 0 0 $button-border-radius;
+}
+
+/**
+ * @summary Explicitly style buttons in the middle (i.e., not first or last) in a button group
+ * @selector .slds-button_middle
+ * @restrict .slds-button
+ */
+.slds-button.slds-button_middle.slds-button_middle {
+  border-radius: 0;
+}
+
+/**
+ * @summary Explicitly style the last button in a button group
+ * @selector .slds-button_last
+ * @restrict .slds-button
+ */
+.slds-button.slds-button_last.slds-button_last {
+  border-left: 0;
+  border-radius: 0 $button-border-radius $button-border-radius 0;
+}
+
 .slds-button-group + .slds-button-group,
 .slds-button-group + .slds-button-group-list,
 .slds-button-group + .slds-button,

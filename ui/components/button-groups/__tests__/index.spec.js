@@ -115,3 +115,38 @@ it('renders a single brand button with brand button icon dropdown', () =>
       </div>
     </ButtonGroup>
   ));
+
+describe('Style Encapsulation Markup & Classes', () => {
+  it('renders a encapsulated button with the `slds-button_first` class', () =>
+    matchesMarkup(
+      <ButtonGroup>
+        <div>
+          <Button isNeutral isFirst>
+            First
+          </Button>
+        </div>
+      </ButtonGroup>
+    ));
+
+  it('renders a encapsulated button with the `slds-button_middle` class', () =>
+    matchesMarkup(
+      <ButtonGroup>
+        <div>
+          <Button isNeutral isMiddle>
+            Middle
+          </Button>
+        </div>
+      </ButtonGroup>
+    ));
+
+  it('renders a encapsulated button with the `slds-button_last` class', () =>
+    matchesMarkup(
+      <ButtonGroup>
+        <div>
+          <Button isNeutral isFirst>
+            Last
+          </Button>
+        </div>
+      </ButtonGroup>
+    ));
+});

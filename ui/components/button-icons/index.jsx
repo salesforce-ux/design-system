@@ -24,6 +24,9 @@ class ButtonIcon extends Component {
       feedback,
       selected,
       symbol,
+      isFirst,
+      isMiddle,
+      isLast,
       ...rest
     } = this.props;
 
@@ -91,6 +94,11 @@ class ButtonIcon extends Component {
           },
           {
             'slds-button_icon-error': feedback === 'error'
+          },
+          {
+            'slds-button_first': isFirst,
+            'slds-button_middle': isMiddle,
+            'slds-button_last': isLast
           },
           variant,
           className

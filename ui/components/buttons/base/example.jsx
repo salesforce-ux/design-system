@@ -16,6 +16,9 @@ export let Button = props => {
     isTextDestructive,
     isSuccess,
     isFullWidth,
+    isFirst,
+    isMiddle,
+    isLast,
     ...rest
   } = props;
 
@@ -31,7 +34,10 @@ export let Button = props => {
           'slds-button_destructive': isDestructive,
           'slds-button_text-destructive': isTextDestructive,
           'slds-button_success': isSuccess,
-          'slds-button_full-width': isFullWidth
+          'slds-button_full-width': isFullWidth,
+          'slds-button_first': isFirst,
+          'slds-button_middle': isMiddle,
+          'slds-button_last': isLast
         },
         className
       )}

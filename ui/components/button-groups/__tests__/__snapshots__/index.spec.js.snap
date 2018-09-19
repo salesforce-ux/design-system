@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Style Encapsulation Markup & Classes renders a encapsulated button with the \`slds-button_first\` class 1`] = `
+<div
+  className="slds-button-group"
+  role="group"
+>
+  <div>
+    <button
+      className="slds-button slds-button_neutral slds-button_first"
+      disabled={undefined}
+    >
+      First
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Style Encapsulation Markup & Classes renders a encapsulated button with the \`slds-button_last\` class 1`] = `
+<div
+  className="slds-button-group"
+  role="group"
+>
+  <div>
+    <button
+      className="slds-button slds-button_neutral slds-button_first"
+      disabled={undefined}
+    >
+      Last
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Style Encapsulation Markup & Classes renders a encapsulated button with the \`slds-button_middle\` class 1`] = `
+<div
+  className="slds-button-group"
+  role="group"
+>
+  <div>
+    <button
+      className="slds-button slds-button_neutral slds-button_middle"
+      disabled={undefined}
+    >
+      Middle
+    </button>
+  </div>
+</div>
+`;
+
 exports[`renders a button group with overflow open 1`] = `
 <div
   className="demo-only"

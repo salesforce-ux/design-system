@@ -637,7 +637,9 @@ describe('walkScss', () => {
       expect(selectors.length).toBe(5);
 
       const mixedInDeclarations =
-        tests['.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link'];
+        tests[
+          '.slds-path__nav .slds-is-won .slds-path__link, .slds-path__nav .slds-is-won:hover .slds-path__link'
+        ];
       expect(mixedInDeclarations).toBeDefined();
       expect(mixedInDeclarations).toHaveLength(4);
 

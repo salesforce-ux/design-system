@@ -303,7 +303,8 @@ TokenMaps.sanitizeRawToken = token => ({
   value: token.value,
   auraToken: TokenMaps.convertYamlTokenToAuraToken(token.name),
   sassToken: TokenMaps.convertYamlTokenToSassToken(token.name),
-  yamlToken: token.name
+  yamlToken: token.name,
+  deprecated: token.deprecated
 });
 
 TokenMaps.sanitizeScss = scss =>

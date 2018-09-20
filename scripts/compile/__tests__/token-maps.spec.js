@@ -358,7 +358,8 @@ describe('sanitizeRawToken', () => {
     type: 'fakeType',
     cssPropertiesIsNotDefined: null,
     value: 'fakeValue',
-    extraValueNotConverted: 12345
+    extraValueNotConverted: 12345,
+    deprecated: true
   };
 
   it('should transform the token object', () => {
@@ -375,6 +376,7 @@ describe('sanitizeRawToken', () => {
     expect(result.yamlToken).toBe('THIS_IS_A_YAML_STYLE_TOKEN');
     expect(result.cssPropertiesIsNotDefined).toBeUndefined();
     expect(result.extraValueNotConverted).toBeUndefined();
+    expect(result.deprecated).toBeTruthy();
   });
 });
 

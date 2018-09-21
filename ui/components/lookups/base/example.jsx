@@ -30,7 +30,7 @@ export default (
         title={false}
       />
     }
-    listbox={
+    dropdown={
       <Listbox
         id="listbox-id-1"
         snapshot={Snapshot.EntityOptions}
@@ -38,6 +38,7 @@ export default (
         count={3}
       />
     }
+    dropdownType="listbox"
     hasInteractions
   />
 );
@@ -62,7 +63,7 @@ export let states = [
             title={false}
           />
         }
-        listbox={
+        dropdown={
           <Listbox
             id="listbox-id-2"
             snapshot={Snapshot.EntityOptions}
@@ -70,6 +71,7 @@ export let states = [
             count={3}
           />
         }
+        dropdownType="listbox"
         isOpen
         hasFocus
       />
@@ -93,7 +95,7 @@ export let states = [
             title={false}
           />
         }
-        listbox={
+        dropdown={
           <Listbox
             id="listbox-id-3"
             snapshot={Snapshot.EntityOptionsFocused}
@@ -101,6 +103,7 @@ export let states = [
             count={3}
           />
         }
+        dropdownType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -126,7 +129,7 @@ export let states = [
           />
         }
         value="salesforce"
-        listbox={
+        dropdown={
           <Listbox
             id="listbox-id-4"
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -135,6 +138,7 @@ export let states = [
             count={4}
           />
         }
+        dropdownType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -166,7 +170,7 @@ export let states = [
             assistiveText="Remove selected option"
           />
         }
-        listbox={
+        dropdown={
           <Listbox
             id="listbox-id-5"
             snapshot={Snapshot.EntityOptions}
@@ -174,6 +178,7 @@ export let states = [
             count={2}
           />
         }
+        dropdownType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
         readonly

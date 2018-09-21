@@ -60,7 +60,7 @@ export const ObjectFieldTypes = {
                   assistiveText="Clear the text input"
                 />
               }
-              listbox={
+              dropdown={
                 <Listbox
                   id="listbox-id-01"
                   snapshot={{}}
@@ -68,6 +68,7 @@ export const ObjectFieldTypes = {
                   count={2}
                 />
               }
+              dropdownType="listbox"
               value="Salesforce Lightning Design System"
             />
           )
@@ -111,7 +112,7 @@ export const ObjectFieldTypes = {
                   title={false}
                 />
               }
-              listbox={
+              dropdown={
                 <Listbox
                   id="listbox-id-02"
                   snapshot={{}}
@@ -120,6 +121,7 @@ export const ObjectFieldTypes = {
                   visualSelection
                 />
               }
+              dropdownType="listbox"
             />
           )
         }
@@ -451,7 +453,7 @@ export const ObjectFieldTypesSingleColumn = {
                   assistiveText="Clear the text input"
                 />
               }
-              listbox={
+              dropdown={
                 <Listbox
                   id="listbox-id-01"
                   snapshot={{}}
@@ -459,6 +461,7 @@ export const ObjectFieldTypesSingleColumn = {
                   count={2}
                 />
               }
+              dropdownType="listbox"
               value="Salesforce Lightning Design System"
             />
           )
@@ -506,7 +509,7 @@ export const ObjectFieldTypesSingleColumn = {
                   title={false}
                 />
               }
-              listbox={
+              dropdown={
                 <Listbox
                   id="listbox-id-02"
                   snapshot={{}}
@@ -515,6 +518,7 @@ export const ObjectFieldTypesSingleColumn = {
                   visualSelection
                 />
               }
+              dropdownType="listbox"
             />
           )
         }

@@ -18,7 +18,12 @@ export let Popover = props => {
 
   return (
     <section
-      className={classNames('slds-popover', props.className)}
+      className={classNames(
+        'slds-popover',
+        props.className,
+        props.isFullWidth && 'slds-popover_full-width',
+        props.isHidden && 'slds-popover_hide'
+      )}
       role="dialog"
       aria-labelledby={
         !props.header && props.headerTitle ? headingUniqueId : props.headingId
@@ -58,7 +63,11 @@ export let Popover = props => {
       </div>
       {props.footer ? (
         <footer
-          className={classNames('slds-popover__footer', props.footerClassName)}
+          className={classNames(
+            'slds-popover__footer',
+            props.footerClassName,
+            props.hasFormFooter && 'slds-popover__footer_form'
+          )}
         >
           {props.footer}
         </footer>

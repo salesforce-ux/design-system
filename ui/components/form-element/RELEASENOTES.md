@@ -13,6 +13,7 @@
 
 ### Changed
 - Reduced overall height of all view mode form elements
+- Left aligned label support for `fieldset` and `legend` form elements
 - Changed HTML so a compound form's `slds-form-element__group` is wrapped inside of `slds-form-element__control`
 - Changed HTML that moved the required asterisk inside of `legend` element
 - Changed HTML that moved the help text icon to be adjacent to the `legend` element

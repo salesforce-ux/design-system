@@ -76,7 +76,7 @@ const ComboboxFormElement = props => (
     )}
     aria-controls={props['aria-controls']}
     aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup={props.dropdownType || 'listbox'}
+    aria-haspopup={props.dropdownType}
     id={props.id}
     role="combobox"
   >
@@ -243,7 +243,7 @@ Combobox.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
   dropdown: PropTypes.element.isRequired,
-  dropdownType: PropTypes.string.isRequired,
+  dropdownType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
   hasFocus: PropTypes.bool,
   hasSelection: PropTypes.bool,
@@ -370,7 +370,7 @@ ComboboxGroup.propTypes = {
   autoFocus: PropTypes.bool,
   comboboxPosition: PropTypes.oneOf(['start', 'end']).isRequired,
   dropdown: PropTypes.element.isRequired,
-  dropdownType: PropTypes.string.isRequired,
+  dropdownType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
   hasFocus: PropTypes.bool,
   hasSelection: PropTypes.bool,

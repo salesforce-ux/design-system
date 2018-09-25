@@ -1293,21 +1293,63 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
 </Example>
 
-## With a Dialog
+## Combobox with a Dialog
+
+If the data displayed within the dropdown of a combobox cannot be represented as a listbox (as shown above), tree, grid, or tree-grid, then the dropdown should be represented as a dialog, with `role="dialog"`.
+
+The key difference for `dialog` dropdowns lies in how they handle focus. In `listbox` dropdowns, users can enter values in the input while arrowing through the listbox options using `aria-activedescendant`. In `dialog` dropdowns, the dropdown becomes a focus trap, so users must have a way to clear or save any selections or changes made.
+
+<Blockquote type="a11y" header="Implementation Details">
+<ul>
+<li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
+<li>2. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
+<li>3. The dropdown is a dialog with `role="dialog"`</li>
+<li>4. The dialog should have an `aria-label` with a value for the dialog's title</li>
+<li>5. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
+</ul>
+</Blockquote>
 
 <CodeView>
   {Dialog.default}
 </CodeView>
 
-### Open
+### Open Dialog
+
+To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
+
+<Blockquote type="a11y" header="Accessibility Note">
+When the dialog is open, be sure to change `aria-expanded` to **true** on the combobox `<div>` with `class="slds-combobox"`.
+</Blockquote>
 
 <CodeView>
   {getDisplayElementById(Dialog.states, "open")}
 </CodeView>
 
+### Keyboard Interaction
+
+  - Focusing on the input does not open the dropdown
+  - Typing in the input does nothing
+  - Pressing the `down arrow` from the input opens the dialog and moves the user's focus into the dialog.
+  - The dialog dropdown is a focus trap
+      - Pressing the `Tab` key cycles the user through all UI elements in the dialog
+  - Pressing `Escape` closes the dialog and clears any changes
+  - Pressing the Cancel button closes the dialog and clears any changes
+  - Pressing the Save button updates the selected value in the input and closes the dialog
+
+### Focus Management
+
+Clicking on the input opens and focuses the cursor inside the dialog on the first focusable element.
+Focusing on the input and pressing the `down arrow` opens the dialog and moves focus to the first focusable element.
+
 ### Examples
 
-#### Multi-Select
+#### Multiple Selection
+
+Below is an example of a `dialog` combobox where users can make multiple selections using checkboxes. The main difference between the **dialog variant** of a multi-select combobox and the [multi-select Entity Autocomplete](/components/combobox/#Multiple-selection-2) involves the behavior after a selection is made. A `dialog` will not close after each selection, since it is a focus trap, while the `listbox` dropdown of the Entity Autocomplete example closes after each selection made, forcing users to re-open the listbox if they need to make another selection.
+
+<Blockquote type="note" header="Dueling Picklist vs. Multi Select Combobox">
+  We recommend using the <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are many items to choose from, such as “Select Country”. Use a multiselect combobox with a dialog when you have less horizontal real estate available and fewer items to select from.
+</Blockquote>
 
 ##### Open
 
@@ -1317,8 +1359,18 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
 ##### Open and Selecting
 
+If nothing has been selected yet, the input's value remains "Select an Option" or something similar.
+
 <CodeView>
   {getDisplayElementById(Dialog.examples, "selecting-options")}
+</CodeView>
+
+##### Closed with One Option Selected
+
+When only one selection has been made, the input's value takes on the value of the selection - German in this case.
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "closed-one-option-selected")}
 </CodeView>
 
 ##### Open with One Option Selected
@@ -1327,19 +1379,15 @@ The containing element should receive the class `slds-combobox_object-switcher` 
   {getDisplayElementById(Dialog.examples, "open-one-option-selected")}
 </CodeView>
 
-##### Closed with One Option Selected
+##### Closed with Two or More Options Selected
+
+When more then one option has been selected, the input's value reads "{# of items selected} options selected".
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "closed-one-option-selected")}
+  {getDisplayElementById(Dialog.examples, "closed-two-or-more-options-selected")}
 </CodeView>
 
 ##### Open with Two or More Options Selected
 <CodeView>
   {getDisplayElementById(Dialog.examples, "open-two-or-more-options-selected")}
-</CodeView>
-
-##### Closed with Two or More Options Selected
-
-<CodeView>
-  {getDisplayElementById(Dialog.examples, "closed-two-or-more-options-selected")}
 </CodeView>

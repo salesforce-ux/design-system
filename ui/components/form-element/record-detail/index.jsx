@@ -61,7 +61,7 @@ const RecordDetailField = props => {
                 ))
               : value}
           </a>
-        ) : typeof value === 'object' ? (
+        ) : typeof value === 'object' && type !== 'richtext' ? (
           value.map(option => (
             <React.Fragment key={option}>
               {option}

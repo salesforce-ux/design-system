@@ -7,8 +7,8 @@ const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
 
-import scssParserAura from 'scss-parser-aura';
-import scssParserAuraPlugins from 'scss-parser-aura/plugins';
+const scssParserAura = require('@salesforce-ux/scss-parser-aura');
+const scssParserAuraPlugins = require('@salesforce-ux/scss-parser-aura/plugins');
 
 const paths = require('../helpers/paths');
 const precss = require('precss');

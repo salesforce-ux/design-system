@@ -15,6 +15,8 @@ import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
+import { Popover } from '../../popovers/base/example';
+import { Button } from '../../buttons/base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -22,6 +24,7 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const comboboxId = 'combobox-id-01';
 const listboxId = 'listbox-id-01';
 const primaryComboboxId = 'primary-combobox-id-01';
+const popoverId = 'popover-id-01';
 
 /**
  * Deprecated Combobox
@@ -1052,6 +1055,86 @@ describe('render combobox', () => {
             count={8}
             isExpanded
           />
+        }
+      />
+    ));
+});
+
+/**
+ * Dialog Variant of Combobox
+ */
+describe('Combobox with a Dialog dropdown', () => {
+  it('renders a closed, readonly dialog combobox', () =>
+    matchesMarkup(
+      <Combobox
+        id={comboboxId}
+        aria-controls={popoverId}
+        label="Languages"
+        readonly
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        dropdownType="dialog"
+        dropdown={
+          <Popover
+            popoverId={popoverId}
+            title="Language Options"
+            isFullWidth
+            isHidden
+            hasFormFooter
+            footer={
+              <React.Fragment>
+                <Button />
+                <Button />
+              </React.Fragment>
+            }
+          >
+            <div>Any content can go here in this Dialog</div>
+          </Popover>
+        }
+      />
+    ));
+  it('renders an open, readonly dialog combobox', () =>
+    matchesMarkup(
+      <Combobox
+        id={comboboxId}
+        aria-controls={popoverId}
+        label="Languages"
+        readonly
+        isOpen
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        dropdownType="dialog"
+        dropdown={
+          <Popover
+            popoverId={popoverId}
+            title="Language Options"
+            isFullWidth
+            hasFormFooter
+            footer={
+              <React.Fragment>
+                <Button />
+                <Button />
+              </React.Fragment>
+            }
+          >
+            <div>Any content can go here in this Dialog</div>
+          </Popover>
         }
       />
     ));

@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
  *
@@ -78,189 +80,118 @@
  * @selector .slds-tree
  * @restrict .slds-tree_container ul, table
  */
-.slds-tree {
-  /**
-   * @summary Initializes a slds item
-   * @selector .slds-tree__item
-   * @restrict .slds-tree div, .slds-tree th
-   */
-  &__item {
-    display: flex;
-    line-height: $line-height-button;
-    padding-left: $spacing-medium;
 
-    /**
-     * @name item-disabled
-     * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
-     * @selector .slds-is-disabled
-     * @restrict .slds-tree__item button
-     * @modifier
-     * @group interactions
-     */
-    .slds-is-disabled {
-      visibility: hidden;
-    }
+/**
+* @summary Initializes a slds item
+* @selector .slds-tree__item
+* @restrict .slds-tree div, .slds-tree th
+*/
+.slds-tree__item {
+  display: flex;
+  padding: ($spacing-xx-small + $spacing-xxx-small) 0 ($spacing-xx-small + $spacing-xxx-small) $spacing-medium;
+}
 
-    @include deprecate('5.0.0', 'Use of anchor tags is deprecated in slds-tree') {
+/**
+* @name item-hovered
+* @summary Hover state for a tree item
+* @selector .slds-is-hovered
+* @restrict .slds-tree__item
+* @notes Class should be applied via Javascript
+* @modifier
+* @group interactions
+*/
+.slds-tree__item.slds-is-hovered,
+.slds-tree__item:hover {
+  background: $color-background-row-hover;
+  cursor: pointer;
+}
 
-      a {
-        color: $color-text-default;
+/**
+ * @name item-disabled
+ * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
+ * @selector .slds-is-disabled
+ * @restrict .slds-tree__item button
+ * @modifier
+ * @group interactions
+ */
+.slds-tree__item .slds-is-disabled {
+  visibility: hidden;
+}
 
-        &:hover {
-          text-decoration: none;
-        }
+/**
+ * @summary Styles the focus and selected state for any tree item that has role="treeitem"
+ * @selector [role="treeitem"]
+ * @restrict .slds-tree li
+ */
+.slds-tree [role="treeitem"]:focus {
+  outline: 0;
 
-        &:focus {
-          outline: 0;
-          text-decoration: underline;
-        }
-      }
-    };
-
-    /**
-     * @name item-hovered
-     * @summary Hover state for a tree item
-     * @selector .slds-is-hovered
-     * @restrict .slds-tree__item
-     * @notes Class should be applied via Javascript
-     * @modifier
-     * @group interactions
-     */
-    &.slds-is-hovered,
-    &:hover {
-      background: $color-background-row-hover;
-      cursor: pointer;
-    }
+  > .slds-tree__item {
+    background: $color-background-row-hover;
+    cursor: pointer;
+    text-decoration: underline;
   }
+}
 
-  /**
-   * @summary The label text of a tree item or tree branch
-   * @selector .slds-tree__item-label
-   * @restrict .slds-tree__item span
-   */
-  .slds-tree__item-label {
-    display: block;
+.slds-tree [role="treeitem"][aria-selected="true"] > .slds-tree__item {
+  background: $brand-primary-transparent-10;
+  box-shadow: $brand-primary 4px 0 0 inset;
+}
+
+.slds-tree [role="treeitem"] > [role="group"] {
+  display: none;
+}
+
+.slds-tree [role="treeitem"][aria-expanded="true"] > [role="group"] {
+  display: block;
+}
+
+// scss-lint:disable SelectorDepth
+.slds-tree [aria-expanded="false"] > .slds-tree__item .slds-button__icon {
+  transition: $duration-promptly transform ease-in-out;
+  transform: rotate(0deg);
+}
+
+.slds-tree [aria-expanded="true"] > .slds-tree__item .slds-button__icon {
+  transition: $duration-promptly transform ease-in-out;
+  transform: rotate(90deg);
+}
+// scss-lint:enable SelectorDepth
+
+// This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+$max-nesting-depth: 20 !default;
+
+@for $current-level from 1 through $max-nesting-depth {
+
+  .slds-tree [aria-level="#{$current-level}"] > .slds-tree__item {
+    padding-left: ($spacing-medium * $current-level);
   }
+}
 
-  /**
-   * @summary The meta text or secondary text of a tree item
-   * @selector .slds-tree__item-meta
-   * @restrict .slds-tree__item span
-   */
-  .slds-tree__item-meta {
-    display: block;
-    margin-top: ($spacing-small * -1); // Offset $line-height-text from result-text
-    color: $color-text-weak;
-  }
+/**
+* @summary The label text of a tree item or tree branch
+* @selector .slds-tree__item-label
+* @restrict .slds-tree__item span
+*/
+.slds-tree .slds-tree__item-label {
+  display: block;
+}
 
-  /**
-   * @summary Styles the focus and selected state for any tree item that has role="treeitem"
-   * @selector [role="treeitem"]
-   * @restrict .slds-tree li
-   */
-  [role="treeitem"] {
+/**
+* @summary The meta text or secondary text of a tree item
+* @selector .slds-tree__item-meta
+* @restrict .slds-tree__item span
+*/
+.slds-tree .slds-tree__item-meta {
+  display: block;
+  color: $color-text-weak;
+}
 
-    &:focus {
-      outline: 0;
+.slds-tree .slds-button {
+  align-self: flex-start;
+  margin-top: $spacing-xxx-small;
+}
 
-      > .slds-tree__item {
-        background: $color-background-row-hover;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    }
-
-    &[aria-selected="true"] > .slds-tree__item {
-      background: $brand-primary-transparent-10;
-      box-shadow: $brand-primary 4px 0 0 inset;
-    }
-
-    > [role="group"] {
-      display: none;
-    }
-
-    &[aria-expanded="true"] > [role="group"] {
-      display: block;
-    }
-  }
-
-  /**
-   * @name item-selected
-   * @summary Selected state for a tree item
-   * @selector .slds-is-selected
-   * @restrict .slds-tree__item
-   * @notes Class should be applied via Javascript
-   * @modifier
-   * @deprecated
-   * @group interactions
-   */
-  @include deprecate('5.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
-
-    .slds-is-selected {
-      background: $color-background-row-selected;
-      box-shadow: $color-background-button-brand 4px 0 0 inset;
-    }
-  };
-
-  /**
-   * @name item-focused
-   * @summary Focus state for a tree item
-   * @selector .slds-is-focused
-   * @restrict .slds-tree__item
-   * @modifier
-   * @deprecated
-   * @group interactions
-   */
-  @include deprecate('5.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
-
-    .slds-is-focused {
-      text-decoration: underline;
-    }
-  };
-
-  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
-  $max-nesting-depth: 20 !default;
-
-  @for $current-level from 1 through $max-nesting-depth {
-
-    [aria-level="#{$current-level}"] > .slds-tree__item {
-      padding-left: ($spacing-medium * $current-level);
-    }
-  }
-
-  @include deprecate('5.0.0', 'Use of aria-controls in slds-tree is deprecated') {
-    // scss-lint:disable SelectorDepth
-    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
-    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
-      transition: $duration-promptly transform ease-in-out;
-      transform: rotate(0deg);
-    }
-
-    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
-    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
-      transition: $duration-promptly transform ease-in-out;
-      transform: rotate(90deg);
-    }
-  }
-
-  // scss-lint:disable SelectorDepth
-  [aria-expanded="false"] > .slds-tree__item .slds-button__icon {
-    transition: $duration-promptly transform ease-in-out;
-    transform: rotate(0deg);
-  }
-
-  [aria-expanded="true"] > .slds-tree__item .slds-button__icon {
-    transition: $duration-promptly transform ease-in-out;
-    transform: rotate(90deg);
-  }
-  // scss-lint:enable SelectorDepth
-
-  .slds-button {
-    align-self: flex-start;
-    margin-top: $spacing-x-small;
-  }
-
-  .slds-pill {
-    margin-left: $spacing-small;
-  }
+.slds-tree .slds-pill {
+  margin-left: $spacing-small;
 }

@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Fixed
+- Adjusted the alignment of the tree item text and chevron to be less reliant on button line height
+
 ## 2.7.0
 
 ### Changed

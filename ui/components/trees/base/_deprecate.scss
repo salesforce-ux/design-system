@@ -1,0 +1,69 @@
+.slds-tree {
+
+  &__item {
+    @include deprecate('4.0.0', 'Use of anchor tags is deprecated in slds-tree') {
+
+      a {
+        color: $color-text-default;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: 0;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /**
+   * @name item-selected
+   * @summary Selected state for a tree item
+   * @selector .slds-is-selected
+   * @restrict .slds-tree__item
+   * @notes Class should be applied via Javascript
+   * @modifier
+   * @deprecated
+   * @group interactions
+   */
+  @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
+
+    .slds-is-selected {
+      background: $color-background-row-selected;
+      box-shadow: $color-background-button-brand 4px 0 0 inset;
+    }
+  }
+
+  /**
+   * @name item-focused
+   * @summary Focus state for a tree item
+   * @selector .slds-is-focused
+   * @restrict .slds-tree__item
+   * @modifier
+   * @deprecated
+   * @group interactions
+   */
+  @include deprecate('4.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
+
+    .slds-is-focused {
+      text-decoration: underline;
+    }
+  }
+
+  @include deprecate('4.0.0', 'Use of aria-controls in slds-tree is deprecated') {
+    // scss-lint:disable SelectorDepth
+    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
+    [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(0deg);
+    }
+
+    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
+    [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
+      transition: $duration-promptly transform ease-in-out;
+      transform: rotate(90deg);
+    }
+  }
+}

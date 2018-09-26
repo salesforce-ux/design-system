@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -74,6 +75,28 @@ export let Popover = props => {
       ) : null}
     </section>
   );
+};
+
+Popover.propTypes = {
+  bodyClassName: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  closeButton: PropTypes.bool,
+  footer: PropTypes.node,
+  footerClassName: PropTypes.string,
+  hasFormFooter: PropTypes.bool,
+  header: PropTypes.node,
+  headerAssistiveText: PropTypes.string,
+  headerClassName: PropTypes.string,
+  headerIconName: PropTypes.string,
+  headerTitle: PropTypes.string,
+  headingId: PropTypes.string,
+  inverse: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isHidden: PropTypes.bool,
+  popoverId: PropTypes.string,
+  style: PropTypes.object,
+  title: PropTypes.string
 };
 
 let Header = props => (

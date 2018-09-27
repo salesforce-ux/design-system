@@ -43,3 +43,25 @@ exports[`Typing icon renders a typing icon 1`] = `
   </span>
 </span>
 `;
+
+exports[`Typing icon renders an animated typing icon 1`] = `
+<span
+  className="slds-icon-typing slds-is-animated"
+  title="User typing"
+>
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-icon-typing__dot"
+  />
+  <span
+    className="slds-assistive-text"
+  >
+    User typing
+  </span>
+</span>
+`;

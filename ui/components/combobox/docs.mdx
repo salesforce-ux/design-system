@@ -1300,13 +1300,14 @@ If the data displayed within the dropdown of a combobox cannot be represented as
 The key difference for `dialog` dropdowns lies in how they handle focus. In `listbox` dropdowns, users can enter values in the input while arrowing through the listbox options using `aria-activedescendant`. In `dialog` dropdowns, the dropdown becomes a focus trap, so users must have a way to clear or save any selections or changes made.
 
 <Blockquote type="a11y" header="Implementation Details">
-<ul>
+<ol>
 <li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
-<li>2. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
-<li>3. The dropdown is a dialog with `role="dialog"`</li>
-<li>4. The dialog should have an `aria-label` with a value for the dialog's title</li>
-<li>5. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
-</ul>
+<li>2. The input for this dialog variant will also never have `aria-activedescendant`
+<li>3. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
+<li>4. The dropdown is a dialog with `role="dialog"`</li>
+<li>5. The dialog should have an `aria-label` with a value for the dialog's title</li>
+<li>6. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
+</ol>
 </Blockquote>
 
 <CodeView>
@@ -1338,8 +1339,9 @@ When the dialog is open, be sure to change `aria-expanded` to **true** on the co
 
 ### Focus Management
 
-Clicking on the input opens and focuses the cursor inside the dialog on the first focusable element.
-Focusing on the input and pressing the `down arrow` opens the dialog and moves focus to the first focusable element.
+- Clicking on the input opens and focuses the cursor inside the dialog on the first focusable element.
+- Placing focus on the input *does not* open the dialog
+- Pressing the `down arrow` whilst focused on the input opens the dialog and moves focus to the first focusable element
 
 ### Examples
 
@@ -1359,7 +1361,7 @@ Below is an example of a `dialog` combobox where users can make multiple selecti
 
 ##### Open and Selecting
 
-If nothing has been selected yet, the input's value remains "Select an Option" or something similar.
+If nothing has been selected yet, the input's placeholder remains "Select an Option" or something similar.
 
 <CodeView>
   {getDisplayElementById(Dialog.examples, "selecting-options")}

@@ -9,6 +9,7 @@
 ### Added
 
 - Added `slds-listbox__option-header` to increase font size to 14px, and apply bold font weight, on listbox option headers.
+- Added a new variant for combobox that uses a dialog for the dropdown for situations like multi-selection
 
 ### Removed
 

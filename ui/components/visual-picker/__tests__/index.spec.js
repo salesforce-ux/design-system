@@ -13,7 +13,7 @@ import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
-xit('renders a vertical visual picker', () =>
+it('renders a vertical visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select an option</Legend>
@@ -55,7 +55,7 @@ xit('renders a vertical visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a disabled vertical visual picker', () =>
+it('renders a disabled vertical visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select an option</Legend>
@@ -101,7 +101,7 @@ xit('renders a disabled vertical visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a coverable content visual picker', () =>
+it('renders a coverable content visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select an app</Legend>
@@ -126,7 +126,7 @@ xit('renders a coverable content visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a disabled coverable content visual picker', () =>
+it('renders a disabled coverable content visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select an app</Legend>
@@ -152,7 +152,7 @@ xit('renders a disabled coverable content visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a coverable content visual picker with checkbox group', () =>
+it('renders a coverable content visual picker with checkbox group', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Add the following object(s)</Legend>
@@ -185,7 +185,7 @@ xit('renders a coverable content visual picker with checkbox group', () =>
     </Fieldset>
   ));
 
-xit('renders a non-coverable content visual picker', () =>
+it('renders a non-coverable content visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select a plan</Legend>
@@ -212,7 +212,7 @@ xit('renders a non-coverable content visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a disabled non-coverable content visual picker', () =>
+it('renders a disabled non-coverable content visual picker', () =>
   matchesMarkup(
     <Fieldset>
       <Legend>Select a plan</Legend>
@@ -239,7 +239,7 @@ xit('renders a disabled non-coverable content visual picker', () =>
     </Fieldset>
   ));
 
-xit('renders a link visual picker', () =>
+it('renders a link visual picker', () =>
   matchesMarkup(
     <div className="demo-only" style={{ width: '24rem' }}>
       <VisualPickerMediaObject symbol="user">

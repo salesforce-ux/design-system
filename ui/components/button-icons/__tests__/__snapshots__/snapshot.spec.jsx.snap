@@ -26,6 +26,7 @@ exports[`bare button icon renders a disabled button icon 1`] = `
 <button
   aria-haspopup={undefined}
   className="slds-button slds-button_icon"
+  disabled={true}
   id={undefined}
 >
   <svg
@@ -43,8 +44,6 @@ exports[`bare button icon renders a disabled button icon 1`] = `
   </span>
 </button>
 `;
-
-exports[`bare button icon renders hint on hover 1`] = `"<div class=\\"slds-hint-parent\\"><button class=\\"slds-button slds-button_icon\\"><svg class=\\"slds-button__icon slds-button__icon_hint\\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#settings\\"></use></svg><span class=\\"slds-assistive-text\\">Provide description of action</span></button></div>"`;
 
 exports[`brand button icon renders a button icon 1`] = `
 <button

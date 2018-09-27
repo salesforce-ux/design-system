@@ -2,7 +2,6 @@
 import React from 'react';
 import ButtonIcon from '../';
 import createHelpers from '../../../../jest.helpers';
-import { mount } from 'enzyme';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -10,22 +9,8 @@ const { matchesMarkup } = createHelpers(__dirname);
 describe('bare button icon', () => {
   it('renders a button icon', () => matchesMarkup(<ButtonIcon />));
 
-  xit('renders a disabled button icon', () => matchesMarkup(<ButtonIcon />));
-
-  xit('renders hint on hover', () => {
-    const wrapper = mount(
-      <div className="slds-hint-parent">
-        <ButtonIcon iconClassName="slds-button__icon_hint" />
-      </div>
-    );
-    return matchesMarkup(
-      wrapper
-        .find('.slds-hint-parent')
-        .at(0)
-        .simulate('mouseEnter')
-        .html()
-    );
-  });
+  it('renders a disabled button icon', () =>
+    matchesMarkup(<ButtonIcon disabled />));
 });
 
 // Container
@@ -34,7 +19,7 @@ describe('button icon with container', () => {
     matchesMarkup(<ButtonIcon size="medium" />));
 
   it('renders a disabled button icon', () =>
-    matchesMarkup(<ButtonIcon size="medium" disabled />));
+    matchesMarkup(<ButtonIcon disabled size="medium" />));
 });
 
 // Bordered Container
@@ -43,7 +28,7 @@ describe('button icon with bordered transparent container', () => {
     matchesMarkup(<ButtonIcon theme="transparent" />));
 
   it('renders a disabled button icon', () =>
-    matchesMarkup(<ButtonIcon theme="transparent" disabled />));
+    matchesMarkup(<ButtonIcon disabled theme="transparent" />));
 });
 
 // Bordered Container Filled
@@ -52,7 +37,7 @@ describe('button icon with bordered filled container', () => {
     matchesMarkup(<ButtonIcon theme="neutral" />));
 
   it('renders a disabled button icon', () =>
-    matchesMarkup(<ButtonIcon theme="neutral" disabled />));
+    matchesMarkup(<ButtonIcon disabled theme="neutral" />));
 });
 
 // Brand
@@ -61,7 +46,7 @@ describe('brand button icon', () => {
     matchesMarkup(<ButtonIcon theme="brand" />));
 
   it('renders a disabled button icon', () =>
-    matchesMarkup(<ButtonIcon theme="brand" disabled />));
+    matchesMarkup(<ButtonIcon disabled theme="brand" />));
 });
 
 // Inverse
@@ -70,7 +55,7 @@ describe('button icon on inversed background', () => {
     matchesMarkup(<ButtonIcon theme="inverse" />));
 
   it('renders a disabled button icon', () =>
-    matchesMarkup(<ButtonIcon theme="inverse" disabled />));
+    matchesMarkup(<ButtonIcon disabled theme="inverse" />));
 });
 
 // Dropdown
@@ -81,9 +66,9 @@ describe('button menu icon for dropdowns', () => {
   it('renders a button menu icon on inversed background', () =>
     matchesMarkup(
       <ButtonIcon
+        className="slds-button_icon-inverse"
         hasDropdown
         theme="transparent"
-        className="slds-button_icon-inverse"
       />
     ));
 });

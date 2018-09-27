@@ -10,9 +10,9 @@ import { CompoundForm } from '../compound/example';
 const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Form Layout', () => {
-  xit('renders a base form layout', () => matchesMarkup(<Form />));
+  it('renders a base form layout', () => matchesMarkup(<Form />));
 
-  xit('renders a base form layout stacked', () =>
+  it('renders a base form layout stacked', () =>
     matchesMarkup(<Form isStacked />));
 
   it('renders a base form layout horizontally', () =>

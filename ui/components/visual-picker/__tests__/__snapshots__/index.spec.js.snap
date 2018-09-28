@@ -1,0 +1,1178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a coverable content visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select an app
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-7"
+        name="options"
+        type="radio"
+        value="visual-picker-7"
+      />
+      <label
+        htmlFor="visual-picker-7"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-utility-connected_apps slds-icon_large slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Connected App
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-8"
+        name="options"
+        type="radio"
+        value="visual-picker-8"
+      />
+      <label
+        htmlFor="visual-picker-8"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#custom_apps"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Custom App
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a coverable content visual picker with checkbox group 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Add the following object(s)
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-11"
+        name="options"
+        type="checkbox"
+        value="visual-picker-11"
+      />
+      <label
+        htmlFor="visual-picker-11"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-standard-account slds-icon_large"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Account
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-12"
+        name="options"
+        type="checkbox"
+        value="visual-picker-12"
+      />
+      <label
+        htmlFor="visual-picker-12"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-standard-lead slds-icon_large"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Lead
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-13"
+        name="options"
+        type="checkbox"
+        value="visual-picker-13"
+      />
+      <label
+        htmlFor="visual-picker-13"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-standard-orders slds-icon_large"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#orders"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Orders
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a disabled coverable content visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select an app
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-9"
+        name="options"
+        type="checkbox"
+        value="visual-picker-9"
+      />
+      <label
+        htmlFor="visual-picker-9"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-utility-connected_apps slds-icon_large slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Connected App
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={true}
+        id="visual-picker-10"
+        name="options"
+        type="checkbox"
+        value="visual-picker-10"
+      />
+      <label
+        htmlFor="visual-picker-10"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+        >
+          <span
+            className="slds-is-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_large slds-icon-action-check"
+              >
+                <use
+                  xlinkHref="/assets/icons/action-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="slds-is-not-selected"
+          >
+            <span
+              className="slds-icon_container"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#custom_apps"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          Custom App
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a disabled non-coverable content visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select a plan
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-17"
+        name="options"
+        type="radio"
+        value="visual-picker-17"
+      />
+      <label
+        htmlFor="visual-picker-17"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $30
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Professional
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Complete service CRM for teams of any size
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-18"
+        name="options"
+        type="radio"
+        value="visual-picker-18"
+      />
+      <label
+        htmlFor="visual-picker-18"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $150
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Enterprise
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Everything you need to take support to the next level
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={true}
+        id="visual-picker-19"
+        name="options"
+        type="radio"
+        value="visual-picker-19"
+      />
+      <label
+        htmlFor="visual-picker-19"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $300
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Unlimited
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Complete support with enterprise-grade customization
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a disabled vertical visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select an option
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-4"
+        name="options"
+        type="radio"
+        value="visual-picker-4"
+      />
+      <label
+        htmlFor="visual-picker-4"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-5"
+        name="options"
+        type="radio"
+        value="visual-picker-5"
+      />
+      <label
+        htmlFor="visual-picker-5"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={true}
+        id="visual-picker-6"
+        name="options"
+        type="radio"
+        value="visual-picker-6"
+      />
+      <label
+        htmlFor="visual-picker-6"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a link visual picker 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "width": "24rem",
+    }
+  }
+>
+  <a
+    className="slds-box slds-box_link slds-box_x-small slds-media"
+    href="javascript:void(0);"
+  >
+    <div
+      className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-knowledge_base"
+        title="Description of icon when needed"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon-text-default"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#knowledge_base"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Description of icon when needed
+        </span>
+      </span>
+    </div>
+    <div
+      className="slds-media__body slds-border_left slds-p-around_small"
+    >
+      <h2
+        className="slds-truncate slds-text-heading_small"
+        title="Share the knowledge"
+      >
+        Share the knowledge
+      </h2>
+      <p
+        className="slds-m-top_small"
+      >
+        Harness your team's collective know-how with our powerful knowledge base
+      </p>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`renders a non-coverable content visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select a plan
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-14"
+        name="options"
+        type="radio"
+        value="visual-picker-14"
+      />
+      <label
+        htmlFor="visual-picker-14"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $30
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Professional
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Complete service CRM for teams of any size
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-15"
+        name="options"
+        type="radio"
+        value="visual-picker-15"
+      />
+      <label
+        htmlFor="visual-picker-15"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $150
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Enterprise
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Everything you need to take support to the next level
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_medium"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-16"
+        name="options"
+        type="radio"
+        value="visual-picker-16"
+      />
+      <label
+        htmlFor="visual-picker-16"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_large"
+            >
+              $300
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              USD/user/month *
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-visual-picker__body"
+        >
+          <span
+            className="slds-text-heading_small"
+          >
+            Lightning Unlimited
+          </span>
+          <span
+            className="slds-text-title"
+          >
+            Complete support with enterprise-grade customization
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`renders a vertical visual picker 1`] = `
+<fieldset
+  className="slds-form-element"
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Select an option
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-1"
+        name="options"
+        type="radio"
+        value="visual-picker-1"
+      />
+      <label
+        htmlFor="visual-picker-1"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-2"
+        name="options"
+        type="radio"
+        value="visual-picker-2"
+      />
+      <label
+        htmlFor="visual-picker-2"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="slds-visual-picker slds-visual-picker_vertical"
+    >
+      <input
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="visual-picker-3"
+        name="options"
+        type="radio"
+        value="visual-picker-3"
+      />
+      <label
+        htmlFor="visual-picker-3"
+      >
+        <span
+          className="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
+        >
+          <span>
+            <span
+              className="slds-text-heading_medium slds-m-bottom_x-small"
+            >
+              Item Text
+            </span>
+            <span
+              className="slds-text-title"
+            >
+              Some optional item description to help the user better understand what this option is about.
+            </span>
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-visual-picker__text-check"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon-text-check slds-icon_x-small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;

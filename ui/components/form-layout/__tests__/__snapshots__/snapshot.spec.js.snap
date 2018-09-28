@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form Layout renders a base form layout horizontally 1`] = `
+exports[`Form Layout renders a base form layout 1`] = `
 <div
-  className="slds-form slds-form_horizontal"
+  className="slds-form"
 >
   <div
     className="slds-form-element"
@@ -177,6 +177,394 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
         <label
           className="slds-radio__label"
           htmlFor="radio-2"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Education Leads
+          </span>
+        </label>
+      </span>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Form Layout renders a base form layout horizontally 1`] = `
+<div
+  className="slds-form slds-form_horizontal"
+>
+  <div
+    className="slds-form-element"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-01"
+      id={undefined}
+    >
+      Text Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <input
+        className="slds-input"
+        defaultValue={undefined}
+        id="input-id-01"
+        placeholder={undefined}
+        readOnly={undefined}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-form-element"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-02"
+      id={undefined}
+    >
+      Textarea Label
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <textarea
+        className="slds-textarea"
+        id="input-id-02"
+        placeholder="Placeholder Text"
+      />
+    </div>
+  </div>
+  <fieldset
+    className="slds-form-element"
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Checkbox Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-5"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-5"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-5"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All opportunities owned by you
+          </span>
+        </label>
+      </div>
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-6"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-6"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-6"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All contacts in the account owned by you
+          </span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="slds-form-element"
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Radio Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-5"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-5"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-5"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Lead Generation
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-6"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-6"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-6"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Education Leads
+          </span>
+        </label>
+      </span>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Form Layout renders a base form layout stacked 1`] = `
+<div
+  className="slds-form slds-form_stacked"
+>
+  <div
+    className="slds-form-element"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-01"
+      id={undefined}
+    >
+      Text Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <input
+        className="slds-input"
+        defaultValue={undefined}
+        id="input-id-01"
+        placeholder={undefined}
+        readOnly={undefined}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-form-element"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-02"
+      id={undefined}
+    >
+      Textarea Label
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <textarea
+        className="slds-textarea"
+        id="input-id-02"
+        placeholder="Placeholder Text"
+      />
+    </div>
+  </div>
+  <fieldset
+    className="slds-form-element"
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Checkbox Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-3"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-3"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-3"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All opportunities owned by you
+          </span>
+        </label>
+      </div>
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-4"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-4"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-4"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All contacts in the account owned by you
+          </span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="slds-form-element"
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Radio Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-3"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-3"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-3"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Lead Generation
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-4"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-4"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-4"
           id={undefined}
         >
           <span

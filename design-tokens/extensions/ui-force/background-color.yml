@@ -16,12 +16,6 @@ props:
     value: '{!PALETTE_COOL_GRAY_1}'
   COLOR_CONTRAST_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_2}'
-  COLOR_BACKGROUND_ALT:
-    value: '{!PALETTE_COOL_GRAY_1}'
-    comment: Second default background color for the app.
-  COLOR_BACKGROUND_ALT_INVERSE:
-    value: '{!BISCAY}'
-    comment: Alternative background color for dark portions of the app.
 
   COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
     value: '{!PALETTE_COOL_GRAY_9}'

@@ -259,7 +259,17 @@ export let examples = [
         direction="stacked"
         snapshot={Snapshot.ObjectFieldTypesSingleColumn}
         isViewMode
-        isSingleColumn
+      />
+    )
+  },
+  {
+    id: 'horizontal-single-column',
+    label: 'Horizontal form layout - 1 column - Read Only Mode',
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
+        isViewMode
       />
     )
   },

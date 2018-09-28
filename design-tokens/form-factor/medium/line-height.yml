@@ -1,0 +1,16 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: number
+  cssProperties:
+  - font
+  - '*height'
+  category: line-height
+props:
+  LINE_HEIGHT_TEXT:
+    value: '1.375'
+    comment: Unitless line-heights for reusability
+  VAR_LINE_HEIGHT_TEXT:
+    value: '1.375'
+    comment: Variable unitless line-heights for reusability

@@ -7,9 +7,10 @@ import {
   TreeHeader,
   TreeList,
   TreeGroup,
-  TreeContainer,
-  MetaTextTree
-} from '../base/index';
+  TreeContainer
+} from '../index';
+
+import { MetaTextTree } from '../base/index';
 
 import createHelpers from '../../../../jest.helpers';
 
@@ -34,11 +35,23 @@ describe('Base Tree - Tree Item', () => {
     matchesMarkup(<TreeItem>Tree Item Children</TreeItem>));
   it('renders a tree item with metatext', () =>
     matchesMarkup(<TreeItem metaTextLabel="Tree Item Metatext" />));
+  it('renders a tree item with marked term', () =>
+    matchesMarkup(
+      <TreeItem itemLabel="lightning button" termToMark="butto" />
+    ));
+  it('renders a tree item with marked term in metatext', () =>
+    matchesMarkup(
+      <TreeItem
+        itemLabel="lightning button"
+        metaTextLabel="Some other term"
+        termToMark="othe"
+      />
+    ));
 });
 
 describe('Base Tree - Branch Item', () => {
   it('renders a tree branch item with a label passed in', () =>
-    matchesMarkup(<TreeItem isBranch branchLabel="Tree Branch Label" />));
+    matchesMarkup(<TreeItem branchLabel="Tree Branch Label" isBranch />));
   it('renders a tree branch item with metatext', () =>
     matchesMarkup(<TreeItem isBranch metaTextLabel="Tree Item Metatext" />));
 });
@@ -88,9 +101,9 @@ describe('Base Tree - List Item', () => {
       matchesMarkup(
         <TreeListItem
           ariaLevel={1}
-          itemIndex={0}
-          isBranch
           hasSelectedItem
+          isBranch
+          itemIndex={0}
           itemLabel="Test Branch"
         >
           <TreeItem isBranch itemLabel="Test Branch" />

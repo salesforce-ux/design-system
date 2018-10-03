@@ -54,6 +54,12 @@
  * - `Ctrl` + `Up` and `Ctrl` + `Down` moves focus. Current selection is maintained
  * - `Ctrl` + `Space` will add or remove the currently focused tree item to the selection
  *
+ * #### Filtering
+ *
+ * When filtering a tree you should couple the tree with a search input. The search input will control the contents of the tree and as such should the attribute `aria-controls` added to it. The value of the `aria-controls` attribute should be the ID of the tree it controls. The search input should also be of type `search`.
+ *
+ * Upon typing in the input the tree should start filtering immediately, expanding all nodes that have matching tree items to display, and highlighting the search term in each of the matching items. The highlight is provided by wrapping the term in `<mark />` elements.
+ *
  * @summary A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
  *
  * @name base

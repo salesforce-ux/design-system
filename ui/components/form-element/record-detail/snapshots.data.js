@@ -526,19 +526,25 @@ export const ObjectFieldTypesSingleColumn = {
           type: 'text',
           label: 'Reference Image',
           value:
-            'The URL for the image is https://www.google.com/imgres?imgurl=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple128%2Fv4%2F50%2F98%2Fb6%2F5098b62e-b26d-6d0e-bda4-26a85c42fe1f%2FAppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-3.png%2F246x0w.jpg&imgrefurl=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fflower%2Fid1279174518%3Fmt%3D8&docid=2fZCCC_Ugr43lM&tbnid=9soMHOA780_ooM%3A&vet=10ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA..i&w=246&h=246&bih=1320&biw=1280&q=flower&ved=0ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA&iact=mrc&uact=8',
-          component: (
-            <FormElement
-              labelContent="Reference Image"
-              inputId="form-element-id-15"
-              isStacked
-              isEditing
-            >
-              <Textarea
-                id="form-element-id-15"
-                defaultValue="The URL for the image is https://www.google.com/imgres?imgurl=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple128%2Fv4%2F50%2F98%2Fb6%2F5098b62e-b26d-6d0e-bda4-26a85c42fe1f%2FAppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-3.png%2F246x0w.jpg&imgrefurl=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fflower%2Fid1279174518%3Fmt%3D8&docid=2fZCCC_Ugr43lM&tbnid=9soMHOA780_ooM%3A&vet=10ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA..i&w=246&h=246&bih=1320&biw=1280&q=flower&ved=0ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA&iact=mrc&uact=8"
-              />
-            </FormElement>
+            'The URL for the image is https://www.google.com/imgres?imgurl=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple128%2Fv4%2F50%2F98%2Fb6%2F5098b62e-b26d-6d0e-bda4-26a85c42fe1f%2FAppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-3.png%2F246x0w.jpg&imgrefurl=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fflower%2Fid1279174518%3Fmt%3D8&docid=2fZCCC_Ugr43lM&tbnid=9soMHOA780_ooM%3A&vet=10ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA..i&w=246&h=246&bih=1320&biw=1280&q=flower&ved=0ahUKEwiJzc206-PcAhVYIjQIHcJsB3YQMwjxASgAMAA&iact=mrc&uact=8'
+        }
+      ]
+    },
+    {
+      fields: [
+        {
+          type: 'richtext',
+          label: 'Rich Text Output',
+          value: (
+            <div className="slds-rich-text-editor__output">
+              <p>Here's a big image</p>
+              <p>
+                <img
+                  src="/assets/images/themes/oneSalesforce/banner-group-public-default.png"
+                  alt=""
+                />
+              </p>
+            </div>
           )
         }
       ]

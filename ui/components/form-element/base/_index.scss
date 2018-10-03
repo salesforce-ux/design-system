@@ -96,6 +96,7 @@
  * @restrict .slds-form-element
  */
 .slds-form-element_readonly {
+  flex-basis: 0%;
   border-bottom: $border-width-thin solid $color-border;
 
   .slds-form-element__control {

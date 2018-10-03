@@ -16,7 +16,6 @@ props:
     value: '{!PALETTE_COOL_GRAY_2}'
     comment: Default background color for the whole app.
     release: 1.0.0
-    themeable: true
     access: global
   COLOR_BACKGROUND_LIGHT:
     value: '{!PALETTE_COOL_GRAY_1}'
@@ -27,9 +26,20 @@ props:
     comment: Light variant of COLOR_BACKGROUND.
     release: 2.8.0
 
+  COLOR_BACKGROUND_ALT:
+    value: '{!WHITE}'
+    comment: Second default background color for the app.
+    release: 1.0.0
+    access: global
+  COLOR_BACKGROUND_ALT_INVERSE:
+    value: '{!BISCAY}'
+    comment: Alternative background color for dark portions of the app.
+    release: 1.0.0
+    access: global
   COLOR_BACKGROUND_INVERSE:
     value: '{!DEEP_COVE}'
     comment: Default background color for dark portions of the app (like Stage Left or tooltips).
+    release: 1.0.0
     access: global
   COLOR_BACKGROUND_INVERSE_LIGHT:
     value: '{!BISCAY}'

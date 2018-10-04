@@ -3,6 +3,10 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.3
+
+### Fixed
+- Resolved issue where Rich Text content would overflow the container of a form element in IE11
 
 ## 2.7.0
 

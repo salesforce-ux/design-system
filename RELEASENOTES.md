@@ -1,6 +1,24 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release 2.7.3 - October 4, 2018**
+
+### Components
+
+#### [Form Elements](https://www.lightningdesignsystem.com/components/form-elements/)
+
+##### Fixed
+
+- Resolved issue where Rich Text content would overflow the container of a form element in IE11
+
+## **Release 2.7.2 - September 21, 2018**
+
+### Tokens
+
+#### Fixed
+
+- Fixed issue where missing cssProperties would cause compilation issues
+
 ## **Release 2.7.1 - September 9, 2018**
 
 ### Components

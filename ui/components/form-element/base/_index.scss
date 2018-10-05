@@ -149,6 +149,11 @@
     margin-bottom: 0;
   }
 
+  &:empty {
+    min-height: calc(#{$var-font-size-7} + 1px); // 20px|22px + 1px
+    vertical-align: bottom;
+  }
+
   /**
    * @summary Inline Edit on static form element
    * @selector .slds-form-element__static_edit

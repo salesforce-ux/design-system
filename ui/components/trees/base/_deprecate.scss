@@ -24,9 +24,7 @@
    * @selector .slds-is-selected
    * @restrict .slds-tree__item
    * @notes Class should be applied via Javascript
-   * @modifier
    * @deprecated
-   * @group interactions
    */
   @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
 
@@ -41,9 +39,7 @@
    * @summary Focus state for a tree item
    * @selector .slds-is-focused
    * @restrict .slds-tree__item
-   * @modifier
    * @deprecated
-   * @group interactions
    */
   @include deprecate('4.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
 

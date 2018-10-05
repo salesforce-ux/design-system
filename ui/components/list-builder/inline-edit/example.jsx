@@ -43,7 +43,7 @@ let ProductList = props => (
       className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer"
     >
       <thead>
-        <tr className="slds-text-title_caps">
+        <tr>
           <Th className="slds-is-sortable" scope="col" title="Name">
             Name
           </Th>
@@ -230,11 +230,9 @@ export default (
             </tr>
           </ProductList>
           <div className="slds-grid slds-grid_vertical-align-center slds-p-vertical_x-small slds-p-horizontal_large">
-            <div className="slds-text-title_caps">
-              <span className="slds-m-right_x-small">Total Products</span>
-              <span className="slds-text-heading_small">2</span>
-            </div>
-            <div className="slds-col_bump-left slds-text-title_caps slds-text-align_right">
+            <span className="slds-m-right_x-small">Total Products</span>
+            <span className="slds-text-heading_small">2</span>
+            <div className="slds-col_bump-left slds-text-align_right">
               <span className="slds-m-right_x-small">Total</span>
               <span className="slds-text-heading_small">$15,950</span>
             </div>

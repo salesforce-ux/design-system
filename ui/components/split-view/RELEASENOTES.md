@@ -4,6 +4,16 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Changed
+
+- Increased font size to 14px, applied bold font weight, and updated line-height in `slds-split-view__list-header`.
+
+### Removed
+
+- Removed `slds-text-title_caps` split view list headers.
+
 ## 2.7.0
 
 ### Changed

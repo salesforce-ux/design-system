@@ -195,3 +195,12 @@ $max-nesting-depth: 20 !default;
 .slds-tree .slds-pill {
   margin-left: $spacing-small;
 }
+
+/**
+ * @summary Initializes a slds tree group header
+ * @selector .slds-tree__group-header
+ * @restrict .slds-tree_container h4
+ */
+.slds-tree__group-header {
+  @include text-title;
+}

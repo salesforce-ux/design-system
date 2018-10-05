@@ -41,3 +41,8 @@
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
 }
+
+@mixin text-title {
+  font-size: $font-size-4;
+  font-weight: $font-weight-bold;
+}

@@ -83,7 +83,7 @@ let Th = props => {
     <th
       {...rest}
       className={classNames(
-        'slds-is-sortable slds-is-resizable slds-text-title_caps',
+        'slds-is-sortable slds-is-resizable',
         props.className
       )}
       scope="col"

@@ -10,6 +10,14 @@
 
 - Improved the contrast for focus and hover states on the close button.
 
+### Added
+
+- Added `slds-popover_panel__label` to increase panel label font size to 14px and apply bold font weight.
+
+### Removed
+
+- Removed `slds-text-title_caps` from panel labels.
+
 ## 2.7.0
 
 ### Added

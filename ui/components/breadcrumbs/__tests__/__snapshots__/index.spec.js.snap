@@ -9,7 +9,7 @@ exports[`renders a base breadcrumb 1`] = `
     className="slds-breadcrumb slds-list_horizontal slds-wrap"
   >
     <li
-      className="slds-breadcrumb__item slds-text-title_caps"
+      className="slds-breadcrumb__item"
     >
       <a
         href="javascript:void(0);"
@@ -18,7 +18,7 @@ exports[`renders a base breadcrumb 1`] = `
       </a>
     </li>
     <li
-      className="slds-breadcrumb__item slds-text-title_caps"
+      className="slds-breadcrumb__item"
     >
       <a
         href="javascript:void(0);"
@@ -132,7 +132,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
       </div>
     </li>
     <li
-      className="slds-breadcrumb__item slds-text-title_caps"
+      className="slds-breadcrumb__item"
     >
       <a
         href="javascript:void(0);"
@@ -141,7 +141,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
       </a>
     </li>
     <li
-      className="slds-breadcrumb__item slds-text-title_caps"
+      className="slds-breadcrumb__item"
     >
       <a
         href="javascript:void(0);"

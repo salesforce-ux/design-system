@@ -4,6 +4,18 @@
 
 <!-- ## [Unreleased] -->
 
+### Added
+
+## 2.8.0
+
+### Changed
+
+- Added bold font weight to `th` elements within table headers.
+
+### Removed
+
+- Removed `slds-text-title_caps` from table headers.
+
 ## 2.7.0
 
 ### Added

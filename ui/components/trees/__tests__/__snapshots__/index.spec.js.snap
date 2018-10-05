@@ -602,7 +602,7 @@ exports[`Base Tree - Tree Container renders a tree container with children 1`] =
   className="slds-tree_container"
 >
   <h4
-    className="slds-text-title_caps"
+    className="slds-tree__group-header"
     id="treeheading"
   >
     Tree Group Header
@@ -670,14 +670,14 @@ exports[`Base Tree - Tree Group renders a tree group with children 1`] = `
 
 exports[`Base Tree - Tree Header renders a default tree header 1`] = `
 <h4
-  className="slds-text-title_caps"
+  className="slds-tree__group-header"
   id="treeheading"
 />
 `;
 
 exports[`Base Tree - Tree Header renders a tree header with children 1`] = `
 <h4
-  className="slds-text-title_caps"
+  className="slds-tree__group-header"
   id="treeheading"
 >
   Tree Group Header

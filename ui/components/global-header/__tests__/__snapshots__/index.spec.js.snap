@@ -273,7 +273,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
               role="presentation"
             >
               <h3
-                className="slds-text-title_caps"
+                className="slds-listbox__option-header"
                 role="presentation"
               >
                 My Favorites

@@ -72,7 +72,7 @@ export default (
           <dl>
             <dt>
               <p
-                className="slds-text-title_caps slds-truncate"
+                className="slds-popover_panel__label slds-truncate"
                 title="Billing Address"
               >
                 Billing Address
@@ -92,7 +92,10 @@ export default (
         <div className="slds-p-horizontal_small slds-size_1-of-2 slds-p-bottom_x-small">
           <dl>
             <dt>
-              <p className="slds-text-title_caps slds-truncate" title="Phone">
+              <p
+                className="slds-popover_panel__label slds-truncate"
+                title="Phone"
+              >
                 Phone
               </p>
             </dt>
@@ -105,7 +108,10 @@ export default (
         <div className="slds-p-horizontal_small slds-size_1-of-2 slds-p-bottom_x-small">
           <dl>
             <dt>
-              <p className="slds-text-title_caps slds-truncate" title="Website">
+              <p
+                className="slds-popover_panel__label slds-truncate"
+                title="Website"
+              >
                 Website
               </p>
             </dt>
@@ -119,7 +125,7 @@ export default (
           <dl>
             <dt>
               <p
-                className="slds-text-title_caps slds-truncate"
+                className="slds-popover_panel__label slds-truncate"
                 title="Account Owner"
               >
                 Account Owner

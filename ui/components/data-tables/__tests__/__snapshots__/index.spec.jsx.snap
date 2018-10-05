@@ -10,7 +10,7 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -29,7 +29,7 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
     <th
       aria-label="Name"
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -55,7 +55,7 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -85,7 +85,7 @@ exports[`AdvancedDataTableHead component should check the select all column head
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -136,7 +136,7 @@ exports[`AdvancedDataTableHead component should check the select all column head
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -203,7 +203,7 @@ exports[`AdvancedDataTableHead component should check the select all column head
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -233,7 +233,7 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -284,7 +284,7 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-sortable"
+      className="slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -331,7 +331,7 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -361,7 +361,7 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -412,7 +412,7 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
     <th
       aria-label="Name"
       aria-sort={null}
-      className="slds-text-title_caps slds-is-resizable"
+      className="slds-is-resizable"
       scope="col"
       style={
         Object {
@@ -458,7 +458,7 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -488,7 +488,7 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -539,7 +539,7 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -617,7 +617,7 @@ exports[`AdvancedDataTableHead component should hide select column header 1`] = 
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -684,7 +684,7 @@ exports[`AdvancedDataTableHead component should hide select column header 1`] = 
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -714,7 +714,7 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -733,7 +733,7 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
     <th
       aria-label="Name"
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -759,7 +759,7 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -789,7 +789,7 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -840,7 +840,7 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -907,7 +907,7 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -937,7 +937,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -988,7 +988,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1055,7 +1055,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1085,7 +1085,7 @@ exports[`AdvancedDataTableHead component should render error column header and s
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1104,7 +1104,7 @@ exports[`AdvancedDataTableHead component should render error column header and s
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1155,7 +1155,7 @@ exports[`AdvancedDataTableHead component should render error column header and s
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1222,7 +1222,7 @@ exports[`AdvancedDataTableHead component should render error column header and s
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1252,7 +1252,7 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -1303,7 +1303,7 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-has-button-menu slds-is-resizable slds-is-sortable"
+      className="slds-has-button-menu slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1391,7 +1391,7 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1421,7 +1421,7 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -1472,7 +1472,7 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1539,7 +1539,7 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1569,7 +1569,7 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -1620,7 +1620,7 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1687,7 +1687,7 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1717,7 +1717,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -1768,7 +1768,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     <th
       aria-label="Name"
       aria-sort="ascending"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+      className="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc"
       scope="col"
       style={
         Object {
@@ -1843,7 +1843,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -1873,7 +1873,7 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -1924,7 +1924,7 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-has-focus slds-is-resizable slds-is-sortable"
+      className="slds-has-focus slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -1991,7 +1991,7 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -2021,7 +2021,7 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps slds-text-align_right"
+      className="slds-text-align_right"
       scope="col"
       style={
         Object {
@@ -2040,7 +2040,7 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-text-title_caps slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable"
       scope="col"
       style={
         Object {
@@ -2107,7 +2107,7 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     <th
       aria-label={undefined}
       aria-sort={null}
-      className="slds-text-title_caps"
+      className=""
       scope="col"
       style={
         Object {
@@ -2171,7 +2171,7 @@ exports[`ColumnTh component should add aria-label when passed 1`] = `
 <th
   aria-label="foo"
   aria-sort={null}
-  className="slds-text-title_caps"
+  className=""
   scope="col"
   style={undefined}
 />
@@ -2181,7 +2181,7 @@ exports[`ColumnTh component should apply has focus class with hasFocus 1`] = `
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps slds-has-focus"
+  className="slds-has-focus"
   scope="col"
   style={undefined}
 />
@@ -2191,7 +2191,7 @@ exports[`ColumnTh component should apply has menu class with hasMenu 1`] = `
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps slds-has-button-menu"
+  className="slds-has-button-menu"
   scope="col"
   style={undefined}
 />
@@ -2201,7 +2201,7 @@ exports[`ColumnTh component should apply is resizable class with isResizable 1`]
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps slds-is-resizable"
+  className="slds-is-resizable"
   scope="col"
   style={undefined}
 />
@@ -2211,7 +2211,7 @@ exports[`ColumnTh component should apply is sortable class and aria-sort none wi
 <th
   aria-label={undefined}
   aria-sort="none"
-  className="slds-text-title_caps slds-is-sortable"
+  className="slds-is-sortable"
   scope="col"
   style={undefined}
 />
@@ -2221,7 +2221,7 @@ exports[`ColumnTh component should apply text align right class with isRightAlig
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps slds-text-align_right"
+  className="slds-text-align_right"
   scope="col"
   style={undefined}
 />
@@ -2231,7 +2231,7 @@ exports[`ColumnTh component should render with children 1`] = `
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps"
+  className=""
   scope="col"
   style={undefined}
 >
@@ -2243,7 +2243,7 @@ exports[`ColumnTh component should set sort direction of ascending 1`] = `
 <th
   aria-label={undefined}
   aria-sort="ascending"
-  className="slds-text-title_caps slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+  className="slds-is-sortable slds-is-sorted slds-is-sorted_asc"
   scope="col"
   style={undefined}
 />
@@ -2253,7 +2253,7 @@ exports[`ColumnTh component should set sort direction of descending 1`] = `
 <th
   aria-label={undefined}
   aria-sort="descending"
-  className="slds-text-title_caps slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+  className="slds-is-sortable slds-is-sorted slds-is-sorted_desc"
   scope="col"
   style={undefined}
 />
@@ -2263,7 +2263,7 @@ exports[`ColumnTh component should set sort direction of none 1`] = `
 <th
   aria-label={undefined}
   aria-sort="none"
-  className="slds-text-title_caps slds-is-sortable"
+  className="slds-is-sortable"
   scope="col"
   style={undefined}
 />
@@ -2273,7 +2273,7 @@ exports[`ColumnTh component should set style attribute when passed 1`] = `
 <th
   aria-label={undefined}
   aria-sort={null}
-  className="slds-text-title_caps"
+  className=""
   scope="col"
   style={
     Object {

@@ -25,7 +25,7 @@ const contextDropdown = (
         className="slds-dropdown__header slds-has-divider_top-space"
         role="separator"
       >
-        <span className="slds-text-title_caps">Menu header</span>
+        <span>Menu header</span>
       </li>
       <MenuItem>Menu Item One</MenuItem>
       <MenuItem>Menu Item Two</MenuItem>

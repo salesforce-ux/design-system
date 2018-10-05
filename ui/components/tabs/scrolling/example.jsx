@@ -27,7 +27,7 @@ export let states = [
         <Scroller>
           <ul className="slds-tabs_default__nav" role="tablist">
             <li
-              className="slds-tabs_default__item slds-text-title_caps slds-active"
+              className="slds-tabs_default__item slds-active"
               title="Item One"
               role="presentation"
             >
@@ -44,7 +44,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Two"
               role="presentation"
             >
@@ -61,7 +61,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Three"
               role="presentation"
             >
@@ -78,7 +78,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Four"
               role="presentation"
             >
@@ -95,7 +95,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Five"
               role="presentation"
             >
@@ -112,7 +112,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Six"
               role="presentation"
             >
@@ -129,7 +129,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Seven"
               role="presentation"
             >
@@ -146,7 +146,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Eight"
               role="presentation"
             >
@@ -163,7 +163,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Nine"
               role="presentation"
             >
@@ -180,7 +180,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Ten"
               role="presentation"
             >
@@ -197,7 +197,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Eleven"
               role="presentation"
             >
@@ -214,7 +214,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_default__item slds-text-title_caps"
+              className="slds-tabs_default__item"
               title="Item Twelve"
               role="presentation"
             >
@@ -357,7 +357,7 @@ export let states = [
         <Scroller>
           <ul className="slds-tabs_scoped__nav" role="tablist">
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps slds-active"
+              className="slds-tabs_scoped__item slds-active"
               title="Item One"
               role="presentation"
             >
@@ -374,7 +374,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Two"
               role="presentation"
             >
@@ -391,7 +391,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Three"
               role="presentation"
             >
@@ -408,7 +408,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Four"
               role="presentation"
             >
@@ -425,7 +425,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Five"
               role="presentation"
             >
@@ -442,7 +442,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Six"
               role="presentation"
             >
@@ -459,7 +459,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Seven"
               role="presentation"
             >
@@ -476,7 +476,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Eight"
               role="presentation"
             >
@@ -493,7 +493,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Nine"
               role="presentation"
             >
@@ -510,7 +510,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Ten"
               role="presentation"
             >
@@ -527,7 +527,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Eleven"
               role="presentation"
             >
@@ -544,7 +544,7 @@ export let states = [
               </a>
             </li>
             <li
-              className="slds-tabs_scoped__item slds-text-title_caps"
+              className="slds-tabs_scoped__item"
               title="Item Twelve"
               role="presentation"
             >

@@ -73,12 +73,7 @@ export let NavVerticalSection = props => {
       )}
     >
       {!hasExpando && !isNavVerticalRadioSet && props.title ? (
-        <h2
-          id={props.id}
-          className={classNames(
-            'slds-nav-vertical__title slds-text-title_caps'
-          )}
-        >
+        <h2 id={props.id} className="slds-nav-vertical__title">
           {props.title}
         </h2>
       ) : null}

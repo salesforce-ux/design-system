@@ -2013,7 +2013,7 @@ exports[`render combobox render grouped combobox 1`] = `
                         tabIndex={undefined}
                       >
                         <h3
-                          className="slds-text-title_caps"
+                          className="slds-listbox__option-header"
                           role="presentation"
                         >
                           Suggested for you
@@ -2596,7 +2596,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                         tabIndex={undefined}
                       >
                         <h3
-                          className="slds-text-title_caps"
+                          className="slds-listbox__option-header"
                           role="presentation"
                         >
                           Suggested for you
@@ -3194,7 +3194,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         tabIndex={undefined}
                       >
                         <h3
-                          className="slds-text-title_caps"
+                          className="slds-listbox__option-header"
                           role="presentation"
                         >
                           Suggested for you
@@ -4239,7 +4239,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                         tabIndex={undefined}
                       >
                         <h3
-                          className="slds-text-title_caps"
+                          className="slds-listbox__option-header"
                           role="presentation"
                         >
                           Suggested for you
@@ -6612,7 +6612,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 tabIndex={undefined}
               >
                 <h3
-                  className="slds-text-title_caps"
+                  className="slds-listbox__option-header"
                   role="presentation"
                 >
                   Group One
@@ -6691,7 +6691,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 tabIndex={undefined}
               >
                 <h3
-                  className="slds-text-title_caps"
+                  className="slds-listbox__option-header"
                   role="presentation"
                 >
                   Group Two

@@ -15,7 +15,7 @@ export const SetupDropdown = () => (
   <Menu className="slds-dropdown_right slds-nubbin_top-right">
     <MenuList>
       <li className="slds-dropdown__header" role="separator">
-        <span className="slds-text-title_caps">Setup</span>
+        <span>Setup</span>
       </li>
       <MenuItem tabIndex="0">Setup Home</MenuItem>
     </MenuList>
@@ -26,7 +26,7 @@ export const ActionsDropdown = () => (
   <Menu className="slds-dropdown_right slds-nubbin_top-right">
     <MenuList>
       <li className="slds-dropdown__header" role="separator">
-        <span className="slds-text-title_caps">Create</span>
+        <span>Create</span>
       </li>
       <MenuItem tabIndex="0" title="New Note">
         <SvgIcon

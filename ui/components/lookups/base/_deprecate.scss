@@ -73,6 +73,7 @@
      */
     &__item_label,
     &__item--label {
+      @include text-title;
       display: flex;
       align-items: center;
       padding: $spacing-x-small $spacing-medium;

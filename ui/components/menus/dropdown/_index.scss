@@ -364,6 +364,7 @@
    * @restrict .slds-dropdown li
    */
   &__header {
+    @include text-title;
     padding: $spacing-x-small $spacing-small;
   }
 
@@ -375,6 +376,7 @@
    */
   &__item {
     line-height: $line-height-text;
+    font-weight: $font-weight-regular;
 
     > a {
       position: relative;

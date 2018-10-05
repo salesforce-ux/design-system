@@ -37,7 +37,7 @@ const ListboxDropdown = props => (
           role="presentation"
           id={listboxOptionId00}
         >
-          <h3 className="slds-text-title_caps" role="presentation">
+          <h3 className="slds-listbox__option-header" role="presentation">
             {props.heading}
           </h3>
         </div>

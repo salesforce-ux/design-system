@@ -11,7 +11,7 @@ export default (
           <a href="javascript:void(0);" className="slds-wizard__link">
             <span className="slds-wizard__marker" />
             <span
-              className="slds-wizard__label slds-text-title_caps slds-truncate"
+              className="slds-wizard__label slds-truncate"
               title="Navigation"
             >
               Navigation
@@ -21,10 +21,7 @@ export default (
         <li className="slds-wizard__item slds-is-active">
           <a href="javascript:void(0);" className="slds-wizard__link">
             <span className="slds-wizard__marker" />
-            <span
-              className="slds-wizard__label slds-text-title_caps slds-truncate"
-              title="Actions"
-            >
+            <span className="slds-wizard__label slds-truncate" title="Actions">
               Actions
             </span>
           </a>
@@ -33,7 +30,7 @@ export default (
           <a href="javascript:void(0);" className="slds-wizard__link">
             <span className="slds-wizard__marker" />
             <span
-              className="slds-wizard__label slds-text-title_caps slds-truncate"
+              className="slds-wizard__label slds-truncate"
               title="Compact Layout"
             >
               Compact Layout
@@ -43,10 +40,7 @@ export default (
         <li className="slds-wizard__item">
           <a href="javascript:void(0);" className="slds-wizard__link">
             <span className="slds-wizard__marker" />
-            <span
-              className="slds-wizard__label slds-text-title_caps slds-truncate"
-              title="Review"
-            >
+            <span className="slds-wizard__label slds-truncate" title="Review">
               Review
             </span>
           </a>
@@ -54,10 +48,7 @@ export default (
         <li className="slds-wizard__item">
           <a href="javascript:void(0);" className="slds-wizard__link">
             <span className="slds-wizard__marker" />
-            <span
-              className="slds-wizard__label slds-text-title_caps slds-truncate"
-              title="Invite"
-            >
+            <span className="slds-wizard__label slds-truncate" title="Invite">
               Invite
             </span>
           </a>

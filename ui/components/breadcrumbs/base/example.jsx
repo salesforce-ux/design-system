@@ -42,12 +42,8 @@ export const Context = props => (
 
 export const BreadcrumbsBase = props => (
   <BreadCrumbs>
-    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-      Parent Entity
-    </Crumb>
-    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-      Parent Record Name
-    </Crumb>
+    <Crumb href="javascript:void(0);">Parent Entity</Crumb>
+    <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
   </BreadCrumbs>
 );
 
@@ -57,12 +53,8 @@ export const BreadcrumbsWithOverflow = props => (
     <Crumb hasMenu>
       <BreadcrumbMenu />
     </Crumb>
-    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-      Parent Entity
-    </Crumb>
-    <Crumb className="slds-text-title_caps" href="javascript:void(0);">
-      Parent Record Name
-    </Crumb>
+    <Crumb href="javascript:void(0);">Parent Entity</Crumb>
+    <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
   </BreadCrumbs>
 );
 

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Changed
+
+- Increased font size to 12px, applied bold font weight, and removed uppercase styling in `.slds-badge`.
+
 ## 2.7.0
 
 ### Added

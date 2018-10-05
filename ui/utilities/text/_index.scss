@@ -67,6 +67,7 @@
   .slds-text-heading_label,
   .slds-text-heading--label {
     @include text-heading--label;
+    font-weight: $font-weight-regular;
   }
 
   .slds-text-heading_label-normal,
@@ -96,6 +97,7 @@
 .slds-text-title_caps,
 .slds-text-title--caps {
   @include text-heading--label-normal;
+  font-weight: $font-weight-regular;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
 }
@@ -109,7 +111,6 @@
 .slds-text-title_bold {
   font-size: $font-size-4;
   font-weight: $font-weight-bold;
-  line-height: $line-height-reset;
 }
 
 /**

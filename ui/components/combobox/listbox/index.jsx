@@ -105,7 +105,7 @@ export const EntityOption = props => (
       </span>
     )}
     {props.label ? (
-      <h3 className="slds-text-title_caps" role="presentation">
+      <h3 className="slds-listbox__option-header" role="presentation">
         {props.name}
       </h3>
     ) : (
@@ -204,7 +204,7 @@ export const Option = props => (
       </span>
     )}
     {props.label ? (
-      <h3 className="slds-text-title_caps" role="presentation">
+      <h3 className="slds-listbox__option-header" role="presentation">
         {props.name}
       </h3>
     ) : (

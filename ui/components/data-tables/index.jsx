@@ -117,7 +117,7 @@ export const ColumnTh = props => {
     return ariaSort;
   };
 
-  const computedClasses = classNames('slds-text-title_caps', {
+  const computedClasses = classNames({
     'slds-has-button-menu': props.hasMenu,
     'slds-has-focus': props.hasFocus,
     'slds-is-resizable': props.isResizable,

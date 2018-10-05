@@ -78,6 +78,8 @@
  * @restrict .slds-split-view div
  */
 .slds-split-view__list-header {
+  @include text-title;
+  line-height: $line-height-heading;
   border: {
     top: $border-width-thin solid $split-view-color-border;
     bottom: $border-width-thin solid $split-view-color-border;

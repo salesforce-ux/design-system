@@ -37,7 +37,7 @@ export const ListboxList = props => (
         className="slds-media slds-listbox__option slds-listbox__option_plain"
         role="presentation"
       >
-        <h3 className="slds-text-title_caps" role="presentation">
+        <h3 className="slds-listbox__option-header" role="presentation">
           My Favorites
         </h3>
       </div>
@@ -104,7 +104,7 @@ export default (
     <DynamicMenu>
       <div className="slds-p-vertical_x-small slds-p-horizontal_small">
         <h3
-          className="slds-text-title_caps slds-m-bottom_x-small"
+          className="slds-dynamic-menu__header slds-m-bottom_x-small"
           role="presentation"
         >
           My Favorites
@@ -131,7 +131,7 @@ export let states = [
         <DynamicMenu>
           <div className="slds-p-vertical_x-small slds-p-horizontal_small">
             <h3
-              className="slds-text-title_caps slds-m-bottom_x-small"
+              className="slds-dynamic-menu__header slds-m-bottom_x-small"
               role="presentation"
             >
               My Favorites

@@ -27,7 +27,7 @@ exports[`Vertical Nav Radio Group renders a compact fieldset 1`] = `
   className="slds-nav-vertical slds-nav-vertical_compact"
 >
   <legend
-    className="slds-nav-vertical__title slds-text-title_caps"
+    className="slds-nav-vertical__title"
   >
     Reports
   </legend>
@@ -60,7 +60,7 @@ exports[`Vertical Nav Radio Group renders a fieldset 1`] = `
   className="slds-nav-vertical"
 >
   <legend
-    className="slds-nav-vertical__title slds-text-title_caps"
+    className="slds-nav-vertical__title"
   >
     Reports
   </legend>
@@ -119,7 +119,7 @@ exports[`Vertical Nav Radio Group renders a shaded fieldset 1`] = `
   className="slds-nav-vertical slds-nav-vertical_shade"
 >
   <legend
-    className="slds-nav-vertical__title slds-text-title_caps"
+    className="slds-nav-vertical__title"
   >
     Reports
   </legend>

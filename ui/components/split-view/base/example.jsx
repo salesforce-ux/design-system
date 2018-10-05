@@ -172,7 +172,7 @@ let SplitView = props => (
         </div>
       </header>
       <div className="slds-grid slds-grid_vertical">
-        <div className="slds-split-view__list-header slds-grid slds-text-title_caps">
+        <div className="slds-split-view__list-header slds-grid">
           <span className="slds-assistive-text">Sorted by:</span>
           <span>
             Lead Score

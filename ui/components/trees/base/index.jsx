@@ -100,7 +100,7 @@ TreeListItem.propTypes = {
 };
 
 export const TreeHeader = props => (
-  <h4 className="slds-text-title_caps" id={props.id}>
+  <h4 className="slds-tree__group-header" id={props.id}>
     {props.children}
   </h4>
 );

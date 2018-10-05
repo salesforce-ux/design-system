@@ -4,4 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.8.0
+
+### Added
+
+- Added `slds-dynamic-menu__header` to increase font size to 14px and apply bold font weight.
+
+### Removed
+
+- Removed `slds-text-title_caps` from dynamic menu headers.

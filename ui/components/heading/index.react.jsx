@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 class LabelHeading extends React.Component {
   render() {
-    const className = classNames('slds-text-title_caps', this.props.className);
+    const className = classNames('slds-text-title_bold', this.props.className);
     return (
       <p {...this.props} className={className}>
         {this.props.children}

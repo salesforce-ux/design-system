@@ -15,7 +15,7 @@ export const TreeGrid = props => (
     <thead
       className={classNames({ 'slds-assistive-text': props.hasHiddenHeader })}
     >
-      <tr className="slds-text-title_caps">
+      <tr>
         <th className="slds-cell-buffer_left" scope="col">
           <div className="slds-grid slds-grid_vertical-align-center">
             <ButtonIcon

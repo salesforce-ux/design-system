@@ -640,12 +640,10 @@
  * @restrict .slds-path__keys div, .slds-path__guidance h2
  */
 .slds-path__coach-title {
+  @include text-title;
   margin-bottom: $spacing-x-small;
   border-bottom: $color-border $border-width-thin solid;
   padding-bottom: $spacing-x-small;
-  font-size: $font-size-heading-x-small;
-  text-transform: uppercase;
-  letter-spacing: 0.0625rem;
   line-height: 1.125; // to align heading in Guidance (due to edit button)
 }
 

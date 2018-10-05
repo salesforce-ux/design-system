@@ -3,6 +3,12 @@
 # Global Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.0
+
+### Removed
+
+- Removed `slds-text-title_caps` from menu headers.
+
 ## 2.7.1
 
 ### Fixed

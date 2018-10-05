@@ -184,7 +184,7 @@ export const SubHeader = props => (
           title="Menu Sub Heading"
           role="separator"
         >
-          <span className="slds-text-title_caps">Menu Sub Heading</span>
+          <span>Menu Sub Heading</span>
         </li>
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
@@ -193,7 +193,7 @@ export const SubHeader = props => (
           title="Menu Sub Heading"
           role="separator"
         >
-          <span className="slds-text-title_caps">Menu Sub Heading</span>
+          <span>Menu Sub Heading</span>
         </li>
         <MenuItem>Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>

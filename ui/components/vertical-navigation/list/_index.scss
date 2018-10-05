@@ -52,6 +52,8 @@
 .slds-nav-vertical__title {
   padding: $spacing-x-small $spacing-medium;
   padding-left: $spacing-large;
+  font-size: $font-size-5;
+  font-weight: $font-weight-bold;
 
   &:not(:first-of-type) {
     margin-top: $spacing-x-small;
@@ -99,7 +101,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: $spacing-x-small $spacing-large;
+  padding: $spacing-x-small $spacing-large $spacing-x-small $spacing-x-large;
   color: $color-text-default;
   border-top: $border-width-thin solid transparent;
   border-bottom: $border-width-thin solid transparent;

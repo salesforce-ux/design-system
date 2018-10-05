@@ -19,9 +19,7 @@ export let NavVerticalFieldset = props => (
       { 'slds-nav-vertical_compact': props.compact }
     )}
   >
-    <legend className="slds-nav-vertical__title slds-text-title_caps">
-      Reports
-    </legend>
+    <legend className="slds-nav-vertical__title">Reports</legend>
     {props.children}
   </fieldset>
 );

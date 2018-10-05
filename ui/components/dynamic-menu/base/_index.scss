@@ -8,3 +8,12 @@
  * @variant
  * @support dev-ready
  */
+
+/**
+ * @summary Headers styles for dynamic menu
+ * @selector .slds-dynamic-menu__header
+ * @restrict .slds-dynamic-menu h3
+ */
+.slds-dynamic-menu__header {
+  @include text-title;
+}

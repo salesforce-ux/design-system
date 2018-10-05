@@ -70,7 +70,7 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
           style={undefined}
         >
           <div
-            className="slds-popover__body"
+            className="slds-popover__body slds-popover__body_small"
             id="dialog-body-id-1"
           >
             <div>
@@ -166,7 +166,7 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
           style={undefined}
         >
           <div
-            className="slds-popover__body"
+            className="slds-popover__body slds-popover__body_small"
             id="dialog-body-id-2"
           >
             <div>

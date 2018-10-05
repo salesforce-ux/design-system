@@ -76,7 +76,7 @@ const ComboboxFormElement = props => (
     )}
     aria-controls={props['aria-controls']}
     aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup={props.dropdownType}
+    aria-haspopup={props.resultsType}
     id={props.id}
     role="combobox"
   >
@@ -173,8 +173,8 @@ export default class Combobox extends Component {
       autoFocus,
       className,
       comboboxAriaControls,
-      dropdown,
-      dropdownType,
+      results,
+      resultsType,
       formClassName,
       hasFocus,
       hasSelection,
@@ -208,7 +208,7 @@ export default class Combobox extends Component {
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
             isOpen={isOpen || this.state.focused}
-            dropdownType={dropdownType}
+            resultsType={resultsType}
           >
             <ComboboxInput
               id={id}
@@ -230,7 +230,7 @@ export default class Combobox extends Component {
               aria-activedescendant={this.props['aria-activedescendant']}
               isDisabled={isDisabled}
             />
-            {dropdown}
+            {results}
           </ComboboxFormElement>
         </ComboboxContainer>
         {listboxOfSelections}
@@ -242,8 +242,8 @@ export default class Combobox extends Component {
 Combobox.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
-  dropdown: PropTypes.element.isRequired,
-  dropdownType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
+  results: PropTypes.element.isRequired,
+  resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
   hasFocus: PropTypes.bool,
   hasSelection: PropTypes.bool,
@@ -297,8 +297,8 @@ export class ComboboxGroup extends Component {
       autoFocus,
       comboboxID,
       comboboxPosition,
-      dropdown,
-      dropdownType,
+      results,
+      resultsType,
       formClassName,
       hasFocus,
       hasSelection,
@@ -331,7 +331,7 @@ export class ComboboxGroup extends Component {
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
-              dropdownType={dropdownType}
+              resultsType={resultsType}
             >
               <ComboboxInput
                 id={id}
@@ -352,7 +352,7 @@ export class ComboboxGroup extends Component {
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}
               />
-              {dropdown}
+              {results}
             </ComboboxFormElement>
           </ComboboxContainer>
           {addonPosition === 'end' && addon}
@@ -369,8 +369,8 @@ ComboboxGroup.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
   comboboxPosition: PropTypes.oneOf(['start', 'end']).isRequired,
-  dropdown: PropTypes.element.isRequired,
-  dropdownType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
+  results: PropTypes.element.isRequired,
+  resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
   hasFocus: PropTypes.bool,
   hasSelection: PropTypes.bool,

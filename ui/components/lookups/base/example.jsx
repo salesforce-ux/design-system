@@ -30,7 +30,7 @@ export default (
         title={false}
       />
     }
-    dropdown={
+    results={
       <Listbox
         id="listbox-id-1"
         snapshot={Snapshot.EntityOptions}
@@ -38,7 +38,7 @@ export default (
         count={3}
       />
     }
-    dropdownType="listbox"
+    resultsType="listbox"
     hasInteractions
   />
 );
@@ -63,7 +63,7 @@ export let states = [
             title={false}
           />
         }
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-2"
             snapshot={Snapshot.EntityOptions}
@@ -71,7 +71,7 @@ export let states = [
             count={3}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -95,7 +95,7 @@ export let states = [
             title={false}
           />
         }
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-3"
             snapshot={Snapshot.EntityOptionsFocused}
@@ -103,7 +103,7 @@ export let states = [
             count={3}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -129,7 +129,7 @@ export let states = [
           />
         }
         value="salesforce"
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-4"
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -138,7 +138,7 @@ export let states = [
             count={4}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -170,7 +170,7 @@ export let states = [
             assistiveText="Remove selected option"
           />
         }
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-5"
             snapshot={Snapshot.EntityOptions}
@@ -178,7 +178,7 @@ export let states = [
             count={2}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
         readonly

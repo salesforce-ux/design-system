@@ -26,7 +26,7 @@ export default (
     aria-controls="listbox-id-1"
     comboboxID="primary-combobox-id-1"
     autocomplete
-    dropdown={
+    results={
       <Listbox
         id="listbox-id-1"
         snapshot={Snapshot.EntityOptions}
@@ -34,7 +34,7 @@ export default (
         count={4}
       />
     }
-    dropdownType="listbox"
+    resultsType="listbox"
     addon={
       <ObjectSwitcher
         id={_.uniqueId('combobox-id-')}
@@ -69,7 +69,7 @@ export let states = [
         aria-controls="listbox-id-1"
         comboboxID="primary-combobox-id-1"
         autocomplete
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-1"
             snapshot={Snapshot.EntityOptions}
@@ -77,7 +77,7 @@ export let states = [
             count={4}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
@@ -111,7 +111,7 @@ export let states = [
         aria-controls="listbox-id-2"
         comboboxID="primary-combobox-id-2"
         autocomplete
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-2"
             snapshot={Snapshot.EntityOptionsFocused}
@@ -119,7 +119,7 @@ export let states = [
             count={4}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         aria-activedescendant="option1"
         addon={
           <ObjectSwitcher
@@ -154,7 +154,7 @@ export let states = [
         aria-controls="listbox-id-3"
         comboboxID="primary-combobox-id-3"
         autocomplete
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-3"
             snapshot={Snapshot.EntityOptions}
@@ -162,7 +162,7 @@ export let states = [
             count={4}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         hasFocus
         addon={
           <ObjectSwitcher
@@ -198,7 +198,7 @@ export let states = [
         aria-controls="listbox-id-4"
         comboboxID="primary-combobox-id-4"
         autocomplete
-        dropdown={
+        results={
           <Listbox
             id="listbox-id-4"
             snapshot={Snapshot.EntityOptions}
@@ -206,7 +206,7 @@ export let states = [
             count={4}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         isOpen
         hasFocus
         addon={

@@ -48,7 +48,7 @@ class ObjectSwitcher extends Component {
               title={false}
             />
           }
-          dropdown={
+          results={
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
               aria-label="Suggested for you"
@@ -58,7 +58,7 @@ class ObjectSwitcher extends Component {
               count={8}
             />
           }
-          dropdownType="listbox"
+          resultsType="listbox"
           isOpen={isOpen}
           hasFocus={hasFocus}
           hasInteractions={hasInteractions}
@@ -118,7 +118,7 @@ export class IconObjectSwitcher extends Component {
               title={false}
             />
           }
-          dropdown={
+          results={
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
               id={listboxId || listboxId02}
@@ -128,7 +128,7 @@ export class IconObjectSwitcher extends Component {
               count={4}
             />
           }
-          dropdownType="listbox"
+          resultsType="listbox"
           isOpen={isOpen}
           hasFocus={hasFocus}
           hasInteractions={hasInteractions}

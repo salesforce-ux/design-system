@@ -28,7 +28,7 @@ export default (
         label="Search Salesforce"
         hideLabel
         placeholder="Search Salesforce"
-        dropdown={
+        results={
           <Listbox
             id="search-listbox-id-1"
             aria-label="Recent Items"
@@ -37,7 +37,7 @@ export default (
             count={6}
           />
         }
-        dropdownType="listbox"
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             id={_.uniqueId('objectswitcher-combobox-id-')}
@@ -82,7 +82,7 @@ export let states = [
             label="Search Salesforce"
             hideLabel
             placeholder="Search Salesforce"
-            dropdown={
+            results={
               <Listbox
                 id="search-listbox-id-2"
                 aria-label="Recent Items"
@@ -91,7 +91,7 @@ export let states = [
                 count={6}
               />
             }
-            dropdownType="listbox"
+            resultsType="listbox"
             addon={
               <ObjectSwitcher
                 id={_.uniqueId('objectswitcher-combobox-id-')}
@@ -134,7 +134,7 @@ export let states = [
             hideLabel
             placeholder="Search Salesforce"
             value="salesforce"
-            dropdown={
+            results={
               <Listbox
                 id="search-listbox-id-4"
                 term="salesforce"
@@ -143,7 +143,7 @@ export let states = [
                 count={6}
               />
             }
-            dropdownType="listbox"
+            resultsType="listbox"
             aria-activedescendant="option0"
             addon={
               <ObjectSwitcher
@@ -189,7 +189,7 @@ export let states = [
             label="Search Salesforce"
             hideLabel
             placeholder="Search Salesforce"
-            dropdown={
+            results={
               <Listbox
                 id="search-listbox-id-1"
                 aria-label="Recent Items"
@@ -198,7 +198,7 @@ export let states = [
                 count={2}
               />
             }
-            dropdownType="listbox"
+            resultsType="listbox"
             addon={
               <ObjectSwitcher
                 id={_.uniqueId('objectswitcher-combobox-id-')}
@@ -243,7 +243,7 @@ export let states = [
             label="Search Salesforce"
             hideLabel
             placeholder="Search Salesforce"
-            dropdown={
+            results={
               <Listbox
                 id="search-listbox-id-1"
                 aria-label="Recent Items"
@@ -252,7 +252,7 @@ export let states = [
                 count={2}
               />
             }
-            dropdownType="listbox"
+            resultsType="listbox"
             addon={
               <ObjectSwitcher
                 id={_.uniqueId('objectswitcher-combobox-id-')}

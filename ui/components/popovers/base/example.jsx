@@ -19,45 +19,51 @@ export let Popover = props => {
 
   return (
     <section
+      aria-describedby={bodyUniqueId}
+      aria-label={!props.header && !props.headerTitle ? props.title : null}
+      aria-labelledby={
+        !props.header && props.headerTitle ? headingUniqueId : props.headingId
+      }
       className={classNames(
         'slds-popover',
         props.className,
         props.isFullWidth && 'slds-popover_full-width',
         props.isHidden && 'slds-popover_hide'
       )}
-      role="dialog"
-      aria-labelledby={
-        !props.header && props.headerTitle ? headingUniqueId : props.headingId
-      }
-      aria-label={!props.header && !props.headerTitle ? props.title : null}
-      aria-describedby={bodyUniqueId}
-      style={props.style}
       id={props.popoverId}
+      role="dialog"
+      style={props.style}
     >
       {props.closeButton ? (
         <ButtonIcon
+          assistiveText="Close dialog"
           className={classNames(
             'slds-button_icon-small slds-float_right slds-popover__close',
             props.inverse && 'slds-button_icon-inverse'
           )}
           symbol="close"
-          assistiveText="Close dialog"
           title="Close dialog"
         />
       ) : null}
       {!props.header && props.headerTitle ? (
         <Header
-          id={headingUniqueId}
-          className={props.headerClassName}
-          title={props.headerTitle || 'Heading Title'}
-          symbol={props.headerIconName}
           assistiveText={props.headerAssistiveText}
+          className={props.headerClassName}
+          id={headingUniqueId}
+          symbol={props.headerIconName}
+          title={props.headerTitle || 'Heading Title'}
         />
       ) : (
         props.header
       )}
       <div
-        className={classNames('slds-popover__body', props.bodyClassName)}
+        className={classNames(
+          'slds-popover__body',
+          {
+            'slds-popover__body_small': props.size === 'small'
+          },
+          props.bodyClassName
+        )}
         id={bodyUniqueId}
       >
         {props.children}
@@ -95,6 +101,7 @@ Popover.propTypes = {
   isFullWidth: PropTypes.bool,
   isHidden: PropTypes.bool,
   popoverId: PropTypes.string,
+  size: PropTypes.oneOf(['small']),
   style: PropTypes.object,
   title: PropTypes.string
 };
@@ -114,7 +121,7 @@ let Header = props => (
         <span className="slds-assistive-text">{props.assistiveText}</span>
       </span>
     ) : null}
-    <h2 id={props.id} className="slds-text-heading_small">
+    <h2 className="slds-text-heading_small" id={props.id}>
       {props.title}
     </h2>
   </header>
@@ -140,8 +147,8 @@ export let examples = [
     element: (
       <Popover
         className="slds-nubbin_left"
-        headerTitle="Header Title"
         closeButton
+        headerTitle="Header Title"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -156,14 +163,51 @@ export let examples = [
     element: (
       <Popover
         className="slds-nubbin_left"
-        footer={<p>Footer Item</p>}
         closeButton
+        footer={<p>Footer Item</p>}
         title="Dialog Title"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'scrolling',
+    label: 'Body max height small',
+    element: (
+      <Popover
+        className="slds-nubbin_left"
+        closeButton
+        footer={<p>Footer Item</p>}
+        headerTitle="Header Title"
+        size="small"
+        title="Dialog Title"
+      >
+        <div className="slds-text-longform">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
       </Popover>
     )
   }

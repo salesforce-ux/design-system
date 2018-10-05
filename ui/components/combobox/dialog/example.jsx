@@ -36,14 +36,15 @@ export let ComboboxWithDialog = props => {
           title={false}
         />
       }
-      dropdownType="dialog"
-      dropdown={
+      resultsType="dialog"
+      results={
         <Popover
           popoverId={popoverId}
           title="Language Options"
           isFullWidth
           isHidden
           hasFormFooter
+          size="small"
           footer={
             <React.Fragment>
               <Button />
@@ -81,13 +82,14 @@ export let states = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId01}
             title="Language Options"
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -124,13 +126,14 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId02}
             title="Language Options"
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -169,13 +172,14 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId03}
             title="Language Options"
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -215,13 +219,14 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId04}
             title="Language Options"
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -260,14 +265,15 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId05}
             title="Language Options"
             isHidden
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -307,13 +313,14 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId06}
             title="Language Options"
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>
@@ -352,14 +359,15 @@ export let examples = [
             title={false}
           />
         }
-        dropdownType="dialog"
-        dropdown={
+        resultsType="dialog"
+        results={
           <Popover
             popoverId={popoverId07}
             title="Language Options"
             isHidden
             isFullWidth
             hasFormFooter
+            size="small"
             footer={
               <React.Fragment>
                 <Button isNeutral>Cancel</Button>

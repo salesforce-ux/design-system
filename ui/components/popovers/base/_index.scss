@@ -49,12 +49,17 @@
 }
 
 /**
- * @summary Applies styles to right align content for footer area of a form popover
+ * @summary Applies styles to center align content for footer area of a form popover
  * @selector .slds-popover__footer_form
  * @restrict .slds-popover footer
  */
 .slds-popover__footer_form {
   text-align: center;
+}
+
+.slds-popover__body_small {
+  max-height: $size-small;
+  overflow-y: auto;
 }
 
 /**

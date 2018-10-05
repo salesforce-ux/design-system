@@ -60,7 +60,7 @@ export const ObjectFieldTypes = {
                   assistiveText="Clear the text input"
                 />
               }
-              dropdown={
+              results={
                 <Listbox
                   id="listbox-id-01"
                   snapshot={{}}
@@ -68,7 +68,7 @@ export const ObjectFieldTypes = {
                   count={2}
                 />
               }
-              dropdownType="listbox"
+              resultsType="listbox"
               value="Salesforce Lightning Design System"
             />
           )
@@ -112,7 +112,7 @@ export const ObjectFieldTypes = {
                   title={false}
                 />
               }
-              dropdown={
+              results={
                 <Listbox
                   id="listbox-id-02"
                   snapshot={{}}
@@ -121,7 +121,7 @@ export const ObjectFieldTypes = {
                   visualSelection
                 />
               }
-              dropdownType="listbox"
+              resultsType="listbox"
             />
           )
         }
@@ -453,7 +453,7 @@ export const ObjectFieldTypesSingleColumn = {
                   assistiveText="Clear the text input"
                 />
               }
-              dropdown={
+              results={
                 <Listbox
                   id="listbox-id-01"
                   snapshot={{}}
@@ -461,7 +461,7 @@ export const ObjectFieldTypesSingleColumn = {
                   count={2}
                 />
               }
-              dropdownType="listbox"
+              resultsType="listbox"
               value="Salesforce Lightning Design System"
             />
           )
@@ -509,7 +509,7 @@ export const ObjectFieldTypesSingleColumn = {
                   title={false}
                 />
               }
-              dropdown={
+              results={
                 <Listbox
                   id="listbox-id-02"
                   snapshot={{}}
@@ -518,7 +518,7 @@ export const ObjectFieldTypesSingleColumn = {
                   visualSelection
                 />
               }
-              dropdownType="listbox"
+              resultsType="listbox"
             />
           )
         }

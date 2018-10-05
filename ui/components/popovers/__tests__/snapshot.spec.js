@@ -234,6 +234,12 @@ describe('Base popover', () => {
         <div>Any content can go here in this Dialog</div>
       </Popover>
     ));
+  it('renders a small scrolling popover', () =>
+    matchesMarkup(
+      <Popover popoverId="popover-id-01" title="Language Options" size="small">
+        <div>Any content can go here in this Dialog</div>
+      </Popover>
+    ));
   it('renders a hidden popover', () =>
     matchesMarkup(
       <Popover popoverId="popover-id-01" title="Language Options" isHidden>

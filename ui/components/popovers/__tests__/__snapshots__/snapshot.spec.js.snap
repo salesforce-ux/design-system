@@ -2,7 +2,7 @@
 
 exports[`Base popover renders a hidden popover 1`] = `
 <section
-  aria-describedby="dialog-body-id-12"
+  aria-describedby="dialog-body-id-13"
   aria-label="Language Options"
   aria-labelledby={undefined}
   className="slds-popover slds-popover_hide"
@@ -12,7 +12,7 @@ exports[`Base popover renders a hidden popover 1`] = `
 >
   <div
     className="slds-popover__body"
-    id="dialog-body-id-12"
+    id="dialog-body-id-13"
   >
     <div>
       Any content can go here in this Dialog
@@ -44,7 +44,7 @@ exports[`Base popover renders a popover at full width 1`] = `
 
 exports[`Base popover renders a popover with a checkbox group 1`] = `
 <section
-  aria-describedby="dialog-body-id-14"
+  aria-describedby="dialog-body-id-15"
   aria-label="Language Options"
   aria-labelledby={undefined}
   className="slds-popover slds-popover_full-width"
@@ -54,7 +54,7 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
 >
   <div
     className="slds-popover__body"
-    id="dialog-body-id-14"
+    id="dialog-body-id-15"
   >
     <fieldset
       className="slds-form-element"
@@ -208,7 +208,7 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
 
 exports[`Base popover renders a popover with a footer 1`] = `
 <section
-  aria-describedby="dialog-body-id-13"
+  aria-describedby="dialog-body-id-14"
   aria-label="Language Options"
   aria-labelledby={undefined}
   className="slds-popover"
@@ -218,7 +218,7 @@ exports[`Base popover renders a popover with a footer 1`] = `
 >
   <div
     className="slds-popover__body"
-    id="dialog-body-id-13"
+    id="dialog-body-id-14"
   >
     <div>
       Any content can go here in this Dialog
@@ -236,6 +236,27 @@ exports[`Base popover renders a popover with a footer 1`] = `
       disabled={undefined}
     />
   </footer>
+</section>
+`;
+
+exports[`Base popover renders a small scrolling popover 1`] = `
+<section
+  aria-describedby="dialog-body-id-12"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body slds-popover__body_small"
+    id="dialog-body-id-12"
+  >
+    <div>
+      Any content can go here in this Dialog
+    </div>
+  </div>
 </section>
 `;
 

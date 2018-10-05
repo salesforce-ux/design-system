@@ -21,3 +21,15 @@ props:
   HEIGHT_PILL:
     value: 1.625rem
     comment: Minimum height of a pill.
+  HEIGHT_HEADER:
+    value: 2.75rem
+    comment: Brand header. Phone 44px; Tablet 50px
+  HEIGHT_INPUT:
+    value: 1.875rem
+    comment: Text input height
+  MAX_WIDTH_ACTION_OVERFLOW_MENU:
+    value: 512px
+    comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
+  SQUARE_TAPPABLE:
+    value: 2.75rem
+    comment: Tap target Size

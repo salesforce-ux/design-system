@@ -21,12 +21,6 @@ props:
   HEIGHT_FOOTER:
     value: 3.75rem
     comment: Action footer menu. Phone 44px; Tablet 50px
-  HEIGHT_HEADER:
-    value: 2.75rem
-    comment: Brand header. Phone 44px; Tablet 50px
-  HEIGHT_INPUT:
-    value: 1.875rem
-    comment: Text input height
   HEIGHT_OVERFLOW_START:
     value: 144px
     comment: Space above overflow menu before scrolling.
@@ -41,9 +35,6 @@ props:
   MAX_WIDTH_ACTION_BAR_WITH_LABELS:
     value: 320px
     comment: Maximum width for action icons in action bar when there are only 2 items with labels.
-  MAX_WIDTH_ACTION_OVERFLOW_MENU:
-    value: 512px
-    comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
   MAX_WIDTH_HEADER_BRAND:
     value: 156px
     comment: Maximum width for brand logos in header.
@@ -52,9 +43,6 @@ props:
     value: 3rem
     comment: Use squareIconLargeBoundary
     deprecated: true
-  SQUARE_TAPPABLE:
-    value: 2.75rem
-    comment: Tap target Size
   FLEX_MASTER_PANEL:
     value: '7'
     comment: 2 Column Layout - Master

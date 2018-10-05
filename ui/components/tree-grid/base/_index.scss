@@ -58,7 +58,11 @@
  */
 .slds-table_tree,
 .slds-table--tree {
-
+  /**
+   * @summary Initializes a slds tree item
+   * @selector .slds-tree__item
+   * @restrict .slds-table_tree th
+   */
   .slds-tree__item {
     line-height: ($line-height-text * 1rem);
 

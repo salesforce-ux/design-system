@@ -200,6 +200,7 @@ export const FieldsetWrapper = props => {
     isRequired,
     isEditing,
     isStacked,
+    isAddress,
     children
   } = props;
 
@@ -208,6 +209,7 @@ export const FieldsetWrapper = props => {
       id={id}
       className={classNames('slds-form-element', {
         'slds-form_compound': hasCompoundFields,
+        'slds-form-element_address': isAddress,
         'slds-has-error': hasError,
         'slds-is-required': isRequired,
         'slds-is-editing': isEditing,
@@ -224,7 +226,8 @@ FieldsetWrapper.propTypes = {
   hasCompoundFields: PropTypes.bool,
   children: PropTypes.node,
   hasError: PropTypes.bool,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
+  isAddress: PropTypes.bool
 };
 
 export const Legend = props => {
@@ -401,6 +404,7 @@ export const Fieldset = props => {
     isRequired,
     isEditing,
     isStacked,
+    isAddress,
     hasError,
     hasCompoundFields,
     hasTooltip,
@@ -414,6 +418,7 @@ export const Fieldset = props => {
       isRequired={isRequired}
       isEditing={isEditing}
       isStacked={isStacked}
+      isAddress={isAddress}
       hasError={hasError}
       hasCompoundFields={hasCompoundFields}
     >
@@ -436,6 +441,7 @@ Fieldset.propTypes = {
   isRequired: PropTypes.bool,
   isEditing: PropTypes.bool,
   isStacked: PropTypes.bool,
+  isAddress: PropTypes.bool,
   hasHiddenLabel: PropTypes.bool,
   hasCompoundFields: PropTypes.bool,
   hasTooltip: PropTypes.bool,

@@ -267,7 +267,7 @@ Array [
     </div>
   </fieldset>,
   <fieldset
-    className="slds-form-element slds-form_compound"
+    className="slds-form-element slds-form_compound slds-form-element_address"
     id={undefined}
   >
     <legend
@@ -492,7 +492,7 @@ Array [
     </div>
   </fieldset>,
   <fieldset
-    className="slds-form-element slds-form_compound"
+    className="slds-form-element slds-form_compound slds-form-element_address"
     id={undefined}
   >
     <legend

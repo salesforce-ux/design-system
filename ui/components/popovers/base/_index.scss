@@ -57,6 +57,14 @@
   text-align: center;
 }
 
+/**
+ * @summary Applies a max-height and vertical scrolling to a popover body
+ *
+ * @selector .slds-popover__body_small
+ * @restrict .slds-popover__body
+ * @modifier
+ * @group body
+ */
 .slds-popover__body_small {
   max-height: $size-small;
   overflow-y: auto;

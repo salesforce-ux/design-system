@@ -6,6 +6,9 @@
 
 ## 2.8.0
 
+### Added
+- Two new examples of trees; filterable and filtered trees, with a search input. These show how you can use an input to filter the contents of a large tree and highlight the search term in matching items
+
 ### Fixed
 - Adjusted the alignment of the tree item text and chevron to be less reliant on button line height
 

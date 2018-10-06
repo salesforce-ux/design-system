@@ -6,12 +6,22 @@ import {
   TreeContainer,
   TreeHeader,
   TreeList,
+  TreeGroup,
+  TreeItem,
+  TreeListItem
+} from '../index';
+
+import {
   DefaultTree,
   ExpandedTree,
   SelectedTree,
   DeeplyNestedTree,
   MetaTextTree
 } from '../base/index';
+
+import { FormElement } from '../../form-element/index';
+import { Input } from '../../input/base/example';
+import { UtilityIcon } from '../../icons/base/example';
 
 /// ///////////////////////////////////////////
 // Export
@@ -73,6 +83,193 @@ export let states = [
           <MetaTextTree />
         </TreeList>
       </TreeContainer>
+    )
+  }
+];
+
+export const examples = [
+  {
+    id: 'filterable-tree',
+    label: 'Fliterable Tree',
+    element: (
+      <div>
+        <div class="slds-m-bottom_small">
+          <FormElement
+            hasHiddenLabel
+            hasLeftIcon
+            inputId="filter-id"
+            labelContent="Filter navigation items"
+          >
+            <UtilityIcon
+              className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+              sprite="utility"
+              symbol="search"
+            />
+            <Input
+              aria-controls="tree-id"
+              id="filter-id"
+              placeholder="Quick Find"
+              type="search"
+            />
+          </FormElement>
+        </div>
+        <TreeContainer>
+          <TreeHeader id="treeheading">Components</TreeHeader>
+          <TreeList headerId="treeheading" id="tree-id">
+            <TreeListItem
+              ariaLevel={1}
+              isBranch
+              itemLabel="lightning"
+              tabIndex={0}
+            >
+              <TreeItem isBranch itemLabel="lightning" />
+              <TreeGroup>
+                <TreeListItem ariaLevel={2} itemLabel="lightning-button">
+                  <TreeItem itemLabel="lightning-button" />
+                </TreeListItem>
+                <TreeListItem
+                  ariaLevel={2}
+                  itemLabel="lightning-checkbox-button"
+                >
+                  <TreeItem itemLabel="lightning-checkbox-button" />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="lightning-radio-button">
+                  <TreeItem itemLabel="lightning-radio-button" />
+                </TreeListItem>
+                <TreeListItem
+                  ariaLevel={2}
+                  itemLabel="lightning-toggle"
+                  metaTextLabel="vaiant a checkbox button"
+                >
+                  <TreeItem
+                    itemLabel="lightning-toggle"
+                    metaTextLabel="variant a checkbox button"
+                  />
+                </TreeListItem>
+              </TreeGroup>
+            </TreeListItem>
+            <TreeListItem ariaLevel={1} isBranch itemLabel="ui">
+              <TreeItem isBranch itemLabel="ui" />
+              <TreeGroup>
+                <TreeListItem ariaLevel={2} itemLabel="ui:button">
+                  <TreeItem itemLabel="ui:button" />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="ui:checkboxButton">
+                  <TreeItem itemLabel="ui:checkboxButton" />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="ui:radioButton">
+                  <TreeItem itemLabel="ui:radioButton" />
+                </TreeListItem>
+              </TreeGroup>
+            </TreeListItem>
+            <TreeListItem
+              ariaLevel={1}
+              isBranch
+              itemLabel="lightningcommunities"
+              metaTextLabel="Community components"
+            >
+              <TreeItem
+                isBranch
+                itemLabel="lightningcommunities"
+                metaTextLabel="Community components"
+              />
+              <TreeGroup>
+                <TreeListItem ariaLevel={2}>
+                  <TreeItem />
+                </TreeListItem>
+              </TreeGroup>
+            </TreeListItem>
+          </TreeList>
+        </TreeContainer>
+      </div>
+    )
+  },
+  {
+    id: 'filterabled-tree',
+    label: 'Flitered Tree',
+    element: (
+      <div>
+        <div class="slds-m-bottom_small">
+          <FormElement
+            hasHiddenLabel
+            hasLeftIcon
+            inputId="filter-id"
+            labelContent="Filter navigation items"
+          >
+            <UtilityIcon
+              className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+              sprite="utility"
+              symbol="search"
+            />
+            <Input
+              aria-controls="tree-id"
+              defaultValue="butto"
+              id="filter-id"
+              placeholder="Quick Find"
+              type="search"
+            />
+          </FormElement>
+        </div>
+        <TreeContainer>
+          <TreeHeader id="treeheading">Components</TreeHeader>
+          <TreeList headerId="treeheading" id="tree-id">
+            <TreeListItem
+              ariaLevel={1}
+              isBranch
+              isExpanded
+              itemLabel="lightning"
+              tabIndex={0}
+            >
+              <TreeItem isBranch itemLabel="lightning" />
+              <TreeGroup>
+                <TreeListItem ariaLevel={2} itemLabel="lightning-button">
+                  <TreeItem itemLabel="lightning-button" termToMark="butto" />
+                </TreeListItem>
+                <TreeListItem
+                  ariaLevel={2}
+                  itemLabel="lightning-checkbox-button"
+                >
+                  <TreeItem
+                    itemLabel="lightning-checkbox-button"
+                    termToMark="butto"
+                  />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="lightning-radio-button">
+                  <TreeItem
+                    itemLabel="lightning-radio-button"
+                    termToMark="butto"
+                  />
+                </TreeListItem>
+                <TreeListItem
+                  ariaLevel={2}
+                  itemLabel="lightning-toggle"
+                  metaTextLabel="vaiant a checkbox button"
+                >
+                  <TreeItem
+                    itemLabel="lightning-toggle"
+                    metaTextLabel="variant a checkbox button"
+                    termToMark="butto"
+                  />
+                </TreeListItem>
+              </TreeGroup>
+            </TreeListItem>
+            <TreeListItem ariaLevel={1} isBranch isExpanded itemLabel="ui">
+              <TreeItem isBranch itemLabel="ui" />
+              <TreeGroup>
+                <TreeListItem ariaLevel={2} itemLabel="ui:button">
+                  <TreeItem itemLabel="ui:button" termToMark="butto" />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="ui:checkboxButton">
+                  <TreeItem itemLabel="ui:checkboxButton" termToMark="butto" />
+                </TreeListItem>
+                <TreeListItem ariaLevel={2} itemLabel="ui:radioButton">
+                  <TreeItem itemLabel="ui:radioButton" termToMark="butto" />
+                </TreeListItem>
+              </TreeGroup>
+            </TreeListItem>
+          </TreeList>
+        </TreeContainer>
+      </div>
     )
   }
 ];

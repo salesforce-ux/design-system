@@ -802,6 +802,113 @@ exports[`Base Tree - Tree Item renders a tree item with children 1`] = `
 </div>
 `;
 
+exports[`Base Tree - Tree Item renders a tree item with marked term 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand lightning button"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand lightning button
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="lightning button"
+    >
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "lightning <mark>butto</mark>n",
+          }
+        }
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Base Tree - Tree Item renders a tree item with marked term in metatext 1`] = `
+<div
+  className="slds-tree__item"
+>
+  <button
+    aria-haspopup={undefined}
+    aria-hidden="true"
+    className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+    id={undefined}
+    tabIndex="-1"
+    title="Expand lightning button"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Expand lightning button
+    </span>
+  </button>
+  <span
+    className="slds-has-flexi-truncate"
+  >
+    <span
+      className="slds-tree__item-label slds-truncate"
+      title="lightning button"
+    >
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "lightning button",
+          }
+        }
+      />
+    </span>
+    <span
+      className="slds-tree__item-meta slds-truncate"
+      title="Some other term"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        :
+      </span>
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Some <mark>othe</mark>r term",
+          }
+        }
+      />
+    </span>
+  </span>
+</div>
+`;
+
 exports[`Base Tree - Tree Item renders a tree item with metatext 1`] = `
 <div
   className="slds-tree__item"
@@ -856,6 +963,7 @@ exports[`Base Tree - Tree List renders a default tree list 1`] = `
 <ul
   aria-labelledby="treeheading"
   className="slds-tree"
+  id={undefined}
   role="tree"
 />
 `;
@@ -864,6 +972,7 @@ exports[`Base Tree - Tree List renders a tree list with children 1`] = `
 <ul
   aria-labelledby="treeheading"
   className="slds-tree"
+  id={undefined}
   role="tree"
 >
   <li

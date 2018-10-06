@@ -19,13 +19,13 @@
  * - `tabindex="0"` should be placed on the first `tr` in the grid on load, to make the row focusable
  * - Every actionable element in the grid should have `tabindex="-1" applied to make them not focusable in the grids navigation mode
  *
- * **Multi select tree grid
+ * **Multi select tree grid**
  *
  * - `aria-multiselectable="true"` should be placed on the `table` element
  * - `aria-selected="false"` should be set by default on all `tr` elements that aren't selected
  * _ `aria-selected="true"` should be set only on the `tr` elements that are selected
  *
- * ** Single Select tree grid
+ * **Single Select tree grid**
  *
  * - `aria-selected="true"` should be applied to the `tr` that is selected in the tree grid
  *
@@ -52,13 +52,17 @@
  *
  * @name base
  * @selector .slds-table_tree
- * @restrict .slds-tree
+ * @restrict table
  * @variant
  * @s1 false
  */
 .slds-table_tree,
 .slds-table--tree {
-
+  /**
+   * @summary Initializes a slds tree item
+   * @selector .slds-tree__item
+   * @restrict .slds-table_tree th
+   */
   .slds-tree__item {
     line-height: ($line-height-text * 1rem);
 
